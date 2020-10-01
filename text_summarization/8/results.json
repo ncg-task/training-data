@@ -1,0 +1,42 @@
+{
+  "has" : {
+    "Results" : {
+      "on" : {
+        "CNN - DM corpus" : {
+          "using" : {
+            "coverage inference penalty" : {
+              "scores" : {
+                "the same" : {
+                  "as a" : {
+                    "full coverage mechanism" : {
+                      "without requiring" : ["additional model parameters", "model fine - tuning"]
+                    }
+                  }
+                }
+              },
+              "from sentence" : "3 . shows our main results on the CNN - DM corpus , with abstractive models shown in the top , and bottom - up attention methods at the bottom .
+We first observe that using a coverage inference penalty scores the same as a full coverage mechanism , without requiring any additional model parameters or model fine - tuning ."
+
+            }
+          }
+        }
+      },
+      "with" : {
+        "CopyTransformer and coverage penalty" : {
+          "indicate" : {
+            "slight improvement" : {
+              "across" : "all three scores"
+            }
+          }
+        },
+        "from sentence" : "The results with the CopyTransformer and coverage penalty indicate a slight improvement across all three scores , but we observe no significant difference between Pointer - Generator and CopyTransformer with bottom - up attention ."
+      },
+      "observe" : {
+        "no significant difference" : {
+          "between" : "Pointer - Generator and CopyTransformer with bottom - up attention"
+        },
+        "from sentence" : "The results with the CopyTransformer and coverage penalty indicate a slight improvement across all three scores , but we observe no significant difference between Pointer - Generator and CopyTransformer with bottom - up attention ."
+      }
+    }
+  }
+}

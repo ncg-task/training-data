@@ -1,0 +1,53 @@
+{
+  "has" : {
+    "Model" : {
+      "method" : {
+        "effectively apply linked entities" : {
+          "in" : {
+            "sequence - tosequence models" : {
+              "called" : "Entity2Topic ( E2T )"
+            }
+          }
+        },
+        "from sentence" : "To this end , we present a method to effectively apply linked entities in sequence - tosequence models , called Entity2Topic ( E2T ) ."
+      },
+      "module" : {
+        "E2T" : {
+          "encodes" : {
+            "entities extracted from the original text" : {
+              "by" : "entity linking system ( ELS )"
+            }
+          },
+          "constructs" : {
+            "vector" : {
+              "representing" : {
+                "topic" : {
+                  "of" : "summary to be generated"
+                }
+              }
+            }
+          },
+          "informs" : {
+            "decoder" : {
+              "about" : "constructed topic vector"
+            }
+          }
+        },
+        "from sentence" : "E2T is a module that can be easily attached to any sequence - to - sequence based summarization model .
+The module encodes the entities extracted from the original text by an entity linking system ( ELS ) , constructs a vector representing the topic of the summary to be generated , and informs the decoder about the constructed topic vector ."
+
+      },
+      "using" : {
+        "entity encoders" : {
+          "with" : "selective disambiguation",
+          "constructing" : {
+            "topic vectors" : {
+              "using" : "firm attention"
+            }
+          }
+        },
+        "from sentence" : "We solve this issue by using entity encoders with selective disambiguation and by constructing topic vectors using firm attention ."
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "has" : {
+    "Experiments" : {
+      "has" : {
+        "Tasks" : {
+          "has" : {
+            "MULTI - EVIDENCE QUESTION ANSWERING" : {
+              "ON" : "WIKIHOP",
+              "has" : {
+                "Hyperparameters" : {
+                  "has" : {
+                    "tokenize" : {
+                      "using" : "Stanford CoreNLP",
+                      "from sentence" : "MULTI - EVIDENCE QUESTION ANSWERING ON WIKIHOP
+We tokenize the data using Stanford CoreNLP ."
+
+                    }
+                  },
+                  "use" : {
+                    "fixed Glo Ve embeddings" : {
+                      "as well as" : "character ngram embeddings",
+                      "from sentence" : "We use fixed Glo Ve embeddings as well as character ngram embeddings ."
+                    }
+                  },
+                  "split" : {
+                    "symbolic query relations" : {
+                      "into" : "words",
+                      "from sentence" : "We split symbolic query relations into words ."
+                    }
+                  },
+                  "trained using" : ["ADAM", {"from sentence" : "All models are trained using ADAM ."}]
+                },
+                "Results" : {
+                  "has" : {
+                    "CFC" : {
+                      "achieves" : {
+                        "state - of - the - art results" : {
+                          "on" : {
+                            "masked and unmasked versions" : {
+                              "of" : "WikiHop"
+                            }
+                          },
+                          "from sentence" : "The CFC achieves state - of - the - art results on both the masked and unmasked versions of WikiHop ."
+                        }
+                      }
+                    }
+                  },
+                  "on" : {
+                    "blind , held - out WikiHop test set" : {
+                      "has" : {
+                        "CFC" : {
+                          "achieves" : {
+                            "new best accuracy" : {
+                              "of" : "70.6 %"
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "In particular , on the blind , held - out WikiHop test set , the CFC achieves a new best accuracy of 70.6 % ."
+                    }
+                  }
+                }
+              }
+            },
+            "RERANKING EXTRACTIVE QUESTION ANSWERING" : {
+              "ON" : ["TRIVIAQA", {"from sentence" : "RERANKING EXTRACTIVE QUESTION ANSWERING ON TRIVIAQA"}],
+              "has" : {
+                "Our experimental results" : {
+                  "show" : {
+                    "reranking" : {
+                      "using" : "CFC",
+                      "provides" : {
+                        "consistent performance gains" : {
+                          "over only using" : "span extraction question answering model"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "Our experimental results in show that reranking using the CFC provides consistent performance gains over only using the span extraction question answering model ."
+                },
+                "reranking" : {
+                  "using" : "CFC",
+                  "has" : {
+                    "improves" : {
+                      "has" : "performance",
+                      "from sentence" : "In particular , reranking using the CFC improves performance regardless of whether the candidate answer set obtained from the span extraction model contains correct answers ."
+                    }
+                  }
+                }
+              },
+              "On" : {
+                "whole Trivia QA dev set" : {
+                  "has" : {
+                    "reranking" : {
+                      "using" : "CFC",
+                      "results in" : {
+                        "again" : {
+                           "of" : "3.1 % EM and 3.0 % F1"
+                        }
+                      }
+                    },
+                    "from sentence" : "On the whole Trivia QA dev set , reranking using the CFC results in again of 3.1 % EM and 3.0 % F1 , which suggests that the CFC can be used to further refine the outputs produced by span extraction question answering models ."
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Community Question Answering ( c QA )", {"from sentence" : "This paper describes the KeLP system participating in the SemEval - 2016 Community Question Answering ( c QA ) task ."}],
+    ["c QA", {"from sentence" : "In this task , participants are asked to automatically provide good answers in a c QA setting ."}]
+  ]
+}

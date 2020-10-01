@@ -1,0 +1,81 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "use" : {
+        "popular seq2seq framework" : {
+          "name" : "Open - NMT",
+          "from sentence" : "We use the popular seq2seq framework Open - NMT 5 as the starting point ."
+        }
+      },
+      "retain" : {
+        "default settings" : {
+          "of" : {
+            "Open NMT" : {
+              "to build" : "network architecture"
+            }
+          }
+        },
+        "from sentence" : "To make our model more general , we retain the default settings of Open NMT to build the network architecture ."
+      },
+      "dimensions" : {
+        "word embeddings and RNN" : {
+          "are both" : "500"
+        },
+        "from sentence" : "Specifically , the dimensions of word embeddings and RNN are both 500 , and the encoder and decoder structures are two - layer bidirectional Long Short Term Memory Networks ( LSTMs ) ."
+      },
+      "has" : {
+        "encoder and decoder structures" : {
+          "are" : "two - layer bidirectional Long Short Term Memory Networks ( LSTMs )",
+          "from sentence" : "Specifically , the dimensions of word embeddings and RNN are both 500 , and the encoder and decoder structures are two - layer bidirectional Long Short Term Memory Networks ( LSTMs ) ."
+        }
+      },
+      "On" : {
+        "our computer" : {
+          "GPU" : "GTX 1080",
+          "Memory" : "16G",
+          "CPU" : "i7-7700 K",
+          "training spends" : "about 2 days",
+          "from sentence" : "On our computer ( GPU : GTX 1080 , Memory : 16G , CPU : i7-7700 K ) , the training spends about 2 days ."
+        }
+      },
+      "During test" : {
+        "beam search" : {
+          "of size" : {
+            "5" : {
+              "to generate" : "summaries"
+            }
+          }
+        },
+        "from sentence" : "During test , we use beam search of size 5 to generate summaries ."
+      },
+      "add" : {
+        "argument" : {
+          "name" : {
+            "replace unk" : {
+              "to replace" : {
+                "generated unknown words" : {
+                  "with" : {
+                    "source word" : {
+                      "that holds" : "highest attention weight"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "We add the argument \" replace unk \" to replace the generated unknown words with the source word that holds the highest attention weight ."
+        }
+      },
+      "introduce" : {
+        "additional length penalty argument" : {
+          "name" : {
+            "alpha 1" : {
+              "to encourage" : "longer generation"
+            }
+          }
+        },
+        "from sentence" : "Since the generated summaries are often shorter than the actual ones , we introduce an additional length penalty argument \" alpha 1 \" to encourage longer generation , like ."
+      }
+    }
+  }
+}

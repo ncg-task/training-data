@@ -1,0 +1,41 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "novel neural architecture" : {
+          "for" : "discriminative sentence modeling"
+        },
+        "from sentence" : "In this paper , we propose a novel neural architecture for discriminative sentence modeling , called the Tree - Based Convolutional Neural Network ( TBCNN ) ."
+      },
+      "called" : ["Tree - Based Convolutional Neural Network ( TBCNN )", {"from sentence" : "In this paper , we propose a novel neural architecture for discriminative sentence modeling , called the Tree - Based Convolutional Neural Network ( TBCNN ) ."}],
+      "leverage" : ["different sentence parsing trees", {"from sentence" : "Our models can leverage different sentence parsing trees , e.g. , constituency trees and dependency trees ."}],
+      "has" : {
+        "variants" : {
+          "denoted as" : ["c- TBCNN", "d - TBCNN"],
+          "from sentence" : "The model variants are denoted as c- TBCNN and d - TBCNN , respectively ."
+        },
+        "tree - based convolution" : {
+          "apply" : {
+            "set of subtree feature detectors" : {
+              "sliding over" : {
+                "entire parsing tree" : {
+                  "of" : "sentence"
+                }
+              },
+              "pooling" : {
+                "aggregates these extracted feature vectors" : {
+                  "taking" : {
+                    "maximum value" : {
+                      "in" : "each dimension"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "The idea of tree - based convolution is to apply a set of subtree feature detectors , sliding over the entire parsing tree of a sentence ; then pooling aggregates these extracted feature vectors by taking the maximum value in each dimension ."
+        }
+      }
+    }
+  }
+}

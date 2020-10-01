@@ -1,0 +1,71 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "novel Attention Guided Graph Convolutional Networks ( AGGCNs )" : {
+          "operate directly on" : "full tree",
+          "from sentence" : "In this paper , we propose the novel Attention Guided Graph Convolutional Networks ( AGGCNs ) , which operate directly on the full tree ."
+        }
+      },
+      "develop" : {
+        "\" soft pruning \" strategy" : {
+          "that transforms" : {
+            "original dependency tree" : {
+              "into" : "fully connected edgeweighted graph"
+            }          
+          },
+          "from sentence" : "Intuitively , we develop a \" soft pruning \" strategy that transforms the original dependency tree into a fully connected edgeweighted graph ."
+        }
+      },
+      "has" : {
+        "weights" : {
+          "viewed as" : {
+            "strength of relatedness" : {
+              "between" : "nodes",
+              "can be learned in" : {
+                "end - to - end fashion" : {
+                  "by using" : "self - attention mechanism"
+                }
+              }
+            }
+          },
+          "from sentence" : "These weights can be viewed as the strength of relatedness between nodes , which can be learned in an end - to - end fashion by using self - attention mechanism ."
+        }
+      },
+      "introduce" : {
+        "dense connections" : {
+          "to" : "GCN model",
+          "from sentence" : "we next introduce dense connections ) to the GCN model following ."
+        }
+      },
+      "For" : {
+        "GCNs" : {
+          "has" : {
+            "L layers" : {
+              "to capture" : {
+                "neighborhood information" : {
+                  "that is" : "L hops away"
+                }
+              }
+            }
+          },
+          "from sentence" : "For GCNs , L layers will be needed in order to capture neighborhood information that is L hops away ."
+        }
+      },
+      "With the help of" : {
+        "dense connections" : {
+          "able to" : {
+            "train" : {
+              "has" : {
+                "AGGCN model" : {
+                  "with" : "large depth"
+                }
+              }
+            }
+          },
+          "from sentence" : "With the help of dense connections , we are able to train the AGGCN model with a large depth , allowing rich local and non-local dependency information to be captured ."
+        }
+      }
+    }
+  }
+}

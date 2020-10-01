@@ -1,0 +1,58 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "new compositional encoder" : {
+          "used in - place of" : "standard RNN encoders",
+          "serve as" : {
+            "new module" : {
+              "complementary to" : "existing neural architectures"
+            }
+          }
+        },
+        "from sentence" : "To this end , we propose a new compositional encoder that can either be used in - place of standard RNN encoders or serve as a new module that is complementary to existing neural architectures ."
+      },
+      "has" : {
+        "Our proposed MRU encoders" : {
+          "learns" : {
+            "gating vectors" : {
+              "via" : {
+                "multiple contract - and - expand layers" : {
+                  "at" : "multiple dilated resolutions"
+                }
+              }
+            }
+          },
+          "from sentence" : "Our proposed MRU encoders learns gating vectors via multiple contract - and - expand layers at multiple dilated resolutions ."
+        },
+        "k document representations" : {
+          "at" : "multiple ranges and n-gram blocks",
+          "combined and modeled with" : {
+            "fully connected layers" : {
+              "to form" : {
+                "final compositional gate" : {
+                  "applied onto" : "original input document"
+                }
+              }
+            }
+          },
+          "from sentence" : "The k document representations ( at multiple ranges and n-gram blocks ) are then combined and modeled with fully connected layers to form the final compositional gate which are applied onto the original input document ."
+        }
+      },
+      "compress" : {
+        "input document" : {
+          "has" : "arbitrary k times at multi-ranges ( e.g. , 1 , 2 , 4 , 10 , 25 )",
+          "into" : {
+            "neural bag - of - words ( summed ) representation" : {
+              "passed through" : "affine transformation layers",
+              "re-expanded to" : "original sequence length"
+            }
+          }
+          "from sentence" : "Specifically , we compress the input document an arbitrary k times at multi-ranges ( e.g. , 1 , 2 , 4 , 10 , 25 ) into a neural bag - of - words ( summed ) representation .
+The compact sequence is then passed through affine transformation layers and then re-expanded to the original sequence length ."
+
+        }
+      }
+    }
+  }
+}

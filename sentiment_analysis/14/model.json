@@ -1,0 +1,48 @@
+{
+  "has" : {
+    "Model" : {
+      "demonstrates" : {
+        "effectiveness" : {
+          "of incorporating" : {
+            "sentiment labels" : {
+              "in" : {
+                "wordlevel information" : {
+                  "for" : {
+                    "sentiment - related tasks" : {
+                      "compared to" : "other word embeddings"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "This work demonstrates the effectiveness of incorporating sentiment labels in a wordlevel information for sentiment - related tasks compared to other word embeddings ."
+        }
+      },
+      "propose" : {
+        "Emo2Vec" : {
+          "are" : {
+            "word - level representations" : {
+              "that encode" : {
+                "emotional semantics" : {
+                  "into" :  "fixed - sized , real - valued vectors"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "1 ) We propose Emo2Vec 1 which are word - level representations that encode emotional semantics into fixed - sized , real - valued vectors ."
+      },
+      "propose to learn" : {
+        "Emo2Vec" : {
+          "with" : {
+            "multi-task learning framework" : {
+              "by including" : "six different emotion - related tasks"
+            }
+          }
+        },
+        "from sentence" : "2 ) We propose to learn Emo2Vec with a multi-task learning framework by including six different emotion - related tasks ."
+      }
+    }
+  }
+}

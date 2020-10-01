@@ -1,0 +1,243 @@
+title
+Sentence Embeddings in NLI with Iterative Refinement Encoders
+abstract
+Sentence - level representations are necessary for various NLP tasks .
+Recurrent neural networks have proven to be very effective in learning distributed representations and can be trained efficiently on natural language inference tasks .
+We build on top of one such model and propose a hierarchy of BiLSTM and max pooling layers that implements an iterative refinement strategy and yields state of the art results on the SciTail dataset as well as strong results for SNLI and MultiNLI .
+We can show that the sentence embeddings learned in this way can be utilized in a wide variety of transfer learning tasks , outperforming InferSent on 7 out of 10 and SkipThought on 8 out of 9 SentEval sentence embedding evaluation tasks .
+Furthermore , our model beats the InferSent model in 8 out of 10 recently published SentEval probing tasks designed to evaluate sentence embeddings ' ability to capture some of the important linguistic properties of sentences .
+Introduction
+Neural networks have been shown to provide a powerful tool for building representations of natural languages on multiple levels of linguistic abstraction .
+Perhaps the most widely used representations in natural language processing are word embeddings .
+Recently there has been a growing interest in models for sentencelevel representations using a range of different neural network architectures .
+Such sentence embeddings have been generated using unsupervised learning approaches , and supervised learning .
+Supervision typically comes in the form of an underlying semantic task with labeled data to train the model .
+The most prominent task for that purpose is natural language inference ( NLI ) that tries to model the inferential relationship between two or more given sentences .
+In particular , given two sentences - the premise p and the hypothesis h - the task is to determine whether h is entailed by p , whether the sentences are in contradiction with each other or whether there is no inferential relationship between the sentences ( neutral ) .
+There are two main neural approaches ar Xiv : 1808.08762v2 [ cs. CL ] 3 Jun 2019 to NLI .
+Sentence encoding - based models focus on building separate embeddings for the premises and the hypothesis and then combine those using a classifier .
+Other approaches do not treat the two sentences separately but utilize e.g. cross - sentence attention .
+With the goal of obtaining general - purpose sentence representations in mind , we opt for the sentence encoding approach .
+Motivated by the success of the InferSent architecture we extend their architecture with a hierarchylike structure of bidirectional LSTM ( BiLSTM ) layers with max pooling .
+All in all , our model improves the previous state of the art for SciTail and achieves strong results for the SNLI and Multi - Genre Natural Language Inference corpus ( MultiNLI ; .
+In order to demonstrate the semantic abstractions achieved by our approach , we also apply our model to a number of transfer learning tasks using the SentEval testing library , and show that it outperforms the InferSent model on 7 out of 10 and SkipThought on 8 out of 9 tasks , comparing to the scores reported by .
+Moreover , our model outperforms the InferSent model in 8 out of 10 recently published SentEval probing tasks designed to evaluate sentence embeddings ' ability to capture some of the important linguistic properties of sentences .
+This highlights the generalization capability of the proposed model , confirming that its architecture is able to learn sentence representations with strong performance across a wide variety of different NLP tasks .
+Related Work
+There is a wide variety of approaches to sentence - level representations that can be used in natural language inference .
+and explore RNN and LSTM architectures , convolutional neural networks and GRUs , to name a few .
+The basic idea behind these approaches is to encode the premise and hypothesis sentences separately and then combine those using a neural network classifier .
+explore multiple different sentence embedding architectures ranging from LSTM , BiLSTM and intra-attention to convolution neural networks and the performance of these architectures on NLI tasks .
+They show that , out of these models , BiLSTM with max pooling achieves the strongest results not only in NLI but also in many other NLP tasks requiring sentence level meaning representations .
+They also show that their model trained on NLI data achieves strong performance on various transfer learning tasks .
+Although sentence embedding approaches have proven their effectiveness in NLI , there are multiple studies showing that treating the hypothesis and premise sentences together and focusing on the relationship between those sentences yields better results .
+These methods are focused on the inference relations rather than the internal semantics of the sentences .
+Therefore , they do not offer similar insights about the sentence level semantics , as individual sentence embeddings do , and they can not straightforwardly be used outside of the NLI context .
+Model Architecture
+Our proposed architecture follows a sentence embedding - based approach for NLI introduced by .
+The model illustrated in contains sentence embeddings for the two input sentences , where the output of the sentence embeddings are combined using a heuristic introduced by , putting together the concatenation ( u , v ) , absolute element - wise difference |u ? v| , and element - wise product u * v.
+The combined vector is then passed onto a 3 layered multi - layer perceptron ( MLP ) with a 3 - way softmax classifier .
+The first two layers of the MLP both utilize dropout and a ReLU activation function .
+We use a variant of ReLU called Leaky ReLU , defined by :
+where we set y = 0.01 as the negative slope for x < 0 . This prevents the gradient from dying when x < 0 .
+Fig .
+1 . Overall NLI Architecture
+For the sentence representations we first embed the individual words with pretrained word embeddings .
+The sequence of the embedded words is then passed onto the sentence encoder which utilizes BiLSTM with max pooling .
+Given a sequence T of words ( w 1 . . . , w T ) , the output of the bi-directional LSTM is a set of vectors ( h 1 , . . . , h T ) , where each ht ? ( h 1 , . . . , h T ) is the concatenation
+of a forward and backward LSTMs
+The max pooling layer produces a vector of the same dimensionality ash t , returning , for each dimension , its maximum value over the hidden units ( h 1 , . . . , h T ) .
+Motivated by the strong results of the BiLSTM max pooling network by , we experimented with combining BiLSTM max pooling networks in a hierarchy - like structure .
+1 To improve the BiLSTM layers ' ability to remember the input words , we let each layer of the network re-read the input embeddings instead of stacking the layers in a strict hierarchical model .
+In this way , our model acts as an iterative refinement architecture that reconsiders the input in each layer while being informed by the previous layer through initialisation .
+This creates a hierarchy of refinement layers and each of them contributes to the NLI classification by max pooling the hidden states .
+In the following we refer to that architecture with the abbreviation HBMP .
+Max pooling is defined in the standard way of taking the highest value over each dimension of the hidden states and the final sentence embedding is the concatenation of those vectors coming from each BiLSTM layer .
+The overall architecture is illustrated in .
+To summarize the differences between our model and traditional stacked BiLSTM architectures we can list the following three main aspects : setup that does not transfer knowledge between layers but also combines information from three separate BiLSTM layers for the final classification .
+The second model ( BiLSTM - Ens - Train ) adds a trainable initialization to each layer to study the impact of the hierarchical initialization that we propose in our architecture .
+The third model ( BiLSTM - Ens - Tied ) connects the three layers by tying parameters to each other .
+Finally , the fourth model ( BiLSTM - Stack ) implements a standard hierarchical network with stacked layers that do not re-read the original input .
+We apply the standard SNLI data for the comparison of these different architectures ( see Section 5 for more information about the SNLI benchmark ) .
+The results show that HBMP performs better than each of the other models , which supports the use of our setup in favor of alternative architectures .
+Furthermore , we can see that the different components all contribute to the final score .
+Ensembling information from three separate BiLSTM layers ( with independent parameters ) improves the performance as we can see in the comparison between BiLSTM - Ens and BiLSTM - Ens - Tied .
+Trainable initialization does not seem to add to the model 's capacity and indicates that the hierarchical initialization that we propose is indeed beneficial .
+Finally , feeding the same input embeddings to all Bi - LSTMs of HBMP leads to an improvement over the stacked model that does not re-read the input information .
+Using these initial findings , we will now look at a more detailed analyses of the performance of HBMP on various datasets and tasks .
+But before , we first give some more details about the implementation of the model and the training procedures we use .
+Note , that the same specifications also apply to the experiments that we already discussed above .
+Training Details
+The architecture was implemented using PyTorch .
+We have published our code in GitHub : https://github.com/Helsinki-NLP/HBMP.
+For all of our models we used a gradient descent optimization algorithm based on the Adam update rule , which is pre-implemented in PyTorch .
+We used a learning rate of 5e - 4 for all our models .
+The learning rate was decreased by the factor of 0.2 after each epoch if the model did not improve .
+We used a batch size of 64 .
+The models were evaluated with the development data after each epoch and training was stopped if the development loss increased for more than 3 epochs .
+The model with the highest development accuracy was selected for testing .
+We use pre-trained Glo Ve word embeddings of size 300 dimensions ( Glo Ve 840B 300D ; , which were fine - tuned during training .
+The sentence embeddings have hidden size of 600 for both direction ( except for SentEval test , where we test models with 600D and 1200D per direction ) and the 3 - layer multilayer perceptron ( MLP ) have the size of 600 dimensions .
+We use a dropout of 0.1 between the MLP layers ( except just before the final layer ) .
+Our models were trained using one NVIDIA Tesla P100 GPU .
+Evaluation Benchmarks
+To further study the performance of HBMP , we train our architecture with three common NLI datasets :
+the Stanford Natural Language Inference ( SNLI ) corpus , the Multi - Genre Natural Language Inference ( MultiNLI ) corpus , the Textual Entailment Dataset from Science Question Answering ( SciTail ) .
+Note that we treat them as separate tasks and do not mix any of the training , development and test data in our NLI experiments .
+We further perform additional linguistic error analyses using the MultiNLI Annotation Dataset and the Breaking NLI dataset .
+Finally , in order to test the ability of the model to learn generalpurpose representations , we apply the downstream tasks that are bundled in the SentEval package for sentence embedding evaluation .
+Note that we combine SNLI and MultiNLI data in those experiments in order to be compatible with related work .
+Below we provide a few more details about each of the evaluation frameworks .
+SNLI :
+The Stanford Natural Language Inference ( SNLI ) corpus ) is a dataset of 570 k human- written sentence pairs manually labeled with the gold labels entailment , contradiction , and neutral .
+The dataset is divided into training ( 550,152 pairs ) , development ( 10,000 pairs ) and test sets ( 10,000 pairs ) .
+The source for the premise sentences in SNLI were image captions taken from the Flickr30 k corpus .
+MultiNLI : The Multi-Genre Natural Language Inference ( MultiNLI ) corpus ) is a broad - coverage corpus for natural language inference , consisting of 433 k human- written sentence pairs labeled with entailment , contradiction and neutral .
+Unlike the SNLI corpus , which draws the premise sentence from image captions , MultiNLI consists of sentence pairs from ten distinct genres of both written and spoken English .
+The dataset is divided into training ( 392,702 pairs ) , development ( 20,000 pairs ) and test sets ( 20,000 pairs ) .
+Only five genres are included in the training set .
+The development and test sets have been divided into matched and mismatched , where the former includes only sentences from the same genres as the training data , and the latter includes sentences from the remaining genres not present in the training data .
+In addition to the training , development and test sets , MultiNLI provides a smaller annotation dataset , which contains approximately 1000 sentence pairs annotated with linguistic properties of the sentences and is split between the matched and mismatched datasets .
+2
+This dataset provides a simple way to assess what kind of sentence pairs an NLI system is able to predict correctly and where it makes errors .
+We use the annotation dataset to perform linguistic error analysis of our model and compare the results to results obtained with InferSent .
+For our experiment with the annotation dataset we use the annotations for the MultiNLI mismatched dataset .
+SciTail : SciTail ) is an NLI dataset created from multiple - choice science exams consisting of 27 k sentence pairs .
+Each question and the correct answer choice have been converted into an assertive statement to form the hypothesis .
+The dataset is divided into training ( 23,596 pairs ) , development ( 1,304 pairs ) and test sets ( 2,126 pairs ) .
+Unlike the SNLI and MultiNLI datasets , SciTail uses only two labels : entailment and neutral .
+Breaking NLI : Breaking NLI is a test set which is constructed by taking premises from the SNLI training set and constructing several hypotheses from them by changing at most one word within the premise .
+It was constructed to highlight how poorly current neural network models for NLI can handle lexical meaning .
+SentEval : SentEval ) is a library for evaluating the quality of sentence embeddings .
+3
+It contains 17 downstream tasks as well as 10 probing tasks .
+The downstream datasets included in the tests were MR movie reviews , CR product reviews , SUBJ subjectivity status , MPQA opinion - polarity , SST binary sentiment analysis , TREC question - type classification , MRPC paraphrase detection , SICK - Relatedness ( SICK - R ) semantic textual similarity , SICK - Entailment ( SICK - E ) natural language inference and STS14 semantic textual similarity .
+The probing tasks evaluate how well the sentence encodings are able to capture the following linguistic properties :
+Length prediction , Word Content analysis ,
+Tree depth prediction , Top Constituents prediction , Word order analysis , Verb tense prediction , Subject number prediction , Object number prediction , Semantic odd man out and Coordination Inversion .
+For the SentEval tasks we trained our model on NLI data consisting of the concatenation of the SNLI and MultiNLI training sets consisting of 942,854 sentence pairs in total .
+This allows us to compare our results to the InferSent results which were obtained using a model trained on the same data .
+have shown that including all the training data from SNLI and MultiNLI improves significantly the model performance on transfer learning tasks , compared to training the model only on SNLI data .
+Model Performance on the NLI task
+In this section , we discuss the performance of the proposed sentence - encoding approach in common natural language inference benchmarks .
+From the experiments , we can conclude that the model provides strong results on all of the three NLI datasets .
+It clearly outperforms the similar but non-hierarchical BiLSTM models reported in the literature and fares well in comparison to other state of the art architectures in the sentence encoding category .
+In particular , our results are close to the current state of the art on SNLI in this category and strong on both , the matched and mismatched test sets of MultiNLI .
+Finally , on SciTail , we achieve the new state of the art with an accuracy of 86.0 % .
+Below , we provide additional details on our results for each of the benchmarks .
+We compare our model only with other state - of - the - art sentence encoding models and exclude cross - sentence attention models , except for SciTail where previous sentence encoding model - based results have not been published .
+SNLI
+For the SNLI dataset , our model provides the test accuracy of 86.6 % after 4 epochs of training .
+The comparison of our results with the previous state of the art and selected other sentence embedding based results are reported in and c by Yoon , Lee , and Lee ( 2018 ) .
+MultiNLI
+For the MultiNLI matched test set ( MultiNLI - m ) our model achieves a test accuracy of 73.7 % after 3 epochs of training , which is 0.8 % points lower than the state of the art 74.5 % by .
+For the mismatched test set ( MultiNLI - mm ) our model achieves a test accuracy of 73.0 % after 3 epochs of training , which is 0.6 % points lower than the state of the art 73.6 % by Chen , Zhu , Ling , Wei , Jiang , and Inkpen ( 2017 b ) .
+A comparison of our results with the previous state of the art and selected other approaches are reported in .
+Although we did not achieve state of the art results for the MultiNLI dataset , we believe that a systematic study of different BiLSTM max pooling structures could reveal an architecture providing the needed improvement .
+SciTail
+On the SciTail dataset we compared our model also against non-sentence embedding - based models , as no results have been previously published which are based on independent sentence embeddings .
+We obtain a score of 86.0 % after 4 epochs of training , which is + 2.7 % points absolute improvement on the previous published state of the art by .
+Our model also outperforms In - fer Sent which achieves an accuracy of 85.1 % in our experiments .
+The comparison of our results with the previous state of the art results are reported in .
+The results achieved by our proposed model are significantly higher than the previously published results .
+It has been argued that the lexical similarity of the sentences in SciTail sentence pairs make it a particularly difficult dataset ) .
+If this is the case , we hypothesize that our model is indeed better at identifying entailment relations beyond focusing on the lexical similarity of the sentences .
+Error Analysis of NLI Predictions
+To better understand what kind of inferential relationships our model is able to identify , we conducted an error analysis for the three datasets .
+We report the results below .
+shows the accuracy of predictions per label ( in terms of F-scores ) for the HBMP model and compares them to the InferSent model .
+This analysis shows that our model leads to a significant improvement over the outcome of the nonhierarchical model from previous work in almost all categories on all the three benchmarks .
+The only exception is the entailment score on SciTail , which is slightly below the performance of InferSent .
+To see in more detail how our HBMP model is able to classify sentence pairs with different labels and what kind of errors it makes , we summarize error statistics as confusion matrices for the different datasets .
+They highlight the HBMP model 's strong performance across all the labels .
+On the SNLI dataset our model clearly outperforms Infer Sent on all labels in terms of precision and recall .
+contains the confusion matrices for that dataset comparing HBMP to InferSent .
+The precision on contradiction exceeds 90 % for our model and reaches high recall values for both , entailment and contradiction .
+The performance is lower for neutral and the confusion of that label with both , contradiction and entailment is higher .
+However , HBMP still outperforms
+Infer Sent by a similar margin as for the other two labels .
+Unlike for the SNLI and both of the MultiNLI datasets , on the SciTail dataset our model is most accurate on sentence pairs labeled neutral , having an F- score 88.9 % compared to pairs marked with entailment , where the F- score was 81.0 % .
+Infer Sent has slightly higher accuracy on entailment , whereas HBMP outperforms InferSent on neutral .
+contains the confusion matrices for the SciTail dataset comparing the HBMP to InferSent .
+This analysis reveals that our model mainly suffers in recall on entailment detection whereas it performs well for neutral with respect to recall .
+It is difficult to say what the reason might be for the mismatch between the two systems but the overall performance of our architecture suggests that it is superior to the InferSent model even though the balance between precision and recall on individual labels is different .
+The error analysis of the MultiNLI dataset is not standard as it can not be based on test data .
+As the labeled test data is not openly available for MultiNLI , we analyzed the error statistics for this dataset based on the development data .
+For the matched dataset ( MultiNLI - m ) our model had a development accuracy of 74.1 % .
+For MultiNLI -m our model has the best accuracy on sentence pairs labeled with entailment , having an F- score of 77.2 % .
+The model is also almost as accurate in predicting contradictions , with an F- score of 75.3 % .
+Similar to SNLI , our model is less effective on sentence pairs labeled with neutral , having an F- score of 68.2 % but , again , the HBMP model outperforms the InferSent on all the labels . HBMP to InferSent .
+Our model improves upon InferSent in all values of precision and recall , in some cases by a wide margin .
+For the MultiNLI mismatched dataset ( MultiNLI - mm ) our model had a development accuracy of 73.7 % .
+or MultiNLI - mm our model has very similar performance as with the MultiNLI -m dataset , having the best accuracy on sentence pars labeled with entailment , having an F- score of 77.9 % .
+The model is also almost as accurate in predicting contradictions , with an F- score of 75.6 % .
+Our model is less effective on sentence pairs labeled with neutral , having an F- score of 68.6 % .
+contains the confusion matrices for the MultiNLI Mismatched dataset comparing the HBMP to InferSent and the picture is similar to the result of the matched dataset .
+Substantial improvements can be seen again , in particular in the precision of contradiction detection .
+Evaluation of Linguistic Abstractions
+The most interesting part of the sentence encoder approach to NLI is the ability of the system to learn generic sentence embeddings that capture abstractions , which can be useful for other downstream tasks as well .
+In order to understand the capabilities of our model we first look at the type of linguistic reasoning that the NLI system is able to learn using the MultiNLI annotation set and the Breaking NLI test set .
+Thereafter , we evaluate downstream tasks using the SentEval library to study the use of our NLI - based sentence embeddings in transfer learning .
+Linguistic Error Analysis of NLI Classifications
+The MultiNLI annotation set makes it possible to conduct a detailed analysis of different linguistic phenomena when predicting inferential relationships .
+We use this to compare our model to InferSent with respect to the type of linguistic properties .
+MultiNLI - mismatched confusion matrices for HBMP and InferSent .
+that are present in the given sentence pairs .
+contains the comparison for the MultiNLI - mm dataset .
+The analysis shows that our HBMP model outperforms InferSent with antonyms , coreference links , modality , negation , paraphrases and tense differences .
+It also produces improved scores for most of the other categories in entailment detection .
+Infer Sent gains especially with conditionals in contradiction and in the word overlap catehory for entailments .
+This seems to suggest that InferSent relies a lot on matching words to find entailment and specific constructions indicating contradictions .
+HBMP does not seem to use word overlap as an indication for entailment that much and is better on detecting neutral sentences in this category .
+This outcome may indicate that our model works with stronger lexical abstractions than InferSent .
+However , due to the small number of examples per annotation category and small differences in the scores in general , it is hard to draw reliable conclusions from this experiment .
+Tests with the Breaking NLI dataset
+In the second experiment we conducted testing of the proposed sentence embedding architecture using the Breaking NLI test set recently published by .
+The test set is designed to highlight the lack of lexical reasoning capability of NLI systems .
+For the Breaking NLI experiment , we trained our HBMP model and the InferSent model using the SNLI training data .
+We compare our results with the results published by and to results obtained with InferSent sentence encoder ( our implementation ) .
+The results show that our HBMP model outperforms the InferSent model in 7 out of 14 categories , receiving an overall score of 65.1 % ( InferSent : 65.6 % ) .
+Our model is especially strong with handling antonyms , which shows a good level of semantic abstraction on the lexical level .
+Infer Sent fares well in narrow categories like drinks , instruments and planets , which may indicate a problem of overfitting to prominent examples in the training data .
+The strong result on the synonyms class may also come from a significant representation of related examples in training .
+However , more detailed investigations are necessary to verify this hypothesis .
+Our model also compares well against the other models , outperforming Decomposable Attention model ( 51.90 % ) and Residual Encoders ( 62.20 % ) in the overall score .
+As these models are not based purely on sentence embeddings , the obtained result highlights that sentence embedding approaches can be competitive when handling inferences requiring lexical information .
+The results of the comparison are summarized in .
+Transfer Learning
+In this section , we focus on transfer learning experiments that apply sentence embeddings trained on NLI to other downstream tasks .
+In order to better understand how well the sentence encoding model generalizes to different tasks , we conducted various tests implemented in the SentEval sentence embedding evaluation library ) and compared our results to the results published for In - fer Sent and SkipThought .
+We used the SentEval library with the default settings recommended on their website , with a logistic regression classifier , Adam optimizer with learning rate of 0.001 , batch size of 64 and epoch size of 4 . lists the transfer learning results for our models with 600D and 1200D hidden dimensionality and compares it to the InferSent and SkipThought scores reported by .
+Our 1200D model outperforms the InferSent model on 7 out of 10 tasks .
+The model achieves higher score on 8 out of 9 tasks reported for SkipThought , having equal score on the SUBJ dataset .
+No MRPC results have been reported for SkipThought .
+To study in more detail the linguistic properties of our proposed model , we also ran the recently published SentEval probing tasks .
+Breaking NLI scores ( accuracy % ) .
+Results marked with * as reported by .
+InferSent results obtained with our implementation using the training set - up described in .
+To remain consistent with other work using SentEval , we report the accuracies as they are provided by the SentEval library .
+model outperforms the InferSent model in 8 out of 10 probing tasks .
+The results are listed in .
+Looking at both the downstream and the probing tasks we can observe strong results of our model compared to the InferSent model that already demonstrated good general abstractions on the sentence level according to the original publication by .
+Hence , HBMP does not only provide competitive NLI .
+scores but also produces improved sentence embeddings that are useful for other tasks .
+Conclusion
+In this paper we have introduced an iterative refinement architecture ( HBMP ) based on BiLSTM layers with max pooling that achieves anew state of the art for SciTail and strong results in the SNLI and MultiNLI sentence - encoding category .
+We carefully analyzed the performance of our model with respect to the label categories and the errors it produces in the various NLI benchmarks .
+We demonstrate that our model outperforms InferSent in nearly all cases with substantially reduced confusion between classes of inferential relationships .
+The linguistic analysis on MultiNLI also reveals that our approach is robust across the various categories and outperforms InferSent on , for example , antonyms and negations that require a good level of semantic abstraction .
+Furthermore , we tested our model using the SentEval sentence embedding evaluation library , showing that it achieves great generalization capability .
+The model outperforms InferSent on 7 out of 10 downstream and 8 out of 10 probing tasks , and SkipThought on 8 out of 9 downstream tasks .
+Overall , our model performs well across all the conducted experiments , which highlights its applicability for various NLP tasks and further demonstrates the general abstractions that it is able to pickup from the NLI training data .
+Although the neural network approaches to NLI have been hugely successful , there has also been a number of concerns raised about the quality of current NLI datasets .
+and show that datasets like SNLI and MultiNLI contain annotation artifacts which help neural network models in classification , allowing decisions only based on the hypothesis sentences as their input .
+On a theoretical and methodological level , there is an ongoing discussion on the nature of various NLI datasets , as well as the definition of what counts as NLI and what does not .
+For example , present an overview of the most standard datasets for NLI and show that the definitions of inference in each of them are actually quite different .
+further highlight this by testing different state - of - the - art neural network models by training them on one dataset and then testing on another , leading to a significant drop in performance for all models .
+In addition to the concerns related to the quality of NLI datasets , the success of the proposed architecture raises a number of other interesting questions .
+First of all , it would be important to understand what kind of semantic information the different layers are able to capture and how they differ from each other .
+Secondly , we would like to ask whether other architecture configurations could lead to even stronger results in NLI and other downstream tasks .
+A third question is concerned with other languages and cross-lingual settings .
+Does the result carryover to multilingual setups and applications ?
+The final question is whether NLI - based sentence embeddings could successfully be combined with other supervised and also unsupervised ways of learning sentence - level representations .
+We will look at all those questions in our future work .

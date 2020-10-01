@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Text - To - Speech Synthesis", {"from sentence" : "Transfer Learning from Speaker Verification to Multispeaker Text - To - Speech Synthesis"}],
+    ["text - to - speech ( TTS ) synthesis", {"from sentence" : "We describe a neural network - based system for text - to - speech ( TTS ) synthesis that is able to generate speech audio in the voice of different speakers , including those unseen during training ."}]
+    ["build a TTS system", {"from sentence" : "The goal of this work is to build a TTS system which can generate natural speech fora variety of speakers in a data efficient manner ."}]
+  ]
+}

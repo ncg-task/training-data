@@ -1,0 +1,74 @@
+192	0	33	Soft - sharing vs. Hard - sharing
+193	30	36	choose
+193	37	51	soft - sharing
+193	52	56	over
+193	57	71	hard - sharing
+193	72	82	because of
+193	87	120	more expressive parameter sharing
+194	23	28	prove
+194	34	55	soft - sharing method
+194	56	98	is statistically significantly better than
+194	99	113	hard - sharing
+194	114	118	with
+194	119	128	p < 0.001
+194	18	20	in
+194	132	143	all metrics
+208	3	8	found
+208	14	35	our 2 - way MTL model
+208	36	40	with
+208	41	62	entailment generation
+208	63	70	reduces
+208	76	92	extraneous count
+208	93	95	by
+208	96	122	17.2 % w.r.t. the baseline
+213	4	15	results are
+213	46	97	2 - way - QG MTL model ( with question generation )
+213	98	104	versus
+213	105	125	baseline improvement
+213	126	128	is
+213	129	159	stat. significant ( p < 0.01 )
+218	12	36	3 - way multi-task model
+218	37	46	generates
+218	47	56	summaries
+218	62	80	are both better at
+218	81	99	logical entailment
+218	104	136	contain more salient information
+22	18	25	present
+22	26	65	novel multi-task learning architectures
+22	66	74	based on
+22	75	115	multi-layered encoder and decoder models
+22	127	143	empirically show
+22	155	175	substantially better
+22	176	184	to share
+22	189	216	higherlevel semantic layers
+22	217	224	between
+22	229	255	three aforementioned tasks
+22	264	271	keeping
+22	276	327	lower - level ( lexico- syntactic ) layers unshared
+2	22	48	Multi - Task Summarization
+5	38	63	abstractive summarization
+17	26	56	abstractive text summarization
+144	0	27	Pointer + Coverage Baseline
+149	2	4	On
+149	5	21	Gigaword dataset
+149	28	42	baseline model
+149	139	159	performs better than
+149	160	178	all previous works
+150	0	39	Multi - Task with Entailment Generation
+152	4	9	shows
+152	20	38	multi-task setting
+152	42	53	better than
+152	54	80	our strong baseline models
+154	0	3	For
+154	4	48	multi-task learning with question generation
+154	55	67	improvements
+154	72	97	statistically significant
+154	175	178	for
+154	179	194	CNN / DailyMail
+154	20	22	in
+154	101	123	ROUGE - 1 ( p < 0.01 )
+154	126	148	ROUGE - L ( p < 0.05 )
+154	155	174	METEOR ( p < 0.01 )
+154	231	239	Gigaword
+154	20	22	in
+154	202	226	all metrics ( p < 0.01 )

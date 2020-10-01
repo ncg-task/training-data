@@ -1,0 +1,288 @@
+title
+A Discrete Hard EM Approach for Weakly Supervised Question Answering
+abstract
+Many question answering ( QA ) tasks only provide weak supervision for how the answer should be computed .
+For example , TRIVIAQA answers are entities that can be mentioned multiple times in supporting documents , while DROP answers can be computed by deriving many different equations from numbers in the reference text .
+In this paper , we show it is possible to convert such tasks into discrete latent variable learning problems with a precomputed , task - specific set of possible solutions ( e.g. different mentions or equations ) that contains one correct option .
+We then develop a hard EM learning scheme that computes gradients relative to the most likely solution at each update .
+Despite its simplicity , we show that this approach significantly outperforms previous methods on six QA tasks , including absolute gains of 2 - 10 % , and achieves the stateof - the - art on five of them .
+Using hard updates instead of maximizing marginal likelihood is key to these results as it encourages the model to find the one correct answer , which we show through detailed qualitative analysis .
+1
+Introduction
+A natural setting in many question answering ( QA ) tasks is to provide weak supervision to determine how the question should be answered given the evidence text .
+For example , as seen in 1 , TRIVIAQA answers are entities that can be mentioned multiple times in supporting documents , while DROP answers can be computed by deriving many different equations from numbers in the reference text .
+Such weak supervision is attractive because it is relatively easy to gather , allowing for large datasets , but complicates learning because there are many different spurious ways to derive the correct answer .
+It is natural to The answer text is mentioned five times in the given document , however , only the fourth span actually answers the question .
+( Bottom ) Reading comprehension with discrete reasoning .
+There are many potential equations which execute the answer ( ' 4 ' ) , but only one of them is the correct equation and the others are false positives .
+model such ambiguities with a latent variable during learning , but most prior work on reading comprehension has rather focused on the model architecture and used heuristics to map the weak signal to full supervision ( e.g. by selecting the first answer span in TRIVIAQA ) .
+Some models are trained with maximum marginal likelihood ( MML ) , but it is unclear if it gives a meaningful improvement over the heuristics .
+In this paper , we show it is possible to formulate a wide range of weakly supervised QA tasks as discrete latent - variable learning problems .
+First , we define a solution to be a particular derivation of a model to predict the answer ( e.g. a span in : Six QA datasets in three different categories used in this paper ( detailed in Section 5 ) along with the size of each dataset .
+An average and median of the size of precomputed solution sets ( denoted by Z ) are also reported .
+Details on how to obtain Z are given in Section 4 .
+the document or an equation to compute the answer ) .
+We demonstrate that for many recently introduced tasks , which we group into three categories as given in , it is relatively easy to precompute a discrete , task - specific set of possible solutions that contains the correct solution along with a modest number of spurious options .
+The learning challenge is then to determine which solution in the set is the correct one , while estimating a complete QA model .
+We model the set of possible solutions as a discrete latent variable , and develop a learning strategy that uses hard - EM - style parameter updates .
+This algorithm repeatedly ( i ) predicts the most likely solution according to the current model from the precomputed set , and ( ii ) updates the model parameters to further encourage its own prediction .
+Intuitively , these hard updates more strongly enforce our prior beliefs that there is a single correct solution .
+This method can be applied to any problem that fits our weak supervision assumptions and can be used with any model architecture .
+We experiment on six different datasets ( Table 1 ) using strong task - specific model architectures .
+Our learning approach significantly outperforms previous methods which use heuristic supervision and MML updates , including absolute gains of 2 - 10 % , and achives the state - of - the - art on five datasets .
+It outperforms recent state - of - the - art reward - based semantic parsing algorithms by 13 % absolute percentage on WIKISQL , strongly suggesting that having a small precomputed set of possible solutions is a key ingredient .
+Finally , we present a detailed analysis showing that , in practice , the introduction of hard updates encourages models to assign much higher probability to the correct solution .
+Related Work
+Reading Comprehension .
+Large - scale reading comprehension ( RC ) tasks that provide full supervision for answer spans have seen significant progress recently .
+More recently , the community has moved towards more challenging tasks such as distantly supervised , RC with free - form human generated answers and RC requiring discrete or multi-hop reasoning .
+These tasks introduce new learning challenges since the gold solution that is required to answer the question ( e.g. a span or an equation ) is not given .
+Nevertheless , not much work has been done for this particular learning challenge .
+Most work on RC focuses on the model architecture and simply chooses the first span or a random span from the document , rather than modeling this uncertainty as a latent choice .
+Others maximize the sum of the likelihood of multiple spans , but it is unclear if it gives a meaningful improvement .
+In this paper , we highlight the learning challenge and show that our learning method , independent of the model architecture , can give a significant gain .
+Specifically , we assume that one of mentions are related to the question and others are false positives because ( i ) this happens for most cases , as the first example in , and ( ii ) even in the case where multiple mentions contribute to the answer , there is often a single span which fits the question the best .
+Semantic Parsing .
+Latent - variable learning has been extensively studied in the literature of semantic parsing .
+For example , a question and an answer pair ( x , y) is given but the logical form that is used to compute the answer is not .
+Two common learning paradigms are maximum marginal likelihood ( MML ) and rewardbased methods .
+In MML , the objective maximizes z?? P ( z | x ) , where ?
+is an approximation of a set of logical forms executing y .
+In reward - based methods , a reward function is defined as a prior , and the model parameters are updated with respect to it .
+Since it is computationally expensive to obtain a precomputed set in semantic parsing , these methods typically recompute the set of logical forms with respect to the beam at every parameter update .
+In contrast , our learning method targets tasks that a set of solutions can be precomputed , which include many recent QA tasks such as reading comprehension , open - domain QA and a recent SQL - based semantic parsing task .
+Method
+In this section , we first formally define our general setup , which we will instantiate for specific tasks in Section 4 and then we describe our learning approach .
+Setup
+Let x be the input of a QA system ( e.g. a question and a document ) and y be the answer text ( e.g. .
+We define a solution as a particular derivation that a model is supposed to produce for the answer prediction ( e.g. a span in the document or an equation to compute the answer , see ) .
+Let f denote a task - specific , deterministic function which maps a solution to the textual form of the answer ( e.g. by simply returning the string associated with a particular selected mention or solving an equation to get the final number , see ) .
+Our goal is to learn a model ( with parameters ?) which takes an input x and outputs a solution z such that f ( z ) = y.
+Ina fully supervised scenario , a true solution z is given , and ?
+is estimated based on a collection of ( x , z ) pairs .
+In this work , we focus on a weakly supervised setting in whichz is not given and we define Z tot as a finite set of all the possible solutions .
+In the case that the search space is very large or infinite , we usually can approximate Z tot with a high coverage in practice .
+Then , we obtain Z = {z ?
+Z tot : f ( z ) = y} by enumerating all z ?
+Z tot .
+This results a set of all the possible solutions that lead to the correct answer .
+We assume it contains one solution that we want to learn to produce , and potentially many other spurious ones .
+In practice , Z is defined in a task - specific manner , as we will see in Section 4 .
+At inference time , the model produces a solutionz ?
+Z tot from an input x with respect to ?
+and predicts the final answer as f ( z ) .
+Note that we can not compute Z at inference time because the groundtruth y is not given .
+2
+Learning Method
+Ina fully - supervised setting wherez is given , we can learn ?
+by optimizing the negative log likelihood ofz given the input x with respect to ?. J Sup ( ?|x , z ) = ? log P ( z |x ; ?)
+In our weak supervision scenario , the model has access to x and Z = {z 1 , z 2 , . . . , z n } , and the selection of the best solution in Z can be modeled as a latent variable .
+We can compute the maximum marginal likelihood ( MML ) estimate , which marginalizes the likelihood of each z i ?
+Z given the input x with respect to ?.
+Formally ,
+is used to compute the objective as follows :
+However , there are two major problems in the MML objective in our settings .
+First , MML can be maximized by assigning high probabilities to any subset of z i ?
+Z ; whereas in our problems , instances in Z other than one correct z are spurious solutions which the model should ideally assign very low probability .
+Second , in MML we optimize the sum over probabilities of Z during training but typically predict the maximum probability solution during inference , creating a discrepancy between training and testing .
+We introduce a learning strategy with a hard - EM approach .
+First , the model computes the likelihood of each z i given the input x with respect to ? , P ( z i | x ; ? ) , and picks one of Z with the largest likelihood : z
+Then , the model optimizes on a standard negative log likelihood objective , assumingz is a true solution .
+The objective can be re-written as follows :
+This objective can be seen as a variant of MML , where the sum is replaced with a max .
+Task Setup
+We apply our approach to three different types of QA tasks : multi-mention reading comprehension , RC with discrete reasoning and a semantic parsing task .
+In this section , we describe each task in detail : how we define a solution z and pre-compute a set Z based on input x and answer y .
+The statistics of | Z | and examples on each task are shown in and respectively .
+Multi- Mention Reading Comprehension
+Multi-mention reading comprehension naturally occurs in several QA tasks such as ( i ) distantlysupervised reading comprehension where a question and answer are collected first before the evidence document is gathered ( e.g. TRIVIAQA ) , ( ii ) abstractive reading comprehension which requires a free - form text to answer the question ( e.g. NARRATIVEQA ) , and ( iii ) open - domain QA where only question - answer pairs are provided .
+Given a question Q = [ q 1 , . . . , q l ] and a document D = [ d 1 , . . . , d L ] , where q i and d j denote the tokens in the question and document , the output y is an answer text , which is usually mentioned multiple times in the document .
+Previous work has dealt with this setting by detecting spans in the document through text matching .
+Following previous approaches , we define a solution z as a span in the document .
+We obtain a set of possible solutions Z = {z 1 , . . . , z n } by finding exact match or similar mentions of y , where z i = ( s i , e i ) is a span of text with start and end token indices s i and e i .
+Specifically ,
+where g is a string matching function .
+If the answer is guaranteed to be a span in the document D , g is a binary function which returns 1 if two strings are the same , and 0 otherwise .
+If the answer is free - form text , we choose gas the ROUGE - L metric .
+This complicates the learning because the given document contains many spans matching to the text , while most of them are not related to answering the question .
+As an example shown in , only the fourth span out of six is relevant to the question .
+Reading Comprehension with Discrete Reasoning
+We experiment on a subset of DROP ( Dua et al. , 2019 ) with numeric answers ( 67 % of the entire dataset ) focusing on mathematical reasoning .
+We refer to this subset as DROP num .
+The current state - of - the - art model is an augmented version of QANET which selects two numeric values from the document or the question and performs addition or subtraction to get the an - Training details .
+We truncate the document to be up to 400 words .
+We use the batch size of 14 7 As we use a different set of operations for the two models , they are not directly comparable .
+Details of the model architecture are shown in Appendix A. and 10 for QANET and BERT , respectively .
+Results .
+shows the results on DROP num .
+Our training strategy outperforms the First - Only baseline and MML by a large margin , consistently across two base models .
+In particular , with BERT , we achieve an absolute gain of 10 % .
+Reading Comprehension with Discrete Reasoning ( DROPnum )
+Question :
+How many yards longer was Rob Bironas ' longest field goal compared to John Carney 's only field goal ?
+Document : ( ...)
+The Chiefs tied the game with QB Brodie Croyle completing a 10 yard td pass to WR Samie Parker .
+Afterwards the Titans responded with Kicker Rob Bironas managing to get a 37 yard field goal .
+Kansas city would take the lead prior to halftime with croyle completing a 9 yard td pass to FB Kris Wilson .
+In the third quarter Tennessee would draw close as Bironas kicked a 37 yard field goal .
+The Chiefs answered with kicker John Carney getting a 36 yard field goal .
+Afterwards the Titans would retake the lead with Young and Williams hooking up with each other again on a 41 yard td pass . :
+Examples of the input , answer text ( y ) , f , Z tot and Z. First , in multi-mention reading comprehension , the answer text ' Robert Schumann ' is mentioned six times but only the fourth span is related to the question .
+Second , in reading comprehension with discrete reasoning , many equations yield to the answer 4 , but only ' 40 - 37 ' answers the question .
+Lastly , in SQL query generation , five SQL queries lead to the answer but only the first one is the correct query .
+See Section 4 for more details .
+where ND and N Q are all numeric values appearing in D and Q , respectively , and S area set of predefined special numbers .
+Then
+where f is an execution function of equations .
+shows an example Z given a question and a document .
+We can see that one equation is correct , while the others are false positives which coincidentally lead to the correct answer .
+SQL
+Query Generation
+Finally , we experiment on the weakly - supervised setting of WIKISQL , in which only the question & answer pair is used and the SQL query ( z ) is treated as a latent variable .
+P (z i | Q , H ) can be computed by any query generation or semantic parsing models .
+We choose SQLova ( Hwang et al. , 2019 ) , a competitive model on WIKISQL ( designed for fully supervised setting ) , as our base model .
+We modify the model to incorporate either the MML objective or our hard - EM learning approach for the weakly - supervised setting .
+We compare with both traditional and recently - Training details .
+We adopt the same set of hyperparameters as in , except that we change the batch size to 10 and truncate the input to be up to 180 words .
+Results .
+shows that our training method significantly outperforms all the weaklysupervised learning algorithms , including 10 % gain over the previous state of the art .
+These results indicate that precomputing a solution set and training a model through hard updates play a significant role to the performance .
+Given that our method does not require SQL executions at training time ( unlike MAPO ) , it provides a simpler , more effective and time - efficient strategy .
+Comparing to previous models with full supervision , our results are still on par and outperform most of the published results .
+Experiments
+We experiment on a range of question answering tasks with varied model architectures to demonstrate the effectiveness of our approach .
+Built on top of strong base models , our learning method is able to achieve state - of - the - art on NARRATIVEQA , TRIVIAQA - OPEN , NATURALQUESTIONS - OPEN , DROP num and WIKISQL .
+Multi-mention Reading Comprehension
+We experiment on two reading comprehension datasets and two open - domain QA datasets .
+For reading comprehension , we evaluate on TRIVI - AQA with short answers and discard the given evidence documents .
+We refer to these two datasets as TRIVIAQA - OPEN and NATURALQUESTIONS -
+We experiment with three learning methods as follows .
+First Only : J (? ) = ? logP ( z 1 | x ; ? ) , where z 1 appears first in the given document among all z i ?
+Z.
+MML : J ( ? ) = ? log ? n i =1 P ( z i | x ; ?) .
+Training details .
+We use uncased version of BERT base .
+For all datasets , we split documents into a set of segments up to 300 tokens because BERT limits the size of the input .
+We use batch size of 20 for two reading comprehension tasks and 192 for two open - domain QA tasks .
+Following Clark and Gardner ( 2018 ) , we filter a subset of segments in TRIVIAQA through TF - IDF similarity between a segment and a question to maintain a reasonable length .
+For opendomain QA tasks , we retrieve 50 Wikipedia articles through TF - IDF ( Chen et al. , 2017 ) and further run to retrieve 20 ( for train ) or 80 ( for development and test ) paragraphs .
+We try 10 , 20 , 40 and 80 paragraphs on the development set to choose the number of paragraphs to use on the test set .
+To avoid local optima , we perform annealing : at training step t , the model optimizes on MML objective with a probability of min ( t / ? , 1 ) and otherwise use our objective , where ?
+is a hyperparameter .
+We observe that the performance is improved by annealing while not being overly sensitive to the hyperparameter ? .
+We include full hyperparameters and detailed ablations in Appendix B.
+Results .
+compares the results of baselines , our method and the state - of - the - art on four datasets .
+6 First of all , we observe that First - Only is a strong baseline across all the datasets .
+We hypothesize that this is due to the bias in the dataset that answers are likely to appear earlier in the paragraph .
+Second , while MML achieves comparable result to the First - Only baseline , our learning method outperforms others by 2 + F1 / ROUGE - L / EM consistently on all datasets .
+Lastly , our method achieves the new state - of the - art on NARRATIVEQA , TRIVIAQA - OPEN and NATURALQUESTIONS - OPEN , and is comparable to the state - of - the - art on TRIVIAQA , despite our aggressive truncation of documents .
+Analysis
+In this section , we will conduct thorough analyses and ablation studies , to better understand how our model learns to find a solution from a precomputed set of possible solutions .
+We also provide more examples and analyses in Appendix C.
+Varying the size of solution set at inference time .
+shows a breakdown of the model accuracy with respect to the size of a solution set ( | Z | ) attest time .
+We observe that the model with our training method outperforms the model with MML objective consistently across different values of | Z | .
+The gap between MML and our method is marginal when | Z | = 0 or 1 , and gradually increases as | Z | grows .
+Varying the size of solution set at training .
+To see how our learning method works with respect to the size of a solution set ( | Z | ) of the training data , particularly with large | Z| , we take 5 subsets of the training set on WIKISQL with | Z | = 3 , 10 , 30 , 100 , 300 .
+We train a model with those subsets and evaluate it on the original development set , both with our training method and MML objective .
+shows statistics of each subset and results .
+We observe that ( i ) our learning method outperforms MML consistently over different values of | Z| , and ( ii ) the gain is particularly large when | Z | > 3 .
+Model predictions over training .
+We analyze the top 1 prediction and the likelihood of z ?
+Z assigned by the model on DROP num with different number of training iterations ( steps from 1 k to 32 k ) .
+t Pred Z ( ordered by P ( z | x ; ?t ) ) 1 k 10- 9 10-6 41-37 40-36 41-37 2 k 37-36 40-36 41-37 41- 37 10 - 6 4 k 40-36 40-36 41-37 41-37 10 - 6 8 k 40-36 40-36 41-37 41-37 10- 6 16 k 37-36 40-36 41-37 41- 37 10 - 6 32 k 40-36 40-36 41-37 41- 37 10 -6 : An example from DROP num ( same as and , with it s answer text ' 4 ' and a subset of the solution set ( Z ) , containing two of ' 41 - 38 ' ( which ' 41 ' come from different mentions ; one denoted by for distinction ) , ' 40 - 36 ' and ' 10 - 4 ' .
+For each training step t , the top 1 prediction and Z ordered by P ( z |x ; ? t ) , a probability of z ?
+Z with respect to the model at t through training procedure are shown .
+Note that at inference time Z is not given , so top 1 prediction is not necessarily an element of Z. the model first begins by assigning a small , uniform probability distribution to Z , but gradually learns to favor the true solution .
+The model sometimes gives the wrong prediction - for example , at t = 16 k , and changes its prediction from the true solution to the wrong solution , ' 37 - 36 ' - but again changes its prediction to be a true solution afterward .
+In addition , its intermediate wrong solution , ' 37 - 36 ' indicates the model was confused with distinguishing the longest field goal of Rob Bironas ( 40 vs. 37 ) , which is an understandable mistake .
+We also compare the predictions from the model with our method to those from the model with MML , which is shown in Appendix C.
+Quality of the predicted solution .
+We analyze if the model outputs the correct solution , since the solution executing the correct answer could be spurious .
+First , on NARRATIVEQA and DROP num , we manually analyze 50 samples from the development set and find that 98 % and 92 % of correct cases produce the correct solution respectively .
+Next , on WIKISQL , we compare the predictions from the model to the annotated SQL queries on the development set .
+This is possible because gold SQL queries are available in the dataset for the full supervision .
+Out of 8,421 examples , 7,110 predictions execute the correct answers .
+Among those , 88.5 % of the predictions are exactly same as the annotated queries .
+Others are the cases where ( i ) both queries are correct , ( ii ) the model prediction is correct but the annotated query is incorrect , and ( iii ) the annotated query is correct and the model prediction is spurious .
+We show a full analysis in Appendix C.
+Robustness to the noise in | Z |. Sometimes noise arises during the construction of | Z | , such as | Z | constructed based on ROUGE - L for NARRA - TIVEQA .
+To explore the effect of noise in Z , we experiment with more noisy solution set by picking all the spans with scores that is equal to or larger than the 5th highest .
+The new construction method increases | Z | from 4.3 to 7.1 on NARRA - TIVEQA .
+The result by MML objective drops significantly ( 56.07 ? 51.14 ) while the result by ours drops marginally ( 58.77 ? 57.97 ) , suggesting that MML suffers more with a noisier Z while ours is more robust .
+Conclusion
+In this paper , we demonstrated that , for many QA tasks which only provide the answer text as supervision , it is possible to precompute a discrete set of possible solutions that contains one correct option .
+Then , we introduced a discrete latent variable learning algorithm which iterates a procedure of predicting the most likely solution in the precomputed set and further increasing the likelihood of that solution .
+We showed that this approach significantly outperforms previous approaches on six QA tasks including reading comprehension , opendomain QA , discrete reasoning task and semantic parsing , achieving absolute gains of 2 - 10 % and setting the new state - of - the - art on five wellstudied datasets .
+A Model details
+We describe the detailed model architecture used as abase model .
+In other words , we describe how we obtain P ( z |x ; ?) .
+The following paragraphs describe ( i ) BERT extractive model used for multi-mention RC ( Section 5.1 ) and ( ii ) BERT sequence tagging model for discrete reasoning task ( Section 5.2 ) , respectively .
+For QANET for discrete reasoning and the model for SQL generation ( Section 5 .
+The input is a question Q and a set of paragraphs {P 1 , . . . , P N } , and the desired output is a span from one of paragraphs .
+Since our goal is to compute a probability of a specific span , z , let 's say z is s-th through e-th word in k-th paragraph .
+The model receives a question Q and a single paragraph P i in parallel .
+Then ,
+Si = Q : [ SEP ] :
+P , a list of m + n i + 1 words , where : indicates a concatenation , [ SEP ] is a special token , m is the length of Q , and n i is the length of P i .
+This Si is fed into BERT :
+where h is the hidden dimension of BERT .
+Then ,
+where W 1 , W 2 ?
+Rh are learnable vectors .
+9 https://github.com/allenai/allennlp/ blob/master/allennlp/models/reading_
+comprehension/naqanet.py and https : //github.com/naver/sqlova 10 https://github.com/huggingface/
+pytorch-pretrained-BERT
+Finally , the probability of z , s- th through e-th word in i - th paragraph , is obtained by :
+where pd denotes d- th element of the vector p.
+Separately , a paragraph selector is trained through
+i , exit is computed and P ( z |Q , P k ) is only considered to output a span .
+Sequence Tagging model for discrete reasoning
+The basic idea of the model is closed to that of .
+The input is a question Q and a paragraph P .
+Our goal is to compute a probability of an equation , z = ( o 1 , n 1 , o 2 , n 2 ) , where o 1 , o 2 ? {+ , ? , * 0.01 } and n 1 , n 2 ? NP ?N Q ?S , NP and N Q are all numeric values appearing in P and Q , and S area set of predefined special numbers .
+11 .
+First , BERT encodings of the question and the paragraph is obtained vi ?
+where : indicates a concatenation , [ SEP ] is a special token , m is the length of Q , n is the length of P , and h is the hidden dimension of BERT .
+Then ,
+where W 1 ?
+R h4 and W 2 ?
+R h|S|4 are learnable matrices .
+Then ,
+Here , subscript i of the vector or the sequence indicate i - th dimension of the vector or i -th element of the sequence , respectively .
+B Annealing
+To prevent the model to be optimized on early decision of the model , we perform annealing : at training step t , the model optimizes on MML objective with a probability of min ( t / ? , 1 ) and otherwise use our objective , where ?
+is a hyperparameter .
+We observe that the performance is improved by annealing while not being sensitive to the hyperparameter ? .
+Ablations and chosen ?
+for each dataset are shown in .
+Note that for DROP num with QANET and WIKISQL , we do not ablate with varying ?
+and just report the number without annealing .
+C Examples
+To see if the prediction from the model is the correct solution to derive the answer , we analyze outputs from the model .
+TRIVIAQA .
+shows one example from TRIVIAQA where the answer text ( Montgomery ) is mentioned in the paragraph multiple times .
+Predictions from the model with our training method and that with MML objective are shown in the red text and the blue text , respectively .
+The span predicted by the model with our method actually answers to the question , while other spans with the answer text is not related to the question .
+DROP num .
+Question & Passage Q :
+How many sports are not olympic sports but are featured in the asian games ?
+( A : 10 ) P : The first 30 sports were announced by the singapore national olympic council on 10 december 2013 on the sidelines of the 27th sea games in myanmar .
+It announced then that there was room for as many as eight more sports .
+On 29 april 2014 the final six sports namely boxing equestrian floorball petanque rowing and volleyball were added to the programme .
+Floorball will feature in the event for the first time after being a demonstration sport in the 2013 edition .
+In its selection of events the organising committee indicated their desire to set a model for subsequent games in trimming the number of ' traditional ' sports to refocus on the seag ' s initial intent to increase the level of sporting excellence in key sports .
+Hence despite room for up to eight traditional sports only two floorball and netball were included in the programme .
+Amongst the other 34 sports 24 are olympic sports and all remaining sports are featured in the asian games . :
+An example from DROP num , with its answer text ' 10 ' and a subset of Z , containing ' 10 ' , two of ' eight + two' ( which ' eight ' come from different mentions ; one denoted by ' ' for distinction ) and ' 34 - 24 ' .
+The below tables are predictions from the model with our training strategy ( left ) and MML ( right ) .
+For each training step t , the top 1 prediction and Z ordered by P ( z |x ; ? t ) , a probability of z ?
+Z with respect to the model at tare shown .
+Note that at inference time Z can not be obtained , so top 1 prediction is not necessarily in Z. :
+Four examples from WIKISQL where the prediction from the model is different from annotated SQL query , although the executed answers are the same .
+Q , H , A and P indicate the given question , the given table header , annotated SQL query and predicted SQL query .
+First two example shows the case where both queries are correct .
+Next example shows the case that the model prediction makes more sense than the annotated query .
+The last example shows the cases that the annotated query makes more sense than the model prediction .

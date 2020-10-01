@@ -1,0 +1,5 @@
+(Contribution||has||Baselines)
+(Baselines||has||BASELINE - LSTM)
+(BASELINE - LSTM||is||multi - task learning)
+(multi - task learning||predicting both||CCG supertags and sentence compression)
+(CCG supertags and sentence compression||at||outer layer)

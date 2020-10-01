@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["generating real - valued data" , {"from sentence" : "As a new way of training generative models , Generative Adversarial Net ( GAN ) that uses a discriminative model to guide the training of the generative model has enjoyed considerable success in generating real - valued data ."}],
+    ["generating sequences of discrete tokens" , {"from sentence" : "However , it has limitations when the goal is for generating sequences of discrete tokens ."}],
+    ["Generating sequential synthetic data", {"from sentence" : "Generating sequential synthetic data that mimics the real one is an important problem in unsupervised learning ."}]
+  ]
+}

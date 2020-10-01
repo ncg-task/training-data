@@ -1,0 +1,82 @@
+{
+  "has" : {
+    "Approach" : {
+      "called" : {
+        "Leak GAN" : {
+          "to address" : "both the non-informativeness and the sparsity issues",
+          "from sentence" : "In this paper , we propose a new algorithmic framework called Leak GAN to address both the non-informativeness and the sparsity issues ."
+        }
+      },
+      "has" : {
+        "LeakGAN" : {
+          "providing" : {
+            "richer information" : {
+              "from" : {
+                "discriminator" : {
+                  "to" : {
+                    "generator" : {
+                      "by borrowing" : {
+                        "recent advances" : {
+                          "in" : "hierarchical reinforcement learning"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "LeakGAN is a new way of providing richer information from the discriminator to the generator by borrowing the recent advances in hierarchical reinforcement learning ."
+        },
+        "MANAGER" : {
+          "along" : ["shortterm memory network ( LSTM )", {"from sentence" : "The MANAGER is along shortterm memory network ( LSTM ) and serves as a mediator ."}],
+          "serves as" : ["mediator", {"from sentence" : "The MANAGER is along shortterm memory network ( LSTM ) and serves as a mediator ."}],
+          "receives" : {
+            "generator D 's high - level feature representation" : {
+              "form" : {
+                "guiding goal" : {
+                  "for" : "WORKER module"
+                }
+              },
+              "from sentence" : "In each step , it receives generator D 's high - level feature representation , e.g. , the feature map of the CNN , and uses it to form the guiding goal for the WORKER module in that timestep . "
+            }
+          }
+        }
+      },
+      "introduce" : {
+        "hierarchical generator G" : {
+          "consists of" : ["high - level MANAGER module", "low - level WORKER module"]
+        },
+        "from sentence" : "As illustrated in , we specifically introduce a hierarchical generator G , which consists of a high - level MANAGER module and a low - level WORKER module ."
+      },
+      "given" : {
+        "goal embedding" : {
+          "produced by" : {
+            "MAN - AGER" : {
+              "has" : {
+                "WORKER" : {
+                  "first encodes" : {
+                    "current generated words" : {
+                      "with" : "another LSTM"
+                    }
+                  },
+                  "then combines" : {
+                    "output" : {
+                      "of" : "the LSTM and the goal embedding",
+                      "to take" : {
+                        "final action" : {
+                          "at" : "current state"
+                        }
+                      }                      
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Next , given the goal embedding produced by the MAN - AGER , the WORKER first encodes current generated words with another LSTM , then combines the output of the LSTM and the goal embedding to take a final action at current state ."
+        }
+      }
+    }
+  }
+}

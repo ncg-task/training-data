@@ -1,0 +1,49 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : ["dependent reading bidirectional LSTM ( DR - BiLSTM ) model", {"from sentence" : "We propose a dependent reading bidirectional LSTM ( DR - BiLSTM ) model to address these limitations ."}],
+      "first encodes" : {
+        "premise u and a hypothesis v" : {
+          "considering" : {
+            "dependency" : {
+              "on" : "each other"
+            }
+          }
+        },
+        "from sentence" : "Given a premise u and a hypothesis v , our model first encodes them considering dependency on each other ."
+      },
+      "employs" : {
+        "soft attention mechanism" : {
+          "to extract" : {
+            "relevant information" : {
+              "from" : "these encodings"
+            }
+          },
+          "from sentence" : "Next , the model employs a soft attention mechanism to extract relevant information from these encodings ."
+        }
+      },
+      "has" : {
+        "augmented sentence representations" : {
+          "passed to" : {
+            "inference stage" : {
+              "uses" : {
+                "similar dependent reading strategy" : {
+                  "in" : "both directions"
+                }
+              }
+            }
+          },
+          "from sentence" : "The augmented sentence representations are then passed to the inference stage , which uses a similar dependent reading strategy in both directions , i.e. u ? v and v ? u ."
+        },
+        "decision" : {
+          "made through" : {
+            "multi - layer perceptron ( MLP )" : {
+              "based on" : "aggregated information"
+            },
+            "from sentence" : "Finally , a decision is made through a multi - layer perceptron ( MLP ) based on the aggregated information ."
+          }
+        }
+      }
+    }
+  }
+}

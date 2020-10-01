@@ -1,0 +1,60 @@
+{
+  "has" : {
+    "Model" : {
+      "denoted as" : {
+        "Neural Question Generation ( NQG ) framework" : {
+          "to generate" : {
+            "natural language questions from text" : {
+              "without" : "pre-defined rules"
+            }
+          },
+          "from sentence" : "In this work we conduct a preliminary study on question generation from text with neural networks , which is denoted as the Neural Question Generation ( NQG ) framework , to generate natural language questions from text without pre-defined rules ."
+        }
+      },
+      "has" : {
+        "Neural Question Generation framework" : {
+          "extends" : {
+            "sequence - to - sequence models" : {
+              "by enriching" : {
+                "encoder" : {
+                  "with" : ["answer", "lexical features"],
+                  "to generate" : "answer focused questions"
+                }
+              }
+            }
+          },
+          "from sentence" : "The Neural Question Generation framework extends the sequence - to - sequence models by enriching the encoder with answer and lexical features to generate answer focused questions ."
+        },
+        "encoder" : {
+          "reads" : ["input sentence", "answer position indicator", "lexical features"],
+          "from sentence" : "Concretely , the encoder reads not only the input sentence , but also the answer position indicator and lexical features ."
+        },
+        "answer position feature" : {
+          "denotes" : {
+            "answer span" : {
+              "in" : "input sentence"
+            }
+          },
+          "from sentence" : "The answer position feature denotes the answer span in the input sentence , which is essential to generate answer relevant questions ."
+        },
+        "lexical features" : {
+          "to help produce" : {
+            "better sentence encoding" : {
+              "include" : ["part - of - speech ( POS )", "named entity ( NER ) tags"]
+            }
+          },
+          "from sentence" : "The lexical features include part - of - speech ( POS ) and named entity ( NER ) tags to help produce better sentence encoding ."
+        },
+        "decoder" : {
+          "with" : "attention mechanism",
+          "generates" : {
+            "answer specific question" : {
+              "of" : "sentence"
+            }
+          },
+          "from sentence" : "Lastly , the decoder with attention mechanism generates an answer specific question of the sentence ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "has" : {
+    "Results" : {
+      "see that" : {
+        "abstractive method" : {
+          "performed" : {
+            "poorly" :{
+              "in" : "cross - domain settings"
+            }
+          },
+          "from sentence" : "We can see that indeed this abstractive method performed poorly in cross - domain settings ."
+        }
+      },
+      "In" : {
+        "in - domain setting" : {
+          "has" : {
+            "our BiLSTM method" : {
+              "with" : "syntactic features ( BiLSTM + SynFeat and BiL - STM + SynFeat + ILP )",
+              "performs" : {
+                "similarly to or better" : {
+                  "than" : "LSTM + method",
+                  "in terms of" : "both F1 and accuracy"
+                }
+              }
+            }
+          },
+          "from sentence" : "( 2 ) In the in - domain setting , with the same amount of training data ( 8,000 ) , our BiLSTM method with syntactic features ( BiLSTM + SynFeat and BiL - STM + SynFeat + ILP ) performs similarly to or better than the LSTM + method proposed by , in terms of both F1 and accuracy ."
+        },
+        "out - of - domain setting" : {
+          "has" : {
+            "our BiLSTM + SynFeat and BiLSTM+SynFeat+ILP methods" : {
+              "clearly outperform" : "LSTM and LSTM + methods",
+              "from sentence" : "( 4 ) In the out - of - domain setting , our BiLSTM + SynFeat and BiLSTM+SynFeat+ILP methods clearly outperform the LSTM and LSTM + methods ."
+            }
+          }
+        }
+      },
+      "has" : {
+        "our method" : {
+          "comparable to" : {
+            "LSTM + method" : {
+              "in" : "in - domain setting"
+            },
+            "from sentence" : "This shows that our method is comparable to the LSTM + method in the in - domain setting ."
+          },
+          "works" : {
+            "reasonably well" : {
+              "for both" : "in - domain and out - ofdomain data"
+            },
+            "from sentence" : "Therefore , our method works reasonably well for both in - domain and out - ofdomain data ."
+          }
+        },
+        "Traditional ILP method" : {
+          "works" : {
+            "better" : {
+              "than" : {
+                "LSTM and LSTM + methods" : {
+                  "in" : "out - of - domain setting"
+                }
+              }
+            },
+            "from sentence" : "( 5 ) The Traditional ILP method also works better than the LSTM and LSTM + methods in the out - of - domain setting ."            
+          },
+          "performs" : {
+            "worse" : {
+              "in" : "in - domain setting",
+              "than both" : "LSTM and LSTM + methods and our methods"
+            },
+            "from sentence" : "But the Traditional ILP method performs worse in the in - domain setting than both the LSTM and LSTM + methods and our methods ."
+          }
+        }
+      },
+      "on" : {
+        "Google News" : {
+          "adding" : {
+            "ILP layer" : {
+              "decreased" : "sentence compression performance"
+            }
+          },
+          "from sentence" : "We also notice that on Google News , adding the ILP layer decreased the sentence compression performance ."
+        }
+      },
+      "in" : {
+        "in - domain setting" : {
+          "has" : {
+            "our method" : {
+              "does not have" : {
+                "any advantage" : {
+                  "over" : "LSTM + method"
+                }
+              }
+            }
+          },
+          "from sentence" : "We can see that in the in - domain setting , our method does not have any advantage over the LSTM + method ."
+        },
+        "cross - domain setting" : {
+          "has" : {
+            "our method" : {
+              "uses" : {
+                "ILP" : {
+                  "to impose" : "syntax - based constraints"
+                }
+              },
+              "performs" : {
+                "better" : {
+                  "than" : "LSTM+",
+                  "when" : {
+                    "amount of training data" : {
+                      "is" : "relatively small"
+                    }
+                  }                  
+                }
+              }
+            },
+            "from sentence" : "But in the cross - domain setting , our method that uses ILP to impose syntax - based constraints clearly performs better than LSTM + when the amount of training data is relatively small ."
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "Document - cue baseline" : {
+          "predict" : {
+            "more than a third of the samples" : {
+              "has" : "correctly",
+              "after sub - sampling" : {
+                "frequent document - answer pairs" : {
+                  "for" : "WIKIHOP"
+                }
+              },
+              "from sentence" : "The Document - cue baseline can predict more than a third of the samples correctly , for both datasets , even after sub - sampling frequent document - answer pairs for WIKIHOP ."
+            }
+          }
+        },
+        "Both neural RC models" : {
+          "able to" : {
+            "largely retain or even improve" : {
+              "has" : {
+                "strong performance" : {
+                  "when" : {
+                    "answers" : {
+                      "are" : "masked"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Both neural RC models are able to largely retain or even improve their strong performance when answers are masked : they are able to leverage the textual context of the candidate expressions ."
+        }
+      },
+      "In" : {
+        "masked setup" : {
+          "has" : {
+            "all baseline models" : {
+              "reliant on" : "lexical cues",
+              "fail" : "in the face of the randomized answer expressions"
+            }
+          },
+          "from sentence" : "In the masked setup all baseline models reliant on lexical cues fail in the face of the randomized answer expressions , since the same answer option has different placeholders in different samples ."
+        }
+      },
+      "for" : {
+        "open - domain setting" : {
+          "of" : "WIKIHOP",
+          "has" : {
+            "reduction" : {
+              "of" : {
+                "answer vocabulary" : {
+                  "to" : {
+                    "100 random single - token mask expressions" : {
+                      "helps" : {
+                        "model" : {
+                          "in selecting" : "candidate span",
+                          "compared to" : {
+                            "multi-token candidate expressions" : {
+                              "in" : "unmasked setting"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "In contrast , for the open - domain setting of WIKIHOP , a reduction of the answer vocabulary to 100 random single - token mask expressions clearly helps the model in selecting a candidate span , compared to the multi-token candidate expressions in the unmasked setting ."
+        }
+      }
+    }
+  }
+}

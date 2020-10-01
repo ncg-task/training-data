@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Sequence - to - Sequence Pre-training", {"from sentence" : "BART : Denoising Sequence - to - Sequence Pre-training for Natural Language Generation , Translation , and Comprehension"}],
+    ["pretraining sequence - to - sequence models", {"from sentence" : "We present BART , a denoising autoencoder for pretraining sequence - to - sequence models ."}]
+  ]
+}

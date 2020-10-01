@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Aspect - level Sentiment Classification", {"from sentence" : "Modeling Sentiment Dependencies with Graph Convolutional Networks for Aspect - level Sentiment Classification"}],
+    ["sentiment analysis", {"from sentence" : "It is a fine - grained task in sentiment analysis , which aims to infer the sentiment polarities of aspects in their context ."}]
+  ]
+}

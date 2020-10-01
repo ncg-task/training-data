@@ -1,0 +1,76 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "with" : {
+        "three additional baselines" : {
+          "name" : [{"NUTM" : {"using" : "direct attention ( DA )"}}, {"NUTM" : {"using" : "key - value without regularization ( KV )"}}, {"NUTM" : {"using" : "fixed , uniform program distribution ( UP )"}}, {"vanilla NTM" : {"with" : "2 memory heads ( h = 2 )"}}],
+          "from sentence" : "We run the task with three additional baselines : NUTM using direct attention ( DA ) , NUTM using key - value without regularization ( KV ) , NUTM using fixed , uniform program distribution ( UP ) and a vanilla NTM with 2 memory heads ( h = 2 ) ."
+        }
+      },
+      "demonstrate" : {
+        "DA" : {
+          "exhibits" : "fast yet shallow convergence",
+          "fall into" : "local minima",
+          "has" : {
+            "fails" : {
+              "to reach" : "zero loss"
+            }
+          },
+          "from sentence" : "The results demonstrate that DA exhibits fast yet shallow convergence .
+It tends to fall into local minima , which finally fails to reach zero loss ."
+
+        }
+      },
+      "has" : {
+        "Key- value attention" : {
+          "helps" : {
+            "NUTM converge" : {
+              "with" : "fewer iterations"
+            }
+          },
+          "has" : {
+            "performance" : {
+              "is" : {
+                "further improved" : {
+                  "with" : "proposed regularization loss"
+                }
+              }
+            }
+          },
+          "from sentence" : "Key- value attention helps NUTM converge completely with fewer iterations .
+The performance is further improved with the proposed regularization loss ."
+
+        },
+        "UP" : {
+          "has" : {
+            "underperforms" : {
+              "has" : "NUTM",
+              "as" : {
+                "lacks" : {
+                  "has" : "dynamic programs"
+                }
+              },
+              "from sentence" : "UP underperforms NUTM as it lacks dynamic programs ."
+            }
+          }
+        },
+        "NTM" : {
+          "with" : "2 heads",
+          "shows" : {
+            "slightly better convergence" : {
+              "compared to" : "NTM"
+            },
+            "underperforms" : {
+              "has" : {
+                "NUTM ( p = 2 )" : {
+                  "with" : "1 head and fewer parameters"
+                }
+              }
+            }
+          },
+          "from sentence" : "The NTM with 2 heads shows slightly better convergence compared to the NTM , yet obviously underperforms NUTM ( p = 2 ) with 1 head and fewer parameters ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,2 @@
+(Contribution||has research problem||Paraphrase Generation)
+(Contribution||has research problem||generating paraphrases automatically)

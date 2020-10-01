@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Neural Paraphrase Identification of Questions", {"from sentence" : "Neural Paraphrase Identification of Questions with Noisy Pretraining"}],
+    ["paraphrase identification of questions", {"from sentence" : "We present a solution to the problem of paraphrase identification of questions ."}],
+    ["Question paraphrase identification", {"from sentence" : "Question paraphrase identification is a widely useful NLP application ."}]
+  ]
+}

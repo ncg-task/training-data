@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Open Question Answering", {"from sentence" : "Open Question Answering with Weakly Supervised Embedding Models"}],
+    ["open - domain question answering", {"from sentence" : "This paper addresses the challenging problem of open - domain question answering , which consists of building systems able to answer questions from any domain ."}],
+    ["Question answering", {"from sentence" : "Question answering is then defined as the task of retrieving the correct entity or set of entities from a KB given a query expressed as a question in natural language ."}]
+  ]
+}

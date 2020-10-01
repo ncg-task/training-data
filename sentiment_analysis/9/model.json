@@ -1,0 +1,36 @@
+{
+  "has" : {
+    "Model" : {
+      "proposes" : {
+        "multi-task learning model" : {
+          "for" : "aspect - based sentiment analysis"
+        },
+        "from sentence" : "Aiming to automatically extract aspects from the text efficiently and analyze the sentiment polarity of aspects simultaneously , this paper proposes a multi-task learning model for aspect - based sentiment analysis ."
+      },
+      "has" : {
+        "LCF - ATEPC 3 model" : {
+          "is" : "novel multilingual and multi-task - oriented model",
+          "from sentence" : "The LCF - ATEPC 3 model proposed in this paper is a novel multilingual and multi-task - oriented model ."
+        }
+      },
+      "based on" : ["multi-head self - attention ( MHSA )", {"from sentence" : "The proposed model is based on multi-head self - attention ( MHSA ) and integrates the pre-trained and the local context focus mechanism , namely LCF - ATEPC ."}],
+      "integrates" : {
+        "pre-trained and the local context focus mechanism" : {
+          "namely" : "LCF - ATEPC"
+        },
+        "from sentence" : "The proposed model is based on multi-head self - attention ( MHSA ) and integrates the pre-trained and the local context focus mechanism , namely LCF - ATEPC ."
+      },
+      "training on" : {
+        "small amount of annotated data of aspect and their polarity" : {
+          "adapted to" : {
+            "large - scale dataset" : {
+              "automatically extracting" : "aspects",
+              "predicting" : "sentiment polarities"
+            }
+          }
+        },
+        "from sentence" : "By training on a small amount of annotated data of aspect and their polarity , the model can be adapted to a large - scale dataset , automatically extracting the aspects and predicting the sentiment polarities ."
+      }
+    }
+  }
+}

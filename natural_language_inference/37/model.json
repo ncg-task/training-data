@@ -1,0 +1,78 @@
+{
+  "has" : {
+    "Model" : {
+      "proposing" : ["improved pipelined method", {"from sentence" : "In this paper we start by proposing an improved pipelined method which achieves state - of - the - art results ."}],
+      "introduce" : {
+        "method" : {
+          "for training" : {
+            "models" : {
+              "to produce" : "accurate per-paragraph confidence scores"
+            }
+          },
+          "from sentence" : "Then we introduce a method for training models to produce accurate per-paragraph confidence scores , and we show how combining this method with multiple paragraph selection further increases performance ."
+        }
+      },
+      "propose" : {
+        "TF - IDF heuristic" : {
+          "to select" : {
+            "paragraphs" : {
+              "to" : "train and test on"
+            }
+          },
+          "from sentence" : "We propose a TF - IDF heuristic to select which paragraphs to train and test on ."
+        }
+      },
+      "use" : {
+        "summed objective function" : {
+          "that marginalizes" : {
+            "model 's output" : {
+              "over" : {
+                "all locations" : {
+                  "occurs" : "answer text"
+                }
+              }
+            }
+          },
+          "from sentence" : "To handle the noise this creates , we use a summed objective function that marginalizes the model 's output over all locations the answer text occurs ."
+        },
+        "shared - normalization objective" : {
+          "where" : {
+            "paragraphs" : {
+              "processed" : "independently",
+              "has" : {
+                "probability" : {
+                  "of" : "answer candidate",
+                  "is" : {
+                    "marginalized" : {
+                      "over" : {
+                        "all paragraphs" : {
+                          "sampled from" : "same document"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "We then use a shared - normalization objective where paragraphs are processed independently , but the probability of an answer candidate is marginalized over all paragraphs sampled from the same document ."
+          }
+        }
+      },
+      "sampling" : {
+        "paragraphs" : {
+          "from" : "context documents",
+          "including" : {
+            "paragraphs" : {
+              "do not contain" : {
+                "answer" : {
+                  "to" : "train on"
+                }
+              } 
+            }
+          },
+          "from sentence" : "We resolve these problems by sampling paragraphs from the context documents , including paragraphs that do not contain an answer , to train on ."
+        }
+      }
+    }
+  }
+}

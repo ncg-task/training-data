@@ -1,0 +1,6 @@
+(Contribution||has||Ablation analysis)
+(Ablation analysis||see||SCNN - VAE - Semi)
+(SCNN - VAE - Semi||has||best classification accuracy)
+(best classification accuracy||of||65.5)
+(Ablation analysis||has||LCNN - VAE - Semi)
+(LCNN - VAE - Semi||has||best NLL result)

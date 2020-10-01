@@ -1,0 +1,83 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "Our final model" : {
+          "achieves" : {
+            "accuracy" : {
+              "of" : {
+                "88.6 %" : {
+                  "has" : {
+                    "best result" : {
+                      "observed on" : "SNLI"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Our final model achieves the accuracy of 88.6 % , the best result observed on SNLI , while our enhanced sequential encoding model attains an accuracy of 88.0 % , which also outperform the previous models ."
+        },
+        "our enhanced sequential encoding model" : {
+          "attains" : {
+            "accuracy" : {
+              "of" : {
+                "88.0 %" : {
+                  "has" : {
+                    "outperform" : {
+                      "has" : "previous models"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Our final model achieves the accuracy of 88.6 % , the best result observed on SNLI , while our enhanced sequential encoding model attains an accuracy of 88.0 % , which also outperform the previous models ."
+        },
+        "our ESIM model" : {
+          "achieves" : {
+            "accuracy" : {
+              "of" : "88.0 %"
+            }
+          },
+          "has" : {
+            "outperformed" : {
+              "has" : {
+                "previous models" : {
+                  "including" : "more complicated network architectures"
+                }
+              },
+              "from sentence" : "The table shows that our ESIM model achieves an accuracy of 88.0 % , which has already outperformed all the previous models , including those using much more complicated network architectures ."
+            }
+          }
+        }
+      },
+      "adding" : {
+        "intra-sentence attention" : {
+          "yields" : "further improvement",
+          "from sentence" : "In general , adding intra-sentence attention yields further improvement , which is not very surprising as it could help align the relevant text spans between premise and hypothesis ."
+        }
+      },
+      "ensemble" : {
+        "our ESIM model" : {
+          "with" : {
+            "syntactic tree - LSTMs" : {
+              "based on" : "syntactic parse trees"
+            }
+          },
+          "achieve" : {
+            "significant improvement" : {
+              "over" : "our best sequential encoding model ESIM",
+              "attaining" : {
+                "accuracy" : {
+                  "of" : "88.6 %"
+                }
+              }
+            }
+          },
+          "from sentence" : "We ensemble our ESIM model with syntactic tree - LSTMs based on syntactic parse trees and achieve significant improvement over our best sequential encoding model ESIM , attaining an accuracy of 88.6 % ."
+        }
+      }
+    }
+  }
+}

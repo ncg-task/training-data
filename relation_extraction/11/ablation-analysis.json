@@ -1,0 +1,50 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "validate that" : {
+        "GCNs" : {
+          "effective at encoding" : "syntactic information"
+        },
+        "from sentence" : "The results validate that GCNs are effective at encoding syntactic information ."
+      },
+      "inducing" : {
+        "side information" : {
+          "leads to" : "improved relation extraction"
+        },
+        "from sentence" : "Further , the improvement from side information shows that it is complementary to the features extracted from text , thus validating the central thesis of this paper , that inducing side information leads to improved relation extraction ."
+      },
+      "has" : {
+        "model" : {
+          "performs" : {
+            "best" : {
+              "when" : {
+                "aliases" : {
+                  "provided by" : "KB"
+                }
+              },
+              "from sentence" : "We find that the model performs best when aliases are provided by the KB itself ."
+            }
+          }
+        },
+        "RESIDE" : {
+          "gives" : {
+            "competitive performance" : {
+              "when" : {
+                "very limited amount of relation alias information" : {
+                  "is" : "available"
+                }
+              }
+            }
+          },
+          "from sentence" : "Overall , we find that RESIDE gives competitive performance even when very limited amount of relation alias information is available ."
+        }
+      },
+      "observe" : {
+        "performance" : {
+          "improves further with" : "availability of more alias information"
+        },
+        "from sentence" : "We observe that performance improves further with the availability of more alias information ."
+      }
+    }
+  }
+}

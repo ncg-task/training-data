@@ -1,0 +1,74 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "has" : {
+        "all word embeddings" : {
+          "from" : "context and target",
+          "initialized by" : "GloVe",
+          "from sentence" : "In our experiments , all word embeddings from context and target are initialized by GloVe 2 , and all out - of - vocabulary words are initialized by sampling from the uniform distribution U ( ?0.1 , 0.1 ) ."
+        },
+        "all out - of - vocabulary words" :{
+          "initialized by" : {
+            "sampling" : {
+              "from" : "uniform distribution U ( ?0.1 , 0.1 )"
+            }
+          },
+          "from sentence" : "In our experiments , all word embeddings from context and target are initialized by GloVe 2 , and all out - of - vocabulary words are initialized by sampling from the uniform distribution U ( ?0.1 , 0.1 ) ."
+        },
+        "weight matrices" : {
+          "given their" : {
+            "initial values" : {
+              "sampling from" : "uniform distribution U ( ?0.1 , 0.1 )"
+            }
+          },
+          "from sentence" : "All weight matrices are given their initial values by sampling from uniform distribution U ( ?0.1 , 0.1 ) , and all biases are set to zeros ."
+        },
+        "biases" : {
+          "set to" : "zeros",
+          "from sentence" : "All weight matrices are given their initial values by sampling from uniform distribution U ( ?0.1 , 0.1 ) , and all biases are set to zeros ."
+        },
+        "dimensions" : {
+          "of" : {
+            "word embeddings , attention vectors and LSTM hidden states" : {
+              "set to" : "300"
+            }
+          },
+          "from sentence" : "The dimensions of word embeddings , attention vectors and LSTM hidden states are set to 300 as in ."
+        },
+        "coefficient" : {
+          "of" : {
+            "L 2 normalization" : {
+              "in" : "objective function",
+              "set to" : "10 ?5"
+            }
+          },
+          "from sentence" : "The coefficient of L 2 normalization in the objective function is set to 10 ?5 , and the dropout rate is set to 0.5 ."
+        },
+        "dropout rate" : {
+          "set to" : "0.5",
+          "from sentence" : "The coefficient of L 2 normalization in the objective function is set to 10 ?5 , and the dropout rate is set to 0.5 ."
+        }
+      },
+      "train" : {
+        "parameters" : {
+          "of" : "IAN",
+          "employ" : {
+            "Momentum" : {
+              "adds" : {
+                "fraction" : {
+                  "of" : {
+                    "update vector" : {
+                      "in" : "prior step",
+                      "to" : "current update vector"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "To train the parameters of IAN , we employ the Momentum , which adds a fraction ? of the update vector in the prior step to the current update vector ."
+        }
+      }
+    }
+  }
+}

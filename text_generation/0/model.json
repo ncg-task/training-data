@@ -1,0 +1,75 @@
+{
+  "has" : {
+    "Model" : {
+      "consider" : {
+        "sequence generation procedure" : {
+          "as" : "sequential decision making process",
+          "from sentence" : "In this paper , to address the above two issues , we follow ) and consider the sequence generation procedure as a sequential decision making process ."
+        }
+      },
+      "has" : {
+        "generative model" : {
+          "treated as" : "agent of reinforcement learning ( RL )",
+          "has" : {
+            "state" : {
+              "is" : "generated tokens so far"
+            },
+            "action" : {
+              "is" : "next token to be generated"
+            }
+          },
+          "from sentence" : "The generative model is treated as an agent of reinforcement learning ( RL ) ; the state is the generated tokens so far and the action is the next token to be generated ."
+        }
+      },
+      "employ" : {
+        "discriminator" : {
+          "to evaluate" : "sequence",
+          "feedback" : {
+            "evaluation" : {
+              "to guide" : {
+                "learning" : {
+                  "of" : "generative model"
+                }
+              }
+            }
+          },
+          "from sentence" : "Unlike the work in ) that requires a task - specific sequence score , such as BLEU in machine translation , to give the reward , we employ a discriminator to evaluate the sequence and feedback the evaluation to guide the learning of the generative model ."
+        }
+      },
+      "regard" : {
+        "generative model" : {
+          "as a" : "stochastic parametrized policy",
+          "from sentence" : "To solve the problem that the gradient can not pass back to the generative model when the output is discrete , we regard the generative model as a stochastic parametrized policy ."
+        } 
+      },
+      "In" : {
+        "policy gradient" : {
+          "employ" : {
+            "Monte Carlo ( MC ) search" : {
+              "to approximate" : "state - action value"
+            }
+          },
+          "from sentence" : "In our policy gradient , we employ Monte Carlo ( MC ) search to approximate the state - action value ."
+        }
+      },
+      "directly train" : {
+        "policy ( generative model )" : {
+          "via" : {
+            "policy gradient" : {
+              "naturally avoids" : {
+                "differentiation difficulty" : {
+                  "for" : {
+                    "discrete data" : {
+                      "in a" : "conventional GAN"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "We directly train the policy ( generative model ) via policy gradient , which naturally avoids the differentiation difficulty for discrete data in a conventional GAN ."
+      }
+    }
+  }
+}

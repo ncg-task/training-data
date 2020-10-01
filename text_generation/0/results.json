@@ -1,0 +1,78 @@
+{
+  "has" : {
+    "Results" : {
+      "see" : {
+        "impact of SeqGAN" : {
+          "outperforms" : "other baselines significantly",
+          "from sentence" : "Since the evaluation metric is fundamentally instructive , we can see the impact of SeqGAN , which outperforms other baselines significantly ."
+        }
+      },
+      "has" : {
+        "significance T - test" : {
+          "on" : {
+            "NLL oracle score distribution" : {
+              "of" : {
+                "generated sequences" : {
+                  "from" : {
+                    "compared models" : {
+                      "demonstrates" : {
+                        "significant improvement" : {
+                          "of" : {
+                            "SeqGAN" : {
+                              "overall" : "compared models"
+                            }
+                          }
+                        }
+                      }
+                    }  
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "A significance T - test on the NLL oracle score distribution of the generated sequences from the compared models is also performed , which demonstrates the significant improvement of SeqGAN overall compared models ."
+        },
+        "SeqGAN" : {
+          "outperforms" : "PG - BLEU",
+          "from sentence" : "Additionally , SeqGAN outperforms PG - BLEU , which means the discriminative signal in GAN is more general and effective than a predefined score ( e.g. BLEU ) to guide the generative policy to capture the underlying distribution of the sequence data .        "
+        }
+      },
+      "After about" : {
+        "150 training epochs" : {
+          "both" : {
+            "maximum likelihood estimation and the schedule sampling methods" : {
+              "converge to" : {
+                "relatively high NLL oracle score" : {
+                  "has" : {
+                    "SeqGAN" : {
+                      "improve the limit of" : {
+                        "generator" : {
+                          "with" : {
+                            "same structure" : {
+                              "as" : "baselines"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "After about 150 training epochs , both the maximum likelihood estimation and the schedule sampling methods converge to a relatively high NLL oracle score , whereas SeqGAN can improve the limit of the generator with the same structure as the baselines significantly ."
+      },
+      "indicates" : {
+        "prospect of applying adversarial training strategies" : {
+          "to" : {
+            "discrete sequence generative models" : {
+              "to breakthrough" : "limitations of MLE"
+            }
+          }
+        },
+        "from sentence" : "This indicates the prospect of applying adversarial training strategies to discrete sequence generative models to breakthrough the limitations of MLE ."
+      }
+    }
+  }
+}

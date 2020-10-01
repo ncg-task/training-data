@@ -1,0 +1,26 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "Feature - based SVM" : {
+          "compare with" : {
+            "reported results" : {
+              "of" : {
+                "top system" : {
+                  "in" : "SemEval 2014"
+                }
+              }
+            },
+            "from sentence" : "( 1 ) Feature - based SVM :
+We compare with the reported results of a top system in SemEval 2014 ."
+
+          }
+        },
+        "LSTM" : {
+          "built on" : "top of word embeddings",
+          "from sentence" : "( 2 ) LSTM : An LSTM network is built on top of word embeddings ."
+        }
+      }
+    }
+  }
+}

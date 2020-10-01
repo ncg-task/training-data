@@ -1,0 +1,49 @@
+{
+  "has" : {
+    "Model" : {
+      "present" : {
+        "embedding - based QA system" : {
+          "developed under" : "framework of Memory Networks ( Mem NNs )",
+          "from sentence" : "Second , in sections 3 and 4 , we present an embedding - based QA system developed under the framework of Memory Networks ( Mem NNs ) ."
+        }
+      },
+      "has" : {
+        "Memory Networks" : {
+          "are" : {
+            "learning systems" : {
+              "centered around" : {
+                "memory component" : {
+                  "can be" : "read and written to"
+                }
+              },
+              "focus on cases where" : {
+                "relationship" : {
+                  "performed by" : {
+                    "embedding" : {
+                      "in" : "same vector space",
+                      "between" : ["input and response languages ( here natural language )", "storage language ( here , the facts from KBs )"]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "setting of" : {
+        "simple QA" : {
+          "corresponds to" : {
+            "elementary operation" : {
+              "of performing" : {
+                "single lookup" : {
+                  "in" : "memory"
+                }
+              }
+            }
+          },
+          "from sentence" : "The setting of the simple QA corresponds to the elementary operation of performing a single lookup in the memory ."
+        }
+      }
+    }
+  }
+}

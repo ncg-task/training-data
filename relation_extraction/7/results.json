@@ -1,0 +1,94 @@
+{
+  "has" : {
+    "Results" : {
+      "observe" : {
+        "model" : {
+          "with" : "STP",
+          "performs" : "best"
+        },
+        "from sentence" : "From , we can observe that the model with the STP performs best , and the SDP model obtains an even worse result than the pure one ."        
+      },
+      "has" : {
+        "SDP model" : {
+          "obtains" : {
+            "even worse result" : {
+              "than" : "pure one"
+            }
+          },
+          "from sentence" : "From , we can observe that the model with the STP performs best , and the SDP model obtains an even worse result than the pure one ."
+        },
+        "PR curve areas" : {
+          "of" : {
+            "BGRU + SDP and BGRU" : {
+              "are about" : "0.332 and 0.337"
+            },
+            "BGRU + STP" : {
+              "increases it to" : "0.366"
+            }
+          },
+          "from sentence" : "The PR curve areas of BGRU + SDP and BGRU are about 0.332 and 0.337 respectively , while BGRU + STP increases it to 0.366 ."
+        },
+        "Our STP" : {
+          "get rid of" : {
+            "irrelevant words" : {
+              "in" : "each instance"
+            }
+          },
+          "obtain" : "more precise sentence representation",
+          "from sentence" : "The result indicates : ( 1 ) Our STP can get rid of irrelevant words in each instance and obtain more precise sentence representation for relation extraction ."
+        },
+        "SDP method" : {
+          "not appropriate to handle" : {
+            "low - quality sentences" : {
+              "where" : {
+                "key relation words" : {
+                  "not in" : "SDP"
+                }
+              }
+            }
+          },
+          "from sentence" : "( 2 ) The SDP method is not appropriate to handle low - quality sentences where key relation words are not in the SDP ."
+        },
+        "BGRU - WLA ( + STP ) + EWA" : {
+          "outperforms" : "BGRU (+ STP )",
+          "from sentence" : "From and , we can obtain : ( 1 ) Regardless of the dataset that we employ , BGRU - WLA ( + STP ) + EWA outperforms BGRU (+ STP ) ."
+        },
+        "PR curve area" : {
+          "has" : {
+            "relative improvement" : {
+              "of" : "over 2.3 %"
+            }
+          },
+          "from sentence" : "To be more specific , the PR curve area has a relative improvement of over 2.3 % , which demonstrates that entity - wise hidden states in the BGRU present more precise relational features than other word states ."
+        },
+        "EWA" : {
+          "achieves" : "further improvements",
+          "outperforms" : {
+            "baseline" : {
+              "by over" : "4.6 %"
+            }
+          },
+          "from sentence" : "EWA achieves further improvements and outperforms the baseline by over 4.6 % , because it considers more information than entity or relational words alone ."
+        },
+        "models with TL" : {
+          "achieve" : "better performance",
+          "improve" : {
+            "PR curve area" : {
+              "by" : "over 4.7 %"
+            } 
+          },
+          "from sentence" : "( 1 ) Regardless of the dataset that we use , models with TL achieve better performance , which improve the PR curve area by over 4.7 % ."
+        },
+        "BGRU + STP + TL" : {
+          "achieves" : "best performance",
+          "increases" : {
+            "area" : {
+              "to" : "0.383"
+            }
+          },
+          "from sentence" : "( 2 ) BGRU + STP + TL achieves the best performance and increases the area to 0.383 , while areas of BGRU , BGRU + STP and BGRU + TL are 0.337 , 0.366 and 0.372 respectively ."
+        }
+      }
+    }
+  }  
+}

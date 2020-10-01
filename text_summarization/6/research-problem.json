@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Abstractive Text Summarization", {"from sentence" : "Deep Recurrent Generative Decoder for Abstractive Text Summarization"}],
+    ["Automatic summarization", {"from sentence" : "Automatic summarization is the process of automatically generating a summary that retains the most important content of the original text document ."}]
+  ]
+}

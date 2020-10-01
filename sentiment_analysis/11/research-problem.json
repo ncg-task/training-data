@@ -1,0 +1,8 @@
+{
+  "has research problem" : [
+    ["Emotion Recognition in Dyadic Dialogue Videos", {"from sentence" : "Conversational Memory Network for Emotion Recognition in Dyadic Dialogue Videos"}],
+    ["Emotion recognition in conversations", {"from sentence" : "Emotion recognition in conversations is crucial for the development of empathetic machines ."}],
+    ["emotion detection in videos of dyadic conversations", {"from sentence" : "In this paper , we analyze emotion detection in videos of dyadic conversations ."}],
+    ["Emotion detection", {"from sentence" : "Emotion detection from such resources can benefit numerous fields like counseling , public opinion mining , financial forecasting , and intelligent systems such as smart homes and chatbots ."}]
+  ]
+}

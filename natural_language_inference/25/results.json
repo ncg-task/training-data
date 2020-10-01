@@ -1,0 +1,79 @@
+{
+  "has" : {
+    "Results" : {
+      "observe" : {
+        "superior performance" : {
+          "by" : "contextual one",
+          "illustrating" : {
+            "benefit" : {
+              "of" : "contextualization"
+            }
+          },
+          "from sentence" : "In we compare these two variants over the development set and observe superior performance by the contextual one , illustrating the benefit of contextualization and specifically per-sequence contextualization which is done separately for the question and for the passage ."
+        }
+      },
+      "has" : {
+        "less frequent" : {
+          "is" : {
+            "word - type" : {
+              "has" : {
+                "gate activations" : {
+                  "are" : "smaller"
+                }
+              },
+              "from sentence" : "On average , the less frequent a word - type is , the smaller are its gate activations , i.e. , the reembedded representation of a rare word places less weight on its fixed word - embedding and more on its contextual representation , compared to a common word ."
+            }
+          }
+        },
+        "performance" : {
+          "due to" : {
+            "utilizing" : {
+              "has" : {
+                "LM hidden states" : {
+                  "of" : "first LSTM layer",
+                  "has" : {
+                    "significantly surpasses" : {
+                      "has" : "other two variants"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Besides a crosscutting boost in results , we note that the performance due to utilizing the LM hidden states of the first LSTM layer significantly surpasses the other two variants ."
+        }        
+      },
+      "Supplementing" : {
+        "calculation" : {
+          "of" : {
+            "token reembeddings" : {
+              "with" : {
+                "hidden states" : {
+                  "of" : "strong language model"
+                }
+              },
+              "proves to be" : "highly effective"
+            }
+          }
+        },
+        "from sentence" : "Supplementing the calculation of token reembeddings with the hidden states of a strong language model proves to be highly effective ."
+      },
+      "showing" : {
+        "benefit" : {
+          "of" : {
+            "training" : {
+              "has" : "QA model",
+              "in" : {
+                "semisupervised fashion" : {
+                  "with" : "large language model"
+                }
+              },
+              "observe" : "significant improvement"
+            }
+          },
+          "from sentence" : "Overall , we observe a significant improvement with all three configurations , effectively showing the benefit of training a QA model in a semisupervised fashion with a large language model ."
+        }
+      }
+    }
+  }
+}

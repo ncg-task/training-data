@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Machine Reading Comprehension", {"from sentence" : "SG - Net : Syntax - Guided Machine Reading Comprehension"}],
+    ["machine reading comprehension ( MRC )", {"from sentence" : "Understanding the meaning of a sentence is a prerequisite to solve many natural language understanding ( NLU ) problems , such as machine reading comprehension ( MRC ) based question answering ."}],
+    ["MRC", {"from sentence" : "We observe that the accuracy of MRC models decreases when answering long questions ( shown in Section 5.1 ) ."}]
+  ]
+}

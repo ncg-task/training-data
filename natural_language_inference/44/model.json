@@ -1,0 +1,50 @@
+{
+  "has" : {
+    "Model" : {
+      "develop" : {
+        "QA system" : {
+          "scalable to" : "large documents",
+          "robust to" : "adversarial inputs",
+          "from sentence" : "In this paper , we aim to develop a QA system that is scalable to large documents as well as robust to adversarial inputs ."
+        }
+      },
+      "study" : {
+        "context" : {
+          "required to" : "answer the question",
+          "by sampling" : {
+            "examples" : {
+              "in" : "dataset"
+            }
+          },
+          "from sentence" : "First , we study the context required to answer the question by sampling examples in the dataset and carefully analyzing them ."
+        }
+      },
+      "propose" : {
+        "sentence selector" : {
+          "to select" : {
+            "minimal set of sentences" : {
+              "to give" : {
+                "QA model" : {
+                  "to answer" : "question"
+                }
+              }
+            },
+            "from sentence" : "Second , inspired by this observation , we propose a sentence selector to select the minimal set of sentences to give to the QA model in order to answer the question ."
+          },
+          "chooses" : {
+            "different number of sentences" : {
+              "for" : "each question",
+              "from sentence" : "Since the minimum number of sentences depends on the question , our sentence selector chooses a different number of sentences for each question , in contrast with previous models that select a fixed number of sentences ."
+            }
+          },
+          "leverages" : {
+            "three simple techniques" : {
+              "has" : ["weight transfer", "data modification", "score normalization"]
+            }
+          },
+          "from sentence" : "Our sentence selector leverages three simple techniques - weight transfer , data modification and score normalization , which we show to be highly effective on the task of sentence selection ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+(Contribution||has research problem||Generative Reading Comprehension)
+(Contribution||has research problem||generative reading comprehension ( RC ))
+(Contribution||has research problem||reading comprehension ( RC ))
+(Contribution||has research problem||RC)
+(Contribution||has research problem||multi-passage RC)

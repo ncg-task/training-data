@@ -1,0 +1,78 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "tokenize" : {
+        "MRC dataset" : {
+          "with" : "spa Cy 2.0.13"
+        },
+        "from sentence" : "We tokenize the MRC dataset with spa Cy 2.0.13 , manipulate WordNet 3.0 with NLTK 3.3 , and implement KAR with TensorFlow 1.11.0 ."
+      },
+      "manipulate" : {
+        "WordNet 3.0" : {
+          "with" : "NLTK 3.3"
+        },
+        "from sentence" : "We tokenize the MRC dataset with spa Cy 2.0.13 , manipulate WordNet 3.0 with NLTK 3.3 , and implement KAR with TensorFlow 1.11.0 ."
+      },
+      "implement" : {
+        "KAR" : {
+          "with" : "TensorFlow 1.11.0"
+        },
+        "from sentence" : "We tokenize the MRC dataset with spa Cy 2.0.13 , manipulate WordNet 3.0 with NLTK 3.3 , and implement KAR with TensorFlow 1.11.0 ."        
+      },
+      "For" : {
+        "dense layers and the BiLSTMs" : {
+          "set" : {
+            "dimensionality unit d" : {
+              "to" : "600"
+            }
+          },
+          "from sentence" : "For the dense layers and the BiLSTMs , we set the dimensionality unit d to 600 ."
+        },
+        "model optimization" : {
+          "apply" : {
+            "Adam ( Kingma and Ba , 2014 ) optimizer" : {
+              "with" : {
+                "learning rate" : {
+                  "of" : "0.0005"
+                },
+                "minibatch size" : {
+                  "of" : "32"
+                }
+              },
+              "from sentence" : "For model optimization , we apply the Adam ( Kingma and Ba , 2014 ) optimizer with a learning rate of 0.0005 and a minibatch size of 32 ."
+            }
+          }
+        }
+      },
+      "To avoid" : {
+        "overfitting" : {
+          "apply" : {
+            "dropout" : {
+              "to" : ["dense layers", "BiLSTMs"],
+              "with" : {
+                "dropout rate" : {
+                  "of" : "0.3"
+                }
+              }
+            }
+          },
+          "from sentence" : "To avoid overfitting , we apply dropout to the dense layers and the BiLSTMs with a dropout rate of 0.3 ."
+        }
+      },
+      "To boost" : {
+        "performance" : {
+          "apply" : {
+            "exponential moving average" : {
+              "with" : {
+                "decay rate" : {
+                  "of" : "0.999"
+                }
+              }
+            }
+          },
+          "from sentence" : "To boost the performance , we apply exponential moving average with a decay rate of 0.999 ."
+        }
+      }
+    }
+  }
+}

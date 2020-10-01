@@ -1,0 +1,203 @@
+{
+  "has" : {
+    "Experimental Setup" : {
+      "For" : {
+        "CNNs" : {
+          "make use of" : {
+            "well - known CNN - non-static architecture and hyperparameters" : {
+              "with" : {
+                "learning rate" : {
+                  "of" : {
+                    "0.0006" : {
+                      "obtained by" : {
+                        "tuning" : {
+                          "on" : "validation data"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "For CNNs , we make use of the well - known CNN - non-static architecture and hyperparameters proposed by , with a learning rate of 0.0006 , obtained by tuning on the validation data ."
+            }
+          } 
+        },
+        "DM - MCNN models" : {
+          "has" : {
+            "configuration" : {
+              "of" : {
+                "convolutional module" : {
+                  "same as for" : "CNNs"
+                }
+              }
+            },
+            "remaining hyperparameter values" : {
+              "tuned on" : "validation sets"
+            }
+          },
+          "from sentence" : "For our DM - MCNN models , the configuration of the convolutional module is the same as for CNNs , and the remaining hyperparameter values were as well tuned on the validation sets ."
+        },
+        "greater efficiency and better convergence properties" : {
+          "has" : {
+            "training" : {
+              "relies on" : "mini-batches"
+            }
+          },
+          "from sentence" : "For greater efficiency and better convergence properties , the training relies on mini-batches ."
+        }
+      },
+      "has" : {
+        "implementation" : {
+          "considers" : {
+            "maximal sentence length" : {
+              "in" : "each mini-batch"
+            }
+          },
+          "zero - pads" : {
+            "all other sentences" : {
+              "to" : {
+                "this length" : {
+                  "under" : {
+                    "convolutional module" : {
+                      "enabling" : {
+                        "uniform and fast processing" : {
+                          "of" : "each mini-batch"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Our implementation considers the maximal sentence length in each mini-batch and zero - pads all other sentences to this length under convolutional module , thus enabling uniform and fast processing of each mini-batch ."
+            }
+          }
+        },
+        "neural network architectures" : {
+          "implemented using" : "PyTorch",
+          "from sentence" : "All neural network architectures are implemented using the PyTorch framework 2 ."
+        },
+        "Embeddings" : {
+          "has" : {
+            "standard pre-trained word vectors" : {
+              "for" : {
+                "English" : {
+                  "are" : {
+                    "GloVe ones" : {
+                      "trained on" : {
+                        "840 billion tokens" : {
+                          "of" : "Common Crawl data"
+                        }
+                      }
+                    }
+                  }
+                },
+                "other languages" : {
+                  "rely on" : {
+                    "Facebook fastText Wikipedia embeddings" : {
+                      "as" : "input representations"
+                    }
+                  }
+                }                
+              },
+              "are" : "300 - dimensional",
+              "from sentence" : "The standard pre-trained word vectors used for English are the GloVe ones trained on 840 billion tokens of Common Crawl data 1 , while for other languages , we rely on the Facebook fastText Wikipedia embeddings as input representations .
+All of these are 300 - dimensional ."
+
+            },
+            "vectors" : {
+              "fed to" : ["CNN", {"convolutional module" : {"of" : {"DM - MCNN" : {"during" : "initialization"}}}}],
+              "from sentence" : "The vectors are either fed to the CNN , or to the convolutional module of the DM - MCNN during initialization , while unknown words are initialized with zeros ."
+            },
+            "unknown words" : {
+              "initialized with" : "zeros",
+              "from sentence" : "The vectors are either fed to the CNN , or to the convolutional module of the DM - MCNN during initialization , while unknown words are initialized with zeros ."
+            },
+            "All words" : {
+              "including" : "unknown ones",
+              "are" : {
+                "fine - tuned" : {
+                  "during" : "training process"
+                }
+              },
+              "from sentence" : "All words , including the unknown ones , are fine - tuned during the training process ."
+            }
+          },
+          "For" : {
+            "transfer learning approach" : {
+              "rely on" : {
+                "multi-domain sentiment dataset" : {
+                  "collected from" : "Amazon customers reviews"
+                }
+              },
+              "from sentence" : "For our transfer learning approach , our experiments rely on the multi-domain sentiment dataset by , collected from Amazon customers reviews ."
+            },
+            "cross - lingual projection" : {
+              "extract" : {
+                "links" : {
+                  "between" : {
+                    "words" : {
+                      "from" : "2017 dump of the English edition of Wiktionary"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "For cross - lingual projection , we extract links between words from a 2017 dump of the English edition of Wiktionary ."
+            }
+          },
+          "train" : {
+            "linear SVMs" : {
+              "using" : {
+                "scikit - learn" : {
+                  "to extract" : {
+                    "word coefficients" : {
+                      "in" : "each domain",
+                      "also for" : "union of all domains",
+                      "yielding" : "26 - dimensional sentiment embedding",
+                      
+                    }
+                  }
+                },
+                "from sentence" : "Specifically , we train linear SVMs using scikit - learn to extract word coefficients in each domain and also for the union of all domains together , yielding a 26 - dimensional sentiment embedding ."
+              }
+            }
+          },
+          "consider" : {
+            "several alternative forms" : {
+              "of infusing" : "external cues",
+              "from sentence" : "For comparison and analysis , we also consider several alternative forms of infusing external cues ."
+            },
+            "sentiment lexicon" : {
+              "called" : {
+                "VADER" : {
+                  "contain" : {
+                    "separate domain - specific scores" : {
+                      "for" : {
+                        "250 different Reddit communities" : {
+                          "result in" : "250 - dimensional embeddings"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "We consider a recent sentiment lexicon called VADER .
+These contain separate domain - specific scores for 250 different Reddit communities , and hence result in 250 - dimensional embeddings ."
+
+                }
+              }
+            }
+          },
+          "restrict" : {
+            "vocabulary link" : {
+              "set to include" : "languages",
+              "mining from" : {
+                "Wiktionary" : {
+                  "corresponding" : ["translation", "synonymy", "derivation", "etymological links"]
+                }
+              },
+              "from sentence" : "We restrict the vocabulary link set to include the languages in , mining corresponding translation , synonymy , derivation , and etymological links from Wiktionary ."              
+            }
+          }
+        }
+      }
+    }
+  }
+}

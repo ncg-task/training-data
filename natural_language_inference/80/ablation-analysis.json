@@ -1,0 +1,43 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "see that" : {
+        "all modifications" : {
+          "lead to" : "new model",
+          "from sentence" : "We can see that all modifications lead to a new model and their differences are statistically significant with a p-value of < 0.001 over Chi square test ."
+        }
+      },
+      "Among" : {
+        "all components" : {
+          "has" : {
+            "three of them" : {
+              "have" : "noticeable influences",
+              "has" : ["max pooling", "difference in the attention stage", "dependent reading"]
+            }
+          },
+          "from sentence" : "Among all components , three of them have noticeable influences : max pooling , difference in the attention stage , and dependent reading ."
+        }
+      },
+      "illustrate" : {
+        "importance" : {
+          "of" : {
+            "our proposed dependent reading strategy" : {
+              "leads to" : {
+                "significant improvement" : {
+                  "in" : "encoding stage"
+                }
+              }
+            }
+          },
+          "from sentence" : "They illustrate the importance of our proposed dependent reading strategy which leads to significant improvement , specifically in the encoding stage ."
+        }
+      },
+      "demonstrates" : {
+        "best performance" : {
+          "with" : "450 - dimensional BiLSTMs",
+          "from sentence" : "demonstrates that we achieve the best performance with 450 - dimensional BiLSTMs ."
+        }
+      }
+    }
+  }
+}

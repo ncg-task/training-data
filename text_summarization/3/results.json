@@ -1,0 +1,25 @@
+{
+  "has" : {
+    "Results" : {
+      "observe" : {
+        "model" : {
+          "outperformed" : ["all the strong state of - the - art models", {"in all metrics" : {"except for" : {"RG - 2" : {"on" : "Gigaword"}}}}, {"from sentence" : "We observe that our model outperformed all the strong state of - the - art models on both datasets in all metrics except for RG - 2 on Gigaword ."}]
+        }
+      },
+      "In terms of" : {
+        "pointer generator performance" : {
+          "has" : {
+            "concept pointer" : {
+              "improvements made" : {
+                "statistically significant ( p < 0.01 )" : {
+                  "across" : "all metrics"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "In terms of the pointer generator performance , the improvements made by our concept pointer are statistically significant ( p < 0.01 ) across all metrics ."
+      }
+    }
+  }
+}

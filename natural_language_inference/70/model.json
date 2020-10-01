@@ -1,0 +1,57 @@
+{
+  "has" : {
+    "Model" : {
+      "modeled as" : {
+        "binary classification problems" : {
+          "has" : {
+            "kernel - based classifiers" : {
+              "are" : "trained",
+              "has" : {
+                "classification score" : {
+                  "to sort" : "instances",
+                  "produce" : "final ranking"
+                }
+              },
+              "from sentence" : "All the above subtasks have been modeled as binary classification problems : kernel - based classifiers are trained and the classification score is used to sort the instances and produce the final ranking ."
+            }
+          }
+        }
+      },
+      "has" : {
+        "classifiers and kernels" : {
+          "implemented within" : "Kernel - based Learning Platform 2 ( KeLP )",
+          "from sentence" : "All classifiers and kernels have been implemented within the Kernel - based Learning Platform 2 ( KeLP ) , thus determining the team 's name ."
+        }
+      },
+      "applies" : {
+        "tree kernels" : {
+          "directly to" : {
+            "question and answer texts" : {
+              "modeled as" : {
+                "pairs" : {
+                  "of" : "linked syntactic trees"
+                }
+              }
+            }
+          },
+          "from sentence" : "The proposed solution provides three main contributions : ( i ) we employ the approach proposed in , which applies tree kernels directly to question and answer texts modeled as pairs of linked syntactic trees ."
+        }
+      },
+      "propose" : {
+        "stacking schema" : {
+          "has" : {
+            "classifiers" : {
+              "for" : "Subtask B and C",
+              "exploit" : {
+                "inferences" : {
+                  "obtained in" : "previous subtasks"
+                }
+              },
+              "from sentence" : "( iii ) we propose a stacking schema so that classifiers for Subtask B and C exploit the inferences obtained in the previous subtasks ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

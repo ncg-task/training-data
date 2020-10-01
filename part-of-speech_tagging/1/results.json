@@ -1,0 +1,142 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "Character - to - word Models" : {
+          "has" : {
+            "F1 score" : {
+              "does not" : {
+                "improve much" : {
+                  "when" : {
+                    "directly add" : {
+                      "has" : "more layers"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "The result shows that for most of the datasets , the F1 score does not improve much when we directly add more layers ."
+            },
+            "proposed character - to - word model , char - IntNet - 5 and char - IntNet - 9" : {
+              "improves" : {
+                "results" : {
+                  "across" : "all datasets"
+                }
+              },
+              "from sentence" : "Our proposed character - to - word model , char - IntNet - 5 and char - IntNet - 9 generally improves the results across all datasets ."
+            },
+            "IntNet" : {
+              "significantly outperforms" : "other character embedding models",
+              "from sentence" : "Our IntNet significantly outperforms other character embedding models , for example , the improvement is more than 2 % in terms of F 1 score for German and Dutch ."
+            }
+          },
+          "observe" : {
+            "some accuracy drop" : {
+              "when" : {
+                "continuously increase" : {
+                  "has" : "depth"
+                }
+              },
+              "from sentence" : "We also observe some accuracy drop when we continuously increase the depth ."
+            },
+            "char - IntNet - 5" : {
+              "is" : {
+                "more effective" : {
+                  "for learning" : {
+                    "character - to - word representations" : {
+                      "than" : "char - IntNet - 9",
+                      "in" : "most of the cases"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Also , we observe that char - IntNet - 5 is more effective for learning character - to - word representations than char - IntNet - 9 in most of the cases ."
+            }
+          },
+          "add" : {
+            "residual connections" : {
+              "to" : {
+                "char - CNN - 9" : {
+                  "as" : "char - ResNet - 9",
+                  "confirms that" : {
+                    "residual connections" : {
+                      "help train" : "deep layers"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Furthermore , we add residual connections to char - CNN - 9 as char - ResNet - 9 , which confirms that residual connections can help train deep layers ."
+            }
+          },
+          "improve" : {
+            "char - ResNet - 9" : {
+              "by changing" : {
+                "residual connections" : {
+                  "into" : {
+                    "dense connection blocks" : {
+                      "as" : "char - DenseNet - 9",
+                      "shows that" : {
+                        "dense connections" : {
+                          "are" : {
+                            "better" : {
+                              "than" : {
+                                "residual connections" : {
+                                  "for learning" : "word shape information"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "We further improve char - ResNet - 9 by changing residual connections into dense connection blocks as char - DenseNet - 9 , which shows that the dense connections are better than residual connections for learning word shape information ."
+                }
+              }
+            }
+          }
+        },
+        "IntNet" : {
+          "improves" : {
+            "F - 1 score" : {
+              "over" : "stateof - the - art results",
+              "by more than" : {
+                "2 %" : {
+                  "for" : "Dutch and Spanish"
+                }
+              }
+            },
+            "from sentence" : "The improvement is more pronounced for non-English datasets , for example , IntNet improves the F - 1 score over the stateof - the - art results by more than 2 % for Dutch and Spanish ."
+          }
+        }
+      },
+      "in comparison with" : {
+        "state - of - the - art results" : {
+          "show that" : {
+            "our char - IntNet" : {
+              "improves" : {
+                "results" : {
+                  "across" : "different models and datasets"
+                }
+              },
+              "from sentence" : "These experiments show that our char - IntNet generally improves results across different models and datasets ."
+            }
+          }
+        }
+      },
+      "shows that" : {
+        "results" : {
+          "of" : {
+            "LSTM - CRF" : {
+              "are" : {
+                "significantly improved" : {
+                  "after adding" : "character - to - word models"
+                }
+              }
+            },
+            "from sentence" : "It also shows that the results of LSTM - CRF are significantly improved after adding character - to - word models , which confirms that word shape information is very important for sequence labeling ."
+          }
+        }
+      }
+    }
+  }
+}

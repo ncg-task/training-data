@@ -1,0 +1,120 @@
+143	4	32	learned character embeddings
+143	37	44	of size
+143	45	46	8
+143	49	77	1 - dimensional convolutions
+143	78	92	of window size
+143	93	94	3
+146	4	22	stacked bi - LSTMs
+146	43	51	3 layers
+146	52	56	with
+146	57	88	200 - dimensional hidden states
+146	93	112	highway connections
+147	0	35	All Multi Layer Perceptrons ( MLP )
+147	40	57	two hidden layers
+147	58	62	with
+147	63	77	500 dimensions
+147	85	96	followed by
+147	97	112	ReLU activation
+155	0	22	Regularization Dropout
+155	26	38	applied with
+155	39	55	dropout rate 0.2
+155	56	58	to
+155	59	76	all hidden layers
+155	77	79	of
+155	80	110	all MLPs and feature encodings
+155	118	134	dropout rate 0.5
+155	56	58	to
+155	138	171	all word and character embeddings
+155	181	197	dropout rate 0.4
+155	56	58	to
+155	201	223	all LSTM layer outputs
+156	0	8	Learning
+156	21	30	done with
+156	31	60	Adam ( Kingma and Ba , 2015 )
+156	26	30	with
+156	66	84	default parameters
+157	4	17	learning rate
+157	21	32	annealed by
+157	33	36	1 %
+157	37	42	every
+157	43	57	100 iterations
+158	0	14	Minibatch Size
+158	15	17	is
+158	18	19	1
+159	0	14	Early Stopping
+159	15	17	of
+159	18	32	20 evaluations
+159	29	31	on
+159	40	47	dev set
+152	8	16	consider
+152	17	22	spans
+152	32	47	entirely within
+152	50	58	sentence
+152	63	68	limit
+152	17	22	spans
+152	75	77	to
+152	80	90	max length
+152	91	93	of
+152	94	100	L = 10
+36	3	10	propose
+36	13	41	simple bi - LSTM based model
+36	42	57	which generates
+36	58	78	span representations
+36	79	82	for
+36	83	101	each possible span
+37	4	24	span representations
+37	34	44	to perform
+37	45	69	entity mention detection
+37	21	23	on
+37	73	82	all spans
+37	83	85	in
+37	86	94	parallel
+38	55	74	relation extraction
+38	26	28	on
+38	78	87	all pairs
+38	88	90	of
+38	91	115	detected entity mentions
+2	23	42	Relation Extraction
+13	22	48	Relation Extraction ( RE )
+21	16	18	RE
+181	0	18	Our proposed model
+181	19	27	achieves
+181	30	38	new SOTA
+181	39	41	on
+181	42	44	RE
+181	45	49	with
+181	52	55	F 1
+181	56	58	of
+181	59	65	62. 83
+182	19	29	also beats
+182	32	47	multitask model
+182	48	58	which uses
+182	59	66	signals
+182	67	71	from
+182	72	88	additional tasks
+182	89	101	by more than
+182	102	116	1.5 F 1 points
+184	4	16	Recall gains
+184	17	20	for
+184	21	23	RE
+184	26	45	4.3 absolute points
+184	52	72	much higher than for
+184	73	76	EMD
+184	79	98	0.6 absolute points
+187	7	22	our large gains
+187	19	21	in
+187	26	47	RE Recall ( and F 1 )
+187	48	56	showcase
+187	61	74	effectiveness
+187	75	77	of
+187	78	119	our simple modeling of ordered span pairs
+187	120	123	for
+187	124	143	relation extraction
+183	0	3	For
+183	4	14	both tasks
+183	87	91	than
+183	92	106	previous works
+183	43	51	close to
+183	17	39	our model 's Precision
+183	66	86	significantly higher
+183	56	62	Recall

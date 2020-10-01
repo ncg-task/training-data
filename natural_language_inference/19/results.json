@@ -1,0 +1,84 @@
+{
+  "has" : {
+    "Results" : {
+      "of" : {
+        "SNLI data" : {
+          "Compared with" : {
+            "existing state - of - the - art model" : {
+              "has" : {
+                "our results" : {
+                  "show" : "new state - of - theart record"
+                }
+              },
+              "from sentence" : "Experimental results of SNLI data compared with the existing models on the SNLI leader - board 2 are shown in .
+Compared with the existing state - of - the - art model , the number of parameters and the training time increased , but our results show the new state - of - theart record ."
+
+            }
+          },
+          "show" : {
+        "addition" : {
+          "of" : {
+            "distance mask" : {
+              "improved" : {
+                "performance" : {
+                  "without" : {
+                    "significantly affecting" : {
+                      "has" : "training time"
+                    },
+                    "increasing" : {
+                      "has" : "parameters"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Results show that the addition of the distance mask improved the performance without significantly affecting the training time or increasing the number of parameters . 49.4 50.4 + Unigram and bigram features 99.7 78.2 Sentence encoding - based models 100D LSTM encoders 220 k 84.8 77.6 300D LSTM encoders 3.0 m 83.9 80.6 1024D GRU encoders 15 m 98.8 81.4 300D Tree - based CNN encoders 3.5 m 83.3 82.1 300D SPINN - PI encoders 3.7 m 89.2 83.2 600D Bi- LSTM encoders 2.0 m 86.4 83.3 300D NTI - SLSTM - LSTM encoders 4.0 m 82.5 83.4 600D Bi-LSTM encoders+intra-attention 2.8 m 84.5 84.2 300D NSE encoders 3.0 m 86.2 84.6 600D"
+            }
+          }
+        }
+      },
+          "has" : {
+            "improvement" : {
+              "of" : {
+                "test accuracy" : {
+                  "is only by" : "0.3 % point"
+                }
+              },
+              "by introducing" : "distance mask",
+              "from sentence" : "2 The improvement of the test accuracy by introducing the distance mask is only by 0.3 % point , potentially because SNLI data mostly consist of short sentences ."
+            }
+          }  
+        }
+      },
+      "applying" : {
+        "SNLI best model" : {
+          "to" : {
+            "MultiNLI dataset" : {
+              "Compared with" : {
+                "result of RepEVAL 2017" : {
+                  "see that" : {
+                    "Distance - based Self - Attention Network" : {
+                      "performs" : "well"
+                    }
+                  },
+                  "from sentence" : "The results of applying SNLI best model to MultiNLI dataset without additional parameter tuning are presented in .
+Compared with the result of RepEVAL 2017 , we can see that the Distance - based Self - Attention Network performs well ."
+
+                }
+              },
+              "has" : {
+                "our model" : {
+                  "showed" : {
+                    "similar average test accuracy" : {
+                      "with" : "much lower number of parameters"
+                    }
+                  },
+                  "from sentence" : "When compared with the model of , our model showed similar average test accuracy with much lower number of parameters ."
+                }
+              }
+            }
+          }
+        }
+      }  
+    }
+  }
+}

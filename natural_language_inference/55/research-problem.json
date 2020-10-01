@@ -1,0 +1,9 @@
+{
+  "has research problem" : [
+    ["Question Answering", {"from sentence" : "Question Answering with Subgraph Embeddings"}],
+    ["answer questions on a broad range of topics", {"from sentence" : "This paper presents a system which learns to answer questions on a broad range of topics from a knowledge base using few handcrafted features ."}],
+    ["automatically answer questions asked in natural language on any topic or in any domain", {"from sentence" : "Teaching machines how to automatically answer questions asked in natural language on any topic or in any domain has always been along standing goal in Artificial Intelligence ."}],
+    ["open - domain question answering ( or open QA )", {"from sentence" : "With the rise of large scale structured knowledge bases ( KBs ) , this problem , known as open - domain question answering ( or open QA ) , boils down to being able to query efficiently such databases with natural language ."}],
+    ["open QA", {"from sentence" : "These KBs , such as Freebase encompass huge ever growing amounts of information and ease open QA by organizing a great variety of answers in a structured format ."}]
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "adopt" : {
+        "Adam optimizer" : {
+          "with" : {
+            "learning rate" : {
+              "of" : {
+                "2e - 5" : {
+                  "for" : {
+                    "transfer step" : {
+                      "on" : "ASNQ dataset"
+                    }
+                  }                  
+                },
+                "1e - 6" : {
+                  "for" : {
+                    "adapt step" : {
+                      "on" : "target dataset"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "We adopt Adam optimizer ( Kingma and Ba 2014 ) with a learning rate of 2e - 5 for the transfer step on the ASNQ dataset and a learning rate of 1e - 6 for the adapt step on the target dataset ."
+        }
+      },
+      "apply" : {
+        "early stopping" : {
+          "on" : {
+            "dev. set" : {
+              "of" : "target corpus"
+            }
+          },
+          "from sentence" : "We apply early stopping on the dev. set of the target corpus for both steps based on the highest MAP score ."
+        }
+      },
+      "set" : {
+        "max number of epochs" : {
+          "equal to" : {
+            "3 and 9" : {
+              "for" : "adapt and transfer steps"
+            }
+          },
+          "from sentence" : "We set the max number of epochs equal to 3 and 9 for adapt and transfer steps , respectively ."
+        },
+        "maximum sequence length" : {
+          "for" : {
+            "BERT / RoBERTa" : {
+              "to" : "128 tokens"
+            }
+          },
+          "from sentence" : "We set the maximum sequence length for BERT / RoBERTa to 128 tokens ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "has" : {
+    "Results" : {
+      "find" : {
+        "Majority method" : {
+          "is" : "worst",
+          "has" : {
+            "majority sentiment polarity" : {
+              "occupies" : {
+                "53.50 % , 65.00 % and 50 %" : {
+                  "on" : "Restaurant , Laptop and Twitter testing datasets"
+                }
+              }
+            }
+          },
+          "from sentence" : "We can find that the Majority method is the worst , which means the majority sentiment polarity occupies 53.50 % , 65.00 % and 50 % of all samples on the Restaurant , Laptop and Twitter testing datasets respectively ."
+        }
+      },
+      "has" : {
+        "Simple SVM model" : {
+          "performs" : {
+            "better" : {
+              "than" : "Majority"
+            }
+          },
+          "from sentence" : "The Simple SVM model performs better than Majority ."
+        },
+        "Our model" : {
+          "achieves" : {
+            "significantly better results" : {
+              "than" : "feature - enhanced SVM"
+            }
+          },
+          "from sentence" : "Our model achieves significantly better results than feature - enhanced SVM ."
+        },
+        "basic LSTM approach" : {
+          "performs" : "worst",
+          "from sentence" : "Among LSTM based neural networks described in this paper , the basic LSTM approach performs the worst ."
+        },
+        "TD - LSTM" : {
+          "obtains" : {
+            "improvement" : {
+              "of" : {
+                "1 - 2 %" : {
+                  "over" : "LSTM"
+                }
+              },
+              "when" : {
+                "target signals" : {
+                  "taken into" : "consideration"
+                }
+              }
+            }
+          },
+          "from sentence" : "TD - LSTM obtains an improvement of 1 - 2 % over LSTM when target signals are taken into consideration ."
+        },
+        "MemNet" : {
+          "achieves" : {
+            "better results" : {
+              "than" : "other models",
+              "on" : "Restaurant dataset"
+            }
+          },
+          "from sentence" : "MemNet achieves better results than other models on the Restaurant dataset , since it considers not only the contexts of targets but also the position of each context word related to the target ."
+        },
+        "IAN" : {
+          "considers" : {
+            "separate representations" : {
+              "of" : "targets"
+            }
+          },
+          "obtains" : {
+            "better results" : {
+              "on" : "Laptop dataset"
+            }
+          },
+          "from sentence" : "IAN considers separate representations of targets and obtains better result on the Laptop dataset ."
+        },
+        "GRNN - G3" : {
+          "achieves" : {
+            "competitive results" : {
+              "on" : "all datasets"
+            }
+          },
+          "from sentence" : "GRNN - G3 achieves competitive results on all datasets because of its three - way structure and special gated - RNN model ."
+        },
+        "LCR - Rot model" : {
+          "achieves" : {
+            "best results" : {
+              "on" : "all datasets",
+              "among" : "all models"
+            }
+          },
+          "from sentence" : "In the contrast , our LCR - Rot model achieves the best results on the all datasets among all models ."
+        }
+      },
+      "With the help of" : {
+        "feature engineering" : {
+          "has" : {
+            "Feature - enhanced SVM" : {
+              "achieves" : "much better results"
+            }
+          }
+        },
+        "from sentence" : "With the help of feature engineering , the Feature - enhanced SVM achieves much better results ."
+      }
+    }
+  }
+}

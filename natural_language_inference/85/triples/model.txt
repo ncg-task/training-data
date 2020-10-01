@@ -1,0 +1,7 @@
+(Contribution||has||Model)
+(Model||enhancing||sequential inference models)
+(sequential inference models||based on||chain models)
+(Model||explicitly encoding||parsing information)
+(parsing information||with||recursive networks)
+(parsing information||in||local inference modeling)
+(parsing information||in||inference composition)

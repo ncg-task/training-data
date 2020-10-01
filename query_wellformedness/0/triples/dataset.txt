@@ -1,0 +1,5 @@
+(Contribution||has||Dataset)
+(Dataset||construct and publicly release||dataset of 25,100 queries)
+(dataset of 25,100 queries||annotated with||probability)
+(probability||of being||well - formed natural language question)
+(Dataset||available for download at||http://goo.gl/language/ query-wellformedness)

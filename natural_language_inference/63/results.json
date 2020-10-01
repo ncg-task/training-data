@@ -1,0 +1,40 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "QUASAR - T" : {
+          "has" : {
+            "our proposed memory controller" : {
+              "gives" : {
+                "more performance improvement" : {
+                  "achieve" : {
+                    "68.13 EM and 70.32 F1" : {
+                      "for" : "short documents"
+                    },
+                    "63.44 and 65.19" : {
+                      "for" : "long documents"
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "QUASAR - T:
+As described in , the baseline ( BiDAF + DNC ) results in a reasonable gain , however , our proposed memory controller gives more performance improvement .
+We achieve 68.13 EM and 70.32 F1 for short documents and 63.44 and 65.19 for long documents which are the current best results ."
+
+          }
+        },
+        "TriviaQA" : {
+          "has" : {
+            "Our model" : {
+              "achieves" : "state of the art performance",
+              "from sentence" : "TriviaQA : We compare proposed model with all the previously suggested approaches as shown in .
+Our model achieves the state of the art performance over the existing approaches as shown in 77.58 84.16 O - QANet 76.24 84.60 O O SAN 76.83 84.40 O O Fusion Net 75.97 83.90 O O RaSoR + TR 75.79 83.26 O - Conducter- net 74.41 82.74 O O Reinforced Mnemonic Reader 73.20 81.80 O O BiDAF + Self-attention 72.14 81.05 - O MEMEN 70.98 80.36 O - MAMCN 70.99 79.94 -r- net 71.30 79.70 - O Document Reader 70.73 79.35 O - FastQAExt 70 ."
+
+            }
+          }
+        }
+      }
+    }
+  }
+}

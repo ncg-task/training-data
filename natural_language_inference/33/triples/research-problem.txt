@@ -1,0 +1,4 @@
+(Contribution||has research problem||LEARNING GENERAL PURPOSE DISTRIBUTED SEN - TENCE REPRESENTATIONS)
+(Contribution||has research problem||distributed vector representations of words)
+(Contribution||has research problem||learning representations of sequences of words)
+(Contribution||has research problem||learning general - purpose sentence representations)

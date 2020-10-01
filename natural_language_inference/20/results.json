@@ -1,0 +1,172 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "clearly outperforms" : {
+          "has" : "non-hierarchical BiLSTM models",
+          "from sentence" : "It clearly outperforms the similar but non-hierarchical BiLSTM models reported in the literature and fares well in comparison to other state of the art architectures in the sentence encoding category ."
+        }
+      },
+      "fares" : {
+        "well" : {
+          "in comparison to" : {
+            "other state of the art architectures" : {
+              "in" : "sentence encoding category"
+            }
+          }
+        },
+        "from sentence" : "It clearly outperforms the similar but non-hierarchical BiLSTM models reported in the literature and fares well in comparison to other state of the art architectures in the sentence encoding category ."
+      },
+      "close to" : {
+        "current state of the art" : {
+          "on" : "SNLI",
+          "from sentence" : "In particular , our results are close to the current state of the art on SNLI in this category and strong on both , the matched and mismatched test sets of MultiNLI ."
+        }
+      },
+      "strong on" : {
+        "matched and mismatched test sets" : {
+          "of" : "MultiNLI",
+          "from sentence" : "In particular , our results are close to the current state of the art on SNLI in this category and strong on both , the matched and mismatched test sets of MultiNLI ."
+        }
+      },
+      "on" : {
+        "SciTail" : {
+          "achieve" : {
+            "new state of the art" : {
+              "with" : {
+                "accuracy" : {
+                  "of" : "86.0 %"
+                }
+              },
+              "from sentence" : "Finally , on SciTail , we achieve the new state of the art with an accuracy of 86.0 % ."
+            }
+          }
+        }
+      },
+      "For" : {
+        "SNLI dataset" : {
+          "has" : {
+            "our model" : {
+              "provides" : {
+                "test accuracy" : {
+                  "of" : "86.6 %",
+                  "after" : {
+                    "4 epochs" : {
+                      "of" : "training"
+                    }
+                  },
+                  "from sentence" : "For the SNLI dataset , our model provides the test accuracy of 86.6 % after 4 epochs of training ."
+                }
+              }
+            }
+          }
+        },
+        "MultiNLI matched test set ( MultiNLI - m )" : {
+          "has" : {
+            "our model" : {
+              "achieves" : {
+                "test accuracy" : {
+                  "of" : {
+                    "73.7 %" : {
+                      "after" : {
+                        "3 epochs" : {
+                          "of" : "training"
+                        }
+                      },
+                      "which is" : {
+                        "0.8 % points lower" : {
+                          "than" : "state of the art 74.5 %"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "For the MultiNLI matched test set ( MultiNLI - m ) our model achieves a test accuracy of 73.7 % after 3 epochs of training , which is 0.8 % points lower than the state of the art 74.5 % by ."
+                }
+              }
+            }
+          }
+        },
+        "mismatched test set ( MultiNLI - mm )" : {
+          "has" : {
+            "our model" : {
+              "achieves" : {
+                "test accuracy" : {
+                  "of" : {
+                    "73.0 %" : {
+                      "after" : {
+                        "3 epochs" : {
+                          "of" : "training"
+                        }
+                      },
+                      "which is" : {
+                        "0.6 % points lower" : {
+                          "than" : "state of the art 73.6 %"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "For the mismatched test set ( MultiNLI - mm ) our model achieves a test accuracy of 73.0 % after 3 epochs of training , which is 0.6 % points lower than the state of the art 73.6 % by Chen , Zhu , Ling , Wei , Jiang , and Inkpen ( 2017 b ) ."
+                }
+              }
+            }
+          }
+        }
+      },
+      "On" : {
+        "SciTail dataset" : {
+          "compared" : {
+            "our model" : {
+              "against" : "non-sentence embedding - based models"
+            },
+            "from sentence" : "On the SciTail dataset we compared our model also against non-sentence embedding - based models , as no results have been previously published which are based on independent sentence embeddings ."            
+          },
+          "obtain" : {
+            "score" : {
+              "of" : {
+                "86.0 %" : {
+                  "after" : {
+                    "4 epochs" : {
+                      "of" : "training"
+                    }
+                  },
+                  "is" : {
+                    "2.7 % points absolute improvement" : {
+                      "on" : "previous published state of the art"
+                    }
+                  }
+                },
+                "from sentence" : "We obtain a score of 86.0 % after 4 epochs of training , which is + 2.7 % points absolute improvement on the previous published state of the art by ."
+              }
+            }
+          },
+          "has" : {
+            "Our model" : {
+              "outperforms" : {
+                "In - fer Sent" : {
+                  "which" : {
+                    "achieves" : {
+                      "accuracy" : "85.1 %"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Our model also outperforms In - fer Sent which achieves an accuracy of 85.1 % in our experiments ."
+            },
+            "results" : {
+              "achieved by" : {
+                "proposed model" : {
+                  "are" : {
+                    "significantly higher" : {
+                      "than" : "previously published results"
+                    }
+                  }
+                },
+                "from sentence" : "The results achieved by our proposed model are significantly higher than the previously published results ."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

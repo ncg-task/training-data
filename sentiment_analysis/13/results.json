@@ -1,0 +1,152 @@
+{
+  "has" : {
+    "Results" : {
+      "observed" : {
+        "proposed joint post - training ( BERT - PT )" : {
+          "has" : {
+            "best performance" : {
+              "over" : {
+                "all tasks" : {
+                  "in" : "all domains"
+                }
+              },
+              "show" : {
+                "benefits" : {
+                  "of having" : "two types of knowledge"
+                }
+              }
+            }
+          },
+          "from sentence" : "To answer RQ1 , we observed that the proposed joint post - training ( BERT - PT ) has the best performance over all tasks in all domains , which show the benefits of having two types of knowledge ."
+        }
+      },
+      "found that" : {
+        "vanilla pre-trained weights" : {
+          "of" : {
+            "BERT" : {
+              "do not work" : {
+                "well" : {
+                  "for" : "review - based tasks"
+                }
+              }
+            }
+          },
+          "from sentence" : "Rest. Methods EM F1 EM F1 DrQA 38.26 50.99 49.52 63.73 DrQA+MRC 40 To answer RQ2 , to our surprise we found that the vanilla pre-trained weights of BERT do not work well for review - based tasks , although it achieves state - of - the - art results on many other NLP tasks ."
+        }
+      },
+      "noticed that" : {
+        "roles" : {
+          "of" : {
+            "domain knowledge and task knowledge" : {
+              "vary for" : "different tasks and domains"
+            }
+          }
+        },
+        "from sentence" : "To answer RQ3 , we noticed that the roles of domain knowledge and task knowledge vary for different tasks and domains ."
+      },
+      "For" : {
+        "RRC" : {
+          "found that" : {
+            "performance gain" : {
+              "of" : {
+                "BERT - PT" : {
+                  "mostly comes from" : "task - awareness ( MRC ) post -training"
+                }
+              }
+            }
+          },
+          "from sentence" : "For RRC , we found that the performance gain of BERT - PT mostly comes from task - awareness ( MRC ) post -training ( as indicated by BERT - MRC ) ."
+        },
+        "AE" : {
+          "found that" : {
+            "great performance boost" : {
+              "comes mostly from" : "domain knowledge posttraining"
+            },
+            "from sentence" : "For AE , we found that great performance boost comes mostly from domain knowledge posttraining , which indicates that contextualized representations of domain knowledge are very important for AE ."            
+          },
+          "has" : {
+            "errors" : {
+              "mostly come from" : ["annotation inconsistency", {"boundaries" : {"of" : "aspects"}}],
+              "from sentence" : "For AE , errors mostly come from annotation inconsistency and boundaries of aspects ( e.g. , apple OS is predicted as OS ) ."
+            }
+          }
+        },
+        "ASC" : {
+          "observed that" : {
+            "large - scale annotated MRC data" : {
+              "is" : "very useful"
+            }
+          },
+          "from sentence" : "For ASC , we observed that large - scale annotated MRC data is very useful ."          
+        }
+      },
+      "further investigated" : {
+        "BERt - MRC" : {
+          "improved" : {
+            "examples" : {
+              "found that" : {
+                "boundaries of spans ( especially short spans )" : {
+                  "were" : "greatly improved"
+                }
+              }
+            }  
+          },
+          "from sentence" : "We further investigated the examples improved by BERT - MRC and found that the boundaries of spans ( especially short spans ) were greatly improved ."
+        }
+      },
+      "has" : {
+        "BERT - MRC" : {
+          "has almost no" : {
+            "improvement" : {
+              "on" : "restaurant"
+            }
+          },
+          "from sentence" : "BERT - MRC has almost no improvement on restaurant , which indicates Wikipedia may have no knowledge about aspects of restaurant ."
+        },
+        "errors" : {
+          "on" : {
+            "RRC" : {
+              "come from" : {
+                "boundaries" : {
+                  "of" : {
+                    "spans" : {
+                      "that are not" : "concise enough"
+                    }
+                  }
+                },
+                "incorrect location" : {
+                  "of" : {
+                    "spans" : {
+                      "that may have" : {
+                        "certain nearby words" : {
+                          "related to" : "question"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "The errors on RRC mainly come from boundaries of spans that are not concise enough and incorrect location of spans that may have certain nearby words related to the question ."
+        },
+        "ASC" : {
+          "tends to have" : {
+            "errors" : {
+              "as" : {
+                "decison boundary" : {
+                  "between" : {
+                    "negative and neutral examples" : {
+                      "is" : "unclear"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "ASC tends to have more errors as the decision boundary between the negative and neutral examples is unclear ( e.g. , even annotators may not sure whether the reviewer shows no opinion or slight negative opinion when mentioning an aspect ) ."
+        }
+      }
+    }  
+  }
+}

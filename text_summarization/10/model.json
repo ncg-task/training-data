@@ -1,0 +1,22 @@
+{
+  "has" : {
+    "Model" : {
+      "present" : {
+        "novel multi-task learning architectures" : {
+          "based on" : "multi-layered encoder and decoder models",
+          "empirically show" : {
+            "substantially better" : {
+              "to share" : {
+                "higherlevel semantic layers" : {
+                  "between" : "three aforementioned tasks",
+                  "keeping" : "lower - level ( lexico- syntactic ) layers unshared"
+                }
+              }
+            }
+          },
+          "from sentence" : "Further , we also present novel multi-task learning architectures based on multi-layered encoder and decoder models , where we empirically show that it is substantially better to share the higherlevel semantic layers between the three aforementioned tasks , while keeping the lower - level ( lexico- syntactic ) layers unshared ."
+        }
+      }
+    }
+  }
+}

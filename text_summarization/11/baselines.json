@@ -1,0 +1,88 @@
+{
+  "has" : {
+    "Baselines" : {
+      "for" : {
+        "LCSTS" : {
+          "has" : {
+            "RNN and RNN - context" : {
+              "are" : {
+                "RNNbased seq2seq models" : {
+                  "without and with" : "attention mechanism"
+                }
+              },
+              "from sentence" : "RNN and RNN - context are the RNNbased seq2seq models , without and with attention mechanism respectively ."
+            },
+            "Copy - Net" : {
+              "is" : {
+                "attention - based seq2seq model" : {
+                  "with" : "copy mechanism"
+                }
+              },
+              "from sentence" : "Copy - Net is the attention - based seq2seq model with the copy mechanism ."
+            },
+            "SRB" : {
+              "improves" : {
+                "semantic relevance" : {
+                  "between" : "source text and summary"
+                }
+              },
+              "from sentence" : "SRB is a model that improves semantic relevance between source text and summary ."
+            },
+            "DRGD" : {
+              "is" : {
+                "conventional seq2seq" : {
+                  "with" : "deep recurrent generative decoder"
+                }
+              },
+              "from sentence" : "DRGD is the conventional seq2seq with a deep recurrent generative decoder ."
+            }            
+          }
+        },
+        "Gigaword" : {
+          "has" : {
+            "ABS and ABS +" : {
+              "are" : {
+                "models" : {
+                  "with" : "local attention and handcrafted features"
+                }
+              },
+              "from sentence" : "As to the baselines for Gigaword , ABS and ABS + are the models with local attention and handcrafted features ."              
+            },
+            "Feats" : {
+              "is" : {
+                "fully RNN seq2seq model" : {
+                  "with" : {
+                    "some specific methods" : {
+                      "to control" : "vocabulary size"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Feats is a fully RNN seq2seq model with some specific methods to control the vocabulary size ."
+            },
+            "RAS - LSTM and RAS - Elman" : {
+              "are" : {
+                "seq2seq models" : {
+                  "with" : ["convolutional encoder", "LSTM decoder", "Elman RNN decoder"]
+                }
+              },
+              "from sentence" : "RAS - LSTM and RAS - Elman are seq2seq models with a convolutional encoder and an LSTM decoder and an Elman RNN decoder respectively ."
+            },
+            "SEASS" : {
+              "is a" : {
+                "seq2seq model" : {
+                  "with" : "selective gate mechanism"
+                }
+              },
+              "from sentence" : "SEASS is a seq2seq model with a selective gate mechanism ."
+            },
+            "DRGD" : {
+              "baseline for" : "Gigaword",
+              "from sentence" : "DRGD is also a baseline for Gigaword ."
+            }
+          }
+        }
+      }      
+    }
+  }
+}

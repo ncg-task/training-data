@@ -1,0 +1,74 @@
+190	14	21	replace
+190	26	56	original fully connected layer
+192	66	76	results in
+192	77	89	- 0.113 CMOS
+196	13	21	removing
+196	22	61	sequence - level knowledge distillation
+196	62	72	results in
+196	73	85	- 0.325 CMOS
+130	9	14	train
+130	19	55	autoregressive Transformer TTS model
+130	56	58	on
+130	59	77	4 NVIDIA V100 GPUs
+130	80	84	with
+130	85	110	batchsize of 16 sentences
+131	3	6	use
+131	11	25	Adam optimizer
+131	26	30	with
+131	31	65	? 1 = 0.9 , ? 2 = 0.98 , ? = 10 ?9
+134	22	30	leverage
+134	31	70	sequence - level knowledge distillation
+139	0	24	In the inference process
+139	31	54	output mel-spectrograms
+139	83	99	transformed into
+139	100	143	audio samples using the pretrained WaveGlow
+28	122	129	propose
+28	146	156	FastSpeech
+28	165	170	takes
+28	173	207	text ( phoneme ) sequence as input
+28	212	221	generates
+28	222	259	mel-spectrograms non-autoregressively
+29	3	9	adopts
+29	12	34	feed - forward network
+29	35	43	based on
+29	48	98	self - attention in Transformer and 1D convolution
+30	187	203	length regulator
+30	209	221	up - samples
+30	226	276	phoneme sequence according to the phoneme duration
+30	353	361	to match
+30	366	404	length of the mel-spectrogram sequence
+31	17	25	built on
+31	28	54	phoneme duration predictor
+31	63	71	predicts
+31	76	100	duration of each phoneme
+2	44	58	Text to Speech
+4	0	58	Neural network based end - to - end text to speech ( TTS )
+15	0	22	Text to speech ( TTS )
+18	0	24	Neural network based TTS
+142	0	13	Audio Quality
+143	3	10	conduct
+143	15	52	MOS ( mean opinion score ) evaluation
+143	4	6	on
+143	60	68	test set
+143	69	79	to measure
+143	84	97	audio quality
+155	0	10	Robustness
+159	3	19	can be seen that
+159	20	35	Transformer TTS
+159	39	52	not robust to
+159	59	69	hard cases
+159	74	78	gets
+159	79	94	34 % error rate
+159	103	113	FastSpeech
+159	118	139	effectively eliminate
+159	140	167	word repeating and skipping
+159	168	178	to improve
+159	179	194	intelligibility
+166	0	11	Voice Speed
+169	3	18	demonstrated by
+169	23	30	samples
+169	33	43	FastSpeech
+169	44	70	can adjust the voice speed
+169	71	98	from 0.5x to 1.5 x smoothly
+169	101	105	with
+169	106	139	stable and almost unchanged pitch

@@ -1,0 +1,163 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "implement" : {
+        "our algorithm" : {
+          "with" : "Tensorflow framework",
+          "from sentence" : "We implement our algorithm with Tensorflow framework ."
+        }
+      },
+      "has" : {
+        "Adadelta optimizer" : {
+          "with" : {
+            "? as 0.95 and as 1e ? 8" : {
+              "used to" : {
+                "optimize" : {
+                  "has" : "all the trainable weights"
+                }
+              },
+              "from sentence" : "An Adadelta optimizer ( Zeiler , 2012 ) with ? as 0.95 and as 1e ?
+8 is used to optimize all the trainable weights ."
+
+            }
+          }
+        },
+        "initial learning rate" : {
+          "set to" : "0.5",
+          "from sentence" : "The initial learning rate is set to 0.5 and batch size to 70 ."
+        },
+        "batch size" : {
+          "to" : "70",
+          "from sentence" : "The initial learning rate is set to 0.5 and batch size to 70 ."
+        },
+        "not improve" : {
+          "has" : {
+            "best indomain performance" : {
+              "for" : "30,000 steps"
+            },
+            "SGD optimizer" : {
+              "with" : {
+                "learning rate" : {
+                  "of" : {
+                    "3e ? 4" : {
+                      "to help" : {
+                        "model" : {
+                          "find" : "better local optimum"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "When the model does not improve best indomain performance for 30,000 steps , an SGD optimizer with learning rate of 3e ?
+4 is used to help model to find a better local optimum ."
+
+        },
+        "Dropout layers" : {
+          "applied before" : "all linear layers",
+          "after" : "word - embedding layer",
+          "from sentence" : "Dropout layers are applied before all linear layers and after word - embedding layer ."
+        },
+        "initialize" : {
+          "has" : {
+            "word embeddings" : {
+              "with" : "pre-trained 300D Glo Ve 840B vectors"
+            }
+          },
+          "from sentence" : "We initialize our word embeddings with pre-trained 300D Glo Ve 840B vectors while the out - of - vocabulary word are randomly initialized with uniform distribution ."          
+        }        
+        "out - of - vocabulary word" : {
+          "are" : {
+            "randomly initialized" : {
+              "with" : "uniform distribution"
+            },
+            "from sentence" : "We initialize our word embeddings with pre-trained 300D Glo Ve 840B vectors while the out - of - vocabulary word are randomly initialized with uniform distribution ."
+          }
+        },
+        "character embeddings" : {
+          "are" : {
+            "randomly initialized" : {
+              "with" : "100D"
+            }
+          },
+          "from sentence" : "The character embeddings are randomly initialized with 100D ."
+        },
+        "crop or pad" : {
+          "each" : {
+            "token" : {
+              "to have" : "16 characters"
+            }
+          },
+          "from sentence" : "We crop or pad each token to have 16 characters ."
+        },
+        "1D convolution kernel size" : {
+          "for" : "character embedding",
+          "is" : "5",
+          "from sentence" : "The 1D convolution kernel size for character embedding is 5 ."
+        },
+        "All weights" : {
+          "constraint by" : "L2 regularization",
+          "from sentence" : "All weights are constraint by L2 regularization , and the L2 regularization at step t is calculated as follows :"
+        },
+        "first scale down ratio" : {
+          "in" : {
+            "feature extraction layer" : {
+              "set to" : "0.3"
+            }
+          },
+          "from sentence" : "The first scale down ratio ?
+in feature extraction layer is set to 0.3 and transitional scale down ratio ?"
+
+        },
+        "transitional scale down ratio" : {
+          "set to" : "0.5",
+          "from sentence" : "in feature extraction layer is set to 0.3 and transitional scale down ratio ?
+is set to 0.5 ."
+
+        },
+        "sequence length" : {
+          "set as" : {
+            "hard cutoff" : {
+              "on" : {
+                "all experiments" : {
+                  "has" : {
+                    "48" : {
+                      "for" : "MultiNLI"
+                    },
+                    "32" : {
+                      "for" : "SNLI"
+                    },
+                    "24" : {
+                      "for" : "Quora Question Pair Dataset"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "The sequence length is set as a hard cutoff on all experiments : 48 for MultiNLI , 32 for SNLI and 24 for Quora Question Pair Dataset ."
+            }
+          }
+        }
+      },
+      "use" : {
+        "exponential decayed keep rate" : {
+          "during" : "training",
+          "where" : {
+            "initial keep rate" : {
+              "is" : "1.0"
+            },
+            "decay rate" : {
+              "is" : {
+                "0.977" : {
+                  "for" : "every 10,000 step"
+                }
+              }
+            }
+          },
+          "from sentence" : "We use an exponential decayed keep rate during training , where the initial keep rate is 1.0 and the decay rate is 0.977 for every 10,000 step ."
+        }
+      },
+    }
+  }  
+}

@@ -1,0 +1,25 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "Residual LSTM" : {
+          "is" : {
+            "current state - of - the - art" : {
+              "on" : "MSCOCO dataset"
+            }
+          },
+          "from sentence" : "Residual LSTM is also the current state - of - the - art on the MSCOCO dataset ."
+        }
+      },
+      "compared" : {
+        "standard VAE model" : {
+          "i.e." : "unsupervised version"
+        },
+        "\" supervised \" variant VAE - S" : {
+          "of" : "unsupervised model"
+        },
+        "from sentence" : "For the Quora dataset , there were no known baseline results , so we compare our model with ( 1 ) standard VAE model i.e. , the unsupervised version , and ( 2 ) a \" supervised \" variant VAE - S of the unsupervised model ."
+      }
+    }
+  }
+}

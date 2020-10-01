@@ -1,0 +1,25 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "Our official ranking" : {
+          "is" : {
+            "1/38 ( tie )" : {
+              "in" : "Subtask A"
+            },
+            "2/24" : {
+              "in" : "Subtask B"
+            },
+            "2/16" : {
+              "in" : ["Subtask C", "Subtask D"]
+            },
+            "11/12" : {
+              "in" : "Subtask E"
+            }
+          },
+          "from sentence" : "Our official ranking is 1/38 ( tie ) in Subtask A , 2/24 in Subtask B , 2/16 in Subtask C , 2/16 in Subtask D and 11/12 in Subtask E."
+        }        
+      }
+    }
+  }
+}

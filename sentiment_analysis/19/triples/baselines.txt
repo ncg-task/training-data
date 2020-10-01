@@ -1,0 +1,4 @@
+(Contribution||has||Baselines)
+(Baselines||compare||SuBiLSTM and SuBiLSTM - Tied)
+(SuBiLSTM and SuBiLSTM - Tied||with||single - layer BiLSTM and a 2 - layer BiLSTM encoder)
+(single - layer BiLSTM and a 2 - layer BiLSTM encoder||with||same hidden dimension)

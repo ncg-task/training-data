@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["natural language inference", {"from sentence" : "is paper proposes an a ention boosted natural language inference model named a ESIM by adding word a ention and adaptive direction - oriented a ention mechanisms to the traditional Bi - LSTM layer of natural language inference models , e.g. ESIM . is makes the inference model a ESIM has the ability toe ectively learn the representation of words and model the local subsentential inference between pairs of premise and hypothesis ."}],
+    ["Natural language inference ( NLI )", {"from sentence" : "Natural language inference ( NLI ) is an important and signicant task in natural language processing ( NLP ) ."}],
+    ["NLI", {"from sentence" : "In the literature , the task of NLI is usually viewed as a relation classi cation ."}]
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "S2SA" : {
+          "name" : "Sequence - to - sequence framework",
+          "proposed for" : "language generation task",
+          "from sentence" : "( 1 ) S2SA : Sequence - to - sequence framework has been proposed for language generation task ."
+        },
+        "S2SAR" : {
+          "implement" : {
+            "simple method" : {
+              "incorporate" : {
+                "review information" : {
+                  "when generating" : "answer"
+                }
+              }
+            },
+            "from sentence" : "( 2 ) S2SAR : We implement a simple method which can incorporate the review information when generating the answer ."
+          }
+        },
+        "SNet" : {
+          "is" : {
+            "two - stage state - of - the - art model" : {
+              "which extracts" : {
+                "some text spans" : {
+                  "from" : "multiple documents context"
+                }
+              },
+              "synthesis" : {
+                "answer" : {
+                  "from" : "spans"
+                }
+              },
+              "from sentence" : "( 3 ) SNet : S- Net is a two - stage state - of - the - art model which extracts some text spans from multiple documents context and synthesis the answer from those spans ."
+            }
+          }
+        },
+        "QS" : {
+          "implement" : "query - based summarization model",
+          "from sentence" : "( 4 ) QS : We implement the query - based summarization model proposed by Hasselqvist et al .."
+        },
+        "BM25" : {
+          "is" : {
+            "bag - of - words retrieval function" : {
+              "ranks" : {
+                "set of reviews" : {
+                  "based on" : {
+                    "question terms" : {
+                      "appearing in" : "each review"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "( 5 ) BM25 : BM25 is a bag - of - words retrieval function that ranks a set of reviews based on the question terms appearing in each review ."
+            }
+          }
+        },
+        "TF - IDF" : {
+          "name" : "Term Frequency - Inverse Document Frequency",
+          "is" : {
+            "numerical statistic" : {
+              "to reflect" : {
+                "how important" : {
+                  "has" : {
+                    "question word" : {
+                      "to" : "review"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "( 6 ) TF - IDF : Term Frequency - Inverse Document
+Frequency is a numerical statistic that is intended to reflect how important a question word is to a review ."
+
+        }
+      }      
+    }
+  }
+}

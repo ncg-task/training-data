@@ -1,0 +1,59 @@
+{
+  "has" : {
+    "Results" : {
+      "compared" : {
+        "Tnt , HunPos and TreeTagger" : {
+          "found" : {
+            "Tnt" : {
+              "to be" : {
+                "consistently better" : {
+                  "than" : "Treetagger"
+                }
+              } 
+            }
+          },
+          "from sentence" : "In an initial investigation , we compared Tnt , HunPos and TreeTagger and found Tnt to be consistently better than Treetagger , Hunpos followed closely but crashed on some languages ( e.g. , Arabic ) ."
+        }
+      },
+      "has" : {
+        "combined word + character representation model" : {
+          "is" : {
+            "best representation" : {
+              "has" : {
+                "outperforming" : {
+                  "has" : {
+                    "baseline" : {
+                      "on" : "all except one language ( Indonesian )"
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "The combined word + character representation model is the best representation , outperforming the baseline on all except one language ( Indonesian ) , providing strong results already without pre-trained embeddings ."            
+          },
+          "reaches" : {
+            "biggest improvement" : {
+              "on" : "Hebrew and Slovene",
+              "has" : "more than + 2 % accuracy",
+              "from sentence" : "This model ( w + c ) reaches the biggest improvement ( more than + 2 % accuracy ) on Hebrew and Slovene ."
+            }
+          }
+        },
+        "overall best system" : {
+          "is" : "multi-task bi - LSTM FREQBIN",
+          "from sentence" : "The overall best system is the multi-task bi - LSTM FREQBIN ( it uses w + c and POLYGLOT initialization for w ) ."
+        }
+      },
+      "Initializing" : {
+        "word embeddings ( + POLYGLOT )" : {
+          "with" : {
+            "off - the - shelf languagespecific embeddings" : {
+              "improves" : "accuracy"
+            }
+          }
+        },
+        "from sentence" : "Initializing the word embeddings ( + POLYGLOT ) with off - the - shelf languagespecific embeddings further improves accuracy ."
+      }
+    }
+  }
+}

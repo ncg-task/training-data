@@ -1,0 +1,23 @@
+{
+  "has" : {
+    "Model" : {
+      "build" : {
+        "neural network model" : {
+          "with" : "four components"
+        },
+        "from sentence" : "We then build a neural network model with four components ."
+      },
+      "uses" : {
+        "ELMo ( which stands for Embeddings from Language Models ) pre-trained contextual embeddings" : {
+          "as" : "input"
+        }
+      },
+      "builds" : {
+        "sequence representation vectors" : {
+          "to predict" : "relation between the question pairs"
+        }
+      },
+      "from sentence" : "The model uses ELMo ( which stands for Embeddings from Language Models ) pre-trained contextual embeddings as an input and builds sequence representation vectors that are used to predict the relation between the question pairs ."
+    }
+  }
+}

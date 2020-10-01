@@ -1,0 +1,28 @@
+{
+  "has" : {
+    "Approach" : {
+      "attempt to learn" : {
+        "unsupervised representation" : {
+          "accurately contains" : "sentiment analysis"
+        },
+        "from sentence" : "We focus in on the task of sentiment analysis and attempt to learn an unsupervised representation that accurately contains this concept ."
+      },
+      "consider" : {
+        "research benchmark of byte ( character ) level language modelling" : {
+          "due to" : "its further simplicity and generality"
+        },
+        "from sentence" : "As an approach , we consider the popular research benchmark of byte ( character ) level language modelling due to its further simplicity and generality ."
+      },
+      "train on" : {
+        "very large corpus" : {
+          "picked to have" : {
+            "similar distribution" : {
+              "as" : "our task of interest"
+            }
+          }
+        },
+        "from sentence" : "We train on a very large corpus picked to have a similar distribution as our task of interest ."
+      }
+    }
+  }
+}

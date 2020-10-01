@@ -1,0 +1,55 @@
+{
+  "has" : {
+    "Results" : {
+      "in" : {
+        "private test set" : {
+          "of" : {
+            "Hotpot QA" : {
+              "see that" : {
+                "our model" : {
+                  "achieves" : {
+                    "second best result" : {
+                      "on" : ["leaderboard", "March 1st"]
+                    }
+                  }
+                }
+              },
+              "from sentence" : "We first present a comparison between baseline models and our DFGN 2 . shows the performance of different models in the private test set of Hotpot QA .
+From the table we can see that our model achieves the second best result on the leaderboard now 3 ( on March 1st ) ."
+
+            }
+          }
+        }
+      },
+      "has" : {
+        "joint performance" : {
+          "of" : {
+            "our model" : {
+              "are" : {
+                "competitive" : {
+                  "against" : "state - of - the - art unpublished models"
+                }
+              }
+            }
+          },
+          "from sentence" : "Besides , the answer performance and the joint performance of our model are competitive against state - of - the - art unpublished models ."
+        }
+      },
+      "show" : {
+        "our model" : {
+          "achieves" : {
+            "1.5 % gain" : {
+              "in" : "joint F1 - score",
+              "with" : {
+                "entity graph" : {
+                  "built from" : "better entity recognizer"
+                }
+              }
+            }
+          },
+          "from sentence" : "The results show that our model achieves a 1.5 % gain in the joint F1 - score with the entity graph built from a better entity recognizer ."
+        }
+      }
+    }
+  }
+}

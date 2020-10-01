@@ -1,0 +1,40 @@
+{
+  "has" : {
+    "Approach" : {
+      "has" : {
+        "semantic parsing" : {
+          "to" : {
+            "problem" : {
+              "of" : "KB QA"
+            }
+          },
+          "from sentence" : "In this paper , we describe a semantic parsing approach to the problem of KB QA ."
+        },
+        "Semantic parses" : {
+          "deterministically converted to" : {
+            "query" : {
+              "to extract" : {
+                "answers" : {
+                  "from" : "KB"
+                }
+              }
+            }
+          },
+          "from sentence" : "Semantic parses can be deterministically converted to a query to extract the answers from the KB ."
+        }
+      },
+      "for" : {
+        "each input question" : {
+          "construct" : "explicit structural semantic parse ( semantic graph )",
+          "from sentence" : "That is , for each input question , we construct an explicit structural semantic parse ( semantic graph ) , as in ."
+        }
+      },
+      "adapt" : {
+        "Gated Graph Neural Networks ( GGNNs )" : {
+          "to process and score" : "semantic parses",
+          "from sentence" : "In particular , we adapt Gated Graph Neural Networks ( GGNNs ) , described in , to process and score semantic parses ."
+        }
+      }
+    }
+  }
+}

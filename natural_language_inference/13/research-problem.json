@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Machine Comprehension", {"from sentence" : "Multi-range Reasoning for Machine Comprehension"}],
+    ["machine comprehension ( MC )", {"from sentence" : "We propose MRU ( Multi - Range Reasoning Units ) , a new fast compositional encoder for machine comprehension ( MC ) ."}],
+    ["MC", {"from sentence" : "While the usage of recurrent encoder is often regarded as indispensable in highly complex MC tasks , there are still several challenges and problems pertaining to it 's usage in modern MC tasks ."}]
+  ]
+}

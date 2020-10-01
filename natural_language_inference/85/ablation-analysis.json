@@ -1,0 +1,101 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "has" : {
+        "Each tree node" : {
+          "implemented with" : {
+            "tree - LSTM block" : {
+              "performance" : {
+                "drops" : {
+                  "to" : "88.2 %"
+                }
+              }
+            },
+            "from sentence" : "Each tree node is implemented with a tree - LSTM block same as in model .
+shows that with this replacement , the performance drops to 88.2 % ."
+
+          }
+        }
+      },
+      "remove" : {
+        "pooling layer" : {
+          "in" : "inference composition",
+          "replace it with" : {
+            "summation" : {
+              "has" : {
+                "accuracy" : {
+                  "has" : {
+                    "drops" :{
+                      "to" : "87.1 %"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "If we remove the pooling layer in inference composition and replace it with summation as in , the accuracy drops to 87.1 % ."
+        },
+        "difference and elementwise product" : {
+          "from" : {
+            "local inference enhancement layer" : {
+              "has" : {
+                "accuracy" : {
+                  "has" : {
+                    "drops" : {
+                      "to" : "87.0 %"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "If we remove the difference and elementwise product from the local inference enhancement layer , the accuracy drops to 87.0 % ."
+        },
+        "premise - based attention" : {
+          "from" : "ESIM",
+          "has" : {
+            "accuracy" : {
+              "has" : {
+                "drops" : {
+                  "to" : "87.2 %",
+                  "on" : "test set"
+                }
+              }
+            }
+          },
+          "from sentence" : "If we remove the premise - based attention from ESIM ( model 23 ) , the accuracy drops to 87.2 % on the test set ."
+        }
+      },
+      "replacing" : {
+        "bidirectional LSTMs" : {
+          "in" : "inference composition"
+        },
+        "input encoding" : {
+          "with" : "feedforward neural network"
+        },
+        "reduces" : {
+          "has" : {
+            "accuracy" : {
+              "to" : "87.3 % and 86.3 %"
+            }
+          }
+        },
+        "from sentence" : "To provide some detailed comparison with , replacing bidirectional LSTMs in inference composition and also input encoding with feedforward neural network reduces the accuracy to 87.3 % and 86.3 % respectively ."
+      },
+      "Removing" : {
+        "hypothesis - based attention ( model 24 )" : {
+          "has" : {
+            "decrease" : {
+              "has" : {
+                "accuracy" : {
+                  "to" : "86.5 %"
+                }
+              }
+            }
+          },
+          "from sentence" : "Removing the hypothesis - based attention ( model 24 ) decrease the accuracy to 86.5 % , where hypothesis - based attention is the attention performed on the other direction for the sentence pairs ."
+        }
+      }
+    }
+  }
+}

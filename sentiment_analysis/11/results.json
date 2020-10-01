@@ -1,0 +1,39 @@
+{
+  "has" : {
+    "Results" : {
+      "suggests" : {
+        "gathering contexts temporally" : {
+          "through" : {
+            "sequential processing": {
+              "is" : {
+                "superior method" : {
+                  "over" : "non-temporal memory representations"
+                }
+              }
+            }
+          },
+          "from sentence" : "This suggests that gathering contexts temporally through sequential processing is indeed a superior method over non-temporal memory representations ."
+        }
+      },
+      "has" : {
+        "CMN self" : {
+          "uses only" : "single history channel",
+          "provides" : {
+            "lesser performance" : {
+              "compared to" : "CMN"
+            }
+          },
+          "from sentence" : "CMN self which uses only single history channel also provides lesser performance when compared to CMN ."
+        },
+        "predictions" : {
+          "on" : {
+            "valence and arousal levels" : {
+              "show" : "similar results"
+            }
+          },
+          "from sentence" : "Overall , predictions on valence and arousal levels also show similar results which reinforce our hypothesis of CMN 's ability to model emotional dynamics ."
+        }
+      }
+    }
+  }
+}

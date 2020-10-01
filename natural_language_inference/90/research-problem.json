@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Natural Language Inference", {"from sentence" : "A Decomposable Attention Model for Natural Language Inference"}],
+    ["Natural language inference ( NLI )", {"from sentence" : "Natural language inference ( NLI ) refers to the problem of determining entailment and contradiction relationships between a premise and a hypothesis ."}],
+    ["NLI", {"from sentence" : "NLI is a central problem in language understanding ) and recently the large SNLI corpus of 570K sentence pairs was created for this task ."}]
+  ]
+}

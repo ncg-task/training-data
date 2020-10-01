@@ -1,0 +1,48 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "WikiMovies" : {
+          "has" : {
+            "Key - Value Memory Networks" : {
+              "has" : {
+                "outperform" : {
+                  "has" : "all other methods"
+                }
+              },
+              "from sentence" : "WikiMovies
+However , Key - Value Memory Networks outperform all other methods on all three data source types ."
+
+            },
+            "Reading" : {
+              "from" : {
+                "Wikipedia documents" : {
+                  "has" : {
+                    "outperforms" : {
+                      "has" : "IE - based KB ( IE )"
+                    }
+                  },
+                  "from sentence" : "Reading from Wikipedia documents directly ( Doc ) outperforms an IE - based KB ( IE ) , which is an encouraging result towards automated machine reading though a gap to a humanannotated KB still remains ( 93.9 vs. 76.2 ) ."
+                }
+              }
+            }
+          }
+        },
+        "WikiQA" : {
+          "has" : {
+            "Key - Value Memory Networks" : {
+              "has" : {
+                "outperform" : {
+                  "has" : "large set of other methods"
+                }
+              },
+              "from sentence" : "WikiQA
+Key - Value Memory Networks outperform a large set of other methods , although the results of the L.D.C. method of are very similar ."
+
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,161 @@
+124	3	6	run
+124	7	22	our experiments
+124	23	25	on
+124	28	35	machine
+124	41	49	contains
+124	52	71	single GTX 1080 GPU
+124	72	76	with
+124	77	86	8 GB VRAM
+126	32	35	use
+126	38	66	variable character embedding
+126	67	71	with
+126	74	106	fixed pre-trained word embedding
+126	107	115	to serve
+126	119	123	part
+126	124	126	of
+126	131	136	input
+126	137	141	into
+126	146	151	model
+127	4	23	character embedding
+127	27	44	implemented using
+127	45	48	CNN
+127	49	53	with
+127	56	78	one -dimensional layer
+127	79	90	consists of
+127	91	100	100 units
+127	49	53	with
+127	108	120	channel size
+127	88	90	of
+127	124	125	5
+128	10	21	input depth
+128	22	24	of
+128	25	26	8
+129	4	14	max length
+129	15	17	of
+129	18	23	SQuAD
+129	24	26	is
+129	27	29	16
+130	4	24	fixed word embedding
+130	31	40	dimension
+130	41	43	of
+130	44	47	100
+130	59	70	provided by
+130	75	89	GloVe data set
+133	4	13	POS model
+133	14	22	contains
+133	23	44	syntactic information
+133	45	49	with
+133	50	71	39 different POS tags
+133	77	82	serve
+133	86	107	both input and output
+134	0	3	For
+134	4	17	SECT and SEDT
+134	22	27	input
+134	28	30	of
+134	35	40	model
+134	47	51	size
+134	28	30	of
+134	55	56	8
+134	57	61	with
+134	62	70	30 units
+134	71	76	to be
+134	77	83	output
+135	19	38	maximum length size
+135	47	56	set to be
+135	57	66	10 and 20
+140	9	17	compared
+140	22	33	performance
+140	201	203	on
+140	208	227	development dataset
+140	34	36	of
+140	231	236	SQuAD
+140	63	86	baseline approach BiDAF
+140	95	119	proposed SEST approaches
+140	122	131	including
+140	132	140	SE - POS
+140	143	154	SECT - LSTM
+140	157	167	SECT - CNN
+140	170	181	SEDT - LSTM
+140	188	198	SEDT - CNN
+145	28	46	our propose models
+145	47	54	achieve
+145	55	83	higher relative improvements
+145	84	86	in
+145	87	96	EM scores
+145	97	101	than
+145	102	112	F 1 scores
+145	113	117	over
+145	122	138	baseline methods
+146	14	24	found that
+146	30	57	SECT - LSTM and SEDT - LSTM
+146	58	62	have
+146	63	81	better performance
+146	82	86	than
+146	93	109	CNN counterparts
+152	0	34	Contribution of Syntactic Sequence
+152	13	15	of
+160	84	87	are
+160	88	97	important
+160	98	101	for
+160	106	112	models
+160	113	120	to work
+160	121	129	properly
+160	27	31	both
+160	36	44	ordering
+160	53	61	contents
+160	69	83	syntactic tree
+152	1	3	on
+160	132	165	constituency and dependency trees
+160	166	174	achieved
+160	175	190	over 20 % boost
+160	194	205	performance
+160	206	217	compared to
+160	222	245	randomly generated ones
+160	250	271	our proposed ordering
+160	277	292	out - performed
+160	297	312	random ordering
+161	34	42	ordering
+161	43	45	of
+161	46	62	dependency trees
+161	63	76	seems to have
+161	77	88	less impact
+161	19	21	on
+161	96	107	performance
+161	108	119	compared to
+161	132	150	constituency trees
+164	0	20	Window Size Analysis
+166	28	36	limiting
+166	41	52	window size
+166	58	66	benefits
+166	71	82	performance
+166	83	85	of
+166	86	96	our models
+169	23	33	illustrate
+169	39	51	performances
+169	52	54	of
+169	59	65	models
+169	66	74	increase
+169	75	79	with
+169	84	90	length
+169	52	54	of
+169	98	104	window
+171	8	16	observed
+171	22	40	larger window size
+171	41	58	does not generate
+171	59	77	predictive results
+171	86	96	as good as
+171	101	121	one with window size
+171	122	128	set to
+171	129	131	10
+26	19	26	propose
+26	27	75	Structural Embedding of Syntactic Trees ( SEST )
+26	81	87	encode
+26	88	109	syntactic information
+26	110	123	structured by
+26	124	161	constituency tree and dependency tree
+26	162	166	into
+26	167	190	neural attention models
+26	100	103	for
+26	199	222	question answering task
+2	44	65	Machine Comprehension
+9	0	21	Reading comprehension

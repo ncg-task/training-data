@@ -1,0 +1,31 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "has" : {
+        "proposed EDD - LG ( shared ) method" : {
+          "works" : {
+            "way better" : {
+              "than" : "other variants",
+              "in terms of" : "BLEU and METEOR metrics",
+              "achieving" : {
+                "improvement" : {
+                  "of" : {
+                    "8 % and 6 %" : {
+                      "in" : "scores",
+                      "for" : "50 K dataset"
+                    },
+                    "10 % and 7 %" : {
+                      "in" : "scores",
+                      "for" : "100 K dataset"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Among the ablations , the proposed EDD - LG ( shared ) method works way better than the other variants in terms of BLEU and METEOR metrics by achieving an improvement of 8 % and 6 % in the scores respectively over the baseline method for 50 K dataset and an improvement of 10 % and 7 % in the scores respectively for 100 K dataset ."
+        }
+      }
+    }
+  }
+}

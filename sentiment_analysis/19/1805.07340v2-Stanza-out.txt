@@ -1,0 +1,153 @@
+title
+Improved Sentence Modeling using Suffix Bidirectional LSTM
+abstract
+Recurrent neural networks have become ubiquitous in computing representations of sequential data , especially textual data in natural language processing .
+In particular , Bidirectional LSTMs are at the heart of several neural models achieving state - of - the - art performance in a wide variety of tasks in NLP .
+However , BiLSTMs are known to suffer from sequential bias the contextual representation of a token is heavily influenced by tokens close to it in a sentence .
+We propose a general and effective improvement to the BiLSTM model which encodes each suffix and prefix of a sequence of tokens in both forward and reverse directions .
+We call our model Suffix Bidirectional LSTM or SuBiLSTM .
+This introduces an alternate bias that favors long range dependencies .
+We apply SuBiLSTMs to several tasks that require sentence modeling .
+We demonstrate that using SuBiLSTM instead of a BiLSTM in existing models leads to improvements in performance in learning general sentence representations , text classification , textual entailment and paraphrase detection .
+Using SuBiLSTM we achieve new state - of - the - art results for fine - grained sentiment classification and question classification .
+Let s be a sequence with n tokens .
+We use s[i : j ] to denote the sequence of embeddings of the tokens from s [ i ] to s [ j ] , where j maybe less than i .
+Let ?
+L p represent a LSTM that ar Xiv : 1805.07340v2 [ cs.LG ]
+Introduction
+Recurrent Neural Networks ( RNN ) ) have emerged as a powerful tool for modeling sequential data .
+Vanilla
+RNNs have largely given way to more sophisticated recurrent architectures like Long Short - Term Memory and the simpler Gated Recurrent Unit ) , owing to their superior gradient propagation properties .
+The importance of LSTMs in natural language processing , where a sentence as a sequence of tokens represents a fundamental unit , has risen exponentially over the past few years .
+A LSTM processing a sentence in the forward direction produces distributed representations of its prefixes .
+A Bidirectional LSTM ( BiLSTM in short ) additionally processes the sentence in the reverse direction ( starting from the last token ) producing representations of the suffixes ( in the reverse direction ) .
+For every token tin the sentence , a BiLSTM thus produces a contextual representation oft based on its prefix and suffix in the sentence .
+Despite their sophisticated design , it is well known that LSTMs suffer from sequential bias Copyright c 2019 , Association for the Advancement of Artificial Intelligence ( www.aaai.org ) .
+All rights reserved ..
+The hidden state of a LSTM is heavily influenced by the last few tokens it has processed .
+This implies that the contextual representation oft is highly influenced by the tokens close to it in the sequential order , with tokens farther away being less influential .
+Computing contextual representations that capture long range dependencies is a challenging research problem , with numerous applications .
+In this paper , we propose a simple , general and effective technique to compute contextual representations that capture long range dependencies .
+For each token t , we encode both its prefix and suffix in both the forward and reverse direction .
+Notably , the encoding of the suffix in the forward direction is biased towards tokens sequentially farther away to the right oft .
+Similarly , the encoding of the prefix in the reverse direction is biased towards tokens sequentially farther away to the left oft .
+Further , we combine the prefix and suffix representations by a simple max - pooling operation to produce a richer contextual representation of t in both the forward and reverse direction .
+We call our model Suffix BiLSTM or SuBiLSTM in short .
+A SuBiLSTM has the same representation length as a BiLSTM with the same hidden dimension .
+We consider two versions of SuBiLSTMs - a tied version where the suffixes and prefixes in each direction are encoded using the same LSTM and an untied version where two different LSTMs are used .
+Note that , as in a BiLSTM , we always use different LSTMs for the forward and reverse direction .
+In general a SuBiLSTM can be used as a drop in replacement in any model that uses the intermediate states of a BiLSTM , without changing any other parts of the model .
+However , the main motivation for introducing SuBiLSTMs is to apply it to problems that require whole sentence modeling e.g. text classification , where the richer contextual information can be helpful .
+We demonstrate the effectiveness of SuBiLSTM on several sentence modeling tasks in NLP - general sentence representation , text classification , textual entailment and paraphrase detection .
+In each of these tasks , we show gains by simply replacing BiLSTMs in strong base models , achieving anew state - of - the - art in fine grained sentiment classification and question classification .
+Here ; is the concatenation operator .
+This defines the SuBiL - STM model .
+We also define another representation where the two LSTMs encoding the sequence in the same direction are the same or their weights are tied .
+This defines the SuBiLSTM - Tied model , which concretely is
+In contrast to SuBiLSTM , a standard BiLSTM uses the following contextual representation of s.
+For a fixed hidden dimension , SuBiLSTM and SuBiLSTM - Tied have the same representation length as a BiLSTM .
+Importantly , SuBiLSTM - Tied uses the same number of parameters as a BiLSTM , while SuBiLSTM uses twice as many .
+can be interpreted as the max - pooling of the bidirectional representations of the prefix and suffix of s [i ] into a compact representation .
+This maybe contrasted with a BiLSTM where the prefix is encoded by a LSTM in the forward direction and the suffix is encoded by another LSTM in the reverse direction .
+SuBiLSTM thus tries to capture more information by encoding the prefix and suffix in a bidirectional manner .
+Interpretations of SuBiLSTM
+In general , the prefix and suffix encodings can be combined in other ways e.g. concatenation , mean or through a learned gating function .
+However , we use max - pooling because it is a simple parameterless operation and it performs better in our experiments .
+Since both SuBiLSTM and SuBiLSTM - Tied produces representations of each token s [ i ] in the same way as a BiLSTM , they can be used as drop in replacements fora BiLSTM in any model that uses these representations .
+Time complexity of a SuBiLSTM
+To compute the contextual representations of a minibatch of sentences using a SuBi LSTM , we calculate all the ?
+h p , i in one pass using ?
+L p .
+We then create several minibatches ( determined by the maximum length of a sentence in the minibatch n max ) of successively smaller suffixes starting at i , for each i ?
+[ 1 : n max ] and use ?
+L s to compute the encodings ? h s , i .
+The same procedure is repeated for the minibatch of sentences with tokens reversed to compute ?
+h s , i and ? h p , i .
+As an optimization , several of the minibatches of the shorter suffixes can be combined to form larger minibatches .
+The worst case time complexity of computing all the representations is quadratic inn max , as compared to the linear time complexity using a BiLSTM .
+As we show in later sections , the increased time complexity is offset by the consistent gains in performance on several sentence modeling tasks .
+The encodings of the different can be computed in parallel , which can speedup computation greatly on modern hardware .
+Evaluation , Datasets , Training and Testing
+We evaluate the representational power of SuBiLSTM using several sentence modeling tasks and datasets from NLP .
+We do not concern ourselves with designing new models for SuBiLSTM .
+Rather , for each task , we take a strongly performing base model that uses the token representations of a BiLSTM and replace it with SuBiLSTM .
+The training procedures are kept exactly the same .
+General Sentence Representation
+The performance of SuBiLSTM and SuBiLSTM - Tied on the 10 transfer tasks in SentEval is shown in .
+In all the tasks , SuBiLSTM and SuBiLSTM - Tied matches or exceeds the performance of the base model InferSent that uses a BiLSTM .
+For SuBiLSTM , among the classification tasks , the gains for SUBJ ( 0.8 % ) , MPQA ( 0.5 % ) and TREC ( 1.6 % ) over Infer Sent are particularly notable .
+There is also a substantial gain of 1.2 % in the semantic textual similarity task ( STSB ) .
+The performance of SuBiLSTM - Tied also follows a similar trend , gaining 0.6 % for SUBJ , 0.5 % for SST , 2.2 % for TREC and and 1.3 % for STSB .
+The better performance on STSB is noteworthy as the sentence representations derived from a SuBiLSTM can take advantage of the long range dependencies it encodes .
+The 2 - layer BiLSTM based model performs comparably to the single layer BiLSTM , despite using a much larger number of parameters .
+In we plot the absolute gains made by SuBiLSTM and SuBiLSTM - Tied over BiLSTM for all the 10 tasks .
+It is interesting to note that both models perform comparably on an average , although SuBiLSTM has twice as many param - eters as SuBiLSTM - Tied .
+The performance of our models is still someway off from MultiTask ; but they use a training dataset which is two orders of magnitude larger with a complex set of learning objectives .
+Quick
+Thoughts ( Logeswaran and Lee 2018 ) also uses a much larger unsupervised dataset .
+It is possible that SuBiLSTM coupled with training objectives and datasets used in these two works will provide substantial gains over the existing results .
+Text Classification
+The performance of SuBiLSTM and SuBiLSTM - Tied on the four text classification datasets is shown in .
+In three of these tasks ( SST - 2 , SST - 5 and TREC - 50 ) , SuBiLSTM - Tied using GloVe and CoVe embeddings performs the best .
+It performs notably better than the single layer BiLSTM based base model BCN on SST - 2 and SST - 5 , achieving anew state - of - the - art accuracy of 56.2 % on fine - grained sentiment classification ( SST - 5 ) .
+On TREC - 6 , the best result is obtained for SuBiLSTM - Tied using Glo Ve embeddings only , anew state - of - the - art accuracy of 96.2 % .
+There is no substantial improvement on the TREC - 50 dataset .
+For text classification , we observe that SuBiLSTM - Tied performs better than SuBiLSTM and CoVe embeddings give a boost inmost cases .
+The performance of the base model BCN with a 2 - layer BiLSTM is slightly better than with the Model Test ESIM with BiLSTM 88.0 DIIN 88.0 BCN+Char+CoVe 88.1 DR - BiLSTM 88.5 CAFE 88 This implies that the richer contextual information captured by a SuBiLSTM can not easily be replicated by adding more layers to the BiLSTM .
+Note that BCN uses a self - attention mechanism on top of the token representations and it is able to exploit the richer representations provided by SuBiLSTM .
+Textual Entailment
+The performance of SuBiLSTM and SuBiLSTM - Tied on the SNLI dataset is shown in .
+Our implementation of ESIM , when using a BiLSTM , achieves 87.8 % accuracy .
+Using a SuBiLSTM , the accuracy jumps to 88.3 % and to 88.2 % for the Tied version .
+On using the 2 - layer BiLSTM , accuracy improves only marginally by 0.1 % .
+This is aligned with the results shown for text classification above .
+Here again , the attention mechanism on top of the token representations benefit from the long range contextual information captured by SuBiLSTM .
+Note that ESIM uses an inter-sentence attention mechanism and is able to exploit the better token representations provided by SuBiLSTM across sentences .
+We also report the performance of an ensemble of 5 models .
+Both the SuBiLSTM versions achieve an accuracy of 89.1 % , while the BiLSTM based ones perform worse .
+Paraphrase Detection
+The accuracies obtained on the QUORA dataset are shown in .
+Note that unlike the BCN and ESIM models , we use a simple Siamese architecture without any attention mechanism .
+In fact , the representation of a sentence in this case is simply the max - pooling of all the intermediate representations of the SuBiLSTM .
+Even in this case , we observe gains over both single layer and 2 - layer BiLSTMs , although slightly lesser than the attention based models .
+The best model ( SuBiLSTM ) achieves 88.2 % , at par with a more complex attention based model BiMPM .
+Baselines
+For each of the tasks , we compare SuBiLSTM and SuBiLSTM - Tied with a single - layer BiLSTM and a 2 - layer BiLSTM encoder with the same hidden dimension .
+While a SuBiLSTM - Tied encoder has the same number of parameters as single - layer BiLSTM , a SuBiLSTM has twice as many .
+In contrast , a 2 - layer BiLSTM has more parameters than either of the SuBiLSTM variants if the hidden dimension is at least as large as the input dimension , which is the casein all out models .
+By comparing with a 2 - layer BiLSTM baseline , we account for the larger number of parameters used in SuBiLSTM and also check whether the long range contextual information captured by SuBiLSTM can easily be replicated by adding more layers to the BiLSTM .
+Experimental Results
+In this section , for the sake of brevity , the terms SuBiLSTM and SuBiLSTM - Tied will sometimes refer to the base models where the BiLSTM has been replaced by our models .
+Model
+Test BIMPM 88.2 pt-DECATTchar 88.4 DIIN 89 .
+Comparison of SuBiLSTM and SuBiLSTM - Tied
+The results shown above clearly show the efficacy of using SuBiLSTMs in existing models geared towards four different sentence modeling tasks .
+The relative performance of SuBiL - STM and SuBiLSTM - Tied are fairly close to each other , as shown by the relative gains in .
+SuBiLSTM - Tied works better on small datasets ( SST and TREC ) , probably owing to the regularizing effect of using the same LSTM to encode both suffixes and prefixes .
+For the larger datasets ( SNLI and QUORA ) , SuBILSTM slightly edges out the tied version owing to its larger capacity .
+The training complexity for both the models is similar and hence , with half the parameters , SuBILSTM - Tied should be the more favored model for sentence modeling tasks .
+Related Work
+Recurrent Neural Networks ) have emerged as one of the most powerful tools for computing distributed representations of sequential data .
+The problems of training vanilla RNNs were addressed by more sophisticated models - most notably the Long Short Term Memory ( LSTM ) and the simpler GRU .
+Over the years , several alternatives to the basic RNN model have been proposed .
+A Dilated - RNN ) uses progressively dilated connections between recurrent nodes to extract long range dependencies efficiently .
+A Skip - RNN ) learns to skip state updates rather than applying them at each token in a sequence , thereby achieving faster training and inference times .
+Recurrent Highway Networks ) allow for multiple state updates via highway connections at each time step and a Clockwork - RNN updates its state at multiple timescales .
+The idea of capturing long term dependencies in better ways has given rise to memory augmented architectures like Neural Turing Machines and TopicRNNs .
+In this paper , we focus on LSTMs .
+As shown by the work of and , LSTMs represent a robust recurrent neural network architecture for modeling sequential data .
+In particular , LSTMs area core component in several state - of - the - art neural models for NLP tasks like language modeling , textual entailment , question answering , semantic role labeling ) and named entity recognition .
+A unidirectional RNN processes a sequence in a single direction , usually following the natural order specific to the sequence .
+Bidirectional RNNs , where two distinct recurrent networks process the input sequence in opposite directions was first proposed by .
+This allows the model to have a representation of the prefix and the suffix at each intermediate point in the sequence , thereby providing context in both directions .
+Following the work by , Bidirectional LSTMs have become a mainstay for sequence representation tasks .
+The concept of having encodings of different contexts has since been generalized to Multidimensional LSTMs and Grid LSTMs ( Kalchbrenner , Danihelka , and Graves 2016 ) .
+In the recently proposed Twin - Networks , the authors show that forcing the prefix encoding in a BiLSTM to be close to the suffix encoding in the reverse direction acts as a regularizer and helps capture more long term dependencies .
+We take a more direct approach - explicitly encoding the suffix in the forward direction and forcing an interaction with the prefix encoding through a max - pooling .
+Although we focus on LSTMs in this paper , our idea generalizes trivially to other RNN cells .
+Conclusion
+We propose SuBiLSTM and SuBiLSTM - Tied , a simple , general and effective improvement to the BiLSTM model , where the prefix and suffix of each token in a sentence is encoded in both forward and reverse directions to capture long range dependencies .
+We demonstrate gains in performance by replacing BiLSTMs in existing models for several sentence modeling tasks .
+The main drawback of our method is the quadratic time complexity required to compute the representations in a SuBiLSTM .
+As future direction of work , we intend to explore variants of SuBiLSTM , where only suffixes of fixed or small random lengths are computed .
+We also plan to utilize the information ( e.g. encodings of subsequences ) exposed by SuBiLSTM in more novel ways .

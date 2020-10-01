@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Machine Comprehension", {"from sentence" : "Multi - Perspective Context Matching for Machine Comprehension"}],
+    ["machine comprehension ( MC )", {"from sentence" : "Previous machine comprehension ( MC ) datasets are either too small to train endto - end deep learning models , or not difficult enough to evaluate the ability of current MC techniques ."}],
+    ["MC", {"from sentence" : "Previous machine comprehension ( MC ) datasets are either too small to train endto - end deep learning models , or not difficult enough to evaluate the ability of current MC techniques ."}]
+  ]
+}

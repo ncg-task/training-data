@@ -1,0 +1,101 @@
+{
+  "has" : {
+    "Model" : {
+      "present" : {
+        "FLOWQA" : {
+          "designed for" : "conversational machine comprehension",
+          "from sentence" : "We present FLOWQA , a model designed for conversational machine comprehension ."
+        }
+      },
+      "has" : {
+        "FLOWQA" : {
+          "consists of" : {
+            "two main components" : {
+              "has" : {
+                "base neural model" : {
+                  "for" : "single - turn MC"
+                },
+                "FLOW mechanism" : {
+                  "encodes" : "conversation history"
+                }
+              },
+              "from sentence" : "FLOWQA consists of two main components : a base neural model for single - turn MC and a FLOW mechanism that encodes the conversation history ."
+            }
+          }
+        },
+        "FLOW mechanism" : {
+          "is" : {
+            "remarkably effective" : {
+              "at tracking" : {
+                "world states" : {
+                  "for" : "sequential instruction understanding"
+                }
+              }
+            },
+            "from sentence" : "This FLOW mechanism is also remarkably effective at tracking the world states for sequential instruction understanding ( Long et al. , 2016 ) : after mapping world states as context and instructions as questions , FLOWQA can interpret a sequence of inter-connected instructions and generate corresponding world state changes as answers ."            
+          },
+          "can be" : {
+            "viewed" : {
+              "as" : {
+                "stacking single - turn QA models" : {
+                  "along" : "dialog progression",
+                  "building" : {
+                    "information flow" : {
+                      "along" : "dialog"
+                    }
+                  },
+                  "from sentence" : "The FLOW mechanism can be viewed as stacking single - turn QA models along the dialog progression ( i.e. , the question turns ) and building information flow along the dialog ."
+                }
+              }
+            }
+          }
+        },
+        "information transfer" : {
+          "happens for" : "each context word",
+          "allowing" : {
+            "rich information" : {
+              "in" : "reasoning process",
+              "to" : "flow"
+            }
+          },
+          "from sentence" : "This information transfer happens for each context word , allowing rich information in the reasoning process to flow ."
+        }
+      },
+      "feed" : {
+        "entire hidden representations" : {
+          "generated during" : {
+            "process" : {
+              "of" : "answering previous questions"
+            }
+          },
+          "from sentence" : "Instead of using the shallow history , i.e. , previous questions and answers , we feed the model with the entire hidden representations generated during the process of answering previous questions ."
+        }
+      },
+      "propose" : {
+        "alternating parallel processing structure" : {
+          "which" : {
+            "alternates" : {
+              "between" : {
+                "sequentially processing" : {
+                  "has" : {
+                    "one dimension" : {
+                      "in parallel of" : "other dimension"
+                    },
+                    "speeds up" : {
+                      "has" : {
+                        "training" : {
+                          "has" : "significantly"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "To handle this issue , we propose an alternating parallel processing structure , which alternates between sequentially processing one dimension in parallel of the other dimension , and thus speeds up training significantly ."
+            }
+          }
+        }
+      }
+    }
+  }  
+}

@@ -1,0 +1,48 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "used" : {
+        "word embeddings ( d = 50 )" : {
+          "computed using" : "Collobert and Weston 's neural language model",
+          "from sentence" : "We used word embeddings ( d = 50 ) that were computed using Collobert and Weston 's neural language model and provided by Turian et al .."
+        }
+      },
+      "has" : {
+        "other model weights" : {
+          "has" : {
+            "randomly intitialised" : {
+              "using" : "Gaussian distribution ( = 0 , ? = 0.01 )"
+            }
+          },
+          "from sentence" : "The other model weights were randomly intitialised using a Gaussian distribution ( = 0 , ? = 0.01 ) ."
+        },
+        "All hyperparameters" : {
+          "optimised via" : {
+            "grid search" : {
+              "on" : "MAP score on the development data"
+            }
+          },
+          "from sentence" : "All hyperparameters were optimised via grid search on the MAP score on the development data ."
+        },
+        "L - BFGS" : {
+          "to train" : {
+            "logistic regression classifier" : {
+              "with" : {
+                "L2 regulariser" : {
+                  "of" : "0.01"
+                }
+              }
+            }
+          },
+          "from sentence" : "L - BFGS was used to train the logistic regression classifier , with L2 regulariser of 0.01 ."
+        }
+      },
+      "use" : {
+        "AdaGrad algorithm" : {
+          "for" : "training",
+          "from sentence" : "We use the AdaGrad algorithm for training ."
+        }
+      }
+    }
+  }  
+}

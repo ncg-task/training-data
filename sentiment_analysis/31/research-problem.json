@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Aspect Level Sentiment Classification", {"from sentence" : "Parameterized Convolutional Neural Networks for Aspect Level Sentiment Classification"}],
+    ["sentiment classification", {"from sentence" : "Continuous growing of user generated text in social media platforms such as Twitter drives sentiment classification increasingly popular ."}],
+    ["general sentiment classification", {"from sentence" : "Differing from general sentiment classification , aspect level sentiment classification identifies opinions from text about specific entities and their aspects ."}]
+  ]
+}

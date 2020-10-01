@@ -1,0 +1,48 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "observe that" : {
+        "concatenation" : {
+          "yield" : {
+            "improvement" : {
+              "verifying that" : {
+                "integrating" : {
+                  "has" : "contextual semantics",
+                  "be" : {
+                    "quite useful" : {
+                      "for" : "language understanding"
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "From the results , we observe that the concatenation would yield an improvement , verifying that integrating contextual semantics would be quite useful for language understanding ."
+          }
+        }
+      },
+      "has" : {
+        "SemBERT" : {
+          "has" : {
+            "outperforms" : {
+              "has" : "simple BERT + SRL model"
+            }
+          },
+          "shows that" : {
+            "SemBERT" : {
+              "works" : {
+                "more effectively" : {
+                  "for" : {
+                    "integrating" : {
+                      "both" : ["plain contextual representation", "contextual semantics"]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "However , SemBERT still outperforms the simple BERT + SRL model just like the latter outperforms the original BERT by a large performance margin , which shows that SemBERT works more effectively for integrating both plain contextual representation and contextual semantics at the same time ."
+        }
+      }
+    }
+  }
+}

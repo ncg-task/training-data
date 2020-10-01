@@ -1,0 +1,152 @@
+{
+  "has" : {
+    "Results" : {
+      "Among" : {
+        "all the GloVe - based methods" : {
+          "has" : {
+            "TD - LSTM approach" : {
+              "performs" : "worst"
+            }
+          },
+          "from sentence" : "Among all the GloVe - based methods , the TD - LSTM approach performs worst because it takes the aspect information into consideration in a very coarse way ."
+        }
+      },
+      "After taking" : {
+        "importance" : {
+          "of" : {
+            "aspect" : {
+              "into" : "account"
+            }
+          },
+          "with" : "attention mechanism",
+          "achieve" : {
+            "stable improvement" : {
+              "comparing to" : "TD - LSTM"
+            }
+          }
+        },
+        "from sentence" : "After taking the importance of the aspect into account with attention mechanism , they achieve a stable improvement comparing to the TD - LSTM ."
+      },
+      "has" : {
+        "RAM" : {
+          "achieves" : {
+            "better performance" : {
+              "than" : "other basic attention - based models"
+            }
+          },
+          "from sentence" : "RAM achieves a better performance than other basic attention - based models , because it combines multiple attentions with a recurrent neural network to capture aspect - specific representations ."
+        },
+        "PBAN" : {
+          "achieves" : {
+            "similar performance" : {
+              "as" : {
+                "RAM" : {
+                  "by employing" : "position embedding"
+                }
+              }
+            },
+            "from sentence" : "PBAN achieves a similar performance as RAM by employing a position embedding ."            
+          },
+          "better than" : {
+            "RAM" : {
+              "on" : "Restaurant dataset"
+            },
+            "from sentence" : "To be specific , PBAN is better than RAM on Restaurant dataset , but worse than RAN on Laptop dataset ."
+          },
+          "worse than" : {
+            "RAN" : {
+              "on" : "Laptop dataset"
+            },
+            "from sentence" : "To be specific , PBAN is better than RAM on Restaurant dataset , but worse than RAN on Laptop dataset ."            
+          }
+        },
+        "AEN" : {
+          "slightly better than" : "TSN",
+          "still worse than" : "RAM and PBAN",
+          "from sentence" : "AEN is slightly better than TSN , but still worse than RAM and PBAN ."
+        },
+        "two models ( SDGCN - A and SDGCN - G )" : {
+          "with" : {
+            "position information" : {
+              "gain" : {
+                "significant improvement" : {
+                  "compared to" : {
+                    "two models" : {
+                      "without" : "position information"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Moreover , the two models ( SDGCN - A and SDGCN - G ) with position information gain a significant improvement compared to the two models without position information ."
+        }
+      },
+      "Compared with" : {
+        "RAM and PBAN" : {
+          "has" : {
+            "overall performance" : {
+              "of" : "TSN",
+              "has" : {
+                "not perform well" : {
+                  "on both" : "Restaurant dataset and Laptop dataset"
+                }
+              }
+            }
+          },
+          "from sentence" : "Compared with RAM and PBAN , the overall performance of TSN is not perform well on both Restaurant dataset and Laptop dataset , which might because the framework of TSN is too simple to model the representations of context and aspect effectively ."
+        }
+      },
+      "Comparing" : {
+        "results" : {
+          "of" : ["SDGCN - A w/o position and SDGCN - G w/o position", "SDGCN - A and SDGCN - G"],
+          "observe" : {
+            "GCN" : {
+              "built with" : "global - relation",
+              "slightly higher than" : {
+                "built with adjacent - relation" : {
+                  "in both" : "accuracy and Macro - F1 measure"
+                }
+              },              
+              "from sentence" : "Comparing the results of SDGCN - A w/o position and SDGCN - G w/o position , SDGCN - A and SDGCN - G , respectively , we observe that the GCN built with global - relation is slightly higher than built with adjacent - relation in both accuracy and Macro - F1 measure ."
+            }
+          }          
+        }
+      },
+      "Benefits from" : {
+        "power" : {
+          "of" : "pre-trained BERT"
+        },
+        "BERT - based models" : {
+          "shown" : {
+            "huge superiority" : {
+              "over" : "GloVe - based models"
+            }
+          }
+        },
+        "from sentence" : "Benefits from the power of pre-trained BERT , BERT - based models have shown huge superiority over GloVe - based models ."
+      },
+      "compared with" : {
+        "AEN - BERT" : {
+          "on" : "Restaurant dataset"
+        },
+        "SDGCN - BERT" : {
+          "achieves" : {
+            "absolute increases" : {
+              "of" : "1.09 % and 1.86 %",
+              "in" : "accuracy and Macro - F1 measure"
+            }
+          },
+          "gains" : {
+            "absolute increases" :  {
+              "of" : "1.42 % and 2.03 %",
+              "in" : "accuracy and Macro - F1 measure",
+              "on" : "Laptop dataset"
+            }
+          }
+        },
+        "from sentence" : "Furthermore , compared with AEN - BERT , on the Restaurant dataset , SDGCN - BERT achieves absolute increases of 1.09 % and 1.86 % in accuracy and Macro - F1 measure respectively , and gains absolute increases of 1.42 % and 2.03 % in accuracy and Macro - F1 measure respectively on the Laptop dataset ."
+      }
+    }
+  }
+}

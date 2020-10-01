@@ -1,0 +1,126 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "Emo2 Vec" : {
+          "works better than" : {
+            "CNN embedding" : {
+              "on" : "14 / 18 datasets",
+              "giving" : {
+                "2.6 % absolute accuracy improvement" : {
+                  "for" : "sentiment task"
+                },
+                "1.6 % absolute f1score improvement" : {
+                  "on" : "other tasks"
+                }
+              }
+            },
+            "from sentence" : "Compared with CNN embedding : Emo2 Vec works better than CNN embedding on 14 / 18 datasets , giving 2.6 % absolute accuracy improvement for the sentiment task and 1.6 % absolute f1score improvement on the other tasks ."
+          },
+          "works" : {
+            "much better" : {
+              "on" : {
+                "all datasets" : {
+                  "except" : "SS - T datasets",
+                  "on" : {
+                    "sentiment and other tasks" : {
+                      "gives" : ["3.3 % accuracy improvement", "4.7 % f 1 score improvement"]                    
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "Compared with SSWE : Emo2 Vec works much better on all datasets except SS - T datasets , which gives 3.3 % accuracy improvement and 4.7 % f 1 score improvement respectively on sentiment and other tasks ."
+          },
+          "not trained by" : {
+            "predicting contextual words" : {
+              "is" : {
+                "weak" : {
+                  "on capturing" : "synthetic and semantic meaning"
+                }
+              },
+              "from sentence" : "Since Emo2 Vec is not trained by predicting contextual words , it is weak on capturing synthetic and semantic meaning ."
+            }
+          } 
+        },
+        "GloVe + Emo2 Vec" : {
+          "achieves" : {
+            "better performances" : {
+              "on" : {
+                "SOTA results" : {
+                  "on" : "three datasets ( SE0714 , stress and tube tablet )"
+                }
+              }
+            },
+            "comparable result" : {
+              "to" : {
+                "SOTA" : {
+                  "on" : "dataset"
+                }
+              }
+            } 
+          },
+          "from sentence" : "GloVe + Emo2
+Vec achieves better performances on SOTA results on three datasets ( SE0714 , stress and tube tablet ) and comparable result to SOTA on dataset Previous SOTA results"
+
+        }
+      },
+      "shows" : {
+        "multi-task training" : {
+          "helps to create" : {
+            "better generalized word emotion representations" : {
+              "than just using" : "single task"
+            }
+          },
+          "from sentence" : "It shows multi-task training helps to create better generalized word emotion representations than just using a single task ."
+        }
+      },
+      "gives" : {
+        "1.3 % improvement" : {
+          "in" : {
+            "accuracy" : {
+              "for" : "sentiment task"
+            }
+          }
+        },
+        "1.1 % improvement" : {
+          "of" : {
+            "f 1 - score" : {
+              "on" : "other tasks"
+            }
+          }
+        },
+        "from sentence" : "On average , it gives 1.3 % improvement in accuracy for the sentiment task and 1.1 % improvement of f 1 - score on the other tasks ."
+      },
+      "solely using" : {
+        "simple classifier" : {
+          "with" : {
+            "good word representation" : {
+              "can achieve" : "promising results" 
+            }          
+          }
+        },
+        "from sentence" : "Here , we want to highlight that solely using a simple classifier with good word representation can achieve promising results ."
+      },
+      "Compared with" : {
+        " GloVe+ DeepMoji , GloVe + Emo2 Vec" : {
+          "achieves" : {
+            "same or better results" : {
+              "on" : "11 / 14 datasets",
+              "on average gives" : "1.0 % improvement"
+            }
+          },
+          "from sentence" : "Compared with GloVe+ DeepMoji , GloVe + Emo2
+Vec achieves same or better results on 11 / 14 datasets , which on average gives 1.0 % improvement ."
+
+        }
+      },
+      "to detect" : {
+        "corresponding emotion" : {
+          "more attention needs to be paid to" : "words"
+        },
+        "from sentence" : "Thus , to detect the corresponding emotion , more attention needs to be paid to words ."
+      }
+    }
+  }
+}

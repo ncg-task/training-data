@@ -1,0 +1,6 @@
+(Contribution||has||Results)
+(Results||has||BIDAF ( ensemble ))
+(BIDAF ( ensemble )||achieves||F 1 score)
+(F 1 score||of||81.1)
+(BIDAF ( ensemble )||achieves||EM score)
+(EM score||of||73.3)

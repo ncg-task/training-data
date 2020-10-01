@@ -1,0 +1,147 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "initialized" : {
+        "word embedding" : {
+          "with" : "300d Glo Ve vectors",
+          "from sentence" : "We initialized word embedding with 300d Glo Ve vectors pre-trained from the 840B Common Crawl corpus ( Pennington , Socher , and Manning 2014 ) , while the word embeddings for the out - of - vocabulary words were initialized randomly ."
+        }
+      },
+      "has" : {
+        "word embeddings" : {
+          "for" : "out - of - vocabulary words",
+          "initialized" : "randomly",
+          "from sentence" : "We initialized word embedding with 300d Glo Ve vectors pre-trained from the 840B Common Crawl corpus ( Pennington , Socher , and Manning 2014 ) , while the word embeddings for the out - of - vocabulary words were initialized randomly ."
+        },
+        "dropout" : {
+          "applied after" : {
+            "word and character embedding layers" : {
+              "with" : {
+                "keep rate" : {
+                  "of" : "0.5"
+                }
+              },
+              "from sentence" : "The dropout was applied after the word and character embedding layers with a keep rate of 0.5 ."
+            }
+          },
+          "applied before" : {
+            "fully - connected layers" : {
+              "with" : {
+                "keep rate" : {
+                  "of" : "0.8"
+                }
+              }
+            },
+            "from sentence" : "It was also applied before the fully - connected layers with a keep rate of 0.8 ."
+          }
+        },
+        "batch normalization" : {
+          "applied on" : "fully - connected layers",
+          "for" : "one - way type datasets",
+          "from sentence" : "The batch normalization was applied on the fully - connected layers , only for the one - way type datasets ."
+        },
+        "RMSProp optimizer" : {
+          "with" : {
+            "initial learning rate" : {
+              "of" : "0.001"
+            }
+          },
+          "from sentence" : "The RMSProp optimizer with an initial learning rate of 0.001 was applied ."
+        },
+        "learning rate" : {
+          "decreased by" : {
+            "factor" : {
+              "of" : "0.85",
+              "when" : {
+                "dev accuraccy" : {
+                  "has" : "does not improve"
+                }
+              }
+            }
+          },
+          "from sentence" : "The learning rate was decreased by a factor of 0.85 when the dev accuracy does not improve ."
+        },
+        "weights" : {
+          "except" : "embedding matrices",
+          "constrained by" : {
+            "L2 regularization" : {
+              "with" : "regularization constant ? = 10 ?6"
+            }
+          },
+          "from sentence" : "All weights except embedding matrices are constrained by L2 regularization with a regularization constant ? = 10 ?6 ."
+        },
+        "sequence lengths" : {
+          "of" : "sentence",
+          "are" : {
+            "all different" : {
+              "for" : {
+                "each dataset" : {
+                  "has" : {
+                    "35" : {
+                      "for" : "SNLI"
+                    },
+                    "55" : {
+                      "for" : "MultiNLI"
+                    },
+                    "25" : {
+                      "for" : "Quora question pair"
+                    },
+                    "50" : {
+                      "for" : "TrecQA"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "The sequence lengths of the sentence are all different for each dataset : 35 for SNLI , 55 for MultiNLI , 25 for Quora question pair and 50 for TrecQA ."
+        }
+      },
+      "randomly initialized" : {
+        "character embedding" : {
+          "with" : "16d vector"
+        },
+        "from sentence" : "We also randomly initialized character embedding with a 16d vector and extracted 32d character representation with a convolutional network ."
+      },
+      "extracted" : {
+        "32d character representation" : {
+          "with" : "convolutional network"
+        },
+        "from sentence" : "We also randomly initialized character embedding with a 16d vector and extracted 32d character representation with a convolutional network ."
+      },
+      "For" : {
+        "densely - connected recurrent layers" : {
+          "stacked" : {
+            "5 layers" : {
+              "each of which have" : "100 hidden units"
+            }
+          },
+          "from sentence" : "For the densely - connected recurrent layers , we stacked 5 layers each of which have 100 hidden units ."
+        },
+        "bottleneck component" : {
+          "set" : {
+            "200 hidden units" : {
+              "as" : {
+                "encoded features" : {
+                  "of" : "autoencoder"
+                }
+              },
+              "with" : {
+                "dropout rate" : {
+                  "of" : "0.2"
+                }
+              }
+            }
+          },
+          "from sentence" : "For the bottleneck component , we set 200 hidden units as encoded features of the autoencoder with a dropout rate of 0.2 ."
+        }
+      },
+      "set" : {
+        "1000 hidden units" : {
+          "with respect to" : "fullyconnected layers",
+          "from sentence" : "We set 1000 hidden units with respect to the fullyconnected layers ."
+        }
+      }
+    }
+  }
+}

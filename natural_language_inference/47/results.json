@@ -1,0 +1,78 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "sum of words model" : {
+          "performed" : {
+            "slightly worse" : {
+              "than" : "fundamentally similar lexicalized classifier"
+            }
+          },
+          "from sentence" : "The sum of words model performed slightly worse than the fundamentally similar lexicalized classifier while the sum of words model can use pretrained word embeddings to better handle rare words , it lacks even the rudimentary sensitivity to word order that the lexicalized model 's bigram features provide ."
+        },
+        "gap" : {
+          "between" : {
+            "train and test set accuracy" : {
+              "is" : {
+                "relatively small" : {
+                  "for" : "all three neural network models"
+                }
+              },
+              "from sentence" : "While the lexicalized model fits the training set almost perfectly , the gap between train and test set accuracy is relatively small for all three neural network models , suggesting that research into significantly higher capacity versions of these models would be productive ."
+            }
+          }
+        },
+        "somewhat steeper slope" : {
+          "for" : "LSTM",
+          "hints that" : {
+            "ability to learn" : {
+              "has" : {
+                "arbitrarily structured representations" : {
+                  "of" : "sentence meaning",
+                  "give it" : {
+                    "advantage" : {
+                      "over" : {
+                        "more constrained lexicalized model" : {
+                          "on" : "larger datasets"
+                        }
+                      }
+                    }
+                  }
+                }              
+              }
+            }
+          },
+          "from sentence" : "In addition , though the LSTM and the lexicalized model show similar performance when trained on the current full corpus , the somewhat steeper slope for the LSTM hints that its ability to learn arbitrarily structured representations of sentence meaning may give it an advantage over the more constrained lexicalized model on still larger datasets ."
+        }
+      },
+      "Of" : {
+        "two RNN models" : {
+          "has" : {
+            "LSTM 's" : {
+              "has" : {
+                "more robust ability" : {
+                  "to learn" : "long - term dependencies",
+                  "serves" : "well",
+                  "resulting in" : {
+                    "performance" : {
+                      "that is" : {
+                        "essentially equivalent" : {
+                          "to" : {
+                            "lexicalized classifier" : {
+                              "on" : "test set"
+                            } 
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "Of the two RNN models , the LSTM 's more robust ability to learn long - term dependencies serves it well , giving it a substantial advantage over the plain RNN , and resulting in performance that is essentially equivalent to the lexicalized classifier on the test set ( LSTM performance near the stopping iteration varies by up to 0.5 % between evaluation steps ) ."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

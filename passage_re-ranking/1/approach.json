@@ -1,0 +1,12 @@
+{
+  "has" : {
+    "Approach" : {
+      "re-purposed" : {
+        "BERT" : {
+          "as" : "passage re-ranker"
+        },
+        "from sentence" : "In this paper , we describe in detail how we have re-purposed BERT as a passage re-ranker and achieved state - of - the - art results on the MS MARCO passage re-ranking task ."
+      }
+    }
+  }
+}

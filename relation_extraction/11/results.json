@@ -1,0 +1,43 @@
+{
+  "has" : {
+    "Results" : {
+      "find that" : {
+        "RESIDE" : {
+          "achieves" : {
+            "higher precision" : {
+              "over" : {
+                "entire recall range" : {
+                  "on" : "both the datasets"
+                }
+              }
+            }  
+          },
+          "from sentence" : "Overall , we find that RESIDE achieves higher precision over the entire recall range on both the datasets ."
+        }
+      },
+      "has" : {
+        "non-neural baselines" : {
+          "could not perform" : "well",
+          "from sentence" : "All the non-neural baselines could not perform well as the features used by them are mostly derived from NLP tools which can be erroneous ."
+        },
+        "RESIDE" : {
+          "outperforms" : "PCNN + ATT and BGWA",
+          "from sentence" : "RESIDE outperforms PCNN + ATT and BGWA which indicates that incorporating side information helps in improving the performance of the model ."
+        },
+        "higher performance" : {
+          "of" : {
+            "BGWA and PCNN + ATT" : {
+              "over" : "PCNN"
+            }
+          },
+          "shows that" : {
+            "attention" : {
+              "helps in" : "distant supervised RE"
+            }
+          },
+          "from sentence" : "The higher performance of BGWA and PCNN + ATT over PCNN shows that attention helps in distant supervised RE ."
+        }
+      }
+    }
+  }  
+}

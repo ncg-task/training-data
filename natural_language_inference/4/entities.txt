@@ -1,0 +1,107 @@
+140	3	7	note
+140	17	42	deep residual coattention
+140	43	50	yielded
+140	55	75	highest contribution
+140	76	78	to
+140	79	96	model performance
+140	99	110	followed by
+140	115	130	mixed objective
+141	4	18	sparse mixture
+141	19	21	of
+141	22	35	experts layer
+141	36	38	in
+141	43	50	decoder
+141	51	56	added
+141	57	75	minor improvements
+141	76	78	to
+141	83	100	model performance
+126	3	13	preprocess
+126	18	24	corpus
+126	30	33	use
+126	38	58	reversible tokenizer
+126	59	63	from
+126	64	80	Stanford CoreNLP
+127	0	3	For
+127	4	19	word embeddings
+127	25	28	use
+127	29	45	GloVe embeddings
+127	46	59	pretrained on
+127	64	88	840B Common Crawl corpus
+128	17	28	concatenate
+128	29	45	these embeddings
+128	46	50	with
+128	51	75	context vectors ( CoVe )
+129	4	27	out of vocabulary words
+129	33	36	set
+129	41	71	embeddings and context vectors
+129	67	69	to
+129	75	79	zero
+130	3	10	perform
+130	11	23	word dropout
+130	24	26	on
+130	31	39	document
+130	46	51	zeros
+130	54	68	word embedding
+130	69	73	with
+130	74	91	probability 0.075
+131	17	21	swap
+131	26	44	first maxout layer
+131	45	47	of
+131	52	74	highway maxout network
+131	75	77	in
+131	82	93	DCN decoder
+131	94	98	with
+131	101	115	sparse mixture
+131	45	47	of
+131	119	132	experts layer
+18	29	36	propose
+18	39	54	mixed objective
+18	60	68	combines
+18	69	99	traditional cross entropy loss
+18	100	104	over
+18	105	114	positions
+18	115	119	with
+18	122	145	measure of word overlap
+18	146	158	trained with
+18	159	181	reinforcement learning
+19	3	9	obtain
+19	14	30	latter objective
+19	31	36	using
+19	37	68	self - critical policy learning
+19	69	77	in which
+19	82	88	reward
+19	92	100	based on
+19	101	113	word overlap
+19	114	121	between
+19	126	141	proposed answer
+19	150	169	ground truth answer
+22	49	55	extend
+22	60	95	Dynamic Coattention Network ( DCN )
+22	99	103	with
+22	106	139	deep residual coattention encoder
+2	58	76	QUESTION ANSWERING
+135	0	13	Comparison to
+135	14	36	baseline DCN with CoVe
+135	38	43	DCN +
+135	44	55	outperforms
+135	14	22	baseline
+135	8	10	on
+135	119	140	SQuAD development set
+135	69	71	by
+135	72	98	3.2 % exact match accuracy
+135	103	111	3.2 % F1
+136	0	5	shows
+136	10	37	consistent performance gain
+136	38	40	of
+136	41	46	DCN +
+136	47	51	over
+136	56	64	baseline
+136	65	71	across
+136	72	86	question types
+136	89	105	question lengths
+136	112	126	answer lengths
+137	16	21	DCN +
+137	22	30	provides
+137	33	54	significant advantage
+137	55	58	for
+137	59	73	long questions

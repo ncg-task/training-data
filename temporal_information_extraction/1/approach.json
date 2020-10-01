@@ -1,0 +1,38 @@
+{
+  "has" : {
+    "Approach" : {
+      "propose" : {
+        "structured learning approach" : {
+          "to" : {
+            "temporal relation extraction" : {
+              "where" : {
+                "local models" : {
+                  "are" : {
+                    "updated" : {
+                      "based on" : {
+                        "feedback" : {
+                          "from" : "global inferences"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "In this paper , we propose a structured learning approach to temporal relation extraction , where local models are updated based on feedback from global inferences ."
+        }
+      },
+      "has" : {
+        "structured approach" : {
+          "gives rise to" : {
+            "semisupervised method" : {
+              "take advantage of" : "readily available unlabeled data"
+            }
+          },
+          "from sentence" : "The structured approach also gives rise to a semisupervised method , making it possible to take advantage of the readily available unlabeled data ."
+        }
+      }
+    }
+  }
+}

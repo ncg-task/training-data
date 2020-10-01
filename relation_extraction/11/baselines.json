@@ -1,0 +1,70 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "Mintz" : {
+          "has" : {
+            "Multi-class logistic regression model" : {
+              "for" : "distant supervision paradigm"
+            }
+          },
+          "from sentence" : "Mintz : Multi-class logistic regression model proposed by for distant supervision paradigm ."
+        },
+        "MultiR" : {
+          "has" : {
+            "Probabilistic graphical model" : {
+              "for" : "multi instance learning"
+            }
+          },
+          "from sentence" : "MultiR : Probabilistic graphical model for multi instance learning by MIMLRE :"
+        },
+        "MIMLRE" : {
+          "has" : {
+            "graphical model" : {
+              "jointly models" : "multiple instances and multiple labels"
+            }
+          },
+          "from sentence" : "MultiR : Probabilistic graphical model for multi instance learning by MIMLRE :
+A graphical model which jointly models multiple instances and multiple labels ."
+
+        },
+        "PCNN" : {
+          "has" : {
+            "CNN based relation extraction model" : {
+              "uses" : {
+                "piecewise max - pooling" : {
+                  "for" : "sentence representation"
+                }
+              }
+            }
+          },
+          "from sentence" : "More details in . PCNN : A CNN based relation extraction model by which uses piecewise max - pooling for sentence representation ."
+        },
+        "PCNN + ATT" : {
+          "has" : {
+            "piecewise max - pooling" : {
+              "over" : {
+                "CNN based model" : {
+                  "to get" : {
+                    "sentence representation" : {
+                      "followed by" : "attention over sentences"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "PCNN + ATT : A piecewise max - pooling over CNN based model which is used by to get sentence representation followed by attention over sentences ."
+        },
+        "BGWA" : {
+          "has" : {
+            "Bi - GRU based relation extraction model" : {
+              "with" : "word and sentence level attention",
+              "from sentence" : "BGWA : Bi - GRU based relation extraction model with word and sentence level attention ) ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

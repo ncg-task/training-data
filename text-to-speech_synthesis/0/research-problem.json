@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Grapheme - to - Phoneme Conversion", {"from sentence" : "Token - Level Ensemble Distillation for Grapheme - to - Phoneme Conversion"}],
+    ["Grapheme - to - phoneme ( G2P ) conversion", {"from sentence" : "Grapheme - to - phoneme ( G2P ) conversion is an important task in automatic speech recognition and text - to - speech systems ."}]
+  ]
+}

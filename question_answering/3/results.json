@@ -1,0 +1,98 @@
+{
+  "has" : {
+    "Results" : {
+      "on" : {
+        "RACE benchmark dataset" : {
+          "has" : {
+            "Our proposed DCU model" : {
+              "achieves" : {
+                "best results" : {
+                  "for" : ["single models", "ensemble models"]
+                }
+              },
+              "from sentence" : "reports our results on the RACE benchmark dataset .
+Our proposed DCU model achieves the best result for both single models and ensemble models ."
+
+            },
+            "best single model score" : {
+              "from" : ["RACE - H", "RACE - M"],
+              "alternates between" : ["Sim - DCU", "DCU"],
+              "from sentence" : "The best single model score from RACE - H and RACE - M alternates between Sim - DCU and DCU ."
+            }
+          },
+          "outperform" : {
+            "highly complex models" : {
+              "such as" : "DFN",
+              "from sentence" : "We outperform highly complex models such as DFN ."
+            }
+          },
+          "pull ahead of" : {
+            "other recent baselines" : {
+              "by" : "at least 5 %",
+              "such as" : ["ElimiNet", "GA"]
+            },
+            "from sentence" : "We also pull ahead of other recent baselines such as ElimiNet and GA by at least 5 % ."
+          }
+        },
+        "Search QA dataset" : {
+          "achieve" : {
+            "same accuracy" : {
+              "as" : "AMANDA",
+              "without using" : "LSTM or GRU encoder"
+            },
+            "from sentence" : "Table 2 reports our results on the Search QA dataset .
+We achieve the same accuracy as AMANDA without using any LSTM or GRU encoder ."
+
+          },
+          "has" : {
+            "hybrid combination , DCU - LSTM" : {
+              "significantly outperforms" : {
+                "AMANDA" : {
+                  "by" : "3 %"
+                }
+              },
+              "from sentence" : "Finally , the hybrid combination , DCU - LSTM significantly outperforms AMANDA by 3 % ." 
+            }
+          }
+        },
+        "NarrativeQA benchmark" : {
+          "observe that" : {
+            "300d DCU" : {
+              "achieve" : {
+                "comparable performance" : {
+                  "with" : "BiDAF"
+                }
+              },
+              "from sentence" : "Contrary to MCQ - based datasets , we found that reports our results on the NarrativeQA benchmark .
+First , we observe that 300d DCU can achieve comparable performance with BiDAF ."
+
+            }
+          },
+          "has" : {
+            "DCU - LSTM" : {
+              "significantly outperforms" : {
+                "all models" : {
+                  "in terms of" : "ROUGE - L",
+                  "including" : "BiDAF"
+                }
+              },
+              "from sentence" : "Finally , DCU - LSTM significantly outperforms all models in terms of ROUGE - L , including BiDAF on this dataset ."
+            },
+            "Performance improvement" : {
+              "over" : {
+                "vanilla BiLSTM model" : {
+                  "ranges from" : {
+                    "1 % ? 3 %" : {
+                      "across" : "all metrics"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Performance improvement over the vanilla BiLSTM model ranges from 1 % ? 3 % across all metrics , suggesting that DCU encoders are also effective as a complementary neural building block ."
+            }
+          }
+        }
+      }      
+    }
+  }
+}

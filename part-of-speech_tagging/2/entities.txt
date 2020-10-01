@@ -1,0 +1,114 @@
+25	3	10	present
+25	13	39	transfer learning approach
+25	40	48	based on
+25	51	93	deep hierarchical recurrent neural network
+25	177	184	between
+25	189	220	source task and the target task
+25	102	108	shares
+25	113	143	hidden feature repre-sentation
+25	148	176	part of the model parameters
+26	58	62	uses
+26	63	87	gradient - based methods
+26	88	91	for
+26	92	110	efficient training
+11	2	6	Code
+11	23	60	https://github.com/kimiyoung/transfer
+134	77	80	set
+134	85	114	character embedding dimension
+134	115	117	at
+134	118	120	25
+134	127	151	word embedding dimension
+134	115	117	at
+134	155	157	50
+134	27	30	for
+134	162	169	English
+134	174	176	64
+134	27	30	for
+134	181	188	Spanish
+134	105	114	dimension
+134	205	207	of
+134	208	221	hidden states
+134	205	207	of
+134	229	251	character - level GRUs
+134	115	117	at
+134	255	257	80
+134	298	315	word - level GRUs
+134	115	117	at
+134	319	322	300
+134	333	354	initial learning rate
+134	115	117	at
+134	358	362	0.01
+146	26	56	our transfer learning approach
+146	61	84	improve the performance
+146	85	87	on
+146	88	115	Twitter POS tagging and NER
+146	76	79	for
+146	120	138	all labeling rates
+146	149	161	improvements
+146	162	166	with
+146	167	177	0.1 labels
+146	178	181	are
+146	182	195	more than 8 %
+146	76	79	for
+146	200	213	both datasets
+147	0	28	Cross - application transfer
+147	34	42	leads to
+147	43	66	substantial improvement
+147	67	72	under
+147	73	98	low - resource conditions
+142	7	15	see that
+142	20	46	transfer learning approach
+142	47	68	consistently improved
+142	69	73	over
+142	78	98	non-transfer results
+143	8	20	observe that
+143	25	36	improvement
+143	37	39	by
+143	40	57	transfer learning
+143	58	60	is
+143	61	77	more substantial
+143	78	82	when
+143	87	100	labeling rate
+143	58	60	is
+143	104	109	lower
+160	3	6	use
+160	7	52	publicly available pretrained word embeddings
+160	53	55	as
+160	56	70	initialization
+161	0	2	On
+161	7	23	English datasets
+161	90	105	experiment with
+161	115	148	50 - dimensional SENNA embeddings
+161	157	191	100 - dimensional GloVe embeddings
+161	196	199	use
+161	204	219	development set
+161	220	229	to choose
+161	138	148	embeddings
+161	245	248	for
+161	249	277	different tasks and settings
+162	0	3	For
+162	4	21	Spanish and Dutch
+162	27	30	use
+162	35	71	64 - dimensional Polyglot embeddings
+163	3	6	set
+163	11	34	hidden state dimensions
+163	35	40	to be
+163	41	44	300
+163	45	48	for
+163	53	69	word - level GRU
+164	4	25	initial learning rate
+164	26	29	for
+164	30	37	AdaGrad
+164	41	49	fixed at
+164	50	54	0.01
+171	12	38	transfer learning approach
+171	39	47	achieves
+171	48	82	new state - of - the - art results
+171	83	85	on
+171	86	123	all the considered benchmark datasets
+172	9	40	our base model ( w/o transfer )
+172	41	49	performs
+172	50	63	competitively
+172	64	75	compared to
+172	80	110	state - of - the - art systems
+2	22	38	SEQUENCE TAGGING

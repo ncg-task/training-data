@@ -1,0 +1,44 @@
+{
+  "has" : {
+    "Model" : {
+      "develop" : {
+        "simple log - linear model" : {
+          "in the spirit of" : "traditional web - based QA systems",
+          "that" : {
+            "answers questions" : {
+              "by" : {
+                "querying" : {
+                  "has" : "web"
+                }
+              }
+            }
+          },
+          "extracting" : {
+            "answer" : {
+              "from" : "returned web snippets"
+            }
+          },
+          "from sentence" : "We develop a simple log - linear model , in the spirit of traditional web - based QA systems , that answers questions by querying the web and extracting the answer from returned web snippets ."
+        }
+      },
+      "has" : {
+        "our evaluation scheme" : {
+          "suitable for" : {
+            "semantic parsing benchmarks" : {
+              "in which" : {
+                "knowledge" : {
+                  "required for" : {
+                    "answering questions" : {
+                      "covered by" : "web"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Thus , our evaluation scheme is suitable for semantic parsing benchmarks in which the knowledge required for answering questions is covered by the web ( in contrast with virtual assitants for which the knowledge is specific to an application ) ."
+        }
+      }
+    }
+  }
+}

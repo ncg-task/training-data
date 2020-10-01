@@ -1,0 +1,74 @@
+157	65	68	use
+157	73	91	BiLSTM - CRF model
+160	0	2	As
+160	7	27	base function f base
+160	33	36	use
+160	37	52	4 BiLSTM layers
+160	53	57	with
+160	58	86	300 dimensional hidden units
+173	7	25	objective function
+173	31	34	use
+173	39	53	crossentropy L
+173	65	69	with
+173	70	85	L2 weight decay
+161	3	11	optimize
+161	16	32	model parameters
+161	38	41	use
+161	42	46	Adam
+165	0	11	To validate
+165	16	33	model performance
+165	39	42	use
+165	43	71	two types of word embeddings
+166	0	23	Typical word embeddings
+166	26	31	SENNA
+166	95	99	ELMo
+171	6	16	embeddings
+171	21	33	fixed during
+171	34	42	training
+23	30	38	presents
+23	41	79	simple and accurate span - based model
+24	99	114	directly scores
+24	115	141	all possible labeled spans
+24	142	150	based on
+24	151	171	span representations
+24	172	184	induced from
+24	185	200	neural networks
+25	0	2	At
+25	3	16	decoding time
+25	22	37	greedily select
+25	38	66	higher scoring labeled spans
+26	4	20	model parameters
+26	25	35	learned by
+26	36	60	optimizing loglikelihood
+26	61	63	of
+26	64	85	correct labeled spans
+2	27	49	Semantic Role Labeling
+4	56	86	semantic role labeling ( SRL )
+11	42	45	SRL
+177	3	9	report
+177	10	25	averaged scores
+177	26	32	across
+177	33	52	five different runs
+177	53	55	of
+177	60	65	model
+179	14	41	span - based ensemble model
+179	42	47	using
+179	48	52	ELMo
+179	53	61	achieved
+179	66	80	best F1 scores
+179	83	102	87.4 F1 and 87.0 F1
+179	103	105	on
+179	110	148	CoNLL - 2005 and CoNLL - 2012 datasets
+183	0	30	Our single and ensemble models
+183	42	50	achieved
+183	55	70	best F 1 scores
+183	71	73	on
+183	92	98	except
+183	103	117	Brown test set
+180	0	18	In comparison with
+180	23	47	CRF - based single model
+180	50	79	our span - based single model
+180	80	100	consistently yielded
+180	101	118	better F 1 scores
+180	119	132	regardless of
+180	137	169	word embeddings , SENNA and ELMO

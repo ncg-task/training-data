@@ -1,0 +1,125 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "pre-processed" : {
+        "SQuAD dataset" : {
+          "using" : {
+            "Stanford CoreNLP tool" : {
+              "with" : "default setting",
+              "to tokenize" : {
+                "text" : {
+                  "obtain" : "POS and NE annotations"
+                }
+              },
+              "from sentence" : "We pre-processed the SQuAD dataset using Stanford CoreNLP tool 5 with its default setting to tokenize the text and obtain the POS and NE annotations ."
+            }
+          }
+        }
+      },
+      "used" : {
+        "stochastic gradient descent" : {
+          "with" : ["ADAM optimizer", {"initial learning rate" : {"of" : "0.001"}}],
+          "from sentence" : "To train our model , we used stochastic gradient descent with the ADAM optimizer , with an initial learning rate of 0.001 ."
+        }
+      },
+      "has" : {
+        "All GRU weights" : {
+          "initialized from" : {
+            "uniform distribution" : {
+              "between" : "( - 0.01 , 0.01 )"
+            }
+          },
+          "from sentence" : "All GRU weights were initialized from a uniform distribution between ( - 0.01 , 0.01 ) ."
+        },
+        "hidden state size" : {
+          "has" : {
+            "d" : {
+              "set to" : {
+                "300" : {
+                  "for" : "all GRUs"
+                }
+              }
+            }
+          },
+          "from sentence" : "The hidden state size , d , was set to 300 for all GRUs ."
+        }
+      },
+      "applied" : {
+        "dropout" : {
+          "of rate" : {
+            "0.2" : {
+              "to" : {
+                "embedding layer" : {
+                  "of" : "input bi - GRU encoder"
+                }
+              }
+            }
+          },
+          "from sentence" : "We also applied dropout of rate 0.2 to the embedding layer of input bi - GRU encoder , and gradient clipping when the norm of gradients exceeded 10 ."          
+        },
+        "gradient clipping" : {
+          "when" : {
+            "norm" : {
+              "of" : "gradients",
+              "exceeded" : "10"
+            }
+          },
+          "from sentence" : "We also applied dropout of rate 0.2 to the embedding layer of input bi - GRU encoder , and gradient clipping when the norm of gradients exceeded 10 ."          
+        },
+        "zero - padding" : {
+          "to" : {
+            "passage and question inputs" : {
+              "in" : "each batch"
+            }
+          },
+          "from sentence" : "We trained in mini-batch style ( mini - batch size is 180 ) and applied zero - padding to the passage and question inputs in each batch ."          
+        }        
+      },
+      "trained in" : {
+        "mini-batch style" : {
+          "has" : {
+            "mini - batch size" : {
+              "is" : "180"
+            }
+          }
+        },
+        "from sentence" : "We trained in mini-batch style ( mini - batch size is 180 ) and applied zero - padding to the passage and question inputs in each batch ."
+      },
+      "set" : {
+        "maximum passage length" : {
+          "to be" : "300 tokens",
+          "has" : {
+            "pruned" : {
+              "has" : {
+                "all the tokens" : {
+                  "after" : {
+                    "300 - th token" : {
+                      "in" : "training set"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "We also set the maximum passage length to be 300 tokens , and pruned all the tokens after the 300 - th token in the training set to save memory and speedup the training process ."
+        }
+      },
+      "trained" : {
+        "model" : {
+          "for" : "at most 30 epochs",
+          "from sentence" : "We trained the model for at most 30 epochs , and in case the accuracy did not improve for 10 epochs , we stopped training ."
+        }
+      },
+      "For" : {
+        "feature ranking - based system" : {
+          "used" : {
+            "jforest ranker" : {
+              "with" : " Lambda MART - Regression Tree algorithm"
+            }
+          },
+          "from sentence" : "For the feature ranking - based system , we used jforest ranker ( Ganjisaffar , Caruana , and Lopes 2011 ) with Lambda MART - Regression Tree algorithm and the ranking metric was NDCG @ 10 ."
+        }
+      }
+    }
+  }
+}

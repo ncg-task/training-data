@@ -1,0 +1,149 @@
+{
+  "has" : {
+    "Results" : {
+      "For" : {
+        "ternary relation extraction" : {
+          "has" : {
+            "our AGGCN model" : {
+              "achieves" : {
+                "accuracies" : {
+                  "of" : {
+                    "87.1 and 87.0" : {
+                      "on" : [{"instances" : {
+                          "within" : "single sentence ( Single )"
+                        }},
+                        "all instances ( Cross )"
+                      ],
+                      "outperform" : "all the baselines"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "For ternary relation extraction ( first two columns in ) , our AGGCN model achieves accuracies of 87.1 and 87.0 on instances within single sentence ( Single ) and on all instances ( Cross ) , respectively , which outperform all the baselines ."
+        },
+        "binary relation extraction" : {
+          "has" : {
+            "AGGCN" : {
+              "consistently outperforms" : ["GS GLSTM", "GCN"]
+            }
+          },
+          "from sentence" : "For binary relation extraction ( third and fourth columns in ) , AGGCN consistently outperforms GS GLSTM and GCN as well ."
+        }
+      },
+      "has" : {
+        "AG - GCN model" : {
+          "surpasses" : {
+            "state - of - the - art Graphstructured LSTM model ( GS GLSTM )" : {
+              "by" : "6.8 and 3.8 points",
+              "for" : "Single and Cross settings"
+            }
+          },
+          "from sentence" : "More specifically , our AG - GCN model surpasses the state - of - the - art Graphstructured LSTM model ( GS GLSTM ) by 6.8 and 3.8 points for the Single and Cross settings , respectively ."
+        },
+        "AGGCN" : {
+          "performs" : {
+            "better" : {
+              "than" : "GCNs"
+            }
+          },
+          "from sentence" : "AGGCN also performs better than GCNs , although its performance can be boosted via pruned trees ."
+        },
+        "our AGGCN model" : {
+          "obtains" : {
+            "8.0 and 5.7 points" : {
+              "higher than" : {
+                "GS GLSTM model" : {
+                  "for" : "ternary and binary relations"
+                }              
+              }
+            }
+          },
+          "from sentence" : "However , our AGGCN model still obtains 8.0 and 5.7 points higher than the GS GLSTM model for ternary and binary relations , respectively ."
+        },
+        "our AGGCN" : {
+          "achieves" : {
+            "better test accuracy" : {
+              "than" : "all GCN models"
+            },
+            "from sentence" : "We also notice that our AGGCN achieves a better test accuracy than all GCN models , which further demonstrates its ability to learn better representations from full trees ."
+          }
+        },
+        "C - AGGCN model" : {
+          "achieves" : {
+            "F1 score" : {
+              "of" : {
+                "68.2" : {
+                  "outperforms" : {
+                    "state - ofart C - GCN model" : {
+                      "by" : "1.8 points"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Our C - AGGCN model achieves an F1 score of 68.2 , which outperforms the state - ofart C - GCN model by 1.8 points ."
+        },
+        "performance gap" : {
+          "between" : {
+            "GCNs with pruned trees and AGGCNs with full trees" : {
+              "empirically show" : {
+                "AGGCN model" : {
+                  "better at distinguishing" : {
+                    "relevant from irrelevant information" : {
+                      "for learning" : "better graph representation"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "The performance gap between GCNs with pruned trees and AGGCNs with full trees empirically show that the AGGCN model is better at distinguishing relevant from irrelevant information for learning a better graph representation ."
+        }
+      },
+      "Compared to" : {
+        "GCN models" : {
+          "has" : {
+            "our model" : {
+              "obtains" : {
+                "1.3 and 1.2 points higher" : {
+                  "than" : {
+                    "best performing model" : {
+                      "with" : "pruned tree ( K=1 )"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Compared to GCN models , our model obtains 1.3 and 1.2 points higher than the best performing model with pruned tree ( K=1 ) ."
+        }
+      },
+      "notice" : {
+        "AGGCN and C - AGGCN" : {
+          "achieve" : {
+            "better precision and recall scores" : {
+              "than" : "GCN and C - GCN"
+            }
+          },
+          "from sentence" : "We also notice that AGGCN and C - AGGCN achieve better precision and recall scores than GCN and C - GCN , respectively ."
+        }
+      },
+      "on" : {
+        "SemEval dataset" : {
+          "has" : {
+            "Our C - AGGCN model ( 85.7 )" : {
+              "consistently outperforms" : "C - GCN model ( 84.8 )",
+              "showing" : "good generalizability"
+            }          
+          },
+          "from sentence" : "We also evaluate our model on the SemEval dataset under the same settings as .
+Our C - AGGCN model ( 85.7 ) consistently outperforms the C - GCN model ( 84.8 ) , showing the good generalizability ."
+
+        }
+      }
+    }
+  }
+}

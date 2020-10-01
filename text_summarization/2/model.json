@@ -1,0 +1,43 @@
+{
+  "has" : {
+    "Model" : {
+      "incorporating" : {
+        "source syntactic structure" : {
+          "in" : {
+            "neural sentence summarization" : {
+              "to help" : {
+                "system" : {
+                  "identify" : "summary - worthy content",
+                  "compose" : {
+                    "summaries" : {
+                      "that preserve" : "important meaning of the source texts"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "In this paper we seek to address this problem by incorporating source syntactic structure in neural sentence summarization to help the system identify summary - worthy content and compose summaries that preserve the important meaning of the source texts ."
+      },
+      "present" : {
+        "structure - infused copy mechanisms" : {
+          "to facilitate copying" : {
+            "source words and relations" : {
+              "to" : {
+                "summary" : {
+                  "based on" : {
+                    "semantic and structural importance" : {
+                      "in" : "source sentences"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "We present structure - infused copy mechanisms to facilitate copying source words and relations to the summary based on their semantic and structural importance in the source sentences ."
+      }
+    }
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "has" : {
+    "Results" : {
+      "on" : {
+        "synthetic data" : {
+          "has" : {
+            "RankGAN" : {
+              "performs" : {
+                "more favourably" : {
+                  "against" : "compared methods"
+                },
+                "from sentence" : "It can be seen that the proposed RankGAN performs more favourably against the compared methods ."                
+              }
+            },
+            "MLE , PG - BLEU and SeqGAN" : {
+              "tend to" : {
+                "converge" : {
+                  "after" : "200 training epochs"
+                }
+              },
+              "from sentence" : "While MLE , PG - BLEU and SeqGAN tend to converge after 200 training epochs , the proposed RankGAN consistently improves the language generator and achieves relatively lower NLL score ."
+            },
+            "proposed RankGAN" : {
+              "consistently improves" : "language generator",
+              "achieves" : {
+                "relatively lower" : {
+                  "has" : "NLL score"
+                },
+                "from sentence" : "While MLE , PG - BLEU and SeqGAN tend to converge after 200 training epochs , the proposed RankGAN consistently improves the language generator and achieves relatively lower NLL score ."
+              }
+            }
+          },
+          "worth noting" : {
+            "proposed RankGAN" : {
+              "achieves" : {
+                "better performance" : {
+                  "than" : "PG - BLEU"
+                }
+              }
+            },
+            "from sentence" : "It is worth noting that the proposed RankGAN achieves better performance than that of PG - BLEU ."
+          }    
+        },
+        "Chinese poems composition" : {
+          "estimate" : {
+            "similarity" : {
+              "between" : "human-written poem and the machine-created one"
+            },
+            "from sentence" : "Following the evaluation protocol in , we compute the BLEU - 2 score and estimate the similarity between the human - written poem and the machine - created one ."
+          },
+          "seen that" : {
+            "proposed Rank GAN" : {
+              "performs" : {
+                "more favourably" : {
+                  "compared to" : {
+                    "state - of - the - art methods" : {
+                      "in terms of" : "BLEU - 2 score"
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "It can be seen that the proposed Rank GAN performs more favourably compared to the state - of - the - art methods in terms of BLEU - 2 score ."
+          },
+          "in terms of" : {
+            "human evaluation score" : {
+              "has" : {
+                "RankGAN" : {
+                  "outperforms" : "compared method"
+                }
+              }
+            },
+            "from sentence" : "RankGAN outperforms the compared method in terms of the human evaluation score ."
+          }
+        },
+        "COCO image captions" : {
+          "has" : {
+            "RankGAN" : {
+              "achieves" : {
+                "better performance" : {
+                  "than" : {
+                    "other methods" : {
+                      "in terms of" : "different BLEU score"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "RankGAN achieves better performance than the other methods in terms of different BLEU scores ."
+            },
+            "our model" : {
+              "able to generate" : {
+                "fluent , novel sentences" : {
+                  "not existing in" : "training set"
+                }
+              },
+              "from sentence" : "These examples show that our model is able to generate fluent , novel sentences that are not existing in the training set ."
+            },
+            "human - written sentences" : {
+              "get" : {
+                "highest score" : {
+                  "comparing to" : "language models"
+                },
+                "from sentence" : "As can be seen , the human - written sentences get the highest score comparing to the language models ."                
+              },
+              "Among" : {
+                "GANs approaches" : {
+                  "has" : {
+                    "RankGAN" : {
+                      "receives" : {
+                        "better score" : {
+                          "than" : "SeqGAN"
+                        }
+                      }
+                    }
+                  }
+                },
+                "from sentence" : "Among the GANs approaches , RankGAN receives better score than SeqGAN , which is consistent to the finding in the Chinese poem composition ."
+              }
+            }
+          }
+        },
+        "Shakespeare 's plays" : {
+          "has" : {
+            "proposed method" : {
+              "achieves" : {
+                "consistently higher BLEU score" : {
+                  "than" : {
+                    "other methods" : {
+                      "in terms of" : "different n-grams criteria"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "As can be seen , the proposed method achieves consistently higher BLEU score than the other methods in terms of the different n-grams criteria ."
+            },
+            "proposed RankGAN" : {
+              "is able to capture" : {
+                "transition pattern" : {
+                  "among" : "words"
+                }
+              },
+              "from sentence" : "The results indicate the proposed RankGAN is able to capture the transition pattern among the words , even if the training sentences are novel , delicate and complicated ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

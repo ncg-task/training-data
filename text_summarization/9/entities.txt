@@ -1,0 +1,100 @@
+96	3	14	implemented
+96	15	25	our models
+96	26	28	in
+96	33	46	Torch library
+97	7	15	optimize
+97	16	24	our loss
+97	43	47	used
+97	48	75	stochastic gradient descent
+97	76	80	with
+97	81	93	mini-batches
+97	94	101	of size
+97	102	104	32
+98	0	6	During
+98	7	15	training
+98	19	26	measure
+98	31	41	perplexity
+98	42	44	of
+98	49	58	summaries
+98	3	5	in
+98	66	80	validation set
+98	85	91	adjust
+98	96	114	hyper - parameters
+98	117	124	such as
+98	129	142	learning rate
+99	0	3	For
+99	8	15	decoder
+99	19	36	experimented with
+99	46	55	Elman RNN
+99	64	110	Long - Short Term Memory ( LSTM ) architecture
+100	9	27	hyper - parameters
+100	28	36	based on
+100	39	50	grid search
+100	55	80	picked the one which gave
+100	85	100	best perplexity
+100	34	36	on
+100	108	122	validation set
+104	4	44	final Elman architecture ( RAS - Elman )
+104	45	49	uses
+104	52	64	single layer
+104	65	69	with
+104	70	108	H = 512 , ? = 0.5 , ? = 2 , and ? = 10
+105	4	29	LSTM model ( RAS - LSTM )
+105	41	53	single layer
+105	54	58	with
+105	59	97	H = 512 , ? = 0.1 , ? = 2 , and ? = 10
+16	84	95	consists of
+16	98	134	conditional recurrent neural network
+16	143	150	acts as
+16	153	160	decoder
+16	161	172	to generate
+16	177	184	summary
+16	93	95	of
+16	191	205	input sentence
+17	37	44	decoder
+17	50	55	takes
+17	58	76	conditioning input
+17	14	16	at
+17	17	32	every time step
+17	90	99	output of
+17	103	117	encoder module
+18	48	55	encoder
+18	56	76	computes scores over
+18	81	86	words
+18	6	8	in
+18	94	108	input sentence
+24	21	25	uses
+24	28	49	convolutional network
+24	50	59	to encode
+24	60	71	input words
+20	9	28	decoder and encoder
+20	33	51	jointly trained on
+20	54	62	data set
+20	63	76	consisting of
+20	77	101	sentence - summary pairs
+2	0	34	Abstractive Sentence Summarization
+10	85	103	text summarization
+112	0	5	shows
+112	20	53	RAS - Elman and RAS - LSTM models
+112	54	61	achieve
+112	62	78	lower perplexity
+112	79	83	than
+112	84	87	ABS
+113	4	14	RAS - LSTM
+113	15	43	performs slightly worse than
+113	44	55	RAS - Elman
+115	4	17	ROUGE results
+115	18	22	show
+115	28	38	our models
+115	39	61	comfortably outperform
+115	67	80	ABS and ABS +
+115	81	83	by
+115	86	97	wide margin
+115	98	100	on
+115	101	112	all metrics
+118	0	2	On
+118	3	13	DUC - 2004
+119	24	28	show
+119	34	44	our models
+119	49	60	better than
+119	61	66	ABS +

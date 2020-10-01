@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Part - of - Speech Tagging", {"from sentence" : "Robust Multilingual Part - of - Speech Tagging via Adversarial Training"}],
+    ["neural POS tagging", {"from sentence" : "In this paper , we propose and analyze a neural POS tagging model that exploits AT ."}]
+  ]
+}

@@ -1,0 +1,3 @@
+(Contribution||has research problem||Emotion Detection in Textual Conversations)
+(Contribution||has research problem||detecting emotions in textual conversations)
+(Contribution||has research problem||detecting emotions ( e.g. , happy , sad , angry , etc. ) in textual conversations)

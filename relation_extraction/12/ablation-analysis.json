@@ -1,0 +1,133 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "observe that" : {
+        "adding" : {
+          "has" : {
+            "either attention guided layers or densely connected layers" : {
+              "improves" : {
+                "performance" : {
+                  "of" : "model"
+                }
+              }
+            },
+            "from sentence" : "We can observe that adding either attention guided layers or densely connected layers improves the performance of the model ."          
+          }
+        },
+        "all the C - AGGCN models" : {
+          "with" : {
+            "varied values of K" : {
+              "outperform" : "state - of - the - art C - GCN model"
+            }
+          },
+          "from sentence" : "We can observe that all the C - AGGCN models with varied values of K are able to outperform the state - of - the - art C - GCN model ( reported in ) ."
+        }
+      },
+      "notice that" : {
+        "feed - forward layer" : {
+          "effective in" : "our model",
+          "from sentence" : "We also notice that the feed - forward layer is effective in our model ."
+        },
+        "performance" : {
+          "of" : {
+            "C - AGGCN with full trees" : {
+              "outperforms" : "all C - AGGCNs with pruned trees"
+            }
+          },
+          "from sentence" : "In addition , we notice that the performance of C - AGGCN with full trees outperforms all C - AGGCNs with pruned trees ."
+        }        
+      },
+      "Without" : {
+        "feed - forward layer" : {
+          "has" : {
+            "result" : {
+              "drops to" : "F1 score of 67.8"
+            }
+          },
+          "from sentence" : "Without the feed - forward layer , the result drops to an F1 score of 67.8 ."
+        }
+      },
+      "has" : {
+        "C - AGGCN with full trees" : {
+          "outperforms" : {
+            "C - AGGCN with pruned trees and C - GCN" : {
+              "against" : "various sentence lengths"
+            }
+          },
+          "from sentence" : "In general , C - AGGCN with full trees outperforms C - AGGCN with pruned trees and C - GCN against various sentence lengths ."
+        },
+        "improvement" : {
+          "achieved by" : {
+            "C - AGGCN with pruned trees" : {
+              "has" : {
+                "decays" : {
+                  "when" : {
+                    "sentence length" : {
+                      "has" : "increases"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Moreover , the improvement achieved by C - AGGCN with pruned trees decays when the sentence length increases ."
+        },
+        "C - AGGCN" : {
+          "consistently outperforms" : {
+            "C - GCN" : {
+              "under" : "same amount of training data"
+            }
+          },
+          "from sentence" : "C - AGGCN consistently outperforms C - GCN under the same amount of training data ."
+        }
+      },
+      "suggests that" : {
+        "C - AGGCN" : {
+          "benefit more from" : "larger graphs ( full tree )",
+          "from sentence" : "This suggests that C - AGGCN can benefit more from larger graphs ( full tree ) ."
+        }
+      },
+      "When" : {
+        "size" : {
+          "of" : {
+            "training data" : {
+              "has" : "increases",
+              "observe that" : {
+                "performance gap" : {
+                  "becomes" : "more obvious"
+                }              
+              },
+              "from sentence" : "When the size of training data increases , we can observe that the performance gap becomes more obvious ."
+            }
+          }
+        }
+      },
+      "using" : {
+        "80 %" : {
+          "of" : {
+            "training data" : {
+              "has" : {
+                "C - AGGCN model" : {
+                  "able to achieve" : {
+                    "F 1 score" : {
+                      "of" : {
+                        "66.5" : {
+                          "higher than" : {
+                            "C - GCN" : {
+                              "trained on" : "whole dataset"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Particularly , using 80 % of the training data , the C - AGGCN model is able to achieve a F 1 score of 66.5 , higher than C - GCN trained on the whole dataset ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

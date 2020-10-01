@@ -1,0 +1,85 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "has" : {
+        "spaCy tool" : {
+          "used to" : {
+            "tokenize" : {
+              "both" : "passages and questions"  
+            },
+            "generate" : {
+              "has" : ["lemma", "part - of - speech", "named entity tags"]
+            }
+          },
+          "from sentence" : "The spa
+Cy tool 2 is used to tokenize the both passages and questions , and generate lemma , part - of - speech and named entity tags ."
+
+        },
+        "mini-batch size" : {
+          "set to" : "32",
+          "from sentence" : "The mini-batch size is set to 32 and Adamax is used as our optimizer ."
+        },
+        "Adamax" : {
+          "used as" : "our optimizer",
+          "from sentence" : "The mini-batch size is set to 32 and Adamax is used as our optimizer ."
+        },
+        "learning rate" : {
+          "set to" : {
+            "0.002" : {
+              "at" : "first",
+              "has" : {
+                "decreased" : {
+                  "by" : {
+                    "half" : {
+                      "after" : "every 10 epochs"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "The learning rate is set to 0.002 at first and decreased by half after every 10 epochs ."
+        }
+      },
+      "use" : {
+        "2 - layer BiLSTM" : {
+          "with" : {
+            "d = 128 hidden units" : {
+              "for" : "both passage and question encoding"
+            }
+          },
+          "from sentence" : "We use 2 - layer BiLSTM with d = 128 hidden units for both passage and question encoding ."
+        }
+      },
+      "set" : {
+        "dropout rate" : {
+          "to" : {
+            "0.4" : {
+              "for" : {
+                "all the hidden units" : {
+                  "of" : ["LSTM", "answer module output layer"]
+                }
+              }              
+            }
+          },
+          "from sentence" : "We set the dropout rate for all the hidden units of LSTM , and the answer module output layer to 0.4 ."
+        }
+      },
+      "To prevent" : {
+        "degenerate output" : {
+          "ensure that" : {
+            "at least one step" : {
+              "in" : "answer module",
+              "is" : {
+                "active" : {
+                  "during" : "training"
+                }
+              }
+            }
+          },
+          "from sentence" : "To prevent degenerate output , we ensure that at least one step in the answer module is active during training ."
+        }
+      }
+    }
+  }
+}

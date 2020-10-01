@@ -1,0 +1,8 @@
+{
+  "has research problem" : [
+    ["MACHINE COMPREHENSION", {"from sentence" : "BI - DIRECTIONAL ATTENTION FLOW FOR MACHINE COMPREHENSION"}],
+    ["Machine comprehension ( MC )", {"from sentence" : "Machine comprehension ( MC ) , answering a query about a given context paragraph , requires modeling complex interactions between the context and the query ."}],
+    ["MC", {"from sentence" : "Recently , attention mechanisms have been successfully extended to MC ."}],
+    ["question answering ( QA )", {"from sentence" : "The tasks of machine comprehension ( MC ) and question answering ( QA ) have gained significant popularity over the past few years within the natural language processing and computer vision communities ."}]
+  ]
+}

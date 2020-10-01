@@ -1,0 +1,130 @@
+{
+  "has" : {
+    "Experiments" : {
+      "has" : {
+        "Tasks" : {
+          "has" : {
+            "HYPERNYM PREDICTION" : {
+              "has" : {
+                "Hyperparameters" : {
+                  "use" : ["standard pairwise ranking objective", {"from sentence" : "To train the model , we use the standard pairwise ranking objective from Eq. ( 5 ) ."}],
+                  "sample" : {
+                    "minibatches" : {
+                      "of" : "128 random image - caption pairs"
+                    },
+                    "from sentence" : "We sample minibatches of 128 random image - caption pairs , and draw all contrastive terms from the minibatch , giving us 127 contrastive images for each caption and captions for each image ."
+                  },
+                  "draw" : {
+                    "contrastive terms" : {
+                      "from" : "minibatch",
+                      "giving" : {
+                        "127 contrastive images" : {
+                          "for" : "each caption"
+                        },
+                        "captions" : {
+                          "for" : "each image"
+                        }
+                      },
+                      "from sentence" : "We sample minibatches of 128 random image - caption pairs , and draw all contrastive terms from the minibatch , giving us 127 contrastive images for each caption and captions for each image ."
+                    }
+                  },
+                  "train for" : {
+                    "15 - 30 epochs" : {
+                      "using" : "Adam optimizer",
+                      "with" : ["learning rate 0.001", {"early stopping" : {"on" : "validation set"}}],
+                      "from sentence" : "We train for 15 - 30 epochs using the Adam optimizer with learning rate 0.001 , and early stopping on the validation set ."
+                    }
+                  },
+                  "set" : {
+                    "dimension" : {
+                      "of" : {
+                        "embedding space and the GRU hidden state N" : {
+                          "to" : "1024"
+                        },
+                        "learned word embeddings" : {
+                          "to" : "300"
+                        },
+                        "margin" : {
+                          "to" : "0.05"
+                        }
+                      },
+                      "from sentence" : "We set the dimension of the embedding space and the GRU hidden state N to 1024 , the dimension of the learned word embeddings to 300 , and the margin ? to 0.05 ."
+                    }
+                  },
+                  "constrain" : {
+                    "caption and image embeddings" : {
+                      "to have" : "unit L2 norm",
+                      "from sentence" : "For consistency with and to mitigate overfitting , we constrain the caption and image embeddings to have unit L2 norm ."
+                    }
+                  }
+                },
+                "Results" : {
+                  "see that" : {
+                    "order- embeddings" : {
+                      "has" : {
+                        "outperform" : {
+                          "has" : "skipthought baseline",
+                          "not using" : "external text corpora"
+                        }
+                      },
+                      "from sentence" : "We see that order- embeddings outperform the skipthought baseline despite not using external text corpora ."
+                    }
+                  }
+                }
+              }
+            },
+            "TEXTUAL ENTAILMENT / NATURAL LANGUAGE INFERENCE" : {
+              "has" : {
+                "Hyperparameters" : {
+                  "set" : {
+                    "dimensions" : {
+                      "of" : {
+                        "embedding space and GRU hidden state" : {
+                          "to be" : "1024"
+                        }
+                      }
+                    },
+                    "dimension" : {
+                      "of" : {
+                        "word embeddings" : {
+                          "to be" : "300"
+                        }
+                      }
+                    },
+                    "from sentence" : "TEXTUAL ENTAILMENT / NATURAL LANGUAGE INFERENCE
+Just as for caption - image ranking , we set the dimensions of the embedding space and GRU hidden state to be 1024 , the dimension of the word embeddings to be 300 , and constrain the embeddings to have unit L2 norm ."
+
+                  },
+                  "constrain" : {
+                    "embeddings" : {
+                      "to have" : "unit L2 norm"
+                    },
+                    "from sentence" : "TEXTUAL ENTAILMENT / NATURAL LANGUAGE INFERENCE
+Just as for caption - image ranking , we set the dimensions of the embedding space and GRU hidden state to be 1024 , the dimension of the word embeddings to be 300 , and constrain the embeddings to have unit L2 norm ."
+
+                  },
+                  "train for" : {
+                    "10 epochs" : {
+                      "with" : {
+                        "batches" : {
+                          "of" : "128 sentence pairs"
+                        }
+                      },
+                      "from sentence" : "We train for 10 epochs with batches of 128 sentence pairs ."
+                    }
+                  },
+                  "use" : {
+                    "Adam optimizer" : {
+                      "with" : ["learning rate 0.001", {"early stopping" : {"on" : "validation set"}}],
+                      "from sentence" : "We use the Adam optimizer with learning rate 0.001 and early stopping on the validation set ."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

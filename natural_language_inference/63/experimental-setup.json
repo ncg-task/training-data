@@ -1,0 +1,76 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "develop" : {
+        "MAMCN" : {
+          "using" : ["Tensorflow 1 deep learning framework", "Sonnet 2 library"]
+        },
+        "from sentence" : "We develop MAMCN using Tensorflow 1 deep learning framework and Sonnet 2 library ."
+      },
+      "For" : {
+        "word - level embedding" : {
+          "tokenize" : "documents",
+          "using" : "using NLTK toolkit",
+          "substitute" : {
+            "words" : {
+              "with" : "GloVe 6B"
+            }
+          },
+          "from sentence" : "For the word - level embedding , we tokenize the documents using NLTK toolkit and substitute words with GloVe 6B 43.16 46.90 49.28 55.83 BiDAF 40.32 45.91 44.86 50.71 hidden size is set to 200 for QUASAR - T and Triv - iaQA , and 100 for SQuAD ."
+        }
+      },
+      "In" : {
+        "memory controller" : {
+          "use" : {
+            "100 x 36 size memory" : {
+              "initialized with" : "zeros"
+            },
+            "4" : {
+            "has" : "read heads"
+            },
+            "1" : {
+            "has" : "write head"
+            }
+          },
+          "from sentence" : "In the memory controller , we use 100 x 36 size memory initialized with zeros , 4 read heads and 1 write head ."
+        }
+      },
+      "has" : {
+        "optimizer" : {
+          "is" : {
+            "AdaDelta ( Zeiler , 2012 )" : {
+              "with" : {
+                "initial learning rate" : {
+                  "of" : "0.5"
+                }
+              }
+            }
+          },
+          "from sentence" : "The optimizer is AdaDelta ( Zeiler , 2012 ) with an initial learning rate of 0.5 ."
+        },
+        "batch size" : {
+          "set to" : "30",
+          "from sentence" : "We train our model for 12 epochs , and batch size is set to 30 ."
+        }
+      },
+      "train" : {
+        "model" : {
+          "for" : "12 epochs"
+        },
+        "from sentence" : "We train our model for 12 epochs , and batch size is set to 30 ."
+      },
+      "During" : {
+        "training" : {
+          "keep" : {
+            "exponential moving average" : {
+              "of" : "weights",
+              "with" : "0.001 decay",
+              "use at" : "test time",
+              "from sentence" : "During the training , we keep the exponential moving average of weights with 0.001 decay and use these averages at test time ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

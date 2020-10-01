@@ -1,0 +1,32 @@
+{
+  "has" : {
+    "Baselines" : {
+      "For" : {
+        "For cross - sentence n- ary relation extraction task" : {
+          "has" : {
+            "feature - based classifier" : {
+              "based on" : {
+                "shortest dependency paths" : {
+                  "between" : "all entity pairs"
+                }
+              },
+              "from sentence" : "For cross - sentence n- ary relation extraction task , we consider three kinds of models as baselines :
+1 ) a feature - based classifier based on shortest dependency paths between all entity pairs , 2 ) Graph - structured LSTM methods , including Graph LSTM , bidirectional DAG LSTM ( Bidir DAG LSTM ) and Graph State LSTM ( GS GLSTM ) ."
+
+            },
+            "Graph - structured LSTM methods" : {
+              "including" : ["Graph LSTM", "bidirectional DAG LSTM ( Bidir DAG LSTM )", "Graph State LSTM ( GS GLSTM )"],
+              "from sentence" : "For cross - sentence n- ary relation extraction task , we consider three kinds of models as baselines :
+1 ) a feature - based classifier based on shortest dependency paths between all entity pairs , 2 ) Graph - structured LSTM methods , including Graph LSTM , bidirectional DAG LSTM ( Bidir DAG LSTM ) and Graph State LSTM ( GS GLSTM ) ."
+
+            },
+            "Graph convolutional networks ( GCN )" : {
+              "with" : "pruned trees",
+              "from sentence" : "These methods extend LSTM to encode graphs constructed from input sentences with dependency edges , 3 ) Graph convolutional networks ( GCN ) with pruned trees , 6 https://nlp.stanford.edu/projects/"
+            }
+          }
+        }        
+      }
+    }
+  }  
+}

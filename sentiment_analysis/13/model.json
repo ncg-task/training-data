@@ -1,0 +1,54 @@
+{
+  "has" : {
+    "Model" : {
+      "adopts" : {
+        "BERT" : {
+          "as" : "base model",
+          "from sentence" : "This work adopts BERT ) as the base model as it achieves the state - of the - art performance on MRC ."
+        }
+      },
+      "propose" : {
+        "novel joint post - training technique" : {
+          "takes" : {
+            "BERT 's pre-trained weights" : {
+              "as" : {
+                "initialization" : {
+                  "for" : "basic language understanding"
+                }
+              }
+            }  
+          }
+        },
+        "from sentence" : "To address all the above challenges , we propose a novel joint post - training technique that takes BERT 's pre-trained weights as the initialization 4 for basic language understanding and adapt BERT with both domain knowledge and task ( MRC ) knowledge before fine - tuning using the domain end task annotated data for the domain RRC ."
+      },
+      "adapt" : {
+        "BERT" : {
+          "with" : {
+            "both domain knowledge and task ( MRC ) knowledge" : {
+              "before" : {
+                "fine - tuning" : {
+                  "using" : {
+                    "domain end task annotated data" : {
+                      "for" : "domain RRC"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "To address all the above challenges , we propose a novel joint post - training technique that takes BERT 's pre-trained weights as the initialization 4 for basic language understanding and adapt BERT with both domain knowledge and task ( MRC ) knowledge before fine - tuning using the domain end task annotated data for the domain RRC ."        
+      },
+      "leverages" : {
+        "knowledge" : {
+          "from" : {
+            "two sources" : {
+              "name" : ["unsupervised domain reviews", "supervised ( yet out - of - domain ) MRC data"]
+            }
+          }
+        },
+        "from sentence" : "This technique leverages knowledge from two sources : unsupervised domain reviews and supervised ( yet out - of - domain ) MRC data 5 , where the former enhances domain - awareness and the latter strengthens MRC task - awareness ."
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "interactive attention network ( IAN ) model" : {
+          "based on" : ["long - short term memory networks ( LSTM )", "attention mechanism"],
+          "from sentence" : "Based on the two points analyzed above , we propose an interactive attention network ( IAN ) model which is based on long - short term memory networks ( LSTM ) and attention mechanism ."
+        }
+      },
+      "has" : {
+        "IAN" : {
+          "utilizes" : {
+            "attention mechanism" : {
+              "associated with" : "target",
+              "to get" : {
+                "important information" : {
+                  "from" : "context"
+                }              
+              }
+            },
+            "from sentence" : "IAN utilizes the attention mechanism associated with a target to get important information from the context and compute context representation for sentiment classification ."            
+          },
+          "compute" : {
+            "context representation" : {
+              "for" : "sentiment classification"
+            },
+            "from sentence" : "IAN utilizes the attention mechanism associated with a target to get important information from the context and compute context representation for sentiment classification ."            
+          },
+          "makes use of" : {
+            "interactive information" : {
+              "from" : "context",
+              "to supervise" : {
+                "modeling" : {
+                  "of" : "target"
+                },
+                "from sentence" : "Further , IAN makes use of the interactive information from context to supervise the modeling of the target which is helpful to judging sentiment ."
+              }
+            }
+          },
+          "predicts" : {
+            "sentiment polarity" : {
+              "for" : {
+                "target" : {
+                  "within" : "its context"
+                }
+              },
+              "with" : "both target representation and context representation concatenated"
+            },
+            "from sentence" : "Finally , with both target representation and context representation concatenated , IAN predicts the sentiment polarity for the target within its context ."
+          }
+        }
+      }
+    }
+  }
+}

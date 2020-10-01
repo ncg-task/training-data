@@ -1,0 +1,8 @@
+(Contribution||has||Approach)
+(Approach||uses||gradient - based methods)
+(gradient - based methods||for||efficient training)
+(Approach||present||transfer learning approach)
+(transfer learning approach||based on||deep hierarchical recurrent neural network)
+(transfer learning approach||between||source task and the target task)
+(source task and the target task||shares||hidden feature repre-sentation)
+(source task and the target task||shares||part of the model parameters)

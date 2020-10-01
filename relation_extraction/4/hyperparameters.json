@@ -1,0 +1,82 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "map" : {
+        "words" : {
+          "occur less than" : {
+            "2 times" : {
+              "in" : "training set"
+            }
+          },
+          "to" : "special < UNK > token"
+        },
+        "from sentence" : "We map words that occur less than 2 times in the training set to a special < UNK > token ."
+      },
+      "use" : {
+        "pre-trained GloVe vectors" : {
+          "to initialize" : "word embeddings",
+          "from sentence" : "We use the pre-trained GloVe vectors to initialize word embeddings ."
+        }
+      },
+      "For" : {
+        "all the LSTM layers" : {
+          "find that" : {
+            "2 - layer stacked LSTMs" : {
+              "work better than" : "one - layer LSTMs"
+            }
+          },
+          "from sentence" : "For all the LSTM layers , we find that 2 - layer stacked LSTMs generally work better than one - layer LSTMs ."
+        }
+      },
+      "minimize" : {
+        "cross - entropy loss" : {
+          "over" : "all 42 relations",
+          "using" : "AdaGrad",
+          "from sentence" : "We minimize cross - entropy loss over all 42 relations using AdaGrad ."
+        }
+      },
+      "apply" : {
+        "Dropout" : {
+          "with" : {
+            "p = 0.5" : {
+              "to" : "CNNs and LSTMs"
+            }
+          }
+        },
+        "from sentence" : "We apply Dropout with p = 0.5 to CNNs and LSTMs ."
+      },
+      "During" : {
+        "training" : {
+          "find" : {
+            "word dropout strategy" : {
+              "to be" : "very effective",
+              "randomly set" : {
+                "token" : {
+                  "to be" : {
+                    "< UNK >" : {
+                      "with" : "probability p"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "During training we also find a word dropout strategy to be very effective : we randomly set a token to be < UNK > with a probability p."
+        }
+      },
+      "set" : {
+        "p" : {
+          "to be" : {
+            "0.06" : {
+              "for" : "SDP - LSTM model"
+            },
+            "0.04" : {
+              "for" : "all other models"
+            }
+          }
+        },
+        "from sentence" : "We set p to be 0.06 for the SDP - LSTM model and 0.04 for all other models ."
+      }
+    }
+  }
+}

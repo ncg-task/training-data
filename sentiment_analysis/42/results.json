@@ -1,0 +1,110 @@
+{
+  "has" : {
+    "Results" : {
+      "find that" : {
+        "feature - based SVM" : {
+          "is" : "extremely strong performer",
+          "substantially outperforms" : "other baseline methods",
+          "from sentence" : "We can find that feature - based SVM is an extremely strong performer and substantially outperforms other baseline methods , which demonstrates the importance of a powerful feature representation for aspect level sentiment classification ."
+        },
+        "performance" : {
+          "of" : {
+            "Contex - tAVG" : {
+              "is" : "very poor"
+            }
+          },
+          "from sentence" : "We can also find that the performance of Contex - tAVG is very poor , which means that assigning the same weight / importance to all the context words is not an effective way ."
+        },
+        "multiple computational layers" : {
+          "consistently improve" : {
+            "classification accuracy" : {
+              "in" : "all these models"
+            }
+          },
+          "from sentence" : "We can find that using multiple computational layers could consistently improve the classification accuracy in all these models ."
+        }
+      },
+      "Among" : {
+        "three recurrent models" : {
+          "has" : {
+            "TDLSTM" : {
+              "performs" : {
+                "better" : {
+                  "than" : "LSTM"
+                }
+              }
+            }
+          },
+          "from sentence" : "Among three recurrent models , TDLSTM performs better than LSTM , which indicates that taking into account of the aspect information is helpful ."
+        },
+        "observe that" : {
+          "using" : {
+            "more computational layers" : {
+              "lead to" : {
+                "better performance" : {
+                  "especially when" : {
+                    "number of hops" : {
+                      "is" : "less than six"
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "Among all our models from single hop to nine hops , we can observe that using more computational layers could generally lead to better performance , especially when the number of hops is less than six ."
+          }
+        }
+      },
+      "consider" : {
+        "each hidden vector" : {
+          "of" : "TDLSTM",
+          "encodes" : {
+            "semantics" : {
+              "of" : {
+                "word sequence" : {
+                  "until" : "current position"
+                }
+              }
+            }
+          },
+          "from sentence" : "We consider that each hidden vector of TDLSTM encodes the semantics of word sequence until the current position ."
+        }
+      },
+      "has" : {
+        "best performances" : {
+          "achieved when" : {
+            "model" : {
+              "contains" : "seven and nine hops"
+            }
+          },
+          "from sentence" : "The best performances are achieved when the model contains seven and nine hops , respectively ."
+        },
+        "All these models" : {
+          "perform" : {
+            "comparably" : {
+              "when" : {
+                "number of hops" : {
+                  "is" : "larger than five"
+                }
+              }
+            }
+          },
+          "from sentence" : "All these models perform comparably when the number of hops is larger than five ."
+        }
+      },
+      "On" : {
+        "both datasets" : {
+          "has" : {
+            "proposed approach" : {
+              "could obtain" : {
+                "comparable accuracy" : {
+                  "compared to" : "state - of - art feature - based SVM system"
+                }
+              }
+            }
+          },
+          "from sentence" : "On both datasets , the proposed approach could obtain comparable accuracy compared to the state - of - art feature - based SVM system ."
+        } 
+      }
+    }
+  }
+}

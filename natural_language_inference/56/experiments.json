@@ -1,0 +1,170 @@
+{
+  "has" : {
+    "Experiments" : {
+      "has" : {
+        "Tasks" : {
+          "has" : {
+            "bAbI question - answering tasks" : {
+              "has" : {
+                "Results" : {
+                  "need" : {
+                    "single step of relational reasoning" : {
+                      "to solve" : "all the bAbI tasks",
+                      "from sentence" : "Surprisingly , we find that we only need a single step of relational reasoning to solve all the bAbI tasks ."
+                    }
+                  },
+                  "appears" : {
+                    "multiple steps of relational reasoning" : {
+                      "not" : {
+                        "important" : {
+                          "for" : "bAbI dataset"
+                        }
+                      },
+                      "from sentence" : "Regardless , it appears multiple steps of relational reasoning are not important for the bAbI dataset ."
+                    }
+                  }
+                }
+              }
+            },
+            "Pretty - CLEVR" : {
+              "has" : {
+                "Results" : {
+                  "has" : {
+                    "MLP" : {
+                      "has" : {
+                        "perfectly solves" : {
+                          "has" : "non-relational questions"
+                        },
+                        "struggles" : {
+                          "with" : "single jump questions"
+                        }
+                      },
+                      "from sentence" : "Mirroring the results from the \" Sort - of - CLEVR \" dataset the MLP perfectly solves the non-relational questions , but struggle with even single jump questions and seem to lower bound the performance of the relational networks ."
+                    },
+                    "relational network" : {
+                      "solves" : "non-relational questions",
+                      "as well as" : {
+                        "ones" : {
+                          "requiring" : "single jump"
+                        }
+                      },
+                      "has" : {
+                        "accuracy" : {
+                          "has" : {
+                            "sharply drops off" : {
+                              "with" : "more jumps"
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "The relational network solves the non-relational questions as well as the ones requiring a single jump , but the accuracy sharply drops off with more jumps ."
+                    }
+                  }
+                }
+              }
+            },
+            "Sudoku" : {
+              "has" : {
+                "Results" : {
+                  "has" : {
+                    "Our network" : {
+                      "learns to" : {
+                        "solve" : {
+                          "has" : {
+                            "94.1 %" : {
+                              "of" : "even the hardest 17 - givens Sudokus",
+                              "after" : "32 steps"
+                            }
+                          }
+                        },
+                        "from sentence" : "Sudoku
+Our network learns to solve 94.1 % of even the hardest 17 - givens Sudokus after 32 steps ."                        
+                      },
+                      "has" : {
+                        "outperforms" : {
+                          "has" : {
+                            "loopy belief propagation" : {
+                              "with" : {
+                                "parallel and random messages" : {
+                                  "passing" : "updates"
+                                }
+                              },
+                              "from sentence" : "Our network outperforms loopy belief propagation , with parallel and random messages passing updates ."
+                            },
+                            "version" : {
+                              "of" : {
+                                "loopy belief propagation" : {
+                                  "has" : {
+                                    "modified specifically" : {
+                                      "for solving" : {
+                                        "Sudokus" : {
+                                          "that uses" : "250 steps"
+                                        }
+                                      }
+                                    } 
+                                  }
+                                }
+                              },
+                              "from sentence" : "It also outperforms a version of loopy belief propagation modified specifically for solving Sudokus that uses 250 steps , Sinkhorn balancing every two steps and iteratively picks the most probable digit ."
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "outperform" : {
+                      "Park" : [
+                        {"has" : {
+                          "treats" : {
+                            "Sudoku" : {
+                              "as" : "9x9 image"
+                            }
+                          }
+                        }},
+                        "10 convolutional layers"
+                      ],
+                      "from sentence" : "Finally we outperform Park which treats the Sudoku as a 9x9 image , uses 10 convolutional layers , iteratively picks the most probable digit , and evaluate on easier Sudokus with 24 - 36 givens ."
+                    }
+                  },
+                  "see that" : {
+                    "even simple Sudokus" : {
+                      "with" : "33 givens",
+                      "require" : {
+                        "upwards of 10 steps" : {
+                          "of" : "relational reasoning"
+                        }
+                      }
+                    },
+                    "harder" : {
+                      "has" : "17 givens",
+                      "continue to" : {
+                        "improve" : {
+                          "after" : "32 steps"
+                        }
+                      }
+                    },
+                    "from sentence" : "See figure 4 . We can see that even simple Sudokus with 33 givens require upwards of 10 steps of relational reasoning , whereas the harder 17 givens continue to improve even after 32 steps ."
+                  },
+                  "At" : {
+                    "64 steps" : {
+                      "has" : {
+                        "accuracy" : {
+                          "for" : "17 givens puzzles",
+                          "has" : {
+                            "increases" : {
+                              "to" : "96.6 %"
+                            }
+                          },
+                          "from sentence" : "At 64 steps the accuracy for the 17 givens puzzles increases to 96.6 % ."
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

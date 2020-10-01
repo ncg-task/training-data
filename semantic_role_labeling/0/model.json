@@ -1,0 +1,77 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "end - to - end approach" : {
+          "in" : {
+            "one forward pass" : {
+              "for predicting" : ["all the predicates", "argument spans"]
+            },
+            "from sentence" : "We propose an end - to - end approach for predicting all the predicates and their argument spans in one forward pass ."
+          }
+        }
+      },
+      "builds on" : {
+        "recent coreference resolution model" : {
+          "by making" : {
+            "central" : {
+              "use of" : "learned , contextualized span representations"
+            }
+          },
+          "from sentence" : "Our model builds on a recent coreference resolution model , by making central use of learned , contextualized span representations ."
+        }
+      },
+      "use" : {
+        "representations" : {
+          "to predict" : {
+            "SRL graphs" : {
+              "directly over" : "text spans"
+            }
+          },
+          "from sentence" : "We use these representations to predict SRL graphs directly over text spans ."
+        }
+      },
+      "has" : {
+        "Each edge" : {
+          "identified by" : {
+            "independently predicting" : {
+              "which" : {
+                "role" : {
+                  "holds between" : "every possible pair of text spans"
+                }
+              }
+            }
+          },
+          "from sentence" : "Each edge is identified by independently predicting which role , if any , holds between every possible pair of text spans , while using aggressive beam 1 Code and models : https://github.com/luheng/lsgn pruning for efficiency ."
+        },
+        "final graph" : {
+          "union of" : ["predicted SRL roles ( edges )", "associated text spans ( nodes )"],
+          "from sentence" : "The final graph is simply the union of predicted SRL roles ( edges ) and their associated text spans ( nodes ) ."
+        },
+        "span representations" : {
+          "generalize" : {
+            "token - level representations" : {
+              "in" : "BIObased models",
+              "letting" : {
+                "model" : {
+                  "dynamically decide" : {
+                    "which spans and roles to include" : {
+                      "without using" : "previously standard syntactic features"
+                    }
+                  }
+                }
+              }              
+            }
+          },
+          "from sentence" : "The span representations also generalize the token - level representations in BIObased models , letting the model dynamically decide which spans and roles to include , without using previously standard syntactic features ."
+        }
+      },
+      "is" : {
+        "first span - based SRL model" : {
+          "that does not assume" : "predicates are given",
+          "from sentence" : "To the best of our knowledge , this is the first span - based SRL model that does not assume that predicates are given ."
+        }
+      }
+    }
+  }
+}

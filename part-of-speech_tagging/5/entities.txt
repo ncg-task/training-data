@@ -1,0 +1,94 @@
+167	0	10	shows that
+167	11	38	separately optimized models
+167	39	42	are
+167	43	70	significantly more accurate
+167	71	73	on
+167	74	81	average
+167	82	86	than
+167	87	111	jointly optimized models
+168	47	50	for
+168	0	21	Separate optimization
+168	22	30	leads to
+168	31	46	better accuracy
+168	47	50	for
+168	51	73	34 out of 40 treebanks
+168	47	50	for
+168	82	109	morphological features task
+168	118	140	30 out of 39 treebanks
+168	47	50	for
+168	145	157	xpos tagging
+169	22	34	outperformed
+169	35	53	joint optimization
+169	54	56	by
+169	57	83	up to 2.1 percent absolute
+169	35	40	joint
+169	98	103	never
+169	104	119	out - performed
+169	120	128	separate
+169	54	56	by
+169	132	156	more than 0.5 % absolute
+179	27	41	combined model
+179	46	75	significantly higher accuracy
+179	76	89	compared with
+179	101	126	character and word models
+194	0	3	For
+194	4	28	all of the network sizes
+194	29	31	in
+194	36	47	grid search
+194	59	74	observed during
+194	75	83	training
+194	84	88	that
+194	93	101	accuracy
+194	102	107	reach
+194	110	120	high value
+194	125	138	degrades with
+194	139	154	more iterations
+194	155	158	for
+194	163	187	character and word model
+119	4	19	word embeddings
+119	20	23	are
+119	24	35	initialized
+119	36	40	with
+119	41	52	zero values
+119	61	83	pre-trained embeddings
+119	88	91	not
+119	92	99	updated
+119	100	106	during
+119	107	115	training
+120	4	11	dropout
+120	12	19	used on
+120	24	34	embeddings
+120	38	49	achieved by
+120	52	56	RRIE
+120	35	37	is
+120	64	91	relative reduction in error
+24	34	39	learn
+24	40	100	context sensitive initial character and word representations
+24	101	108	through
+24	109	155	two separate sentence - level recurrent models
+25	15	27	combined via
+25	30	47	meta-BiLSTM model
+25	53	59	builds
+25	62	84	unified representation
+25	85	87	of
+25	88	97	each word
+25	111	119	used for
+25	120	137	syntactic tagging
+2	0	23	Morphosyntactic Tagging
+141	0	9	Our model
+141	10	21	outperforms
+141	22	24	in
+141	25	27	32
+141	28	30	of
+141	35	47	54 treebanks
+141	48	52	with
+141	53	60	13 ties
+143	19	26	produce
+143	27	41	better results
+143	44	58	especially for
+143	59	89	morphologically rich languages
+155	0	10	Our models
+155	19	26	produce
+155	27	55	significantly better results
+155	56	60	than
+155	65	102	winners of the CoNLL 2017 Shared Task

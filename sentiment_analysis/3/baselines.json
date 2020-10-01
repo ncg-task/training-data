@@ -1,0 +1,107 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "c LSTM" : {
+          "is" : ["contextual LSTM model", {"from sentence" : "c LSTM : A contextual LSTM model ."}],
+          "has" : {
+            "utterance - level bidirectional LSTM" : {
+              "to encode" : "each utterance",
+              "from sentence" : "An utterance - level bidirectional LSTM is used to encode each utterance ."
+            },
+            "context - level unidirectional LSTM" : {
+              "to encode" : "context",
+              "from sentence" : "A context - level unidirectional LSTM is used to encode the context ."
+            }
+          }
+        },
+        "CNN+cLSTM" : {
+          "has" : {
+            "CNN" : {
+              "to extract" : "utterance features"
+            },
+            "c LSTM" : {
+              "applied to learn" : "context representations"
+            }
+          },
+          "from sentence" : "CNN+cLSTM : An CNN is used to extract utterance features .
+An c LSTM is then applied to learn context representations ."
+
+        },
+        "BERT BASE" : {
+          "treat" : {
+            "each utterance" : {
+              "with" : {
+                "context" : {
+                  "as" : "single document"
+                }
+              }
+            }
+          },
+          "limit" : {
+            "document length" : {
+              "to" : {
+                "last 100 tokens" : {
+                  "to allow" : "larger batch size"
+                }
+              }
+            }
+          },
+          "from sentence" : "BERT BASE :
+We treat each utterance with its context as a single document .
+We limit the document length to the last 100 tokens to allow larger batch size ."
+
+        },
+        "DialogueRNN" : {
+          "is" : {
+            "stateof - the - art model" : {
+              "for" : {
+                "emotion detection" : {
+                  "in" : "textual conversations"
+                }
+              }
+            }
+          },
+          "models both" : "context and speakers information",
+          "from sentence" : "DialogueRNN : The stateof - the - art model for emotion detection in textual conversations .
+It models both context and speakers information ."
+
+        },
+        "KET SingleSelfAttn" : {
+          "replace" : {
+            "hierarchical self - attention" : {
+              "by" : {
+                "single self - attention layer" : {
+                  "to learn" : "context representations"
+                }
+              }
+            },
+            "from sentence" : "KET SingleSelfAttn :
+We replace the hierarchical self - attention by a single self - attention layer to learn context representations ."
+
+          },
+          "has" : {
+            "Contextual utterances" : {
+              "are" : {
+                "concatenated together" : {
+                  "prior to" : "single self - attention layer"
+                }
+              },
+              "from sentence" : "Contextual utterances are concatenated together prior to the single self - attention layer ."
+            }
+          }
+        },
+        "KET StdAttn" : {
+          "replace" : {
+            "dynamic contextaware affective graph attention" : {
+              "by" : "standard graph attention"
+            },
+            "from sentence" : "KET StdAttn :
+We replace the dynamic contextaware affective graph attention by the standard graph attention ."
+
+          }
+        }        
+      }
+    }    
+  }
+}

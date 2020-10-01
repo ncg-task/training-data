@@ -1,0 +1,150 @@
+192	0	11	ATAE - LSTM
+192	12	14	is
+192	17	47	classical LSTM - based network
+192	48	51	for
+192	56	64	APC task
+192	73	80	applies
+192	85	104	attention mechanism
+192	105	116	to focus on
+192	121	136	important words
+192	137	139	in
+192	144	151	context
+195	0	7	ATSM -S
+196	0	2	is
+196	5	19	baseline model
+196	20	22	of
+196	27	42	ATSM variations
+196	43	46	for
+196	47	84	Chinese language - oriented ABSA task
+198	5	7	is
+198	8	34	novel neural network model
+198	35	38	for
+198	39	47	APC task
+198	48	62	aimed to solve
+198	67	108	shortcomings of traditional RNNs and CNNs
+201	0	3	AEN
+201	6	8	is
+201	12	39	attentional encoder network
+201	40	48	based on
+201	53	74	pretrained BERT model
+201	83	96	aims to solve
+201	101	131	aspect polarity classification
+202	0	4	BERT
+202	7	9	is
+202	12	32	BERT - adapted model
+202	33	36	for
+202	37	78	Review Reading Comprehension ( RRC ) task
+203	0	11	BERT - BASE
+203	12	14	is
+203	19	46	basic pretrained BERT model
+203	20	22	as
+204	3	14	adapt it to
+204	15	39	ABSA multi-task learning
+204	48	54	equips
+204	59	71	same ability
+204	72	96	to automatically extract
+204	97	109	aspect terms
+204	114	122	classify
+204	123	139	aspects polarity
+204	143	160	LCF - ATEPC model
+207	0	10	BERT - ADA
+209	0	2	is
+209	5	40	domain - adapted BERT - based model
+209	41	53	proposed for
+209	58	66	APC task
+209	75	84	finetuned
+209	89	106	BERT - BASE model
+209	107	109	on
+209	110	131	task - related corpus
+211	0	11	LCF - ATEPC
+211	14	16	is
+211	21	47	multi -task learning model
+211	48	51	for
+211	56	73	ATE and APC tasks
+212	0	9	LCF - ATE
+212	10	13	are
+212	18	53	variations of the LCF - ATEPC model
+212	65	77	optimize for
+212	82	90	ATE task
+213	0	9	LCF - APC
+213	10	13	are
+213	18	43	variations of LCF - ATEPC
+213	56	68	optimize for
+213	73	81	APC task
+213	82	88	during
+213	89	105	training process
+48	42	81	https://github.com/yangheng95/LCF-ATEPC
+32	140	148	proposes
+32	151	176	multi-task learning model
+32	177	180	for
+32	181	214	aspect - based sentiment analysis
+34	4	23	LCF - ATEPC 3 model
+34	38	40	is
+34	52	102	novel multilingual and multi-task - oriented model
+36	22	30	based on
+36	31	67	multi-head self - attention ( MHSA )
+36	72	82	integrates
+36	87	136	pre-trained and the local context focus mechanism
+36	139	145	namely
+36	146	157	LCF - ATEPC
+37	3	14	training on
+37	17	76	small amount of annotated data of aspect and their polarity
+37	96	106	adapted to
+37	109	130	large - scale dataset
+37	133	157	automatically extracting
+37	162	169	aspects
+37	174	184	predicting
+37	189	209	sentiment polarities
+2	70	127	Aspect Polarity Classification and Aspect Term Extraction
+8	0	42	Aspect - based sentiment analysis ( ABSA )
+8	136	166	aspect term extraction ( ATE )
+8	171	209	aspect polarity classification ( APC )
+9	52	82	aspect term polarity inferring
+9	115	137	aspect term extraction
+13	147	177	aspect polarity classification
+16	0	33	Aspect - based sentiment analysis
+23	4	7	APC
+24	62	65	ATE
+238	4	13	CDM layer
+238	14	29	works better on
+238	30	45	twitter dataset
+244	78	110	joint model based on BERT - BASE
+244	111	119	achieved
+244	120	139	hopeful performance
+244	96	98	on
+244	143	161	all three datasets
+244	166	180	even surpassed
+244	181	222	other proposed BERT based improved models
+244	96	98	on
+244	226	239	some datasets
+248	0	14	ATEPC - Fusion
+248	15	17	is
+248	20	40	supplementary scheme
+248	41	43	of
+248	44	57	LCF mechanism
+248	67	73	adopts
+248	76	93	moderate approach
+248	94	105	to generate
+248	106	128	local context features
+249	25	29	show
+249	39	50	performance
+249	59	70	better than
+249	75	103	existing BERT - based models
+246	0	13	Compared with
+246	18	35	BERT - BASE model
+246	38	48	BERT - SPC
+246	49	71	significantly improves
+246	76	98	accuracy and F 1 score
+246	99	101	of
+246	102	132	aspect polarity classification
+247	14	17	for
+247	22	32	first time
+247	35	45	BERT - SPC
+247	46	59	has increased
+247	64	73	F 1 score
+247	74	76	of
+247	77	88	ATE subtask
+247	9	11	on
+247	92	106	three datasets
+247	107	112	up to
+247	113	117	99 %

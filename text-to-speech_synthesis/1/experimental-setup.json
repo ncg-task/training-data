@@ -1,0 +1,29 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "train" : {
+        "autoregressive Transformer TTS model" : {
+          "on" : {
+            "4 NVIDIA V100 GPUs" : {
+              "with" : "batchsize of 16 sentences"
+            }
+          }
+        },
+        "from sentence" : "We first train the autoregressive Transformer TTS model on 4 NVIDIA V100 GPUs , with batchsize of 16 sentences on each GPU ."
+      },
+      "use" : {
+        "Adam optimizer" : {
+          "with" : "? 1 = 0.9 , ? 2 = 0.98 , ? = 10 ?9"
+        },
+        "from sentence" : "We use the Adam optimizer with ? 1 = 0.9 , ? 2 = 0.98 , ? = 10 ?9 and follow the same learning rate schedule in ."
+      },
+      "leverage" : ["sequence - level knowledge distillation", {"from sentence" : "In addition , we also leverage sequence - level knowledge distillation that has achieved good performance in non-autoregressive machine translation to transfer the knowledge from the teacher model to the student model ."}],
+      "In the inference process" : {
+        "output mel-spectrograms" : {
+          "transformed into" : "audio samples using the pretrained WaveGlow"
+        },
+        "from sentence" : "In the inference process , the output mel-spectrograms of our FastSpeech model are transformed into audio samples using the pretrained WaveGlow [ 20 ] 5 ."
+      } 
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "has" : {
+        "tokenizers" : {
+          "use in" : {
+            "step" : {
+              "of" : {
+                "preprocessing" : {
+                  "has" : "data"
+                }
+              }
+            }
+          },
+          "from" : "Stanford CoreNLP",
+          "from sentence" : "The tokenizers we use in the step of preprocessing data are from Stanford CoreNLP ."
+        }
+      },
+      "to transform" : {
+        "passage and question" : {
+          "in" : {
+            "Stanford CoreNLP utilities" : {
+              "use" : ["part - of - speech tagger", "named - entity recognition tagger"]
+            }
+          },
+          "from sentence" : "We also use part - of - speech tagger and named - entity recognition tagger in Stanford CoreNLP utilities to transform the passage and question ."
+        }
+      },
+      "For" : {
+        "skip - gram model" : {
+          "has" : {
+            "our model" : {
+              "refers to" : {
+                "word2 vec module" : {
+                  "in" : {
+                    "open source software library" : {
+                      "name" : "Tensorflow"
+                    }
+                  },
+                  "has" : {
+                    "skip window" : {
+                      "set as" : "2"
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "For the skip - gram model , our model refers to the word2 vec module in open source software library , Tensorflow , the skip window is set as 2 ."
+          }
+        },
+        "memory networks" : {
+          "set" : {
+            "number of layer" : {
+              "as" : "3"
+            }
+          },
+          "from sentence" : "For the memory networks , we set the number of layer as 3 ."
+        }
+      },
+      "To improve" : {
+        "reliability and stabllity" : {
+          "screen out" : {
+            "sentences" : {
+              "whose" : {
+                "length" : {
+                  "are" : "shorter than 9"
+                }
+              }
+            }
+          },
+          "from sentence" : "To improve the reliability and stabllity , we screen out the sentences whose length are shorter than 9 ."
+        }
+      },
+      "use" : {
+        "100 one dimensional" : {
+          "has" : {
+            "filters" : {
+              "for" : {
+                "CNN" : {
+                  "in" : "character level embedding"
+                }
+              },
+              "with" : {
+                "width" : {
+                  "of" : {
+                    "5" : {
+                      "for" : "each one"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "We use 100 one dimensional filters for CNN in the character level embedding , with width of 5 for each one ."
+        },
+        "AdaDelta ( Zeiler , 2012 ) optimizer" : {
+          "with" : {
+            "initial learning rate" : {
+              "as" : "0.001"
+            }
+          },
+          "from sentence" : "We use the AdaDelta ( Zeiler , 2012 ) optimizer with a initial learning rate as 0.001 ."
+        }
+      },
+      "set" : {
+        "hidden size" : {
+          "as" : {
+            "100" : {
+              "for" : "all the LSTM and GRU layers"
+            }
+          },
+          "from sentence" : "We set the hidden size as 100 for all the LSTM and GRU layers and apply dropout between layers with a dropout ratio as 0.2 ."
+        }
+      },
+      "apply" : {
+        "dropout" : {
+          "between" : {
+            "layers" : {
+              "with" : {
+                "dropout ratio" : {
+                  "as" : "0.2"
+                }
+              }
+            }
+          },
+          "from sentence" : "We set the hidden size as 100 for all the LSTM and GRU layers and apply dropout between layers with a dropout ratio as 0.2 ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "has" : {
+    "Model" : {
+      "first propose" : {
+        "Multi - Hop Pointer - Generator Model ( MHPGM )" : {
+          "has" : {
+            "strong baseline model" : {
+              "uses" : {
+                "multiple hops" : {
+                  "of" : ["bidirectional attention", "self - attention", "pointer - generator decoder"],
+                  "to effectively" : {
+                    "read and reason" : {
+                      "within" : "along passage"
+                    },
+                    "synthesize" : {
+                      "has" : "coherent response"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "In this paper , we first propose the Multi - Hop Pointer - Generator Model ( MHPGM ) , a strong baseline model that uses multiple hops of bidirectional attention , self - attention , and a pointer - generator decoder to effectively read and reason within along passage and synthesize a coherent response ."
+            }
+          }
+        }
+      },
+      "present" : {
+        "algorithm" : {
+          "for selecting" : {
+            "useful , grounded multi-hop relational knowledge paths" : {
+              "from" : "ConceptNet",
+              "via" : ["pointwise mutual information ( PMI )", "term - frequency - based scoring function"]
+            }
+          },
+          "from sentence" : "Next , to address the issue that understanding human - generated text and performing longdistance reasoning on it often involves intermittent access to missing hops of external commonsense ( background ) knowledge , we present an algorithm for selecting useful , grounded multi-hop relational knowledge paths from ConceptNet ) via a pointwise mutual information ( PMI ) and term - frequency - based scoring function ."
+        },
+        "novel method" : {
+          "of" : {
+            "inserting" : {
+              "has" : {
+                "selected commonsense paths" : {
+                  "between" : {
+                    "hops" : {
+                      "of" : {
+                        "document - context reasoning" : {
+                          "within" : "our model"
+                        }
+                      }
+                    }
+                  },
+                  "via" : {
+                    "Necessary and Optional Information Cell ( NOIC )" : {
+                      "employs" : {
+                        "selectivelygated attention mechanism" : {
+                          "that utilizes" : {
+                            "commonsense information" : {
+                              "to effectively fill in" : "gaps of inference"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "We then present a novel method of inserting these selected commonsense paths between the hops of document - context reasoning within our model , via the Necessary and Optional Information Cell ( NOIC ) , which employs a selectivelygated attention mechanism that utilizes commonsense information to effectively fill in gaps of inference ."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,147 @@
+216	3	6	see
+216	11	36	full features integration
+216	37	43	obtain
+216	48	64	best performance
+217	0	5	Among
+217	6	31	all the feature ablations
+217	88	92	drop
+217	38	56	Part - Of - Speech
+217	59	70	Exact Match
+217	73	87	Qtype features
+217	93	107	much more than
+217	112	126	other features
+219	11	28	final ablation of
+219	29	40	POS and NER
+219	46	53	can see
+219	58	69	performance
+219	70	76	decays
+219	77	81	over
+219	82	91	3 % point
+221	9	16	replace
+221	17	41	our input gate mechanism
+221	42	46	into
+221	47	88	simplified feature concatenation strategy
+221	95	106	performance
+221	107	112	drops
+221	113	125	nearly 2.3 %
+221	67	69	on
+221	133	141	EM score
+223	43	52	employing
+223	53	71	question influence
+223	37	39	on
+223	79	95	passage encoding
+223	100	105	boost
+223	4	10	result
+223	117	128	up to 1.3 %
+223	37	39	on
+223	136	144	EM score
+190	3	13	preprocess
+190	14	39	each passage and question
+190	40	45	using
+190	50	65	library of nltk
+190	70	77	exploit
+190	82	121	popular pretrained word embedding GloVe
+190	122	126	with
+190	127	152	100 - dimensional vectors
+190	196	199	for
+190	205	227	questions and passages
+191	4	8	size
+191	9	11	of
+191	12	34	char - level embedding
+191	75	86	obtained by
+191	87	98	CNN filters
+191	43	49	set as
+191	50	67	100 - dimensional
+194	4	14	batch size
+194	18	27	set to be
+194	28	30	48
+194	31	34	for
+194	44	71	SQuAD and TriviaQA datasets
+193	3	8	adopt
+193	13	47	AdaDelta ( Zeiler 2012 ) optimizer
+193	48	51	for
+193	52	60	training
+193	61	65	with
+193	69	90	initial learning rate
+193	91	93	of
+193	94	100	0.0005
+195	8	13	apply
+195	14	48	dropout ( Srivastava et al. 2014 )
+195	49	56	between
+195	57	63	layers
+195	64	68	with
+195	71	83	dropout rate
+195	84	86	of
+195	87	90	0.2
+196	0	3	For
+196	8	27	multi-hop reasoning
+196	33	36	set
+196	41	55	number of hops
+196	20	22	as
+196	59	60	2
+196	70	79	imitating
+196	80	103	human reading procedure
+196	22	24	on
+196	107	128	skimming and scanning
+197	0	6	During
+197	7	15	training
+197	21	24	set
+197	29	44	moving averages
+197	45	47	of
+197	48	59	all weights
+197	60	62	as
+197	67	89	exponential decay rate
+197	45	47	of
+197	93	98	0.999
+28	19	26	propose
+28	31	46	novel framework
+28	47	52	named
+28	53	60	Smarnet
+30	24	33	introduce
+30	38	55	Smarnet framework
+30	61	69	exploits
+30	70	103	fine - grained word understanding
+30	104	108	with
+30	109	144	various attribution discriminations
+31	8	15	develop
+31	20	41	interactive attention
+31	42	46	with
+31	47	61	memory network
+31	62	70	to mimic
+31	71	94	human reading procedure
+32	8	11	add
+32	14	28	checking layer
+32	29	31	on
+32	36	51	answer refining
+32	61	70	to ensure
+32	75	83	accuracy
+4	0	28	Machine Comprehension ( MC )
+5	28	30	MC
+13	9	30	machine comprehension
+209	27	34	can see
+209	35	51	our single model
+209	52	60	achieves
+209	64	72	EM score
+209	73	75	of
+209	76	84	71.415 %
+209	91	99	F1 score
+209	73	75	of
+209	103	111	80.160 %
+209	120	134	ensemble model
+209	135	143	improves
+209	144	146	to
+209	64	66	EM
+209	150	158	75.989 %
+209	91	93	F1
+209	166	175	83. 475 %
+211	27	29	on
+211	111	119	test set
+211	120	122	of
+211	60	69	Trivia QA
+211	27	29	on
+212	3	10	can see
+212	11	28	our Smarnet model
+212	29	40	outperforms
+212	45	60	other baselines
+212	69	85	wikipedia domain
+212	90	100	web domain

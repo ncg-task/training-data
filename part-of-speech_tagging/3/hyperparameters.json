@@ -1,0 +1,119 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "has" : {
+        "Parameter optimization" : {
+          "performed with" : {
+            "minibatch stochastic gradient descent ( SGD )" : {
+              "with" : {
+                "batch size" : {
+                  "has" : "10"
+                },
+                "momentum" : {
+                  "has" : "0.9"
+                }
+              },
+              "from sentence" : "Parameter optimization is performed with minibatch stochastic gradient descent ( SGD ) with batch size 10 and momentum 0.9 ."
+            }
+          }
+        },
+        "\" best \" parameters" : {
+          "appear at" : "around 50 epochs",
+          "from sentence" : "The \" best \" parameters appear at around 50 epochs , according to our experiments ."
+        }
+      },
+      "choose" : {
+        "initial learning rate" : {
+          "of" : {
+            "0.01" : {
+              "for" : "POS tagging"
+            },
+            "0.015" : {
+              "for" : "NER"
+            }
+          },
+          "updated on" : {
+            "each epoch" : {
+              "of" : "training"
+            }
+          },
+          "from sentence" : "We choose an initial learning rate of ? 0 ( ? 0 = 0.01 for POS tagging , and 0.015 for NER , see Section 3.3 . ) , and the learning rate is updated on each epoch of training as ? t = ? 0 / ( 1 + ?t ) , with decay rate ? =
+0.05 and t is the number of epoch completed ."
+
+        }
+      },
+      "reduce" : {
+        "effects" : {
+          "of" : {
+            "gradient exploding" : {
+              "use" : {
+                "gradient clipping" : {
+                  "of" : "5.0"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "To reduce the effects of \" gradient exploding \" , we use a gradient clipping of 5.0 ."
+      },
+      "use" : {
+        "early stopping" : {
+          "based on" : {
+            "performance" : {
+              "on" : "validation sets"
+            }
+          },
+          "from sentence" : "We use early stopping based on performance on validation sets ."
+        }
+      },
+      "For each of" : {
+        "embeddings" : {
+          "fine - tune" : "initial embeddings",
+          "modifying them during" : {
+            "gradient updates" : {
+              "of" : {
+                "neural network model" : {
+                  "by" : "back - propagating gradients"
+                }
+              }
+            }
+          },
+          "from sentence" : "For each of the embeddings , we fine - tune initial embeddings , modifying them during gradient updates of the neural network model by back - propagating gradients ."
+        }
+      },
+      "To mitigate" : {
+        "overfitting" : {
+          "apply" : {
+            "dropout method" : {
+              "to regularize" : "model"
+            }
+          }
+        },
+        "from sentence" : "To mitigate overfitting , we apply the dropout method ( Srivastava et al. , 2014 ) to regularize our model ."
+      },
+      "apply" : {
+        "dropout" : {
+          "on" : {
+            "character embeddings" : {
+              "before inputting to" : "CNN"
+            },
+            "input and output vectors" : {
+              "of" : "BLSTM"
+            }
+          },
+          "from sentence" : "As shown in and 3 , we apply dropout on character embeddings before inputting to CNN , and on both the input and output vectors of BLSTM ."
+        }
+      },
+      "fix" : {
+        "dropout rate" : {
+          "at" : {
+            "0.5" : {
+              "for" : "all dropout layers"
+            }
+          },
+          "from sentence" : "We fix dropout rate at 0.5 for all dropout layers through all the experiments ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+129	3	8	adopt
+129	13	36	Whole Word Masking BERT
+130	4	25	initial learning rate
+130	29	35	set in
+130	36	75	{ 8e -6 , 1 e - 5 , 2 e - 5 , 3 e - 5 }
+130	76	80	with
+130	81	95	warm - up rate
+130	96	98	of
+130	99	102	0.1
+130	107	122	L2 weight decay
+130	96	98	of
+130	126	130	0.01
+131	4	14	batch size
+131	18	29	selected in
+131	30	46	{ 16 , 20 , 32 }
+132	4	28	maximum number of epochs
+132	32	38	set to
+132	39	46	3 or 10
+133	4	10	weight
+134	0	2	in
+134	7	31	dual context aggregation
+134	32	34	is
+134	35	38	0.5
+135	8	13	texts
+135	14	17	are
+135	18	27	tokenized
+135	28	33	using
+135	34	44	wordpieces
+135	55	75	maximum input length
+135	79	85	set to
+135	86	89	384
+135	90	93	for
+135	102	116	SQuAD and RACE
+27	19	25	extend
+27	30	56	self - attention mechanism
+27	57	61	with
+27	62	88	syntax - guided constraint
+27	91	101	to capture
+27	102	122	syntax related parts
+27	57	61	with
+27	128	147	each concerned word
+28	18	23	adopt
+28	24	77	pre-trained dependency syntactic parse tree structure
+28	78	88	to produce
+28	93	106	related nodes
+28	107	110	for
+28	111	120	each word
+28	31	33	in
+28	126	134	sentence
+28	191	200	regarding
+28	111	120	each word
+28	211	213	as
+28	216	226	child node
+28	137	143	namely
+28	144	185	syntactic dependency of interest ( SDOI )
+30	32	48	SDOI information
+30	54	61	propose
+30	64	106	novel syntax - guided network ( SG - Net )
+30	115	120	fuses
+30	125	152	original SAN and SDOI - SAN
+30	155	165	to provide
+30	166	209	more linguistically inspired representation
+30	39	42	for
+30	226	253	reading comprehension tasks
+2	27	56	Machine Reading Comprehension
+13	130	167	machine reading comprehension ( MRC )
+17	32	35	MRC
+143	8	19	outperforms
+143	20	43	all the published works
+143	48	56	achieves
+143	61	70	2nd place
+143	71	73	on
+143	78	89	leaderboard
+143	90	105	when submitting
+143	106	114	SG - NET
+144	18	24	adding
+144	28	56	extra answer verifier module
+144	63	68	yield
+144	69	82	better result

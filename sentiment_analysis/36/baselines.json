@@ -1,0 +1,140 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "SVM" : {
+          "is" : {
+            "traditional support vector machine based model" : {
+              "with" : "extensive feature engineering"
+            }
+          },
+          "from sentence" : "SVM : It is a traditional support vector machine based model with extensive feature engineering ;"
+        },
+        "AdaRNN" : {
+          "learns" : {
+            "sentence representation" : {
+              "toward" : "target",
+              "for" : {
+                "sentiment prediction" : {
+                  "via" : {
+                    "semantic composition" : {
+                       "over" : "dependency tree"
+                    }
+                  }
+                }
+              }
+            }  
+          },
+          "from sentence" : "AdaRNN : It learns the sentence representation toward target for sentiment prediction via semantic composition over dependency tree ;"
+        },
+        "AE - LSTM" : {
+          "is" : {
+            "simple LSTM model" : {
+              "incorporating" : {
+                "target embedding" : {
+                  "as" : "input"
+                }
+              }
+            }
+          },
+          "from sentence" : "AE - LSTM , and ATAE - LSTM : AE - LSTM is a simple LSTM model incorporating the target embedding as input , while ATAE - LSTM extends AE - LSTM with attention ;"
+        },
+        "ATAE - LSTM" : {
+          "extends" : {
+            "AE - LSTM" : {
+              "with" : "attention"
+            }          
+          },
+          "from sentence" : "AE - LSTM , and ATAE - LSTM : AE - LSTM is a simple LSTM model incorporating the target embedding as input , while ATAE - LSTM extends AE - LSTM with attention ;"
+        },
+        "IAN" : {
+          "employs" : {
+            "two LSTMs" : {
+              "to learn" : {
+                "representations" : {
+                  "of" : "context and the target phrase"
+                }
+              }
+            }
+          },
+          "from sentence" : "IAN : IAN employs two LSTMs to learn the representations of the context and the target phrase interactively ;"
+        },
+        "CNN - ASP" : {
+          "is" : {
+            "CNN - based model" : {
+              "which directly concatenates" : {
+                "target representation" : {
+                  "to" : "each word embedding"
+                }
+              }
+            }
+          },
+          "from sentence" : "CNN - ASP :
+It is a CNN - based model implemented by us which directly concatenates target representation to each word embedding ;"
+
+        },
+        "TD - LSTM" : {
+          "employs" : {
+            "two LSTMs" : {
+              "to model" : {
+                "left and right contexts" : {
+                  "of" : "target"
+                }
+              }
+            }
+          },
+          "performs" : {
+            "predictions" : {
+              "based on" : "concatenated context representations"
+            }
+          },
+          "from sentence" : "TD - LSTM :
+It employs two LSTMs to model the left and right contexts of the target separately , then performs predictions based on concatenated context representations ;"
+
+        },
+        "MemNet" : {
+          "applies" : {
+            "attention mechanism" : {
+              "over" : "word embeddings multiple times"
+            }
+          },
+          "predicts" : {
+            "sentiments" : {
+              "based on" : "top - most sentence representations"
+            }
+          },
+          "from sentence" : "MemNet : It applies attention mechanism over the word embeddings multiple times and predicts sentiments based on the top - most sentence representations ;"
+        },
+        "BILSTM - ATT -G" : {
+          "models" : {
+            "left and right contexts" : {
+              "using" : "two attention - based LSTMs"
+            }
+          },
+          "introduces" : {
+            "gates" : {
+              "to measure" : {
+                "importance of left context , right context , and the entire sentence" : {
+                  "for" : "prediction"
+                }
+              }
+            }
+          },
+          "from sentence" : "BILSTM - ATT -G : It models left and right contexts using two attention - based LSTMs and introduces gates to measure the importance of left context , right context , and the entire sentence for the prediction ;"
+        },
+        "RAM" : {
+          "is" : {
+            "multilayer architecture" : {
+              "where" : {
+                "each layer" : {
+                  "consists of" : ["attention - based aggregation of word features", {"GRU cell" : {"to learn" : "sentence representation"}}]
+                }
+              }
+            }
+          },
+          "from sentence" : "RAM : RAM is a multilayer architecture where each layer consists of attention - based aggregation of word features and a GRU cell to learn the sentence representation ."
+        }
+      }
+    }
+  }
+}

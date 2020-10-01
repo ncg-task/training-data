@@ -1,0 +1,42 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : ["attention based model", {"from sentence" : "This paper propose an attention based model to solve the problems above ."}],
+      "has" : {
+        "our model" : {
+          "eschews" : "recurrence",
+          "employs" : {
+            "attention" : {
+              "as" : {
+                "competitive alternative" : {
+                  "to draw" : {
+                    "introspective and interactive semantics" : {
+                      "between" : "target and context words"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Specifically , our model eschews recurrence and employs attention as a competitive alternative to draw the introspective and interactive semantics between target and context words ."
+            }
+          }
+        }
+      },
+      "To deal with" : {
+        "label unreliability issue" : {
+          "employ" : {
+            "label smoothing regularization" : {
+              "to encourage" : {
+                "model" : {
+                  "to be" : "less confident",
+                  "with" : "fuzzy labels"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "To deal with the label unreliability issue , we employ a label smoothing regularization to encourage the model to be less confident with fuzzy labels ."
+      },
+      "apply" : ["pre-trained BERT", {"from sentence" : "We also apply pre-trained BERT to this task and show our model enhances the performance of basic BERT model ."}]
+    }
+  }
+}

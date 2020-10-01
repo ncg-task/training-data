@@ -1,0 +1,9 @@
+{
+  "has research problem" : [
+    ["Generative Reading Comprehension", {"from sentence" : "Multi - Style Generative Reading Comprehension"}],
+    ["generative reading comprehension ( RC )", {"from sentence" : "This study tackles generative reading comprehension ( RC ) , which consists of answering questions based on textual evidence and natural language generation ( NLG ) ."}],
+    ["reading comprehension ( RC )", {"from sentence" : "Recently , reading comprehension ( RC ) , a challenge to answer a question given textual evidence provided in a document set , has received much attention ."}],
+    ["RC", {"from sentence" : "Current mainstream studies have treated RC as a process of extracting an answer span from one passage or multiple passages , which is usually done by predicting the start and end positions of the answer ."}],
+    ["multi-passage RC", {"from sentence" : "In this study , we propose Masque , a generative model for multi-passage RC ."}]
+  ]
+}

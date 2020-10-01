@@ -1,0 +1,41 @@
+{
+  "has" : {
+    "Model" : {
+      "using" : {
+        "deep highway bidirectional LSTMs" : {
+          "with" : "constrained decoding",
+          "from sentence" : "In this paper , we show that this result can be pushed further using deep highway bidirectional LSTMs with constrained decoding , again significantly moving the state of the art ( another 2 points on CoNLL 2005 ) ."
+        }
+      },
+      "treat" : {
+        "SRL" : {
+          "as" : ["BIO tagging problem", {"from sentence" : "Fol - lowing , we treat SRL as a BIO tagging problem and use deep bidirectional LSTMs ."}]
+        }
+      },
+      "use" : {
+        "deep bidirectional LSTMs" : {
+          "differ by" : {
+            "simplifying" : {
+              "has" : "input and output layers"
+            },
+            "introducing" : {
+              "has" : "highway connections"
+            },
+            "using" : {
+              "has" : "recurrent dropout"
+            },
+            "decoding" : {
+              "with" : "BIOconstraints"
+            },
+            "ensembling" : {
+              "with" : "product of experts"
+            }
+          }
+        },
+        "from sentence" : "Fol - lowing , we treat SRL as a BIO tagging problem and use deep bidirectional LSTMs .
+However , we differ by ( 1 ) simplifying the input and output layers , ( 2 ) introducing highway connections , ( 3 ) using recurrent dropout , ( 4 ) decoding with BIOconstraints , and ( 5 ) ensembling with a product of experts ."
+
+      }
+    }
+  }
+}

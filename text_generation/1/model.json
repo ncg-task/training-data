@@ -1,0 +1,118 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "novel adversarial learning framework" : {
+          "name" : "RankGAN",
+          "from sentence" : "In this paper , we propose a novel adversarial learning framework , RankGAN , for generating highquality language descriptions ."
+        },
+        "train" : {
+          "has" : {
+            "ranker" : {
+              "to rank" : {
+                "machine - written sentences" : {
+                  "lower than" : "human - written sentences",
+                  "with respect to" : {
+                    "reference sentence" : {
+                      "which is" : "human-written"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "As opposed to performing a binary classification task , we propose to train the ranker to rank the machine - written sentences lower than human - written sentences with respect to a reference sentence which is human-written ."
+        }
+      },
+      "learns" : {
+        "model" : {
+          "from" : {
+            "relative ranking information" : {
+              "between" : {
+                "the machine - written and the human - written sentences" : {
+                  "in" : "adversarial framework"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "RankGAN learns the model from the relative ranking information between the machine - written and the human - written sentences in an adversarial framework ."
+      },
+      "relax" : {
+        "training" : {
+          "of" : "discriminator",
+          "to" : "learning - to - rank optimization problem"
+        },
+        "from sentence" : "In the proposed RankGAN , we relax the training of the discriminator to a learning - to - rank optimization problem ."
+      },
+      "proposed" : {
+        "new adversarial network" : {
+          "consists of" : {
+            "two neural network models" : {
+              "name" : "a generator and a ranker"
+            }
+          }
+        },
+        "from sentence" : "Specifically , the proposed new adversarial network consists of two neural network models , a generator and a ranker ."
+      },
+      "train" : {
+        "generator" : {
+          "to synthesize" : {
+            "sentences" : {
+              "which confuse" : "ranker"
+            }
+          },
+          "so that" : {
+            "machine - written sentences" : {
+              "ranked higher than" : "human - written sentences"
+            }
+          }          
+        },
+        "from sentence" : "Accordingly , we train the generator to synthesize sentences which confuse the ranker so that machine - written sentences are ranked higher than human - written sentences in regard to the reference ."
+      },
+      "During" : {
+        "learning" : {
+          "adopt" : {
+            "policy gradient technique" : {
+              "to overcome" : "non-differentiable problem"
+            }
+          }
+        },
+        "from sentence" : "During learning , we adopt the policy gradient technique to overcome the non-differentiable problem ."
+      },
+      "viewing" : {
+        "set of data samples collectively" : {
+          "evaluating" : {
+            "quality" : {
+              "through" : "relative ranking",
+              "of" : {
+                "samples" : {
+                  "has" : {
+                    "discriminator" : {
+                      "able to make" : {
+                        "better assessment" : {
+                          "helps" : {
+                            "generator" : {
+                              "to learn" : "better"
+                            }
+                          }                          
+                        }
+                      }                      
+                    }
+                  }
+                }
+              }              
+            }
+          }
+        },
+        "from sentence" : "Consequently , by viewing a set of data samples collectively and evaluating their quality through relative ranking , the discriminator is able to make better assessment of the quality of the samples , which in turn helps the generator to learn better ."
+      },
+      "suitable for" : {
+        "language learning" : {
+          "in comparison to" : "conventional GANs"
+        },
+        "from sentence" : "Our method is suitable for language learning in comparison to conventional GANs ."
+      }
+    }
+  }
+}

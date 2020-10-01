@@ -1,0 +1,154 @@
+title
+Emo2 Vec : Learning Generalized Emotion Representation by Multi- task Training
+abstract
+In this paper , we propose Emo2 Vec which encodes emotional semantics into vectors .
+We train Emo2 Vec by multi-task learning six different emotion - related tasks , including emotion / sentiment analysis , sarcasm classification , stress detection , abusive language classification , insult detection , and personality recognition .
+Our evaluation of Emo2 Vec shows that it outperforms existing affect - related representations , such as Sentiment - Specific Word Embedding and DeepMoji embeddings with much smaller training corpora .
+When concatenated with GloVe , Emo2 Vec achieves competitive performances to state - of - the - art results on several tasks using a simple logistic regression classifier .
+Introduction
+Recent work on word representation has been focusing on embedding syntactic and semantic information into fixed - sized vectors based on the distributional hypothesis , and have proven to be useful in many natural language tasks .
+However , despite the rising popularity regarding the use of word embeddings , they often fail to capture the emotional semantics the words convey .
+For example , the Glo Ve vector captures the semantic meaning of " headache " , as it is closer to words of ill symptoms like " fever " and " toothache " , but misses the emotional association that the word carries .
+The word " headache " in the sentence " You are giving me a headache " does not really mean that the speaker will get a headache , but instead implies the negative emotion of the speaker .
+To include affective information into the word representation , proposed Sentiment - Specific Word Embeddings ( SSWE ) which encodes both positive / negative sentiment and syntactic contextual information in a vector space .
+This work demonstrates the effectiveness of incorporating sentiment labels in a wordlevel information for sentiment - related tasks compared to other word embeddings .
+However , they only focus on binary labels , which weakens their generalization ability on other affect tasks .
+instead uses emotion lexicons to tune the vector space , which gives them better results .
+Nevertheless , this method requires human - labeled lexicons and can not scale to large amounts of data .
+achieves good results on affect tasks by training a two - layer bidirectional Long Short - Term Memory ( bi - LSTM ) model , named DeepMoji , to predict emoji of the input document using a huge dataset of 1.2 billions of tweets .
+However , collecting billions of tweets is expensive and time consuming for researchers .
+Furthermore , most works in sentiment and emotion analysis have focused solely on a single task .
+Nevertheless , as emotion is a complex concept , we believe that all emotion involving situations such as stress , hate speech , sarcasm , and insult , should be included fora deeper understanding of emotion .
+Thus , one way to achieve this is through a multi-task training framework , as we present here .
+Contributions :
+1 ) We propose Emo2Vec 1 which are word - level representations that encode emotional semantics into fixed - sized , real - valued vectors .
+2 ) We propose to learn Emo2Vec with a multi-task learning framework by including six different emotion - related tasks .
+3 ) Compared to existing affect - related embeddings , Emo2 Vec achieves better results on more than ten datasets with much less training data ( 1.9 M vs 1.2B documents ) .
+Furthermore , with a simple logistic regression classifier , Emo2 Vec reaches competitive performance to state - of - the - art results on several
+Methodology
+We train Emo2 Vec using an end - to - end multi-task learning framework with one larger dataset and several small task - specific datasets .
+The model is divided into two parts : a shared embedding layer ( i.e. Emo2 Vec ) , and task - specific classifiers .
+All datasets share the same word - level representations ( i.e. Emo2 Vec ) , thus forcing the model to encode shared knowledge into a single matrix .
+For the larger dataset , a Convolutional Neural Network ( CNN ) model is used to capture complex linguistic features present in the corpus .
+On the other hand , the classifier of each small dataset is a simple logistic regression .
+Notation :
+We define D = {d L , d 1 , d 2 , , d n } as the set of n + 1 datasets , where d L is the larger dataset and the other d i are the small datasets .
+We denote a sentence X i with i ? { L , 1 , 2 , , n} as [ w i , 1 , w i , 2 , , w i , N i ] where w i , j is the j - th word in the i - th sample and Ni is the number of words .
+All the models ' parameters are defined as M ? = {T , CNN , LR ? 1 , . . . , LR ?n } , where T ?
+R | V |k is the Emo2 Vec matrix , | V | is the vocabulary size and k is the embedding dimension , CNN is a Convolutional Neural Network model and LR ?
+i for i ?
+[ 1 , n] is a logistic regression classifier parameterized by ?
+i which is specific for the dataset d i .
+We denote the embedded representation of a word w i , j withe w i , j .
+CNN model
+The CNN architecture used is illustrated in 2 .
+Firstly , 1 - D convolution is used to extract n- gram features from the input embeddings .
+Specifically , the j - th filter denoted by F j , is convolved with embeddings of words in a sliding window of size k j , giving a feature value c j , t .
+J filters are learned trough this process :
+where * is the 1 - D convolution operation .
+This is followed by a layer of ReLU activation for non-linearity .
+After that , we add a max - pooling layer of pooling size M ?
+F j + 1 along the time dimension to force the network to find the most relevant feature for predicting y L correctly .
+The result of this series of operations is a scalar output off m j .
+All f m j for j ?
+[ 1 , J ] are then concatenated together to produce a vector representation f m 1:J of the whole input sentence .
+To make the final classification , the vector f m i,1:J is projected to the target label space by adding another fully connected layer ( i.e. parameterized by W and b ) , with a softmax activation .
+Multi - task learning
+Since collecting a huge amount of labeled datasets is expensive , we collect two types of corpora , one larger dataset ( millions of training samples ) and a set of small datasets ( thousands of training samples each ) with accurate labels .
+For small datasets , sentiment analysis , emotion classification , sarcasm detection , abusive language classification , stress detection , insult classification and personality recognition are included .
+The reason why we include many datasets is to 1 ) leverage different aspects of words emotion knowledge , which may not be present in single domain dataset ; 2 ) create a more general embedding emotional space that can generalize well across different tasks and domains .
+To avoid over-fitting , L2 regularization penalty is added from the weights of all logistic regression classifiers ?
+i for i ?
+[ 1 , n] .
+Hence , we jointly optimize the following loss function :
+Where L j is the negative log likelihood ( NLL ) between ?
+j and y j , and ?
+an hyper - parameter for the regularization terms .
+3 Experimental Setup
+Dataset
+Larger dataset
+We collect a larger dataset from Twitter with hashtags as distant supervision .
+Such distant supervision method using hashtags has already been proved to provide reasonably relevant emotion labels by previous works .
+We construct our hashtag corpus from , and 2 .
+More tweets between January and October 2017 are additionally added using the Twitter Firehose API by using the hashtags based on the hierarchy mentioned in .
+The hashtags are transformed into corresponding emotion labels of Joy , Sadness , Anger , and Fear .
+When extending the dataset , we only use documents with emotional hashtags at the end and filter out any documents with URLs , quotations , or less than five words as did .
+The total number of documents is about 1.9 million with four classes : joy ( 36.5 % ) , sadness ( 33.8 % ) , anger ( 23.5 % ) , and fear ( 6 % ) .
+The dataset is randomly split into a train ( 70 % ) , validation ( 15 % ) , and test set ( 15 % ) for experiments .
+Small datasets
+For sentiment , we include 8 datasets .
+( 1 , 2 ) SSTfine and SST - binary ( 3 ) OpeNER ( 4 , 5 ) tube auto and tube tablet ( 6 ) Se-m
+Eval ( Hltcoe , 2013 ) ( 7 ,8 ) SS - Twitter and SS - Youtube .
+For emotion tasks , we include 4 datasets , ( 1 ) ISEAR ( 2 ) WASSA ( 3 ) Olympic ( 4 ) SE0714 .
+We further include 6 other affect - related datasets .
+( 1 , 2 ) SCv1- GEN and SCv2 - GEN for sarcasm detection , ( 3 ) Stress ( Winata et al. , 2018 ) , ( 4 ) Abusive .
+( 5 ) Personality ( Pennebaker and King , 1999 )
+( 6 ) Insult .
+Pre-training Emo2Vec
+Emo2 Vec embedding matrix and the CNN model are pre-trained using hashtag corpus alone .
+Parameters of T and CNN are randomly initialized and Adam is used for optimization .
+Best parameter settings are tuned on the validation set .
+For the best model , we use the batch size of 16 , embedding size of 100 , 1024 filters and filter sizes are 1 , 3 ,5 and 7 respectively .
+We keep the trained embedding and rename it as CNN embedding for comparison .
+100 - dim for Emo2 Vec is used in all experiments .
+Multi - task training
+We tune our parameters of learning rate , L2 regularization , whether to pre-train our model and batch size with the average accuracy of the development set of all datasets .
+We early stop our model when the averaged dev accuracy stop increasing .
+Our best model uses learning rate of 0.001 , L2 regularization of 1.0 , batch size of 32 .
+We save the best model and take the embedding layer as Emo2Vec vectors .
+Evaluation
+Baselines :
+We use 50 - dimension Sentimentspecific Word Embedding ( SSWE ) encoded with emotion knowledge .
+Thus , we use the DeepMoji embedding , the 256 - dimension embedding layer of DeepMoji as another baseline .
+Evaluation method :
+To make a fair comparison with other baseline representations , we first take one dataset d i out from n small datasets as the test set .
+The remaining n ? 1 small datasets and the larger dataset are used to train Emo2 Vec through multi -task learning .
+We take the trained Emo2 Vec as the feature ford i and train a logistic regression on d i to compare the performance with other baseline representations .
+The procedure is repeated n times to seethe generalization ability on different datasets .
+We release Emo2 Vec trained on all datasets .
+For sentiment tasks , accuracy score is reported .
+For other tasks , if it is binary task , we report f 1 score for the positive class .
+If it is multiclass classification tasks , we make it binary classification problem for each class and report averaged f 1 score .
+Results
+We compare our Emo2Vec with SSWE , CNN embedding , DeepMoji embedding and state - of - theart ( SOTA ) results on 18 different datasets .
+The results can be found in .
+Compared with CNN embedding : Emo2 Vec works better than CNN embedding on 14 / 18 datasets , giving 2.6 % absolute accuracy improvement for the sentiment task and 1.6 % absolute f1score improvement on the other tasks .
+It shows multi-task training helps to create better generalized word emotion representations than just using a single task .
+Compared with SSWE : Emo2 Vec works much better on all datasets except SS - T datasets , which gives 3.3 % accuracy improvement and 4.7 % f 1 score improvement respectively on sentiment and other tasks .
+This is because SSWE is trained on 10M binary classification task on twitter which then over-fits on dataset SS - T , and generalizes poorly to other tasks .
+Compared with DeepMoji embedding : Emo2 Vec outperforms
+DeepMoji on 13 / 18 datasets despite the much smaller size of our training corpus ( 1.9 M documents for us vs 1.2B documents for DeepMoji ) .
+On average , it gives 1.3 % improvement in accuracy for the sentiment task and 1.1 % improvement of f 1 - score on the other tasks .
+Compared with SOTA results :
+We further compare the performance of Emo2Vec vectors with SOTA results on 14 datasets where the same split is shared .
+Since Emo2 Vec is not trained by predicting contextual words , it is weak on capturing synthetic and semantic meaning .
+Thus , we concatenate Emo2Vec with the pre-trained GloVe vectors , which are trained on Twitter and Wikepedia 3 .
+Then , the concatenated vector of GloVe and Emo2Vec , the concatenated vector of GloVe and DeepMoji embeddings and Glo Ve are included for comparison with SOTA results .
+Note that SOTA results require complex bi - LSTM model while all these representations are trained and reported with a logistic regression classifier .
+Here , we want to highlight that solely using a simple classifier with good word representation can achieve promising results .
+shows that GloVe + Emo2 Vec outperforms
+Glo Ve on 13 / 14 datasets .
+Compared with GloVe+ DeepMoji , GloVe + Emo2
+Vec achieves same or better results on 11 / 14 datasets , which on average gives 1.0 % improvement .
+GloVe + Emo2
+Vec achieves better performances on SOTA results on three datasets ( SE0714 , stress and tube tablet ) and comparable result to SOTA on dataset Previous SOTA results
+GloVe GloVe+DeepMoji
+GloVe+ Emo2 Vec SS - Twitter bi-LSTM 0.88 0.78 0.81 0.81 SS - Youtube bi-LSTM 0.93 0.84 0.86 0.87 SS - binary bi-LSTM 0.886 0.795 0.809 0.823 SS - fine bi-LSTM 0.69 0.69 0.68 0.68 SCv2-GEN bi -LSTM 0.75 0.73 0.74 0.74 Average 0.642 0.657 0.667 another four datasets ( tube auto , SemEval , SCv1- GEN and SCv2 - GEN ) .
+We believe the reason why we achieve a much better performance than SOTA on the SE0714 is that headlines are usually short and emotional words exist more commonly in headlines .
+Thus , to detect the corresponding emotion , more attention needs to be paid to words .
+Related work
+For sentiment analysis , numerous classification models have been explored .
+Multi-modal sentiment analysis extends text - based model to the combination of visual , acoustic and language , which achieves better results than the single modality .
+Various methods are developed for automatic constructions of sentiment lexicons using both supervised and unsupervised way .
+Aspect - based sentiment is also a hot topic where researchers care more about the sentiment towards a certain target .
+Transfer learning from the large corpus is also investigated by to train a large model on a huge emoji tweet corpus , which boosts the performance of affectrelated tasks .
+Multi- task training has achieved great success in various natural language tasks , such as machine translation , multilingual tasks , semantic parsing . jointly learns POS tagging , chunking , dependency parsing , semantic relatedness , and textual entailment by considering linguistic hierarchy and achieves state - of - the - results on five datasets .
+For sentiment analysis , jointly trains ternary and fine - grained classification with a recurrent neural network and achieves new stateof - the - art results .
+Conclusion and Future Work
+In this paper , we propose Emo2 Vec to represent emotion with vectors using a multi -task training framework .
+Six affect - related tasks are utilized , including emotion / sentiment analysis , sarcasm classification , stress detection , abusive language classification , insult detection , and personality recognition .
+We empirically show how Emo2 Vec leverages multi-task training to learn a generalized emotion representation .
+In addition , Emo2 Vec outperforms existing affect - related embeddings on more than ten different datasets .
+By combining Emo2Vec with GloVe , logistic regression can achieve competitive performances on several state - of - the - art results .
+Acknowledgements
+This work is partially funded by ITS/ 319/16 FP of Innovation Technology Commission , HKUST 16248016 of Hong Kong Research Grants Council .

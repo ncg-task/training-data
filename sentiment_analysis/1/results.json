@@ -1,0 +1,152 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "our model" : {
+          "achieves" : {
+            "superior performance" : {
+              "on" : {
+                "both datasets" : {
+                  "compared to" : {
+                    "all baselines" : {
+                      "including" : "stateof - the - art BiHDM when DE features from all frequency bands are used"
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "It is encouraging to see that our model achieves superior performance on both datasets as compared to all baselines including the stateof - the - art BiHDM when DE features from all frequency bands are used ."            
+          },
+          "improves" : {
+            "accuracy" : {
+              "of" : {
+                "state - of - the - art model" : {
+                  "on" : {
+                    "SEED - IV" : {
+                      "by" : "around 5 %"
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "It is worth noting that our model improves the accuracy of the state - of - the - art model on SEED - IV by around 5 % ."
+          },
+          "performs" : {
+            "better" : {
+              "than" : {
+                "DGCNN" : {
+                  "another" : {
+                    "GNN - based model" : {
+                      "leverages" : {
+                        "topological structure" : {
+                          "in" : "EEG signals"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "In particular , our model performs better than DGCNN , which is another GNN - based model that leverages the topological structure in EEG signals ."                  
+                }
+              }
+            },
+            "consistently better" : {
+              "in" : {
+                "gamma band" : {
+                  "than" : "beta band"
+                }                
+              },
+              "from sentence" : "One subtle difference between our model and other models is that our model performs consistently better in gamma band than beta band , whereas other models perform comparably in both bands , indicating that gamma band maybe the most discriminative band for our model ."
+            }
+          }
+        }
+      },
+      "In" : {
+        "subject - dependent experiments" : {
+          "on" : {
+            "SEED" : {
+              "has" : {
+                "STRNN" : {
+                  "achieves" : {
+                    "highest accuracy" : {
+                      "in" : "delta , theta and alpha bands"
+                    }
+                  }
+                },
+                "BiDANN" : {
+                  "performs" : {
+                    "best" : {
+                      "in" : "beta band"
+                    }
+                  }
+                },
+                "our model" : {
+                  "performs" : {
+                    "best" : {
+                      "in" : "gamma band"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "In subject - dependent experiments on SEED , STRNN achieves the highest accuracy in delta , theta and alpha bands , BiDANN performs best in beta band , and our model performs best in gamma band ."          
+        },
+        "subject - independent experiments" : {
+          "on" : {
+            "SEED" : {
+              "has" : {
+                "BiDANN - S" : {
+                  "achieves" : {
+                    "highest accuracy" : {
+                      "in" : "theta and alpha bands"
+                    }
+                  }
+                },
+                "our model" : {
+                  "performs" : {
+                    "best" : {
+                      "in" : "delta , beta and gamma bands"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "In subject - independent experiments on SEED , BiDANN - S achieves the highest accuracy in theta and alpha bands , and our model performs best in delta , beta and gamma bands ."
+        }
+      },
+      "For" : {
+        "subject - dependent and subjectindependent settings" : {
+          "on" : {
+            "SEED" : {
+              "has" : {
+                "our model" : {
+                  "achieve" : {
+                    "better performance" : {
+                      "on" : {
+                        "beta and gamma bands" : {
+                          "than" : "delta , theta and alpha bands"
+                        }
+                      },
+                      "with one exception of" : {
+                        "STRNN" : {
+                          "performs" : {
+                            "worst" : {
+                              "on" : "gamma band"
+                            }
+                          }
+                        }
+                      }                      
+                    }
+                  } 
+                }
+              }
+            }
+          },
+          "from sentence" : "For both subject - dependent and subjectindependent settings on SEED , we compare the performance of each model across different frequency bands .
+In general , most models including our model achieve better performance on beta and gamma bands than delta , theta and alpha bands , with one exception of STRNN , which performs the worst on gamma band ."
+
+        }
+      }
+    }
+  }
+}

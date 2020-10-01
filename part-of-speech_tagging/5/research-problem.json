@@ -1,0 +1,5 @@
+{
+  "has research problem" : [
+    ["Morphosyntactic Tagging", {"from sentence" : "Morphosyntactic Tagging with a Meta-BiLSTM Model over Context Sensitive Token Encodings"}]
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "study" : {
+        "effect of distilling from unlabeled source words" : {
+          "boost" : {
+            "accuracy" : {
+              "by" : "nearly 1 % WER",
+              "demonstrating effectiveness by" : {
+                "introducing abundant unlabeled data" : {
+                  "into" : "knowledge distillation"
+                }
+              }
+            }
+          },
+          "from sentence" : "We first study the effect of distilling from unlabeled source words , as shown in .
+It can be seen that unlabeled source words can boost the accuracy by nearly 1 % WER , demonstrating the effectiveness by introducing abundant unlabeled data into knowledge distillation ."
+
+        },
+        "effect of ensemble teacher model in knowledge distillation" : {
+          "boost" : {
+            "accuracy" : {
+              "by" : "more than 1 % WER",
+              "compared with" : "single teacher model ( a Transformer model with 6 - layer encoder and 6 - layer decoder )"
+            }
+          },
+          "from sentence" : "Furthermore , we study the effect of ensemble teacher model in knowledge distillation .
+As shown in , the ensemble teacher model can boost the accuracy by more than 1 % WER , compared with the single teacher model ( a Transformer model with 6 - layer encoder and 6 - layer decoder ) , which demonstrates the strong ensemble teacher model is essential to guarantee the performance of student model in knowledge distillation ."
+
+        }
+      },
+      "compare" : {
+        "Transformer" : {
+          "with" : "RNN and CNN based models",
+          "without using" : "knowledge distillation and unlabeled data",
+          "outperforms" : "RNN and CNN based models"
+        },
+        "from sentence" : "At last , we compare Transformer with RNN and CNN based models , without using knowledge distillation and unlabeled data , as shown in .
+We can see that Transformer model outperforms the RNN and CNN based models used in previous works , demonstrating the advantage of Transformer model ."
+
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "has" : {
+        "Without dropout" : {
+          "has" : {
+            "model" : {
+              "overfits" : {
+                "around 300 epochs" : {
+                  "at" : "78 F1"
+                }
+              }
+            }
+          },
+          "from sentence" : "Without dropout , the model overfits at around 300 epochs at 78 F1 ."
+        },
+        "Orthonormal parameter initialization" : {
+          "is" : "surprisingly important",
+          "without this" : {
+            "model" : {
+              "achieves" : {
+                "only 65 F1" : {
+                  "within" : "first 50 epochs"
+                }
+              }
+            }
+          },
+          "from sentence" : "Orthonormal parameter initialization is surprisingly important - without this , the model achieves only 65 F1 within the first 50 epochs ."
+        },
+        "8 layer ablations" : {
+          "suffer" : {
+            "loss" : {
+              "more than" : "1.7",
+              "in" : "absolute F 1",
+              "compared to" : "full model"
+            }
+          },
+          "from sentence" : "All 8 layer ablations suffer a loss of more than 1.7 in absolute F 1 compared to the full model ."
+        }
+      }
+    }
+  }
+}

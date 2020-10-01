@@ -1,0 +1,159 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "Majority" : {
+          "assigns" : {
+            "sentiment polarity" : {
+              "with" : {
+                "most frequent occurrences" : {
+                  "in" : {
+                    "training set" : {
+                      "to" : {
+                        "each sample" : {
+                          "in" : "test set"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Majority assigns the sentiment polarity with most frequent occurrences in the training set to each sample in test set ."
+        },
+        "Bi - LSTM and Bi - GRU" : {
+          "adopt" : {
+            "Bi - LSTM and a Bi - GRU network" : {
+              "to model" : "sentence",
+              "use" : {
+                "hidden state" : {
+                  "of" : {
+                    "final word" : {
+                      "for" : "prediction"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Bi - LSTM and Bi - GRU adopt a Bi - LSTM and a Bi - GRU network to model the sentence and use the hidden state of the final word for prediction respectively ."
+        },
+        "TD - LSTM" : {
+          "adopts" : {
+            "two LSTMs" : {
+              "to model" : {
+                "left context" : {
+                  "with" : "target"
+                },
+                "right context" : {
+                  "with" : "target"
+                }
+              }
+            }
+          },
+          "takes" : {
+            "hidden states" : {
+              "of" : {
+                "LSTM" : {
+                  "at" : {
+                    "last time - step" : {
+                      "to represent" : {
+                        "sentence" : {
+                          "for" : "prediction"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "TD - LSTM adopts two LSTMs to model the left context with target and the right context with target respectively ; It takes the hidden states of LSTM at last time - step to represent the sentence for prediction ."
+        },
+        "MemNet" : {
+          "applies" : {
+            "attention" : {
+              "has" : {
+                "multiple times" : {
+                  "on" : "word embeddings"
+                }
+              }
+            }
+          },
+          "has" : {
+            "output" : {
+              "of" : "last attention",
+              "fed to" : {
+                "softmax" : {
+                  "for" : "prediction"
+                }
+              }              
+            }
+          },
+          "from sentence" : "MemNet applies attention multiple times on the word embeddings , and the output of last attention is fed to softmax for prediction ."
+        },
+        "IAN" : {
+          "learns" : {
+            "attentions" : {
+              "in" : "contexts and targets"
+            }
+          },
+          "generates" : {
+            "representations" : {
+              "for" : "targets and contexts"
+            }
+          },
+          "from sentence" : "IAN interactively learns attentions in the contexts and targets , and generates the representations for targets and contexts separately ."
+        },
+        "RAM" : {
+          "is" : {
+            "multilayer architecture" : {
+              "where" : {
+                "each layer" : {
+                  "consists of" : {
+                    "attention - based aggregation" : {
+                      "of" : "word features"
+                    },
+                    "GRU cell" : {
+                      "to learn" : "sentence representation"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "RAM ) is a multilayer architecture where each layer consists of attention - based aggregation of word features and a GRU cell to learn the sentence representation ."
+        },
+        "LCR - Rot" : {
+          "employs" : {
+            "three Bi- LSTMs" : {
+              "to model" : ["left context", "target", "right context"],
+              "from sentence" : "LCR - Rot
+employs three
+Bi- LSTMs to model the left context , the target and the right context ."
+
+            }
+          }
+        },
+        "AOA - LSTM" : {
+          "introduces" : {
+            "attention - over- attention ( AOA ) based network" : {
+              "to model" : {
+                "aspects and sentences" : {
+                  "in" : "joint way"
+                }
+              },
+              "explicitly capture" : {
+                "interaction" : {
+                  "between" : "aspects and context sentences"
+                }
+              }
+            }
+          },
+          "from sentence" : "AOA - LSTM introduces an attention - over- attention ( AOA ) based network to model aspects and sentences in a joint way and explicitly capture the interaction between aspects and context sentences ."
+        }
+      }
+    }
+  }
+}

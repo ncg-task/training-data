@@ -1,0 +1,43 @@
+{
+  "has" : {
+    "Approach" : {
+      "to decouple" : {
+        "speaker modeling" : {
+          "from" : "speech synthesis",
+          "by independently training" : {
+            "speaker - discriminative embedding network" : {
+              "captures" : "space of speaker characteristics"
+            }
+          },
+          "training" : {
+            "high quality TTS model" : {
+              "on" : "smaller dataset",
+              "conditioned on" : "representation learned by the first network" 
+            }
+          }
+        },
+        "from sentence" : "Our approach is to decouple speaker modeling from speech synthesis by independently training a speaker - discriminative embedding network that captures the space of speaker characteristics and training a high quality TTS model on a smaller dataset conditioned on the representation learned by the first network .  "
+      },
+      "train" : {
+        "speaker embedding network" : {
+          "on" : {
+            "speaker verification task" : {
+              "to determine" : "two different utterances were spoken by the same speaker"
+            }
+          }
+        },
+        "from sentence" : "We train the speaker embedding network on a speaker verification task to determine if two different utterances were spoken by the same speaker ."
+      },
+      "trained on" : {
+        "untranscribed speech" : {
+          "containing" : {
+            "reverberation and background noise" : {
+              "from" : "large number of speakers"
+            }
+          }
+        },
+        "from sentence" : "In contrast to the subsequent TTS model , this network is trained on untranscribed speech containing reverberation and background noise from a large number of speakers ."
+      }
+    }
+  }
+}

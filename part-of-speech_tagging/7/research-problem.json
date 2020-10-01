@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Multilingual Part - of - Speech Tagging", {"from sentence" : "Multilingual Part - of - Speech Tagging with Bidirectional Long Short - Term Memory Models and Auxiliary Loss"}],
+    ["POS tagging", {"from sentence" : "We address these issues and evaluate bi - LSTMs with word , character , and unicode byte embeddings for POS tagging ."}]
+  ]
+}

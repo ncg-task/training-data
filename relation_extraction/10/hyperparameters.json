@@ -1,0 +1,95 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "has" : {
+        "learned character embeddings" : {
+          "of size" : "8",
+          "from sentence" : "The learned character embeddings are of size 8 . 1 - dimensional convolutions of window size 3 , 4,5 are applied per-token with 50 filters of each window size ."   
+        },
+        "1 - dimensional convolutions" : {
+          "of window size" : "3",
+          "from sentence" : "The learned character embeddings are of size 8 . 1 - dimensional convolutions of window size 3 , 4,5 are applied per-token with 50 filters of each window size ."   
+        },
+        "stacked bi - LSTMs" : {
+          "has" : {
+            "3 layers" : {
+              "with" : ["200 - dimensional hidden states", "highway connections"]
+            }
+          },
+          "from sentence" : "Our stacked bi - LSTMs ( Section 3.1 ) has 3 layers with 200 - dimensional hidden states and highway connections ."
+        },
+        "All Multi Layer Perceptrons ( MLP )" : {
+          "has" : {
+            "two hidden layers" : {
+              "with" : "500 dimensions",
+              "followed by" : "ReLU activation"
+            }
+          },
+          "from sentence" : "All Multi Layer Perceptrons ( MLP ) has two hidden layers with 500 dimensions , each followed by ReLU activation ."
+        },
+        "Regularization Dropout" : {
+          "applied with" : {
+            "dropout rate 0.2" : {
+              "to" : {
+                "all hidden layers" : {
+                  "of" : "all MLPs and feature encodings"
+                }
+              }
+            },
+            "dropout rate 0.5" : {
+              "to" : "all word and character embeddings"
+            },
+            "dropout rate 0.4" : {
+              "to" : "all LSTM layer outputs"
+            }
+          },
+          "from sentence" : "Regularization Dropout is applied with dropout rate 0.2 to all hidden layers of all MLPs and feature encodings , with dropout rate 0.5 to all word and character embeddings and with dropout rate 0.4 to all LSTM layer outputs ."
+        },
+        "Learning" : {
+          "done with" : {
+            "Adam ( Kingma and Ba , 2015 )" : {
+              "with" : "default parameters"
+            }
+          },
+          "from sentence" : "Learning Learning is done with Adam ( Kingma and Ba , 2015 ) with default parameters ."
+        },
+        "learning rate" : {
+          "annealed by" : {
+            "1 %" : {
+              "every" : "100 iterations"
+            }
+          },
+          "from sentence" : "The learning rate is annealed by 1 % every 100 iterations ."
+        },
+        "Minibatch Size" : {
+          "is" : "1",
+          "from sentence" : "Minibatch Size is 1 ."
+        },
+        "Early Stopping" : {
+          "of" : {
+            "20 evaluations" : {
+              "on" : "dev set"
+            }
+          },
+          "from sentence" : "Early Stopping of 20 evaluations on the dev set is used ."
+        }
+      },
+      "consider" : {
+        "spans" : {
+          "entirely within" : "sentence"
+        },
+        "from sentence" : "We only consider spans that are entirely within a sentence and limit spans to a max length of L = 10 ."
+      },
+      "limit" : {
+        "spans" : {
+          "to" : {
+            "max length" : {
+              "of" : "L = 10"
+            }
+          }
+        },
+        "from sentence" : "We only consider spans that are entirely within a sentence and limit spans to a max length of L = 10 ."
+      }
+    }
+  }
+}

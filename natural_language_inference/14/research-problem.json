@@ -1,0 +1,8 @@
+{
+  "has research problem" : [
+    ["Question Answering", {"from sentence" : "CODAH : An Adversarially - Authored Question Answering Dataset for Common Sense"}],
+    ["Commonsense reasoning", {"from sentence" : "Commonsense reasoning is a critical AI capability , but it is difficult to construct challenging datasets that test commonsense ."}],
+    ["commonsense reasoning over text", {"from sentence" : "The rise of datadriven methods has led to interest in developing large datasets for commonsense reasoning over text ."}],
+    ["commonsense question answering", {"from sentence" : "In this work , we introduce the COmmonsense Dataset Adversarially - authored by Humans ( CODAH ) for commonsense question answering in the style of SWAG multiple choice sentence completion ."}]
+  ]
+}

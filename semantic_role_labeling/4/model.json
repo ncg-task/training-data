@@ -1,0 +1,33 @@
+{
+  "has" : {
+    "Model" : {
+      "presents" : ["simple and accurate span - based model", {"from sentence" : "To fill this gap , this paper presents a simple and accurate span - based model ."}],
+      "directly scores" : {
+        "all possible labeled spans" : {
+          "based on" : {
+            "span representations" : {
+              "induced from" : "neural networks"
+            }
+          },
+          "from sentence" : "Inspired by recent span - based models in syntactic parsing and coreference resolution , our model directly scores all possible labeled spans based on span representations induced from neural networks ."
+        }
+      },
+      "At" : {
+        "decoding time" : {
+          "greedily select" : "higher scoring labeled spans",
+          "from sentence" : "At decoding time , we greedily select higher scoring labeled spans ."
+        }
+      },
+      "has" : {
+        "model parameters" : {
+          "learned by" : {
+            "optimizing loglikelihood" : {
+              "of" : "correct labeled spans"
+            }
+          },
+          "from sentence" : "The model parameters are learned by optimizing loglikelihood of correct labeled spans ."
+        }
+      }
+    }
+  }
+}

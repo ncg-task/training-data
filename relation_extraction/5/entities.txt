@@ -1,0 +1,168 @@
+181	19	64	entity representations and feedforward layers
+181	65	75	contribute
+181	76	83	1.0 F 1
+183	6	9	F 1
+183	10	18	drops by
+183	19	23	10.3
+183	24	38	when we remove
+183	43	61	feedforward layers
+183	68	82	LSTM component
+183	91	111	dependency structure
+182	14	20	remove
+182	25	45	dependency structure
+182	76	81	score
+182	82	90	drops by
+182	91	98	3.2 F 1
+184	6	14	Removing
+184	19	26	pruning
+184	72	77	hurts
+184	82	88	result
+184	89	99	by another
+184	100	107	9.7 F 1
+126	6	45	A logistic regression ( LR ) classifier
+126	52	60	combines
+126	61	85	dependencybased features
+126	86	90	with
+126	91	113	other lexical features
+127	6	50	Shortest Dependency Path LSTM ( SDP - LSTM )
+127	59	66	applies
+127	69	90	neural sequence model
+127	91	93	on
+127	98	111	shortest path
+127	112	119	between
+127	124	151	subject and object entities
+127	152	154	in
+127	159	174	dependency tree
+128	0	11	Tree - LSTM
+128	20	22	is
+128	25	40	recursive model
+128	46	57	generalizes
+128	7	11	LSTM
+128	67	69	to
+128	70	95	arbitrary tree structures
+133	22	48	competitive sequence model
+133	54	61	employs
+133	64	100	position - aware attention mechanism
+133	101	105	over
+133	106	132	LSTM outputs ( PA - LSTM )
+28	18	25	propose
+28	28	78	novel extension of the graph convolutional network
+28	89	101	tailored for
+28	102	121	relation extraction
+29	10	17	encodes
+29	22	42	dependency structure
+29	43	47	over
+29	52	66	input sentence
+29	67	71	with
+29	72	110	efficient graph convolution operations
+29	118	126	extracts
+29	127	159	entity - centric representations
+29	160	167	to make
+29	168	195	robust relation predictions
+30	8	13	apply
+30	16	54	novel path - centric pruning technique
+30	55	64	to remove
+30	65	87	irrelevant information
+30	88	92	from
+30	93	101	the tree
+30	108	125	maximally keeping
+30	126	142	relevant content
+2	56	75	Relation Extraction
+151	3	10	observe
+151	20	29	GCN model
+151	66	77	outperforms
+151	78	107	all dependency - based models
+151	108	110	by
+151	111	127	at least 1.6 F 1
+152	10	12	on
+152	3	8	using
+152	9	44	contextualized word representations
+152	51	64	C - GCN model
+152	73	84	outperforms
+152	89	111	strong PA - LSTM model
+152	112	114	by
+152	115	122	1.3 F 1
+152	129	137	achieves
+152	140	160	new state of the art
+153	17	21	find
+153	22	31	our model
+153	32	45	improves upon
+153	46	74	other dependencybased models
+153	18	20	in
+153	78	103	both precision and recall
+156	46	60	our GCN models
+156	61	65	have
+156	66	89	complementary strengths
+156	90	106	when compared to
+156	111	120	PA - LSTM
+154	0	9	Comparing
+154	14	27	C - GCN model
+154	28	32	with
+154	18	27	GCN model
+154	52	61	find that
+154	66	70	gain
+154	71	88	mainly comes from
+154	89	104	improved recall
+161	5	25	simple interpolation
+161	26	33	between
+161	36	55	GCN and a PA - LSTM
+161	56	64	achieves
+161	68	77	F 1 score
+161	78	80	of
+161	81	85	67.1
+161	88	101	outperforming
+161	102	118	each model alone
+161	119	121	by
+161	122	138	at least 2.0 F 1
+162	3	16	interpolation
+162	17	24	between
+162	27	50	C - GCN and a PA - LSTM
+162	51	67	further improves
+162	72	78	result
+162	79	81	to
+162	82	86	68.2
+165	3	18	find that under
+165	23	59	conventional with- entity evaluation
+165	62	79	our C - GCN model
+165	80	91	outperforms
+165	92	137	all existing dependency - based neural models
+166	10	35	by properly incorporating
+166	36	58	off - path information
+166	61	70	our model
+166	71	82	outperforms
+166	87	149	previous shortest dependency path - based model ( SDP - LSTM )
+167	0	5	Under
+167	10	34	mask - entity evaluation
+167	37	54	our C - GCN model
+167	60	71	outperforms
+167	72	81	PA - LSTM
+167	82	84	by
+167	87	105	substantial margin
+170	3	7	show
+170	12	25	effectiveness
+170	26	28	of
+170	29	51	path - centric pruning
+170	57	64	compare
+170	69	103	two GCN models and the Tree - LSTM
+170	104	108	when
+172	18	29	performance
+172	50	55	peaks
+172	61	66	K = 1
+172	69	82	outperforming
+172	89	145	respective dependency path - based counterpart ( K = 0 )
+176	3	12	find that
+176	13	29	all three models
+176	30	33	are
+176	34	48	less effective
+176	49	53	when
+176	58	80	entire dependency tree
+176	81	83	is
+176	84	91	present
+177	23	38	contextualizing
+177	43	46	GCN
+177	47	55	makes it
+177	56	70	less sensitive
+177	71	73	to
+177	74	81	changes
+177	1	3	in
+177	89	104	tree structures

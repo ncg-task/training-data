@@ -1,0 +1,41 @@
+{
+  "has" : {
+    "Results" : {
+      "on" : {
+        "Gigaword Corpus" : {
+          "has" : {
+            "Our model" : {
+              "performs better than" : "previous works"
+            }
+          },
+          "from sentence" : "Experimental Results : Gigaword Corpus
+Our model performs better than the previous works ."
+
+        },
+        "DUC 2004" : {
+          "show" : {
+            "Seq2seq + selective + MTL + ERAML model" : {
+              "achieves" : {
+                "significant improvements" : {
+                  "over" : "baseline models",
+                  "surpassing" : {
+                    "Feats2s" : {
+                      "by" : {
+                        "0.98 % ROUGE - 1 , 0.78 % ROUGE - 2 and 0.65 % ROUGE - L" : {
+                          "without" : "fine - tuning"
+                        }
+                      }
+                    }  
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Experimental Results : DUC 2004
+In , experimental results also show our Seq2seq + selective + MTL + ERAML model achieves significant improvements over baseline models , surpassing Feats2s by 0.98 % ROUGE - 1 , 0.78 % ROUGE - 2 and 0.65 % ROUGE - L without fine - tuning on DUC data ."
+
+        }
+      }
+    }
+  }
+}

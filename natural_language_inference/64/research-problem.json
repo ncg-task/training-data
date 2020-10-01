@@ -1,0 +1,10 @@
+{
+  "has research problem" : [
+    ["Answer Sentence Selection", {"from sentence" : "TANDA : Transfer and Adapt Pre-Trained Transformer Models for Answer Sentence Selection"}],
+    ["Question Answering", {"from sentence" : "We demonstrate the benefits of our approach for answer sentence selection , which is a well - known inference task in Question Answering ."}],
+    ["Question Answering ( QA )", {"from sentence" : "This has renewed the research interest in Question Answering ( QA ) and , in particular , in two main tasks :"}],
+    ["answer sentence selection ( AS2 )", {"from sentence" : "( i ) answer sentence selection ( AS2 ) , which , given a question and a set of answer sentence candidates , consists in selecting sentences ( e.g. , retrieved by a search engine ) correctly answering the question ; and ( ii ) machine reading ( MR ) or reading comprehension , which , given a question and a reference text , consists in finding a text span answering it ."}],
+    ["AS2", {"from sentence" : "Even though the latter is gaining more and more popularity , AS2 is more relevant to a production scenario since , a combination of a search engine and an AS2 model already implements an initial QA system ."}],
+    ["QA", {"from sentence" : "Even though the latter is gaining more and more popularity , AS2 is more relevant to a production scenario since , a combination of a search engine and an AS2 model already implements an initial QA system ."}]
+  ]
+}

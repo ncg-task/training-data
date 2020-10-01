@@ -1,0 +1,140 @@
+{
+  "has" : {
+    "Experiments" : {
+      "has" : {
+        "Tasks" : {
+          "has" : {
+            "COPYING MEMORY TASK" : {
+              "has" : {
+                "RUM" : {
+                  "utilizes" : {
+                    "different representation of memory" : {
+                      "that" : {
+                        "outperforms" : {
+                          "those of" : "LSTM and GRU"
+                        }
+                      }
+                    }
+                  },
+                  "solves" : {
+                    "task" : {
+                      "has" : "completely"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "1 . RUM utilizes a different representation of memory that outperforms those of LSTM and GRU ; 2 . RUM solves the task completely , despite its update gate , which does not allow all of the information encoded in the hidden stay to pass through ."
+            },
+            "ASSOCIATIVE RECALL TASK" : {
+              "has" : {
+                "Hyperparameters" : {
+                  "have" : {
+                    "same hidden state N h = 50" : {
+                      "for" : "different lengths T",
+                      "from sentence" : "All the models have the same hidden state N h = 50 for different lengths T ."
+                    }
+                  },
+                  "use" : {
+                    "batch size" : {
+                      "has" : "128",
+                      "from sentence" : "We use a batch size 128 ."
+                    }
+                  },
+                  "has" : {
+                    "optimizer" : {
+                      "is" : {
+                        "RMSProp" : {
+                          "with" : {
+                            "learning rate" : {
+                              "of" : "0.001"
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "The optimizer is RMSProp with a learning rate 0.001 ."
+                    }
+                  }
+                },
+                "Results" : {
+                  "find that" : {
+                    "LSTM" : {
+                      "has" : {
+                        "fails" : {
+                          "to learn" : "task"
+                        }
+                      },
+                      "from sentence" : "We find that LSTM fails to learn the task , because of its lack of sufficient memory capacity ."
+                    }
+                  },
+                  "has" : {
+                    "NTM and Fast - weight RNN" : {
+                      "has" : {
+                        "fail" : {
+                          "has" : "longer tasks"
+                        }
+                      },
+                      "from sentence" : "NTM and Fast - weight RNN fail longer tasks , which means they can not learn to manipulate their memory efficiently ."
+                    }
+                  }
+                }
+              }
+            },
+            "QUESTION ANSWERING" : {
+              "has" : {
+                "Baselines" : {
+                  "name" : ["simple LSTM", "End - to - end Memory Network", "GORU"],
+                  "from sentence" : "We compare our model with several baselines : a simple LSTM , an End - to - end Memory Network ) and a GORU ."
+                },
+                "Results" : {
+                  "find that" : {
+                    "RUM" : {
+                      "has" : {
+                        "outperforms significantly" : {
+                          "has" : "LSTM and GORU"
+                        }
+                      },
+                      "achieves" : {
+                        "competitive result" : {
+                          "with" : {
+                            "those of MemN2N" : {
+                              "has" : "attention mechanism"
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "We find that RUM outperforms significantly LSTM and GORU and achieves competitive result with those of MemN2N , which has an attention mechanism ."
+                    }
+                  }
+                }
+              }
+            },
+            "CHARACTER LEVEL LANGUAGE MODELING" : {
+              "has" : {
+                "PENN TREEBANK CORPUS DATA SET" : {
+                  "has" : {
+                    "Results" : {
+                      "has" : {
+                        "FS - RUM - 2" : {
+                          "has" : {
+                            "generalizes better" : {
+                              "than" : {
+                                "other gated models" : {
+                                  "such as" : "GRU and LSTM"
+                                }
+                              }
+                            }
+                          },
+                          "from sentence" : "FS - RUM - 2 generalizes better than other gated models , such as GRU and LSTM , because it learns efficient patterns for activation in its kernels ."
+                        }
+                      }
+                    }
+                  }
+                }                
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

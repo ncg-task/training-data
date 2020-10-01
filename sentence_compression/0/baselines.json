@@ -1,0 +1,49 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "LSTM" : {
+          "is" : "basic LSTM - based deletion method",
+          "from sentence" : "LSTM : This is the basic LSTM - based deletion method proposed by ."
+        },
+        "LSTM +" : {
+          "incorporated" : {
+            "dependency parse tree information" : {
+              "into" : "LSTM model"
+            }
+          },
+          "used" : {
+            "prediction" : {
+              "on" : {
+                "previous word" : {
+                  "to help" : {
+                    "prediction" : {
+                      "on" : "current word"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "LSTM + : This is advanced version of the model proposed by , where the authors incorporated some dependency parse tree information into the LSTM model and used the prediction on the previous word to help the prediction on the current word ."
+        },
+        "Traditional ILP" : {
+          "is" : "ILP - based method",
+          "from sentence" : "Traditional ILP :
+This is the ILP - based method proposed by ."
+
+        },
+        "Abstractive seq2seq" : {
+          "is" : {
+            "abstractive sequence - to - sequence model" : {
+              "trained on" : "3.8 million Gigaword title - article pairs"
+            }
+          },
+          "from sentence" : "Abstractive seq2seq :
+This is an abstractive sequence - to - sequence model trained on 3.8 million Gigaword title - article pairs as described in Section 1 ."
+
+        }
+      }      
+    }
+  }
+}

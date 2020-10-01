@@ -1,0 +1,7 @@
+(Contribution||has||Ablation analysis)
+(Ablation analysis||has||1D Convolution in FFT Block)
+(1D Convolution in FFT Block||replace||original fully connected layer)
+(1D Convolution in FFT Block||results in||- 0.113 CMOS)
+(Ablation analysis||has||Sequence - Level Knowledge Distillation)
+(Sequence - Level Knowledge Distillation||removing||sequence - level knowledge distillation)
+(sequence - level knowledge distillation||results in||- 0.325 CMOS)

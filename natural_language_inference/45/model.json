@@ -1,0 +1,61 @@
+{
+  "has" : {
+    "Model" : {
+      "present" : {
+        "fine - grained gating mechanism" : {
+          "to combine" : "word - level and characterlevel representations",
+          "from sentence" : "In this work , we present a fine - grained gating mechanism to combine the word - level and characterlevel representations ."
+        }
+      },
+      "compute" : {
+        "vector gate" : {
+          "as" : {
+            "linear projection" : {
+              "of" : "token features"
+            }
+          },
+          "from sentence" : "We compute a vector gate as a linear projection of the token features followed 1 Code is available at https://github.com/kimiyoung/fg-gating 1 ar Xiv: 1611.01724v2 [ cs.CL ] 11 Sep 2017"
+        }
+      },
+      "has" : {
+        "multiplicatively" : {
+          "apply" : {
+            "gate" : {
+              "to" : "character - level and wordlevel representations"
+            }
+          },
+          "from sentence" : "We then multiplicatively apply the gate to the character - level and wordlevel representations ."
+        },
+        "Each dimension" : {
+          "of" : "gate",
+          "controls" : {
+            "how much information" : {
+              "flowed from" : "word - level and character - level representations"
+            }
+          },
+          "from sentence" : "Each dimension of the gate controls how much information is flowed from the word - level and character - level representations respectively ."
+        },
+        "our fine - grained gating mechanism" : {
+          "used to" : {
+            "model" : {
+              "multiple levels" : {
+                "structure" : {
+                  "in" : "language",
+                  "inlcuding" : ["words", "characters", "phrases", "sentences", "paragraphs"]
+                }
+              }
+            },
+            "from sentence" : "More generally , our fine - grained gating mechanism can be used to model multiple levels of structure in language , including words , characters , phrases , sentences and paragraphs ."
+          }
+        }
+      },
+      "for" : {
+        "token properties" : {
+          "determine" : "gate",
+          "use" : ["named entity tags", "part - ofspeech tags", "document frequencies", "word - level representations"],
+          "from sentence" : "We use named entity tags , part - ofspeech tags , document frequencies , and word - level representations as the features for token properties which determine the gate ."
+        }
+      }
+    }
+  }
+}

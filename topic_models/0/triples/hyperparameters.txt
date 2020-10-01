@@ -1,0 +1,5 @@
+(Contribution||has||Hyperparameters)
+(Hyperparameters||has||regularization weight)
+(regularization weight||from||? = { 0.0001 , . . . , 10.0 })
+(Hyperparameters||has||embedding dimension)
+(embedding dimension||chosen from||K = { 100 , . . . , 800 })

@@ -1,0 +1,63 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "has" : {
+        "first ablation baseline" : {
+          "shows" : {
+            "without richer features" : {
+              "as" : "alignment input",
+              "has" : {
+                "performance" : {
+                  "on" : "all datasets",
+                  "has" : "degrades significantly"
+                }
+              },
+              "from sentence" : "The first ablation baseline shows that without richer features as the alignment input , the performance on all datasets degrades significantly ."
+            }
+          }
+        },
+        "second baseline" : {
+          "show" : {
+            "vanilla residual connections" : {
+              "without direct access to" : "original pointwise features",
+              "are" : {
+                "not enough" : {
+                  "to model" : {
+                    "relations" : {
+                      "in" : "many text matching tasks"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "The results of the second baseline show that vanilla residual connections without direct access to the original pointwise features are not enough to model the relations in many text matching tasks ."
+            }
+          }
+        },
+        "simpler implementation" : {
+          "of" : "fusion layer",
+          "leads to" : "evidently worse performance",
+          "from sentence" : "The simpler implementation of the fusion layer leads to evidently worse performance , indicating that the fu- sion layer can not be further simplified ."
+        }
+      },
+      "see that" : {
+        "parallel blocks" : {
+          "perform" : {
+            "worse" : {
+              "than" : "stacked blocks",
+              "supports" : {
+                "preference" : {
+                  "for" : {
+                    "deeper models" : {
+                      "over" : "wider ones"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "In the last ablation study , we can see that parallel blocks perform worse than stacked blocks , which supports the preference for deeper models over wider ones ."
+        }
+      }
+    }
+  }
+}

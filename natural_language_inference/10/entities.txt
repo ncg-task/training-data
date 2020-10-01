@@ -1,0 +1,152 @@
+150	33	43	initialize
+150	48	69	word embedding matrix
+150	70	74	with
+150	75	104	GloVe 300D pretrained vectors
+153	4	23	dropout probability
+153	27	33	set to
+153	34	37	0.2
+154	4	8	size
+154	9	11	of
+154	12	24	mini-batches
+154	28	34	set to
+154	35	38	128
+155	4	25	temperature parameter
+155	28	30	of
+155	31	47	Gumbel - Softmax
+155	51	57	set to
+155	58	61	1.0
+156	0	12	For training
+156	13	19	models
+156	40	44	used
+156	22	36	Adam optimizer
+163	19	21	on
+163	52	59	machine
+163	28	32	with
+163	65	84	NVIDIA Titan Xp GPU
+158	15	23	see that
+158	24	56	LSTM - based leaf transformation
+158	63	78	clear advantage
+158	79	83	over
+158	88	123	affine - transformation - based one
+160	49	58	find that
+160	59	82	our 100D and 300D model
+160	83	93	outperform
+160	94	110	all other models
+160	111	113	of
+160	114	143	similar numbers of parameters
+161	0	14	Our 600D model
+161	15	23	achieves
+161	28	36	accuracy
+161	37	39	of
+161	40	46	86.0 %
+161	58	71	comparable to
+161	84	112	state - of - the - art model
+175	0	2	is
+175	5	30	single - hidden layer MLP
+175	31	35	with
+175	40	64	ReLU activation function
+177	3	10	trained
+177	15	28	SST - 2 model
+177	29	49	with hyperparameters
+177	50	83	D x = 300 , D h = 300 , D c = 300
+178	4	16	word vectors
+178	21	32	initialized
+178	33	37	with
+178	38	67	GloVe 300D pretrained vectors
+178	72	84	fine - tuned
+178	85	91	during
+178	92	100	training
+180	4	8	size
+180	9	11	of
+180	12	24	mini-batches
+180	28	34	set to
+180	35	37	32
+180	42	60	Adadelta optimizer
+180	64	72	used for
+180	73	85	optimization
+179	3	8	apply
+179	9	28	dropout ( p = 0.5 )
+179	29	31	on
+179	36	42	output
+179	43	45	of
+179	50	70	word embedding layer
+179	79	99	input and the output
+179	43	45	of
+179	107	116	MLP layer
+181	0	3	For
+181	8	21	SST - 5 model
+181	24	39	hyperparameters
+181	44	50	set to
+181	51	85	D x = 300 , D h = 300 , D c = 1024
+181	122	130	optimize
+181	16	21	model
+181	141	146	using
+181	147	165	Adadelta optimizer
+181	166	170	with
+181	171	184	batch size 64
+181	189	194	apply
+181	195	202	dropout
+181	166	170	with
+181	208	215	p = 0.5
+183	4	17	SST - 2 model
+183	18	29	outperforms
+183	30	46	all other models
+183	47	60	substantially
+183	61	67	except
+183	68	81	byte - m LSTM
+184	8	16	see that
+184	21	32	performance
+184	33	35	of
+184	36	53	our SST - 5 model
+184	57	68	on par with
+184	81	117	current state - of - the - art model
+185	27	36	utilizing
+185	37	80	pretraining and character n-gram embeddings
+185	81	89	improves
+185	90	109	validation accuracy
+185	110	112	by
+185	113	130	2.8 % ( SST - 2 )
+185	134	151	1.7 % ( SST - 5 )
+23	19	26	propose
+23	27	45	Gumbel Tree - LSTM
+23	5	7	is
+23	59	82	novel RvNN architecture
+23	93	104	not require
+23	105	120	structured data
+23	125	142	learns to compose
+23	143	174	task - specific tree structures
+23	175	182	without
+23	183	200	explicit guidance
+24	0	28	Our Gumbel Tree - LSTM model
+24	32	40	based on
+24	41	112	tree - structured long short - term memory ( Tree - LSTM ) architecture
+25	96	105	our model
+25	106	116	introduces
+25	117	141	composition query vector
+25	147	155	measures
+25	156	164	validity
+25	165	167	of
+25	117	128	composition
+26	0	5	Using
+26	6	21	validity scores
+26	22	33	computed by
+26	38	62	composition query vector
+26	65	74	our model
+26	75	94	recursively selects
+26	95	107	compositions
+26	108	113	until
+26	114	150	only a single representation remains
+27	3	6	use
+27	7	59	Straight - Through ( ST ) Gumbel - Softmax estimator
+27	60	69	to sample
+27	70	82	compositions
+27	83	85	in
+27	90	104	training phase
+28	30	37	relaxes
+28	42	69	discrete sampling operation
+28	70	75	to be
+28	76	86	continuous
+28	56	58	in
+28	94	107	backward pass
+2	20	51	Task - Specific Tree Structures
+6	139	196	task - specific tree structures only from plain text data

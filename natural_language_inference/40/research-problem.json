@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Recurrent Neural Networks", {"from sentence" : "Linguistic Knowledge as Memory for Recurrent Neural Networks"}],
+    ["Training recurrent neural networks to model long term dependencies", {"from sentence" : "Training recurrent neural networks to model long term dependencies is difficult ."}]
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "ASVAET" : {
+          "able to improve" : {
+            "supervised performance" : {
+              "for" : "all classifiers"  
+            },
+            "from sentence" : "From the , the ASVAET is able to improve supervised performance consistently for all classifiers ."            
+          },
+          "outperforms" : ["compared semisupervised methods", {"from sentence" : "The ASVAET outperforms the compared semisupervised methods evidently ."}]
+        },
+        "TNet - AS" : {
+          "outperforms" : "other three models",
+          "from sentence" : "The TNet - AS outperforms the other three models ."
+        }
+      },
+      "For" : {
+        "MemNet" : {
+          "has" : {
+            "test accuracy" : {
+              "improved by" : {
+                "about 2 %" : {
+                  "by" : "TSSVAE"
+                }
+              }
+            }
+          },
+          "from sentence" : "For the MemNet , the test accuracy can be improved by about 2 % by the TSSVAE , and so as the Macro - averaged F1 ."
+        }
+      },
+      "Compared with" : {
+        "other two semi-supervised methods" : {
+          "has" : {
+            "ASVAET" : {
+              "shows" : "better results"
+            }
+          }
+        },
+        "from sentence" : "Compared with the other two semi-supervised methods , the ASVAET also shows better results ."
+      },
+      "adoption of" : {
+        "indomain pre-trained word vectors" : {
+          "beneficial for" : {
+            "performance" : {
+              "compared with" : "Glove vectors"
+            }
+          },
+          "from sentence" : "The adoption of indomain pre-trained word vectors is beneficial for the performance compared with the Glove vectors ."
+        }
+      }
+    }
+  }
+}

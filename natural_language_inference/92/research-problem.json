@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Weakly Supervised Question Answering", {"from sentence" : "A Discrete Hard EM Approach for Weakly Supervised Question Answering"}],
+    ["question answering ( QA )", {"from sentence" : "Many question answering ( QA ) tasks only provide weak supervision for how the answer should be computed ."}],
+    ["QA", {"from sentence" : "Despite its simplicity , we show that this approach significantly outperforms previous methods on six QA tasks , including absolute gains of 2 - 10 % , and achieves the stateof - the - art on five of them ."}]
+  ]
+}

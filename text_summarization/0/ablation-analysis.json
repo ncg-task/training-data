@@ -1,0 +1,58 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "has" : {
+        "discriminator" : {
+          "provides" : {
+            "scalar training signal L g c" : {
+              "for" : "generator training"
+            },
+            " feature vector F ( m t )" : {
+              "for" : "goal tracker"
+            }
+          },
+          "increment of" : {
+            "17.51 %" : {
+              "from" : {
+                "RASG w / o GTD to RASG w / o GT" : {
+                  "in terms of" : "ROUGE - L"
+                }
+              }
+            }
+          },
+          "from sentence" : "The discriminator provides the scalar training signal L g c for generator training and the feature vector F ( m t ) for goal tracker .
+Consequently , there is an increment of 17.51 % from RASG w / o GTD to RASG w / o GT in terms of ROUGE - L , which demonstrates the effectiveness of discriminator ."
+
+        },
+        "goal tracker" : {
+          "compared with" : {
+            "RASG and RASG w / o GT" : {
+              "offers" : {
+                "RASG w/ o GTD" : {
+                  "decrease of" : {
+                    "45. 23 % and 17.88 %" : {
+                      "in terms of" : "ROUGE - 1"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "As for the effectiveness of goal tracker , compared with RASG and RASG w / o GT , RASG w/ o GTD offers a decrease of 45. 23 % and 17.88 % in terms of ROUGE - 1 , respectively ."
+        },
+        "RASG w/o DM" : {
+          "offers a decrease of" : {
+            "10 . 22 %" : {
+              "compared with" : {
+                "RASG" : {
+                  "in terms of" : "ROUGE - L"
+                }
+              }
+            }
+          },
+          "from sentence" : "Finally , RASG w/o DM offers a decrease of 10 . 22 % compared with RASG in terms of ROUGE - L , which demonstrates the effectiveness of denoising module ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "As" : {
+        "base function f base" : {
+          "use" : {
+            "4 BiLSTM layers" : {
+              "with" : "300 dimensional hidden units"
+            }
+          },
+          "from sentence" : "As the base function f base , we use 4 BiLSTM layers with 300 dimensional hidden units ."
+        },
+        "objective function" : {
+          "use" : {
+            "crossentropy L" : {
+              "with" : "L2 weight decay"
+            }
+          },
+          "from sentence" : "As the objective function , we use the crossentropy L ? in Eq. 3 with L2 weight decay ,"
+        } 
+      },
+      "optimize" : {
+        "model parameters" : {
+          "use" : "Adam",
+          "from sentence" : "To optimize the model parameters , we use Adam ."
+        }
+      },
+      "To validate" : {
+        "model performance" : {
+          "use" : "two types of word embeddings",
+          "from sentence" : "To validate the model performance , we use two types of word embeddings ."
+        }
+      },
+      "has" : {
+        "Typical word embeddings" : {
+          "has" : ["SENNA", "ELMo"],
+          "from sentence" : "Typical word embeddings , SENNA 6 ( Collobert et al. , 2011 ) Contextualized word embeddings , ELMo 7 SENNA and ELMo can be regarded as different types of embeddings in terms of the context sensitivity ."
+        },
+        "embeddings" : {
+          "fixed during" : "training",
+          "from sentence" : "These embeddings are fixed during training ."
+        }
+      }
+    }
+  }
+}

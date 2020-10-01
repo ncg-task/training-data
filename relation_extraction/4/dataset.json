@@ -1,0 +1,39 @@
+{
+  "has" : {
+    "Dataset" : {
+      "markedly improve" : {
+        "availability of supervised training data" : {
+          "by using" : {
+            "Mechanical Turk crowd annotation" : {
+              "to produce" : {
+                "large supervised training dataset" : {
+                  "suitable for" : {
+                    "common relations" : {
+                      "between" : "people , organizations and locations",
+                      "used in" : "TAC KBP evaluations"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Secondly , we markedly improve the availability of supervised training data by using Mechanical Turk crowd annotation to produce a large supervised training dataset , suitable for the common relations between people , organizations and locations which are used in the TAC KBP evaluations ."
+        }
+      },
+      "name" : {
+        "TAC Relation Extraction Dataset ( TACRED )" : {
+          "make it available through" : {
+            "Linguistic Data Consortium ( LDC )" : {
+              "to respect" : {
+                "copyrights" : {
+                  "on" : "underlying text"
+                }
+              }
+            }
+          },
+          "from sentence" : "We name this dataset the TAC Relation Extraction Dataset ( TACRED ) , and will make it available through the Linguistic Data Consortium ( LDC ) in order to respect copyrights on the underlying text ."
+        }
+      }
+    }
+  }
+}

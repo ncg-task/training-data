@@ -1,0 +1,83 @@
+{
+  "has" : {
+    "Results" : {
+      "show that" : {
+        "method" : {
+          "has" : {
+            "significantly outperforms" : {
+              "has" : "all state - of - the - art methods",
+              "in" : "all conditions and all datasets"
+            }
+          },
+          "from sentence" : "The results show that our method significantly outperforms all state - of - the - art methods in all conditions and all datasets ."
+        },
+        "3rd level" : {
+          "dominates" : "selection",
+          "from sentence" : "It shows that the 3rd level dominates the selection while the 4th level is also important for several categories such as scene and animals ."
+        },
+        "4th level" : {
+          "important for" : {
+            "several categories" : {
+              "such as" : "scene and animals"
+            }
+          },
+          "from sentence" : "It shows that the 3rd level dominates the selection while the 4th level is also important for several categories such as scene and animals ."
+        },
+        "1st level" : {
+          "exploited mostly for" : "animals and people categories",
+          "from sentence" : "The 1st level is exploited mostly for the animals and people categories ."
+        }
+      },
+      "on" : {
+        "Flickr30 k" : {
+          "observe that" : {
+            "our method" : {
+              "obtains" : {
+                "higher performance" : {
+                  "on" : "almost all categories"
+                }
+              }
+            }
+          },
+          "has" : {
+            "model" : {
+              "based on" : {
+                "PNASNet" : {
+                  "has" : {
+                    "consistently outperforms" : {
+                      "has" : {
+                        "state - of - the - art" : {
+                          "on" : ["all categories", "both metrics"]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "For fair comparison with To get a deeper understanding of our model , we first report in category - wise pointing game accuracy and attention correctness ( percentage of the heatmap falling into the ground truth bounding box ) and compare with the state - of - the - art method on Flickr30 k .
+We observe that our method obtains a higher performance on almost all categories even when VGG16 is used as the visual backbone .
+The model based on PNASNet consistently outperforms the state - of - the - art on all categories on both metrics ."
+
+        }
+      },
+      "has" : {
+        "full sentence selection" : {
+          "relies mostly on" : "3rd level",
+          "from sentence" : "The full sentence selection relies mostly on the 3rd level as well , while for some sentences the 4th model has been selected ."
+        }
+      },
+      "for" : {
+        "some sentences" : {
+          "has" : {
+            "4th model" : {
+              "been" : "selected"
+            }
+          },
+          "from sentence" : "The full sentence selection relies mostly on the 3rd level as well , while for some sentences the 4th model has been selected ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : ["novel CNN architecture", {"from sentence" : "We propose a novel CNN architecture that addresses some of the shortcomings of previous approaches ."}],
+      "has" : {
+        "CNN architecture" : {
+          "relies on" : {
+            "novel multi-level attention mechanism" : {
+              "to capture" : [{"entity - specific attention" : {"is" : {"primary attention" : {"at" : {"input level" : {"with respect to" : "target entities"}}}}}}, {"relation - specific pooling attention" : {"is" : {"secondary attention" : {"with respect to" : "target relations"}}}}]
+            }
+          },
+          "from sentence" : "Our CNN architecture relies on a novel multi-level attention mechanism to capture both entity - specific attention ( primary attention at the input level , with respect to the target entities ) and relation - specific pooling attention ( secondary attention with respect to the target relations ) ."
+        }
+      },
+      "introduce" : {
+        "novel pair - wise margin - based objective function" : {
+          "proves" : {
+            "superior" : {
+              "to" : "standard loss functions"
+            }
+          },
+          "from sentence" : "2 . We introduce a novel pair - wise margin - based objective function that proves superior to standard loss functions ."
+        }
+      }      
+    }
+  }
+}

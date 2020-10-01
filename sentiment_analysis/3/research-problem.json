@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Emotion Detection in Textual Conversations", {"from sentence" : "Knowledge - Enriched Transformer for Emotion Detection in Textual Conversations"}],
+    ["detecting emotions in textual conversations", {"from sentence" : "The task of detecting emotions in textual conversations leads to a wide range of applications such as opinion mining in social networks ."}],
+    ["detecting emotions ( e.g. , happy , sad , angry , etc. ) in textual conversations", {"from sentence" : "This work addresses the task of detecting emotions ( e.g. , happy , sad , angry , etc. ) in textual conversations , where the emotion of an utterance is detected in the conversational context ."}]
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Relation Extraction", {"from sentence" : "Span - Level Model for Relation Extraction"}],
+    ["Relation Extraction ( RE )", {"from sentence" : "This paper focuses on Relation Extraction ( RE ) , which is the task of entity mention detection and classifying the relations between each pair of those mentions ."}],
+    ["RE", {"from sentence" : "Since , work on RE has revolved around end - to - end systems : single models which first perform entity mention detection and then relation extraction ."}]
+  ]
+}

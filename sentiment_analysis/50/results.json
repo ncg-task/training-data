@@ -1,0 +1,48 @@
+{
+  "has" : {
+    "Results" : {
+      "observe that" : {
+        "PRET" : {
+          "is" : "very helpful",
+          "consistently gives" : {
+            "1 - 3 % increase" : {
+              "in" : {
+                "accuracy" : {
+                  "over" : "LSTM + ATT"
+                }
+              }
+            }
+          },
+          "from sentence" : "We observe that PRET is very helpful , and consistently gives a 1 - 3 % increase in accuracy over LSTM + ATT across all datasets ."
+        }
+      },
+      "has" : {
+        "MULT" : {
+          "gives" : {
+            "similar performance" : {
+              "as" : {
+                "LSTM + ATT" : {
+                  "on" : "D1 and D2"
+                }
+              }
+            }
+          },
+          "from sentence" : "MULT gives similar performance as LSTM + ATT on D1 and D2 , but improvements can be clearly observed for D3 and D4 ."
+        },
+        "combination ( PRET + MULT )" : {
+          "yields" : "better results",
+          "from sentence" : "The combination ( PRET + MULT ) overall yields better results ."
+        },
+        "numbers of neutral examples" : {
+          "in" : {
+            "test sets" : {
+              "of" : "D3 and D4",
+              "are" : "very small"
+            }
+          },
+          "from sentence" : "( 2 ) The numbers of neutral examples in the test sets of D3 and D4 are very small ."
+        }
+      }
+    }
+  }
+}

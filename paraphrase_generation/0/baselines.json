@@ -1,0 +1,51 @@
+{
+  "has" : {
+    "Baselines" : {
+      "start with" : {
+        "baseline model" : {
+          "take as" : {
+            "simple encoder and decoder network" : {
+              "with" : "only the local loss ( ED - Local )"
+            }
+          },
+          "from sentence" : "We start with baseline model which we take as a simple encoder and decoder network with only the local loss ( ED - Local ) ."
+        }
+      },
+      "experimented with" : {
+        "encoder - decoder and a discriminator network" : {
+          "with" : {
+            "only global loss ( EDD - Global )" : {
+              "to distinguish" : {
+                "ground truth paraphrase" : {
+                  "with" :  "predicted one"      
+                }
+              }
+            }
+          },
+          "from sentence" : "Further we have experimented with encoder - decoder and a discriminator network with only global loss ( EDD - Global ) to distinguish the ground truth paraphrase with the predicted one ."
+        }
+      },
+      "has" : {
+        "variation of our model" : {
+          "used" : "both the global and local loss ( EDD - LG )",
+          "from sentence" : "Another variation of our model is used both the global and local loss ( EDD - LG ) ."
+        }
+      },
+      "make" : {
+        "discriminator" : {
+          "share" : {
+            "weights" : {
+              "with" : "encoder"
+            }
+          },
+          "train" : {
+            "network" : {
+              "with" : "both the losses ( EDD - LG ( shared ) )"
+            }
+          },
+          "from sentence" : "Finally , we make the discriminator share weights with the encoder and train this network with both the losses ( EDD - LG ( shared ) ) ."
+        }
+      }
+    }
+  }
+}

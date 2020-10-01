@@ -1,0 +1,75 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "has" : {
+        "dimension" : {
+          "of" : ["word embedding vectors", "hidden state vectors"],
+          "is" : "300",
+          "from sentence" : "In our work , the dimension of word embedding vectors and hidden state vectors is 300 ."
+        },
+        "All out - ofvocabulary words and weight matrices" : {
+          "randomly initialized by" : "uniform distribution U ( - 0.1 , 0.1 )",
+          "from sentence" : "All out - ofvocabulary words and weight matrices are randomly initialized by a uniform distribution U ( - 0.1 , 0.1 ) , and all bias are set to zero ."
+        },
+        "all bias" : {
+          "set to" : "zero",
+          "from sentence" : "All out - ofvocabulary words and weight matrices are randomly initialized by a uniform distribution U ( - 0.1 , 0.1 ) , and all bias are set to zero ."
+        },
+        "Tensor Flow" : {
+          "for implementing" : "neural network model",
+          "from sentence" : "Tensor
+Flow is used for implementing our neural network model ."
+
+        },
+        "paired t- test" : {
+          "used for" : "significance testing",
+          "from sentence" : "The paired t- test is used for the significance testing ."
+        }
+      },
+      "use" : {
+        "GloVe 2 vectors" : {
+          "with" : {
+            "300 dimensions" : {
+              "to initialize" : "word embeddings"
+            }
+          },
+          "from sentence" : "We use GloVe 2 vectors with 300 dimensions to initialize the word embeddings , the same as ."
+        }
+      },
+      "In" : {
+        "model training" : {
+          "has" : {
+            "learning rate" : {
+              "set to" : "0.1"
+            },
+            "weight" : {
+              "for" : {
+                "L 2 - norm regularization" : {
+                  "set to" : "1 e - 5"
+                }
+              }
+            },
+            "dropout rate" : {
+              "set to" : "0.5"
+            }
+          },
+          "from sentence" : "In model training , the learning rate is set to 0.1 , the weight for L 2 - norm regularization is set to 1 e - 5 , and dropout rate is set to 0.5 ."
+        }
+      },
+      "train" : {
+        "model" : {
+          "use" : {
+            "stochastic gradient descent optimizer" : {
+              "with" : {
+                "momentum" : {
+                  "of" : "0.9"
+                }
+              }
+            }
+          },
+          "from sentence" : "We train the model use stochastic gradient descent optimizer with momentum of 0.9 ."
+        }
+      }
+    }
+  }  
+}

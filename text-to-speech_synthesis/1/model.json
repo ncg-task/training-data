@@ -1,0 +1,34 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "FastSpeech" : {
+          "takes" : "text ( phoneme ) sequence as input",
+          "generates" : "mel-spectrograms non-autoregressively"
+        },
+        "from sentence" : "Considering the monotonous alignment between text and speech , to speedup mel- spectrogram generation , in this work , we propose a novel model , FastSpeech , which takes a text ( phoneme ) sequence as input and generates mel-spectrograms non-autoregressively ."
+      },
+      "adopts" : {
+        "feed - forward network" : {
+          "based on" : "self - attention in Transformer and 1D convolution",
+          "from sentence" : "It adopts a feed - forward network based on the self - attention in Transformer and 1D convolution ."          
+        },
+        "length regulator" : {
+          "up - samples" : {
+            "phoneme sequence according to the phoneme duration" : {
+              "to match" : "length of the mel-spectrogram sequence"
+            }
+          },
+          "built on" : {
+            "phoneme duration predictor" : {
+              "predicts" : "duration of each phoneme"
+            }
+          },
+          "from sentence" : "Since a mel-spectrogram sequence is much longer than its corresponding phoneme sequence , in order to solve the problem of length mismatch between the two sequences , FastSpeech adopts a length regulator that up - samples the phoneme sequence according to the phoneme duration ( i.e. , the number of mel- spectrograms that each phoneme corresponds to ) to match the length of the mel-spectrogram sequence .
+The regulator is built on a phoneme duration predictor , which predicts the duration of each phoneme ."
+
+        }
+      }
+    }
+  }
+}

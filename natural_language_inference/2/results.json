@@ -1,0 +1,75 @@
+{
+  "has" : {
+    "Results" : {
+      "shows that" : {
+        "AMANDA" : {
+          "outperforms" : {
+            "all the stateof - the - art models" : {
+              "by" : "significant margin",
+              "on" : "New s QA dataset"
+            },
+            "from sentence" : "shows that AMANDA outperforms all the stateof - the - art models by a significant margin on the New s QA dataset ."
+          }
+        }
+      },
+      "shows" : {
+        "results" : {
+          "on" : {
+            "TriviaQA dataset" : {
+              "shows" : {
+                "AMANDA" : {
+                  "achieves" : {
+                    "state - of the - art results" : {
+                      "in" : {
+                        "Wikipedia and Web domain" : {
+                          "on" : "distantly supervised and verified data"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "shows the results on the TriviaQA dataset .
+shows that AMANDA achieves state - of the - art results in both Wikipedia and Web domain on distantly supervised and verified data ."
+
+            }
+          }
+        }
+      },
+      "on" : {
+        "Search QA dataset" : {
+          "has" : {
+            "AMANDA" : {
+              "outperforms" : {
+                "both systems" : {
+                  "especially for" : {
+                    "multi-word - answer questions" : {
+                      "by" : "huge margin"
+                    }
+                  }
+                },
+                "from sentence" : "Results on the Search QA dataset are shown in .
+  AMANDA outperforms both systems , especially for multi-word - answer questions by a huge margin ."
+  
+              },
+              "performs" : {
+                "better" : {
+                  "than" : {
+                    "any of the ablated models" : {
+                      "include" : {
+                        "ablation" : {
+                          "of" : ["multifactor attentive encoding", "max - attentional question aggregation ( q ma )", "question type representation ( q f )"]
+                        }
+                      },
+                      "from sentence" : "shows that AMANDA performs better than any of the ablated models which include the ablation of multifactor attentive encoding , max - attentional question aggregation ( q ma ) , and question type representation ( q f ) ."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

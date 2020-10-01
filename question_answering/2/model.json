@@ -1,0 +1,85 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "focal visual - text attention ( FVTA ) model" : {
+          "for" : "sequential data",
+          "from sentence" : "To address these two challenges , we propose a focal visual - text attention ( FVTA ) model for sequential data"
+        },
+        "novel attention kernel" : {
+          "for" : {
+            "VQA" : {
+              "on" : "visual - text data"
+            }
+          },
+          "from sentence" : "We propose a novel attention kernel for VQA on visual - text data ."
+        }
+      },
+      "has" : {
+        "FVTA" : {
+          "learns to" : {
+            "localize" : {
+              "has" : {
+                "relevant information" : {
+                  "within" : {
+                    "few , small , temporally consecutive regions" : {
+                      "over" : "input sequences"
+                    }
+                  }
+                }
+              }
+            },
+            "infer" : {
+              "has" : {
+                "answer" : {
+                  "based on" : {
+                    "cross-modal statistics" : {
+                      "pooled from" : "these regions"
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "Inspired by this process , FVTA first learns to localize relevant information within a few , small , temporally consecutive regions over the input sequences , and learns to infer an answer based on the cross-modal statistics pooled from these regions ."            
+          },
+          "proposes" : {
+            "novel kernel" : {
+              "to compute" : {
+                "attention tensor" : {
+                  "jointly models" : {
+                    "latent information" : {
+                      "in" : {
+                        "three sources" : {
+                          "name" : [{"answer - signaling words" : {"in" : "question"}}, {"temporal correlation" : {"within" : "sequence"}}, {"cross-modal interaction" : {"between" : "text and image"}}]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "FVTA proposes a novel kernel to compute the attention tensor that jointly models the latent information in three sources :
+1 ) answer - signaling words in the question , 2 ) temporal correlation within a sequence , and 3 ) cross-modal interaction between the text and image ."
+
+          }
+        },
+        "FVTA attention" : {
+          "allows for" : {
+            "collective reasoning" : {
+              "by" : {
+                "attention kernel" : {
+                  "learned over" : {
+                    "few , small , consecutive sub-sequences" : {
+                      "of" : "text and image"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "FVTA attention allows for collective reasoning by the attention kernel learned over a few , small , consecutive sub-sequences of text and image ."
+        }
+      }
+    }
+  }
+}

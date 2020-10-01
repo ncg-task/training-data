@@ -1,0 +1,6 @@
+(Contribution||has||Dataset)
+(Dataset||built||ASNQ)
+(ASNQ||by transforming||recently released Natural Questions ( NQ ) corpus)
+(recently released Natural Questions ( NQ ) corpus||from||MR)
+(MR||to||AS2 task)
+(ASNQ||for||AS2)

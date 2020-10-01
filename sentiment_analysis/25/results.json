@@ -1,0 +1,123 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "ACSA" : {
+          "has" : {
+            "LSTM based model ATAE - LSTM" : {
+              "has" : {
+                "worst performance" : {
+                  "of" : "all neural networks"
+                }
+              },
+              "from sentence" : "LSTM based model ATAE - LSTM has the worst performance of all neural networks ."
+            },
+            "GCAE" : {
+              "improves" : {
+                "performance" : {
+                  "by" : {
+                    "1.1 % to 2.5 %" : {
+                      "compared with" : "ATAE - LSTM"
+                    }
+                  }
+                },
+                "from sentence" : "GCAE improves the performance by 1.1 % to 2.5 % compared with ATAE - LSTM ."                
+              },
+              "achieves" : {
+                "4 % higher accuracy" : {
+                  "than" : {
+                    "ATAE - LSTM" : {
+                      "on" : "Restaurant - Large"
+                    }
+                  }
+                },
+                "5 % higher" : {
+                  "on" : "SemEval - 2014 on ACSA task"
+                },
+                "from sentence" : "GCAE achieves 4 % higher accuracy than ATAE - LSTM on Restaurant - Large and 5 % higher on SemEval - 2014 on ACSA task ."
+              }
+            },
+            "GCN" : {
+              "has" : {
+                "higher score" : {
+                  "than" : {
+                    "GCAE" : {
+                      "on" : "original restaurant dataset"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "However , GCN , which does not have aspect modeling part , has higher score than GCAE on the original restaurant dataset ." 
+            }
+          },
+          "Without the large amount of" : {
+            "sentiment lexicons" : {
+              "has" : {
+                "SVM" : {
+                  "perform" : {
+                    "worse" : {
+                      "than" : "neural methods"
+                    },
+                    "from sentence" : "Without the large amount of sentiment lexicons , SVM perform worse than neural methods ."
+                  },
+                  "performance" : {
+                    "increased" : {
+                      "by" : "7.6 %"
+                    },
+                    "from sentence" : "With multiple sentiment lexicons , the performance is increased by 7.6 % ."
+                  }
+                }
+              }
+            }
+          }          
+        },
+        "ATSA" : {
+          "has" : {
+            "IAN" : {
+              "has" : {
+                "better performance" : {
+                  "than" : "TD - LSTM and ATAE - LSTM"
+                }
+              },
+              "from sentence" : "IAN has better performance than TD - LSTM and ATAE - LSTM , because two attention layers guides the representation learning of the context and the entity interactively ."
+            },
+            "RAM" : {
+              "achieves" : {
+                "good accuracy" : {
+                  "by combining" : {
+                    "multiple attentions" : {
+                      "with" : "recurrent neural network"
+                    }
+                  }
+                },
+                "from sentence" : "RAM also achieves good accuracy by combining multiple attentions with a recurrent neural network , but it needs more training time as shown in the following section ."
+              }
+            },
+            "GCAE" : {
+              "outperforms" : "other neural models and basic SVM",
+              "from sentence" : "Because of the gating mechanisms and the convolutional layer over aspect terms , GCAE outperforms other neural models and basic SVM ."
+            }
+          },
+          "On" : {
+            "hard test set" : {
+              "has" : {
+                "GCAE" : {
+                  "has" : {
+                    "1 % higher accuracy" : {
+                      "than" : "RAM",
+                      "on" : "restaurant data"
+                    },
+                    "1.7 % higher" : {
+                      "on" : "laptop data"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "On the hard test dataset , GCAE has 1 % higher accuracy than RAM on restaurant data and 1.7 % higher on laptop data ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

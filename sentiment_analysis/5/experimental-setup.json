@@ -1,0 +1,88 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "use" : {
+        "released handcrafted features" : {
+          "i.e." : [{"differential entropy ( DE )" : {"in" : "SEED and SEED - IV"}}, {"Short - Time Fourier Transform ( STFT )" : {"in" : "MPED"}}],
+          "to feed" : "model",
+          "from sentence" : "We use the released handcrafted features , i.e. , the differential entropy ( DE ) in SEED and SEED - IV , and the Short - Time Fourier Transform ( STFT ) in MPED , as the input to feed our model ."
+        }
+      },
+      "has" : {
+        "sizes d N" : {
+          "of" : {
+            "input sample X t" : {
+              "are" : "5 62 , 5 62 and 1 62"
+            }
+          },
+          "from sentence" : "Thus the sizes d N of the input sample X t are 5 62 , 5 62 and 1 62 for these three datasets , respectively ."
+        },
+        "learning rate , momentum and weight decay rate" : {
+          "set as" : "0.003 , 0.9 and 0.95",
+          "from sentence" : "The learning rate , momentum and weight decay rate are set as 0.003 , 0.9 and 0.95 respectively ."
+        },
+        "network" : {
+          "trained using" : {
+            "SGD" : {
+              "with" : {
+                "batch size" : {
+                  "of" : "200"
+                }  
+              }
+            }
+          },
+          "from sentence" : "The network is trained using SGD with batch size of 200 ."
+        }
+      },
+      "in" : {
+        "experiment" : {
+          "set" : {
+            "dimension d l" : {
+              "of" : {
+                "each electrode 's deep representation" : {
+                  "to" : "32"
+                }              
+              }
+            },
+            "parameters d g and K" : {
+              "of" : {
+                "global high - level feature" : {
+                  "to" : "32 and 6"
+                }
+              }
+            },
+            "dimension do" : {
+              "of" : {
+                "output feature" : {
+                  "to" : "16",
+                  "without" : "elaborate traversal"
+                }
+              }
+            }
+          },
+          "from sentence" : "Moreover , in the experiment , we respectively set the dimension d l of each electrode 's deep representation to 32 ; the parameters d g and K of the global high - level feature to 32 and 6 ; and the dimension do of the output feature to 16 without elaborate traversal ."
+        }
+      },
+      "implemented" : {
+        "BiHDM" : {
+          "using" : {
+            "Tensor Flow" : {
+              "on" : "one Nvidia 1080 Ti GPU"
+            }
+          }
+        },
+        "from sentence" : "Specifically , we implemented BiHDM using Tensor Flow on one Nvidia 1080 Ti GPU ."
+      },
+      "adopt" : {
+        "subtraction" : {
+          "as" : {
+            "pairwise operation" : {
+              "of" : "BiHDM model"
+            }
+          }
+        },
+        "from sentence" : "In addition , we adopt the subtraction as the pairwise operation of the BiHDM model in the experiment section , and discuss the other two types of operations in section III - D."
+      }
+    }
+  }
+}

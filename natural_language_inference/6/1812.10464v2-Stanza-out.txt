@@ -1,0 +1,249 @@
+title
+Massively Multilingual Sentence Embeddings for Zero - Shot Cross - Lingual Transfer and Beyond
+abstract
+We introduce an architecture to learn joint multilingual sentence representations for 93 languages , belonging to more than 30 different families and written in 28 different scripts .
+Our system uses a single BiLSTM encoder with a shared BPE vocabulary for all languages , which is coupled with an auxiliary decoder and trained on publicly available parallel corpora .
+This enables us to learn a classifier on top of the resulting embeddings using English annotated data only , and transfer it to any of the 93 languages without any modification .
+Our experiments in cross-lingual natural language inference ( XNLI dataset ) , cross - lingual document classification ( ML - Doc dataset ) and parallel corpus mining ( BUCC dataset ) show the effectiveness of our approach .
+We also introduce anew test set of aligned sentences in 112 languages , and show that our sentence embeddings obtain strong results in multilingual similarity search even for low - resource languages .
+Our implementation , the pretrained encoder and the multilingual test set are available at https://github.com / facebookresearch/LASER . . 2018 .
+Achieving human parity on automatic Chinese to English news translation .
+CoRR , abs / 1803.05567 .
+Jeremy Howard and Sebastian Ruder . 2018 .
+Universal language model fine - tuning for text classification .
+In
+Introduction
+While the recent advent of deep learning has led to impressive progress in Natural Language Processing ( NLP ) , these techniques are known to be particularly data hungry , limiting their applicability in many practical scenarios .
+An increasingly popular approach to alleviate this issue is to first learn general language representations on unlabeled data , which are then integrated in task - specific downstream systems .
+This approach was first popularized byword embeddings
+This work was performed during an internship at Facebook AI Research . , but has recently been superseded by sentence - level representations .
+Nevertheless , all these works learn a separate model for each language and are thus unable to leverage information across different languages , greatly limiting their potential performance for low - resource languages .
+In this work , we are interested in universal language agnostic sentence embeddings , that is , vector representations of sentences that are general with respect to two dimensions : the input language and the NLP task .
+The motivations for such representations are multiple : the hope that languages with limited resources benefit from joint training over many languages , the desire to perform zero - shot transfer of an NLP model from one language ( typically English ) to another , and the possibility to handle code-switching .
+To that end , we train a single encoder to handle multiple languages , so that semantically similar sentences in different languages are close in the embedding space .
+While previous work in multilingual NLP has been limited to either a few languages or specific applications like typology prediction or machine translation , we learn general purpose sentence representations for 93 languages ( see ) .
+Using a single pre-trained BiLSTM encoder for all the 93 languages , we obtain very strong results in various scenarios without any fine - tuning , including crosslingual natural language inference ( XNLI dataset ) , cross - lingual classification ( MLDoc dataset ) , bitext mining ( BUCC dataset ) and anew multilingual similarity search dataset we introduce covering 112 languages .
+To the best of our knowledge , this is the first exploration of general purpose massively multilingual sentence representations across a large variety of tasks .
+ar Xiv: 1812.10464v2 [ cs. CL ] 25 Sep 2019
+2 Related work
+Following the success of word embeddings , there has been an increasing interest in learning continuous vector representations of longer linguistic units like sentences .
+These sentence embeddings are commonly obtained using a Recurrent Neural Network ( RNN ) encoder , which is typically trained in an unsupervised way overlarge collections of unlabelled corpora .
+For instance , the skip - thought model of couple the encoder with an auxiliary decoder , and train the entire system to predict the surrounding sentences over a collection of books .
+It was later shown that more competitive results could be obtained by training the encoder over labeled Natural Language Inference ( NLI ) data .
+This was later extended to multitask learning , combining different training objectives like that of skip - thought , NLI and machine translation .
+While the previous methods consider a single language at a time , multilingual representations have attracted a large attention in recent times .
+Most of this research focuses on cross - lingual word embeddings , which are commonly learned jointly from parallel corpora .
+An alternative approach that is becoming increasingly popular is to separately train word embeddings for each language , and map them to a shared space based on a bilingual dictionary or even in a fully unsupervised manner .
+Cross - lingual word embeddings are often used to build bag - of - word representations of longer linguistic units by taking their respective ( IDF - weighted ) average .
+While this approach has the advantage of requiring weak or no cross - lingual signal , it has been shown that the resulting sentence embeddings work poorly in practical crosslingual transfer settings .
+A more competitive approach that we follow here is to use a sequence - to - sequence encoderdecoder architecture .
+The full system is trained end - to - end on parallel corpora akin to multilingual neural machine translation : the encoder maps the source sequence into a fixed - length vector representation , which is used by the decoder to create the target sequence .
+This decoder is then discarded , and the encoder is kept to embed sentences in any of the training languages .
+While some proposals use a separate encoder for each language ( Schwenk and Douze , 2017 ) , sharing a single encoder for all languages also gives strong results .
+Nevertheless , most existing work is either limited to few , rather close languages or , more commonly , consider pairwise joint embeddings with English and one foreign language .
+To the best of our knowledge , existing work on learning multilingual representations fora large number of languages is limited to word embeddings or specific applications like typology prediction or machine translation , ours being the first paper exploring general purpose massively multilingual sentence representations .
+All the previous approaches learn a fixed - length representation for each sentence .
+A recent research line has obtained very strong results using variable - length representations instead , consisting of contextualized embeddings of the words in the sentence .
+For that purpose , these methods train either an RNN or self - attentional encoder over unnanotated corpora using some form of language modeling .
+A classifier can then be learned on top of the resulting encoder , which is commonly further fine - tuned during this supervised training .
+Concurrent to our work , Lample and Conneau ( 2019 ) propose a cross - lingual extension of these models , and report strong results in cross -lingual natural language inference , machine translation and language modeling .
+In contrast , our focus is on scaling to a large number of languages , for which we argue that fixed - length approaches provide a more versatile and compatible representation form .
+1
+Also , our approach achieves strong results without taskspecific fine - tuning , which makes it interesting for tasks with limited resources . :
+Architecture of our system to learn multilingual sentence embeddings .
+Proposed method
+We use a single , language agnostic BiLSTM encoder to build our sentence embeddings , which is coupled with an auxiliary decoder and trained on parallel corpora .
+From Section 3.1 to 3.3 , we describe its architecture , our training strategy to scale to 93 languages , and the training data used for that purpose .
+3.1 Architecture illustrates the architecture of the proposed system , which is based on Schwenk ( 2018 ) .
+As it can be seen , sentence embeddings are obtained by applying a max - pooling operation over the output of a BiLSTM encoder .
+These sentence embeddings are used to initialize the decoder LSTM through a linear transformation , and are also concatenated to its input embeddings at every time step .
+Note that there is no other connection between the encoder and the decoder , as we want all relevant information of the input sequence to be captured by the sentence embedding .
+We use a single encoder and decoder in our system , which are shared by all languages involved .
+For that purpose , we build a joint byte - pair encoding ( BPE ) vocabulary with 50 k operations , which is learned on the concatenation of all training corpora .
+This way , the encoder has no explicit signal on what the input language is , encouraging it to learn language independent representations .
+In contrast , the decoder takes a language ID embedding that specifies the language to generate , which is concatenated to the input and sentence embeddings at every time step .
+Scaling up to almost one hundred languages calls for an encoder with sufficient capacity .
+In this paper , we limit our study to a stacked BiLSTM with 1 to 5 layers , each 512 - dimensional .
+The resulting sentence representations ( after concatenating both directions ) are 1024 dimensional .
+The decoder has always one layer of dimension 2048 .
+The input embedding size is set to 320 , while the language ID embedding has 32 dimensions .
+Training strategy
+In preceding work , each input sentence was jointly translated into all other languages .
+However , this approach has two obvious drawbacks when trying to scale to a large number of languages .
+First , it requires an N - way parallel corpus , which is difficult to obtain for all languages .
+Second , it has a quadratic cost with respect to the number of languages , making training prohibitively slow as the number of languages is increased .
+In our preliminary experiments , we observed that similar results can be obtained using only two target languages .
+2
+At the same time , we relax the requirement for N- way parallel corpora by considering separate alignments for each language combination .
+Training minimizes the cross - entropy loss on the training corpus , alternating overall combinations of the languages involved .
+For that purpose , we use Adam with a constant learning rate of 0.001 and dropout set to 0.1 , and train fora fixed number of epochs .
+Our implementation is based on fairseq , 3 and we make use of its multi - GPU support to train on 16 NVIDIA V100 GPUs with a total batch size of 128,000 tokens .
+Unless otherwise specified , we train our model for 17 epochs , which takes about 5 days .
+Stopping training earlier decreases the overall performance only slightly . :
+List of the 93 languages along with their training size , the resulting similarity error rate on Tatoeba , and the number of sentences in it .
+Dashes denote language pairs excluded for containing less than 100 test sentences .
+Training data and pre-processing
+As described in Section 3.2 , training requires bitexts aligned with two target languages .
+We choose English and Spanish for that purpose , as most of the data is aligned with these languages .
+We collect training corpora for 93 input languages by combining the Europarl , United Nations , Open - Subtitles 2018 , Global Voices , Tanzil and Tatoeba corpus , which are all publicly available on the OPUS website
+5 .
+Appendix
+A provides a more detailed description of this training data , while .
+So as to obtain a more complete picture , we also evaluate our embeddings in cross - lingual document classification ( MLDoc , Section 4.2 ) , and bitext mining ( BUCC , Section 4.3 ) .
+However , all these datasets only cover a subset of our 93 languages , so we also introduce anew test set for multilingual similarity search in 112 languages , including several languages for which we have no training data but whose language family is covered ( Section 4.4 ) .
+We remark that we use the same pre-trained BiLSTM encoder for all tasks and languages without any fine - tuning .
+XNLI : cross - lingual
+NLI
+NLI has become a widely used task to evaluate sentence representations .
+Given two sentences , a premise and a hypothesis , the task consists in deciding whether there is an entailment , contradiction or neutral relationship between them .
+XNLI is a recent effort to create a dataset similar to the English MultiNLI for several languages .
+It consists of 2,500 development and 5,000 test instances translated from En - glish into 14 languages by professional translators , making results across different languages directly comparable .
+We train a classifier on top of our multilingual encoder using the usual combination of the two sentence embeddings : ( p , h , ph , |p?h| ) , where p and hare the premise and hypothesis .
+For that purpose , we use a feed - forward neural network with two hidden layers of size 512 and 384 , trained with Adam .
+All hyperparameters were optimized on the English XNLI development corpus only , and then , the same classifier was applied to all languages of the XNLI test set .
+As such , we did not use any training or development data in any of the foreign languages .
+Note , moreover , that the multilingual sentence embeddings are fixed and not fine - tuned on the task or the language .
+We report our results in , along with several baselines from and the multilingual BERT model .
+9 Our proposed method obtains the best results in zero - shot cross - lingual transfer for all languages but Spanish .
+Moreover , our transfer results are strong and homogeneous across all languages :
+9 Note that the multilingual variant of BERT is not discussed in its paper .
+Instead , the reported results were extracted from the README of the official GitHub project at https://github.com/google-research/bert/ blob/master/multilingual.md on July 5 , 2019 .
+for 11 of them , the zero - short performance is ( at most ) 5 % lower than the one on English , including distant languages like Arabic , Chinese and Vietnamese , and we also achieve remarkable good results on low - resource languages like Swahili .
+In contrast , BERT achieves excellent results on English , outperforming our system by 7.5 points , but its transfer performance is much weaker .
+For instance , the loss in accuracy for both Arabic and Chinese is 2.5 points for our system , compared to 19.3 and 17.6 points for BERT .
+10 Finally , we also outperform all baselines of Conneau et al. by a substantial margin , with the additional advantage that we use a single pre-trained encoder , whereas X - BiLSTM learns a separate encoder for each language .
+We also provide results involving Machine Translation ( MT ) from .
+This can be done in two ways :
+1 ) translate the test data into English and apply the English NLI classifier , or 2 ) translate the English training data and train a separate NLI classifier for each language .
+Note that we are not evaluating multilingual sentence embeddings anymore , but rather the quality of the MT system and a monolingual model .
+Moreover , the use of MT incurs in an important overhead with either strategy : translating test makes inference substantially more expensive , whereas translating train results in a separate model for each language .
+As shown in , our approach outperforms all translation baselines of .
+We also outperform MT BERT for Arabic and Thai , and are very close for 10 Concurrent to our work , Lample and Conneau ( 2019 ) report superior results using another variant of BERT , outperforming our method by 4.5 points in average .
+However , note that these results are not fully comparable because 1 ) their system uses development data in the foreign languages , whereas our approach is fully zero - shot , 2 ) their approach requires fine - tuning on the task , 3 ) our system handles a much larger number of languages , and 4 ) our transfer performance is substantially better ( an average loss of 4 vs 10.6 points with respect to the respective English system ) .
+Urdu .
+Thanks to its multilingual nature , our system can also handle premises and hypothesis in different languages .
+As reported in Appendix B , the proposed method obtains very strong results in these settings , even for distant language combinations like French - Chinese .
+MLDoc : cross - lingual classification
+Cross - lingual document classification is a typical application of multilingual representations .
+In order to evaluate our sentence embeddings in this task , we use the MLDoc dataset of Schwenk and Li , which is an improved version of the Reuters benchmark with uniform class priors and a wider language coverage .
+There are 1,000 training and development documents and 4,000 test documents for each language , divided in 4 different genres .
+Just as with the XNLI evaluation , we consider the zero - shot transfer scenario : we train a classifier on top of our multilingual encoder using the English training data , optimizing hyperparameters on the English development set , and evaluating the resulting system in the remaining languages .
+We use a feed - forward neural network with one hidden layer of 10 units .
+As shown in , our system obtains the best published results for 5 of the 7 transfer languages .
+We believe that our weaker performance on Japanese can be attributed to the domain and sentence length mismatch between MLDoc and the parallel corpus we use for this language .
+BUCC : bitext mining
+Bitext mining is another natural application for multilingual sentence embeddings .
+Given two comparable corpora in different languages , the task consists in identifying sentence pairs that are translations of each other .
+For that purpose , one would commonly score sentence pairs by taking the cosine similarity of their respective embeddings , so parallel sentences can be extracted through nearest neighbor retrieval and filtered by setting a fixed threshold over this score .
+However , it was recently shown that this approach suffers from scale inconsistency issues , and Artetxe and Schwenk ( 2018 ) proposed the following alternative score addressing it :
+score ( x , y ) = margin ( cos ( x , y ) ,
+where x and y are the source and target sentences , and NN k ( x ) denotes the k nearest neighbors of x in the other language .
+The paper explores different margin functions , with ratio ( margin ( a , b ) = ab ) yielding the best results .
+This notion of margin is related to .
+We use this method to evaluate our sentence embeddings on the BUCC mining task , using exact same hyperparameters as Artetxe and Schwenk ( 2018 ) .
+The task consists in extracting parallel sentences from a comparable corpus between English and four foreign languages : German , French , Russian and Chinese .
+The dataset consists of 150 K to 1.2M sentences for each language , split into a sample , training and test set , with about 2 - 3 % of the sentences being parallel .
+As shown in , our system establishes a new state - of - the - art for all language pairs with the exception of English - Chinese test .
+We also outperform Artetxe and Schwenk ( 2018 ) themselves , who use two separate models covering 4 languages each .
+Not only are our results better , but our model also covers many more languages , so it can potentially be used to mine bitext for any combination of the 93 languages supported .
+Tatoeba : similarity search
+While XNLI , MLDoc and BUCC are well established benchmarks with comparative results available , they only cover a small subset of our 93 languages .
+So as to better assess the performance of our model in all these languages , we introduce anew test set of similarity search for 112 languages based on the Tatoeba corpus .
+The dataset consists of up to 1,000 English - aligned sentence pairs for each language .
+Appendix
+C describes how the dataset was constructed in more details .
+Evaluation is done by finding the nearest neighbor for each sentence in the other language according to cosine similarity and computing the error rate .
+We report our results in .
+Contrasting these results with those of XNLI , one would assume that similarity error rates below 5 % are indicative of strong downstream performance .
+11 This is the case for 37 languages , while there are 48 languages with an error rate below 10 % and 55 with less than 20 % .
+There are only 15 languages with error rates above 50 % .
+Additional result analysis is given in Appendix D.
+We believe that our competitive results for many low - resource languages are indicative of the benefits of joint training , which is also supported by our ablation results in Section 5.3 .
+In relation to that , Appendix E reports similarity search results for 29 additional languages without any training data , showing that our encoder can also generalize to unseen languages to some extent as long as it was trained on related languages .
+Ablation experiments
+In this section , we explore different variants of our approach and study the impact on the performance We consider the average of en?xx and x x ? en for all our evaluation tasks .
+We report average results across all languages .
+For XNLI , we also report the accuracy on English .
+reports the performance on the different tasks for encoders with 1 , 3 or 5 layers .
+We were notable to achieve good convergence with deeper models .
+It can be seen that all tasks benefit from deeper models , in particular XNLI and Tatoeba , suggesting that a single layer BiLSTM has not enough capacity to encode so many languages .
+Encoder depth
+Multitask learning
+Multitask learning has been shown to be helpful to learn English sentence embeddings .
+The most important task in this approach is arguably NLI , so we explored adding an additional NLI objective to our system with different weighting schemes .
+As shown in , the NLI objective leads to a better performance on the English NLI test set , but this comes at the cost of a worse cross - lingual transfer performance in XNLI and Tatoeba .
+The effect in BUCC is negligible .
+Czech , French , German and Spanish , so results between both models are directly comparable .
+As shown in , the full model equals or outperforms the one covering the evaluation languages only for all tasks but MLDoc .
+This suggests that the joint training also yields to overall better representations .
+Number of training languages
+Conclusions
+In this paper , we propose an architecture to learn multilingual fixed - length sentence embeddings for 93 languages .
+We use a single language - agnostic BiLSTM encoder for all languages , which is trained on publicly available parallel corpora and applied to different downstream tasks without any fine - tuning .
+Our experiments on cross -lingual natural language inference ( XNLI ) , cross - lingual document classification ( MLDoc ) , and bitext mining ( BUCC ) confirm the effectiveness of our approach .
+We also introduce anew test set of multilingual similarity search in 112 languages , and show that our approach is competitive even for low - resource languages .
+To the best of our knowledge , this is the first successful exploration of general purpose massively multilingual sentence representations .
+In the future , we would like to explore alternative encoder architectures like self - attention .
+We would also like to explore strategies to exploit monolingual data , such as using pre-trained word embeddings , backtranslation , or other ideas from unsupervised .
+Finally , we would like to replace our language dependant pre-processing with a language agnostic approach like SentencePiece .
+Our implementation , the pre-trained encoder and the multilingual test set are freely available at https://github.com/ facebookresearch/LASER .
+A Training data
+Our training data consists of the combination of the following publicly available parallel corpora :
+Europarl : 21 European languages .
+The size varies from 400 k to 2M sentences depending on the language pair .
+United Nations :
+We use the first two million sentences in Arabic , Russian and Chinese .
+OpenSubtitles2018 : A parallel corpus of movie subtitles in 57 languages .
+The corpus size varies from a few thousand sentences to more than 50 million .
+We keep at most 2 million entries for each language pair .
+Global Voices :
+News stories from the Global Voices website ( 38 languages ) .
+This is a rather small corpus with less than 100 k sentence inmost of the languages .
+Tanzil : Quran translations in 42 languages , average size of 135 k sentences .
+The style and vocabulary is very different from news texts .
+Tatoeba :
+A community supported collection of English sentences and translations into more than 300 languages .
+We use this corpus to extract a separate test set of up to 1,000 sentences ( see Appendix C ) .
+For languages with more than 1,000 entries , we use the remaining ones for training .
+Using all these corpora would provide parallel data for more languages , but we decided to keep 93 languages after discarding several constructed languages with little practical use ( Klingon , Kotava , Lojban , Toki Pona and Volapk ) .
+In our preliminary experiments , we observed that the domain of the training data played a key role in the performance of our sentence embeddings .
+Some tasks ( BUCC , MLDoc ) tend to perform better when the encoder is trained on long and formal sentences , whereas other tasks ( XNLI , Tatoeba ) benefit from training on shorter and more informal sentences .
+So as to obtain a good balance , we used at most two million sentences from Open - Subtitles , although more data is available for some languages .
+The size of the available training data varies largely for the considered languages ( see ) .
+This favours high - resource languages when the joint BPE vocabulary is created and the training of the joint encoder .
+In this work , we did not try to counter this effect by over - sampling lowresource languages .
+reports the accuracies of our system on the XNLI test set when the premises and hypothesis are in a different language .
+The numbers in the diagonal correspond to the main results reported in .
+Our approach obtains strong results when combining different languages .
+We do not have evidence that distant languages perform considerably worse .
+Instead , the combined performance seems mostly bounded by the accuracy of the language that performs worst when used alone .
+For instance , Greek - Russian achieves very similar results to Bulgarian - Russian , two Slavic languages .
+Similarly , combing French with Chinese , two totally different languages , is only 1.5 points worse than French - Spanish , two very close languages .
+B XNLI results for all language combinations
+C Tatoeba : dataset
+Tatoeba 13 is an open collection of English sentences and high - quality translations into more than 300 languages .
+The number of available translations is updated every Saturday .
+We downloaded the snapshot on November 19th 2018 and performed the following processing :
+1 ) removal of sentences containing " @ " or " http " , as emails and web addresses are not language specific ; 2 ) removal of sentences with less than three words , as they usually have little semantic information ; 3 ) removal of sentences that appear multiple times , either in the source or the target .
+After filtering , we created test sets of up to 1,000 aligned sentences with English .
+This amount is available for 72 languages .
+Limiting the number of sentences to 500 , we increase the coverage to 86 languages , and 112 languages with 100 parallel sentences .
+It should be stressed that , in general , the English sentences are not the same for different languages , so error rates are not directly comparable across languages .
+D Tatoeba : result analysis
+In this section , we provide some analysis on the results given in .
+We have 48 languages with an error rate below 10 % and 55 with less than 20 % , respectively ( English included ) .
+The languages with less than 20 % error belong to 20 different families and use 12 different scripts , and include 6 languages for which we have only small amounts of bitexts ( less than 400 k ) , namely Esperanto , Galician , Hindi , Interlingua , Malayam and Marathi , which presumably benefit from the joint training with other related languages .
+Overall , we observe low similarity error rates on the Indo - Aryan languages , namely Hindi , Bengali , Marathi and Urdu .
+The performance on Berber languages ( " ber " and " kab " ) is remarkable , although we have less than 100 k sentences to train them .
+This is atypical example of languages which are spoken by several millions of people , but for which the amount of written resources is very limited .
+It is quite unlikely that we would be able to train a good sentence embedding with language specific corpora only , showing the benefit of joint training on many languages .
+Only 15 languages have similarity error rates above 50 % .
+Four of them are low - resource languages with their own script and which are alone in their family ( Amharic , Armenian , Khmer and Georgian ) , making it difficult to benefit from joint training .
+In any case , it is still remarkable that a language like Khmer performs much better than random with only 625 training examples .
+There are also several Turkic languages ( Kazakh , Tatar , Uighur and Uzbek ) and Celtic languages ( Breton and Cornish ) with high error rates .
+We plan to further investigate its cause and possible solutions in the future .
+E Tatoeba : results for unseen languages
+We extend our experiments to 29 languages without any training data ( see ) .
+Many of them are recognized minority languages spoken in specific regions ( e.g. Asturian , Faroese , Frisian , Kashubian , North Moluccan Malay , Piemontese , Swabian or Sorbian ) .
+All share some similarities , at various degrees , with other major languages that we cover , but also differ by their own grammar or specific vocabulary .
+This enables our encoder to perform reasonably well , even if it did not see these languages during training .

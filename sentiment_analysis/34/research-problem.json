@@ -1,0 +1,8 @@
+{
+  "has research problem" : [
+    ["Arabic Sentiment Analyser", {"from sentence" : "Mazajak : An Online Arabic Sentiment Analyser"}],
+    ["Sentiment analysis ( SA )", {"from sentence" : "Sentiment analysis ( SA ) is one of the most useful natural language processing applications ."}],
+    ["Sentiment analysis", {"from sentence" : "Sentiment analysis is one of the vital approaches to extract public opinion from large corpora of text ."}],
+    ["SA", {"from sentence" : "Work on SA started in early 2000s , particularly with the work of , where they studied the sentiment of movies ' reviews ."}]
+  ]
+}

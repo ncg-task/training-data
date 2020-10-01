@@ -1,0 +1,74 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "Gumbel Tree - LSTM" : {
+          "is" : {
+            "novel RvNN architecture" : {
+              "not require" : "structured data",
+              "learns to compose" : {
+                "task - specific tree structures" : {
+                  "without" : "explicit guidance"
+                }
+              }
+            }
+          },
+          "from sentence" : "In this paper , we propose Gumbel Tree - LSTM , which is a novel RvNN architecture that does not require structured data and learns to compose task - specific tree structures without explicit guidance ."
+        }
+      },
+      "has" : {
+        "Our Gumbel Tree - LSTM model" : {
+          "based on" : "tree - structured long short - term memory ( Tree - LSTM ) architecture",
+          "from sentence" : "Our Gumbel Tree - LSTM model is based on tree - structured long short - term memory ( Tree - LSTM ) architecture , which is one of the most renowned variants of RvNN ."
+        },
+        "our model" : {
+          "introduces" : {
+            "composition query vector" : {
+              "measures" : {
+                "validity" : {
+                  "of" : "composition"
+                }
+              }
+            },
+            "from sentence" : "To learn how to compose task - specific tree structures without depending on structured input , our model introduces composition query vector that measures validity of a composition ."
+          }
+        }
+      },
+      "Using" : {
+        "validity scores" : {
+          "computed by" : "composition query vector",
+          "has" : {
+            "our model" : {
+              "recursively selects" : {
+                "compositions" : {
+                  "until" : "only a single representation remains"
+                }
+              }
+            }
+          },
+          "from sentence" : "Using validity scores computed by the composition query vector , our model recursively selects compositions until only a single representation remains ."
+        }
+      },
+      "use" : {
+        "Straight - Through ( ST ) Gumbel - Softmax estimator" : {
+          "to sample" : {
+            "compositions" : {
+              "in" : "training phase"
+            },
+            "from sentence" : "We use Straight - Through ( ST ) Gumbel - Softmax estimator to sample compositions in the training phase ."            
+          },
+          "relaxes" : {
+            "discrete sampling operation" : {
+              "to be" : {
+                "continuous" : {
+                  "in" : "backward pass"
+                }
+              }
+            },
+            "from sentence" : "ST Gumbel - Softmax estimator relaxes the discrete sampling operation to be continuous in the backward pass , thus our model can be trained via the standard backpropagation ."
+          }
+        }
+      }
+    }
+  }
+}

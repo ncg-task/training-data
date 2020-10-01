@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Machine Comprehension", {"from sentence" : "Structural Embedding of Syntactic Trees for Machine Comprehension"}],
+    ["Reading comprehension", {"from sentence" : "Reading comprehension such as SQuAD or News QA requires identifying a span from a given context , which is an extension to the traditional question answering task , aiming at responding questions posed by human with natural language ."}]
+  ]
+}

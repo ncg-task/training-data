@@ -1,0 +1,41 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "For" : {
+        "MS - MARCO" : {
+          "preprocess" : {
+            "corpus" : {
+              "with" : {
+                "reversible tokenizer" : {
+                  "from" : "Stanford CoreNLP"
+                }
+              }
+            },
+            "from sentence" : "For MS - MARCO , we preprocess the corpus with the reversible tokenizer from Stanford CoreNLP and we choose the span that achieves the highest ROUGE - L score with the reference answers as the gold span for training ."
+          },
+          "employ" : {
+            "300 - D pre-trained Glove embeddings" : {
+              "has" : {
+                "fixed" : {
+                  "during" : "training"
+                }
+              },
+              "from sentence" : "We employ the 300 - D pre-trained Glove embeddings and keep it fixed during training ."
+            }
+          },
+          "has" : {
+            "character embeddings" : {
+              "are" : "randomly initialized",
+              "with" : {
+                "dimension" : {
+                  "as" : "30"
+                }
+              },
+              "from sentence" : "The character embeddings are randomly initialized with its dimension as 30 ."
+            }
+          }          
+        }
+      }
+    }
+  }
+}

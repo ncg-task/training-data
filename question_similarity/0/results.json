@@ -1,0 +1,107 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "GRU cells" : {
+          "are" : "most efficient",
+          "from sentence" : "The tables show that while GRU cells are the most efficient , the ON - LSTM cells ( with chunk size 8 ) are the most effective ( in terms of all considered measures ) ."
+        },
+        "ON - LSTM cells" : {
+          "with" : "chunk size 8",
+          "are" : {
+            "most effective" : {
+              "in terms of" : "all considered measures"
+            }
+          },
+          "from sentence" : "The tables show that while GRU cells are the most efficient , the ON - LSTM cells ( with chunk size 8 ) are the most effective ( in terms of all considered measures ) ."
+        },
+        "Effect of Data Augmentation" : {
+          "shows" : {
+            "each augmentation step" : {
+              "affects" : {
+                "model 's efficiency" : {
+                  "has" : "negatively"
+                }
+              },
+              "from sentence" : "The tables show that each augmentation step affects the model 's efficiency negatively ."
+            }
+          },
+          "not" : {
+            "each increment step" : {
+              "has" : {
+                "positive effect" : {
+                  "on" : "model 's effectiveness"
+                }
+              },
+              "from sentence" : "On the other hand , not each increment step has a positive effect on the model 's effectiveness ."
+            }
+          }
+        },
+        "sequence weighted attention" : {
+          "gives" : {
+            "better results" : {
+              "by" : {
+                "about 1 point" : {
+                  "of" : "F1-score"
+                }
+              }
+            }
+          },
+          "from sentence" : "However , the sequence weighted attention gives better results by about 1 point of the F1-score ."
+        }
+      },
+      "using" : {
+        "pre-trained FastText embeddings" : {
+          "as" : {
+            "input" : {
+              "to" : {
+                "our model" : {
+                  "yields" : "worse F1score",
+                  "on" : {
+                    "public and private leaderboards" : {
+                      "with" : "94.254 and 93.118"
+                    }
+                  },
+                  "compared with" : "ELMo contextual embeddings model"
+                }
+              }
+            }
+          },
+          "from sentence" : "For example , using pre-trained FastText embeddings as an input to our model yields worse F1score on both public and private leaderboards with 94.254 and 93.118 , respectively , compared with the ELMo contextual embeddings model ."
+        }
+      },
+      "overcome" : {
+        "weakness" : {
+          "of" : {
+            "Arabic ELMo model" : {
+              "by translating" : {
+                "data" : {
+                  "to" : {
+                    "English" : {
+                      "using" : "Google Translate"
+                    }
+                  }
+                }
+              },
+              "treating" : {
+                "problem" : {
+                  "as" : "English SQS problem"
+                }
+              },
+              "results are" : {
+                "much worse" : {
+                  "with" : {
+                    "88.868 and 87.504 F1 - scores" : {
+                      "on" : "public and private leaderboards"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Moreover , an attempt to overcome the weakness of the Arabic ELMo model is done by translating the data to English using Google Translate 8 and treating the problem as an English SQS problem instead , but the results are much worse with 88.868 and 87.504 F1 - scores on public and private leaderboards , respectively ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

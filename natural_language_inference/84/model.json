@@ -1,0 +1,71 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "new method" : {
+          "for computing" : {
+            "embeddings \" on the fly \"" : {
+              "jointly addresses" : ["large vocabulary problem", {"paucity of data" : {"for learning" : {"representations" : {"in" : "long tail of the Zipfian distribution"}}}}]
+            }
+          },
+          "from sentence" : "In this paper we propose a new method for computing embeddings \" on the fly \" , which jointly addresses the large vocabulary problem and the paucity of data for learning representations in the long tail of the Zipfian distribution ."
+        }
+      },
+      "train" : {
+        "network" : {
+          "to predict" : {
+            "representations" : {
+              "of" : "words",
+              "based on" : "auxiliary data"
+            }
+          },
+          "from sentence" : "This method , which we illustrate in , can be summarized as follows : instead of directly learning separate representations for all words in a potentially unbounded vocabulary , we train a network to predict the representations of words based on auxiliary data ."
+        }
+      },
+      "has" : {
+        "Several sources of auxiliary data" : {
+          "used" : "simultaneously",
+          "as" : {
+            "input" : {
+              "to" : {
+                "neural network" : {
+                  "compute" : {
+                    "combined representation" : {
+                      "used for" : "out - of - vocabulary words",
+                      "combined with" : {
+                        "withinvocabulary word embeddings" : {
+                          "directly trained on" : "task of interest",
+                          "pretrained from" : "external data source"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Several sources of auxiliary data can be used simultaneously as input to a neural network that will compute a combined representation .
+These representations can then be used for out - of - vocabulary words , or combined with withinvocabulary word embeddings directly trained on the task of interest or pretrained from an external data source ."
+
+        },
+        "auxiliary data encoders" : {
+          "trained jointly with" : "objective",
+          "ensuring" : {
+            "preservation" : {
+              "of" : {
+                "semantic alignment" : {
+                  "with" : {
+                    "representations" : {
+                      "of" : "within - vocabulary words"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Importantly , the auxiliary data encoders are trained jointly with the objective , ensuring the preservation of semantic alignment with representations of within - vocabulary words ."
+        }
+      }
+    }
+  }
+}

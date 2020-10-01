@@ -1,0 +1,51 @@
+39	45	49	call
+39	50	61	NarrativeQA
+40	12	23	consists of
+40	24	31	stories
+40	34	43	which are
+40	44	67	books and movie scripts
+40	70	74	with
+40	75	110	human written questions and answers
+40	111	126	based solely on
+40	127	166	human - generated abstractive summaries
+41	19	28	questions
+41	29	34	maybe
+41	35	43	answered
+41	44	49	using
+41	59	68	summaries
+41	76	91	full story text
+202	35	63	neural span prediction model
+202	64	91	significantly outperforming
+202	92	118	all other proposed methods
+204	0	59	Both the plain sequence to sequence model and the AS Reader
+204	140	147	perform
+204	148	152	well
+206	3	28	additional inductive bias
+206	29	39	results in
+206	40	58	higher performance
+206	50	53	for
+206	67	88	span prediction model
+209	23	25	on
+209	30	55	full Narra - tive QA task
+209	58	63	where
+209	68	85	context documents
+209	86	89	are
+209	90	102	full stories
+210	33	40	observe
+210	43	50	decline
+210	47	49	in
+210	54	65	performance
+210	66	68	of
+210	73	104	span- selection oracle IR model
+225	4	13	AS Reader
+225	80	93	underperforms
+225	98	133	simple no -context Seq2Seq baseline
+225	147	158	in terms of
+225	159	162	MRR
+230	27	35	observed
+230	36	62	no significant differences
+230	63	74	for varying
+230	75	91	number of chunks
+2	16	37	Reading Comprehension
+4	0	28	Reading comprehension ( RC )
+5	52	54	RC

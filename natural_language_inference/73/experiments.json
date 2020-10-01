@@ -1,0 +1,82 @@
+{
+  "has" : {
+    "Experiments" : {
+      "has" : {
+        "Tasks" : {
+          "has" : {
+            "Natural Language Inference" : {
+              "has" : {
+                "Results" : {
+                  "has" : {
+                    "ReSAN" : {
+                      "has" : {
+                        "outperforms" : {
+                          "has" : [["all the sentence encoding based methods",
+                          {"from sentence" : "Natural Language Inference
+Compared to the methods from official leaderboard , ReSAN outperforms all the sentence encoding based methods and achieves the best test accuracy ."
+                          
+                          }], [{"300D SPINN - PI encoders" : {"by" : "3.1 %"}}, {"from sentence" : "Furthermore , ReSAN even outperforms the 300D SPINN - PI encoders by 3.1 %. , which is a recursive model and uses the result of an external semantic parsing tree as an extra input ."}]]
+                        }
+                      },
+                      "achieves" : ["best test accuracy", {"from sentence" : "Compared to the methods from official leaderboard , ReSAN outperforms all the sentence encoding based methods and achieves the best test accuracy ."}]
+                    }
+                  },
+                  "compared to" : {
+                    "last best models" : {
+                      "i.e." : ["600D Gumbel TreeLSTM encoders", "600D Residual stacked encoders"],
+                      "has" : {
+                        "ReSAN" : {
+                          "uses" : "far fewer parameters",
+                          "with" : "better performance"
+                        }
+                      },
+                      "from sentence" : "Specifically , compared to the last best models , i.e. , 600D Gumbel TreeLSTM encoders and 600D Residual stacked encoders , ReSAN uses far fewer parameters with better performance ."
+                    }
+                  },
+                  "Compared to" : {
+                    "recurrent models" : {
+                      "e.g." : ["Bi - LSTM", "Bi - GRU"],
+                      "due to" : {
+                        "parallelizable computations" : {
+                          "has" : {
+                            "ReSAN" : {
+                              "shows" : ["better prediction quality", "more compelling efficiency"]
+                            }
+                          }                          
+                        }
+                      },
+                      "from sentence" : "Compared to the recurrent models ( e.g. , Bi - LSTM and Bi - GRU ) , ReSAN shows better prediction quality and more compelling efficiency due to parallelizable computations ."
+                    },
+                    "convolutional models" : {
+                      "i.e." : ["Multiwindow CNN", "Hierarchical CNN"],
+                      "has" : {
+                        "ReSAN" : {
+                          "has" : {
+                            "significantly outperforms" : {
+                              "by" : "3.1 % and 2.4 %"
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "Compared to the convolutional models ( i.e. , Multiwindow CNN and Hierarchical CNN ) , ReSAN significantly outperforms them by 3.1 % and 2.4 % respectively due to the weakness of CNNs in modeling long - range dependencies ."
+                    },
+                    "attention - based models" : {
+                      "name" : ["multi-head attention", "DiSAN"],
+                      "has" : {
+                        "ReSAN" : {
+                          "uses" : "similar number of parameters",
+                          "with" : ["better test performance", "less time cost"]
+                        }
+                      },
+                      "from sentence" : "Compared to the attention - based models , multi-head attention and DiSAN , ReSAN uses a similar number of parameters with better test performance and less time cost ."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

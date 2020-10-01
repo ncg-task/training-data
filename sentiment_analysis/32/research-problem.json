@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Aspect - Level Sentiment Classification", {"from sentence" : "Interactive Attention Networks for Aspect - Level Sentiment Classification"}],
+    ["sentiment classification", {"from sentence" : "Previous approaches have realized the importance of targets in sentiment classification and developed various methods with the goal of precisely modeling their contexts via generating target - specific representations ."}]
+  ]
+}

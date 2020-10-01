@@ -1,0 +1,8 @@
+(Contribution||has||Approach)
+(Approach||attempt to learn||unsupervised representation)
+(unsupervised representation||accurately contains||sentiment analysis)
+(Approach||train on||very large corpus)
+(very large corpus||picked to have||similar distribution)
+(similar distribution||as||our task of interest)
+(Approach||consider||research benchmark of byte ( character ) level language modelling)
+(research benchmark of byte ( character ) level language modelling||due to||its further simplicity and generality)

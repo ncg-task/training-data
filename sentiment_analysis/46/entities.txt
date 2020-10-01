@@ -1,0 +1,155 @@
+90	0	4	RNTN
+90	7	38	Recursive Tensor Neural Network
+90	49	57	to model
+90	58	70	correlations
+90	71	78	between
+90	79	99	different dimensions
+90	100	102	of
+90	103	122	child nodes vectors
+91	0	14	LSTM / Bi-LSTM
+91	37	43	employ
+91	45	69	Long Short - Term Memory
+91	78	99	bidirectional variant
+91	100	110	to capture
+91	111	133	sequential information
+92	0	9	Tree-LSTM
+92	12	24	Memory cells
+92	29	42	introduced by
+92	43	85	Tree - Structured Long Short - Term Memory
+92	90	95	gates
+92	96	100	into
+92	101	133	tree - structured neural network
+93	0	3	CNN
+93	6	35	Convolutional Neural Networks
+93	49	60	to generate
+93	61	100	task - specific sentence representation
+94	0	4	NCSL
+94	17	60	Neural Context - Sensitive Lexicon ( NSCL )
+94	61	70	to obtain
+94	71	102	prior sentiment scores of words
+94	68	70	in
+94	110	118	sentence
+95	0	12	LR - Bi-LSTM
+95	15	22	imposes
+95	23	39	linguistic roles
+95	40	44	into
+95	45	60	neural networks
+95	61	72	by applying
+95	73	98	linguistic regularization
+95	96	98	on
+95	102	122	intermediate outputs
+95	123	127	with
+95	128	141	KL divergence
+96	0	16	Self - attention
+96	19	27	proposes
+96	30	53	selfattention mechanism
+96	54	62	to learn
+96	63	92	structured sentence embedding
+97	0	9	ID - LSTM
+97	12	16	uses
+97	17	39	reinforcement learning
+97	40	48	to learn
+97	49	83	structured sentence representation
+97	21	24	for
+97	88	112	sentiment classification
+99	25	35	dimensions
+99	36	38	of
+99	39	93	characterlevel embedding and word embedding ( Glo Ve )
+99	103	109	set to
+99	110	113	300
+100	0	12	Kernel sizes
+100	13	15	of
+100	16	38	multi-gram convolution
+100	39	42	for
+100	43	53	Char - CNN
+100	58	64	set to
+100	65	70	2 , 3
+101	8	23	weight matrices
+101	28	42	initialized as
+101	43	69	random orthogonal matrices
+103	4	8	size
+103	9	11	of
+103	12	22	mini-batch
+103	23	25	is
+103	26	28	60
+104	4	16	dropout rate
+104	17	19	is
+104	20	23	0.5
+104	34	45	coefficient
+105	0	2	of
+105	3	20	L 2 normalization
+105	24	30	set to
+105	31	36	10 ?5
+101	79	82	set
+101	83	103	all the bias vectors
+101	40	42	as
+101	107	119	zero vectors
+102	3	11	optimize
+102	16	30	proposed model
+102	31	35	with
+102	36	53	RMSprop algorithm
+102	56	61	using
+102	62	81	mini-batch training
+15	18	25	propose
+15	28	88	Multi- sentimentresource Enhanced Attention Network ( MEAN )
+15	89	92	for
+15	93	134	sentence - level sentiment classification
+15	135	147	to integrate
+15	148	192	many kinds of sentiment linguistic knowledge
+15	193	197	into
+15	198	218	deep neural networks
+15	219	222	via
+15	223	254	multi -path attention mechanism
+18	20	62	multisentiment - resource attention module
+18	63	71	to learn
+18	72	150	more comprehensive and meaningful sentiment - specific sentence representation
+18	151	159	by using
+18	164	203	three types of sentiment resource words
+18	204	206	as
+18	207	224	attention sources
+18	225	237	attending to
+18	242	255	context words
+19	21	30	attend to
+19	31	70	different sentimentrelevant information
+19	71	75	from
+19	76	110	different representation subspaces
+19	111	121	implied by
+19	122	158	different types of sentiment sources
+19	163	170	capture
+19	175	192	overall semantics
+19	138	140	of
+19	200	240	sentiment , negation and intensity words
+19	61	64	for
+19	245	265	sentiment prediction
+16	24	30	design
+16	33	62	coupled word embedding module
+16	63	71	to model
+16	76	95	word representation
+16	96	100	from
+16	101	145	character - level and word - level semantics
+2	60	84	Sentiment Classification
+112	8	17	our model
+112	18	24	brings
+112	27	50	substantial improvement
+112	51	55	over
+112	60	67	methods
+112	68	88	that do not leverage
+112	89	119	sentiment linguistic knowledge
+114	24	48	consistently outperforms
+114	49	63	LR - Bi - LSTM
+114	64	80	which integrates
+114	81	97	linguistic roles
+114	98	100	of
+114	101	141	sentiment , negation and intensity words
+114	142	146	into
+114	147	162	neural networks
+114	163	166	via
+114	171	196	linguistic regularization
+115	24	32	achieves
+115	33	51	2.4 % improvements
+115	52	56	over
+115	61	71	MR dataset
+115	76	94	0.8 % improvements
+115	52	56	over
+115	104	115	SST dataset
+115	116	142	compared to LR - Bi - LSTM

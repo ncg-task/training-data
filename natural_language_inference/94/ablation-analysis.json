@@ -1,0 +1,51 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "has" : {
+        "self - attention" : {
+          "able to contribute" : {
+            "significantly" : {
+              "to" : {
+                "performance" : {
+                  "on top of" : "other components of the model"
+                }
+              }
+            },
+            "from sentence" : "Experiment 1 and 5 are our models presented in were also important for the model 's performance and that self - attention is able to contribute significantly to performance on top of other components of the model ."
+          }
+        }
+      },
+      "see that" : {
+        "effectively introducing" : {
+          "has" : {
+            "external knowledge" : {
+              "has" : {
+                "improve" : {
+                  "has" : {
+                    "performance" : {
+                      "on top of" : "our strong baseline",
+                      "via" : ["our commonsense selection algorithm", "NOIC"]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Finally , we see that effectively introducing external knowledge via our commonsense selection algorithm and NOIC can improve performance even further on top of our strong baseline ."
+        },
+        "our commonsense selection and incorporation mechanism" : {
+          "has" : {
+            "improves" : {
+              "has" : {
+                "performance significantly" : {
+                  "across" : "all metrics"
+                }
+              }
+            }
+          },
+          "from sentence" : "The results of these are shown in , where we see that neither NumberBatch nor random - relationships nor single - hop common - sense offer statistically significant improvements 7 , whereas our commonsense selection and incorporation mechanism improves performance significantly across all metrics ."
+        }
+      }
+    }
+  }
+}

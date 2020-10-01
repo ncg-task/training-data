@@ -1,0 +1,80 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "WSJ" : {
+          "has" : {
+            "BiLSTM - LAN" : {
+              "gives" : {
+                "significant accuracy improvements" : {
+                  "over" : ["BiLSTM - CRF", "BiLSTM- softmax"],
+                  "from sentence" : "BiLSTM - LAN gives significant accuracy improvements over both BiLSTM - CRF and BiLSTM- softmax ( p < 0.01 ) , which is consistent with observations on development experiments ."
+                }
+              }
+            }            
+          }
+        },
+        "Universal Dependencies ( UD ) v 2.2" : {
+          "has" : {
+            "Our model" : {
+              "ourperforms" : {
+                "all the baselines" : {
+                  "on" : "all the languages"
+                }
+              },
+              "from sentence" : "Our model outperforms all the baselines on all the languages ."
+            },
+            "improvements" : {
+              "are" : {
+                "statistically significant" : {
+                  "for" : {
+                    "all the languages ( p < 0.01 )" : {
+                      "suggesting that" : {
+                        "BiLSTM - LAN" : {
+                          "is" : {
+                            "generally effective" : {
+                              "across" : "languages"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "The improvements are statistically significant for all the languages ( p < 0.01 ) , suggesting that BiLSTM - LAN is generally effective across languages ."
+                }
+              }
+            }
+          }
+        },
+        "OntoNotes 5.0" : {
+          "has" : {
+            "BiLSTM - LAN" : {
+              "has" : {
+                "significantly outperforms" : {
+                  "has" : ["BiLSTM - CRF", {"from sentence" : "BiLSTM - LAN also significantly outperforms BiLSTM - CRF by 1.17 F1-score ( p < 0.01 ) . CCGBank ."}],
+                  "by" : ["1.17 F1-score", {"from sentence" : "BiLSTM - LAN also significantly outperforms BiLSTM - CRF by 1.17 F1-score ( p < 0.01 ) . CCGBank ."}],
+                  "both" : {
+                    "BiLSTMsoftmax and BiLSTM - CRF ( p < 0.01 )" : {
+                      "showing" : {
+                        "advantage" : {
+                          "of" : "LAN"
+                        }
+                      },
+                      "from sentence" : "As shown in , BiLSTM - LAN significantly outperforms both BiLSTMsoftmax and BiLSTM - CRF ( p < 0.01 ) , showing the advantage of LAN . and explore BiRNN - softmax and BiLSTM - softmax , respectively ."
+                    }
+                  }
+                }
+              },
+              "obtains" : {
+                "new state - of - theart results" : {
+                  "on" : "CCGBank",
+                  "from sentence" : "Compared with these methods , BiLSTM - LAN obtains new state - of - theart results on CCGBank , matching the tri-training performance of , without training on external data ."
+                }
+              }
+            }
+          }          
+        }
+      }      
+    }
+  }
+}

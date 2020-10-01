@@ -1,0 +1,73 @@
+{
+  "has" : {
+    "Dataset" : {
+      "construct" : {
+        "Swag" : {
+          "has" : {
+            "adversarial dataset" : {
+              "with" : "113 k multiple - choice questions"
+            }
+          },
+          "from sentence" : "We use this method to construct Swag : an adversarial dataset with 113 k multiple - choice questions ."
+        }
+      },
+      "start with" : {
+        "pairs" : {
+          "of" : {
+            "temporally adjacent video captions" : {
+              "each with" : ["context", {"follow - up event" : {"know" : "physically possible"}}]
+            }
+          },
+          "from sentence" : "We start with pairs of temporally adjacent video captions , each with a context and a follow - up event that we know is physically possible ."
+        }
+      },
+      "use" : {
+        "state - of - theart language model" : {
+          "fine - tuned on" : "data",
+          "to massively oversample" : {
+            "diverse set" : {
+              "of" : {
+                "possible negative sentence endings ( or counterfactuals )" : {
+                  "filter" : {
+                    "aggressively and adversarially" : {
+                      "using" : {
+                        "committee of trained models" : {
+                          "to obtain" : {
+                            "population" : {
+                              "of" : {
+                                "de-biased endings" : {
+                                  "with" : {
+                                    "similar stylistic features" : {
+                                      "to" : "real ones"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "We then use a state - of - theart language model fine - tuned on this data to massively oversample a diverse set of possible negative sentence endings ( or counterfactuals ) .
+Next , we filter these candidate endings aggressively and adversarially using a committee of trained models to obtain a population of de-biased endings with similar stylistic features to the real ones ."
+
+        }
+      },
+      "has" : {
+        "filtered counterfactuals" : {
+          "validated by" : {
+            "crowd workers" : {
+              "to further ensure" : "data quality"
+            }
+          },
+          "from sentence" : "Finally , these filtered counterfactuals are validated by crowd workers to further ensure data quality ."
+        }
+      }
+    }
+  }
+}

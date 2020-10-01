@@ -1,0 +1,179 @@
+157	3	13	initialize
+157	18	25	weights
+157	26	28	of
+157	29	43	all sub-layers
+157	44	46	as
+157	47	73	random orthogonal matrices
+158	4	20	other parameters
+158	42	53	by sampling
+158	54	66	each element
+158	67	71	from
+158	74	95	Gaussian distribution
+158	96	100	with
+158	101	126	mean 0 and variance 1 ? d
+159	4	19	embedding layer
+159	20	26	can be
+159	27	47	initialized randomly
+159	57	84	pre-trained word embeddings
+164	4	13	dimension
+164	14	16	of
+164	17	62	word embeddings and predicate mask embeddings
+164	66	72	set to
+164	73	76	100
+164	85	108	number of hidden layers
+164	66	72	set to
+164	73	75	10
+166	4	21	number of heads h
+166	25	31	set to
+166	32	33	8
+168	0	14	Dropout layers
+168	19	31	added before
+168	32	52	residual connections
+168	53	57	with
+168	60	76	keep probability
+168	77	79	of
+168	80	83	0.8
+169	0	7	Dropout
+169	16	30	applied before
+169	35	58	attention softmax layer
+169	67	99	feed - froward ReLU hidden layer
+169	110	128	keep probabilities
+169	133	139	set to
+169	140	143	0.9
+171	0	31	Learning Parameter optimization
+171	35	50	performed using
+171	51	78	stochastic gradient descent
+174	5	8	SGD
+174	9	17	contains
+174	20	30	mini-batch
+174	31	47	of approximately
+174	48	59	4096 tokens
+174	60	63	for
+174	68	88	CoNLL - 2005 dataset
+174	93	104	8192 tokens
+174	60	63	for
+174	113	133	CoNLL - 2012 dataset
+175	4	17	learning rate
+175	21	35	initialized to
+175	36	39	1.0
+165	3	6	set
+165	11	35	number of hidden units d
+165	36	38	to
+165	39	42	200
+170	8	14	employ
+170	15	40	label smoothing technique
+170	41	45	with
+170	48	63	smoothing value
+170	64	66	of
+170	67	70	0.1
+170	71	77	during
+170	78	86	training
+172	3	8	adopt
+172	9	17	Adadelta
+172	44	46	as
+172	51	60	optimizer
+173	42	46	clip
+173	51	55	norm
+173	56	58	of
+173	19	28	gradients
+173	69	73	with
+173	76	100	predefined threshold 1.0
+173	0	8	To avoid
+173	9	36	exploding gradients problem
+176	0	14	After training
+176	15	26	400 k steps
+176	32	37	halve
+176	42	55	learning rate
+176	56	61	every
+176	62	73	100 K steps
+177	3	8	train
+177	9	19	all models
+177	20	23	for
+177	24	35	600 K steps
+178	0	3	For
+178	4	14	DEEP - ATT
+178	15	19	with
+178	20	36	FFN sub - layers
+178	43	63	whole training stage
+178	64	69	takes
+178	76	84	two days
+178	85	87	to
+178	88	94	finish
+178	95	97	on
+178	100	118	single Titan X GPU
+178	121	129	which is
+178	130	146	2.5 times faster
+29	37	44	present
+29	47	90	deep attentional neural network ( DEEPATT )
+29	91	94	for
+29	107	110	SRL
+30	11	18	rely on
+30	23	49	self - attention mechanism
+30	56	70	directly draws
+30	75	94	global dependencies
+30	95	97	of
+30	102	108	inputs
+31	24	42	major advantage of
+31	43	59	self - attention
+31	71	79	conducts
+31	80	98	direct connections
+31	99	106	between
+31	107	127	two arbitrary tokens
+31	128	130	in
+31	133	141	sentence
+32	12	28	distant elements
+32	29	46	can interact with
+32	47	57	each other
+32	58	60	by
+32	61	74	shorter paths
+32	108	114	allows
+32	115	141	unimpeded information flow
+32	142	149	through
+32	154	161	network
+33	22	30	provides
+33	33	50	more flexible way
+33	51	87	to select , represent and synthesize
+33	92	103	information
+33	104	106	of
+33	111	117	inputs
+33	125	141	complementary to
+33	142	158	RNN based models
+34	0	10	Along with
+34	11	27	self - attention
+34	30	40	DEEP - ATT
+34	41	51	comes with
+34	52	66	three variants
+34	162	180	to further enhance
+34	185	200	representations
+34	73	77	uses
+34	78	95	recurrent ( RNN )
+34	98	119	convolutional ( CNN )
+34	124	161	feed - forward ( FFN ) neural network
+2	0	27	Deep Semantic Role Labeling
+4	0	30	Semantic Role Labeling ( SRL )
+7	67	70	SRL
+12	0	22	Semantic Role Labeling
+180	19	22	get
+180	23	37	74.1 F 1 score
+180	38	40	on
+180	45	70	out - of - domain dataset
+182	0	15	When ensembling
+182	16	24	5 models
+182	25	29	with
+182	30	56	FFN nonlinear sub - layers
+182	59	71	our approach
+182	72	80	achieves
+182	84	93	F 1 score
+182	94	96	of
+182	97	110	84.6 and 83.9
+182	159	179	absolute improvement
+182	94	96	of
+182	183	194	1.4 and 0.5
+182	195	199	over
+182	204	235	previous state - of - the - art
+183	6	13	results
+183	48	52	that
+183	57	80	self - attention layers
+183	84	102	helpful to capture
+183	103	125	structural information
+183	130	156	long distance dependencies

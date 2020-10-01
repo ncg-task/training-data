@@ -1,0 +1,147 @@
+88	0	43	Emo2 Vec embedding matrix and the CNN model
+88	48	65	pre-trained using
+88	66	80	hashtag corpus
+89	0	23	Parameters of T and CNN
+89	24	27	are
+89	28	48	randomly initialized
+89	53	57	Adam
+89	61	69	used for
+89	70	82	optimization
+91	0	3	For
+91	8	18	best model
+91	24	27	use
+91	32	42	batch size
+91	43	45	of
+91	46	48	16
+91	51	65	embedding size
+91	43	45	of
+91	69	72	100
+91	75	87	1024 filters
+91	92	104	filter sizes
+91	105	108	are
+91	109	123	1 , 3 ,5 and 7
+95	3	7	tune
+95	8	22	our parameters
+95	23	25	of
+95	26	39	learning rate
+95	42	59	L2 regularization
+96	3	13	early stop
+96	14	23	our model
+96	24	28	when
+96	33	54	averaged dev accuracy
+96	9	13	stop
+96	60	70	increasing
+97	4	14	best model
+97	15	19	uses
+97	20	33	learning rate
+97	34	36	of
+97	37	42	0.001
+97	45	62	L2 regularization
+97	34	36	of
+97	66	69	1.0
+97	72	82	batch size
+97	34	36	of
+98	3	7	save
+98	12	22	best model
+98	27	31	take
+98	36	51	embedding layer
+98	52	54	as
+98	55	70	Emo2Vec vectors
+14	10	22	demonstrates
+14	27	40	effectiveness
+14	41	57	of incorporating
+14	58	74	sentiment labels
+14	44	46	in
+14	80	101	wordlevel information
+14	92	95	for
+14	106	131	sentiment - related tasks
+14	132	143	compared to
+14	144	165	other word embeddings
+24	7	14	propose
+24	15	22	Emo2Vec
+24	31	34	are
+24	35	63	word - level representations
+24	64	75	that encode
+24	76	95	emotional semantics
+24	96	100	into
+24	101	138	fixed - sized , real - valued vectors
+25	7	23	propose to learn
+25	24	31	Emo2Vec
+25	32	36	with
+25	39	68	multi-task learning framework
+25	69	81	by including
+25	82	119	six different emotion - related tasks
+2	11	54	Learning Generalized Emotion Representation
+115	30	38	Emo2 Vec
+115	39	56	works better than
+115	14	27	CNN embedding
+115	71	73	on
+115	74	90	14 / 18 datasets
+115	93	99	giving
+115	100	135	2.6 % absolute accuracy improvement
+115	136	139	for
+115	144	158	sentiment task
+115	163	197	1.6 % absolute f1score improvement
+115	71	73	on
+115	205	216	other tasks
+117	30	47	works much better
+117	48	50	on
+117	51	63	all datasets
+117	64	70	except
+117	71	86	SS - T datasets
+117	48	50	on
+117	176	201	sentiment and other tasks
+117	95	100	gives
+117	101	127	3.3 % accuracy improvement
+117	132	159	4.7 % f 1 score improvement
+124	18	32	not trained by
+124	33	60	predicting contextual words
+124	15	17	is
+124	69	73	weak
+124	74	86	on capturing
+124	87	117	synthetic and semantic meaning
+134	4	12	achieves
+134	13	32	better performances
+134	33	35	on
+134	36	48	SOTA results
+134	33	35	on
+134	52	102	three datasets ( SE0714 , stress and tube tablet )
+134	107	124	comparable result
+134	125	127	to
+134	36	40	SOTA
+134	33	35	on
+134	58	65	dataset
+116	3	8	shows
+116	9	28	multi-task training
+116	29	44	helps to create
+116	45	92	better generalized word emotion representations
+116	93	108	than just using
+116	111	122	single task
+121	16	21	gives
+121	22	39	1.3 % improvement
+121	40	42	in
+121	43	51	accuracy
+121	52	55	for
+121	60	74	sentiment task
+121	79	96	1.1 % improvement
+121	97	99	of
+121	100	111	f 1 - score
+121	112	114	on
+121	119	130	other tasks
+128	33	45	solely using
+128	48	65	simple classifier
+128	66	70	with
+128	71	95	good word representation
+128	96	107	can achieve
+128	108	125	promising results
+131	0	13	Compared with
+132	4	12	achieves
+132	13	35	same or better results
+132	36	38	on
+132	39	55	11 / 14 datasets
+132	64	80	on average gives
+132	81	98	1.0 % improvement
+138	7	16	to detect
+138	21	42	corresponding emotion
+138	45	79	more attention needs to be paid to
+138	80	85	words

@@ -1,0 +1,102 @@
+129	26	42	HSLN - CNN model
+129	54	80	suffers a little more from
+129	85	102	component removal
+129	103	107	than
+129	112	128	HSLN - RNN model
+132	29	92	dropout regularization and attention - based pooling components
+132	96	102	add to
+132	103	113	our system
+132	123	138	further improve
+132	143	148	model
+132	78	80	in
+132	154	168	limited extent
+130	0	4	When
+130	9	32	context enriching layer
+130	33	35	is
+130	36	43	removed
+130	46	57	both models
+130	58	68	experience
+130	73	106	most significant performance drop
+130	123	134	on par with
+130	139	175	previous stateof - the - art results
+131	14	26	even without
+131	31	64	label sequence optimization layer
+131	67	76	our model
+131	83	108	significantly outperforms
+131	113	135	best published methods
+131	145	157	empowered by
+131	158	168	this layer
+110	4	20	token embeddings
+110	26	40	pre-trained on
+110	43	55	large corpus
+110	56	65	combining
+110	66	100	Wikipedia , PubMed , and PMC texts
+110	131	136	using
+110	141	154	word2vec tool
+116	4	17	learning rate
+116	21	34	initially set
+116	38	43	0.003
+116	48	58	decayed by
+116	59	62	0.9
+116	63	68	after
+116	69	79	each epoch
+121	4	16	window sizes
+121	17	19	of
+121	24	35	CNN encoder
+121	5	7	in
+121	43	66	sentence encoding layer
+121	67	70	are
+121	71	86	2 , 3 , 4 and 5
+111	9	21	fixed during
+111	26	40	training phase
+111	41	49	to avoid
+111	50	62	over-fitting
+115	13	26	trained using
+115	31	55	Adam optimization method
+117	0	3	For
+117	4	18	regularization
+117	21	28	dropout
+117	61	71	applied to
+117	72	82	each layer
+119	24	31	adopted
+119	36	43	dropout
+119	44	48	with
+119	49	84	expectation - linear regularization
+119	99	120	to explicitly control
+119	125	138	inference gap
+119	148	155	improve
+119	160	189	generaliza - tion performance
+120	21	34	optimized via
+120	35	46	grid search
+120	47	55	based on
+120	60	74	validation set
+21	18	25	present
+21	28	61	hierarchical neural network model
+21	62	65	for
+21	70	109	sequential sentence classification task
+21	121	125	call
+21	128	177	hierarchical sequential labeling network ( HSLN )
+22	10	20	first uses
+22	23	39	RNN or CNN layer
+22	40	62	to individually encode
+22	67	90	sentence representation
+22	91	95	from
+22	100	127	sequence of word embeddings
+22	16	20	uses
+22	140	163	another bi - LSTM layer
+22	167	180	take as input
+22	185	219	individual sentence representation
+22	224	230	output
+22	235	273	contextualized sentence representation
+22	276	293	subsequently uses
+22	296	342	single - hidden - layer feed - forward network
+22	343	355	to transform
+22	67	90	sentence representation
+22	40	42	to
+22	391	409	probability vector
+22	424	433	optimizes
+22	438	470	predicted label sequence jointly
+22	471	474	via
+22	477	486	CRF layer
+2	33	99	Sequential Sentence Classification in Medical Scientific Abstracts
+5	82	116	sequential sentence classification

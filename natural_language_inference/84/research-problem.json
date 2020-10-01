@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Learning representations for rare words", {"from sentence" : "Learning representations for rare words is a well - known challenge of natural language understanding , since the standard end - to - end supervised learning methods require many occurrences of each word to generalize well ."}],
+    ["COMPUTE WORD EMBEDDINGS ON THE FLY", {"from sentence" : "LEARNING TO COMPUTE WORD EMBEDDINGS ON THE FLY"}]
+  ]
+}

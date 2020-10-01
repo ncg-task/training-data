@@ -1,0 +1,33 @@
+{
+  "has" : {
+    "Model" : {
+      "push" : {
+        "multi-head attention" : {
+          "to" : "extreme",
+          "by building" : {
+            "word - by - word dimension - wise alignment tensor" : {
+              "call" : "interaction tensor"
+            }
+          },
+          "from sentence" : "In this work , we push the multi-head attention to a extreme by building a word - by - word dimension - wise alignment tensor which we call interaction tensor ."
+        }
+      },
+      "has" : {
+        "interaction tensor" : {
+          "encodes" : {
+            "high - order alignment relationship" : {
+              "between" : "sentences pair"
+            }
+          },
+          "from sentence" : "The interaction tensor encodes the high - order alignment relationship between sentences pair ."
+        }
+      },
+      "dub" : {
+        "general framework" : {
+          "as" : "Interactive Inference Network ( IIN )",
+          "from sentence" : "We dub the general framework as Interactive Inference Network ( IIN ) ."
+        }
+      }
+    }
+  }
+}

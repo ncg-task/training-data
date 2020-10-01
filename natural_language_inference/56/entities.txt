@@ -1,0 +1,135 @@
+81	50	105	github.com/rasmusbergpalm/recurrent-relationalnetworks.
+104	36	40	need
+104	43	78	single step of relational reasoning
+104	79	87	to solve
+104	88	106	all the bAbI tasks
+108	16	23	appears
+108	24	62	multiple steps of relational reasoning
+108	67	70	not
+108	71	80	important
+108	81	84	for
+108	89	101	bAbI dataset
+140	65	68	MLP
+140	69	85	perfectly solves
+140	90	114	non-relational questions
+140	140	161	single jump questions
+141	4	22	relational network
+141	23	29	solves
+141	34	58	non-relational questions
+141	59	69	as well as
+141	74	78	ones
+141	79	88	requiring
+141	91	102	single jump
+141	113	121	accuracy
+141	122	139	sharply drops off
+141	140	144	with
+141	145	155	more jumps
+145	0	6	Sudoku
+153	0	11	Our network
+153	12	21	learns to
+153	22	27	solve
+153	28	34	94.1 %
+153	35	37	of
+153	38	74	even the hardest 17 - givens Sudokus
+153	75	80	after
+153	81	89	32 steps
+172	12	23	outperforms
+172	24	48	loopy belief propagation
+172	51	55	with
+172	56	84	parallel and random messages
+172	85	92	passing
+172	93	100	updates
+173	22	57	version of loopy belief propagation
+173	58	83	modified specifically for
+173	84	91	solving
+173	92	99	Sudokus
+173	100	109	that uses
+173	110	119	250 steps
+176	11	21	outperform
+176	22	26	Park
+176	27	39	which treats
+176	44	50	Sudoku
+176	51	53	as
+176	56	65	9x9 image
+176	68	72	uses
+176	73	96	10 convolutional layers
+159	22	30	see that
+159	31	50	even simple Sudokus
+159	51	55	with
+159	56	65	33 givens
+159	66	73	require
+159	74	93	upwards of 10 steps
+159	82	84	of
+159	97	117	relational reasoning
+159	132	138	harder
+159	139	148	17 givens
+159	149	160	continue to
+159	161	168	improve
+159	174	179	after
+159	180	188	32 steps
+162	0	2	At
+162	3	11	64 steps
+162	16	24	accuracy
+162	25	28	for
+162	33	50	17 givens puzzles
+162	51	60	increases
+162	61	63	to
+162	64	70	96.6 %
+25	128	138	introduces
+25	141	159	composite function
+25	166	194	recurrent relational network
+25	0	26	Toward generally realizing
+25	31	38	ability
+25	39	67	to methodically reason about
+25	68	75	objects
+25	86	98	interactions
+25	99	103	over
+25	104	114	many steps
+26	3	9	serves
+26	15	32	modular component
+26	33	36	for
+26	37	69	many - step relational reasoning
+26	66	68	in
+26	73	119	end - to - end differentiable learning systems
+27	3	10	encodes
+27	15	31	inductive biases
+27	32	36	that
+27	41	48	objects
+27	63	68	world
+27	98	110	described by
+27	111	121	properties
+27	152	156	time
+27	173	179	affect
+27	180	190	each other
+27	263	275	invariant to
+27	152	156	time
+28	44	53	decompose
+28	56	64	function
+28	65	68	for
+28	69	89	relational reasoning
+28	90	94	into
+28	95	109	two components
+28	13	15	in
+28	82	84	as
+30	17	24	trained
+30	25	47	jointly end - to - end
+31	162	171	represent
+31	189	196	vectors
+31	35	62	relational reasoning module
+31	35	62	relational reasoning module
+31	63	73	implements
+31	77	86	interface
+31	92	103	operates on
+31	106	111	graph
+31	112	114	of
+31	115	139	nodes and directed edges
+31	142	147	where
+31	115	120	nodes
+31	162	176	represented by
+31	177	196	real valued vectors
+31	203	205	is
+31	206	220	differentiable
+42	0	29	Recurrent Relational Networks
+5	116	123	objects
+5	98	112	representation
+5	17	45	recurrent relational network

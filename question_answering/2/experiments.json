@@ -1,0 +1,411 @@
+{
+  "has" : {
+    "Experiments" : {
+      "In" : {
+        "Memex QA dataset" : {
+          "has" : {
+            "Baselines" : {
+              "has" : {
+                "Logistic Regression" : {
+                  "predicts" : {
+                    "answer" : {
+                      "with" : "concatenated image , question and metadata features"
+                    }
+                  },
+                  "from sentence" : "We implement the following methods as baselines : Logistic Regression predicts the answer with concatenated image , question and metadata features as reported in ."
+                },
+                "Embedding + LSTM" : {
+                  "utilizes" : {
+                    "word embeddings and character embeddings" : {
+                      "along with" : {
+                        "same visual embeddings" : {
+                          "used in" : "FVTA"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "Embedding + LSTM utilizes word embeddings and character embeddings , along with the same visual embeddings used in FVTA ."
+                },
+                "Embedding + LSTM + Concat" : {
+                  "concatenates" : {
+                    "last LSTM output" : {
+                      "from" : {
+                        "different modalities" : {
+                          "to produce" : "final output"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "Embedding + LSTM + Concat concatenates the last LSTM output from different modalities to produce the final output ."
+                },
+                "Classic Soft Attention" : {
+                  "uses" : {
+                    "classic one dimensional question - to - context attention" : {
+                      "to summarize" : {
+                        "context" : {
+                          "for" : "question answering"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "Classic Soft Attention uses classic one dimensional question - to - context attention to summarize context for question answering ."
+                },
+                "DMN +" : {
+                  "is" : {
+                    "improved dynamic memory networks" : {
+                      "which is one of" : {
+                        "representative architectures" : {
+                          "that achieve" : {
+                            "good performance" : {
+                              "on" : "VQA Task"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "DMN + is the improved dynamic memory networks , which is one of the representative architectures that achieve good performance on the VQA Task ."
+                },
+                "TGIF Temporal Attention" : {
+                  "is" : {
+                    "spatial - temporal reasoning network" : {
+                      "on" : "sequential animated image QA"
+                    }
+                  },
+                  "from sentence" : "TGIF Temporal Attention is a recently proposed spatial - temporal reasoning network on sequential animated image QA ."
+                }
+              }      
+            },
+            "Experimental setup" : {
+              "encode" : {
+                "GPS locations" : {
+                  "using" : "words"
+                },
+                "from sentence" : "We encode GPS locations using words ."
+              },
+              "has" : {
+                "questions , textual context and answers" : {
+                  "are" : {
+                    "tokenized" : {
+                      "using" : "Stanford word tokenizer"
+                    }
+                  },
+                  "from sentence" : "All questions , textual context and answers are tokenized using the Stanford word tokenizer ."
+                },
+                "bi-directional LSTM" : {
+                  "used for" : {
+                    "each modality" : {
+                      "to obtain" : "contextual representations"
+                    }
+                  },
+                  "from sentence" : "Then a bi-directional LSTM is used for each modality to obtain contextual representations ."
+                }
+              },
+              "use" : [
+                {"pre-trained Glo Ve word embeddings" : {
+                  "fixed during" : "training",
+                  "from sentence" : "We use pre-trained Glo Ve word embeddings , which is fixed during training ."
+                }},
+                {"linear transformation" : {
+                  "to compress" : {
+                    "image feature" : {
+                      "into" : "100 dimensional"
+                    }
+                  },
+                  "from sentence" : "We then use a linear transformation to compress the image feature into 100 dimensional ."
+                }},
+                "AdaDelta optimizer",
+                {"initial learning rate" : {"of" : {"0.5" : {"to train for" : {"200 epochs" : {"with" : {"dropout rate" : {"of" : "0.3"}}}}}}}, "from sentence" : "We use the AdaDelta optimizer and an initial learning rate of 0.5 to train for 200 epochs with a dropout rate of 0.3 .."}
+              ],
+              "For" : {
+                "image / video embedding" : {
+                  "extract" : {
+                    "fixed - size features" : {
+                      "using" : {
+                        "pre-trained CNN model" : {
+                          "name" : "Inception - ResNet",
+                          "by concatenating" : {
+                            "pool5 layer and classification layer 's output" : {
+                              "before" : "softmax"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "For image / video embedding , we extract fixed - size features using the pre-trained CNN model , Inception - ResNet , by concatenating the pool5 layer and classification layer 's output before softmax ."
+                }
+              },
+              "concatenate" : {
+                "output" : {
+                  "of" : {
+                    "both directions" : {
+                      "of" : {
+                        "LSTM" : {
+                          "for" : {
+                            "all media documents" : {
+                              "get" : {
+                                "question matrix Q" : {
+                                  "has" : "R 2 d M"
+                                },
+                                "context tensor H" : {
+                                  "has" : "R 2dV KN 6"
+                                }
+                              }                      
+                            }
+                          },
+                          "Given" : {
+                            "hidden state size" : {
+                              "of" : {
+                                "d" : {
+                                  "set to" : "50"
+                                }
+                              }
+                            }
+                          }                  
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "Given a hidden state size of d , which is set to 50 , we concatenate the output of both directions of the LSTM and get a question matrix Q ?
+        R 2 d M and context tensor H ?
+        R 2dV KN 6 for all media documents ."
+        
+                }
+              },
+              "reshape" : {
+                "context tensor" : {
+                  "into" : "H ? R 2 d T 6",
+                  "from sentence" : "We reshape the context tensor into H ? R 2 d T 6 ."
+                }
+              },
+              "To select" : {
+                "best hyperparameters" : {
+                  "randomly select" : {
+                    "20 %" : {
+                      "of" : {
+                        "official training set" : {
+                          "as" : "validation set"
+                        }
+                      }
+                    }
+                  }
+                },
+                "from sentence" : "To select the best hyperparmeters , we randomly select 20 % of the official training set as the validation set ."
+              }
+            },
+            "Results" : {
+              "has" : {
+                "FVTA" : {
+                  "outperforms" : {
+                    "other attention models" : {
+                      "on finding" : {
+                        "relevant photos" : {
+                          "for" : "question"
+                        }
+                      }
+                    },
+                    "from sentence" : "FVTA outperforms other attention models on finding the relevant photos for the question ."
+                  }
+                }
+              }
+            },            
+            "Ablation analysis" : {
+              "evaluate" : {
+                "FVTA attention mechanism" : {
+                  "first replace" : {
+                    "our kernel tensor" : {
+                      "with" : "simple cosine similarity function",
+                      "has" : {
+                        "Results" : {
+                          "show that" : {
+                            "standard cosine similarity" : {
+                              "inferior to" : "our similarity function"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "To evaluate the FVTA attention mechanism , we first replace our kernel tensor with simple cosine similarity function .
+        Results show that standard cosine similarity is inferior to our similarity function ."
+        
+                }
+              },
+              "For ablating" : {
+                "intra-sequence dependency" : {
+                  "use" : {
+                    "representations" : {
+                      "from" : {
+                        "last timestep" : {
+                          "of" : "each context document"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "For ablating intra-sequence dependency , we use the representations from the last timestep of each context document ."
+                },
+                "cross sequence interaction" : {
+                  "average" : {
+                    "all attended context representation" : {
+                      "from" : {
+                        "different modalities" : {
+                          "to get" : "final context vector"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "For ablating cross sequence interaction , we average all attended context representation from different modalities to get the final context vector ."
+                }
+              },
+              "has" : {
+                "Both aspects of correlation" : {
+                  "of" : "FVTA attention tensor",
+                  "contribute towards" : "model 's performance",
+                  "while" : {
+                    "intra-sequence dependency" : {
+                      "shows" : "more importance",
+                      "from sentence" : "Both aspects of correlation of the FVTA attention tensor contribute towards the model 's performance , while intra-sequence dependency shows more importance in this experiment ."
+                    }
+                  }
+                }        
+              },
+              "compare" : {
+                "effectiveness" : {
+                  "of" : {
+                    "context - aware question attention" : {
+                      "by removing" : "question attention",
+                      "use" : {
+                        "last timestep" : {
+                          "of" : {
+                            "LSTM output" : {
+                              "from" : "question",
+                              "as" : "question representation"
+                            }
+                          }
+                        }
+                      },
+                      "shows" : {
+                        "question attention" : {
+                          "provides" : "slight improvement"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "We compare the effectiveness of context - aware question attention by removing the question attention and use the last timestep of the LSTM output from the question as the question representation .
+        It shows the question attention provides slight improvement ."
+        
+                }
+              },
+              "train" : {
+                "FVTA without photos" : {
+                  "to see" : {
+                    "contribution" : {
+                      "of" : "visual information"
+                    }
+                  },
+                  "has" : {
+                    "result" : {
+                      "is" : "quite good"
+                    }
+                  },
+                  "from sentence" : "Finally , we train FVTA without photos to see the contribution of visual information .
+        The result is quite good but it is perhaps not surprising due to the language bias in the questions and answers of the dataset , which is not uncommon in VQA dataset and in Visual7W ."
+        
+                }
+              }
+            }
+          }
+        },
+        "MovieQA dataset" : {
+          "has" : {
+            "Experimental setup" : {
+              "implement" : {
+                "FVTA network" : {
+                  "for" : "Movie QA task",
+                  "with" : {
+                    "modality number" : {
+                      "of" : "2 ( video & text )"
+                    }
+                  },
+                  "from sentence" : "We implement FVTA network for Movie QA task with modality number of 2 ( video & text ) ."
+                }
+              },
+              "set" : {
+                "maximum number of movie clips per question" : {
+                  "to" : "N = 20"
+                },
+                "maximum number of frames to consider" : {
+                  "to" : "F = 10"
+                },
+                "maximum number of subtitle sentences in a clip" : {
+                  "to" : "K = 100"
+                },
+                "maximum words" : {
+                  "to" : "V = 10"
+                },
+                "from sentence" : "We set the maximum number of movie clips per question to N = 20 , the maximum number of frames to consider to F = 10 , the maximum number of subtitle sentences in a clip to K = 100 and the maximum words to V = 10 ."
+              },
+              "use" : {
+                "AdaDelta optimizer" : {
+                  "with" : {
+                    "minibatch" : {
+                      "of" : "16"
+                    },
+                    "initial learning rate" : {
+                      "of" : "0.5",
+                      "trained for" : "300 epochs"
+                    }
+                  },
+                  "from sentence" : "We use the AdaDelta optimizer with a minibatch of 16 and an initial learning rate of 0.5 to trained for 300 epochs ."
+                }
+              }
+            },
+            "Results" : {
+              "has" : {
+                "FVTA model" : {
+                  "outperforms" : "all baseline methods",
+                  "achieves" : {
+                    "comparable performance" : {
+                      "to" : {
+                        "state - of - the - art result" : {
+                          "on" : "MovieQA test server"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "FVTA model outperforms all baseline methods and achieves comparable performance to the state - of - the - art result 2 on the MovieQA test server ."
+                },
+                "accuracy" : {
+                  "is" : {
+                    "0.410" : {
+                      "vs" : {
+                        "0.387" : {
+                          "by" : "RWMN"
+                        }
+                      },
+                      "on" : "validation set"                      
+                    },
+                    "0.373" : {
+                      "vs" : "0.363",
+                      "on" : "test set",
+                      "from sentence" : "Our accuracy is 0.410 ( vs 0.387 by RWMN ) on the validation set and 0.373 ( vs 0.363 ) on the test set ."
+                    }
+                  }
+                },
+                "FVTA" : {
+                  "consistently outperforms" : {
+                    "classical attention models" : {
+                      "including" : ["soft attention", "MCB", "TGIF"]
+                    }
+                  },
+                  "from sentence" : "Benefiting from such modeling ability , FVTA consistently outperforms the classical attention models including soft attention , MCB and TGIF ."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

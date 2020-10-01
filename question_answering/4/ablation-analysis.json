@@ -1,0 +1,44 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "on" : ["New s QA development set", {"from sentence" : "We conduct an ablation study on the New s QA development set ."}],
+      "observe" : {
+        "significant gap" : {
+          "in" : {
+            "performance" : {
+              "between" : "DECAPROP and R - NET"
+            }
+          },
+          "from sentence" : "Finally , in ( 8 - 9 ) , we varied the FM with linear and nonlinear feed - forward layers . From ( 1 ) , we observe a significant gap in performance between DECAPROP and R - NET ."
+        },
+        "superiority" : {
+          "of" : {
+            "DECAPROP" : {
+              "over" : "R - NET",
+              "is" : "consistent and relatively stable"
+            }
+          },
+          "from sentence" : "We observe that the superiority of DECAPROP over R - NET is consistent and relatively stable ."
+        }
+      },
+      "has" : {
+        "key insight" : {
+          "is" : {
+            "all model components" : {
+              "are crucial to" : "DECAPROP",
+              "from sentence" : "Overall , the key insight is that all model components are crucial to DECAPROP ."
+            }
+          }
+        },
+        "DECAENC" : {
+          "seems to contribute" : {
+            "most" : {
+              "to" : "overall performance"
+            },
+            "from sentence" : "Notably , the DECAENC seems to contribute the most to the overall performance ."
+          }
+        }
+      }
+    }
+  }
+}

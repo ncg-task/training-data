@@ -1,0 +1,142 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "TD - LSTM model" : {
+          "shown to be better than" : "LSTM",
+          "gets" : {
+            "worst performance" : {
+              "of" : "all RNN based models"
+            }
+          },
+          "has" : {
+            "accuracy" : {
+              "achieved by" : {
+                "TD - LSTM" : {
+                  "is" : {
+                    "2.94 % and 2.4 %" : {
+                      "lower than" : "Bi - LSTM"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "( 2 ) The TD - LSTM model , which has been shown to be better than LSTM , gets the worst performance of all RNN based models and the accuracy achieved by TD - LSTM is 2.94 % and 2.4 % lower than those by Bi - LSTM on the two datasets respectively ."
+        },
+        "Our method" : {
+          "achieves" : {
+            "accuracies" : {
+              "of" : {
+                "82.23 %" : {
+                  "as well as" : {
+                    "77 . 27 %" : {
+                      "on" : "Restaurant and Laptop dataset"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Our method achieves accuracies of 82.23 % as well as 77 . 27 % on the Restaurant and Laptop dataset respectively , which are 0.89 % and 2.03 % higher than the current best method ."
+        },
+        "Bi - GRU - PW" : {
+          "performs" : {
+            "even worse" : {
+              "than" : "Bi - GRU"
+            }
+          },
+          "from sentence" : "In addition , another observation is that Bi - GRU - PW performs even worse than Bi - GRU ."
+        },
+        "accuracy" : {
+          "achieved by" : {
+            "Bi - GRU - PW" : {
+              "is" : {
+                "0.72 %" : {
+                  "as well as" : {
+                    "1.41 %" : {
+                      "lower than" : {
+                        "Bi - GRU" : {
+                          "on" : " Restaurant and Laptop dataset"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "The accuracy achieved by Bi - GRU - PW is 0.72 % as well as 1.41 % lower than that by Bi - GRU on the Restaurant and Laptop dataset respectively ."
+          }
+        },
+        "HAPN" : {
+          "achieves" : {
+            "improvement" : {
+              "of" : {
+                "0.35 % and 0.78 %" : {
+                  "on" : "accuracy"
+                }
+              }
+            },
+            "from sentence" : "HAPN achieves improvement of 0.35 % and 0.78 % on accuracy respectively on the two dataset ."
+          }
+        },
+        "information fusion operation" : {
+          "used to" : {
+            "calculate" : {
+              "has" : "Source2context attention value"
+            },
+            "from sentence" : "( 1 ) The information fusion operation is only used to calculate the Source2context attention value ."
+          }
+        },
+        "output" : {
+          "of" : {
+            "Source2aspect attention" : {
+              "used for" : "information fusion"
+            }
+          },
+          "from sentence" : "The output of Source2aspect attention is only used for information fusion ."
+        },
+        "Bi - GRU - PE" : {
+          "achieving" : {
+            "accuracies" : {
+              "of" : {
+                "80.89 % and 76.02 %" : {
+                  "on" : "two datasets"
+                }
+              }
+            }
+          },
+          "from sentence" : "And the achieved model is \" Bi - GRU - PE \" reported in the , achieving the accuracies of 80.89 % and 76.02 % on the two datasets respectively , which are 1.34 % and 1.25 % lower than the proposed model ."
+        }
+      },
+      "Compared with" : {
+        "state - of - the - art methods" : {
+          "has" : {
+            "our model" : {
+              "achieves" : "best performance"
+            }
+          }
+        },
+        "from sentence" : "( 3 ) Compared with the state - of - the - art methods , our model achieves the best performance , which illustrates the effectiveness of the proposed approach ."
+      },
+      "introducing" : {
+        "position embeddings" : {
+          "has" : {
+            "accuracy" : {
+              "has an" : {
+                "increase" : {
+                  "of" : {
+                    "0.62 % and 2.67 %" : {
+                      "on" : "two datasets"
+                    }
+                  }
+                } 
+              }
+            }
+          },
+          "from sentence" : "After introducing the position embeddings , the accuracy has an increase of 0.62 % and 2.67 % on two datasets ."
+        }
+      }
+    }
+  }
+}

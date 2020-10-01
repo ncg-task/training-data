@@ -1,0 +1,43 @@
+{
+  "has" : {
+    "Results" : {
+      "on" : {
+        "two datasets" : {
+          "has" : {
+            "our model" : {
+              "achieves" : {
+                "advantages" : {
+                  "of" : {
+                    "ROUGE score" : {
+                      "over" : "baselines",
+                      "on" : {
+                        "LCSTS" : {
+                          "are" : "significant"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "In the experiments on the two datasets , our model achieves advantages of ROUGE score over the baselines , and the advantages of ROUGE score on the LCSTS are significant ."
+        }
+      },
+      "Compared with" : {
+        "conventional seq2seq model" : {
+          "owns an advantage" : {
+            "our model" : {
+              "of" : {
+                "ROUGE - 2 score 3.7 and 1.5" : {
+                  "on" : "LCSTS and Gigaword"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "Compared with the conventional seq2seq model , our model owns an advantage of ROUGE - 2 score 3.7 and 1.5 on the LCSTS and Gigaword respectively ."
+      }
+    }
+  }
+}

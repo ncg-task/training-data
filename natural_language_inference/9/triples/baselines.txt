@@ -1,0 +1,6 @@
+(Contribution||has||Baselines)
+(Baselines||include||LSTM)
+(Baselines||include||End - to - end Memory Networks ( N2N ))
+(Baselines||include||Dynamic Memory Networks ( DMN + ))
+(Baselines||include||Gated End - to - end Memory Networks ( GMe m N2N ))
+(Baselines||include||Differentiable Neural Computer ( DNC ))

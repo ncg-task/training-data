@@ -1,0 +1,81 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "Knowledge - Enriched Transformer ( KET )" : {
+          "incorporate" : "contextual information and external knowledge bases",
+          "from sentence" : "To this end , we propose a Knowledge - Enriched Transformer ( KET ) to effectively incorporate contextual information and external knowledge bases to address the aforementioned challenges ."
+        },
+        "hierarchical self - attention mechanism" : {
+          "allowing" : {
+            "KET" : {
+              "to model" : "hierarchical structure of conversations"
+            }
+          },
+          "from sentence" : "In addition , we propose a hierarchical self - attention mechanism allowing KET to model the hierarchical structure of conversations ."
+        }
+      },
+      "has" : {
+        "Transformer" : {
+          "has" : {
+            "self - attention and cross-attention modules" : {
+              "capture" : "intra-sentence and inter-sentence correlations",
+              "has" : {
+                "shorter path" : {
+                  "of" : {
+                    "information flow" : {
+                      "allows" : {
+                        "KET" : {
+                          "to model" : "contextual information more efficiently"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "The self - attention and cross-attention modules in the Transformer capture the intra-sentence and inter-sentence correlations , respectively .
+The shorter path of information flow in these two modules compared to gated RNNs and CNNs allows KET to model contextual information more efficiently ."
+
+            }
+          }
+        }
+      },
+      "separates" : {
+        "context and response" : {
+          "into" : "encoder and decoder",
+          "from sentence" : "Our model separates context and response into the encoder and decoder , respectively , which is different from other Transformer - based models , e.g. , BERT , which directly concatenate context and response , and then train language models using only the encoder part ."
+        }
+      },
+      "exploit" : {
+        "commonsense knowledge" : {
+          "leverage" : {
+            "external knowledge bases" : {
+              "to facilitate" : {
+                "understanding of each word" : {
+                  "in" : "utterances",
+                  "by referring to" : "related knowledge entities"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "Moreover , to exploit commonsense knowledge , we leverage external knowledge bases to facilitate the understanding of each word in the utterances by referring to related knowledge entities ."
+      },
+      "has" : {
+        "referring process" : {
+          "is" : "dynamic",
+          "balances between" : {
+            "relatedness and affectiveness" : {
+              "of" : {
+                "retrieved knowledge entities" : {
+                  "using" : "context - aware affective graph attention mechanism"
+                }
+              }
+            }
+          },
+          "from sentence" : "The referring process is dynamic and balances between relatedness and affectiveness of the retrieved knowledge entities using a context - aware affective graph attention mechanism ."
+        }
+      }
+    }
+  }
+}

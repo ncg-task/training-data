@@ -1,0 +1,56 @@
+{
+  "has" : {
+    "Model" : {
+      "identify" : {
+        "attention scoring function" : {
+          "utilizing" : {
+            "all layers" : {
+              "of" : "representation",
+              "with" : "less training burden"
+            }
+          },
+          "from sentence" : "To alleviate this challenge , we identify an attention scoring function utilizing all layers of representation with less training burden ."
+        }
+      },
+      "leads to" : {
+        "attention" : {
+          "thoroughly captures" : {
+            "complete information" : {
+              "between" : "question and the context"
+            }
+          },
+          "from sentence" : "This leads to an attention that thoroughly captures the complete information between the question and the context ."
+        }
+      },
+      "With" : {
+        "fully - aware attention" : {
+          "put forward" : {
+            "multi -level attention mechanism" : {
+              "to understand" : {
+                "information" : {
+                  "in" : "question",
+                  "exploit it" : {
+                    "layer by layer" : {
+                      "on" : "context side"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "With this fully - aware attention , we put forward a multi -level attention mechanism to understand the information in the question , and exploit it layer by layer on the context side ."
+        }
+      },
+      "has" : {
+        "innovations" : {
+          "integrated into" : {
+            "new end - to - end structure" : {
+              "called" : "FusionNet"
+            }
+          },
+          "from sentence" : "All of these innovations are integrated into a new end - to - end structure called FusionNet in , with details described in Section 3 ."
+        }
+      }
+    }
+  }
+}

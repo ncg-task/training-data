@@ -1,0 +1,43 @@
+{
+  "has" : {
+    "Results" : {
+      "adding" : {
+        "CRF layer" : {
+          "for" : "joint decoding",
+          "achieve" : {
+            "significant improvements" : {
+              "over" : "BLSTM - CNN models",
+              "for" : "POS tagging and NER"
+            }
+          },
+          "from sentence" : "Finally , by adding CRF layer for joint decoding we achieve significant improvements over BLSTM - CNN models for both POS tagging and NER on all metrics ."
+        }
+      },
+      "Comparing with" : {
+        "traditional statistical models" : {
+          "has" : {
+            "our system" : {
+              "achieves" : "state - of - the - art accuracy",
+              "obtaining" : {
+                "0.05 % improvement" : {
+                  "over" : "previously best reported results"
+                }
+              }
+            }
+          },
+          "from sentence" : "Comparing with traditional statistical models , our system achieves state - of - the - art accuracy , obtaining 0.05 % improvement over the previously best reported results by ."
+        }
+      },
+      "has" : {
+        "our model" : {
+          "achieves" : {
+            "significant improvements" : {
+              "over" : ["Senna", "other three neural models"],
+              "from sentence" : "Similar to the observations of POS tagging , our model achieves significant improvements over Senna and the other three neural models , namely the LSTM - CRF proposed by , LSTM - CNNs pro- :"
+            }
+          }
+        }
+      }
+    }
+  }
+}

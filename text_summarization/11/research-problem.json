@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Abstractive Summarization", {"from sentence" : "Global Encoding for Abstractive Summarization"}],
+    ["neural abstractive summarization", {"from sentence" : "Therefore , sequence - to - sequence learning can be applied to neural abstractive summarization , whose model consists of an encoder and a decoder ."}]
+  ]
+}
+

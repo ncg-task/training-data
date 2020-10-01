@@ -1,0 +1,17 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "Baselines" : {
+          "perform" : ["reasonably well", {"much better" : {"than" : "random baseline"}}, {"from sentence" : "The baselines in perform reasonably well and much better than the random baseline , but none of them match human performance on either dataset ."}],
+          "has" : {
+            "clear scope" : {
+              "for" : ["improvement", "machine learning methods"],
+              "from sentence" : "There is clear scope for improvement for machine learning methods , starting with the use of context provided to make better decisions about sarcasm ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

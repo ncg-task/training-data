@@ -1,0 +1,9 @@
+{
+  "has research problem" : [
+    ["Multi- Domain Inference", {"from sentence" : "Shortcut - Stacked Sentence Encoders for Multi- Domain Inference"}],
+    ["multi-domain natural language inference", {"from sentence" : "We present a simple sequential sentence encoder for multi-domain natural language inference ."}],
+    ["Natural language inference ( NLI )", {"from sentence" : "Natural language inference ( NLI ) or recognizing textual entailment ( RTE ) is a fundamental semantic task in the field of natural language processing ."}],
+    ["recognizing textual entailment ( RTE )", {"from sentence" : "Natural language inference ( NLI ) or recognizing textual entailment ( RTE ) is a fundamental semantic task in the field of natural language processing ."}],
+    ["Multi - NLI", {"from sentence" : "In this paper , we follow the former approach of encoding - based models , and propose a novel yet simple sequential sentence encoder for the Multi - NLI problem ."}]
+  ]
+}

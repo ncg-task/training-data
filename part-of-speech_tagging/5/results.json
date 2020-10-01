@@ -1,0 +1,43 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "Part - of - Speech Tagging Results" : {
+          "has" : {
+            "Our model" : {
+              "has" : {
+                "outperforms" : {
+                  "in" : {
+                    "32" : {
+                      "of" : "54 treebanks"
+                    }
+                  },
+                  "with" : "13 ties"
+                },
+                "from sentence" : "Our model outperforms in 32 of the 54 treebanks with 13 ties ."            
+              },
+              "produce" : {
+                "better results" : {
+                  "especially for" : "morphologically rich languages",
+                  "from sentence" : "Our model tends to produce better results , especially for morphologically rich languages ( e.g. Slavic"
+                }
+              }
+            }
+          }          
+        },
+        "Morphological Tagging Results" : {
+          "has" : {
+            "Our models" : {
+              "produce" : {
+                "significantly better results" : {
+                  "than" : "winners of the CoNLL 2017 Shared Task"
+                }
+              },
+              "from sentence" : "Our models tend to produce significantly better results than the winners of the CoNLL 2017 Shared Task ( i.e. , 1.8 % absolute improvement on average , corresponding to a RRIE of 21.20 % ) ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

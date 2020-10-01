@@ -1,0 +1,187 @@
+179	0	8	Majority
+179	9	11	is
+179	16	30	basic baseline
+179	39	46	chooses
+179	51	77	largest sentiment polarity
+179	27	29	in
+179	85	97	training set
+179	98	105	to each
+179	106	114	instance
+179	27	29	in
+179	122	130	test set
+180	0	6	MemNet
+180	7	13	applys
+180	14	34	multi-hop attentions
+180	31	33	on
+180	42	57	word embeddings
+180	60	66	learns
+180	71	88	attention weights
+180	31	33	on
+180	92	112	context word vectors
+180	113	128	with respect to
+180	133	154	averaged query vector
+181	0	3	IAN
+181	4	24	interactively learns
+181	29	56	coarse - grained attentions
+181	57	64	between
+181	69	87	context and aspect
+181	94	105	concatenate
+181	110	117	vectors
+181	118	121	for
+181	122	132	prediction
+182	0	15	BILSTM - ATT -G
+182	41	47	models
+182	48	70	left and right context
+182	71	75	with
+182	76	103	two attention - based LSTMs
+182	108	116	utilizes
+182	117	122	gates
+182	123	133	to control
+182	138	148	importance
+182	149	151	of
+182	152	164	left context
+182	57	70	right context
+182	189	204	entire sentence
+182	205	208	for
+182	209	219	prediction
+183	0	3	RAM
+183	4	10	learns
+183	11	31	multi-hop attentions
+183	28	30	on
+183	39	52	hidden states
+183	53	55	of
+183	56	83	bidirectional LSTM networks
+183	84	87	for
+183	88	101	context words
+183	108	123	proposes to use
+183	124	135	GRU network
+183	136	142	to get
+183	147	164	aggregated vector
+183	165	169	from
+183	21	31	attentions
+186	0	8	MGAN - C
+186	14	21	employs
+186	26	53	coarse - grained attentions
+186	54	57	for
+186	58	68	prediction
+187	0	8	MGAN - F
+187	14	22	utilizes
+187	27	61	proposed fine - grained attentions
+187	62	65	for
+187	66	76	prediction
+188	0	9	MGAN - CF
+188	10	21	adopts both
+188	26	72	coarse - grained and fine - grained attentions
+189	0	4	MGAN
+189	5	7	is
+189	12	58	complete multi-grained attention network model
+171	21	36	word embeddings
+171	37	45	for both
+171	46	70	context and aspect words
+171	75	89	initialized by
+171	90	95	Glove
+172	4	13	dimension
+172	14	16	of
+172	17	35	word embedding d v
+172	40	52	hidden state
+173	0	6	set to
+173	7	10	300
+174	4	26	weight matrix and bias
+174	27	30	are
+174	31	42	initialized
+174	43	45	by
+174	46	54	sampling
+174	55	59	from
+174	62	100	uniform distribution U ( 0.01 , 0.01 )
+175	4	15	coefficient
+175	18	20	of
+175	21	39	L 2 regularization
+175	45	47	is
+175	48	54	10 ? 5
+176	46	52	set to
+176	53	56	0.5
+29	19	26	propose
+29	29	61	multi -grained attention network
+30	28	62	fine - grained attention mechanism
+30	133	148	to characterize
+30	153	178	word - level interactions
+30	179	186	between
+30	187	211	aspect and context words
+30	218	225	relieve
+30	230	246	information loss
+30	247	258	occurred in
+30	259	295	coarse - grained attention mechanism
+31	17	24	utilize
+31	29	66	bidirectional coarsegrained attention
+31	121	138	combine them with
+31	139	168	finegrained attention vectors
+31	169	179	to compose
+31	184	214	multigrained attention network
+31	215	218	for
+31	223	258	final sentiment polarity prediction
+32	28	42	to make use of
+32	47	94	valuable aspect - level interaction information
+32	100	106	design
+32	110	131	aspect alignment loss
+32	19	21	in
+32	139	157	objective function
+32	158	168	to enhance
+32	173	183	difference
+32	40	42	of
+32	191	208	attention weights
+32	209	216	towards
+32	221	228	aspects
+32	229	239	which have
+32	244	256	same context
+32	261	291	different sentiment polarities
+2	38	77	Aspect - Level Sentiment Classification
+4	70	107	aspect level sentiment classification
+193	6	14	Majority
+193	15	23	performs
+193	24	29	worst
+195	11	15	MGAN
+195	16	27	outperforms
+195	28	54	Majority and Feature + SVM
+196	6	17	ATAE - LSTM
+196	18	20	is
+196	21	27	better
+196	28	32	than
+196	13	17	LSTM
+197	0	9	TD - LSTM
+197	10	18	performs
+197	19	34	slightly better
+197	35	39	than
+197	40	51	ATAE - LSTM
+198	19	24	worse
+198	25	29	than
+198	30	45	our method MGAN
+199	6	9	IAN
+199	10	18	achieves
+199	19	42	slightly better results
+199	43	47	with
+199	52	81	previous LSTM - based methods
+200	0	10	Our method
+200	11	32	consistently performs
+200	33	39	better
+200	40	44	than
+200	45	48	IAN
+202	0	16	BILSTM - ATT - G
+202	17	23	models
+202	24	54	left context and right context
+202	55	60	using
+202	61	84	attention - based LSTMs
+202	93	101	achieves
+202	102	120	better performance
+202	121	125	than
+202	126	132	MemNet
+203	0	3	RAM
+203	4	12	performs
+203	13	19	better
+203	20	24	than
+203	25	40	other baselines
+206	0	17	Our proposed MGAN
+206	18	39	consistently performs
+206	40	51	better than
+206	52	58	MemNet
+206	61	77	BILSTM - ATT - G
+206	82	85	RAM

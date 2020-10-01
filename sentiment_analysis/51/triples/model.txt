@@ -1,0 +1,4 @@
+(Contribution||has||Model)
+(Model||use||pretrained BERT model)
+(pretrained BERT model||finetune it for||fine - grained sentiment classification task)
+(fine - grained sentiment classification task||on||Stanford Sentiment Treebank ( SST ) dataset)

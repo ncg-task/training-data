@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Deep Semantic Role Labeling", {"from sentence" : "Deep Semantic Role Labeling : What Works and What 's Next"}],
+    ["semantic role labeling ( SRL )", {"from sentence" : "We introduce a new deep learning model for semantic role labeling ( SRL ) that significantly improves the state of the art , along with detailed analyses to reveal its strengths and limitations ."}],
+    ["SRL", {"from sentence" : "Recently breakthroughs involving end - to - end deep models for SRL without syntactic input seem to overturn the long - held belief that syntactic parsing is a prerequisite for this task ."}]
+  ]
+}

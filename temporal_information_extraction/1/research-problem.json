@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Temporal Relation Extraction", {"from sentence" : "A Structured Learning Approach to Temporal Relation Extraction"}],
+    ["Identifying temporal relations between events", {"from sentence" : "Identifying temporal relations between events is an essential step towards natural language understanding ."}],
+    ["temporal processing", {"from sentence" : "The fundamental tasks in temporal processing , as identified in the TE workshops , are 1 ) time expression ( the so - called \" timex \" ) extraction and normalization and 2 ) temporal relation ( also known as TLINKs ) extraction ."}]
+  ]
+}

@@ -1,0 +1,5 @@
+(Contribution||has||Baselines)
+(Baselines||has||random token generation)
+(Baselines||has||MLE trained LSTM G)
+(Baselines||has||scheduled sampling)
+(Baselines||has||Policy Gradient with BLEU ( PG - BLEU ))

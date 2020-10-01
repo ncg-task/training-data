@@ -1,0 +1,65 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "TD - LSTM"  : {
+          "uses" : {
+            "two LSTM networks" : {
+              "to model" : {
+                "preceding and following contexts" : {
+                  "surrounding" : "aspect term"
+                }
+              }
+            },
+            "from sentence" : "TD - LSTM uses two LSTM networks to model the preceding and following contexts surrounding the aspect term ."
+          }
+        },
+        "AT - LSTM" : {
+          "combines" : {
+            "sentence hidden states" : {
+              "from" : "LSTM",
+              "with" : {
+                "aspect term embedding" : {
+                  "to generate" : "attention vector"
+                }
+              }
+            }
+          },
+          "from sentence" : "AT - LSTM combines the sentence hidden states from a LSTM with the aspect term embedding to generate the attention vector ."
+        },
+        "ATAE - LSTM" : {
+          "extends" : {
+            "AT - LSTM" : {
+              "by appending" : {
+                "aspect embedding" : {
+                  "into" : "each word vector"
+                }
+              }
+            }
+          },
+          "from sentence" : "ATAE - LSTM further extends AT - LSTM by appending the aspect embedding into each word vector ."
+        },
+        "AF - LSTM" : {
+          "introduces" : {
+            "word - aspect fusion attention" : {
+              "to learn" : {
+                "associative relationships" : {
+                  "between" : "aspect and context words"
+                }
+              }
+            }
+          },
+          "from sentence" : "AF - LSTM introduces a word - aspect fusion attention to learn associative relationships between aspect and context words ."
+        },
+        "CNN" : {
+          "uses" : {
+            "architecture" : {
+              "without explicitly considering" : "aspect"
+            }
+          },
+          "from sentence" : "CNN uses the architecture proposed in without explicitly considering aspect ."
+        }
+      }
+    }
+  }
+}

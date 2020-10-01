@@ -1,0 +1,166 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "Comparison with Non - Transfer" : {
+          "has" : {
+            "MGAN" : {
+              "consistently outperforms" : {
+                "MGAN w / o C2 F" : {
+                  "where" : {
+                    "C2F module" : {
+                      "of" : "source network",
+                      "is" : "removed"
+                    },
+                    "source position information" : {
+                      "is" : {
+                        "missed" : {
+                          "by" : {
+                            "1.41 % , 1.03 % , 1.09 %" : {
+                              "for" : "accuracy"
+                            },
+                            "1.79 % , 3.62 % and 1.16 %" : {
+                              "for" : "Macro - F1"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "( 2 ) MGAN consistently outperforms the MGAN w / o C2 F , where C2F module of the source network is removed and the source position information is missed ( we set all p s i to 1 ) , by 1.41 % , 1.03 % , 1.09 % for accuracy and 1.79 % , 3.62 % and 1.16 % for Macro - F1 on average ."
+                }  
+              }
+            },
+            "MGAN w / o PI" : {
+              "does not utilize" : "position information",
+              "performs" : "very poorly",
+              "from sentence" : "The MGAN w / o PI , which does not utilize the position information , performs very poorly ."
+            }
+          }
+        },
+        "Comparison with Transfer" : {
+          "has" : {
+            "SO" : {
+              "performs" : "poorly",
+              "from sentence" : "SO performs poorly due to no adaptation applied ."
+            },
+            "popular technique FT" : {
+              "can not achieve" : "satisfactory results",
+              "from sentence" : "The popular technique FT can not achieve satisfactory results since fine - tuning may cause the oblivion of useful knowledge from the source task ."
+            },
+            "full model MGAN" : {
+              "outperforms" : {
+                "M - DAN and M - MMD" : {
+                  "by" : {
+                    "1.80 % and 1.33 %" : {
+                      "for" : "accuracy"
+                    },
+                    "1.90 % and 1.66 %" : {
+                      "for" : "Marco - F1 on average"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "The full model MGAN outperforms M - DAN and M - MMD by 1.80 % and 1.33 % for accuracy and 1.90 % and 1.66 % for Marco - F1 on average , respectively ."
+            },
+            "MGAN" : {
+              "considers both of them in" : {
+                "point - wise surrogate" : {
+                  "improves" : {
+                    "performance" : {
+                      "of" : "our method"
+                    }
+                  }
+                },
+                "from sentence" : "Remarkably , MGAN considers both of them in a point - wise surrogate , which altogether improves the performance of our method ."
+              },
+              "outperforms" : {
+                "ablation MGAN w/ o SS" : {
+                  "removing" : {
+                    "semantic separation loss" : {
+                      "of" : {
+                        "CFA" : {
+                          "by" : {
+                            "0.81 %" : {
+                              "for" : "accuracy"
+                            },
+                            "1.00 %" : {
+                              "for" : "Macro - F1 on average"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "from sentence" : "Besides , MGAN outperforms its ablation MGAN w/ o SS removing the semantic separation loss of the CFA by 0.81 % for accuracy and 1.00 % for Macro - F1 on average , which implies that the semantic separation plays an important role in alleviating false alignment ."
+              }
+            }
+          }
+        },
+        "Effect of C2F Attention Module" : {
+          "has" : {
+            "MGAN" : {
+              "compared with" : {
+                "MGAN w / o C2F" : {
+                  "locates" : "wrong sentiment contexts"
+                }
+              },
+              "uses" : {
+                "C2F" : {
+                  "to capture" : {
+                    "more specific aspect terms" : {
+                      "from" : {
+                        "context" : {
+                          "towards" : "aspect category"
+                        }
+                      },
+                      "helps" : {
+                        "source task" : {
+                          "capture" : {
+                            "more fine - grained semantics" : {
+                              "of" : "aspect category"
+                            },
+                            "detailed position information" : {
+                              "like" : "target task"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Then , compared with MGAN w / o C2F , MGAN further uses C2F to capture more specific aspect terms from the context towards the aspect category , such as \" shells \" to food seafood sea , which helps the source task capture more fine - grained semantics of aspect category and detailed position information like the target task , such that the sentiment attention can be positionaware and identify more relevant sentiment features towards the aspect .
+While MGAN w / o C2F locates wrong sentiment contexts and fails in ( c ) ."
+
+            }
+          },
+          "benefited from" : {
+            "distilled knowledge" : {
+              "from" : "source task",
+              "has" : {
+                "MGAN" : {
+                  "can better model" : {
+                    "complicated relatedness" : {
+                      "between" : {
+                        "context and aspect term" : {
+                          "for" : "target domain L"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "As such , benefited from distilled knowledge from the source task , MGAN can better model the complicated relatedness between the context and aspect term for the target domain L , but MGAN w / o C2F performs poorly though it make true predictions in ( d ) and ( e ) ."
+                },
+                "MGAN w / o C2F" : {
+                  "performs" : "poorly",
+                  "from sentence" : "As such , benefited from distilled knowledge from the source task , MGAN can better model the complicated relatedness between the context and aspect term for the target domain L , but MGAN w / o C2F performs poorly though it make true predictions in ( d ) and ( e ) ."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

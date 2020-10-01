@@ -1,0 +1,189 @@
+239	4	28	1 - layer linear setting
+239	29	37	performs
+239	42	46	best
+240	0	5	Using
+240	6	10	ReLU
+240	11	22	seems to be
+240	23	28	worse
+240	29	33	than
+240	34	53	nonlinear FC layers
+243	8	15	explore
+243	20	27	utility
+243	28	36	of using
+243	37	71	character and syntactic embeddings
+243	83	91	found to
+243	97	103	helped
+243	104	108	CAFE
+244	14	20	remove
+244	25	59	inter-attention alignment features
+244	68	84	naturally impact
+244	89	106	model performance
+244	107	120	significantly
+246	3	10	observe
+246	16	35	both highway layers
+246	36	40	have
+246	41	58	marginally helped
+246	63	82	overall performance
+248	20	47	Sub and Concat compositions
+248	48	52	were
+248	53	67	more important
+248	68	72	than
+248	77	92	Mul composition
+250	25	32	replace
+250	37	49	LSTM encoder
+250	50	54	with
+250	57	63	BiLSTM
+250	66	75	observing
+250	81	105	adding bi-directionality
+250	106	121	did not improve
+250	122	133	performance
+250	125	128	for
+250	138	147	our model
+192	3	12	implement
+192	13	22	our model
+192	23	25	in
+192	26	36	TensorFlow
+192	41	54	train them on
+192	55	71	Nvidia P100 GPUs
+193	3	6	use
+193	11	25	Adam optimizer
+193	51	55	with
+193	59	80	initial learning rate
+193	81	83	of
+193	84	90	0.0003
+194	0	17	L2 regularization
+194	21	27	set to
+194	28	33	10 ?6
+195	0	7	Dropout
+195	8	12	with
+195	15	31	keep probability
+195	32	34	of
+195	35	38	0.8
+195	42	55	applied after
+195	56	104	each fullyconnected , recurrent or highway layer
+196	4	14	batch size
+196	18	31	tuned amongst
+196	32	51	{ 128 , 256 , 512 }
+197	4	30	number of latent factors k
+197	31	34	for
+197	39	58	factorization layer
+197	62	75	tuned amongst
+197	76	103	{ 5 , 10 , 50 , 100 , 150 }
+198	4	8	size
+198	9	11	of
+198	16	29	hidden layers
+198	9	11	of
+198	37	59	highway network layers
+198	64	70	set to
+198	71	74	300
+199	4	14	parameters
+199	19	35	initialized with
+199	36	57	xavier initialization
+200	0	15	Word embeddings
+200	20	34	preloaded with
+200	35	57	300d Glo Ve embeddings
+200	62	74	fixed during
+200	75	83	training
+201	0	16	Sequence lengths
+201	21	30	padded to
+201	31	51	batch - wise maximum
+202	4	15	batch order
+202	19	45	( randomly ) sorted within
+202	46	53	buckets
+26	10	38	several new novel components
+29	5	26	scalar valued feature
+29	30	37	used to
+29	38	45	augment
+29	50	74	base word representation
+27	13	20	propose
+27	23	81	compare , compress and propagate ( Com Prop ) architecture
+27	88	117	compressed alignment features
+27	122	135	propagated to
+27	136	148	upper layers
+27	151	158	such as
+27	161	180	RNN - based encoder
+27	183	196	for enhancing
+27	197	220	representation learning
+28	23	30	achieve
+28	34	55	efficient propagation
+28	56	58	of
+28	59	77	alignment features
+28	83	90	propose
+28	91	121	alignment factorization layers
+28	122	131	to reduce
+28	132	153	each alignment vector
+28	20	22	to
+28	159	187	single scalar valued feature
+2	99	125	Natural Language Inference
+4	57	91	Natural Language Inference ( NLI )
+14	51	54	NLI
+204	28	30	on
+204	35	49	SNLI benchmark
+205	0	2	On
+205	7	46	cross sentence ( single model setting )
+205	53	64	performance
+205	65	67	of
+205	72	91	proposed CAFE model
+205	92	94	is
+205	95	116	extremely competitive
+207	0	4	CAFE
+207	5	12	obtains
+208	0	15	88.5 % accuracy
+208	16	18	on
+208	23	36	SNLI test set
+208	42	69	extremely competitive score
+210	24	32	achieves
+210	33	64	88.3 % and 88.1 % test accuracy
+210	65	69	with
+210	70	101	only 3.5 M and 1.5 M parameters
+214	47	58	CAFE + ELMo
+214	130	138	achieves
+214	139	149	89.0 score
+214	17	19	on
+214	153	157	SNLI
+216	5	16	outperforms
+216	21	61	state - of - theart ESIM and DIIN models
+216	62	66	with
+216	74	82	fraction
+216	29	31	of
+216	90	104	parameter cost
+218	15	37	lightweight adaptation
+218	38	46	achieves
+218	47	53	87.7 %
+219	13	21	ensemble
+219	22	24	of
+219	25	38	5 CAFE models
+219	39	47	achieves
+219	48	68	89.3 % test accuracy
+219	75	91	best test scores
+228	3	11	MultiNLI
+228	14	18	CAFE
+228	19	44	significantly outperforms
+228	45	49	ESIM
+229	8	18	outperform
+229	23	40	ESIM + Read model
+230	3	26	ensemble of CAFE models
+230	27	34	achieve
+230	35	54	competitive re-sult
+231	0	2	On
+231	3	10	SciTail
+231	17	36	proposed CAFE model
+231	37	45	achieves
+231	46	80	state - of - the - art performance
+232	4	20	performance gain
+232	21	25	over
+232	26	42	strong baselines
+232	43	50	such as
+232	51	60	DecompAtt
+232	65	69	ESIM
+232	70	73	are
+233	0	11	10 % ? 13 %
+233	12	23	in terms of
+233	24	32	accuracy
+234	0	4	CAFE
+234	10	21	outperforms
+234	22	26	DGEM
+234	93	95	by
+234	98	116	significant margin
+234	117	119	of
+234	120	123	5 %

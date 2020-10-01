@@ -1,0 +1,94 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "preprocess" : {
+        "each passage and question" : {
+          "using" : "library of nltk"
+        },
+        "from sentence" : "We preprocess each passage and question using the library of nltk and exploit the popular pretrained word embedding GloVe with 100 - dimensional vectors ( Pennington , Socher , and Manning 2014 ) for both questions and passages ."
+      },
+      "exploit" : {
+        "popular pretrained word embedding GloVe" : {
+          "with" : "100 - dimensional vectors",
+          "for" : "questions and passages"
+        },
+        "from sentence" : "We preprocess each passage and question using the library of nltk and exploit the popular pretrained word embedding GloVe with 100 - dimensional vectors ( Pennington , Socher , and Manning 2014 ) for both questions and passages ."
+      },
+      "has" : {
+        "size" : {
+          "of" : {
+            "char - level embedding" : {
+              "obtained by" : "CNN filters"
+            }
+          },
+          "set as" : "100 - dimensional",
+          "from sentence" : "The size of char - level embedding is also set as 100 - dimensional and is obtained by CNN filters under the instruction of ( Kim 2014 ) ."
+        },
+        "batch size" : {
+          "set to be" : {
+            "48" : {
+              "for" : "SQuAD and TriviaQA datasets"
+            },
+            "from sentence" : "The batch size is set to be 48 for both the SQuAD and TriviaQA datasets ."
+          }
+        }
+      },
+      "adopt" : {
+        "AdaDelta ( Zeiler 2012 ) optimizer" : {
+          "for" : "training",
+          "with" : {
+            "initial learning rate" : {
+              "of" : "0.0005"
+            }
+          },
+          "from sentence" : "We adopt the AdaDelta ( Zeiler 2012 ) optimizer for training with an initial learning rate of 0.0005 ."
+        }
+      },
+      "apply" : {
+        "dropout ( Srivastava et al. 2014 )" : {
+          "between" : "layers",
+          "with" : {
+            "dropout rate" : {
+              "of" : "0.2"
+            }
+          },
+          "from sentence" : "We also apply dropout ( Srivastava et al. 2014 ) between layers with a dropout rate of 0.2 ."
+        }
+      },
+      "For" : {
+        "multi-hop reasoning" : {
+          "set" : {
+            "number of hops" : {
+              "as" : {
+                "2" : {
+                  "has" : {
+                    "imitating" : {
+                      "has" : "human reading procedure",
+                      "on" : "skimming and scanning"
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "For the multi-hop reasoning , we set the number of hops as 2 which is imitating human reading procedure on skimming and scanning ."
+          }
+        }
+      },
+      "During" : {
+        "training" : {
+          "set" : {
+            "moving averages" : {
+              "of" : "all weights",
+              "as" : {
+                "exponential decay rate" : {
+                  "of" : "0.999"
+                }
+              }
+            }
+          },
+          "from sentence" : "During training , we set the moving averages of all weights as the exponential decay rate of 0.999 ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "bigram model" : {
+          "performs" : {
+            "better" : {
+              "than" : "unigram model"
+            }
+          },
+          "addition of" : {
+            "IDF - weighted word count features" : {
+              "has" : {
+                "significantly improve" : {
+                  "has" : {
+                    "performance" : {
+                      "for" : "both models"
+                    }
+                  },
+                  "by" : "10 % - 15 %"
+                }
+              }
+            }
+          },
+          "from sentence" : "As can be seen , the bigram model performs better than the unigram model and the addition of the IDF - weighted word count features significantly improve performance for both models by 10 % - 15 % ."
+        },
+        "best models ( bigram + count )" : {
+          "outperform" : "all baselines",
+          "from sentence" : "As can be seen in , our best models ( bigram + count ) outperform all baselines and prior work on MAP and are very close to the best model proposed by Yih et al. on MRR ."
+        }
+      }
+    }
+  }
+}

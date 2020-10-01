@@ -1,0 +1,118 @@
+23	27	31	take
+23	36	44	approach
+23	45	47	of
+23	48	68	converting questions
+23	69	71	to
+23	72	117	( uninterpretable ) vectorial representations
+23	124	134	require no
+23	135	167	pre-defined grammars or lexicons
+23	172	175	can
+23	176	181	query
+23	182	188	any KB
+23	189	203	independent of
+23	208	214	schema
+24	15	23	focus on
+24	24	33	answering
+24	34	58	simple factual questions
+24	21	23	on
+24	64	85	broad range of topics
+31	16	24	based on
+31	25	33	learning
+31	34	69	low - dimensional vector embeddings
+31	70	72	of
+31	73	78	words
+31	86	96	KB triples
+31	97	104	so that
+31	105	120	representations
+31	70	72	of
+31	124	159	questions and corresponding answers
+31	160	166	end up
+31	173	180	similar
+31	30	32	in
+31	188	203	embedding space
+33	113	124	make use of
+33	125	141	weak supervision
+34	29	34	model
+34	38	45	able to
+34	46	60	take advantage
+34	61	63	of
+34	64	94	noisy and indirect supervision
+34	95	97	by
+34	104	128	automatically generating
+34	129	138	questions
+34	139	143	from
+34	144	154	KB triples
+34	159	175	treating this as
+34	176	189	training data
+34	203	216	supplementing
+34	222	226	with
+34	229	250	data set of questions
+34	251	276	collaboratively marked as
+34	277	288	paraphrases
+34	293	300	with no
+34	301	319	associated answers
+35	3	18	end up learning
+35	19	55	meaningful vectorial representations
+35	56	59	for
+35	60	69	questions
+35	70	85	involving up to
+35	86	97	800 k words
+35	106	113	triples
+35	114	116	of
+35	120	151	mostly automatically created KB
+35	152	156	with
+35	157	171	2.4 M entities
+35	176	195	600 k relationships
+2	0	23	Open Question Answering
+12	48	80	open - domain question answering
+16	0	18	Question answering
+201	15	23	see that
+201	24	36	multitasking
+201	37	41	with
+201	42	57	paraphrase data
+201	58	60	is
+201	61	70	essential
+201	80	88	improves
+201	89	91	F1
+201	92	96	from
+201	97	101	0.60
+201	102	104	to
+201	105	109	0.68
+207	0	13	Fine - tuning
+207	18	33	embedding model
+207	34	36	is
+207	37	52	very beneficial
+207	53	64	to optimize
+207	69	84	top of the list
+207	89	95	grants
+207	98	102	bump
+207	73	75	of
+207	106	114	5 points
+207	73	75	of
+207	118	120	F1
+208	0	26	All versions of our system
+208	27	45	greatly outperform
+208	46	53	paralex
+208	60	78	fine - tuned model
+208	79	87	improves
+208	92	102	F1 - score
+208	103	105	by
+208	106	122	almost 20 points
+231	14	29	string matching
+231	30	46	greatly improves
+231	47	54	results
+231	57	61	both
+231	65	85	precision and recall
+231	97	118	significantly reduces
+231	119	134	evaluation time
+232	4	12	final F1
+232	13	24	obtained by
+232	25	47	our fine - tuned model
+232	48	50	is
+232	51	62	even better
+232	63	67	then
+232	72	78	result
+232	79	81	of
+232	82	89	paralex
+232	5	7	in
+232	93	102	reranking

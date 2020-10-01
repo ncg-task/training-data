@@ -1,0 +1,20 @@
+{
+  "has" : {
+    "Results" : {
+      "see that" : {
+        "our model" : {
+          "performs" : {
+            "better" : {
+              "in terms of" : {
+                "accuracy" : {
+                  "than" : "many popular and sophisticated NLP models"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "We can see that our model , despite being a simple architecture , performs better in terms of accuracy than many popular and sophisticated NLP models ."
+      }     
+    }
+  }
+}

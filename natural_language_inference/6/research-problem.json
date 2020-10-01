@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Massively Multilingual Sentence Embeddings", {"from sentence" : "Massively Multilingual Sentence Embeddings for Zero - Shot Cross - Lingual Transfer and Beyond"}],
+    ["joint multilingual sentence representations", {"from sentence" : "We introduce an architecture to learn joint multilingual sentence representations for 93 languages , belonging to more than 30 different families and written in 28 different scripts ."}]
+  ]
+}

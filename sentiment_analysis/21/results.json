@@ -1,0 +1,56 @@
+{
+  "has" : {
+    "Results" : {
+      "see that using" : {
+        "cosine similarity" : {
+          "instead of" : {
+            "dot product" : {
+              "improves" : "accuracy"            
+            }
+          },
+          "from sentence" : "From here we see that using cosine similarity instead of dot product improves accuracy across the board ."
+        }
+      },
+      "suggest that" : {
+        "switching" : {
+          "from" : {
+            "dot product" : {
+              "to" : "cosine similarity"
+            }
+          },
+          "improves" : "accuracy"          
+        },
+        "from sentence" : "However it is not to suggest that switching from dot product to cosine similarity alone improves accuracy as other minor ad - justments and hyperparameter tuning as explained was done ."
+      },
+      "during" : {
+        "grid search" : {
+          "has" : {
+            "initial learning rate" : {
+              "was" : "0.25"
+            }
+          }
+        },
+        "from sentence" : "As seen during grid search , whenever the initial learning rate was 0.25 , accuracy was always poor ."
+      },
+      "Introducing" : {
+        "L2 regularization" : {
+          "to" : "dot product",
+          "improves" : {
+            "accuracy" : {
+              "for" : {
+                "all cases" : {
+                  "except" : {
+                    "depreciation" : {
+                      "in the case of using" : "unigrams"
+                    }
+                  }
+                }
+              }
+            }
+          },    
+          "from sentence" : "Introducing L2 regularization to dot product improves accuracy for all cases except a depreciation in the case of using unigrams only , lucikily cosine similarity does not suffer from this same depreciation ."
+        }
+      }
+    }
+  }
+}

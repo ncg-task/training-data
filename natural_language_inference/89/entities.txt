@@ -1,0 +1,199 @@
+193	0	8	Removing
+193	13	48	independent span loss ( indep - I )
+193	49	59	results in
+193	62	78	performance drop
+193	65	68	for
+193	83	118	all answerable questions ( HasAns )
+194	0	8	Ablating
+194	9	52	independent no - answer loss ( indep - II )
+194	75	81	causes
+194	82	98	little influence
+194	55	57	on
+194	102	108	HasAns
+194	115	123	leads to
+194	126	140	severe decline
+194	55	57	on
+194	144	178	no - answer accuracy ( NoAns ACC )
+212	9	29	two auxiliary losses
+212	42	50	leads to
+212	54	73	overall degradation
+212	71	73	on
+212	81	86	curve
+212	102	113	outperforms
+212	118	126	baseline
+212	127	129	by
+212	132	144	large margin
+196	10	18	deleting
+196	19	37	both of two losses
+196	38	44	causes
+196	47	58	degradation
+196	24	26	of
+196	62	82	more than 1.5 points
+196	56	58	on
+196	90	109	overall performance
+196	110	121	in terms of
+196	122	124	F1
+196	127	142	with or without
+196	143	158	ELMo embeddings
+200	0	6	Adding
+200	7	22	ELMo embeddings
+200	35	43	does not
+200	44	49	boost
+200	54	65	performance
+204	3	12	find that
+204	29	31	on
+204	32	49	noanswer accuracy
+204	50	52	is
+204	53	64	significant
+210	3	10	observe
+210	16	37	RMR + ELMo + Verifier
+210	38	46	achieves
+210	51	65	best precision
+210	66	70	when
+210	75	81	recall
+210	60	62	is
+210	85	97	less than 80
+177	3	6	run
+177	9	20	grid search
+177	32	37	among
+177	38	71	[ 0.1 , 0.3 , 0.5 , 0.7 , 1 , 2 ]
+179	80	83	For
+179	84	94	Model - II
+179	101	138	Adam optimizer ( Kingma and Ba 2014 )
+179	139	143	with
+179	146	159	learning rate
+179	160	162	of
+179	163	169	0.0008
+179	184	195	hidden size
+179	199	205	set as
+179	206	209	300
+179	218	225	dropout
+179	160	162	of
+179	231	234	0.3
+179	238	249	applied for
+179	250	272	preventing overfitting
+180	4	14	batch size
+180	15	17	is
+180	18	20	48
+180	21	24	for
+180	29	35	reader
+180	38	40	64
+180	21	24	for
+180	45	55	Model - II
+180	62	64	32
+180	21	24	for
+180	45	54	Model - I
+180	90	101	Model - III
+181	3	6	use
+181	11	33	Glo Ve 100D embeddings
+181	34	37	for
+181	42	48	reader
+181	55	70	300D embeddings
+181	34	37	for
+181	75	85	Model - II
+181	90	101	Model - III
+182	3	10	utilize
+182	15	29	nltk tokenizer
+182	32	45	to preprocess
+182	46	68	passages and questions
+182	82	87	split
+182	88	97	sentences
+26	32	39	propose
+26	42	69	read - then - verify system
+26	75	85	aims to be
+26	86	92	robust
+26	80	82	to
+26	96	118	unanswerable questions
+27	14	24	our system
+27	25	36	consists of
+27	37	51	two components
+27	62	78	no-answer reader
+27	79	93	for extracting
+27	94	111	candidate answers
+27	116	125	detecting
+27	126	148	unanswerable questions
+27	164	179	answer verifier
+27	180	192	for deciding
+27	212	231	extracted candidate
+27	29	31	is
+27	235	245	legitimate
+29	11	18	augment
+29	19	35	existing readers
+29	36	40	with
+29	41	61	two auxiliary losses
+32	25	36	introducing
+32	40	61	independent span loss
+32	67	74	aims to
+32	75	86	concentrate
+32	76	78	on
+32	94	116	answer extraction task
+33	57	65	leverage
+33	68	94	multi-head pointer network
+33	95	106	to generate
+33	107	131	two pairs of span scores
+33	134	139	where
+33	140	148	one pair
+33	149	151	is
+33	152	162	normalized
+33	25	29	with
+33	172	188	no -answer score
+33	197	202	other
+33	206	214	used for
+33	219	233	auxiliary loss
+34	13	20	present
+34	21	54	another independent noanswer loss
+34	55	75	to further alleviate
+34	80	91	confliction
+34	97	108	focusing on
+34	113	137	no-answer detection task
+34	138	145	without
+34	162	182	shared normalization
+34	183	185	of
+34	186	203	answer extraction
+35	56	65	introduce
+35	69	102	additional answer verifying phase
+35	111	118	aims at
+35	119	126	finding
+35	127	143	local entailment
+35	149	157	supports
+35	80	86	answer
+39	71	82	investigate
+39	83	112	three different architectures
+39	113	116	for
+39	121	142	answer verifying task
+40	4	13	first one
+40	14	16	is
+40	19	35	sequential model
+40	41	46	takes
+40	47	60	two sentences
+40	61	63	as
+40	64	78	along sequence
+40	91	101	second one
+40	114	121	capture
+40	122	134	interactions
+40	135	142	between
+40	47	60	two sentences
+41	4	12	last one
+41	13	15	is
+41	18	30	hybrid model
+41	31	44	that combines
+41	49	65	above two models
+2	16	45	Machine Reading Comprehension
+187	16	26	our system
+187	27	34	obtains
+187	35	63	state - of the - art results
+187	121	123	on
+187	128	136	test set
+187	64	76	by achieving
+187	80	88	EM score
+187	43	45	of
+187	92	96	71.7
+187	103	112	F 1 score
+187	43	45	of
+187	116	120	74.2
+188	0	11	Notice that
+188	12	18	SLQA +
+188	23	30	reached
+188	33	50	comparable result
+188	51	62	compared to
+188	63	75	our approach

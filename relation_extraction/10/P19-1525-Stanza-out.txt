@@ -1,0 +1,192 @@
+title
+Span - Level Model for Relation Extraction
+abstract
+Relation Extraction is the task of identifying entity mention spans in raw text and then identifying relations between pairs of the entity mentions .
+Recent approaches for this spanlevel task have been token - level models which have inherent limitations .
+They can not easily define and implement span - level features , can not model overlapping entity mentions and have cascading errors due to the use of sequential decoding .
+To address these concerns , we present a model which directly models all possible spans and performs joint entity mention detection and relation extraction .
+We report anew state - of - the - art performance of 62.83 F 1 ( prev best was 60.49 ) on the ACE2005 dataset .
+Introduction
+Many NLP tasks follow the pattern of taking raw text as input and then : detecting relevant spans and classifying the relations between those spans .
+Examples of this include Relation Extraction , Coreference Resolution and Semantic Role Labeling .
+This class of NLP problems are inherently span - level tasks .
+This paper focuses on Relation Extraction ( RE ) , which is the task of entity mention detection and classifying the relations between each pair of those mentions .
+We report anew state - of - the - art performance of 62.83 F 1 ( prev best was 60.49 ) on the ACE2005 dataset .
+Here is a simple example of Relation Extraction for the sentence , " Washington , D.C. is the capital of the USA " .
+Step 1 , Entity Mention Detection will detect the spans " Washington , D.C. " and " USA " as LOCATIONS .
+Step 2 , Relation Extraction will classify all directed pairs of detected entity mentions .
+It will classify the directed pair ( " Washington , D.C. " , " USA " ) as having the relation IS CAPITAL OF .
+But the directed pair ( " USA " , " Washington , D.C. " ) will be classified as having no relation .
+In more complex cases , each entity could participate in multiple different relations .
+Since , work on RE has revolved around end - to - end systems : single models which first perform entity mention detection and then relation extraction .
+These recent works have used sequential token - level methods for both the steps .
+Token - level models are primarily constrained by the fact that each token has a single fixed representation while each token is apart of many different spans .
+To model and extract spans , these token - level models have to resort to approximate span - level features which are increasingly indirect and expensive :
+Tree - LSTMs , CRFs , Beam Search and Pointer Networks .
+Their usage of the BILOU token - tagging scheme makes modelling overlapping entities impossible .
+In general , these tokenlevel models are sequential in nature and hence have cascading errors .
+Another end - to - end approach for RE is to use a simple span - level model .
+A model which creates explicit representations for all possible spans , uses them for the entity mention detection step and then explicitly compares ordered pairs of spans for the relation extraction step .
+Such a model is not constrained like the token - level models because it can define direct span - specific features for each span inexpensively .
+Since each possible span is separately considered , selecting overlapping entity mentions is possible .
+Predicting one span as an entity no longer blocks another span from being predicted as an entity .
+This approach models each possible span independently and in parallel i.e. it is not sequential and does not suffer from cascad - ing errors .
+Such models have recently found success in similar NLP tasks like Coreference Resolution and Semantic Role Labeling .
+In this paper , we present such a span - level model for Relation Extraction .
+We propose a simple bi - LSTM based model which generates span representations for each possible span .
+The span representations are used to perform entity mention detection on all spans in parallel .
+The same span representations are then used to perform relation extraction on all pairs of detected entity mentions .
+We evaluated the performance of our model on the ACE2005 dataset and report anew startof - the - art F 1 score of 62.83 for Relation Extraction .
+Related Work
+Given text input , Relation Extraction involves two steps : span detection and classification of the relation between pairs of detected spans .
+In the RE literature , these are more commonly called Entity Mention Detection and Relation Extraction respectively .
+An earlier line of research has focused on only the second step , assuming that the arguments of the relations are given by some other system / oracle .
+The more interesting problem is joint Entity Mention Detection and Relation Extraction .
+More interesting because it simultaneously addresses both steps , enriches embeddings from losses related to both sub - tasks and only requires using a single model during test .
+Past approaches include Integer Linear Programming and Probabilistic Graphical Models .
+modeled this joint task as a Structured Prediction problem and since then most work on RE has revolved around endto - end systems which do the joint task .
+A common theme in current end - to - end models is the use of token - level models .
+For the entity mention detection step , recent works have used the BILOU tokentagging scheme .
+For the relation extraction step there have been a variety of methods tried like Tree - LSTMs , sequence labeling and multihead selection .
+used semi-Markov chains and the Viterbi algorithm , which is also a sequential token - level approach .
+This token - level modeling approach has several limitations as highlighted in Section 1 .
+Recent work using span - level end - to - end models have seen success in NLP tasks following the same pattern as RE ( Coreference Resolution and Semantic Role Labeling ) .
+In this paper , we adapt to create a span - level end - to - end model for RE .
+Model
+Our model consists of three steps which we explain in detail in the next subsections :
+Span Representation Generation
+Use task - agnostic raw token embeddings to create task - specific token embeddings for each token .
+The task - specific token embeddings are used to generate span embeddings for each possible span .
+Entity Mention Detection ( EMD )
+The span embeddings are used to obtain a vector of entity type scores for each span .
+Each span is assigned the entity type corresponding to its highest entity type score .
+The spans that are assigned an entity type other than NONE are selected for Step 3 .
+Relation Extraction ( RE )
+For each ordered span - pair ( i , j ) , we obtain a representation by concatenating the respective span embeddings .
+This representation is defined in an order - sensitive way in Section 3.3 i.e. the span - pair representation of spans ( i , j ) is different from that of spans ( j , i ) .
+For each ordered span - pair , its representation is used to obtain a vector of relation type scores .
+Each ordered span - pair is assigned the relation type of its highest relation type score .
+Step 1 : Span Representation Generation
+The architecture we use to generate span representations closely follows .
+Given a document D with T tokens , there are N = T ( T + 1 ) 2 possible spans .
+span i is defined by all the tokens from START ( i ) to END ( i ) inclusive , for 1 ?
+i ?
+N .
+The aim is to obtain a span representation g i for each span i.
+Raw Token Embeddings
+We use x t to represent the raw token embeddings of token t with 1 ? t ?
+T . x t is a concatenation of the following :
+Fixed Contextual Word Embeddings
+Fixed Word Embeddings
+Trained from scratch Character Embeddings
+We use fixed ELMo for Contextual Word Embeddings , fixed Senna for Word Embeddings and train Character Embeddings from scratch .
+The Contextual Word Embeddings for each sentence were computed separately .
+In terms of number of free parameters ; Contextual Word Embeddings use the most ( 100 's of millions ) , followed by Word Embeddings ( 10 's of millions ) and finally Character Embeddings use by far the least ( 10's of thousands ) .
+The decision to train only the Character Embeddings was based on overfitting concerns given our relatively small dataset .
+Bi-LSTM
+Layers
+The pretrained Contextual Embeddings we use in x t above are obtained by unsupervised task - agnostic training .
+To obtain task - specific contextualization we use stacked bidirectional LSTMs ) on the raw token embeddings x t to obtain x * t ,
+where ? ?
+ht and ? ?
+ht are the hidden states of the last layer of the forward and backward LSTMs respectively .
+x * t is the concatenation of ? ?
+ht and ? ?
+ht .
+The bi-LSTMs were run separately on each sentence as that gave better performance .
+Span Representation Syntactic heads obtained from general syntactic parsers are used in many NLP systems .
+Here we do n't use general syntactic parsers but instead use attention to create a task - specific span - head feature .
+This feature vector is computed for each span :
+where MLP ?
+is a Multi Layer Perceptron ( aka Feed Forward Network ) .x
+i is a weighted sum of fixed word vectors for the tokens in span i .
+We did experiment with using the weighted sum of the bi -LSTM output ( x * t ) or of the ELMo fixed contextual word embeddings but got better results with using fixed word embeddings .
+For each span i , it s span representation g i was defined as :
+where ? ( i ) encodes the size of span i in number of tokens .
+Each component of g i is a span - specific feature that would be difficult to define and use in token - level models .
+Step 2 : Entity Mention Detection ( EMD )
+In this step , we predict the entity type for each span .
+This prediction is done identically and parallelly for each span .
+For each span we compute a vector of entity type scores .
+The number of entity type scores computed is the number of entity types ( including the NONE entity type ) .
+For each span , the softmax function is applied to its entity type scores to get a distribution over the entity types .
+For span i ,
+The output size of MLP ner and hence the size of p ner i is equal to the number of NER classes .
+The predicted entity type for each span i is the entity type corresponding to span i 's highest entity type score i.e. max ( score ner i ) .
+Only spans whose predicted entity type is not NONE are selected for Step 3 .
+Unlike token - level models , overlapping spans can be selected here as each span 's selection decision is independent of other spans .
+Step 3 : Relation Extraction ( RE )
+In this paper , we only consider ordered binary relations , the most common setting of RE i.e. only relations between exactly two arguments and where the two pairs ( span i , span j ) and ( span j , span i ) are considered different .
+We consider every ordered pair of selected spans ( from Step 2 ) such that both spans are from the same sentence .
+For each such pair ( span i , span j ) , we first compute an ordered pair embedding r ( i , j ) :
+where g i and g j are the span embeddings of the 1 stand 2 nd arguments respectively ( from Step 1 ) .
+g i g j refers to their element - wise product .
+We use the ordered pair embedding r i , j to compute a vector of relation type scores .
+The number of relation type scores is the number of relation types ( including the NONE relation type ) .
+For each ordered pair of spans , the softmax function is applied to its relation type scores to get a distribution over the relation types .
+For pair ( span i , span j ) ,
+The output size of MLP re and hence the size of p re i , j is equal to the number of RE classes .
+Loss
+Two learning signals are provided to train the model : entity type information per span and relation type information per ordered ( selected ) span pair .
+Both are provided via CrossEntropy Loss on Equations 1 and 2 respectively .
+We use ?
+ner i to represent the correct entity type for span i and y re i , j to represent the correct relation type for the ordered pair of spans , ( span i , span j ) .
+S represents the set of all spans and S represents the set of all selected spans ( Section 3.2 ) .
+Then the final training loss is ,
+where the first term is a sum overall spans of the entity mention detection loss ( eqn 1 ) and the second term is a sum overall ordered pairs of selected spans of the relation extraction loss ( eqn 2 ) .
+Experiments
+Dataset
+We use the ACE2005 dataset .
+It has 351 documents for train , 80 for validation and 80 for test .
+There are seven span - level entity types and six ordered span relation types .
+Character Embeddings
+The learned character embeddings are of size 8 . 1 - dimensional convolutions of window size 3 , 4,5 are applied per-token with 50 filters of each window size .
+This is followed by ReLU activation and max - pooling over each filter .
+Model Size
+Our stacked bi - LSTMs ( Section 3.1 ) has 3 layers with 200 - dimensional hidden states and highway connections .
+All Multi Layer Perceptrons ( MLP ) has two hidden layers with 500 dimensions , each followed by ReLU activation .
+Feature Encoding
+Each span gets a span width feature which is a learned 20 - dimensional vector representing the number of tokens in that span .
+Span Pruning
+A high number of spans under consideration can lead to memory and speed issues .
+We only consider spans that are entirely within a sentence and limit spans to a max length of L = 10 .
+This choice was based on our Train Set , see Section 5 ) fora discussion about it .
+Performance is not affected significantly as very few entity mentions have more than 10 tokens .
+Regularization Dropout is applied with dropout rate 0.2 to all hidden layers of all MLPs and feature encodings , with dropout rate 0.5 to all word and character embeddings and with dropout rate 0.4 to all LSTM layer outputs .
+Learning Learning is done with Adam ( Kingma and Ba , 2015 ) with default parameters .
+The learning rate is annealed by 1 % every 100 iterations .
+Minibatch Size is 1 .
+Early Stopping of 20 evaluations on the dev set is used .
+Model Complexity
+Section 3.1 describes our span generation process and Section 4 describes our algorithmic span pruning process .
+The algorithmic span pruning process limits our model spans which are entirely within a single sentence and have a max length of L = 10 tokens .
+While our model creates representations for spans ( instead of just tokens ) , it achieves the dual goals of being memory efficient and capturing most ( more than 99.95 % ) entities and relations in the space of the spans considered .
+shows the model complexity and entity / relation coverage for different policies of span generation on the Train Set of ACE2005 .
+It shows numbers for policies ranging from one which considers all spans across the doc , to a policy that considers only single token spans .
+It shows that our chosen span generation policy ( in bold ) is far more memory efficient than a naive search overall possible spans in the input document .
+Yet our policy still considers more than 99.95 % of all entities and relations .
+Our policy is linear in the document 's ( sentence ) length , not quadratic ; because we limit our model to spans that are wholly in a single sentence and have a max length of L = 10 tokens .
+Entity Mention Detection
+Relation Extraction System PR F 1 PR F 1 85.2 76.9 80.8 68.9 41.9 52.1 82.9 83.9 83.4 57 54.0 55.6 84.0 81.3 82.6 57.9 54.0 55.9 Entities .
+Dev and Test Sets follow the same trends .
+Each row is a different policy for span generation and our chosen policy is bolded .
+" # Spans " is the number of spans considered by the policy .
+" % Entities Covered " is the percentage of entities in the dataset that are considered by that policy .
+" % Relations Covered " is the same thing for Relations ( i.e. a Relation is covered if both entities of the Relation are covered ) .
+Note how our chosen policy is more than 40x more memory efficient than a policy which considers all spans in the doc .
+And yet , our method covers 99.99 % and 99.96 % of all Entities and Relations respectively in the Train Set of ACE2005 .
+6
+Results shows the results for RE .
+For the joint task , we compare entity mention detection performance and relation extraction performance .
+Our proposed model achieves a new SOTA on RE with a F 1 of 62. 83 , more than 2.3 F 1 above the previous SOTA .
+Our proposed model also beats a multitask model which uses signals from additional tasks by more than 1.5 F 1 points .
+For both tasks , our model 's Precision is close to and Recall is significantly higher than previous works .
+The Recall gains for RE ( 4.3 absolute points ) are much higher than for EMD ( 0.6 absolute points ) .
+The gains in EMD Recall highlights the effectiveness of our span representations ( Section 3.1 ) .
+The disproportionate gains in RE Recall can not be fully explained by the relatively lower gains in EMD Recall .
+Thus , our large gains in RE Recall ( and F 1 ) showcase the effectiveness of our simple modeling of ordered span pairs for relation extraction ( Section 3.3 ) .
+Conclusions
+We present a neural span - level end - to - end model for joint entity mention detection and relation extraction .
+In contrast with existing token - level models : our model is able to use span - specific features , allows for overlapping entity mentions and does not use sequential decoding .
+Our proposed model achieves anew state - of - the - art RE performance on the ACE2005 dataset .
+The gains are driven by improvements in Recall for both tasks .

@@ -1,0 +1,6 @@
+(Contribution||has research problem||Answer Sentence Selection)
+(Contribution||has research problem||Question Answering)
+(Contribution||has research problem||Question Answering ( QA ))
+(Contribution||has research problem||answer sentence selection ( AS2 ))
+(Contribution||has research problem||AS2)
+(Contribution||has research problem||QA)

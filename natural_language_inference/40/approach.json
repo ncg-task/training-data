@@ -1,0 +1,91 @@
+{
+  "has" : {
+    "Approach" : {
+      "utilize" : {
+        "order inherent" : {
+          "in" : "unaugmented sequence",
+          "to decompose" : {
+            "graph" : {
+              "into" : {
+                "two Directed Acyclic Graphs ( DAGs )" : {
+                  "with" : "topological ordering"
+                }
+              }
+            }
+          },
+          "from sentence" : "Instead , we utilize the order inherent in the the unaugmented sequence to decompose the graph into two Directed Acyclic Graphs ( DAGs ) with a topological ordering ."
+        }
+      },
+      "introduce" : {
+        "Memory as Acyclic Graph Encoding RNN ( MAGE - RNN ) framework" : {
+          "to compute" : {
+            "representation" : {
+              "of" : "graphs",
+              "while" : {
+                "touching" : {
+                  "every" : "node",
+                  "has" : "only once"
+                }
+              }
+            }
+          },
+          "implement" : {
+            "GRU version" : {
+              "called" : "MAGE - GRU"
+            }
+          },
+          "from sentence" : "We introduce the Memory as Acyclic Graph Encoding RNN ( MAGE - RNN ) framework to compute the representation of such graphs while touching every node only once , and implement a GRU version of it called MAGE - GRU ."
+        }
+      },
+      "has" : {
+        "MAGE - RNN" : {
+          "learns" : {
+            "separate representations" : {
+              "for" : {
+                "propagation" : {
+                  "along" : "each edge type"
+                }
+              },
+              "leads to" : "superior performance empirically"
+            },
+            "from sentence" : "MAGE - RNN learns separate representations for propagation along each edge type , which leads to superior performance empirically ."
+          }
+        }
+      },
+      "use" : {
+        "MAGE - RNN" : {
+          "to model" : {
+            "coreference relations" : {
+              "for" : {
+                "text comprehension tasks" : {
+                  "where" : {
+                    "answers to a query" : {
+                      "have to be extracted from" : "context document"
+                    }
+                  }
+                }
+              },
+              "has" : {
+                "Tokens" : {
+                  "in" : "document",
+                  "connected by" : {
+                    "coreference relation" : {
+                      "if" : {
+                        "refer" : {
+                          "to" : "same underlying entity"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "We use MAGE - RNN to model coreference relations for text comprehension tasks , where answers to a query have to be extracted from a context document .
+Tokens in a document are connected by a coreference relation if they refer to the same underlying entity ."
+
+        }
+      }
+    }
+  }  
+}

@@ -1,0 +1,62 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "CASCADE" : {
+          "achieve" : {
+            "major improvements" : {
+              "across" : "all datasets",
+              "with" : "statistical significance"
+            },
+            "from sentence" : "CASCADE manages to achieve major improvement across all datasets with statistical significance ."            
+          },
+          "comfortably beats" : {
+            "state - of - the - art neural models" : {
+              "name" : ["CNN - SVM", "CUE - CNN"]
+            },
+            "from sentence" : "CASCADE comfortably beats the state - of - the - art neural models CNN - SVM and CUE - CNN ."
+          }
+        },
+        "lowest performance" : {
+          "obtained by" : "Bag - of - words approach",
+          "from sentence" : "The lowest performance is obtained by the Bag - of - words approach whereas all neural architectures outperform it ."
+        },
+        "improved performance" : {
+          "on" : {
+            "Main imbalanced dataset" : {
+              "reflects" : {
+                "robustness" : {
+                  "towards" : "class imbalance"
+                }
+              },
+              "establishes it as" : "real - world deployable network",
+              "from sentence" : "Its improved performance on the Main imbalanced dataset also reflects its robustness towards class imbalance and establishes it as a real - world deployable network ."
+            }
+          }
+        },
+        "CUE - CNN" : {
+          "generates" : {
+            "user embeddings" : {
+              "using" : {
+                "method" : {
+                  "similar to" : "ParagraphVector"
+                }
+              },
+              "from sentence" : "Since CUE - CNN generates its user embeddings using a method similar to the ParagraphVector , we test the importance of personality features being included in our user profiling ."
+            }
+          }
+        }
+      },
+      "Amongst" : {
+        "neural networks" : {
+          "has" : {
+            "CNN baseline" : {
+              "receives" : "least performance"
+            }
+          },
+          "from sentence" : "Amongst the neural networks , the CNN baseline receives the least performance ."
+        }
+      }
+    }
+  }
+}

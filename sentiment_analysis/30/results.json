@@ -1,0 +1,40 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "Our model" : {
+          "achieves" : {
+            "state - of - the - art results" : {
+              "for both" : ["aspect detection", "sentiment classification"]
+            }
+          },
+          "from sentence" : "Our model achieves state - of - the - art results for both aspect detection and sentiment classification ."
+        },
+        "proposed model" : {
+          "equipped only with" : "domainindependent general - purpose GloVe embeddings",
+          "outperforms" : {
+            "Sentic LSTM" : {
+              "heavily reliant on" : "external knowledge bases and domainspecific embeddings"
+            }
+          },
+          "from sentence" : "It is impressive that the proposed model , equipped only with domainindependent general - purpose GloVe embeddings , outperforms Sentic LSTM , an approach heavily reliant on external knowledge bases and domainspecific embeddings ."
+        },
+        "Ent Net vs. our model" : {
+          "see" : {
+            "consistent performance gains" : {
+              "for" : {
+                "our model" : {
+                  "in both" : "aspect detection and sentiment classification",
+                  "compared to" : "EntNet"
+                }
+              }
+            }
+          },
+          "from sentence" : "Ent Net vs. our model .
+We see consistent performance gains for our model in both aspect detection and sentiment classification , compared to EntNet , esp. for aspect detection , underlining the benefit of delayed update gate activation ."
+
+        }
+      }
+    }
+  }
+}

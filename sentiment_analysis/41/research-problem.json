@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Aspect - level Sentiment Classification", {"from sentence" : "Attention - based LSTM for Aspect - level Sentiment Classification"}],
+    ["sentiment analysis", {"from sentence" : "Aspect - level sentiment classification is a finegrained task in sentiment analysis ."}],
+    ["aspect - level sentiment classification", {"from sentence" : "In this paper , we deal with aspect - level sentiment classification and we find that the sentiment polarity of a sentence is highly dependent on both content and aspect ."}]
+  ]
+}

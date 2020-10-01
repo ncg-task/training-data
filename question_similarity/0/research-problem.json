@@ -1,0 +1,10 @@
+{
+  "has research problem" : [
+    ["Semantic Question Similarity in Arabic", {"from sentence" : "Tha3aroon at NSURL - 2019 Task 8 : Semantic Question Similarity in Arabic"}],
+    ["semantic text question similarity", {"from sentence" : "In this paper , we describe our team 's effort on the semantic text question similarity task of NSURL 2019 ."}],
+    ["Semantic Text Similarity ( STS )", {"from sentence" : "Semantic Text Similarity ( STS ) problems are both real - life and challenging ."}],
+    ["STS", {"from sentence" : "For example , in the paraphrase identification task , STS is used to predict if one sentence is a paraphrase of the other or not ."}],
+    ["Semantic Question Similarity ( SQS ) for the Arabic language", {"from sentence" : "A new task has been proposed by Mawdoo3 1 company with a new dataset provided by their data annotation team for Semantic Question Similarity ( SQS ) for the Arabic language ."}],
+    ["SQS", {"from sentence" : "SQS is a variant of STS , which aims to compare a pair of questions and determine whether they have the same meaning or not ."}]
+  ]
+}

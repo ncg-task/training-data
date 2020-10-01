@@ -1,0 +1,22 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "has" : {
+        "answer position indicator" : {
+          "plays" : {
+            "crucial role" : {
+              "in" : "answer focused question generation"
+            }
+          },
+          "from sentence" : "The answer position indicator , as expected , plays a crucial role in answer focused question generation as shown in the NQG ?"
+        }
+      },
+      "show that" : {
+        "word case , POS and NER tag features" : {
+          "contributes to" : "question generation",
+          "from sentence" : "NER , show that word case , POS and NER tag features contributes to question generation ."
+        }
+      }
+    }
+  }
+}

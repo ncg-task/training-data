@@ -1,0 +1,193 @@
+{
+  "has" : {
+    "Experiments" : {
+      "on" : {
+        "Document Modelling" : {
+          "has" : {
+            "Results" : {
+              "indicate" : {
+                "NVDM" : {
+                  "achieves" : {
+                    "best performance" : {
+                      "on" : "both datasets"
+                    }
+                  }
+                },
+                "from sentence" : "Experiments on Document Modelling
+The experimental results indicate that NVDM achieves the best performance on both datasets ."
+
+              },
+              "For" : {
+                "experiments" : {
+                  "on" : {
+                    "RCV1 - v2 dataset" : {
+                      "has" : {
+                        "NVDM" : {
+                          "with" : {
+                            "latent variable" : {
+                              "of" : "50 dimension",
+                              "performs" : {
+                                "even better" : {
+                                  "than" : {
+                                    "fDARN" : {
+                                      "with" : "200 dimension"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "For the experiments on RCV1 - v2 dataset , the NVDM with latent variable of 50 dimension performs even better than the fDARN with 200 dimension ."
+                }
+              }
+            }
+          }  
+        }
+      },      
+      "for" : {
+        "Answer Sentence Selection" : {
+          "has" : {
+            "Hyperparameters" : {
+              "has" : {
+                "word embeddings ( K = 50 )" : {
+                  "are" : {
+                    "obtained" : {
+                      "by running" : {
+                        "word2vec tool" : {
+                          "on" : ["English Wikipedia dump", "AQUAINT 5 corpus"]
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "Dataset & Setup for Answer Sentence Selection
+The word embeddings ( K = 50 ) are obtained by running the word2vec tool on the English Wikipedia dump and the AQUAINT 5 corpus ."
+
+                }
+              },
+              "use" : {
+                "LSTMs" : {
+                  "with" : ["3 layers", "50 hidden units"],
+                  "apply" : {
+                    "40 % dropout" : {
+                      "after" : "embedding layer"
+                    }
+                  },
+                  "from sentence" : "We use LSTMs with 3 layers and 50 hidden units , and apply 40 % dropout after the embedding layer ."                  
+                }
+              },
+              "For construction of" : {
+                "inference network" : {
+                  "use" : {
+                    "MLP" : {
+                      "with" : "2 layers"
+                    },
+                    "tanh units" : {
+                      "of" : "50 dimension"
+                    }
+                  },
+                  "from sentence" : "For the construction of the inference network , we use an MLP ( Eq. 10 ) with 2 layers and tanh units of 50 dimension , and an MLP ( Eq. 17 ) with 2 layers and tanh units of 150 dimension for modelling the joint representation ."
+                }
+              },
+              "for modelling" : {
+                "joint representation" : {
+                  "has" : {
+                    "MLP" : {
+                      "with" : "2 layers"
+                    },
+                    "tanh units" : {
+                      "of" : "150 dimension"
+                    }
+                  },
+                  "from sentence" : "For the construction of the inference network , we use an MLP ( Eq. 10 ) with 2 layers and tanh units of 50 dimension , and an MLP ( Eq. 17 ) with 2 layers and tanh units of 150 dimension for modelling the joint representation ."
+                }
+              },
+              "During" : {
+                "training" : {
+                  "carry out" : {
+                    "stochastic estimation" : {
+                      "by taking" : {
+                        "one sample" : {
+                          "for computing" : "gradients"
+                        }
+                      }
+                    },
+                    "from sentence" : "During training we carry out stochastic estimation by taking one sample for computing the gradients , while in prediction we use 20 samples to calculate the expectation of the lower bound ."
+                  }
+                }
+              },
+              "in" : {
+                "prediction" : {
+                  "use" : {
+                    "20 samples" : {
+                      "to calculate" : {
+                        "expectation" : {
+                          "of" : "lower bound"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "During training we carry out stochastic estimation by taking one sample for computing the gradients , while in prediction we use 20 samples to calculate the expectation of the lower bound ."
+                }
+              }
+            },
+            "Results" : {
+              "has" : {
+                "LSTM + Att" : {
+                  "performs" : {
+                    "slightly better" : {
+                      "than" : "vanilla LSTM model",
+                      "has" : {
+                        "our NASM" : {
+                          "improves" : "results"
+                        }
+                      }
+                    },
+                    "from sentence" : "The LSTM + Att performs slightly better than the vanilla LSTM model , and our NASM improves the results further ."
+                  }
+                },
+                "our best model" : {
+                  "after combining with" : "co-occurrence word count feature",
+                  "outperforms" : {
+                    "all the previous models" : {
+                      "including" : ["neural network based models", {"classifiers" : {"with" : {"set" : {"of" : "hand - crafted features"}}}}]
+                    }
+                  },
+                  "from sentence" : "Since the QASent dataset is biased towards lexical overlapping features , after combining with a co-occurrence word count feature , our best model NASM outperforms all the previous models , including both neural network based models and classifiers with a set of hand - crafted features ( e.g. LCLR ) ."
+                }
+              },
+              "on" : {
+                "Wik - iQA dataset" : {
+                  "has" : {
+                    "all of our models" : {
+                      "outperform" : {
+                        "previous distributional models" : {
+                          "by" : "large margin"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "Similarly , on the Wik - iQA dataset , all of our models outperform the previous distributional models by a large margin ."
+                }
+              },
+              "including" : {
+                "word count feature" : {
+                  "has" : {
+                    "our models" : {
+                      "has" : "improve further",
+                      "achieve" : "state - of - the - art"
+                    }
+                  },
+                  "from sentence" : "By including a word count feature , our models improve further and achieve the state - of - the - art ."
+                }
+              }
+            }
+          }
+        }
+      }      
+    }
+  }
+}

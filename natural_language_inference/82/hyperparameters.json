@@ -1,0 +1,28 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "For" : {
+        "preprocessing" : {
+          "segment at" : ["sentences", {
+            "punctuation marks" : {
+              "has" : [".", "!", "?"]}}],
+          "from sentence" : "For preprocessing , we segment sentences at punctuation marks \" . \" , \" ! \" , and \" ? \" ."
+        }
+      },
+      "train" : {
+        "model" : {
+          "with" : {
+            "hyper - parameters" : {
+              "has" : {
+                "lightly tuned" : {
+                  "on" : "validation set"
+                }
+              },
+              "from sentence" : "We train our model 8 with hyper - parameters lightly tuned on the validation set 9 , and we conduct ablation test on several techniques that improve our basic model ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

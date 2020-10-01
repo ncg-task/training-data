@@ -1,0 +1,62 @@
+{
+  "has" : {
+    "Model" : {
+      "consists of" : {
+        "sequential encoder - decoder" : {
+          "is" : {
+            "further trained" : {
+              "using" : "pairwise discriminator"
+            }
+          },
+          "from sentence" : "Our model consists of a sequential encoder - decoder that is further trained using a pairwise discriminator ."
+        }
+      },
+      "has" : {
+        "encoder - decoder architecture" : {
+          "widely used for" : ["machine translation", "machine comprehension"],
+          "from sentence" : "The encoder - decoder architecture has been widely used for machine translation and machine comprehension tasks ."
+        }
+      },
+      "ensures" : {
+        "' local ' loss" : {
+          "incurred for" : "each recurrent unit cell"
+        },
+        "from sentence" : "In general , the model ensures a ' local ' loss that is incurred for each recurrent unit cell ."
+      },
+      "To ensure" : {
+        "whole sentence" : {
+          "is" : {
+            "correctly encoded" : {
+              "make further use of" : {
+                "pair - wise discriminator" : {
+                  "that encodes" : "whole sentence",
+                  "obtains" : "embedding"
+                },
+                "from sentence" : "To ensure that the whole sentence is correctly encoded , we make further use of a pair - wise discriminator that encodes the whole sentence and obtains an embedding for it ."
+              },
+              "further ensure that" : {
+                "close" : {
+                  "to" : "desired ground - truth embeddings"
+                },
+                "far" : {
+                  "from" : "other ( sentences in the corpus ) embeddings"
+                },
+                "from sentence" : "We further ensure that this is close to the desired ground - truth embeddings while being far from other ( sentences in the corpus ) embeddings ."
+              }
+            }
+          }
+        }
+      },
+      "provides" : {
+        "' global ' loss" : {
+          "ensures that" : {
+            "sentence embedding" : {
+              "close to" : "other semantically related sentence embeddings"
+            }
+          }
+        },
+        "from sentence" : "This model thus provides a ' global ' loss that ensures the sentence embedding as a whole is close to other semantically related sentence embeddings ." 
+      }
+    }
+  }
+}

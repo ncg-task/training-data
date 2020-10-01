@@ -1,0 +1,84 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "novel model dubbed Piecewise Convolutional Neural Networks ( PC - NNs )" : {
+          "with" : "multi-instance learning",
+          "from sentence" : "In this paper , we propose a novel model dubbed Piecewise Convolutional Neural Networks ( PC - NNs ) with multi-instance learning to address the two problems described above ."
+        }
+      },
+      "has" : {
+        "distant supervised relation extraction" : {
+          "treated as" : "multi-instance problem",
+          "from sentence" : "To address the first problem , distant supervised relation extraction is treated as a multi-instance problem similar to previous studies ."
+        },
+        "piecewise max pooling procedure" : {
+          "returns" : {
+            "maximum value" : {
+              "in" : {
+                "each segment" : {
+                  "instead of" : {
+                    "single maximum value" : {
+                      "over" : "entire sentence"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "The piecewise max pooling procedure returns the maximum value in each segment instead of a single maximum value over the entire sentence ."
+        }        
+      },
+      "design" : {
+        "objective function" : {
+          "at" : "bag level",
+          "from sentence" : "We design an objective function at the bag level ."
+        }
+      },
+      "In" : {
+        "learning process" : {
+          "has" : {
+            "uncertainty" : {
+              "of" : "instance labels",
+              "alleviates" : "wrong label problem"
+            }
+          },
+          "from sentence" : "In the learning process , the uncertainty of instance labels can be taken into account ; this alleviates the wrong label problem ."
+        }
+      },
+      "adopt" : {
+        "convolutional architecture" : {
+          "to automatically learn" : {
+            "relevant features" : {
+              "without" : "complicated NLP preprocessing"
+            }
+          },
+          "from sentence" : "To address the second problem , we adopt convolutional architecture to automatically learn relevant features without complicated NLP preprocessing inspired by ."
+        }
+      },
+      "To capture" : {
+        "structural and other latent information" : {
+          "divide" : {
+            "convolution results" : {
+              "into" : {
+                "three segments" : {
+                  "based on" : {
+                    "positions" : {
+                      "of" : "two given entities"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "devise" : {
+            "piecewise max pooling layer" : {
+              "instead of" : "single max pooling layer"
+            }
+          },
+          "from sentence" : "To capture structural and other latent information , we divide the convolution results into three segments based on the positions of the two given entities and devise a piecewise max pooling layer instead of the single max pooling layer ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Convolutional Neural Networks with Recurrent Neural Filters", {"from sentence" : "Convolutional Neural Networks with Recurrent Neural Filters"}],
+    ["model convolution filters with RNNs", {"from sentence" : "In this work , we model convolution filters with RNNs that naturally capture compositionality and long - term dependencies in language ."}],
+    ["employ recurrent neural networks ( RNNs ) as convolution filters of CNN systems", {"from sentence" : "To overcome this , we propose to employ recurrent neural networks ( RNNs ) as convolution filters of CNN systems for various NLP tasks ."}]
+  ]
+}

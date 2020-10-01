@@ -1,0 +1,79 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "implement" : {
+        "our model" : {
+          "in" : "TensorFlow"
+        },
+        "from sentence" : "We implement our model in TensorFlow and train them on Nvidia P100 GPUs ."
+      },
+      "train them on" : ["Nvidia P100 GPUs", {"from sentence" : "We implement our model in TensorFlow and train them on Nvidia P100 GPUs ."}],
+      "use" : {
+        "Adam optimizer" : {
+          "with" : {
+            "initial learning rate" : {
+              "of" : "0.0003"
+            }
+          },
+          "from sentence" : "We use the Adam optimizer ( Kingma and Ba , 2014 ) with an initial learning rate of 0.0003 ."
+        }
+      },
+      "has" : {
+        "L2 regularization" : {
+          "set to" : "10 ?6",
+          "from sentence" : "L2 regularization is set to 10 ?6 ."
+        },
+        "Dropout" : {
+          "with" : {
+            "keep probability" : {
+              "of" : "0.8",
+              "applied after" : "each fullyconnected , recurrent or highway layer"
+            },
+            "from sentence" : "Dropout with a keep probability of 0.8 is applied after each fullyconnected , recurrent or highway layer ."
+          }
+        },
+        "batch size" : {
+          "tuned amongst" : "{ 128 , 256 , 512 }",
+          "from sentence" : "The batch size is tuned amongst { 128 , 256 , 512 } ."
+        },
+        "number of latent factors k" : {
+          "for" : {
+            "factorization layer" : {
+              "tuned amongst" : "{ 5 , 10 , 50 , 100 , 150 }"
+            }
+          },
+          "from sentence" : "The number of latent factors k for the factorization layer is tuned amongst { 5 , 10 , 50 , 100 , 150 } ."
+        },
+        "size" : {
+          "of" : {
+            "hidden layers" : {
+              "of" : {
+                "highway network layers" : {
+                  "set to" : "300"
+                }
+              }
+            },
+            "from sentence" : "The size of the hidden layers of the highway network layers are set to 300 ."
+          }
+        },
+        "parameters" : {
+          "initialized with" : "xavier initialization",
+          "from sentence" : "All parameters are initialized with xavier initialization ."
+        },
+        "Word embeddings" : {
+          "preloaded with" : "300d Glo Ve embeddings",
+          "fixed during" : "training",
+          "from sentence" : "Word embeddings are preloaded with 300d Glo Ve embeddings and fixed during training ."
+        },
+        "Sequence lengths" : {
+          "padded to" : "batch - wise maximum",
+          "from sentence" : "Sequence lengths are padded to batch - wise maximum ."
+        },
+        "batch order" : {
+          "( randomly ) sorted within" : "buckets",
+          "from sentence" : "The batch order is ( randomly ) sorted within buckets following ."
+        }
+      }
+    }
+  }
+}

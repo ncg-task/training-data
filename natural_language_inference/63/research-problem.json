@@ -1,0 +1,9 @@
+{
+  "has research problem" : [
+    ["Machine Reading Comprehension", {"from sentence": "A Multi - Stage Memory Augmented Neural Network for Machine Reading Comprehension"}],
+    ["Reading Comprehension ( RC )", {"from sentence" : "Reading Comprehension ( RC ) of text is one of the fundamental tasks in natural language processing ."}],
+    ["RC", {"from sentence" : "In recent years , several end - to - end neural network models have been proposed to solve RC tasks ."}],
+    ["answer span prediction style Question Answering ( QA )", {"from sentence" : "One possible way of measuring RC is by formulating it as answer span prediction style Question Answering ( QA ) task , which is finding an answer to the question based on the given document ( s ) ."}],
+    ["QA", {"from sentence" : "Recently , influential deep learning approaches have been proposed to solve this QA task . ; propose the attention mechanism between question and context for question - aware contextual representation ."}]
+  ]
+}

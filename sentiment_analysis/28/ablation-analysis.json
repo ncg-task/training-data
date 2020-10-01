@@ -1,0 +1,60 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "Comparing the results of" : {
+        "AEN - GloVe and AEN - Glo Ve w / o LSR" : {
+          "observe" : {
+            "accuracy" : {
+              "of" : "AEN - Glo Ve w / o LSR",
+              "drops" : {
+                "significantly" : {
+                  "on" : "all three datasets"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "Comparing the results of AEN - GloVe and AEN - Glo Ve w / o LSR , we observe that the accuracy of AEN - Glo Ve w / o LSR drops significantly on all three datasets ."
+      },
+      "has" : {
+        "overall performance" : {
+          "of" : {
+            "AEN - GloVe and AEN - Glo Ve - BiLSTM" : {
+              "is" : "relatively close"
+            },
+            "AEN - Glo Ve" : {
+              "performs" : {
+                "better" : {
+                  "on" : "Restaurant dataset"
+                }
+              }
+            }
+          },
+          "from sentence" : "The overall performance of AEN - GloVe and AEN - Glo Ve - BiLSTM is relatively close , AEN - Glo Ve performs better on the Restaurant dataset ."
+        },
+        "AEN - Glo Ve" : {
+          "has" : "fewer parameters",
+          "easier to" : "parallelize",
+          "from sentence" : "More importantly , AEN - Glo Ve has fewer parameters and is easier to parallelize ."
+        },
+        "AEN - Glo Ve 's lightweight level" : {
+          "ranks" : "second",
+          "from sentence" : "AEN - Glo Ve 's lightweight level ranks second , since it takes some more parameters than MemNet in modeling hidden states of sequences ."
+        },
+        "model size" : {
+          "of" : {
+            "AEN - Glo Ve - BiLSTM" : {
+              "more than" : {
+                "twice" : {
+                  "of" : "AEN - GloVe"
+                }
+              },
+              "does not bring" : "any performance improvements"
+            }
+          },
+          "from sentence" : "As a comparison , the model size of AEN - Glo Ve - BiLSTM is more than twice that of AEN - GloVe , but does not bring any performance improvements ."
+        }
+      }
+    }
+  }
+}

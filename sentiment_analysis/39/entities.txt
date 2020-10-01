@@ -1,0 +1,122 @@
+162	126	134	based on
+162	135	154	linguistic features
+162	89	96	such as
+162	163	170	n-grams
+162	173	188	POS information
+162	192	223	more hand - engineered features
+164	21	27	define
+164	42	77	sparse representations of locations
+165	0	26	Mask target entity n-grams
+168	0	21	Left - right n- grams
+170	0	18	Left right pooling
+178	87	90	use
+178	93	111	bidirectional LSTM
+178	112	120	to learn
+178	123	133	classifier
+178	134	137	for
+178	138	157	each of the aspects
+179	0	15	Representations
+179	16	19	for
+179	22	38	location ( e l )
+179	52	57	using
+180	0	35	Final output state ( LSTM - Final )
+181	0	41	Location output state ( LSTM - Location )
+128	0	9	SentiHood
+128	20	28	contains
+128	29	48	annotated sentences
+128	49	59	containing
+128	60	95	one or two location entity mentions
+129	22	36	5215 sentences
+129	37	41	with
+129	42	56	3862 sentences
+129	57	67	containing
+129	70	85	single location
+129	90	104	1353 sentences
+129	57	67	containing
+129	116	142	multiple ( two ) locations
+131	12	22	 sentiment
+131	26	38	dominant for
+131	39	46	aspects
+131	47	54	such as
+131	55	74	dining and shopping
+133	4	18	general aspect
+133	19	21	is
+133	26	46	most frequent aspect
+133	47	51	with
+133	52	71	over 2000 sentences
+133	78	93	aspect touristy
+133	98	109	occurred in
+133	110	133	less than 100 sentences
+134	71	104	total number of opinions ( 5920 )
+134	13	15	in
+134	112	119	dataset
+134	123	134	higher than
+134	139	158	number of sentences
+134	12	17	since
+134	18	31	each sentence
+134	44	64	one or more opinions
+135	16	20	name
+135	16	20	name
+135	0	21	Location entity names
+135	26	35	masked by
+135	36	60	location1 and location 2
+135	61	63	in
+135	68	81	whole dataset
+2	53	60	Dataset
+2	12	52	Targeted Aspect Based Sentiment Analysis
+4	41	83	targeted aspect - based sentiment analysis
+16	0	18	Sentiment analysis
+20	0	42	Aspect - based sentiment analysis ( ABSA )
+24	0	27	Targeted sentiment analysis
+211	10	13	see
+211	20	41	n-gram representation
+211	42	46	with
+211	47	63	location masking
+211	64	72	achieves
+211	73	96	slightly better results
+211	97	101	over
+211	106	126	left - right context
+213	7	16	by adding
+213	17	32	POS information
+213	38	42	gain
+213	46	54	increase
+213	13	15	in
+213	62	73	performance
+215	0	10	Separating
+215	15	63	left and the right context ( LR - Left - Right )
+215	64	67	for
+215	68	86	BoW representation
+215	89	105	does not improve
+215	110	121	performance
+217	0	5	Among
+217	12	34	two variations of LSTM
+217	41	46	model
+217	47	51	with
+217	52	74	final state embeddings
+217	75	79	does
+217	80	95	slightly better
+217	96	100	than
+217	41	46	model
+217	120	123	use
+217	128	160	embeddings at the location index
+218	6	25	interesting to note
+218	35	50	best LSTM model
+218	54	69	not superior to
+218	70	95	logistic regression model
+218	109	120	in terms of
+218	121	124	AUC
+221	56	59	for
+221	60	85	logistic regression model
+221	86	90	with
+221	91	118	n-grams and POS information
+221	8	39	interesting observation is that
+221	44	55	F 1 measure
+221	32	34	is
+221	122	130	very low
+221	151	162	performance
+221	32	34	is
+221	166	174	superior
+221	175	177	to
+221	178	190	other models
+221	191	202	in terms of
+221	203	206	AUC

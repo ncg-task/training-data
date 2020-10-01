@@ -1,0 +1,18 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "add" : {
+        "dropout" : {
+          "before" : "each add - on layer",
+          "from sentence" : "We add dropout before each add - on layer ."
+        }
+      },
+      "For" : {
+        "pre-trained BERT model" : {
+          "use" : "uncased basic model",
+          "from sentence" : "For the pre-trained BERT model , we use the uncased basic model ."
+        }
+      }
+    }
+  }
+}

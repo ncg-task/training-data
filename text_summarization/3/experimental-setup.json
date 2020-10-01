@@ -1,0 +1,95 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "has" : {
+        "word embeddings" : {
+          "initialize with" : "128 - d vectors",
+          "fine - tune" : "during training",
+          "from sentence" : "We initialize word embeddings with 128 - d vectors and fine - tune them during training ."
+        },
+        "vocabulary size" : {
+          "set to" : {
+            "150 k" : {
+              "for" : "both the source and target text"
+            }
+          },
+          "from sentence" : "The vocabulary size was set to 150 k for both the source and target text ."
+        },
+        "hidden state size" : {
+          "set to" : "256",
+          "from sentence" : "The hidden state size was set to 256 ."
+        },
+        "models" : {
+          "on" : "single GTX TI - TAN GPU machine",
+          "from sentence" : "We trained our models on a single GTX TI - TAN GPU machine ."
+        }
+      },
+      "used" : {
+        "Adagrad optimizer" : {
+          "with" : {
+            "batch size of 64" : {
+              "to minimize" : "loss"
+            }
+          },
+          "from sentence" : "We used the Adagrad optimizer with a batch size of 64 to minimize the loss ."          
+        },
+        "gradient clipping" : {
+          "with" : {
+            "maximum gradient norm" : {
+              "of" : "2"
+            }
+          },
+          "from sentence" : "We used gradient clipping with a maximum gradient norm of 2 ."
+        }
+      },
+      "set to" : {
+        "0.15" : {
+          "has" : "initial learning rate"
+        },
+        "0.1" : {
+          "has" : "accumulator value"
+        },
+        "from sentence" : "The initial learning rate and the accumulator value were set to 0.15 and 0.1 , respectively ."
+      },
+      "trained" : {
+        "concept pointer generator" : {
+          "for" : {
+            "450 k iterations" : {
+              "yielded" : "best performance"
+            }
+          }
+        }
+      },
+      "optimization using" : {
+        "RL rewards" : {
+          "for" : {
+            "RG - L" : {
+              "at" : {
+                "95 K iterations" : {
+                  "on" : "DUC - 2004"
+                },
+                "50 K iterations" : {
+                  "on" : "Gigaword"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "We trained our concept pointer generator for 450 k iterations yielded the best performance , then took the optimization using RL rewards for RG - L at 95 K iterations on DUC - 2004 and at 50 K iterations on Gigaword ."
+      },
+      "took" : {
+        "distancesupervised training" : {
+          "at" : {
+            "5 K iterations" : {
+              "on" : "DUC - 2004"
+            },
+            "6.5 K iterations" : {
+              "on" : "Gigaword"
+            }
+          }
+        },
+        "from sentence" : "We took the distancesupervised training at 5 K iterations on DUC - 2004 and at 6.5 K iterations on Gigaword ."
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "our boundary model" : {
+          "has" : {
+            "outperformed" : {
+              "has" : "sequence model"
+            }
+          },
+          "achieving" : {
+            "exact match score" : {
+              "of" : "61.1 %"
+            },
+            "F1 score" : {
+              "of" : "71.2 %"
+            }
+          },
+          "from sentence" : "Furthermore , our boundary model has outperformed the sequence model , achieving an exact match score of 61.1 % and an F1 score of 71.2 % ."
+        }
+      },
+      "in terms of" : {
+        "exact match score" : {
+          "has" : {
+            "boundary model" : {
+              "has" : {
+                "clear advantage" : {
+                  "over" : "sequence model"
+                }
+              }
+            }
+          },
+          "from sentence" : "In particular , in terms of the exact match score , the boundary model has a clear advantage over the sequence model ."
+        }
+      },
+      "adding" : {
+        "Bi - Ans - Ptr" : {
+          "with" : "bi-directional pre-processing LSTM",
+          "get" : {
+            "1.2 % improvement" : {
+              "in" : "F1"
+            }
+          }
+        },
+        "from sentence" : "While by adding Bi - Ans - Ptr with bi-directional pre-processing LSTM , we can get 1.2 % improvement in F1 ."
+      }
+    }
+  }
+}

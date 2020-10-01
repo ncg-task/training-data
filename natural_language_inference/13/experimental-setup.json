@@ -1,0 +1,62 @@
+{
+  "has" : {
+    "Experimental Setup" : {
+      "implement" : {
+        "all models" : {
+          "in" : "TensorFlow"
+        },
+        "from sentence" : "We implement all models in TensorFlow ."
+      },
+      "has" : {
+        "Word embeddings" : {
+          "initialized with" : "300d Glo Ve vectors",
+          "not fine - tuned during" : "training",
+          "from sentence" : "Word embeddings are initialized with 300d Glo Ve vectors and are not fine - tuned during training ."
+        },
+        "Dropout rate" : {
+          "tuned amongst" : {
+            "{ 0.1 , 0.2 , 0.3 }" : {
+              "on" : {
+                "all layers" : {
+                  "including" : "embedding layer"
+                }
+              }
+            }
+          },
+          "from sentence" : "Dropout rate is tuned amongst { 0.1 , 0.2 , 0.3 } on all layers including the embedding layer ."
+        },
+        "batch size" : {
+          "set to" : "64/256/32",
+          "from sentence" : "The batch size is set to 64/256/32 accordingly ."
+        },
+        "maximum sequence lengths" : {
+          "are" : "500/200/1100",
+          "from sentence" : "The maximum sequence lengths are 500/200/1100 respectively ."
+        }
+      },
+      "adopt" : {
+        "Adam optimizer" : {
+          "with" : {
+            "learning rate" : {
+              "of" : {
+                "0.0003/ 0.001/0.001" : {
+                  "for" : "RACE / SearchQA / Narrative QA"
+                }
+              }
+            }
+          },
+          "from sentence" : "We adopt the Adam optimizer with a learning rate of 0.0003/ 0.001/0.001 for RACE / SearchQA / Narrative
+QA respectively ."
+
+        }
+      },
+      "based on" : {
+        "TitanXP GPU" : {
+          "has" : "all runtime benchmarks",
+          "trained" : "All models"
+        },
+        "from sentence" : "All models are trained and all runtime benchmarks are based on a TitanXP GPU ."
+      }
+    }
+  }
+}

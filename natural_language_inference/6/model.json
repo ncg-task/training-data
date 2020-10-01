@@ -1,0 +1,34 @@
+{
+  "has" : {
+    "Model" : {
+      "interested in" : {
+        "universal language agnostic sentence embeddings" : {
+          "that is" : {
+            "vector representations" : {
+              "of" : {
+                "sentences" : {
+                  "that are" : {
+                    "general" : {
+                      "with respect to" : {
+                        "two dimensions" : {
+                          "name" : ["input language", "NLP task"]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "In this work , we are interested in universal language agnostic sentence embeddings , that is , vector representations of sentences that are general with respect to two dimensions : the input language and the NLP task ."
+        }
+      },
+      "train" : {
+        "single encoder" : {
+          "to handle" : "multiple languages",
+          "from sentence" : "To that end , we train a single encoder to handle multiple languages , so that semantically similar sentences in different languages are close in the embedding space ."
+        }
+      }
+    }
+  }
+}

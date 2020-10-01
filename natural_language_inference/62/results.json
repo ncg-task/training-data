@@ -1,0 +1,34 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "KAR" : {
+          "on" : {
+            "development set" : {
+              "achieves" : {
+                "EM" : {
+                  "of" : "71.9"
+                },
+                "F 1 score" : {
+                  "of" : "80.8"
+                },
+                "even better" : {
+                  "than" : {
+                    "final performance" : {
+                      "of" : {
+                        "several strong baselines" : {
+                          "such as" : ["DCN ( EM / F1 : 65.4 / 75.6 )", "BiDAF ( EM / F1 : 67.7 / 77.3 )"]
+                        }
+                      }
+                    }
+                  }
+                }
+              }              
+            }
+          },
+          "from sentence" : "Finally we find that after only one epoch of training , KAR already achieves an EM of 71.9 and an F 1 score of 80.8 on the development set , which is even better than the final performance of several strong baselines , such as DCN ( EM / F1 : 65.4 / 75.6 ) and BiDAF ( EM / F1 : 67.7 / 77.3 ) ."
+        }
+      }
+    }
+  }
+}

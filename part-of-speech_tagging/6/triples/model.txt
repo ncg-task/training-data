@@ -1,0 +1,6 @@
+(Contribution||has||Model)
+(Model||learns||latent feature representations)
+(latent feature representations||shared for||POS tagging and dependency parsing tasks)
+(POS tagging and dependency parsing tasks||using||BiLSTMthe bidirectional LSTM)
+(Model||propose||novel neural architecture)
+(novel neural architecture||for||joint POS tagging and graph - based dependency parsing)

@@ -1,0 +1,104 @@
+112	15	29	implemented in
+112	30	40	TensorFlow
+119	3	6	use
+119	7	39	300 dimensional GloVe embeddings
+119	40	52	to represent
+119	53	58	words
+120	0	21	Each embedding vector
+120	26	36	normalized
+120	37	44	to have
+120	45	56	2 norm of 1
+120	61	75	projected down
+120	18	20	to
+120	79	93	200 dimensions
+121	0	35	Out - of - vocabulary ( OOV ) words
+121	40	49	hashed to
+121	50	78	one of 100 random embeddings
+121	84	98	initialized to
+121	99	105	mean 0
+121	110	130	standard deviation 1
+123	4	50	other parameter weights ( hidden layers etc. )
+123	56	72	initialized from
+123	73	89	random Gaussians
+123	90	94	with
+123	95	101	mean 0
+123	106	129	standard deviation 0.01
+124	0	27	Each hyperparameter setting
+124	32	38	run on
+124	41	55	single machine
+124	56	60	with
+124	61	102	10 asynchronous gradient - update threads
+124	105	110	using
+124	111	118	Adagrad
+124	119	122	for
+124	123	135	optimization
+124	56	60	with
+124	145	178	default initial accumulator value
+124	179	181	of
+124	182	185	0.1
+125	0	22	Dropout regularization
+125	27	35	used for
+125	36	51	all ReLU layers
+125	58	65	not for
+125	70	88	final linear layer
+126	91	104	dropout ratio
+126	107	110	0.2
+126	117	130	learning rate
+126	140	147	vanilla
+126	133	137	0.05
+126	158	173	intra-attention
+126	150	155	0.025
+24	55	64	relies on
+24	65	74	alignment
+24	82	116	fully computationally decomposable
+24	117	132	with respect to
+24	137	147	input text
+26	0	5	Given
+26	6	19	two sentences
+26	28	37	each word
+26	41	56	repre-sented by
+26	60	76	embedding vector
+28	14	21	results
+28	22	24	of
+28	31	42	subproblems
+28	47	53	merged
+28	54	64	to produce
+28	69	89	final classification
+26	88	94	create
+26	97	118	soft alignment matrix
+26	119	124	using
+26	125	141	neural attention
+27	8	11	use
+27	16	34	( soft ) alignment
+27	35	47	to decompose
+27	52	56	task
+27	57	61	into
+27	62	73	subproblems
+29	28	33	apply
+29	34	58	intra-sentence attention
+29	59	67	to endow
+29	72	77	model
+29	78	82	with
+29	85	100	richer encoding
+29	101	103	of
+29	104	117	substructures
+29	118	126	prior to
+29	131	145	alignment step
+2	35	61	Natural Language Inference
+9	0	34	Natural language inference ( NLI )
+10	0	3	NLI
+130	0	20	Our vanilla approach
+130	21	29	achieves
+130	30	57	state - of - theart results
+130	58	62	with
+130	63	108	almost an order of magnitude fewer parameters
+130	109	113	than
+130	118	123	LSTMN
+131	0	6	Adding
+131	7	31	intra-sentence attention
+131	32	37	gives
+131	40	64	considerable improvement
+131	65	67	of
+131	68	89	0.5 percentage points
+131	90	94	over
+131	99	124	existing state of the art

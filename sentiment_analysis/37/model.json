@@ -1,0 +1,39 @@
+{
+  "has" : {
+    "Model" : {
+      "independently generate" : {
+        "aspect - aware sentence representations" : {
+          "for" : "all the aspects",
+          "using" : ["gated recurrent unit ( GRU )", "attention mechanism"]
+        },
+        "from sentence" : "To model these scenarios , firstly , following , we independently generate aspect - aware sentence representations for all the aspects using gated recurrent unit ( GRU ) and attention mechanism ."
+      },
+      "employ" : {
+        "memory networks" : {
+          "to repeatedly match" : {
+            "target aspect representation" : {
+              "with" : "other aspects",
+              "to generate" : {
+                "more accurate representation" : {
+                  "of" : "target aspect",
+                  "name" : {
+                    "refined representation" : {
+                      "fed to" : {
+                        "softmax classifier" : {
+                          "for" : "final classification"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Then , we employ memory networks to repeatedly match the target aspect representation with the other aspects to generate more accurate representation of the target aspect .
+This refined representation is fed to a softmax classifier for final classification ."
+
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "In" : {
+        "our d-TBCNN model" : {
+          "has" : {
+            "number of units" : {
+              "is" : {
+                "300" : {
+                  "for" : "convolution"
+                },
+                "200" : {
+                  "for" : "last hidden layer"
+                }
+              }
+            }
+          },
+          "from sentence" : "In our d-TBCNN model , the number of units is 300 for convolution and 200 for the last hidden layer ."
+        }
+      },
+      "has" : {
+        "Word embeddings" : {
+          "are" : "300 dimensional",
+          "pretrained ourselves using" : "word2vec",
+          "from sentence" : "Word embeddings are 300 dimensional , pretrained ourselves using word2vec To train our model , we compute gradient by back - propagation and apply stochastic gradient descent with mini-batch 200 ."
+        },
+        "Dropout" : {
+          "applied to" : "both weights and embeddings",
+          "from sentence" : "Dropout is further applied to both weights and embeddings ."
+        },
+        "All hidden layers" : {
+          "dropped out by" : "50 %",
+          "from sentence" : "All hidden layers are dropped out by 50 % , and embeddings 40 % ."
+        },
+        "embeddings" : {
+          "has" : "40 %",
+          "from sentence" : "All hidden layers are dropped out by 50 % , and embeddings 40 % ."
+        }
+      },
+      "To train" : {
+        "our model" : {
+          "compute" : {
+            "gradient" : {
+              "by" : "back - propagation"
+            }
+          },
+          "apply" : {
+            "stochastic gradient descent" : {
+              "with" : "mini-batch 200"
+            }          
+          }
+        },
+        "from sentence" : "Word embeddings are 300 dimensional , pretrained ourselves using word2vec To train our model , we compute gradient by back - propagation and apply stochastic gradient descent with mini-batch 200 ."
+      },
+      "use" : {
+        "ReLU" : {
+          "as" : "activation function",
+          "from sentence" : "We use ReLU as the activation function ."
+        }
+      },
+      "For" : {
+        "regularization" : {
+          "add" : {
+            "2 penalty" : {
+              "for" : {
+                "weights" : {
+                  "with" : {
+                    "coefficient" : {
+                      "of" : "10 ?5"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "For regularization , we add 2 penalty for weights with a coefficient of 10 ?5 ."
+        }
+      }
+    }
+  }  
+}

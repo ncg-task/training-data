@@ -1,0 +1,46 @@
+29	81	85	Code
+29	102	140	https://github.com/kimiyoung/fg-gating
+28	18	25	present
+28	28	59	fine - grained gating mechanism
+28	60	70	to combine
+28	75	122	word - level and characterlevel representations
+29	3	10	compute
+29	13	24	vector gate
+29	25	27	as
+29	30	47	linear projection
+29	48	50	of
+29	55	69	token features
+31	8	30	multiplicatively apply
+31	35	39	gate
+31	40	42	to
+31	47	94	character - level and wordlevel representations
+32	0	14	Each dimension
+32	15	17	of
+32	22	26	gate
+32	27	35	controls
+32	36	56	how much information
+32	60	71	flowed from
+32	76	126	word - level and character - level representations
+34	17	52	our fine - grained gating mechanism
+34	60	67	used to
+34	68	73	model
+34	74	89	multiple levels
+34	90	92	of
+34	93	102	structure
+34	22	24	in
+34	106	114	language
+34	127	132	words
+34	135	145	characters
+34	148	155	phrases
+34	158	167	sentences
+34	172	182	paragraphs
+33	122	125	for
+33	126	142	token properties
+33	149	158	determine
+33	163	167	gate
+33	3	6	use
+33	7	24	named entity tags
+33	27	47	part - ofspeech tags
+33	50	70	document frequencies
+33	77	105	word - level representations
+2	93	114	READING COMPREHENSION

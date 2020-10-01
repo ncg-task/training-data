@@ -1,0 +1,3 @@
+(Contribution||has research problem||Joint Extraction of Entity Mentions and Relations)
+(Contribution||has research problem||Extraction of entities and their relations from text)
+(Contribution||has research problem||entity mention and relation extraction at the sentencelevel)

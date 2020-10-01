@@ -1,0 +1,228 @@
+194	0	14	After removing
+194	19	45	exact match binary feature
+194	60	71	performance
+194	72	79	degrade
+194	80	82	to
+194	83	87	78.2
+194	88	90	on
+194	91	104	matched score
+194	88	90	on
+194	108	123	development set
+194	128	132	78.0
+194	88	90	on
+194	136	152	mismatched score
+199	3	9	obtain
+199	10	14	73.2
+199	15	18	for
+199	19	32	matched score
+199	37	41	73.6
+199	42	44	on
+199	45	60	mismatched data
+202	6	12	remove
+202	13	38	encoding layer completely
+202	53	59	obtain
+202	62	66	73.5
+202	67	70	for
+202	71	84	matched score
+202	89	93	73.2
+202	67	70	for
+202	98	114	mismatched score
+203	11	22	demonstrate
+203	27	51	feature extraction layer
+203	52	56	have
+203	57	76	powerful capability
+203	77	87	to capture
+203	92	108	semantic feature
+204	28	63	both self - attention and fuse gate
+204	71	85	retaining only
+204	86	101	highway network
+204	47	49	on
+205	4	10	result
+205	11	19	improves
+205	20	22	to
+205	23	36	77.7 and 77.3
+205	53	91	matched and mismatched development set
+206	48	57	fuse gate
+206	82	93	performance
+206	94	101	degrade
+206	60	62	to
+206	105	109	73.5
+206	85	88	for
+206	114	127	matched score
+206	132	136	73.8
+206	85	88	for
+206	141	151	mismatched
+207	26	29	use
+207	34	42	addition
+207	43	45	of
+207	50	64	representation
+207	65	70	after
+207	71	86	highway network
+207	14	17	and
+207	50	64	representation
+207	65	70	after
+207	116	132	self - attention
+207	133	135	as
+207	136	151	skip connection
+207	177	197	performance increase
+207	198	200	to
+207	201	214	77.3 and 76.3
+137	3	12	implement
+137	13	26	our algorithm
+137	27	31	with
+137	32	52	Tensorflow framework
+138	3	21	Adadelta optimizer
+138	40	44	with
+138	12	20	optimize
+139	5	12	used to
+139	22	47	all the trainable weights
+140	4	25	initial learning rate
+140	29	35	set to
+140	36	39	0.5
+140	44	54	batch size
+140	33	35	to
+140	58	60	70
+141	20	31	not improve
+141	32	57	best indomain performance
+141	49	52	for
+141	62	74	30,000 steps
+141	80	93	SGD optimizer
+141	94	98	with
+141	99	112	learning rate
+141	113	115	of
+141	9	14	model
+142	10	17	to help
+142	27	31	find
+142	34	54	better local optimum
+143	0	14	Dropout layers
+143	19	33	applied before
+143	34	51	all linear layers
+143	56	61	after
+143	62	84	word - embedding layer
+145	3	13	initialize
+145	18	33	word embeddings
+145	34	38	with
+145	39	75	pre-trained 300D Glo Ve 840B vectors
+145	86	112	out - of - vocabulary word
+145	113	116	are
+145	117	137	randomly initialized
+145	34	38	with
+145	143	163	uniform distribution
+146	4	24	character embeddings
+146	25	28	are
+146	29	49	randomly initialized
+146	50	54	with
+146	55	59	100D
+147	3	14	crop or pad
+147	15	19	each
+147	20	25	token
+147	26	33	to have
+147	34	47	16 characters
+148	4	30	1D convolution kernel size
+148	31	34	for
+148	35	54	character embedding
+148	55	57	is
+148	58	59	5
+149	0	11	All weights
+149	16	29	constraint by
+149	30	47	L2 regularization
+154	4	26	first scale down ratio
+155	0	2	in
+155	3	27	feature extraction layer
+155	31	37	set to
+155	38	41	0.3
+155	46	75	transitional scale down ratio
+155	31	37	set to
+156	10	13	0.5
+157	4	19	sequence length
+157	23	29	set as
+157	32	43	hard cutoff
+157	44	46	on
+157	47	62	all experiments
+157	65	67	48
+157	68	71	for
+157	72	80	MultiNLI
+157	83	85	32
+157	68	71	for
+157	90	94	SNLI
+157	99	101	24
+157	68	71	for
+157	106	133	Quora Question Pair Dataset
+144	3	6	use
+144	10	39	exponential decayed keep rate
+144	40	46	during
+144	47	55	training
+144	58	63	where
+144	68	85	initial keep rate
+144	86	88	is
+144	89	92	1.0
+144	101	111	decay rate
+144	86	88	is
+144	115	120	0.977
+144	121	124	for
+144	125	142	every 10,000 step
+23	18	22	push
+23	27	47	multi-head attention
+23	48	50	to
+23	53	60	extreme
+23	61	72	by building
+23	75	125	word - by - word dimension - wise alignment tensor
+23	135	139	call
+23	140	158	interaction tensor
+24	4	22	interaction tensor
+24	23	30	encodes
+24	35	70	high - order alignment relationship
+24	71	78	between
+24	79	93	sentences pair
+26	3	6	dub
+26	11	28	general framework
+26	29	31	as
+26	32	69	Interactive Inference Network ( IIN )
+2	45	71	NATURAL LANGUAGE INFERENCE
+10	29	32	NLI
+10	47	78	recognizing textual entiailment
+10	84	87	RTE
+161	14	22	MULTINLI
+166	0	12	Our approach
+166	15	28	without using
+166	33	52	recurrent structure
+166	55	63	achieves
+166	68	106	new state - of - the - art performance
+166	80	82	of
+166	110	116	80.0 %
+166	119	128	exceeding
+166	129	171	current state - of - the - art performance
+166	172	174	by
+166	175	188	more than 5 %
+167	20	22	on
+167	33	37	find
+167	42	76	out - of - domain test performance
+167	77	79	is
+167	80	98	consistently lower
+167	99	103	than
+167	104	132	in - domain test performance
+177	3	7	show
+177	8	24	our model , DIIN
+177	27	35	achieves
+177	36	70	state - of - the - art performance
+177	71	73	on
+177	78	101	competitive leaderboard
+181	14	41	QUORA QUESTION PAIR DATASET
+184	0	5	BIMPM
+184	6	12	models
+184	13	46	different perspective of matching
+184	47	54	between
+184	55	68	sentence pair
+184	69	71	on
+184	72	86	both direction
+184	94	104	aggregates
+184	105	120	matching vector
+184	121	125	with
+184	126	130	LSTM
+185	0	27	DECATT word and DECATT char
+185	28	32	uses
+185	33	84	automatically collected in - domain paraphrase data
+185	85	102	to noisy pretrain
+185	103	152	n-gram word embedding and ngram subword embedding
+185	160	162	on
+185	172	200	decomposable attention model

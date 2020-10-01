@@ -1,0 +1,44 @@
+{
+  "has" : {
+    "Model" : {
+      "study the ability of" : {
+        "Transformer neural network architecture" : {
+          "to encode" : {
+            "relations" : {
+              "between" : "entity pairs"
+            }
+          },
+          "identify" : {
+            "representation" : {
+              "that outperforms" : {
+                "previous work" : {
+                  "in" : "supervised relation extraction"
+                }
+              }
+            }
+          },
+          "from sentence" : "First , we study the ability of the Transformer neural network architecture to encode relations between entity pairs , and we identify a method of representation that outperforms previous work in supervised relation extraction ."
+        }
+      },
+      "present" : {
+        "method" : {
+          "of" : {
+            "training" : {
+              "has" : {
+                "relation representation" : {
+                  "without" : {
+                    "any supervision" : {
+                      "from" : "knowledge graph or human annotators"
+                    }
+                  }
+                }
+              },
+              "by matching" : "blanks",
+              "from sentence" : "Then , we present a method of training this relation representation without any supervision from a knowledge graph or human annotators by matching the blanks ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

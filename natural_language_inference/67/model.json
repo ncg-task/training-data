@@ -1,0 +1,37 @@
+{
+  "has" : {
+    "Model" : {
+      "called" : ["dynamic chunk reader ( DCR )", {"from sentence" : "Our proposed model , called dynamic chunk reader ( DCR ) , not only significantly differs from both the above systems in the way that answer candidates are generated and ranked , but also shares merits with both works ."}],
+      "uses" : {
+        "deep networks" : {
+          "to learn" : {
+            "better representations" : {
+              "for" : "candidate answer chunks",
+              "instead of" : "fixed feature representations"
+            }
+          },
+          "from sentence" : "First , our model uses deep networks to learn better representations for candidate answer chunks , instead of using fixed feature representations as in ."
+        }
+      },
+      "represents" : {
+        "answer candidates" : {
+          "as" : {
+            "chunks" : {
+              "instead of" : "word - level representations",
+              "to make" : {
+                "model" : {
+                  "aware of" : {
+                    "subtle differences" : {
+                      "among" : "candidates"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Second , it represents answer candidates as chunks , as in ( Rajpurkar et al. ) , instead of word - level representations , to make the model aware of the subtle differences among candidates ( importantly , overlapping candidates ) ."
+        }
+      }
+    }
+  }
+}

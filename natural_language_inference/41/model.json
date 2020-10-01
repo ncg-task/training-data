@@ -1,0 +1,56 @@
+{
+  "has" : {
+    "Model" : {
+      "present" : {
+        "BART" : {
+          "pre-trains" : {
+            "model" : {
+              "combining" : "Bidirectional and Auto - Regressive Transformers"
+            }
+          },
+          "from sentence" : "In this paper , we present BART , which pre-trains a model combining Bidirectional and Auto - Regressive Transformers ."
+        }
+      },
+      "has" : {
+        "BART" : {
+          "is" : {
+            "denoising autoencoder" : {
+              "built with" : "sequence - to - sequence model",
+              "applicable to" : "very wide range of end tasks"
+            },
+            "from sentence" : "BART is a denoising autoencoder built with a sequence - to - sequence model that is applicable to a very wide range of end tasks ."            
+          },
+          "uses" : {
+            "standard Tranformer - based neural machine translation architecture" : {
+              "seen as" : {
+                "generalizing" : {
+                  "has" : [{"BERT" : {"due to" : "bidirectional encoder"}}, {"GPT" : {"with" : "left - to - right decoder"}}]
+                }
+              },
+              "from sentence" : "BART uses a standard Tranformer - based neural machine translation architecture which , despite its simplicity , can be seen as generalizing BERT ( due to the bidirectional encoder ) , GPT ( with the left - to - right decoder ) , and many other more recent pretraining schemes ( see ."
+            }
+          }
+        },
+        "Pretraining" : {
+          "has" : {
+            "two stages" : {
+              "has" : {
+                "text" : {
+                  "corrupted with" : "arbitrary noising function"
+                },
+                "sequence - to - sequence model" : {
+                  "is" : {
+                    "learned" : {
+                      "to reconstruct" : "original text"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Pretraining has two stages ( 1 ) text is corrupted with an arbitrary noising function , and ( 2 ) a sequence - to - sequence model is learned to reconstruct the original text ."
+            }
+          } 
+        }
+      }
+    }
+  }
+}

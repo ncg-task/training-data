@@ -1,0 +1,90 @@
+{
+  "has" : {
+    "Results" : {
+      "Comparing" : {
+        "1 - hop memory networks" : {
+          "see" : {
+            "significant performance gains" : {
+              "achieved by" : "CNP , CI , JCI , and JPI",
+              "on" : {
+                "both datasets" : {
+                  "each of them has" : {
+                    "p < 0.01" : {
+                      "over" : {
+                        "strongest baseline ( BL - MN )" : {
+                          "from" : "paired t- test"
+                        }
+                      },
+                      "using" : "F1 - Macro"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Comparing the 1 - hop memory networks ( first nine rows ) , we see significant performance gains achieved by CNP , CI , JCI , and JPI on both datasets , where each of them has p < 0.01 over the strongest baseline ( BL - MN ) from paired t- test using F1 - Macro ."
+        },
+        "all TMNs" : {
+          "see that" : {
+            "JCI" : {
+              "works" : "best"
+            }
+          },
+          "from sentence" : "3 . Comparing all TMNs , we see that JCI works the best as it always obtains the top - three scores on two datasets and in two settings ."
+        }
+      },
+      "In" : {
+        "3 - hop setting" : {
+          "has" : {
+            "TMNs" : {
+              "achieve" : {
+                "much better results" : {
+                  "on" : "Restaurant"
+                }
+              },
+              "from sentence" : "2 . In the 3 - hop setting , TMNs achieve much better results on Restaurant ."              
+            },
+            "JCI , IT , and CI" : {
+              "achieve" : "best scores",
+              "outperforming" : {
+                "strongest baseline AMN" : {
+                  "by" : "2.38 % , 2.18 % , and 2.03 %"
+                }
+              },
+              "from sentence" : "JCI , IT , and CI achieve the best scores , outperforming the strongest baseline AMN by 2.38 % , 2.18 % , and 2.03 % ."
+            }          
+          }
+        }
+      },
+      "On" : {
+        "Laptop" : {
+          "has" : {
+            "BL - MN and most TMNs" : {
+              "perform" : "similarly"
+            }
+          },
+          "from sentence" : "On Laptop , BL - MN and most TMNs ( except CNP and JPI ) perform similarly ."
+        }
+      },
+      "has" : {
+        "CI and JPI" : {
+          "perform" : {
+            "well" : {
+              "in" : "most cases"
+            }
+          },
+          "from sentence" : "CI and JPI also perform well in most cases ."
+        },
+        "IT , NP , and CNP" : {
+          "achieve" : {
+            "very good scores" : {
+              "in" : "some cases",
+              "are" : "less stable"
+            }
+          },
+          "from sentence" : "IT , NP , and CNP can achieve very good scores in some cases but are less stable ."
+        }
+      }
+    }
+  }  
+}

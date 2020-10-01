@@ -1,0 +1,33 @@
+{
+  "has" : {
+    "Approach" : {
+      "propose" : {
+        "data enrichment method" : {
+          "which uses" : "WordNet",
+          "to extract" : {
+            "inter-word semantic connections" : {
+              "as" : {
+                "general knowledge" : {
+                  "from" : "each given passage - question pair"
+                }
+              }
+            }
+          },
+          "from sentence" : "On the one hand , we propose a data enrichment method , which uses WordNet to extract inter-word semantic connections as general knowledge from each given passage - question pair ."
+        },
+        "end - to - end MRC model" : {
+          "named" : {
+            "Knowledge Aided Reader ( KAR )" : {
+              "explicitly uses" : {
+                "extracted general knowledge" : {
+                  "to assist" : "attention mechanisms"
+                }
+              },
+              "from sentence" : "On the other hand , we propose an end - to - end MRC model named as Knowledge Aided Reader ( KAR ) , which explicitly uses the above extracted general knowledge to assist its attention mechanisms ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

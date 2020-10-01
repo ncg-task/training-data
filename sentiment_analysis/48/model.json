@@ -1,0 +1,64 @@
+{
+  "has" : {
+    "Model" : {
+      "proposed" : {
+        "classifier - agnostic framework" : {
+          "named" : "Aspect - term Semi-supervised Variational Autoencoder ( Kingma and Welling , 2014 ) based on Transformer ( ASVAET )",
+          "from sentence" : "In this paper , we proposed a classifier - agnostic framework which named Aspect - term Semi-supervised Variational Autoencoder ( Kingma and Welling , 2014 ) based on Transformer ( ASVAET ) ."
+        }
+      },
+      "has" : {
+        "variational autoencoder" : {
+          "offers" : {
+            "flexibility" : {
+              "to customize" : "model structure"
+            }
+          },
+          "from sentence" : "The variational autoencoder offers the flexibility to customize the model structure ."
+        },
+        "representation" : {
+          "of" : {
+            "lexical context" : {
+              "extracted by" : "encoder"
+            }
+          }
+        },
+        "aspect - term sentiment polarity" : {
+          "inferred from" : "specific ATSA classifier",
+          "from sentence" : "Specifically , the representation of the lexical context is extracted by the encoder and the aspect - term sentiment polarity is inferred from the specific ATSA classifier ."
+        }
+      },
+      "By regarding" : {
+        "aspect sentiment polarity" : {
+          "of" : "unlabeled data",
+          "as" : "discrete latent variable",
+          "has" : {
+            "model" : {
+              "implicitly induces" : {
+                "sentiment polarity" : {
+                  "via" : "variational inference"
+                }
+              },
+              "from sentence" : "By regarding the aspect sentiment polarity of the unlabeled data as the discrete latent variable , the model implicitly induces the sentiment polarity via the variational inference ."
+            }
+          }
+        }
+      },
+      "by separating" : {
+        "representation" : {
+          "of" : "input sentence",
+          "has" : {
+            "classifier" : {
+              "becomes" : {
+                "independent module" : {
+                  "in" : "our framework"
+                }
+              }
+            }
+          },
+          "from sentence" : "In addition , by separating the representation of the input sentence , the classifier becomes an independent module in our framework , which endows the method with the ability to integrate different classifiers ."
+        }
+      }
+    }
+  }  
+}

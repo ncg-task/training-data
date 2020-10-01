@@ -1,0 +1,180 @@
+title
+A Multi - Stage Memory Augmented Neural Network for Machine Reading Comprehension
+abstract
+Reading Comprehension ( RC ) of text is one of the fundamental tasks in natural language processing .
+In recent years , several end - to - end neural network models have been proposed to solve RC tasks .
+However , most of these models suffer in reasoning overlong documents .
+In this work , we propose a novel Memory Augmented Machine Comprehension Network ( MAMCN ) to address long - range dependencies present in machine reading comprehension .
+We perform extensive experiments to evaluate proposed method with the renowned benchmark datasets such as SQuAD , QUASAR - T , and Trivia QA .
+We achieve the state of the art performance on both the document - level ( QUASAR - T , TriviaQA ) and paragraph - level ( SQuAD ) datasets compared to all the previously published approaches .
+Introduction
+Reading Comprehension ( RC ) is essential for understanding human knowledge written in text form .
+One possible way of measuring RC is by formulating it as answer span prediction style Question Answering ( QA ) task , which is finding an answer to the question based on the given document ( s ) .
+Recently , influential deep learning approaches have been proposed to solve this QA task . ; propose the attention mechanism between question and context for question - aware contextual representation .
+refine these contextual representations by using self - attention to improve the performance .
+Even further performance improvement is gained by using contextualized word representations for query and context .
+Based on those approaches , several methods have successfully made progress towards reaching human - level performance on SQuAD .
+Each training example in the SQuAD only has the relevant paragraph with the corresponding answer .
+However , most of the documents present in the real - world are long , containing relevant and irrelevant paragraphs , and do not guarantee answer presence .
+Therefore the models proposed to solve SQuAD have difficulty in applying to real - world documents .
+Recently , QUASAR - T and Trivia
+QA datasets have been proposed to resemble real - world document .
+These datasets use document - level evidence as training example instead of using only the relevant paragraph and evidence does not guarantee answer presence , which makes them more realistic .
+To effectively comprehend long documents present in the QUASAR - T and TriviaQA datasets , the QA models have to resolve long - range dependencies present in these documents .
+In this work , we build a QA model that can understand long documents by utilizing Memory Augmented Neural Networks ( MANNs ) .
+This type of neural networks decouples the memory capacity from the number of model parameters .
+While there have been several attempts to use MANNs in managing long - range dependencies , applications are limited to only toy datasets .
+Compared to the previous approaches , we mainly focus on the document - level QA task on QUASAR - T and Trivia QA .
+We also apply our model to SQuAD to show that our model even works well on the paragraph - level .
+Our contributions in this work are as follows :
+(
+Related Work
+Many neural networks have been proposed to solve answer span QA task .
+Ranking continuous text spans within a passage was proposed by and .
+combine match - LSTM , originally introduced in and pointer networks to produce the boundary of the answer .
+Since then , most of the models adopted pointer networks as a prediction layer and then focused on improving other layers .
+Some methods focused on devising more accurate attention method ; ; ; employ attention mechanism to match the question context mutually ; In addition , apply multi-layer attention and expand to multi-level attention to get more enriched attention information .
+Other approaches use contextualized word representations to further improve the performance .
+utilize embedding from pre-trained language model as an additional feature and select machine translation model instead .
+Also , there are few attempts at augmenting memory capacity of the model .
+refine the contextual representation with multi-hops , and simply use the encoded query representations as a memory vector for refining the answer prediction , which are not meant to handle long - range dependency that we consider in this work .
+Proposed Model
+We propose a memory augmented reader for answer - span style QA task .
+Answer - span style QA task is defined as follows .
+Question and document can be represented by sequence of words q = {w q i } m i = 1 , d = {w d j } n j=1 respectively .
+Answerspan a = {w d k } e k=s ( where , 1 ? s ? e ? n) should be returned , given q and d .
+We embed the sequence of words in q and d to get contextual representations .
+These contextual representations are used for calculating question - aware context representation which is controlled by external memory unit and used for predicting answer - span .
+We describe more details of each layer in following sections and depict overall architecture of proposed model in .
+Contextual Representation
+Word Embedding :
+We use two different kinds of embeddings to get the richer feature representation for each word in the question and document .
+Word - level embedding helps to have a representation explaining semantic similarities as proximity in high dimensional vector space .
+In addition to this , we utilize character - level embedding by applying convolution filters to address out - ofvocabulary and infrequent words problem .
+We concatenate both embeddings [ e w ; e c ] to represent each word embedding as e ?
+R l .
+Contextual
+Embedding :
+We compute the contextual representation for each word in the question and document by using bi-directional GRU as follows :
+where e q i , ed j are the word embeddings for each word in the question and document , and h i ?1 , h i + 1 are the hidden states of the forward and reverse GRUs respectively .
+The final question and document contextual representation are C q ? R m2 l and Cd ?
+R n2 l .
+Co- attention :
+We compute question - aware representations for each word in the document by adopting the attention mechanism in .
+To get these representations , we first compute the similarity matrix S followed by bi-directional attention between the words in the question and document as follows : similarity matrix s ij represents attention between i th word in the question and j th word in the document .
+We can get the attention weights of question words to each document word by applying column - wise softmax to S.
+A q :,j is attention weights of questions to j th word in the document .
+We can get attended question vectors for the document words by multiplying entire attention matrix A q to the contextual embedding of question C q .
+Also , we can get attention weights on the document words for the question ad by applying softmax to the column - wise max values ( v d ) of attention matrix A q .
+This attention weight on the document words ad is duplicated n times for each row to make A d and applied to contextual embedding of document Cd to get attended document vectors .
+Finally , we can make question - aware contextual representation C by concatenating as follows :
+Memory Controller
+Memory controller allows us to utilize external memory to compensate for the limited memory capacity of the recurrent layers .
+We develop the memory controller inspired by the memory framework of .
+The operation of the controller at time step t is given by :
+It takes the contextual representation vector C t , : as input , and the external memory matrix of the previous time step M t?1 ?
+R pq , where p is the number of memory locations , and q is the dimension of each location .
+We choose two layers of BiGRUs as the recurrent layer for the controller .
+The contextual representations are fed into the first layer to capture interactions between contexts .
+Then , st and the subset of memory vectors obtained from the memory matrix are concatenated to generate an input vector x t for the second layer ,
+where sis the number of read vectors .
+After feeding the input vector x t to the second recurrent layer , the controller uses the outputs of the layer h mt to emit the output vector o t and the interface vector it .
+We describe details of obtaining each vector as follows :
+Output Vector :
+The controller makes the output vector as a weighted sum v t of hidden state of the recurrent layer and memory vectors .
+We add a residual connection between the controller 's input and output to mitigate the information morphing that can occur when interacting with memory .
+As a result , we get a long - term dependency - aware output vector as follows :
+Interface Vector :
+At the same time , the controller generates interface vector it for the memory interaction based on h mt as follows :
+We consider it as a concatenation of various functional vectors which determine the basic operation of the memory such as memory addressing , read and write .
+The complete list of functional vectors is described in .
+Memory Addressing :
+We use content - based addressing mechanism for read and write operations .
+In content - based addressing , the memory locations required to read / write at the current time step tare obtained by using the probability distribution over the memory locations , which is a similarity function between the key vector and each memory vector .
+cos is the cosine similarity and ?
+is a constrained strength value to [ 1 , ? ) by ( 1 + log ( 1 + e ? ) ) .
+Operation Name Vector
+Read
+Write key Read Operation :
+Each read head performs a read operation by weighting over entire memory .
+Along with this , we use a temporal memory linkage matrix to associate memories together , which keep track of consecutively modified locations in the memory .
+The multiplication of temporal link matrix and read weights from the previous time - step gives backward b t and forward weights ft which helps to track the temporal order of the memory .
+The read weights are obtained from the linear combination of corresponding weights and the mode vectors ?
+normalized by softmax .
+These read weights are applied to memory locations to get the final read vectors as follow :
+Write Operation :
+Similar to the read heads in read operation , a write head determines whereto write by using content - based weighting .
+We adopted dynamic memory allocation as described in to maintain a free list and a usage vector to track the memory freeness .
+Based on the memory freeness , allocation weights at are calculated to indicate whereto write , and it is interpolated with content - based weights to get locations for writing .
+Write gate g wt decides whether to write or not and allocation gate g at determines the degree of interpolation .
+After finding the location to write with this weight , write operation on the memory is performed as follows :
+where is element - wise multiplication and J p ,q is p by q matrix of ones .
+Prediction Layer
+We feed output vector o from memory controller to prediction layer .
+First , it goes to bi-directional GRU and is then linearly projected to get probability distribution of start position of answer P r( a s | q , d ) .
+The end position P r( a e | q , d) is calculated the same way with the hidden states of the start position concatenated as an additional input .
+These probabilities are also used for model optimization while training in the form of negative log -likelihood probability .
+Experimental Results
+In this section , we present our experimental setup for evaluating the performance of our MAMCN model .
+We select different datasets based on their average document length to check the effectiveness of external memory on RC task .
+We compare the performance of our model with all the published results and the baseline memory augmented model .
+The baseline model is developed by replacing modeling layer in BiDAF model with the memory controller from DNC .
+Data Set
+We perform experiments with recently proposed QUASAR - T and Trivia QA datasets to seethe performance of our model on the long documents .
+The QUASAR - T dataset consists of factoid question - answer pairs and a corresponding large background corpus ) to comprehend .
+In TriviaQA , question - answers pairs are collected from trivia and quiz - league websites .
+The evidence documents for these QA pairs are collected from Wikipedia articles and Web search results .
+The average length of the documents in these datasets are much longer than SQuAD and question - documents pairs are collected in a decoupled way , making them more difficult to comprehend .
+In the case of TriviaQA , we truncate the documents to 1200 words for training and 2000 words for the test .
+Even these truncated documents are 3 to 5 times longer than SQuAD documents .
+The average length of original documents in TriviaQA is about 3,000 words , so there is no guarantee that above truncated documents contain the answer fora given question .
+We also conduct experiments on SQuAD dataset to show our model can even work well on paragraph - level data .
+The SQuAD contains a collection of Wikipedia articles and crowd - sourced question - answer pairs .
+Even though SQuAD dataset pushed existing models to achieve significant performance improvements in solving RC task , the document length does not resemble the length of the real - world document .
+The statistics of all these datasets are shown in .
+We use official train , dev , and test splits provided in all these datasets for experiments .
+Implementation Details
+We develop MAMCN using Tensorflow 1 deep learning framework and Sonnet 2 library .
+For the word - level embedding , we tokenize the documents using NLTK toolkit and substitute words with GloVe 6B 43.16 46.90 49.28 55.83 BiDAF 40.32 45.91 44.86 50.71 hidden size is set to 200 for QUASAR - T and Triv - iaQA , and 100 for SQuAD .
+In the memory controller , we use 100 x 36 size memory initialized with zeros , 4 read heads and 1 write head .
+The optimizer is AdaDelta ( Zeiler , 2012 ) with an initial learning rate of 0.5 .
+We train our model for 12 epochs , and batch size is set to 30 .
+During the training , we keep the exponential moving average of weights with 0.001 decay and use these averages at test time .
+Results
+We use Exact Match ( EM ) and F1 Score as evaluation metrics for all the datasets .
+EM measures the percentage of the predictions that exactly matches with the corresponding ground truth answers .
+The F1 score measures the overlap between the predictions and corresponding ground truth answers .
+QUASAR - T:
+The results on QUASAR - T are 3 https://competitions.codalab.org/competitions/17208
+shown in .
+As described in , the baseline ( BiDAF + DNC ) results in a reasonable gain , however , our proposed memory controller gives more performance improvement .
+We achieve 68.13 EM and 70.32 F1 for short documents and 63.44 and 65.19 for long documents which are the current best results .
+TriviaQA : We compare proposed model with all the previously suggested approaches as shown in .
+We perform the experiments on both Web and Wikipedia domains and report evaluation results for " Full " and " Verified " cases .
+" Full " is not guaranteed to have all the supporting factors to answer the question , however , it is the entire dataset selected with distant supervision .
+The " Verified " is a subset of the " Full " dataset cleaned by the human annotators to guarantee the presence of supporting facts to answer .
+Our model achieves the state of the art performance over the existing approaches as shown in 77.58 84.16 O - QANet 76.24 84.60 O O SAN 76.83 84.40 O O Fusion Net 75.97 83.90 O O RaSoR + TR 75.79 83.26 O - Conducter- net 74.41 82.74 O O Reinforced Mnemonic Reader 73.20 81.80 O O BiDAF + Self-attention 72.14 81.05 - O MEMEN 70.98 80.36 O - MAMCN 70.99 79.94 -r- net 71.30 79.70 - O Document Reader 70.73 79.35 O - FastQAExt 70 .
+In the longer documents case ( QUASAR - T and TriviaQA ) , MAMCN with external memory performed well because the controller can aggregate information effectively from the long sequences , however , due to the small length of the documents in SQuAD , the existing methods based on the recurrent layers without external memory are also sufficient to achieve reasonable perfor - indicate whether each model uses any additional feature augmentation and / or self - attention .
+All the models with the help of these additional feature augmentation and / or self - attention achieve further performance gain on SQuAD dataset .
+Our vanilla model ( MAMCN ) achieved the best performance among the models which are not using additional feature augmentation and / or selfattention layer mechanisms .
+We also adopted these mechanisms one by one to show that our model is compatible with them .
+First , we add ELMo which is the weighted sum of hidden layers of language model with regularization as an additional feature to our word embeddings .
+This helped our model ( MAMCN + ELMo ) to improve F1 to 85.13 and EM to 77.44 and is the best among the models only with the additional feature augmentation .
+Secondly , we add self - attention with dense connections to our model .
+Recently , have shown that adding a connection between each layer to every other layer in convolutional networks improves the performance by a huge margin .
+Inspired by this , we build densely connected embedding block along with self - attention to increase performance further in the case of SQ uAD .
+The suggested embedding block is shown in .
+Each layer concatenates all the inputs from the previous layers directly connected to it .
+We replace all the BiGRU units with this embedding block except the controller layer in our model ( MAMCN + ELMo + DC ) .
+We achieve the state of the art performance , 86.73 F1 and 79.69 EM , with the help of this em-bedding block .
+To show the effectiveness of our method in addressing long - term dependencies , we collected two examples from the devset of TriviaQA , shown in .
+Finding an answer in these examples require resolving long - term dependencies .
+The first example requires understanding dependency present between two sentences while answering .
+The 'BiDAF + Self - attention ' model predicts incorrect answer by shallow matching a sentence which is syntactically close to the question .
+Our model predicts the correct answer by better combining the information from the two sentences .
+In the second example , the answer is present remotely in the document , the ' BiDAF + Selfattention ' model without external memory face difficulty in comprehending this long document and predicts the wrong answer whereas our model predicts correct answer .
+Conclusion
+We proposed a multi-stage memory augmented neural network model to comprehend long docu-ments in QA task .
+The proposed model achieved the state of the art results on the recently released large - scale QA benchmark datasets such as QUASAR - T , TriviaQA , and SQ uAD .
+The results suggest that proposed method is helpful for addressing long - range dependencies in QA task .
+The future work involves implementing scalable read / write heads to handle larger size external memory to reason over multiple documents .

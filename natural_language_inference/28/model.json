@@ -1,0 +1,35 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "novel RNN cell" : {
+          "has" : {
+            "resolves simultaneously" : {
+              "has" : {
+                "weaknesses" : {
+                  "of" : "basic RNN"
+                }
+              }
+            },
+            "from sentence" : "Here , we propose a novel RNN cell that resolves simultaneously those weaknesses of basic RNN ."
+          }
+        }
+      },
+      "has" : {
+        "Rotational Unit of Memory" : {
+          "is" : [
+            {"modified gated model" : {
+              "whose" : {
+                "rotational operation" : {
+                  "acts as" : "associative memory"
+                }
+              }
+            }},
+            "orthogonal matrix",
+            {"from sentence" : "The Rotational Unit of Memory is a modified gated model whose rotational operation acts as associative memory and is strictly an orthogonal matrix ."}
+          ]
+        }
+      }
+    }
+  }
+}

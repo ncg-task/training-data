@@ -1,0 +1,146 @@
+167	8	13	under
+167	18	35	Siamese framework
+167	41	50	implement
+167	51	70	two baseline models
+167	75	88	Siamese - CNN
+167	97	111	Siamese - LSTM
+171	3	5	on
+171	3	5	on
+171	47	56	implement
+171	57	81	two more baseline models
+171	84	109	Multi - Perspective - CNN
+171	118	144	Multi - Perspective - LSTM
+173	11	23	re-implement
+173	38	44	 model
+173	65	67	is
+173	39	44	model
+173	76	81	under
+173	109	119	 framework
+163	82	112	paraphrase identification task
+164	9	22	experiment on
+164	51	59	 dataset
+175	7	15	see that
+175	80	82	 )
+175	83	88	works
+175	89	100	much better
+175	101	105	than
+175	80	82	 )
+176	13	19	 model
+176	20	31	outperforms
+176	13	19	 model
+176	53	55	by
+176	56	77	more than two percent
+179	51	82	natural language inference task
+179	83	87	over
+179	92	104	SNLI dataset
+179	5	7	is
+184	15	23	see that
+187	47	51	than
+187	47	51	than
+187	22	28	 model
+187	29	34	works
+187	35	46	much better
+187	47	51	than
+190	12	22	our models
+190	23	30	achieve
+190	35	69	state - of - the - art performance
+190	70	77	in both
+190	78	107	single and ensemble scenarios
+190	5	8	for
+190	116	147	natural language inference task
+189	83	95	observe that
+189	123	125	is
+189	126	137	on par with
+189	142	178	state - of - the - art single models
+189	185	209	our ' BiMPM ( Ensemble )
+189	212	217	works
+189	218	229	much better
+189	230	234	than
+189	199	207	Ensemble
+192	62	65	for
+192	66	97	answer sentence selection tasks
+194	3	16	experiment on
+194	17	29	two datasets
+194	32	41	TREC - QA
+194	46	52	WikiQA
+196	7	15	see that
+196	20	31	performance
+196	32	36	from
+196	37	46	our model
+196	47	49	is
+196	50	56	on par
+196	57	61	with
+196	66	95	state - of - the - art models
+130	3	13	initialize
+130	14	29	word embeddings
+130	3	5	in
+130	37	62	word representation layer
+130	63	67	with
+130	72	108	300 - dimensional GloVe word vectors
+130	109	124	pretrained from
+130	129	153	840B Common Crawl corpus
+131	0	3	For
+131	8	43	out - of - vocabulary ( OOV ) words
+131	49	59	initialize
+131	64	79	word embeddings
+131	80	88	randomly
+132	8	36	charactercomposed embeddings
+132	42	52	initialize
+132	53	67	each character
+132	68	70	as
+132	73	96	20 - dimensional vector
+132	17	24	compose
+132	111	120	each word
+132	121	125	into
+132	128	149	50 dimensional vector
+132	150	154	with
+132	157	167	LSTM layer
+133	3	6	set
+133	11	22	hidden size
+133	23	25	as
+133	26	29	100
+133	30	33	for
+133	34	51	all BiLSTM layers
+136	11	24	learning rate
+136	25	27	as
+136	28	33	0.001
+134	3	8	apply
+134	9	16	dropout
+134	17	19	to
+134	20	32	every layers
+134	42	45	set
+134	50	63	dropout ratio
+134	64	66	as
+134	67	70	0.1
+135	24	32	minimize
+135	37	50	cross entropy
+135	51	53	of
+135	58	70	training set
+135	77	80	use
+135	85	99	ADAM optimizer
+135	125	134	to update
+135	135	145	parameters
+137	0	6	During
+137	7	15	training
+137	21	34	do not update
+137	39	66	pre-trained word embeddings
+32	49	56	propose
+32	59	111	bilateral multi-perspective matching ( BiMPM ) model
+32	112	115	for
+32	116	126	NLSM tasks
+33	22	32	belongs to
+33	61	71	 framework
+39	15	27	BiLSTM layer
+39	31	42	utilized to
+39	43	52	aggregate
+39	57	73	matching results
+39	74	78	into
+39	81	111	fixed - length matching vector
+40	10	18	based on
+40	23	38	matching vector
+40	43	51	decision
+40	55	67	made through
+40	70	91	fully connected layer
+4	0	34	Natural language sentence matching
+15	0	43	Natural language sentence matching ( NLSM )
+17	52	56	NLSM

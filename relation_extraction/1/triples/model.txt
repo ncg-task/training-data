@@ -1,0 +1,5 @@
+(Contribution||has||Model)
+(Model||show||simple neural architectures)
+(simple neural architectures||built on top of||BERT)
+(simple neural architectures||yields||state - of - the - art performance)
+(state - of - the - art performance||on||variety of benchmark datasets)

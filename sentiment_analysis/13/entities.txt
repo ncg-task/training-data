@@ -1,0 +1,185 @@
+40	10	22	first builds
+40	26	37	RRC dataset
+40	38	44	called
+40	45	53	ReviewRC
+40	56	61	using
+40	62	69	reviews
+40	70	74	from
+40	75	94	SemEval 2016 Task 5
+40	105	109	is a
+40	110	125	popular dataset
+40	126	129	for
+40	130	172	aspect - based sentiment analysis ( ABSA )
+40	58	60	in
+40	180	212	domains of laptop and restaurant
+210	3	8	adopt
+210	9	30	BERT BASE ( uncased )
+210	24	26	as
+210	38	43	basis
+210	44	47	for
+210	48	63	all experiments
+211	97	105	leverage
+211	106	122	FP16 computation
+211	126	135	to reduce
+211	140	144	size
+211	145	152	of both
+211	157	162	model
+211	167	189	hidden representations
+211	145	147	of
+211	193	197	data
+212	3	6	set
+212	9	26	static loss scale
+212	27	29	of
+212	30	31	2
+212	32	34	in
+212	35	37	FP
+213	4	18	maximum length
+213	19	21	of
+213	22	36	post -training
+213	40	46	set to
+213	47	50	320
+213	51	55	with
+213	58	68	batch size
+213	19	21	of
+213	72	74	16
+213	75	91	for each type of
+213	92	101	knowledge
+214	4	24	number of subbatch u
+214	28	34	set to
+214	35	36	2
+214	48	68	good enough to store
+214	74	95	sub - batch iteration
+214	96	100	into
+214	103	113	GPU memory
+214	11	13	of
+214	117	120	11G
+215	3	6	use
+215	7	21	Adam optimizer
+215	26	29	set
+215	34	47	learning rate
+215	48	53	to be
+215	54	60	3e - 5
+216	3	8	train
+216	9	21	70,000 steps
+216	22	25	for
+216	30	43	laptop domain
+216	48	61	140,000 steps
+216	22	25	for
+216	70	87	restaurant domain
+43	10	16	adopts
+43	17	21	BERT
+43	24	26	as
+43	31	41	base model
+48	41	48	propose
+48	51	88	novel joint post - training technique
+48	94	99	takes
+48	100	127	BERT 's pre-trained weights
+48	128	130	as
+48	135	149	initialization
+48	152	155	for
+48	156	184	basic language understanding
+48	189	194	adapt
+48	100	104	BERT
+48	200	204	with
+48	205	253	both domain knowledge and task ( MRC ) knowledge
+48	254	260	before
+48	261	274	fine - tuning
+48	275	280	using
+48	285	315	domain end task annotated data
+48	152	155	for
+48	324	334	domain RRC
+49	15	24	leverages
+49	25	34	knowledge
+49	35	39	from
+49	40	51	two sources
+49	54	81	unsupervised domain reviews
+49	86	131	supervised ( yet out - of - domain ) MRC data
+2	58	91	Aspect - based Sentiment Analysis
+10	129	146	aspect extraction
+10	151	182	aspect sentiment classification
+10	186	219	aspect - based sentiment analysis
+250	19	27	observed
+250	37	81	proposed joint post - training ( BERT - PT )
+250	90	106	best performance
+250	107	111	over
+250	112	121	all tasks
+250	48	50	in
+250	125	136	all domains
+250	145	149	show
+250	154	162	benefits
+250	163	172	of having
+250	173	195	two types of knowledge
+252	102	112	found that
+252	117	144	vanilla pre-trained weights
+252	145	147	of
+252	148	152	BERT
+252	153	164	do not work
+252	165	169	well
+252	170	173	for
+252	174	194	review - based tasks
+254	19	31	noticed that
+254	36	41	roles
+254	42	44	of
+254	45	80	domain knowledge and task knowledge
+254	81	89	vary for
+254	90	117	different tasks and domains
+255	0	3	For
+255	4	7	RRC
+255	13	23	found that
+255	28	44	performance gain
+255	45	47	of
+255	48	57	BERT - PT
+255	58	75	mostly comes from
+255	76	115	task - awareness ( MRC ) post -training
+259	4	6	AE
+259	12	22	found that
+259	23	46	great performance boost
+259	47	64	comes mostly from
+259	65	94	domain knowledge posttraining
+269	9	15	errors
+269	16	32	mostly come from
+269	33	57	annotation inconsistency
+269	62	72	boundaries
+269	73	75	of
+269	76	83	aspects
+262	4	7	ASC
+262	13	26	observed that
+262	27	59	large - scale annotated MRC data
+262	60	62	is
+262	63	74	very useful
+258	3	23	further investigated
+258	37	45	improved
+258	28	36	examples
+258	64	74	found that
+258	79	125	boundaries of spans ( especially short spans )
+258	126	130	were
+258	131	147	greatly improved
+260	0	10	BERT - MRC
+260	11	24	has almost no
+260	25	36	improvement
+260	37	39	on
+260	40	50	restaurant
+267	4	10	errors
+267	11	13	on
+267	14	17	RRC
+267	25	34	come from
+267	35	45	boundaries
+267	46	48	of
+267	49	54	spans
+267	55	67	that are not
+267	68	82	concise enough
+267	87	105	incorrect location
+267	46	48	of
+267	49	54	spans
+267	115	128	that may have
+267	129	149	certain nearby words
+267	150	160	related to
+267	165	173	question
+271	0	3	ASC
+271	4	17	tends to have
+271	23	29	errors
+271	30	32	as
+271	55	62	between
+271	67	96	negative and neutral examples
+271	40	42	is
+271	100	107	unclear

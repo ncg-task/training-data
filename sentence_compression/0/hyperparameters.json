@@ -1,0 +1,61 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "has" : {
+        "our model" : {
+          "trained using" : {
+            "Adam algorithm" : {
+              "with" : {
+                "learning rate" : {
+                  "initialized at" : "0.001"
+                }
+              },
+              "from sentence" : "In the experiments , our model was trained using the Adam algorithm with a learning rate initialized at 0.001 ."
+            }
+          }
+        },
+        "dimension" : {
+          "of" : {
+            "hidden layers" : {
+              "of" : {
+                "bi - LSTM" : {
+                  "is" : "100"
+                }
+              }
+            }
+          },
+          "from sentence" : "The dimension of the hidden layers of bi - LSTM is 100 ."
+        },
+        "Word embeddings" : {
+          "initialized from" : "GloVe 100 dimensional pre-trained embeddings",
+          "from sentence" : "Word embeddings are initialized from GloVe 100 dimensional pre-trained embeddings ."
+        },
+        "POS and dependency embeddings" : {
+          "randomly initialized with" : "40 - dimensional vectors",
+          "from sentence" : "POS and dependency embeddings are randomly initialized with 40 - dimensional vectors ."
+        },
+        "embeddings" : {
+          "updated during" : "training",
+          "from sentence" : "The embeddings are all updated during training ."
+        },
+        "Dropping probability" : {
+          "for" : {
+            "dropout layers" : {
+              "between" : {
+                "stacked LSTM layers" : {
+                  "is" : "0.5"
+                }
+              }
+            }
+          },
+          "from sentence" : "Dropping probability for dropout layers between stacked LSTM layers is 0.5 ."
+        },
+        "batch size" : {
+          "set as" : "30",
+          "from sentence" : "The batch size is set as 30 ."
+        }
+      },
+      "utilize" : ["open source ILP solver", {"from sentence" : "We utilize an open source ILP solver 4 in our method ."}]
+    }
+  }
+}

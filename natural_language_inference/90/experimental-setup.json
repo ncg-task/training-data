@@ -1,0 +1,83 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "implemented in" : ["TensorFlow", {"from sentence" : "The method was implemented in TensorFlow ."}],
+      "use" : {
+        "300 dimensional GloVe embeddings" : {
+          "to represent" : "words",
+          "from sentence" : "We use 300 dimensional GloVe embeddings to represent words ."
+        }
+      },
+      "has" : {
+        "Each embedding vector" : {
+          "has" : {
+            "normalized" : {
+              "to have" : "2 norm of 1"
+            },
+            "projected down" : {
+              "to" : "200 dimensions"
+            }
+          },
+          "from sentence" : "Each embedding vector was normalized to have 2 norm of 1 and projected down to 200 dimensions , a number determined via hyperparameter tuning ."
+        },
+        "Out - of - vocabulary ( OOV ) words" : {
+          "hashed to" : {
+            "one of 100 random embeddings" : {
+              "initialized to" : ["mean 0", "standard deviation 1"]
+            }
+          },
+          "from sentence" : "Out - of - vocabulary ( OOV ) words are hashed to one of 100 random embeddings each initialized to mean 0 and standard deviation 1 ."
+        },
+        "other parameter weights ( hidden layers etc. )" : {
+          "initialized from" : {
+            "random Gaussians" : {
+              "with" : ["mean 0", "standard deviation 0.01"]
+            }
+          },
+          "from sentence" : "All other parameter weights ( hidden layers etc. ) were initialized from random Gaussians with mean 0 and standard deviation 0.01 ."
+        },
+        "Each hyperparameter setting" : {
+          "run on" : {
+            "single machine" : {
+              "with" : "10 asynchronous gradient - update threads"
+            }
+          },
+          "using" : {
+            "Adagrad" : {
+              "for" : "optimization",
+              "with" : {
+                "default initial accumulator value" : {
+                  "of" : "0.1"
+                }
+              }
+            }
+          },
+          "from sentence" : "Each hyperparameter setting was run on a single machine with 10 asynchronous gradient - update threads , using Adagrad for optimization with the default initial accumulator value of 0.1 ."
+        },
+        "Dropout regularization" : {
+          "used for" : {
+            "all ReLU layers" : {
+              "not for" : "final linear layer"
+            }
+          },
+          "from sentence" : "Dropout regularization was used for all ReLU layers , but not for the final linear layer ."
+        },
+        "dropout ratio" : {
+          "has" : "0.2",
+          "from sentence" : "We additionally tuned the following hyperparameters and present their chosen values in , 1 dropout ratio ( 0.2 ) and learning rate ( 0.05 - vanilla , 0.025 - intra-attention ) ."
+        },
+        "learning rate" : {
+          "has" : {
+            "vanilla" : {
+              "has" : "0.05"
+            },
+            "intra-attention" : {
+              "has" : "0.025"
+            }
+          },
+          "from sentence" : "We additionally tuned the following hyperparameters and present their chosen values in , 1 dropout ratio ( 0.2 ) and learning rate ( 0.05 - vanilla , 0.025 - intra-attention ) ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Deep Sentiment Analysis", {"from sentence" : "A Helping Hand : Transfer Learning for Deep Sentiment Analysis"}],
+    ["sentiment analysis", {"from sentence" : "Over the past decades , sentiment analysis has grown from an academic endeavour to an essential analytics tool ."}],
+    ["supervised sentiment polarity classification", {"from sentence" : "In recent years , deep neural architectures based on convolutional or recurrent layers have become established as the preeminent models for supervised sentiment polarity classification ."}]
+  ]
+}

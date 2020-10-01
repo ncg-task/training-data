@@ -1,0 +1,23 @@
+{
+  "has" : {
+    "Results" : {
+      "see" : {
+        "BERT - LSTM - large model" : {
+          "achieves" : {
+            "state - of - the - art F 1 score" : {
+              "among" : "single models"
+            }
+          },
+          "outperforms" : {
+            "ensemble model" : {
+              "on" : "CoNLL 2005",
+              "has" : "in - domain and out - of - domain tests"
+            }
+          }
+        },
+        "from sentence" : "We see that the BERT - LSTM - large model achieves the state - of - the - art F 1 score among single models and outperforms the ensemble model on the CoNLL 2005 in - domain and out - of - domain tests ."
+      },
+      "falls short on" : ["CoNLL 2012 benchmark", {"from sentence" : "However , it falls short on the CoNLL 2012 benchmark because the model of obtains very high precision ."}]
+    }
+  }
+}

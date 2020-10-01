@@ -1,0 +1,179 @@
+146	0	27	CNN and Daily Mail Datasets
+149	0	10	Vocab Size
+149	44	48	keep
+149	53	86	most frequent | V | = 101 k words
+149	20	22	in
+149	150	161	CNN dataset
+149	168	187	| V | = 151 k words
+149	20	22	in
+149	251	269	Daily Mail dataset
+150	0	15	Embedding Layer
+151	3	9	choose
+151	10	43	300 - dimensional word embeddings
+151	50	53	use
+151	58	108	300 - dimensional pretrained Glove word embeddings
+151	109	112	for
+151	113	127	initialization
+152	8	13	apply
+152	14	21	dropout
+152	22	26	with
+152	27	42	probability 0.2
+152	43	45	to
+152	50	65	embedding layer
+174	4	18	absolute value
+174	19	21	of
+174	22	30	gradient
+174	31	33	on
+174	34	48	each parameter
+174	49	51	is
+174	52	59	clipped
+174	60	66	within
+174	67	72	0.001
+175	4	14	batch size
+175	15	17	is
+175	18	20	64
+175	21	24	for
+175	25	57	both CNN and Daily Mail datasets
+173	3	6	use
+173	7	21	ADAM optimizer
+173	22	25	for
+173	26	48	parameter optimization
+173	49	53	with
+173	57	78	initial learning rate
+173	79	81	of
+173	82	116	0.0005 , ? 1 = 0.9 and ? 2 = 0.999
+179	11	21	trained on
+179	22	38	GTX TitanX 12 GB
+197	0	14	Comparing with
+197	19	28	AS Reader
+197	31	39	ReasoNet
+197	40	45	shows
+197	50	72	signi cant improvement
+197	73	85	by capturing
+197	97	106	reasoning
+197	6	8	in
+197	114	123	paragraph
+198	0	52	Iterative Attention Reader , EpiReader and GA Reader
+198	53	56	are
+198	61	94	three multi-turn reasoning models
+198	95	99	with
+198	100	119	xed reasoning steps
+198	84	86	in
+198	88	93	model
+199	14	25	outperforms
+199	0	8	ReasoNet
+199	38	52	by integrating
+199	53	69	termination gate
+199	89	95	allows
+199	96	120	di erent reasoning steps
+199	20	23	for
+199	125	144	di erent test cases
+201	0	8	ReasoNet
+201	9	16	obtains
+201	17	35	comparable results
+201	36	40	with
+201	41	51	AoA Reader
+201	52	54	on
+201	55	67	CNN test set
+210	0	13	SQuAD Dataset
+217	0	10	Vocab Size
+218	3	6	use
+218	11	32	python NLTK tokenizer
+218	35	48	to preprocess
+218	49	71	passages and questions
+218	78	90	obtain about
+218	91	101	100K words
+218	82	84	in
+218	109	119	vocabulary
+219	0	15	Embedding Layer
+219	21	24	use
+219	29	71	100 - dimensional pretrained Glove vectors
+219	72	74	as
+219	75	90	word embeddings
+247	4	32	maximum reasoning step T max
+247	36	42	set to
+247	43	45	10
+248	3	6	use
+248	7	25	AdaDelta optimizer
+248	26	29	for
+248	30	52	parameter optimization
+248	53	57	with
+248	61	82	initial learning rate
+248	83	85	of
+248	86	89	0.5
+254	8	19	demonstrate
+254	25	33	ReasoNet
+254	34	45	outperforms
+254	46	79	all existing published approaches
+255	9	16	compare
+255	17	25	ReasoNet
+255	48	55	exceeds
+255	31	36	BiDAF
+255	62	69	both in
+255	70	107	single model and ensemble model cases
+257	35	43	ReasoNet
+257	115	120	holds
+257	125	140	second position
+257	141	143	in
+257	144	172	all the competing approaches
+257	141	143	in
+257	180	197	SQuAD leaderboard
+258	0	18	Graph Reachability
+283	0	15	Embedding Layer
+283	6	8	in
+284	3	6	use
+284	9	43	100 - dimensional embedding vector
+284	44	47	for
+284	48	59	each symbol
+284	67	94	query and graph description
+300	4	32	maximum reasoning step T max
+300	36	42	set to
+300	43	52	15 and 25
+300	53	56	for
+300	61	96	small graph and large graph dataset
+301	3	6	use
+301	7	25	AdaDelta optimizer
+301	26	29	for
+301	30	52	parameter optimization
+301	53	57	with
+301	61	82	initial learning rate
+301	83	85	of
+301	86	89	0.5
+301	96	106	batch size
+301	83	85	of
+301	110	112	32
+308	7	15	achieves
+308	16	44	90.92 % and 71.55 % accuracy
+308	45	47	in
+308	52	81	small and large graph dataset
+33	26	33	propose
+33	36	69	novel neural network architecture
+33	70	76	called
+33	77	107	Reasoning Network ( ReasoNet )
+35	0	4	With
+35	7	15	question
+35	16	18	in
+35	19	23	mind
+35	26	35	ReasoNets
+35	36	40	read
+35	43	51	document
+35	52	62	repeatedly
+35	75	86	focusing on
+35	87	101	di erent parts
+35	102	104	of
+35	43	51	document
+35	118	123	until
+35	126	143	satisfying answer
+35	129	131	is
+35	147	162	found or formed
+37	89	98	introduce
+37	101	118	termination state
+37	40	42	in
+37	126	135	inference
+42	43	52	proposing
+42	55	86	reinforcement learning approach
+42	95	103	utilizes
+42	107	143	instance - dependent reward baseline
+42	146	167	to successfully train
+42	168	177	ReasoNets
+2	39	60	Machine Comprehension

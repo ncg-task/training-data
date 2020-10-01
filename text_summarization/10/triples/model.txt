@@ -1,0 +1,7 @@
+(Contribution||has||Model)
+(Model||present||novel multi-task learning architectures)
+(novel multi-task learning architectures||empirically show||substantially better)
+(substantially better||to share||higherlevel semantic layers)
+(higherlevel semantic layers||keeping||lower - level ( lexico- syntactic ) layers unshared)
+(higherlevel semantic layers||between||three aforementioned tasks)
+(novel multi-task learning architectures||based on||multi-layered encoder and decoder models)

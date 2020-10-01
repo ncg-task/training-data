@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Machine Comprehension", {"from sentence" : "A Parallel - Hierarchical Model for Machine Comprehension on Sparse Data"}],
+    ["Understanding unstructured text", {"from sentence" : "Understanding unstructured text is a major goal within natural language processing ."}],
+    ["Machine comprehension ( MC )", {"from sentence" : "Machine comprehension ( MC ) is evaluated by posing a set of questions based on a text passage ( akin to the reading tests we all took in school ) ."}]
+  ]
+}

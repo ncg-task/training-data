@@ -1,0 +1,178 @@
+229	14	22	confirms
+229	27	40	effectiveness
+229	41	43	of
+229	44	60	char- embeddings
+229	70	78	addition
+229	79	88	increased
+229	93	109	F1 and EM scores
+229	112	114	by
+229	115	130	2.7 % and 3.1 %
+230	19	23	when
+230	28	51	convolutional attention
+230	56	67	replaced by
+230	72	100	standard attention mechanism
+230	119	130	performance
+230	131	138	dropped
+230	65	67	by
+230	142	147	2.4 %
+230	110	112	in
+230	151	153	F1
+230	158	163	2.5 %
+230	110	112	in
+230	167	169	EM
+232	26	34	indicate
+232	44	59	reduction layer
+232	63	83	capable of producing
+232	84	111	useful word representations
+232	112	116	when
+232	117	128	compressing
+232	133	143	embeddings
+233	17	25	replaced
+233	42	68	standard feedforward layer
+233	69	73	with
+233	78	98	same reduction ratio
+233	113	120	drop of
+233	121	136	2.1 % and 2.5 %
+233	137	139	in
+233	144	160	F1 and EM scores
+217	8	15	trained
+217	20	31	FABIR model
+217	32	38	during
+217	39	48	54 epochs
+217	49	53	with
+217	56	66	batch size
+217	67	69	of
+217	70	72	75
+217	11	13	in
+217	78	96	GPU NVidia Titan X
+217	49	53	with
+217	102	107	12 GB
+217	67	69	of
+217	111	114	RAM
+218	3	12	developed
+218	13	22	our model
+218	23	25	in
+218	26	36	Tensorflow
+219	3	16	pre-processed
+219	21	26	texts
+219	27	31	with
+219	36	50	NLTK Tokenizer
+221	0	3	For
+221	4	18	regularization
+221	24	31	applied
+221	32	62	residual and attention dropout
+221	63	65	of
+221	66	69	0.9
+221	70	72	in
+221	73	90	processing layers
+221	98	101	0.8
+221	70	72	in
+221	109	124	reduction layer
+222	0	2	In
+222	7	42	character - level embedding process
+222	47	54	dropout
+222	55	57	of
+222	58	62	0.75
+222	67	79	added before
+222	84	95	convolution
+223	17	24	dropout
+223	25	27	of
+223	28	31	0.8
+223	36	48	added before
+223	49	73	each convolutional layer
+223	74	76	in
+223	81	96	answer selector
+224	3	6	set
+224	7	34	processing layers dimension
+224	35	42	d model
+224	43	45	to
+224	46	49	100
+224	56	71	number of heads
+224	72	79	n heads
+224	14	16	in
+224	83	106	each attention sublayer
+224	43	45	to
+224	110	111	4
+224	118	144	feed - forward hidden size
+224	43	45	to
+224	148	151	200
+224	14	16	in
+224	7	24	processing layers
+224	177	180	400
+224	14	16	in
+224	188	203	reduction layer
+20	176	181	named
+20	182	237	Fully Attention - Based Information Retriever ( FABIR )
+21	18	27	to verify
+21	28	48	how much performance
+21	56	76	get exclusively from
+21	81	100	attention mechanism
+21	103	128	without combining it with
+21	129	153	several other techniques
+24	0	23	Convolutional attention
+24	28	53	novel attention mechanism
+24	59	66	encodes
+24	67	97	many - to - many relationships
+24	98	105	between
+24	106	111	words
+24	114	122	enabling
+24	123	156	richer contextual representations
+25	0	15	Reduction layer
+25	20	36	new layer design
+25	42	46	fits
+25	51	59	pipeline
+25	60	71	proposed by
+25	72	87	Vaswani et al .
+27	0	31	Column - wise cross - attention
+27	37	43	modify
+27	48	72	crossattention operation
+27	80	87	propose
+27	90	103	new technique
+27	112	128	better suited to
+27	129	149	question - answering
+2	26	47	Information Retriever
+9	0	27	Question - answering ( QA )
+12	49	65	open - domain QA
+13	77	79	QA
+245	0	9	Regarding
+245	10	27	EM and F 1 scores
+245	30	45	FABIR and BiDAF
+245	46	52	showed
+245	53	73	similar performances
+255	19	26	analyze
+255	31	42	performance
+255	43	45	of
+255	46	61	FABIR and BiDAF
+255	34	37	for
+256	0	5	shows
+256	11	26	shorter answers
+256	27	30	are
+256	31	37	easier
+256	42	53	both models
+262	33	49	best performance
+262	50	54	with
+262	63	73	 questions
+264	70	76	proved
+264	77	83	easier
+264	84	86	to
+264	87	94	respond
+264	105	112	possess
+264	117	130	same property
+264	131	140	of having
+264	143	159	smaller universe
+264	131	133	of
+264	163	179	possible answers
+265	42	52	 questions
+265	53	64	resulted in
+265	65	100	considerably lower F1 and EM scores
+270	0	9	Questions
+270	16	22	expect
+270	45	47	as
+270	51	57	answer
+270	58	61	are
+270	62	76	also difficult
+272	19	35	shorter passages
+272	36	42	showed
+272	47	64	worst performance
+272	56	59	for
+272	69	80	both models

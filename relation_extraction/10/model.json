@@ -1,0 +1,38 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "simple bi - LSTM based model" : {
+          "which generates" : {
+            "span representations" : {
+              "for" : "each possible span"
+            }
+          },
+          "from sentence" : "We propose a simple bi - LSTM based model which generates span representations for each possible span ."
+        }
+      },
+      "has" : {
+        "span representations" : {
+          "to perform" : {
+            "entity mention detection" : {
+              "on" : {
+                "all spans" : {
+                  "in" : "parallel"
+                }
+              },
+              "from sentence" : "The span representations are used to perform entity mention detection on all spans in parallel ."     
+            },
+            "relation extraction" : {
+              "on" : {
+                "all pairs" : {
+                  "of" : "detected entity mentions"
+                }
+              },
+              "from sentence" : "The same span representations are then used to perform relation extraction on all pairs of detected entity mentions ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

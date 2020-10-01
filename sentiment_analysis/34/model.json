@@ -1,0 +1,19 @@
+{
+  "has" : {
+    "Model" : {
+      "present" : {
+        "Mazajak" : {
+          "has" : "Online Arabic sentiment analysis system",
+          "utilises" : ["deep learning", "massive Arabic word embeddings"],
+          "from sentence" : "In this paper , we present Mazajak 2 , an Online Arabic sentiment analysis system that utilises deep learning and massive Arabic word embeddings ."
+        }
+      },
+      "available as" : {
+        "online API" : {
+          "used by" : "other researchers"
+        },
+        "from sentence" : "The system is available as an online API that can be used by other researchers ."
+      }
+    }
+  }
+}

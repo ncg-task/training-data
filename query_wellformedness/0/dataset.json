@@ -1,0 +1,19 @@
+{
+  "has" : {
+    "Dataset" : {
+      "construct and publicly release" : {
+        "dataset of 25,100 queries" : {
+          "annotated with" : {
+            "probability" : {
+              "of being" : "well - formed natural language question"
+            }
+          }
+        },
+        "from sentence" : "We construct and publicly release a dataset of 25,100 queries annotated with the probability of being a well - formed natural language question ( 2.1 ) ."
+      },
+      "available for download at" : ["http://goo.gl/language/ query-wellformedness", {"from sentence" : "Our dataset ise available for download at http://goo.
+gl/language/ query-wellformedness ."}]
+
+    }
+  }
+}

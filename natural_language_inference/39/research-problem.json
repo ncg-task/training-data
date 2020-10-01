@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Semantic Similarity Measurement", {"from sentence" : "Pairwise Word Interaction Modeling with Deep Neural Networks for Semantic Similarity Measurement"}],
+    ["Textual similarity measurement", {"from sentence" : "Textual similarity measurement is a challenging problem , as it requires understanding the semantics of input sentences ."}],
+    ["semantic textual similarity ( STS )", {"from sentence" : "Given two pieces of text , measuring their semantic textual similarity ( STS ) remains a fundamental problem in language research and lies at the core of many language processing tasks , including question answering , query ranking , and paraphrase generation ."}]
+  ]
+}

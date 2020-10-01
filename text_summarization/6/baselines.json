@@ -1,0 +1,120 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "TOPIARY" : {
+          "for" : {
+            "compressive text summarization" : {
+              "combines" : ["system using linguistic based transformations", "an unsupervised topic detection algorithm"]
+            }
+          },
+          "from sentence" : "TOPIARY is the best on DUC2004 Task - 1 for compressive text summarization .
+It combines a system using linguistic based transformations and an unsupervised topic detection algorithm for compressive text summarization ."
+
+        },
+        "MOSES +" : {
+          "uses" : {
+            "phrasebased statistical machine translation system" : {
+              "trained on" : {
+                "Gigaword" : {
+                  "to produce" : "summaries"
+                }
+              }
+            }
+          },
+          "from sentence" : "MOSES + uses a phrasebased statistical machine translation system trained on Gigaword to produce summaries ."
+        },
+        "ABS and ABS +" : {
+          "with" : {
+            "local attention modeling" : {
+              "for" : "abstractive sentence summarization"
+            }
+          },
+          "from sentence" : "ABS and ABS + are both the neural network based models with local attention modeling for abstractive sentence summarization ."
+        },
+        "ABS +" : {
+          "trained on" : "Gigaword corpus",
+          "combined with" : {
+            "additional log - linear extractive summarization model" : {
+              "with" : "handcrafted features"
+            }
+          },
+          "from sentence" : "ABS + is trained on the Gigaword corpus , but combined with an additional log - linear extractive summarization model with handcrafted features ."
+        },
+        "RNN and RNN - context" : {
+          "are" : "two seq2seq architectures",
+          "from sentence" : "RNN and RNN - context are two seq2seq architectures ."
+        },
+        "Copy Net" : {
+          "integrates" : {
+            "copying mechanism" : {
+              "into" : "sequence - to sequence framework"
+            }
+          },
+          "from sentence" : "Copy Net integrates a copying mechanism into the sequence - to sequence framework ."
+        },
+        "RNN - distract" : {
+          "uses" : {
+            "new attention mechanism" : {
+              "by distracting" : {
+                "historical attention" : {
+                  "in" : "decoding steps"
+                }
+              }
+            }
+          },
+          "from sentence" : "RNN - distract uses a new attention mechanism by distracting the historical attention in the decoding steps ."
+        },
+        "RAS - LSTM and RAS - Elman" : {
+          "consider" : {
+            "words and word positions" : {
+              "as" : "input"
+            }
+          },
+          "use" : {
+            "convolutional encoders" : {
+              "to handle" : "source information"
+            }  
+          },
+          "from sentence" : "RAS - LSTM and RAS - Elman both consider words and word positions as input and use convolutional encoders to handle the source information ."
+        },
+        "LenEmb" : {
+          "control" : {
+            "summary length" : {
+              "by considering" : {
+                "length embedding vector" : {
+                  "as" : "input"
+                }
+              }
+            }
+          },
+          "from sentence" : "LenEmb uses a mechanism to control the summary length by considering the length embedding vector as the input ."
+        },
+        "ASC+ FSC" : {
+          "uses" : {
+            "generative model" : {
+              "with" : {
+                "attention mechanism" : {
+                  "to conduct" : "sentence compression problem"
+                }
+              }
+            }
+          },
+          "from sentence" : "ASC+ FSC 1 ) uses a generative model with attention mechanism to conduct the sentence compression problem ."
+        },
+        "lvt2k - 1sent and lvt5k - 1sent" : {
+          "utilize" : {
+            "trick" : {
+              "to control" : {
+                "vocabulary size" : {
+                  "to improve" : "training efficiency"
+                }
+              }
+            }  
+          },
+          "from sentence" : "lvt2k - 1sent and lvt5k - 1sent utilize a trick to control the vocabulary size to improve the training efficiency ."
+        }
+      }
+    }
+  }
+}

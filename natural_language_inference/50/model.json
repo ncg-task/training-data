@@ -1,0 +1,47 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "extremely simple neural ranking model" : {
+          "for" : "question answering",
+          "from sentence" : "In this paper , we propose an extremely simple neural ranking model for question answering that achieves highly competitive results on several benchmarks with only a fraction of the runtime and only 40K - 90 K parameters ( as opposed to millions ) ."
+        }
+      },
+      "has" : {
+        "neural ranking" : {
+          "models" : {
+            "relationships" : {
+              "between" : {
+                "QA pairs" : {
+                  "in" : {
+                    "Hyperbolic space" : {
+                      "instead of" : "Euclidean space"
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "Our neural ranking models the relationships between QA pairs in Hyperbolic space instead of Euclidean space ."
+          }
+        },
+        "Hyperbolic space" : {
+          "is" : {
+            "embedding space" : {
+              "with" : {
+                "constant negative curvature" : {
+                  "in which" : {
+                    "distance" : {
+                      "towards" : "border",
+                      "is" : "increasing exponentially"
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "Hyperbolic space is an embedding space with a constant negative curvature in which the distance towards the border is increasing exponentially ."
+          }
+        }
+      }
+    }
+  }
+}

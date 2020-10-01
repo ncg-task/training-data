@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["PASSAGE RE - RANKING", {"from sentence" : "PASSAGE RE - RANKING WITH BERT"}],
+    ["query - based passage re-ranking", {"from sentence" : "In this paper , we describe a simple re-implementation of BERT for query - based passage re-ranking ."}]
+  ]
+}

@@ -1,0 +1,52 @@
+25	49	62	incorporating
+25	63	89	source syntactic structure
+25	49	51	in
+25	93	122	neural sentence summarization
+25	123	130	to help
+25	135	141	system
+25	142	150	identify
+25	151	175	summary - worthy content
+25	180	187	compose
+25	188	197	summaries
+25	198	211	that preserve
+25	216	253	important meaning of the source texts
+26	3	10	present
+26	11	46	structure - infused copy mechanisms
+26	47	68	to facilitate copying
+26	69	95	source words and relations
+26	47	49	to
+26	103	110	summary
+26	111	119	based on
+26	126	160	semantic and structural importance
+26	23	25	in
+26	168	184	source sentences
+2	40	65	Abstractive Summarization
+4	51	64	summarization
+215	24	26	on
+215	31	60	Gigaword valid - 2000 dataset
+216	3	10	present
+216	11	43	R - 1 , R - 2 , and R - L scores
+216	64	72	measures
+216	77	140	overlapped unigrams , bigrams , and longest common subsequences
+216	141	148	between
+216	153	183	system and reference summaries
+221	13	20	observe
+221	26	32	models
+221	42	46	with
+221	51	86	structure - infused copy mechanisms
+221	91	102	superior to
+221	107	115	baseline
+222	3	8	found
+222	37	50	 architecture
+222	59	80	directly concatenates
+222	81	102	structural embeddings
+222	103	107	with
+222	112	133	encoder hidden states
+222	136	147	outperforms
+223	2	23	Struct + 2 Way + Word
+223	31	43	demonstrates
+223	44	62	strong performance
+223	65	74	achieving
+223	75	118	43.21 % , 21. 84 % , and 40.86 % F 1 scores
+223	54	57	for
+223	125	150	R - 1 , R - 2 , and R - L

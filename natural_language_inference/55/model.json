@@ -1,0 +1,24 @@
+{
+  "has" : {
+    "Model" : {
+      "providing" : {
+        "ability" : {
+          "to answer" : "more complicated questions",
+          "from sentence" : "In this paper , we improve the model of by providing the ability to answer more complicated questions ."
+        }
+      },
+      "has" : {
+        "more sophisticated inference procedure" : {
+          "is" : "efficient",
+          "consider" : "longer paths",
+          "from sentence" : "s The main contributions of the paper are : ( 1 ) a more sophisticated inference procedure that is both efficient and can consider longer paths ( considered only answers directly connected to the question in the graph ) ; and ( 2 ) a richer representation of the answers which encodes the question - answer path and surrounding subgraph of the KB ."
+        },
+        "richer representation" : {
+          "of" : "answers",
+          "encodes" : ["question - answer path", {"surrounding subgraph" : {"of" : "KB"}}],
+          "from sentence" : "s The main contributions of the paper are : ( 1 ) a more sophisticated inference procedure that is both efficient and can consider longer paths ( considered only answers directly connected to the question in the graph ) ; and ( 2 ) a richer representation of the answers which encodes the question - answer path and surrounding subgraph of the KB ."
+        }
+      }
+    }
+  }
+}

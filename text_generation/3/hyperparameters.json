@@ -1,0 +1,55 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "set" : {
+        "maximum length" : {
+          "to" : {
+            "15 words" : {
+              "for" : "each generated sentence"
+            }
+          },
+          "from sentence" : "For dialogue generation , we set the maximum length to 15 words for each generated sentence ."
+        },
+        "hidden size" : {
+          "has" : "512", 
+          "from sentence" : "Based on the performance on the validation set , we set the hidden size to 512 , embedding size to 64 and vocabulary size to 40 K for baseline models and the proposed model ."
+        },
+        "embedding size" : {
+          "has" : "64",
+          "from sentence" : "Based on the performance on the validation set , we set the hidden size to 512 , embedding size to 64 and vocabulary size to 40 K for baseline models and the proposed model ."
+        },
+        "vocabulary size" : {
+          "has" : "40 K",
+          "from sentence" : "Based on the performance on the validation set , we set the hidden size to 512 , embedding size to 64 and vocabulary size to 40 K for baseline models and the proposed model ."          
+        }
+      },
+      "has" : {
+        "parameters" : {
+          "updated by" : "Adam algorithm ( Kingma and Ba , 2014 )",
+          "initialized by" : {
+            "sampling" : {
+              "from" : "uniform distribution ( [? 0.1 , 0.1 ] )"
+            }
+          },
+          "from sentence" : "The parameters are updated by the Adam algorithm ( Kingma and Ba , 2014 ) and initialized by sampling from the uniform distribution ( [? 0.1 , 0.1 ] ) ."
+        },
+        "initial learning rate" : {
+          "has" : "0.002",
+          "from sentence" : "The initial learning rate is 0.002 and the model is trained in minibatches with a batch size of 256 . ? 1 and ?"          
+        },
+        "model" : {
+          "trained in" : {
+            "minibatches" : {
+              "with" : {
+                "batch size" : {
+                  "of" : "256"
+                }
+              }
+            }
+          },
+          "from sentence" : "The initial learning rate is 0.002 and the model is trained in minibatches with a batch size of 256 . ? 1 and ?"
+        }
+      }
+    }
+  }
+}

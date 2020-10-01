@@ -1,0 +1,76 @@
+{
+  "has" : {
+    "Baselines" : {
+      "For" : {
+        "Gigaword dataset" : {
+          "compare our models with" : {
+            "ABS +" : {
+              "is a" : {
+                "fine tuned version of ABS" : {
+                  "uses" : ["attentive CNN encoder", "NNLM decoder"]
+                }
+              }
+            },
+            "Feat2s" : {
+              "is an" : {
+                "RNN sequence - to - sequence model" : {
+                  "with" : {
+                    "lexical and statistical features" : {
+                      "in" : "encoder"
+                    }
+                  }
+                }
+              }
+            },
+            "Luong - NMT" : {
+              "is a" : "two - layer LSTM encoder - decoder model"
+            },
+            "RAS - Elman" : {
+              "uses" : ["attentive CNN encoder", "Elman RNN decoder"]
+            },
+            "SEASS" : {
+              "uses" : ["BiGRU encoders", {"GRU decoders" : {"with" : "selective encoding"}}]
+            }
+          },
+          "from sentence" : "For the Gigaword dataset , we compare our models with the following abstractive baselines :
+ABS + is a fine tuned version of ABS which uses an attentive CNN encoder and an NNLM decoder , Feat2s ( Nallapati et al. , 2016 ) is an RNN sequence - to - sequence model with lexical and statistical features in the encoder , Luong - NMT is a two - layer LSTM encoder - decoder model , RAS - Elman uses an attentive CNN encoder and an Elman RNN decoder , and SEASS uses BiGRU encoders and GRU decoders with selective encoding ."
+
+        },
+        "CNN dataset" : {
+          "compare our models with" : {
+            "Lead - 3" : {
+              "extracts" : {
+                "first three sentences of the document" : {
+                  "as" : "summary"
+                }
+              }
+            },
+            "LexRank" : {
+              "extracts" : {
+                "texts" : {
+                  "using" : "LexRank"
+                }
+              }
+            },
+            "Bi - GRU" : {
+              "is a" : "non-hierarchical one - layer sequence - to - sequence abstractive baseline"
+            },
+            "Distraction - M3" : {
+              "uses" : {
+                "sequence - to - sequence abstractive model" : {
+                  "with" : "distraction - based networks"
+                }
+              }
+            },
+            "GBA" : {
+              "is a" : "graph - based attentional neural abstractive model"
+            }
+          },
+          "from sentence" : "For the CNN dataset , we compare our models with the following extractive and abstractive baselines :
+Lead - 3 is a strong baseline that extracts the first three sentences of the document as summary , LexRank extracts texts using LexRank , Bi - GRU is a non-hierarchical one - layer sequence - to - sequence abstractive baseline , Distraction - M3 uses a sequence - to - sequence abstractive model with distraction - based networks , and GBA is a graph - based attentional neural abstractive model ."
+
+        }
+      }
+    }    
+  }
+}

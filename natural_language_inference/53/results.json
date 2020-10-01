@@ -1,0 +1,278 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "Architecture impact" : {
+          "has" : {
+            "BiLSTM - 4096" : {
+              "with" : "max - pooling operation",
+              "performs" : {
+                "best" : {
+                  "on" : "SNLI and transfer tasks"
+                }
+              },
+              "Looking at" : {
+                "micro and macro averages" : {
+                  "performs" : {
+                    "significantly better" : {
+                      "than" : {
+                        "other models" : {
+                          "name" : ["LSTM", "GRU", "BiGRU - last", "BiLSTM - Mean", "inner-attention", "hierarchical - ConvNet"]
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Architecture impact
+The BiLSTM - 4096 with the max - pooling operation performs best on both SNLI and transfer tasks .
+Looking at the micro and macro averages , we see that it performs significantly better than the other models LSTM , GRU , BiGRU - last , BiLSTM - Mean , inner-attention and the hierarchical - ConvNet. also shows that better performance on the training task does not necessarily translate in better results on the transfer tasks like when comparing inner-attention and BiLSTM - Mean for instance ."
+
+            },
+            "transfer quality" : {
+              "sensitive to" : "optimization algorithm",
+              "when training with" : {
+                "Adam" : {
+                  "instead of" : "SGD",
+                  "observed" : {
+                    "BiLSTM - max" : {
+                      "converged" : {
+                        "faster" : {
+                          "on" : "SNLI"
+                        }
+                      },
+                      "obtained" : {
+                        "worse results" : {
+                          "on" : "transfer tasks"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "For a given model , the transfer quality is also sensitive to the optimization algorithm : when training with Adam instead of SGD , we observed that the BiLSTM - max converged faster on SNLI ( 5 epochs instead of 10 ) , but obtained worse results on the transfer tasks , most likely because of the model and classifier 's increased capability to over-specialize on the training task ."
+                }
+              }
+            }
+          }
+        },
+        "Embedding size" : {
+          "has" : {
+            "increased embedding sizes" : {
+              "lead to" : {
+                "increased performance" : {
+                  "for" : "almost all models"
+                }
+              },
+              "from sentence" : "Since it is easier to linearly separate in high dimension , especially with logistic regression , it is not surprising that increased embedding sizes lead to increased performance for almost all models ."
+            }
+          }
+        },
+        "Comparison with SkipThought" : {
+          "With" : {
+            "much less data ( 570 k compared to 64M sentences )" : {
+              "with" : {
+                "high - quality supervision" : {
+                  "from" : "SNLI dataset"
+                }
+              },
+              "able to" : {
+                "consistently outperform" : {
+                  "has" : {
+                    "results" : {
+                      "obtained by" : "SkipThought vectors"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "With much less data ( 570 k compared to 64M sentences ) but with high - quality supervision from the SNLI dataset , we are able to consistently outperform the results obtained by SkipThought vectors ."
+            }
+          },
+          "has" : {
+            "Our BiLSTM - max" : {
+              "trained on" : "SNLI",
+              "performs" : {
+                "much better" : {
+                  "than" : {
+                    "released SkipThought vectors" : {
+                      "on" : ["MR", "CR", "MPQA", "SST", "MRPC - accuracy", "SICK - R", "SICK - E", "STS"]
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Our BiLSTM - max trained on SNLI performs much better than released SkipThought vectors on MR , CR , MPQA , SST , MRPC - accuracy , SICK - R , SICK - E and STS14 ( see ) ."
+            }
+          },
+          "performs" : {
+            "better" : {
+              "than" : {
+                "SkipThought" : {
+                  "on" : ["MR", "CR", "MPQA"],
+                  "Except for" : "SUBJ dataset"
+                }
+              },
+              "from sentence" : "Except for the SUBJ dataset , it also performs better than SkipThought - LN on MR , CR and MPQA ."
+            }
+          },
+          "looking at" : {
+            "STS14 results" : {
+              "observe" : {
+                "cosine metrics" : {
+                  "in" : "our embedding space",
+                  "is" : {
+                    "more semantically informative" : {
+                      "than" : "SkipThought embedding space"
+                    }
+                  }
+                },
+                "from sentence" : "We also observe by looking at the STS14 results that the cosine metrics in our embedding space is much more semantically informative than in SkipThought embedding space ( pearson score of 0.68 compared to 0.29 and 0.44 for ST and ST - LN ) ."
+              }
+            }
+          }
+        },
+        "NLI as a supervised training set" : {
+          "indicate" : {
+            "our model" : {
+              "trained on" : "SNLI",
+              "obtains" : {
+                "much better overall results" : {
+                  "than" : {
+                    "models" : {
+                      "trained on" : {
+                        "other supervised tasks" : {
+                          "such as" : ["COCO", "dictionary definitions", "NMT", "PPDB", "SST"]
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "Our findings indicate that our model trained on SNLI obtains much better overall results than models trained on other supervised tasks such as COCO , dictionary definitions , NMT , PPDB and SST ."
+                }
+              }
+            }
+          }
+        },
+        "Domain adaptation on SICK tasks" : {
+          "has" : {
+            "Our transfer learning approach" : {
+              "obtains" : {
+                "better results" : {
+                  "than" : "previous state - of - the - art"
+                }
+              },
+              "from sentence" : "Domain adaptation on SICK tasks
+Our transfer learning approach obtains better results than previous state - of - the - art on the SICK task - can be seen as an out - domain version of SNLI - for both entailment and relatedness ."              
+            },
+            "significantly outperformed" : {
+              "has" : {
+                "previous transfer learning approaches" : {
+                  "on" : "SICK - E",
+                  "that used" : {
+                    "parameters" : {
+                      "of" : "LSTM model",
+                      "trained on" : "SNLI",
+                      "to fine - tune on" : "SICK"
+                    }
+                  },
+                  "from sentence" : "We also significantly outperformed previous transfer learning approaches on SICK - E ( Bowman et al. , 2015 ) that used the parameters of an LSTM model trained on SNLI to fine - tune on SICK ( 80.8 % accuracy ) ."
+                }
+              }
+            }
+          },
+          "obtain" : {
+            "pearson score" : {
+              "of" : {
+                "0.885" : {
+                  "on" : "SICK - R"
+                }
+              }
+            },
+            "86.3 % test accuracy" : {
+              "on" : "SICK - E",
+              "while" : {
+                "previous best handengineered models" : {
+                  "obtained" : "84.5 %"
+                }
+              }
+            },
+            "from sentence" : "We obtain a pearson score of 0.885 on SICK - R while obtained 0.868 , and we obtain 86.3 % test accuracy on SICK - E while previous best handengineered models obtained 84.5 % ."
+          }
+        },
+        "Image - caption retrieval results" : {
+          "trained with" : {
+            "ResNet features and 30 k more training data" : {
+              "has" : {
+                "SkipThought vectors" : {
+                  "perform" : {
+                    "significantly better" : {
+                      "than" : "original setting"
+                    }
+                  },
+                  "going from" : {
+                    "33.8 to 37.9" : {
+                      "for" : "caption retrieval R@1"
+                    }
+                  },
+                  "from" : {
+                    "25.9 to 30.6" : {
+                      "on" : "image retrieval R@1"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "When trained with ResNet features and 30 k more training data , the SkipThought vectors perform significantly better than the original setting , going from 33.8 to 37.9 for caption retrieval R@1 , and from 25.9 to 30.6 on image retrieval R@1 ."
+            }
+          },
+          "has" : {
+            "Our approach" : {
+              "pushes" : {
+                "results" : {
+                  "has" : "even further",
+                  "from" : {
+                    "37.9" : {
+                      "to" : {
+                        "42.4" : {
+                          "on" : "cap-tion retrieval"       
+                        }
+                      }
+                    },
+                    "30.6" : {
+                      "to" : {
+                        "33.2" : {
+                          "on" : "image retrieval"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "Our approach pushes the results even further , from 37.9 to 42.4 on cap-tion retrieval , and 30.6 to 33.2 on image retrieval ."
+                }
+              }
+            }
+          }
+        },
+        "MultiGenre NLI" : {
+          "observe" : {
+            "significant boost" : {
+              "in" : "performance overall",
+              "compared to" : {
+                "model" : {
+                  "trained only on" : "SLNI"
+                }
+              }
+            },
+            "from sentence" : "MultiGenre NLI
+We observe a significant boost in performance overall compared to the model trained only on SLNI ."
+
+          },
+          "has" : {
+            "Our model" : {
+              "reaches" : {
+                "AdaSent performance" : {
+                  "on" : "CR"
+                }
+              },
+              "from sentence" : "Our model even reaches AdaSent performance on CR , suggesting that having a larger coverage for the training task helps learn even better general representations ."
+            }
+          }
+        }
+      }
+    } 
+  }
+}

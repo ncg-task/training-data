@@ -1,0 +1,7 @@
+(Contribution||has||Baselines)
+(Baselines||For||ASTD)
+(ASTD||has||best reported results)
+(best reported results||by||ensemble system)
+(ensemble system||combining output of||CNN and Bi - LSTM architectures)
+(Baselines||has||best performing system)
+(best performing system||in||SemEval 2017 task)

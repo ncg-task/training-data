@@ -1,0 +1,90 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "has" : {
+        "Pre-training Emo2Vec" : {
+          "has" : {
+            "Emo2 Vec embedding matrix and the CNN model" : {
+              "pre-trained using" : "hashtag corpus",
+              "from sentence" : "Emo2 Vec embedding matrix and the CNN model are pre-trained using hashtag corpus alone ."
+            },
+            "Parameters of T and CNN" : {
+              "are" : "randomly initialized",
+              "from sentence" : "Parameters of T and CNN are randomly initialized and Adam is used for optimization ."
+            },
+            "Adam" : {
+              "used for" : "optimization",
+              "from sentence" : "Parameters of T and CNN are randomly initialized and Adam is used for optimization ."
+            }
+          },
+          "For" : {
+            "best model" : {
+              "use" : {
+                "batch size" : {
+                  "of" : "16"
+                },
+                "embedding size" : {
+                  "of" : "100"
+                }
+              },
+              "has" : {
+                "1024 filters" : {
+                  "has" : {
+                    "filter sizes" : {
+                      "are" : "1 , 3 ,5 and 7"
+                    }
+                  },
+                  "from sentence" : "For the best model , we use the batch size of 16 , embedding size of 100 , 1024 filters and filter sizes are 1 , 3 ,5 and 7 respectively ."
+                }              
+              }
+            }
+          }
+        },
+        "Multi - task training" : {
+          "tune" : {
+            "our parameters" : {
+              "of" : ["learning rate", "L2 regularization"],
+              "from sentence" : "We tune our parameters of learning rate , L2 regularization , whether to pre-train our model and batch size with the average accuracy of the development set of all datasets ."
+            }
+          },
+          "early stop" : {
+            "our model" : {
+              "when" : {
+                "averaged dev accuracy" : {
+                  "stop" : "increasing"
+                }
+              }
+            },
+            "from sentence" : "We early stop our model when the averaged dev accuracy stop increasing ."
+          },
+          "has" : {
+            "best model" : {
+              "uses" : {
+                "learning rate" : {
+                  "of" : "0.001"
+                },
+                "L2 regularization" : {
+                  "of" : "1.0"
+                },
+                "batch size" : {
+                  "of" : 32
+                }
+              },
+              "from sentence" : "Our best model uses learning rate of 0.001 , L2 regularization of 1.0 , batch size of 32 ."
+            }
+          },
+          "save" : {
+            "best model" : {
+              "take" : {
+                "embedding layer" : {
+                  "as" : "Emo2Vec vectors"
+                }
+              },
+              "from sentence" : "We save the best model and take the embedding layer as Emo2Vec vectors ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

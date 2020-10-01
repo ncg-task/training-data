@@ -1,0 +1,73 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "our simpler and lighter ML models" : {
+          "either outperform or are comparable to" : "much heavier current state - of - the art",
+          "from sentence" : "From , we can see that our simpler and lighter ML models either outperform or are comparable to the much heavier current state - of - the art on this dataset ."
+        },
+        "Audio - only results" : {
+          "has" : {
+            "Performance of LSTM and ARE" : {
+              "reveals" : {
+                "deep models indeed need a lot of information" : {
+                  "to learn" : {
+                    "features" : {
+                      "as" : {
+                        "LSTM classifier" : {
+                          "trained on" : "eight - dimensional features",
+                          "achieves" : {
+                            "very low accuracy" : {
+                              "as compared to" : "end - to - end trained ARE"
+                            }                   
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Audio - only results :
+Performance of LSTM and ARE reveals that deep models indeed need a lot of information to learn features as the LSTM classifier trained on eight - dimensional features achieves very low accuracy as compared to the end - to - end trained ARE ."
+
+        },
+        "Text - only results" : {
+          "observe" : {
+            "performance of all the models" : {
+              "is" : "similar"
+            }
+          },
+          "from sentence" : "Text - only results :
+We observe that the performance of all the models for this setting is similar ."
+
+        },
+        "Audio + Text results" : {
+          "combining" : {
+            "audio and text features" : {
+              "gives" : {
+                "boost" : {
+                  "of" : "? 14 % for all the metrics"
+                }
+              }
+            }
+          },
+          "from sentence" : "c) Audio + Text results :
+We see that combining audio and text features gives us a boost of ? 14 % for all the metrics ."
+
+        }
+      },
+      "conclude that" : {
+        "our simple ML methods" : {
+          "are" : {
+            "very robust" : {
+              "to have achieved" : "comparable performance"
+            }
+          },
+          "from sentence" : "Overall , we can conclude that our simple ML methods are very robust to have achieved comparable performance even though they are modeled to predict six - classes as opposed to four in previous works ."
+        }
+      }
+    }
+  }
+}

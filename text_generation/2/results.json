@@ -1,0 +1,113 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "Synthetic Data Experiments" : {
+          "In" : {
+            "pre-training stage" : {
+              "has" : {
+                "LeakGAN" : {
+                  "already shown" : {
+                    "observable performance superiority" : {
+                      "compared to" : "other models"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "( i ) In the pre-training stage , LeakGAN has already shown observable performance superiority compared to other models , which indicates that the proposed hierarchical architecture itself brings improvement over the previous ones ."
+            },
+            "adversarial training stage" : {
+              "has" : {
+                "Leak GAN" : {
+                  "shows" : "better speed of convergence",
+                  "explores" : {
+                    "local minimum" : {
+                      "is" : {
+                        "significantly better" : {
+                          "than" : "previous results"
+                        }
+                      }
+                    }
+                  } 
+                }
+              },
+              "from sentence" : "( ii ) In the adversarial training stage , Leak GAN shows a better speed of convergence , and the local minimum it explores is significantly better than previous results ."
+            }
+          }
+        },
+        "Long Text Generation : EMNLP2017 WMT News" : {
+          "In" : {
+            "all measured metrics" : {
+              "has" : {
+                "LeakGAN" : {
+                  "shows" : {
+                    "significant performance gain" : {
+                      "compared to" : "baseline models"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "In all measured metrics , LeakGAN shows significant performance gain compared to baseline models ."
+            }
+          }
+        },
+        "Middle Text Generation : COCO Image Captions" : {
+          "of" : {
+            "BLEU scores" : {
+              "on" : {
+                "COCO dataset" : {
+                  "indicate" : {
+                    "Leak GAN" : {
+                      "performs" : {
+                        "significantly better" : {
+                          "than" : {
+                            "baseline models" : {
+                              "in" : "mid-length text generation task"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "The results of the BLEU scores on the COCO dataset indicate that Leak GAN performs significantly better than baseline models in mid-length text generation task ."
+            }
+          }
+        },
+        "Short Text Generation : Chinese Poems" : {
+          "indicate" : {
+            "LeakGAN" : {
+              "successfully handles" : "short text generation tasks"
+            },
+            "from sentence" : "The results on Chinese Poems indicate that LeakGAN successfully handles the short text generation tasks ."
+          }
+        },
+        "Turing Test and Generated Samples" : {
+          "has" : {
+            "performance" : {
+              "on" : {
+                "two datasets" : {
+                  "indicates that" : {
+                    "generated sentences" : {
+                      "of" : {
+                        "Leak GAN" : {
+                          "than those of" : {
+                            "SeqGAN" : {
+                              "of" : ["higher global consistency", "better readability"]
+                            }
+                          }
+                        }
+                      }
+                    } 
+                  }
+                }
+              },
+              "from sentence" : "The performance on two datasets indicates that the generated sentences of Leak GAN are of higher global consistency and better readability than those of SeqGAN ."
+            }
+          }        
+        }
+      }
+    }    
+  }
+}

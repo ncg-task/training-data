@@ -1,0 +1,52 @@
+{
+  "has" : {
+    "Model" : {
+      "has" : {
+        "network" : {
+          "is" : ["densely connected", {"from sentence" : "Firstly , our network is densely connected , connecting every layer of P with every layer of Q ."}]
+        },
+        "propagated features" : {
+          "collectively passed into" : "prediction layers",
+          "effectively connect" : {
+            "shallow layers" : {
+              "to" : "deeper layers"
+            }
+          },
+          "from sentence" : "The propagated features are collectively passed into prediction layers , which effectively connect shallow layers to deeper layers ."
+        }
+      },
+      "propose" : {
+        "efficient Bidirectional Attention Connectors ( BAC )" : {
+          "as" : {
+            "base building block" : {
+              "to connect" : {
+                "two sequences" : {
+                  "at" : "arbitrary layers"
+                }
+              }
+            }
+          },
+          "from sentence" : "To this end , we propose efficient Bidirectional Attention Connectors ( BAC ) as a base building block to connect two sequences at arbitrary layers ."
+        },
+        "DECAPROP ( Densely Connected Attention Propagation )" : {
+          "is" : {
+            "novel architecture" : {
+              "for" : "reading comprehension"
+            }
+          },
+          "from sentence" : "Overall , we propose DECAPROP ( Densely Connected Attention Propagation ) , a novel architecture for reading comprehension ."
+        }
+      },
+      "compress" : {
+        "attention outputs" : {
+          "be" : {
+            "small" : {
+              "to" : "propagate"
+            }
+          },
+          "from sentence" : "The key idea is to compress the attention outputs so that they can be small enough to propagate , yet enabling a connection between two sequences ."
+        }
+      }
+    }    
+  }
+}

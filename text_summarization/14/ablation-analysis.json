@@ -1,0 +1,136 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "has" : {
+        "Does our summarization model learn entailment knowledge ?" : {
+          "For" : {
+            "test set" : {
+              "has" : {
+                "average entailment score" : {
+                  "for" : {
+                    "reference" : {
+                      "is" : "0.72"
+                    },
+                    "basic seq2seq model" : {
+                      "entailment score is" : "0.46"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "For the test set of , the average entailment score for the reference is 0.72 , while for the basic seq2seq model , the entailment score is only 0.46 ."
+            }
+          },
+          "adopt" : {
+            "entailment-based strategies" : {
+              "has" : {
+                "entailment score" : {
+                  "rises to" : {
+                    "0.63" : {
+                      "for" : "seq2seq model"
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "When we adopt entailmentbased strategies , the entailment score rises to 0.63 for seq2seq model ."
+          },
+          "Note" : {
+            "entailment score" : {
+              "is" : {
+                "0.57" : {
+                  "for" : {
+                    "seq2seq model" : {
+                      "with" : "selective encoding"
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "Note that the entailment score is 0.57 for seq2seq model with selective encoding , and we believe that the selective mechanism can filter out secondary information in the input , which will reduce the possibility to generate irrelevant information ."
+          },
+          "has" : {
+            "selective mechanism" : {
+              "filter out" : {
+                "secondary information" : {
+                  "in" : "input"
+                }
+              },
+              "from sentence" : "Note that the entailment score is 0.57 for seq2seq model with selective encoding , and we believe that the selective mechanism can filter out secondary information in the input , which will reduce the possibility to generate irrelevant information ."
+            },
+            "Entailment - aware selective model" : {
+              "achieves" : {
+                "high entailment reward" : {
+                  "of" : "0.71"
+                }
+              },
+              "from sentence" : "Entailment - aware selective model achieves a high entailment reward of 0.71 ."
+            }
+          },
+          "conclude" : {
+            "our model" : {
+              "successfully learned" : "entailment knowledge"
+            },
+            "from sentence" : "In part at least , we can conclude that our model has successfully learned entailment knowledge ."
+          }
+        },
+        "Is it less abstractive for our model ?" : {
+          "shows that" : {
+            "seq2seq model" : {
+              "produces" : {
+                "more novel words" : {
+                  "than" : {
+                    "our model" : {
+                      "indicating" : "lower degree of abstraction"
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "shows that the seq2seq model produces more novel words ( i.e. , words that do not appear in the article ) than our model , indicating a lower degree of abstraction for our model ."            
+          },
+          "exclude" : {
+            "all the words not in the reference" : {
+              "has" : {
+                "model" : {
+                  "generates" : {
+                    "more novel words" : {
+                      "suggesting that" : {
+                        "our model" : {
+                          "provides" : {
+                            "compromise solution" : {
+                              "for" : "informativeness and correctness"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "However , when we exclude all the words not in the reference ( these words may lead to wrong information ) , our model generates more novel words , suggesting that our model provides a compromise solution for informativeness and correctness ."
+          }
+        },
+        "Could the entailment recognition also be improved ?" : {
+          "shows" : {
+            "our summarization model" : {
+              "with" : {
+                "MTL" : {
+                  "outperforms" : "basic seq2seq model"  
+                }
+              }
+            },
+            "from sentence" : "shows that our summarization model with MTL outperforms basic seq2seq model ."
+          },
+          "has" : {
+            "accuracy" : {
+              "of" : "entailment recognition",
+              "from sentence" : "As ? increases , the accuracy of entailment recognition improves and finally exceeds that of the model without MTL , which reveals the advantage of MTL framework ."
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

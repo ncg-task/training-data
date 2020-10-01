@@ -1,0 +1,108 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "run" : {
+        "our experiments" : {
+          "on" : {
+            "machine" : {
+              "contains" : {
+                "single GTX 1080 GPU" : {
+                  "with" : "8 GB VRAM"
+                }
+              }
+            }
+          },
+          "from sentence" : "We run our experiments on a machine that contains a single GTX 1080 GPU with 8 GB VRAM ."
+        }
+      },
+      "use" : {
+        "variable character embedding" : {
+          "with" : "fixed pre-trained word embedding",
+          "to serve" : {
+            "part" : {
+              "of" : {
+                "input" : {
+                  "into" : "model"
+                }
+              }
+            }
+          },
+          "from sentence" : "As introduced in Section 2 , we use a variable character embedding with a fixed pre-trained word embedding to serve as part of the input into the model ."
+        }
+      },
+      "has" : {
+        "character embedding" : {
+          "implemented using" : "CNN",
+          "with" : {
+            "one -dimensional layer" : {
+              "consists of" : {
+                "100 units" : {
+                  "with" : {
+                    "channel size" : {
+                      "of" : "5"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "The character embedding is implemented using CNN with a one -dimensional layer consists of 100 units with a channel size of 5 ."
+        },
+        "input depth" : {
+          "of" : "8",
+          "from sentence" : "It has an input depth of 8 ."
+        },
+        "max length" : {
+          "of" : {
+            "SQuAD" : {
+              "is" : "16"
+            }
+          },
+          "from sentence" : "The max length of SQuAD is 16 which means there are a maximum 16 words in a sentence ."
+        },
+        "fixed word embedding" : {
+          "has" : {
+            "dimension" : {
+              "of" : "100"
+            }
+          },
+          "provided by" : "GloVe data set",
+          "from sentence" : "The fixed word embedding has a dimension of 100 , which is provided by the GloVe data set ."
+        },
+        "POS model" : {
+          "contains" : {
+            "syntactic information" : {
+              "with" : "39 different POS tags",
+              "serve" : "both input and output"
+            }
+          },
+          "from sentence" : "The POS model contains syntactic information with 39 different POS tags that serve as both input and output ."
+        }
+      },
+      "For" : {
+        "SECT and SEDT" : {
+          "has" : {
+            "input" : {
+              "of" : "model",
+              "has" : {
+                "size" : {
+                  "of" : "8"
+                }
+              },
+              "with" : {
+                "30 units" : {
+                  "to be" : "output"
+                }
+              },
+              "from sentence" : "For SECT and SEDT the input of the model has a size of 8 with 30 units to be output ."              
+            },
+            "maximum length size" : {
+              "set to be" : "10 and 20",
+              "from sentence" : "Both of them has a maximum length size that is set to be 10 and 20 respectively , which values will be further discussed in Section 4.5 ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

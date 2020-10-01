@@ -1,0 +1,123 @@
+36	3	8	built
+36	9	13	ASNQ
+36	26	29	for
+36	30	33	AS2
+36	36	51	by transforming
+36	56	105	recently released Natural Questions ( NQ ) corpus
+36	108	112	from
+36	113	115	MR
+36	116	118	to
+36	119	127	AS2 task
+151	3	8	adopt
+151	9	23	Adam optimizer
+151	47	51	with
+151	54	67	learning rate
+151	68	70	of
+151	71	77	2e - 5
+151	78	81	for
+151	86	99	transfer step
+151	100	102	on
+151	107	119	ASNQ dataset
+151	143	149	1e - 6
+151	78	81	for
+151	158	168	adapt step
+151	100	102	on
+151	176	190	target dataset
+152	3	8	apply
+152	9	23	early stopping
+152	24	26	on
+152	31	39	dev. set
+152	40	42	of
+152	47	60	target corpus
+153	3	6	set
+153	11	31	max number of epochs
+153	32	40	equal to
+153	41	48	3 and 9
+153	49	52	for
+153	53	77	adapt and transfer steps
+154	11	34	maximum sequence length
+154	35	38	for
+154	39	53	BERT / RoBERTa
+154	54	56	to
+154	57	67	128 tokens
+31	19	24	study
+31	36	62	Transformer - based models
+31	41	44	for
+31	67	70	AS2
+31	75	82	provide
+31	83	102	effective solutions
+31	103	112	to tackle
+31	117	140	data scarceness problem
+31	41	44	for
+31	67	70	AS2
+31	157	168	instability
+31	33	35	of
+31	176	191	finetuning step
+33	3	10	improve
+33	11	20	stability
+33	21	23	of
+33	24	42	Transformer models
+33	43	52	by adding
+33	56	87	intermediate fine - tuning step
+33	96	103	aims at
+33	104	116	specializing
+33	122	124	to
+33	129	148	target task ( AS2 )
+34	3	7	show
+34	17	34	transferred model
+34	35	41	can be
+34	42	61	effectively adapted
+34	62	64	to
+34	69	82	target domain
+34	83	87	with
+34	90	116	subsequent finetuning step
+34	124	134	when using
+34	135	146	target data
+34	147	149	of
+34	150	160	small size
+2	62	87	Answer Sentence Selection
+7	118	136	Question Answering
+17	42	67	Question Answering ( QA )
+18	6	39	answer sentence selection ( AS2 )
+19	61	64	AS2
+19	195	197	QA
+166	0	5	TANDA
+166	6	14	provides
+166	17	34	large improvement
+166	35	39	over
+166	44	60	state of the art
+177	6	14	improves
+177	15	29	all the models
+177	32	43	BERT - Base
+177	46	59	RoBERTa- Base
+177	62	74	BERT - Large
+177	79	94	RoBERTa - Large
+177	97	110	outperforming
+177	115	140	previous state of the art
+167	0	20	RoBERTa- Large TANDA
+167	21	26	using
+167	27	31	ASNQ
+168	8	17	establish
+168	21	52	impressive new state of the art
+168	53	56	for
+168	57	60	AS2
+168	61	63	on
+168	64	70	WikiQA
+168	42	44	of
+168	74	89	0.920 and 0.933
+168	90	92	in
+168	93	104	MAP and MRR
+174	0	21	RoBERTa - Large TANDA
+174	22	26	with
+174	27	31	ASNQ
+175	16	27	establishes
+175	31	53	impressive performance
+175	54	56	of
+175	57	62	0.943
+175	13	15	in
+175	66	69	MAP
+175	74	79	0.974
+175	13	15	in
+175	83	86	MRR
+175	89	102	outperforming
+175	107	132	previous state of the art

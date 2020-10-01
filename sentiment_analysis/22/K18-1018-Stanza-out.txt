@@ -1,0 +1,231 @@
+title
+Hierarchical Attention Based Position-aware Network for Aspect-level Sentiment Analysis
+abstract
+Aspect - level sentiment analysis aims to identify the sentiment of a specific target in its context .
+Previous works have proved that the interactions between aspects and the contexts are important .
+On this basis , we also propose a succinct hierarchical attention based mechanism to fuse the information of targets and the contextual words .
+In addition , most existing methods ignore the position information of the aspect when encoding the sentence .
+In this paper , we argue that the position - aware representations are beneficial to this task .
+Therefore , we propose a hierarchical attention based position - aware network ( HAPN ) , which introduces position embeddings to learn the position - aware representations of sentences and further generate the target - specific representations of contextual words .
+The experimental results on SemEval 2014 dataset show that our approach outperforms the state - of - theart methods .
+Introduction
+Aspect - level sentiment analysis is a fine - grained task in sentiment analysis , which aims to identify the sentiment polarity ( i.e. , negative , neutral , or positive ) of a specific opinion target expressed in a comment / review by a reviewer .
+For example , given a sentence " The price is reasonable although the service is poor " , the sentiment polarity for aspects " price " and " service " are positive and negative respectively .
+Traditional methods for aspect - level sentiment analysis mainly focus on designing a set of features ( such as bag - of - words , sentiment lexicons , and linguistic features ) to train a classifier for sentiment classification .
+However , such kind of feature engineering work often relies on human ingenuity , which is a timeconsuming process and lacks generalization .
+In recent years , more and more neural network based models have been proposed and obtained the stateof - the - art results .
+As previous research reveals that 40 % of sentiment classification errors are caused by not considering targets in sentiment classification , recent works tend to focus on fusing the information of the targets and the contexts .
+and both concatenated the aspect embeddings and embeddings of each word as inputs to a LSTM based model so as to introduce the information of the target into the model .
+adopted circular convolution and circular correlation to model the similarity between aspect and contextual words .
+and both employed a bidirectional attention operation to achieve the representations of targets and contextual words determined by each other .
+introduced an attention - over- attention based network to model the aspects and contexts in a joint way and explicitly capture the interaction between aspects and the context .
+As described above , the existing studies show that the interactions between aspects and the context are important to the aspect - level sentiment analysis .
+Leveraging this idea , we also propose a succinct hierarchical attention based mechanism to fuse the information of targets and the contextual words , which aims to generate the target - specific representations of each word .
+In addition , most of the above methods ignore the position information of the aspect when
+Hierarchical Attention Based Position - aware Network for Aspect - level Sentiment Analysis
+Lishuang Li , Yang Liu and AnQiao Zhou School of Computer Science and Technology , Dalian University of Technology lilishuang314@163.com encoding the sentence .
+We argue that the position of a candidate aspect is important for the sentence modelling .
+For instance , consider the sentence " I bought a mobile phone , it s camera is wonderful but the battery life is a bit short " .
+For the candidate aspect " battery life " , " wonderful " and " short " are both likely to be considered as its adjunct word .
+In this case , if we encode the position information into the representation of each word effectively , we would have more confidence in concluding that the " short " is the adjunct word of " battery life " and predict the sentiment as negative .
+Then , the next problem is how to introduce the position information .
+In some previous works , they weighted the representation of each word according to the position , and the words close to the aspect could be paid more attention .
+However , this operation is not always reasonable and sometimes the adjunct word maybe faraway from the target word .
+Thus , we introduce position embeddings when modelling the sentence and further generate the positionaware representations .
+In other words , the position information is considered as a kind of features and embedded into position embeddings .
+The model will learn to exploit both of the semantic information and the position clues .
+Based on the analysis above , in this paper , we propose a hierarchical attention based positionaware network ( HAPN ) for aspect - level sentiment classification .
+A position - aware encoding layer is introduced for modelling the sentence to achieve the position - aware abstract representation of each word .
+On this basis , a succinct fusion mechanism is further proposed to fuse the information of aspects and the contexts , achieving the final sentence representation .
+Finally , we feed the achieved sentence representation into a softmax layer to predict the sentiment polarity .
+We evaluate our approach on SemEval 2014 dataset , containing reviews of restaurant domain and laptop domain .
+The experimental results demonstrate that the proposed approach is effective for aspect - level sentiment classification , and it outperforms state - of - the - art approaches with remarkable gains .
+We make our source code public at https://github.com/DUT-LiuYang/Aspect-Sentiment-Analysis.
+Related Work
+Many approaches have been proposed to address the problem of aspect - level sentiment analysis .
+Traditional approaches to this task normally exploited a diverse set of strategies to convert classification clues ( i.e. , sentiment lexicons , bagof - word ) into feature vectors .
+Although these methods have achieved comparable performance , their models highly depend on the effectiveness of the handcraft features which are labor intensive and lack generalization .
+Therefore , many neural network based models have been proposed in recent years .
+And most current state - of - the - art works in aspect - based sentiment analysis pay more attention to fusing the information of the targets and contextual words .
+proposed an attention based LSTM which introduced the aspect clues by concatenating the aspect embeddings and the word representations .
+developed two target - dependent LSTM to model the left and right contexts with target , where the target information was automatically taken into account .
+proposed an attention based LSTM which learned to attend based on associative relationships between sentence words and aspect by adopting circular convolution and circular correlation .
+proposed an interactive attention network which interactively learned attentions in the contexts and targets .
+Similarly , introduced a rotatory attention mechanism to achieve the representations of the targets , the left context and the right context , which were determined by each other .
+introduced an attentionover - attention network modeled the aspects and sentences in a joint way , which jointly learned the representations for aspects and sentences and automatically focused on the important parts in sentences .
+In addition , other current researches focus on capturing more accurate information by adopting multiple attentions .
+designed a deep memory network which consisted of multiple computational layers , each of which was an attention model over an external memory .
+proposed a recurrent attention based network which introduced multiple attention mechanisms .
+Compared with the above models , we introduce position embeddings when modelling the sentence to generate position - aware representations ; on this basis , we propose a hierarchical attention based fusion mechanism to fuse the clues of aspects and the contexts .
+Model
+In our approach , each target along with the sentence where the target is located constitutes an instance .
+We suppose that a sentence consists of n words = { , , ? , } and a target has m words = { , , ? , } . is a subsequence of .
+The goal of our model is to predict the sentiment polarity of the sentence over the target .
+As shown in , our model primarily includes four parts : input embeddings , Bi - GRU based encoding layer , hierarchical attention based fusion layer and the output layer .
+Input Embedding
+The embedding layer has two parts : the word embeddings and the position embeddings .
+Let ? ?
+be a word embedding lookup table generated by an unsupervised method such as Glo Ve or CBOW , where is the dimension of the word embeddings and is the size of word vocabulary .
+As described in Section 1 , we also introduce position embeddings , which have been widely used in CNN based models , as apart of the inputs to the model .
+Similar as the word embedding layer , the position embedding layer is a ? ? , where is the dimension of the position embeddings and is the number of possible relevant positions between each word and the target .
+The position embedding lookup table is initialized randomly and tuned in the training phase .
+Bi- GRU
+Based Sentence Encoder
+In this paper , we apply a Bi - GRU to learn a more abstract representation of the sentence .
+In the following , we describe our encoding layer in detail .
+In the encoding phase , we first transform each token in the sentence into a real - valued vector using the concatenation of the following vectors :
+?
+The pre-trained word embeddings of .
+?
+The position embeddings of : the relevant position between the i - th word and the target is defined as the relative offset with respect to the target and calculated by the follow equation :
+where k is the index of the first word of target , m is the length of the target , n is the length of the sentence , and none is the special marks assigned to the token padded .
+The position embedding vector is obtained by looking up the randomly initialized embeddings table according to the relevant position .
+Hence a sequence of words can be represented as = { , , , } .
+We then run two parallel GRU layers : forward GRU layer and backward GRU layer .
+We run the forward GRU to generate the hidden representation ? ? , ? ? , , ? ?
+and run the backward GRU to get the hidden representation ? ? , ? ? , , ? ? .
+Eventually , we obtain the new representation = ( ? , ? , , ? ) by concatenating the hidden vectors in ? ? , ? ? , , ? ? and ? ? , ? ? , , ? ? : ? = ? ? , ? ? .
+Note that ? ? ?
+essentially encapsulates the context information over the whole sentence ( from 1 to n ) with a greater focus on position i , where is the dimension of hidden states .
+Due to the introduction of the position embeddings , ? is considered to be position - aware .
+Hierarchical Attention Based Fusion Layer
+In this subsection , we illustrate the proposed succinct mechanism to fuse the information of targets and the contextual words .
+In detail , a source2 aspect attention is first employed to capture the most important clues in the target words and the representation of the aspect is obtained .
+Subsequently , an aspect- specific representation of each word is generated based on the aspect representation and the encoded position - aware representation .
+A source2context attention is then used to capture the most indicative sentiment words in the context and generate the weighted sum embeddings as the final sentence representation .
+Source2aspect Attention :
+Due to the fact that substantial numbers of aspects contain at least two words , we introduce a source2 aspect mechanism to generate the representation of the aspect .
+The source2 * attention is inspired by the related research of selfattention network .
+First , we introduce a score function by taking the word embeddings of each word in target as inputs .
+where ? ?
+is a weight vector and tanh is a non-linear function .
+The score is then used as a weight denoting the importance of a word in the target .
+On this basis , the normalized importance weight of i - th word in the target is computed as follows :
+At last , a weighted combination of word embeddings is considered as the representation for the target :
+Information Fusion :
+After achieving the target representation , we then further make use of the achieved representation to construct the targetspecific representation of each word in the sentence by the following equation :
+where ? ? ( ) is a weight matrix .
+denotes the target - specific representation of the i - th word in the sentence .
+Source2context
+Attention :
+Then , the targetspecific representation of each word is used to learn attentions and further generate the final sentence representation .
+The attention is defined as the following equations :
+where ? ?
+is a weight vector and denotes the importance of the i - th word in the sentence .
+At last , a weighted combination of position - aware hidden states is computed :
+which is considered as the final representation of the current instance .
+Output and Model Training
+Hence , we can get the final representation of the current instance after the last three subsections .
+Then we feed it into a softmax layer to predict the target sentiment .
+Given all of our ( suppose N ) training samples ( ) ; ( ) , we can then define the loss function as the negative log- likelihood :
+In order to compute the network parameter , we minimize the average negative log-likelihood ?( ) via RMSprop proposed by over shuffled mini-batches .
+We also adopt the dropout regularization and early stopping to ease overfitting .
+Experiments
+Experiment Settings
+We conduct experiments on SemEval 2014 Task 4 to validate the effectiveness of our model , as shown in .
+The SemEval 2014 dataset contains reviews of restaurant and laptop domains , which are widely used in previous works .
+The evaluation metric is classification accuracy .
+We use 300 - dimension word vectors pre-trained by GloVe ( whose vocabulary size is 1.9M ) for our experiments , as previous works did .
+All out - of - vocabulary words are initialized as zero vectors , and all biases are set to zero .
+The dimensions of hidden states and fused embeddings are set to 300 .
+The dimension of position embeddings is set to 50 .
+Keras is used for implementing our neural network model .
+In model training , we set the learning rate to 0.001 , the batch size to 64 , and dropout rate to 0.5 .
+The paired t- test is used for the significance testing .
+Compared Methods
+In order to evaluate the performance of proposed model , we select the following state - of - the - art methods for comparison : ?
+Majority assigns the sentiment polarity with most frequent occurrences in the training set to each sample in test set .
+?
+Bi - LSTM and Bi - GRU adopt a Bi - LSTM and a Bi - GRU network to model the sentence and use the hidden state of the final word for prediction respectively .
+?
+TD - LSTM adopts two LSTMs to model the left context with target and the right context with target respectively ; It takes the hidden states of LSTM at last time - step to represent the sentence for prediction .
+?
+MemNet applies attention multiple times on the word embeddings , and the output of last attention is fed to softmax for prediction .
+?
+IAN interactively learns attentions in the contexts and targets , and generates the representations for targets and contexts separately .
+?
+RAM ) is a multilayer architecture where each layer consists of attention - based aggregation of word features and a GRU cell to learn the sentence representation .
+?
+LCR - Rot
+employs three
+Bi- LSTMs to model the left context , the target and the right context .
+Then they propose a rotatory attention mechanism which models the relation between target and left / right contexts .
+?
+AOA - LSTM introduces an attention - over- attention ( AOA ) based network to model aspects and sentences in a joint way and explicitly capture the interaction between aspects and context sentences .
+without manual feature engineering and improve the performance in this task .
+System Performance Comparision
+( 2 ) The TD - LSTM model , which has been shown to be better than LSTM , gets the worst performance of all RNN based models and the accuracy achieved by TD - LSTM is 2.94 % and 2.4 % lower than those by Bi - LSTM on the two datasets respectively .
+This results show that introducing target clues only by splitting the sentence according to the position of target is inadequate and bidirectional RNN based model can achieve better performance than unidirectional model in this task .
+Another noticeable observation is that Bi - GRU achieves 80.27 % and 73.35 % accuracies which are 1.7 % and 2.82 % higher than those of Bi - LSTM on the Restaurant and Laptop dataset respectively .
+It indicates that Bi - GRU is more suitable to this task than Bi - LSTM .
+( 3 ) Compared with the state - of - the - art methods , our model achieves the best performance , which illustrates the effectiveness of the proposed approach .
+Our method achieves accuracies of 82.23 % as well as 77 . 27 % on the Restaurant and Laptop dataset respectively , which are 0.89 % and 2.03 % higher than the current best method .
+We will give a detailed analysis in the following subsections .
+Effects of Position Embeddings
+In order to verify the efficiency and advantage of position embeddings , we design the following models :
+Bi - GRU employs the standard Bi - GRU to encode the sentence and predict the sentiment polarity .
+Bi - GRU - PW first weights the word embeddings of each word in the sentence based on the distance from the target , as did in ) .
+Then the weighted representations are fed into the Bi - GRU .
+Bi - GRU - PE concatenates the word embeddings and the position embeddings of each word as inputs to the Bi - GRU when modelling the sentence .
+In , we report the performance of the three models .
+It can be observed that Bi - GRU - PE performs better than Bi - GRU significantly .
+After introducing the position embeddings , the accuracy has an increase of 0.62 % and 2.67 % on two datasets .
+This indicates that exploiting the position clues effectively can improve the performance of models in this task .
+In addition , another observation is that Bi - GRU - PW performs even worse than Bi - GRU .
+The accuracy achieved by Bi - GRU - PW is 0.72 % as well as 1.41 % lower than that by Bi - GRU on the Restaurant and Laptop dataset respectively .
+To an extent , the results verify that weighting the word representations according to the distance to the aspect is ineffective in this task .
+Effects of the Information Fusion
+To verify the efficiency of the information fusion , we further design the following model for comparison :
+No- fusion is a simplified version of HAPN , where we directly concatenate the target representation and the position - aware representation of each word as the inputs to the source2context attention .
+In , we report the performance comparison of HAPN and No-fusion .
+From the than No-fusion .
+HAPN achieves improvement of 0.35 % and 0.78 % on accuracy respectively on the two dataset .
+It indicates that the fusion operation we propose has potentials in automatically generating target - specific representations and improves the performance .
+Effects of The Hierarchical Attention
+This subsection evalutes the effectiveness of the hierarchical attention mechanism .
+To achieve this goal , we deactivate the two attention respectively from the proposed model .
+Firstly , to verify the efficiency of the Source2aspect attention , we design the following model for comparison :
+No - S2A - attention is a simplified version of HAPN , where the Source2aspect attention is replaced with averaging the initial word embeddings to represent the target phrase .
+presents the performance comparison of HAPN and No - S2A - attention .
+From , we can see that No - S2A - attention achieve the accuracies of 81.34 % as well as 76 . 49 % on the Restaurant and Laptop dataset respectively , which are 0.89 % and 0.78 % lower than the proposed model .
+This indicates that the Source2aspect attention in our model is effective to this task .
+Secondly , as described in the privious sections , the Source2context attention in the paper aims at weighted summing the position - aware hidden states based on the target - specific representations generated by the information fusion operation .
+From , it could be observed that :
+( 1 ) The information fusion operation is only used to calculate the Source2context attention value .
+The output of Source2aspect attention is only used for information fusion .
+Therefore , we remove the fusion operation and Source2aspect attention while removing the Source2context attention .
+And the achieved model is " Bi - GRU - PE " reported in the , achieving the accuracies of 80.89 % and 76.02 % on the two datasets respectively , which are 1.34 % and 1.25 % lower than the proposed model .
+This indicates that the Source2context attention is necessary in the proposed model .
+Case Study
+In this section , we use a review sentence " Harumi Sushi has the freshest and most delicious array of sushi in NYC " and the target " array of sushi " from the Restaurant dataset as a case study .
+We apply our HAPN to model the sentence and the target , and obtain the correct sentiment polarity : positive .
+In , we give the visualization of the attention weights ( Source2context ) on this sentence computed by HAPN .
+The meaning of the example sentence in the case study is that the " array of sushi " is good .
+Obviously , the words " freshest " and " most delicious " play an important role in judging the sentiment polarity of " array of sushi " .
+From , we can observe that those words are paid much attention as we expect .
+And it is worth noting that the word " freshest " obtains as much attention as " delicious " , although " freshest " is much farther from the target than " delicious " .
+This shows that our model does n't reduce a word 's weight only according to the long distance from the target .
+This maybe because that our HAPN embeds the position information and can consider the influence of position in combination with semantic information instead of simply weighting .
+Discussion
+Experimental results show that our proposed method has better performance than state - of - theart approaches .
+The detailed analysis for improvement is as follows :
+( 1 ) Position embeddings As discussed in Section 1 , position information is important when modelling the sentence .
+When there are several aspects in a sentence , it is easy to pay attention to the adjectives of another aspect by error .
+In this case , the relevant position between a word and the target can help to understand the structure of sentences .
+We introduce position embeddings as apart of inputs when modelling the sentence .
+Therefore , we can achieve the positionaware representations of each word and the model will learn to exploit both the semantic information and the position clues of each word .
+As shown in , the introduction of position embeddings bring a performance improvement of 0.62 % and 2.67 % on two datasets respectively , which illustrates the effectiveness of the position embeddings .
+( 2 ) Hierarchical attention based fusion operation Compared with the traditional sentiment analysis task , the aspect - level sentiment analysis is more fine - grained and need the information of specific target .
+As described in Section 3.3 , we introduce a hierarchical attention based fusion layer to generate the target - specific representation of each word .
+By exploiting the specific representations to further compute the attention value and generate the final sentence representation , the model can obtain more target clues .
+As shown in and , the experimental results show that the hierarchical attention based information fusion operation can bring performance improvement to this task .
+( 3 ) Bi - GRU based encoder
+In this paper , we employ a Bi - GRU based encoder to model the sentence .
+GRU has been shown to achieve comparable performance with less parameters than LSTM .
+And we run two parallel GRUs to obtain richer semantic information and position clues .
+The experimental results in also show that Bi - GRU can achieve better performance in this task .
+Conclusions
+In this paper , we propose a hierarchical attention based position - aware network for aspect - level sentiment analysis .
+This architecture introduces position embeddings as apart of inputs to further generate position - aware representations .
+Furthermore , we propose a succinct hierarchical attention based mechanism to fuse the information of targets and the contextual words , and achieve the final sentence representation .
+Experimental results show that our approach achieves state - of - the - art performance on the Semeval 2014 dataset .

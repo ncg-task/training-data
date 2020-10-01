@@ -1,0 +1,57 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "shows" : {
+        "performance" : {
+          "of" : {
+            "logistic regression model" : {
+              "has" : {
+                "trained" : {
+                  "using" : ["all the features ( All )", "individual feature - groups"]
+                }
+              },
+              "from sentence" : "shows the performance of a logistic regression model trained using all the features ( All ) and then using individual feature - groups ."
+            }
+          }
+        }
+      },
+      "see that" : {
+        "features" : {
+          "extracted from" : {
+            "aspect" : {
+              "analyzing" : {
+                "event - sequence" : {
+                  "have" : {
+                    "strongest predictive power" : {
+                      "followed by" : {
+                        "characterizing" : {
+                          "has" : "Sentiment - trajectory"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "We can see that the features extracted from the aspect analyzing the event - sequence have the strongest predictive power , followed by those characterizing Sentiment - trajectory ."
+          }
+        }
+      },
+      "has" : {
+        "features" : {
+          "measuring" : {
+            "top - ical consistency" : {
+              "result in" : "lowest accuracy",
+              "has" : {
+                "perform better" : {
+                  "than" : "random"
+                }
+              },
+              "from sentence" : "The features measuring top - ical consistency result in lowest accuracy but they still perform better than random on the task ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

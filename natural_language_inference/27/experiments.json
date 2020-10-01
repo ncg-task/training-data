@@ -1,0 +1,217 @@
+{
+  "has" : {
+    "Experiments" : {
+      "ON" : {
+        "SQUAD" : {
+          "has" : {
+            "Experimental setup" : {
+              "employ" : {
+                "two types" : {
+                  "of" : "standard regularizations"
+                },
+                "from sentence" : "EXPERIMENTS ON SQUAD
+    We employ two types of standard regularizations ."
+    
+              },
+              "use" : {
+                "L2 weight decay" : {
+                  "on" : "all the trainable variables",
+                  "with parameter" : "? = 3 10 ?7",
+                  "from sentence" : "First , we use L2 weight decay on all the trainable variables , with parameter ? = 3 10 ?7 ."
+                },
+                "dropout" : {
+                  "on" : ["word", "character embeddings", "between layers"],
+                  "where" : {
+                    "word and character dropout rates" : {
+                      "are" : "0.1 and 0.05"
+                    },
+                    "dropout rate" : {
+                      "between" : {
+                        "every two layers" : {
+                          "is" : "0.1"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "We additionally use dropout on word , character embeddings and between layers , where the word and character dropout rates are 0.1 and 0.05 respectively , and the dropout rate between every two layers is 0.1 ."
+                },
+                "ADAM optimizer" : {
+                  "with" : "? 1 = 0.8 , ? 2 = 0.999 , = 10 ?7",
+                  "from sentence" : "We use the ADAM optimizer ( Kingma & Ba , 2014 ) with ? 1 = 0.8 , ? 2 = 0.999 , = 10 ?7 ."
+                },
+                "learning rate warm - up scheme" : {
+                  "with" : {
+                    "inverse exponential" : {
+                      "has" : {
+                        "increase" : {
+                          "from" : {
+                            "0.0" : { 
+                              "to" : "0.001"
+                            }
+                          },
+                          "in" : "first 1000 steps",
+                          "then" : {
+                            "maintain" : {
+                              "has" : {
+                                "constant learning rate" : {
+                                  "for" : "remainder of training"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    } 
+                  },
+                  "from sentence" : "We use a learning rate warm - up scheme with an inverse exponential increase from 0.0 to 0.001 in the first 1000 steps , and then maintain a constant learning rate for the remainder of training ."
+                }
+              },
+              "adopt" : {
+                "stochastic depth method ( layer dropout )" : {
+                  "within" : {
+                    "each embedding or model encoder layer" : {
+                      "where" : {
+                        "sublayer l" : {
+                          "has" : {
+                            "survival probability pl = 1 ? l L ( 1 ? p L )" : {
+                              "where" : {
+                                "L" : {
+                                  "is" : "last layer"
+                                },
+                                "p L" : {
+                                  "=" : "0.9"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "We also adopt the stochastic depth method ( layer dropout ) within each embedding or model encoder layer , where sublayer l has survival probability pl = 1 ? l L ( 1 ? p L ) where L is the last layer and p L = 0.9 ."
+                }
+              },
+              "has" : {
+                "hidden size and the convolution filter number" : {
+                  "are" : "128",
+                  "from sentence" : "The hidden size and the convolution filter number are all 128 , the batch size is 32 , training steps are 150 K for original data , 250 K for \" data augmentation 2 \" , and 340 K for \" data augmentation 3 \" ."
+                },
+                "batch size" : {
+                  "is" : "32",
+                  "from sentence" : "The hidden size and the convolution filter number are all 128 , the batch size is 32 , training steps are 150 K for original data , 250 K for \" data augmentation 2 \" , and 340 K for \" data augmentation 3 \" ."
+                },
+                "training steps" : {
+                  "are" : {
+                    "150 K" : {
+                      "for" : "original data"
+                    },
+                    "250 K" : {
+                      "for" : "data augmentation 2"
+                    },
+                    "340 K" : {
+                      "for" : "data augmentation 3"
+                    }
+                  },
+                  "from sentence" : "The hidden size and the convolution filter number are all 128 , the batch size is 32 , training steps are 150 K for original data , 250 K for \" data augmentation 2 \" , and 340 K for \" data augmentation 3 \" ."
+                },
+                "numbers of convolution layers" : {
+                  "in" : {
+                    "embedding and modeling encoder" : {
+                      "are" : "4 and 2"
+                    }
+                  },
+                  "from sentence" : "The numbers of convolution layers in the embedding and modeling encoder are 4 and 2 , kernel sizes are 7 and 5 , and the block numbers for the encoders are 1 and 7 , respectively ."
+                },
+                "kernel sizes" : {
+                  "are" : "7 and 5",
+                  "from sentence" : "The numbers of convolution layers in the embedding and modeling encoder are 4 and 2 , kernel sizes are 7 and 5 , and the block numbers for the encoders are 1 and 7 , respectively ."
+                },
+                "block numbers" : {
+                  "for" : {
+                    "encoders" : {
+                      "are" : "1 and 7"
+                    }
+                  },
+                  "from sentence" : "The numbers of convolution layers in the embedding and modeling encoder are 4 and 2 , kernel sizes are 7 and 5 , and the block numbers for the encoders are 1 and 7 , respectively ."
+                },
+                "Exponential moving average" : {
+                  "applied on" : {
+                    "all trainable variables" : {
+                      "with" : "decay rate 0.9999"
+                    }
+                  },
+                  "from sentence" : "Exponential moving average is applied on all trainable variables with a decay rate 0.9999 ."
+                }
+              },
+              "implement" : {
+                "our model" : {
+                  "in" : "Python",
+                  "using" : "Tensorflow"
+                },
+                "from sentence" : "Finally , we implement our model in Python using Tensorflow and carryout our experiments on an NVIDIA p 100 GPU ."
+              },
+              "carryout" : {
+                "our experiments" : {
+                  "on" : "NVIDIA p 100 GPU"
+                },
+                "from sentence" : "Finally , we implement our model in Python using Tensorflow and carryout our experiments on an NVIDIA p 100 GPU ."
+              }
+            },
+            "Results" : {
+              "has" : {
+                "accuracy ( EM / F1 ) performance" : {
+                  "of" : "our model",
+                  "is" : {
+                    "on par" : {
+                      "with" : "state - of - the - art models"
+                    }
+                  },
+                  "from sentence" : "As can be seen from the table , the accuracy ( EM / F1 ) performance of our model is on par with the state - of - the - art models ."
+                },
+                "our model" : {
+                  "trained on" : "original dataset",
+                  "has" : {
+                    "outperforms" : {
+                      "has" : "all the documented results in the literature",
+                      "in terms of" : "EM and F1 scores"
+                    }
+                  },
+                  "from sentence" : "In particular , our model trained on the original dataset outperforms all the documented results in the literature , in terms of both EM and F1 scores ( see second column of ) ."
+                }
+              },
+              "trained with" : {
+                "augmented data" : {
+                  "with" : "proper sampling scheme",
+                  "has" : {
+                    "our model" : {
+                      "can get" : {
+                        "significant gain 1.5/1.1" : {
+                          "on" : "EM / F1"
+                        }
+                      }
+                    }
+                  }
+                },
+                "from sentence" : "When trained with the augmented data with proper sampling scheme , our model can get significant gain 1.5/1.1 on EM / F1 ."
+              },
+              "on" : {
+                "official test set" : {
+                  "is" : {
+                    "76.2/84.6" : {
+                      "which" : {
+                        "significantly outperforms" : {
+                          "has" : "best documented result 73.2/81.8"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "Finally , our result on the official test set is 76.2/84.6 , which significantly outperforms the best documented result 73.2/81.8 ."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

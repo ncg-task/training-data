@@ -1,0 +1,53 @@
+{
+  "has" : {
+    "Results" : {
+      "observe that" : {
+        "novel attentionbased architecture" : {
+          "achieves" : "new state - of - the - art results",
+          "from sentence" : "We observe that our novel attentionbased architecture achieves new state - of - the - art results on this relation classification dataset ."
+        }
+      },
+      "has" : {
+        "Att - Input - CNN" : {
+          "relies only on" : {
+            "primal attention" : {
+              "at" : "input level"
+            }
+          },
+          "performing" : {
+            "standard max - pooling" : {
+              "after" : {
+                "convolution layer" : {
+                  "to generate" : "network output w O"
+                }
+              }
+            }
+          },
+          "from sentence" : "Att - Input - CNN relies only on the primal attention at the input level , performing standard max - pooling after the convolution layer to generate the network output w O , in which the new objective function is utilized ."
+        },
+        "Our full dual attention model Att - Pooling - CNN" : {
+          "achieves" : {
+            "even more favorable F1- score" : {
+              "of" : "88 %"
+            }
+          },
+          "from sentence" : "Our full dual attention model Att - Pooling - CNN achieves an even more favorable F1- score of 88 % ."
+        }
+      },
+      "With" : {
+        "Att - Input - CNN" : {
+          "achieve" : {
+            "F1-score" : {
+              "of" : {
+                "87.5 %" : {
+                  "outperforming" : ["an SVM - based approach ( 82.2 % )", "wellknown CR - CNN model ( 84.1 % )", "newly released DRNNs ( 85.8 % )"]
+                }
+              }
+            },
+            "from sentence" : "With Att - Input - CNN , we achieve an F1-score of 87.5 % , thus already outperforming not only the original winner of the SemEval task , an SVM - based approach ( 82.2 % ) , but also the wellknown CR - CNN model ( 84.1 % ) with a relative improvement of 4.04 % , and the newly released DRNNs ( 85.8 % ) with a relative improvement of 2.0 % , although the latter approach depends on the Stanford parser to obtain dependency parse information ."
+          }
+        }
+      }
+    }
+  }
+}

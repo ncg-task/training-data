@@ -1,0 +1,76 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "tuned on" : ["development set", {"from sentence" : "The hyperparameters for our models were tuned on the development set for each task ."}],
+      "initialized" : {
+        "our word representations" : {
+          "using" : "publicly available 300 - dimensional Glove vectors",
+          "from sentence" : "We initialized our word representations using publicly available 300 - dimensional Glove vectors"
+        }
+      },
+      "For" : {
+        "sentiment classification task" : {
+          "has" : {
+            "word representations" : {
+              "updated" : {
+                "during training" : {
+                  "with" : {
+                    "learning rate" : {
+                      "of" : "0.1"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "For the sentiment classification task , word representations were updated during training with a learning rate of 0.1 ."
+        },
+        "semantic relatedness task" : {
+          "has" : {
+            "word representations" : {
+              "held" : "fixed"
+            }  
+          },
+          "from sentence" : "For the semantic relatedness task , word representations were held fixed as we did not observe any significant improvement when the representations were tuned ."
+        }
+      },
+      "has" : {
+        "Our models" : {
+          "trained using" : {
+            "AdaGrad" : {
+              "with" : {
+                "learning rate" : {
+                  "of" : "0.05"
+                },
+                "minibatch size" : {
+                  "of" : "25"
+                }
+              }
+            },
+            "from sentence" : "Our models were trained using AdaGrad with a learning rate of 0.05 and a minibatch size of 25 ."
+          }
+        },
+        "model parameters" : {
+          "regularized with" : {
+            "per-minibatch L2 regularization strength" : {
+              "of" : "10 ?4"
+            },
+            "from sentence" : "The model parameters were regularized with a per-minibatch L2 regularization strength of 10 ?4 ."
+          }
+        },
+        "sentiment classifier" : {
+          "additionally regularized using" : {
+            "dropout" : {
+              "with" : {
+                "dropout rate" : {
+                  "of" : "0.5"
+                }
+              }
+            }
+          },
+          "from sentence" : "The sentiment classifier was additionally regularized using dropout with a dropout rate of 0.5 ."
+        }
+      }
+    }
+  }
+}

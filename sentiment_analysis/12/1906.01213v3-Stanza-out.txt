@@ -1,0 +1,224 @@
+title
+Progressive Self - Supervised Attention Learning for Aspect - Level Sentiment Analysis
+abstract
+In aspect - level sentiment classification ( ASC ) , it is prevalent to equip dominant neural models with attention mechanisms , for the sake of acquiring the importance of each context word on the given aspect .
+However , such a mechanism tends to excessively focus on a few frequent words with sentiment polarities , while ignoring infrequent ones .
+In this paper , we propose a progressive self - supervised attention learning approach for neural ASC models , which automatically mines useful attention supervision information from a training corpus to refine attention mechanisms .
+Specifically , we iteratively conduct sentiment predictions on all training instances .
+Particularly , at each iteration , the context word with the maximum attention weight is extracted as the one with active / misleading influence on the correct / incorrect prediction of every instance , and then the word itself is masked for subsequent iterations .
+Finally , we augment the conventional training objective with a regularization term , which enables ASC models to continue equally focusing on the extracted active context words while decreasing weights of those misleading ones .
+Experimental results on multiple datasets show that our proposed approach yields better attention mechanisms , leading to substantial improvements over the two stateof - the - art neural ASC models .
+Source code and trained models are available .
+Introduction
+Aspect - level sentiment classification ( ASC ) , as an indispensable task in sentiment analysis , aims at inferring the sentiment polarity of an input sentence in a certain aspect .
+In this regard , pre-vious representative models are mostly discriminative classifiers based on manual feature engineering , such as Support Vector Machine .
+Recently , with the rapid development of deep learning , dominant ASC models have evolved into neural network ( NN ) based models , which are able to automatically learn the aspect - related semantic representation of an input sentence and thus exhibit better performance .
+Usually , these NN - based models are equipped with attention mechanisms to learn the importance of each context word towards a given aspect .
+It can not be denied that attention mechanisms play vital roles in neural ASC models .
+However , the existing attention mechanism in ASC suffers from a major drawback .
+Specifically , it is prone to overly focus on a few frequent words with sentiment polarities and little attention is laid upon low - frequency ones .
+As a result , the performance of attentional neural ASC models is still far from satisfaction .
+We speculate that this is because there exist widely " apparent patterns " and " inapparent patterns " .
+Here , " apparent patterns " are interpreted as high - frequency words with strong sentiment polarities and " inapparent patterns " are referred to as low - frequency ones in training data .
+As mentioned in , NNs are easily affected by these two modes : " apparent patterns " tend to be overly learned while " inapparent patterns " often can not be fully learned .
+Here we use sentences in to explain this defect .
+In the first three training sentences , given the fact that the context word " small " occurs frequently with negative sentiment , the atten - tion mechanism pays more attention to it and directly relates the sentences containing it with negative sentiment .
+This inevitably causes another informative context word " crowded " to be partially neglected in spite of it also possesses negative sentiment .
+Consequently , a neural ASC model incorrectly predicts the sentiment of the last two test sentences : in the first test sentence , the neural ASC model fails to capture the negative sentiment implicated by " crowded " ; while , in the second test sentence , the attention mechanism directly focuses on " small " though it is not related to the given aspect .
+Therefore , we believe that the attention mechanism for ASC still leaves tremendous room for improvement .
+One potential solution to the above - mentioned issue is supervised attention , which , however , is supposed to be manually annotated , requiring labor - intense work .
+In this paper , we propose a novel progressive self - supervised attention learning approach for neural ASC models .
+Our method is able to automatically and incrementally mine attention supervision information from a training corpus , which can be exploited to guide the training of attention mechanisms in ASC models .
+The basic idea behind our approach roots in the following fact : the context word with the maximum attention weight has the greatest impact on the sentiment prediction of an input sentence .
+Thus , such a context word of a correctly predicted training instance should betaken into consideration during the model training .
+In contrast , the context word in an incorrectly predicted training instance ought to be ignored .
+To this end , we iteratively conduct sentiment predictions on all training instances .
+Particularly , at each iteration , we extract the context word with the maximum attention weight from each training instance to form attention supervision information , which can be used to guide the training of attention mechanism : in the case of correct prediction , we will remain this word to be considered ; otherwise , the attention weight of this word is expected to be decreased .
+Then , we mask all extracted context words of each training instance so far and then refollow the above process to discover more supervision information for attention mechanisms .
+Finally , we augment the standard training objective with a regularizer , which enforces attention distributions of these mined context words to be consistent with their expected distributions .
+Our main contributions are three - fold :
+( 1 ) Through in - depth analysis , we point out the existing drawback of the attention mechanism for ASC .
+( 2 ) We propose a novel incremental approach to automatically extract attention supervision information for neural ASC models .
+To the best of our knowledge , our work is the first attempt to explore automatic attention supervision information mining for ASC .
+( 3 ) We apply our approach to two dominant neural ASC models : Memory Network ( MN ) and Transformation Network ( TNet ) .
+Experimental results on several benchmark datasets demonstrate the effectiveness of our approach .
+Background
+In this section , we give brief introductions to MN and TNet , which both achieve satisfying performance and thus are chosen as the foundations of our work .
+Here we introduce some notations to facilitate subsequent descriptions : x= ( x 1 , x 2 , ... , x N ) is the input sentence , t= ( t 1 , t 2 , ... , t T ) is the given target aspect , y , y p ?{ Positive , Negative , Neutral } denote the ground - truth and the predicted sentiment , respectively . MN . The framework illustration of MN is given in .
+We first introduce an aspect embedding matrix converting each target aspect word t j into a vector representation , and then define the final vector representation v( t ) oft as the averaged aspect embedding of its words .
+Meanwhile , another embedding matrix is used to project each context word x i to the continuous space stored in memory , denoted by mi .
+Then , an internal attention mechanism is applied to generate the aspectrelated semantic representation o of the sentence
+where M is an attention matrix and hi is the final semantic representation of xi , induced from a context word embedding matrix .
+Finally , we use a fully connected output layer to conduct classification based on o and v( t ) .
+TNet . provides the framework illustrations of TNet , which mainly consists of three components :
+( 1 ) The bottom layer is a Bi - LSTM that transforms the input x into the contextualized word representations h ( 0 ) ( x ) = (
+h
+The key operation of CPT layers is Target - Specific Transformation .
+It contains another Bi - LSTM for generating v( t ) via an attention mechanism , and then incorporates v( t ) into the word representations .
+Besides , CPT layers are also equipped with a Context - Preserving Mechanism ( CPM ) to preserve the context information and learn more abstract word - level features .
+In the end , we obtain the word - level semantic representations
+The topmost part is a CNN layer used to produce the aspect - related sentence representation o for the sentiment classification .
+In this work , we consider another alternative to the original TNet , which replaces its topmost CNN with an attention mechanism to produce the aspect - related sentence representation as o = Atten ( h ( x ) , v ( t ) ) .
+In Section 4 , we will investigate the performance of the original TNet and its variant equipped with an attention mechanism , denoted by TNet - ATT .
+Training Objective .
+Both of the abovementioned models take the negative log -likelihood of the gold - truth sentiment tags as their training objectives :
+where Dis the training corpus , d ( y ) is the one - hot vector of y , d ( x , t ; ? ) is the model - predicted sentiment distribution for the pair ( x , t ) , and denotes the dot product of two vectors .
+Our Approach
+In this section , we first describe the basic intuition behind our approach and then provide its details .
+Finally , we elaborate how to incorporate the mined supervision information for attention mechanisms into neural ASC models .
+It is noteworthy that our method is only applied to the training optimization of neural ASC models , without any impact on the model testing .
+Basic Intuition
+The basic intuition of our approach stems from the following fact : in attentional ASC models , the importance of each context word on the given aspect mainly depends on its attention weight .
+Thus , the context word with the maximum attention weight has the most important impact on the sentiment prediction of the input sentence .
+Therefore , fora training sentence , if the prediction of ASC model is correct , we believe that it is reasonable to continue focusing on this context word .
+Conversely , the attention weight of this context word should be decreased .
+However , as previously mentioned , the context word with the maximum attention weight is often the one with strong sentiment polarity .
+It usually occurs frequently in the training corpus and thus tends to be overly considered during model training .
+This simultaneously leads to the insufficient learning of other context words , especially low - frequency ones with sentiment polarities .
+To address this problem , one intuitive and feasible method is to first shield the influence of this most important context word before reinvestigating effects of remaining context words of the training instance .
+In that case , other low - frequency context words with sentiment polarities can be discovered according to their attention weights .
+Details of Our Approach
+Based on the above analysis , we propose a novel incremental approach to automatically mine influential context words from training instances , which can be then exploited as attention supervision information for neural ASC models .
+As shown in Algorithm 1 , we first use the initial training corpus D to conduct model training , and then obtain the initial model parameters ?
+( 0 ) ( Line 1 ) .
+Then , we continue training the model for K iterations , where influential context words of all training instances can be iteratively extracted ( Lines 6 - 25 ) .
+During this process , for each training instance ( x , t , y ) , we introduce two word sets initialized as ?
+( Lines 2 - 5 ) to record its extracted context words : ( 1 ) s a ( x ) consists of context words with active effects on the sentiment prediction of x .
+Each word of s a ( x ) will be encouraged to remain considered in the refined model training , and ( 2 ) s m ( x ) contains context words with misleading Algorithm
+1 : Neural ASC Model Training with Automatically Mined Attention Supervision Information .
+Input : D : the initial training corpus ;
+?
+init : the initial model parameters ;
+? : the entropy threshold of attention weight distribution ; K : the maximum number of training iterations ; 1 :
+sm ( x ) ? ? 5 : end for 6 : fork = 1 , 2 ... , K do 7 :
+if yp == y then 17:
+sa
+end for 24 : ? ( k ) ? Train ( D ( k ) ; ? ( k?1 ) ) 25 : end for 26 : Ds ? ? 27 : for ( x , t , y ) ?
+D do 28:
+Ds ? Ds ? ( x , t , y , sa ( x ) , s m ( x ) ) 29 : end for 30 : ? ?
+Train ( Ds ) Return : ? ; effects , whose attention weights are expected to be decreased .
+Specifically , at the k - th training iteration , we adopt the following steps to deal with ( x , t , y ) :
+I n
+Step 1 , we first apply the model parameters ? ( k?1 ) of the previous iteration to generate the aspect representation v ( t ) ( Line 9 ) .
+Importantly , according to s a ( x ) and s m ( x ) , we then mask all previously extracted context words of x to create anew sentence x , where each masked word is replaced with a special token " mask " ( Line 10 ) .
+In this way , the effects of these context words will be shielded during the sentiment prediction of x , and thus other context words can be potentially extracted from x .
+Finally , we generate the word representations h( x ) ={h ( x i ) } N i=1 ( Line 11 ) .
+In Step 2 , on the basis of v ( t ) and h( x ) , we The [ place ] is mask and mask but the service is mask .
+Neg / Neg 3.07 -: The example of mining influential context words from the first training sentence in .
+E ( ? ( x ) ) denotes the entropy of the attention weight distribution ?( x ) , ?
+is entropy threshold set as 3.0 , and x m indicates the context word with the maximum attention weight .
+Note that all extracted words are replaced with " mask " and their background colors are labeled as white .
+leverage ? ( k?1 ) to predict the sentiment of x as y p ( Line 12 ) , where the word - level attention weight distribution
+Step 3 , we use the entropy E ( ? ( x ) ) to measure the variance of ? ( x ) ( Line 13 ) , which contributes to determine the existence of an influential context word for the sentiment prediction of x ,
+If E (? ( x ) ) is less than a threshold ?
+( Line 14 ) , we believe that there exists at least one context word with great effect on the sentiment prediction of x .
+Hence , we extract the context word x m with the maximum attention weight ( Line 15 - 20 ) that will be exploited as attention supervision information to refine the model training .
+Specifically , we adopt two strategies to deal with x m according to different prediction results on x : if the prediction is correct , we wish to continue focusing on x m and add it into s a ( x ) ( Lines 16 - 17 ) ; otherwise , we expect to decrease the attention weight of x m and thus include it into s m ( x ) ( Lines 18 - 19 ) .
+I n
+Step 4 , we combine x , t and y as a triple , and merge it with the collected ones to form anew training corpus D ( k ) ( Line 22 ) .
+Then , we leverage D ( k ) to continue updating model parameters for the next iteration ( Line 24 ) .
+In doing so , we make our model adaptive to discover more influential context words .
+Through K iterations of the above steps , we manage to extract influential context words of all training instances .
+illustrates the context word mining process of the first sentence shown in .
+In this example , we iteratively extract three context words in turn : " small " , " crowded " and " quick " .
+The former two words are included in s a ( x ) , while the last one is contained in s m ( x ) .
+Finally , the extracted context words of each training instance will be included into D , forming a final training corpus D s with attention supervision information ( Lines 26 - 29 ) , which will be used to carryout the last model training ( Line 30 ) .
+The details will be provided in the next subsection .
+Model Training with Attention Supervision Information
+To exploit the above extracted context words to refine the training of attention mechanisms for ASC models , we propose a soft attention regularizer (? ( s a ( x ) ? s m ( x ) ) , ? ( s a ( x ) ? s m ( x ) ) ; ? ) to jointly minimize the standard training objective , where ?( * ) and ? ( * ) denotes the model - induced and expected attention weight distributions of words in s a ( x ) ?s m ( x ) , respectively .
+More specifically , (? ( * ) , ? ( * ) ; ? ) is an Euclidean Distance style loss that penalizes the disagreement between ?( * ) and ? ( * ) .
+As previously analyzed , we expect to equally continue focusing on the context words of s a ( x ) during the final model training .
+To this end , we set their expected attention weights to the same value 1 | sa ( x ) | .
+By doing so , the weights of words extracted first will be reduced , and those of words extracted later will be increased , avoiding the over- fitting of high - frequency context words with sentiment polarities and the under - fitting of lowfrequency ones .
+On the other hand , for the words in s m ( x ) with misleading effects on the sentiment prediction of x , we want to reduce their effects and thus directly set their expected weights as 0 .
+Back to the sentence shown in , both " small " and " crowded " ? s a ( x ) are assigned the same expected weight 0.5 , and the expected weight of " quick " ? s m ( x ) is 0 .
+Finally , our objective function on the training corpus D s with attention supervision information
+where J(x , t , y ; ? ) is the conventional training objective defined in Equation 1 , and ?> 0 is a hyperparameter that balances the preference between the conventional loss function and the regularization term .
+In addition to the utilization of attention supervision information , our method has a further advantage : it is easier to address the vanishing gradient problem by adding such information into the intermediate layers of the entire network , because the supervision of ? ( * ) is closer to ?( * ) than y .
+Experiments
+Datasets .
+We applied the proposed approach into MN and TNet - ATT ) ( see Section 2 ) , and conducted experiments on three benchmark datasets :
+LAPTOP , REST and TWITTER .
+In our datasets , the target aspect of each sentence has been provided .
+Besides , we removed a few instances with conflict sentiment labels as implemented in .
+The statistics of the final datasets are listed in .
+Contrast Models .
+We referred to our two enhanced ASC models as MN ( + AS ) and TNet - ATT ( + AS ) , and compared them with MN , TNet , and TNet - ATT .
+Note our models require additional K+1 - iteration training , therefore , we also compared them with the above models with additional K+1 - iteration training , which are denoted as MN ( + KT ) , TNet ( + KT ) and TNet - ATT ( + KT ) .
+Moreover , to investigate effects of different kinds of attention supervision information , we also listed the performance of MN ( + AS a ) and MN ( + AS m ) , which only leverage context words of s a ( x ) and s m ( x ) , respectively , and the same for TNet - ATT ( + AS a ) and TNet - ATT ( + AS m ) .
+Training Details .
+We used pre-trained Glo Ve vectors to initialize the word embeddings with vector dimension 300 .
+For out - of - vocabulary words , we randomly sampled their embeddings from the uniform distribution , as implemented in .
+Besides , we initialized the other model parameters uniformly between [ - 0.01 , 0.01 ] .
+To alleviate overfitting , we employed dropout strategy ( Hinton et al. , 2012 ) on the input word embeddings of the LSTM and the ultimate aspect - related sentence representation .
+Adam ( Kingma and Ba , 2015 ) was adopted as the optimizer with the learning rate 0.001 .
+When implementing our approach , we empirically set the maximum iteration number K as 5 , ? in Equation 3 as 0.1 on LAPTOP data set , 0.5 on REST data set and 0.1 on TWITTER data set , respectively .
+All hyper - parameters were tuned on 20 % randomly held - out training data .
+Finally , we used F1 - Macro and accuracy as our evaluation Model LAPTOP REST TWITTER Macro - F1 Accuracy Macro - F1 Accuracy Macro - F1 Accuracy MN 62 . * * and * means significant at p < 0.01 and p < 0.05 over the baselines ( MN , TNet ) on each test set , respectively .
+Here we conducted 1,000 bootstrap tests to measure the significance in metric score differences .
+measures .
+Effects of ?
+?
+is a very important hyper - parameter that controls the iteration number of mining attention supervision information ( see Line 14 of Algorithm 1 ) .
+Thus , in this group of experiments , we varied ?
+from 1.0 to 7.0 with an increment of 1 each time , so as to investigate its effects on the performance of our models on the validation sets .
+and 4 show the experimental results of different models .
+Specifically , MN ( + AS ) with ?
+= 3.0 achieves the best performance , meanwhile , the optimal performance of TNet - ATT ( + AS ) is obtained when ? = 4.0 . We observe the increase of ?
+does not lead to further improvements , which maybe due to more noisy extracted context words .
+Because of these results , we set ? for MN ( + AS ) and TNet - ATT ( + AS ) as 3.0 and 4.0 in the following experiments , respectively .
+Overall Results
+Table 4 provides all the experimental results .
+To enhance the persuasiveness of our experimental results , we also displayed the previously reported scores of MN and TNet on the same data set .
+According to the experimental results , we can come to the following conclusions :
+First , both of our reimplemented MN and TNet are comparable to their original models reported in .
+These results show that our reimplemented baselines are competitive .
+When we replace the CNN of TNet with an attention mechanism , TNet - ATT is slightly inferior to TNet .
+Moreover , when we perform additional K+1 - iteration of training on these models , their performance has not changed significantly , suggesting simply increasing training time is unable to enhance the performance of the neural ASC models .
+Second , when we apply the proposed approach into both MN and TNet - ATT , the context words in s a ( x ) are more effective than those in s m ( x ) .
+This is because the proportion of correctly predicted training instances is larger than that of incorrectly ones .
+Besides , the performance gap between MN ( + AS a ) and MN ( + AS m ) is larger than that between two variants of TNet - ATT .
+One underlying reason is that the performance of TNet - ATT is better than MN , which enables TNet - ATT to produce more correctly predicted training instances .
+This in turn brings more attention supervision to TNet - ATT than MN .
+Finally , when we use both kinds of attention supervision information , no matter for which metric , MN ( + AS ) remarkably outperforms MN on all test sets .
+Although our TNet - ATT is slightly in -
+Model
+Sentence
+Ans. / Pred. ferior to TNet , TNet - ATT ( + AS ) still significantly surpasses both TNet and TNet - ATT .
+These results strongly demonstrate the effectiveness and generality of our approach .
+Case Study
+In order to know how our method improves neural ASC models , we deeply analyze attention results of TNet - ATT and TNet - ATT ( + AS ) .
+It has been found that our proposed approach can solve the above - mentioned two issues well .
+provides two test cases .
+TNet - ATT incorrectly predicts the sentiment of the first test sentence as neutral .
+This is because the context word " uncomfortable " only appears in two training instances with negative polarities , which distracts attention from it .
+When using our approach , the average attention weight of " uncomfortable " is increased to 2.6 times than that of baseline in these two instances .
+Thus , TNet - ATT ( + AS ) is capable of assigning a greater attention weight ( 0.0056?0.2940 ) to this context word , leading to the correct prediction of the first test sentence .
+For the second test sentence , since the context word " cute " occurs in training instances mostly with positive polarity , TNet - ATT directly focuses on this word and then incorrectly predicts the sentence sentiment as positive .
+Adopting our method , attention weights of " cute " in training instances with neural or negative polarity are significantly decreased .
+Specifically , in these instances , the average weight of " cute " is reduced to 0.07 times of the original .
+Hence , TNet - ATT ( + AS ) assigns a smaller weight ( 0.1090?0.0062 ) to " cute " and achieves the correct sentiment prediction .
+Related Work
+Recently , neural models have been shown to be successful on ASC .
+For example , due to its multiple advantages , such as being simpler and faster , MNs with attention mechanisms have been widely used .
+Another prevailing neural model is LSTM that also involves an attention mechanism to explicitly capture the importance of each context word .
+Overall , attention mechanisms play crucial roles in all these models .
+Following this trend , researchers have resorted to more sophisticated attention mechanisms to refine neural ASC models .
+proposed a multiple - attention mechanism to capture sentiment features separated by along distance , so that it is more robust against irrelevant information .
+An interactive attention network has been designed by for ASC , where two attention networks were introduced to model the target and context interactively .
+proposed to leverage multiple attentions for ASC : one obtained from the left context and the other one acquired from the right context of a given aspect .
+Very recently , transformation - based model has also been explored for ASC , and the attention mechanism is replaced by CNN .
+Different from these work , our work is inline with the studies of introducing attention supervision to refine the attention mechanism , which have become hot research topics in several NNbased NLP tasks , such as event detection , machine translation , and police killing detection .
+However , such supervised attention acquisition is labor - intense .
+Therefore , we mainly commits to automatic mining supervision information for attention mechanisms of neural ASC models .
+Theoretically , our approach is orthogonal to these models , and we leave the adaptation of our approach into these models as future work .
+Our work is inspired by two recent models : one is proposed to progressively mine discriminative object regions using classification networks to address the weakly - supervised semantic segmentation problems , and the other one is where a dropout method integrating with global information is presented to encourage the model to mine inapparent features or patterns for text classification .
+To the best of our knowledge , our work is the first one to explore automatic mining of attention supervision information for ASC .
+Conclusion and Future Work
+In this paper , we have explored how to automatically mine supervision information for attention mechanisms of neural ASC models .
+Through indepth analyses , we first point out the defect of the attention mechanism for ASC : a few frequent words with sentiment polarities are tend to be over - learned , while those with low frequency often lack sufficient learning .
+Then , we propose a novel approach to automatically and incrementally mine attention supervision information for neural ASC models .
+These mined information can be further used to refine the model training via a regularization term .
+To verify the effectiveness of our approach , we apply our approach into two dominant neural ASC models , where experimental results demonstrate our method significantly improves the performance of these two models .
+Our method is general for attention mechanisms .
+Thus , we plan to extend our approach to other neural NLP tasks with attention mechanisms , such as neural document classification and neural machine translation .

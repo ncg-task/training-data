@@ -1,0 +1,91 @@
+{
+  "has" : {
+    "Experiments" : {
+      "has" : {
+        "Tasks" : {
+          "has" : {
+            "Textual Entailment" : {
+              "has" : {
+                "Results" : {
+                  "show" : {
+                    "SRL embedding" : {
+                      "has" : {
+                        "boost" : {
+                          "has" : {
+                            "ESIM + ELMo model" : {
+                              "by" : "+ 0.7 % improvement"
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "Textual Entailment
+Results in show that SRL embedding can boost the ESIM + ELMo model by + 0.7 % improvement ."
+
+                    }
+                  },
+                  "With" : {
+                    "semantic cues" : {
+                      "has" : {
+                        "simple sequential encoding model" : {
+                          "yields" : "substantial gains"
+                        },
+                        "our single BERT LARGE model" : {
+                          "achieves" : "new stateof - the - art",
+                          "has" : {
+                            "outperforms" : {
+                              "has" : {
+                                "all the ensemble models" : {
+                                  "in" : "leaderboard"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "With the semantic cues , the simple sequential encoding model yields substantial gains , and our single BERT LARGE model also achieves a new stateof - the - art , even outperforms all the ensemble models in the leaderboard 8 ."
+                    }
+                  }
+                }
+              }
+            },
+            "Machine Reading Comprehension" : {
+              "has" : {
+                "Baselines" : {
+                  "includes" : {
+                    "MQAN" : {
+                      "for" : {
+                        "single task and multi-task" : {
+                          "with" : ["SRL", "BiDAF + ELMo", "R.M. Reader", "BERT"]
+                        }
+                      },
+                      "from sentence" : "Machine Reading Comprehension
+Our baseline includes MQAN for single task and multi-task with SRL , BiDAF + ELMo , R.M. Reader and BERT ."
+
+                    }
+                  }
+                },
+                "Results" : {
+                  "has" : {
+                    "SRL embeddings" : {
+                      "give" : {
+                        "substantial performance gains" : {
+                          "over" : "all the strong baselines"
+                        }
+                      },
+                      "showing" : {
+                        "quite effective" : {
+                          "for" : "more complex document and question encoding"
+                        }
+                      },
+                      "from sentence" : "9 . The SRL embeddings give substantial performance gains over all the strong baselines , showing it is also quite effective for more complex document and question encoding ."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

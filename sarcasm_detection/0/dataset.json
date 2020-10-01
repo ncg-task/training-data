@@ -1,0 +1,28 @@
+{
+  "has" : {
+    "Dataset" : {
+      "make available" : {
+        "first corpus" : {
+          "for" : "sarcasm detection",
+          "has" : "unbalanced and self - annotated labels",
+          "from sentence" : "In this work , we make available the first corpus 1 for sarcasm detection that has both unbalanced and self - annotated labels and does not consist of short text snippets from Twitter 2 ."
+        }
+      },
+      "With" : {
+        "more than a million examples" : {
+          "of" : {
+            "sarcastic statements" : {
+              "each provided with" :  "author , topic , and contex information"
+            }
+          },
+          "exceeds" : {
+            "previous sarcasm corpora" : {
+              "by" : "an order of magnitude in size"
+            }
+          },
+          "from sentence" : "With more than a million examples of sarcastic statements , each provided with author , topic , and contex information , the dataset exceeds all previous sarcasm corpora by an order of magnitude in size ."
+        }
+      }
+    }
+  }
+}

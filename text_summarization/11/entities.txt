@@ -1,0 +1,111 @@
+101	0	21	RNN and RNN - context
+101	22	25	are
+101	30	53	RNNbased seq2seq models
+101	56	72	without and with
+101	73	92	attention mechanism
+102	0	10	Copy - Net
+102	11	13	is
+102	18	49	attention - based seq2seq model
+102	50	54	with
+102	59	73	copy mechanism
+103	0	3	SRB
+103	20	28	improves
+103	29	47	semantic relevance
+103	48	55	between
+103	56	79	source text and summary
+104	0	4	DRGD
+104	5	7	is
+104	12	32	conventional seq2seq
+104	33	37	with
+104	40	73	deep recurrent generative decoder
+105	20	23	for
+105	24	32	Gigaword
+105	35	48	ABS and ABS +
+105	49	52	are
+105	57	63	models
+105	64	68	with
+105	69	109	local attention and handcrafted features
+106	0	5	Feats
+106	6	8	is
+106	11	34	fully RNN seq2seq model
+106	35	39	with
+106	40	61	some specific methods
+106	62	72	to control
+106	77	92	vocabulary size
+107	0	26	RAS - LSTM and RAS - Elman
+107	27	30	are
+107	31	45	seq2seq models
+107	46	50	with
+107	53	74	convolutional encoder
+107	82	94	LSTM decoder
+107	102	119	Elman RNN decoder
+108	0	5	SEASS
+108	6	10	is a
+108	11	24	seq2seq model
+108	25	29	with
+108	32	56	selective gate mechanism
+109	0	4	DRGD
+109	15	27	baseline for
+109	28	36	Gigaword
+88	3	12	implement
+88	13	28	our experiments
+88	29	31	in
+88	32	64	PyTorch on an NVIDIA 1080 Ti GPU
+89	4	59	word embedding dimension and the number of hidden units
+89	69	72	512
+90	26	36	batch size
+90	40	46	set to
+90	47	49	64
+92	4	17	learning rate
+92	21	27	halved
+92	28	39	every epoch
+93	0	17	Gradient clipping
+93	21	33	applied with
+93	34	53	range [ - 10 , 10 ]
+91	3	6	use
+91	7	46	Adam optimizer ( Kingma and Ba , 2014 )
+91	47	51	with
+91	56	121	default setting ? = 0.001 , ? 1 = 0.9 , ? 2 = 0.999 and = 1 10 ?8
+23	44	46	of
+23	47	62	global encoding
+23	63	66	for
+23	67	92	abstractive summarization
+24	3	6	set
+24	9	33	convolutional gated unit
+24	34	44	to perform
+24	45	60	global encoding
+24	10	12	on
+24	68	82	source context
+25	4	8	gate
+25	9	17	based on
+25	18	54	convolutional neural network ( CNN )
+25	55	62	filters
+25	63	82	each encoder output
+25	9	17	based on
+25	96	110	global context
+25	111	117	due to
+25	122	139	parameter sharing
+2	20	45	Abstractive Summarization
+10	64	96	neural abstractive summarization
+115	148	153	LCSTS
+115	19	21	on
+115	26	38	two datasets
+115	41	50	our model
+115	51	59	achieves
+115	60	70	advantages
+115	71	73	of
+115	74	85	ROUGE score
+115	86	90	over
+115	95	104	baselines
+115	19	21	on
+115	148	153	LCSTS
+115	154	157	are
+115	158	169	significant
+118	0	13	Compared with
+118	18	44	conventional seq2seq model
+118	57	74	owns an advantage
+118	47	56	our model
+118	75	77	of
+118	78	105	ROUGE - 2 score 3.7 and 1.5
+118	19	21	on
+118	113	131	LCSTS and Gigaword

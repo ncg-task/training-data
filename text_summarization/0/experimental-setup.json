@@ -1,0 +1,42 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "implement" : {
+        "our experiments" : {
+          "in" : {
+            "TensorFlow" : {
+              "on" : "NVIDIA P40 GPU"
+            }
+          },
+          "from sentence" : "We implement our experiments in TensorFlow ) on an NVIDIA P40 GPU ."
+        }
+      },
+      "has" : {
+        "word embedding dimension" : {
+          "set to" : "256"  
+        },
+        "number of hidden units" : {
+          "has" : "512"
+        },
+        "from sentence" : "The word embedding dimension is set to 256 and the number of hidden units is 512 ."
+      },
+      "use" : {
+        "Adagrad optimizer" : {
+          "as" : "optimizing algorithm"
+        },
+        "from sentence" : "We use Adagrad optimizer as our optimizing algorithm ."
+      },
+      "employ" : {
+        "beam search" : {
+          "with" : {
+            "beam size 5" : {
+              "to generate" : "more fluency summary sentence"
+            }
+          }
+        },
+        "from sentence" : "We employ beam search with beam size 5 to generate more fluency summary sentence ."
+      }
+    }
+  }
+}
+

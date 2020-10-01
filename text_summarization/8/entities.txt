@@ -1,0 +1,89 @@
+29	32	40	consider
+29	41	62	bottom - up attention
+30	13	26	first selects
+30	29	43	selection mask
+30	44	47	for
+30	52	67	source document
+30	112	124	by this mask
+30	77	111	constrains a standard neural model
+33	15	27	incorporates
+33	30	63	separate content selection system
+33	64	73	to decide
+33	77	93	relevant aspects
+33	94	96	of
+33	101	116	source document
+34	3	8	frame
+34	14	28	selection task
+34	29	33	as a
+34	34	60	sequence - tagging problem
+34	63	84	with the objective of
+34	85	103	identifying tokens
+34	104	108	from
+34	111	119	document
+34	129	136	part of
+34	141	148	summary
+36	80	86	employ
+36	87	94	masking
+36	95	107	to constrain
+36	108	121	copying words
+36	18	20	to
+36	129	143	selected parts
+36	144	146	of
+36	151	155	text
+36	164	172	produces
+36	173	192	grammatical outputs
+186	4	24	inference parameters
+186	29	37	tuned on
+186	40	58	200 example subset
+187	0	24	Length penalty parameter
+187	71	83	ranging from
+187	84	94	0.6 to 1.4
+187	31	40	copy mask
+187	71	83	ranging from
+187	114	124	0.1 to 0.2
+190	4	30	coverage penalty parameter
+190	36	42	set to
+190	43	45	10
+190	56	94	copy attention normalization parameter
+190	40	42	to
+190	100	101	2
+188	4	21	minimum length of
+188	26	43	generated summary
+188	44	53	is set to
+188	54	56	35
+188	57	60	for
+188	61	69	CNN - DM
+188	74	75	6
+188	57	60	for
+188	80	83	NYT
+191	3	6	use
+191	7	15	AllenNLP
+191	16	19	for
+191	24	40	content selector
+191	47	60	Open NMT - py
+191	16	19	for
+191	69	87	abstractive models
+2	12	37	Abstractive Summarization
+11	0	18	Text summarization
+13	31	63	neural abstractive summarization
+192	27	29	on
+192	34	49	CNN - DM corpus
+193	22	27	using
+193	30	56	coverage inference penalty
+193	57	63	scores
+193	64	72	the same
+193	73	77	as a
+193	78	101	full coverage mechanism
+193	104	121	without requiring
+193	126	153	additional model parameters
+193	157	176	model fine - tuning
+194	12	16	with
+194	21	57	CopyTransformer and coverage penalty
+194	58	66	indicate
+194	69	87	slight improvement
+194	88	94	across
+194	95	111	all three scores
+194	121	128	observe
+194	129	154	no significant difference
+194	155	162	between
+194	163	229	Pointer - Generator and CopyTransformer with bottom - up attention

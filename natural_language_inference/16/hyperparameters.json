@@ -1,0 +1,84 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "initialize" : {
+        "word embeddings" : {
+          "in" : "word representation layer",
+          "with" : {
+            "300 - dimensional GloVe word vectors" : {
+              "pretrained from" : "840B Common Crawl corpus"
+            }
+          },
+          "from sentence" : "We initialize word embeddings in the word representation layer with the 300 - dimensional GloVe word vectors pretrained from the 840B Common Crawl corpus ."
+        }
+      },
+      "For" : {
+        "out - of - vocabulary ( OOV ) words" : {
+          "initialize" : {
+            "word embeddings" : {
+              "has" : "randomly"
+            }
+          },
+          "from sentence" : "For the out - of - vocabulary ( OOV ) words , we initialize the word embeddings randomly ."
+        },
+        "charactercomposed embeddings" : {
+          "initialize" : {
+            "each character" : {
+              "as" : "20 - dimensional vector"
+            }
+          },
+          "compose" : {
+            "each word" : {
+              "into" : {
+                "50 dimensional vector" : {
+                  "with" : "LSTM layer"
+                }
+              }
+            }
+          },
+          "from sentence" : "For the charactercomposed embeddings , we initialize each character as a 20 - dimensional vector , and compose each word into a 50 dimensional vector with a LSTM layer ."
+        }
+      },
+      "set" : {
+        "hidden size" : {
+          "as" : "100",
+          "for" : "all BiLSTM layers",
+          "from sentence" : "We set the hidden size as 100 for all BiLSTM layers ."
+        },
+        "learning rate" : {
+          "as" : "0.001",
+          "from sentence" : "We set the learning rate as 0.001 ."
+        }
+      },
+      "apply" : {
+        "dropout" : {
+          "to" : "every layers",
+          "set" : {
+            "dropout ratio" : {
+              "as" : "0.1"
+            }
+          },
+          "from sentence" : "We apply dropout to every layers in , and set the dropout ratio as 0.1 ."
+        }
+      },
+      "minimize" : {
+        "cross entropy" : {
+          "of" : "training set"
+        },
+        "from sentence" : "To train the model , we minimize the cross entropy of the training set , and use the ADAM optimizer [ Kingma and Ba , 2014 ] to update parameters ."
+      },
+      "use" : {
+        "ADAM optimizer" : {
+          "to update" : "parameters"
+        },
+        "from sentence" : "To train the model , we minimize the cross entropy of the training set , and use the ADAM optimizer [ Kingma and Ba , 2014 ] to update parameters ."
+      },
+      "During" : {
+        "training" : {
+          "do not update" : "pre-trained word embeddings",
+          "from sentence" : "During training , we do not update the pre-trained word embeddings ."
+        }
+      }
+    }
+  }  
+}

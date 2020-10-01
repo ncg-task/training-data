@@ -1,0 +1,134 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "proposed DRCN" : {
+          "obtains" : {
+            "accuracy" : {
+              "of" : {
+                "88.9 %" : {
+                  "is" : "competitive score"
+                }
+              }
+            }
+          },
+          "from sentence" : "The proposed DRCN obtains an accuracy of 88.9 % which is a competitive score although we do not use any external knowledge like ESIM + ELMo and LM - Transformer ."
+        },
+        "ensemble model" : {
+          "achieves" : {
+            "accuracy" : {
+              "of" : "90.1 %",
+              "sets" : "new state - of the - art performance"
+            },
+            "from sentence" : "The ensemble model achieves an accuracy of 90.1 % , which sets the new state - of the - art performance ."            
+          },
+          "with" : {
+            "53 m parameters ( 6.7 m 8 )" : {
+              "outperforms" : {
+                "LM - Transformer" : {
+                  "whose" : {
+                    "number of parameters" : {
+                      "is" : "85 m"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Our ensemble model with 53 m parameters ( 6.7 m 8 ) outperforms the LM - Transformer whose the number of parameters is 85 m ."
+            }
+          }
+        }
+      },
+      "in case of" : {
+        "encoding - based method" : {
+          "obtain" : {
+            "best performance" : {
+              "of" : "86.5 %",
+              "without" : "co-attention and exact match flag"
+            }
+          },
+          "from sentence" : "Furthermore , in case of the encoding - based method , we obtain the best performance of 86.5 % without the co-attention and exact match flag ."
+        }
+      },
+      "of" : {
+        "MultiNLI dataset" : {
+          "has" : {
+            "Our plain DRCN" : {
+              "has" : {
+                "competitive performance" : {
+                  "without" : "contextualized knowledge"
+                }
+              },
+              "from sentence" : "shows the results on MATCHED and MISMATCHED problems of MultiNLI dataset .
+Our plain DRCN has a competitive performance without any contextualized knowledge ."
+
+            }
+          },
+          "by combining" : {
+            "DRCN" : {
+              "with" : "ELMo",
+              "has" : {
+                "our model" : {
+                  "outperforms" : {
+                    "LM - Transformer" : {
+                      "which has" : "85 m parameters"
+                    }
+                  },
+                  "with" : {
+                    "fewer parameters" : {
+                      "of" : "61 m"
+                    }
+                  },
+                  "from sentence" : "And , by combining DRCN with the ELMo , one of the contextualized embeddings from language models , our model outperforms the LM - Transformer which has 85 m parameters with fewer parameters of 61 m ."
+                }
+              }
+            }
+          }
+        }
+      },
+      "on" : {
+        "Quora question pair dataset" : {
+          "obtained" : {
+            "accuracies" : {
+              "of" : {
+                "90.15 % and 91.30 %" : {
+                  "in" : "single and ensemble methods",
+                  "surpassing" : {
+                    "previous state - of - the - art model" : {
+                      "of" : "DIIN"
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "Quora Question
+Pair shows our results on the Quora question pair dataset .
+We obtained accuracies of 90.15 % and 91.30 % in single and ensemble methods , respectively , surpassing the previous state - of - the - art model of DIIN ."            
+          }
+        },
+        "TrecQA and SelQA datasets" : {
+          "has" : {
+            "proposed DRCN" : {
+              "using" : {
+                "collective attentions" : {
+                  "over" : "multiple layers"
+                }
+              },
+              "achieves" : {
+                "new state - of the - art performance" : {
+                  "exceeding" : {
+                    "current state - of - the - art performance" : {
+                      "has" : "significantly"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "TrecQA and SelQA shows the performance of different models on TrecQA and SelQA datasets for answer sentence selection task that aims to select a set of candidate answer sentences given a question .
+However , the proposed DRCN using collective attentions over multiple layers , achieves the new state - of the - art performance , exceeding the current state - of - the - art performance significantly on both datasets ."
+
+        }
+      }
+    }
+  }
+}

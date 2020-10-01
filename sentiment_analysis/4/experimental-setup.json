@@ -1,0 +1,99 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "has" : {
+        "20 % of the training set" : {
+          "used as" : {
+            "validation set" : {
+              "for" : "hyper - parameter tuning"
+            }
+          },
+          "from sentence" : "20 % of the training set is used as validation set for hyper - parameter tuning ."
+        },
+        "Termination" : {
+          "of" : {
+            "training - phase" : {
+              "decided by" : {
+                "early - stopping" : {
+                  "with" : {
+                    "patience" : {
+                      "of" : "10 d = 100 dv = 512 dem = 100 K = 40 R = 3 epochs"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Termination of the training - phase is decided by early - stopping with a patience of 10 d = 100 dv = 512 dem = 100 K = 40 R = 3 epochs ."
+        },
+        "network" : {
+          "subjected to" : {
+            "regularization" : {
+              "in the form of" : "Dropout and Gradient - clipping",
+              "for" : {
+                "norm" : {
+                  "of" : "40"
+                }
+              }              
+            }
+          },
+          "from sentence" : "The network is subjected to regularization in the form of Dropout and Gradient - clipping for a norm of 40 ."
+        },
+        "best hyper - parameters" : {
+          "decided using" : "gridsearch",
+          "from sentence" : "Finally , the best hyper - parameters are decided using a gridsearch ."
+        }
+      },
+      "use" : {
+        "Adam optimizer ( Kingma and Ba , 2014 )" : {
+          "for" : {
+            "training" : {
+              "has" : {
+                "parameters" : {
+                  "starting with" : {
+                    "initial learning rate" : {
+                      "of" : "0.001"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "We use the Adam optimizer ( Kingma and Ba , 2014 ) for training the parameters starting with an initial learning rate of 0.001 ."
+        }
+      },
+      "For" : {
+        "multimodal feature extraction" : {
+          "explore" : {
+            "different designs" : {
+              "for" : "employed CNNs"
+            }  
+          },
+          "from sentence" : "For multimodal feature extraction , we explore different designs for the employed CNNs ."
+        },
+        "text" : {
+          "find" : {
+            "single layer CNN" : {
+              "to perform at par with" : "deeper variants"
+            },
+            "from sentence" : "For text , we find the single layer CNN to perform at par with deeper variants ."
+          }
+        },
+        "visual features" : {
+          "has" : {
+            "deeper CNN" : {
+              "provides" : "better representations"
+            }
+          },
+          "from sentence" : "For visual features , however , a deeper CNN provides better representations ."
+        }
+      },
+      "find" : {
+        "contextually conditioned features" : {
+          "perform better than" : "context - less features",
+          "from sentence" : "We also find that contextually conditioned features perform better than context - less features ."
+        }
+      }
+    }
+  }
+}

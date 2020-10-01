@@ -1,0 +1,5 @@
+(Contribution||has||Results)
+(Results||has||Wiki QA)
+(Wiki QA||has||paragraph vector ( PV ) , CNN , and PV - Cnt / CNN - Cnt with word matching features)
+(paragraph vector ( PV ) , CNN , and PV - Cnt / CNN - Cnt with word matching features||has||Our model)
+(Our model||has||outperforms)

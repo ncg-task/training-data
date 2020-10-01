@@ -1,0 +1,75 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "SVM - ensemble" : {
+          "is" : {
+            "strong context - free benchmark model" : {
+              "which uses" : {
+                "similar multimodel approach" : {
+                  "on" : "ensemble of trees"
+                }
+              }
+            }
+          },
+          "from sentence" : "SVM - ensemble :
+A strong context - free benchmark model which uses similar multimodal approach on an ensemble of trees ."
+
+        },
+        "bc - LSTM" : {
+          "has" : {
+            "bi-directional LSTM" : {
+              "equipped with" : "hierarchical fusion"
+            }
+          },
+          "from sentence" : "bc - LSTM :
+A bi-directional LSTM equipped with hierarchical fusion , proposed by ."
+
+        },
+        "Memn2n" : {
+          "generates" : {
+            "memory representations" : {
+              "for" : {
+                "each historical utterance" : {
+                  "using" : {
+                    "embedding matrix B" : {
+                      "without" : "sequential modeling"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Memn2n : The original memory network as proposed by Contrasting to CMN , the model generates the memory representations for each historical utterance using an embedding matrix B as used in equation 7 , without sequential modeling ."
+        },
+        "CMN Self" : {
+          "use" : {
+            "only self history" : {
+              "for classifying" : {
+                "emotion" : {
+                  "of" : "utterance u i"
+                }
+              }
+            }
+          },
+          "from sentence" : "[ 1 , K ] } for ? ? {a , b}. CMN
+Self :
+In this baseline , we use only self history for classifying emotion of utterance u i ."
+
+        },
+        "CMN N A" : {
+          "has" : {
+            "Single layer variant" : {
+              "of" : {
+                "CMN" : {
+                  "with" : "no attention module"
+                }
+              }
+            }
+          },
+          "from sentence" : "CMN N A : Single layer variant of the CMN with no attention module ."
+        }        
+      }  
+    }
+  }
+}

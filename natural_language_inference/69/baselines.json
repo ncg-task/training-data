@@ -1,0 +1,67 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "Random" : {
+          "Selects" : "random candidate",
+          "from sentence" : "Random Selects a random candidate ; note that the number of candidates differs between samples ."
+        },
+        "Max- mention" : {
+          "Predicts" : {
+            "most frequently mentioned candidate" : {
+              "in" : "support documents"
+            },
+            "from sentence" : "Max- mention
+Predicts the most frequently mentioned candidate in the support documents"
+
+          }
+        },
+        "Majority - candidate - per-query - type" : {
+          "Predicts" : {
+            "candidate" : {
+              "that was" : {
+                "most frequently observed" : {
+                  "as" : "true answer"
+                }
+              }
+            }
+          },
+          "from sentence" : "Majority - candidate - per-query - type
+Predicts the candidate c ?
+C q that was most frequently observed as the true answer in the training set , given the query type of q ."
+
+        },
+        "TF - IDF" : {
+          "has" : {
+            "Retrieval - based models" : {
+              "known to be" : {
+                "strong QA baselines" : {
+                  "if" : {
+                    "candidate answers" : {
+                      "are" : "provided"
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "TF - IDF
+Retrieval - based models are known to be strong QA baselines if candidate answers are provided ."
+
+          }
+        },
+        "Document - cue" : {
+          "has" : {
+            "effect" : {
+              "that" : {
+                "correct candidate" : {
+                  "indicated solely by" : "presence of certain documents"
+                }
+              }
+            },
+            "from sentence" : "( 1 ) Document - cue During dataset construction we observed that certain document - answer pairs appear more frequently than others , to the effect that the correct candidate is often indicated solely by the presence of certain documents in Sq ."
+          }
+        }
+      }
+    }
+  }
+}

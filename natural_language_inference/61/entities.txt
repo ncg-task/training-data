@@ -1,0 +1,73 @@
+121	3	6	use
+121	11	22	Adam method
+121	23	26	for
+121	27	39	optimization
+127	7	45	pre-trained 300 - D Glove 840B vectors
+127	46	59	to initialize
+127	60	75	word embeddings
+123	2	23	initial learning rate
+123	27	33	set to
+123	34	40	0.0005
+123	51	61	batch size
+123	24	26	is
+123	65	68	128
+124	2	12	dimensions
+124	13	15	of
+124	20	33	hidden states
+124	13	15	of
+124	37	66	Bi - aLSTM and word embedding
+124	67	70	are
+124	71	74	300
+126	0	12	Dropout rate
+126	16	22	set to
+126	23	26	0.2
+126	27	33	during
+126	34	42	training
+128	0	35	Out - of - vocabulary ( OOV ) words
+128	36	39	are
+128	40	60	initialized randomly
+128	61	65	with
+128	66	82	Gaussian samples
+125	3	9	employ
+125	10	41	non-linearity function f = selu
+125	42	51	replacing
+125	61	77	linear unit ReLU
+125	78	91	on account of
+125	96	119	faster convergence rate
+51	26	31	using
+51	32	42	ESIM model
+51	43	45	as
+51	50	58	baseline
+51	64	67	add
+51	71	85	a ention layer
+51	86	92	behind
+51	93	113	each Bi - LSTM layer
+51	121	124	use
+51	128	164	adaptive orientation embedding layer
+51	165	185	to jointly represent
+51	190	218	forward and backward vectors
+52	3	7	name
+52	13	39	a ention boosted Bi - LSTM
+52	40	42	as
+52	43	54	Bi - a LSTM
+52	61	67	denote
+52	72	84	modi ed ESIM
+52	40	42	as
+52	88	93	aESIM
+5	38	64	natural language inference
+9	0	34	Natural language inference ( NLI )
+12	32	35	NLI
+138	32	42	ESIM model
+138	43	51	achieved
+138	52	58	88.1 %
+138	59	61	on
+138	62	73	SNLI corpus
+138	76	104	elevating 0.8 percent higher
+138	105	109	than
+138	32	42	ESIM model
+139	3	11	promoted
+139	12	39	almost 0.5 percent accuracy
+139	44	56	outperformed
+139	61	70	baselines
+139	71	73	on
+139	74	82	MultiNLI

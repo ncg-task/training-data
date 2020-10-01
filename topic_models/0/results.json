@@ -1,0 +1,45 @@
+{
+  "has" : {
+    "Results" : {
+      "on" : {
+        "Fisher speech corpora" : {
+          "with" : "manual and automatic transcriptions",
+          "see that" : {
+            "our proposed systems" : {
+              "achieve" : "consistently better accuracies"
+            },
+            "GLCU" : {
+              "exploits" : "uncertainty in document embeddings",
+              "has" : {
+                "much lower cross - entropy" : {
+                  "than" : "GLC"
+                }
+              }
+            }
+          },
+              "from sentence" : "presents the classification results on Fisher speech corpora with manual and automatic transcriptions , where the first two rows are the results from earlier published works .
+We can see that our proposed systems achieve consistently better accuracies ; notably , GLCU which exploits the uncertainty in document embeddings has much lower cross - entropy than its counterpart , GLC ."
+
+        },
+        "20 Newsgroups dataset" : {
+          "see that" : {
+            "topic ID systems based on Bayesian SMM and logistic regression" : {
+              "better than" : {
+                "all the other models" : {
+                  "except for" : "purely discriminative CNN model"
+                }
+              }
+            },
+            "topic ID systems based on Bayesian SMM" : {
+              "consistently better than" : "variational auto encoder inspired NVDM , and ( non-Bayesian ) SMM"
+            }
+          },
+          "from sentence" : "presents classification results on 20 Newsgroups dataset .
+We see that the topic ID systems based on Bayesian SMM and logistic regression is better than all the other models , except for the purely discriminative CNN model .
+We can also see that all the topic ID systems based on Bayesian SMM are consistently better than variational auto encoder inspired NVDM , and ( non-Bayesian ) SMM .  "
+
+        }
+      }
+    }
+  }
+}

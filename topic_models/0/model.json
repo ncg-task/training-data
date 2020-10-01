@@ -1,0 +1,46 @@
+{
+  "has" : {
+    "Model" : {
+      "present" : {
+        "Bayesian subspace multinomial model ( Bayesian SMM )" : {
+          "as a" : {
+            "generative model" : {
+              "for" : "bag - ofwords representation of documents"
+            }
+          }
+        },
+        "from sentence" : "In this paper , we present Bayesian subspace multinomial model ( Bayesian SMM ) as a generative model for bag - ofwords representation of documents ."
+      },
+      "learn to represent" : {
+        "each document" : {
+          "in the form of" : {
+            "Gaussian distribution" : {
+              "encoding" : "uncertainty in its covariance"
+            }
+          }
+        },
+        "from sentence" : "We show that our model can learn to represent each document in the form of a Gaussian distribution , thereby encoding the uncertainty in its covariance ."
+      },
+      "propose" : {
+        "generative Gaussian classifier" : {
+          "exploits" : {
+            "uncertainty" : {
+              "for" : "topic identification ( ID )"
+            }
+          }
+        },
+        "from sentence" : "Further , we propose a generative Gaussian classifier that exploits this uncertainty for topic identification ( ID ) ."
+      },
+      "extended" : {
+        "proposed VB framework" : {
+          "for" : {
+            "subspace n-gram model" : {
+              "can model" : "n-gram distribution of words in sentences"
+            }
+          }
+        },
+        "from sentence" : "The proposed VB framework can be extended in a straightforward way for subspace n-gram model , that can model n-gram distribution of words in sentences ."
+      }
+    }
+  }
+}

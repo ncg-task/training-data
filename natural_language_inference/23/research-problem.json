@@ -1,0 +1,9 @@
+{
+  "has research problem" : [
+    ["MACHINE COMPREHENSION", {"from sentence" : "FUSIONNET : FUSING VIA FULLY - AWARE ATTENTION WITH APPLICATION TO MACHINE COMPREHENSION"}],
+    ["Teaching machines to read , process and comprehend text and then answer questions", {"from sentence" : "Teaching machines to read , process and comprehend text and then answer questions is one of key problems in artificial intelligence ."}],
+    ["machine reading comprehension ( MRC )", {"from sentence" : "Many neural network models have been proposed for this challenge and they generally frame this problem as a machine reading comprehension ( MRC ) task ."}],
+    ["MRC", {"from sentence" : "We argue that this hypothesis also holds in language understanding and MRC ."}],
+    ["language understanding", {"from sentence" : "We argue that this hypothesis also holds in language understanding and MRC ."}]    
+  ]
+}

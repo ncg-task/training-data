@@ -1,0 +1,34 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "IR Baseline" : {
+          "rank" : {
+            "answer candidates" : {
+              "by" : "maximum tf .idf document retrieval score",
+              "using" : {
+                "unboosted query" : {
+                  "of" : "question and answer terms"
+                }
+              }
+            }
+          },
+          "from sentence" : "IR Baseline :
+For this baseline , we rank answer candidates by the maximum tf .idf document retrieval score using an unboosted query of question and answer terms ( see Section 4.1 for retrieval details ) ."
+
+        },
+        "IR ++" : {
+          "uses" : {
+            "same architecture" : {
+              "as" : "full model"
+            }
+          },
+          "with" : "only the IR ++ feature group",
+          "from sentence" : "IR ++ :
+This baseline uses the same architecture as the full model , as described in Section 4.3 , but with only the IR ++ feature group ."
+
+        }
+      }
+    }
+  }
+}

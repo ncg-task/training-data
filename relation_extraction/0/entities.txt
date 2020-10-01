@@ -1,0 +1,149 @@
+170	27	70	feature - based structured perceptron model
+170	71	75	with
+170	76	99	efficient beam - search
+171	5	11	employ
+171	14	37	segment - based decoder
+171	38	48	instead of
+171	49	71	token - based decoding
+173	2	8	SPTree
+173	20	28	proposed
+173	31	49	LSTM - based model
+173	50	54	with
+173	57	71	sequence layer
+173	72	75	for
+173	76	97	entity identification
+173	76	97	entity identification
+173	136	152	which identifies
+173	153	198	relations between pairs of candidate entities
+174	8	16	employed
+174	17	38	our previous approach
+174	39	42	for
+174	43	53	extraction
+174	54	56	of
+174	57	87	opinion entities and relations
+174	88	90	to
+174	91	100	this task
+180	3	8	train
+180	9	18	our model
+180	19	24	using
+180	25	33	Adadelta
+180	34	38	with
+180	39	56	gradient clipping
+181	3	13	regularize
+181	14	25	our network
+181	26	31	using
+181	32	39	dropout
+181	40	44	with
+181	49	64	drop - out rate
+181	65	76	tuned using
+181	77	92	development set
+186	3	7	have
+186	8	23	3 hidden layers
+186	24	26	in
+186	27	38	our network
+186	47	61	dimensionality
+186	62	64	of
+186	69	81	hidden units
+186	82	84	is
+186	85	88	100
+187	8	15	weights
+187	16	18	in
+187	23	30	network
+187	35	51	initialized from
+187	58	78	random uniform noise
+188	3	7	tune
+188	12	27	hyperparameters
+188	28	36	based on
+188	37	58	ACE05 development set
+188	63	75	use them for
+188	76	84	training
+188	34	36	on
+188	88	101	ACE04 dataset
+24	19	26	propose
+24	29	52	novel RNN - based model
+24	53	56	for
+24	61	110	joint extraction of entity mentions and relations
+25	32	40	does not
+25	41	47	depend
+25	48	50	on
+25	51	82	any dependency tree information
+26	0	21	Our RNN - based model
+26	22	24	is
+26	27	59	multi - layer bidirectional LSTM
+26	60	64	over
+26	67	75	sequence
+27	3	9	encode
+27	14	29	output sequence
+27	30	34	from
+27	35	52	left - to - right
+28	0	2	At
+28	3	17	each time step
+28	23	26	use
+28	30	52	attention - like model
+28	37	39	on
+28	60	89	previously decoded time steps
+28	92	103	to identify
+28	108	114	tokens
+28	115	117	in
+28	120	138	specified relation
+28	139	143	with
+28	148	161	current token
+29	8	11	add
+29	15	31	additional layer
+29	32	34	to
+29	35	46	our network
+29	47	56	to encode
+29	61	76	output sequence
+29	77	81	from
+29	82	99	right - to - left
+2	22	71	Joint Extraction of Entity Mentions and Relations
+10	0	52	Extraction of entities and their relations from text
+12	39	98	entity mention and relation extraction at the sentencelevel
+196	0	18	Multiple Relations
+196	15	17	on
+196	15	17	on
+197	3	12	find that
+197	13	36	modifying our objective
+197	37	47	to include
+197	48	66	multiple relations
+197	67	75	improves
+197	80	86	recall
+197	87	89	of
+197	90	100	our system
+197	57	66	relations
+197	116	126	leading to
+197	127	145	slight improvement
+197	153	185	overall performance on relations
+204	0	13	PHYS relation
+204	14	16	is
+204	17	34	easier identified
+204	35	50	with respect to
+204	51	61	GPE entity
+204	62	66	than
+204	67	77	PER entity
+201	3	9	adding
+201	10	32	bidirectional encoding
+201	33	35	to
+201	36	46	our system
+201	52	56	find
+201	69	90	significantly improve
+201	95	106	performance
+201	107	109	of
+201	36	46	our system
+201	121	132	compared to
+201	133	159	left - to - right encoding
+202	8	16	improves
+202	17	26	precision
+202	27	38	compared to
+202	39	62	left - toright decoding
+202	63	76	combined with
+202	77	105	multiple relations objective
+203	3	16	find that for
+203	17	31	some relations
+203	35	37	is
+203	38	44	easier
+203	45	54	to detect
+203	60	75	with respect to
+203	76	95	one of the entities
+203	4	6	in
+203	103	114	entity pair

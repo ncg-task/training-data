@@ -1,0 +1,34 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "NQG framework" : {
+          "outperforms" : {
+            "PCFG - Trans and s 2s + att baselines" : {
+              "by" : "large margin"
+            }
+          },
+          "from sentence" : "Our NQG framework outperforms the PCFG - Trans and s 2s + att baselines by a large margin ."
+        },
+        "NQG ++" : {
+          "has" : {
+            "1.11 BLEU score gain" : {
+              "over" : "NQG +"
+            }
+          },
+          "from sentence" : "The extended version , NQG ++ , has 1.11 BLEU score gain over NQG + , which shows that initializing with pre-trained word vectors and sharing them between encoder and decoder help learn better word representation ."
+        }
+      },
+      "With the help of" : {
+        "copy mechanism" : {
+          "has" : {
+            "NQG +" :{
+              "has" : "2.05 BLEU improvement"
+            }
+          }
+        },
+        "from sentence" : "With the help of copy mechanism , NQG + has a 2.05 BLEU improvement since it solves the rare words problem ."
+      }
+    }
+  }
+}

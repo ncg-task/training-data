@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Citation Intent Classification in Scientific Publications", {"from sentence" : "Structural Scaffolds for Citation Intent Classification in Scientific Publications"}],
+    ["Identifying the intent of a citation in scientific papers", {"from sentence" : "Identifying the intent of a citation in scientific papers ( e.g. , background information , use of methods , comparing results ) is critical for machine reading of individual publications and automated analysis of the scientific literature ."}],
+    ["citation intent classification", {"from sentence" : "In this work , we approach the problem of citation intent classification by modeling the language expressed in the citation context ."}]
+  ]
+}

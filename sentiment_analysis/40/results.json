@@ -1,0 +1,45 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "our RAM" : {
+          "consistently outperforms" : "compared methods",
+          "from sentence" : "As shown by the results in , our RAM consistently outperforms all compared methods on these four datasets ."
+        },
+        "AC and AC - S" : {
+          "perform" : "poorly",
+          "from sentence" : "AC and AC - S perform poorly , because averaging context is equivalent to paying identical attention to each word which would hide the true sentiment word ."
+        },
+        "Rec - NN" : {
+          "better than" : "TD - LSTM",
+          "not as good as" : "our method",
+          "from sentence" : "Rec - NN is better than TD - LSTM but not as good as our method ."
+        },
+        "TD - LSTM" : {
+          "performs" : {
+            "less competitive" : {
+              "than" : "our method"
+            }
+          },
+          "from sentence" : "TD - LSTM performs less competitive than our method on all the datasets , particularly on the tweet dataset , because in this dataset sentiment words are usually far from person names , for which case the multiple - attention mechanism is designed to work ."
+        },
+        "TD - LSTM - A" : {
+          "performs" : {
+            "worse" : {
+              "than" : "our method"
+            }
+          },
+          "from sentence" : "TD - LSTM - A also performs worse than our method , because it s two attentions , i.e. one for the text before the target and the other for the after , can not tackle some cases where more than one features being attended are at the same side of the target ."
+        },
+        "MemNet" : {
+          "adopts" : {
+            "multiple attentions" : {
+              "in order to improve" : "attention results"
+            }
+          },
+          "from sentence" : "MemNet adopts multiple attentions in order to improve the attention results , given the assumption that the result of an attention at a later hop should be better than that at the beginning ."
+        }
+      }
+    }
+  }
+}

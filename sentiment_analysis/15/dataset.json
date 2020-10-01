@@ -1,0 +1,76 @@
+{
+  "has" : {
+    "Dataset" : {
+      "name" : {
+        "Stanford Sentiment Treebank" : {
+          "is" : {
+            "first corpus" : {
+              "with" : {
+                "fully labeled parse trees" : {
+                  "allows for" : {
+                    "complete analysis" : {
+                      "of" : {
+                        "compositional effects" : {
+                          "of" : "sentiment in language"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "The Stanford Sentiment Treebank is the first corpus with fully labeled parse trees that allows for a complete analysis of the compositional effects of sentiment in language ."
+        }
+      },
+      "has" : {
+        "corpus" : {
+          "based on" : {
+            "dataset" : {
+              "consists of" : {
+                "11,855 single sentences" : {
+                  "extracted from" : "movie reviews"
+                }
+              }
+            }
+          },
+          "from sentence" : "The corpus is based on the dataset introduced by and consists of 11,855 single sentences extracted from movie reviews ."
+        },
+        "parsed" : {
+          "with" : "Stanford parser",
+          "total of" : {
+            "215,154 unique phrases" : {
+              "from" : {
+                "parse trees" : {
+                  "annotated by" : "3 human judges"
+                }
+              }
+            }
+          },
+          "from sentence" : "It was parsed with the Stanford parser and includes a total of 215,154 unique phrases from those parse trees , each annotated by 3 human judges ."
+        },
+        "new dataset" : {
+          "to analyze" : {
+            "intricacies" : {
+              "of" : "sentiment"
+            }
+          },
+          "to capture" : "complex linguistic phenomena",
+          "from sentence" : "This new dataset allows us to analyze the intricacies of sentiment and to capture complex linguistic phenomena ."
+        },
+        "granularity and size" : {
+          "enable" : {
+            "community" : {
+              "to train" : {
+                "compositional models" : {
+                  "based on" : "supervised and structured machine learning techniques"
+                }
+              }
+            }
+          },
+          "from sentence" : "The granularity and size of this dataset will enable the community to train compositional models that are based on supervised and structured machine learning techniques ."
+        }
+      }
+    }
+  }
+}

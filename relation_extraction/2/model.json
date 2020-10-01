@@ -1,0 +1,67 @@
+{
+  "has" : {
+    "Model" : {
+      "apply" : {
+        "pretrained BERT model" : {
+          "for" : "relation classification",
+          "from sentence" : "In this paper , we apply the pretrained BERT model for relation classification ."
+        }
+      },
+      "insert" : {
+        "special tokens" : {
+          "before and after" : {
+            "target entities" : {
+              "to identify"  : {
+                "locations" : {
+                  "of" : "two target entities",
+                  "transfer" : {
+                    "information" : {
+                      "into" : "BERT model"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "before feeding" : {
+            "text" : {
+              "to" : {
+                "BERT" : {
+                  "for" : "fine - tuning"
+                }
+              }
+            }
+          },
+          "from sentence" : "We insert special tokens before and after the target entities before feeding the text to BERT for fine - tuning , in order to identify the locations of the two target entities and transfer the information into the BERT model ."
+        }
+      },
+      "locate" : {
+        "positions" : {
+          "of" : "two target entities",
+          "in" : {
+            "output embedding" : {
+              "from" : "BERT model"
+            }
+          }          
+        },
+        "from sentence" : "We then locate the positions of the two target entities in the output embedding from BERT model ."
+      },
+      "as the input to" : {
+        "multi - layer neural network" : {
+          "for" : {
+            "classification" : {
+              "use" : ["embeddings", 
+              {"sentence encoding" : {
+                "has" : {
+                  "embedding" : {
+                    "of" : {
+                      "special first token" : {
+                        "in the setting of" : "BERT"}}}}}}]
+            }
+          },
+          "from sentence" : "We use their embeddings as well as the sentence encoding ( embedding of the special first token in the setting of BERT ) as the input to a multi - layer neural network for classification ."
+        }
+      }
+    }
+  }
+}

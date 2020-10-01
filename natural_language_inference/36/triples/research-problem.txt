@@ -1,0 +1,4 @@
+(Contribution||has research problem||Text Comprehension)
+(Contribution||has research problem||text comprehension ( TC ))
+(Contribution||has research problem||machine reading comprehension ( MRC ))
+(Contribution||has research problem||textual entailment ( TE ))

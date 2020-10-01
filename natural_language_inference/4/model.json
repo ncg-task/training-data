@@ -1,0 +1,45 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "mixed objective" : {
+          "combines" : {
+            "traditional cross entropy loss" : {
+              "over" : "positions",
+              "with" : {
+                "measure of word overlap" : {
+                  "trained with" : "reinforcement learning"
+                }
+              }
+            }
+          },
+          "from sentence" : "To address this problem , we propose a mixed objective that combines traditional cross entropy loss over positions with a measure of word overlap trained with reinforcement learning ."
+        }
+      },
+      "obtain" : {
+        "latter objective" : {
+          "using" : {
+            "self - critical policy learning" : {
+              "in which" : {
+                "reward" : {
+                  "based on" : {
+                    "word overlap" : {
+                      "between" : ["proposed answer", "ground truth answer"]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "We obtain the latter objective using self - critical policy learning in which the reward is based on word overlap between the proposed answer and the ground truth answer ."
+        }
+      },
+      "extend" : {
+        "Dynamic Coattention Network ( DCN )" : {
+          "with" : "deep residual coattention encoder",
+          "from sentence" : "In addition to our mixed training objective , we extend the Dynamic Coattention Network ( DCN ) by with a deep residual coattention encoder ."
+        }
+      }
+    }
+  }
+}

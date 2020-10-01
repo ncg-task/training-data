@@ -1,0 +1,126 @@
+99	16	29	trained using
+99	34	48	Adam optimizer
+99	49	53	with
+99	54	78	categorical crossentropy
+99	79	81	as
+99	86	99	loss function
+100	3	6	use
+100	10	34	early stopping criterion
+100	32	34	on
+100	42	57	validation data
+100	58	70	to determine
+100	75	100	number of training epochs
+101	4	17	learning rate
+101	21	29	fixed to
+101	30	34	0.01
+101	151	159	training
+101	163	175	performed in
+101	176	183	batches
+101	48	50	of
+101	187	200	128 instances
+102	3	8	apply
+102	9	16	Dropout
+102	17	19	on
+102	24	41	penultimate layer
+102	42	55	as well as on
+102	60	76	embeddings layer
+102	77	81	with
+102	84	95	probability
+102	96	98	of
+102	99	102	0.5
+103	3	9	choose
+103	14	18	size
+103	99	103	with
+103	106	119	random search
+103	120	122	on
+103	127	141	validation set
+103	19	21	of
+103	26	59	layers ( RNN layer size o = 256 )
+20	3	10	present
+20	13	31	novel architecture
+20	37	46	considers
+20	47	62	other relations
+20	63	65	in
+20	70	78	sentence
+20	79	81	as
+20	84	91	context
+20	92	106	for predicting
+20	111	116	label
+20	117	119	of
+20	124	139	target relation
+22	4	16	architecture
+22	17	21	uses
+22	25	45	LSTM - based encoder
+22	46	62	to jointly learn
+22	63	78	representations
+22	79	82	for
+22	83	96	all relations
+22	51	53	in
+22	102	117	single sentence
+23	87	90	are
+23	91	99	combined
+23	4	18	representation
+23	19	21	of
+23	26	41	target relation
+23	46	61	representations
+23	19	21	of
+23	69	86	context relations
+23	100	107	to make
+23	112	128	final prediction
+2	36	70	Knowledge Base Relation Extraction
+4	24	60	sentence - level relation extraction
+12	17	36	relation extraction
+13	32	62	sentential relation extraction
+113	4	10	models
+113	11	20	that take
+113	25	32	context
+113	33	37	into
+113	38	45	account
+113	46	53	perform
+113	54	61	similar
+113	35	37	to
+113	69	78	baselines
+113	13	15	at
+113	86	109	smallest recall numbers
+113	116	121	start
+113	35	37	to
+113	125	143	positively deviate
+113	13	15	at
+113	157	176	higher recall rates
+114	20	36	ContextAtt model
+114	37	45	performs
+114	46	52	better
+114	53	57	than
+114	58	74	any other system
+114	88	92	over
+114	97	116	entire recall range
+115	0	11	Compared to
+115	16	43	competitive LSTM - baseline
+115	86	102	ContextAtt model
+115	103	111	achieves
+115	114	128	24 % reduction
+115	129	131	of
+115	136	149	average error
+118	0	5	shows
+118	15	31	ContextAtt model
+118	32	40	performs
+118	41	45	best
+118	46	50	over
+118	51	69	all relation types
+119	13	21	see that
+119	26	36	ContextSum
+119	37	69	does n't universally outperforms
+119	74	89	LSTM - baseline
+120	27	32	using
+120	33	42	attention
+120	46	64	crucial to extract
+120	65	85	relevant information
+120	86	90	from
+120	95	112	context relations
+121	38	45	observe
+121	55	78	context - enabled model
+121	79	91	demonstrates
+121	96	112	most improvement
+121	13	15	on
+121	153	163	useful for
+121	164	182	taxonomy relations

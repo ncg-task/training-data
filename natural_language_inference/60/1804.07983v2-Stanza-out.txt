@@ -1,0 +1,193 @@
+title
+Dynamic Meta - Embeddings for Improved Sentence Representations
+abstract
+While one of the first steps in many NLP systems is selecting what pre-trained word embeddings to use , we argue that such a step is better left for neural networks to figure out by themselves .
+To that end , we introduce dynamic meta-embeddings , a simple yet effective method for the supervised learning of embedding ensembles , which leads to stateof - the - art performance within the same model class on a variety of tasks .
+We subsequently show how the technique can be used to shed new light on the usage of word embeddings in NLP systems .
+Multi-domain Standard word embeddings
+Introduction
+It is no exaggeration to say that word embeddings have revolutionized NLP .
+From early distributional semantic models to deep learningbased word embeddings , word - level meaning representations have found applications in a wide variety of core NLP tasks , to the extent that they are now ubiquitous in the field .
+A sprawling literature has emerged about what types of embeddings are most useful for which tasks .
+For instance , there has been extensive work on understanding what word embeddings learn , evaluating their performance , specializing them for certain tasks , learning sub - word level representations , et cetera .
+One of the first steps in designing many NLP systems is selecting what kinds of word embed - dings to use , with people often resorting to freely available pre-trained embeddings .
+While this is often a sensible thing to do , the usefulness of word embeddings for downstream tasks tends to be hard to predict , as downstream tasks can be poorly correlated with word - level benchmarks .
+An alternative is to try to combine the strengths of different word embeddings .
+Recent work in socalled " meta- embeddings " , which ensembles embedding sets , has been gaining traction .
+Metaembeddings are usually created in a separate preprocessing step , rather than in a process that is dynamically adapted to the task .
+In this work , we explore the supervised learning of task - specific , dynamic meta-embeddings , and apply the technique to sentence representations .
+The proposed approach turns out to be highly effective , leading to state - of - the - art performance within the same model class on a variety of tasks , opening up new areas for exploration and yielding insights into the usage of word embeddings .
+Why Is This a Good Idea ?
+Our technique brings several important benefits to NLP applications .
+First , it is embedding - agnostic , meaning that one of the main ( and perhaps most important ) hyperparameters in NLP pipelines is made obsolete .
+Second , as we will show , it leads to improved performance on a variety of tasks .
+Third , and perhaps most importantly , it allows us to overcome common pitfalls with current systems :
+Coverage
+One of the main problems with NLP systems is dealing with out - ofvocabulary words : our method increases lexical coverage by allowing systems to take the union over different embeddings .
+are often trained on a single domain , such as Wikipedia or newswire .
+With our method , embeddings from different domains can be combined , optionally while taking into account contextual information .
+Multi-modality Multi-modal information has proven useful in many tasks , yet the question of multi-modal fusion remains an open problem .
+Our method offers a straightforward solution for combining information from different modalities .
+Evaluation
+While it is often unclear how to evaluate word embedding performance , our method allows for inspecting the weights that networks assign to different embeddings , providing a direct , task - specific , evaluation method for word embeddings .
+Interpretability and Linguistic Analysis Different word embeddings work well on different tasks .
+This is well - known in the field , but knowing why this happens is less wellunderstood .
+Our method sheds light on which embeddings are preferred in which linguistic contexts , for different tasks , and allows us to speculate as to why that is the case .
+Outline
+In what follows , we explore dynamic meta-embeddings and show that this method outperforms the naive concatenation of various word embeddings , while being more efficient .
+We apply the technique in a BiLSTM - max sentence encoder and evaluate it on wellknown tasks in the field : natural language inference ( SNLI and MultiNLI ; 4 ) , sentiment analysis ( SST ; 5 ) , and image - caption retrieval ( Flickr30k ; 6 ) .
+In each case we show state - of - the - art performance within the class of single sentence encoder models .
+Furthermore , we include an extensive analysis ( 7 ) to highlight the general usefulness of our technique and to illustrate how it can lead to new insights .
+Related Work
+Thanks to their widespread popularity in NLP , a sprawling literature has emerged about learning and applying word embeddings - much too large to fully cover here , so we focus on previous work that combines multiple embeddings for downstream tasks .
+combine unsupervised embeddings with supervised ones for sentiment classification .
+and learn to combine word - level and character - level embeddings .
+Contextual representations have been used in neural machine translation as well , e.g. for learning contextual word vectors and applying them in other tasks or for learning context - dependent representations to solve disambiguation problems in machine translation .
+Neural tensor skip - gram models learn to combine word , topic and context embeddings ; context2vec learns a more sophisticated context representation separately from target embeddings ; and learn word representations with distributed word representation with multi-contextual mixed embedding .
+Recent work in " meta-embeddings " , which ensembles embedding sets , has been gaining traction ) - here , we show that the idea can be applied in context , and to sentence representations .
+Furthermore , these works obtain metaembeddings as a preprocessing step , rather than learning them dynamically in a supervised setting , as we do here .
+Similarly to , who proposed deep contextualized word representations derived from language models and which led to impressive performance on a variety of tasks , our method allows for contextualization , in this case of embedding set weights .
+There has also been work on learning multiple embeddings per word , including a lot of work in sense embeddings where the senses of a word have their own individual embeddings , as well as on how to apply such sense embeddings in downstream NLP tasks .
+The question of combining multiple word embeddings is related to multi-modal and multi-view learning .
+For instance , combining visual features from convolutional neural networks with word embeddings has been examined , see for an overview .
+In multi-modal semantics , for instance , word - level embeddings from different modalities are often mixed via concatenation r = [?u , ( 1 ? ? ) v ] .
+Here , we dynamically learn the weights to combine representations .
+Recently , related dynamic multi-modal fusion methods have also been explored .
+There has also been work on unifying multi-view embeddings from different data sources .
+The usefulness of different embeddings as initialization has been explored , and different architectures and hyperparameters have been extensively examined .
+Problems with evaluating word embeddings intrinsically are well known , and various alternatives for evaluating word embeddings in downstream tasks have been proposed ( e.g. , .
+For more related work with regard to word embeddings and their evaluation , see .
+Our work can be seen as an instance of the wellknown attention mechanism , and its recent sentence - level incarnations of self - attention and inner-attention , where the attention mechanism is applied within the same sentence instead of for aligning multiple sentences .
+Here , we learn ( optionally contextualized ) attention weights for different embedding sets and apply the technique in sentence representations .
+Dynamic Meta - Embeddings
+Commonly , NLP systems use a single type of word embedding , e.g. , word2vec , GloVe or Fast - Text .
+We propose giving networks access to multiple types of embeddings , allowing a network to learn which embeddings it prefers by predicting a weight for each embedding type , optionally depending on the context .
+For a sentence of s tokens {t j } s j = 1 , we haven word embedding types , leading to sequences {w i , j } s j=1 ?
+Rd i ( i = 1 , 2 , . . . , n ) .
+We center each type of word embedding to zero mean .
+Naive baseline
+We compare to naive concatenation as a baseline .
+Concatenation is a sensible strategy for combining different embedding sets , because it provides the sentence encoder with all of the information in the individual embeddings :
+The downside of concatenating embeddings and giving that as input to an RNN encoder , however , is that the network then quickly becomes inefficient as we combine more and more embeddings .
+DME
+For dynamic meta-embeddings , we project the embeddings into a common ddimensional space by learned linear functions
+We then combine the projected embeddings by taking the weighted sum
+) are scalar weights from a self - attention mechanism :
+where a ?
+Rd and b ?
+R are learned parameters and ?
+is a softmax ( or could be a sigmoid or tanh , for gating ) .
+We also experiment with an Unweighted variant of this approach , that just sums up the projections .
+CDME
+Alternatively , we can make the selfattention mechanism context - dependent , leading to contextualized DME ( CDME ) :
+where h j ?
+R 2 m is the j th hidden state of a BiL - STM taking {w i , j } s j=1 as input , a ?
+R 2 m and b ?
+R .
+We set m = 2 , which makes the contextualization very efficient .
+Sentence encoder
+We use a standard bidirectional LSTM encoder with max - pooling ( BiLSTM - Max ) , which computes two sets of s hidden states , one for each direction :
+The hidden states are subsequently concatenated for each timestep to obtain the final hidden states , after which a max - pooling operation is applied over their components to get the final sentence representation :
+SNLI MNLI
+InferSent 84.5 - NSE 84.6 - G- TreeLSTM 86.0 - SSE 86.1 73.6 ReSan 86 .
+Natural Language Inference
+Natural language inference , also known as recognizing textual entailment ( RTE ) , is the task of classifying pairs of sentences according to whether they are neutral , entailing or contradictive .
+Inference about entailment and contradiction is fundamental to understanding natural language , and there are two established datasets to evaluate semantic representations in that setting : SNLI and the more recent MultiNLI .
+The SNLI dataset consists of 570 k humangenerated English sentence pairs , manually labeled for entailment , contradiction and neutral .
+The MultiNLI dataset can be seen as an extension of SNLI : it contains 433 k sentence pairs , taken from ten different genres ( e.g. fiction , government text or spoken telephone conversations ) , with the same entailment labeling scheme .
+We train sentence encoders with dynamic metaembeddings using two well - known and often - used embedding types : FastText and Glo Ve .
+Specifically , we make use of the 300 - dimensional embeddings trained on a similar WebCrawl corpus , and compare three scenarios : when used individually , when naively concatenated or in the dynamic meta-embedding setting ( unweighted , context - independent DME and contextualized CDME ) .
+We also compare our approach against other models in the same class - in this case , models that encode sentences individually and do not allow attention across the two sentences .
+We include InferSent , which also makes use of a BiLSTM - Max sentence encoder .
+In addition , we include a setting where we combine not two , but six different embedding types , adding FastText wiki - news embeddings
+2 , English - German and English - French embeddings from , as well as the BOW2 embeddings from Levy and Goldberg ( 2014 a ) trained on Wikipedia .
+Implementation Details
+Our loss is a max - margin rank loss as in VSE ++ , a state - of - the - art method on this task .
+The network architecture is almost identical to that system , except that we use DME ( with 256 - dimensional embedding projection ) and a 1024 - dimensional caption encoder .
+For the Flickr30 k images that we do retrieval over , we use random cropping during training for data augmentation and use a ResNet - 152 for feature extraction .
+We tune the sizes of the encoders and use a learning rate of 0.0003 and a dropout rate of 0.1 .
+shows the results , comparing against VSE ++.
+First , note that the ImageNet - only embeddings do n't work as well as the FastText ones , which is most likely due to poorer coverage .
+We observe that DME outperforms naive and FastText - only , and outperforms VSE ++ by a large margin .
+These findings confirm the intuition that knowing what things look like ( i.e. , having a wordlevel visual representation ) improves performance in visual retrieval tasks ( i.e. , where we need to find relevant images for phrases or sentences ) something that sounds obvious but has not really been explored before , to our knowledge .
+This showcases DME 's usefulness for fusing embeddings in multi-modal tasks .
+Results
+Sentiment
+To showcase the general applicability of the proposed approach , we also apply it to a case where we have to classify a single sentence , namely , sentiment classification .
+Sentiment analysis and opinion mining have become important applications for NLP research .
+We evaluate on the binary SST task , consisting of 70 k sentences with a corresponding binary ( positive or negative ) sentiment label .
+Image - Caption Retrieval
+An advantage of the proposed approach is that it is inherently capable of dealing with multi-modal information .
+Multi-modal semantics often combines linguistic and visual representations via concatenation with a global weight ? , i.e. , v = [?v ling , ( 1 ? ? ) v vis ] .
+In DME we instead learn to combine embeddings dynamically , optionally based on context .
+The representation fora word then becomes grounded in the visual modality , and we encode on the word - level what things look like .
+We evaluate this idea on the Flickr30 k imagecaption retrieval task : given an image , retrieve the correct caption ; and vice versa .
+The intuition is that knowing what something looks like makes it easier to retrieve the correct image / caption .
+While this work was under review , a related method was published by , which takes a similar approach but evaluates its effectiveness on COCO and uses Google images .
+We obtain wordlevel visual embeddings by retrieving relevant images fora given label from ImageNet in the same manner as , taking the images ' ResNet - 152 features and subsequently averaging those .
+We then learn to combine textual ( FastText ) and visual ( ImageNet ) word representations in the caption encoder used for retrieving relevant images .
+Discussion & Analysis
+Aside from improved performance , an additional benefit of learning dynamic meta-embeddings is that they enable inspection of the weights that the network has learned to assign to the respective embeddings .
+In this section , we perform a variety of smaller experiments in order to highlight the usefulness of the technique for studying linguistic phenomena , determining appropriate training domains and evaluating word embeddings .
+We compute the contribution of each word embedding type as follows :
+1 Visualizing Attention shows the attention weights fora CDME model trained on SNLI , using the aforementioned six embedding sets .
+The sentence is from the SNLI validation set .
+We observe that different embeddings are preferred for different words .
+The figure is meant to illustrate possibilities for analysis , which we turn to in the next section .
+Linguistic Analysis
+We perform a fine - grained analysis of the behavior of DME on the validation set of SNLI .
+shows a breakdown of the average attention weights per part of speech .
+shows a similar breakdown for open versus closed class .
+The analysis allows us to make several interesting observations : it appears that this model prefers
+Glo Ve embeddings , followed by the two FastText embeddings ( trained on .
+For open class words ( e.g. , nouns , verbs , adjectives and adverbs ) , those three embedding types are strongly preferred , while closed class words get more evenly divided attention .
+The embeddings from get low weights , possibly because the method is complementary with FastText - wiki , which was trained on a more recent version of Wikipedia .
+We can further examine the attention weights by analyzing them in terms of frequency and concreteness .
+We use Norvig 's Google N- grams corpus frequency counts 3 to divide the words into fre - shows the average attention weights per frequency bin , ranging from low to high .
+We observe a clear preference for GloVe , in particular for low - frequency words .
+For concreteness , we use the concreteness ratings from .
+shows the average weights per concreteness bin fora model trained on Flickr30 k .
+We can clearly see that visual embeddings get higher weights as the words become more and more concrete .
+There are of course intricate relationships between concreteness , frequency , POS tags and open / closed class words : closed class words are often frequent and abstract , while open class words could be more concrete , etc .
+It is beyond the scope of the current work to explore these further , but we hope that others will pursue this direction in future work .
+Multi-domain Embeddings
+The MultiNLI dataset consists of various genres .
+This allows us to inspect the applicability of source domain data fora specific genre .
+We train embeddings on three kinds of data : Wikipedia , the Toronto Books Corpus and the English OpenSubtitles 4 .
+We examine the atten -
+Model
+Levy LEAR SNLI CDME 0.33 0.67 85.3.9
+Model GloVe Refined SST CDME 0.59 0.41 89.0.4 : Accuracy and learned weights on SNLI using LEAR or SST using sentiment - refined embeddings using the specialization method from tion weights on the five genres in the in - domain ( matched ) set , consisting of fiction ; transcriptions of spoken telephone conversations ; government reports , speeches , letters and press releases ; popular culture articles from the Slate Magazine archive ; and travel guides .
+shows the average attention weights for the three embedding types over the five genres .
+We observe that Toronto Books , which consists of fiction , is very appropriate for the fiction genre , while Wikipedia is highly preferred for the travel genre , perhaps because it contains a lot of factual information about geographical locations .
+The government genre makes more use of Open- Subtitles .
+The spoken telephone genre does not appear to prefer OpenSubtitles , which we might have expected given that that corpus would contain spoken dialogue , but Toronto books , which does include written dialogue .
+Specialization
+The above shows that we can use DME to analyze different embeddings on a task .
+Given the recent interest in the community in specializing , retro-fitting and counter - fitting word embeddings forgiven tasks , we examine whether the lexical - level benefits of specialization extend to sentencelevel downstream tasks .
+After all , one of the main motivations behind work on lexical entailment is that it allows for better downstream textual entailment .
+Hence , we take the LEAR embeddings by , which do very well on the HyperLex lexical entailment evaluation dataset .
+We compare their best - performing embeddings against the original embeddings that were used for specialization , derived from the BOW2 embeddings of .
+Similarly , we use the technique of for refining Glo Ve embeddings for sentiment , and evaluate model performance on the SST task .
+shows that LEAR embeddings get high weights compared to the original source embeddings ( " Levy " in the table ) .
+Our analysis showed that LEAR was particularly favored for verbs ( with average weights of 0.75 ) .
+The sentiment - refined embeddings were less useful , with the original GloVe embeddings receiving higher weights .
+These preliminary experiments show how DME models can be used for analyzing the performance of specialized embeddings in downstream tasks .
+Note that different weighting mechanisms might give different results - we found that the normalization strategy and the depth of the network significantly influenced weight assignments in our experiments with specialized embeddings .
+Examining Contextualization
+We examined models trained on SNLI and looked at the variance of the attention weights per word in the dev set .
+If contextualization is important forgetting the classification decision correct , then we would expect big differences in the attention weights per word depending on the context .
+Upon examination , we only found relatively few differences .
+In part , this maybe explained by the small size of the dev set , but for the Glove + FastText model we inspected there were only around twenty words with any variance at all , which suggests that the field needs to work on more difficult semantic benchmark tasks .
+The words , however , where characterized by their polysemy , in particular by having both noun and verb senses .
+The following words were all in the top 20 most contextdependent words : mob , boards , winds , trains , pitches , camp .
+We argue that the decision of which word embeddings to use in what setting should be left to the neural network .
+While people usually pick one type of word embeddings for their NLP systems and then stick with it , we find that dynamically learned meta-embeddings lead to improved results .
+In addition , we showed that the proposed mechanism leads to better interpretability and insightful linguistic analysis .
+We showed that the network learns to select different embeddings for different data , different domains and different tasks .
+We also investigated embedding specialization and examined more closely whether contextualization helps .
+To our knowledge , this work constitutes the first effort to incorporate multi-modal information on the language side of image - caption retrieval models ; and the first attempt at incorporating meta-embeddings into large - scale sentencelevel NLP tasks .
+In future work , it would be interesting to apply this idea to different tasks , in order to explore what kinds of embeddings are most useful for core NLP tasks , such as tagging , chunking , named entity recognition , parsing and generation .
+It would also be interesting to further examine specialization and how it transfers to downstream tasks .
+Using this method for evaluating word embeddings in general , and how they relate to sentence representations in particular , seems a fruitful direction for further exploration .
+In addition , it would be interesting to explore how the attention weights change during training , and if , e.g. , introducing entropy regularization ( or even negative entropy ) might improve results or interpretability further .

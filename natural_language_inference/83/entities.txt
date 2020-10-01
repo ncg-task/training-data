@@ -1,0 +1,110 @@
+197	0	5	shows
+197	10	21	performance
+197	22	24	of
+197	27	52	logistic regression model
+197	53	60	trained
+197	61	66	using
+197	67	91	all the features ( All )
+197	107	134	individual feature - groups
+198	7	15	see that
+198	20	28	features
+198	29	43	extracted from
+198	48	54	aspect
+198	55	64	analyzing
+198	69	85	event - sequence
+198	86	90	have
+198	95	121	strongest predictive power
+198	124	135	followed by
+198	142	156	characterizing
+198	157	179	Sentiment - trajectory
+199	4	12	features
+199	13	22	measuring
+199	23	45	top - ical consistency
+199	46	55	result in
+199	56	71	lowest accuracy
+199	87	101	perform better
+199	102	106	than
+199	107	113	random
+173	0	4	DSSM
+173	10	16	trains
+173	17	41	two deep neural networks
+173	42	52	to project
+173	57	89	context and the ending - options
+173	90	94	into
+173	99	116	same vector space
+175	0	4	Msap
+177	3	9	trains
+177	12	31	logistic regression
+177	32	40	based on
+177	41	83	stylistic and languagemodel based features
+178	0	2	LR
+178	23	25	is
+178	28	60	simple logistic regression model
+178	70	81	agnostic to
+178	106	131	multiple types of aspects
+180	0	13	Majority Vote
+181	5	20	ensemble method
+181	21	25	uses
+181	30	38	features
+181	39	52	extracted for
+181	65	78	K = 3 aspects
+181	81	89	to train
+181	90	127	K separate logistic regression models
+183	0	11	Soft Voting
+184	19	25	learns
+184	26	67	K different aspect - specific classifiers
+189	0	23	Aspect - aware Ensemble
+190	45	51	trains
+190	52	90	K different aspectspecific classifiers
+35	17	24	explore
+35	25	47	three semantic aspects
+35	48	50	of
+35	51	70	story understanding
+35	83	101	sequence of events
+35	102	114	described in
+35	51	56	story
+35	138	147	evolution
+35	48	50	of
+35	151	187	sentiment and emotional trajectories
+35	202	221	topical consistency
+36	4	16	first aspect
+36	20	34	motivated from
+36	49	74	semantic script induction
+36	81	93	evaluates if
+36	94	100	events
+36	101	113	described in
+36	117	137	ending - alternative
+36	142	151	likely to
+36	152	157	occur
+36	158	164	within
+36	169	187	sequence of events
+36	101	113	described in
+36	205	222	preceding context
+42	27	40	evaluating if
+42	45	54	sentiment
+42	55	67	described in
+42	71	84	ending option
+42	85	96	makes sense
+42	97	108	considering
+42	113	120	context
+42	121	123	of
+42	128	133	story
+45	31	43	analyzing if
+45	48	53	topic
+45	54	56	of
+45	60	73	ending option
+45	77	92	consistent with
+45	97	114	preceding context
+46	3	10	present
+46	13	31	log - linear model
+46	40	47	used to
+46	48	53	weigh
+46	58	73	various aspects
+46	74	76	of
+46	81	86	story
+46	87	92	using
+46	95	110	hidden variable
+2	0	19	Story Comprehension
+4	0	29	Automatic story comprehension
+14	20	55	automatically understanding stories
+29	26	39	story - cloze

@@ -1,0 +1,71 @@
+{
+  "has" : {
+    "Model" : {
+      "presents" : {
+        "RE2" : {
+          "has" : {
+            "fast and strong neural architecture" : {
+              "with" : "multiple alignment processes",
+              "for" : "general purpose text matching"
+            },
+            "from sentence" : "This paper presents RE2 , a fast and strong neural architecture with multiple alignment processes for general purpose text matching ."
+          }
+        }
+      },
+      "has" : {
+        "components" : {
+          "has" : {
+            "previous aligned features" : {
+              "name" : "Residual vectors"
+            },
+            "original point - wise features" : {
+              "name" : "Embedding vectors"
+            },
+            "contextual features" : {
+              "name" : "Encoded vectors"
+            }
+          },
+          "from sentence" : "These components , which the name RE2 stands for , are previous aligned features ( Residual vectors ) , original point - wise features ( Embedding vectors ) , and contextual features ( Encoded vectors ) ."
+        },
+        "embedding layer" : {
+          "embeds" : "discrete tokens",
+          "from sentence" : "An embedding layer first embeds discrete tokens ."
+        },
+        "same - structured blocks" : {
+          "consisting of" : ["encoding", "alignment", "fusion layers", {"from sentence" : "Several same - structured blocks consisting of encoding , alignment and fusion layers then process the sequences consecutively ."}],
+          "process" : {
+            "sequences" : {
+              "has" : "consecutively"
+            },
+            "from sentence" : "Several same - structured blocks consisting of encoding , alignment and fusion layers then process the sequences consecutively ."            
+          },
+          "connected by" : ["augmented version of residual connections", {"from sentence" : "These blocks are connected by an augmented version of residual connections ( see section 2.1 ) ."}]
+        },
+        "pooling layer" : {
+          "aggregates" : {
+            "sequential representations" : {
+              "into" : {
+                "vectors" : {
+                  "processed by" : {
+                    "prediction layer" : {
+                      "to give" : "final prediction"
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "A pooling layer aggregates sequential representations into vectors which are finally processed by a prediction layer to give the final prediction ."
+          }
+        },
+        "implementation" : {
+          "of" : {
+            "each layer" : {
+              "kept" : "as simple as possible"
+            }
+          },
+          "from sentence" : "The implementation of each layer is kept as simple as possible , and the whole model , as a well - organized combination , is quite powerful and lightweight at the same time ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,163 @@
+34	51	56	apply
+34	57	61	BERT
+34	62	64	to
+34	65	104	negation detection and scope resolution
+35	3	10	explore
+35	15	21	set of
+35	22	36	design choices
+35	52	65	experiment on
+35	70	97	3 public datasets available
+35	104	149	BioScope Corpus ( Abstracts and Full Papers )
+35	156	172	Sherlock Dataset
+35	181	198	SFU Review Corpus
+36	3	8	train
+36	9	16	NegBERT
+36	17	19	on
+36	20	31	one dataset
+36	36	42	report
+36	47	53	scores
+36	54	64	on testing
+36	65	76	all dataset
+189	3	6	use
+189	7	21	Google 's BERT
+189	22	24	as
+189	29	39	base model
+189	40	51	to generate
+189	52	73	contextual embeddings
+189	74	77	for
+189	82	90	sentence
+191	14	20	vector
+191	21	23	of
+191	24	43	dimension R H x N_C
+191	44	54	to compute
+191	55	71	scores per token
+193	7	21	early stopping
+193	22	24	on
+193	25	33	dev data
+193	34	37	for
+193	38	46	6 epochs
+193	47	49	as
+193	50	59	tolerance
+193	64	73	F 1 score
+193	47	49	as
+193	81	102	early stopping metric
+193	113	127	Adam optimizer
+193	128	132	with
+193	136	157	initial learning rate
+193	158	160	of
+193	161	168	3 e - 5
+193	179	209	Categorical Cross Entropy Loss
+193	248	256	to avoid
+193	257	265	training
+193	22	24	on
+193	273	293	padded label outputs
+197	34	60	default 70 - 15 - 15 split
+197	61	64	for
+197	69	92	train - dev - test data
+190	4	12	input to
+190	17	27	BERT model
+190	28	30	is
+190	33	73	sequence of tokenized and encoded tokens
+190	42	44	of
+190	79	87	sentence
+192	0	4	BERT
+192	5	12	outputs
+192	15	21	vector
+192	22	24	of
+192	25	56	size R H per token of the input
+192	68	75	feed to
+192	78	105	common classification layer
+192	22	24	of
+192	109	125	dimen-sion R Hx5
+192	126	129	for
+192	130	143	cue detection
+192	148	153	R Hx2
+192	126	129	for
+192	158	174	scope resolution
+194	3	10	perform
+194	11	45	cue detection and scope resolution
+194	6	9	for
+194	50	64	all 3 datasets
+194	71	79	train on
+194	80	81	1
+194	86	93	test on
+194	94	106	all datasets
+198	3	10	trained
+198	15	21	models
+198	22	24	on
+198	25	34	free GPUs
+198	35	48	available via
+198	49	68	Google Colaboratory
+2	43	82	Negation Detection and Scope Resolution
+201	0	3	For
+201	4	17	cue detection
+201	15	17	on
+201	27	53	Sherlock dataset test data
+201	59	67	see that
+201	71	81	outperform
+201	86	97	best system
+201	116	118	by
+201	119	133	0.6 F1 measure
+202	0	2	On
+202	7	25	BioScope Abstracts
+202	31	38	perform
+202	39	54	reasonably well
+204	7	27	BioScope Full papers
+204	45	52	achieve
+204	53	61	90.43 F1
+204	62	66	when
+204	67	75	training
+204	76	78	on
+204	83	92	same data
+205	7	24	SFU Review Corpus
+205	30	37	achieve
+205	41	43	F1
+205	44	46	of
+205	47	52	87.08
+208	4	20	scope resolution
+209	0	2	On
+209	7	23	Sherlock dataset
+209	29	36	achieve
+209	40	42	F1
+209	43	45	of
+209	46	51	92.36
+209	54	67	outperforming
+209	72	97	previous State of the Art
+209	98	100	by
+209	103	139	significant margin ( almost 3.0 F1 )
+210	7	25	BioScope Abstracts
+210	31	38	achieve
+210	42	44	F1
+210	45	47	of
+210	48	53	95.68
+210	56	69	outperforming
+210	74	91	best architecture
+210	92	94	by
+210	95	102	3.57 F1
+211	7	27	Bioscope Full Papers
+211	33	43	outperform
+211	48	65	best architecture
+211	66	68	by
+211	69	76	2.64 F1
+211	82	93	training on
+211	98	110	same dataset
+212	7	24	SFU Review Corpus
+212	30	40	outperform
+212	45	56	best system
+212	65	67	by
+212	68	75	1.02 F1
+213	4	26	negation cue detection
+213	32	39	observe
+213	42	57	significant gap
+213	58	65	between
+213	66	132	our model , NegBERT , and the current state - of the - art systems
+213	144	154	outperform
+213	159	175	baseline systems
+217	8	18	trained on
+217	19	37	BioScope Abstracts
+217	42	51	tested on
+217	56	76	BioScope Full Papers
+217	95	103	observed
+217	106	132	stateof - the - art result
+217	111	113	of
+217	136	141	91.24

@@ -1,0 +1,9 @@
+{
+  "has research problem" : [
+    ["Context - Dependent Sentiment Analysis", {"from sentence" : "Context - Dependent Sentiment Analysis in User- Generated Videos"}],
+    ["identification of sentiments in videos", {"from sentence" : "Multimodal sentiment analysis is a developing area of research , which involves the identification of sentiments in videos ."}],
+    ["Sentiment analysis" , {"from sentence" : "Sentiment analysis is a ' suitcase ' research problem that requires tackling many NLP sub - tasks , e.g. , aspect extraction , named entity recognition , concept extraction , sarcasm detection , personality recognition , and more ."}],
+    ["Emotion recognition", {"from sentence" : "Emotion recognition further breaks down the inferred polarity into a set of emotions conveyed by the subjective data , e.g. , positive sentiment can be caused by joy or anticipation , while negative sentiment can be caused by fear or disgust ."}],
+    ["multimodal sentiment analysis", {"from sentence" : "Recently , a number of approaches to multimodal sentiment analysis , producing interesting results , have been proposed ."}]
+  ]
+}

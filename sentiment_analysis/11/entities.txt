@@ -1,0 +1,149 @@
+257	0	14	SVM - ensemble
+258	2	39	strong context - free benchmark model
+258	40	50	which uses
+258	5	7	on
+258	85	102	ensemble of trees
+260	0	9	bc - LSTM
+261	2	21	bi-directional LSTM
+261	22	35	equipped with
+261	36	55	hierarchical fusion
+266	130	132	is
+266	0	6	Memn2n
+266	83	92	generates
+266	97	119	memory representations
+266	120	123	for
+266	124	149	each historical utterance
+266	150	155	using
+266	159	177	embedding matrix B
+266	202	209	without
+266	210	229	sequential modeling
+273	22	25	use
+273	26	43	only self history
+273	44	59	for classifying
+273	60	67	emotion
+273	68	70	of
+273	71	84	utterance u i
+276	0	7	CMN N A
+276	10	30	Single layer variant
+276	31	33	of
+276	0	3	CMN
+276	42	46	with
+276	47	66	no attention module
+245	3	6	use
+245	7	11	10 %
+245	12	14	of
+245	19	31	training set
+245	32	34	as
+245	37	62	held - out validation set
+245	63	66	for
+245	67	88	hyperparameter tuning
+246	36	81	Stochastic Gradient Descent ( SGD ) optimizer
+246	84	97	starting with
+246	101	128	initial learning Utterances
+246	129	146	whose history has
+246	147	179	atleast 3 similar emotion labels
+249	3	21	annealing approach
+249	22	28	halves
+249	33	35	lr
+249	36	41	every
+249	42	51	20 epochs
+249	56	67	termination
+249	71	84	decided using
+249	88	108	early - stop measure
+249	109	113	with
+249	116	124	patience
+249	125	127	of
+249	128	130	12
+249	131	144	by monitoring
+249	149	164	validation loss
+250	0	17	Gradient clipping
+250	21	29	used for
+250	30	44	regularization
+250	45	49	with
+250	52	56	norm
+250	57	63	set to
+250	64	66	40
+254	4	18	dimension size
+254	19	21	of
+254	26	40	memory cells d
+254	44	50	set as
+254	51	53	50
+251	20	33	decided using
+251	36	49	Random Search
+252	0	8	Based on
+252	9	31	validation performance
+252	34	57	context window length K
+252	61	67	set to
+252	71	73	40
+252	82	98	number of hops R
+252	102	110	fixed at
+252	111	117	3 hops
+19	3	10	propose
+19	13	50	conversational memory network ( CMN )
+19	59	63	uses
+19	66	85	multimodal approach
+19	86	89	for
+19	90	107	emotion detection
+19	108	110	in
+19	111	170	utterances ( a unit of speech bound by breathes or pauses )
+19	131	133	of
+19	179	200	conversational videos
+28	4	16	proposed CMN
+28	44	52	by using
+28	53	82	emotional context information
+28	83	93	present in
+28	98	118	conversation history
+29	3	11	improves
+29	12	41	speakerbased emotion modeling
+29	42	50	by using
+29	51	66	memory networks
+29	77	99	efficient in capturing
+29	100	124	long - term dependencies
+29	129	140	summarizing
+29	141	165	task - specific details 
+30	19	31	memory cells
+30	32	34	of
+30	35	38	CMN
+30	39	42	are
+30	43	61	continuous vectors
+30	67	72	store
+30	77	96	context information
+30	97	105	found in
+30	110	129	utterance histories
+31	0	3	CMN
+31	9	15	models
+31	16	25	interplay
+31	26	28	of
+31	35	43	memories
+31	44	54	to capture
+31	55	80	interspeaker dependencies
+32	10	18	extracts
+32	19	68	multimodal features ( audio , visual , and text )
+32	69	72	for
+32	73	87	all utterances
+32	88	90	in
+32	93	98	video
+2	34	79	Emotion Recognition in Dyadic Dialogue Videos
+4	0	36	Emotion recognition in conversations
+17	27	78	emotion detection in videos of dyadic conversations
+16	0	17	Emotion detection
+290	5	13	suggests
+290	19	48	gathering contexts temporally
+290	49	56	through
+290	57	78	sequential processing
+290	2	4	is
+290	91	106	superior method
+290	107	111	over
+290	112	147	non-temporal memory representations
+291	0	8	CMN self
+291	15	24	uses only
+291	25	47	single history channel
+291	53	61	provides
+291	62	80	lesser performance
+291	86	97	compared to
+291	0	3	CMN
+293	10	21	predictions
+293	18	20	on
+293	25	51	valence and arousal levels
+293	57	61	show
+293	62	77	similar results

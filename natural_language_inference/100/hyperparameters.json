@@ -1,0 +1,29 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "set for" : {
+        "NNM - 1" : {
+          "has" : {
+            "number of bins" : {
+              "as" : "600"
+            },
+            "word embedding dimension" : {
+              "as" : "700"
+            }              
+          }
+        },
+        "NNM - 2" : {
+          "has" : {
+            "number of bins" : {
+              "as" : "200"
+            },
+            "word embedding dimension" : {
+              "as" : "700"
+            }
+          }
+        },
+        "from sentence" : "For the setting of hyper - parameters , we set the number of bins as 600 , word embedding dimension as 700 for a NNM - 1 , the number of bins as 200 , word embedding dimension as 700 for a NNM - 2 after we tune hyper - parameters on the provided DEV set of TREC QA data ."
+      }
+    }
+  }
+}

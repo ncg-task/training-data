@@ -1,0 +1,31 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : [
+        ["entailment - aware encoder", "entailment - aware decoder", {"from sentence" : "To incorporate entailment knowledge into abstractive summarization models , we propose in this work an entailment - aware encoder and an entailment - aware decoder ."}],
+        {"entailment Reward Augmented Maximum Likelihood ( RAML ) training" : {
+          "encourages" : {
+            "decoder of the summarization system" : {
+              "to produce" : {
+                "summary" : {
+                  "entailed by" : "source"
+                }
+              }
+            }  
+          },
+          "from sentence" : "Furthermore , we propose an entailment Reward Augmented Maximum Likelihood ( RAML ) training that encourages the decoder of the summarization system to produce summary entailed by the source ."
+        }}
+      ],
+      "share" : {
+        "encoder" : {
+          "of" : {
+            "summarization generation system" : {
+              "with" : "entailment recognition system"
+            }
+          }
+        },
+        "from sentence" : "We share the encoder of the summarization generation system with the entailment recognition system , so that the encoder can grasp both the gist of the source sentence and be aware of entailment relationships ."
+      }
+    }
+  }
+}

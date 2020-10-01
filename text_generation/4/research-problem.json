@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Generating Text", {"from sentence" : "Generating Text through Adversarial Training using Skip - Thought Vectors"}],
+    ["text generation", {"from sentence" : "Attempts have been made for utilizing GANs with word embeddings for text generation ."}],
+    ["natural language text generation", {"from sentence" : "Numerous efforts have been made in the field of natural language text generation for tasks such as sentiment analysis and machine translation ."}]
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Reading Comprehension", {"from sentence" : "The NarrativeQA Reading Comprehension Challenge"}],
+    ["Reading comprehension ( RC )", {"from sentence" : "Reading comprehension ( RC ) - in contrast to information retrieval - requires integrating information and reasoning about events , entities , and their relations across a full document ."}],
+    ["RC", {"from sentence" : "Question answering is conventionally used to assess RC ability , in both artificial agents and children learning to read ."}]
+  ] 
+}

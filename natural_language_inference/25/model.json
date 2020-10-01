@@ -1,0 +1,46 @@
+{
+  "has" : {
+    "Model" : {
+      "take" : {
+        "model" : {
+          "carries out" : {
+            "only basic question - document interaction" : {
+              "prepend to" : {
+                "module" : {
+                  "that produces" : {
+                    "token embeddings" : {
+                      "by" : {
+                        "explicitly gating" : {
+                          "between" : "contextual and non-contextual representations"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "To illustrate this idea , we take a model that carries out only basic question - document interaction and prepend to it a module that produces token embeddings by explicitly gating between contextual and non-contextual representations ( for both the document and question ) ."
+            }
+          }
+        }
+      },
+      "turn to" : {
+        "semisupervised setting" : {
+          "leverage" : {
+            "language model" : {
+              "pre-trained on" : {
+                "large amounts of data" : {
+                  "as" : {
+                    "sequence encoder" : {
+                      "forcibly facilitates" : "context utilization"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Motivated by these findings , we turn to a semisupervised setting in which we leverage a language model , pre-trained on large amounts of data , as a sequence encoder which forcibly facilitates context utilization ."
+        }
+      }
+    }
+  }
+}

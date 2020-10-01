@@ -1,0 +1,62 @@
+{
+  "has" : {
+    "Model" : {
+      "to make" : {
+        "machine comprehension" : {
+          "has" : {
+            "fast" : {
+              "remove" : "recurrent nature of these models"
+            }
+          },
+          "from sentence" : "In this paper , aiming to make the machine comprehension fast , we propose to remove the recurrent nature of these models ."
+        }
+      },
+      "use" : {
+        "convolutions and self - attentions" : {
+          "as" : {
+            "building blocks" : {
+              "of" : "encoders",
+              "separately encodes" : "query and context"
+            }
+          },
+          "from sentence" : "We instead exclusively use convolutions and self - attentions as the building blocks of encoders that separately encodes the query and context ."
+        }
+      },
+      "learn" : {
+        "interactions" : {
+          "between" : "context and question",
+          "by" : "standard attentions"
+        },
+        "from sentence" : "Then we learn the interactions between context and question by standard attentions ."
+      },
+      "has" : {
+        "resulting representation" : {
+          "is" : {
+            "encoded again" : {
+              "with" : "our recurrency - free encoder",
+              "before" : {
+                "decoding" : {
+                  "to" : {
+                    "probability" : {
+                      "of" : {
+                        "each position" : {
+                          "being" : {
+                            "start or end" : {
+                              "of" : "answer span"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "The resulting representation is encoded again with our recurrency - free encoder before finally decoding to the probability of each position being the start or end of the answer span ."
+            }
+          }
+        }
+      },
+      "call" : ["architecture QANet", {"from sentence" : "We call this architecture QANet , which is shown in ."}]
+    }
+  }
+}

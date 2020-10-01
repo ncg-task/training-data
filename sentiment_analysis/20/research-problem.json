@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Message - level and Topic - based Sentiment Analysis", {"from sentence" : "DataStories at SemEval-2017 Task 4 : Deep LSTM with Attention for Message - level and Topic - based Sentiment Analysis"}],
+    ["Sentiment Analysis in Twitter", {"from sentence": "In this paper we present two deep - learning systems that competed at SemEval - 2017 Task 4 \" Sentiment Analysis in Twitter \" ."}],
+    ["Sentiment analysis", {"from sentence" : "Sentiment analysis is an area in Natural Language Processing ( NLP ) , studying the identification and quantification of the sentiment expressed in text ."}]
+  ]
+}

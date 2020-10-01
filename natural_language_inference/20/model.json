@@ -1,0 +1,21 @@
+{
+  "has" : {
+    "Model" : {
+      "opt for" : ["sentence encoding approach", {"from sentence" : "With the goal of obtaining general - purpose sentence representations in mind , we opt for the sentence encoding approach ."}],
+      "extend" : {
+        "InferSent architecture" : {
+          "with" : {
+            "hierarchylike structure" : {
+              "of" : {
+                "bidirectional LSTM ( BiLSTM ) layers" : {
+                  "with" : "max pooling"
+                }
+              }
+            }
+          },
+          "from sentence" : "Motivated by the success of the InferSent architecture we extend their architecture with a hierarchylike structure of bidirectional LSTM ( BiLSTM ) layers with max pooling ."
+        }
+      }
+    }
+  }
+}

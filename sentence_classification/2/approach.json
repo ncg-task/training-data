@@ -1,0 +1,88 @@
+{
+  "has" : {
+    "Approach" : {
+      "propose" : {
+        "usage of translations" : {
+          "as" : "compelling and effective domain - free contexts",
+          "from sentence" : "In this paper , we propose the usage of translations as compelling and effective domain - free contexts , or contexts that are always available no matter what the task domain is ."
+        },
+        "method" : {
+          "to mitigate" : {
+            "possible problems" : {
+              "when using" : {
+                "translated sentences" : {
+                  "as" : "context"
+                }
+              }
+            }
+          },
+          "from sentence" : "In this paper , we propose a method to mitigate the possible problems when using translated sentences as context based on the following observations ."
+        }
+      },
+      "present" : ["neural attentionbased multiple context fixing attachment ( MCFA )", {"from sentence" : "Based on these observations , we present a neural attentionbased multiple context fixing attachment ( MCFA ) ."}],
+      "has" : {
+        "MCFA" : {
+          "is" : {
+            "series of modules" : {
+              "uses" : {
+                "all sentence vectors" : {
+                  "as" : "context",
+                  "to fix" : "a sentence vector"
+                }
+              }
+            },
+            "from sentence" : "MCFA is a series of modules that uses all the sentence vectors ( e.g. Arabic , English , Korean , etc. ) as context to fix a sentence vector ( e.g. Korean ) ."            
+          },
+          "computes" : {
+            "two sentence usability metrics" : {
+              "to control" : "noise when fixing vectors",
+              "has" : {
+                "self usability" : {
+                  "weighs" : {
+                    "confidence" : {
+                      "of using" : {
+                        "sentence a" : {
+                          "in solving" : "task"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "MCFA computes two sentence usability metrics to control the noise when fixing vectors : ( a ) self usability ? i ( a ) weighs the confidence of using sentence a in solving the task ."
+                },
+                "relative usability" : {
+                  "weighs" : {
+                    "confidence of" : {
+                      "using" : {
+                        "sentence a" : {
+                          "fixing" : "sentence b"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "( b ) relative usability ? r ( a , b ) weighs the confidence of using sentence a in fixing sentence b."
+                }
+              }
+            }
+          },
+          "attached after" : {
+            "encoding the sentence" : {
+              "makes it widely adaptable" : "to other models"
+            },
+            "from sentence" : "( 1 ) MCFA is attached after encoding the sentence , which makes it widely adaptable to other models ."
+          },
+          "moves" : {
+            "vectors" : {
+              "inside" : "same space",
+              "preserves" : {
+                "meaning" : {
+                  "of" : "vector dimensions"
+                }
+              }
+            },
+            "from sentence" : "( 3 ) MCFA moves the vectors inside the same space , thus preserves the meaning of vector dimensions ."
+          }
+        }
+      }
+    }
+  }
+}

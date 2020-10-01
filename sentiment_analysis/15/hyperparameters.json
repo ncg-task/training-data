@@ -1,0 +1,49 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "has" : {
+        "Optimal performance" : {
+          "for" : {
+            "all models" : {
+              "achieved at" : {
+                "word vector sizes" : {
+                  "between" : "25 and 35 dimensions"
+                },
+                "batch sizes" : {
+                  "between" : "20 and 30"
+                }
+              }
+            }
+          },
+          "from sentence" : "Optimal performance for all models was achieved at word vector sizes between 25 and 35 dimensions and batch sizes between 20 and 30 ."
+        },
+        "RNTN" : {
+          "usually achieve" : {
+            "best performance" : {
+              "on" : {
+                "dev set" : {
+                  "after training for" : "3 - 5 hours"
+                }
+              }
+            }
+          },
+          "from sentence" : "The RNTN would usually achieve its best performance on the dev set after training for 3 - 5 hours ."
+        },
+        "sentences" : {
+          "in" : {
+            "treebank" : {
+              "were split into" : "train ( 8544 ) , dev ( 1101 ) and test splits ( 2210 )"
+            }
+          },
+          "from sentence" : "The sentences in the treebank were split into a train ( 8544 ) , dev ( 1101 ) and test splits ( 2210 ) and these splits are made available with the data release ."
+        } 
+      },
+      "use" : {
+        "f = tanh" : {
+          "in" : "all experiments",
+          "from sentence" : "We use f = tanh in all experiments ."
+        }
+      }
+    }
+  }
+}

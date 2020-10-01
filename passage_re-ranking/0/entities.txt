@@ -1,0 +1,151 @@
+24	19	26	explore
+24	30	50	alternative approach
+24	51	59	based on
+24	60	69	enriching
+24	74	97	document representation
+25	36	41	train
+25	44	74	sequence - to - sequence model
+25	82	87	given
+25	90	98	document
+25	101	110	generates
+25	111	129	possible questions
+25	77	81	that
+25	90	98	document
+25	148	153	might
+25	21	27	answer
+25	0	11	Focusing on
+25	12	30	question answering
+68	0	4	BM25
+68	10	13	use
+68	18	51	Anserini open - source IR toolkit
+68	54	62	to index
+68	67	103	original ( non -expanded ) documents
+68	113	120	to rank
+68	125	133	passages
+70	0	16	BM25 + Doc2query
+71	9	15	expand
+71	20	29	documents
+71	30	35	using
+71	40	65	proposed Doc2query method
+72	8	22	index and rank
+72	27	45	expanded documents
+72	46	59	exactly as in
+72	64	75	BM25 method
+76	0	3	RM3
+77	3	10	compare
+77	11	29	document expansion
+77	30	34	with
+77	35	50	query expansion
+77	56	63	applied
+77	68	97	RM3 query expansion technique
+79	0	11	BM25 + BERT
+79	17	35	index and retrieve
+79	36	45	documents
+79	46	51	as in
+79	56	70	BM25 condition
+79	75	90	further re-rank
+79	36	45	documents
+79	105	109	with
+79	7	11	BERT
+80	0	23	BM25 + Doc2query + BERT
+80	29	58	expand , index , and retrieve
+80	59	68	documents
+80	69	74	as in
+80	79	105	BM25 + Doc2query condition
+80	110	125	further re-rank
+80	59	68	documents
+80	140	144	with
+80	19	23	BERT
+2	0	18	Document Expansion
+86	0	18	Document expansion
+86	19	23	with
+86	24	55	our method ( BM25 + Doc2query )
+86	56	64	improves
+86	65	88	retrieval effectiveness
+86	89	91	by
+86	94	98	15 %
+86	99	102	for
+86	103	116	both datasets
+89	0	57	Our full re-ranking condition ( BM25 + Doc2query + BERT )
+89	58	63	beats
+89	64	81	BM25 + BERT alone
+113	0	51	Our method without a re-ranker ( BM25 + Doc2query )
+113	52	56	adds
+113	59	72	small latency
+113	82	86	over
+113	87	120	baseline BM25 ( 50 ms vs. 90 ms )
+113	125	127	is
+113	142	160	seven times faster
+113	161	165	than
+113	168	184	neural re-ranker
+113	185	193	that has
+113	196	222	three points higher MRR@10
+87	8	15	combine
+87	16	34	document expansion
+87	35	39	with
+87	42	102	state - of - the - art re-ranker ( BM25 + Doc2query + BERT )
+87	108	115	achieve
+87	120	140	best - known results
+87	32	34	on
+87	152	160	TREC CAR
+87	163	166	for
+87	167	175	MS MARCO
+87	185	189	near
+87	194	210	state of the art
+99	3	14	notice that
+99	19	24	model
+99	34	38	copy
+99	39	49	some words
+99	50	54	from
+99	59	73	input document
+99	44	49	words
+99	59	73	input document
+100	30	38	produces
+100	45	59	not present in
+100	128	144	characterized as
+100	145	154	expansion
+100	155	157	by
+100	158	190	synonyms and other related terms
+103	6	12	expand
+103	13	31	MS MARCO documents
+103	32	37	using
+103	38	52	only new words
+103	57	65	retrieve
+103	70	93	development set queries
+103	94	98	with
+103	99	103	BM25
+103	109	115	obtain
+103	119	125	MRR@10
+103	126	128	of
+103	129	133	18.8
+104	0	14	Expanding with
+104	15	27	copied words
+104	28	33	gives
+104	37	43	MRR@10
+104	44	46	of
+104	47	51	19.7
+105	3	10	achieve
+105	13	26	higher MRR@10
+105	27	29	of
+105	30	34	21.5
+105	35	39	when
+105	40	49	documents
+105	54	67	expanded with
+105	68	87	both types of words
+107	3	12	find that
+107	17	28	Recall@1000
+107	29	31	of
+107	36	60	MS MARCO development set
+107	61	75	increased from
+107	76	89	85.3 ( BM25 )
+107	90	92	to
+107	93	118	89.3 ( BM25 + Doc2query )
+109	42	57	query expansion
+109	58	62	with
+109	63	66	RM3
+109	67	72	hurts
+109	33	35	in
+109	76	89	both datasets
+111	23	41	document expansion
+111	49	68	more effective than
+111	69	84	query expansion

@@ -1,0 +1,185 @@
+158	3	6	use
+158	11	40	released handcrafted features
+158	43	47	i.e.
+158	54	81	differential entropy ( DE )
+158	82	84	in
+158	85	103	SEED and SEED - IV
+158	114	153	Short - Time Fourier Transform ( STFT )
+158	82	84	in
+158	157	161	MPED
+158	177	184	to feed
+158	189	194	model
+159	9	18	sizes d N
+159	19	21	of
+159	26	42	input sample X t
+159	43	46	are
+159	47	67	5 62 , 5 62 and 1 62
+162	4	50	learning rate , momentum and weight decay rate
+162	55	61	set as
+162	62	82	0.003 , 0.9 and 0.95
+163	4	11	network
+163	15	28	trained using
+163	29	32	SGD
+163	33	37	with
+163	38	48	batch size
+163	49	51	of
+163	52	55	200
+160	11	13	in
+160	18	28	experiment
+160	47	50	set
+160	55	68	dimension d l
+160	69	71	of
+160	72	109	each electrode 's deep representation
+160	110	112	to
+160	113	115	32
+160	122	142	parameters d g and K
+160	69	71	of
+160	150	177	global high - level feature
+160	110	112	to
+160	181	189	32 and 6
+160	200	212	dimension do
+160	69	71	of
+160	220	234	output feature
+160	110	112	to
+160	238	240	16
+160	241	248	without
+160	249	268	elaborate traversal
+161	18	29	implemented
+161	30	35	BiHDM
+161	36	41	using
+161	42	53	Tensor Flow
+161	54	56	on
+161	57	79	one Nvidia 1080 Ti GPU
+164	17	22	adopt
+164	27	38	subtraction
+164	39	41	as
+164	46	64	pairwise operation
+164	65	67	of
+164	72	83	BiHDM model
+171	76	81	using
+171	82	96	twelve methods
+171	99	108	including
+171	109	146	linear support vector machine ( SVM )
+171	149	169	random forest ( RF )
+171	172	210	canonical correlation analysis ( CCA )
+171	213	266	group sparse canonical correlation analysis ( GSCCA )
+171	269	297	deep believe network ( DBN )
+171	300	355	graph regularization sparse linear regression ( GRSLR )
+171	358	401	graph convolutional neural network ( GCNN )
+171	404	458	dynamical graph convolutional neural network ( DGCNN )
+171	461	504	domain adversarial neural networks ( DANN )
+171	507	565	bi-hemisphere domain adversarial neural network ( BiDANN )
+171	568	580	EmotionMeter
+171	587	636	attention - long short - term memory ( A - LSTM )
+175	14	17	see
+175	27	47	proposed BiHDM model
+175	48	59	outperforms
+175	60	84	all the compared methods
+175	85	87	on
+175	88	131	all the three public EEG emotional datasets
+175	140	148	verifies
+175	153	175	effectiveness of BiHDM
+176	26	28	on
+176	29	38	SEED - IV
+176	45	60	proposed method
+176	61	74	improves over
+176	79	124	state - of - the - art method Emotion - Meter
+176	125	127	by
+176	128	131	4 %
+177	17	25	see that
+177	30	52	compared method BiDANN
+177	66	75	considers
+177	80	104	bi-hemispheric asymmetry
+177	107	115	achieves
+177	118	140	comparable performance
+200	0	5	shows
+200	10	46	t- test statistical analysis results
+200	67	70	see
+200	71	76	BiHDM
+200	22	24	is
+200	80	100	significantly better
+200	101	105	than
+200	110	125	baseline method
+193	46	60	twelve methods
+193	61	70	including
+193	71	131	Kullback - Leibler importance estimation procedure ( KLIEP )
+193	134	192	unconstrained least - squares importance fitting ( ULSIF )
+193	195	229	selective transfer machine ( STM )
+193	232	280	linear SVM , transfer component analysis ( TCA )
+193	245	280	transfer component analysis ( TCA )
+193	321	349	geodesic flow kernel ( GFK )
+193	352	356	DANN
+193	359	364	DGCNN
+193	367	398	deep adaptation network ( DAN )
+193	401	407	BiDANN
+193	414	422	A - LSTM
+197	50	59	seen that
+197	64	85	proposed BiHDM method
+197	86	94	achieves
+197	99	115	best performance
+197	22	24	in
+197	123	144	three public datasets
+197	153	161	verifies
+197	166	188	effectiveness of BiHDM
+197	189	204	in dealing with
+197	205	250	subject - independent EEG emotion recognition
+198	0	3	For
+198	8	22	three datasets
+198	29	44	improvements on
+198	45	53	accuracy
+198	54	57	are
+198	58	81	2.2 % , 3.5 % and 2.4 %
+198	104	117	compared with
+198	122	161	existing state - of - the - art methods
+200	10	46	t- test statistical analysis results
+200	67	70	see
+200	71	76	BiHDM
+200	22	24	is
+200	80	100	significantly better
+200	101	105	than
+200	110	125	baseline method
+43	26	33	propose
+43	36	68	novel neural network model BiHDM
+43	69	77	to learn
+43	82	108	bi-hemispheric discrepancy
+43	109	112	for
+43	113	136	EEG emotion recognition
+44	0	5	BiHDM
+44	6	20	aims to obtain
+44	25	49	deep discrepant features
+44	50	57	between
+44	62	88	left and right hemispheres
+44	100	119	expected to contain
+44	120	151	more discriminative information
+44	152	164	to recognize
+44	169	188	EEG emotion signals
+47	138	143	using
+47	89	97	simplify
+47	102	134	graph structure learning process
+47	8	23	to avoid losing
+47	29	67	intrinsic graph structural information
+47	68	70	of
+47	71	79	EEG data
+47	135	143	by using
+47	148	187	horizontal and vertical traversing RNNs
+47	190	210	which will construct
+47	213	240	complete relationship graph
+47	245	253	generate
+47	254	282	discriminative deep features
+47	58	61	for
+47	287	309	all the EEG electrodes
+48	0	15	After obtaining
+48	22	35	deep features
+48	36	38	of
+48	39	53	each electrode
+48	64	71	extract
+48	76	110	asymmetric discrepancy information
+48	111	118	between
+48	119	134	two hemispheres
+48	135	148	by performing
+48	149	177	specific pairwise operations
+48	101	104	for
+48	182	213	any paired symmetric electrodes
+2	45	68	EEG Emotion Recognition
+5	167	216	electroencephalograph ( EEG ) emotion recognition
+13	60	79	emotion recognition

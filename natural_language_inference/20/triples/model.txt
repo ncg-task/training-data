@@ -1,0 +1,6 @@
+(Contribution||has||Model)
+(Model||extend||InferSent architecture)
+(InferSent architecture||with||hierarchylike structure)
+(hierarchylike structure||of||bidirectional LSTM ( BiLSTM ) layers)
+(bidirectional LSTM ( BiLSTM ) layers||with||max pooling)
+(Model||opt for||sentence encoding approach)

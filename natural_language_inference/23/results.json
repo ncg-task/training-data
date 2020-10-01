@@ -1,0 +1,44 @@
+{
+  "has" : {
+    "Results" : {
+      "see that" : {
+        "our models" : {
+          "not only perform" : {
+            "well" : {
+              "on" : "original SQuAD dataset"
+            }
+          },
+          "also" : {
+            "outperform" : {
+              "has" : {
+                "all previous models" : {
+                  "by" : {
+                    "more than 5 %" : {
+                      "in" : "EM score",
+                      "on" : "adversarial datasets"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "From the results , we can see that our models not only perform well on the original SQuAD dataset , but also outperform all previous models by more than 5 % in EM score on the adversarial datasets ."
+        }
+      },
+      "shows" : {
+        "FusionNet" : {
+          "is" : {
+            "better" : {
+              "at" : {
+                "language understanding" : {
+                  "of both" : "context and question"
+                }
+              }
+            }
+          },
+          "from sentence" : "This shows that FusionNet is better at language understanding of both the context and question ."
+        }
+      }
+    }
+  }
+}

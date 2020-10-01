@@ -1,0 +1,76 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "novel neural network model BiHDM" : {
+          "to learn" : {
+            "bi-hemispheric discrepancy" : {
+              "for" : "EEG emotion recognition"
+            }
+          },
+          "from sentence" : "Thus , in this paper , we propose a novel neural network model BiHDM to learn the bi-hemispheric discrepancy for EEG emotion recognition ."
+        }
+      },
+      "has" : {
+        "BiHDM" : {
+          "aims to obtain" : {
+            "deep discrepant features" : {
+              "between" : {
+                "left and right hemispheres" : {
+                  "expected to contain" : {
+                    "more discriminative information" : {
+                      "to recognize" : "EEG emotion signals"
+                    }
+                  } 
+                }
+              }
+            },
+            "from sentence" : "BiHDM aims to obtain the deep discrepant features between the left and right hemispheres , which is expected to contain more discriminative information to recognize the EEG emotion signals ."
+          } 
+        }
+      },
+      "simplify" : {
+        "graph structure learning process" : {
+          "to avoid losing" : {
+            "intrinsic graph structural information" : {
+              "of" : "EEG data"
+            }
+          },
+          "by using" : {
+            "horizontal and vertical traversing RNNs" : {
+              "which will construct" : {
+                "complete relationship graph" : {
+                  "generate" : {
+                    "discriminative deep features" : {
+                      "for" : "all the EEG electrodes"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "Hence , to avoid losing this intrinsic graph structural information of EEG data , we can simplify the graph structure learning process by using the horizontal and vertical traversing RNNs , which will construct a complete relationship graph and generate discriminative deep features for all the EEG electrodes ."
+      },
+      "After obtaining" : {
+        "deep features" : {
+          "of" : "each electrode",
+          "extract" : {
+            "asymmetric discrepancy information" : {
+              "between" : {
+                "two hemispheres" : {
+                  "by performing" : {
+                    "specific pairwise operations" : {
+                      "for" : "any paired symmetric electrodes"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "After obtaining these deep features of each electrodes , we can extract the asymmetric discrepancy information between two hemispheres by performing specific pairwise operations for any paired symmetric electrodes ."
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Question Answering", {"from sentence" : "Efficient and Robust Question Answering from Minimal Context over Documents"}],
+    ["question answering ( QA )", {"from sentence" : "Neural models for question answering ( QA ) over documents have achieved significant performance improvements ."}],
+    ["QA", {"from sentence" : "Inspired by this observation , we propose a simple sentence selector to select the minimal set of sentences to feed into the QA model ."}]
+  ]
+}

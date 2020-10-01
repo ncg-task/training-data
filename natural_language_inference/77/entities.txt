@@ -1,0 +1,129 @@
+141	0	9	BoW Model
+142	17	27	trained on
+142	28	33	spans
+142	34	46	up to length
+142	47	49	10
+144	0	2	As
+144	3	23	pre-processing steps
+144	27	36	lowercase
+144	37	47	all inputs
+144	52	60	tokenize
+144	64	69	using
+144	70	75	spacy
+145	4	15	binary word
+145	5	7	in
+145	19	35	question feature
+145	39	50	computed on
+145	51	57	lemmas
+145	58	69	provided by
+145	70	75	spacy
+145	80	93	restricted to
+145	94	112	alphanumeric words
+145	118	125	are not
+145	126	135	stopwords
+146	30	33	use
+146	36	57	hidden dimensionality
+146	58	60	of
+146	23	24	n
+146	63	64	=
+146	65	68	150
+146	71	78	dropout
+146	79	81	at
+146	86	102	input embeddings
+146	103	107	with
+146	112	121	same mask
+146	122	125	for
+146	126	135	all words
+146	142	146	rate
+146	58	60	of
+146	150	153	0.2
+146	176	199	fixed word - embeddings
+146	158	175	300 - dimensional
+146	200	204	from
+146	205	210	Glove
+147	3	11	employed
+147	12	16	ADAM
+147	17	20	for
+147	21	33	optimization
+147	34	38	with
+147	42	65	initial learning - rate
+147	66	68	of
+147	69	74	10 ?3
+148	3	7	used
+148	8	20	mini-batches
+148	21	23	of
+148	24	28	size
+148	29	31	32
+149	0	6	FastQA
+151	3	11	tokenize
+151	16	21	input
+151	22	24	on
+151	25	36	whitespaces
+151	55	82	non-alphanumeric characters
+152	4	15	binary word
+152	5	7	in
+152	19	35	question feature
+152	39	50	computed on
+152	55	60	words
+152	69	78	appear in
+152	79	86	context
+153	30	33	use
+153	36	57	hidden dimensionality
+153	58	60	of
+153	23	24	n
+153	63	64	=
+153	65	68	300
+153	71	90	variational dropout
+153	75	77	at
+153	98	114	input embeddings
+153	115	119	with
+153	124	133	same mask
+153	134	137	for
+153	138	147	all words
+153	154	158	rate
+153	58	60	of
+153	162	165	0.5
+153	186	209	fixed word - embeddings
+153	170	185	300 dimensional
+153	210	214	from
+153	215	220	Glove
+154	3	11	employed
+154	12	16	ADAM
+154	17	20	for
+154	21	33	optimization
+154	34	38	with
+154	42	65	initial learning - rate
+154	66	68	of
+154	69	74	10 ?3
+28	122	128	namely
+28	129	135	FastQA
+28	19	26	develop
+28	36	69	neural , bag - of - words ( BoW )
+28	78	110	recurrent neural network ( RNN )
+29	17	22	model
+29	53	64	interaction
+29	93	100	between
+29	101	121	question and context
+29	127	134	through
+29	135	154	computable features
+29	62	64	on
+29	162	172	word level
+2	7	16	Neural QA
+4	36	61	question answering ( QA )
+4	57	59	QA
+11	0	18	Question answering
+175	4	23	neural BoW baseline
+175	24	32	achieves
+175	33	45	good results
+176	18	29	outperforms
+176	32	75	feature rich logistic - regression baseline
+176	64	66	on
+176	83	104	SQuAD development set
+176	109	123	nearly reaches
+176	128	150	BiLSTM baseline system
+179	6	22	very competitive
+179	23	25	to
+179	26	76	previously established stateof - the - art results
+179	106	114	improves
+179	121	124	for
+179	125	132	News QA

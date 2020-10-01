@@ -1,0 +1,313 @@
+{
+  "has" : {
+    "Experiments" : {
+      "has" : {
+        "Tasks" : {
+          "has" : {
+            "Language Modeling" : {
+              "has" : {
+                "Hyperparameters" : {
+                  "used" : {
+                    "stochastic gradient descent" : {
+                      "for" : "optimization",
+                      "with" : {
+                        "initial learning rate" : {
+                          "of" : "0.65"
+                        }
+                      },
+                      "has" : {
+                        "decays" : {
+                          "by" : {
+                            "factor" : {
+                              "of" : "0.85",
+                              "per" : "epoch"
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "Language Modeling
+We used stochastic gradient descent for optimization with an initial learning rate of 0.65 , which decays by a factor of 0.85 per epoch if no significant improvement has been observed on the validation set ."
+
+                    }
+                  },
+                  "has" : {
+                    "renormalize" : {
+                      "has" : {
+                        "gradient" : {
+                          "if" : {
+                            "norm" : {
+                              "greater than" : "5"
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "We renormalize the gradient if its norm is greater than 5 ."
+                    },
+                    "mini - batch size" : {
+                      "set to" : "40",
+                      "from sentence" : "The mini - batch size was set to 40 ."
+                    },
+                    "dimensions" : {
+                      "of" : "word embeddings",
+                      "set to" : {
+                        "150" : {
+                          "for" : "all models"
+                        }
+                      },
+                      "from sentence" : "The dimensions of the word embeddings were set to 150 for all models ."
+                    }
+                  }
+                },
+                "Baselines" : {
+                  "has" : {
+                    "Kneser - Ney 5 - gram language model ( KN5 )" : {
+                      "serves as" : {
+                        "non-neural baseline" : {
+                          "for" : "language modeling task"
+                        }
+                      },
+                      "from sentence" : "The first one is a Kneser - Ney 5 - gram language model ( KN5 ) which generally serves as a non-neural baseline for the language modeling task ."
+                    },
+                    "gated - feedback LSTM" : {
+                      "has" : {
+                        "feedback gates" : {
+                          "connecting" : {
+                            "hidden states" : {
+                              "across" : "multiple time steps",
+                              "as" : {
+                                "adaptive control" : {
+                                  "of" : "information flow"
+                                }
+                              }
+                            }
+                          },
+                          "from sentence" : "The gated - feedback LSTM has feedback gates connecting the hidden states across multiple time steps as an adaptive control of the information flow ."
+                        }
+                      }
+                    },
+                    "depth - gated LSTM" : {
+                      "uses" : {
+                        "depth gate" : {
+                          "to connect" : {
+                            "memory cells" : {
+                              "of" : "vertically adjacent layers"
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "The depth - gated LSTM uses a depth gate to connect memory cells of vertically adjacent layers ."
+                    }
+                  }
+                },
+                "Results" : {
+                  "Among" : {
+                    "all deep architectures" : {
+                      "has" : {
+                        "three - layer LSTMN" : {
+                          "performs" : "best"
+                        }
+                      },
+                      "from sentence" : "Amongst all deep architectures , the three - layer LSTMN also performs best ."
+                    }
+                  }
+                }
+              }
+            },
+            "Sentiment Analysis" : {
+              "has" : {
+                "Baselines" : {
+                  "are" : ["LSTM variants", {"from sentence" : "Most of these models ( including ours ) are LSTM variants ( third block in , recursive neural networks ( first block ) , or convolutional neural networks ( CNNs ; second block ) ."}],
+                  "report" : {
+                    "performance" : {
+                      "of" : "paragraph vector model",
+                      "from sentence" : "For comparison , we also report the performance of the paragraph vector model ( PV ; ; see , second block ) which neither operates on trees nor sequences but learns distributed document representations parameterized directly ."
+                    }
+                  }
+                },
+                "Hyperparameters" : {
+                  "used" : {
+                    "pretrained 300 - D Glove 840B vectors" : {
+                      "to initialize" : "word embeddings",
+                      "from sentence" : "We used pretrained 300 - D Glove 840B vectors to initialize the word embeddings ."
+                    },
+                    "Adam ( Kingma and Ba , 2015 )" : {
+                      "for" : {
+                        "optimization" : {
+                          "with" : {
+                            "two momentum parameters" : {
+                              "set to" : "0.9 and 0.999"
+                            }
+                          },
+                          "from sentence" : "We used Adam ( Kingma and Ba , 2015 ) for optimization with the two momentum parameters set to 0.9 and 0.999 respectively ."
+                        }
+                      }
+                    }
+                  },
+                  "has" : {
+                    "gradient" : {
+                      "for" : {
+                        "words" : {
+                          "with" : "Glove embeddings"
+                        }
+                      },
+                      "scaled by" : {
+                        "0.35" : {
+                          "in" : {
+                            "first epoch" : {
+                              "after" : {
+                                "all word embeddings" : {
+                                  "updated" : "normally"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "The gradient for words with Glove embeddings , was scaled by 0.35 in the first epoch after which all word embeddings were updated normally ."
+                    },
+                    "initial learning rate" : {
+                      "set to" : "2E - 3",
+                      "from sentence" : "The initial learning rate was set to 2E - 3 ."
+                    },
+                    "regularization constant" : {
+                      "was" : "1E - 4",
+                      "from sentence" : "The regularization constant was 1E - 4 and the mini-batch size was 5 ."
+                    },
+                    "mini-batch size" : {
+                      "was" : "5",
+                      "from sentence" : "The regularization constant was 1E - 4 and the mini-batch size was 5 ."                      
+                    },
+                    "dropout rate" : {
+                      "of" : "0.5",
+                      "applied to" : "neural network classifier",
+                      "from sentence" : "A dropout rate of 0.5 was applied to the neural network classifier ."
+                    }
+                  }
+                },
+                "Results" : {
+                  "show that" : {
+                    "both 1 - and 2 - layer LSTMNs" : {
+                      "has" : {
+                        "outperform" : {
+                          "has" : "LSTM baselines"
+                        }
+                      },
+                      "from sentence" : "The results in show that both 1 - and 2 - layer LSTMNs outperform the LSTM baselines while achieving numbers comparable to state of the art ."
+                    }
+                  },
+                  "On" : {
+                    "fine - grained and binary classification tasks" : {
+                      "has" : {
+                        "our 2 - layer LSTMN" : {
+                          "performs" : {
+                            "close" : {
+                              "to" : "best system"
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "On the fine - grained and binary classification tasks our 2 - layer LSTMN performs close to the best system T -. shows examples of intra-attention for sentiment words ."
+                    }
+                  }
+                }
+              }
+            },
+            "Natural Language Inference" : {
+              "has" : {
+                "Experimental setup" : {
+                  "used" : {
+                    "pre-trained 300 - D Glove 840B vectors" : {
+                      "to initialize" : "word embeddings",
+                      "from sentence" : "Natural Language Inference
+We used pre-trained 300 - D Glove 840B vectors to initialize the word embeddings ."
+
+                    },
+                    "Out - of - vocabulary ( OOV ) words" : {
+                      "initialized" : {
+                        "randomly" : {
+                          "with" : "Gaussian samples"
+                        }
+                      },
+                      "from sentence" : "Out - of - vocabulary ( OOV ) words were initialized randomly with Gaussian samples ( = 0 , ?= 1 ) ."
+                    },
+                    "Adam ( Kingma and Ba , 2015 )" : {
+                      "for" : "optimization",
+                      "with" : {
+                        "two momentum parameters" : {
+                          "set to" : "0.9 and 0.999"
+                        },
+                        "initial learning rate" : {
+                          "set to" : "1E - 3"
+                        }
+                      },
+                      "from sentence" : "We used Adam ( Kingma and Ba , 2015 ) for optimization with the two momentum parameters set to 0.9 and 0.999 respectively , and the initial learning rate set to 1E - 3 ."
+                    },
+                    "mini- batch size" : {
+                      "set to" : "16 or 32",
+                      "from sentence" : "The mini- batch size was set to 16 or 32 ."
+                    }
+                  },
+                  "updated" : {
+                    "OOV vectors" : {
+                      "in" : {
+                        "first epoch" : {
+                          "after" : {
+                            "all word embeddings" : {
+                              "updated" : "normally"
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "We only updated OOV vectors in the first epoch , after which all word embeddings were updated normally ."
+                    }
+                  },
+                  "has" : {
+                    "dropout rate" : {
+                      "selected from" : "[ 0.1 , 0.2 , 0.3 , 0.4 ]",
+                      "from sentence" : "The dropout rate was selected from [ 0.1 , 0.2 , 0.3 , 0.4 ] ."
+                    }
+                  }
+                },
+                "Baselines" : {
+                  "has" : ["shared LSTM ( Rocktschel et al. , 2016 )", "word - by - word attention model", "matching LSTM ( m LSTM ; )", {"from sentence" : "Specifically , these include a model which encodes the premise and hypothesis independently with two LSTMs , a shared LSTM ( Rocktschel et al. , 2016 ) , a word - by - word attention model , and a matching LSTM ( m LSTM ; ) ."}],
+                  "compared" : ["bag - of - words baseline", {"from sentence" : "We also compared our models with a bag - of - words baseline which averages the pre-trained embeddings for the words in each sentence and concatenates them to create features fora logistic regression classifier ( first block in ) ."}]
+                },
+                "Results" : {
+                  "has" : {
+                    "LSTMNs" : {
+                      "achieve" : "better performance",
+                      "from sentence" : "LSTMNs achieve better performance compared Models"
+                    }
+                  },
+                  "observe" : {
+                    "fusion" : {
+                      "is" : "generally beneficial"
+                    },
+                    "deep fusion" : {
+                      "has" : {
+                        "slightly improves" : {
+                          "over" : "shallow fusion"
+                        }
+                      }
+                    },
+                    "from sentence" : "We also observe that fusion is generally beneficial , and that deep fusion slightly improves over shallow fusion ."
+                  },
+                  "With" : {
+                    "standard training" : {
+                      "has" : {
+                        "deep fusion" : {
+                          "yield" : "state - of - the - art performance"
+                        }
+                      },
+                      "from sentence" : "With standard training , our deep fusion yields the state - of - the - art performance in this task ."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

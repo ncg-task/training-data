@@ -1,0 +1,64 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "position - aware bidirectional attention network ( PBAN )" : {
+          "based on" : "bidirectional Gated Recurrent Units ( Bi - GRU )",
+          "from sentence" : "Inspired by this , we go one step further and propose a position - aware bidirectional attention network ( PBAN ) based on bidirectional Gated Recurrent Units ( Bi - GRU ) ."
+        }
+      },
+      "has" : {
+        "PBAN" : {
+          "mutually models" : {
+            "relationship" : {
+              "between" : {
+                "sentence and different words in the aspect term" : {
+                  "by adopting" : "bidirectional attention mechanism"
+                }
+              }
+            },
+            "from sentence" : "In addition to utilizing the position information , PBAN also mutually models the relationship between the sentence and different words in the aspect term by adopting a bidirectional attention mechanism ."            
+          }
+        }
+      },
+      "consists of" : {
+        "Obtaining position information" : {
+          "of" : {
+            "each word" : {
+              "in" : {
+                "corresponding sentence" : {
+                  "based on" : {
+                    "current aspect term" : {
+                      "converting" : {
+                        "position information" : {
+                          "into" : "position embedding"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "1 ) Obtaining position information of each word in corresponding sentence based on the current aspect term , then converting the position information into position embedding ."
+        },
+        "PBAN" : {
+          "composes of" : {
+            "two Bi - GRU networks" : {
+              "focusing on extracting" : ["aspectlevel features", "sentence - level features"]
+            }
+          },
+          "from sentence" : "2 ) The PBAN composes of two Bi - GRU networks focusing on extracting the aspectlevel features and sentence - level features respectively ."
+        },
+        "bidirectional attention mechanism" : {
+          "to model" : {
+            "mutual relation" : {
+              "between" : "aspect term and its corresponding sentence"
+            }
+          },
+          "from sentence" : "3 ) Using the bidirectional attention mechanism to model the mutual relation between aspect term and its corresponding sentence ."
+        }
+      }
+    }
+  }
+}

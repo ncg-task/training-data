@@ -1,0 +1,33 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "use" : {
+        "word2 vec skip - gram model" : {
+          "to learn" : {
+            "initial word representations" : {
+              "on" : "Wikipedia"
+            }
+          },
+          "from sentence" : "We use the word2 vec skip - gram model to learn initial word representations on Wikipedia ."
+        }
+      },
+      "has" : {
+        "Other matrics" : {
+          "initialized with" : {
+            "random values" : {
+              "following" : "Gaussian distribution"
+            }
+          },
+          "from sentence" : "Other matrices are initialized with random values following a Gaussian distribution ."
+        }
+      },
+      "apply" : {
+        "cross-validation procedure" : {
+          "on" : "training data",
+          "to select" : "suitable hyperparameters",
+          "from sentence" : "We apply a cross-validation procedure on the training data to select suitable hyperparameters ."
+        }
+      }
+    }
+  }
+}

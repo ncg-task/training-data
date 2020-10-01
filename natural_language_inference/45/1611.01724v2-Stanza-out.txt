@@ -1,0 +1,199 @@
+title
+Published as a conference paper at ICLR 2017 WORDS OR CHARACTERS ? FINE - GRAINED GATING FOR READING COMPREHENSION
+abstract
+Previous work combines word - level and character - level representations using concatenation or scalar weighting , which is suboptimal for high - level tasks like reading comprehension .
+We present a fine - grained gating mechanism to dynamically combine word - level and character - level representations based on properties of the words .
+We also extend the idea of fine - grained gating to modeling the interaction between questions and paragraphs for reading comprehension .
+Experiments show that our approach can improve the performance on reading comprehension tasks , achieving new state - of - the - art results on the Children 's Book Test and Who Did What datasets .
+To demonstrate the generality of our gating mechanism , we also show improved results on asocial media tag prediction task .
+1
+INTRODUCTION
+Finding semantically meaningful representations of the words ( also called tokens ) in a document is necessary for strong performance in Natural Language Processing tasks .
+In neural networks , tokens are mainly represented in two ways , either using word - level representations or character - level representations .
+Word - level representations are obtained from a lookup table , where each unique token is represented as a vector .
+Character - level representations are usually obtained by applying recurrent neural networks ( RNNs ) or convolutional neural networks ( CNNs ) on the character sequence of the token , and their hidden states are combined to form the representation .
+Word - level representations are good at memorizing the semantics of the tokens while character - level representations are more suitable for modeling sub - word morphologies .
+For example , considering " cat " and " cats " , word - level representations can only learn the similarities between the two tokens by training on a large amount of training data , while character - level representations , by design , can easily capture the similarities .
+Character - level representations are also used to alleviate the difficulties of modeling out - of - vocabulary ( OOV ) tokens .
+Hybrid word - character models have been proposed to leverage the advantages of both word - level and character - level representations .
+The most commonly used method is to concatenate these two representations .
+However , concatenating word - level and character - level representations is technically problematic .
+For frequent tokens , the word - level representations are usually accurately estimated during the training process , and thus introducing character - level representations can potentially bias the entire representations .
+For infrequent tokens , the estimation of wordlevel representations have high variance , which will have negative effects when combined with the character - level representations .
+To address this issue , recently introduced a scalar gate conditioned on the word - level representations to control the ratio of the two representations .
+However , for the task of reading comprehension , preliminary experiments showed that this method was notable to improve the performance over concatenation .
+There are two possible reasons .
+First , word - level representations might not contain sufficient information to support the decisions of selecting between the two representations .
+Second , using a scalar gate means applying the same ratio for each of the dimensions , which can be suboptimal .
+In this work , we present a fine - grained gating mechanism to combine the word - level and characterlevel representations .
+We compute a vector gate as a linear projection of the token features followed 1 Code is available at https://github.com/kimiyoung/fg-gating 1 ar Xiv: 1611.01724v2 [ cs.CL ] 11 Sep 2017
+Published as a conference paper at ICLR 2017 by a sigmoid activation .
+We then multiplicatively apply the gate to the character - level and wordlevel representations .
+Each dimension of the gate controls how much information is flowed from the word - level and character - level representations respectively .
+We use named entity tags , part - ofspeech tags , document frequencies , and word - level representations as the features for token properties which determine the gate .
+More generally , our fine - grained gating mechanism can be used to model multiple levels of structure in language , including words , characters , phrases , sentences and paragraphs .
+In this work we focus on studying the effects on word - character gating .
+To better tackle the problem of reading comprehension , we also extend the idea of fine - grained gating for modeling the interaction between documents and queries .
+Previous work has shown the importance of modeling interactions between document and query tokens by introducing various attention architectures for the task .
+Most of these use an inner product between the two representations to compute the relative importance of document tokens .
+The Gated - Attention Reader showed improved performance by replacing the inner-product with an element - wise product to allow for better matching at the semantic level .
+However , they use aggregated representations of the query which may lead to loss of information .
+In this work we use a fine - grained gating mechanism for each token in the paragraph and each token in the query .
+The fine - grained gating mechanism applies an element - wise multiplication of the two representations .
+We show improved performance on reading comprehension datasets , including Children 's Book Test ( CBT ) , Who Did What , and SQuAD .
+On CBT , our approach achieves new state - of - the - art results without using an ensemble .
+Our model also improves over state - of - the - art results on the Who Did What dataset .
+To demonstrate the generality of our method , we apply our word - character finegrained gating mechanism to asocial media tag prediction task and show improved performance over previous methods .
+Our contributions are two - fold .
+First , we present a fine - grained word - character gating mechanism and show improved performance on a variety of tasks including reading comprehension .
+Second , to better tackle the reading comprehension tasks , we extend our fine - grained gating approach to modeling the interaction between documents and queries .
+RELATED WORK
+Hybrid word - character models have been proposed to take advantages of both word - level and character - level representations .
+introduce a compositional character to word ( C2W ) model based on bidirectional LSTMs .
+describe a model that employs a convolutional neural network ( CNN ) and a highway network over characters for language modeling .
+use agate to adaptively find the optimal mixture of the character - level and word - level inputs .
+employ deep gated recurrent units on both character and word levels to encode morphology and context information .
+Concurrent to our work , ? employed a similar gating idea to combine word - level and character - level representations , but their focus is on low - level sequence tagging tasks and the gate is not conditioned on linguistic features .
+The gating mechanism is widely used in sequence modeling .
+Long short - term memory ( LSTM ) networks are designed to deal with vanishing gradients through the gating mechanism .
+Similar to LSTM , Gated Recurrent Unit ( GRU ) was proposed by , which also uses gating units to modulate the flow of information .
+The gating mechanism can also be viewed as a form of attention mechanism over two inputs .
+Similar to the idea of gating , multiplicative integration has also been shown to provide a benefit in various settings .
+find that multiplicative operations are superior to additive operations in modeling relations .
+propose to use Hadamard product to replace sum operation in recurrent networks , which gives a significant performance boost over existing RNN models .
+use a multiplicative gating mechanism to achieve state - of - the - art results on question answering benchmarks .
+Reading comprehension is a challenging task for machines .
+A variety of models have been proposed to extract answers from given text .
+propose a dynamic chunk reader to extract and rank a set of answer candidates from a given document to answer questions .
+introduce an end - to - end neural architecture which incorporates match - LSTM and pointer networks .
+FINE - GRAINED GATING
+In this section , we will describe our fine - grained gating approach in the context of reading comprehension .
+We first introduce the settings of reading comprehension tasks and a general neural network architecture .
+We will then describe our word - character gating and document - query gating approaches respectively .
+READING COMPREHENSION SETTING
+The reading comprehension task involves a document P = ( p 1 , p 2 , , p M ) and a query Q = ( q 1 , q 2 , , q N ) , where M and N are the lengths of the document and the query respectively .
+Each token pi is denoted as ( w i , Ci ) , where w i is a one - hot encoding of the token in the vocabulary and Ci is a matrix with each row representing a one - hot encoding of a character .
+Each token in the query q j is similarly defined .
+We use i as a subscript for documents and j for queries .
+The output of the problem is an answer a , which can either bean index or a span of indices in the document .
+Now we describe a general architecture used in this work , which is a generalization of the gated attention reader .
+For each token in the document and the query , we compute a vector representation using a function f .
+More specifically , for each token pi in the document ,
+The same function f is also applied to the tokens in the query .
+Let H 0 p and H q denote the vector representations computed by f for tokens in documents and queries respectively .
+In Section 3.2 , we will discuss the " word - character " fine - grained gating used to define the function f .
+Suppose that we have a network of K layers .
+At the k -th layer , we apply RNNs on H k?1 p and H q to obtain hidden states P k and Q k , where P k is a M d matrix and Q k is a N d matrix with d being the number of hidden units in the RNNs .
+Then we use a function r to compute anew representation for the document H k p = r( P k , Q k ) .
+In Section 3.3 , we will introduce the " document - query " finegrained gating used to define the function r.
+After going through K layers , we predict the answer index a using a softmax layer over hidden states H k p .
+For datasets where the answer is a span of text , we use two softmax layers for the start and end indices respectively .
+WORD - CHARACTER FINE - GRAINED GATING
+Given a one - hot encoding w i and a character sequence Ci , we now describe how to compute the vector representation hi = f ( w i , Ci ) for the token .
+In the rest of the section , we will drop the subscript i for notation simplicity .
+We first apply an RNN on C and take the hidden state in the last time step c as the character - level representation .
+Let E denote the token embedding lookup table .
+We perform a matrix - vector multiplication Ew to obtain a word - level representation .
+We assume c and Ew have the same length d e in this work .
+Previous methods defined f using the word - level representation Ew , the character - level representation c , or the concatenation [ Ew ; c ] .
+Unlike these methods , we propose to use agate to dynamically choose between the word - level and character - level representations based on the properties of the token .
+Let v denote a feature vector that encodes these properties .
+In this work , we use the concatenation of named entity tags , partof - speech tags , binned document frequency vectors , and the word - level representations to form the feature vector v. Let d v denote the length of v.
+The gate is computed as follows : where W g and b g are the model parameters with shapes d e d v and d e , and ?
+denotes an elementwise sigmoid function .
+The final representation is computed using a fine - grained gating mechanism ,
+where denotes element - wise product between two vectors .
+An illustration of our fine - grained gating mechanism is shown in .
+Intuitively speaking , when the gate g has high values , more information flows from the character - level representation to the final representation ; when the gate g has low values , the final representation is dominated by the word - level representation .
+Though also use agate to choose between word - level and character - level representations , our method is different in two ways .
+First , we use a more fine - grained gating mechanism , i.e. , vector gates rather than scalar gates .
+Second , we condition the gate on features that better reflect the properties of the token .
+For example , for noun phrases and entities , we would expect the gate to bias towards character - level representations because noun phrases and entities are usually less common and display richer morphological structure .
+Experiments show that these changes are key to the performance improvements for reading comprehension tasks .
+Our approach can be further generalized to a setting of multi - level networks so that we can combine multiple levels of representations using fine - grained gating mechanisms , which we leave for future work .
+DOCUMENT - QUERY FINE - GRAINED GATING
+Given the hidden states P k and Q k , we now describe how to compute a representation H k that encodes the interactions between the document and the query .
+In this section , we drop the superscript k ( the layer number ) for notation simplicity .
+Let pi denote the i - th row of P and q j denote the j-row of Q .
+Let d h denote the lengths of pi and q j .
+Attention - over - attention ( AoA ) defines a dot product between each pair of tokens in the document and the query , i.e. , p Ti q j , followed by row - wise and column - wise softmax nonlinearities .
+AoA imposes pair - wise interactions between the document and the query , but using a dot product is potentially not expressive enough and hard to generalize to multi - layer networks .
+The gated attention ( GA ) reader defines an element - wise product asp i g i where g i is agate computed by attention mechanism on the token pi and the entire query .
+The intuition for the gate g i is to attend to important information in the document .
+However , there is no direct pair - wise interaction between each token pair .
+We present a fine - grained gating method that combines the advantages of the above methods ( i.e. , both pairwise and element - wise ) .
+We compute the pairwise element - wise product between the hidden states in the document and the query , as shown in .
+More specifically , for pi and q j , we have
+where q j can be viewed as agate to filter the information in pi .
+We then use an attention mechanism over I ij to output hidden states hi as follows
+where uh is ad v - dimensional model parameter , b h 1 and b h2 are scalar model parameters , w i and w j are one - hot encodings for pi and q j respectively .
+We additionally use one - hot encodings in the attention mechanism to reinforce the matching between the same tokens since such information is not fully preserved in I ij when k is large .
+The softmax nonlinearity is applied overall j's .
+The final hidden states H are formed by concatenating the hi 's for each token pi .
+EXPERIMENTS
+We first present experimental results on the Twitter dataset where we can rule out the effects of different choices of network architectures , to demonstrate the effectiveness of our word - character fine - grained gating approach .
+Later we show experiments on more challenging datasets on reading comprehension to further show that our approach can be used to improve the performance on highlevel NLP tasks as well .
+EVALUATING WORD - CHARACTER GATING ON TWITTER
+We evaluate the effectiveness of our word - character fine - grained gating mechanism on asocial media tag prediction task .
+We use the Twitter dataset and follow the experimental settings in .
+We also use the same network architecture upon the token representations , which is an LSTM layer followed by a softmax classification layer .
+The Twitter dataset consists of English tweets with at least one hashtag from Twitter .
+Hashtags and HTML tags have been removed from the body of the tweet , and user names and URLs are replaced with special tokens .
+The dataset contains 2 million tweets for training , 10 K for validation and 50 K for testing , with a total of 2,039 distinct hashtags .
+The task is to predict the hashtags of each tweet .
+We compare several different methods as follows .
+Word char concat uses the concatenation of word - level and character - level representations as in ; word char feat concat concatenates the word - level and character - level representations along with the features described in but is conditioned on the features ; fine - grained gate is our method described in Section 3.2 .
+We include word char feat concat fora fair comparison because our fine - grained gating approach also uses the token features .
+The results are shown in .
+We report three evaluation metrics including precision@1 , re-call@10 , and mean rank .
+Our method outperforms character - level models used in by 2.29 % , 2.69 % , and 2.5 points in terms of precision , recall and mean rank respectively .
+We can observe that scalar gating approach can only marginally improve over the baseline methods , while fine - grained gating methods can substantially improve model performance .
+Note that directly concatenating the token features with the character - level and word - level representations does not boost the performance , but using the token features to compute agate ( as done in fine - grained gating ) leads to better results .
+This indicates that the benefit of fine - grained gating mainly comes from better modeling rather than using additional features .
+PERFORMANCE ON READING COMPREHENSION
+After investigating the effectiveness of the word - character fine - grained gating mechanism on the Twitter dataset , we now move onto a more challenging task , reading comprehension .
+In this section , we experiment with two datasets , the Children 's Book Test dataset and the SQuAD dataset .
+CLOZE - STYLE QUESTIONS
+We evaluate our model on cloze - style question answering benchmarks . 0.712 ( 0.710 ) 0.625 ( 0.625 ) 0.700 ( 0.703 ) 0.591 ( 0.595 )
+The Children 's Book Test ( CBT ) dataset is built from children 's books .
+The whole dataset has 669,343 questions for training , 8,000 for validation and 10,000 for testing .
+We closely follow the setting in and incrementally add different components to seethe changes in performance .
+For the fine - grained gating approach , we use the same hyper - parameters as in except that we use a character - level GRU with 100 units to be of the same size as the word lookup table .
+The word embeddings are updated during training .
+In addition to different ways of combining word - level and character - level representations , we also compare two different ways of integrating documents and queries : GA refers to the gated attention reader and FG refers to our fine - grained gating described in Section 3.3 .
+The results are reported in .
+We report the results on common noun ( CN ) questions and named entity ( NE ) questions , which are two widely used question categories in CBT .
+Our finegrained gating approach achieves new state - of - the - art performance on both settings and outperforms the current state - of - the - art results by up to 1.76 % without using ensembles .
+Our method outperforms the baseline GA reader by up to 2.4 % , which indicates the effectiveness of the fine - grained gating mechanism .
+Consistent with the results on the Twitter dataset , using word - character fine - grained gating can substantially improve the performance over concatenation or scalar gating .
+Furthermore , we can see that document - query fine - grained gating also contributes significantly to the final results .
+We also apply our fine - grained gating model to the Who Did What ( WDW ) dataset ( ? ) .
+As shown in , our model achieves state - of - the - art results compared to strong baselines .
+We fix the word embeddings during training .
+SQUAD
+The Stanford Question Answering Dataset ( SQuAD ) is a reading comprehension dataset collected recently .
+It contains 23,215 paragraphs come from 536 Wikipedia articles .
+Unlike other reading comprehension datasets such as CBT , the answers area span of text rather than a single word .
+The dataset is partitioned into a training set ( 80 % , 87,636 question - answer pairs ) , a development set ( 10 % , 10,600 question - answer pairs ) and a test set which is not released .
+We report our results in .
+" Exact match " computes the ratio of questions that are answered correctly by strict string comparison , and the F 1 score is computed on the token level .
+We can observe that both word - character fine - grained gating and document - query fine - grained gating can substantially improve the performance , leading to state - of - the - art results among published papers .
+Note that at the time of submission , the best score on the leaderboard is 0.716 inexact match and 0.804 in F1 without published papers .
+A gap exists because our architecture described in Section 3.1 does not specifically model the answer span structure that is unique to SQuAD .
+In this work , we focus on this general architecture to study the effectiveness of fine - grained gating mechanisms .
+VISUALIZATION AND ANALYSIS
+We visualize the model parameter W gas described in Section 3.2 .
+For each feature , we average the corresponding weight vector in W g .
+The results are described in .
+We can see that named entities like " Organization " and noun phrases ( with tags " NNP " or " NNPS " ) tend to use characterlevel representations , which is consistent with human intuition because those tokens are usually infrequent or display rich morphologies .
+Also , DOCLEN - 4 , WH - adverb ( " WRB " ) , and conjunction ( " IN " and " CC " ) tokens tend to use word - level representations because they appear frequently .
+We also sample random span of text from the SQuAD dataset , and visualize the average gate values in .
+The results are consistent with our observations in .
+Rare tokens , noun phrases , and named entities tend to use character - level representations , while others tend to use word - level representations .
+To further justify this argument , we also list the tokens with highest and lowest gate values in .
+CONCLUSIONS
+We present a fine - grained gating mechanism that dynamically combines word - level and characterlevel representations based on word properties .
+Experiments on the Twitter tag prediction dataset show that fine - grained gating substantially outperforms scalar gating and concatenation .
+Our method also improves the performance on reading comprehension and achieves new state - of - the - art results on CBT and WDW .
+In our future work , we plan to to apply the fine - grained gating mechanism for combining other levels of representations , such as phrases and sentences .
+It will also be intriguing to integrate NER and POS networks and learn the token representation in an end - to - end manner .

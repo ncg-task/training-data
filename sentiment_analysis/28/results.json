@@ -1,0 +1,67 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "overall performance" : {
+          "of" : {
+            "TD - LSTM" : {
+              "is" : "not good",
+              "makes" : {
+                "rough treatment" : {
+                  "of" : "target words"
+                }
+              }
+            }
+          },
+          "from sentence" : "The overall performance of TD - LSTM is not good since it only makes a rough treatment of the target words ."
+        },
+        "ATAE - LSTM , IAN and RAM" : {
+          "are" : "attention based models",
+          "stably exceed" : {
+            "TD - LSTM method" : {
+              "on" : "Restaurant and Laptop datasets"
+            }
+          },
+          "from sentence" : "ATAE - LSTM , IAN and RAM are attention based models , they stably exceed the TD - LSTM method on Restaurant and Laptop datasets ."
+        },
+        "RAM" : {
+          "better than" : "other RNN based models",
+          "does not perform" : {
+            "well" : {
+              "on" : "Twitter dataset"
+            }
+          },
+          "from sentence" : "RAM is better than other RNN based models , but it does not perform well on Twitter dataset , which might because bidirectional LSTM is not good at modeling small and ungrammatical text ."
+        },
+        "Feature - based SVM" : {
+          "still" : "competitive baseline",
+          "relying on" : "manually - designed features",
+          "from sentence" : "Feature - based SVM is still a competitive baseline , but relying on manually - designed features ."
+        },
+        "Rec - NN" : {
+          "gets" : {
+            "worst performances" : {
+              "among" : "all neural network baselines"
+            }
+          },
+          "from sentence" : "Rec - NN gets the worst performances among all neural network baselines as dependency parsing is not guaranteed to work well on ungrammatical short texts such as tweets and comments ."
+        }
+      },
+      "Like" : {
+        "AEN" : {
+          "has" : {
+            "Mem Net" : {
+              "eschews" : "recurrence",
+              "has" : {
+                "overall performance" : {
+                  "is" : "not good"
+                }
+              }
+            }
+          },
+          "from sentence" : "Like AEN , Mem Net also eschews recurrence , but its overall performance is not good since it does not model the hidden semantic of embeddings , and the result of the last attention is essentially a linear combination of word embeddings ."
+        }
+      }
+    }
+  }
+}

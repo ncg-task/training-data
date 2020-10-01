@@ -1,0 +1,8 @@
+{
+  "has research problem" : [
+    ["Information Retriever", {"from sentence" : "A Fully Attention - Based Information Retriever"}],
+    ["Question - answering ( QA )", {"from sentence" : "Question - answering ( QA ) systems that can answer queries expressed in natural language have been a perennial goal of the artificial intelligence community ."}],
+    ["open - domain QA", {"from sentence" : "That is , in fact , the proposed focus of recent open - domain QA datasets , such as SQuAD ."}],
+    ["QA", {"from sentence" : "In SQuAD , each problem instance consists of a passage P and a question Q. A QA system must then provide an answer A by selecting a snippet from P ."}]
+  ]
+}

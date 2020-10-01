@@ -1,0 +1,83 @@
+36	22	31	construct
+36	32	36	Swag
+36	42	61	adversarial dataset
+36	62	66	with
+36	67	100	113 k multiple - choice questions
+37	3	13	start with
+37	14	19	pairs
+37	20	22	of
+37	23	57	temporally adjacent video captions
+37	60	69	each with
+37	72	79	context
+37	86	103	follow - up event
+37	112	116	know
+37	120	139	physically possible
+38	8	11	use
+38	14	48	state - of - theart language model
+38	49	64	fine - tuned on
+38	70	74	data
+38	75	98	to massively oversample
+38	101	112	diverse set
+38	22	24	of
+38	116	173	possible negative sentence endings ( or counterfactuals )
+38	22	24	of
+38	75	77	to
+39	10	16	filter
+39	41	71	aggressively and adversarially
+39	72	77	using
+39	80	107	committee of trained models
+39	108	117	to obtain
+39	120	130	population
+39	134	151	de-biased endings
+39	152	156	with
+39	157	183	similar stylistic features
+39	191	200	real ones
+40	16	40	filtered counterfactuals
+40	45	57	validated by
+40	58	71	crowd workers
+40	72	89	to further ensure
+40	90	102	data quality
+2	35	42	Dataset
+2	47	77	Grounded Commonsense Inference
+236	4	14	best model
+236	20	29	only uses
+236	34	40	ending
+236	41	43	is
+236	48	67	LSTM sequence model
+236	68	72	with
+236	73	88	ELMo embeddings
+236	97	104	obtains
+236	105	111	43.6 %
+236	68	72	with
+237	43	59	greatly improves
+237	65	77	more context
+237	80	82	by
+237	83	88	3.1 %
+237	94	99	given
+237	104	123	initial noun phrase
+237	136	151	ad-ditional 4 %
+237	94	99	given
+237	172	186	first sentence
+238	0	19	Further improvement
+238	23	34	gained from
+238	35	41	models
+238	42	54	that compute
+238	55	79	pairwise representations
+238	80	82	of
+238	87	93	inputs
+239	10	29	simplest such model
+239	32	42	Dual - BoW
+239	45	52	obtains
+239	53	73	only 35.1 % accuracy
+239	76	85	combining
+239	86	124	In - fer Sent sentence representations
+239	125	130	gives
+239	131	146	40.5 % accuracy
+239	149	169	InferSent - Bilinear
+240	4	16	best results
+240	17	26	come from
+240	27	46	pairwise NLI models
+240	54	70	fully trained on
+240	71	89	Swag , ESIM + ELMo
+240	90	97	obtains
+240	98	113	59.2 % accuracy

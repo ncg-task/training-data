@@ -1,0 +1,33 @@
+{
+  "has" : {
+    "Model" : {
+      "present" : {
+        "two deep - learning systems" : {
+          "competed at" : "SemEval - 2017 Task 4",
+          "from sentence" : "In this paper , we present two deep - learning systems that competed at SemEval - 2017 Task 4 ."
+        }
+      },
+      "has" : {
+        "first model" : {
+          "desgined for addressing" : ["problem of messagelevel sentiment analysis", {"from sentence" : "Our first model is designed for addressing the problem of messagelevel sentiment analysis ."}],
+          "employ" : {
+            "2 - layer Bidirectional LSTM" : {
+              "equipped with" : "attention mechanism",
+              "from sentence" : "We employ a 2 - layer Bidirectional LSTM , equipped with an attention mechanism ."
+            }
+          }
+        }
+      },
+      "For" : {
+        "topic - based sentiment analysis tasks" : {
+          "propose" : {
+            "Siamese Bidirectional LSTM" : {
+              "with" : "contextaware attention mechanism"
+            }
+          },
+          "from sentence" : "For the topic - based sentiment analysis tasks , we propose a Siamese Bidirectional LSTM with a contextaware attention mechanism ."
+        }
+      }
+    }
+  }
+}

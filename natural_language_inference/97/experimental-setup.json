@@ -1,0 +1,55 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "For" : {
+        "word vectors" : {
+          "use" : {
+            "Google 's publicly available embeddings" : {
+              "trained with" : {
+                "word2vec" : {
+                  "on" : "100 - billion - word News corpus"
+                }
+              },
+              "from sentence" : "For word vectors we use Google 's publicly available embeddings , trained with word2vec on the 100 - billion - word News corpus ."
+            }
+          },
+          "kept" : {
+            "fixed" : {
+              "throughout" : "training",
+              "from sentence" : "These vectors are kept fixed throughout training , since we found that training them was not helpful ( likely because of MCTest 's size ) ."
+            }
+          },
+          "are" : ["300 - dimensional", {"from sentence" : "The vectors are 300 - dimensional ( d = 300 ) ."}]
+        }
+      },
+      "used" : {
+        "0.5" : {
+          "as" : "dropout probability",
+          "from sentence" : "We found dropout to be particularly effective at improving generalization from the training to the test set , and used 0.5 as the dropout probability ."
+        },
+        "Adam optimizer" : {
+          "with" : "standard settings",
+          "from sentence" : "We used the Adam optimizer with the standard settings ( Kingma and Ba , 2014 ) and a learning rate of 0.003 ."
+        },
+        "learning rate" : {
+          "of" : "0.003",
+          "from sentence" : "We used the Adam optimizer with the standard settings ( Kingma and Ba , 2014 ) and a learning rate of 0.003 ."
+        }
+      },
+      "has" : {
+        "Dropout" : {
+          "occurs after" : {
+            "all neural - network transformations" : {
+              "allowed to" : {
+                "change" : {
+                  "with" : "training"
+                }
+              }
+            },
+            "from sentence" : "Dropout occurs after all neural - network transformations , if those transformations are allowed to change with training ."
+          }
+        }
+      }
+    }
+  }
+}

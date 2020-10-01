@@ -1,0 +1,77 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "shows" : {
+        "number of training and test instances" : {
+          "in" : "each category",
+          "from sentence" : "shows the number of training and test instances in each category ."
+        }
+      },
+      "has" : {
+        "Word embeddings" : {
+          "in" : {
+            "AEN - Glo Ve" : {
+              "do not get updated in" : "learning process"
+            }
+          },
+          "fine - tune" : {
+            "pre-trained BERT" : {
+              "in" : "AEN - BERT"
+            }
+          },
+          "from sentence" : "Word embeddings in AEN - Glo Ve do not get updated in the learning process , but we fine - tune pre-trained BERT 3 in AEN - BERT ."
+        },
+        "Embedding dimension d dim" : {
+          "is" : {
+            "300" : {
+              "for" : "GloVe"
+            },
+            "768" : {
+              "for" : "pretrained BERT"
+            }
+          },
+          "from sentence" : "Embedding dimension d dim is 300 for GloVe and is 768 for pretrained BERT ."
+        },
+        "Dimension" : {
+          "of" : {
+            "hidden states d hid" : {
+              "set to" : "300"
+            }
+          },
+          "from sentence" : "Dimension of hidden states d hid is set to 300 ."
+        },
+        "weights" : {
+          "of" : "our model",
+          "initialized with" : "Glorot initialization",
+          "from sentence" : "The weights of our model are initialized with Glorot initialization ."
+        },
+        "Adam optimizer ( Kingma and Ba , 2014 )" : {
+          "applied to" : {
+            "update" : {
+              "has" : "all the parameters"
+            }
+          },
+          "from sentence" : "Adam optimizer ( Kingma and Ba , 2014 ) is applied to update all the parameters ."
+        }
+      },
+      "During" : {
+        "training" : {
+          "set" : {
+            "label smoothing parameter" : {
+              "to" : "0.2"
+            },
+            "coefficient ? of L 2 regularization item" : {
+              "is" : "10 ? 5"
+            },
+            "dropout rate" : {
+              "is" : "0.1"
+            }
+          }
+        },
+        "from sentence" : "During training , we set label smoothing parameter to 0.2 , the coefficient ?
+of L 2 regularization item is 10 ? 5 and dropout rate is 0.1 ."
+
+      }
+    }
+  }
+}

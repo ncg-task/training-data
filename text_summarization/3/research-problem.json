@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Abstractive Summarization", {"from sentence" : "Concept Pointer Network for Abstractive Summarization"}],
+    ["Abstractive summarization ( ABS )", {"from sentence" : "Abstractive summarization ( ABS ) has gained overwhelming success owing to a tremendous development of sequence - to - sequence ( seq2seq ) model and its variants ."}]
+  ]
+}

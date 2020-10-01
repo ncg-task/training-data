@@ -1,0 +1,46 @@
+{
+  "has" : {
+    "Results" : {
+      "get" : {
+        "74.1 F 1 score" : {
+          "on" : "out - of - domain dataset",
+          "from sentence" : "In Remarkably , we get 74.1 F 1 score on the out - of - domain dataset , which outperforms the previous state - of - the - art system by 2.0 F 1 score ."
+        }
+      },
+      "When ensembling" : {
+        "5 models" : {
+          "with" : {
+            "FFN nonlinear sub - layers" : {
+              "has" : {
+                "our approach" : {
+                  "achieves" : {
+                    "F 1 score" : {
+                      "of" : "84.6 and 83.9"
+                    }
+                  },
+                  "has" : {
+                    "absolute improvement" : {
+                      "of" : "1.4 and 0.5",
+                      "over" : "previous state - of - the - art"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "When ensembling 5 models with FFN nonlinear sub - layers , our approach achieves an F 1 score of 84.6 and 83.9 on the two datasets respectively , which has an absolute improvement of 1.4 and 0.5 over the previous state - of - the - art ."
+            }
+          }
+        }
+      },
+      "has" : {
+        "results" : {
+          "that" : {
+            "self - attention layers" : {
+              "helpful to capture" : ["structural information", "long distance dependencies"]
+            }
+          },
+          "from sentence" : "These results are consistent with our intuition that the self - attention layers is helpful to capture structural information and long distance dependencies ."
+        }
+      }
+    }
+  }
+}

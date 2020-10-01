@@ -1,0 +1,129 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "ATAE - LSTM" : {
+          "is" : {
+            "classical LSTM - based network" : {
+              "for" : "APC task",
+              "applies" : {
+                "attention mechanism" : {
+                  "to focus on" : {
+                    "important words" : {
+                      "in" : "context"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "ATAE - LSTM is a classical LSTM - based network for the APC task , which applies the attention mechanism to focus on the important words in the context ."
+        },
+        "ATSM -S" : {
+          "is" : {
+            "baseline model" : {
+              "of" : {
+                "ATSM variations" : {
+                  "for" : "Chinese language - oriented ABSA task"
+                }
+              }
+            }
+          },
+          "from sentence" : "ATSM -S Peng et al.
+  is a baseline model of the ATSM variations for Chinese language - oriented ABSA task ."
+  
+        },
+        "GANNA" : {
+          "is" : {
+            "novel neural network model" : {
+              "for" : "APC task",
+              "aimed to solve" : "shortcomings of traditional RNNs and CNNs"
+            }
+          },
+          "from sentence" : "GANN is novel neural network model for APC task aimed to solve the shortcomings of traditional RNNs and CNNs ."
+        },
+        "AEN" : {
+          "is" : {
+            "attentional encoder network" : {
+              "based on" : "pretrained BERT model",
+              "aims to solve" : "aspect polarity classification"
+            }
+          },
+          "from sentence" : "AEN - is an attentional encoder network based on the pretrained BERT model , which aims to solve the aspect polarity classification ."
+        },
+        "BERT" : {
+          "is" : {
+            "BERT - adapted model" : {
+              "for" : "Review Reading Comprehension ( RRC ) task"
+            }
+          },
+          "from sentence" : "BERT - is a BERT - adapted model for Review Reading Comprehension ( RRC ) task , a task inspired by machine reading comprehension ( MRC ) , it could be adapted to aspect - level sentiment classification task ."
+        },
+        "BERT - BASE" : {
+          "is" : "basic pretrained BERT model",
+          "adapt it to" : {
+            "ABSA multi-task learning" : {
+              "equips" : {
+                "same ability" : {
+                  "to automatically extract" : "aspect terms",
+                  "classify" : {
+                    "aspects polarity" : {
+                      "as" : "LCF - ATEPC model"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "BERT - BASE is the basic pretrained BERT model .
+  We adapt it to ABSA multi-task learning , which equips the same ability to automatically extract aspect terms and classify aspects polarity as LCF - ATEPC model ."
+  
+        },
+        "BERT - ADA" : {
+          "is" : {
+            "domain - adapted BERT - based model" : {
+              "proposed for" : "APC task",
+              "finetuned" : {
+                "BERT - BASE model" : {
+                  "on" : "task - related corpus"
+                }
+              }
+            }
+          },
+          "from sentence" : "BERT - ADA
+  Rietzler et al.
+  is a domain - adapted BERT - based model proposed for the APC task , which finetuned the BERT - BASE model on task - related corpus ."
+  
+        },
+        "LCF - ATEPC" : {
+          "is" : {
+            "multi -task learning model" : {
+              "for" : "ATE and APC tasks"
+            }
+          },
+          "from sentence" : "LCF - ATEPC 5 is the multi -task learning model for the ATE and APC tasks , which is based on the the BERT - SPC model and local context focus mechanism ."
+        },
+        "LCF - ATE" : {
+          "are" : {
+            "variations of the LCF - ATEPC model" : {
+              "optimize for" : "ATE task"
+            }
+          },
+          "from sentence" : "LCF - ATE are the variations of the LCF - ATEPC model which only optimize for the ATE task ."
+        },
+        "LCF - APC" : {
+          "are" : {
+            "variations of LCF - ATEPC" : {
+              "optimize for" : {
+                "APC task" : {
+                  "during" : "training process"
+                }            
+              }
+            }
+          },
+          "from sentence" : "LCF - APC are the variations of LCF - ATEPC and it only optimize for the APC task during training process ."
+        }      
+      }
+    }
+  }
+}

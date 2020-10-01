@@ -1,0 +1,55 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "neural multitask learning framework" : {
+          "to incorporate" : {
+            "knowledge" : {
+              "into" : {
+                "citations" : {
+                  "from" : "structure of scientific papers"
+                }
+              }
+            }
+          },
+          "from sentence" : "To this end , we propose a neural multitask learning framework to incorporate knowledge into citations from the structure of scientific papers ."
+        },
+        "two auxiliary tasks" : {
+          "as" : {
+            "structural scaffolds" : {
+              "to improve" : "citation intent prediction"
+            }
+          },
+          "from sentence" : "In particular , we propose two auxiliary tasks as structural scaffolds to improve citation intent prediction : 1 ( 1 ) predicting the section title in which the citation occurs and ( 2 ) predicting whether a sentence needs a citation ."
+        },
+        "neural scaffold framework" : {
+          "for" : {
+            "citation intent classification" : {
+              "to incorporate into" : {
+                "citations" : {
+                  "has" : {
+                    "knowledge" : {
+                      "from" : "structure of scientific papers"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Our contributions are : ( i ) we propose a neural scaffold framework for citation intent classification to incorporate into citations knowledge from structure of scientific papers ; ( ii ) we achieve anew state - of - the - art of 67.9 % F1 on the ACL - ARC citations benchmark , an absolute 13.3 % increase over the previous state - of - the - art ; and ( iii ) we introduce SciCite , anew dataset of citation intents which is at least five times as large as existing datasets and covers a variety of scientific domains ."
+            }
+          }
+        }
+      },
+      "On" : {
+        "two datasets" : {
+          "show that" : {
+            "proposed neural scaffold model" : {
+              "outperforms" : "existing methods",
+              "by" : "large margins"
+            }
+          },
+          "from sentence" : "On two datasets , we show that the proposed neural scaffold model outperforms existing methods by large margins ."
+        }
+      }
+    }    
+  }  
+}

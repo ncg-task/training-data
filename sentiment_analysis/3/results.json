@@ -1,0 +1,129 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "c LSTM" : {
+          "performs" : {
+            "reasonably well" : {
+              "on" : "short conversations ( i.e. , EC and DailyDialog )"
+            },
+            "worst" : {
+              "on" : "long conversations ( i.e. , MELD , EmoryNLP and IEMOCAP )"
+            }
+          },
+          "from sentence" : "c LSTM performs reasonably well on short conversations ( i.e. , EC and DailyDialog ) , but the worst on long conversations ( i.e. , MELD , EmoryNLP and IEMOCAP ) ."
+        },
+        "BERT BASE" : {
+          "achieves" : {
+            "very competitive performance" : {
+              "on": {
+                "all datasets" : {
+                  "except" : {
+                    "EC" : {
+                      "due to" : {
+                        "strong representational power" : {
+                          "via" : {
+                            "bi-directional context modelling" : {
+                              "using" : "Transformer"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "BERT BASE achieves very competitive performance on all datasets except EC due to its strong representational power via bi-directional context modelling using the Transformer ."
+        },
+        "DialogueRNN" : {
+          "performs better than" : {
+            "our model" : {
+              "on" : "IEMOCAP"
+            }
+          },
+          "from sentence" : "In particular , DialogueRNN performs better than our model on IEMOCAP , which maybe attributed to its detailed speaker information for modelling the emotion dynamics in each speaker as the conversation flows ."
+        },
+        "KET variants" : {
+          "name" : "KET SingleSelfAttn and KET StdAttn",
+          "perform" : {
+            "comparably" : {
+              "with" : {
+                "best baselines" : {
+                  "on" : {
+                    "all datasets" : {
+                      "except" : "IEMOCAP"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Our KET variants KET SingleSelfAttn and KET StdAttn perform comparably with the best baselines on all datasets except IEMOCAP ."
+            },
+            "noticeably worse" : {
+              "than" : {
+                "KET" : {
+                  "on" : {
+                    "all datasets" : {
+                      "except" : "EC"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "However , both variants perform noticeably worse than KET on all datasets except EC , validating the importance of our proposed hierarchical self - attention and dynamic context - aware affective graph attention mechanism ."
+            },
+            "on par" : {
+              "with" : {
+                "KET model" : {
+                  "on" : "EC"
+                }
+              },
+              "from sentence" : "One observation worth mentioning is that these two variants perform on a par with the KET model on EC ."
+            }
+          }
+        }
+      },
+      "when" : {
+        "utterance - level LSTM" : {
+          "in" : {
+            "c LSTM" : {
+              "replaced by" : {
+                "features" : {
+                  "extracted by" : "CNN",
+                  "has" : {
+                    "model" : {
+                      "performs" : {
+                        "significantly better" : {
+                          "than" : {
+                            "c LSTM" : {
+                              "on" : "long conversations"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "In contrast , when the utterance - level LSTM in c LSTM is replaced by features extracted by CNN , i.e. , the CNN + c LSTM , the model performs significantly better than c LSTM on long conversations , which further validates that modelling long conversations using only RNN models may not be sufficient ."
+        }
+      },
+      "indicates that" : {
+        "our model" : {
+          "is" : {
+            "robust" : {
+              "across" : {
+                "datasets" : {
+                  "with" : "varying training sizes , context lengths and domains"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "This finding indicates that our model is robust across datasets with varying training sizes , context lengths and domains ."
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "has" : {
+    "Results" : {
+      "On" : {
+        "WebQuestions" : {
+          "has" : {
+            "86 % of the questions" : {
+              "answered with" : "single supporting fact",
+              "has" : {
+                "performance" : {
+                  "has" : "increases significantly",
+                  "from" : {
+                    "36.2 %" : {
+                      "to" : "41.0 % F1-score"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "On WebQuestions , not specifically designed as a simple QA dataset , 86 % of the questions can now be answered with a single supporting fact , and performance increases significantly ( from 36.2 % to 41.0 % F1-score ) ."
+            }
+          }
+        }
+      },
+      "Using" : {
+        "bigger FB5M as KB" : {
+          "not change" : {
+            "performance" : {
+              "on" : "SimpleQuestions"
+            }
+          },
+          "from sentence" : "Using the bigger FB5M as KB does not change performance on SimpleQuestions because it was based on FB2M , but the results show that our model is robust to the addition of more entities than necessary ."
+        }
+      },
+      "has" : {
+        "Transfer learning on Reverb" : {
+          "has" : {
+            "best results" : {
+              "are" : ["67 % accuracy", {"68 %" : {"for" : "ensemble of 5 models"}}],
+              "from sentence" : "Our best results are 67 % accuracy ( and 68 % for the ensemble of 5 models ) , which are better than the 54 % of the original paper and close to the stateof - the - art 73 % of ."
+            }
+          },
+          "notice" : {
+            "models" : {
+              "trained on" : {
+                "single QA dataset" : {
+                  "perform" : {
+                    "poorly" : {
+                      "on" : "other datasets"
+                    }
+                  },
+                  "from sentence" : "We first notice that models trained on a single QA dataset perform poorly on the other datasets ( e.g. 46.6 % accuracy on SimpleQuestions for the model trained on WebQuestions only ) , which shows that the performance on We-bQuestions does not necessarily guarantee high coverage for simple QA ."
+                }
+              }
+            }
+          },
+          "training on" : {
+            "both datasets" : {
+              "improves" : "performance"
+            },
+            "from sentence" : "On the other hand , training on both datasets only improves performance ; in particular , the model is able to capture all question patterns of the two datasets ; there is no \" negative interaction \" ."
+          }
+        },
+        "Importance of data sources" : {
+          "has" : {
+            "paraphrases" : {
+              "not seem to" : {
+                "help much" : {
+                  "on" : "WebQuestions and SimpleQuestions",
+                  "except when" : {
+                    "training" : {
+                      "only with" : {
+                        "synthetic questions" : {
+                          "have" : {
+                            "dramatic impact" : {
+                              "on" : {
+                                "performance" : {
+                                  "on" : "Reverb"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "While paraphrases do not seem to help much on WebQuestions and SimpleQuestions , except when training only with synthetic questions , they have a dramatic impact on the performance on Reverb ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

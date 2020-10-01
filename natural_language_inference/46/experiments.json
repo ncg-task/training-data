@@ -1,0 +1,91 @@
+{
+  "has" : {
+    "Experiments" : {
+      "has" : {
+        "Tasks" : {
+          "has" : {
+            "Reading Summaries Only" : {
+              "has" : {
+                "Results" : {
+                  "has" : {
+                    "neural span prediction model" : {
+                      "has" : {
+                        "significantly outperforming" : {
+                          "has" : "all other proposed methods"
+                        },
+                        "from sentence" : "Reading Summaries
+Only
+This is indeed the case , with the neural span prediction model significantly outperforming all other proposed methods ."
+
+                      }
+                    },
+                    "Both the plain sequence to sequence model and the AS Reader" : {
+                      "perform" : "well",
+                      "from sentence" : "Both the plain sequence to sequence model and the AS Reader , successfully applied to the CNN / DailyMail reading comprehension task , also perform well on this task ."
+                    },
+                    "additional inductive bias" : {
+                      "results in" : {
+                        "higher performance" : {
+                          "for" : "span prediction model"
+                        }
+                      },
+                      "from sentence" : "An additional inductive bias results in higher performance for the span prediction model ."
+                    }
+                  },
+                  "on" : {
+                    "full Narra - tive QA task" : {
+                      "where" : {
+                        "context documents" : {
+                          "are" : "full stories"
+                        }
+                      },
+                      "observe" : {
+                        "decline" : {
+                          "in" : {
+                            "performance" : {
+                              "of" : "span- selection oracle IR model"
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "summarizes the results on the full Narra - tive QA task , where the context documents are full stories .
+As expected ( and desired ) , we observe a decline in performance of the span- selection oracle IR model , compared with the results on summaries ."
+
+                    }
+                  }
+                }
+              }
+            },
+            "Reading Full Stories Only" : {
+              "has" : {
+                "Results" : {
+                  "has" : {
+                    "AS Reader" : {
+                      "has" : {
+                        "underperforms" : {
+                          "has" : "simple no -context Seq2Seq baseline",
+                          "in terms of" : "MRR"
+                        },
+                        "from sentence" : "The AS Reader , which was the better - performing model on the summaries task , underperforms the simple no -context Seq2Seq baseline ( shown in ) in terms of MRR ."                    
+                      }
+                    }
+                  },
+                  "observed" : {
+                    "no significant differences" : {
+                      "for" : {
+                        "varying" : {
+                          "has" : "number of chunks"
+                        }
+                      },
+                      "from sentence" : "As with the AS Reader , we observed no significant differences for varying number of chunks ."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }      
+    }
+  }
+}

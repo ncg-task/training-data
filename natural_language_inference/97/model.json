@@ -1,0 +1,80 @@
+{
+  "has" : {
+    "Model" : {
+      "present" : {
+        "parallel - hierarchical approach" : {
+          "to" : "machine comprehension",
+          "designed to" : {
+            "work well" : {
+              "in" : "data - limited setting"
+            }
+          },
+          "from sentence" : "We present a parallel - hierarchical approach to machine comprehension designed to work well in a data - limited setting ."
+        }
+      },
+      "learns to" : {
+        "comprehend" : {
+          "at" : "high level",
+          "even when" : {
+            "data" : {
+              "is" : "sparse"
+            }
+          },
+          "from sentence" : "Our model learns to comprehend at a high level even when data is sparse ."
+        }
+      },
+      "compares" : {
+        "question and answer candidates" : {
+          "to" : "text",
+          "using" : "several distinct perspectives",
+          "from sentence" : "The key to our model is that it compares the question and answer candidates to the text using several distinct perspectives ."
+        }
+      },
+      "has" : {
+        "semantic perspective" : {
+          "compares" : {
+            "hypothesis" : {
+              "to" : {
+                "sentences" : {
+                  "in" : "text",
+                  "viewed as" : "single , self - contained thoughts"
+                }
+              }
+            }
+          },
+          "represented using" : {
+            "sum and transformation" : {
+              "of" : "word embedding vectors"
+            }
+          },
+          "from sentence" : "The semantic perspective compares the hypothesis to sentences in the text viewed as single , self - contained thoughts ; these are represented using a sum and transformation of word embedding vectors , similarly to in ."
+        },
+        "word - by - word perspective" : {
+          "focuses on" : {
+            "similarity matches" : {
+              "between" : {
+                "individual words" : {
+                  "from" : "hypothesis and text"
+                }
+              },
+              "at" : "various scales"
+            },
+            "from sentence" : "The word - by - word perspective focuses on similarity matches between individual words from hypothesis and text , at various scales ."            
+          },
+          "consider" : {
+            "matches" : {
+              "over" : "complete sentences"
+            },
+            "from sentence" : "As in the semantic perspective , we consider matches over complete sentences ."
+          },
+          "use" : {
+            "sliding window" : {
+              "acting on" : "subsentential scale",
+              "from sentence" : "We also use a sliding window acting on a subsentential scale ( inspired by the work of ) , which implicitly considers the linear distance between matched words ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

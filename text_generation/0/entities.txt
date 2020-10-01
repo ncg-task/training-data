@@ -1,0 +1,143 @@
+192	21	44	random token generation
+193	22	40	MLE trained LSTM G
+194	17	35	scheduled sampling
+195	22	61	Policy Gradient with BLEU ( PG - BLEU )
+185	45	61	first initialize
+185	66	76	parameters
+185	77	82	of an
+185	83	95	LSTM network
+185	96	105	following
+185	110	141	normal distribution N ( 0 , 1 )
+185	142	144	as
+185	149	155	oracle
+185	156	166	describing
+185	171	231	real data distribution G oracle ( x t |x 1 , . . . , x t?1 )
+187	0	2	In
+187	3	19	SeqGAN algorithm
+187	26	38	training set
+187	39	42	for
+187	47	60	discriminator
+187	61	76	is comprised by
+187	81	99	generated examples
+187	100	104	with
+187	109	116	label 0
+187	125	134	instances
+187	135	139	from
+187	3	4	S
+187	100	104	with
+187	109	114	label
+196	7	25	scheduled sampling
+196	32	48	training process
+196	49	66	gradually changes
+196	67	71	from
+196	74	126	fully guided scheme feeding the true previous tokens
+196	127	131	into
+196	132	136	LSTM
+196	139	146	towards
+196	149	195	less guided scheme which mostly feeds the LSTM
+196	196	200	with
+196	205	221	generated tokens
+189	91	93	in
+189	94	124	our synthetic data experiments
+189	131	142	kernel size
+189	146	150	from
+189	151	157	1 to T
+189	166	175	number of
+189	176	192	each kernel size
+189	193	203	is between
+189	204	214	100 to 200
+190	0	31	Dropout ) and L2 regularization
+190	41	49	to avoid
+190	50	62	over-fitting
+197	2	19	curriculum rate ?
+197	28	38	to control
+197	43	54	probability
+197	55	57	of
+197	58	83	replacing the true tokens
+197	84	88	with
+197	93	107	generated ones
+32	66	74	consider
+32	79	108	sequence generation procedure
+32	109	111	as
+32	114	148	sequential decision making process
+33	4	20	generative model
+33	24	34	treated as
+33	38	76	agent of reinforcement learning ( RL )
+33	83	88	state
+33	21	23	is
+33	96	119	generated tokens so far
+33	128	134	action
+33	21	23	is
+33	142	168	next token to be generated
+34	132	138	employ
+34	141	154	discriminator
+34	155	166	to evaluate
+34	53	61	sequence
+34	184	192	feedback
+34	197	207	evaluation
+34	208	216	to guide
+34	221	229	learning
+34	230	232	of
+34	237	253	generative model
+35	114	120	regard
+35	64	80	generative model
+35	142	146	as a
+35	147	177	stochastic parametrized policy
+36	0	2	In
+36	7	22	policy gradient
+36	28	34	employ
+36	35	60	Monte Carlo ( MC ) search
+36	61	75	to approximate
+36	80	100	state - action value
+37	3	17	directly train
+37	22	49	policy ( generative model )
+37	50	53	via
+37	54	69	policy gradient
+37	78	94	naturally avoids
+37	99	125	differentiation difficulty
+37	126	129	for
+37	130	143	discrete data
+37	144	148	in a
+37	149	165	conventional GAN
+4	195	224	generating real - valued data
+5	50	89	generating sequences of discrete tokens
+13	0	36	Generating sequential synthetic data
+202	66	69	see
+202	74	90	impact of SeqGAN
+202	99	110	outperforms
+202	111	140	other baselines significantly
+203	2	23	significance T - test
+203	24	26	on
+203	31	60	NLL oracle score distribution
+203	61	63	of
+203	68	87	generated sequences
+203	88	92	from
+203	97	112	compared models
+203	139	151	demonstrates
+203	156	179	significant improvement
+203	61	63	of
+203	183	189	SeqGAN
+203	190	197	overall
+203	97	112	compared models
+207	15	21	SeqGAN
+207	22	33	outperforms
+207	34	43	PG - BLEU
+205	0	11	After about
+205	12	31	150 training epochs
+205	34	38	both
+205	43	106	maximum likelihood estimation and the schedule sampling methods
+205	107	118	converge to
+205	121	153	relatively high NLL oracle score
+205	164	170	SeqGAN
+205	175	195	improve the limit of
+205	200	209	generator
+205	210	214	with
+205	219	233	same structure
+205	161	163	as
+205	241	250	baselines
+206	5	14	indicates
+206	19	71	prospect of applying adversarial training strategies
+206	72	74	to
+206	75	110	discrete sequence generative models
+206	111	126	to breakthrough
+206	131	149	limitations of MLE

@@ -1,0 +1,88 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "on" : {
+        "English dataset Gigawords" : {
+          "set" : {
+            "dimension" : {
+              "of" : {
+                "word embeddings" : {
+                  "to" : "300"
+                },
+                "hidden states and latent variables" : {
+                  "to" : "500"
+                }
+              }
+            }
+          },
+          "maximum length of" : {
+            "documents and summaries" : {
+              "is" : "100 and 50"
+            }
+          },
+          "has" : {
+            "batch size" : {
+              "of" : {
+                "mini-batch training" : {
+                  "is" : "256"
+                }
+              }
+            }  
+          },
+          "from sentence" : "For the experiments on the English dataset Gigawords , we set the dimension of word embeddings to 300 , and the dimension of hidden states and latent variables to 500 .
+The maximum length of documents and summaries is 100 and 50 respectively .
+The batch size of mini-batch training is 256 ."
+
+        }
+      },
+      "For" : {
+        "DUC - 2004" : {
+          "maximum length of" : {
+            "summaries" : {
+              "is" : "75 bytes"
+            }
+          },
+          "from sentence" : "For DUC - 2004 , the maximum length of summaries is 75 bytes ."          
+        },
+        "dataset of LCSTS" : {
+          "dimension of" : {
+            "word embeddings" : {
+              "is" : "350",
+              "from sentence" : "For the dataset of LCSTS , the dimension of word embeddings is 350 ."              
+            },
+            "hidden states and latent variables" : {
+              "to" : "500",
+              "from sentence" : "We also set the dimension of hidden states and latent variables to 500 ."
+            }
+          },
+          "maximum length of" : {
+            "documents and summaries" : {
+              "is" : "120 and 25",
+              "from sentence" : "The maximum length of documents and summaries is 120 and 25 respectively , and the batch size is also 256 ."              
+            }
+          }
+        }
+      },
+      "beam size of" : {
+        "decoder" : {
+          "set to" : "10"
+        },
+        "from sentence" : "The beam size of the decoder was set to be 10 ."
+      },
+      "has" : {
+        "Adadelta" : {
+          "with" : {
+            "hyperparameter ? = 0.95" : {
+              "used for" : "gradient based optimization"
+            }
+          },
+          "from sentence" : "Adadelta with hyperparameter ? = 0.95 and = 1 e ? 6 is used for gradient based optimization ."
+        },
+        "neural network based framework" : {
+          "implemented using" : "Theano",
+          "from sentence" : "Our neural network based framework is implemented using Theano ( Theano Development Team , 2016 ) ."
+        }
+      }
+    }
+  }
+}

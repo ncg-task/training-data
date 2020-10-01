@@ -1,0 +1,131 @@
+{
+  "has" : {
+    "Results" : {
+      "on" : {
+        "RACE" : {
+          "has" : {
+            "6 % improvement" : {
+              "on" : "RACE - H dataset",
+              "from sentence" : "Experimental Results on RACE
+Overall , there is a 6 % improvement on the RACE - H dataset and 1.8 % improvement on the RACE - M dataset ."
+
+            },
+            "1.8 % improvement" : {
+              "on" : "RACE - M dataset",
+              "from sentence" : "Overall , there is a 6 % improvement on the RACE - H dataset and 1.8 % improvement on the RACE - M dataset ."
+            },
+            "Sim .MRU and MRU" : {
+              "achieve" : {
+                "comparable performance" : {
+                  "to" : "each other"
+                }
+              },
+              "from sentence" : "In general , we also found that the usage of a recurrent cell is not really crucial on this dataset since ( 1 ) Sim .
+MRU and MRU can achieve comparable performance to each other , ( 2 ) GRU and LSTM models do not have a competitive edge and ( 3 ) Using no encoder already achieves comparable 1 performance to DFN ."
+
+            },
+            "GRU and LSTM models" : {
+              "do not have" : "competitive edge",
+              "from sentence" : "In general , we also found that the usage of a recurrent cell is not really crucial on this dataset since ( 1 ) Sim .
+MRU and MRU can achieve comparable performance to each other , ( 2 ) GRU and LSTM models do not have a competitive edge and ( 3 ) Using no encoder already achieves comparable 1 performance to DFN ."
+
+            },
+            "no encoder" : {
+              "achieves" : {
+                "comparable 1 performance" : {
+                  "to" : "DFN"
+                }
+              },
+              "from sentence" : "In general , we also found that the usage of a recurrent cell is not really crucial on this dataset since ( 1 ) Sim .
+MRU and MRU can achieve comparable performance to each other , ( 2 ) GRU and LSTM models do not have a competitive edge and ( 3 ) Using no encoder already achieves comparable 1 performance to DFN ."
+
+            },
+            "ensemble of Sim . MRU models" : {
+              "achieve" : {
+                "state - of - the - art performance" : {
+                  "on" : "RACE dataset",
+                  "achieving" : {
+                    "overall score" : {
+                      "of" : "53.3 %"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Finally , an ensemble of Sim . MRU models achieve state - of - the - art performance on the RACE dataset , achieving and overall score of 53.3 % . :"
+            }
+          }
+        },
+        "Narrative QA benchmark" : {
+          "observe that" : {
+            "300d MRU" : {
+              "can achieve" : {
+                "comparable performance" : {
+                  "with" : "BiDAF"
+                }
+              },
+              "from sentence" : "are baselines reported by . reports our results on the Narrative QA benchmark .
+First , we observe that 300d MRU can achieve comparable performance with BiDAF ."
+
+            }
+          },
+          "compared with" : {
+            "BiLSTM" : {
+              "of" : "equal output dimensions ( 150 d )",
+              "find that" : {
+                "MRU model" : {
+                  "performs" : {
+                    "competitively" : {
+                      "with" : {
+                        "less than 1 % deprovement" : {
+                          "across" : "all metrics"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "When compared with a BiLSTM of equal output dimensions ( 150 d ) , we find that our MRU model performs competitively , with less than 1 % deprovement across all metrics ."
+            }
+          },
+          "performance of" : {
+            "our model" : {
+              "is" : {
+                "significantly better" : {
+                  "than" : "300d LSTM model"
+                }
+              },
+              "also being" : "significantly faster" 
+            },
+            "from sentence" : "The performance of our model is significantly better than 300d LSTM model while also being significantly faster ."
+          },
+          "has" : {
+            "MRU - LSTM" : {
+              "has" : {
+                "significantly outperforms" : {
+                  "has" : {
+                    "all models" : {
+                      "including" : "BiDAF"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Finally , the MRU - LSTM significantly outperforms all models , including BiDAF on this dataset ."
+            },
+            "Performance improvement" : {
+              "over" : {
+                "vanilla BiLSTM model" : {
+                  "ranges from" : {
+                    "1 % ? 3 %" : {
+                      "across" : "all metrics"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Performance improvement over the vanilla BiLSTM model ranges from 1 % ? 3 % across all metrics , suggesting that MRU encoders are also effective as a complementary neural building block ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

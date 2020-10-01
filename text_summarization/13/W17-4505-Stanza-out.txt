@@ -1,0 +1,267 @@
+title
+Coarse-to-Fine Attention Models for Document Summarization
+abstract
+Sequence - to - sequence models with attention have been successful fora variety of NLP problems , but their speed does not scale well for tasks with long source sequences such as document summarization .
+We propose a novel coarse - to - fine attention model that hierarchically reads a document , using coarse attention to select top - level chunks of text and fine attention to read the words of the chosen chunks .
+While the computation for training standard attention models scales linearly with source sequence length , our method scales with the number of top - level chunks and can handle much longer sequences .
+Empirically , we find that while coarse - tofine attention models lag behind state - of the - art baselines , our method achieves the desired behavior of sparsely attending to subsets of the document for generation .
+Introduction
+The sequence - to - sequence architecture of , also known as the encoder - decoder architecture , is now the gold standard for many NLP tasks , including machine translation , question answering , dialogue , caption generation , and in particular summarization .
+A popular variant of sequence - to - sequence models are attention models .
+By keeping an encoded representation of each part of the input , we " attend " to the relevant part each time we produce an output from the decoder .
+In practice , this means computing attention weights for all encoder hidden states , then taking the weighted average as our new context vector .
+While successful , existing sequence - tosequence methods are computationally limited by the length of source and target sequences .
+For a problem such as document summarization , a source sequence of length N ( where N could potentially be very large ) requires O( N ) model computations to encode .
+However , it makes sense intuitively that not every word of the source will be necessary for generating a summary , and so we would like to reduce the amount of computation performed on the source .
+Therefore , in order to scale attention models for this problem , we aim to prune down the length of the source sequence in an intelligent way .
+Instead of naively attending to all the words of the source at once , our solution is to use a two - layer hierarchical attention .
+For document summarization , this means dividing the document into chunks of text , sparsely attending to one or a few chunks at a time using hard attention , then applying the usual full attention over those chunks - we call this method coarse - to - fine attention .
+Through experiments , we find that while coarse - to - fine attention does not perform as well as standard attention , it does show the desired behavior of sparsely reading the source sequence .
+We structure the rest of the paper as follows .
+In Section 2 , we introduce related work on summarization and neural attention .
+In Section 3 , we review the encoder - decoder framework , and in Section 4 introduce our models .
+In Section 5 , we describe our experimental setup , and in Section 6 show results .
+Finally , we conclude in Section 7 .
+Related Work
+In summarization , neural attention models were first applied by to do headline generation , i.e. produce a title fora news article given only the first sentence .
+and apply attention models to summarize full documents , achieving stateof - the - art results on the CNN / Dailymail dataset .
+All of these models , however , suffer from the inherent complexity of attention over the full document .
+Indeed , report that a single model takes over 3 days to train .
+Many techniques have been proposed in the literature to efficiently handle the problem of large inputs to deep neural networks .
+One particular framework is that of " conditional computation " , as coined by - the idea is to only compute a subset of a network 's units fora given input by gating different parts of the network .
+Several methods , some stochastic and some deterministic , have been explored in the vein of conditional computation .
+In this work , we will focus on stochastic methods , although deterministic methods are worth considering as future work .
+On the stochastic front , demonstrate the effectiveness of " hard " attention .
+While standard " soft " attention averages the representations of where the model attends to , hard attention discretely selects a single location .
+Hard attention has been successfully applied in various computer vision tasks , but so far has limited usage in NLP .
+We will apply hard attention to the document summarization task by sparsifying our reading of the source text .
+Background
+We begin by describing the standard sequence - tosequence attention model , also known as encoderdecoder models .
+In the encoder - decoder architecture , an encoder recurrent neural network ( RNN ) reads the source sequence as input to produce the context , and a decoder RNN generates the output sequence using the context as input .
+Formally , suppose we have a vocabulary V .
+A given input sequence w 1 , . . . , w n ?
+V is transformed into a sequence of vectors x 1 , . . . , x n ?
+Rd in through a word embedding matrix E ?
+R | V|d in as x t = Ew t .
+The encoder RNN is given by a parameterizable function f enc and a hidden state ht ?
+Rd hid at each time step t with ht = f enc ( x t , h t?1 ) .
+In our models , we use the long - short term memory ( LSTM ) network .
+The decoder is another RNN f dec that generates output words y t ?
+V .
+It keeps hidden state h dec t ?
+Rd hid ash dec t = f dec ( y t , h dec t?1 ) similar to the encoder RNN .
+A context vector is produced at each time step using an attention function a that takes the encoded hidden states [ h 1 , . . . , h n ] and the current decoder hidden state h dec t and produces the context ct ?
+R dctx : ct = a ( [h 1 , . . . , h n ] , h dec t ) .
+As in , we feed the context vector at time t?1 back into the decoder RNN at time
+.
+Finally , a linear projection and softmax ( the generator ) produces a distribution over output words y t ?
+V:
+The models are then trained end - to - end to minimize negative log - likelihood loss ( NLL ) .
+We note that we have great flexibility in how our attention function a ( ) combines the encoder context and the current decoder hidden state .
+In the next section , we describe our models for a ( ) .
+Models
+Baselines
+We consider a few baseline models .
+A strong and simple baseline is the first sentence of the document , which we denote FIRST .
+We also consider the integer linear programming ( ILP ) based document summarizer of .
+We apply the code 2 directly on the test set without retraining the system .
+We provide the necessary preprocessing using the Berkeley coreference system 3 .
+We call this baseline ILP .
+Our models
+We ran experiments with the models STANDARD , HIER , and C2F as described above .
+For the coarse attention representations h s i of HIER and C2F , we experiment with convolutional and bag of words encodings .
+We use convolutions for the top - level representations by default , where we follow and perform a convolution over each window of words in the chunk using 600 filters of kernel width 6 .
+We use maxover - time pooling to obtain a fixed - dimensional top - level representation in Rd f where d f = 600 is the number of filters .
+For bag of words , we simply take the top - level representation as the sum of the chunk 's word embeddings ( for a separate embedding matrix ) , and we write BOW when we use this encoding .
+For BOW models , we fix the word embeddings on the encoder side ( in other models , they are fine tuned ) .
+As an addition to any top - level representation method , we can include positional embeddings .
+In general , we expect the order of text in the document to matter for summarization - for example , the first few sentences are usually important .
+We therefore include the option to concatenate a 25 dimensional embedding of the chunk 's position to the representation .
+When we use positional embeddings , we write + POS .
+For C2 F , we include options + MULTI fork mul >
+1 , + PRETRAIN for starting with a model pretrained with soft attention for 1 epoch , and + ALTERNATE for sampling between hard and soft attention with probability 0.5 .
+Standard Attention
+In , the function a ( ) is implemented with an attention network .
+We compute attention weights for each encoder hidden state hi as follows :
+Attention allows us to select the most relevant words of the source ( by assigning higher attention weights ) when generating words at each time step .
+Our final context vector is then ct = tanh ( W 2 [ ct , h dec t ] ) for W 2 ?
+R 2 d hid dctx a learned matrix .
+Going forward , we call this instantiation of the attention function STANDARD .
+Hierarchical Attention
+The attention network of STANDARD is computationally expensive for long sequences - for each hidden state of the decoder , we need to compare it to every hidden state of the encoder in order to determine whereto attend to .
+This seems unnecessary fora problem such as document summarization ; intuitively , we only need to attend to a few important chunks of text at a time .
+Therefore , we propose a hierarchical method of attending to the document - by segmenting the document into large top - level chunks of text , we first attend to these chunks , then to the words within the chunks .
+To accomplish this hierarchical attention , we construct encodings of the document at both levels .
+Suppose we have chunks s 1 , . . . , s m with words w i , 1 , . . . , w i , n i in chunk s i .
+For the toplevel representations , we use a simple encoding model ( e.g. bag of words or convolutions ) on each s i to obtain hidden states h s i ?
+R dsent ( see Section 5 for details ) .
+For the word representations , we run an LSTM encoder separately on the words of each chunk ; specifically , we apply an RNN on s i to get hidden states h i , j for i = 1 , . . . , m and
+Using the top - level representations h s i and the word representations h i , j , we compute coarse attention weights ? s 1 , . . . , ?
+s m for the toplevel chunks in the same way as STANDARD , and similarly compute fine attention weights ? w i , 1 , . . . , ?
+w i , n i for each i .
+We then compute the final soft attention on word w i , j as ? i , j = ? s i ? w i , j ( note this ensures that the weights normalize to 1 over the whole document ) .
+Finally , we proceed exactly as in standard attention by computing the weighted average over hidden states h i , j to produce the context , i.e. c = i , j ?
+i , j h i , j .
+We label this attention method HIER .
+Next , we consider the hard attention version of this model to achieve sparsity in our network .
+Coarse - to - Fine Attention
+With the previous models STANDARD and HIER , we are required to compute hidden states overall words and top - level chunks in the document , so that if we have M chunks and N words per chunk , the computational complexity is O ( M N ) for each attention step .
+However , if we are able to perform conditional computation and only read M + of the chunks at a time , we can reduce the attention complexity to O ( M + M + N ) , where we choose the chunks to attend to in O ( M ) and read the selected chunks in O ( M + N ) .
+Note that this expression ignores the total the number of words of the document , and the bottleneck becomes the length of each chunk of text .
+In our model , we will apply stochastic sampling to the top - level attention distribution in the spirit of hard attention while keeping the lowerlevel attention as is .
+We call our method coarseto - fine attention 1 .
+Specifically , using the top - level attention distribution ? s 1 , . . . , ?
+s m , we select a single chunk s i by sampling this distribution .
+We then set the context vector as n i j=1 ?
+w i , j h i , j , where we use the word attention weights for the chosen chunk s i .
+Note that this is equivalent to converting the top - level distribution ?
+s i to a one - hot encoding based on the hard sample , then writing ?
+i , j = ? s i ?
+w i , j as in HIER .
+At test time , we take the max ?
+s i fora onehot encoding instead of sampling .
+We label this coarse - to - fine method C2F .
+Because the hard attention model loses the property of being end - to - end differentiable , we use reinforcement learning to train our network .
+Specifically , we use the REINFORCE algorithm , also formalized by in the stochastic computation graph framework .
+Layers before the hard attention node receive backpropagated policy gradient ?L ?? = r ? log p (?|? ) ??
+, where r is some reward and p ( ?|? ) is the attention distribution that we sample from .
+Rewards and variance reduction
+We can think of our decoder RNN as a reinforcement learning agent where the state is the LSTM decoder state at time t and actions are the hard attention decisions .
+Since samples from ?
+tat time t of the RNN decoder can also affect future rewards , the total influenced reward is T s=t r sat time t , where rt = log p ( y t |y 1 , . . . , y t?1 , x ) is the single step reward .
+Inspired by the discount factor from RL , we slightly modify the total reward : instead of simply taking the sum , we can scale later rewards with a discount factor ? , giving total reward T s=t ?
+s?t r s for the stochastic hard attention node at .
+We found 1 The term coarse - to - fine attention has previously been introduced in the literature .
+However , their idea is different : they use coarse attention to reweight the fine attention computed over the entire input .
+This idea has also been called hierarchical attention . :
+Model architecture for sequence - to - sequence with coarse - to - fine attention .
+The left side is the encoder that reads the document , and the right side is the decoder that produces the output sequence .
+On the encoder side , the top - level hidden states are used for the coarse attention weights , while the word - level hidden states are used for the fine attention weights .
+The context vector is then produced by a weighted average of the word - level states .
+In HIER , we average over the coarse attention weights , thus requiring computation of all word - level hidden states .
+In C2 F , we make a hard decision for which chunk of text to use , and so we only need to compute word - level hidden states for one chunk .
+that adding a discount factor helps in practice ( we use ? = 0.5 ) .
+Training on the reward directly tends to have high variance , and so we subtract a baseline reward to help reduce variance as per .
+To calculate these baselines , we store a constant b t for each decoder time step t.
+We follow and keep an exponentially moving average of the reward for each time step t as b t ? b t + ?( r t ? b t ) where rt is the average minibatch reward and ?
+a learning rate ( set to 0.1 ) .
+In addition to including a baseline , we also scale the rewards by a tuned hyperparameter ?
+- we found that scaling helped to stabilize training .
+We empirically set ? to 0.3 .
+Therefore , our final reward at time t can be written as
+ALTERNATE training explain that training hard attention with REINFORCE has very high variance , even when including a baseline .
+Thus , for every minibatch of training , they randomly use soft attention instead of hard attention with some probability ( they use 0.5 ) .
+The backpropagated gradient is then the standard soft attention gradient instead of the REINFORCE gradient .
+When we use this training method in our results , we label it as + ALTERNATE .
+Multiple samples
+From our initial experiments with C2 F , we found that taking a single sample was not very effective .
+However , we discovered that sampling multiple times from the attention distribution ?
+s improves performance .
+To be precise , we fix a number k mul for the number of times we sample from ? s .
+Then , we sample based on the multinomial distribution ?
+Mult ( k mul , {?
+i } m i =1 ) to produce the new top - level attention vector ? s , with ? s i =
+i /k mul .
+In our results , we label this as + MULTI .
+Intuitively , k mul is the number of top - level chunks we select to produce the context .
+With higher k mul , the hard attention model more closely approximates the soft attention model , and hence should lead to better performance .
+This , however , incurs a cost in computational complexity .
+Experiments
+Data
+Experiments were performed on aversion of the CNN / Dailymail dataset from Hermann et al ..
+Each data point is a news document accompanied by up to 4 " highlights " , and we take the first of these as our target summary .
+Note that our dataset differs from related work which take all the highlights as the summary , as we were less interested in target side length and more in correctly locating sparse attention in the source .
+Train , validation , and test splits are provided with the original dataset along with document tokenization and sentence splitting .
+We do addi-tional preprocessing by replacing all numbers with # and appending end of sentence tokens </ s > to each sentence .
+We limit our vocabulary size to the 50000 most frequent words , replacing the rest with < unk > tokens .
+Implementation Details
+To ease minibatch training on the hierarchical models , we arrange the first 400 words of the document into a 10 by 40 image and take each row to be a top - level chunk .
+For HIER , we also experiment with shapes of 5 by 80 and 2 by 200 ( denoted 5X80 , 2 X200 resp . ) .
+These should more closely approximate STANDARD as the shape approaches a single sequence .
+In addition , we pad short documents to the maximum length with a special padding word and allow the model to attend to it .
+However , we zero out word embeddings for the padding states and also zero out their corresponding LSTM states .
+We found in practice that very little of the attention ended upon the corresponding states .
+Training
+We train with minibatch stochastic gradient descent ( SGD ) with batch size 20 for 20 epochs , renormalizing gradients below norm 5 .
+We initialize the learning rate to 0.1 for the top - level encoder and 1 for the rest of the model , and begin decaying it by a factor of 0.5 each epoch after the validation perplexity stops decreasing .
+We use 2 layer LSTMs with 500 hidden units , and we initialize word embeddings with 300 dimensional word2vec embeddings .
+We initialize all other parameters as uniform in the interval [ ? 0.1 , 0.1 ] .
+For convolutional layers , we use a kernel width of 6 and 600 filters .
+Positional embeddings have dimension 25 .
+We use dropout between stacked LSTM hidden states and before the final word generator layer to regularize ( with dropout probability 0.3 ) .
+At test time , we run beam search to produce the summary with a beam size of 5 .
+Our models are implemented using Torch based on a past version of the Open NMT system
+4 . We ran our experiments on a 12GB Geforce GTX Titan X GPU .
+The models take between 2 - 2.5 hours to train per epoch .
+Evaluation
+We report metrics for perplexity and ROUGE balanced F - scores on the test set .
+With multiple gold summaries in the CNN / Dailymail highlights , we take the max ROUGE score over the gold summaries fora predicted summary , as our models are trained to produce a single sentence .
+The final metric is then the average overall test data points .
+Note that because we are training the model to output a single highlight , our numbers are not comparable with or.
+shows summarization results .
+We see that our soft attention models comfortably beat the baselines , while hard attention lags behind .
+Results
+The ILP model ROUGE scores are surprisingly low .
+We attribute this to the fact that our models usually produce a single sentence as the summary , while the ILP system can produce multiple .
+ILP therefore has comparatively high ROUGE recall while suffering in precision .
+Unfortunately , the STANDARD sequence - tosequence baseline proves to be difficult to beat .
+HIER performs surprisingly poorly , even though the hierarchical assumption seems like a natural one to make .
+We believe that the assumption that we can factor the attention distribution into learned coarse and fine factors may in fact be too strong .
+Because the training signal is backpropagated to the word - level LSTM via the coarse attention , the training algorithm can not directly compare word attention weights as in STANDARD .
+Thus , the model does not learn how to attend to the most relevant top - level chunks , instead averaging the attention as a backoff ( see 6.1 ) .
+Additionally , the shapes 5X80 and 2X200 perform slightly better , indicating that the model prefers to have fewer sequences to attend to .
+C2 F results are significantly worse than soft attention results .
+As has been previously observed , training with reinforcement learning is inherently more difficult than standard maximum likelihood , as the signal from rewards tends to have high variance ( even with variance reduction techniques ) .
+Thus , it maybe too difficult to train the encoder ( which forms a large part of the model ) using such a noisy gradient .
+Even with soft attention pretraining ( + PRETRAIN ) and alternating training We run the ROUGE 1.5.5 script with flags -m -n 2 - a -f B.
+( + ALTERNATE ) , C2F fails to reach HIER performance .
+While taking a single sample performs quite poorly , we see that taking more than one sample gives a significant boost to scores ( + MULTI2 , + MULTI3 ) .
+There seem to be diminishing returns as we take more samples .
+Finally , we note that positional embeddings ( + POS ) give a nontrivial boost to scores and causes the attention to prefer the front of the document .
+The exception , C2 F + POS , is due to the fact that the attention collapses to always highlight the first top - level chunk .
+We show predicted summaries from each model in .
+We note that the ILP system , which extracts sentences first , produces long summaries .
+In contrast , the generated summaries tend to be quite succint , and most are the result of copying or paraphrasing specific sentences .
+Source : isis supporters have vowed to murder twitter staff because they believe the site 's policy of shutting down their extremist pages is a ' virtual war ' . </ s >
+a mocked - up image of the site 's founder jack dorsey in < unk > was posted yesterday alongside a diatribe written in arabic , which claimed twitter employees ' necks are ' a target for the soldiers of the caliphate ' . </ s > addressing mr dorsey personally , it claimed twitter was taking sides in a ' media war ' which allowed ' slaughter ' , adding : ' your virtual war onus will cause areal war on you . </ s >
+diatribe :
+an image of twitter founder jack dorsey in < unk > was posted alongside a rant in arabic </ s > ... GOLD : diatribe in arabic posted anonymously yesterday and shared online FIRST : isis supporters have vowed to murder twitter staff because they believe the site 's policy of shutting down their extremist pages is a ' virtual war ' .
+ILP : ISIS supporters have vowed to murder Twitter staff because they believe the site 's policy of shutting down their extremist pages is a ' virtual war ' .
+Twitter was taking sides .
+Islamic State militants have swept through huge tracts of Syria and Iraq , murdering thousands of people .
+STANDARD : image of jack dorsey 's founder jack dorsey posted on twitter HIER : the message was posted in arabic and posted on twitter HIER BOW : the message was posted on twitter and posted on twitter HIER + POS : dorsey in < unk > was posted yesterday alongside a diatribe in arabic C2F : ' lone war ' is a ' virtual war ' image of the islamic state C2F + MULTI2 : isis supporters say site 's policy of shutting down is a ' propaganda war ' C2F + POS + MULTI2 : twitter users say they believe site 's policy of closure is a ' media war '
+Analysis
+Sharpness of Attention
+We are interested in measuring the ability of our models to focus on a single top - level chunk using attention .
+Quantitatively , we measure the entropy of the coarse attention on the validation set in itively , higher entropy means the attention is more spread out , while lower entropy means the attention is concentrated .
+We compute the entropy numbers by averaging overall generated words in the validation set .
+Because each document has been split into 10 chunks , perfectly uniform entropy would be ? 2.30 .
+We note that the entropy of C2F is very low ( before taking the argmax attest time ) .
+This is exactly what we had hoped for - we will see that the model in fact learns to focus on only a few top - level chunks of the document over the course of generation .
+If we have multiple samples with + MULTI2 , the model is allowed to use 2 chunks at a time , which relaxes the entropy slightly .
+We also observe that the HIER entropy is very high and almost uniform .
+The model appears to be averaging the encoder hidden states across chunks , indicating that the training failed to find the same optimum as in STANDARD .
+We discuss this further in the next section .
+Attention Heatmaps
+For the document in , we visualize the coarse attention distributions produced by each model in .
+In each figure , the rows are the top - level chunks of each document ( 40 words per row ) , and the columns are the summary words produced by the model .
+The intensity of each box for a given column represents the strength of the attention weight on that row .
+For STANDARD , the heatmap is produced by summing the word - level attention weights in each row .
+In HIER , we observe that the attention becomes washed out ( in accord with its high entropy ) and is essentially averaging all of the encoder hidden states .
+This is surprising because in theory , HIER should be able to replicate the same attention distribution as STANDARD .
+If we examine the word - level attention ( not pictured here ) , we find that the model focuses on stop words ( e.g. punctuation marks , </ s > ) in the encoder .
+We posit this maybe due to the LSTM " saving " information at these words , and so the soft attention model can best retrieve the information by averaging over these hidden states .
+Alternatively , the model maybe ignoring the encoder and generating only from the decoder language model .
+In C2 F , we see that we get very sharp attention on some rows as we had hoped .
+Unfortunately , the model has trouble deciding whereto attend to , oscillating between the first and second - to - last rows .
+We partially alleviate this problem by allowing the model to attend to multiple rows in hard attention .
+Indeed , with + MULTI2 + POS , the model actually produces a very coherent output by focusing attention near the beginning .
+We believe that the improved result for this example is not only due to more flexibility in whereto attend , but a better
+Conclusion
+In this work , we experiment with a novel coarseto - fine attention model on the CNN / Dailymail dataset .
+We find that both versions of our model , HIER and C2F , fail to beat the standard sequenceto - sequence model on metrics , but C2F has the desired property of sharp attention on a small subset of the source .
+Therefore , coarse - to - fine attention shows promise for scaling up existing models to larger inputs .
+Further experimentation is needed to improve these attention models to state of the art .
+In particular , we need to better understand ( 1 ) the reason for the subpar performance and high entropy of hierarchical attention , ( 2 ) how to control the variance training of reinforcement learning , and ( 3 ) how to balance the tradeoff between stronger models and attention sparsity overlong source sequences .
+We would also like to investigate alternatives to reinforcement learning for implementing sparse attention , e.g. sparsemax and key - value memory networks ( preliminary investigations with sparsemax were not extremely promising , but we leave this to future work ) .
+Resolving these issues can allow attention models to become more scalable , especially in computationally intensive tasks such as document summarization .

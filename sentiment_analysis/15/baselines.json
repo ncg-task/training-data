@@ -1,0 +1,21 @@
+{
+  "has" : {
+    "Baselines" : {
+      "compare to" : {
+        "commonly used methods" : {
+          "that use" : {
+            "bag of words features" : {
+              "with" : ["Naive Bayes and SVMs", {"Naive Bayes" : {"with" : "bag of bigram features"}}]
+            }
+          },
+          "from sentence" : "We compare to commonly used methods that use bag of words features with Naive Bayes and SVMs , as well as Naive Bayes with bag of bigram features ."
+        },
+        "model" : {
+          "averages" : "neural word vectors",
+          "ignores" : "word order ( VecAvg )",
+          "from sentence" : "We also compare to a model that averages neural word vectors and ignores word order ( VecAvg ) ." 
+        }
+      }
+    }
+  }
+}

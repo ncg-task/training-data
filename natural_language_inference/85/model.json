@@ -1,0 +1,19 @@
+{
+  "has" : {
+    "Model" : {
+      "enhancing" : {
+        "sequential inference models" : {
+          "based on" : "chain models",
+          "from sentence" : "While some previous top - performing models use rather complicated network architectures to achieve the state - of - the - art results , we demonstrate in this paper that enhancing sequential inference models based on chain models can outperform all previous results , suggesting that the potentials of such sequential inference approaches have not been fully exploited yet ."
+        }
+      },
+      "explicitly encoding" : {
+        "parsing information" : {
+          "with" : "recursive networks",
+          "in" : ["local inference modeling", "inference composition"]
+        },
+        "from sentence" : "We show that by explicitly encoding parsing information with recursive networks in both local inference modeling and inference composition and by incorporating it into our framework , we achieve additional improvement , increasing the performance to a new state of the art with an 88.6 % accuracy ."
+      }
+    }
+  }
+}

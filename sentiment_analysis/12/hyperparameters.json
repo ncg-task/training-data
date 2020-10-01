@@ -1,0 +1,72 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "used" : {
+        "pre-trained Glo Ve vectors" : {
+          "to initialize" : {
+            "word embeddings" : {
+              "with" : {
+                "vector dimension" : {
+                  "has" : "300"
+                }
+              }
+            }
+          },
+          "from sentence" : "We used pre-trained Glo Ve vectors to initialize the word embeddings with vector dimension 300 ."
+        }
+      },
+      "For" : {
+        "out - of - vocabulary words" : {
+          "randomly sampled" : {
+            "embeddings" : {
+              "from" : "uniform distribution"
+            }
+          },
+          "from sentence" : "For out - of - vocabulary words , we randomly sampled their embeddings from the uniform distribution , as implemented in ."
+        }
+      },
+      "To alleviate" : {
+        "overfitting" : {
+          "employed" : {
+            "dropout strategy ( Hinton et al. , 2012 )" : {
+              "on" : {
+                "input word embeddings" : {
+                  "of" : "LSTM"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "To alleviate overfitting , we employed dropout strategy ( Hinton et al. , 2012 ) on the input word embeddings of the LSTM and the ultimate aspect - related sentence representation ."
+      },
+      "has" : {
+        "Adam ( Kingma and Ba , 2015 )" : {
+          "adopted" : {
+            "optimizer" : {
+              "with" : {
+                "learning rate" : {
+                  "has" : "0.001"
+                }
+              }
+            }
+          },
+          "from sentence" : "Adam ( Kingma and Ba , 2015 ) was adopted as the optimizer with the learning rate 0.001 ."
+        },
+        "All hyper - parameters" : {
+          "tuned on" : "20 % randomly held - out training data",
+          "from sentence" : "All hyper - parameters were tuned on 20 % randomly held - out training data ."
+        }
+      },
+      "When implementing" : {
+        "our approach" : {
+          "empirically set" : {
+            "maximum iteration number K" : {
+              "as" : ["5", {"0.1" : {"on" : "LAPTOP data set"}}, {"0.5" : {"on" : "REST data set"}}, {"0.1" : {"on" : "TWITTER data set"}}]
+            }
+          }
+        },
+        "from sentence" : "When implementing our approach , we empirically set the maximum iteration number K as 5 , ? in Equation 3 as 0.1 on LAPTOP data set , 0.5 on REST data set and 0.1 on TWITTER data set , respectively ."
+      }
+    }
+  }
+}

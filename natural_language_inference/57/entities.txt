@@ -1,0 +1,99 @@
+96	24	27	use
+96	32	67	standard pairwise ranking objective
+97	3	9	sample
+97	10	21	minibatches
+97	22	24	of
+97	25	57	128 random image - caption pairs
+97	64	68	draw
+97	73	90	contrastive terms
+97	91	95	from
+97	10	19	minibatch
+97	112	118	giving
+97	122	144	127 contrastive images
+97	145	148	for
+97	149	161	each caption
+97	166	174	captions
+97	145	148	for
+97	179	189	each image
+98	3	12	train for
+98	13	27	15 - 30 epochs
+98	28	33	using
+98	38	52	Adam optimizer
+98	53	57	with
+98	58	77	learning rate 0.001
+98	84	98	early stopping
+98	99	101	on
+98	106	120	validation set
+99	3	6	set
+99	11	20	dimension
+99	21	23	of
+99	28	70	embedding space and the GRU hidden state N
+99	71	73	to
+99	74	78	1024
+99	102	125	learned word embeddings
+99	71	73	to
+99	129	132	300
+99	143	149	margin
+99	71	73	to
+99	155	159	0.05
+101	54	63	constrain
+101	68	96	caption and image embeddings
+101	97	104	to have
+101	105	117	unit L2 norm
+115	3	11	see that
+115	12	29	order- embeddings
+115	30	40	outperform
+115	45	65	skipthought baseline
+115	74	83	not using
+115	84	105	external text corpora
+144	0	47	TEXTUAL ENTAILMENT / NATURAL LANGUAGE INFERENCE
+149	41	44	set
+149	49	59	dimensions
+149	60	62	of
+149	67	103	embedding space and GRU hidden state
+149	104	109	to be
+149	110	114	1024
+149	49	58	dimension
+149	60	62	of
+149	138	153	word embeddings
+149	104	109	to be
+149	160	163	300
+149	170	179	constrain
+149	143	153	embeddings
+149	195	202	to have
+149	203	215	unit L2 norm
+150	3	12	train for
+150	13	22	10 epochs
+150	23	27	with
+150	28	35	batches
+150	36	38	of
+150	39	57	128 sentence pairs
+151	3	6	use
+151	11	25	Adam optimizer
+151	26	30	with
+151	31	50	learning rate 0.001
+151	55	69	early stopping
+151	70	72	on
+151	77	91	validation set
+27	3	7	call
+27	8	18	embeddings
+27	19	26	learned
+27	39	56	order- embeddings
+26	28	35	exploit
+26	40	63	partial order structure
+26	64	66	of
+26	71	98	visual - semantic hierarchy
+26	99	110	by learning
+26	113	120	mapping
+26	130	133	not
+26	134	155	distance - preserving
+26	156	159	but
+26	160	178	order - preserving
+26	179	186	between
+26	191	215	visualsemantic hierarchy
+26	40	53	partial order
+26	236	240	over
+26	245	260	embedding space
+2	0	41	ORDER - EMBEDDINGS OF IMAGES AND LANGUAGE
+4	88	158	single visual - semantic hierarchy over words , sentences , and images
+15	147	171	visualsemantic hierarchy

@@ -1,0 +1,26 @@
+{
+  "has" : {
+    "Results" : {
+      "see that" : {
+        "RASG" : {
+          "achieves" : {
+            "11.0 % , 9.1 % and 6.6 % increment" : {
+              "over" : {
+                "state - of - the - art method CGU" : {
+                  "in terms of" : "ROUGE - 1 , ROUGE - 2 and ROUGE - L"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "We see that RASG achieves a 11.0 % , 9.1 % and 6.6 % increment over the state - of - the - art method CGU in terms of ROUGE - 1 , ROUGE - 2 and ROUGE - L respectively ."
+      },
+      "worth noticing" : {
+        "baseline model S2SR" : {
+          "achieves better performance than" : "S2S"
+        },
+        "from sentence" : "It is worth noticing that the baseline model S2SR achieves better performance than S2S which demonstrates the effectiveness of incorporating reader focused aspect in summary generation ."
+      }
+    }
+  }
+}

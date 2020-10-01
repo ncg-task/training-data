@@ -1,0 +1,44 @@
+{
+  "has" : {
+    "Model" : {
+      "show" : {
+        "neural network - based sentence model" : {
+          "can be applied to" : "task of answer sentence selection",
+          "from sentence" : "In this paper , we show that a neural network - based sentence model can be applied to the task of answer sentence selection ."
+        }
+      },
+      "construct" : {
+        "two distributional sentence models" : {
+          "first" : "bag - of - words model",
+          "second" : {"bigram model" : {"based on" : "convolutional neural network"}},
+          "from sentence" : "We construct two distributional sentence models ; first a bag - of - words model , and second , a bigram model based on a convolutional neural network ."
+        }
+      },
+      "train" : {
+        "supervised model" : {
+          "to learn" : {
+            "semantic matching" : {
+              "between" : "question and answer pairs",
+              "Assuming set of" : "pre-trained semantic word embeddings"
+            }
+          },
+          "from sentence" : "Assuming a set of pre-trained semantic word embeddings , we train a supervised model to learn a semantic matching between question and answer pairs ."
+        }
+      },
+      "present" : {
+        "enhanced version" : {
+          "combines" : {
+            "signal" : {
+              "of" : {
+                "distributed matching algorithm" : {
+                  "with" : "two simple word matching features"
+                }
+              }
+            }
+          },
+          "from sentence" : "We also present an enhanced version of this model , which combines the signal of the distributed matching algorithm with two simple word matching features ."
+        }
+      }
+    }
+  }
+}

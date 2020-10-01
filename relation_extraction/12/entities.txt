@@ -1,0 +1,223 @@
+240	7	19	observe that
+240	20	26	adding
+240	27	85	either attention guided layers or densely connected layers
+240	86	94	improves
+240	99	110	performance
+240	111	113	of
+240	118	123	model
+246	20	44	all the C - AGGCN models
+246	45	49	with
+246	50	68	varied values of K
+246	81	91	outperform
+246	96	132	state - of - the - art C - GCN model
+242	8	19	notice that
+242	24	44	feed - forward layer
+242	48	60	effective in
+242	61	70	our model
+249	33	44	performance
+249	45	47	of
+249	48	73	C - AGGCN with full trees
+249	74	85	outperforms
+249	86	118	all C - AGGCNs with pruned trees
+243	0	7	Without
+243	12	32	feed - forward layer
+243	39	45	result
+243	46	54	drops to
+243	58	74	F1 score of 67.8
+254	13	38	C - AGGCN with full trees
+254	39	50	outperforms
+254	51	90	C - AGGCN with pruned trees and C - GCN
+254	91	98	against
+254	99	123	various sentence lengths
+256	15	26	improvement
+256	27	38	achieved by
+256	39	66	C - AGGCN with pruned trees
+256	67	73	decays
+256	74	78	when
+256	83	98	sentence length
+256	99	108	increases
+263	0	9	C - AGGCN
+263	10	34	consistently outperforms
+263	35	42	C - GCN
+263	43	48	under
+263	53	81	same amount of training data
+259	5	18	suggests that
+259	19	28	C - AGGCN
+259	33	50	benefit more from
+259	51	78	larger graphs ( full tree )
+264	0	4	When
+264	9	13	size
+264	14	16	of
+264	17	30	training data
+264	31	40	increases
+264	50	62	observe that
+264	67	82	performance gap
+264	83	90	becomes
+264	91	103	more obvious
+265	15	20	using
+265	21	25	80 %
+265	26	28	of
+265	33	46	training data
+265	53	68	C - AGGCN model
+265	72	87	able to achieve
+265	90	99	F 1 score
+265	26	28	of
+265	103	107	66.5
+265	110	121	higher than
+265	122	129	C - GCN
+265	130	140	trained on
+265	145	158	whole dataset
+184	0	3	For
+184	0	52	For cross - sentence n- ary relation extraction task
+185	6	32	feature - based classifier
+185	33	41	based on
+185	42	67	shortest dependency paths
+185	68	75	between
+185	76	92	all entity pairs
+185	99	130	Graph - structured LSTM methods
+185	133	142	including
+185	143	153	Graph LSTM
+185	156	197	bidirectional DAG LSTM ( Bidir DAG LSTM )
+185	202	231	Graph State LSTM ( GS GLSTM )
+186	104	140	Graph convolutional networks ( GCN )
+186	76	80	with
+186	146	158	pruned trees
+175	3	9	choose
+175	14	31	number of heads N
+175	32	35	for
+175	36	58	attention guided layer
+175	59	63	from
+175	64	81	{ 1 , 2 , 3 , 4 }
+175	88	102	block number M
+175	59	63	from
+175	108	121	{ 1 , 2 , 3 }
+175	59	63	from
+176	2	4	in
+176	5	33	each densely connected layer
+176	39	52	{ 2 , 3 , 4 }
+178	0	14	Glo Ve vectors
+178	19	26	used as
+178	31	45	initialization
+178	46	49	for
+178	50	65	word embeddings
+32	19	26	propose
+32	31	93	novel Attention Guided Graph Convolutional Networks ( AGGCNs )
+32	102	121	operate directly on
+32	126	135	full tree
+33	17	24	develop
+33	43	52	 strategy
+33	53	68	that transforms
+33	73	97	original dependency tree
+33	98	102	into
+33	105	139	fully connected edgeweighted graph
+34	6	13	weights
+34	21	30	viewed as
+34	35	58	strength of relatedness
+34	59	66	between
+34	67	72	nodes
+34	81	98	can be learned in
+34	102	124	end - to - end fashion
+34	125	133	by using
+34	134	160	self - attention mechanism
+41	8	17	introduce
+41	18	35	dense connections
+41	38	40	to
+41	45	54	GCN model
+42	0	3	For
+42	4	8	GCNs
+42	11	19	L layers
+42	44	54	to capture
+42	55	79	neighborhood information
+42	80	87	that is
+42	88	99	L hops away
+45	0	16	With the help of
+45	17	34	dense connections
+45	44	51	able to
+45	52	57	train
+45	62	73	AGGCN model
+45	74	78	with
+45	81	92	large depth
+2	50	69	Relation Extraction
+204	0	3	For
+204	4	31	ternary relation extraction
+204	59	74	our AGGCN model
+204	75	83	achieves
+204	84	94	accuracies
+204	95	97	of
+204	98	111	87.1 and 87.0
+204	18	20	on
+204	115	124	instances
+204	125	131	within
+204	132	158	single sentence ( Single )
+204	166	189	all instances ( Cross )
+204	213	223	outperform
+204	224	241	all the baselines
+207	4	30	binary relation extraction
+207	65	70	AGGCN
+207	71	95	consistently outperforms
+207	96	104	GS GLSTM
+207	67	70	GCN
+205	24	38	AG - GCN model
+205	39	48	surpasses
+205	53	115	state - of - the - art Graphstructured LSTM model ( GS GLSTM )
+205	116	118	by
+205	119	137	6.8 and 3.8 points
+205	138	141	for
+205	146	171	Single and Cross settings
+209	0	5	AGGCN
+209	11	19	performs
+209	20	26	better
+209	27	31	than
+209	32	36	GCNs
+217	10	25	our AGGCN model
+217	32	39	obtains
+217	40	58	8.0 and 5.7 points
+217	59	70	higher than
+217	75	89	GS GLSTM model
+217	90	93	for
+217	94	122	ternary and binary relations
+218	20	29	our AGGCN
+218	30	38	achieves
+218	41	61	better test accuracy
+218	62	66	than
+218	67	81	all GCN models
+229	4	19	C - AGGCN model
+229	20	28	achieves
+229	32	40	F1 score
+229	41	43	of
+229	44	48	68.2
+229	57	68	outperforms
+229	73	100	state - ofart C - GCN model
+229	101	103	by
+229	104	114	1.8 points
+231	4	19	performance gap
+231	20	27	between
+231	28	77	GCNs with pruned trees and AGGCNs with full trees
+231	78	94	empirically show
+231	104	115	AGGCN model
+231	119	143	better at distinguishing
+231	144	180	relevant from irrelevant information
+231	181	193	for learning
+231	196	223	better graph representation
+206	0	11	Compared to
+206	12	22	GCN models
+206	25	34	our model
+206	35	42	obtains
+206	43	68	1.3 and 1.2 points higher
+206	69	73	than
+206	78	99	best performing model
+206	100	104	with
+206	105	124	pruned tree ( K=1 )
+230	8	14	notice
+230	20	39	AGGCN and C - AGGCN
+230	40	47	achieve
+230	48	82	better precision and recall scores
+230	83	87	than
+230	88	103	GCN and C - GCN
+232	27	29	on
+232	34	49	SemEval dataset
+235	0	28	Our C - AGGCN model ( 85.7 )
+235	29	53	consistently outperforms
+235	58	80	C - GCN model ( 84.8 )
+235	83	90	showing
+235	95	116	good generalizability

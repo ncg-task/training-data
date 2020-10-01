@@ -1,0 +1,42 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "d-TBCNN model" : {
+          "achieves" : "87.9 % accuracy",
+          "from sentence" : "Nonetheless , our d-TBCNN model achieves
+87.9 % accuracy , ranking third in the list ."
+
+        }
+      },
+      "In" : {
+        "more controlled comparison" : {
+          "with" : ["shallow architectures", "basic interaction ( linearly transformed and non-linearly squashed )"],
+          "has" : {
+            "TBCNNs" : {
+              "consistently outperform" : {
+                "RNNs" : {
+                  "to" : "large extent ( 50.4 - 51.4 % versus 43.2 % )"
+                },
+                "\" flat \" CNNs" : {
+                  "by more than" : "10 %"
+                }
+              }
+            }
+          },
+          "from sentence" : "In a more controlled comparison - with shallow architectures and the basic interaction ( linearly transformed and non-linearly squashed ) - TBCNNs , of both variants , consistently outperform RNNs to a large extent ( 50.4 - 51.4 % versus 43.2 % ) ; they also consistently outperform \" flat \" CNNs by more than 10 % ."
+        }
+      },
+      "observe" : {
+        "d- TBCNN" : {
+          "achieves" : {
+            "higher performance" : {
+              "than" : "c - TBCNN"
+            }
+          }
+        },
+        "from sentence" : "We also observe d- TBCNN achieves higher performance than c - TBCNN ."
+      }
+    }
+  }
+}

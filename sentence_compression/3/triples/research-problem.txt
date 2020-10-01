@@ -1,0 +1,2 @@
+(Contribution||has research problem||Sentence Compression)
+(Contribution||has research problem||deletion - based sentence compression)

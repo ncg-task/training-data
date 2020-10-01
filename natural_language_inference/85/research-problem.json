@@ -1,0 +1,8 @@
+{
+  "has research problem" : [
+    ["Natural Language Inference", {"from sentence" : "Enhanced LSTM for Natural Language Inference"}],
+    ["Reasoning and inference", {"from sentence" : "Reasoning and inference are central to human and artificial intelligence ."}],
+    ["natural language inference ( NLI )", {"from sentence" : "Specifically , natural language inference ( NLI ) is concerned with determining whether a naturallanguage hypothesis h can be inferred from a premise p , as depicted in the following example from MacCartney ( 2009 ) , where the hypothesis is regarded to be entailed from the premise ."}],
+    ["NLI", {"from sentence" : "Exploring syntax for NLI is very attractive to us ."}]
+  ]
+}

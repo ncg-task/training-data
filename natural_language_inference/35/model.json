@@ -1,0 +1,77 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "Masque" : {
+          "has" : {
+            "generative model" : {
+              "for" : "multi-passage RC"
+            }
+          },
+          "from sentence" : "In this study , we propose Masque , a generative model for multi-passage RC ."
+        }
+      },
+      "introduce" : {
+        "pointer - generator mechanism" : {
+          "for generating" : {
+            "abstractive answer" : {
+              "from" : ["question", {"multiple passages" : {"covers" : "various answer styles"}}]
+            }
+          },
+          "from sentence" : "We introduce the pointer - generator mechanism for generating an abstractive answer from the question and multiple passages , which covers various answer styles ."
+        },
+        "multi-style learning" : {
+          "that enables" : {
+            "our model" : {
+              "to control" : "answer styles",
+              "has" : {
+                "improves" : {
+                  "has" : {
+                    "RC" : {
+                      "for" : "all styles involved"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "We introduce multi-style learning that enables our model to control answer styles and improves RC for all styles involved ."
+        }
+      },
+      "extend" : {
+        "mechanism" : {
+          "to" : {
+            "Transformer based one" : {
+              "that allows" : {
+                "words" : {
+                  "to be generated from" : "vocabulary",
+                  "to be copied from" : ["question", "passages"]
+                }
+              },
+              "from sentence" : "We extend the mechanism to a Transformer based one that allows words to be generated from a vocabulary and to be copied from the question and passages ."
+            }
+          }
+        },
+        "pointer - generator" : {
+          "to" : "conditional decoder",
+          "introducing" : {
+            "artificial token" : {
+              "corresponding to" : "each style"
+            }
+          },
+          "from sentence" : "We also extend the pointer - generator to a conditional decoder by introducing an artificial token corresponding to each style , as in ."
+        }
+      },
+      "For" : {
+        "each decoding step" :{
+          "controls" : {
+            "mixture weights" : {
+              "over" : "three distributions"
+            }
+          },
+          "from sentence" : "For each decoding step , it controls the mixture weights over three distributions with the given style ( ) ."
+        }
+      }
+    }
+  }
+}

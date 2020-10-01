@@ -1,0 +1,65 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "ABS +" : {
+          "is a" : "tuned ABS model",
+          "from sentence" : "ABS + is a tuned ABS model with additional features ."
+        },
+        "RAS - Elman" : {
+          "is a" : ["convolution encoder", {"Elman RNN decoder" : {"with" : "attention"}}],
+          "from sentence" : "RAS - Elman ) is a convolution encoder and an Elman RNN decoder with attention ."
+        },
+        "Seq2seq + att" : {
+          "is" : ["two - layer BiLSTM encoder", {"one - layer LSTM decoder" : {"equipped with" : "attention"}}],
+          "from sentence" : "Seq2seq + att is two - layer BiLSTM encoder and one - layer LSTM decoder equipped with attention ."
+        },
+        "lvt5 k - lsent" : {
+          "uses" : {
+            "temporal attention" : {
+              "to keep track of" : {
+                "past attentive weights" : {
+                  "of" : "decoder"
+                }
+              },
+              "restrains" : {
+                "repetition" : {
+                  "in" : "later sequences"
+                }
+              }
+            }
+          },
+          "from sentence" : "lvt5 k - lsent uses temporal attention to keep track of the past attentive weights of the decoder and restrains the repetition in later sequences ."
+        },
+        "SEASS" : {
+          "includes" : {
+            "additional selective gate" : {
+              "to control" : {
+                "information flow" : {
+                  "from" : {
+                    "encoder" : {
+                      "to" : "decoder"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "SEASS includes an additional selective gate to control information flow from the encoder to the decoder ."
+        },
+        "Pointer - generator" : {
+          "is" : ["integrated pointer network", "seq2seq model"],
+          "from sentence" : "Pointer - generator is an integrated pointer network and seq2seq model ."
+        },
+        "CGU" : {
+          "for" : {
+            "global encoding" : {
+              "sets" : ["convolutional gated unit", "self - attention"]
+            }
+          },
+          "from sentence" : "CGU ) sets a convolutional gated unit and self - attention for global encoding ."
+        }        
+      }      
+    }
+  }
+}

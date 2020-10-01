@@ -1,0 +1,60 @@
+{
+  "has" : {
+    "Model" : {
+      "presents" : {
+        "solution" : {
+          "resolve" : {
+            "inefficient multiple - passes issue" : {
+              "of" : {
+                "existing solutions" : {
+                  "for" : {
+                    "MRE" : {
+                      "by encoding" : "input only once"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "This work presents a solution that can resolve the inefficient multiple - passes issue of existing solutions for MRE by encoding the input only once , which significantly increases the efficiency and scalability ."
+            }
+          }
+        }
+      },
+      "has" : {
+        "proposed solution" : {
+          "built on top of" : "existing transformer - based , pretrained general - purposed language encoders",
+          "from sentence" : "Specifically , the proposed solution is built on top of the existing transformer - based , pretrained general - purposed language encoders ."
+        }
+      },
+      "use" : {
+        "Bidirectional Encoder Representations from Transformers ( BERT )" : {
+          "as" : "transformer - based encoder",
+          "from sentence" : "In this paper we use Bidirectional Encoder Representations from Transformers ( BERT ) as the transformer - based encoder , but this solution is not limited to using BERT alone ."
+        }
+      },
+      "introduce" : {
+        "structured prediction layer" : {
+          "for predicting" : {
+            "multiple relations" : {
+              "for" : "different entity pairs"
+            }
+          },
+          "from sentence" : "The two novel modifications to the original BERT architecture are : ( 1 ) we introduce a structured prediction layer for predicting multiple relations for different entity pairs ; and ( 2 ) we make the selfattention layers aware of the positions of all en-tities in the input paragraph ."
+        }
+      },
+      "make" : {
+        "selfattention layers" : {
+          "aware of" : {
+            "positions" : {
+              "of" : {
+                "all en-tities" : {
+                  "in" : "input paragraph"
+                }
+              }
+            }
+          },
+          "from sentence" : "The two novel modifications to the original BERT architecture are : ( 1 ) we introduce a structured prediction layer for predicting multiple relations for different entity pairs ; and ( 2 ) we make the selfattention layers aware of the positions of all en-tities in the input paragraph ."
+        }
+      }
+    }
+  }
+}

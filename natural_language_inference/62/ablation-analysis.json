@@ -1,0 +1,28 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "replacing" : {
+        "knowledge aided attention mechanisms" : {
+          "with" : ["mutual attention", "self attention"],
+          "find that" : {
+            "F 1 score" : {
+              "of" : "KAR",
+              "drops by" : {
+                "4.2" : {
+                  "on" : "development set"
+                },
+                "7.8" : {
+                  "on" : "AddSent"
+                },
+                "9.1" : {
+                  "on" : "AddOneSent"
+                }
+              }
+            }
+          },
+          "from sentence" : "Then we conduct an ablation study by replacing the knowledge aided attention mechanisms with the mutual attention proposed by and the self attention proposed by separately , and find that the F 1 score of KAR drops by 4.2 on the development set , 7.8 on AddSent , and 9.1 on AddOneSent ."
+        }
+      }
+    }
+  }
+}

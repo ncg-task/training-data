@@ -1,0 +1,71 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "run" : {
+        "grid search" : {
+          "among" : "[ 0.1 , 0.3 , 0.5 , 0.7 , 1 , 2 ]",
+          "from sentence" : "We run a grid search on ? and ? among [ 0.1 , 0.3 , 0.5 , 0.7 , 1 , 2 ] ."
+        }
+      },
+      "For" : {
+        "Model - II" : {
+          "has" : {
+            "Adam optimizer ( Kingma and Ba 2014 )" : {
+              "with" : {
+                "learning rate" : {
+                  "of" : "0.0008"
+                }
+              },
+              "from sentence" : "As for answer verifiers , we use the original configuration from for Model - I. For Model - II , the Adam optimizer ( Kingma and Ba 2014 ) with a learning rate of 0.0008 is used , the hidden size is set as 300 , and a dropout ) of 0.3 is applied for preventing overfitting ."
+            },
+            "hidden size" : {
+              "set as" : "300",
+              "from sentence" : "As for answer verifiers , we use the original configuration from for Model - I. For Model - II , the Adam optimizer ( Kingma and Ba 2014 ) with a learning rate of 0.0008 is used , the hidden size is set as 300 , and a dropout ) of 0.3 is applied for preventing overfitting ."
+            },
+            "dropout" : {
+              "of" : {
+                "0.3" : {
+                  "applied for" : "preventing overfitting"
+                }
+              },
+              "from sentence" : "As for answer verifiers , we use the original configuration from for Model - I. For Model - II , the Adam optimizer ( Kingma and Ba 2014 ) with a learning rate of 0.0008 is used , the hidden size is set as 300 , and a dropout ) of 0.3 is applied for preventing overfitting ."
+            }
+          }
+        }
+      },
+      "has" : {
+        "batch size" : {
+          "is" : {
+            "48" : {
+              "for" : "reader"
+            },
+            "64" : {
+              "for" : "Model - II"
+            },
+            "32" : {
+              "for" : ["Model - I", "Model - III"]
+            }
+          },
+          "from sentence" : "The batch size is 48 for the reader , 64 for Model - II , and 32 for Model - I as well as Model - III ."
+        }
+      },
+      "use" : {
+        "Glo Ve 100D embeddings" : {
+          "for" : "reader",
+          "from sentence" : "We use the Glo Ve 100D embeddings for the reader , and 300D embeddings for Model - II and Model - III ."
+        },
+        "300D embeddings" : {
+          "for" : ["Model - II", "Model - III"],
+          "from sentence" : "We use the Glo Ve 100D embeddings for the reader , and 300D embeddings for Model - II and Model - III ."
+        }
+      },
+      "utilize" : {
+        "nltk tokenizer" : {
+          "to preprocess" : "passages and questions",
+          "split" : "sentences",
+          "from sentence" : "We utilize the nltk tokenizer 3 to preprocess passages and questions , as well as split sentences ."
+        }
+      }
+    }
+  }
+}

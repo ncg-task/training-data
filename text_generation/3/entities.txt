@@ -1,0 +1,108 @@
+86	29	32	set
+86	37	51	maximum length
+86	52	54	to
+86	55	63	15 words
+86	64	67	for
+86	68	91	each generated sentence
+87	60	71	hidden size
+87	75	78	512
+87	81	95	embedding size
+87	99	101	64
+87	106	121	vocabulary size
+87	125	129	40 K
+88	4	14	parameters
+88	19	29	updated by
+88	34	73	Adam algorithm ( Kingma and Ba , 2014 )
+88	78	92	initialized by
+88	93	101	sampling
+88	102	106	from
+88	111	150	uniform distribution ( [? 0.1 , 0.1 ] )
+89	4	25	initial learning rate
+89	29	34	0.002
+89	43	48	model
+89	52	62	trained in
+89	63	74	minibatches
+89	75	79	with
+89	82	92	batch size
+89	93	95	of
+89	96	99	256
+24	29	36	propose
+24	39	74	novel Auto - Encoder Matching model
+24	75	83	to learn
+24	84	112	utterance - level dependency
+25	26	29	use
+25	30	48	two auto- encoders
+25	49	57	to learn
+25	62	86	semantic representations
+25	87	89	of
+25	90	110	inputs and responses
+25	90	92	in
+25	117	135	unsupervised style
+26	9	14	given
+26	19	52	utterance - level representations
+26	59	73	mapping module
+26	77	92	taught to learn
+26	97	125	utterance - level dependency
+2	87	106	Dialogue Generation
+12	0	29	Automatic dialogue generation
+20	10	33	conversation generation
+97	4	22	proposed AEM model
+97	23	47	significantly outperform
+97	53	66	Seq2Seq model
+98	3	15	demonstrates
+98	20	65	effectiveness of utterance - level dependency
+98	66	78	on improving
+98	83	108	quality of generated text
+100	4	20	improvement from
+100	25	34	AEM model
+100	35	37	to
+100	42	63	AEM + Attention model
+100	66	68	is
+100	69	88	0.68 BLEU - 4 point
+104	3	7	find
+104	17	26	AEM model
+104	27	35	achieves
+104	36	59	significant improvement
+104	60	62	on
+104	67	94	diversity of generated text
+106	20	32	noticed that
+106	37	56	attention mechanism
+106	57	65	performs
+106	66	81	almost the same
+106	82	93	compared to
+106	98	107	AEM model
+107	15	24	combining
+107	29	45	two dependencies
+107	61	82	AEM + Attention model
+107	83	91	achieves
+107	96	108	best results
+120	18	20	of
+120	21	37	human evaluation
+121	4	29	inter-annotator agreement
+121	30	32	is
+121	33	45	satisfactory
+122	4	38	Pearson 's correlation coefficient
+122	39	41	is
+122	42	46	0.69
+122	9	11	on
+122	50	59	coherence
+122	64	68	0.57
+122	9	11	on
+122	72	79	fluency
+123	14	24	clear that
+123	29	38	AEM model
+123	39	50	outperforms
+123	55	68	Seq2Seq model
+123	69	73	with
+123	76	88	large margin
+124	15	44	interesting to note that with
+124	49	68	attention mechanism
+124	75	84	coherence
+124	88	109	decreased slightly in
+124	114	127	Seq2Seq model
+124	132	158	increased significantly in
+124	163	172	AEM model
+126	18	31	expected that
+126	36	57	AEM + Attention model
+126	58	66	achieves
+126	71	83	best G-score

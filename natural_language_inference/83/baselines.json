@@ -1,0 +1,65 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "DSSM" : {
+          "trains" : {
+            "two deep neural networks" : {
+              "to project" : {
+                "context and the ending - options" : {
+                  "into" : "same vector space"
+                }
+              },
+              "from sentence" : "DSSM : It trains two deep neural networks to project the context and the ending - options into the same vector space ."
+            }
+          }
+        },
+        "Msap" : {
+          "trains" : {
+            "logistic regression" : {
+              "based on" : "stylistic and languagemodel based features"
+            },
+            "from sentence" : "Msap :
+It trains a logistic regression based on stylistic and languagemodel based features ."
+
+          }
+        },
+        "LR" : {
+          "is" : {
+            "simple logistic regression model" :{
+              "agnostic to" : "multiple types of aspects"
+            },
+            "from sentence" : "LR : Our next baseline is a simple logistic regression model which is agnostic to the fact that there are multiple types of aspects ."
+          }
+        },
+        "Majority Vote" : {
+          "has" : {
+            "ensemble method" : {
+              "uses" : {
+                "features" : {
+                  "extracted for" : "K = 3 aspects",
+                  "to train" : "K separate logistic regression models"
+                }
+              }
+            },
+            "from sentence" : "Majority Vote :
+This ensemble method uses the features extracted for each of the K = 3 aspects , to train K separate logistic regression models ."
+
+          }
+        },
+        "Soft Voting" : {
+          "learns" : "K different aspect - specific classifiers",
+          "from sentence" : "Soft Voting :
+This baseline also learns K different aspect - specific classifiers ."
+
+        },
+        "Aspect - aware Ensemble" : {
+          "trains" : "K different aspectspecific classifiers",
+          "from sentence" : "Aspect - aware Ensemble :
+Like the voting methods , this baseline also trains K different aspectspecific classifiers ."
+
+        }
+      }      
+    }
+  }
+}

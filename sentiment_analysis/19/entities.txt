@@ -1,0 +1,65 @@
+115	27	34	compare
+115	35	63	SuBiLSTM and SuBiLSTM - Tied
+115	64	68	with
+115	71	123	single - layer BiLSTM and a 2 - layer BiLSTM encoder
+115	64	68	with
+115	133	154	same hidden dimension
+30	19	26	propose
+30	29	69	simple , general and effective technique
+30	70	80	to compute
+30	81	107	contextual representations
+30	108	120	that capture
+30	121	144	long range dependencies
+31	0	3	For
+31	4	16	each token t
+31	22	33	encode both
+31	38	55	prefix and suffix
+31	56	63	in both
+31	68	97	forward and reverse direction
+34	13	20	combine
+34	25	58	prefix and suffix representations
+34	59	61	by
+34	64	94	simple max - pooling operation
+34	95	105	to produce
+34	108	140	richer contextual representation
+34	146	153	in both
+34	158	187	forward and reverse direction
+35	3	7	call
+35	18	31	Suffix BiLSTM
+35	35	43	SuBiLSTM
+35	44	46	in
+35	47	52	short
+2	0	26	Improved Sentence Modeling
+4	52	96	computing representations of sequential data
+12	65	104	fine - grained sentiment classification
+12	109	132	question classification
+18	72	96	modeling sequential data
+125	4	24	relative performance
+125	25	27	of
+125	28	59	SuBiL - STM and SuBiLSTM - Tied
+125	60	63	are
+125	64	76	fairly close
+126	0	15	SuBiLSTM - Tied
+126	16	21	works
+126	22	28	better
+126	29	31	on
+126	32	63	small datasets ( SST and TREC )
+128	4	23	training complexity
+128	24	32	for both
+128	37	43	models
+128	44	46	is
+128	47	54	similar
+128	94	109	SuBILSTM - Tied
+128	67	71	with
+128	72	91	half the parameters
+128	110	119	should be
+128	124	142	more favored model
+128	24	27	for
+128	147	170	sentence modeling tasks
+127	0	3	For
+127	8	42	larger datasets ( SNLI and QUORA )
+127	45	53	SuBILSTM
+127	63	72	edges out
+127	77	89	tied version
+127	90	98	owing to
+127	103	118	larger capacity

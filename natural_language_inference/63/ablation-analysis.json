@@ -1,0 +1,55 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "add" : {
+        "ELMo" : {
+          "helped" : {
+            "our model ( MAMCN + ELMo )" : {
+              "to improve" : {
+                "F1" : {
+                  "to" : "85.13"
+                },
+                "EM" : {
+                  "to" : "77.44"
+                }
+              },
+              "is" : {
+                "best" : {
+                  "among" : {
+                    "models" : {
+                      "only with" : "additional feature augmentation"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "First , we add ELMo which is the weighted sum of hidden layers of language model with regularization as an additional feature to our word embeddings .
+This helped our model ( MAMCN + ELMo ) to improve F1 to 85.13 and EM to 77.44 and is the best among the models only with the additional feature augmentation ."
+
+            }
+          }
+        }
+      },
+      "replace" : {
+        "BiGRU units" : {
+          "with" : {
+            "embedding block" : {
+              "except" : "controller layer",
+              "in" : {
+                "our model ( MAMCN + ELMo + DC )" : {
+                  "achieve" : {
+                    "state of the art performance" : {
+                      "has" : "86.73 F1 and 79.69 EM"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "We replace all the BiGRU units with this embedding block except the controller layer in our model ( MAMCN + ELMo + DC ) .
+We achieve the state of the art performance , 86.73 F1 and 79.69 EM , with the help of this em-bedding block ."
+
+            }
+          }
+        }
+      }
+    }
+  }
+}

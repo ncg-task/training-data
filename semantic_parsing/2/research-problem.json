@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Neural Semantic Parsing", {"from sentence" : "Coarse - to - Fine Decoding for Neural Semantic Parsing"}],
+    ["Semantic parsing", {"from sentence" : "Semantic parsing aims at mapping natural language utterances into structured meaning representations ."}]
+  ]
+}

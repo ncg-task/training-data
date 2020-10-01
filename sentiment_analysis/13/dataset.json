@@ -1,0 +1,32 @@
+{
+  "has" : {
+    "Dataset" : {
+      "first builds" : {
+        "RRC dataset" : {
+          "called" : {
+            "ReviewRC" : {
+              "using" : {
+                "reviews" : {
+                  "from" : {
+                    "SemEval 2016 Task 5" : {
+                      "is a" : {
+                        "popular dataset" : {
+                          "for" : {
+                            "aspect - based sentiment analysis ( ABSA )" : {
+                              "in" : "domains of laptop and restaurant"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "This work first builds an RRC dataset called ReviewRC , using reviews from SemEval 2016 Task 5 2 , which is a popular dataset for aspect - based sentiment analysis ( ABSA ) in the domains of laptop and restaurant ."
+        }
+      }
+    }
+  }
+}

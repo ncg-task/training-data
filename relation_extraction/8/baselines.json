@@ -1,0 +1,20 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "Mintz" : {
+          "represents" : "traditional distantsupervision - based model",
+          "from sentence" : "Mintz represents a traditional distantsupervision - based model that was proposed by ."
+        },
+        "MultiR" : {
+          "is" : "multi-instance learning method",
+          "from sentence" : "MultiR is a multi-instance learning method that was proposed by ."
+        },
+        "MIML" : {
+          "is" : "multi-instance multilabel model",
+          "from sentence" : "MIML is a multi-instance multilabel model that was proposed by ."
+        }
+      }
+    }
+  }
+}

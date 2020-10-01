@@ -1,0 +1,48 @@
+{
+  "has" : {
+    "Approach" : {
+      "focus on" : {
+        "capturing" : {
+          "has" : "fine - grained word - level information",
+          "from sentence" : "In contrast , we focus on capturing fine - grained word - level information directly ."
+        }
+      },
+      "instead of using" : {
+        "sentence modeling" : {
+          "propose" : {
+            "pairwise word interaction modeling" : {
+              "that encourages" : {
+                "explicit word context interactions" : {
+                  "across" : "sentences"
+                }
+              },
+              "from sentence" : "First , instead of using sentence modeling , we propose pairwise word interaction modeling that encourages explicit word context interactions across sentences ."
+            }
+          }
+        }
+      },
+      "based on" : {
+        "pairwise word interactions" : {
+          "describe" : {
+            "novel similarity focus layer" : {
+              "which" : {
+                "helps" : {
+                  "has" : {
+                    "model" : {
+                      "selectively identify" : {
+                        "important word interactions" : {
+                          "for" : "similarity measurement"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Second , based on the pairwise word interactions , we describe a novel similarity focus layer which helps the model selectively identify important word interactions depending on their importance for similarity measurement ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

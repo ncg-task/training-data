@@ -1,0 +1,45 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "Our ensemble ( PoE )" : {
+          "has" : {
+            "an absolute improvement" : {
+              "over" : {
+                "previous state of the art" : {
+                  "of" : "2.1 F1",
+                  "on" : ["CoNLL 2005", "CoNLL 2012"]                  
+                }
+              },
+              "from sentence" : "Our ensemble ( PoE ) has an absolute improvement of 2.1 F1 on both CoNLL 2005 and CoNLL 2012 over the previous state of the art ."
+            }
+          }
+        },
+        "Our single model" : {
+          "achieves" : {
+            "more than a 0.4 improvement" : {
+              "on" : "both datasets"
+            }
+          },
+          "from sentence" : "Our single model also achieves more than a 0.4 improvement on both datasets ."
+        }
+      },
+      "In comparison with" : {
+        "best reported results" : {
+          "has" : {
+            "our percentage of completely correct predicates" : {
+              "improves by" : "5.9 points"
+            }
+          }
+        },
+        "from sentence" : "In comparison with the best reported results , our percentage of completely correct predicates improves by 5.9 points ."
+      },
+      "show" : {
+        "accurate syntactic information" : {
+          "improve" : "deep models",
+          "from sentence" : "While the continuing trend of improving SRL without syntax seems to suggest that neural end - to - end systems no longer needs parsers , our analysis in Section 4.4 will show that accurate syntactic information can improve these deep models ."
+        }
+      }
+    }
+  }
+}

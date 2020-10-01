@@ -1,0 +1,32 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "note" : {
+        "deep residual coattention" : {
+          "yielded" : {
+            "highest contribution" : {
+              "to" : "model performance",
+              "followed by" : "mixed objective"
+            }
+          },
+          "from sentence" : "We note that the deep residual coattention yielded the highest contribution to model performance , followed by the mixed objective ."
+        }
+      },
+      "has" : {
+        "sparse mixture" : {
+          "of" : {
+            "experts layer" : {
+              "in" : "decoder",
+              "added" : {
+                "minor improvements" : {
+                  "to" : "model performance"
+                }
+              }
+            }
+          },
+          "from sentence" : "The sparse mixture of experts layer in the decoder added minor improvements to the model performance . :"
+        }
+      }
+    }
+  }
+}

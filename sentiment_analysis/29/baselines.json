@@ -1,0 +1,82 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "Majority" : {
+          "is" : "basic baseline method",
+          "assigns" : {
+            "largest sentiment polarity" : {
+              "in" : {
+                "training set" : {
+                  "to" : {
+                    "each sample" : {
+                      "in" : "test set"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Majority is a basic baseline method , which assigns the largest sentiment polarity in the training set to each sample in the test set ."
+        },
+        "LSTM" : {
+          "uses" : {
+            "one LSTM network" : {
+              "to model" : "sentence"
+            }
+          },
+          "has" : {
+            "last hidden state" : {
+              "used as" : {
+                "sentence representation" : {
+                  "for" : "final classification"
+                }
+              }
+            }
+          },
+          "from sentence" : "LSTM uses one LSTM network to model the sentence , and the last hidden state is used as the sentence representation for the final classification ."
+        },
+        "TD - LSTM" : {
+          "uses" : {
+            "two LSTM networks" : {
+              "to model" : {
+                "preceding and following contexts" : {
+                  "surrounding" : "aspect term"
+                }
+              }
+            }
+          },
+          "from sentence" : "TD - LSTM uses two LSTM networks to model the preceding and following contexts surrounding the aspect term ."
+        },
+        "AT - LSTM" : {
+          "first models" : {
+            "sentence" : {
+              "via" : "LSTM model"
+            }
+          },
+          "from sentence" : "AT - LSTM first models the sentence via a LSTM model ."
+        },
+        "ATAE - LSTM" : {
+          "further extends" : {
+            "AT - LSTM" : {
+              "by appending" : {
+                "aspect embedding" : {
+                  "into" : "each word vector"
+                }
+              }
+            }
+          },
+          "from sentence" : "ATAE - LSTM further extends AT - LSTM by appending the aspect embedding into each word vector ."
+        },
+        "IAN" : {
+          "uses" : {
+            "two LSTM networks" : {
+              "to model" : "sentence and aspect term"
+            }
+          },
+          "from sentence" : "IAN uses two LSTM networks to model the sentence and aspect term respectively ."
+        }
+      }
+    }
+  }  
+}

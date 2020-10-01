@@ -1,0 +1,72 @@
+title
+Parameterized Convolutional Neural Networks for Aspect Level Sentiment Classification
+abstract
+We introduce a novel parameterized convolutional neural network for aspect level sentiment classification. Using parameterized filters and parameterized gates, we incorporate aspect information into convolutional neural networks (CNN). Experiments demonstrate that our parameterized filters and parameterized gates effectively capture the aspectspecific features, and our CNN-based models achieve excellent results on SemEval 2014 datasets.
+Introduction
+Continuous growing of user generated text in social media platforms such as Twitter drives sentiment classification increasingly popular. The goal of sentiment classification is to detect whether apiece of text expresses a positive, a negative, or a neutral sentiment. The majority of the literature focuses on general sentiment analysis (document level), not involving a specific topic or entity. When there are multiple aspects about an entity in a sentence, it is hard to determine the sentiment as a whole.
+Differing from general sentiment classification, aspect level sentiment classification identifies opinions from text about specific entities and their aspects. For example, given a sentence "great food but the service was dreadful", the sentiment polarity about aspect "food" is positive while the sentiment polarity about "service" is negative. If we ignore the aspect information, it is hard to determine the sentiment fora target aspect, which accounts fora large portion of sentiment classification error.
+Recently, machine learning based approaches are becoming popular for this task. Representative approaches in literature include Support Vector Machine (SVM) with manually created features and neural network based models. Because of neural networks' capacity of learning representations from data without feature engineering, they are of growing interest for this natural language processing task. The mainstream neural methods are either based on long short-term memory or memory networks. None of them are using convolutional neural networks (CNN), which are good at capturing local patterns.
+In the present work, we propose two simple yet effective convolutional neural networks with aspect information incorporated. The overall architecture differs significantly from previous work. Specifically, we design two novel neural units that take target aspects into account. One is parameterized filter, the other is parameterized gate. These units both are generated from aspect-specific features and are further applied on the sentence. Our experiments show that our two model variants work surprisingly well on this type of task.
+
+Related Work
+Aspect level sentiment classification is a branch of sentiment classification. It aims at identifying the sentiment polarity of one aspect target in a context sentence.
+One typical early work tries to identify the aspect level sentiment polarity based on predefined language rules. Nasukawa and Yi first perform dependency parsing on sentences. Then rules are applied to determine the sentiment about aspects. Standard machine learning algorithms like SVM are also widely used on this task. Jiang et al. create several targetdependent features, then they feed these targetdependent features with content features into an SVM classifier.
+In recent years, aspect level sentiment classification is dominated by neural network based approaches. The majority of published works rely on the architecture of long short-term memory (LSTM) . use an attention vector generated from aspect embedding to better capture the important parts in sentences. introduce a wordaspect fusion operation to learn associative relationships between aspects and sentences. use an attention-over-attention layer to further improve the performance.
+Another type of neural architectures known as memory network has also been used in this task.  takes an aspect term as a query sent to external memory. Their model consists of multiple computational layers. Each layer is an attention model. One recent work Dyadic MemNN places associative layers on top of memory networks to improve the performance.
+The overall architecture in this paper differs significantly with all these previous works. To the best of our knowledge, this paper is the first attempt using convolutional neural networks for aspect level sentiment classification.
+
+Parameterized Convolutional Neural Networks
+In this section, we introduce our method for aspect level sentiment classification, which is based on convolutional neural networks. We first describe CNN for general sentiment classification, then we introduce our two model variants Parameterized Filters for Convolutional Neural Networks (PF-CNN) and Parameterized Gated Convolutional Neural Networks (PG-CNN).
+
+Problem Definition
+In aspect level sentiment classification, we are given a sentence s = [w 1 , w 2 , ..., w i , ..., w n ] and an aspect target t = [w i , w i+1 , ..., w i+m?1 ]. The goal is to classify whether the sentiment towards the aspect in the sentence is positive, negative, or neutral.
+
+Convolutional Neural Networks
+We first briefly describe convolutional neural networks (CNN) for general sentiment classification. Given a sentence s = [w 1 , w 2 , ..., w i , ..., w n ], let vi ? R k be the word vector for word w i . A sentence of length n can be represented as a matrix s = [v 1 , v 2 , ..., v n ] ? R n×k . A convolution filter w ? R h×k with width h is applied to the word matrix to get high-level representative features. Specifically, fora word window v i:i+h?1 ? R h×k , a feature c i is generated by
+where represents element-wise product, b ? R is a bias term and f is a non-linear function. Sliding the filter window from the beginning of the word matrix till the end, we get a feature map
+After that, a pooling operation is applied over the feature map to get one single general sentiment feature ? gin each map. We use max pooling in the CNN for sentences.
+We denote this process as ? g = CNN g (s; w, b).
+Using d such convolutional filters, we can get a general sentiment feature vector ? g ? Rd without information from aspect terms.
+
+Parameterized Filters
+Standard convolutional neural networks do not consider information from aspect terms. Herein, our first model variant overcomes this issue by parameterizing filters using aspect terms. We call it Parameterized Filters for Convolutional Neural Networks (PF-CNN). The overall architecture is shown in the left of. Formally, given the aspect term with length m, t = [w i , w i+1 , ..., w i+m?1 ] and the corresponding
+where wt ? R ht×k , b tare the convolutional filter, bias term for CNN t . ht is the width of filters applied on aspect targets. With h s × k such filters and bias terms, we can get a feature matrix ? t ? R hs×k , where h sis the filter width applied on sentences. We use average pooling in the CNN t for aspects. In the next step, ? t is further used as a convolutional filter applied on the sentence.
+Using such d parameterized filters, we get the aspect-specific features ? s ? Rd with target term information. We further concatenate the targeted feature vector with general sentiment features as the final classification features ? = [? g , ? s ].
+
+Parameterized Gates
+The second model variant we designed is called Parameterized Gated Convolutional Neural Networks (PG-CNN). The overall architecture is shown in the right of. Similar with PF-CNN, PG-CNN also utilizes a convolutional neural network to extract feature ? t from aspect terms, which instead is used as agate in the CNN applied on the sentence. The key step of PG-CNN is described in equation.
+Instead of using a non-linear function fin equation (1), we use agate ?(? t v i:i+h?1 + b) to control how much information passing to the next layer, where ?(·) is sigmoid function. For each general filter applied on the sentence, one parameterized gate is generated from the aspect.
+After that, we generate the final classification feature ? in the same way as standard CNN.
+
+Final Classification
+We feed the final classification feature into a linear layer to project ? into the space of targeted classes:
+where W land bl are the weight matrix and bias. Following the linear layer, we use a softmax layer to compute the probability of class c.
+
+Model training
+We train our model to minimize the cross-entropy loss function with L 2 regularization:
+
+Experiments
+
+Experiments Setting Dataset
+We adopt one widely used dataset from SemEval 2014 Task 4. It contains two domain-specific datasets for laptops and restaurants. Each data point is a pair of a sentence and an aspect term. Experienced annotators tagged each pair with sentiment polarity. Following recent work, we take 500 training instances as development set 1 . Unfortunately, many works have not mentioned the usage of development set.
+
+Hyperparameters and Training
+We use rectifier as non-linear function fin the CNN g , CNN t and sigmoid in the CNN s , filter window sizes of 1, 2, 3, 4 with 100 feature maps  each, l 2 regularization term of 0.001 and minibatch size of 25. Parameterized filters and gates have the same size and number as normal filters. They are generated uniformly by CNN with window sizes of 1, 2, 3, 4, eg. among 100 parameterized filters with size 3, 25 of them are generated by aspect CNN with filter size 1, 2, 3, 4 respectively. The word embeddings are initialized with 300-dimensional Glove vectors and are fixed during training. For the out of vocabulary words we initialize them randomly from uniform distribution U (?0.01, 0.01). We apply dropout on the final classification features of PG-CNN. The dropout rate is chosen as 0.3. Training is done through mini-batch stochastic gradient descent with Adam update rule. The initial learning rate is 0.001. If the training loss does not drop after every three epochs, we decrease the learning rate by half. We adopt early stopping based on the validation loss on development sets.
+
+Results
+We use accuracy metric to measure the performance. To show the effectiveness of our model, we compare it with several baseline methods. We list them as follows:
+TD-LSTM uses two LSTM networks to model the preceding and following contexts surrounding the aspect term. The last hidden states of these two LSTM networks are concatenated for predicting the sentiment polarity .
+AT-LSTM combines the sentence hidden states from a LSTM with the aspect term embedding to generate the attention vector. The final sentence representation is the weighted sum of the hidden states.
+ATAE-LSTM further extends AT-LSTM by appending the aspect embedding into each word vector.
+AF-LSTM introduces a word-aspect fusion attention to learn associative relationships between aspect and context words.
+CNN uses the architecture proposed in without explicitly considering aspect. We use filter window sizes of 1,2,3,4 with 100 maps each. Dropout rate is chosen as 0.5. Early stopping based on validation accuracy is applied.
+Our two models achieve the best performance when compared to these baselines as shown in, which shows that our proposed neural units effectively captures the aspect-specific features. Compared to one recently proposed model AF-LSTM, our method achieve 2%-5% improvements. Surprisingly, a vanilla CNN works quite well on this problem. It even beats these welldesigned LSTM models, which further proves that using CNN-based methods is a direction worth exploring.
+
+Case Study & Discussion
+Compared to a vanilla CNN, our two model variants could successfully distinguish the describing words for corresponding aspect targets. In the sentence "the appetizers are ok, but the service is slow", a vanilla CNN outputs the same negative sentiment label for both aspect terms "appetizers" and "service", while PF-CNN and PG-CNN successfully recognize that "slow" is only used for describing "service" and output neutral and negative labels for aspects "appetizers" and "service" respectively. In another example "the staff members are extremely friendly and even replaced my drink once when i dropped it outside", our models also find out that positive and neutral sentiment for "staff" and "drink" respectively.
+One thing we notice in our experiment is that a vanilla CNN ignoring aspects has comparable performance with some well-designed LSTM models in this aspect-level sentiment classification task.
+For a sentence containing multiple aspects, we assume the majority of the aspect-level sentiment label is the sentence-level sentiment label. Using this labeling scheme, in the restaurant data, 1034 out of 1117 test points have the same sentencelevel and aspect-level labels. Thus, a sentencelevel classifier with accuracy 75% also classifies 70% aspect-labels correctly. A similar observation was made for the laptop dataset as well. Probably this is the reason why a vanilla CNN has comparable performance on these two datasets. For future research, a more balanced dataset would be helpful to overcome this issue.
+
+Conclusion
+We propose a novel method for aspect level sentiment classification. We introduce two novel neural units called parameterized filter and parameterized gate to incorporate aspect information into the convolutional neural network architecture. Comparisons with baseline methods show our model effectively learns the aspect-specific sentiment expressions. Our experiments demonstrate a significant improvement compared to multiple strong neural baselines.
+To the best of our knowledge, our model is the first attempt using convolutional neural networks solving this problem. We hope this work could inspire future research exploring in this direction. It is also interesting to see whether such parameterized CNN architecture could benefit other natural language processing tasks involving text pairs like question answering task.

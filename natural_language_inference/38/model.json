@@ -1,0 +1,59 @@
+{
+  "has" : {
+    "Model" : {
+      "introduce" : {
+        "Multi - layer Embedding with Memory Networks ( MEMEN )" : {
+          "has" : {
+            "end - to - end neural network" : {
+              "for" : "machine comprehension task"
+            }
+          },
+          "from sentence" : "In this paper , we introduce the Multi - layer Embedding with Memory Networks ( MEMEN ) , an end - to - end neural network for machine comprehension task ."
+        }
+      },
+      "consists of" : {
+        "three parts" : {
+          "has" : {
+            "encoding" : {
+              "of" : "context and query",
+              "in which" : {
+                "add" : {
+                  "has" : {
+                    "useful syntactic and semantic information" : {
+                      "in" : {
+                        "embedding" : {
+                          "of" : "every word"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "high - efficiency multilayer memory network" : {
+              "of" : {
+                "full - orientation matching" : {
+                  "to match" : "question and context"
+                }
+              }
+            },
+            "pointer - network based answer boundary prediction layer" : {
+              "to get" : {
+                "location" : {
+                  "of" : {
+                    "answer" : {
+                      "in" : "passage"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Our model consists of three parts :
+1 ) the encoding of context and query , in which we add useful syntactic and semantic information in the embedding of every word , 2 ) the high - efficiency multilayer memory network of full - orientation matching to match the question and context , 3 ) the pointer - network based answer boundary prediction layer to get the location of the answer in the passage ."
+
+        }
+      }
+    }
+  }
+}

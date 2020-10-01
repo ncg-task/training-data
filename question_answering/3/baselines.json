@@ -1,0 +1,38 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "RACE" : {
+          "has" : {
+            "key competitors" : {
+              "are" : ["Stanford Attention Reader ( Stanford AR )", "Gated Attention Reader ( GA )", "Dynamic Fusion Networks ( DFN )"]
+            }
+          },
+          "from sentence" : "RACE
+The key competitors are the Stanford Attention Reader ( Stanford AR ) , Gated Attention Reader ( GA ) , and Dynamic Fusion Networks ( DFN ) ."
+
+        },
+        "SearchQA" : {
+          "has" : {
+            "main competitor baseline" : {
+              "is" : "AMANDA model"
+            }
+          },
+          "from sentence" : "SearchQA
+The main competitor baseline is the AMANDA model proposed by ."
+
+        },
+        "NarrativeQA" : {
+          "has" : {
+            "baselines" : {
+              "are" : ["context - less sequence to sequence ( seq2seq ) model", "ASR", "BiDAF"]
+            }
+          },
+          "from sentence" : "NarrativeQA
+We compete on the summaries setting , in which the baselines are a context - less sequence to sequence ( seq2seq ) model , ASR and BiDAF ."
+
+        }
+      }      
+    }
+  }
+}

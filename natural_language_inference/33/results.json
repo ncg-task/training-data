@@ -1,0 +1,184 @@
+{
+  "has" : {
+    "Results" : {
+      "adding" : {
+        "more tasks" : {
+          "improves" : {
+            "transfer performance" : {
+              "of" : "our model"
+            }
+          },
+          "from sentence" : "It is evident from that adding more tasks improves the transfer performance of our model ."
+        }
+      },
+      "Increasing" : {
+        "capacity" : {
+          "has" : {
+            "our sentence encoder" : {
+              "with" : "more hidden units ( + L )",
+              "as well as" : "additional layer ( + 2L )",
+              "lead to" : "improved transfer performance"
+            }
+          },
+          "from sentence" : "Increasing the capacity our sentence encoder with more hidden units ( + L ) as well as an additional layer ( + 2L ) also lead to improved transfer performance ."
+        }
+      },
+      "observe" : {
+        "gains" : {
+          "of" : {
+            "1.1 - 2.0 %" : {
+              "on" : {
+                "sentiment classification tasks" : {
+                  "name" : ["MR", "CR", "SUBJ", "MPQA"]
+                }
+              },
+              "over" : "Infersent"
+            }
+          },
+          "from sentence" : "We observe gains of 1.1 - 2.0 % on the sentiment classification tasks ( MR , CR , SUBJ & MPQA ) over Infersent ."
+        },
+        "0.2-0.5 % improvement" : {
+          "over" : "decomposable attention model",
+          "from sentence" : "For example , we observe a 0.2-0.5 % improvement over the decomposable attention model ."
+        }
+      },
+      "demonstrate" : {
+        "substantial gains" : {
+          "on" : "TREC",
+          "has" : {
+            "6 %" : {
+              "over" : "Infersent"
+            },
+            "roughly 2 %" : {
+              "over" : "CNN - LSTM"
+            },
+            "outperforming" : {
+              "has" : "competitive supervised baseline"
+            }
+          },
+          "from sentence" : "We demonstrate substantial gains on TREC ( 6 % over Infersent and roughly 2 % over the CNN - LSTM ) , outperforming even a competitive supervised baseline ."
+        }
+      },
+      "see" : {
+        "similar gains" : {
+          "has" : "2.3 %",
+          "on" : "paraphrase identification ( MPRC )",
+          "closing" : {
+            "gap" : {
+              "on" : {
+                "supervised approaches" : {
+                  "trained from" : "scratch"
+                }
+              }
+            }
+          },
+          "from sentence" : "We see similar gains ( 2.3 % ) on paraphrase identification ( MPRC ) , closing the gap on supervised approaches trained from scratch ."
+        }
+      },
+      "addition of" : {
+        "constituency parsing" : {
+          "has" : {
+            "improves" : {
+              "has" : {
+                "performance" : {
+                  "on" : ["sentence relatedness ( SICK - R )", "entailment ( SICK - E )"]
+                }
+              }
+            }
+          },
+          "from sentence" : "The addition of constituency parsing improves performance on sentence relatedness ( SICK - R ) and entailment ( SICK - E ) consistent with observations made by ."
+        }
+      },
+      "show that" : {
+        "training" : {
+          "has" : {
+            "MLP" : {
+              "on top of" : {
+                "our fixed sentence representations" : {
+                  "has" : {
+                    "outperforms" : {
+                      "has" : {
+                        "several strong & complex supervised approaches" : {
+                          "that use" : "attention mechanisms"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "In , we show that simply training an MLP on top of our fixed sentence representations outperforms several strong & complex supervised approaches that use attention mechanisms , even on this fairly large dataset ."
+                }
+              }
+            }
+          }
+        }
+      },
+      "When using" : {
+        "small fraction" : {
+          "of" : "training data",
+          "able to" : {
+            "outperform" : {
+              "has" : {
+                "Siamese and Multi - Perspective CNN" : {
+                  "using" : {
+                    "roughly 6 %" : {
+                      "of" : "available training set"
+                    }
+                  },
+                  "from sentence" : "When using only a small fraction of the training data , indicated by the columns 1 k - 25 k , we are able to outperform the Siamese and Multi - Perspective CNN using roughly 6 % of the available training set ."
+                }
+              }
+            }
+          }
+        }
+      },
+      "has" : {
+        "outperform" : {
+          "has" : "Deconv LVM model",
+          "from sentence" : "We also outperform the Deconv LVM model proposed by in this low - resource setting ."
+        },
+        "Representations" : {
+          "learned solely from" : {
+            "NLI" : {
+              "appear to encode" : "syntax"
+            }
+          },
+          "incorporation into" : {
+            "our multi-task framework" : {
+              "does not" : {
+                "amplify" : {
+                  "has" : "signal"
+                }
+              }
+            }
+          },
+          "from sentence" : "Representations learned solely from NLI do appear to encode syntax but incorporation into our multi-task framework does not amplify this signal ."
+        }
+      },
+      "observe that" : {
+        "learned word embeddings" : {
+          "are" : {
+            "competitive" : {
+              "with" : {
+                "popular methods" : {
+                  "such as" : ["GloVe", "word2vec", "fasttext"]
+                }
+              }
+            }
+          },
+          "from sentence" : "Somewhat surprisingly , in we observe that the learned word embeddings are competitive with popular methods such as GloVe , word2vec , and fasttext on the benchmarks presented by and ."
+        },
+        "sentence characteristics" : {
+          "such as" : {
+            "length and word order" : {
+              "are" : {
+                "better encoded" : {
+                  "addition of" : "parsing"
+                }
+              }
+            }
+          },
+          "from sentence" : "Similarly , we observe that sentence characteristics such as length and word order are better encoded with the addition of parsing ."
+        }
+      }
+    }
+  }
+}

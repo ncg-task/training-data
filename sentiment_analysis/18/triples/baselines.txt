@@ -1,0 +1,7 @@
+(Contribution||has||Baselines)
+(Baselines||has||LSTM)
+(LSTM||built on||top of word embeddings)
+(Baselines||has||Feature - based SVM)
+(Feature - based SVM||compare with||reported results)
+(reported results||of||top system)
+(top system||in||SemEval 2014)

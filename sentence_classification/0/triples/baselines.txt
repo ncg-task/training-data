@@ -1,0 +1,7 @@
+(Contribution||has||Baselines)
+(Baselines||has||BiLSTM Attention ( with and without ELMo ))
+(BiLSTM Attention ( with and without ELMo )||optimizes||network)
+(network||for||main loss)
+(main loss||regarding||citation intent classification ( L 1 ))
+(BiLSTM Attention ( with and without ELMo )||uses||similar architecture)
+(similar architecture||to||proposed neural multitask learning framework)

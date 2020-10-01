@@ -1,0 +1,54 @@
+{
+  "has" : {
+    "Approach" : {
+      "examine" : {
+        "simple model family" : {
+          "has" : {
+            "decomposable attention model" : {
+              "shown promise in modeling" : "natural language inference"
+            }
+          },
+          "from sentence" : "We examine a simple model family , the decomposable attention model of , that has shown promise in modeling natural language inference and has inspired recent work on similar tasks ."
+        }
+      },
+      "to mitigate" : {
+        "data sparsity" : {
+          "modify" : {
+            "input representation" : {
+              "of" : "decomposable attention model",
+              "to use" : {
+                "sums" : {
+                  "of" : {
+                    "character n-gram embeddings" : {
+                      "instead of" : "word embeddings"  
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "First , to mitigate data sparsity , we modify the input representation of the decomposable attention model to use sums of character n-gram embeddings instead of word embeddings ."
+        }
+      },
+      "pretrain" : {
+        "all our model parameters" : {
+          "on" : {
+            "noisy , automatically collected question - paraphrase corpus" : {
+              "name" : "Paralex",
+              "followed by" : {
+                "fine - tuning" : {
+                  "has" : {
+                    "parameters" : {
+                      "on" : "Quora dataset"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Second , to significantly improve our model performance , we pretrain all our model parameters on the noisy , automatically collected question - paraphrase corpus Paralex , followed by fine - tuning the parameters on the Quora dataset ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

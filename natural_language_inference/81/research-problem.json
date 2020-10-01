@@ -1,0 +1,8 @@
+{
+  "has research problem" : [
+    ["MULTI - EVIDENCE QUESTION ANSWERING", {"from sentence" : "COARSE - GRAIN FINE - GRAIN COATTENTION NET - WORK FOR MULTI - EVIDENCE QUESTION ANSWERING"}],
+    ["question answering", {"from sentence" : "End - to - end neural models have made significant progress in question answering , however recent studies show that these models implicitly assume that the answer and evidence appear close together in a single document ."}],
+    ["question answering ( QA )", {"from sentence" : "A requirement of scalable and practical question answering ( QA ) systems is the ability to reason over multiple documents and combine their information to answer questions ."}],
+    ["neural question answering", {"from sentence" : "Although existing datasets enabled the development of effective end - to - end neural question answering systems , they tend to focus on reasoning over localized sections of a single document ."}]
+  ]
+}

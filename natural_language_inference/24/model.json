@@ -1,0 +1,44 @@
+{
+  "has" : {
+    "Model" : {
+      "derive" : {
+        "alternative multi-step reasoning neural network" : {
+          "for" : "MRC",
+          "from sentence" : "In this work , we derive an alternative multi-step reasoning neural network for MRC ."
+        }
+      },
+      "During" : {
+        "training" : {
+          "fix" : "number of reasoning steps",
+          "perform" : {
+            "stochastic dropout" : {
+              "on" : "answer module ( final layer predictions )"
+            }
+          },
+          "from sentence" : "During training , we fix the number of reasoning steps , but perform stochastic dropout on the answer module ( final layer predictions ) ."
+        },
+        "decoding" : {
+          "generate" : {
+            "answers" : {
+              "based on" : {
+                "average" : {
+                  "of" : {
+                    "predictions" : {
+                      "in" : {
+                        "all steps" : {
+                          "rather than" : "final step"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "During decoding , we generate answers based on the average of predictions in all steps , rather than the final step ."
+          }
+        }
+      },
+      "call" : ["stochastic answer network ( SAN )", {"from sentence" : "We call this a stochastic answer network ( SAN ) because the stochastic dropout is applied to the answer module ; albeit simple , this technique significantly improves the robustness and overall accuracy of the model ."}]
+    }
+  }
+}

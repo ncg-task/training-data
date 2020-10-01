@@ -1,0 +1,123 @@
+108	0	15	Without dropout
+108	22	27	model
+108	28	36	overfits
+108	40	57	around 300 epochs
+108	37	39	at
+108	61	66	78 F1
+109	0	36	Orthonormal parameter initialization
+109	37	39	is
+109	40	62	surprisingly important
+109	65	77	without this
+109	84	89	model
+109	90	98	achieves
+109	99	109	only 65 F1
+109	110	116	within
+109	121	136	first 50 epochs
+110	4	21	8 layer ablations
+110	22	28	suffer
+110	31	35	loss
+110	39	48	more than
+110	49	52	1.7
+110	53	55	in
+110	56	68	absolute F 1
+110	69	80	compared to
+110	85	95	full model
+87	4	11	network
+87	12	23	consists of
+87	24	80	8 BiLSTM layers ( 4 forward LSTMs and 4 reversed LSTMs )
+87	81	85	with
+87	86	114	300 dimensional hidden units
+87	123	136	softmax layer
+87	137	151	for predicting
+87	156	175	output distribution
+89	24	26	in
+89	27	37	BiL - STMs
+89	42	58	initialized with
+89	59	86	random orthonormal matrices
+91	4	10	tokens
+91	11	14	are
+91	15	28	lower - cased
+91	33	49	initialized with
+91	50	84	100 - dimensional GloVe embeddings
+91	85	99	pre-trained on
+91	100	109	6B tokens
+91	114	128	updated during
+91	129	137	training
+92	0	6	Tokens
+92	16	30	not covered by
+92	31	36	GloVe
+92	41	54	replaced with
+92	57	91	randomly initialized UNK embedding
+95	8	14	models
+95	19	30	trained for
+95	31	41	500 epochs
+95	42	46	with
+95	47	61	early stopping
+95	62	70	based on
+95	71	90	development results
+93	12	15	use
+93	16	24	Adadelta
+93	43	47	with
+93	50	68	1e ?6 and ? = 0.95
+93	73	85	mini-batches
+93	89	93	size
+93	94	96	80
+94	3	6	set
+94	7	32	RNN - dropout probability
+94	33	35	to
+94	36	39	0.1
+94	44	48	clip
+94	49	58	gradients
+94	59	63	with
+94	64	68	norm
+94	69	80	larger than
+94	38	39	1
+11	63	68	using
+11	69	101	deep highway bidirectional LSTMs
+11	102	106	with
+11	107	127	constrained decoding
+14	18	23	treat
+14	24	27	SRL
+14	28	30	as
+14	33	52	BIO tagging problem
+14	57	60	use
+14	61	85	deep bidirectional LSTMs
+15	13	22	differ by
+15	29	40	simplifying
+15	45	68	input and output layers
+15	77	88	introducing
+15	89	108	highway connections
+15	117	122	using
+15	123	140	recurrent dropout
+15	149	157	decoding
+15	158	162	with
+15	163	177	BIOconstraints
+15	190	200	ensembling
+15	158	162	with
+15	208	226	product of experts
+2	0	27	Deep Semantic Role Labeling
+4	43	73	semantic role labeling ( SRL )
+10	64	67	SRL
+103	0	20	Our ensemble ( PoE )
+103	25	48	an absolute improvement
+103	93	97	over
+103	102	127	previous state of the art
+103	49	51	of
+103	52	58	2.1 F1
+103	59	61	on
+103	67	77	CoNLL 2005
+103	82	92	CoNLL 2012
+104	0	16	Our single model
+104	22	30	achieves
+104	31	58	more than a 0.4 improvement
+104	59	61	on
+104	62	75	both datasets
+105	0	18	In comparison with
+105	23	44	best reported results
+105	47	94	our percentage of completely correct predicates
+105	95	106	improves by
+105	107	117	5.9 points
+106	170	174	show
+106	180	210	accurate syntactic information
+106	215	222	improve
+106	229	240	deep models

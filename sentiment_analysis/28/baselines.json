@@ -1,0 +1,196 @@
+{
+  "has" : {
+    "Baselines" : {
+      "design" : {
+        "basic BERT - based model" : {
+          "to evaluate" : {
+            "performance" : {
+              "of" : "AEN - BERT"
+            }
+          },
+          "from sentence" : "We also design a basic BERT - based model to evaluate the performance of AEN - BERT ."
+        }
+      },
+      "has" : {
+        "Non - RNN based baselines" : {
+          "has" : {
+            "Feature - based SVM" : {
+              "is" : {
+                "traditional support vector machine based model" : {
+                  "with" : "extensive feature engineering"
+                }
+              },
+              "from sentence" : "Feature - based SVM is a traditional support vector machine based model with extensive feature engineering ."
+            },
+            "Rec - NN" : {
+              "uses" : {
+                "rules" : {
+                  "to transform" : "dependency tree"
+                }
+              },
+              "put" : {
+                "opinion target" : {
+                  "at" : "root"
+                }
+              },
+              "learns" : {
+                "sentence representation" : {
+                  "toward" : "target",
+                  "via" : {
+                    "semantic composition" : {
+                      "using" : "Recursive NNs"
+                    }
+                  }              
+                }
+              },
+              "from sentence" : "Rec - NN firstly uses rules to transform the dependency tree and put the opinion target at the root , and then learns the sentence representation toward target via semantic composition using Recursive NNs ."          
+            },
+            "MemNet" : {
+              "uses" : {
+                "multi-hops of attention layers" : {
+                  "on" : {
+                    "context word embeddings" : {
+                      "for" : "sentence representation"
+                    }
+                  },
+                  "to explicitly captures" : {
+                    "importance" : {
+                      "of" : "each context word"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "MemNet uses multi-hops of attention layers on the context word embeddings for sentence representation to explicitly captures the importance of each context word ."
+            }
+          }
+        },
+        "RNN based baselines" : {
+          "has" : {
+            "TD - LSTM" : {
+              "extends" : {
+                "LSTM" : {
+                  "by using" : "two LSTM networks",
+                  "to model" : {
+                    "left context" : {
+                      "with" : "target"
+                    },
+                    "right context" : {
+                      "with" : "target"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "TD - LSTM extends LSTM by using two LSTM networks to model the left context with target and the right context with target respectively ."
+            },
+            "ATAE - LSTM" : {
+              "strengthens" : {
+                "effect of target embeddings" : {
+                  "which appends" : {
+                    "target embeddings" : {
+                      "with" : "each word embeddings"
+                    }
+                  }                
+                }
+              },
+              "use" : {
+                "LSTM" : {
+                  "with" : {
+                    "attention" : {
+                      "to get" : {
+                        "final representation" : {
+                          "for" : "classification"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "ATAE - LSTM
+  ( Wang et al. , 2016 ) strengthens the effect of target embeddings , which appends the target embeddings with each word embeddings and use LSTM with attention to get the final representation for classification ."
+  
+            },
+            "IAN" : {
+              "learns" : {
+                "representations" : {
+                  "of" : {
+                    "target and context" : {
+                      "with" : "two LSTMs and attentions",
+                      "which generates" : {
+                        "representations" : {
+                          "for" : {
+                            "targets and contexts" : {
+                              "with respect to" : "each other"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "IAN learns the representations of the target and context with two LSTMs and attentions interactively , which generates the representations for targets and contexts with respect to each other ."
+            },
+            "RAM" : {
+              "strengthens" : {
+                "Mem - Net" : {
+                  "by representing" : {
+                    "memory" : {
+                      "with" : "bidirectional LSTM"
+                    }
+                  }
+                }
+              },
+              "using" : {
+                "gated recurrent unit network" : {
+                  "to combine" : {
+                    "multiple attention outputs" : {
+                      "for" : "sentence representation"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "RAM strengthens Mem - Net by representing memory with bidirectional LSTM and using a gated recurrent unit network to combine the multiple attention outputs for sentence representation ."
+            }
+          }
+        },
+        "AEN - Glo Ve ablations" : {
+          "has" : {
+            "AEN - GloVe w/ o PCT" : {
+              "ablates" : "PCT module",
+              "from sentence" : "AEN - GloVe w/ o PCT ablates PCT module ."
+            },
+            "AEN - GloVe w/ o MHA" : {
+              "ablates" : "MHA module",
+              "from sentence" : "AEN - GloVe w/ o MHA ablates MHA module ."
+            },
+            "AEN - GloVe w/ o LSR" : {
+              "ablates" : "label smoothing regularization",
+              "from sentence" : "AEN - GloVe w/ o LSR ablates label smoothing regularization ."
+            },
+            "AEN-GloVe-BiLSTM" : {
+              "replaces" : {
+                "attentional encoder layer" : {
+                  "with" : "two bidirectional LSTM"
+                }
+              },
+              "from sentence" : "AEN-GloVe-BiLSTM replaces the attentional encoder layer with two bidirectional LSTM ."
+            }
+          }
+        },
+        "Basic BERT - based model" : {
+          "has" : {
+            "BERT - SPC" : {
+              "feeds" : {
+                "sequence \" [ CLS ] + context + [ SEP ] + target + [ SEP ] \"" : {
+                  "into" : "basic BERT model",
+                  "for" : "sentence pair classification task"
+                }
+              },
+              "from sentence" : "BERT - SPC feeds sequence \" [ CLS ] + context + [ SEP ] + target + [ SEP ] \" into the basic BERT model for sentence pair classification task ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

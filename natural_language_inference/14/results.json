@@ -1,0 +1,57 @@
+{
+  "has" : {
+    "Results" : {
+      "As" : {
+        "baseline" : {
+          "evaluate" : {
+            "both models" : {
+              "on" : "full SWAG training and validation sets",
+              "providing" : {
+                "accuracy" : {
+                  "of" : {
+                    "84.2 %" : {
+                      "on" : "BERT"
+                    },
+                    "80.2 %" : {
+                      "on" : "GPT"
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "As a baseline , we evaluate both models on the full SWAG training and validation sets , providing an accuracy of 84.2 % on BERT and 80.2 % on GPT ."
+          }
+        }
+      },
+      "train" : {
+        "models" : {
+          "on" : {
+            "sample" : {
+              "of" : "2,241 SWAG questions"
+            },
+            "from sentence" : "To adjust for the difference in size between our dataset and SWAG , we also train the models on a sample of 2,241 SWAG questions ( the size of the training set in each of CODAH 's crossvalidation folds ) and evaluate them on the full SWAG validation set ."            
+          },
+          "has" : {
+            "evaluate" : {
+              "on" : "full SWAG validation set",
+              "from sentence" : "To adjust for the difference in size between our dataset and SWAG , we also train the models on a sample of 2,241 SWAG questions ( the size of the training set in each of CODAH 's crossvalidation folds ) and evaluate them on the full SWAG validation set ."              
+            }
+          },
+          "produces" : {
+            "accuracy" : {
+              "of" : {
+                "75.2 %" : {
+                  "for" : "BERT"
+                },
+                "63.6 %" : {
+                  "for" : "GPT"
+                }
+              }
+            },
+            "from sentence" : "This produces an accuracy of 75.2 % for BERT ( using the cross-validation grid search ) and 63.6 % for GPT . :"
+          }
+        }
+      }
+    }
+  }
+}

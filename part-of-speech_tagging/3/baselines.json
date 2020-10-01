@@ -1,0 +1,12 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "three baseline systems" : {
+          "name" : ["BRNN , the bi-direction RNN", "BLSTM , the bidirection LSTM", {"BLSTM - CNNs , the combination of BLSTM with CNN" : {"to model" : "characterlevel information"}}],
+          "from sentence" : "We compare the performance with three baseline systems - BRNN , the bi-direction RNN ; BLSTM , the bidirection LSTM , and BLSTM - CNNs , the combination of BLSTM with CNN to model characterlevel information ."          
+        }
+      }
+    }
+  }  
+}

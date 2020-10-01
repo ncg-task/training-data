@@ -1,0 +1,93 @@
+{
+  "has" : {
+    "Results" : {
+      "on" : {
+        "WebQSP - WD data set" : {
+          "has" : {
+            "graph models" : {
+              "outperform" : {
+                "all other models" : {
+                  "across" : "precision , recall and F-score"
+                }
+              },
+              "has" : {
+                "GGNN" : {
+                  "showing" : "best overall result"
+                }
+              }
+            }
+          },
+          "from sentence" : "We compare the results on the WebQSP - WD data set in .
+As can be seen , the graph models outperform all other models across precision , recall and F-score , with GGNN showing the best overall result ."
+
+        }
+      },
+      "has" : {
+        "STAGG architecture" : {
+          "delivers" : "worst results",
+          "from sentence" : "The STAGG architecture delivers the worst results in our experiments , the main reason being supposedly that the model had to rely on manually defined features that are less flexible ."
+        },
+        "Single Edge model" : {
+          "outperforms" : {
+            "more complex Pooled Edges model" : {
+              "by" : "noticeable margin"
+            }
+          },
+          "from sentence" : "The Single Edge model outperforms the more complex Pooled Edges model by a noticeable margin ."
+        },
+        "Single Edge baseline" : {
+          "prefers" : {
+            "simple graphs" : {
+              "that consist of" : "single edge",
+              "is" : {
+                "good strategy" : {
+                  "to achieve" : "higher recall values"
+                }
+              }
+            }  
+          },
+          "from sentence" : "The Single Edge baseline prefers simple graphs that consist of a single edge which is a good strategy to achieve higher recall values ."
+        },
+        "Pooled Edges model" : {
+          "maintains" : {
+            "better performance" : {
+              "across" : "questions of different complexity",
+              "shows" : {
+                "benefits" : {
+                  "of encoding" : "all graph edges"
+                }
+              }
+            }
+          },
+          "from sentence" : "The Pooled Edges model maintains a better performance across questions of different complexity , which shows the benefits of encoding all graph edges ."
+        }
+      },
+      "for" : {
+        "STAGG and Single Edge baselines" : {
+          "has" : {
+            "performance" : {
+              "on" : "more complex questions",
+              "has" : "drops",
+              "compared to" : {
+                "results" : {
+                  "on" : "simpler questions"
+                }
+              }
+            }
+          },
+          "from sentence" : "In , we see that for the STAGG and Single Edge baselines the performance on more complex questions drops compared to the results on simpler questions ."
+        }
+      },
+      "see that" : {
+        "GGNN model" : {
+          "offers" : {
+            "best results" : {
+              "on" : "simple and complex questions"
+            }
+          },
+          "from sentence" : "We see that the GGNN model offers the best results both on simple and complex questions , as it effectively encodes the structure of semantic graphs ."
+        }
+      }
+    }
+  }
+}

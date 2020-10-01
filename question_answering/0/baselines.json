@@ -1,0 +1,45 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "Pooled Edges model" : {
+          "use" : {
+            "DCNN" : {
+              "to encode" : {
+                "question and the label of each edge" : {
+                  "in" : "semantic graph"
+                }
+              }
+            }
+          },
+          "from sentence" : "3 . Pooled Edges model - We use the DCNN to encode the question and the label of each edge in the semantic graph ."
+        },
+        "Graph Neural Network ( GNN )" : {
+          "include" : {
+            "model variant" : {
+              "that does not use" : "gating mechanism",
+              "directly computes" : {
+                "hidden state" : {
+                  "as" : {
+                    "combination" : {
+                      "of" : "activations ( Eq 1 ) and the previous state"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Graph Neural Network ( GNN ) -
+To judge the effect of the gated graph neural architecture , we also include a model variant that does not use the gating mechanism and directly computes the hidden state as a combination of the activations ( Eq 1 ) and the previous state ."
+
+        },
+        "Gated Graph Neural Network ( GGNN )" : {
+          "to process" : "semantic parses",
+          "from sentence" : "Gated
+Graph Neural Network ( GGNN ) - We use the GGNN to process semantic parses , as described in Section 3.2 ."
+
+        }
+      }
+    }
+  }
+}

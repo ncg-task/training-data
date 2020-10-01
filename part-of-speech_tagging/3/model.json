@@ -1,0 +1,75 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "neural network architecture" : {
+          "for" : "sequence labeling"
+        },
+        "from sentence" : "In this paper , we propose a neural network architecture for sequence labeling ."
+      },
+      "is" : {
+        "endto - end model" : {
+          "requiring no" : ["task - specific resources", "feature engineering", "data pre-processing"],
+          "beyond" : {
+            "pre-trained word embeddings" : {
+              "on" : "unlabeled corpora"
+            }
+          },
+          "from sentence" : "It is a truly endto - end model requiring no task - specific resources , feature engineering , or data pre-processing beyond pre-trained word embeddings on unlabeled corpora ."
+        }
+      },
+      "easily applied to" : {
+        "wide range" : {
+          "of" : {
+            "sequence labeling tasks" : {
+              "on" : "different languages and domains"
+            }
+          }
+        },
+        "from sentence" : "Thus , our model can be easily applied to a wide range of sequence labeling tasks on different languages and domains ."
+      },
+      "first use" : {
+        "convolutional neural networks ( CNNs )" : {
+          "to encode" : {
+            "character - level information" : {
+              "of" : {
+                "a word" : {
+                  "into" : "its character - level representation"
+                }
+              }
+            }
+          },
+          "from sentence" : "We first use convolutional neural networks ( CNNs ) to encode character - level information of a word into its character - level representation ."
+        }
+      },
+      "combine" : {
+        "character - and word - level representations" : {
+          "feed them into" : {
+            "bi-directional LSTM ( BLSTM )" : {
+              "to model" : {
+                "context information" : {
+                  "of" : "each word"
+                }
+              }
+            }
+          },
+          "from sentence" : "Then we combine character - and word - level representations and feed them into bi-directional LSTM ( BLSTM ) to model context information of each word ."
+        }
+      },
+      "On top of" : {
+        "BLSTM" : {
+          "use" : {
+            "sequential CRF" : {
+              "to jointly decode" : {
+                "labels" : {
+                  "for" : "whole sentence"
+                }
+              }
+            }
+          },
+          "from sentence" : "On top of BLSTM , we use a sequential CRF to jointly decode labels for the whole sentence ."
+        }
+      }
+    }
+  }
+}

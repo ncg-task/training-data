@@ -1,0 +1,12 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : [
+        ["random token generation", {"from sentence" : "The first model is a random token generation ."}],
+        ["MLE trained LSTM G", {"from sentence" : "The second one is the MLE trained LSTM G ? ."}],
+        ["scheduled sampling", {"from sentence" : "The third one is scheduled sampling ."}],
+        ["Policy Gradient with BLEU ( PG - BLEU )", {"from sentence" : "The fourth one is the Policy Gradient with BLEU ( PG - BLEU ) ."}]
+      ]
+    }
+  }
+}

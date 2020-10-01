@@ -1,0 +1,56 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : [
+        ["multi -grained attention network", {"from sentence" : "In this paper , we propose a multi -grained attention network to address the above two issues in aspect level sentiment classification ."}],
+        {"fine - grained attention mechanism" : {
+          "to characterize" : {
+            "word - level interactions" : {
+              "between" : "aspect and context words"
+            }
+          },
+          "relieve" : {
+            "information loss" : {
+              "occurred in" : "coarse - grained attention mechanism"
+            }
+          },
+          "from sentence" : "Specifically , we propose a fine - grained attention mechanism ( i.e. F- Aspect2Context and F - Context2Aspect ) , which is employed to characterize the word - level interactions between aspect and context words , and relieve the information loss occurred in coarse - grained attention mechanism ."
+        }}
+      ],
+      "utilize" : {
+        "bidirectional coarsegrained attention" : {
+          "combine them with" : {
+            "finegrained attention vectors" : {
+              "to compose" : {
+                "multigrained attention network" : {
+                  "for" : "final sentiment polarity prediction"
+                }
+              }
+            }
+          },
+          "from sentence" : "In addition , we utilize the bidirectional coarsegrained attention ( i.e. C- Aspect2Context and C - Context2Aspect ) and combine them with finegrained attention vectors to compose the multigrained attention network for the final sentiment polarity prediction , which can leverage the advantages of them ."
+        }
+      },
+      "to make use of" : {
+        "valuable aspect - level interaction information" : {
+          "design" : {
+            "aspect alignment loss" : {
+              "in" : "objective function",
+              "to enhance" : {
+                "difference" : {
+                  "of" : "attention weights",
+                  "towards" : {
+                    "aspects" : {
+                      "which have" : ["same context", "different sentiment polarities"]
+                    }
+                  }                  
+                }
+              }              
+            }
+          },
+          "from sentence" : "More importantly , in order to make use of the valuable aspect - level interaction information , we design an aspect alignment loss in the objective function to enhance the difference of the attention weights towards the aspects which have the same context and different sentiment polarities ."
+        }
+      }
+    }
+  }
+}

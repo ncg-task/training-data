@@ -1,0 +1,77 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "novel attention mechanism" : {
+          "differs from" : {
+            "previous ones" : {
+              "in" : ["multi-dimensional", "directional"]
+            }
+          },
+          "from sentence" : "We propose a novel attention mechanism that differs from previous ones in that it is 1 ) multi-dimensional : the attention w.r.t. each pair of elements from the source ( s ) is a vector , where each entry is the attention computed on each feature ; and 2 ) directional : it uses one or multiple positional masks to model the asymmetric attention between two elements ."
+        }
+      },
+      "compute" : {
+        "feature - wise attention" : {
+          "since" : {
+            "each element" : {
+              "in" : "sequence",
+              "represented by" : "vector"
+            }
+          },
+          "from sentence" : "We compute feature - wise attention since each element in a sequence is usually represented by a vector , e.g. , word / character embedding , and attention on different features can contain different information about dependency , thus to handle the variation of contexts around the same word ."
+        }
+      },
+      "apply" : {
+        "positional masks" : {
+          "to" : "attention distribution",
+          "easily encode" : {
+            "prior structure knowledge" : {
+              "such as" : ["temporal order", "dependency parsing"]
+            }
+          },
+          "from sentence" : "We apply positional masks to attention distribution since they can easily encode prior structure knowledge such as temporal order and dependency parsing ."
+        }
+      },
+      "build" : {
+        "light - weight and RNN / CNN - free neural network" : {
+          "name" : "Directional Self - Attention Network ( DiSAN )",
+          "for" : "sentence encoding",
+          "from sentence" : "We then build a light - weight and RNN / CNN - free neural network , \" Directional Self - Attention Network ( DiSAN ) \" , for sentence encoding ."
+        }
+      },
+      "In" : {
+        "DiSAN" : {
+          "has" : {
+            "input sequence" : {
+              "processed by" : {
+                "directional ( forward and backward ) self - attentions" : {
+                  "to model" : "context dependency",
+                  "produce" : {
+                    "context - aware representations" : {
+                      "for" : "all tokens"
+                    }
+                  }
+                },
+                "from sentence" : "In DiSAN , the input sequence is processed by directional ( forward and backward ) self - attentions to model context dependency and produce context - aware representations for all tokens ."                
+              }
+            },
+            "multi-dimensional attention" : {
+              "computes" : {
+                "vector representation" : {
+                  "of" : "entire sequence",
+                  "passed into" : {
+                    "classification / regression module" : {
+                      "to compute" : "final prediction for a particular task"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Then , a multi-dimensional attention computes a vector representation of the entire sequence , which can be passed into a classification / regression module to compute the final prediction fora particular task ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

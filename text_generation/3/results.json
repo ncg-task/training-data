@@ -1,0 +1,111 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "proposed AEM model" : {
+          "significantly outperform" : "Seq2Seq model",
+          "from sentence" : "The proposed AEM model significantly outperforms the Seq2Seq model ."
+        }
+      },
+      "demonstrates" : {
+        "effectiveness of utterance - level dependency" : {
+          "on improving" : "quality of generated text",
+          "from sentence" : "It demonstrates the effectiveness of utterance - level dependency on improving the quality of generated text ."
+        }
+      },
+      "improvement from" : {
+        "AEM model" : {
+          "to" : {
+            "AEM + Attention model" : {
+              "is" : "0.68 BLEU - 4 point"
+            }
+          }
+        },
+        "from sentence" : "The improvement from the AEM model to the AEM + Attention model 2 is 0.68 BLEU - 4 point ."
+      },
+      "find" : {
+        "AEM model" : {
+          "achieves" : {
+            "significant improvement" : {
+              "on" : "diversity of generated text"
+            }
+          }  
+        },
+        "from sentence" : "We find that the AEM model achieves significant improvement on the diversity of generated text ."
+      },
+      "noticed that" : {
+        "attention mechanism" : {
+          "performs" : {
+            "almost the same" : {
+              "compared to" : "AEM model"
+            }
+          }
+        },
+        "from sentence" : "Also , it should be noticed that the attention mechanism performs almost the same compared to the AEM model ( 31.2 K vs. 34.6 K in terms of Dist - 3 ) , which indicates that the utterance - level dependency and the word - level dependency are both indispensable for dialogue generation ."
+      },
+      "combining" : {
+        "two dependencies" : {
+          "has" : {
+            "AEM + Attention model" : {
+              "achieves" : "best results"
+            }
+          }
+        },
+        "from sentence" : "Therefore , by combining the two dependencies together , the AEM + Attention model achieves the best results ."
+      },
+      "of" : {
+        "human evaluation" : {
+          "has" : {
+            "inter-annotator agreement" : {
+              "is" : "satisfactory",
+              "from sentence" : "shows the results of human evaluation .
+The inter-annotator agreement is satisfactory considering the difficulty of human evaluation ."
+
+            },
+            "Pearson 's correlation coefficient" : {
+              "is" : {
+                "0.69" : {
+                  "on" : "coherence"
+                },
+                "0.57" : {
+                  "on" : "fluency"
+                }
+              },
+              "from sentence" : "The Pearson 's correlation coefficient is 0.69 on coherence and 0.57 on fluency , with p < 0.0001 ."
+            }
+          },
+          "clear that" : {
+            "AEM model" : {
+              "outperforms" : {
+                "Seq2Seq model" : {
+                  "with" : "large margin"
+                }
+              }
+            },
+            "from sentence" : "First , it is clear that the AEM model outperforms the Seq2Seq model with a large margin , which proves the effectiveness of the AEM model on generating high quality responses ."
+          },
+          "interesting to note that with" : {
+            "attention mechanism" : {
+              "has" : {
+                "coherence" : {
+                  "decreased slightly in" : {
+                    "Seq2Seq model" : {
+                      "increased significantly in" : "AEM model"
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "Second , it is interesting to note that with the attention mechanism , the coherence is decreased slightly in the Seq2Seq model but increased significantly in the AEM model ."
+          },
+          "expected that" : {
+            "AEM + Attention model" : {
+              "achieves" : "best G-score"
+            },
+            "from sentence" : "Therefore , it is expected that the AEM + Attention model achieves the best G-score ."
+          }
+        }
+      }
+    }
+  }
+}

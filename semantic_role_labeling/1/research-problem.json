@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Semantic Role Labeling", {"from sentence" : "Linguistically - Informed Self - Attention for Semantic Role Labeling"}],
+    ["semantic role labeling ( SRL )", {"from sentence" : "Current state - of - the - art semantic role labeling ( SRL ) uses a deep neural network with no explicit linguistic features ."}],
+    ["SRL", {"from sentence" : "However , prior work has shown that gold syntax trees can dramatically improve SRL decoding , suggesting the possibility of increased accuracy from explicit modeling of syntax ."}]
+  ]
+}

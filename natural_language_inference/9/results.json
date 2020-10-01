@@ -1,0 +1,51 @@
+{
+  "has" : {
+    "Results" : {
+      "In" : {
+        "1 k data" : {
+          "has" : {
+            "QRN 's ' 2 r' ( 2 layers + reset gate + d = 50 )" : {
+              "outperforms" : {
+                "all other models" : {
+                  "by" : "large margin ( 2.8 + % )"
+                }
+              },
+              "from sentence" : "In 1 k data , QRN 's ' 2 r' ( 2 layers + reset gate + d = 50 ) outperforms all other models by a large margin ( 2.8 + % ) ."
+            }
+          }
+        },
+        "10 k dataset" : {
+          "has" : {
+            "average accuracy" : {
+              "of" : {
+                "QRN 's ' 6r200 ' ( 6 layers + reset gate + d = 200 ) model" : {
+                  "outperforms" : {
+                    "all previous models" : {
+                      "by" : "large margin ( 2.5 + % )",
+                      "achieving" : {
+                        "nearly perfect score" : {
+                          "of" : "99.7 %"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "In 10 k dataset , the average accuracy of QRN 's ' 6r200 ' ( 6 layers + reset gate + d = 200 ) model outperforms all previous models by a large margin ( 2.5 + % ) , achieving a nearly perfect score of 99.7 % ."
+            }
+          }
+        }
+      },
+      "has" : {
+        "QRN" : {
+          "outperforms" : {
+            "previous work" : {
+              "by" : "large margin ( 2.0 + % )"
+            }
+          },
+          "from sentence" : "QRN outperforms previous work by a large margin ( 2.0 + % ) in every comparison ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["populate knowledge bases with facts", {"from sentence" : "However , the ability to populate knowledge bases with facts automatically extracted from documents has improved frustratingly slowly ."}],
+    ["populate a knowledge base with relational facts", {"from sentence" : "A basic but highly important challenge in natural language understanding is being able to populate a knowledge base with relational facts contained in a piece of text ."}],
+    ["relation extraction", {"from sentence" : "Existing work on relation extraction ( e.g. , has been unable to achieve sufficient recall or precision for the results to be usable versus hand - constructed knowledge bases ."}]
+  ]
+}

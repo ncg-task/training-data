@@ -1,0 +1,3 @@
+(Contribution||has research problem||generating real - valued data)
+(Contribution||has research problem||generating sequences of discrete tokens)
+(Contribution||has research problem||Generating sequential synthetic data)

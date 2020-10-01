@@ -1,0 +1,16 @@
+{
+  "has" : {
+    "Dataset" : {
+      "introduce" : {
+        "COmmonsense Dataset Adversarially - authored by Humans ( CODAH )" : {
+          "for" : {
+            "commonsense question answering" : {
+              "in the style of" : "SWAG multiple choice sentence completion"
+            }
+          },
+          "from sentence" : "In this work , we introduce the COmmonsense Dataset Adversarially - authored by Humans ( CODAH ) for commonsense question answering in the style of SWAG multiple choice sentence completion ."
+        }
+      }
+    }
+  }
+}

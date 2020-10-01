@@ -1,0 +1,151 @@
+title
+A Span Selection Model for Semantic Role Labeling
+abstract
+We present a simple and accurate span-based model for semantic role labeling (SRL). Our model directly takes into account all possible argument spans and scores them for each label. At decoding time, we greedily select higher scoring labeled spans. One advantage of our model is to allow us to design and use spanlevel features, that are difficult to use in tokenbased BIO tagging approaches. Experimental results demonstrate that our ensemble model achieves the state-of-the-art results, 87.4 F1 and 87.0 F1 on the CoNLL-2005 and 2012 datasets, respectively.
+Introduction
+Semantic Role Labeling (SRL) is a shallow semantic parsing task whose goal is to recognize the predicate-argument structure of each predicate. Given a sentence and a target predicate, SRL systems have to predict semantic arguments of the predicate. Each argument is a span, a unit that consists of one or more words. A key to the argument span prediction is how to represent and model spans.
+One popular approach to it is based on BIO tagging schemes. State-of-the-art neural SRL models adopt this approach. Using features induced by neural networks, they predict a BIO tag for each word. Words at the beginning and inside of argument spans have the "B" and "I" tags, and words outside argument spans have the tag "O." While yielding high accuracies, this approach reconstructs argument spans from the predicted BIO tags instead of directly predicting the spans.
+Another approach is based on labeled span prediction. This approach scores each span with its label. One advantage of this approach is to allow us to design and use span-level features, that are difficult to use in BIO tagging approaches. However, the performance has lagged behind that of the state-of-the-art BIO-based neural models.
+To fill this gap, this paper presents a simple and accurate span-based model. Inspired by recent span-based models in syntactic parsing and coreference resolution, our model directly scores all possible labeled spans based on span representations induced from neural networks. At decoding time, we greedily select higher scoring labeled spans. The model parameters are learned by optimizing loglikelihood of correct labeled spans.
+We evaluate the performance of our spanbased model on the datasets. Experimental results show that the span-based model outperforms the BiLSTM-CRF model. In addition, by using contextualized word representations, ELMo, our ensemble model achieves the state-of-the-art results, 87.4 F1 and 87.0 F1 on the CoNLL-2005 and 2012 datasets, respectively. Empirical analysis on these results shows that the label prediction ability of our span-based model is better than that of the CRF-based model. Another finding is that ELMo improves the model performance for span boundary identification.
+In summary, our main contributions include:
+• A simple span-based model that achieves the state-of-the-art results. We treat SRL as span selection, in which we select appropriate spans from a set of possible spans for each label. This section formalizes the problem and provides our span selection model.
+
+Span Selection Problem
+
+Problem Setting
+Given a sentence that consists of T words w 1:T = w 1 , · · · , w T and the target predicate position index p, the goal is to predict a set of labeled spans
+Input : X = {w 1:T , p},
+Each labeled span i, j, r consists of word indices i and j in the sentence (1 ? i ? j ? T ) and a semantic role label r ? R.
+One simple method to predict Y is to select the highest scoring span (i, j) from all possible spans S for each label r,
+(1) Function SCORE r (i, j) returns areal value for each span (i, j) ? S (described in Section 2.2 in more detail). The number of possible spans S in the input sentence w 1:T is T (T +1)
+
+2
+, and S is defined as follows,
+Note that some semantic roles may not appear in the sentence. To deal with the absence of some labels, we define the predicate position span (p, p) as a NULL span and train a model to select the NULL span when there is no span for the label. 2
+
+Example
+Consider the following sentence with the set of correct labeled spans Y .
+[ A1 ] Y = { 1, 1, A0 , 3, 4, A1 , 2, 2, A2 , · · · , 2, 2, TMP } 2 Since the predicate itself can never bean argument of its own, we define the position as the NULL span.
+The input sentence is w 1:4 = "She kept a cat", and the target predicate position is p = 2. The correct labeled span 1, 1, A0 indicates that the A0 argument is "She", and 3, 4, A1 indicates that the A1 argument is "a cat". The other labeled spans 2, 2, * indicate there are no arguments.
+All the possible spans in this sentence are as follows, S w 1:4 = {(1, 1), (1, 2), (1, 3), (1, 4), (2, 2), (2, 3), (2, 4), (3, 3), (3, 4), (4, 4)} , where the predicate span (2, 2) is treated as the NULL span. Among these candidates, we select the highest scoring span for each label. As a result, we can obtain correct labeled spans Y .
+
+Scoring Function
+As the scoring function for each span in Eq. 1, we model normalized distribution overall possible spans S for each label r,
+where function F ? returns areal value. We train the parameters ? of F ? on a training set,
+To train the parameters ? of F ? , we minimize the cross-entropy loss function,
+where function ? (X, Y ) is a loss for each sample.
+
+Function F ?
+Function F ? in Eq. 2 consists of three types of functions; the base feature function f base , the span feature function f span and the labeling function f label as follows,
+Firstly, f base calculates abase feature vector ht for each word wt ? w 1:T . Then, from a sequence of the base feature vectors h 1:T , f span calculates a span feature vector h s fora span s = (i, j). Finally, using h s , f label calculates the score for the span s = (i, j) with a label r. Each function in Eqs. 4, 5 and 6 can arbitrarily be defined. In Section 3, we describe our functions used in this paper.
+
+Inference
+The simple argmax inference (Eq. 1) selects one span for each label. While this argmax inference is computationally efficient, it faces the following two problematic issues. In terms of (a), for example, when 1, 3, A0 and 2, 4, A1 are selected, apart of these two spans overlaps. In terms of (b), consider the following sentence.
+He came to the U.S. yesterday at 5 p.m.
+In this example, the label TMP is assigned to the two spans ("yesterday" and "at 5 p.m."). Semantic role labels are mainly categorized into (i) core labels or (ii) adjunct labels. In the above example, the labels A0 and A4 are regarded as core labels, which indicate obligatory arguments for the predicate. In contrast, the labels like TMP are regarded as adjunct labels, which indicate optional arguments for the predicate. As the example shows, adjunct labels can be assigned to multiple spans. To deal with these issues, we use a greedy search that keeps the consistency among spans and can return multiple spans for adjunct labels. Specifically, we greedily select higher scoring labeled spans subject to two constraints.
+Overlap Constraint: Any spans that overlap with the selected spans cannot be selected. Number Constraint: While multiple spans can be selected for each adjunct label, at most one span can be selected for each core label.
+As a precise description of this algorithm, we describe the pseudo code and its explanation in Appendix A.
+
+Network Architecture
+To compute the score for each span, we have introduced three functions (f base , f span , f label ) in Section 2.3. As an instantiation of each function, we use neural networks. This section describes our neural networks for each function and the overall network architecture. illustrates the overall architecture of our model. The first component f base uses bidirectional LSTMs (BiLSTMs) to calculate the base features. From the base features, the second component f span extracts span features. Based on them, the final component f label calculates the score for each labeled span. In the following, we describe these three components in detail.
+
+BiLSTM-Span Model
+
+Base Feature Function
+As the base feature function f base , we use BiL-STMs,
+There are some variants of BiLSTMs. Following the deep SRL models proposed by and , we stack BiLSTMs in an interleaving fashion. The stacked BiLSTMs process an input sequence in a left-to-right manner at odd-numbered layers and in a right-to-left manner at even-numbered layers.
+The first layer of the stacked BiLSTMs receives word embeddings x word ? Rd word and predicate mark embeddings x mark ? Rd mark . As the word embeddings, we can use existing word embeddings. The mark embeddings are created from the mark feature which has a binary value. The value is 1 if the word is the target predicate and 0 otherwise. For example, at the bottom part of, the word "bought" is the target predicate and assigned 1 as its mark feature.
+Receiving these inputs, the stacked BiLSTMs calculates the hidden states until the top layer. We use these hidden states as the input feature vectors h 1:T for the span feature function f span (Eq. 5). Each vector ht ? h 1:T has d hidden dimensions. We provide a detailed description of the stacked BiLSTMs in Appendix B.
+
+Span Feature Function
+From the base features induced by the BiLSTMs, we create the span feature representations, where the addition and subtraction features of the i-th and j-th hidden states are concatenated and used as the feature fora span s = (i, j). The resulting vector h sis a 2d hidden dimensional vector.
+The middle part of shows an example of this process. For the span (3, 5), the span feature function f span receives the 3rd and 5th features (h 3 and h 5 ). Then, these two vectors are added, and the 5th vector is subtracted from the 3rd vector. The resulting vectors are concatenated and given to the labeling function f label .
+Our design of the span features is inspired by the span (or segment) features used in syntactic parsing. While these neural span features cannot be used in BIO-based SRL models, they can easily be incorporated into spanbased models.
+
+Labeling Function
+Taking a span representation h s as input, the labeling function f label returns the score for the span s = (i, j) with a label r. Specifically, we use the following labeling function,
+where W ? R |R|×2d hidden has a row vector associated with each label r, and W[r] denotes the r-th row vector. As the result of the inner product of W[r] and h s , we obtain the score fora span (i, j) with a label r. The upper part of shows an example of this process. The span representation h s for the span s = (3, 5) is created from addition and subtraction of h 3 and h 5 . Then, we calculate the inner product of h sand W. The score for the label A0 is 2.1, and the score for the label A1 is 3.7. In the same manner, by calculating the scores for all the spans Sand labels R, we can obtain the score matrix (at the top part of).
+
+Ensembling
+We propose an ensemble model that uses span representations from multiple models. Each base model trained with different random initializations has variance in span representations. To take advantage of it, we introduce a variant of a mixture of experts (MoE)
+Firstly, we combine span representations h
+is a parameter matrix and {? m } M m=1 are trainable, softmax-normalized parameters. Then, using the combined span representation h moe s , we calculate the score in the same way as Eq. 8. We use the same greedy search algorithm used for our base model (Section 2.4).
+During training, we update only the parameters of the ensemble model, i.e.,
+That is, we fix the parameters of each trained model m. As the loss function, we use the cross-entropy (Eq. 3).
+
+Experiments
+
+Datasets
+We use the CoNLL-2005 and 2012 datasets 4 . We follow the standard train-development-test split and use the official evaluation script 5 from the CoNLL-2005 shared task on both datasets.
+3 One popular ensemble model for SRL is the product of experts (PoE) model. In our preliminary experiments, we tried the PoE model but it did not improve the performance. We use the version of OntoNotes downloaded at: http://cemantix.org/data/ontonotes.html.
+
+Baseline Model
+For comparison, as a model based on BIO tagging approaches, we use the BiLSTM-CRF model proposed by. The BiLSTMs for the base feature function f base are the same as those used in our BiLSTM-span model.
+
+Model Setup
+As the base function f base , we use 4 BiLSTM layers with 300 dimensional hidden units. To optimize the model parameters, we use Adam. Other hyperparameters are described in Appendix C in detail.
+
+Word Embeddings
+Word embeddings have a great influence on SRL models. To validate the model performance, we use two types of word embeddings.
+• Typical word embeddings, SENNA 6 (Collobert et al., 2011) • Contextualized word embeddings, ELMo 7 SENNA and ELMo can be regarded as different types of embeddings in terms of the context sensitivity. SENNA and other typical word embeddings always assign an identical vector to each word regardless of the input context. In contrast, ELMo assigns different vectors to each word depending on the input context. In this work, we use these word embeddings that have different properties. 8 These embeddings are fixed during training.
+
+Training
+As the objective function, we use the crossentropy L ? in Eq. 3 with L2 weight decay,
+where the hyperparameter ? is the coefficient governing the L2 weight decay.
+
+Results
+We report averaged scores across five different runs of the model training. datasets. Overall, our span-based ensemble model using ELMo achieved the best F1 scores, 87.4 F1 and 87.0 F1 on the CoNLL-2005 and CoNLL-2012 datasets, respectively. In comparison with the CRF-based single model, our span-based single model consistently yielded better F1 scores regardless of the word embeddings, SENNA and ELMO. Although the performance difference was small between these models using ELMO, it seems natural because both models got much better results and approached to the performance upper bound. shows the comparison with existing models in F1 scores. Our single and ensemble models using ELMO achieved the best F1 scores on all the test sets except the Brown test set.
+
+Analysis
+To better understand our span-based model, we addressed the following questions and obtained the following findings. In addition, we have conducted qualitative analysis on span and label representations learned in the span-based model (Section 5.3).
+
+Performance for Span Boundary Identification
+We analyze the results predicted by the single models. We evaluate F1 scores only for the span boundary match, shown by. We regard a predicted boundary i, j, * as correct if it matches the gold annotation regardless of its label.   On both datasets, the CRF-based models achieved better F1 than that of the span-based models. Also, compared with SENNA, ELMO yielded much better F1 by over 3.0. This suggests that a factor of the overall SRL performance gain by ELMO is the improvement of the model ability to identify span boundaries.
+
+Performance for Label Prediction
+We analyze labels of the predicted results. For labeled spans whose boundaries match the gold annotation, we evaluate the label accuracies. As Table 5 shows, the span-based models outperformed the CRF-based models. Also, interestingly, the performance gap between SENNA and ELMO was not so big as that for span boundary identification. shows F1 scores for frequent labels on the CoNLL-2005 and 2012 datasets. For A0 and A1, the performances of the CRF-based and spanbased models were almost the same. For A2, the span-based models outperformed the CRF-based model by about 1.0 F1 on the both datasets. 9
+
+Label-wise Performance
+Label Confusion Matrix shows a confusion matrix for labeling errors of the span-based model using ELMo. 10 Following , we only count predicted arguments that match the gold span boundaries. The PNC label got low scores on the CoNLL-2012 dataset in. Almost all the gold PNC (purpose) labels are assigned to only the news article domain texts of the CoNLL-2012 dataset. The other 6 domain texts have no or very few PNC labels. This can lead to the low performance. We have observed the same tendency of labeling confusions between the models using ELMo and SENNA.   The span-based model confused A0 and A1 arguments the most. In particular, the model confused them for ergative verbs. Consider the following two sentences:
+People start their own business ...
+[ A0 ]
+.. Congress has started to jump on ...
+[ A1 ]
+where the constituents located at the syntactic subjective position fulfill a different role A0 or A1 according to their semantic properties, such as animacy. Such arguments are difficult for SRL models to correctly identify.
+Another point is the confusions of A2 with DIR and LOC. As  pointed out, A2 in a lot of verb frames represents semantic relations such as direction or location, which can cause the confusions of A2 with such location-related adjuncts. To remedy these two problematic issues, it can be a promising approach to incorporate frame knowledge into SRL models by using verb frame dictionaries.
+"· · · toy makers to move [ across the border ] ." GOLD:A2 PRED:DIR Nearest neighbors of "across the border" 1 DIR across the Hudson 2 DIR outside their traditional tony circle 3 DIR across the floor 4 DIR through this congress 5 A2 off their foundations 6 DIR off its foundation 7 DIR off the center field wall 8 A3 out of bed 9 A2 through cottage rooftops 10 DIR through San Francisco: Example of the CoNLL-2005 development set, in which our model misclassified the label for the span "across the border". We collect 10 nearest neighbors of this span from the training set.
+
+Qualitative Analysis on Our Model
+
+On Span Representations
+Our span-based model computes and uses span representations (Eq. 7) for label prediction. To investigate a relation between the span representations and predicted labels, we qualitatively analyze nearest neighbors of each span representation with its predicted label. Specifically, for each predicted span in the development set, we collect 10 nearest neighbor spans with their gold labels from the training set. shows 10 nearest neighbors of a span "across the border" for the predicate "move". The label of this span was misclassified, i.e., the predicted label is DIR but the gold is A2. Looking at its nearest neighbor spans, they have different gold labels, such as DIR, A2 and A3. Like this case, we have observed that spans with a misclassified label often have their nearest neighbors with inconsistent labels.
+
+On Label Embeddings
+We analyze the label embeddings in the labeling function (Eq. 8). shows the distribution of the learned label embeddings. The adjunct labels are close to each other, which are likely to be less discriminative. Also, the core label A2 is close to the adjunct label DIR, which are often confused by the model. To enhance the discriminative power, it is promising to apply techniques that keep label representations faraway from each other.
+6 Related Work
+
+Semantic Role Labeling Tasks
+Automatic SRL has been widely studied. There have been two main styles of SRL.
+• FrameNet-style SRL • PropBank-style SRL In this paper, we have tackled PropBank-style SRL. 11 In PropBank-style SRL, there have been two main task settings.
+• Span-based SRL: shared tasks • Dependency-based SRL: shared tasks 11 Detailed descriptions on FrameNet-style and PropBankstyle SRL can be found in;;;. illustrates an example of span-based and dependency-based SRL. In dependency-based SRL (at the upper part of), the correct A2 argument for the predicate "hit" is the word "with". On one hand, in span-based SRL (at the lower part of), the correct A2 argument is the span "with the bat". For span-based SRL, the CoNLL-2004 and 2005 shared tasks provided the task settings and datasets. In the task settings, various SRL models, from traditional pipeline models to recent neural ones, have been proposed and competed with each other. For dependencybased SRL, the CoNLL-2008 and 2009 shared tasks provided the task settings and datasets. As in spanbased SRL, recent neural models achieved highperformance in dependency-based SRL. This paper focuses on span-based SRL.
+
+BIO-based SRL Models
+Span-based SRL can be solved as BIO sequential tagging.
+Neural models State-of-the-art SRL models use neural networks based on the BIO tagging approach. The pioneering neural SRL model was proposed by. They use convolutional neural networks (CNNs) and CRFs. Instead of CNNs, and  used stacked BiLSTMs and achieved strong performance without syntactic inputs. replaced stacked BiLSTMs with selfattention architectures.  improved the self-attention SRL model by incorporating syntactic information.
+Word representations Typical word representations, such as SENNA and GloVe, have been used and contributed to the performance improvement. Recently, integrated contextualized word representation, ELMo, into the model of  and improved the performance by 3.2 F1 score.  also integrated ELMo into the model of  and reported the performance improvement.
+
+Span-based SRL Models
+Another line of approaches to SRL is labeled span modeling.
+
+Typical models
+Typically, in this approach, models firstly identify candidate argument spans (argument identification) and then classify each span into one of the semantic role labels (argument classification). For inference, several effective methods have been proposed, such as structural constraint inference by using integer linear programming or dynamic programming.
+Recent span-based model Avery recent work,, proposed a span-based SRL model similar to our model. They also used BiLSTMs to induce span representations in an end-to-end fashion. A main difference is that while they model P(r|i, j), we model P(i, j|r). In other words, while their model seeks to select an appropriate label for each span (label selection), our model seeks to select appropriate spans for each label (span selection). This point distinguishes between their model and ours.
+FrameNet span-based model For FrameNetstyle SRL, used a segmental RNN, combining bidirectional RNNs with semi-Markov CRFs. Their model computes span representations using BiLSTMs and learns a conditional distribution overall possible labeled spans of an input sequence. Although we cannot compare our results with theirs, we can regard that our model is simpler and effective for PropBank-style SRL.
+
+Span-based Models in Other NLP Tasks
+In syntactic parsing, proposed an LSTM-based sentence segment embedding method named LSTM-Minus.; incorporated the LSTM Minus into their parsing model and achieved the best results in constituency parsing. In coreference resolution,  presented an end-to-end coreference resolution model, which considers all spans in a document as potential mentions and learn distributions over possible antecedents for each. Our model can be regarded as an extension of their model.
+
+Conclusion and Future Work
+We have presented a simple and accurate spanbased model. We treat SRL as span selection and our model seeks to select appropriate spans for each label. Experimental results have demonstrated that despite the simplicity, the model outperforms a strong BiLSTM-CRF model. Also, our span-based ensemble model using ELMo achieves the state-of-the-art results on the CoNLL-2005 and 2012 datasets. Through empirical analysis, we have obtained some interesting findings. One of them is that the span-based model is better at label prediction compared with the CRF-based model. Another one is that ELMo improves the model performance for span boundary identification.
+An interesting direction for future work concerns evaluating span representations from our span-based model. Since the investigation on the characteristics of the representations can lead to interesting findings, it is worthwhile evaluating them intrinsically and extrinsically. Another promising direction is to explore methods of incorporating frame knowledge into SRL models. We have observed that a lot of label confusions arise due to the lack of such knowledge. The use of frame knowledge to reduce these confusions is a straightforward approach.

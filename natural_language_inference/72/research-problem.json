@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Machine Reading Comprehension", {"from sentence" : "CliCR : A Dataset of Clinical Case Reports for Machine Reading Comprehension *"}],
+    ["machine comprehension", {"from sentence" : "We present a new dataset for machine comprehension in the medical domain ."}]
+  ]
+}

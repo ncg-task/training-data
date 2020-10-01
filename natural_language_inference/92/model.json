@@ -1,0 +1,90 @@
+{
+  "has" : {
+    "Model" : {
+      "formulate" : {
+        "wide range of weakly supervised QA tasks" : {
+          "as" : "discrete latent - variable learning problems",
+          "from sentence" : "In this paper , we show it is possible to formulate a wide range of weakly supervised QA tasks as discrete latent - variable learning problems ."
+        }
+      },
+      "has" : {
+        "demonstrate" : {
+          "for" : {
+            "many recently introduced tasks" : {
+              "group into" : "three categories",
+              "has" : {
+                "relatively easy" : {
+                  "to precompute" : {
+                    "discrete , task - specific set of possible solutions" : {
+                      "that contains" : {
+                        "correct solutions" : {
+                          "along with" : "modest number of spurious options"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "We demonstrate that for many recently introduced tasks , which we group into three categories as given in , it is relatively easy to precompute a discrete , task - specific set of possible solutions that contains the correct solution along with a modest number of spurious options ."
+            }
+          }
+        }
+      },
+      "has" : {
+        "learning challenge" : {
+          "to determine" : {
+            "which solution" : {
+              "in" : "set",
+              "is" : {
+                "correct one" : {
+                  "while estimating" : "complete QA model"
+                }
+              }
+            },
+            "from sentence" : "The learning challenge is then to determine which solution in the set is the correct one , while estimating a complete QA model ."
+          }
+        },
+        "hard updates" : {
+          "has" : {
+            "strongly enforce" : {
+              "has" : {
+                "prior beliefs" : {
+                  "there is" : "single correct solution"
+                }
+              },
+              "from sentence" : "Intuitively , these hard updates more strongly enforce our prior beliefs that there is a single correct solution ."
+            }
+          }
+        }
+      },
+      "model" : {
+        "set of possible solutions" : {
+          "as" : "discrete latent variable",
+          "from sentence" : "We model the set of possible solutions as a discrete latent variable , and develop a learning strategy that uses hard - EM - style parameter updates ."
+        }
+      },
+      "develop" : {
+        "learning strategy" : {
+          "uses" : "hard - EM - style parameter updates",
+          "from sentence" : "We model the set of possible solutions as a discrete latent variable , and develop a learning strategy that uses hard - EM - style parameter updates ."
+        }
+      },
+      "predicts" : {
+        "most likely solution" : {
+          "according to" : {
+            "current model" : {
+              "from" : "precomputed set"
+            }
+          },
+          "from sentence" : "This algorithm repeatedly ( i ) predicts the most likely solution according to the current model from the precomputed set , and ( ii ) updates the model parameters to further encourage its own prediction ."
+        }
+      },
+      "updates" : {
+        "model parameters" : {
+          "to further encourage" : "own prediction"
+        },
+        "from sentence" : "This algorithm repeatedly ( i ) predicts the most likely solution according to the current model from the precomputed set , and ( ii ) updates the model parameters to further encourage its own prediction ."
+      }
+    }
+  }
+}

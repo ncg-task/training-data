@@ -1,0 +1,4 @@
+(Contribution||has research problem||Emotion Recognition in Dyadic Dialogue Videos)
+(Contribution||has research problem||Emotion recognition in conversations)
+(Contribution||has research problem||emotion detection in videos of dyadic conversations)
+(Contribution||has research problem||Emotion detection)

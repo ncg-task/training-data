@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Abstractive Sentence Summarization", {"from sentence" : "Selective Encoding for Abstractive Sentence Summarization"}],
+    ["sentence summarization", {"from sentence" : "The second level representation is tailored for sentence summarization task , which leads to better performance ."}]
+  ]
+}

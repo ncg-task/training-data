@@ -1,0 +1,76 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "has" : {
+        "Dimensions" : {
+          "of" : {
+            "hidden vectors and word embeddings" : {
+              "selected from" : "{ 250 , 300 } and { 150 , 200 , 250 , 300 }" 
+            }
+          },
+          "from sentence" : "Dimensions of hidden vectors and word embeddings were selected from { 250 , 300 } and { 150 , 200 , 250 , 300 } , respectively ."
+        },
+        "dropout rate" : {
+          "selected from" : "{ 0.3 , 0.5 }",
+          "from sentence" : "The dropout rate was selected from { 0.3 , 0.5 } ."
+        },
+        "Label smoothing" : {
+          "employed for" : ["GEO", "ATIS"],
+          "from sentence" : "Label smoothing was employed for GEO and ATIS ."
+        },
+        "smoothing parameter" : {
+          "set to" : "0.1",
+          "from sentence" : "The smoothing parameter was set to 0.1 ."
+        },
+        "Word embeddings" : {
+          "initialized by" : "GloVe",
+          "shared by" : ["table encoder", "input encoder"],
+          "from sentence" : "Word embeddings were initialized by GloVe , and were shared by table encoder and input encoder in Section 4.3 ."
+        },
+        "part - of - speech tags" : {
+          "obtained by" : "spaCy toolkit",
+          "from sentence" : "The part - of - speech tags were obtained by the spaCy toolkit ."
+        },
+        "learning rate" : {
+          "selected from" : "{ 0.002 , 0.005 }",
+          "from sentence" : "The learning rate was selected from { 0.002 , 0.005 } ."
+        },
+        "batch size" : {
+          "was" : {
+            "200" : {
+              "for" : "WIKISQL"
+            },
+            "64" : {
+              "for" : "other datasets"
+            }
+          },
+          "from sentence" : "The batch size was 200 for WIKISQL , and was 64 for other datasets ."
+        },
+        "Early stopping" : {
+          "to determine" : "number of epochs",
+          "from sentence" : "Early stopping was used to determine the number of epochs ."
+        }
+      },
+      "appended" : {
+        "10 - dimensional part - of - speech tag vectors" : {
+          "to" : {
+            "embeddings" : {
+              "of" : {
+                "question words" : {
+                  "in" : "WIKISQL"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "We appended 10 - dimensional part - of - speech tag vectors to embeddings of the question words in WIKISQL ."
+      },
+      "used" : {
+        "RMSProp optimizer" : {
+          "to train" : "models",
+          "from sentence" : "We used the RMSProp optimizer to train the models ."
+        }
+      }
+    }
+  }
+}

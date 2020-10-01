@@ -1,0 +1,38 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "ABS +" : {
+          "Based on" : {
+            "ABS model" : {
+              "further with" : {
+                "two - layer LSTMs" : {
+                  "for" : {
+                    "encoder - decoder" : {
+                      "with" : {
+                        "500 hidden units" : {
+                          "in" : "each layer"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "ABS + Based on ABS model , further with two - layer LSTMs for the encoder - decoder with 500 hidden units in each layer implemented in ."
+            },
+            "s 2 s+ att" : {
+              "implement" : {
+                "sequence - to sequence model" : {
+                  "with" : "attention"
+                }
+              },
+              "from sentence" : "s 2 s+ att
+We also implement a sequence - to sequence model with attention as our baseline and denote it as \" s2 s + att \" ."
+
+            }            
+          }
+        }
+      }      
+    }
+  }
+}

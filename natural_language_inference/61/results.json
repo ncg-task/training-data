@@ -1,0 +1,32 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "ESIM model" : {
+          "achieved" : {
+            "88.1 %" : {
+              "on" : "SNLI corpus",
+              "has" : {
+                "elevating 0.8 percent" : {
+                  "higher than" : "ESIM model"
+                }
+              }
+            },
+            "from sentence" : "According to the results in , a ESIM model achieved 88.1 % on SNLI corpus , elevating 0.8 percent higher than ESIM model ."            
+          },
+          "promoted" : ["almost 0.5 percent accuracy", {"from sentence" : "It promoted almost 0.5 percent accuracy and outperformed the baselines on MultiNLI ."}],
+          "has" : {
+            "outperformed" : {
+              "has" : {
+                "baselines" : {
+                  "on" : "MultiNLI",
+                  "from sentence" : "It promoted almost 0.5 percent accuracy and outperformed the baselines on MultiNLI ."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

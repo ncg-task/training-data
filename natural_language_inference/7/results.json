@@ -1,0 +1,35 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "RASOR" : {
+          "achieves" : {
+            "error reduction" : {
+              "of" : {
+                "more than 50 %" : {
+                  "in terms of" : "exact match and F1",
+                  "relative to" : "human performance upper bound"
+                }
+              }
+            },
+            "from sentence" : "Despite not having access to any external representation of linguistic structure , RASOR achieves an error reduction of more than 50 % over this baseline , both in terms of exact match and F1 , relative to the human performance upper bound ."
+          },
+          "model" : {
+            "efficiently and explicitly" : {
+              "has" : {
+                "quadratic number of possible answers" : {
+                  "leads to" : {
+                    "14 % error reduction" : {
+                      "over" : "best performing Match - LSTM model"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "In contrast , RASOR can efficiently and explicitly model the quadratic number of possible answers , which leads to a 14 % error reduction over the best performing Match - LSTM model ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

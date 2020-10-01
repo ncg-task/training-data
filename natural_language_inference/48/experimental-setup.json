@@ -1,0 +1,107 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "To train" : {
+        "our model" : {
+          "used" : {
+            "stochastic gradient descent" : {
+              "with" : ["ADAM optimizer", {"initial learning rate" : {"of" : "0.001"}}]
+            }
+          },
+          "from sentence" : "To train our model , we used stochastic gradient descent with the ADAM optimizer ( Kingma and Ba , 2014 ) , with an initial learning rate of 0.001 ."
+        }
+      },
+      "set" : {
+        "batch size" : {
+          "to" : "32"
+        },
+        "from sentence" : "We set the batch size to 32 and we decay the learning rate by 0.8 if the accuracy on the validation set does not increase after a half - epoch , i.e. 2000 batches ( for CBT ) and 5000 batches for ( CNN ) ."
+      },
+      "decay" : {
+        "learning rate" : {
+          "by" : "0.8",
+          "if" : {
+            "accuracy" : {
+              "on" : {
+                "validation set" : {
+                  "has" : {
+                    "not increase" : {
+                      "after" : {
+                        "half - epoch" : {
+                          "i.e." : [{"2000 batches" : {"for" : "CBT"}}, {"5000 batches" : {"for" : "CNN"}}]
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "We set the batch size to 32 and we decay the learning rate by 0.8 if the accuracy on the validation set does not increase after a half - epoch , i.e. 2000 batches ( for CBT ) and 5000 batches for ( CNN ) ."
+                }
+              }
+            }
+          }
+        }
+      },
+      "initialize" : {
+        "all weights" : {
+          "of" : "our model",
+          "by" : {
+            "sampling" : {
+              "from" : "normal distribution N ( 0 , 0.05 )"
+            }
+          },
+          "from sentence" : "We initialize all weights of our model by sampling from the normal distribution N ( 0 , 0.05 ) ."
+        }
+      },
+      "has" : {
+        "GRU recurrent weights" : {
+          "are" : {
+            "initialized" : {
+              "to be" : "orthogonal"
+            }
+          },
+          "from sentence" : "Following , the GRU recurrent weights are initialized to be orthogonal and biases are initialized to zero ."
+        },
+        "biases" : {
+          "are" : {
+            "initialized" : {
+              "to" : "zero"
+            }
+          },
+          "from sentence" : "Following , the GRU recurrent weights are initialized to be orthogonal and biases are initialized to zero ."
+        },
+        "Our model" : {
+          "implemented in" : {
+            "Theano" : {
+              "using" : "Keras library"
+            },
+            "from sentence" : "Our model is implemented in Theano , using the Keras library ."
+          }
+        }
+      },
+      "to stabilize" : {
+        "learning" : {
+          "clip" : {
+            "gradients" : {
+              "if" : {
+                "norm" : {
+                  "greater than" : "5"
+                }
+              }
+            }
+          },
+          "from sentence" : "In order to stabilize the learning , we clip the gradients if their norm is greater than 5 and those marked with 2 are from ."
+        }
+      },
+      "setting" : {
+        "embedding regularization" : {
+          "to" : "0.0001",
+          "worked" : {
+            "robustly" : {
+              "across" : "datasets"
+            }
+          }
+        },
+        "from sentence" : "We found that setting embedding regularization to 0.0001 , T = 8 , d = 384 , h = 128 , s = 512 worked robustly across the datasets ."
+      }
+    }
+  }  
+}

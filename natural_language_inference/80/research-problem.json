@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Natural Language Inference", {"from sentence" : "DR- BiLSTM : Dependent Reading Bidirectional LSTM for Natural Language Inference"}],
+    ["natural language inference ( NLI )", {"from sentence" : "We present a novel deep learning architecture to address the natural language inference ( NLI ) task ."}],
+    ["NLI", {"from sentence" : "The goal of NLI is to identify the logical relationship ( entailment , neutral , or contradiction ) between a premise and a corresponding hypothesis ."}]
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "has" : {
+    "Results" : {
+      "see empirically that" : {
+        "our model" : {
+          "has" : {
+            "outperforms" : {
+              "has" : {
+                "all generative models" : {
+                  "on" : "NarrativeQA"
+                }
+              }
+            },
+            "competitive" : {
+              "with" : "top span prediction models"
+            }
+          },
+          "from sentence" : "We see empirically that our model outperforms all generative models on NarrativeQA , and is competitive with the top span prediction models ."
+        }
+      },
+      "with" : {
+        "NOIC commonsense integration" : {
+          "able to" : {
+            "further improve" : {
+              "has" : {
+                "performance" : {
+                  "establishing" : {
+                    "new state - of - the - art" : {
+                      "for" : "task"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Furthermore , with the NOIC commonsense integration , we were able to further improve performance ( p < 0.001 on all metrics 5 ) , establishing a new state - of - the - art for the task ."
+        }
+      },
+      "see that" : {
+        "our model" : {
+          "performs" : {
+            "reasonably well" : {
+              "on" : "WikiHop"
+            }
+          },
+          "achieves" : {
+            "promising initial improvements" : {
+              "via" : {
+                "addition" : {
+                  "of" : {
+                    "commonsense" : {
+                      "hinting at" : {
+                        "generalizability" : {
+                          "of" : "our approaches"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "We also see that our model performs reasonably well on WikiHop , and further achieves promising initial improvements via the addition of commonsense , hinting at the generalizability of our approaches ."
+        }
+      },
+      "speculate" : {
+        "improvement" : {
+          "has" : {
+            "smaller" : {
+              "on" : "Wikihop"
+            }
+          },
+          "from sentence" : "We speculate that the improvement is smaller on Wikihop because only approximately 11 % of WikiHop data points require commonsense and because WikiHop data requires more fact - based commonsense ( e.g. , from Freebase ) as opposed to semantics - based commonsense ( e.g. , from Con-ceptNet ( Speer and Havasi , 2012 ) ) ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+(Contribution||has||Hyperparameters)
+(Hyperparameters||has||margin)
+(margin||set to||0.1)
+(Hyperparameters||has||embedding dimension and the learning rate)
+(embedding dimension and the learning rate||chosen among||{ 64 , 128 , 256 } and { 1 , 0.1 , ... , 1.0e ? 4 })

@@ -1,0 +1,85 @@
+62	35	50	some parameters
+62	61	69	fixed to
+62	70	101	reasonable and empirical values
+62	104	111	such as
+62	116	169	size of convolutions ( 5 5 pixels , 32 feature maps )
+62	178	231	size of subsamplings ( 2 2 pixels using max pooling )
+63	0	10	All layers
+63	11	14	use
+63	15	25	ReLU units
+63	28	37	except of
+63	38	45	softmax
+63	52	59	used in
+63	64	76	output layer
+64	4	17	learning rate
+64	21	29	fixed to
+64	30	38	? = 0.01
+64	43	57	not subject to
+64	58	73	model selection
+66	4	19	entire database
+66	29	48	randomly split into
+66	51	103	60% / 20 % / 20 % training / validation / test ratio
+72	0	27	Stochastic gradient descent
+72	28	32	with
+72	35	45	batch size
+72	46	48	of
+72	49	52	500
+76	5	10	model
+76	15	26	trained for
+76	27	36	50 epochs
+76	18	20	in
+76	44	59	model selection
+65	24	32	apply to
+65	37	45	momentum
+65	57	65	fixed to
+65	66	71	= 0.9
+71	13	30	implemented using
+71	31	38	Lasagne
+71	49	58	generated
+71	59	68	CUDA code
+71	72	83	executed on
+71	86	96	Tesla K40c
+73	13	28	four parameters
+73	29	34	to be
+73	35	44	optimized
+73	51	73	number of convolutions
+73	80	103	number of hidden layers
+73	110	142	number of units per hidden layer
+73	151	165	dropout factor
+56	4	16	input images
+56	21	29	fed into
+56	32	43	convolution
+56	44	54	comprising
+56	57	94	convolutional and a subsampling layer
+57	5	16	convolution
+57	23	34	followed by
+57	35	52	more convolutions
+57	53	62	to become
+57	73	87	more invariant
+57	53	55	to
+57	91	102	distortions
+57	78	80	in
+57	110	115	input
+60	4	11	novelty
+60	17	19	is
+60	41	121	exact number of convolutions , number of hidden layers and size of hidden layers
+60	122	125	are
+60	126	135	not fixed
+60	140	150	subject to
+60	161	176	model selection
+58	0	2	In
+58	7	19	second stage
+58	24	46	regular neural network
+58	47	54	follows
+58	59	71	convolutions
+58	81	96	to discriminate
+58	101	109	features
+58	110	120	learned by
+58	59	71	convolutions
+59	4	16	output layer
+59	17	28	consists of
+59	29	38	two units
+59	39	42	for
+59	43	60	smile or no smile
+2	18	35	Smile Recognition
+4	139	168	facial expression recognition

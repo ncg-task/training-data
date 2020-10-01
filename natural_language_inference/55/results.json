@@ -1,0 +1,56 @@
+{
+  "has" : {
+    "Results" : {
+      "Replacing" : {
+        "C 2" : {
+          "by" : "C 1",
+          "induces" : {
+            "large drop" : {
+              "in" : "performance"
+            }
+          },
+          "from sentence" : "Replacing C 2 by C 1 induces a large drop in performance because many questions do not have answers that are directly connected to their inluded entity ( not in C 1 ) ."
+        }
+      },
+      "using" : {
+        "all 2 - hops connections" : {
+          "as" : "candidate set",
+          "is" : "detrimental",
+          "from sentence" : "However , using all 2 - hops connections as a candidate set is also detrimental , because the larger number of candidates confuses ( and slows a lot ) our ranking based inference ."
+        }
+      },
+      "verify" : {
+        "hypothesis" : {
+          "that" : {
+            "richer representation" : {
+              "for" : "answers",
+              "store" : "more pertinent information"
+            },
+            "from sentence" : "Our results also verify our hypothesis of Section 3.1 , that a richer representation for answers ( using the local subgraph ) can store more pertinent information ."
+          }
+        }
+      },
+      "demonstrate" : {
+        "greatly improve" : {
+          "upon" : "model",
+          "corresponds to" : {
+            "setting" : {
+              "with" : ["Path representation", {"C 1" : {"as" : "candidate set"}}]
+            }
+          },
+          "from sentence" : "Finally , we demonstrate that we greatly improve upon the model of , which actually corresponds to a setting with the Path representation and C 1 as candidate set ."
+        }
+      },
+      "has" : {
+        "ensemble" : {
+          "has" : {
+            "improves" : {
+              "has" : "state - of - the - art"
+            }
+          },
+          "from sentence" : "The ensemble improves the state - of - the - art , and indicates that our models are significantly different in their design ."
+        }
+      }
+    }
+  }
+}

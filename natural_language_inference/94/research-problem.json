@@ -1,0 +1,8 @@
+{
+  "has research problem" : [
+    ["Generative Multi - Hop Question Answering", {"from sentence" : "Commonsense for Generative Multi - Hop Question Answering Tasks"}],
+    ["Reading comprehension QA", {"from sentence" : "Reading comprehension QA tasks have seen a recent surge in popularity , yet most works have focused on fact - finding extractive QA ."}],
+    ["machine reading comprehension ( MRC ) based QA", {"from sentence" : "In this paper , we explore the task of machine reading comprehension ( MRC ) based QA ."}],
+    ["reasoning - based MRC - QA", {"from sentence" : "Much progress has been made in reasoning - based MRC - QA on the bAbI dataset , which contains questions that require the combination of multiple disjoint pieces of evidence in the context ."}]
+  ]
+}

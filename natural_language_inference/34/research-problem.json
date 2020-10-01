@@ -1,0 +1,8 @@
+{
+  "has research problem" : [
+    ["Multi-hop Reasoning", {"from sentence" : "Dynamically Fused Graph Network for Multi-hop Reasoning"}],
+    ["Text - based question answering ( TBQA )", {"from sentence" : "Text - based question answering ( TBQA ) has been studied extensively in recent years ."}],
+    ["Question answering ( QA )", {"from sentence" : "Question answering ( QA ) has been a popular topic in natural language processing ."}],
+    ["QA", {"from sentence" : "QA provides a quantifiable way to evaluate an NLP system 's capability on language understanding and reasoning ."}]
+  ]
+}

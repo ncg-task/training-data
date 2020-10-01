@@ -1,0 +1,69 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "preprocess" : {
+        "corpus" : {
+          "use" : {
+            "reversible tokenizer" : {
+              "from" : "Stanford CoreNLP"
+            }
+          }
+        },
+        "from sentence" : "To preprocess the corpus , we use the reversible tokenizer from Stanford CoreNLP ."
+      },
+      "For" : {
+        "word embeddings" : {
+          "use" : {
+            "GloVe embeddings" : {
+              "pretrained on" : "840B Common Crawl corpus",
+              "from sentence" : "For word embeddings , we use GloVe embeddings pretrained on the 840B Common Crawl corpus as well as character ngram embeddings by ."
+            }
+          },
+          "concatenate" : {
+            "these embeddings" : {
+              "with" : "context vectors ( CoVe )"
+            },
+            "from sentence" : "In addition , we concatenate these embeddings with context vectors ( CoVe ) trained on ."
+          }
+        },
+        "out of vocabulary words" : {
+          "set" : {
+            "embeddings and context vectors" : {
+              "to" :"zero"
+            }
+          },
+          "from sentence" : "For out of vocabulary words , we set the embeddings and context vectors to zero ."
+        }
+      },
+      "perform" : {
+        "word dropout" : {
+          "on" : {
+            "document" : {
+              "zeros" : {
+                "word embedding" : {
+                  "with" : "probability 0.075"
+                }
+              }
+            }
+          },
+          "from sentence" : "We perform word dropout on the document which zeros a word embedding with probability 0.075 ."
+        }
+      },
+      "swap" : {
+        "first maxout layer" : {
+          "of" : {
+            "highway maxout network" : {
+              "in" : "DCN decoder"
+            }
+          },
+          "with" : {
+            "sparse mixture" : {
+              "of" : "experts layer"
+            }
+          }
+        },
+        "from sentence" : "In addition , we swap the first maxout layer of the highway maxout network in the DCN decoder with a sparse mixture of experts layer ."
+      }
+    }
+  }
+}

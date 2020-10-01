@@ -1,0 +1,42 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "use" : {
+        "Adam method" : {
+          "for" : {
+            "optimization" : {
+              "with" : {
+                "hyperparameters" : {
+                  "set to" : ["0.9", "0.999"]
+                }
+              }
+            }
+          },
+          "from sentence" : "We use the Adam method ( Kingma and Ba , 2014 ) with hyperparameters ?
+1 set to 0.9 and ?
+2 set to 0.999 for optimization ."
+
+        }
+      },
+      "has" : {
+        "initial learning rate" : {
+          "set to" : "0.001",
+          "from sentence" : "The initial learning rate is set to be 0.001 with a decay ratio of 0.95 for each iteration ."
+        },
+        "decay ratio" : {
+          "of" : {
+            "0.95" : {
+              "for" : "each iteration"
+            }
+          },
+          "from sentence" : "The initial learning rate is set to be 0.001 with a decay ratio of 0.95 for each iteration ."
+        },
+        "batch size" : {
+          "set to" : "30",
+          "from sentence" : "The batch size is set to be 30 ."
+        }
+      },
+      "experiment with" : ["d = 150 and d = 300", {"from sentence" : "We experiment with d = 150 and d = 300 where d is the dimension of all the hidden states ."}]
+    }
+  }
+}

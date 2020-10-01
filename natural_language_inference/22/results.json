@@ -1,0 +1,27 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "model" : {
+          "is" : {
+            "tied" : {
+              "in" : "accuracy",
+              "on" : "hidden test set",
+              "with" : "bestperforming published single model"
+            }
+          },
+          "from sentence" : "At the time of submission , our model is tied in accuracy on the hidden test set with the bestperforming published single model ."
+        }
+      },
+      "achieve" : {
+        "F 1 score" : {
+          "of" : "79.5"
+        },
+        "EM score" : {
+          "of" : "70.6"
+        },
+        "from sentence" : "We achieve an F 1 score of 79.5 and EM score of 70.6 ."
+      }
+    }
+  }
+}

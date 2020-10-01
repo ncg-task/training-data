@@ -1,0 +1,32 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "two simple yet effective convolutional neural networks" : {
+          "with" : "aspect information",
+          "from sentence" : "In the present work , we propose two simple yet effective convolutional neural networks with aspect information incorporated ."
+        }
+      },
+      "design" : {
+        "two novel neural units" : {
+          "take" : {
+            "target aspects" : {
+              "into" : "account"
+            }
+          },
+          "One is" : "parameterized filter",
+          "other is" : "parameterized gate"
+        },
+        "from sentence" : "Specifically , we design two novel neural units that take target aspects into account .
+One is parameterized filter , the other is parameterized gate ."
+
+      },
+      "has" : {
+        "units" : {
+          "generated from" : "aspect - specific features",
+          "from sentence" : "These units both are generated from aspect - specific features and are further applied on the sentence ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "NewsQA" : {
+          "has" : {
+            "key competitors" : {
+              "are" : ["BiDAF", "Match - LSTM", "FastQA / Fast QA - Ext", "R2-BiLSTM", "AMANDA"],
+              "from sentence" : "On this dataset , the key competitors are BiDAF , Match - LSTM , FastQA / Fast QA - Ext , R2-BiLSTM , AMANDA ."
+            }
+          }
+        },
+        "Quasar -T" : {
+          "has" : {
+            "key competitors" : {
+              "are" : ["BiDAF", "Reinforced Ranker - Reader ( R 3 )"],
+              "from sentence" : "The key competitors on this dataset are BiDAF and the Reinforced Ranker - Reader ( R 3 ) ."
+            }
+          }
+        },
+        "SearchQA" : {
+          "has" : {
+            "competitor baselines" : {
+              "are" : ["Attention Sum Reader ( ASR )", "Focused Hierarchical RNNs ( FH - RNN )", "AMANDA", "BiDAF", "AQA", "Reinforced Ranker - Reader ( R 3 )"],
+              "from sentence" : "The competitor baselines on this dataset are Attention Sum Reader ( ASR ) , Focused Hierarchical RNNs ( FH - RNN ) , AMANDA , BiDAF , AQA and the Reinforced Ranker - Reader ( R 3 ) ."
+            }
+          }          
+        },
+        "Narrative QA" : {
+          "compare with" : [
+            {"baselines" : {
+              "namely" : ["Seq2Seq", "Attention Sum Reader", "BiDAF"],
+              "from sentence" : "We compare with the baselines in the original paper , namely Seq2Seq , Attention Sum Reader and BiDAF ."
+            }},
+            "recent BiAttention + MRU model",
+            {"from sentence" : "We also compare with the recent BiAttention + MRU model ."}
+          ]
+        }
+      }
+    }
+  }
+}

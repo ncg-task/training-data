@@ -1,0 +1,57 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "Semantic Parsing" : {
+          "has" : {
+            "Our system" : {
+              "outperforms" : "existing neural network - based approaches",
+              "from sentence" : "Semantic Parsing Tab.
+Our system outperforms existing neural network - based approaches ."
+
+            },
+            "model" : {
+              "without" : "parent feeding",
+              "achieves" : {
+                "slightly better accuracy" : {
+                  "on" : "GEO"
+                }
+              },
+              "from sentence" : "Interestingly , we found the model without parent feeding achieves slightly better accuracy on GEO , probably because that its relative simple grammar does not require extra handling of parent information ."
+            }
+          }
+        },
+        "Code Generation" : {
+          "has" : {
+            "TRANX" : {
+              "achieves" : {
+                "state - of - the - art results" : {
+                  "on" : "DJANGO"
+                }
+              },
+              "from sentence" : "Code Generation Tab.
+2 lists the results on DJANGO .
+TRANX achieves state - of - the - art results on DJANGO ."
+
+            }
+          },
+          "find" : {
+            "parent feeding" : {
+              "yields" : {
+                "+ 1 point gain" : {
+                  "in" : "accuracy" 
+                }
+              },
+              "from sentence" : "We also find parent feeding yields + 1 point gain in accuracy , suggesting the importance of modeling parental connections in ASTs with complex domain grammars ( e.g. , Python ) ."
+            },
+            "TRANX" : {
+              "achieves" : "impressive results",
+              "outperforms" : "many task - specific methods",
+              "from sentence" : "3 . We find TRANX , although just with simple extensions to adapt to this dataset , achieves impressive results and outperforms many task - specific methods ."
+            }
+          }
+        }
+      }      
+    }
+  }  
+}

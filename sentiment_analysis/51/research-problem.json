@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Fine - grained Sentiment Classification", {"from sentence" : "Fine - grained Sentiment Classification using BERT"}],
+    ["Sentiment classification", {"from sentence" : "Sentiment classification is an important process in understanding people 's perception towards a product , service , or topic ."}]
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "has" : {
+    "Experiments" : {
+      "has" : {
+        "Model" : {
+          "has" : {
+            "Ensemble Model" : {
+              "use" : ["4 Transformer models", "3 CNN models", "3 Bi - LSTM models", {"from sentence" : "We use 4 Transformer models , 3 CNN models and 3 Bi - LSTM models with different hyperparameters for ensemble , which give the best performance on the validation set ."}],
+              "has" : {
+                "4 Transformer models" : {
+                  "share" : "same hidden size ( 256 )",
+                  "vary in" : "number of the encoder - decoder layers",
+                  "from sentence" : "The 4 Transformer models share the same hidden size ( 256 ) but vary in the number of the encoder - decoder layers ."
+                },
+                "3 CNN models" : {
+                  "share" : "same hidden size ( 256 )",
+                  "vary in" : "number of encoder - decoder layers ( 10 - 10 , 10 - 10 , 8 - 8 ) and convolutional kernel widths ( 3 , 2 , 2 )",
+                  "from sentence" : "For the 3 CNN models , they share the same hidden size ( 256 ) but vary in the number of encoder - decoder layers ( 10 - 10 , 10 - 10 , 8 - 8 ) and convolutional kernel widths ( 3 , 2 , 2 ) respectively ."
+                },
+                "3 Bi - LSTM models" : {
+                  "share" : "same number of encoder - decoder layers ( 1 - 1 )",
+                  "with different" : "hidden sizes ( 256 , 384 and 512 )",
+                  "from sentence" : "For the 3 Bi - LSTM models , they share the same number of encoder - decoder layers ( 1 - 1 ) , but with different hidden sizes ( 256 , 384 and 512 ) ."
+                }
+              }
+            },
+            "Student Model" : {
+              "choose" : "Transformer",
+              "use" : "default configurations ( 256 hidden size and 6 - 6 layers of encoder - decoder )",
+              "from sentence" : "Student Model
+We choose Transformer as the student model and use the default configurations ( 256 hidden size and 6 - 6 layers of encoder - decoder ) unless otherwise stated ."
+
+            }
+          }
+        },
+        "Experimental setup" : {
+          "implement experiments with" : ["fairseq - py 4 library in Py-Torch", {"from sentence" : "We implement experiments with the fairseq - py 4 library in Py-Torch ."}],
+          "use" : {
+            "Adam optimizer" : {
+              "for" : "all models",
+              "follow" : "learning rate schedule",
+              "from sentence" : "We use Adam optimizer for all models and follow the learning rate schedule in ."            
+            },
+            "beam search" : {
+              "during" : "inference",
+              "set" : "beam size to 10",
+              "from sentence" : "We use beam search during inference and set beam size to 10 ."
+            },
+            "WER ( word error rate ) and PER ( phoneme error rate )" : {
+              "to measure" : "accuracy of G2P conversion",
+              "from sentence" : "We use WER ( word error rate ) and PER ( phoneme error rate ) to measure the accuracy of G2P conversion ."
+            }
+          },
+          "has" : {
+            "dropout" : {
+              "is" : {
+                "0.3" : {
+                  "for" : "Bi - LSTM and CNN models"
+                }
+              }
+            },
+            "residual dropout , attention dropout and ReLU dropout" : {
+              "for" : {
+                "Transformer models" : {
+                  "is" : "0.2 , 0.4 , 0.4"
+                }
+              }
+            },
+            "from sentence" : "The dropout is 0.3 for Bi - LSTM and CNN models , while the residual dropout , attention dropout and ReLU dropout for Transformer models is 0.2 , 0.4 , 0.4 respectively ."
+          },
+          "train" : {
+            "each model" : {
+              "on" : {
+                "8 NVIDIA M40 GPUs" : {
+                  "contains" : {
+                    "roughly 4000 tokens" : {
+                      "in" : "one mini-batch"
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "We train each model on 8 NVIDIA M40 GPUs .
+  Each GPU contains roughly 4000 tokens in one mini-batch ."
+  
+          }
+        }        
+      }
+    }
+  }
+}

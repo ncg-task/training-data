@@ -1,0 +1,33 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : ["linguistically - informed self - attention ( LISA )", {"from sentence" : "In response , we propose linguistically - informed self - attention ( LISA ) : a model that combines multi-task learning with stacked layers of multi-head self - attention ; the model is trained to : ( 1 ) jointly predict parts of speech and predicates ; ( 2 ) perform parsing ; and ( 3 ) attend to syntactic parse parents , while ( 4 ) assigning semantic role labels ."}],
+      "trained to" : [
+        {"jointly predict" : {
+          "has" : "parts of speech and predicates"}}, 
+          "perform parsing", {"attend" : {"to" : "syntactic parse parents"}}, {"assigning" : {"has" : "semantic role labels"}}, {"from sentence" : "In response , we propose linguistically - informed self - attention ( LISA ) : a model that combines multi-task learning with stacked layers of multi-head self - attention ; the model is trained to : ( 1 ) jointly predict parts of speech and predicates ; ( 2 ) perform parsing ; and ( 3 ) attend to syntactic parse parents , while ( 4 ) assigning semantic role labels ."}],
+      "trained" : {
+        "end - to - end" : {
+          "has" : {
+            "ealier layers" : {
+              "trained to predict" : "prerequisite parts - of - speech and predicates"
+            },
+            "latter" : {
+              "supplied to" : {
+                "later layers" : {
+                  "for" : "scoring"
+                }
+              }
+            }
+          },
+          "from sentence" : "Whereas prior work typically requires separate models to provide linguistic analysis , including most syntaxfree neural models which still rely on external predicate detection , our model is truly end - to - end : earlier layers are trained to predict prerequisite parts - of - speech and predicates , the latter of which are supplied to later layers for scoring ."          
+        }
+      },
+      "encode" : [{"each sentence" : {
+      "has" : "only once", 
+      "predict" : [{"predicates" : {"then predict" : "semantic roles"}}, "part - of - speech tags", "labeled syntactic parse"]
+      }}, 
+      {"from sentence" : "Though prior work re-encodes each sentence to predict each desired task and again with respect to each predicate to perform SRL , we more efficiently encode each sentence only once , predict its predicates , part - of - speech tags and labeled syntactic parse , then predict the semantic roles for all predicates in the sentence in parallel ."}]
+    }
+  }
+}

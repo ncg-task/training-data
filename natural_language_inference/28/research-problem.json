@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Recurrent Neural Networks ( RNN )", {"from sentence" : "The concepts of unitary evolution matrices and associative memory have boosted the field of Recurrent Neural Networks ( RNN ) to state - of - the - art performance in a variety of sequential tasks ."}],
+    ["RNN", {"from sentence" : "However , RNN still have a limited capacity to manipulate long - term memory ."}]
+  ]
+}

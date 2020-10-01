@@ -1,0 +1,79 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "Non-Transfer" : {
+          "has" : {
+            "Target Network ( TN )" : {
+              "is" : {
+                "proposed base model ( BiLSTM + C2A + Pas )" : {
+                  "trained on" : {
+                    "D t" : {
+                      "for" : "target task"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Non-Transfer
+To demonstrate the benefits from coarse - tofine task transfer , we compare with the following state - of the - art AT - level methods without transfer : Target Network ( TN ) :
+It is our proposed base model ( BiLSTM + C2A + Pas ) trained on D t for the target task ."
+
+            }
+          }
+        },
+        "Transfer" : {
+          "has" : {
+            "Source- only ( SO )" : {
+              "uses" : {
+                "source network" : {
+                  "trained on" : {
+                    "D s" : {
+                      "to initialize" : "target network"
+                    }
+                  },
+                  "tests it on" : "D t"
+                }
+              },
+              "from sentence" : "Source- only ( SO ) :
+It uses a source network trained on D s to initialize a target network and then tests it on D t ."
+
+            },
+            "Fine-tuning ( FT )" : {
+              "advances" : {
+                "SO" : {
+                  "with further finetuning" : {
+                    "target network" : {
+                      "on" : "D t"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Fine-tuning ( FT ) : It advances SO with further finetuning the target network on D t ."
+            },
+            "M- DAN" : {
+              "is" : {
+                "multi-adversarial version" : {
+                  "of" : "Domain Adversarial Network ( DAN )",
+                  "based on" : "multiple domain discriminators"
+                }
+              },
+              "from sentence" : "M- DAN : It is a multi-adversarial version of Domain Adversarial Network ( DAN ) ) based on multiple domain discriminators ."
+            },
+            "M - MMD" : {
+              "aligns" : {
+                "different class distributions" : {
+                  "between" : {
+                    "domains" : {
+                      "based on" : "multiple Maximum Mean Discrepancy ( MMD )"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "M - MMD : Similar with M - DAN , M - MMD aligns different class distributions between domains based on multiple Maximum Mean Discrepancy ( MMD ) ) ."
+            }            
+          }
+        }
+      }
+    }
+  }  
+}

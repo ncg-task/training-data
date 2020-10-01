@@ -1,0 +1,59 @@
+39	33	41	identify
+39	45	71	attention scoring function
+39	72	81	utilizing
+39	82	92	all layers
+39	93	95	of
+39	96	110	representation
+39	111	115	with
+39	116	136	less training burden
+40	5	13	leads to
+40	17	26	attention
+40	32	51	thoroughly captures
+40	56	76	complete information
+40	77	84	between
+40	89	113	question and the context
+41	0	4	With
+41	10	33	fully - aware attention
+41	39	50	put forward
+41	53	85	multi -level attention mechanism
+41	86	99	to understand
+41	104	115	information
+41	104	106	in
+41	123	131	question
+41	138	148	exploit it
+41	149	163	layer by layer
+41	31	33	on
+41	171	183	context side
+42	13	24	innovations
+42	29	44	integrated into
+42	47	75	new end - to - end structure
+42	76	82	called
+42	83	92	FusionNet
+2	67	88	MACHINE COMPREHENSION
+24	0	81	Teaching machines to read , process and comprehend text and then answer questions
+29	108	145	machine reading comprehension ( MRC )
+35	71	74	MRC
+35	44	66	language understanding
+238	26	34	see that
+238	35	45	our models
+238	46	62	not only perform
+238	63	67	well
+238	50	52	on
+238	75	97	original SQuAD dataset
+238	104	108	also
+238	109	119	outperform
+238	120	139	all previous models
+238	140	142	by
+238	143	156	more than 5 %
+238	79	81	in
+238	160	168	EM score
+238	50	52	on
+238	176	196	adversarial datasets
+239	5	10	shows
+239	16	25	FusionNet
+239	2	4	is
+239	29	35	better
+239	13	15	at
+239	39	61	language understanding
+239	62	69	of both
+239	74	94	context and question

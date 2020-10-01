@@ -1,0 +1,69 @@
+{
+  "has" : {
+    "Results" : {
+      "for" : {
+        "Multi - NLI" : {
+          "improve" : {
+            "substantially" : {
+              "over" : "CBOW and biL - STM Encoder baselines"
+            },
+            "from sentence" : "First for Multi - NLI , we improve substantially over the CBOW and biL - STM Encoder baselines reported in the dataset paper ."
+          },
+          "show that" : {
+            "our final shortcut - based stacked encoder" : {
+              "achieves" : {
+                "around 3 % improvement" : {
+                  "compared to" : "1 layer biLSTM - Max Encoder"
+                }
+              },
+              "from sentence" : "We also show that our final shortcut - based stacked encoder achieves around 3 % improvement as compared to the 1 layer biLSTM - Max Encoder in the second last row ( using the exact same classifier and optimizer settings ) ."
+            }
+          },
+          "has" : {
+            "shortcut - encoder" : {
+              "was" : {
+                "top singe - model ( non-ensemble ) result" : {
+                  "on" : "EMNLP RepEval Shared Task leaderboard"
+                }
+              },
+              "from sentence" : "Our shortcut - encoder was also the top singe - model ( non-ensemble ) result on the EMNLP RepEval Shared Task leaderboard ."
+            }
+          }
+        },
+        "SNLI" : {
+          "compare" : {
+            "shortcutstacked encoder" : {
+              "with" : {
+                "current state - of - the - art encoders" : {
+                  "from" : "SNLI leaderboard"
+                }
+              },
+              "from sentence" : "Next , for SNLI , we compare our shortcutstacked encoder with the current state - of - the - art encoders from the SNLI leaderboard ( https :// nlp.stanford.edu/projects/snli/ ) ."
+            }
+          },
+          "compare to" : {
+            "recent biLSTM - Max Encoder" : {
+              "has" : {
+                "results" : {
+                  "indicate" : {
+                    "Our Shortcut - Stacked Encoder" : {
+                      "sur-passes" : "all the previous state - of - the - art encoders",
+                      "achieves" : {
+                        "new best encoding - based result" : {
+                          "on" : "SNLI"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "We also compare to the recent biLSTM - Max Encoder of , which served as our model 's 1 - layer starting point .
+The results indicate that ' Our Shortcut - Stacked Encoder ' sur-passes all the previous state - of - the - art encoders , and achieves the new best encoding - based result on SNLI , suggesting the general effectiveness of simple shortcut - connected stacked layers in sentence encoders ."
+
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "has" : {
+    "Dataset" : {
+      "collected" : {
+        "first large - scale dataset of questions and answers" : {
+          "based on" : "KB",
+          "called" : "SimpleQuestions",
+          "from sentence" : "First , as an effort to study the coverage of existing systems and the possibility to train jointly on different data sources via multitasking , we collected the first large - scale dataset of questions and answers based on a KB , called SimpleQuestions ."
+        }
+      },
+      "contains" : ["more than 100 k questions", {"from sentence" : "This dataset , which is presented in Section 2 , contains more than 100 k questions written by human anno-What American cartoonist is the creator of Andy Lippincott ?"}]
+    }
+  }
+}

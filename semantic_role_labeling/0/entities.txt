@@ -1,0 +1,67 @@
+16	154	158	Code
+16	172	202	https://github.com/luheng/lsgn
+13	3	10	propose
+13	14	37	end - to - end approach
+13	49	51	in
+13	100	116	one forward pass
+13	38	52	for predicting
+13	53	71	all the predicates
+13	82	96	argument spans
+14	10	19	builds on
+14	22	57	recent coreference resolution model
+14	60	69	by making
+14	70	77	central
+14	78	84	use of
+14	85	130	learned , contextualized span representations
+15	3	6	use
+15	13	28	representations
+15	29	39	to predict
+15	40	50	SRL graphs
+15	51	64	directly over
+15	65	75	text spans
+16	0	9	Each edge
+16	13	26	identified by
+16	27	51	independently predicting
+16	52	57	which
+16	58	62	role
+16	74	87	holds between
+16	88	121	every possible pair of text spans
+17	4	15	final graph
+17	30	38	union of
+17	39	68	predicted SRL roles ( edges )
+17	79	110	associated text spans ( nodes )
+19	4	24	span representations
+19	30	40	generalize
+19	45	74	token - level representations
+19	75	77	in
+19	78	93	BIObased models
+19	96	103	letting
+19	87	92	model
+19	114	132	dynamically decide
+19	133	165	which spans and roles to include
+19	168	181	without using
+19	182	220	previously standard syntactic features
+20	33	35	is
+20	43	71	first span - based SRL model
+20	72	92	that does not assume
+20	98	118	predicates are given
+2	47	76	Neural Semantic Role Labeling
+10	0	30	Semantic role labeling ( SRL )
+11	25	28	SRL
+71	20	31	joint model
+71	32	43	outperforms
+71	48	77	previous best pipeline system
+71	78	80	by
+71	84	97	F1 difference
+71	98	100	of
+71	101	129	anywhere between 1.3 and 6.0
+73	0	2	On
+73	3	15	all datasets
+73	18	27	our model
+73	31	38	able to
+73	39	46	predict
+73	47	51	over
+73	52	56	40 %
+73	57	59	of
+73	64	73	sentences
+73	74	94	completely correctly

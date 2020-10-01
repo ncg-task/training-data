@@ -1,0 +1,161 @@
+25	29	36	develop
+25	37	56	deep memory network
+25	57	60	for
+25	61	98	aspect level sentiment classification
+26	13	15	is
+26	16	29	data - driven
+26	32	57	computationally efficient
+27	13	24	consists of
+27	25	54	multiple computational layers
+27	55	59	with
+27	60	77	shared parameters
+28	0	10	Each layer
+28	11	13	is
+28	16	62	content - and location - based attention model
+28	71	83	first learns
+28	88	107	importance / weight
+28	108	110	of
+28	111	128	each context word
+28	138	146	utilizes
+28	152	163	information
+28	164	176	to calculate
+28	177	207	continuous text representation
+29	4	23	text representation
+29	24	26	in
+29	31	41	last layer
+29	45	56	regarded as
+29	61	68	feature
+29	69	72	for
+29	73	97	sentiment classification
+30	3	18	every component
+30	19	21	is
+30	22	36	differentiable
+30	43	55	entire model
+30	56	84	could be efficiently trained
+30	85	96	end - toend
+30	97	101	with
+30	102	118	gradient descent
+30	121	126	where
+30	131	144	loss function
+30	19	21	is
+30	152	173	cross - entropy error
+30	174	176	of
+30	177	201	sentiment classification
+158	6	14	Majority
+158	15	17	is
+158	20	41	basic baseline method
+158	50	57	assigns
+158	62	86	majority sentiment label
+158	31	33	in
+158	90	102	training set
+158	103	110	to each
+158	111	119	instance
+158	31	33	in
+158	127	135	test set
+159	6	25	Feature - based SVM
+159	26	34	performs
+159	35	57	state - of - the - art
+159	58	60	on
+159	61	98	aspect level sentiment classification
+161	22	39	three LSTM models
+161	28	32	LSTM
+161	28	32	LSTM
+162	0	2	In
+162	12	38	LSTM based recurrent model
+162	42	54	applied from
+162	59	64	start
+162	65	67	to
+162	72	75	end
+162	76	78	of
+162	81	89	sentence
+162	100	118	last hidden vector
+162	122	129	used as
+162	134	157	sentence representation
+163	0	6	TDLSTM
+163	7	14	extends
+163	20	42	by taking into account
+163	50	56	aspect
+163	63	67	uses
+163	68	85	two LSTM networks
+163	90	120	forward one and a backward one
+163	123	130	towards
+163	50	56	aspect
+163	7	14	extends
+163	0	6	TDLSTM
+164	0	12	TDLSTM + ATT
+164	28	44	by incorporating
+164	48	67	attention mechanism
+164	95	99	over
+164	104	118	hidden vectors
+165	3	6	use
+165	11	34	same Glove word vectors
+165	35	38	for
+165	39	54	fair comparison
+166	14	23	implement
+166	24	34	ContextAVG
+166	44	46	is
+166	39	57	simplistic version
+166	58	60	of
+166	61	73	our approach
+2	0	37	Aspect Level Sentiment Classification
+12	76	94	sentiment analysis
+171	7	16	find that
+171	17	36	feature - based SVM
+171	37	39	is
+171	43	69	extremely strong performer
+171	74	99	substantially outperforms
+171	100	122	other baseline methods
+178	26	37	performance
+178	38	40	of
+178	41	54	Contex - tAVG
+178	55	57	is
+178	58	67	very poor
+202	23	52	multiple computational layers
+202	59	79	consistently improve
+202	84	107	classification accuracy
+202	8	10	in
+202	111	127	all these models
+172	0	5	Among
+172	6	28	three recurrent models
+172	31	37	TDLSTM
+172	38	46	performs
+172	47	53	better
+172	54	58	than
+172	33	37	LSTM
+179	59	77	observe that using
+179	78	103	more computational layers
+179	120	127	lead to
+179	128	146	better performance
+179	149	164	especially when
+179	169	183	number of hops
+179	184	186	is
+179	187	200	less than six
+175	3	11	consider
+175	17	35	each hidden vector
+175	36	38	of
+175	39	45	TDLSTM
+175	46	53	encodes
+175	58	67	semantics
+175	36	38	of
+175	71	84	word sequence
+175	85	90	until
+175	95	111	current position
+180	4	21	best performances
+180	26	39	achieved when
+180	44	49	model
+180	50	58	contains
+180	59	78	seven and nine hops
+203	0	16	All these models
+203	17	24	perform
+203	25	35	comparably
+203	36	40	when
+203	45	59	number of hops
+203	60	62	is
+203	63	79	larger than five
+181	0	2	On
+181	3	16	both datasets
+181	23	40	proposed approach
+181	41	53	could obtain
+181	54	73	comparable accuracy
+181	74	85	compared to
+181	90	133	state - of - art feature - based SVM system

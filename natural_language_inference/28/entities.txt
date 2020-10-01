@@ -1,0 +1,66 @@
+151	4	7	RUM
+151	8	16	utilizes
+151	19	53	different representation of memory
+151	54	58	that
+151	59	70	outperforms
+151	71	79	those of
+151	80	92	LSTM and GRU
+151	103	109	solves
+151	114	118	task
+151	119	129	completely
+175	15	19	have
+175	24	50	same hidden state N h = 50
+175	51	54	for
+175	55	74	different lengths T
+176	3	6	use
+176	9	19	batch size
+176	20	23	128
+177	4	13	optimizer
+177	14	16	is
+177	17	24	RMSProp
+177	25	29	with
+177	32	45	learning rate
+177	46	51	0.001
+178	52	54	of
+178	3	12	find that
+178	13	17	LSTM
+178	18	23	fails
+178	24	32	to learn
+178	37	41	task
+179	0	25	NTM and Fast - weight RNN
+179	26	30	fail
+179	31	43	longer tasks
+187	48	59	simple LSTM
+187	65	94	End - to - end Memory Network
+187	103	107	GORU
+188	3	12	find that
+188	13	16	RUM
+188	17	42	outperforms significantly
+188	43	56	LSTM and GORU
+188	61	69	achieves
+188	70	88	competitive result
+188	89	93	with
+188	94	109	those of MemN2N
+188	125	144	attention mechanism
+215	0	12	FS - RUM - 2
+215	13	31	generalizes better
+215	32	36	than
+215	37	55	other gated models
+215	58	65	such as
+215	66	78	GRU and LSTM
+27	10	17	propose
+27	20	34	novel RNN cell
+27	40	63	resolves simultaneously
+27	70	80	weaknesses
+27	81	83	of
+27	84	93	basic RNN
+28	4	29	Rotational Unit of Memory
+28	30	32	is
+28	35	55	modified gated model
+28	56	61	whose
+28	62	82	rotational operation
+28	83	90	acts as
+28	91	109	associative memory
+28	129	146	orthogonal matrix
+4	92	125	Recurrent Neural Networks ( RNN )
+5	10	13	RNN

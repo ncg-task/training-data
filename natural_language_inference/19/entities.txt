@@ -1,0 +1,103 @@
+165	3	7	used
+165	12	43	Glove 840B 300D 1 ( d e = 300 )
+165	44	47	for
+165	52	78	pre-trained word embedding
+165	79	86	without
+165	91	101	finetuning
+165	56	61	train
+166	21	61	more universally usable sentence encoder
+167	0	19	Layer normalization
+167	24	34	applied to
+167	35	57	all linear projections
+167	58	60	of
+167	61	87	masked multihead attention
+167	90	101	fusion gate
+167	108	135	multi-dimensional attention
+170	68	87	dropout probability
+170	92	98	set to
+170	99	102	0.1
+171	0	10	Batch size
+171	11	14	was
+171	15	17	64
+171	28	33	model
+171	38	50	trained with
+171	51	65	Adam optimizer
+171	46	50	with
+171	75	88	learning rate
+171	89	91	of
+171	92	97	0.001
+168	3	10	applied
+168	11	27	residual dropout
+168	41	45	with
+168	20	27	dropout
+168	54	56	to
+168	61	67	output
+168	68	70	of
+168	71	98	masked multi-head attention
+168	103	130	SF +H F +b F of fusion gate
+170	3	6	set
+170	7	22	h = 5 , ? = 1.5
+170	23	25	in
+170	30	57	masked multi-head attention
+172	16	31	implemented via
+172	32	42	Tensorflow
+172	43	45	on
+172	46	83	single Nvidia Geforce GTX 1080 Ti GPU
+32	31	38	propose
+32	39	77	Distancebased Self - Attention Network
+32	84	94	introduces
+32	97	110	distance mask
+32	117	123	models
+32	128	145	relative distance
+32	146	153	between
+32	154	159	words
+33	0	19	In conjunction with
+33	22	38	directional mask
+33	45	58	distance mask
+33	59	83	allows us to incorporate
+33	84	124	complete positional information of words
+33	72	74	in
+33	128	137	our model
+2	46	72	Natural Language Inference
+10	38	41	NLI
+18	111	145	Natural Language Inference ( NLI )
+174	21	23	of
+174	24	33	SNLI data
+174	101	105	show
+175	0	13	Compared with
+175	18	55	existing state - of - the - art model
+175	121	132	our results
+175	142	172	new state - of - theart record
+177	8	12	show
+177	22	30	addition
+177	31	33	of
+177	38	51	distance mask
+177	52	60	improved
+177	65	76	performance
+177	77	84	without
+177	85	108	significantly affecting
+177	113	126	training time
+177	130	140	increasing
+177	155	165	parameters
+180	6	17	improvement
+180	18	20	of
+180	25	38	test accuracy
+180	72	82	is only by
+180	83	94	0.3 % point
+180	39	53	by introducing
+180	58	71	distance mask
+186	15	23	applying
+186	24	39	SNLI best model
+186	40	42	to
+186	43	59	MultiNLI dataset
+188	0	13	Compared with
+188	18	40	result of RepEVAL 2017
+188	50	58	see that
+188	63	104	Distance - based Self - Attention Network
+188	105	113	performs
+188	114	118	well
+189	34	43	our model
+189	44	50	showed
+189	51	80	similar average test accuracy
+189	14	18	with
+189	86	117	much lower number of parameters

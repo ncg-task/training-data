@@ -1,0 +1,93 @@
+{
+  "has" : {
+    "Models" : {
+      "propose" : {
+        "new architecture" : {
+          "named" : "Target - Specific Transformation Networks ( TNet )"
+        },
+        "from sentence" : "We propose a new architecture , named Target - Specific Transformation Networks ( TNet ) , to solve the above issues in the task of target sentiment classification ."
+      },
+      "has" : {
+        "TNet" : {
+          "firstly encodes" : {
+            "context information" : {
+              "into" : "word embeddings"
+            },
+            "from sentence" : "TNet firstly encodes the context information into word embeddings and generates the contextualized word representations with LSTMs ."
+          },
+          "generates" : {
+            "contextualized word representations" : {
+              "with" : "LSTMs"
+            },
+            "from sentence" : "TNet firstly encodes the context information into word embeddings and generates the contextualized word representations with LSTMs ." 
+          },
+          "introduces" : {
+            "novel Target - Specific Transformation ( TST ) component" : {
+              "for generating" : "target - specific word representations",
+              "To integrate" : {
+                "target information" : {
+                  "into" : "target - specific word representations"
+                }
+              }
+            },
+            "from sentence" : "To integrate the target information into the word representations , TNet introduces a novel Target - Specific Transformation ( TST ) component for generating the target - specific word representations ."
+          }
+        },
+        "TST" : {
+          "generates" : {
+            "different representations" : {
+              "of" : {
+                "target" : {
+                  "conditioned on" : "individual context words"
+                }
+              }
+            }
+          },
+          "consolidates" : {
+            "each context word" : {
+              "with" : {
+                "tailor - made target representation" : {
+                  "to obtain" : "transformed word representation"
+                }
+              }
+            }
+          },
+          "from sentence" : "Contrary to the previous attention - based approaches which apply the same target representation to determine the attention scores of individual context words , TST firstly generates different representations of the target conditioned on individual context words , then it consolidates each context word with its tailor - made target representation to obtain the transformed word representation ."
+        }
+      },
+      "design" : {
+        "contextpreserving mechanism" : {
+          "to contextualize" : "generated target - specific word representations",
+          "from sentence" : "As the context information carried by the representations from the LSTM layer will be lost after the non-linear TST , we design a contextpreserving mechanism to contextualize the generated target - specific word representations ."
+        }
+      },
+      "adopt" : {
+        "proximity strategy" : {
+          "To help" : {
+            "CNN feature extractor" : {
+              "locate" : {
+                "sentiment indicators" : {
+                  "has" : "more accurately"
+                }
+              }
+            }  
+          },
+          "to scale" : {
+            "input" : {
+              "of" : {
+                "convolutional layer" : {
+                  "with" : {
+                    "positional relevance" : {
+                      "between" : "a word and the target"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "To help the CNN feature extractor locate sentiment indicators more accurately , we adopt a proximity strategy to scale the input of convolutional layer with positional relevance between a word and the target ."
+        }
+      }
+    }
+  }
+}

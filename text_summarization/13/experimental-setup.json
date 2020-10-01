@@ -1,0 +1,103 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "train with" : {
+        "minibatch stochastic gradient descent ( SGD )" : {
+          "with" : {
+            "batch size 20" : {
+              "for" : "20 epochs"
+            }
+          },
+          "renormalizing gradients" : "below norm 5"
+        },
+        "from sentence" : "We train with minibatch stochastic gradient descent ( SGD ) with batch size 20 for 20 epochs , renormalizing gradients below norm 5 ."
+      },
+      "initialize" : {
+        "learning rate" : {
+          "to" : {
+            "0.1" : {
+              "for" : "top - level encoder"
+            },
+            "1" : {
+              "for" : "rest of the model"
+            }
+          },
+          "begin decaying it by" : {
+            "a factor of 0.5" : {
+              "after" : {
+                "validation perplexity" : {
+                  "stops" : "decreasing"
+                }
+              }
+            }
+          },
+          "from sentence" : "We initialize the learning rate to 0.1 for the top - level encoder and 1 for the rest of the model , and begin decaying it by a factor of 0.5 each epoch after the validation perplexity stops decreasing ."
+        },
+        "word embeddings" : {
+          "with" : "300 dimensional word2vec embeddings",
+          "from sentence" : "We use 2 layer LSTMs with 500 hidden units , and we initialize word embeddings with 300 dimensional word2vec embeddings ."          
+        },
+        "all other parameters" : {
+          "as uniform in" : "interval [ ? 0.1 , 0.1 ]",
+          "from sentence" : "We initialize all other parameters as uniform in the interval [ ? 0.1 , 0.1 ] ."
+        }        
+      },
+      "use" : {
+        "2 layer LSTMs" : {
+          "with" : "500 hidden units",
+          "from sentence" : "We use 2 layer LSTMs with 500 hidden units , and we initialize word embeddings with 300 dimensional word2vec embeddings ."          
+        },
+        "dropout" : {
+          "between" : {
+            "stacked LSTM hidden states and before the final word generator layer" : {
+              "to regularize" : "dropout probability 0.3"
+            }
+          },
+          "from sentence" : "We use dropout between stacked LSTM hidden states and before the final word generator layer to regularize ( with dropout probability 0.3 ) ."
+        }
+      },
+      "For" : {
+        "convolutional layers" : {
+          "use" : {
+            "kernel width" : {
+              "of" : "6 and 600 filters"
+            }
+          },
+          "from sentence" : "For convolutional layers , we use a kernel width of 6 and 600 filters ."
+        }
+      },
+      "has" : {
+        "Positional embeddings" : {
+          "have" : "dimension 25",
+          "from sentence" : "Positional embeddings have dimension 25 ."
+        }
+      },
+      "At" : {
+        "test time" : {
+          "run" : {
+            "beam search" : {
+              "to produce" : {
+                "summary" : {
+                  "with" : "beam size of 5"
+                }
+              }
+            }
+          },
+          "from sentence" : "At test time , we run beam search to produce the summary with a beam size of 5 ."
+        }
+      },
+      "implemented using" : {
+        "Torch" : {
+          "based on" : "past version of the Open NMT system"
+        },
+        "from sentence" : "Our models are implemented using Torch based on a past version of the Open NMT system"
+      },
+      "ran" : {
+        "our experiments" : {
+          "on" : "12GB Geforce GTX Titan X GPU"
+        },
+        "from sentence" : "4 . We ran our experiments on a 12GB Geforce GTX Titan X GPU ."
+      }
+    }
+  }
+}

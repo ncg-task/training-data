@@ -1,0 +1,50 @@
+{
+  "has" : {
+    "Results" : {
+      "see" : {
+        "some improvement" : {
+          "on" : {
+            "Discourse Structure prediction" : {
+              "when we are using" : "joint model",
+              "has" : {
+                "improvement" : {
+                  "is" : {
+                    "statistically significant" : {
+                      "only for" : "Nuclearity and Relation predictions"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "From the results , we see some improvement on Discourse Structure prediction when we are using a joint model but the improvement is statistically significant only for the Nuclearity and Relation predictions ."
+            }
+          }
+        }
+      },
+      "has" : {
+        "improvements" : {
+          "on" : {
+            "Relations predictions" : {
+              "mainly on" : {
+                "Contrastive set" : {
+                  "specifically" : ["Contrast", "Comparison", "Cause"]
+                }
+              },
+              "from sentence" : "The improvements on the Relation predictions were mainly on the Contrastive set , specifically the class of Contrast , Comparison and Cause relations as ."
+            }
+          }
+        }
+      },
+      "In" : {
+        "fine grained setting" : {
+          "compute" : {
+            "accuracy" : {
+              "of" : "exact match",
+              "across" : "five classes"
+            }
+          },
+          "from sentence" : "In the fine grained setting we compute the accuracy of exact match across five classes ."
+        }
+      }
+    }
+  }
+}

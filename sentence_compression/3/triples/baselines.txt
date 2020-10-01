@@ -1,0 +1,8 @@
+(Contribution||has||Baselines)
+(Baselines||has||dependency - tree - based method)
+(dependency - tree - based method||considers||sentence compression task)
+(sentence compression task||as||optimization problem)
+(optimization problem||by using||integer linear programming)
+(Baselines||has||long short - term memory networks ( LSTMs ))
+(long short - term memory networks ( LSTMs )||showed||strong promise)
+(strong promise||in||sentence compression)

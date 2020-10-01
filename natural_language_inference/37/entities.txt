@@ -1,0 +1,175 @@
+164	3	8	train
+164	13	18	model
+164	19	23	with
+164	28	64	Adadelta optimizer ( Zeiler , 2012 )
+164	19	23	with
+164	72	82	batch size
+164	83	85	60
+164	86	89	for
+164	90	102	Triv - ia QA
+164	107	109	45
+164	86	89	for
+164	114	119	SQuAD
+168	4	39	Glo Ve 300 dimensional word vectors
+168	56	64	used for
+168	65	80	word embeddings
+169	0	2	On
+169	3	8	SQuAD
+169	14	17	use
+169	20	34	dimensionality
+169	35	42	of size
+169	43	46	100
+169	47	50	for
+169	55	59	GRUs
+169	72	75	200
+169	47	50	for
+169	84	97	linear layers
+169	98	112	employed after
+169	113	137	each attention mechanism
+170	8	11	for
+170	12	20	TriviaQA
+170	59	64	using
+170	67	88	larger dimensionality
+170	89	91	of
+170	92	95	140
+170	8	11	for
+170	100	108	each GRU
+170	113	116	280
+170	8	11	for
+170	125	138	linear layers
+170	44	46	is
+170	142	152	beneficial
+171	0	6	During
+171	7	15	training
+171	21	29	maintain
+171	33	59	exponential moving average
+171	60	62	of
+171	67	74	weights
+171	75	79	with
+171	82	92	decay rate
+171	60	62	of
+171	96	101	0.999
+21	26	35	proposing
+21	39	64	improved pipelined method
+22	8	17	introduce
+22	20	26	method
+22	27	39	for training
+22	40	46	models
+22	47	57	to produce
+22	58	98	accurate per-paragraph confidence scores
+24	3	10	propose
+24	13	31	TF - IDF heuristic
+24	32	41	to select
+24	48	58	paragraphs
+24	32	34	to
+24	62	79	train and test on
+26	38	41	use
+26	44	69	summed objective function
+26	70	87	that marginalizes
+26	92	107	model 's output
+26	108	112	over
+26	113	126	all locations
+26	143	149	occurs
+26	131	142	answer text
+32	14	46	shared - normalization objective
+32	47	52	where
+32	53	63	paragraphs
+32	68	77	processed
+32	78	91	independently
+32	102	113	probability
+32	114	116	of
+32	120	136	answer candidate
+32	137	139	is
+32	140	152	marginalized
+32	153	157	over
+32	158	172	all paragraphs
+32	173	185	sampled from
+32	190	203	same document
+31	29	37	sampling
+31	38	48	paragraphs
+31	49	53	from
+31	58	75	context documents
+31	78	87	including
+31	38	48	paragraphs
+31	104	118	do not contain
+31	122	128	answer
+31	131	133	to
+31	134	142	train on
+2	21	60	Multi - Paragraph Reading Comprehension
+4	36	79	neural paragraph - level question answering
+14	39	84	answering questions given a related paragraph
+180	3	7	find
+180	58	67	effective
+180	52	57	to be
+180	13	29	TF - IDF ranking
+180	38	51	sum objective
+181	0	5	Using
+181	10	23	refined model
+181	24	33	increases
+181	38	42	gain
+181	43	45	by
+181	46	62	another 4 points
+186	4	58	shared - norm , merge , and no-answer training methods
+186	59	66	improve
+186	71	87	model 's ability
+186	88	98	to utilize
+186	99	108	more text
+186	111	115	with
+186	120	140	shared - norm method
+186	141	146	being
+186	147	166	significantly ahead
+186	167	169	of
+186	174	180	others
+186	181	183	on
+186	188	200	verified set
+186	205	214	tied with
+186	219	233	merge approach
+186	181	183	on
+186	241	252	general set
+192	9	19	base model
+192	20	29	starts to
+192	30	34	lose
+192	35	46	performance
+192	10	12	as
+192	50	65	more paragraphs
+192	66	69	are
+192	70	74	used
+210	6	24	all our approaches
+210	29	41	some benefit
+210	48	67	shared - norm model
+210	68	70	is
+210	75	84	strongest
+210	110	118	not lose
+210	119	130	performance
+210	131	133	as
+210	134	161	large numbers of paragraphs
+210	50	53	are
+210	166	170	used
+216	0	27	Our paragraph - level model
+216	28	30	is
+216	31	42	competitive
+216	62	76	our variations
+216	77	86	to handle
+216	91	114	multi-paragraph setting
+216	120	125	cause
+216	128	138	minor loss
+216	139	141	of
+216	142	153	performance
+219	4	14	base model
+219	15	24	starts to
+219	25	29	drop
+219	30	32	in
+219	33	44	performance
+219	45	49	once
+219	50	74	more than two paragraphs
+219	75	78	are
+219	79	83	used
+220	14	36	shared - norm approach
+220	40	47	able to
+220	48	53	reach
+220	56	72	peak performance
+220	73	75	of
+220	76	84	72.37 F1
+220	89	97	64.08 EM
+220	98	103	given
+220	104	117	15 paragraphs

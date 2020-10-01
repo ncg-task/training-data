@@ -1,0 +1,41 @@
+{
+  "has" : {
+    "Model" : {
+      "develop" : {
+        "framework" : {
+          "based on" : {
+            "long shortterm memory ( LSTM )" : {
+              "takes" : {
+                "sequence of utterances" : {
+                  "as" : "input"
+                }
+              },
+              "extracts" : "contextual utterancelevel features"
+            }
+          },
+          "from sentence" : "In this paper , we discard such an oversimplifying hypothesis and develop a framework based on long shortterm memory ( LSTM ) that takes a sequence of utterances as input and extracts contextual utterancelevel features ."          
+        }
+      },
+      "preserves" : {
+        "sequential order" : {
+          "of" : "utterances"
+        },
+        "from sentence" : "Our model preserves the sequential order of utterances and enables consecutive utterances to share information , thus providing contextual information to the utterance - level sentiment classification process ."
+      },
+      "enables" : {
+        "consecutive utterances" : {
+          "to share" : {
+            "information" : {
+              "providing" : {
+                "contextual information" : {
+                  "to" : "utterance - level sentiment classification process"
+                }
+              }
+            }
+          },
+          "from sentence" : "Our model preserves the sequential order of utterances and enables consecutive utterances to share information , thus providing contextual information to the utterance - level sentiment classification process ."
+        }      
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "has" : {
+    "Model" : {
+      "present" : {
+        "reattention mechanism" : {
+          "that" : {
+            "temporally memorizes" : {
+              "has" : {
+                "past attentions" : {
+                  "to refine" : {
+                    "current attentions" : {
+                      "in" : "multi-round alignment architecture"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "To address the first problem , we present a reattention mechanism that temporally memorizes past attentions and uses them to refine current attentions in a multi-round alignment architecture ."
+        }
+      },
+      "has" : {
+        "computation" : {
+          "based on" : {
+            "two words" : {
+              "share" : "similar semantics",
+              "if" : {
+                "attentions" : {
+                  "about" : {
+                    "same texts" : {
+                      "are" : "highly overlapped",
+                      "be" : "less similar" 
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "The computation is based on the fact that two words should share similar semantics if their attentions about same texts are highly overlapped , and be less similar vice versa ."
+          }
+        },
+        "reattention" : {
+          "be" : {
+            "more concentrated" : {
+              "if" : {
+                "past attentions" : {
+                  "focus on" : {
+                    "same parts" : {
+                      "of" : "input"
+                    }
+                  }
+                }
+              }
+            },
+            "relatively more distracted" : {
+              "to focus on" : {
+                "new regions" : {
+                  "if" : {
+                    "past attentions" : {
+                      "are" : "not overlapped at all"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Therefore , the reattention can be more concentrated if past attentions focus on same parts of the input , or be relatively more distracted so as to focus on new regions if past attentions are not overlapped at all ."
+        }
+      },
+      "extend" : {
+        "traditional training method" : {
+          "with" : {
+            "novel approach" : {
+              "called" : {
+                "dynamic - critical reinforcement learning" : {
+                  "dynamically decides" : {
+                    "reward and the baseline" : {
+                      "according to" : "two sampling strategies"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "As for the second problem , we extend the traditional training method with a novel approach called dynamic - critical reinforcement learning .
+Unlike the traditional reinforcement learning algorithm where the reward and baseline are statically sampled , our approach dynamically decides the reward and the baseline according to two sampling strategies , Context : The American Football Conference ( AFC ) champion Denver Broncos defeated the National Football Conference ( NFC ) champion Carolina Panthers 24 - 10 to earn their third Super Bowl title ."
+
+        }
+      }
+    }
+  }
+}

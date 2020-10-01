@@ -1,0 +1,117 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "has" : {
+        "models" : {
+          "name" : ["BERT - base uncased", "3 - layer 600D Bidirectional Long Short - Term Memory ( BiLSTM )", "Minitagger ( SVM ) ) + GloVe", "MarMoT ( CRF )", "Majority class per word"],
+          "from sentence" : "We performed experiments with the following models :
+BERT - base uncased 3 - layer 600D Bidirectional Long Short - Term Memory ( BiLSTM ) ( Hochreiter and Schmidhuber , 1997 ) Minitagger ( SVM ) ) + GloVe MarMoT ( CRF ) Majority class per word"
+
+        }
+      },
+      "use" : {
+        "Huggingface PyTorch implementation" : {
+          "of" : {
+            "BERT" : {
+              "available in" : "pytorch transformers library",
+              "further" : {
+                "fine - tune" : {
+                  "during" : "training"
+                }
+              }
+            }
+          },
+          "from sentence" : "We use the Huggingface PyTorch implementation of BERT available in the pytorch transformers library , 3 which we further fine - tune during training ."
+        },
+        "smaller BERT - base model" : {
+          "using" : "uncased alternative",
+          "from sentence" : "For our experiments we use the smaller BERT - base model using the uncased alternative ."
+        },
+        "batch size" : {
+          "of" : "32",
+          "from sentence" : "We use a batch size of 32 and fine - tune the model for 2 epochs ."
+        },
+        "dropout" : {
+          "of" : {
+            "0.2" : {
+              "between" : "layers of the BiLSTM"
+            }
+          },
+          "from sentence" : "We use a dropout of 0.2 between the layers of the BiLSTM ."
+        }
+      },
+      "take" : {
+        "last hidden layer" : {
+          "of" : "BERT",
+          "train" : {
+            "single fully - connected classifier layer" : {
+              "on" : "top",
+              "mapping" : {
+                "representation" : {
+                  "of" : {
+                    "each word" : {
+                      "to" : "labels"
+                    }
+                  }
+                } 
+              }
+            }
+          },
+          "from sentence" : "We take the last hidden layer of BERT and train a single fully - connected classifier layer on top of it , mapping the representation of each word to the labels ."
+        }
+      },
+      "fine - tune" : {
+        "model" : {
+          "for" : "2 epcohs"
+        },
+        "from sentence" : "We use a batch size of 32 and fine - tune the model for 2 epochs ."
+      },
+      "For" : {
+        "BiLSTM" : {
+          "use" : "pre-trained 300D Glo Ve 840B word embeddings",
+          "from sentence" : "For BiLSTM we use pre-trained 300D Glo Ve 840B word embeddings ." 
+        },
+        "SVM" : {
+          "use" : {
+            "Minitagger 4 implementation" : {
+              "using" : {
+                "each dimension" : {
+                  "of" : {
+                    "pre-trained 300D Glo Ve 840B word embeddings" : {
+                      "as" : "features",
+                      "with" : "context - size 1"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "For the SVM we use Minitagger 4 implementation by using each dimension of the pre-trained 300D Glo Ve 840B word embeddings as features , with context - size 1 , i.e. including the previous and the next word in the context ."
+            }
+          }
+        },
+        "conditional random field ( CRF ) model" : {
+          "use" : {
+            "MarMot" : {
+              "with" : "default configuration"
+            }
+          },
+          "from sentence" : "For the conditional random field ( CRF ) model we use MarMot 5 by with the default configuration ."
+        }
+      },
+      "add" : {
+        "one fullyconnected classifier layer" : {
+          "on top of" : "BiLSTM",
+          "mapping" : {
+            "representation" : {
+              "of" : {
+                "each word" : {
+                  "to" : "labels"
+                }
+              }
+            }
+          },
+          "from sentence" : "As with BERT , we add one fullyconnected classifier layer on top of the BiLSTM , mapping the representation of each word to the labels ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "conversational memory network ( CMN )" : {
+          "uses" : {
+            "multimodal approach" : {
+              "for" : {
+                "emotion detection" : {
+                  "in" : {
+                    "utterances ( a unit of speech bound by breathes or pauses )" : {
+                      "of" : "conversational videos"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "We propose a conversational memory network ( CMN ) , which uses a multimodal approach for emotion detection in utterances ( a unit of speech bound by breathes or pauses ) of such conversational videos ."
+        }
+      },
+      "has" : {
+        "proposed CMN" : {
+          "by using" : {
+            "emotional context information" : {
+              "present in" : "conversation history"
+            },
+            "from sentence" : "Our proposed CMN incorporates these factors by using emotional context information present in the conversation history ."
+          },
+          "improves" : {
+            "speakerbased emotion modeling" : {
+              "by using" : {
+                "memory networks" : {
+                  "efficient in capturing" : "long - term dependencies",
+                  "summarizing" : "task - specific details "
+                }
+              },
+              "from sentence" : "It improves speakerbased emotion modeling by using memory networks which are efficient in capturing long - term dependencies and summarizing task - specific details using attention models ."
+            }
+          }
+        },
+        "memory cells" : {
+          "of" : {
+            "CMN" : {
+              "are" : {
+                "continuous vectors" : {
+                  "store" : {
+                    "context information" : {
+                      "found in" : "utterance histories"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Specifically , the memory cells of CMN are continuous vectors that store the context information found in the utterance histories ."
+        },
+        "CMN" : {
+          "models" : {
+            "interplay" : {
+              "of" : {
+                "memories" : {
+                  "to capture" : "interspeaker dependencies"
+                }
+              }
+            },
+            "from sentence" : "CMN also models interplay of these memories to capture interspeaker dependencies ."
+          },
+          "extracts" : {
+            "multimodal features ( audio , visual , and text )" : {
+              "for" : {
+                "all utterances" : {
+                  "in" : "video"
+                }
+              }
+            },
+            "from sentence" : "CMN first extracts multimodal features ( audio , visual , and text ) for all utterances in a video ."
+          }
+        }
+      }
+    }
+  }
+}

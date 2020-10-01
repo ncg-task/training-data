@@ -1,0 +1,76 @@
+160	14	21	running
+160	24	49	transitive closure module
+160	50	55	after
+160	60	99	temporal rule - based sieve ( RB + TR )
+160	100	110	results in
+160	111	127	improving recall
+161	0	9	Combining
+161	10	63	rule - based and machine - learned sieves ( RB + ML )
+161	64	70	yields
+161	73	91	slight improvement
+161	92	105	compared with
+161	106	147	enabling only the machine - learned sieve
+161	4	6	in
+161	155	168	system ( ML )
+162	0	11	Introducing
+162	16	40	temporal reasoner module
+162	41	48	between
+162	53	80	two sieves ( RB + TR + ML )
+162	81	93	proves to be
+162	94	114	even more beneficial
+19	4	17	CATENA system
+19	18	26	includes
+19	27	58	two main classification modules
+19	61	68	one for
+19	69	77	temporal
+19	86	95	other for
+19	96	112	causal relations
+20	24	37	take as input
+20	40	48	document
+20	49	63	annotated with
+20	80	97	temporal entities
+20	98	110	according to
+20	111	128	TimeML guidelines
+20	131	140	including
+20	145	175	document creation time ( DCT )
+20	178	217	events and time expressions ( timexes )
+21	4	10	output
+21	11	13	is
+21	18	31	same document
+21	32	36	with
+21	37	62	temporal links ( TLINKs )
+21	63	74	set between
+21	75	80	pairs
+21	81	83	of
+21	84	101	temporal entities
+22	4	12	document
+22	21	35	annotated with
+22	36	63	causal relations ( CLINKs )
+22	64	71	between
+22	72	83	event pairs
+23	4	11	modules
+23	12	15	for
+23	16	59	temporal and causal relation classification
+23	60	72	rely both on
+23	75	101	sieve - based architecture
+23	104	112	in which
+23	117	143	remaining unlabelled pairs
+23	146	159	after running
+23	162	184	rule - based component
+23	196	215	transitive reasoner
+23	220	228	fed into
+23	231	252	supervised classifier
+4	54	112	temporal and causal relation extraction and classification
+150	26	32	CATENA
+150	33	35	is
+150	40	62	best performing system
+150	52	54	in
+150	66	76	both tasks
+156	51	67	performs best on
+156	68	109	timex - timex and event - timex relations
+156	112	117	while
+156	118	123	CAEVO
+156	130	138	achieves
+156	143	155	best results
+156	7	9	on
+156	159	194	event - DCT and event - event pairs

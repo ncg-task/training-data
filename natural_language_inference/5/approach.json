@@ -1,0 +1,84 @@
+{
+  "has" : {
+    "Approach" : {
+      "explore" : {
+        "effect" : {
+          "of" : {
+            "additional information" : {
+              "by adopting" : {
+                "pretrained language model ( LM )" : {
+                  "to compute" : {
+                    "vector representation" : {
+                      "of" : "input text"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "First , we explore the effect of additional information by adopting a pretrained language model ( LM ) to compute the vector representation of the input text ."
+            },
+            "different objective functions" : {
+              "has" : "listwise and pointwise learning",
+              "from sentence" : "Last , we explore the effect of different objective functions ( listwise and pointwise learning ) ."
+            }
+          }
+        }
+      },
+      "select" : ["ELMo language model", {"from sentence" : "Following this study , we select an ELMo language model for this study ."}],
+      "investigate" : {
+        "applicability" : {
+          "of" : {
+            "transfer learning ( TL )" : {
+              "using" : {
+                "large - scale corpus" : {
+                  "created for" : {
+                    "relevant - sentence - selection task" : {
+                      "i.e." : "question - answering NLI ( QNLI ) dataset"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "We investigate the applicability of transfer learning ( TL ) using a large - scale corpus that is created for a relevant - sentence - selection task ( i.e. , question - answering NLI ( QNLI ) dataset ) ."
+        }
+      },
+      "enhance" : {
+        "one of the baseline models" : {
+          "name" : "Comp - Clip",
+          "for" : {
+            "target QA task" : {
+              "by proposing" : "novel latent clustering ( LC ) method"
+            }
+          },
+          "from sentence" : "Second , we further enhance one of the baseline models , Comp - Clip ( refer to the discussion in 3.1 ) , for the target QA task by proposing a novel latent clustering ( LC ) method ."
+        }
+      },
+      "has" : {
+        "LC method" : {
+          "computes" : {
+            "latent cluster information" : {
+              "for" : "target samples",
+              "by creating" : "latent memory space",
+              "calculating" : {
+                "similarity" : {
+                  "between" : ["sample", "memory"]
+                }
+              },
+              "from sentence" : "The LC method computes latent cluster information for target samples by creating a latent memory space and calculating the similarity between the sample and the memory ."
+            }
+          },
+          "assigns" : {
+            "true - label question - answer pairs" : {
+              "to" : {
+                "similar clusters" : {
+                  "By" : "endto - end learning process"
+                }
+              },
+              "from sentence" : "By an endto - end learning process with the answer-selection task , the LC method assigns true - label question - answer pairs to similar clusters ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

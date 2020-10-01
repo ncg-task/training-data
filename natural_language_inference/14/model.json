@@ -1,0 +1,56 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "novel method" : {
+          "for" : "question generation",
+          "in which" : {
+            "human annotators" : {
+              "educated on" : {
+                "workings" : {
+                  "of" : "state - of - the - art question answering model"
+                }
+              },
+              "asked to" : {
+                "submit" : {
+                  "has" : {
+                    "questions" : {
+                      "adversarially target" : "weaknesses"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "We propose a novel method for question generation , in which human annotators are educated on the workings of a state - of - the - art question answering model , and are asked to submit questions that adversarially target the weaknesses ."
+        }
+      },
+      "has" : {
+        "Annotators" : {
+          "rewarded for" : {
+            "submissions" : {
+              "in which" : {
+                "model" : {
+                  "has" : {
+                    "fails" : {
+                      "to identify" : {
+                        "correct sentence completion" : {
+                          "before and after" : {
+                            "fine - tuning" : {
+                              "on" : "ample of the submitted questions"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "Annotators are rewarded for submissions in which the model fails to identify the correct sentence completion both before and after fine - tuning on a sample of the submitted questions , encouraging the creation of questions that are not easily learnable ."
+          }
+        }
+      }
+    }
+  }
+}

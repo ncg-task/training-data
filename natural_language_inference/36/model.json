@@ -1,0 +1,37 @@
+{
+  "has" : {
+    "Model" : {
+      "explore" : {
+        "integrative models" : {
+          "for" : "finer - grained text comprehension and inference",
+          "from sentence" : "In this work , to alleviate such an obvious shortcoming about semantics , we make attempt to explore integrative models for finer - grained text comprehension and inference ."
+        }
+      },
+      "propose" : {
+        "semantics enhancement framework" : {
+          "for" : "TC tasks",
+          "from sentence" : "In this work , we propose a semantics enhancement framework for TC tasks , which boosts the strong baselines effectively ."
+        }
+      },
+      "implement" : {
+        "easy and feasible scheme" : {
+          "to integrate" : {
+            "semantic signals" : {
+              "in" : {
+                "downstream neural models" : {
+                  "in" : "end - to - end manner",
+                  "to boost" : {
+                    "effectively" : {
+                      "has" : "strong baselines"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "We implement an easy and feasible scheme to integrate semantic signals in downstream neural models in end - to - end manner to boost strong baselines effectively ."
+        }
+      }
+    }
+  }
+}

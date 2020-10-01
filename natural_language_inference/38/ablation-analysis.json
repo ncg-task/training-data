@@ -1,0 +1,93 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "of" : {
+        "single model" : {
+          "on" : "SQ u AD dev set",
+          "has" : {
+            "contribute" : {
+              "toward" : {
+                "model 's performance" : {
+                  "both" : ["syntactic embeddings", "semantic embeddings"],
+                  "has" : {
+                    "POS tags" : {
+                      "to be" : "more important"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "We also run the ablations of our single model on SQ u AD dev set to evaluate the individual contribution .
+As shows , both syntactic embeddings and semantic embeddings contribute towards the model 's performance and the POS tags seem to be more important ."
+
+        }
+      },
+      "For ablating" : {
+        "integral query matching" : {
+          "has" : {
+            "result" : {
+              "has" : {
+                "drops" : {
+                  "about" : "2 %"
+                }
+              }
+            }
+          },
+          "shows that" : {
+            "integral information" : {
+              "of" : {
+                "query" : {
+                  "for" : {
+                    "each word" : {
+                      "in" : "passage",
+                      "is" : "crucial"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "For ablating integral query matching , the result drops about 2 % on both metrics and it shows that the integral information of query for each word in passage is crucial ."
+        }
+      },
+      "has" : {
+        "query - based similarity matching" : {
+          "accounts for" : {
+            "about 10 % performance degradation" : {
+              "proves" : {
+                "effectiveness" : {
+                  "of" : {
+                    "alignment context words" : {
+                      "against" : "query"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "The query - based similarity matching accounts for about 10 % performance degradation , which proves the effectiveness of alignment context words against query ."
+        }
+      },
+      "For" : {
+        "context - based similarity matching" : {
+          "took out" : {
+            "M 3" : {
+              "from" : "linear function",
+              "proved to be" : {
+                "contributory" : {
+                  "to" : {
+                    "performance" : {
+                      "of" : "full - orientation matching"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "For context - based similarity matching , we simply took out the M 3 from the linear function and it is proved to be contributory to the performance of full - orientation matching ."
+        }
+      }
+    }
+  }  
+}

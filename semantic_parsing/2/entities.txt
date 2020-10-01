@@ -1,0 +1,165 @@
+230	58	99	https :// github.com/donglixp/coarse2fine
+237	0	10	Dimensions
+237	11	13	of
+237	14	48	hidden vectors and word embeddings
+237	54	67	selected from
+237	68	111	{ 250 , 300 } and { 150 , 200 , 250 , 300 }
+238	4	16	dropout rate
+238	21	34	selected from
+238	35	48	{ 0.3 , 0.5 }
+239	0	15	Label smoothing
+239	20	32	employed for
+239	33	36	GEO
+239	41	45	ATIS
+240	4	23	smoothing parameter
+240	28	34	set to
+240	35	38	0.1
+242	0	15	Word embeddings
+242	21	35	initialized by
+242	36	41	GloVe
+242	53	62	shared by
+242	63	76	table encoder
+242	81	94	input encoder
+244	4	27	part - of - speech tags
+244	33	44	obtained by
+244	49	62	spaCy toolkit
+246	4	17	learning rate
+246	22	35	selected from
+246	36	53	{ 0.002 , 0.005 }
+247	4	14	batch size
+247	19	22	200
+247	23	26	for
+247	27	34	WIKISQL
+247	45	47	64
+247	23	26	for
+247	52	66	other datasets
+248	0	14	Early stopping
+248	24	36	to determine
+248	41	57	number of epochs
+243	3	11	appended
+243	12	59	10 - dimensional part - of - speech tag vectors
+243	55	57	to
+243	63	73	embeddings
+243	36	38	of
+243	81	95	question words
+243	69	71	in
+243	99	106	WIKISQL
+245	3	7	used
+245	12	29	RMSProp optimizer
+245	30	38	to train
+245	43	49	models
+14	18	38	propose to decompose
+14	43	59	decoding process
+14	60	64	into
+14	65	75	two stages
+15	4	17	first decoder
+15	18	28	focuses on
+15	29	39	predicting
+15	42	54	rough sketch
+15	55	57	of
+15	62	84	meaning representation
+17	9	23	second decoder
+17	24	32	fills in
+17	33	48	missing details
+17	49	67	by conditioning on
+17	72	94	natural language input
+17	103	109	sketch
+18	19	25	sketch
+18	26	36	constrains
+18	41	59	generation process
+18	67	79	encoded into
+18	80	87	vectors
+18	88	96	to guide
+18	97	105	decoding
+20	14	27	decomposition
+20	28	40	disentangles
+20	41	91	high - level from low - level semantic information
+20	100	107	enables
+20	112	120	decoders
+20	121	129	to model
+20	130	137	meaning
+20	86	88	at
+20	141	172	different levels of granularity
+22	25	41	explicitly share
+22	42	51	knowledge
+22	52	54	of
+22	55	72	coarse structures
+22	73	76	for
+22	81	140	examples that have the same sketch ( i.e. , basic meaning )
+23	16	26	generating
+23	31	37	sketch
+23	44	51	decoder
+23	52	57	knows
+23	67	97	basic meaning of the utterance
+23	129	135	use it
+23	119	124	model
+23	68	70	as
+23	139	153	global context
+23	154	164	to improve
+23	169	179	prediction
+23	81	83	of
+23	187	200	final details
+2	32	55	Neural Semantic Parsing
+4	0	16	Semantic parsing
+257	13	20	observe
+257	26	37	COARSE2FINE
+257	38	49	outperforms
+257	50	58	ONESTAGE
+257	67	75	suggests
+257	81	94	disentangling
+257	95	107	high - level
+257	108	112	from
+257	113	136	low - level information
+267	26	40	sketch encoder
+267	41	43	is
+267	44	54	beneficial
+267	64	72	there is
+267	76	96	8.9 point difference
+267	97	116	in accuracy between
+267	117	143	COARSE2FINE and the oracle
+260	128	138	our method
+260	139	147	performs
+260	148	161	competitively
+260	181	207	relatively simple decoders
+269	13	24	superior to
+269	25	33	ONESTAGE
+269	48	80	previous best performing systems
+270	0	25	COARSE2FINE 's accuracies
+270	26	28	on
+270	29	59	aggregation agg op and agg col
+270	60	63	are
+270	64	81	90.2 % and 92.0 %
+270	108	121	comparable to
+270	122	128	SQLNET
+271	7	16	most gain
+271	20	31	obtained by
+271	36	52	improved decoder
+271	53	55	of
+271	60	72	WHERE clause
+279	0	8	Sketches
+279	9	20	produced by
+279	21	32	COARSE2FINE
+279	33	36	are
+279	37	50	more accurate
+262	17	27	predicting
+262	32	38	sketch
+262	39	48	correctly
+262	49	55	boosts
+262	56	67	performance
+272	8	12	find
+272	20	44	tableaware input encoder
+272	45	47	is
+272	48	56	critical
+272	57	60	for
+272	61	71	doing well
+272	72	74	on
+272	75	84	this task
+282	0	2	On
+282	3	10	WIKISQL
+282	17	25	sketches
+282	26	38	predicted by
+282	39	50	COARSE2FINE
+282	51	54	are
+282	55	72	marginally better
+282	73	86	compared with
+282	87	95	ONESTAGE

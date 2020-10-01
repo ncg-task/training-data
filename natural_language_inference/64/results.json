@@ -1,0 +1,66 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "TANDA" : {
+          "provides" : {
+            "large improvement" : {
+              "over" : "state of the art",
+              "from sentence" : "TANDA provides a large improvement over the state of the art , which has been regularly contributed to by hundreds of researchers ."
+            }
+          },
+          "improves" : {
+            "all the models" : {
+              "name" : ["BERT - Base", "RoBERTa- Base", "BERT - Large", "RoBERTa - Large"],
+              "has" : {
+                "outperforming" : {
+                  "has" : "previous state of the art"
+                }
+              }
+            },
+            "from sentence" : "TANDA improves all the models : BERT - Base , RoBERTa- Base , BERT - Large and RoBERTa - Large , outperforming the previous state of the art with all of them ."
+          }
+        },
+        "RoBERTa- Large TANDA" : {
+          "using" : ["ASNQ", {"from sentence" : "RoBERTa- Large TANDA using ASNQ ?"}],
+          "establish" : {
+            "impressive new state of the art" : {
+              "for" : {
+                "AS2" : {
+                  "on" : "WikiQA"
+                }
+              },
+              "of" : {
+                "0.920 and 0.933" : {
+                  "in" : "MAP and MRR"
+                }
+              }
+            },
+            "from sentence" : "Wiki QA establish an impressive new state of the art for AS2 on WikiQA of 0.920 and 0.933 in MAP and MRR , respectively ."
+          }
+        },
+        "RoBERTa - Large TANDA" : {
+          "with" : ["ASNQ", {"from sentence" : "RoBERTa - Large TANDA with ASNQ ?"}],
+          "establishes" : {
+            "impressive performance" : {
+              "of" : {
+                "0.943" : {
+                  "in" : "MAP"
+                },
+                "0.974" : {
+                  "in" : "MRR"
+                }
+              },
+              "has" : {
+                "outperforming" : {
+                  "has" : "previous state of the art"
+                }
+              }
+            }
+          },
+          "from sentence" : "TREC - QA again establishes an impressive performance of 0.943 in MAP and 0.974 in MRR , outperforming the previous state of the art by ."
+        }
+      }
+    }
+  }  
+}

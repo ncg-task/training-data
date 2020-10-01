@@ -1,0 +1,13 @@
+{
+  "has" : {
+    "Model" : {
+      "introduce" : {
+        "novel model" : {
+          "has" : "bi - LSTM trained with auxiliary loss",
+          "from sentence" : "Finally , we introduce a novel model , a bi - LSTM trained with auxiliary loss ."
+        }
+      },
+      "jointly predicts" : ["POS and the log frequency of the word", {"from sentence" : "The model jointly predicts the POS and the log frequency of the word ."}]
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Joint Extraction of Entity Mentions and Relations", {"from sentence" : "Going out on a limb : Joint Extraction of Entity Mentions and Relations without Dependency Trees"}],
+    ["Extraction of entities and their relations from text", {"from sentence" : "Extraction of entities and their relations from text belongs to a very well - studied family of structured prediction tasks in NLP ."}],
+    ["entity mention and relation extraction at the sentencelevel", {"from sentence" : "Several methods have been proposed for entity mention and relation extraction at the sentencelevel ."}]
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "Multi- sentimentresource Enhanced Attention Network ( MEAN )" : {
+          "for" : "sentence - level sentiment classification",
+          "to integrate" : {
+            "many kinds of sentiment linguistic knowledge" : {
+              "into" : "deep neural networks",
+              "via" : "multi -path attention mechanism"              
+            }
+          },          
+          "from sentence" : "In this work , we propose a Multi- sentimentresource Enhanced Attention Network ( MEAN ) for sentence - level sentiment classification to integrate many kinds of sentiment linguistic knowledge into deep neural networks via multi -path attention mechanism ."
+        },
+        "multisentiment - resource attention module" : {
+          "to learn" : {
+            "more comprehensive and meaningful sentiment - specific sentence representation" : {
+              "by using" : {
+                "three types of sentiment resource words" : {
+                  "as" : "attention sources",
+                  "attending to" : "context words"
+                }
+              }
+            },
+            "from sentence" : "Then , we propose a multisentiment - resource attention module to learn more comprehensive and meaningful sentiment - specific sentence representation by using the three types of sentiment resource words as attention sources attending to the context words respectively ."            
+          },
+          "attend to" : {
+            "different sentimentrelevant information" : {
+              "from" : {
+                "different representation subspaces" : {
+                  "implied by" : "different types of sentiment sources",
+                  "capture" : {
+                    "overall semantics" : {
+                      "of" : {
+                        "sentiment , negation and intensity words" : {
+                          "for" : "sentiment prediction"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "In this way , we can attend to different sentimentrelevant information from different representation subspaces implied by different types of sentiment sources and capture the overall semantics of the sentiment , negation and intensity words for sentiment prediction ."
+          }
+        }
+      },
+      "design" : {
+        "coupled word embedding module" : {
+          "to model" : {
+            "word representation" : {
+              "from" : "character - level and word - level semantics"
+            }
+          },
+          "from sentence" : "Specifically , we first design a coupled word embedding module to model the word representation from character - level and word - level semantics ."
+        }
+      }
+    }
+  }
+}

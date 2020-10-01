@@ -1,0 +1,49 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "utilize" : {
+        "word2vec" : {
+          "to train" : {
+            "word embeddings" : {
+              "on" : "NYT corpus"
+            }
+          },
+          "from sentence" : "In the experiment , we utilize word2vec 2 to train word embeddings on NYT corpus ."          
+        }
+      },
+      "has" : {
+        "grid search approach" : {
+          "to select" : {
+            "optimal learning rate lr" : {
+              "for" : "Adam optimizer",
+              "among" : "0.1 , 0.001 , 0.0005 , 0.0001"
+            },
+            "GRU size m ?" : {
+              "has" : "100 , 160 , 230 , 400"
+            },
+            "position embedding size l ?" : {
+              "has" : "5 , 10 , 15 , 20"
+            }
+          },
+          "from sentence" : "The grid search approach is used to select optimal learning rate lr for Adam optimizer among { 0.1 , 0.001 , 0.0005 , 0.0001 } , GRU size m ? { 100 , 160 , 230 , 400 } , position embedding size l ? { 5 , 10 , 15 , 20}. shows all parameters for our task ."
+        }
+      },
+      "GRU size m" : ["230", {"from sentence" : "GRU size m 230"}],
+      "Word embedding dimension k" : ["50", {"from sentence" : "Word embedding dimension k 50 POS embedding dimension l 5 Batch size n 50 Entity - Task weights ( ?"}],
+      "POS embedding dimension l" : ["5", {"from sentence" : "Word embedding dimension k 50 POS embedding dimension l 5 Batch size n 50 Entity - Task weights ( ?"}],
+      "Batch size n" : ["50", {"from sentence" : "Word embedding dimension k 50 POS embedding dimension l 5 Batch size n 50 Entity - Task weights ( ?"}],
+      "Entity - Task weights" : ["0.5", {"from sentence" : "Word embedding dimension k 50 POS embedding dimension l 5 Batch size n 50 Entity - Task weights ( ?
+head , ? tail ) 0.5,0.5 Entity - Relation"}],
+
+      "Entity - Relation Task weight" : ["0.3", {"from sentence" : "head , ? tail ) 0.5,0.5 Entity - Relation
+Task weight ?
+0.3 Learning rate lr 0.001 Dropout probability p 0.5 l 2 penalty ?"}],
+
+      "Learning rate lr" : ["0.001", {"from sentence" : "0.3 Learning rate lr 0.001 Dropout probability p 0.5 l 2 penalty ?"}],
+      "Dropout probability p" : ["0.5", {"from sentence" : "0.3 Learning rate lr 0.001 Dropout probability p 0.5 l 2 penalty ?"}],
+      "l 2 penalty" : ["0.0001", {"from sentence" : "0.3 Learning rate lr 0.001 Dropout probability p 0.5 l 2 penalty ?
+0.0001"}]
+
+    }
+  }
+}

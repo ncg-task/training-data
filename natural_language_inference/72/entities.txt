@@ -1,0 +1,93 @@
+149	8	15	include
+149	18	41	distance - based method
+149	42	51	that uses
+149	52	67	word embeddings
+157	3	10	trained
+157	13	40	4 - gram Kneser - Ney model
+157	41	43	on
+157	44	63	CliCR training data
+157	66	70	with
+157	71	90	multi-word entities
+157	91	105	represented as
+157	108	120	single token
+157	123	128	using
+157	129	134	SRILM
+33	21	30	construct
+33	31	72	queries , answers and supporting passages
+33	73	77	from
+33	78	94	BMJ Case Reports
+34	2	13	case report
+34	14	16	is
+34	19	39	detailed description
+34	40	42	of
+34	45	58	clinical case
+34	64	74	focuses on
+34	75	88	rare diseases
+34	91	132	unusual presentation of common conditions
+34	137	160	novel treatment methods
+35	12	20	contains
+35	23	46	Learning points section
+35	49	60	summarizing
+35	65	75	key pieces
+35	76	78	of
+35	79	90	information
+39	73	94	long support passages
+39	134	142	includes
+39	143	150	answers
+39	151	160	which are
+39	161	199	single - or multiword medical entities
+37	3	6	use
+37	13	28	learning points
+37	29	38	to create
+37	39	46	queries
+37	47	62	by blanking out
+37	65	79	medical entity
+39	12	20	contains
+39	21	43	around 100,000 queries
+39	13	15	on
+39	47	66	12,000 case reports
+2	10	17	Dataset
+2	47	76	Machine Reading Comprehension
+4	29	50	machine comprehension
+208	3	11	see that
+208	12	29	answer prediction
+208	30	38	based on
+208	39	64	contextual representation
+208	65	67	of
+208	68	104	queries and passages ( sim -entity )
+208	105	113	achieves
+208	116	139	strong base performance
+208	140	147	that is
+208	153	165	outperformed
+208	166	168	by
+208	169	171	GA
+211	4	18	language model
+211	19	27	performs
+211	28	34	poorly
+211	35	37	on
+211	38	47	EM and F1
+211	58	82	embedding - metric score
+211	83	85	is
+211	86	92	higher
+213	4	13	GA reader
+213	14	22	performs
+213	23	27	well
+213	28	34	across
+213	35	55	all entity set - ups
+223	16	25	SA reader
+223	26	29	are
+223	30	39	far below
+223	57	59	of
+223	60	69	GA reader
+224	20	28	performs
+224	29	40	much better
+224	41	43	on
+224	44	63	anonymized entities
+224	64	71	than on
+224	72	91	non-anonymized ones
+215	61	74	observed that
+215	75	85	GA - NoEnt
+215	86	102	tends to predict
+215	103	117	longer answers
+215	118	122	than
+215	123	140	GA - Ent / Anonym

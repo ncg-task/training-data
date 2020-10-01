@@ -1,0 +1,53 @@
+{
+  "has" : {
+    "Model" : {
+      "consists of" : {
+        "conditional recurrent neural network" : {
+          "acts as" : {
+            "decoder" : {
+              "to generate" : {
+                "summary" : {
+                  "of" : "input sentence"
+                }
+              }
+            }
+          },
+          "from sentence" : "Inspired by the recently proposed architectures for machine translation , our model consists of a conditional recurrent neural network , which acts as a decoder to generate the summary of an input sentence , much like a standard recurrent language model ."
+        }
+      },
+      "has" : {
+        "decoder" : {
+          "takes" : {
+            "conditioning input" : {
+              "at" : "every time step",
+              "output of" : "encoder module"
+            }
+          },
+          "from sentence" : "In addition , at every time step the decoder also takes a conditioning input which is the output of an encoder module ."          
+        },
+        "encoder" : {
+          "computes scores over" : {
+            "words" : {
+              "in" : "input sentence"
+            },
+            "from sentence" : "Depending on the current state of the RNN , the encoder computes scores over the words in the input sentence ."            
+          },
+          "uses" : {
+            "convolutional network" : {
+              "to encode" : "input words"
+            },
+            "from sentence" : "Lastly , our encoder uses a convolutional network to encode input words ."
+          }
+        },
+        "decoder and encoder" : {
+          "jointly trained on" : {
+            "data set" : {
+              "consisting of" : "sentence - summary pairs"
+            }
+          },
+          "from sentence" : "Both the decoder and encoder are jointly trained on a data set consisting of sentence - summary pairs ."
+        }
+      }
+    }
+  }
+}

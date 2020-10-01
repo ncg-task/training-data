@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Semantic Role Labeling", {"from sentence" : "A Span Selection Model for Semantic Role Labeling"}],
+    ["semantic role labeling ( SRL )", {"from sentence" : "We present a simple and accurate span - based model for semantic role labeling ( SRL ) ."}],
+    ["SRL", {"from sentence" : "Given a sentence and a target predicate , SRL systems have to predict semantic arguments of the predicate ."}]
+  ]
+}

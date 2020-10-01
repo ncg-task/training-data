@@ -1,0 +1,162 @@
+192	0	7	TOPIARY
+192	40	43	for
+192	44	74	compressive text summarization
+193	3	11	combines
+193	14	59	system using linguistic based transformations
+193	64	105	an unsupervised topic detection algorithm
+194	0	7	MOSES +
+194	8	12	uses
+194	15	65	phrasebased statistical machine translation system
+194	66	76	trained on
+194	77	85	Gigaword
+194	86	96	to produce
+194	97	106	summaries
+196	0	13	ABS and ABS +
+196	55	59	with
+196	60	84	local attention modeling
+196	85	88	for
+196	89	123	abstractive sentence summarization
+197	0	5	ABS +
+197	9	19	trained on
+197	24	39	Gigaword corpus
+197	46	59	combined with
+197	63	117	additional log - linear extractive summarization model
+197	55	59	with
+197	123	143	handcrafted features
+198	0	21	RNN and RNN - context
+198	22	25	are
+198	26	51	two seq2seq architectures
+200	0	8	Copy Net
+200	9	19	integrates
+200	22	39	copying mechanism
+200	40	44	into
+200	49	81	sequence - to sequence framework
+201	0	14	RNN - distract
+201	15	19	uses
+201	22	45	new attention mechanism
+201	46	60	by distracting
+201	65	85	historical attention
+201	57	59	in
+201	93	107	decoding steps
+202	0	26	RAS - LSTM and RAS - Elman
+202	32	40	consider
+202	41	65	words and word positions
+202	66	68	as
+202	69	74	input
+202	79	82	use
+202	83	105	convolutional encoders
+202	106	115	to handle
+202	120	138	source information
+204	0	6	LenEmb
+204	27	34	control
+204	39	53	summary length
+204	54	68	by considering
+204	73	96	length embedding vector
+204	97	99	as
+204	104	109	input
+205	0	8	ASC+ FSC
+205	13	17	uses
+205	20	36	generative model
+205	37	41	with
+205	42	61	attention mechanism
+205	62	72	to conduct
+205	77	105	sentence compression problem
+207	0	31	lvt2k - 1sent and lvt5k - 1sent
+207	32	39	utilize
+207	42	47	trick
+207	48	58	to control
+207	63	78	vocabulary size
+207	79	89	to improve
+207	94	113	training efficiency
+209	20	22	on
+209	27	52	English dataset Gigawords
+209	39	42	set
+209	66	75	dimension
+209	76	78	of
+209	79	94	word embeddings
+209	95	97	to
+209	98	101	300
+209	125	159	hidden states and latent variables
+209	95	97	to
+209	163	166	500
+209	31	33	is
+209	76	78	of
+209	31	33	is
+210	4	21	maximum length of
+210	22	45	documents and summaries
+210	49	59	100 and 50
+211	4	14	batch size
+211	18	37	mini-batch training
+211	41	44	256
+212	0	3	For
+212	4	14	DUC - 2004
+212	21	38	maximum length of
+212	39	48	summaries
+212	49	51	is
+212	52	60	75 bytes
+213	8	24	dataset of LCSTS
+213	31	43	dimension of
+213	44	59	word embeddings
+213	60	62	is
+213	63	66	350
+214	29	63	hidden states and latent variables
+214	64	66	to
+214	67	70	500
+215	4	21	maximum length of
+215	22	45	documents and summaries
+215	46	48	is
+215	49	59	120 and 25
+216	4	16	beam size of
+216	21	28	decoder
+216	33	39	set to
+216	43	45	10
+217	0	8	Adadelta
+217	9	13	with
+217	14	37	hyperparameter ? = 0.95
+217	55	63	used for
+217	64	91	gradient based optimization
+218	4	34	neural network based framework
+218	38	55	implemented using
+218	56	62	Theano
+26	44	50	design
+26	53	66	new framework
+26	67	75	based on
+26	76	131	sequence to - sequence oriented encoder - decoder model
+26	132	145	equipped with
+26	148	183	latent structure modeling component
+27	3	9	employ
+27	10	46	Variational Auto - Encoders ( VAEs )
+27	47	49	as
+27	54	64	base model
+27	65	68	for
+27	69	93	our generative framework
+27	100	110	can handle
+27	115	132	inference problem
+27	133	148	associated with
+27	149	176	complex generative modeling
+29	17	20	add
+29	21	44	historical dependencies
+29	45	47	on
+29	52	68	latent variables
+29	69	71	of
+29	72	76	VAEs
+29	81	88	propose
+29	91	133	deep recurrent generative decoder ( DRGD )
+29	134	137	for
+29	138	163	latent structure modeling
+30	96	106	integrated
+30	9	91	standard discriminative deterministic decoder and the recurrent generative decoder
+30	107	111	into
+30	114	140	unified decoding framework
+31	29	36	decoded
+31	4	20	target summaries
+31	37	50	based on both
+31	55	93	discriminative deterministic variables
+31	102	142	generative latent structural information
+2	38	68	Abstractive Text Summarization
+39	0	23	Automatic summarization
+230	12	14	on
+230	19	40	Chinese dataset LCSTS
+231	0	14	Our model DRGD
+231	20	28	achieves
+231	33	49	best performance

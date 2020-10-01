@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Neural Abstractive Summarization", {"from sentence" : "Cutting - off Redundant Repeating Generations for Neural Abstractive Summarization"}],
+    ["abstractive summarization ( ABS )", {"from sentence" : "The RNN - based encoder - decoder ( EncDec ) approach has recently been providing significant progress in various natural language generation ( NLG ) tasks , i.e. , machine translation ( MT ) and abstractive summarization ( ABS ) ."}]
+  ]
+}

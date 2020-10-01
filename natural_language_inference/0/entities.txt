@@ -1,0 +1,110 @@
+182	10	17	observe
+182	20	36	substantial drop
+182	37	50	when removing
+182	51	75	tokenspecific attentions
+182	76	80	over
+182	85	107	query in the GA module
+182	116	128	allow gating
+182	129	146	individual tokens
+182	47	49	in
+182	154	162	document
+182	168	170	by
+182	171	189	parts of the query
+182	190	201	relevant to
+182	51	56	token
+182	213	224	rather than
+182	229	257	overall query representation
+183	10	18	removing
+183	23	43	character embeddings
+183	62	70	used for
+183	71	82	WDW and CBT
+183	85	93	leads to
+183	96	105	reduction
+183	106	108	of
+183	109	137	about 1 % in the performance
+11	37	75	https:// github.com/bdhingra/ga-reader
+23	155	186	Gated - Attention ( GA ) module
+23	209	215	allows
+23	53	58	query
+23	226	251	to directly interact with
+23	252	266	each dimension
+23	267	269	of
+23	274	290	token embeddings
+23	59	61	at
+23	298	314	semantic - level
+23	72	79	applied
+23	332	344	layer - wise
+23	345	347	as
+23	368	374	during
+23	379	420	multi-hop representation learning process
+24	7	31	fine - grained attention
+24	32	39	enables
+24	44	49	model
+24	50	58	to learn
+24	59	92	conditional token representations
+24	93	99	w.r.t.
+24	104	118	given question
+2	30	48	Text Comprehension
+13	43	58	machine reading
+137	19	31	observe that
+137	32	51	feature engineering
+137	52	60	leads to
+137	61	85	significant improvements
+137	86	89	for
+137	90	110	WDW and CBT datasets
+137	117	124	not for
+137	125	152	CNN and Daily Mail datasets
+140	12	18	fixing
+140	23	38	word embeddings
+140	39	47	provides
+140	51	62	improvement
+140	63	66	for
+140	71	82	WDW and CBT
+140	89	96	not for
+140	97	115	CNN and Daily Mail
+142	28	30	on
+142	35	46	WDW dataset
+142	51	81	basic version of the GA Reader
+142	82	93	outperforms
+142	94	125	all previously published models
+142	126	141	when trained on
+142	146	160	Strict setting
+147	12	20	CBT - CN
+147	25	34	GA Reader
+147	35	39	with
+147	44	59	qe-comm feature
+147	60	71	outperforms
+147	72	110	all previously published single models
+147	111	117	except
+147	122	125	NSE
+147	132	141	AS Reader
+147	142	152	trained on
+147	155	168	larger corpus
+143	3	9	adding
+143	14	28	qecomm feature
+143	33	44	performance
+143	45	54	increases
+143	55	57	by
+143	58	73	3.2 % and 3.5 %
+143	74	76	on
+143	81	108	Strict and Relaxed settings
+144	0	2	On
+144	7	34	CNN and Daily Mail datasets
+144	39	48	GA Reader
+144	49	57	leads to
+144	61	72	improvement
+144	73	75	of
+144	76	91	3.2 % and 4.3 %
+144	105	109	over
+144	114	141	best previous single models
+146	0	3	For
+146	4	12	CBT - NE
+146	15	24	GA Reader
+146	25	29	with
+146	34	48	qecomm feature
+146	49	60	outperforms
+146	61	100	all previous single and ensemble models
+146	101	107	except
+146	112	121	AS Reader
+146	122	132	trained on
+146	137	164	much larger BookTest Corpus

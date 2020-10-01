@@ -1,0 +1,63 @@
+{
+  "has" : {
+    "Results" : {
+      "For" : {
+        "MOSEI dataset" : {
+          "obtain" : {
+            "better performance" : {
+              "with" : "text"
+            }
+          },
+          "from sentence" : "For MOSEI dataset , we obtain better performance with text ."
+        },
+        "text - acoustic input pairs" : {
+          "obtain" : {
+            "highest accuracies" : {
+              "with" : {
+                "79. 74 % , 79.60 % and 79.32 %" : {
+                  "for" : "MMMU - BA , MMUU - SA and MU - SA frameworks"
+                }
+              }
+            }
+          },
+          "from sentence" : "For text - acoustic input pairs , we obtain the highest accuracies with 79. 74 % , 79.60 % and 79.32 % for MMMU - BA , MMUU - SA and MU - SA frameworks , respectively ."
+        }
+      },
+      "experiment with" : {
+        "tri-modal inputs" : {
+          "observe" : {
+            "improved performance" : {
+              "of" : {
+                "79. 80 % , 79.76 % and 79.63 %" : {
+                  "for" : "MMMU - BA , MMUU - SA and MU - SA frameworks"
+                }
+              }
+            }
+          },
+          "from sentence" : "Finally , we experiment with tri-modal inputs and observe an improved performance of 79. 80 % , 79.76 % and 79.63 % for MMMU - BA , MMUU - SA and MU - SA frameworks , respectively ."
+        }
+      },
+      "has" : {
+        "performance improvement" : {
+          "found to be" : {
+            "statistically significant ( T-test )" : {
+              "than" : "bimodality and uni-modality inputs"
+            }
+          },
+          "from sentence" : "The performance improvement was also found to be statistically significant ( T-test ) than the bimodality and uni-modality inputs ."
+        }
+      },
+      "observe" : {
+        "MMMU - BA framework" : {
+          "reports" : {
+            "best accuracy" : {
+              "of" : "79 . 80 %",
+              "for" : "MOSEI dataset"
+            }
+          },
+          "from sentence" : "Further , we observe that the MMMU - BA framework reports the best accuracy of 79 . 80 % for the MOSEI dataset , thus supporting our claim that multi-modal attention framework ( i.e. MMMU - BA ) captures more information than the self - attention frameworks ( i.e. MMUU - SA & MU - SA ) ."
+        }
+      }
+    }
+  }
+}

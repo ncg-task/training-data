@@ -1,0 +1,153 @@
+247	4	8	RNTN
+247	45	67	showing its ability to
+247	68	117	structurally learn negation of positive sentences
+255	0	5	shows
+255	8	20	typical case
+255	21	29	in which
+255	30	39	sentiment
+255	44	48	made
+255	49	62	more positive
+255	63	75	by switching
+255	80	90	main class
+255	91	95	from
+255	96	115	negative to neutral
+259	17	25	conclude
+259	35	39	RNTN
+259	43	64	best able to identify
+259	69	88	effect of negations
+259	89	93	upon
+259	99	140	positive and negative sentiment sentences
+209	3	13	compare to
+209	14	35	commonly used methods
+209	36	44	that use
+209	45	66	bag of words features
+209	67	71	with
+209	72	92	Naive Bayes and SVMs
+209	72	83	Naive Bayes
+209	67	71	with
+209	123	145	bag of bigram features
+211	21	26	model
+211	32	40	averages
+211	41	60	neural word vectors
+211	65	72	ignores
+211	73	94	word order ( VecAvg )
+20	4	31	Stanford Sentiment Treebank
+20	32	34	is
+20	39	51	first corpus
+20	52	56	with
+20	57	82	fully labeled parse trees
+20	88	98	allows for
+20	101	118	complete analysis
+20	119	121	of
+20	126	147	compositional effects
+20	119	121	of
+20	151	172	sentiment in language
+21	4	10	corpus
+21	14	22	based on
+21	27	34	dataset
+21	53	64	consists of
+21	65	88	11,855 single sentences
+21	89	103	extracted from
+21	104	117	movie reviews
+22	7	13	parsed
+22	14	18	with
+22	23	38	Stanford parser
+22	54	62	total of
+22	63	85	215,154 unique phrases
+22	86	90	from
+22	97	108	parse trees
+22	116	128	annotated by
+22	129	143	3 human judges
+23	5	16	new dataset
+23	27	37	to analyze
+23	42	53	intricacies
+23	54	56	of
+23	57	66	sentiment
+23	71	81	to capture
+23	82	110	complex linguistic phenomena
+25	4	24	granularity and size
+25	46	52	enable
+25	57	66	community
+25	67	75	to train
+25	76	96	compositional models
+25	106	114	based on
+25	115	168	supervised and structured machine learning techniques
+202	0	19	Optimal performance
+202	11	14	for
+202	24	34	all models
+202	39	50	achieved at
+202	51	68	word vector sizes
+202	69	76	between
+202	77	97	25 and 35 dimensions
+202	102	113	batch sizes
+202	69	76	between
+202	122	131	20 and 30
+206	4	8	RNTN
+206	15	30	usually achieve
+206	35	51	best performance
+206	52	54	on
+206	59	66	dev set
+206	67	85	after training for
+206	86	97	3 - 5 hours
+212	4	13	sentences
+212	14	16	in
+212	21	29	treebank
+212	30	45	were split into
+212	48	102	train ( 8544 ) , dev ( 1101 ) and test splits ( 2210 )
+208	3	6	use
+208	7	15	f = tanh
+208	16	18	in
+208	19	34	all experiments
+27	92	98	called
+27	103	143	Recursive Neural Tensor Network ( RNTN )
+28	0	32	Recursive Neural Tensor Networks
+28	47	54	phrases
+28	55	57	of
+28	58	68	any length
+29	5	14	represent
+29	17	23	phrase
+29	24	31	through
+29	32	61	word vectors and a parse tree
+29	71	78	compute
+29	37	44	vectors
+29	87	90	for
+29	91	103	higher nodes
+29	104	106	in
+29	57	61	tree
+29	116	121	using
+29	126	166	same tensor - based composition function
+2	59	77	Sentiment Treebank
+5	102	153	richer supervised training and evaluation resources
+217	0	6	showed
+217	14	41	fine grained classification
+217	42	46	into
+217	47	56	5 classes
+217	57	59	is
+217	62	86	reasonable approximation
+217	87	97	to capture
+217	98	124	most of the data variation
+219	4	8	RNTN
+219	9	13	gets
+219	18	37	highest performance
+219	40	51	followed by
+219	56	72	MV - RNN and RNN
+220	4	20	recursive models
+220	21	25	work
+220	26	35	very well
+220	36	38	on
+220	39	54	shorter phrases
+220	57	62	where
+220	88	91	are
+220	92	101	important
+220	110	135	bag of features baselines
+220	136	143	perform
+220	31	35	well
+220	154	158	with
+229	4	18	combination of
+229	23	58	new sentiment treebank and the RNTN
+229	59	65	pushes
+229	70	86	state of the art
+229	13	15	on
+229	90	103	short phrases
+229	104	109	up to
+229	110	116	85.4 %

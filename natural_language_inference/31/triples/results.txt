@@ -1,0 +1,8 @@
+(Contribution||has||Results)
+(Results||has||method)
+(method||perform||well)
+(well||in||answer selection task)
+(well||without||any taskspecific modifications)
+(Results||on||Wiki QA dataset)
+(Wiki QA dataset||obtain||result)
+(result||on par with||state - of - the - art)

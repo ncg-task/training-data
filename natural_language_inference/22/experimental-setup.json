@@ -1,0 +1,95 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "In" : {
+        "character encoding layer" : {
+          "use" : {
+            "100 filters" : {
+              "of" : "width 5"
+            }
+          },
+          "from sentence" : "In the character encoding layer , we use 100 filters of width 5 ."
+        }
+      },
+      "set" : {
+        "hidden layer dimension ( d )" : {
+          "to" : "100",
+          "from sentence" : "In the remainder of the model , we set the hidden layer dimension ( d ) to 100 ."
+        }
+      },
+      "use" : {
+        "pretrained 100D Glo Ve vectors ( 6B - token version )" : {
+          "as" : "word embeddings",
+          "from sentence" : "We use pretrained 100D Glo Ve vectors ( 6B - token version ) as word embeddings ."
+        },
+        "AdaDelta optimizer" : {
+          "for" : "optimization",
+          "from sentence" : "We use the AdaDelta optimizer ( Zeiler , 2012 ) for optimization ."
+        }
+      },
+      "has" : {
+        "Out - of - vocobulary tokens" : {
+          "represented by" : {
+            "UNK symbol" : {
+              "in" : "word embedding layer"
+            }
+          },
+          "treated" : {
+            "normally" : {
+              "by" : "character embedding layer"
+            }
+          },
+          "from sentence" : "Out - of - vocobulary tokens are represented by an UNK symbol in the word embedding layer , but treated normally by the character embedding layer ."
+        },
+        "Batch size" : {
+          "is" : "30",
+          "from sentence" : "Batch size is 30 ."
+        },
+        "Learning rate" : {
+          "starts at" : "0.5",
+          "decreases to" : {
+            "0.2" : {
+              "has" : {
+                "stops improving" : {
+                  "has" : "model"
+                }
+              }
+            }
+          },
+          "from sentence" : "Learning rate starts at 0.5 , and decreases to 0.2 once the model stops improving ."
+        },
+        "L2-regularization weight" : {
+          "is" : "1 e - 4",
+          "from sentence" : "The L2-regularization weight is 1 e - 4 , AQSL weight is 1 and dropout with a drop rate of 0.2 is A typical model run converges in about 40 k steps ."
+        },
+        "AQSL weight" : {
+          "is" : "1",
+          "from sentence" : "The L2-regularization weight is 1 e - 4 , AQSL weight is 1 and dropout with a drop rate of 0.2 is A typical model run converges in about 40 k steps ."
+        },
+        "dropout" : {
+          "with" : {
+            "drop rate" : {
+              "of" : "0.2"
+            }
+          },
+          "from sentence" : "The L2-regularization weight is 1 e - 4 , AQSL weight is 1 and dropout with a drop rate of 0.2 is A typical model run converges in about 40 k steps ."
+        },
+        "typical model run" : {
+          "has" : {
+            "converges" : {
+              "in about" : "40 k steps"
+            }
+          },
+          "from sentence" : "The L2-regularization weight is 1 e - 4 , AQSL weight is 1 and dropout with a drop rate of 0.2 is A typical model run converges in about 40 k steps ."
+        }
+      },
+      "selected" : {
+        "hyperparameter values" : {
+          "through" : "random search",
+          "from sentence" : "We selected hyperparameter values through random search ."
+        }
+      },
+      "using" : ["Tensorflow", "single NVIDIA K80 GPU", {"from sentence" : "This takes two days using Tensorflow and a single NVIDIA K80 GPU . provide an official evaluation script that allows us to measure F 1 score and EM score by comparing the prediction and ground truth answers ."}]
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Multi-hop Reading Comprehension", {"from sentence" : "Constructing Datasets for Multi-hop Reading Comprehension Across Documents"}],
+    ["Reading Comprehension", {"from sentence" : "Most Reading Comprehension methods limit themselves to queries which can be answered using a single sentence , paragraph , or document ."}],
+    ["Reading Comprehension ( RC )", {"from sentence" : "Contemporary end - to - end Reading Comprehension ( RC ) methods can learn to extract the correct answer span within a given text and approach human - level performance ."}]
+  ]
+}

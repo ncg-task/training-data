@@ -1,0 +1,68 @@
+{
+  "has" : {
+    "Model" : {
+      "has" : {
+        "input images" : {
+          "fed into" : {
+            "convolution" : {
+              "comprising" : "convolutional and a subsampling layer"
+            }
+          },
+          "from sentence" : "The input images are fed into a convolution comprising a convolutional and a subsampling layer ."
+        },
+        "convolution" : {
+          "followed by" : {
+            "more convolutions" : {
+              "to become" : {
+                "more invariant" : {
+                  "to" : {
+                    "distortions" : {
+                      "in" : "input"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "That convolution maybe followed by more convolutions to become gradually more invariant to distortions in the input ."
+        },
+        "novelty" : {
+          "is" : {
+            "exact number of convolutions , number of hidden layers and size of hidden layers" : {
+              "are" : "not fixed",
+              "subject to" : "model selection"
+            },
+            "from sentence" : "The novelty of this approach is that the exact number of convolutions , number of hidden layers and size of hidden layers are not fixed but subject to extensive model selection in Sec. 4.3 ."
+          }
+        }
+      },
+      "In" : {
+        "second stage" : {
+          "has" : {
+            "regular neural network" : {
+              "follows" : {
+                "convolutions" : {
+                  "to discriminate" : {
+                    "features" : {
+                      "learned by" : "convolutions"
+                    }
+                  }
+                }
+              }
+            },
+            "output layer" : {
+              "consists of" : {
+                "two units" : {
+                  "for" : "smile or no smile"
+                }
+              }
+            }
+          },
+          "from sentence" : "In the second stage , a regular neural network follows the convolutions in order to discriminate the features learned by the convolutions .
+The output layer consists of two units for smile or no smile ."
+
+        }
+      }
+    }
+  }
+}

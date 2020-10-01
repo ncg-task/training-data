@@ -1,0 +1,96 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "use" : {
+        "tokenizer" : {
+          "from" : "Stanford CoreNLP",
+          "to preprocess" : "each passage and question",
+          "from sentence" : "We use the tokenizer from Stanford CoreNLP to preprocess each passage and question ."
+        },
+        "hidden vector length" : {
+          "set to" : {
+            "75" : {
+              "for" : "all layers"
+            }
+          },
+          "from sentence" : "The hidden vector length is set to 75 for all layers ."
+        },
+        "hidden size" : {
+          "to compute" : {
+            "attention scores" : {
+              "is" : "75"
+            }
+          },
+          "from sentence" : "The hidden size used to compute attention scores is also 75 ."
+        }
+      },
+      "has" : {
+        "Gated Recurrent Unit variant" : {
+          "of" : "LSTM",
+          "used throughout" : "our model",
+          "from sentence" : "The Gated Recurrent Unit variant of LSTM is used throughout our model ."
+        },
+        "model" : {
+          "optimized with" : {
+            "AdaDelta ( Zeiler , 2012 )" : {
+              "with" : {
+                "initial learning rate" : {
+                  "of" : "1"
+                }
+              }
+            },
+            "from sentence" : "The model is optimized with AdaDelta ( Zeiler , 2012 ) with an initial learning rate of 1 ."
+          }
+        }
+      },
+      "For" : {
+        "word embedding" : {
+          "use" : {
+            "pretrained case - sensitive GloVe embeddings" : {
+              "for" : "questions and passages",
+              "has" : {
+                "fixed" : {
+                  "during" : "training"
+                }
+              }              
+            },
+            "zero vectors" : {
+              "to represent" : "all out - of - vocab words"
+            },
+            "from sentence" : "For word embedding , we use pretrained case - sensitive GloVe embeddings 2 ( Pennington et al. , 2014 ) for both questions and passages , and it is fixed during training ; We use zero vectors to represent all out - of - vocab words ."            
+          }
+        }
+      },
+      "utilize" : {
+        "1 layer of bi-directional GRU" : {
+          "to compute" : "character - level embeddings"
+        },
+        "3 layers of bi-directional GRU" : {
+          "to encode" : "questions and passages"
+        },
+        "gated attention - based recurrent network" : {
+          "for" : "question and passage matching",
+          "encoded" : "bidirectionally"
+        },
+        "from sentence" : "We utilize 1 layer of bi-directional GRU to compute character - level embeddings and 3 layers of bi-directional GRU to encode questions and passages , the gated attention - based recurrent network for question and passage matching is also encoded bidirectionally in our experiment ."
+      },
+      "apply" : {
+        "dropout" : {
+          "between" : "layers",
+          "with" : {
+            "dropout rate" : {
+              "of" : "0.2"
+            }
+          },
+          "from sentence" : "We also apply dropout between layers with a dropout rate of 0.2 ."
+        }
+      },
+      "used in" : {
+        "AdaDelta" : {
+          "are" : "0.95 and 1e ? 6",
+          "from sentence" : "The ? and used in AdaDelta are 0.95 and 1e ? 6 respectively ."
+        }
+      }
+    }
+  }
+}

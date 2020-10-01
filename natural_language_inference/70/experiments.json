@@ -1,0 +1,75 @@
+{
+  "has" : {
+    "Experiments" : {
+      "has" : {
+        "Tasks" : {
+          "has" : {
+            "Subtask A" : {
+              "has" : {
+                "Results" : {
+                  "achieved" : {
+                    "first position" : {
+                      "among" : "12 systems",
+                      "with" : "best MAP"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Subtask A
+Results : reports the outcome on Subtask A .
+The good results on the 10 fold cross validations are confirmed on the official test set : the model is very accurate and achieved the first position among 12 systems , with the best MAP ."
+
+            },
+            "Subtask B" : {
+              "has" : {
+                "Results" : {
+                  "has" : {
+                    "our primary submission" : {
+                      "achieved" : {
+                        "third position" : {
+                          "w.r.t." : "MAP",
+                          "among" : "11 systems"
+                        }
+                      },
+                      "from sentence" : "On the official test set , our primary submission achieved the third position w.r.t. MAP among 11 systems ."
+                    },
+                    "primary system" : {
+                      "achieves" : {
+                        "highest F 1 and accuracy" : {
+                          "on" : "both tuning and test stages"
+                        }
+                      },
+                      "from sentence" : "The primary system achieves the highest F 1 and accuracy on both tuning and test stages ."
+                    }
+                  }
+                }
+              }
+            },
+            "Subtask C" : {
+              "has" : {
+                "Results" : {
+                  "has" : {
+                    "primary submission" : {
+                      "achieved" : "second highest MAP",
+                      "from sentence" : "Our primary submission achieved the second highest MAP , while our Contrastive 2 is the best result ."
+                    }
+                  },
+                  "noted that" : {
+                    "F 1 our system" : {
+                      "is" : {
+                        "best" : {
+                          "among" : "10 primary submissions"
+                        }
+                      }
+                    },
+                    "from sentence" : "It should be also noted that the F 1 our system is the best among 10 primary submissions ."
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

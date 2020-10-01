@@ -1,0 +1,289 @@
+title
+A Fully Attention - Based Information Retriever
+abstract
+Recurrent neural networks are now the state - of the - art in natural language processing because they can build rich contextual representations and process texts of arbitrary length .
+However , recent developments on attention mechanisms have equipped feedforward networks with similar capabilities , hence enabling faster computations due to the increase in the number of operations that can be parallelized .
+We explore this new type of architecture in the domain of question - answering and propose a novel approach that we call Fully Attention Based Information Retriever ( FABIR ) .
+We show that FABIR achieves competitive results in the Stanford Question Answering Dataset ( SQuAD ) while having fewer parameters and being faster at both learning and inference than rival methods .
+I. INTRODUCTION
+Question - answering ( QA ) systems that can answer queries expressed in natural language have been a perennial goal of the artificial intelligence community .
+An interesting strategy in the design of such systems is information extraction , where the answer is sought in a set of support documents .
+However , extracting information from large texts is still a challenging task , and most state - of - the - art models restrict themselves to single paragraphs .
+That is , in fact , the proposed focus of recent open - domain QA datasets , such as SQuAD .
+In SQuAD , each problem instance consists of a passage P and a question Q. A QA system must then provide an answer A by selecting a snippet from P .
+That format reduces the complexity of the task and also facilitates training , as one can learn a probability distribution over the words that compose the passage .
+Since its publication in 2016 , SQuAD has been targeted by many research groups , and the proposed models are gradually approaching ( even overcoming ) human - level performances .
+All but a few of these models rely on Recurrent Neural Networks ( RNNs ) , which currently dominate the stateof - the - art inmost Natural Language Processing ( NLP ) tasks .
+However , RNNs do have some drawbacks , of which the most relevant to real - world applications is the high number of sequential operations , which increases the processing time of both learning and inference .
+To address these limitations , proposed the Transformer , a machine translation model that introduces anew deep learning architecture solely based on " attention " mechanisms .
+We later clarify the meaning of attention in this context .
+Inspired by the positive results of Vaswani et al. in machine translation , we have applied a similar architecture to the domain of question - answering , a model that we have named Fully Attention - Based Information Retriever ( FABIR ) .
+Our goal then was to verify how much performance we can get exclusively from the attention mechanism , without combining it with several other techniques .
+We validated our model in the SQuAD dataset , which proved that FABIR not only achieves competitive results ( F1:77.6 % , EM : 67.7 % ) but also has fewer parameters and is faster at both training and testing times than competing methods .
+Besides the development of a new architecture , we identify three major contributions of our work that have made these results possible :
+Convolutional attention : a novel attention mechanism that encodes many - to - many relationships between words , enabling richer contextual representations .
+Reduction layer : a new layer design that fits the pipeline proposed by Vaswani et al .
+and compresses the input embedding size for subsequent layers ( this is especially beneficial when employing pre-trained embeddings ) .
+Column - wise cross - attention : we modify the crossattention operation by and propose a new technique that is better suited to question - answering .
+This article is organized as follows .
+We first introduce some of the related work in question - answering and then present FABIR 's architecture and its basic design choices .
+Subsequently , we report and comment our results in the SQuAD dataset .
+Finally , we compare the performance of FABIR with RNN - based models and draw some conclusions , suggesting directions for future work .
+II .
+RELATED WORK
+The vast majority of papers that address the SQuAD dataset have adopted RNN - based models -.
+They all follow a similar pipeline , with pre-trained word - embeddings that are processed by bidirectional RNNs .
+Question and passage are processed independently , and their interaction is modeled by attention mechanisms to produce an answer .
+There are slight differences in how each model employs attention , but they all calculate it over the hidden states of an RNN .
+Vaswani et al.
+were the first to apply attention directly over the word - embeddings , and thus derived anew neural network architecture which , without any recurrence , achieved state - of the - art results in machine translation .
+In this section , we briefly discuss both types of attention models .
+A. Traditional Attention Mechanisms
+In recent years , attention mechanisms have been used with success in a variety of NLP tasks , such as machine translation , and natural language inference , .
+Indeed , most models that target the SQuAD dataset use some form of attention to model the relationship between question and passage .
+Attention can be defined as a mechanism that gives a score ?
+i to a vector pi from a set P = [ p 1 , ... , pm ] with respect to a vector q j from Q = [ q 1 , ... , q n ] .
+This score is a function of both P and Q and is shown in its most general form in .
+where s i and ?
+i are scalars and f is a score function that measures the importance of pi relative to q j .
+Intuitively , a large weight ?
+i means that the vector pi is somehow strongly related to Q .
+In the literature , two alternatives for f have been proposed , additive and multiplicative attentions :
+where W 1 , W 2 and W 3 are learnable parameters and g is a elementwise nonlinear function .
+For small vectors , additive and multiplicative attention mechanisms have been shown to produce similar results .
+In most models , the attention scores ?
+are used to create a context vector c given by a weighted sum of P , which is processed by an RNN :
+where v t is the hidden state of the RNN at time t.
+Notably , in the SQuAD dataset , P and Q are the vectorial representations of passage and question , respectively .
+B. Google 's Transformer
+The Transformer is a machine translation model introduced in [ 2 ] that achieved state - of - the - art results by combining feedforward neural networks with a multiplicative attention mechanism applied over position - encoded embedding vectors .
+It defines three different matrices U , K and V that are associated with queries , keys , and values , respectively .
+Every attention operation in the Transformer is performed by multiplying these matrices as shown in .
+where W UK , WV ?
+Rd model d model are weight matrices and d model is the embedding size of each word .
+Additionally , Vaswani et al.
+suggest a multi-head attention , in which U , K and V are divided into n heads heads and the attention in the i th head is computed as
+where W U , i , W K ,i , W V , i ?
+Rd model d head are again learnable weight matrices and d head is the embedding dimension of each head .
+Finally , attention is computed by the concatenation of every head attention att i , followed by an affine transformation :
+where W O ?
+Rn heads * d head d model .
+If one wants to model the interdependence of words within a single piece of text , U , K and V are all equal and consist of the text of interest embedded in some vectorial space .
+This type of attention is often called " self - attention " or " self - alignment " , .
+Conversely , if one seeks the relationship between words from two different passages , then U represents one , while K and V represent the other .
+In that case , we talk about " cross-attention " .
+C. Other RNN - free Models
+We also identified another QA model that is inspired by the architecture introduced by Vaswani et al ..
+Their model differs from ours in that it heavily relies on convolutions ( 46 layers against 2 in FABIR ) , which approximates it to other CNN NLP models , rather than purely attention based models .
+Although they report high F1 and EM scores ( 82.7 % and 73.3 % ) , our model is almost twice as fast in inference ( 259 samples / s against 440 in FABIR ) .
+Also , their model probably has a higher number of learned parameters due to the increased number of layers .
+III .
+FABIR
+In this section , we present FABIR 's architecture and the main design decisions we have made to develop a lighter and faster question - answering model .
+In particular , we introduce the convolutional attention , the column - wise cross-attention , and the reduction layer , which build on the Transformer model to enable its application to question - answering .
+A.
+Embeddings
+We model each piece of text at the level of a word , i.e. , sentences are defined by a sequence of vectors ? , each one representing a word in a vectorial space R dinput .
+Thus , we build anew representation of question and passage to which we will refer as ?
+Q and ?
+P , respectively .
+where Q len and P len denote the number of tokens in the question and the passage , respectively .
+These embeddings are composed by word - level and character - level representations .
+The former is denoted by ? w ?
+R 100 and was imported from the pre-trained embeddings of GloVe " 6B " .
+The latter is denoted by ? c ?
+R 100 and is computed for each word as a result of the composition of its characters .
+Given a word with length l , C = [ c 1 , c 2 , ... , cl ] , in which c i ?
+R 8 are learned character embeddings , we compute ?
+c by convolving C with kernel H ?
+R 158100 and applying max - over time pooling .
+Finally , we squeeze ?
+c values to [ ? 1 , 1 ] using a hyperbolic tangent activation function and pass the concatenation of ?
+wand tanh ( ? c ) through a two - layer Highway - Network to obtain the final representation of a word .
+B. Encoder
+In contrast to an RNN , FABIR does not process words in sequence , and hence needs to model the position of each word in a sentence differently .
+We add positional information to each word embedding using a trigonometric encoder as proposed in .
+Therefore , given a sequence of embedding vectors of even size d model , the position of the i th word is encoded in a vector e i as follows :
+where f k are scalars , which were chosen according to .
+The encoding of an embedding matrix ?
+is represented by E and the whole operation can be summarized as
+where d model is the size of each position encoding , which is not necessarily equal to d input .
+The encoding E can be summed to ?
+to include the information of the position of each word in the text .
+Indeed , in , the final vectorial representation of apiece of text is defined by the sum of the embeddings ?
+with the position encoding E , which would require d model = d input .
+However , we introduce a layer that processes embeddings and encodings separately before summing them up .
+Because we also use this layer to reduce the embedding size from d input to d model , we named it " reduction layer " .
+The architecture of this type of layer is addressed further on .
+C. Convolutional Attention
+In FABIR the attention mechanism is inspired by the Transformer model introduced in .
+However , we hypothesize the word - to - word relationship in ( 1 a ) fails to capture the complexity of expressions involving groups of words .
+To facilitate the modeling of the interdependence of surrounding words , we redefine s i , j as
+where hand ware the height and width of a convolution kernel .
+This new type of attention , which we named " convolutional - attention " , is entirely defined by the following sequence of steps :
+where Conv represents a single convolutional layer with a trainable kernel H ?
+R hwn heads n heads that has height h , width w , and number of filters and channels both equal ton heads .
+Note that in ( 12 b ) zero - padding is applied so that logits conv maintains the same dimension of logits .
+D. Sublayers
+After converting question and passage to their vectorial representation Q and P , we apply a series of operations that we call sublayers .
+In this section , we introduce each of these operations .
+1 ) Self - attention : Self - attention ( att self ) is the mechanism that models the interdependence between words in the same piece of text .
+It has been proven to help relating distant words , which is crucial to understand the long sentences that appear in context paragraphs in SQ uAD .
+In FABIR , self - attention is a sublayer that applies such operation via convolutional attention and is defined as att self ( P ) = att conv ( P , P , P ) .
+2 ) Column - wise Cross - attention : Cross-attention ( att cross ) differs from other types of attention by relating two different pieces of text .
+Given P and Q , cross - attention of Q over P is defined as
+In contrast to Vaswani et al. , where the softmax in ( 12 d ) is applied in a row - wise manner , we suggest column - wise cross - attention .
+More precisely , we sum over i instead of j in ( 1 b ) .
+Row - wise softmax is inadequate in QA because , in practice , it computes a weighted average of the question words for every passage word , and thus can not model the likely scenario in which not every word in the passage is related to the question .
+In contrast , the column - wise softmax attributes greater weights to passage words that are more closely related to the respective question word , which seems appropriate for the SQuAD task .
+Many question - answering models employ cross - attention in both directions : att cross ( P , Q ) and att cross ( Q , P ) , , .
+However , in FABIR we have observed better results when only the former is used .
+3 ) Feedforward :
+The feedforward sublayer is solely composed of a neural network with a single hidden layer , which is applied vector - wise .
+Following the architecture suggested by Vaswani et al. , the feedforward sublayer is implemented in ( 15 ) with a two - layer neural network :
+where W 1 ?
+Rd model d hidden , W 2 ?
+Rd hidden d model , b 1 ?
+R 1 d hidden and b 2 ?
+R 1 d model are all trainable parameters , d hidden is the dimension of the hidden layer in and
+ReLU ( x ) = max ( 0 , x ) .
+Reduction Layer Processing Layer Q t Pt.
+On the left , a block diagram representation of FABIR , which receives as input the raw passage and question texts , P and Q .
+The passage and question embedding matrices are ?
+P and ?
+Q , respectively , and they both have an embedding dimension of d input , which is a result of the tokenization , followed by the word / char embedding process .
+After the layer reduction , subsequent representations of P and Q have embedding size d model and already include the encoding of word positions .
+Finally , ? 1 and ?
+2 are the indices , which define the answer to the passage - question pair P and Q .
+On the center , a block representation of the reduction layer , which is the third layer in FABIR 's pipeline .
+Finally , on the right side , it is the processing layer , which is similar to the reduction layer except by the absence of the " matrix reduction " sublayer and the substitution of the decoupled attention by a self - attention block .
++ Position Encoder
+4 ) Normalization :
+This operation is also applied vectorwise and it normalizes the embedding of each word so that its variance and mean are reduced to 1 and 0 , respectively .
+The primary goal of layer normalization is to accelerate training as shown in , .
+E. Layers
+A layer L is a combination of sublayers that produce a transformation in the representation of question and passage :
+Typically , a layer is composed of self - attention with shared weights applied to P and Q individually , followed by crossattention and feedforward sublayers .
+This standard layer is called " processing layer " and is illustrated in .
+Note that , to facilitate training , every sublayer is followed by normalization .
+FABIR is formed by stacking layers on top of each other as shown in .
+Not counting the pre-processing and answer selector layers , our best performing model was composed of four layers , of which the last three are processing layers and the first is a reduction layer .
+F. Reduction Layer
+The SQuAD dataset is relatively small for the training of word embeddings , and pre-trained word vectors have been favored in the literature .
+Nonetheless , we observed that the new architecture introduced by Vaswani et al.
+is more susceptible to overfitting than RNNs when presented with large embedding sizes .
+Hence , we needed a method to compress the word representations , and thus facilitate and speedup training by reducing the number of parameters .
+A straightforward method to reduce the input embedding size is to multiply it by a matrix with the required dimensions :
+where ?
+model ?
+R 1d model , ?
+input ?
+R 1 dinput are the embedding vectors , and W Reduction ?
+Rd model dinput is a weight matrix , to which we refer as " reduction matrix " .
+Although matrix reduction is quite simple , it discards information before any processing and hence might hamper performance by preventing the network from using some relevant data .
+To incorporate that information before discarding it , we could add a large processing layer followed by a matrix reduction , but our experiments have shown that this approach does not yield positive results in FABIR .
+Our interpretation of that behavior is that the position encoding is somehow dissolved in the matrix reduction process .
+A possible solution is to process embeddings of size d input and encodings of size d model independently and thus limit the reduction operation to the embeddings .
+We then suggest decoupled attention , a mechanism that allows us to apply selfattention to embeddings and encodings separately to preserve their different sizes , as described in .
+Both operations use the full embedding ? ?
+R ?
+len dinput , but the decoupled attention outputs embeddings with size d input and encodings with final size d model .
+After applying decoupled attention with shared weights in P and Q , we add a full processing layer for the embeddings ?
+with size d input .
+That layer is equivalent to a regular processing layer L , but it processes only ? , leaving the encoding E untouched .
+Finally , we use a reduction matrix to scale ?
+down to d model and add the encoder matrix E of same size , which is the output from the decoupled attention sublayer .
+describes this whole process , which we named " reduction layer " .
+G. Answer Selection
+Given that in SQu AD the answer is always contained in the supporting paragraph P , the output of the model is merely the indices ?
+1 and ?
+2 that represent the first and the last word of the answer , respectively .
+Therefore , we can model the answer as two probability distributions ? 1 and ?
+2 over the passage P , and train the model to minimize the negative log-likelihood .
+Given the true indices y 1 and y 2 , the cost function is then defined as follows : J = ? ( y 1 log ( ? 1 ) + y 2 log ( ?
+2 ) ) .
+To compute the cost function , we apply a two layered convolutional neural network with hidden layer size 32 and output size 2 , as we need one dimension for each probability distribution .
+Both convolutions have kernel size 9 and the activation function ( ReLU ) is applied only after the first layer .
+Subsequently , each output dimension passes through a softmax operation to compute the probability distributions ?
+y 1 and ?
+y 2 .
+Finally , selecting the indices ?
+1 and ?
+2 becomes an optimization problem :
+where 15 represents the maximum allowed answer length .
+This superior limit is imposed to avoid long answers , since short answers are more frequent .
+IV .
+EXPERIMENTAL RESULTS
+We have trained our FABIR model during 54 epochs with a batch size of 75 in a GPU NVidia Titan X with 12 GB of RAM .
+We developed our model in Tensorflow and made it available at https://worksheets.codalab.org/worksheets/ 0xee647ea284674396831ecb5aae9ca297 / for replicability .
+We pre-processed the texts with the NLTK Tokenizer .
+As suggested in , we have chosen the Adam optimizer with the same hyperparameters , except for the learning rate , which was divided by two in our implementation .
+For regularization , we applied residual and attention dropout of 0.9 in processing layers and of 0.8 in the reduction layer .
+In the character - level embedding process , a dropout of 0.75 was added before the convolution .
+Additionally , a dropout of 0.8 was added before each convolutional layer in the answer selector .
+We set processing layers dimension d model to 100 , the number of heads n heads in each attention sublayer to 4 , the feed - forward hidden size to 200 in processing layers and 400 in the reduction layer .
+Convolution kernels in attention sublayers had spatial dimensions 1 5 .
+A. Architecture Evaluation
+To better evaluate FABIR 's architecture , we ran controlled tests on each of it s key elements .
+show the results of these experiments regarding the F1 and EM scores , and the Training Time ( TT ) over 18 - epoch runs .
+This analysis confirms the effectiveness of char- embeddings , as its addition increased the F1 and EM scores , by 2.7 % and 3.1 % , respectively .
+Most importantly , when the convolutional attention was replaced by the standard attention mechanism proposed in , the performance dropped by 2.4 % in F1 and 2.5 % in EM .
+That validates the contribution of this new attention method in building elaborate contextual representations .
+Moreover , the tests also indicate that the reduction layer is capable of producing useful word representations when compressing the embeddings .
+Indeed , when we replaced that layer by a standard feedforward layer with the same reduction ratio , there was a drop of 2.1 % and 2.5 % in the F1 and EM scores , respectively .
+Finally , we observed that the column - wise cross-attention outperforms its row - wise counterpart by 2.0 % and 1.9 % in F1 and EM , respectively .
+It confirms the intuition that applying the softmax over the passage words is more adequate in QA .
+The training times indicate that each one of the new mechanisms introduced in FABIR incurred an increase in the processing cost .
+Nonetheless , that was outweighed by the improvement in performance , especially because FABIR is still significantly faster than competing RNN models .
+B. FABIR vs BiDAF
+This section compares our model to traditional RNNbased question - answering models .
+To have a comprehensive comparison , we took a state - of - the - art model developed in Tensorflow that had it s code openly available at https://github.com/allenai/bi-att-flow.
+That way , we could run our experiments with both models in the same piece of hardware to have a fair comparison between them .
+In , the BiDAF scores without parentheses were achieved after training their model for 18,000 iterations of batch size 60 in our hardware .
+Conversely , values in parentheses are BiDAF 's official scores in the SQuAD ranking .
+Note that for both models , we batch the examples by paragraph length to improve computational efficiency .
+Regarding EM and F 1 scores , FABIR and BiDAF showed similar performances .
+Their similar scores render further comparisons even more telling , because their differences can not be explained by their overall performances , but exclusively by their architectures .
+Although both models required similar training times to reach these scores , the time for training one epoch in FABIR was more than four times shorter , which could be useful for tackling larger data sets .
+Concerning inference time , FABIR was more than five times faster in processing the 10,570 question - passage pairs in the development data set .
+FABIR 's faster inference is a substantial advantage in large - scale applications , such as information extraction in large corpora .
+Indeed , when running applications such as search tools or user interfaces , the inference time is critical to tackle real - world problems .
+Concerning the number of training variables , FABIR has almost 50 % fewer parameters than BiDAF , which incurs two major advantages .
+First , it s training time is expected to be shorter , because the number of variables to be updated in every iteration is smaller .
+Secondly , it has lower memory requirements , which is attractive to applications that dispose of low computational power .
+C. FABIR and BiDAF Statistics
+In this section we analyze the performance of FABIR and BiDAF in the different types of question in SQuAD .
+shows that shorter answers are easier for both models : while they reach more than 75 % F1 for answers that are shorter than four words , for answers longer than ten words these scores drop to 60.4 % and 67.3 % for FABIR and BiDAF , respectively .
+Long answers are not only more challenging but are also underrepresented in the dataset , which introduces a bias towards short responses .
+More than 79 % of the answers in SQuAD have five words or fewer .
+In contrast to what has been observed for answers , longer questions seem not to increase the complexity of the task .
+In , the F 1 scores for both models varied by less than 2.5 % in the considered question length intervals .
+Question type is a strong predictor of performance .
+shows that both models had their best performance with " when " questions .
+Answers to these types of questions are easier to infer because they are usually composed of timerelated words , such as months , years , seasons or weekdays , which are easier to distinguish from the rest of the text .
+Together with " when " questions , " how long " and " how many " also proved easier to respond , as they possess the same property of having a smaller universe of possible answers .
+In contrast to these , " how " and " why " questions resulted in considerably lower F1 and EM scores , as they can be answered by any sentence , and hence require a deeper understanding of the text .
+Note that " how " questions do not include " how many " , " how much " or " how long " questions , whose answers are more predictable .
+" Other " questions include alternatives , such as " Name a type of ... " or " Does it ... " or even questions with typos , such as " Hoe was ... " , which should be " How was ... " .
+These questions are more challenging because they might have multiple correct answers and require higher levels of abstraction .
+For instance , to respond to a question such as " Name an ingredient ... " , the model would need a deep understanding of the semantics of the word " ingredients " to identify " tomatoes " or " cheese " as possible answers .
+Questions which expect a " yes " or a " no " as an answer are also difficult because it is not always possible to find those words in a snippet from the passage .
+shows the performance of FABIR and BiDAF against the passage length .
+It is curious that shorter passages showed the worst performance for both models .
+It is hard to interpret that result as , intuitively , one would expect brief passages to be easier to interpret .
+One possible explanation is that short passages give fewer options of simple questions , such as " when " , " who " , or " how many " , and the annotators of the dataset had to resort to more elaborate alternatives .
+78.234 85.344 FRC 76.240 84.599 RaSoR + TR + LM 77.583 84.163 Stochastic Answer Networks 76.828 84.396 r-net 76.461 84.265 Fusion Net 75.968 83.900 DCN + 75.087 83.081 Conductor - net 74.405 82.742 BiDAF + Self Attention 72.139 81.048 smartnet 71.415 80.160 Ruminating Reader 70.639 79.456 j Net 70.607 79.821 ReasoNet 70.555 79.364 Document Reader 70.733 79.353 RaSoR 70.849 78.741 FastQAExt 70.849 78.857 Multi- Perspective Matching 70.387 78.784 SEDT 68.163 77.527 FABIR ( Ours ) 67.744 77.605 BiDAF 67.974 77.323 Dynamic Coattention Networks 66.233 77.896 Match- LSTM with Bi - Ans - Ptr 64.744 73.743
+Fine - Grained Gating 62.446 73.327 OTF
+dict+spelling 64.083 73.056 Dynamic Chunk Reader 62.499 70.956
+V .
+CONCLUSION AND FUTURE WORK
+The experiments validate that attention mechanisms alone are enough to power an effective question - answering model .
+Above all , FABIR proved roughly five times faster at both training and inference than BiDAF , a competing RNN - based model with similar performance .
+These results strengthen some of FABIR 's compelling advantages , notably , an architecture that is both more parallelizable and lighter , with half of the number of parameters in comparison to BiDAF .
+FABIR also brings three significant contributions to this new class of neural network architectures .
+The convolutional attention , the reduction layer , and the column - wise crossattention individually increased the model 's F1 and EM scores by more than 2 % .
+Moreover , being thoroughly compatible with the Transformer , these new mechanisms are valuable assets to further developments in attention models .
+In fact , an intriguing line for future research is to evaluate their impact on other NLP tasks , such as machine translation or parsing .
+Although FABIR is still far from surpassing the models at the top of the SQuAD leaderboard , we believe that its faster and lighter architecture already make it an attractive alternative to RNN - based models , especially for applications with limited processing power or that require low - latency .
+Also , being a distinct technique , FABIR might have low correlation with existing RNN - based models , increasing the potential of ensemble methods .
+How to combine FABIR with other systems is then an interesting topic for future research in diverse NLP applications .

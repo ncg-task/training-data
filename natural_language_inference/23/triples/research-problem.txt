@@ -1,0 +1,5 @@
+(Contribution||has research problem||MACHINE COMPREHENSION)
+(Contribution||has research problem||Teaching machines to read , process and comprehend text and then answer questions)
+(Contribution||has research problem||machine reading comprehension ( MRC ))
+(Contribution||has research problem||MRC)
+(Contribution||has research problem||language understanding)

@@ -1,0 +1,8 @@
+(Contribution||has||Baselines)
+(Baselines||include||distance - based method)
+(distance - based method||that uses||word embeddings)
+(Baselines||trained||4 - gram Kneser - Ney model)
+(4 - gram Kneser - Ney model||on||CliCR training data)
+(CliCR training data||with||multi-word entities)
+(multi-word entities||represented as||single token)
+(CliCR training data||using||SRILM)

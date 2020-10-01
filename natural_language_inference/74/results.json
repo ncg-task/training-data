@@ -1,0 +1,35 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "performance" : {
+          "of" : {
+            "most of the integrated methods" : {
+              "are" : {
+                "better" : {
+                  "than" : "sentence encoding based models"
+                }
+              },
+              "from sentence" : "Obviously , the performance of most of the integrated methods are better than the sentence encoding based models above ."
+            },
+            "our model" : {
+              "achieves" : [
+                {"89.6 %" : {
+                  "on" : "SNLI"
+                }},
+                {"80.3 %" : {
+                  "on" : "matched MultiNLI"
+                }},
+                {"79.4 %" : {
+                  "on" : "mismatched MultiNLI"
+                }},
+                "all state - of - the - art results",
+                {"from sentence" : "The performance of our model achieves 89.6 % on SNLI , 80.3 % on matched MultiNLI and 79.4 % on mismatched MultiNLI , which are all state - of - the - art results ."}
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

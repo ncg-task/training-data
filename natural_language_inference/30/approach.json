@@ -1,0 +1,108 @@
+{
+  "has" : {
+    "Approach" : {
+      "take" : {
+        "approach" : {
+          "of" : {
+            "converting questions" : {
+              "to" : {
+                "( uninterpretable ) vectorial representations" : {
+                  "require no" : "pre-defined grammars or lexicons",
+                  "can" : {
+                    "query" : {
+                      "any KB" : {
+                        "independent" : {
+                          "of" : "schema"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "In this paper , we instead take the approach of converting questions to ( uninterpretable ) vectorial representations which require no pre-defined grammars or lexicons and can query any KB independent of its schema ."
+                }
+              }
+            }
+          }
+        }
+      },
+      "focus on" : {
+        "answering" : {
+          "has" : {
+            "simple factual questions" : {
+              "on" : "broad range of topics"
+            }
+          },
+          "from sentence" : "Following , we focus on answering simple factual questions on a broad range of topics , more specifically , those for which single KB triples stand for both the question and an answer ( of which there maybe many ) ."
+        }
+      },
+      "based on" : {
+        "learning" : {
+          "has" : {
+            "low - dimensional vector embeddings" : {
+              "of" : ["words", "KB triples"],
+              "so that" : {
+                "representations" : {
+                  "of" : "questions and corresponding answers",
+                  "end up" : {
+                    "similar" : {
+                      "in" : "embedding space"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Our approach is based on learning low - dimensional vector embeddings of words and of KB triples so that representations of questions and corresponding answers end up being similar in the embedding space ."
+        }
+      },
+      "make use of" : ["weak supervision", {"from sentence" : "In order to avoid transferring the cost of manual intervention to the one of labeling large amounts of data , we make use of weak supervision ."}],
+      "has" : {
+        "model" : {
+          "able to" : {
+            "take advantage" : {
+              "of" : {
+                "noisy and indirect supervision" : {
+                  "by" : {
+                    "automatically generating" : {
+                      "has" : {                  
+                        "questions" : {
+                          "from" : "KB triples",
+                          "treating this as" : "training data"
+                        }
+                      }
+                    },
+                    "supplementing" : {
+                      "with" : {
+                        "data set of questions" : {
+                          "collaboratively marked as" : "paraphrases",
+                          "with no" : "associated answers"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "We show empirically that our model is able to take advantage of noisy and indirect supervision by ( i ) automatically generating questions from KB triples and treating this as training data ; and ( ii ) supplementing this with a data set of questions collaboratively marked as paraphrases but with no associated answers ."
+                }
+              }
+            }
+          }
+        }
+      },
+      "end up learning" : {
+        "meaningful vectorial representations" : {
+          "for" : {
+            "questions" : {
+              "involving up to" : "800 k words"
+            },
+            "triples" : {
+              "of" : {
+                "mostly automatically created KB" : {
+                  "with" : ["2.4 M entities", "600 k relationships"]
+                }
+              }
+            }
+          },
+          "from sentence" : "We end up learning meaningful vectorial representations for questions involving up to 800 k words and for triples of an mostly automatically created KB with 2.4 M entities and 600 k relationships ."
+        }
+      }
+    }
+  }
+}

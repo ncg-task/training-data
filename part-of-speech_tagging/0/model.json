@@ -1,0 +1,27 @@
+{
+  "has" : {
+    "Model" : {
+      "propose and carefully analyze" : {
+        "neural part - of - speech ( POS ) tagging model" : {
+          "that exploits" : "adversarial training"
+        },
+        "from sentence" : "In this paper , spotlighting a well - studied core problem of NLP , we propose and carefully analyze a neural part - of - speech ( POS ) tagging model that exploits adversarial training ."
+      },
+      "With" : {
+        "BiLSTM - CRF model" : {
+          "as" : "baseline POS tagger",
+          "apply" : {
+            "adversarial training" : {
+              "considering" : {
+                "perturbations" : {
+                  "to" : "input word / character embeddings"
+                }
+              }
+            }
+          },
+          "from sentence" : "With a BiLSTM - CRF model as our baseline POS tagger , we apply adversarial training by considering perturbations to input word / character embeddings ."
+        }
+      }
+    }
+  }
+}

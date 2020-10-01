@@ -1,0 +1,154 @@
+21	11	18	explore
+21	23	29	effect
+21	30	32	of
+21	33	55	additional information
+21	56	67	by adopting
+21	70	102	pretrained language model ( LM )
+21	103	113	to compute
+21	118	139	vector representation
+21	30	32	of
+21	147	157	input text
+29	32	61	different objective functions
+29	64	95	listwise and pointwise learning
+23	26	32	select
+23	36	55	ELMo language model
+24	3	14	investigate
+24	19	32	applicability
+24	33	35	of
+24	36	60	transfer learning ( TL )
+24	61	66	using
+24	69	89	large - scale corpus
+24	98	109	created for
+24	112	148	relevant - sentence - selection task
+24	151	155	i.e.
+24	158	199	question - answering NLI ( QNLI ) dataset
+25	20	27	enhance
+25	28	54	one of the baseline models
+25	57	68	Comp - Clip
+25	106	109	for
+25	114	128	target QA task
+25	129	141	by proposing
+25	144	181	novel latent clustering ( LC ) method
+26	4	13	LC method
+26	14	22	computes
+26	23	49	latent cluster information
+26	40	43	for
+26	54	68	target samples
+26	69	80	by creating
+26	83	102	latent memory space
+26	107	118	calculating
+26	123	133	similarity
+26	134	141	between
+26	61	67	sample
+26	90	96	memory
+27	82	89	assigns
+27	90	126	true - label question - answer pairs
+27	9	11	to
+27	130	146	similar clusters
+27	0	2	By
+27	6	34	endto - end learning process
+112	3	12	implement
+112	17	34	Comp - Clip model
+112	40	45	apply
+112	48	80	context projection weight matrix
+112	81	85	with
+112	86	100	100 dimensions
+112	110	124	shared between
+112	129	142	question part
+112	151	162	answer part
+113	0	2	In
+113	7	23	aggregation part
+113	29	32	use
+113	33	42	1 - D CNN
+113	43	47	with
+113	50	70	total of 500 filters
+117	3	9	select
+117	10	11	k
+117	50	52	as
+117	53	60	6 and 4
+117	14	17	for
+117	69	94	WikiQA and TREC - QA case
+118	22	27	apply
+118	28	45	8 latent clusters
+119	4	19	vocabulary size
+119	20	22	in
+119	27	62	WiKiQA , TREC - QA and QNLI dataset
+119	63	66	are
+119	67	94	30,104 , 56,908 and 154,442
+120	5	13	applying
+120	18	20	TL
+120	27	42	vocabulary size
+120	46	52	set to
+120	53	60	154,442
+120	71	80	dimension
+120	81	83	of
+120	88	120	context projection weight matrix
+120	46	52	set to
+120	131	134	300
+121	3	6	use
+121	11	25	Adam optimizer
+121	28	37	including
+121	38	55	gradient clipping
+121	58	60	by
+121	65	69	norm
+121	70	72	at
+121	75	84	threshold
+121	85	87	of
+121	88	89	5
+122	0	3	For
+122	19	33	regularization
+122	39	46	applied
+122	49	56	dropout
+122	57	61	with
+122	64	69	ratio
+122	16	18	of
+122	73	76	0.5
+2	55	71	Answer Selection
+4	48	82	sentence - level answer- selection
+10	0	35	Automatic question answering ( QA )
+127	10	13	For
+127	18	32	WikiQA dataset
+127	39	66	pointwise learning approach
+127	67	72	shows
+127	75	93	better performance
+127	94	98	than
+127	103	129	listwise learning approach
+128	3	10	combine
+128	11	13	LM
+128	14	18	with
+128	23	54	base model ( Comp - Clip + LM )
+128	59	66	observe
+128	69	92	significant improvement
+128	7	9	in
+128	96	107	performance
+128	108	119	in terms of
+128	120	151	MAP ( 0.714 to 0.746 absolute )
+129	8	11	add
+129	16	51	LC method ( Comp - Clip + LM + LC )
+129	58	79	best previous results
+129	80	83	are
+129	84	93	surpassed
+129	94	105	in terms of
+129	106	137	MAP ( 0.718 to 0.764 absolute )
+132	65	69	with
+132	74	91	TREC - QA dataset
+132	4	31	pointwise learning approach
+132	37	42	shows
+132	43	64	excellent performance
+136	16	25	our model
+136	26	37	outperforms
+136	42	62	best previous result
+136	71	74	add
+136	75	112	LC method , ( Comp - Clip + LM + LC )
+136	113	124	in terms of
+136	125	128	MAP
+136	131	136	0.865
+136	137	139	to
+136	140	145	0.868
+135	27	34	achieve
+135	35	63	additional performance gains
+135	64	75	in terms of
+135	80	83	MAP
+135	90	95	apply
+135	96	112	LM , LC , and TL
+135	115	138	0.850 , 0.868 and 0.875

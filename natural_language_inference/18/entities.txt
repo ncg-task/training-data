@@ -1,0 +1,179 @@
+141	12	14	on
+141	15	33	Document Modelling
+141	12	14	on
+145	25	33	indicate
+145	39	43	NVDM
+145	44	52	achieves
+145	57	73	best performance
+145	77	90	both datasets
+146	0	3	For
+146	8	22	experiments on
+146	23	40	RCV1 - v2 dataset
+146	47	51	NVDM
+146	52	56	with
+146	57	72	latent variable
+146	73	75	of
+146	76	88	50 dimension
+146	89	97	performs
+146	98	109	even better
+146	110	114	than
+146	119	124	fDARN
+146	52	56	with
+146	130	143	200 dimension
+155	16	19	for
+155	20	45	Answer Sentence Selection
+155	43	45	on
+173	4	30	word embeddings ( K = 50 )
+173	31	34	are
+173	35	43	obtained
+173	44	54	by running
+173	59	72	word2vec tool
+173	80	102	English Wikipedia dump
+173	111	127	AQUAINT 5 corpus
+174	3	6	use
+174	7	12	LSTMs
+174	13	17	with
+174	18	26	3 layers
+174	31	46	50 hidden units
+174	53	58	apply
+174	59	71	40 % dropout
+174	72	77	after
+174	82	97	embedding layer
+175	28	45	inference network
+175	51	54	use
+175	58	61	MLP
+175	73	77	with
+175	78	86	2 layers
+175	91	101	tanh units
+175	21	23	of
+175	105	117	50 dimension
+175	188	201	for modelling
+175	206	226	joint representation
+175	58	61	MLP
+175	73	77	with
+175	78	86	2 layers
+175	91	101	tanh units
+175	21	23	of
+175	174	187	150 dimension
+176	0	6	During
+176	7	15	training
+176	19	28	carry out
+176	29	50	stochastic estimation
+176	51	60	by taking
+176	61	71	one sample
+176	72	85	for computing
+176	90	99	gradients
+176	3	5	in
+176	111	121	prediction
+176	125	128	use
+176	129	139	20 samples
+176	140	152	to calculate
+176	157	168	expectation
+176	169	171	of
+176	176	187	lower bound
+187	4	14	LSTM + Att
+187	15	23	performs
+187	24	39	slightly better
+187	40	44	than
+187	49	67	vanilla LSTM model
+187	74	82	our NASM
+187	83	91	improves
+187	96	103	results
+188	132	146	our best model
+188	74	94	after combining with
+188	97	129	co-occurrence word count feature
+188	152	163	outperforms
+188	164	187	all the previous models
+188	190	199	including
+188	205	232	neural network based models
+188	237	248	classifiers
+188	90	94	with
+188	21	24	set
+188	260	262	of
+188	263	286	hand - crafted features
+189	12	14	on
+189	19	36	Wik - iQA dataset
+189	39	56	all of our models
+189	57	67	outperform
+189	72	102	previous distributional models
+189	103	105	by
+189	108	120	large margin
+190	3	12	including
+190	15	33	word count feature
+190	36	46	our models
+190	47	62	improve further
+190	67	74	achieve
+190	79	101	state - of - the - art
+22	11	21	introduces
+22	24	52	neural variational framework
+22	53	56	for
+22	57	74	generative models
+22	75	77	of
+22	78	82	text
+22	85	96	inspired by
+22	101	124	variational autoencoder
+23	25	30	build
+23	34	51	inference network
+23	54	68	implemented by
+23	71	90	deep neural network
+23	91	105	conditioned on
+23	106	110	text
+23	113	127	to approximate
+23	132	157	intractable distributions
+23	158	162	over
+23	167	183	latent variables
+24	87	115	neural variational inference
+24	116	131	learns to model
+24	136	157	posterior probability
+31	2	17	primary feature
+31	18	20	of
+31	21	25	NVDM
+31	26	28	is
+31	34	43	each word
+31	47	70	generated directly from
+31	73	113	dense continuous document representation
+31	114	124	instead of
+31	129	163	more common binary semantic vector
+33	4	8	NASM
+33	11	13	is
+33	16	44	supervised conditional model
+33	51	57	imbues
+33	58	63	LSTMs
+33	64	68	with
+33	71	108	latent stochastic attention mechanism
+33	109	117	to model
+33	122	131	semantics
+33	132	134	of
+33	135	158	question - answer pairs
+34	4	19	attention model
+34	23	34	designed to
+34	35	40	focus
+34	11	13	on
+34	48	55	phrases
+34	56	58	of
+34	62	68	answer
+34	78	99	strongly connected to
+34	104	122	question semantics
+34	130	141	modelled by
+34	144	163	latent distribution
+36	0	18	Bayesian inference
+36	19	27	provides
+36	30	47	natural safeguard
+36	48	55	against
+36	56	67	overfitting
+27	3	8	using
+27	13	38	reparameterisation method
+27	45	62	inference network
+27	66	81	trained through
+27	82	100	back - propagating
+27	101	136	unbiased and low variance gradients
+27	137	143	w.r.t.
+27	148	164	latent variables
+28	27	34	propose
+28	37	79	Neural Variational Document Model ( NVDM )
+28	80	83	for
+28	84	102	document modelling
+28	109	147	Neural Answer Selection Model ( NASM )
+28	80	83	for
+28	152	170	question answering
+2	0	28	Neural Variational Inference

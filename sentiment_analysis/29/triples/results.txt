@@ -1,0 +1,7 @@
+(Contribution||has||Results)
+(Results||found that||performance fluctuates)
+(performance fluctuates||with||different random initialization)
+(Results||On average||our best trained model)
+(our best trained model||outperforms them in||large margin)
+(Results||On average||our algorithm)
+(our algorithm||better than||baseline methods)

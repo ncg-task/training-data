@@ -1,0 +1,144 @@
+159	8	17	replacing
+159	22	48	word - by - word attention
+159	49	53	with
+159	54	70	Attentive Reader
+159	71	86	style attention
+159	87	96	decreases
+159	101	109	EM score
+159	110	118	by about
+159	119	124	4.5 %
+161	11	16	shows
+161	22	73	POS feature ( 1 ) and question - word feature ( 3 )
+161	74	77	are
+161	82	109	two most important features
+162	10	19	combining
+162	24	33	DCR model
+162	34	38	with
+162	43	74	proposed POS - trie constraints
+162	75	81	yields
+162	84	89	score
+162	90	100	similar to
+162	24	33	DCR model
+162	34	38	with
+162	143	169	all possible n-gram chunks
+136	3	16	pre-processed
+136	21	34	SQuAD dataset
+136	35	40	using
+136	41	62	Stanford CoreNLP tool
+136	65	69	with
+136	74	89	default setting
+136	90	101	to tokenize
+136	106	110	text
+136	115	121	obtain
+136	126	148	POS and NE annotations
+137	24	28	used
+137	29	56	stochastic gradient descent
+137	57	61	with
+137	66	80	ADAM optimizer
+137	91	112	initial learning rate
+137	113	115	of
+137	116	121	0.001
+138	0	15	All GRU weights
+138	21	37	initialized from
+138	40	60	uniform distribution
+138	61	68	between
+138	69	86	( - 0.01 , 0.01 )
+139	4	21	hidden state size
+139	6	7	d
+139	32	38	set to
+139	39	42	300
+139	43	46	for
+139	47	55	all GRUs
+142	8	15	applied
+142	16	23	dropout
+142	24	31	of rate
+142	32	35	0.2
+142	36	38	to
+142	43	58	embedding layer
+142	24	26	of
+142	62	84	input bi - GRU encoder
+142	91	108	gradient clipping
+142	109	113	when
+142	118	122	norm
+142	24	26	of
+142	126	135	gradients
+142	136	144	exceeded
+142	145	147	10
+143	72	86	zero - padding
+143	87	89	to
+143	94	121	passage and question inputs
+143	6	8	in
+143	125	135	each batch
+143	3	13	trained in
+143	14	30	mini-batch style
+143	33	50	mini - batch size
+143	51	53	is
+143	54	57	180
+144	8	11	set
+144	16	38	maximum passage length
+144	39	44	to be
+144	45	55	300 tokens
+144	62	68	pruned
+144	69	83	all the tokens
+144	84	89	after
+144	94	108	300 - th token
+144	109	111	in
+144	116	128	training set
+147	3	10	trained
+147	15	20	model
+147	21	24	for
+147	25	42	at most 30 epochs
+148	0	3	For
+148	8	38	feature ranking - based system
+148	44	48	used
+148	49	63	jforest ranker
+148	107	111	with
+148	111	151	 Lambda MART - Regression Tree algorithm
+25	21	27	called
+25	28	56	dynamic chunk reader ( DCR )
+26	18	22	uses
+26	23	36	deep networks
+26	37	45	to learn
+26	46	68	better representations
+26	69	72	for
+26	73	96	candidate answer chunks
+26	99	109	instead of
+26	116	145	fixed feature representations
+27	12	22	represents
+27	23	40	answer candidates
+27	41	43	as
+27	44	50	chunks
+27	82	92	instead of
+27	93	121	word - level representations
+27	124	131	to make
+27	136	141	model
+27	142	150	aware of
+27	155	173	subtle differences
+27	174	179	among
+27	30	40	candidates
+2	55	76	Reading Comprehension
+4	66	101	neural reading comprehension ( RC )
+9	0	57	Reading comprehension - based question answering ( RCQA )
+12	45	49	RCQA
+150	31	33	on
+150	38	51	SQuAD dataset
+150	31	33	on
+150	31	33	on
+151	4	7	are
+151	123	129	better
+151	37	66	our exact match ( EM ) and F1
+151	74	89	development set
+151	158	168	comparable
+151	64	66	F1
+151	110	118	test set
+154	28	47	our baseline system
+154	48	56	improves
+154	57	68	10 % ( EM )
+154	69	73	over
+154	90	120	feature - based ranking system
+155	13	24	compared to
+155	25	38	our DCR model
+155	55	63	baseline
+155	74	76	is
+155	77	98	more than 12 % ( EM )
+155	99	105	behind

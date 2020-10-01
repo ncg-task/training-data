@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Text Comprehension", {"from sentence" : "Gated - Attention Readers for Text Comprehension"}],
+    ["machine reading", {"from sentence" : "A recent trend to measure progress towards machine reading is to test a system 's ability to answer questions about a document it has to comprehend ."}]
+  ]
+}

@@ -1,0 +1,28 @@
+14	14	18	Code
+14	34	79	https://github.com/enigmaeth/skip-thought-gan
+71	4	26	Skip - Thought encoder
+71	41	48	encodes
+71	49	58	sentences
+71	59	63	with
+71	64	70	length
+71	71	80	less than
+71	81	89	30 words
+71	90	95	using
+71	96	110	2400 GRU units
+71	59	63	with
+71	116	127	word vector
+71	128	145	dimensionality of
+71	146	149	620
+71	150	160	to produce
+71	161	199	4800 - dimensional combineskip vectors
+72	4	26	combine - skip vectors
+72	29	33	with
+72	38	59	first 2400 dimensions
+72	60	65	being
+72	66	80	uni-skip model
+72	89	112	last 2400 bi-skip model
+72	142	153	found to be
+72	158	192	best performing in the experiments
+2	0	15	Generating Text
+7	68	83	text generation
+11	48	80	natural language text generation

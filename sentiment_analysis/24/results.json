@@ -1,0 +1,101 @@
+{
+  "has" : {
+    "Results" : {
+      "observe that" : {
+        "IMN ?d" : {
+          "able to" : {
+            "significantly outperform" : {
+              "other" : "baselines",
+              "on" : "F1"
+            }
+          }
+        },
+        "from sentence" : "From , we observe that IMN ?d is able to significantly outperform other baselines on F1 - I ."
+      },
+      "has" : {
+        "IMN" : {
+          "boosts" : "performance",
+          "outperforms" : {
+            "best F1" : {
+              "from" : {
+                "baselines" : {
+                  "by" : {
+                    "2.29 % , 1.77 % , and 2.61 %" : {
+                      "on" : "D1 , D2 , and D3"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "IMN further boosts the performance and outperforms the best F1 - I results from the baselines by 2.29 % , 1.77 % , and 2.61 % on D1 , D2 , and D3 ."
+        },
+        "IMN wo DE" : {
+          "performs" : {
+            "only marginally" : {
+              "below" : "IMN"
+            }
+          },
+          "from sentence" : "IMN wo DE performs only marginally below IMN ."
+        },
+        "IMN ?d" : {
+          "more affected without" : "domain - specific embeddings",
+          "outperforms" : {
+            "all other baselines" : {
+              "except" : "DECNN - d Trans"
+            }
+          },
+          "from sentence" : "IMN ?d is more affected without domain - specific embeddings , while it still outperforms all other baselines except DECNN - d Trans ."
+        },
+        "DECNN - dTrans" : {
+          "is" : {
+            "very strong baseline" : {
+              "exploits" : {
+                "additional knowledge" : {
+                  "from" : {
+                    "larger corpora" : {
+                      "for" : "both tasks"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "DECNN - dTrans is a very strong baseline as it exploits additional knowledge from larger corpora for both tasks ."
+        },
+        "IMN ?d wo DE" : {
+          "competitive with" : "DECNN - dTrans",
+          "from sentence" : "IMN ?d wo DE is competitive with DECNN - dTrans even without utilizing additional knowledge , which suggests the effectiveness of the proposed network structure ."
+        }
+      },
+      "for" : {
+        "AE ( F1 - a and F1 - o )" : {
+          "has" : {
+            "IMN ?d" : {
+              "performs" : {
+                "best" : {
+                  "in" : "most cases"
+                }
+              }
+            }
+          },
+          "from sentence" : "Specifically , for AE ( F1 - a and F1 - o ) , IMN ?d performs the best in most cases ."
+        }
+      },
+      "For" : {
+        "AS ( acc - s and F1 - s )" : {
+          "has" : {
+            "IMN" : {
+              "outperforms" : {
+                "other methods" : {
+                  "by" : "large margins"
+                }
+              }
+            }
+          },
+          "from sentence" : "For AS ( acc - s and F1 - s ) , IMN outperforms other methods by large margins ."
+        }
+      }
+    }
+  }  
+}

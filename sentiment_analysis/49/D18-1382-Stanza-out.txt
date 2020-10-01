@@ -1,0 +1,253 @@
+title
+Contextual Inter-modal Attention for Multi-modal Sentiment Analysis
+abstract
+Multi-modal sentiment analysis offers various challenges , one being the effective combination of different input modalities , namely text , visual and acoustic .
+In this paper , we propose a recurrent neural network based multi-modal attention framework that leverages the contextual information for utterance - level sentiment prediction .
+The proposed approach applies attention on multi-modal multi-utterance representations and tries to learn the contributing features amongst them .
+We evaluate our proposed approach on two multi-modal sentiment analysis benchmark datasets , viz.
+CMU Multi-modal Opinion - level Sentiment Intensity ( CMU - MOSI ) corpus and the recently released CMU Multi-modal Opinion Sentiment and Emotion Intensity ( CMU - MOSEI ) corpus .
+Evaluation results show the effectiveness of our proposed approach with the accuracies of 82.31 % and 79. 80 % for the MOSI and MO - SEI datasets , respectively .
+These are approximately 2 and 1 points performance improvement over the state - of - the - art models for the datasets .
+Introduction
+Traditionally , sentiment analysis has been applied to a wide variety of texts .
+In contrast , multi-modal sentiment analysis has recently gained attention due to the tremendous growth of many social media platforms such as YouTube , Instagram , Twitter , Facebook etc .
+It depends on the information that can be obtained from more than one modality ( e.g. text , visual and acoustic ) for the analysis .
+The motivation is to leverage the varieties of ( often distinct ) information from multiple sources for building an efficient system .
+For ex-ample , it is a non-trivial task to detect the sentiment of a sarcastic sentence " My neighbours are home ! !
+it is good to wake up at 3 am in the morning . " as negative considering only the textual information .
+However , if the system has access to some other sources of information , e.g. visual , it can easily detect the unpleasant gestures of the speaker and would classify it with the negative sentiment polarity .
+Similarly , for some instances acoustic features such as intensity , pitch , pause etc. have important roles to play in the correctness of the system .
+However , combining these information in an effective manner is a non-trivial task that researchers often have to face .
+A video provides a good source for extracting multi-modal information .
+In addition to the visual frames , it also provides information such as acoustic and textual representation of spoken language .
+Additionally , a speaker can utter multiple utterances in a single video and these utterances can have different sentiments .
+The sentiment information of an utterance often has inter-dependence on other contextual utterances .
+Classifying such an utterance in an independent manner poses many challenges to the underlying algorithm .
+In this paper , we propose a novel method that employs a recurrent neural network based multimodal multi-utterance attention framework for sentiment prediction .
+We hypothesize that applying attention to contributing neighboring utterances and / or multi-modal representations may assist the network to learn in a better way .
+The main challenge in multi-modal sentiment analysis lies in the proper utilization of the information extracted from multiple modalities .
+Although it is often argued that incorporation of all the available modalities is always beneficial for enhanced performance , it must be noted that not all the modalities play equal role .
+Another concern in multi-modal framework is that the presence of noise in one modality can affect the overall performance .
+To better address these concerns we propose a novel fusion method by focusing on inter-modality relations computed between the target utterance and its context .
+We argue that in multi-modal sentiment classification , not only the relation among two modalities of the same utterance is important , but also relatedness with the modalities across its context are important .
+Think of an utterance
+Ut that constitutes of three modalities , say At ( i.e. audio ) , Vt ( i.e. visual ) and T t ( i.e. text ) .
+Let us also assume U k being a member of the contextual utterances consisting of the modalities - A k , V k and T k .
+In this case , our model computes the relatedness among the modalities ( for e.g. , Vt and T k ) of Ut and U kin order to produce a richer multi-modal representation for final classification .
+The attention mechanism is then used to attend to the important contextual utterances having higher relatedness or similarity ( computed using inter-modality correlations ) with the target utterance .
+Unlike previous approaches that simply apply attentions over the contextual utterance for classification , we attend over the contextual utterances by computing correlations among the modalities of the target utterance and the context utterances .
+This explicitly helps us to distinguish which modalities of the relevant contextual utterances are more important for sentiment prediction of the target utterance .
+The model facilitates this modality selection by attending over the contextual utterances and thus generates better multimodal feature representation when these modalities from the context are combined with the modalities of the target utterance .
+We evaluate our proposed approach on two recent benchmark datasets , i.e. CMU - MOSI and CMU - MOSEI , with one being the largest ( CMU - MOSEI ) available dataset for multimodal sentiment analysis ( c.f. Section 4.1 ) .
+Evaluation shows that the proposed attention framework attains better performance than the state - of - the - art systems for various combinations of input modalities ( i.e. text , visual & acoustic ) .
+The main contributions of our proposed work are three - fold : a ) we propose a novel technique for multi-modal sentiment analysis ; b ) we propose an effective attention framework that leverages contributing features across multiple modalities and neighboring utterances for sentiment analysis ; and c) we present the state - of - the - art systems for sentiment analysis in two different benchmark datasets .
+Related Work
+A survey of the literature suggests that multimodal sentiment prediction is relatively anew area as compared to textual based sentiment prediction .
+A good review covering the literature from uni-modal analysis to multi-modal analysis is presented in .
+An application of multi-kernel learning based fusion technique was proposed in , where they employed deep convolutional neural networks for extracting the textual features and fused it with other ( visual & acoustic ) modalities for prediction .
+introduced the multi-modal dictionary to better understand the interaction between facial gestures and spoken words when expressing the sentiment .
+Authors introduced the MOSI dataset , the first of its kind to enable the studies of multi-modal sentiment intensity analysis .
+proposed a Tensor Fusion Network ( TFN ) model to learn the intra-modality and inter-modality dynamics of the three modalities ( i.e. text , visual and acoustic ) .
+They reported the improved accuracy using multi-modality on the CMU - MOSI dataset .
+An application to leverage on the gated multi-modal embedded Long Short Term Memory ( LSTM ) with temporal attention ( GME - LSTM ( A ) ) for the word - level fusion of multi-modality inputs is proposed in .
+The Gated Multi-modal Embedding ( GME ) alleviates the difficulties of fusion while the LSTM with Temporal Attention ( LSTM ( A ) ) performs word - level fusion .
+The works mentioned above did not take contextual information into account .
+proposed a LSTM based framework that leverages the contextual information to capture the inter-dependencies between the utterances .
+In another work , proposed an user opinion based framework to combine the three modality inputs ( i.e. text , visual & acoustic ) by applying a multi-kernel learning based method .
+proposed multiattention blocks ( MAB ) to capture information across three modalities .
+They reported improved accuracies in the range of 2 - 3 % over the state - of - the - art models for the different datasets .
+The fundamental difference between our proposed method and the existing works is that our framework applies focus on the neighboring utterances to leverage contextual information for utterance - level sentiment prediction .
+To the best of our knowledge , our current work is the very first of its kind that attempts to employ multi-modal attention block ( exploiting neighboring utterances ) for sentiment prediction .
+We use multi-modal attention framework that leverages contributing features across multiple modalities and the neighboring utterances for sentiment analysis .
+Proposed Methodology
+In our proposed framework , we aim to leverage the multi-modal and contextual information for predicting the sentiment of an utterance .
+Utterances of a particular speaker in a video represent the time series information and it is logical that the sentiment of a particular utterance would affect the sentiments of the other neighboring utterances .
+To model the relationship with the neighboring utterances and multi-modality , we propose a recurrent neural network based multi-modal attention framework .
+The proposed framework takes multi-modal information ( i.e. text , visual & acoustic ) fora sequence of utterances and feeds it into three separate bi-directional Gated Recurrent Unit ( GRU ) .
+This is followed by a dense ( fully - connected ) operation which is shared across the time - steps or utterances ( one each for text , visual & acoustic ) .
+We then apply multimodal attention on the outputs of the dense layers .
+The objective is to learn the joint - association between the multiple modalities & utterances , and to emphasize on the contributing features by putting more attention to these .
+In particular , we employ bi-modal attention framework , where an attention function is applied to the representations of pairwise modalities i.e. visual - text , text - acoustic and acoustic - visual .
+Finally , the outputs of pairwise attentions along with the representations are concatenated and passed to the softmax layer for classification .
+We call our proposed architecture Multi - Modal Multi - Utterance - Bi-Modal Attention ( MMMU - BA ) framework .
+An overall architecture of the proposed MMMU - BA framework is illustrated in .
+Please refer to in appendix for illustration of attention computation .
+For comparison , we also experiment with two other variants of the proposed MMMU - BA framework i.e. a ) .
+Multi - Modal
+Uni-Utterance - Self Attention ( MMUU - SA ) framework and b ) .
+Multi - Utterance - Self Attention ( MU - SA ) framework .
+The architecture of these variants differ with respect to the attention computation module and the naming conventions " MMMU " , " MMUU " or " MU " signify the information that participates in the attention computation .
+For example , in MMMU - BA , we compute attention over the multi-modal and multi-utterance inputs , whereas in MMUU - SA , the attention is computed over the mutli-modal but uni-utterance inputs .
+In contrast , we compute attention over only multi-utterance inputs in MU - SA .
+Rest of the components for all the three variants remain same .
+Multi-modal Multi-utterance
+- Bi-modal
+Attention ( MMMU - BA ) Framework
+Assuming a particular video has ' u ' utterances , the raw utterance level multi-modal features are rep -
+Three separate
+Bi - GRU layers with forward & backward state concatenation are first applied on the raw data followed by the fully - connected dense layers , resulting in T ?
+R ud ( text ) , V ?
+R ud ( visual ) and A ?
+R ud ( acoustic ) , where ' d ' is the number of neurons in the dense layer .
+Finally , pairwise - attentions are computed on various combinations of three modalities - ( V , T ) , ( T , A ) & ( A , V ) .
+In particular the attention between V and T is computed as follows :
+Bi-modal
+Attention : Modality representations of V & T are obtained from the Bi - GRU network , and hence contain the contextual information of the utterances for each modality .
+At first , we compute a pair of matching matrices M 1 , M 2 ?
+R uu over two representations that account for the crossmodality information .
+Multi - Utterance Attention :
+As mentioned earlier , in the proposed model we aim to leverage the contextual information of each utterance for the prediction .
+We compute the probability distribution scores ( N 1 ? R uu & N 2 ?
+R uu ) over each utterance of bi-modal attention matrices M 1 & M 2 using a softmax function .
+This essentially computes the attention weights for the contextual
+Bi-GRU
+Dense
+AR ( raw acoustic ) utterances .
+Finally , soft attention is applied over the multi-modal multi-utterance attention matrices to compute the modality - wise attentive representa -
+Finally , a multiplicative gating function following is computed between the multi-modal utterance specific representations of each individual modality and the other modalities .
+This element - wise matrix multiplication assists in attending to the important components of multiple modalities and utterances .
+Similar to MMMU - BA VT , we follow the same procedure to compute MMMU - BA AV & MMMU - BA TA .
+For a data source comprising of raw visual ( V R ) , acoustic ( A R ) & text ( T R ) modalities , at first , we compute the bi-modal attention pairs for each combination i.e. MMMU - BA VT , MMMU - BA AV & MMMU - BA TA .
+Finally , motivated by the residual skip connection network , we concatenate the bi-modal attention pairs with individual modalities ( i.e. V , A & T ) to boost the gradient flow to the lower layers .
+This concatenated feature is then used for final classification .
+Multi - Modal
+Uni-Utterance - Self
+Attention ( MMUU - SA ) Framework MMUU - SA framework does not account for information from the other utterances at the attention level , rather it utilizes multi-modal information of single utterance for predicting the sentiment .
+For a video having ' q ' utterances , ' q ' separate attention blocks are needed , where each block computes the self - attention over multi-modal information of a single utterance .
+Let X up ?
+R 3d is the information matrix of the p th utterance where the three ' d ' dimensional rows are the outputs of the dense layers for the three modalities .
+The attention matrix A up ?
+R 3d is computed separately for , p = 1 st , 2 nd , ... q th utterances .
+Finally , for each utterance p , A up and X up are concatenated and passed to the output layer for classification .
+Please refer to the appendix for more details .
+Multi - Utterance - Self Attention ( MU - SA ) Framework
+In MU - SA framework , we apply self attention on the utterances of each modality separately , and use these for classification .
+In contrast to MMUU - SA framework , MU - SA utilizes the contextual information of the utterances at the attention level .
+Let , T ? R ud ( text ) , V ?
+R ud ( visual ) and A ?
+R ud ( acoustic ) are the outputs of the dense layers .
+For the three modalities , three separate attention blocks are required , where each block takes multi-utterance information of a single modality and computes the self attention matrix .
+Specifically , the MU - SA attention ( A v ) on V ( visual ) will be computed as follows ,
+The attention matrix A p ?
+R 3d is computed for p = 1 st , 2 nd , ...u th utterances .
+Finally , for each utterance u , A p and X pare concatenated and passed to the output layer with softmax activation for classification .
+Datasets , Experiments and Analysis
+In this section we describe the datasets used for our experiments and report the results along with the necessary analysis .
+Datasets
+We evaluate our proposed approach on two benchmark datasets , namely CMU Multi-modal Opinion - level Sentiment Intensity ( CMU - MOSI ) corpus Each utterance in CMU - MOSI dataset has been annotated as either positive or negative , whereas in CMU - MOSEI dataset labels are in the continuous range of - 3 to + 3 .
+However , in this work we project the instances of CMU - MOSEI in a two - class classification setup with values ?
+0 signify positive sentiments and values < 0 signify negative sentiments .
+We adopt such a strategy to be consistent with the previous published works on CMU - MOSI datasets .
+Feature extraction
+We use the CMU - Multi-modal Data SDK 1 .
+These utterance - level features represent the outputs of a convolutional neural network , 3D convolutional neural network & open SMILE for text , visual & acoustic modalities , respectively .
+Dimensions of utterance - level features are 100 , 100 & 73 for text , visual & acoustic , respectively .
+Experiments
+We evaluate our proposed approach for CMU - MOSI ( test data ) & CMU - MOSEI ( dev data )
+4 .
+Accuracy score is used as the evaluation metric .
+We use Bi-directional GRUs having 300 neurons , each followed by a dense layer consisting of 100 neurons .
+Utilizing the dense layer , we project the input features of all the three modalities to the same dimensions .
+We set dropout = 0.5 ( MOSI ) & 0.3 ( MOSEI ) as a measure of regularization .
+In addition , we also use dropout = 0.4 ( MOSI ) & 0.3 ( MOSEI ) for the Bi - GRU layers .
+We employ ReLu activation function in the dense layers , and softmax activation in the final classification layer .
+For training the network we set the batch size = 32 , use Adam optimizer with cross - entropy loss function and train for 50 epochs .
+We report the average result of 5 runs for all our experiments .
+We experiment with all the valid combinations of uni-modal ( where only one modality is taken at a time ) , bi-modal ( any two modalities are taken at a time ) and tri-modal ( all three modalities are taken at a time ) inputs for text , visual and acoustic .
+In multi-modal attention frameworks i.e. MMMU - BA & MMUU - SA , the attention is computed over at least two modalities , hence , these two frameworks are not -applicable ( NA ) for uni-modal experiments in .
+For MOSEI dataset , we obtain better performance with text .
+Subsequently , we take two modalities at a time for constructing bi-modal inputs and feed it to the network .
+For text - acoustic input pairs , we obtain the highest accuracies with 79. 74 % , 79.60 % and 79.32 % for MMMU - BA , MMUU - SA and MU - SA frameworks , respectively .
+The results that we obtain from the bi-modal combinations suggest that the text - acoustic combination is a better choice than the others as it improves the overall performance .
+Finally , we experiment with tri-modal inputs and observe an improved performance of 79. 80 % , 79.76 % and 79.63 % for MMMU - BA , MMUU - SA and MU - SA frameworks , respectively .
+This improvement entails that combination of all the three modalities is a better choice .
+The performance improvement was also found to be statistically significant ( T-test ) than the bimodality and uni-modality inputs .
+Further , we observe that the MMMU - BA framework reports the best accuracy of 79 . 80 % for the MOSEI dataset , thus supporting our claim that multi-modal attention framework ( i.e. MMMU - BA ) captures more information than the self - attention frameworks ( i.e. MMUU - SA & MU - SA ) .
+Analysis of Attention Mechanism
+We analyze the attention values to understand the learning behavior of the proposed architecture .
+To illustrate , we take an example video from the CMU - MOSI test dataset .
+The transcript of the utterances for this particular video are presented in .
+The gold sentiments are positive for all the utterances except u 3 & u 4 .
+We found that the proposed tri-modal MMMU - BA model predicts the labels of all the nine instances correctly , whereas other models make at least one misclassification .
+Elements of the rows of N 1 & N 2 matrices signify different weights across multiple utterances .
+From the attention heatmaps , it is evident that by applying different weights across contextual utterances and modalities the model is able to predict labels of all the utterances correctly .
+All the heatmaps justify that the model learns to incorporate multi-modal & multi-utterance information and thus is able to correctly predict the labels of all the utterances .
+For example , heatmap of MMMU - BA VT ) signifies that elements of N 1 are weighted higher than N 2 , and thus the model puts more attention on the textual part and relatively lesser on the visual part ( as N 1 is multiplied with T & N 2 is multiplied with V ) .
+Also it can be concluded that textual .
+Nine separate attention weights ( N u 1 , N u 2 , .. , N u 9 ) are computed for the nine utterances .
+This model wrongly predicts the labels of the utterances u 4 & u 5 .
+We further analyze our proposed architecture ( i.e. MMMU - BA ) with and without attention .
+In MOSI for tri-modal inputs , the MMMU - BA architecture reports a reduced accuracy of 80 . 89 % without attention framework as compared to 82.31 % with attention .
+We observe similar performance in the MOSEI dataset , where we obtain 79.02 % ( a ) Softmax attention weights N1 & N2 for MMMU - ( c ) Softmax attention weights N1 & N2 for MMMU - BATA .
+( d ) MU - SAtext matrix .
+( e ) MU - SA visual matrix .
+( f ) MU - SAacoustic matrix . .
+The Tri-modal MMMU - BA model predicts all 9 instances correctly , whereas , the other two models makes at least one misclassification .
+Heatmap signifies that the model is able to predict labels of all the utterances correctly by incorporating multi-modal & multi-utterance information . :
+Analysis of attention mechanism in MMMU - BA architecture .
+w / attention ?
+with multi-modal multi utterance attention mechanism and w/o attention ?
+without attention mechanism .
+accuracy without attention framework against 79. 80 % accuracy with attention framework .
+Statistical T - test shows these improvements to be significant .
+We also observed the similar trends for bi-modal inputs in both the datasets .
+All these experiments ( c.f. ) suggest that the attention framework is an important component in our proposed architecture , and in absence of this the network finds it more difficult for learning in all the cases ( i.e. bi-modal & tri-modal input setups ) .
+We successfully show that attention computation on pairwise combination of modalities ( i.e. bimodal attention framework ) is more effective than the combination of self - attention on single modality .
+Further for the completeness of the proposed approach , we also experiment with tri-modal attention framework ( attention is computed on three modalities at a time ) .
+Though the results that we obtain are convincing , it does not improve the performance over the bi-modal attention framework .
+We obtain the accuracies of 79.58 % & 81.25 % on MOSEI and MOSI , respectively , for the tri-modal attention framework .
+Comparative Analysis
+For MOSI datasets we compare the performance of our proposed approach with the the following state - of - the - art systems : i ) . - LSTM - based sequence model to capture the contextual information of the utterances ; ii ) . - Tensor level fusion technique for combining all the three modalities ; iii ) .
+- A gated multi-modal embedded LSTM with temporal attention ( GME - LSTM ( A ) ) for word - level fusion of multi-modality inputs .
+and iv ) . - Multiple attention blocks for capturing the information across the three modalities .
+In we present the comparative performance between our proposed model and other state - of - the - art systems .
+In MOSI dataset , reported the accuracies of 80 . obtained an accuracy of & 77.4 % .
+reported accuracies of 75.7 % ( LSTM ( A ) ) & 76.5 % ( GME - LSTM ( A ) ) for two variants of their model .
+In contrast to the state - of - the - art systems , our proposed model attains an improved accuracy of 82.31 % when we utilize all the three modalities , i.e. text , visual & acoustic .
+Our proposed system also obtains better performance as compared to the state - of - the - arts for bi-modal inputs .
+For MOSEI dataset , we evaluate against the following systems : i ) , i i ) , and iii ) , where authors proposed a memory fusion network for multi-view sequential learning .
+We evaluate the system of on MOSEI dataset and obtain 77 . 64 % accuracy with the tri-modal inputs .
+Authors in reported the accuracy 76.0 % and 76.4 % , respectively , with the tri-modal inputs .
+In comparison , our proposed approach yields an accuracy of 79.80 % .
+As reported in the proposed approach also attains better performance for all the bi-modal and uni-modal input combinations when compared to .
+As reported in , we observe that the performance achieved in our proposed approach is significantly better in comparison to the state - of the - art systems with p-value < 0.05 ( obtained using T-test ) .
+For further analysis , we also report results for three - class classification ( positive , neutral & negative classes ) problem setup for MOSEI dataset in .
+Note that this setup is not feasible in MOSI as labels are only positive or negative .
+Error Analysis
+We perform error analysis on the predictions of our proposed MMMU - BA model with all the three input sources .
+Confusion matrices for both the datasets are demonstrated in .
+For MO - SEI dataset we observe that the precision and recall for positive class ( 84 % precision & 88 % recall ; are quite encouraging .
+However , the same are comparatively on the lower side for the negative class ( 68 % precision & 58 % recall .
+In contrast , for the MOSI dataset - which is relatively balancedwe obtain quite similar performance for both the classes i.e. positive ( 86 % precision & 85 % recall ) and negative ( 77 % precision & 75 % recall ) .
+Please TV A
+MOSEI
+And when I was going to school it was really difficult for me to find avenues and resources to be able to reach higher education .
+negative positive Implicit sentiment .
+We could have a decision from the court on the stay any day now .
+positive negative
+Holidays never really happen in online courses I guess .
+negative positive Negation & strong word .
+Young people dropping out of the labour market are actually not counted anymore as unemployed as they are inactive .
+positive negative
+Thank you for your efforts and consideration .
+negative positive Sarcastic sentence .
+refer to the appendix for PR curves of different input combinations .
+We further analyze our outputs qualitatively and list a few frequently occurring error categories with examples in .
+Conclusion
+In this paper , we have proposed a recurrent neural network based multi-modal attention framework that leverages the contextual information for utterance - level sentiment prediction .
+The network learns on top of three modalities , viz. text , visual and acoustic , considering sequence of utter - ances in a video .
+Through evaluation results on two benchmark datasets ( one being the popular & commonly used ( MOSI ) and other being the most recent & largest ( MOSEI ) dataset for multi-modal sentiment analysis ) , we successfully showed that the proposed attention based framework performs better than various state - of - the - art systems .
+In future , we would like to investigate new techniques , and explore the ways to handle implicit sentiment and sarcasm .
+Future direction of work also include adding more dimensions , e.g. emotion analysis & intensity prediction .
+Acknowledgment
+Let X p ?
+R 3d is the information matrix of the p th utterance where the three ' d ' dimensional rows are the outputs of the time - distributed dense layer for the three modalities .
+Computation in the p th attention block proceeds as follows :
+M up = X up . X T up N up ( i , j ) = e Mu p ( i , j ) 3 k=1 e Mu p ( i , k ) for i , j = 1 , 2 , 3 ;
+The attention matrix A up ?
+R 3d is computed separately for , p = 1 st , 2 nd , ... q th utterances .
+Finally , for each utterance p , A up and X up are concatenated and passed to the output layer for classification .
+Dataset Statistics
+Dataset statistics are presented in .
+Attention Computation
+MMMU - BA VT attention computation is illustrated in . and MOSEI .

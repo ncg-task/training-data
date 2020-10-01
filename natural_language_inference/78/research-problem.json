@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Natural Language Inference", {"from sentence" : "Compare , Compress and Propagate : Enhancing Neural Architectures with Alignment Factorization for Natural Language Inference"}],
+    ["Natural Language Inference ( NLI )", {"from sentence" : "This paper presents a new deep learning architecture for Natural Language Inference ( NLI ) ."}],
+    ["NLI", {"from sentence" : "More concretely , given a premise and hypothesis , NLI aims to detect whether the latter entails or contradicts the former ."}]
+  ]
+}

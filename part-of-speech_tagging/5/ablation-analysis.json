@@ -1,0 +1,83 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "shows that" : {
+        "separately optimized models" : {
+          "are" : {
+            "significantly more accurate" : {
+              "on" : "average",
+              "than" : "jointly optimized models"
+            }
+          },
+          "from sentence" : "shows that separately optimized models are significantly more accurate on average than jointly optimized models ."
+        }
+      },
+      "for" : {
+        "Separate optimization" : {
+          "leads to" : {
+            "better accuracy" : {
+              "for" : {
+                "34 out of 40 treebanks" : {
+                  "for" : "morphological features task"
+                },
+                "30 out of 39 treebanks" : {
+                  "for" : "xpos tagging"
+                }
+              }
+            },
+            "from sentence" : "Separate optimization leads to better accuracy for 34 out of 40 treebanks for the morphological features task and for 30 out of 39 treebanks for xpos tagging ."
+          },
+          "has" : {
+            "outperformed" : {
+              "has" : {
+                "joint optimization" : {
+                  "by" : "up to 2.1 percent absolute"
+                }
+              },
+              "from sentence" : "Separate optimization outperformed joint optimization by up to 2.1 percent absolute , while joint never out - performed separate by more than 0.5 % absolute ."
+            }
+          }
+        }
+      },
+      "has" : {
+        "joint" : {
+          "never" : {
+            "out - performed" : {
+              "has" : "separate",
+              "by" : "more than 0.5 % absolute"
+            }
+          },
+          "from sentence" : "Separate optimization outperformed joint optimization by up to 2.1 percent absolute , while joint never out - performed separate by more than 0.5 % absolute ."
+        },
+        "combined model" : {
+          "has" : {
+            "significantly higher accuracy" : {
+              "compared with" : "character and word models"
+            }
+          },
+          "from sentence" : "The examples show that the combined model has significantly higher accuracy compared with either the character and word models individually ."
+        }
+      },
+      "For" : {
+        "all of the network sizes" : {
+          "in" : "grid search",
+          "observed during" : {
+            "training" : {
+              "that" : {
+                "accuracy" : {
+                  "reach" : "high value",
+                  "degrades with" : {
+                    "more iterations" : {
+                      "for" : "character and word model"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "For all of the network sizes in the grid search , we still observed during training that the accuracy reach a high value and degrades with more iterations for the character and word model ."
+        }
+      }
+    }
+  }
+}

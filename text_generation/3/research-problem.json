@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Dialogue Generation", {"from sentence" : "An Auto - Encoder Matching Model for Learning Utterance - Level Semantic Dependency in Dialogue Generation"}],
+    ["Automatic dialogue generation", {"from sentence" : "Automatic dialogue generation task is of great importance to many applications , ranging from open - domain chatbots to goal - oriented technical support agents ."}],
+    ["conversation generation", {"from sentence" : "However , conversation generation is a much more complex and flexible task as there are less \" word - to - words \" relations between inputs and responses ."}]
+  ]
+}

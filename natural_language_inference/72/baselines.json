@@ -1,0 +1,27 @@
+{
+  "has" : {
+    "Baselines" : {
+      "include" : {
+        "distance - based method" : {
+          "that uses" : "word embeddings",
+          "from sentence" : "We also include a distance - based method that uses word embeddings ( sim-entity ) ."
+        }
+      },
+      "trained" : {
+        "4 - gram Kneser - Ney model" : {
+          "on" : {
+            "CliCR training data" : {
+              "with" : {
+                "multi-word entities" : {
+                  "represented as" : "single token"
+                }
+              },
+              "using" : "SRILM"
+            }
+          },
+          "from sentence" : "We trained a 4 - gram Kneser - Ney model on CliCR training data ( with multi-word entities represented as a single token ) using SRILM ."
+        }
+      }
+    }
+  }
+}

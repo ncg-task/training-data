@@ -1,0 +1,147 @@
+title
+A Compare - Aggregate Model with Latent Clustering for Answer Selection
+abstract
+In this paper , we propose a novel method for a sentence - level answer- selection task that is a fundamental problem in natural language processing .
+First , we explore the effect of additional information by adopting a pretrained language model to compute the vector representation of the input text and by applying transfer learning from a large - scale corpus .
+Second , we enhance the compare - aggregate model by proposing a novel latent clustering method to compute additional information within the target corpus and by changing the objective function from listwise to pointwise .
+To evaluate the performance of the proposed approaches , experiments are performed with the WikiQA and TREC - QA datasets .
+The empirical results demonstrate the superiority of our proposed approach , which achieve state - of - the - art performance for both datasets .
+INTRODUCTION
+Automatic question answering ( QA ) is a primary objective of artificial intelligence .
+Recently , research on this task has taken two major directions based on the answer span considered by the model .
+The first direction ( i.e. , the fine - grained approach ) finds an exact answer to a question within a given passage .
+The second direction ( i.e. , the coarse - level approach ) is an information retrieval ( IR ) - based approach that provides the most relevant sentence from a given document in response to a question .
+In this study , we are interested in building a model that computes a matching score between two text inputs .
+In particular , our model is designed to undertake an answer-selection task that chooses the sentence that is most relevant to the question from a list of answer candidates .
+This task has been extensively investigated by researchers because it is a fundamental task that can be applied to other QA - related tasks .
+However , most previous answer-selection studies have employed small datasets compared with the large datasets employed for other natural language processing ( NLP ) tasks .
+Therefore , * Work conducted while the author was an intern at Adobe Research .
+the exploration of sophisticated deep learning models for this task is difficult .
+To fill this gap , we conduct an intensive investigation with the following directions to obtain the best performance in the answerselection task .
+First , we explore the effect of additional information by adopting a pretrained language model ( LM ) to compute the vector representation of the input text .
+Recent studies have shown that replacing the word - embedding layer with a pretrained language model helps the model capture the contextual meaning of words in the sentence .
+Following this study , we select an ELMo language model for this study .
+We investigate the applicability of transfer learning ( TL ) using a large - scale corpus that is created for a relevant - sentence - selection task ( i.e. , question - answering NLI ( QNLI ) dataset ) .
+Second , we further enhance one of the baseline models , Comp - Clip ( refer to the discussion in 3.1 ) , for the target QA task by proposing a novel latent clustering ( LC ) method .
+The LC method computes latent cluster information for target samples by creating a latent memory space and calculating the similarity between the sample and the memory .
+By an endto - end learning process with the answer-selection task , the LC method assigns true - label question - answer pairs to similar clusters .
+In this manner , a model will have further information for matching sentence pairs , which increases the total model performance .
+Last , we explore the effect of different objective functions ( listwise and pointwise learning ) .
+In contrast to previous research , we observe that the pointwise learning approach performs better than the listwise learning approach when we apply our proposed methods .
+Extensive experiments are conducted to investigate the efficacy and properties of the proposed methods and show the superiority of our proposed approaches for achieving state - of - the - art performance with the WikiQA and TREC - QA datasets .
+RELATED WORK
+Researchers have investigated models based on neural networks for question - answering tasks .
+One study employs a Siamese architecture that utilizes an encoder ( e.g. , RNN or CNN ) to compute vector representations of the question and the answer .
+The affinity score is calculated based on these vector representations .
+To improve the model performance by enabling the use of information from one sentence ( e.g. , a question or an answer ) in computing the representation of another sentence , researchers included the attention mechanism in their models .
+1 : : The architecture of the model .
+The dotted box on the right shows the process through which the latent - cluster information is computed and added to the answer .
+This process is also performed in the question part but is omitted in the figure .
+The latent memory is shared in both processes .
+Another line of research includes the compare - aggregate framework .
+In this framework , first , vector representations of each sentence are computed .
+Second , these representations are compared .
+Last , the results are aggregated to calculate the matching score between the question and the answer .
+In this study , unlike the previous research , we employ a pretrained language model and a latent - cluster method to help the model understand the information in the question and the answer .
+METHODS
+Comp - Clip Model
+In this paper , we are interested in estimating the matching score f ( y|Q , A ) , where y , Q = {q 1 , ... , q n } and A = {a 1 , ... , am } represent the label , the question and the answer , respectfully .
+We select the model from , which is referred to as the Comp - Clip model , as our baseline model .
+The model consists of the following four parts :
+Context representation :
+The question Q ?
+Rd Q and answer A ?
+Rd A , ( where dis a dimensionality of word embedding and Q and A are the length of the sequence in Q and A , respectively ) , are processed to capture the contextual information and the word as follows :
+where ?
+denotes element - wise multiplication , and ?
+is the sigmoid function .
+The W ?
+R l d is the learned model parameter .
+Attention : The soft alignment of each element in Q ?
+R l Q and A ?
+R l A are calculated using dynamic - clip attention .
+We obtain the corresponding vectors HQ ?
+R l A and H A ?
+R l Q .
+( 2 )
+Comparison :
+A comparison function is used to match each word in the question and answer to a corresponding attention - applied vector representation :
+where ?
+denotes element - wise multiplication .
+Aggregation :
+We aggregate the vectors from the comparison layer using CNN with n-types of filters and calculate the matching score between Q and A .
+Proposed Approaches
+To achieve the best performance in the answer - selection task , we propose four approaches : adding a pretrained LM ; adding the LC information of each sentence as auxiliary knowledge ; applying TL to benefit from large - scale data ; and modifying the objective function from listwise to pointwise learning .
+depicts the total architecture of the proposed model .
+Pretrained Language Model ( LM ) :
+Recent studies have shown that replacing the word embedding layer with a pretrained LM helps the model capture the contextual meaning of the words in the sentence .
+We select an ELMo language model and replace the previous word embedding layer with the ELMo model as follows : L Q = ELMo ( Q ) , LA = ELMo ( A ) .
+These new representations - L Q and LA - are substituted for Q and A , respectively , in equation .
+Latent Clustering ( LC ) Method :
+We assume that extracting the LC information of the text and using it as auxiliary information will help the neural network model analyze the corpus .
+The dotted box in shows the proposed LC method .
+We create n-many latent memory vectors M 1:n and calculate the similarity between the sentence representation and each latent memory vector .
+The latentcluster information of the sentence representation will be obtained using a weighted sum of the latent memory vectors according to the calculated similarity as follows :
+where s ?
+Rd is a sentence representation , M 1:n ?
+Rd ? n indicates the latent memory , and W ?
+Rd d ? is the learned model parameter .
+We apply the LC method and extract cluster information from each question and answer .
+This additional information is added to each of the final representations in the comparison part ( see 3.1 ) as follows :
+where f is the LC method ( in equation 5 ) and [ ; ] denotes the concatenation of each vector .
+These new representations - C Q new and CA new - are substituted for C Q and CA in equation .
+Note that we average word - embedding to obtain sentence representation in the previous equation .
+Transfer Learning ( TL ) :
+To observe the efficacy in a large dataset , we apply transfer learning using the question - answering NLI ( QNLI ) corpus .
+We train the CompClip model with the QNLI corpus and then fine - tune the model with target corpora , such as the Wik - iQA and TREC - QA datasets .
+Pointwise Learning to Rank : Previous research adopts a listwise learning approach .
+With a dataset that consists of a question , Q , a related answer set , A = { A 1 , ... , A N } , and a target label , y = {y 1 , ... , y N } , a matching score is computed using equation .
+This approach applies KL - divergence loss to train the model as follows : score i = model ( Q , A i ) , S = softmax ( [ score 1 , ... , score i ] ) , loss = N n=1 KL ( S n | |y n ) ,
+where i is the number of answer candidates for the given question and N is the total number of samples employed during training .
+In contrast , we pair each answer candidate to the question and compute the cross - entropy loss to train the model as follows : loss = ?
+N n= 1 y n log ( score n ) ,
+EMPIRICAL RESULTS
+We regard all tasks as relevant answer selections for the given questions .
+Following the previous study , we report the model performance as the mean average precision ( MAP ) and the mean reciprocal rank ( MRR ) .
+To test the performance of the model , we utilize the TREC - QA , WikiQA and QNLI datasets ] .
+Dataset
+Wiki
+QA is an answer selection QA dataset constructed from real queries of Bing and Wikipedia .
+Following the literature , we use only questions that contain at least one correct answer among the list of answer candidates .
+Implementation Details
+To implement the Comp - Clip model , we apply a context projection weight matrix with 100 dimensions that are shared between the question part and the answer part ( eq. 1 ) .
+In the aggregation part , we use 1 - D CNN with a total of 500 filters , which involves five types of filters K ? R {1,2,3,4,5}100 , 100 per type .
+This CNN is independently applied to the question part and answer part .
+For the LC method , we perform additional hyper - parameter searching 0.743 * 0.699 * 0.754 * 0.708 *
+---- Comp-Clip ( 2017 ) 0.732 * 0.718 * 0.738 * 0.732 * - 0.821 - 0.899 IWAN ( 2017 ) 0.738 * 0.692 * 0.749 * 0.705 * - 0.822 - 0.899 IWAN + s CARNN ( 2018 ) 0.719 * 0.716 * 0.729 * 0.722 * - 0.829 - 0.875 MCAN ( 2018 ) - experiments to select the best parameters .
+We select k ( for the kmax - pool in equation 5 ) as 6 and 4 for the WikiQA and TREC - QA case , respectively .
+In both datasets , we apply 8 latent clusters .
+The vocabulary size in the WiKiQA , TREC - QA and QNLI dataset are 30,104 , 56,908 and 154,442 , respectively .
+When applying the TL , the vocabulary size is set to 154,442 , and the dimension of the context projection weight matrix is set to 300 .
+We use the Adam optimizer , including gradient clipping , by the norm at a threshold of 5 .
+For the purpose of regularization , we applied a dropout with a ratio of 0.5 ..
+Unlike previous studies , we report our results for both the dev dataset and the test dataset because we note a performance gap between these datasets .
+While training the model , we apply an early stop that is based on the performance of the dev dataset and measure the performance on the test dataset .
+Because Comp - Clip [ 1 ] is our baseline model , we implement it from scratch and achieve a performance that is similar to that of the original paper .
+Comparison with Other Methods
+Wiki QA : For the WikiQA dataset , the pointwise learning approach shows a better performance than the listwise learning approach .
+We combine LM with the base model ( Comp - Clip + LM ) and observe a significant improvement in performance in terms of MAP ( 0.714 to 0.746 absolute ) .
+When we add the LC method ( Comp - Clip + LM + LC ) , the best previous results are surpassed in terms of MAP ( 0.718 to 0.764 absolute ) .
+We achieve avast improvement in performance
+TREC - QA :
+The pointwise learning approach also shows excellent performance with the TREC - QA dataset .
+As shown in table 1 , the TREC - QA dataset has a larger number of answer candidates per question .
+We assume that this characteristic prevents the model from handling the dataset with a listwise learning approach .
+As in the WikiQA case , we achieve additional performance gains in terms of the MAP as we apply LM , LC , and TL ( 0.850 , 0.868 and 0.875 , respectively ) .
+In particular , our model outperforms the best previous result when we add LC method , ( Comp - Clip + LM + LC ) in terms of MAP ( 0.865 to 0.868 ) .
+Impact of Latent Clustering
+To evaluate the impact of latent clustering method ( Comp - Clip + LM + LC ) in a larger dataset environment , we perform QNLI evaluation .
+shows the performance of the model ( Comp - Clip + LM + LC ) for the QNLI dataset with a variant number of clusters .
+Note that the QNLI dataset is created from the SQuAD dataset , which only provides train and dev subsets .
+Consequently , we report the model performances for the dev dataset .
+As shown in the table , we achieve the best results with 8 clusters in listwise learning and 16 clusters in pointwise learning .
+In both cases , we achieve no additional performance gain after 16 clusters .
+CONCLUSION
+In this study , our proposed method achieves state - of - the - art performance for both the WikiQA dataset and TREC - QA dataset .
+We show that leveraging a large amount of data is crucial for capturing the contextual representation of input text .
+In addition , we show that the proposed latent clustering method with a pointwise objective function significantly improves the model performance in the sentence - level QA task .

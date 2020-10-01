@@ -1,0 +1,121 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "LSTM" : {
+          "takes" : {
+            "sentence" : {
+              "as" : {
+                "input" : {
+                  "to get" : {
+                    "hidden representation" : {
+                      "of" : "each word"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "regards" : {
+            "average value" : {
+              "of" : {
+                "hidden states" : {
+                  "as" : {
+                    "representation of sentence" : {
+                      "puts it into" : {
+                        "softmax layer" : {
+                          "to predict" : {
+                            "probability" : {
+                              "of" : "each sentiment polarity"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "LSTM : LSTM takes the sentence as input so as to get the hidden representation of each word .
+Then it regards the average value of all hidden states as the representation of sentence , and puts it into softmax layer to predict the probability of each sentiment polarity ."
+
+        },
+        "AE - LSTM" : {
+          "models" : {
+            "words" : {
+              "in" : {
+                "sentence" : {
+                  "via" : "LSTM network"
+                }
+              }
+            }
+          },
+          "concatenate" : {
+            "aspect embedding" : {
+              "to" : {
+                "hidden contextual representation" : {
+                  "for calculating" : {
+                    "attention weights" : {
+                      "employed to produce" : {
+                        "final representation" : {
+                          "for" : {
+                            "input sentence" : {
+                              "to judge" : "sentiment polarity"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "AE - LSTM : AE - LSTM first models the words in sentence via LSTM network and concatenate the aspect embedding to the hidden contextual representation for calculating the attention weights , which are employed to produce the final representation for the input sentence to judge the sentiment polarity ."
+        },
+        "ATAE - LSTM" : {
+          "extended" : {
+            "AE - LSTM" : {
+              "by appending" : {
+                "aspect embedding" : {
+                  "to" : {
+                    "each word embedding" : {
+                      "to represent" : "input sentence"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "ATAE - LSTM : ATAE - LSTM extended AE - LSTM by appending the aspect embedding to each word embedding so as to represent the input sentence , which highlights the role of aspect embedding ."
+        },
+        "IAN" : {
+          "considers" : {
+            "separate modeling" : {
+              "of" : "aspect terms and sentences"
+            }
+          },
+          "from sentence" : "IAN : IAN considers the separate modeling of aspect terms and sentences respectively ."
+        },
+        "MemNet" : {
+          "applies" : {
+            "attention" : {
+              "has" : {
+                "multiple times" : {
+                  "on" : "word embedding"
+                  "so that" : {
+                    "more abstractive evidences" : {
+                      "could be selected from" : "external memory"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "MemNet : MemNet applies attention multiple times on the word embedding , so that more abstractive evidences could be selected from the external memory ."
+        }
+      }
+    }
+  }
+}

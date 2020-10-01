@@ -1,0 +1,56 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "use" : {
+        "Adam method" : {
+          "for" : "optimization",
+          "from sentence" : "We use the Adam method ( Kingma and Ba , 2014 ) for optimization ."
+        },
+        "dropout" : {
+          "with" : {
+            "rate" : {
+              "of" : "0.5"
+            }
+          },
+          "applied to" : "all feedforward connections",
+          "from sentence" : "We use dropout with a rate of 0.5 , which is applied to all feedforward connections ."
+        },
+        "pre-trained 300 - D Glove 840B vectors" : {
+          "to initialize" : "our word embeddings",
+          "from sentence" : "We use pre-trained 300 - D Glove 840B vectors to initialize our word embeddings ."
+        }
+      }    ,
+      "has" : {
+        "first momentum" : {
+          "set to be" : "0.9",
+          "from sentence" : "The first momentum is set to be 0.9 and the second 0.999 ."
+        },
+        "second" : {
+          "has" : "0.999",
+          "from sentence" : "The first momentum is set to be 0.9 and the second 0.999 ."
+        },
+        "initial learning rate" : {
+          "is" : "0.0004",
+          "from sentence" : "The initial learning rate is 0.0004 and the batch size is 32 ."
+        },
+        "batch size" : {
+          "is" : "32",
+          "from sentence" : "The initial learning rate is 0.0004 and the batch size is 32 ."
+        },
+        "hidden states" : {
+          "of" : ["LSTMs", "tree - LSTMs", "word embeddings"],
+          "have" : "300 dimensions",
+          "from sentence" : "All hidden states of LSTMs , tree - LSTMs , and word embeddings have 300 dimensions ."
+        },
+        "Out - of - vocabulary ( OOV ) words" : {
+          "initialized" : {
+            "randomly" : {
+              "with" : "Gaussian samples"
+            }
+          },
+          "from sentence" : "Out - of - vocabulary ( OOV ) words are initialized randomly with Gaussian samples ."
+        }
+      }
+    }
+  }
+}

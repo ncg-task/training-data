@@ -1,0 +1,42 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "Experiment - I : Recognizing Textual Entailment" : {
+          "has" : {
+            "proposed two C - LSTMs models with four stacked blocks" : {
+              "outperform" : "all the competitor models",
+              "indicates that" : {
+                "our thinner and deeper network" : {
+                  "has" : "does work effectively"
+                }
+              },
+              "from sentence" : "Our proposed two C - LSTMs models with four stacked blocks outperform all the competitor models , which indicates that our thinner and deeper network does work effectively ."
+            }
+          },
+          "Compared with" : {
+            "attention LSTMs" : {
+              "has" : {
+                "our two models" : {
+                  "achieve" : "comparable results",
+                  "using" : "much fewer parameters ( nearly 1 / 5 )"
+                }
+              },
+              "from sentence" : "Compared with attention LSTMs , our two models achieve comparable results to them using much fewer parameters ( nearly 1 / 5 ) ."
+            }
+          },
+          "By stacking" : {
+            "C - LSTMs" : {
+              "has" : {
+                "performance" : {
+                  "improved" : "significantly"
+                }
+              }
+            },
+            "from sentence" : "By stacking C - LSTMs , the performance of them are improved significantly , and the four stacked TC - LSTMs achieve 85.1 % accuracy on this dataset ."
+          }
+        }
+      }
+    }
+  }
+}

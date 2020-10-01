@@ -1,0 +1,44 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "remove" : {
+        "gated - attention" : {
+          "has" : {
+            "accuracies" : {
+              "has" : {
+                "drop" : {
+                  "to" : "72.8 % and 73.6 %"
+                }
+              }
+            }
+          },
+          "from sentence" : "If we remove the gated - attention , the accuracies drop to 72.8 % and 73.6 % ."
+        },
+        "charactercomposition vector" : {
+          "has" : {
+            "accuracies" : {
+              "has" : {
+                "drop" : {
+                  "to" : "72.9 % and 73.5 %"
+                }
+              }
+            }
+          },
+          "from sentence" : "If we remove charactercomposition vector , the accuracies drop to 72.9 % and 73.5 % ."
+        },
+        "word - level embedding" : {
+          "has" : {
+            "accuracies" : {
+              "has" : {
+                "drop" : {
+                  "to" : "65.6 % and 66.0 %"
+                }
+              }
+            }
+          },
+          "from sentence" : "If we remove word - level embedding , the accuracies drop to 65.6 % and 66.0 % ."
+        }
+      }
+    }
+  }
+}

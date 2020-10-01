@@ -1,0 +1,15 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "has" : {
+        "embedding dimension" : {
+          "chosen from" : "K = { 100 , . . . , 800 }"
+        },
+        "regularization weight" : {
+          "from" : "? = { 0.0001 , . . . , 10.0 }"
+        }
+      },
+      "from sentence" : "The embedding dimension was chosen from K = { 100 , . . . , 800 } , and regularization weight from ? = { 0.0001 , . . . , 10.0 }."
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Abstractive Summarization", {"from sentence" : "Structure - Infused Copy Mechanisms for Abstractive Summarization"}],
+    ["summarization", {"from sentence" : "Seq2seq learning has produced promising results on summarization ."}]
+  ]
+}

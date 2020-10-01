@@ -1,0 +1,56 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "novel neural network architecture" : {
+          "called" : "Reasoning Network ( ReasoNet )",
+          "from sentence" : "With this motivation , we propose a novel neural network architecture called Reasoning Network ( ReasoNet ) ."
+        }
+      },
+      "With" : {
+        "question" : {
+          "in" : {
+            "mind" : {
+              "has" : {
+                "ReasoNets" : {
+                  "read" : {
+                    "document" : {
+                      "has" : "repeatedly",
+                      "focusing on" : {
+                        "di erent parts" : {
+                          "of" : "document",
+                          "until" : {
+                            "satisfying answer" : {
+                              "is" : "found or formed"
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "With a question in mind , ReasoNets read a document repeatedly , each time focusing on di erent parts of the document until a satisfying answer is found or formed ."
+                    }
+                  },
+                  "introduce" : {
+                    "termination state" : {
+                      "in" : "inference",
+                      "from sentence" : "Moreover , unlike previous approaches using xed number of hops or iterations , ReasoNets introduce a termination state in the inference ."
+                    }
+                  },
+                  "proposing" : {
+                    "reinforcement learning approach" : {
+                      "utilizes" : {
+                        "instance - dependent reward baseline" : {
+                          "to successfully train" : "ReasoNets"
+                        }
+                      },
+                      "from sentence" : "Motivated by , we tackle this challenge by proposing a reinforcement learning approach , which utilizes an instance - dependent reward baseline , to successfully train ReasoNets ."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

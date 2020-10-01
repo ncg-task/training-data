@@ -1,0 +1,77 @@
+{
+  "has" : {
+    "Results" : {
+      "In terms of" : {
+        "dependency parsing" : {
+          "has" : {
+            "our model jPTDP" : {
+              "outperforms" : "Stack - propagation"
+            }
+          },
+          "from sentence" : "In terms of dependency parsing , in most cases , our model jPTDP outperforms Stack - propagation ."
+        }
+      },
+      "produces" : {
+        "about 7 % absolute lower LAS score" : {
+          "than" : {
+            "Stack - propagation" : {
+              "on" : "Dutch ( nl )"
+            }
+          },
+          "from sentence" : "It is somewhat unexpected that our model produces about 7 % absolute lower LAS score than Stack - propagation on Dutch ( nl ) ."
+        }
+      },
+      "Without taking" : {
+        "nl" : {
+          "into" : "account",
+          "has" : {
+            "averaged LAS score" : {
+              "over" : {
+                "all remaining languages" : {
+                  "is" : {
+                    "1.1 % absolute higher" : {
+                      "than" : "Stack - propagation 's"
+                    }
+                  }
+                }
+              }
+            }
+          }          
+        },
+        "from sentence" : "Without taking \" nl \" into account , our averaged LAS score over all remaining languages is 1.1 % absolute higher than Stack - propagation 's ."
+      },
+      "shows" : {
+        "absolute LAS improvement" : {
+          "of" : {
+            "4.4 %" : {
+              "on" : "average"
+            }
+          },
+          "from sentence" : "The last row in shows an absolute LAS improvement of 4.4 % on average when comparing our jPTDP with its simplified version of not using characterbased representations : specifically , morphologically rich languages get an averaged improvement of 9.3 % , vice versa 2.6 % for others ."
+        }
+      },
+      "has" : {
+        "morphologically rich languages" : {
+          "get" : {
+            "averaged improvement" : {
+              "of" : "9.3 %"
+            }
+          },
+          "from sentence" : "The last row in shows an absolute LAS improvement of 4.4 % on average when comparing our jPTDP with its simplified version of not using characterbased representations : specifically , morphologically rich languages get an averaged improvement of 9.3 % , vice versa 2.6 % for others ."
+        },
+        "jPDTP" : {
+          "good for" : {
+            "morphologically rich languages" : {
+              "with" : {
+                "1.7 % higher averaged LAS" : {
+                  "than" : "Stack - propagation"
+                }
+              }
+            }
+          },
+          "from sentence" : "So , our jPDTP is particularly good for morphologically rich languages , with 1.7 % higher averaged LAS than Stack - propagation over these languages ."
+        }
+      }
+    }
+  }  
+}

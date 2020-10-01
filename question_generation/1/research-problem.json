@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Visual Question Generation", {"from sentence" : "Multimodal Differential Network for Visual Question Generation"}],
+    ["Generating natural questions from an image", {"from sentence" : "Generating natural questions from an image is a semantic task that requires using visual and language modality to learn multimodal representations ."}],
+    ["generating natural questions for an image", {"from sentence" : "Here the au-thors have proposed the challenging task of generating natural questions for an image ."}]
+  ]
+}

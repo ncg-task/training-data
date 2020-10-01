@@ -1,0 +1,60 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "Dependency - based models" : {
+          "has" : {
+            "A logistic regression ( LR ) classifier" : {
+              "combines" : {
+                "dependencybased features" : {
+                  "with" : "other lexical features"
+                }
+              },
+              "from sentence" : "( 1 ) A logistic regression ( LR ) classifier which combines dependencybased features with other lexical features ."
+            },
+            "Shortest Dependency Path LSTM ( SDP - LSTM )" : {
+              "applies" : {
+                "neural sequence model" : {
+                  "on" : {
+                    "shortest path" : {
+                      "between" : {
+                        "subject and object entities" : {
+                          "in" : "dependency tree"
+                        }      
+                      }
+                    }
+                  }
+                },
+                "from sentence" : "( 2 ) Shortest Dependency Path LSTM ( SDP - LSTM ) , which applies a neural sequence model on the shortest path between the subject and object entities in the dependency tree ."
+            }
+          },
+            "Tree - LSTM" : {
+              "is" : {
+                "recursive model" : {
+                  "generalizes" : {
+                    "LSTM" : {
+                      "to" : "arbitrary tree structures"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Tree - LSTM , which is a recursive model that generalizes the LSTM to arbitrary tree structures ."
+            }
+          }
+        },
+        "Neural sequence model" : {
+          "has" : {
+            "competitive sequence model" : {
+              "employs" : {
+                "position - aware attention mechanism" : {
+                  "over" : "LSTM outputs ( PA - LSTM )"
+                }
+              }
+            }
+          },
+          "from sentence" : "Our group presented a competitive sequence model that employs a position - aware attention mechanism over LSTM outputs ( PA - LSTM ) , and showed that it outperforms several CNN and dependency - based models by a substantial margin ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Sequence Labeling", {"from sentence" : "Hierarchically - Refined Label Attention Network for Sequence Labeling"}],
+    ["statistical sequence labeling", {"from sentence" : "CRF has been used as a powerful model for statistical sequence labeling ."}]
+  ]
+}

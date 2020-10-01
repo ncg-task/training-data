@@ -1,0 +1,71 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "best model" : {
+          "only uses" : {
+            "ending" : {
+              "is" : {
+                "LSTM sequence model" : {
+                  "with" : "ELMo embeddings",
+                  "obtains" : "43.6 %",
+                  "has" : {
+                    "greatly improves" : {
+                      "with" : "more context",
+                      "by" : {
+                        "3.1 %" : {
+                          "given" : "initial noun phrase"
+                        },
+                        "ad-ditional 4 %" : {
+                          "given" : "first sentence"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "The best model that only uses the ending is the LSTM sequence model with ELMo embeddings , which obtains 43.6 % .
+This model , as with most models studied , greatly improves with more context : by 3.1 % when given the initial noun phrase , and by an ad-ditional 4 % when also given the first sentence ."
+
+            }
+          }
+        },
+        "Further improvement" : {
+          "gained from" : {
+            "models" : {
+              "that compute" : {
+                "pairwise representations" : {
+                  "of" : "inputs"
+                }
+              }
+            },
+            "from sentence" : "Further improvement is gained from models that compute pairwise representations of the inputs ."
+          }
+        },
+        "simplest such model" : {
+          "name" : "Dual - BoW",
+          "obtains" : "only 35.1 % accuracy",
+          "combining" : {
+            "In - fer Sent sentence representations" : {
+              "gives" : "40.5 % accuracy",
+              "name" : "InferSent - Bilinear"
+            }
+          },
+          "from sentence" : "While the simplest such model , Dual - BoW , obtains only 35.1 % accuracy , combining In - fer Sent sentence representations gives 40.5 % accuracy ( InferSent - Bilinear ) ."
+        },
+        "best results" : {
+          "come from" : {
+            "pairwise NLI models" : {
+              "fully trained on" : {
+                "Swag , ESIM + ELMo" : {
+                  "obtains" : "59.2 % accuracy"
+                }
+              },
+              "from sentence" : "The best results come from pairwise NLI models : when fully trained on Swag , ESIM + ELMo obtains 59.2 % accuracy ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

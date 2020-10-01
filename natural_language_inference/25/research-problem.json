@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Reading Comprehension", {"from sentence" : "Contextualized Word Representations for Reading Comprehension"}],
+    ["Reading comprehension ( RC )", {"from sentence" : "Reading comprehension ( RC ) is a high - level task in natural language understanding that requires reading a document and answering questions about its content ."}],
+    ["RC", {"from sentence" : "RC has attracted substantial attention over the last few years with the advent of large annotated datasets , computing resources , and neural network models and optimization procedures ."}]
+  ]
+}

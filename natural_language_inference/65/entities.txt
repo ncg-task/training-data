@@ -1,0 +1,132 @@
+171	3	6	use
+171	9	23	context window
+171	24	26	of
+171	27	31	size
+171	32	33	3
+171	34	37	for
+171	38	50	Insurance QA
+171	84	85	4
+171	34	37	for
+171	90	99	TREC - QA
+171	104	111	Wiki QA
+173	57	79	learning rate schedule
+173	80	84	that
+173	85	94	decreases
+173	57	70	learning rate
+173	0	3	For
+173	4	12	AP - CNN
+173	15	26	AP - biLSTM
+173	31	40	QA - LSTM
+172	41	53	best results
+172	67	81	achieved using
+172	82	115	between 15 and 25 training epochs
+178	25	46	four NN architectures
+178	47	55	QA - CNN
+178	58	66	AP - CNN
+178	69	80	QA - biLSTM
+178	85	96	AP - biLSTM
+178	101	118	implemented using
+178	119	125	Theano
+15	45	52	propose
+15	53	77	Attentive Pooling ( AP )
+15	82	111	two - way attention mechanism
+15	37	41	that
+15	119	141	significantly improves
+15	147	182	discriminative models ' performance
+15	9	11	on
+15	186	223	pair - wise ranking or classification
+15	226	237	by enabling
+15	240	254	joint learning
+15	21	23	of
+15	262	277	representations
+15	21	23	of
+15	286	292	inputs
+15	293	303	as well as
+15	304	332	their similarity measurement
+16	15	17	AP
+16	18	25	enables
+16	30	43	pooling layer
+16	44	58	to be aware of
+16	63	81	current input pair
+16	84	97	in a way that
+16	98	109	information
+16	110	114	from
+16	119	134	two input items
+16	139	157	directly influence
+16	162	173	computation
+16	56	58	of
+16	177	206	each other 's representations
+17	20	31	consists of
+17	32	40	learning
+17	43	61	similarity measure
+17	62	66	over
+17	67	103	projected segments ( e.g. trigrams )
+17	29	31	of
+17	111	120	two items
+17	6	8	in
+17	128	138	input pair
+17	145	150	using
+17	155	172	similarity scores
+17	173	180	between
+17	77	85	segments
+17	194	204	to compute
+17	205	222	attention vectors
+17	6	8	in
+17	226	241	both directions
+18	11	28	attention vectors
+18	38	48	to perform
+18	49	56	pooling
+10	0	48	Neural networks ( NN ) with attention mechanisms
+11	80	100	attention mechanisms
+181	57	60	for
+181	65	85	Insurance QA dataset
+183	42	50	see that
+183	51	59	AP - CNN
+183	60	71	outperforms
+183	72	80	QA - CNN
+183	81	83	by
+183	86	98	large margin
+183	96	98	in
+183	102	116	both test sets
+183	137	144	dev set
+184	0	11	AP - biLSTM
+184	17	28	outperforms
+184	33	44	QA - biLSTM
+185	0	24	AP - CNN and AP - biLSTM
+185	25	29	have
+185	30	49	similar performance
+189	30	40	outperform
+189	45	75	state - of - the - art systems
+201	65	82	TREC - QA dataset
+203	35	43	AP - CNN
+203	44	55	outperforms
+203	56	64	QA - CNN
+203	65	67	by
+203	70	82	large margin
+203	80	82	in
+203	86	98	both metrics
+210	25	55	state - of - the - art systems
+210	56	58	in
+210	59	71	both metrics
+210	74	85	MAP and MRR
+204	0	11	AP - biLSTM
+204	12	23	outperforms
+204	28	39	QA - biLSTM
+204	50	61	performance
+204	65	76	not as good
+204	69	71	as
+204	87	95	AP - CNN
+211	55	69	WikiQA dataset
+212	33	41	AP - CNN
+212	42	53	outperforms
+212	54	62	QA - CNN
+212	69	80	AP - biLSTM
+212	42	53	outperforms
+212	97	108	QA - biLSTM
+213	4	29	difference of performance
+213	30	37	between
+213	38	59	AP - CNN and QA - CNN
+213	60	62	is
+213	63	70	smaller
+213	71	75	than
+213	92	112	Insurance QA dataset

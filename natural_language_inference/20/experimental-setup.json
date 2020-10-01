@@ -1,0 +1,80 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "has" : {
+        "architecture" : {
+          "implemented using" : "PyTorch",
+          "from sentence" : "The architecture was implemented using PyTorch ."
+        },
+        "sentence embeddings" : {
+          "have" : {
+            "hidden size" : {
+              "of" : {
+                "600" : {
+                  "for" : "both direction"
+                }
+              }
+            },
+            "from sentence" : "The sentence embeddings have hidden size of 600 for both direction ( except for SentEval test , where we test models with 600D and 1200D per direction ) and the 3 - layer multilayer perceptron ( MLP ) have the size of 600 dimensions ."
+          }
+        },
+        "3 - layer multilayer perceptron ( MLP )" : {
+          "have" : {
+            "size" : {
+              "of" : "600 dimensions",
+              "from sentence" : "The sentence embeddings have hidden size of 600 for both direction ( except for SentEval test , where we test models with 600D and 1200D per direction ) and the 3 - layer multilayer perceptron ( MLP ) have the size of 600 dimensions ."              
+            } 
+          }
+        }
+      },
+      "used" : {
+        "gradient descent optimization algorithm" : {
+          "based on" : "Adam update rule",
+          "pre-implemented in" : "PyTorch",
+          "from sentence" : "For all of our models we used a gradient descent optimization algorithm based on the Adam update rule , which is pre-implemented in PyTorch ."          
+        },
+        "learning rate" : {
+          "of" : ["5e - 4", {"from sentence" : "We used a learning rate of 5e - 4 for all our models ."}],
+          "decreased by" : {
+            "factor" : {
+              "of" : "0.2",
+              "after" : {
+                "each epoch" : {
+                  "if" : {
+                    "model" : {
+                      "not" : "improve"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "The learning rate was decreased by the factor of 0.2 after each epoch if the model did not improve ."
+            }
+          }
+        },
+        "batch size" : {
+          "of" : "64",
+          "from sentence" : "We used a batch size of 64 ."
+        }
+      },
+      "use" : {
+        "pre-trained Glo Ve word embeddings" : {
+          "of" : {
+            "size" : {
+              "has" : "300 dimensions"
+            }
+          },
+          "from sentence" : "We use pre-trained Glo Ve word embeddings of size 300 dimensions ( Glo Ve 840B 300D ; , which were fine - tuned during training ."
+        },
+        "dropout" : {
+          "of" : {
+            "0.1" : {
+              "between" : "MLP layers"
+            }
+          },
+          "from sentence" : "We use a dropout of 0.1 between the MLP layers ( except just before the final layer ) ."
+        }
+      },
+      "trained using" : ["one NVIDIA Tesla P100 GPU", {"from sentence" : "Our models were trained using one NVIDIA Tesla P100 GPU ."}]
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "has" : {
+        "token embeddings" : {
+          "pre-trained on" : {
+            "large corpus" : {
+              "combining" : "Wikipedia , PubMed , and PMC texts"
+            }
+          },
+          "using" : "word2vec tool",
+          "from sentence" : "The token embeddings were pre-trained on a large corpus combining Wikipedia , PubMed , and PMC texts ( Moen and Ananiadou , 2013 ) using the word2vec tool 4 ( denoted as \" Word2vec- wiki+P.M. \" ) ."
+        },
+        "learning rate" : {
+          "initially set" : "0.003",
+          "decayed by" : {
+            "0.9" : {
+              "after" : "each epoch"
+            }
+          },
+          "from sentence" : "The learning rate is initially set as 0.003 and decayed by 0.9 after each epoch ."
+        },
+        "window sizes" : {
+          "of" : {
+            "CNN encoder" : {
+              "in" : {
+                "sentence encoding layer" : {
+                  "are" : "2 , 3 , 4 and 5"
+                }
+              },
+              "from sentence" : "The window sizes of the CNN encoder in the sentence encoding layer are 2 , 3 , 4 and 5 ."
+            }
+          }
+        }
+      },
+      "fixed during" : {
+        "training phase" : {
+          "to avoid" : "over-fitting"
+        },
+        "from sentence" : "They are fixed during the training phase to avoid over-fitting ." 
+      },
+      "trained using" : ["Adam optimization method", {"from sentence" : "The model is trained using the Adam optimization method ( Kingma and Ba , 2014 ) ."}],
+      "For" : {
+        "regularization" : {
+          "has" : {
+            "dropout" : {
+              "applied to" : "each layer"
+            }
+          },
+          "from sentence" : "For regularization , dropout ( Srivastava et al. , 2014 ) is applied to each layer ."
+        }
+      },
+      "adopted" : {
+        "dropout" : {
+          "with" : {
+            "expectation - linear regularization" : {
+              "to explicitly control" : "inference gap",
+              "improve" : "generaliza - tion performance"
+            }
+          },
+          "from sentence" : "To reduce this gap , we adopted the dropout with expectation - linear regularization introduced by to explicitly control the inference gap and thus improve the generaliza - tion performance ."
+        }
+      },
+      "optimized via" : {
+        "grid search" : {
+          "based on" : "validation set",
+          "from sentence" : "Hyperparameters were optimized via grid search based on the validation set and the best configuration is shown in ."
+        }
+      }
+    }
+  }
+}

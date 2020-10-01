@@ -1,0 +1,36 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "has" : {
+        "word embeddings": {
+          "are" : {
+            "initialized" : {
+              "with" : "zero values"
+            }
+          },
+          "from sentence" : "The word embeddings are initialized with zero values and the pre-trained embeddings are not updated during training ."
+        },
+        "pre-trained embeddings" : {
+          "not" : {
+            "updated" : {
+              "during" : "training"
+            }
+          },
+          "from sentence" : "The word embeddings are initialized with zero values and the pre-trained embeddings are not updated during training ."
+        },
+        "dropout" : {
+          "used on" : {
+            "embeddings" : {
+              "achieved by" : {
+                "RRIE" : {
+                  "is" : "relative reduction in error"
+                }
+              }
+            }
+          },
+          "from sentence" : "The dropout used on the embeddings is achieved by a RRIE is the relative reduction in error ."
+        }
+      }
+    }
+  }
+}

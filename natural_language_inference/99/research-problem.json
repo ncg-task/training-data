@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Machine Comprehension ( MC )", {"from sentence" : "Machine Comprehension ( MC ) is a challenging task in Natural Language Processing field , which aims to guide the machine to comprehend a passage and answer the given question ."}],
+    ["MC", {"from sentence" : "Many existing approaches on MC task are suffering the inefficiency in some bottlenecks , such as insufficient lexical understanding , complex question - passage interaction , incorrect answer extraction and soon ."}],
+    ["machine comprehension", {"from sentence" : "Recently machine comprehension task accumulates much concern among NLP researchers ."}]
+  ]
+}

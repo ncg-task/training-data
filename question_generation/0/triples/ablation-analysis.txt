@@ -1,0 +1,6 @@
+(Contribution||has||Ablation analysis)
+(Ablation analysis||has||answer position indicator)
+(answer position indicator||plays||crucial role)
+(crucial role||in||answer focused question generation)
+(Ablation analysis||show that||word case , POS and NER tag features)
+(word case , POS and NER tag features||contributes to||question generation)

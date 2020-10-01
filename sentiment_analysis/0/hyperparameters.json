@@ -1,0 +1,99 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "use" : {
+        "GRUs" : {
+          "as they yield" : {
+            "comparable performance" : {
+              "to that of" : "LSTM"  
+            }
+          },
+          "include" : {
+            "smaller number" : {
+              "of" : "weight parameters"
+            }
+          },
+          "from sentence" : "Among the variants of the RNN function , we use GRUs as they yield comparable performance to that of the LSTM and include a smaller number of weight parameters ."
+        },
+        "max encoder step" : {
+          "of" : {
+            "750" : {
+              "for" : "audio input"
+            },
+            "128" : {
+              "for" : {
+                "text input" : {
+                  "covers" : {
+                    "maximum length" : {
+                      "of" : "transcripts"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "We use a max encoder step of 750 for the audio input , based on the implementation choices presented in and 128 for the text input because it covers the maximum length of the transcripts ."
+        },
+        "released transcripts" : {
+          "of" : {
+            "IEMOCAP dataset" : {
+              "for" : "simplicity"
+            }
+          },
+          "from sentence" : "In preparing the textual dataset , we first use the released transcripts of the IEMOCAP dataset for simplicity ."
+        }
+      },
+      "has" : {
+        "vocabulary size" : {
+          "of" : {
+            "dataset" : {
+              "is" : {
+                "3,747" : {
+                  "including" : {
+                    "\" UNK \" token" : {
+                      "represents" : "unknown words"
+                    },
+                    "\" PAD \" token" : {
+                      "used to indicate" : {
+                        "padding information" : {
+                          "added while preparing" : "mini-batch data"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "The vocabulary size of the dataset is 3,747 , including the \" UNK \" token , which represents unknown words , and the \" PAD \" token , which is used to indicate padding information added while preparing mini-batch data ."            
+          }
+        },
+        "number of hidden units and the number of layers" : {
+          "in" : {
+            "RNN" : {
+              "for" : {
+                "each model ( ARE , TRE , MDRE and MDREA )" : {
+                  "selected based on" : "extensive hyperparameter search experiments"
+                }
+              }
+            }
+          },
+          "from sentence" : "The number of hidden units and the number of layers in the RNN for each model ( ARE , TRE , MDRE and MDREA ) are selected based on extensive hyperparameter search experiments .    "
+        },
+        "weights" : {
+          "of" : {
+            "hidden units" : {
+              "initialized using" : "orthogonal weights"  
+            }
+          },
+          "from sentence" : "The weights of the hidden units are initialized using orthogonal
+weights ] , and the text embedding layer is initialized from pretrained word - embedding vectors ."
+
+        },
+        "text embedding layer" : {
+          "initialized from" : "pretrained word - embedding vectors",
+          "from sentence" : "weights ] , and the text embedding layer is initialized from pretrained word - embedding vectors ."
+        }
+      }
+    }
+  }
+}

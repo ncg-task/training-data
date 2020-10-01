@@ -1,0 +1,84 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "removing" : {
+        "deep transformation" : {
+          "has" : {
+            "TNet - LF and TNet - AS" : {
+              "reduced to" : "TNet w/o transformation",
+              "has" : {
+                "results" : {
+                  "in both" : "accuracy and F 1 measure",
+                  "incomparable with" : "TNet"
+                }
+              }
+            },
+            "from sentence" : "After removing the deep transformation ( i.e. , the techniques introduced in Section 2.2 ) , both TNet - LF and TNet - AS are reduced to TNet w/o transformation ( where position relevance is kept ) , and their results in both accuracy and F 1 measure are incomparable with those of TNet ."            
+          },
+          "shows that" : {
+            "integration" : {
+              "of" : {
+                "target information" : {
+                  "into" : "word - level representations",
+                  "crucial for" : "good performance"
+                }
+              }
+            },
+            "from sentence" : "It shows that the integration of target information into the word - level representations is crucial for good performance ."
+          }
+        } 
+      },
+      "Comparing" : {
+        "results" : {
+          "of" : {
+            "TNet and TNet w/o context" : {
+              "observe" : {
+                "performance" : {
+                  "of" : "TNet w/o context",
+                  "drops" : {
+                    "significantly" : {
+                      "on" : "LAPTOP and REST"
+                    }
+                  }
+                }
+              },
+              "on" : {
+                "TWITTER" : {
+                  "has" : {
+                    "TNet w/o context" : {
+                      "performs" : "very competitive"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Comparing the results of TNet and TNet w/o context ( where TST and position relevance are kept ) , we observe that the performance of TNet w/o context drops significantly on LAPTOP and REST 7 , while on TWITTER , TNet w/o context performs very competitive ( p- values with TNet - LF and TNet - AS are 0.066 and 0.053 respectively for Accuracy ) ."
+            }
+          }
+        }
+      },
+      "has" : {
+        "TNet w/o context" : {
+          "performs" : {
+            "consistently better" : {
+              "than" : "TNet w/o transformation"
+            }
+          },
+          "from sentence" : "TNet w/o context performs consistently better than TNet w/o transformation , which verifies the efficacy of the target specific transformation ( TST ) , before applying context - preserving ."
+        },
+        "produced p-values" : {
+          "are less than" : {
+            "0.05" : {
+              "suggesting that" : {
+                "improvements" : {
+                  "brought in by" : "position information",
+                  "are" : "significant"                  
+                }
+              }
+            }
+          },
+          "from sentence" : "All of the produced p-values are less than 0.05 , suggesting that the improvements brought in by position information are significant ."
+        }
+      }
+    }
+  }
+}

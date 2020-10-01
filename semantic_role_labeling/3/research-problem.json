@@ -1,0 +1,8 @@
+{
+  "has research problem" : [
+    ["Deep Semantic Role Labeling", {"from sentence" : "Deep Semantic Role Labeling with Self - Attention"}],
+    ["Semantic Role Labeling ( SRL )", {"from sentence" : "Semantic Role Labeling ( SRL ) is believed to be a crucial step towards natural language understanding and has been widely studied ."}],
+    ["SRL", {"from sentence" : "In this paper , we present a simple and effective architecture for SRL which aims to address these problems ."}],
+    ["Semantic Role Labeling", {"from sentence" : "Semantic Role Labeling is a shallow semantic parsing task , whose goal is to determine essentially \" who did what to whom \" , \" when \" and \" where \" ."}]
+  ]
+}

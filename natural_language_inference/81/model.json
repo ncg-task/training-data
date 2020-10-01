@@ -1,0 +1,75 @@
+{
+  "has" : {
+    "Model" : {
+      "has" : {
+        "Our multi-evidence QA model" : {
+          "name" : "Coarse - grain Fine - grain Coattention Network ( CFC )",
+          "selects among" : {
+            "set" : {
+              "of" : "candidate answers",
+              "given" : {
+                "set" : {
+                  "of" : ["support documents", "query"]
+                }
+              }
+            }
+          },
+          "from sentence" : "Our multi-evidence QA model , the Coarse - grain Fine - grain Coattention Network ( CFC ) , selects among a set of candidate answers given a set of support documents and a query ."
+        },
+        "CFC" : {
+          "inspired by" : ["coarse - grain reasoning", "fine - grain reasoning"],
+          "from sentence" : "The CFC is inspired by coarse - grain reasoning and fine - grain reasoning ."
+        },
+        "Each module" : {
+          "employs" : {
+            "novel hierarchical attention" : {
+              "has" : {
+                "hierarchy" : {
+                  "of" : ["coattention", "self - attention"],
+                  "to combine" : {
+                    "information" : {
+                      "from" : "support documents",
+                      "conditioned on" : ["query", "candidates"]
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Each module employs a novel hierarchical attention - a hierarchy of coattention and self - attention - to combine information from the support documents conditioned on the query and candidates ."
+            }
+          }
+        }
+      },
+      "In" : {
+        "coarse - grain reasoning" : {
+          "has" : {
+            "model" : {
+              "builds" : {
+                "coarse summary" : {
+                  "of" : "support documents",
+                  "conditioned on" : "query"
+                }
+              }
+            }
+          },
+          "from sentence" : "In coarse - grain reasoning , the model builds a coarse summary of support documents conditioned on the query without knowing what candidates are available , then scores each candidate ."
+        },
+        "fine - grain reasoning" : {
+          "has" : {
+            "model" : {
+              "matches" : {
+                "specific finegrain contexts" : {
+                  "to gauge" : {
+                    "relevance" : {
+                      "of" : "candidate"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "In fine - grain reasoning , the model matches specific finegrain contexts in which the candidate is mentioned with the query in order to gauge the relevance of the candidate ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

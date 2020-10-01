@@ -1,0 +1,193 @@
+200	4	27	first ablation baseline
+200	28	33	shows
+200	39	62	without richer features
+200	20	22	as
+200	70	85	alignment input
+200	92	103	performance
+200	16	18	on
+200	107	119	all datasets
+200	120	142	degrades significantly
+202	19	34	second baseline
+202	35	39	show
+202	45	73	vanilla residual connections
+202	74	98	without direct access to
+202	103	130	original pointwise features
+202	131	134	are
+202	135	145	not enough
+202	146	154	to model
+202	159	168	relations
+202	31	33	in
+202	172	196	many text matching tasks
+203	4	26	simpler implementation
+203	27	29	of
+203	34	46	fusion layer
+203	47	55	leads to
+203	56	83	evidently worse performance
+205	36	44	see that
+205	45	60	parallel blocks
+205	61	68	perform
+205	69	74	worse
+205	75	79	than
+205	80	94	stacked blocks
+205	103	111	supports
+205	116	126	preference
+205	64	67	for
+205	131	144	deeper models
+205	145	149	over
+205	150	160	wider ones
+127	3	12	implement
+127	17	22	model
+127	23	27	with
+127	28	38	TensorFlow
+127	43	51	train on
+127	52	68	Nvidia P100 GPUs
+128	3	11	tokenize
+128	12	21	sentences
+128	22	26	with
+128	31	43	NLTK toolkit
+128	46	53	convert
+128	62	73	lower cases
+128	78	84	remove
+128	85	101	all punctuations
+130	0	15	Word embeddings
+130	20	36	initialized with
+130	37	48	840B - 300d
+131	0	19	Glo Ve word vectors
+131	24	36	fixed during
+131	37	45	training
+132	0	10	Embeddings
+132	11	13	of
+132	14	38	out - ofvocabulary words
+132	43	57	initialized to
+132	58	63	zeros
+133	0	20	All other parameters
+133	21	24	are
+133	25	36	initialized
+133	37	41	with
+133	42	59	He initialization
+133	64	74	normalized
+133	75	77	by
+133	78	98	weight normalization
+134	0	7	Dropout
+134	8	12	with
+134	15	31	keep probability
+134	32	34	of
+134	35	38	0.8
+134	42	56	applied before
+134	63	80	fully - connected
+134	84	103	convolutional layer
+135	4	15	kernel size
+135	16	18	of
+135	23	44	convolutional encoder
+135	48	54	set to
+135	55	56	3
+136	4	20	prediction layer
+136	21	23	is
+136	26	60	two - layer feed - forward network
+137	4	15	hidden size
+137	19	25	set to
+137	26	29	150
+138	0	11	Activations
+138	12	14	in
+138	15	42	all feed - forward networks
+138	43	46	are
+138	47	63	GeLU activations
+142	4	20	number of blocks
+142	24	32	tuned in
+142	35	40	range
+142	41	45	from
+142	46	52	1 to 3
+143	4	20	number of layers
+143	11	13	of
+143	28	49	convolutional encoder
+143	53	58	tuned
+143	59	63	from
+143	64	70	1 to 3
+146	4	25	initial learning rate
+146	29	39	tuned from
+146	40	55	0.0001 to 0.003
+147	4	14	batch size
+147	18	28	tuned from
+147	29	38	64 to 512
+148	4	13	threshold
+148	14	17	for
+148	18	35	gradient clipping
+148	39	45	set to
+148	46	47	5
+140	3	8	scale
+140	13	22	summation
+140	23	25	in
+140	26	56	augmented residual connections
+140	57	59	by
+140	60	67	1 / ? 2
+140	68	72	when
+141	2	13	to preserve
+141	18	26	variance
+141	27	32	under
+141	37	47	assumption
+141	48	52	that
+141	57	68	two addends
+141	69	73	have
+141	78	91	same variance
+145	3	6	use
+145	11	50	Adam optimizer ( Kingma and Ba , 2015 )
+145	58	94	exponentially decaying learning rate
+145	95	99	with
+145	102	115	linear warmup
+21	11	19	presents
+21	20	23	RE2
+21	28	63	fast and strong neural architecture
+21	64	68	with
+21	69	97	multiple alignment processes
+21	98	101	for
+21	102	131	general purpose text matching
+25	6	16	components
+25	55	80	previous aligned features
+25	29	33	name
+25	83	99	Residual vectors
+25	104	134	original point - wise features
+25	29	33	name
+25	137	154	Embedding vectors
+25	163	182	contextual features
+25	29	33	name
+25	185	200	Encoded vectors
+28	3	18	embedding layer
+28	25	31	embeds
+28	32	47	discrete tokens
+29	8	32	same - structured blocks
+29	33	46	consisting of
+29	47	55	encoding
+29	58	67	alignment
+29	72	85	fusion layers
+29	91	98	process
+29	103	112	sequences
+29	113	126	consecutively
+30	17	29	connected by
+30	33	74	augmented version of residual connections
+31	2	15	pooling layer
+31	16	26	aggregates
+31	27	53	sequential representations
+31	54	58	into
+31	59	66	vectors
+31	85	97	processed by
+31	100	116	prediction layer
+31	117	124	to give
+31	129	145	final prediction
+32	4	18	implementation
+32	19	21	of
+32	22	32	each layer
+32	36	40	kept
+32	41	62	as simple as possible
+2	21	34	Text Matching
+161	8	10	on
+165	3	9	obtain
+165	12	18	result
+165	19	30	on par with
+165	35	57	state - of - the - art
+167	4	10	method
+167	15	22	perform
+167	23	27	well
+167	28	30	in
+167	35	56	answer selection task
+167	57	64	without
+167	65	95	any taskspecific modifications

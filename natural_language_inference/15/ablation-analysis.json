@@ -1,0 +1,121 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "could see" : {
+        "performance" : {
+          "was" : "rather higher",
+          "because of" : "regularization effect",
+          "from sentence" : "Although the number of parameters in the DRCN significantly decreased as shown in , we could see that the performance was rather higher because of the regularization effect ."
+        }
+      },
+      "has" : {
+        "result" : {
+          "shows" : {
+            "dense connections" : {
+              "over" : "attentive features",
+              "are" : "more effective"
+            },
+            "from sentence" : "The result shows that the dense connections over attentive features are more effective ."
+          }
+        },
+        "models" : {
+          "which have" : {
+            "connections" : {
+              "between" : "layers",
+              "are" : {
+                "more robust" : {
+                  "to" : "increased depth of network"
+                }
+              }
+            }
+          },
+          "has" : {
+            "performances" : {
+              "tend to" : {
+                "degrade" : {
+                  "as" : {
+                    "layers" : {
+                      "get" : "deeper"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "The models ( 5 - 9 ) which have connections between layers , are more robust to the increased depth of network , however , the performances of ( 10 - 11 ) tend to degrade as layers get deeper ."
+            }
+          },
+          "with" : {
+            "dense connections" : {
+              "rather than" : "residual connections",
+              "have" : "higher performance",
+              "from sentence" : "In addition , the models with dense connections rather than residual connections , have higher performance in general ."
+            }
+          }
+        },
+        "dense connection" : {
+          "is" : {
+            "more effective" : {
+              "than" : "residual connection"
+            }
+          },
+          "from sentence" : "shows that the connection between layers is essential , especially in deep models , endowing more representational power , and the dense connection is more effective than the residual connection ."
+        }
+      },
+      "removed" : {
+        "dense connections" : {
+          "over" : "both co-attentive and recurrent features",
+          "has" : {
+            "performance" : {
+              "has" : {
+                "degraded" : {
+                  "to" : "88.5 %"
+                }
+              }
+            }
+          },
+          "from sentence" : "In , we removed dense connections over both co-attentive and recurrent features , and the performance degraded to 88.5 % ."
+        }
+      },
+      "demonstrate" : {
+        "dense connection" : {
+          "using" : {
+            "concatenation operation" : {
+              "over" : "deeper layers"
+            }
+          },
+          "has" : {
+            "more powerful capability" : {
+              "retaining" : {
+                "collective knowledge" : {
+                  "to learn" : "textual semantics"
+                }
+              }
+            }
+          },
+          "from sentence" : "The results of ( 8 - 9 ) demonstrate that the dense connection using concatenation operation over deeper layers , has more powerful capability retaining collective knowledge to learn textual semantics ."
+        }
+      },
+      "shows" : {
+        "connections" : {
+          "among" : "layers",
+          "important to help" : "gradient flow",
+          "from sentence" : "The result of ( 10 ) shows that the connections among the layers are important to help gradient flow ."
+        },
+        "attentive information" : {
+          "functioning as" : "soft - alignment",
+          "is" : {
+            "significantly effective" : {
+              "in" : "semantic sentence matching"
+            }
+          },
+          "from sentence" : "And , the result of ( 11 ) shows that the attentive information functioning as a soft - alignment is significantly effective in semantic sentence matching ."
+        },
+        "connection" : {
+          "between" : "layers",
+          "is" : "essential",
+          "endowing" : "more representational power",
+          "from sentence" : "shows that the connection between layers is essential , especially in deep models , endowing more representational power , and the dense connection is more effective than the residual connection ."
+        }
+      }
+    }
+  }
+}

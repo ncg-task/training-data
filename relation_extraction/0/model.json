@@ -1,0 +1,64 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "novel RNN - based model" : {
+          "for" : "joint extraction of entity mentions and relations",
+          "from sentence" : "In this paper , we propose a novel RNN - based model for the joint extraction of entity mentions and relations ."
+        }
+      },
+      "does not" : {
+        "depend" : {
+          "on" : "any dependency tree information"
+        },
+        "from sentence" : "Unlike other models , our model does not depend on any dependency tree information ."
+      },
+      "has" : {
+        "Our RNN - based model" : {
+          "is" : {
+            "multi - layer bidirectional LSTM" : {
+              "over" : "sequence"
+            }
+          },
+          "from sentence" : "Our RNN - based model is a multi - layer bidirectional LSTM over a sequence ."
+        }        
+      },
+      "encode" : {
+        "output sequence" : {
+          "from" : "left - to - right",
+          "from sentence" : "We encode the output sequence from left - to - right ."
+        }
+      },
+      "At" : {
+        "each time step" : {
+          "use" : {
+            "attention - like model" : {
+              "on" : "previously decoded time steps",
+              "to identify" : {
+                "tokens" : {
+                  "in" : {
+                    "specified relation" : {
+                      "with" : "current token"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "At each time step , we use an attention - like model on the previously decoded time steps , to identify the tokens in a specified relation with the current token ."
+        }
+      },
+      "add" : {
+        "additional layer" : {
+          "to" : "our network",
+          "to encode" : {
+            "output sequence" : {
+              "from" : "right - to - left"
+            }
+          },
+          "from sentence" : "We also add an additional layer to our network to encode the output sequence from right - to - left and find significant improvement on the performance of relation identification using bi-directional encoding ."
+        }
+      }
+    }
+  }
+}

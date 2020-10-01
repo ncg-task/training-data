@@ -1,0 +1,36 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "novel Auto - Encoder Matching model" : {
+          "to learn" : "utterance - level dependency",
+          "from sentence" : "To address this problem , we propose a novel Auto - Encoder Matching model to learn utterance - level dependency ."
+        }
+      },
+      "use" : {
+        "two auto- encoders" : {
+          "to learn" : {
+            "semantic representations" : {
+              "of" : {
+                "inputs and responses" : {
+                  "in" : "unsupervised style"
+                }
+              }
+            }
+          },
+          "from sentence" : "First , motivated by , we use two auto- encoders to learn the semantic representations of inputs and responses in an unsupervised style ."
+        }
+      },
+      "given" : {
+        "utterance - level representations" : {
+          "has" : {
+            "mapping module" : {
+              "taught to learn" : "utterance - level dependency"
+            }
+          },
+          "from sentence" : "Second , given the utterance - level representations , the mapping module is taught to learn the utterance - level dependency ."
+        }
+      }
+    }
+  }
+}

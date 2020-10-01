@@ -1,0 +1,83 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "implement" : {
+        "proposed scaffold framework" : {
+          "using" : "AllenNLP library",
+          "from sentence" : "We implement our proposed scaffold framework using the AllenNLP library ."
+        }
+      },
+      "For" : {
+        "word representations" : {
+          "use" : {
+            "100 - dimensional GloVe vectors" : {
+              "trained on" : {
+                "corpus" : {
+                  "of" : "6B tokens",
+                  "from" : "Wikipedia and Gigaword"
+                }
+              }
+            }
+          },
+          "from sentence" : "For word representations , we use 100 - dimensional GloVe vectors trained on a corpus of 6B tokens from Wikipedia and Gigaword ."
+        },
+        "contextual representations" : {
+          "use" : {
+            "ELMo vectors" : {
+              "with" : {
+                "output dimension size" : {
+                  "of" : "1,024"
+                }
+              },
+              "trained on" : {
+                "dataset" : {
+                  "of" : "5.5 B tokens"
+                }
+              }
+            } 
+          },
+          "from sentence" : "For contextual representations , we use ELMo vectors released by with output dimension size of 1,024 which have been trained on a dataset of 5.5 B tokens ."
+        },
+        "each of scaffold tasks" : {
+          "use" : {
+            "single - layer MLP" : {
+              "between" : {
+                "hidden and input layers" : {
+                  "with" : ["20 hidden nodes", "ReLU activation", {"Dropout rate" : {"of" : "0.2"}}]
+                }
+              }
+            }
+          },
+          "from sentence" : "For each of scaffold tasks , we use a single - layer MLP with 20 hidden nodes , ReLU activation and a Dropout rate of 0.2 between the hidden and input layers ."
+        }
+      },
+      "use" : {
+        "single - layer BiLSTM" : {
+          "with" : {
+            "hidden dimension size" : {
+              "of" : "50"
+            }
+          },
+          "from sentence" : "We use a single - layer BiLSTM with a hidden dimension size of 50 for each direction 11 ."
+        },
+        "Beaker" : {
+          "for" : "running the experiments",
+          "from sentence" : "We use Beaker 12 for running the experiments ."
+        }
+      },
+      "has" : {
+        "Batch size" : {
+          "is" : {
+            "8" : {
+              "for" : "ACL - ARC dataset"
+            },
+            "32" : {
+              "for" : "SciCite dataset"
+            }
+          },
+          "from sentence" : "Batch size is 8 for ACL - ARC dataset and 32 for SciCite dataset ( recall that SciCite is larger than ACL - ARC ) ."
+        }        
+      }
+    }
+  }
+}

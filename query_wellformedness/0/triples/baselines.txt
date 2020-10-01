@@ -1,0 +1,7 @@
+(Contribution||has||Baselines)
+(Baselines||has||majority class baseline)
+(majority class baseline||corresponds to||all queries being classified non-wellformed)
+(majority class baseline||is||61.5 %)
+(Baselines||has||question word baseline)
+(question word baseline||classifies||any query)
+(any query||starting with||question word)

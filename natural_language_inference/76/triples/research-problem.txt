@@ -1,0 +1,2 @@
+(Contribution||has research problem||Recognizing textual entailment ( RTE ))
+(Contribution||has research problem||RTE)

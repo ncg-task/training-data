@@ -1,0 +1,37 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "bilateral multi-perspective matching ( BiMPM ) model" : {
+          "for" : "NLSM tasks",
+          "from sentence" : "In this paper , to tackle these limitations , we propose a bilateral multi-perspective matching ( BiMPM ) model for NLSM tasks ."
+        }
+      },
+      "belongs to" : ["\" matching aggregation \" framework", {"from sentence" : "Our model essentially belongs to the \" matching aggregation \" framework ."}],
+      "has" : {
+        "BiLSTM layer" : {
+          "utilized to" : {
+            "aggregate" : {
+              "has" : {
+                "matching results" : {
+                  "into" : "fixed - length matching vector"
+                }
+              }
+            }
+          },
+          "from sentence" : "Then , another BiLSTM layer is utilized to aggregate the matching results into a fixed - length matching vector ."
+        }
+      },
+      "based on" : {
+        "matching vector" : {
+          "has" : {
+            "decision" : {
+              "made through" : "fully connected layer"
+            }
+          },
+          "from sentence" : "Finally , based on the matching vector , a decision is made through a fully connected layer ."
+        }
+      }
+    }
+  }
+}

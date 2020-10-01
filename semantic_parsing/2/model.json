@@ -1,0 +1,96 @@
+{
+  "has" : {
+    "Model" : {
+      "propose to decompose" : {
+        "decoding process" : {
+          "into" : "two stages",
+          "from sentence" : "In this work , we propose to decompose the decoding process into two stages ."
+        }
+      },
+      "has" : {
+        "first decoder" : {
+          "focuses on" : {
+            "predicting" : {
+              "has" : {
+                "rough sketch" : {
+                  "of" : "meaning representation"
+                }
+              }
+            }
+          },
+          "from sentence" : "The first decoder focuses on predicting a rough sketch of the meaning representation , which omits low - level details , such as arguments and variable names ."
+        },
+        "second decoder" : {
+          "fills in" : {
+            "missing details" : {
+              "by conditioning on" : ["natural language input", "sketch"]
+            }
+          },
+          "from sentence" : "Then , a second decoder fills in missing details by conditioning on the natural language input and the sketch itself ."
+        },
+        "sketch" : {
+          "constrains" : "generation process",
+          "encoded into" : {
+            "vectors" : {
+              "to guide" : "decoding"
+            }
+          },
+          "from sentence" : "Specifically , the sketch constrains the generation process and is encoded into vectors to guide decoding ."
+        },
+        "decomposition" : {
+          "disentangles" : {
+            "high - level from low - level semantic information" : {
+              "enables" : {
+                "decoders" : {
+                  "to model" : {
+                    "meaning" : {
+                      "at" : "different levels of granularity"
+                    }
+                  },
+                  "from sentence" : "Firstly , the decomposition disentangles high - level from low - level semantic information , which enables the decoders to model meaning at different levels of granularity ."
+                }
+              }              
+            }
+          }
+        },
+        "explicitly share" : {
+          "has" : {
+            "knowledge" : {
+              "of" : {
+                "coarse structures" : {
+                  "for" : "examples that have the same sketch ( i.e. , basic meaning )"
+                }            
+              }
+            },
+            "from sentence" : "Secondly , the model can explicitly share knowledge of coarse structures for the examples that have the same sketch ( i.e. , basic meaning ) , even though their actual meaning representations are different ( e.g. , due to different details ) ."
+          }
+        },
+        "generating" : {
+          "has" : {
+            "sketch" : {
+              "has" : {
+                "decoder" : {
+                  "knows" : "basic meaning of the utterance"
+                }
+              },
+              "use it" : {
+                "model" : {
+                  "as" : {
+                    "global context" : {
+                      "to improve" : {
+                        "prediction" : {
+                          "of" : "final details"
+                        }
+                      }
+                    }
+                  }
+                }
+              }              
+            }
+          },
+          "from sentence" : "Thirdly , after generating the sketch , the decoder knows what the basic meaning of the utterance looks like , and the model can use it as global context to improve the prediction of the final details ."
+        }
+      }
+    }
+  }
+}

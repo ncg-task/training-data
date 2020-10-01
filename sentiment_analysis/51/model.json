@@ -1,0 +1,16 @@
+{
+  "has" : {
+    "Model" : {
+      "use" : {
+        "pretrained BERT model" : {
+          "finetune it for" : {
+            "fine - grained sentiment classification task" : {
+              "on" : "Stanford Sentiment Treebank ( SST ) dataset"
+            }
+          },
+          "from sentence" : "In this paper , we use the pretrained BERT model and finetune it for the fine - grained sentiment classification task on the Stanford Sentiment Treebank ( SST ) dataset ."
+        }
+      }
+    }
+  }
+}

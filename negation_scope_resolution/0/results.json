@@ -1,0 +1,125 @@
+{
+  "has" : {
+    "Results" : {
+      "For" : {
+        "cue detection" : {
+          "on" : {
+            "Sherlock dataset test data" : {
+              "see that" : {
+                "outperform" : {
+                  "has" : "best system",
+                  "by" : "0.6 F1 measure"
+                }
+              }
+            },
+            "from sentence" : "For cue detection , on the Sherlock dataset test data , we see that we outperform the best system [ FBK Chowdhury ] by 0.6 F1 measure ."            
+          },
+          "On" : {
+            "BioScope Abstracts" : {
+              "perform" : "reasonably well",
+              "from sentence" : "On the BioScope Abstracts , we perform reasonably well ."
+            },
+            "BioScope Full papers" : {
+              "achieve" : {
+                "90.43 F1" : {
+                  "when" : {
+                    "training" : {
+                      "on" : "same data"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "On the BioScope Full papers , we are able to achieve 90.43 F1 when training on the same data , but we do note that the amount of training data available is significantly lower than for the other datasets , and while general Deep Learning based approaches can not perform well in such situations , we still manage to perform well ."
+            },
+            "SFU Review Corpus" : {
+              "achieve" : {
+                "F1" : {
+                  "of" : "87.08"
+                }
+              },
+              "from sentence" : "On the SFU Review Corpus , we achieve an F1 of 87.08 ."
+            }
+          }          
+        },
+        "scope resolution" : {
+          "On" : {
+            "Sherlock dataset" : {
+              "achieve" : {
+                "F1" : {
+                  "of" : {
+                    "92.36" : {
+                      "outperforming" : {
+                        "previous State of the Art" : {
+                          "by" : "significant margin ( almost 3.0 F1 )"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "For scope resolution :
+On the Sherlock dataset , we achieve an F1 of 92.36 , outperforming the previous State of the Art by a significant margin ( almost 3.0 F1 ) ."
+
+            },
+            "BioScope Abstracts" : {
+              "achieve" : {
+                "F1" : {
+                  "of" : {
+                    "95.68" : {
+                      "outperforming" : {
+                        "best architecture" : {
+                          "by" : "3.57 F1"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "On the BioScope Abstracts , we achieve an F1 of 95.68 , outperforming the best architecture by 3.57 F1 ."
+            },
+            "Bioscope Full Papers" : {
+              "outperform" : {
+                "best architecture" : {
+                  "by" : "2.64 F1",
+                  "training on" : "same dataset"
+                }
+              },
+              "from sentence" : "On the Bioscope Full Papers , we outperform the best architecture by 2.64 F1 when training on the same dataset"
+            },
+            "SFU Review Corpus" : {
+              "outperform" : {
+                "best system" : {
+                  "by" : "1.02 F1"
+                }
+              },
+              "from sentence" : "On the SFU Review Corpus , we outperform the best system to date by 1.02 F1 ."
+            }
+          }
+        },
+        "negation cue detection" : {
+          "observe" : {
+            "significant gap" : {
+              "between" : "our model , NegBERT , and the current state - of the - art systems"
+            },
+            "from sentence" : "For negation cue detection , we observe a significant gap between our model , NegBERT , and the current state - of the - art systems , while we outperform the baseline systems ."
+          },
+          "outperform" : ["baseline systems", {"from sentence" : "For negation cue detection , we observe a significant gap between our model , NegBERT , and the current state - of the - art systems , while we outperform the baseline systems ."}],
+          "trained on" : {
+            "BioScope Abstracts" : {
+              "tested on" : {
+                "BioScope Full Papers" : {
+                  "observed" : {
+                    "stateof - the - art result" : {
+                      "of" : "91.24"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "When we trained on BioScope Abstracts and tested on the BioScope Full Papers , we surprisingly observed a stateof - the - art result of 91.24 ( a gain of 3.89 F1 points over training on BioScope Full Papers ) , which is far beyond the achievable results on training and evaluating on the Bio-Medical sub corpora ."
+            }
+          }
+        }
+      }
+    }    
+  }
+}

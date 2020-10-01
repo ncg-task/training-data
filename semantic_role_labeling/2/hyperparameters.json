@@ -1,0 +1,82 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "has" : {
+        "network" : {
+          "consists of" : {
+            "8 BiLSTM layers ( 4 forward LSTMs and 4 reversed LSTMs )" : {
+              "with" : "300 dimensional hidden units"
+            },
+            "softmax layer" : {
+              "for predicting" : "output distribution"
+            }
+          },
+          "from sentence" : "Our network consists of 8 BiLSTM layers ( 4 forward LSTMs and 4 reversed LSTMs ) with 300 dimensional hidden units , and a softmax layer for predicting the output distribution ."
+        },
+        "weight matrics" : {
+          "in" : {
+            "BiL - STMs" : {
+              "initialized with" : "random orthonormal matrices"
+            }
+          },
+          "from sentence" : "All the weight matrices in BiL - STMs are initialized with random orthonormal matrices as described in. ,"
+        },
+        "tokens" : {
+          "are" : "lower - cased",
+          "initialized with" : {
+            "100 - dimensional GloVe embeddings" : {
+              "pre-trained on" : "6B tokens",
+              "updated during" : "training"
+            }
+          },
+          "from sentence" : "All tokens are lower - cased and initialized with 100 - dimensional GloVe embeddings pre-trained on 6B tokens and updated during training ."
+        },
+        "Tokens" : {
+          "not covered by" : {
+            "GloVe" : {
+              "replaced with" : "randomly initialized UNK embedding"
+            }
+          },
+          "from sentence" : "Tokens that are not covered by GloVe are replaced with a randomly initialized UNK embedding ."
+        },
+        "models" : {
+          "trained for" : {
+            "500 epochs" : {
+              "with" : {
+                "early stopping" : {
+                  "based on" : "development results"
+                }
+              }
+            },
+            "from sentence" : "All the models are trained for 500 epochs with early stopping based on development results ."
+          }
+        }
+      },
+      "use" : {
+        "Adadelta" : {
+          "with" : "1e ?6 and ? = 0.95"
+        },
+        "mini-batches" : {
+          "size" : "80"
+        },
+        "from sentence" : "Training We use Adadelta ( Zeiler , 2012 ) with = 1e ?6 and ? = 0.95 and mini-batches of size 80 ."
+      },
+      "set" : {
+        "RNN - dropout probability" : {
+          "to" : "0.1"
+        },
+        "from sentence" : "We set RNN - dropout probability to 0.1 and clip gradients with norm larger than 1 ."
+      },
+      "clip" : {
+        "gradients" : {
+          "with" : {
+            "norm" : {
+              "larger than" : "1"
+            }
+          },
+          "from sentence" : "We set RNN - dropout probability to 0.1 and clip gradients with norm larger than 1 ."
+        }
+      }
+    }    
+  }
+}

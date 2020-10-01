@@ -1,0 +1,45 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "has" : {
+        "passage - aligned question representation" : {
+          "is" : "crucial",
+          "from sentence" : "The passage - aligned question representation is crucial , since lexically similar regions of the passage provide strong signal for relevant answer spans ."
+        }
+      },
+      "observe" : {
+        "general improvements" : {
+          "when using" : {
+            "labels" : {
+              "that" : {
+                "closely align" : {
+                  "with" : "task"
+                }
+              }
+            }
+          },
+          "from sentence" : "First , we observe general improvements when using labels that closely align with the task ."
+        },
+        "interactions between the endpoints" : {
+          "using" : "spanlevel FFNN",
+          "has" : {
+            "RASOR" : {
+              "outperforms" : {
+                "endpoint prediction model" : {
+                  "by" : {
+                    "1.1" : {
+                      "in" : "exact match"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Second , we observe the importance of allowing interactions between the endpoints using the spanlevel FFNN .
+RASOR outperforms the endpoint prediction model by 1.1 in exact match , The interaction between endpoints enables RASOR to enforce consistency across its two substructures ."
+
+        }
+      }
+    }
+  }
+}

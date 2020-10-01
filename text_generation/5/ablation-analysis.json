@@ -1,0 +1,22 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "see" : {
+        "SCNN - VAE - Semi" : {
+          "has" : {
+            "best classification accuracy" : {
+              "of" : "65.5"
+            }
+          },
+          "from sentence" : "We can see that SCNN - VAE - Semi has the best classification accuracy of 65.5 ."
+        }
+      },
+      "has" : {
+        "LCNN - VAE - Semi" : {
+          "has" : "best NLL result",
+          "from sentence" : "On the other hand , LCNN - VAE - Semi has the best NLL result ."
+        }  
+      }
+    }
+  }
+}

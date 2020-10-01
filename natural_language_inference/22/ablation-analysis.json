@@ -1,0 +1,27 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "show" : {
+        "two ruminate layers" : {
+          "are" : {
+            "important and helpful" : {
+              "in contributing" : "performance"
+            }
+          },
+          "from sentence" : "Experiments 3 and 4 show that the two ruminate layers are both important and helpful in contributing performance ."
+        }
+      },
+      "worth noting" : {
+        "BiLSTM" : {
+          "in" : "context ruminate layer",
+          "contributes" : {
+            "substantially" : {
+              "to" : "model performance"
+            }
+          },
+          "from sentence" : "It is worth noting that the BiLSTM in the context ruminate layer contributes substantially to model performance ."
+        }
+      } 
+    }
+  }
+}

@@ -1,0 +1,3 @@
+(Contribution||has research problem||Neural Relation Extraction)
+(Contribution||has research problem||Relation extraction)
+(Contribution||has research problem||distant supervised relation extraction)

@@ -1,0 +1,4 @@
+(Contribution||has research problem||Abstractive Text Summarization)
+(Contribution||has research problem||neural abstractive summarization)
+(Contribution||has research problem||reader - aware abstractive summary generation)
+(Contribution||has research problem||abstractive summarization)

@@ -1,0 +1,73 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "has" : {
+        "Soft - sharing vs. Hard - sharing" : {
+          "choose" : {
+            "soft - sharing" : {
+              "over" : "hard - sharing",
+              "because of" : "more expressive parameter sharing"              
+            },
+            "from sentence" : "Soft - sharing vs. Hard - sharing
+As described in Sec. 4.2 , we choose soft - sharing over hard - sharing because of the more expressive parameter sharing it provides to the model ."  
+
+          },
+          "prove" : {
+            "soft - sharing method" : {
+              "is statistically significantly better than" : {
+                "hard - sharing" : {
+                  "with" : {
+                    "p < 0.001" : {
+                      "in" : "all metrics"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Empirical results in 8 prove that soft - sharing method is statistically significantly better than hard - sharing with p < 0.001 in all metrics ."
+            }
+          }
+        },
+        "Quantitative Improvements in Entailment" : {
+          "found" : {
+            "our 2 - way MTL model" : {
+              "with" : {
+                "entailment generation" : {
+                  "reduces" : {
+                    "extraneous count" : {
+                      "by" : "17.2 % w.r.t. the baseline"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "We found that our 2 - way MTL model with entailment generation reduces this extraneous count by 17.2 % w.r.t. the baseline ."
+            }
+          }
+        },
+        "Quantitative Improvements in Saliency Detection" : {
+          "results are" : {
+            "2 - way - QG MTL model ( with question generation )" : {
+              "versus" : {
+                "baseline improvement" : {
+                  "is" : "stat. significant ( p < 0.01 )"
+                }
+              }
+            },
+            "from sentence" : "The results are shown in Table 10 , where the 2 - way - QG MTL model ( with question generation ) versus baseline improvement is stat. significant ( p < 0.01 ) ."
+          }
+        },
+        "Qualitative Examples on Entailment and Saliency Improvements" : {
+          "has" : {
+            "3 - way multi-task model" : {
+              "generates" : {
+                "summaries" : {
+                  "are both better at" : ["logical entailment", "contain more salient information"]
+                }
+              },
+              "from sentence" : "Hence , our 3 - way multi-task model generates summaries that are both better at logical entailment and contain more salient information ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

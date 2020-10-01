@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Aspect-level Sentiment Analysis", {"from sentence" : "Hierarchical Attention Based Position-aware Network for Aspect-level Sentiment Analysis"}],
+    ["sentiment analysis", {"from sentence" : "Aspect - level sentiment analysis is a fine - grained task in sentiment analysis , which aims to identify the sentiment polarity ( i.e. , negative , neutral , or positive ) of a specific opinion target expressed in a comment / review by a reviewer ."}]
+  ]
+}

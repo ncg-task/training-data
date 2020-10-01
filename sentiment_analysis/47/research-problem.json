@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Aspect - based Sentiment Analysis", {"from sentence" : "Left - Center - Right Separated Neural Network for Aspect - based Sentiment Analysis with Rotatory Attention"}],
+    ["sentiment analysis", {"from sentence" : "Aspect - based sentiment analysis is a fine - grained classification task in sentiment analysis , identifying sentiment polarity of a sentence expressed toward a target ."}],
+    ["sentiment classification", {"from sentence" : "In the early studies , methods for the aspect - based sentiment classification task were similar as that used in standard sentiment classification task ."}]
+  ]
+}

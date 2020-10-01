@@ -1,0 +1,137 @@
+{
+  "has" : {
+    "Experimental Setup" : {
+      "implement" : {
+        "model" : {
+          "with" : "TensorFlow"
+        },
+        "from sentence" : "We implement our model with TensorFlow and train on Nvidia P100 GPUs ."
+      },
+      "train on" : ["Nvidia P100 GPUs", {"from sentence" : "We implement our model with TensorFlow and train on Nvidia P100 GPUs ."}],
+      "tokenize" : {
+        "sentences" : {
+          "with" : "NLTK toolkit",
+          "convert" : "lower cases",
+          "remove" : "all punctuations",
+          "from sentence" : "We tokenize sentences with the NLTK toolkit , convert them to lower cases and remove all punctuations ."
+        }
+      },
+      "has" : {
+        "Word embeddings" : {
+          "initialized with" : "840B - 300d",
+          "from sentence" : "Word embeddings are initialized with 840B - 300d"
+        },
+        "Glo Ve word vectors" : {
+          "fixed during" : "training",
+          "from sentence" : "Glo Ve word vectors and fixed during training ."
+        },
+        "Embeddings" : {
+          "of" : "out - ofvocabulary words",
+          "initialized to" : "zeros",
+          "from sentence" : "Embeddings of out - ofvocabulary words are initialized to zeros and fixed as well ."
+        },
+        "All other parameters" : {
+          "are" : {
+            "initialized" : {
+              "with" : "He initialization"
+            },
+            "normalized" : {
+              "by" : "weight normalization"
+            }
+          },
+          "from sentence" : "All other parameters are initialized with He initialization and normalized by weight normalization ."
+        },
+        "Dropout" : {
+          "with" : {
+            "keep probability" : {
+              "of" : "0.8",
+              "applied before" : ["fully - connected", "convolutional layer"],
+              "from sentence" : "Dropout with a keep probability of 0.8 is applied before every fully - connected or convolutional layer ."
+            }
+          }
+        },
+        "kernel size" : {
+          "of" : "convolutional encoder",
+          "set to" : "3",
+          "from sentence" : "The kernel size of the convolutional encoder is set to 3 ."
+        },
+        "prediction layer" : {
+          "is" : "two - layer feed - forward network",
+          "from sentence" : "The prediction layer is a two - layer feed - forward network ."
+        },
+        "hidden size" : {
+          "set to" : "150",
+          "from sentence" : "The hidden size is set to 150 in all experiments ."
+        },
+        "Activations" : {
+          "in" : "all feed - forward networks",
+          "are" : "GeLU activations",
+          "from sentence" : "Activations in all feed - forward networks are GeLU activations , and we use ?"
+        },
+        "number of blocks" : {
+          "tuned in" : {
+            "range" : {
+              "from" : "1 to 3"
+            }
+          },
+          "from sentence" : "The number of blocks is tuned in a range from 1 to 3 ."
+        },
+        "number of layers" : {
+          "of" : {
+            "convolutional encoder" : {
+              "tuned from" : {
+                "1" : {
+                  "to" : "3"
+                }
+              }
+            }
+          },
+          "from sentence" : "The number of layers of the convolutional encoder is tuned from 1 to 3 ."
+        },
+        "initial learning rate" : {
+          "tuned from" : "0.0001 to 0.003",
+          "from sentence" : "The initial learning rate is tuned from 0.0001 to 0.003 ."
+        },
+        "batch size" : {
+          "tuned from" : "64 to 512",
+          "from sentence" : "The batch size is tuned from 64 to 512 ."
+        },
+        "threshold" : {
+          "for" : {
+            "gradient clipping" : {
+              "set to" : "5",
+              "from sentence" : "The threshold for gradient clipping is set to 5 ."
+            }
+          }
+        }
+      },
+      "scale" : {
+        "summation" : {
+          "in" : "augmented residual connections",
+          "by" : {
+            "1 / ? 2" : {
+              "when" : "n ? 3",
+              "to preserve" : {
+                "variance" : {
+                  "under" : {
+                    "assumption" : {
+                      "that" : {
+                        "two addends" : {
+                          "have" : "same variance"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "We scale the summation in augmented residual connections by 1 / ? 2 when n ?
+3 to preserve the variance under the assumption that the two addends have the same variance ."
+
+        }
+      },
+      "use" : ["Adam optimizer ( Kingma and Ba , 2015 )", {"exponentially decaying learning rate" : {"with" : "linear warmup"}}, {"from sentence" : "We use the Adam optimizer ( Kingma and Ba , 2015 ) and an exponentially decaying learning rate with a linear warmup ."}]
+    }
+  }  
+}

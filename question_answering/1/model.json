@@ -1,0 +1,110 @@
+{
+  "has" : {
+    "Model" : {
+      "introduce" : {
+        "Bi- Directional Attention Flow ( BIDAF ) network" : {
+          "has" : {
+            "hierarchical multi-stage architecture" : {
+              "for modeling" : {
+                "representations" : {
+                  "of" : "context paragraph",
+                  "at" : "different levels of granularity"
+                }
+              }
+            }
+          },
+          "from sentence" : "In this paper , we introduce the Bi- Directional Attention Flow ( BIDAF ) network , a hierarchical multi-stage architecture for modeling the representations of the context paragraph at different levels of granularity ) ."
+        }
+      },
+      "has" : {
+        "BIDAF" : {
+          "includes" : "character - level , word - level , and contextual embeddings",
+          "uses" : {
+            "bi-directional attention flow" : {
+              "to obtain" : "query - aware context representation"
+            }
+          },
+          "from sentence" : "BIDAF includes character - level , word - level , and contextual embeddings , and uses bi-directional attention flow to obtain a query - aware context representation ."
+        },
+        "attention" : {
+          "computed for" : "every time step",
+          "has" : {
+            "attended vector" : {
+              "at" : "each time step",
+              "allowed to" : {
+                "flow through" : {
+                  "to" : "subsequent modeling layer"
+                }
+              }
+            }
+          },
+          "from sentence" : "Instead , the attention is computed for every time step , and the attended vector at each time step , along with the representations from previous layers , is allowed to flow through to the subsequent modeling layer ."
+        }
+      },
+      "use" : {
+        "memory - less attention mechanism" : {
+          "forces" : {
+            "attention layer" : {
+              "to focus on" : {
+                "learning" : {
+                  "has" : {
+                    "attention" : {
+                      "between" : "query and the context"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "enables" : {
+            "modeling layer" : {
+              "to focus on" : {
+                "learning" : {
+                  "has" : {
+                    "interaction" : {
+                      "within" : "query - aware context representation"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "allows" : {
+            "attention" : {
+              "at" : {
+                "each time step" : {
+                  "to be" : {
+                    "unaffected" : {
+                      "from" : {
+                        "incorrect attendances" : {
+                          "at" : "previous time steps"
+                        }                      
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          "from sentence" : "Second , we use a memory - less attention mechanism .
+It forces the attention layer to focus on learning the attention between the query and the context , and enables the modeling layer to focus on learning the interaction within the query - aware context representation ( the output of the attention layer ) .
+It also allows the attention at each time step to be unaffected from incorrect attendances at previous time steps ."
+
+        },
+        "attention mechanisms" : {
+          "in" : {
+            "both directions" : {
+              "name" : ["query - to - context", "context - to - query"],
+              "which provide" : {
+                "complementary information" : {
+                  "to" : "each other"
+                }
+              }
+            }
+          },
+          "from sentence" : "Third , we use attention mechanisms in both directions , query - to - context and context - to - query , which provide complimentary information to each other ."
+        }
+      }
+    }
+  }
+}

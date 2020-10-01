@@ -1,0 +1,93 @@
+32	44	48	that
+32	49	55	learns
+32	56	58	to
+32	64	90	select and explain answers
+32	93	97	when
+32	102	128	only supervision available
+32	9	11	is
+32	136	159	which answer is correct
+32	166	169	not
+32	170	187	how to explain it
+33	27	34	chooses
+33	39	53	justifications
+33	54	66	that provide
+33	71	80	most help
+33	81	88	towards
+33	89	96	ranking
+33	101	116	correct answers
+33	117	123	higher
+33	124	128	than
+33	129	143	incorrect ones
+34	5	13	formally
+34	16	43	our neural network approach
+34	44	54	alternates
+34	63	68	using
+34	73	86	current model
+34	87	91	with
+34	92	105	max - pooling
+34	106	115	to choose
+34	120	150	highest scoring justifications
+34	5	8	for
+34	155	170	correct answers
+34	177	187	optimizing
+34	192	212	answer ranking model
+34	213	218	given
+34	136	150	justifications
+148	0	11	IR Baseline
+149	23	27	rank
+149	28	45	answer candidates
+149	46	48	by
+149	53	93	maximum tf .idf document retrieval score
+149	94	99	using
+149	103	118	unboosted query
+149	119	121	of
+149	122	147	question and answer terms
+150	0	5	IR ++
+151	14	18	uses
+151	23	40	same architecture
+151	6	8	as
+151	48	58	full model
+151	95	99	with
+151	100	128	only the IR ++ feature group
+2	66	86	Answer Justification
+11	0	55	Developing interpretable machine learning ( ML ) models
+171	0	14	QA Performance
+177	4	14	full model
+177	20	28	combines
+177	29	98	IR ++ , lexical overlap , discourse , and embeddings - based features
+177	107	110	P@1
+177	111	113	of
+177	114	120	53.3 %
+177	137	150	absolute gain
+177	111	113	of
+177	154	159	6.3 %
+177	45	49	over
+177	169	187	strong IR baseline
+183	5	11	tackle
+183	16	39	AI2 Kaggle question set
+185	0	9	By way of
+185	12	28	loose comparison
+185	88	97	our model
+185	102	138	approximately 5 % higher performance
+192	0	16	In comparison to
+192	17	30	other systems
+192	31	35	that
+192	36	44	competed
+192	45	47	in
+192	52	68	Kaggle challenge
+192	71	81	our system
+192	82	90	comes in
+192	94	103	7th place
+192	104	110	out of
+192	111	126	170 competitors
+228	10	14	61 %
+228	15	17	of
+228	22	49	top - ranked justifications
+228	50	54	from
+228	55	65	our system
+228	71	79	rated as
+228	80	84	Good
+228	88	99	compared to
+228	100	104	52 %
+228	50	54	from
+228	114	125	IR baseline

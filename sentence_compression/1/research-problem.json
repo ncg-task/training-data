@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Sentence Compression by Deletion", {"from sentence" : "Sentence Compression by Deletion with LSTMs"}],
+    ["deletion - based sentence compression", {"from sentence" : "We present an LSTM approach to deletion - based sentence compression where the task is to translate a sentence into a sequence of zeros and ones , corresponding to token deletion decisions ."}],
+    ["Sentence compression", {"from sentence" : "Sentence compression is a standard NLP task where the goal is to generate a shorter paraphrase of a sentence ."}]
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "use" : {
+        "Google 's BERT" : {
+          "as" : {
+            "base model" : {
+              "to generate" : {
+                "contextual embeddings" : {
+                  "for" : "sentence"
+                }
+              }
+            }
+          },
+          "from sentence" : "We use Google 's BERT as the base model to generate contextual embeddings for the sentence ."
+        },
+        "vector" : {
+          "of" : {
+            "dimension R H x N_C" : {
+              "to compute" : "scores per token"
+            }
+          },
+          "from sentence" : "We then use a vector of dimension R H x N_C to compute scores per token , for the classification task at hand ."
+        },
+        "early stopping" : {
+          "on" : {
+            "dev data" : {
+              "for" : {
+                "6 epochs" : {
+                  "as" : "tolerance"
+                }
+              }
+            }
+          },
+          "from sentence" : "We use early stopping on dev data for 6 epochs as tolerance and F 1 score as the early stopping metric , use the Adam optimizer with an initial learning rate of 3 e - 5 , and the Categorical Cross Entropy Loss with class weights as described above to avoid training on the padded label outputs ."
+        },
+        "F 1 score" : {
+          "as" : "early stopping metric",
+          "from sentence" : "We use early stopping on dev data for 6 epochs as tolerance and F 1 score as the early stopping metric , use the Adam optimizer with an initial learning rate of 3 e - 5 , and the Categorical Cross Entropy Loss with class weights as described above to avoid training on the padded label outputs ."
+        },
+        "Adam optimizer" : {
+          "with" : {
+            "initial learning rate" : {
+              "of" : "3 e - 5"
+            }
+          },
+          "from sentence" : "We use early stopping on dev data for 6 epochs as tolerance and F 1 score as the early stopping metric , use the Adam optimizer with an initial learning rate of 3 e - 5 , and the Categorical Cross Entropy Loss with class weights as described above to avoid training on the padded label outputs ."
+        },
+        "Categorical Cross Entropy Loss" : {
+          "to avoid" : {
+            "training" : {
+              "on" : "padded label outputs"
+            }
+          },
+          "from sentence" : "We use early stopping on dev data for 6 epochs as tolerance and F 1 score as the early stopping metric , use the Adam optimizer with an initial learning rate of 3 e - 5 , and the Categorical Cross Entropy Loss with class weights as described above to avoid training on the padded label outputs ."
+        },
+        "default 70 - 15 - 15 split" : {
+          "for" : "train - dev - test data",
+          "from sentence" : "For all other corpuses , we use a default 70 - 15 - 15 split for the train - dev - test data ."
+        }
+      },
+      "input to" : {
+        "BERT model" : {
+          "is" : {
+            "sequence of tokenized and encoded tokens" : {
+              "of" : "sentence"
+            }
+          },
+          "from sentence" : "The input to the BERT model is a sequence of tokenized and encoded tokens of a sentence ."
+        }
+      },
+      "has" : {
+        "BERT" : {
+          "outputs" : {
+            "vector" : {
+              "of" : "size R H per token of the input",
+              "feed to" : {
+                "common classification layer" : {
+                  "of" : {
+                    "dimen-sion R Hx5" : {
+                      "for" : "cue detection"
+                    },
+                    "R Hx2" : {
+                      "for" : "scope resolution"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "BERT outputs a vector of size R H per token of the input , which we feed to a common classification layer of dimen-sion R Hx5 for cue detection and R Hx2 for scope resolution ."
+            }
+          }
+        }
+      },
+      "perform" : {
+        "cue detection and scope resolution" : {
+          "for" : "all 3 datasets",
+          "train on" : "1",
+          "test on" : "all datasets",
+          "from sentence" : "We perform cue detection and scope resolution for all 3 datasets , and train on 1 and test on all datasets ."
+        }
+      },
+      "trained" : {
+        "models" : {
+          "on" : {
+            "free GPUs" : {
+              "available via" : "Google Colaboratory"
+            }
+          }
+        },
+        "from sentence" : "We trained the models on free GPUs available via Google Colaboratory , the training scripts are publicly available ."
+      }
+    }
+  }
+}

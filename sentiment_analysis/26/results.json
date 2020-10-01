@@ -1,0 +1,95 @@
+{
+  "has" : {
+    "Results" : {
+      "Comparing this to" : {
+        "CNNs" : {
+          "with" : {
+            "GloVe / fastText embeddings" : {
+              "where" : {
+                "Glo Ve" : {
+                  "used for" : "English"
+                },
+                "fastText" : {
+                  "used for" : "all other languages"
+                }
+              }
+            }
+          },
+          "observe" : {
+            "substantial improvements" : {
+              "across all" : "datasets"
+            }
+          }
+        },
+        "from sentence" : "Comparing this to CNNs with GloVe / fastText embeddings , where Glo Ve is used for English , and fastText is used for all other languages , we observe substantial improvements across all datasets ."
+      },
+      "shows" : {
+        "word vectors" : {
+          "tend to convey" : {
+            "pertinent word semantics signals" : {
+              "that enable" : {
+                "models" : {
+                  "to generalize" : "better"
+                }
+              }
+            }
+          },
+          "from sentence" : "This shows that word vectors do tend to convey pertinent word semantics signals that enable models to generalize better ."
+        }
+      },
+      "Note" : {
+        "accuracy" : {
+          "using" : {
+            "GloVe" : {
+              "on" : {
+                "English movies review dataset" : {
+                  "consistent with" : {
+                    "numbers" : {
+                      "reported in" : "previous work"
+                    }
+                  }
+                }
+              }
+            }  
+          },
+          "from sentence" : "Note also that the accuracy using GloVe on the English movies review dataset is consistent with numbers reported in previous work ."
+        }
+      },
+      "consider" : {
+        "our DM - MCNNs" : {
+          "with" : "dual - module mechanism",
+          "from sentence" : "Next , we consider our DM - MCNNs with their dual - module mechanism to take advantage of transfer learning ."
+        }
+      },
+      "observe" : {
+        "fairly consistent and sometimes quite substan - tial gains" : {
+          "over" : {
+            "CNNs" : {
+              "with just" : "GloVe / fastText vectors"
+            }
+          },
+          "from sentence" : "We observe fairly consistent and sometimes quite substan - tial gains over CNNs with just the GloVe / fastText vectors ."
+        }
+      },
+      "has" : {
+        "automatically projected cross - lingual embeddings" : {
+          "are" : {
+            "very noisy and limited in their coverage" : {
+              "particularly with respect to" : "inflected forms"
+            }
+          },
+          "has" : {
+            "our model" : {
+              "succeeds in exploiting them to obtain" : {
+                "substantial gains" : {
+                  "in" : "several different languages and domains"
+                }
+              } 
+            }
+          }
+          "from sentence" : "Although the automatically projected cross - lingual embeddings are very noisy and limited in their coverage , particularly with respect to inflected forms , our model succeeds in exploiting them to obtain substantial gains in several different languages and domains ."
+        }
+      }
+    }
+  }
+}

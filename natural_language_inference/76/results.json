@@ -1,0 +1,113 @@
+{
+  "has" : {
+    "Results" : {
+      "processing" : {
+        "hypothesis" : {
+          "conditioned on" : "premise",
+          "gives" : {
+            "improvement" : {
+              "of" : {
+                "3.3 percentage points" : {
+                  "in" : "accuracy",
+                  "over" : "Bowman et al. 's LSTM"
+                }
+              }
+            }
+          },
+          "from sentence" : "We found that processing the hypothesis conditioned on the premise instead of encoding each sentence independently gives an improvement of 3.3 percentage points in accuracy over Bowman et al. 's LSTM ."
+        }
+      },
+      "has" : {
+        "Our LSTM" : {
+          "has" : {
+            "outperforms" : {
+              "has" : "simple lexicalized classifier",
+              "by" : "2.7 percentage points"
+            },
+            "from sentence" : "Our LSTM outperforms a simple lexicalized classifier by 2.7 percentage points ."
+          }
+        }
+      },
+      "incorporating" : {
+        "attention mechanism" : {
+          "found" : {
+            "0.9 percentage point" : {
+              "has" : {
+                "improvement" : {
+                  "over" : "single LSTM"
+                }
+              }
+            },
+            "1.4 percentage point" : {
+              "has" : {
+                "increase" : {
+                  "over" : {
+                    "benchmark model" : {
+                      "uses" : {
+                        "two LSTMs" : {
+                          "for" : "conditional encoding"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "By incorporating an attention mechanism we found a 0.9 percentage point improvement over a single LSTM with a hidden size of 159 , and a 1.4 percentage point increase over a benchmark model that uses two LSTMs for conditional encoding ( one for the premise and one for the hypothesis conditioned on the representation of the premise ) ."
+        }
+      },
+      "Enabling" : {
+        "model" : {
+          "attend" : {
+            "output vectors" : {
+              "of" : "premise",
+              "for" : {
+                "every word" : {
+                  "in" : "hypothesis"
+                }
+              },
+              "yields" : {
+                "another 1.2 percentage point" : {
+                  "has" : {
+                    "improvement" : {
+                      "compared to" : {
+                        "attending" : {
+                          "based only on" : {
+                            "last output vector" : {
+                              "of" : "premise"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Enabling the model to attend over output vectors of the premise for every word in the hypothesis yields another 1.2 percentage point improvement compared to attending based only on the last output vector of the premise ."
+            }
+          }
+        }
+      },
+      "Allowing" : {
+        "model" : {
+          "attend" : {
+            "hypothesis" : {
+              "based on" : "premise",
+              "not" : {
+                "improve" : {
+                  "has" : {
+                    "performance" : {
+                      "for" : "RTE"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Allowing the model to also attend over the hypothesis based on the premise does not seem to improve performance for RTE ."
+        }
+      }
+    }
+  }
+}

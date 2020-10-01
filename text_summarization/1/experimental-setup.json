@@ -1,0 +1,45 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "tie" : {
+        "weights" : {
+          "of" : ["encoder embedding", "decoder embedding", "decoder output layers"]
+        },
+        "from sentence" : "For all experiments , we tie the weights of the encoder embedding , the decoder embedding , and the decoder output layers ."
+      },
+      "train" : {
+        "up to 20 epochs" : {
+          "select" : {
+            "checkpoint" : {
+              "with" : "best oracle metric"
+            }
+          }
+        },
+        "from sentence" : "We train up to 20 epochs and select the checkpoint with the best oracle metric ."
+      },
+      "use" : {
+        "Adam ( Kingma and Ba , 2015 ) optimizer" : {
+          "with" : ["learning rate 0.001", "momentum parmeters ? 1 = 0.9 and ? 2 = 0.999"]
+        },
+        "from sentence" : "We use Adam ( Kingma and Ba , 2015 ) optimizer with learning rate 0.001 and momentum parmeters ? 1 = 0.9 and ? 2 = 0.999 ."
+      },
+      "has" : {
+        "Minibatch size" : {
+          "is" : {
+            "64 and 32" : {
+              "for" : "question generation and abstractive summarization"
+            }
+          },
+          "from sentence" : "Minibatch size is 64 and 32 for question generation and abstractive summarization ."
+        }
+      },
+      "implemented in" : ["PyTorch", {"from sentence" : "All models are implemented in PyTorch and trained on single Tesla P40 GPU , based on NAVER Smart Machine Learning ( NSML ) platform ."}],
+      "trained on" : {
+        "single Tesla P40 GPU" : {
+          "based on" : "NAVER Smart Machine Learning ( NSML ) platform"
+        },
+        "from sentence" : "All models are implemented in PyTorch and trained on single Tesla P40 GPU , based on NAVER Smart Machine Learning ( NSML ) platform ."
+      }
+    }
+  }
+}

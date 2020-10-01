@@ -1,0 +1,29 @@
+{
+  "has" : {
+    "Baselines" : {
+      "consider" : {
+        "CNN variants" : {
+          "with" : "linear filters and RNFs",
+          "from sentence" : "We consider CNN variants with linear filters and RNFs."
+        }
+      },
+      "For" : {
+        "RNFs" : {
+          "adopt" : {
+            "two implementations" : {
+              "based on" : "GRUs and LSTMs"
+            }
+          },
+          "from sentence" : "For RNFs , we adopt two implementations based on GRUs and LSTMs respectively ."
+        }
+      },
+      "compare against" : {
+        "RNN variants" : {
+          "name" : ["GRU", "LSTM", {"GRU" : {"with" : "max pooling"}}, {"LSTM" : {"with" : "max pooling"}}]
+        },
+        "from sentence" : "We also compare against the following RNN variants : GRU , LSTM , GRU with max pooling , and LSTM with max pooling ."
+      }
+    }
+  }  
+}
+

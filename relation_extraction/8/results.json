@@ -1,0 +1,57 @@
+{
+  "has" : {
+    "Results" : {
+      "demonstrates" : {
+        "PCNNs + MIL" : {
+          "achieves" : {
+            "higher precision" : {
+              "over" : "entire range of recall"
+            }
+          },
+          "from sentence" : "shows the precision - recall curves for each method , where PCNNs + MIL denotes our method , and demonstrates that PCNNs + MIL achieves higher precision over the entire range of recall ."
+        }
+      },
+      "has" : {
+        "PCNNs + MIL" : {
+          "enhances" : {
+            "recall" : {
+              "to" : "ap - proximately 34 %"
+            }
+          },
+          "without any loss of" : "precision",
+          "from sentence" : "PCNNs + MIL enhances the recall to ap - proximately 34 % without any loss of precision ."
+        }   
+      },
+      "In terms of both" : {
+        "precision and recall" : {
+          "has" : {
+            "PCNNs + MIL" : {
+              "outperforms" : "all other evaluated approaches"
+            }
+          },
+          "from sentence" : "In terms of both precision and recall , PCNNs + MIL outperforms all other evaluated approaches ."
+        }
+      },
+      "Automatically learning" : {
+        "features" : {
+          "via" : {
+            "PCNNs" : {
+              "alleviate" : "error propagation"
+            }
+          }
+        },
+        "from sentence" : "Automatically learning features via PCNNs can alleviate the error propagation that occurs in traditional feature extraction ."
+      },
+      "Incorporating" : {
+        "multi-instance learning" : {
+          "into" : {
+            "convolutional neural network" : {
+              "effective means of addressing" : "wrong label problem"
+            }
+          }
+        },
+        "from sentence" : "Incorporating multi-instance learning into a convolutional neural network is an effective means of addressing the wrong label problem ."
+      }
+    }
+  }
+}

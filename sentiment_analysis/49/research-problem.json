@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Multi-modal Sentiment Analysis", {"from sentence": "Contextual Inter-modal Attention for Multi-modal Sentiment Analysis"}],
+    ["sentiment analysis", {"from sentence" : "Traditionally , sentiment analysis has been applied to a wide variety of texts ."}]
+  ]
+}

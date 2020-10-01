@@ -1,0 +1,103 @@
+{
+  "has" : {
+    "Results" : {
+      "find that" : {
+        "bare SPINN - PI - NT model" : {
+          "performs" : {
+            "little better" : {
+              "than" : "RNN baseline"
+            }
+          }
+        },
+        "SPINN - PI" : {
+          "with" : "added tracking LSTM",
+          "performs" : "well"
+        },
+        "from sentence" : "We find that the bare SPINN - PI - NT model performs little better than the RNN baseline , but that SPINN - PI with the added tracking LSTM performs well ."        
+      },
+      "has" : {
+        "full SPINN model" : {
+          "with" : "relatively weak internal parser",
+          "performs" : "slightly less well",
+          "has" : {
+            "robustly exceeds" : {
+              "has" : {
+                "performance" : {
+                  "of" : "RNN baseline"
+                }
+              }
+            }
+          },
+          "from sentence" : "The full SPINN model with its relatively weak internal parser performs slightly less well , but nonetheless robustly exceeds the performance of the RNN baseline ."
+        },
+        "SPINN - PI and the full SPINN" : {
+          "has" : {
+            "significantly outperform" : {
+              "has" : "previous sentence - encoding models",
+              "from sentence" : "Both SPINN - PI and the full SPINN significantly outperform all previous sentence - encoding models ."              
+            },
+            "outperform" : {
+              "has" : {
+                "tree - based CNN" : {
+                  "uses" : {
+                    "tree - structured composition" : {
+                      "for" : "local feature extraction"
+                    },
+                    "simpler pooling techniques" : {
+                      "to build" : "sentence features"
+                    }
+                  },
+                  "from sentence" : "Most notably , these models outperform the tree - based CNN of , which also uses tree - structured composition for local feature extraction , but uses simpler pooling techniques to build sentence features in the interest of efficiency ."
+                }
+              }
+            }
+          }
+        },
+        "full SPINN" : {
+          "performed" : {
+            "moderately well" : {
+              "at reproducing" : {
+                "Stanford Parser 's parses" : {
+                  "of" : "SNLI data",
+                  "at" : "transition - by - transition level"
+                }
+              },
+              "with" : {
+                "92.4 % accuracy" : {
+                  "at" : "test time"
+                }
+              }
+            },
+            "from sentence" : "The full SPINN performed moderately well at reproducing the Stanford Parser 's parses of the SNLI data at a transition - by - transition level , with 92.4 % accuracy at test time ."
+          }
+        }
+      },
+      "show that" : {
+        "model" : {
+          "that uses" : {
+            "tree - structured composition fully ( SPINN )" : {
+              "has" : {
+                "outper - forms" : {
+                  "has" : {
+                    "only partially ( tree - based CNN )" : {
+                      "has" : {
+                        "outperforms" : {
+                          "has" : {
+                            "one" : {
+                              "which" : "not use it at all ( RNN )"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Our results show that a model that uses tree - structured composition fully ( SPINN ) outper - forms one which uses it only partially ( tree - based CNN ) , which in turn outperforms one which does not use it at all ( RNN ) ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

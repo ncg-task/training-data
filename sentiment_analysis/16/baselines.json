@@ -1,0 +1,59 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "AMN" : {
+          "has" : {
+            "state - of - the - art memory network" : {
+              "used for" : "ASC",
+              "from sentence" : "AMN : A state - of - the - art memory network used for ASC ."
+            }
+          }
+        },
+        "BL - MN" : {
+          "has" : {
+            "Our basic memory network" : {
+              "does not use" : {
+                "proposed techniques" : {
+                  "for capturing" : "target - sensitive sentiments"
+                }
+              }
+            }
+          },
+          "from sentence" : "BL - MN : Our basic memory network presented in Section 2 , which does not use the proposed techniques for capturing target - sensitive sentiments ."
+        },
+        "AE - LSTM" : {
+          "compare with" : {
+            "state - of - the - art attention - based LSTM" : {
+              "for" : "ASC"
+            }
+          },
+          "from sentence" : "AE - LSTM : RNN / LSTM is another popular attention based neural model .
+Here we compare with a state - of - the - art attention - based LSTM for ASC , AE - LSTM ."
+
+        },
+        "ATAE - LSTM" : {
+          "has" : {
+            "attention - based LSTM" : {
+              "for" : "ASC"
+            }
+          },
+          "from sentence" : "ATAE - LSTM :
+Another attention - based LSTM for ASC reported in ."
+
+        },
+        "Target - sensitive Memory Networks ( TMNs )" : {
+          "has" : {
+            "six proposed techniques" : {
+              "name" : ["NP", "CNP", "IT", "CI", "JCI", "JPI"],
+              "give" : "six target - sensitive memory networks"
+            }
+          },
+          "from sentence" : "Target - sensitive Memory Networks ( TMNs ) :
+The six proposed techniques , NP , CNP , IT , CI , JCI , and JPI give six target - sensitive memory networks ."
+
+        }        
+      }
+    }
+  }
+}

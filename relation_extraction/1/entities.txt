@@ -1,0 +1,38 @@
+64	50	84	predicate indicator embedding size
+64	85	87	is
+64	88	90	10
+65	4	17	learning rate
+65	21	28	5 10 ?5
+65	31	73	BERT base - cased and large - cased models
+65	78	85	used in
+65	86	101	our experiments
+66	4	23	position embeddings
+66	24	27	are
+66	28	65	randomly initialized and fine - tuned
+66	66	72	during
+66	77	93	training process
+24	3	7	show
+24	13	40	simple neural architectures
+24	41	56	built on top of
+24	57	61	BERT
+24	62	68	yields
+24	69	103	state - of - the - art performance
+24	47	49	on
+24	109	138	variety of benchmark datasets
+2	23	42	Relation Extraction
+2	47	69	Semantic Role Labeling
+10	24	54	semantic role labeling ( SRL )
+14	4	7	SRL
+79	3	6	see
+79	16	41	BERT - LSTM - large model
+79	42	50	achieves
+79	55	87	state - of - the - art F 1 score
+79	88	93	among
+79	94	107	single models
+79	112	123	outperforms
+79	128	142	ensemble model
+79	90	92	on
+79	150	160	CoNLL 2005
+79	161	200	in - domain and out - of - domain tests
+80	13	27	falls short on
+80	32	52	CoNLL 2012 benchmark

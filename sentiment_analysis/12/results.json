@@ -1,0 +1,53 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "both of our reimplemented MN and TNet" : {
+          "comparable to" : "original models",
+          "from sentence" : "First , both of our reimplemented MN and TNet are comparable to their original models reported in ."
+        },
+        "TNet - ATT" : {
+          "replace" : {
+            "CNN" : {
+              "of" : {
+                "TNet" : {
+                  "with" : "attention mechanism"
+                } 
+              }
+            }
+          },
+          "slightly inferior to" : "TNet",
+          "from sentence" : "When we replace the CNN of TNet with an attention mechanism , TNet - ATT is slightly inferior to TNet ."
+        }
+      },
+      "perform" : {
+        "additional K+1 - iteration" : {
+          "of" : {
+            "training" : {
+              "on" : {
+                "neural ASC models" : {
+                  "performance" : "not changed significantly"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "Moreover , when we perform additional K+1 - iteration of training on these models , their performance has not changed significantly , suggesting simply increasing training time is unable to enhance the performance of the neural ASC models ."
+      },
+      "use" : {
+        "both kinds of attention supervision information" : {
+          "has" : {
+            "MN ( + AS )" : {
+              "remarkably outperforms" : {
+                "MN" : {
+                  "on" : "all test sets"
+                }
+              }  
+            }
+          }
+        },
+        "from sentence" : "Finally , when we use both kinds of attention supervision information , no matter for which metric , MN ( + AS ) remarkably outperforms MN on all test sets ."
+      }
+    }
+  }
+}

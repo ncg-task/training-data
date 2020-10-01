@@ -1,0 +1,32 @@
+{
+  "has" : {
+    "Results" : {
+      "evident" : {
+        "our IARM model" : {
+          "outperforms" : {
+            "all the baseline models" : {
+              "including" : "state of the art",
+              "in both of" : "domains"
+            }
+          }
+        },
+        "from sentence" : "It is evident from the results that our IARM model outperforms all the baseline models , including the state of the art , in both of the domains ."
+      },
+      "obtained" : {
+        "bigger improvement" : {
+          "in" : {
+            "laptop domain" : {
+              "of" : "1.7 %",
+              "compared to" : {
+                "restaurant domain" : {
+                  "of" : "1.4 %"
+                }              
+              }              
+            }
+          },
+          "from sentence" : "We obtained bigger improvement in laptop domain , of 1.7 % , compared to restaurant domain , of 1.4 % ."
+        }
+      }
+    }
+  }
+}

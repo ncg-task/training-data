@@ -1,0 +1,46 @@
+{
+  "has" : {
+    "Model" : {
+      "has" : {
+        "framework" : {
+          "consists of" : "three main sub parts",
+          "from sentence" : "Our framework consists of three main sub parts ."
+        }
+      },
+      "Given" : {
+        "segmented sentence" : {
+          "has" : {
+            "first step" : {
+              "to create" : {
+                "meaningful vector representations" : {
+                  "for" : "all the EDUs"
+                }
+              }
+            }
+          },
+          "from sentence" : "Given a segmented sentence , the first step is to create meaningful vector representations for all the EDUs ."
+        }
+      },
+      "devise" : {
+        "three different Recursive Neural Net models" : {
+          "designed for" : {
+            "one" : {
+              "of" : ["discourse structure prediction", "discourse relation prediction", "sentiment analysis"]
+            }
+          },
+          "from sentence" : "Next , we devise three different Recursive Neural Net models , each designed for one of discourse structure prediction , discourse relation prediction and sentiment analysis ."
+        }
+      },
+      "join" : {
+        "Neural Nets" : {
+          "in" : {
+            "two different ways" : {
+              "name" : ["Multitasking", "Pre-training"]
+            }
+          },
+          "from sentence" : "Finally , we join these Neural Nets in two different ways : Multitasking and Pre-training ."
+        }
+      }
+    }
+  }
+}

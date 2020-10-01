@@ -1,0 +1,7 @@
+(Contribution||has||Results)
+(Results||see that||R - BERT)
+(R - BERT||significantly beats||baseline methods)
+(Results||has||MACRO F1 value)
+(MACRO F1 value||of||R - BERT)
+(R - BERT||is||89. 25)
+(89. 25||much better than||previous best solution)

@@ -1,0 +1,8 @@
+{
+  "has research problem" : [
+    ["Text Comprehension", {"from sentence" : "Explicit Contextual Semantics for Text Comprehension"}],
+    ["text comprehension ( TC )", {"from sentence" : "This paper focuses on two core text comprehension ( TC ) tasks , machine reading comprehension ( MRC ) and textual entailment ( TE ) ."}],
+    ["machine reading comprehension ( MRC )", {"from sentence" : "This paper focuses on two core text comprehension ( TC ) tasks , machine reading comprehension ( MRC ) and textual entailment ( TE ) ."}],
+    ["textual entailment ( TE )", {"from sentence" : "This paper focuses on two core text comprehension ( TC ) tasks , machine reading comprehension ( MRC ) and textual entailment ( TE ) ."}]
+  ]
+}

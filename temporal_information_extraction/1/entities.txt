@@ -1,0 +1,76 @@
+17	19	26	propose
+17	29	57	structured learning approach
+17	58	60	to
+17	61	89	temporal relation extraction
+17	92	97	where
+17	98	110	local models
+17	111	114	are
+17	115	122	updated
+17	123	131	based on
+17	132	140	feedback
+17	141	145	from
+17	146	163	global inferences
+18	4	23	structured approach
+18	29	42	gives rise to
+18	45	66	semisupervised method
+18	91	108	take advantage of
+18	113	145	readily available unlabeled data
+199	17	55	regularized averaged perceptron ( AP )
+199	56	70	implemented in
+199	75	89	LBJava package
+200	0	9	On top of
+200	14	28	first baseline
+200	34	43	performed
+200	44	60	global inference
+202	13	17	used
+202	22	38	same feature set
+202	65	70	as in
+202	75	112	proposed structured perceptron ( SP )
+202	117	121	CoDL
+2	34	62	Temporal Relation Extraction
+4	0	45	Identifying temporal relations between events
+13	25	44	temporal processing
+214	7	10	see
+214	16	25	UT - Time
+214	26	34	is about
+214	35	38	3 %
+214	39	50	better than
+214	51	57	AP - 1
+214	58	60	in
+214	65	86	absolute value of F 1
+220	0	9	On top of
+220	10	16	AP - 2
+220	21	42	global inference step
+220	43	52	enforcing
+220	53	90	symmetry and transitivity constraints
+220	112	127	further improve
+220	132	141	F 1 score
+220	142	144	by
+220	145	150	9.3 %
+221	0	8	SP + ILP
+221	9	25	further improved
+221	30	41	performance
+221	42	44	in
+221	45	73	precision , recall , and F 1
+221	134	142	reaching
+221	146	155	F 1 score
+221	156	158	of
+221	159	165	67.2 %
+232	4	18	improvement of
+232	19	27	SP + ILP
+232	39	43	over
+232	44	46	AP
+232	58	61	was
+232	62	67	small
+232	72	80	AP + ILP
+232	96	111	even worse than
+232	44	46	AP
+233	3	11	applying
+233	16	36	postfiltering method
+233	66	81	able to achieve
+233	82	101	better performances
+233	102	107	using
+233	108	116	SP + ILP
+249	0	8	SP + ILP
+249	9	21	outperformed
+249	22	27	CAEVO

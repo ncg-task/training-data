@@ -1,0 +1,4 @@
+(Contribution||has||Model)
+(Model||propose||target - sensitive memory networks ( TMNs ))
+(target - sensitive memory networks ( TMNs )||can capture||sentiment interaction)
+(sentiment interaction||between||targets and contexts)

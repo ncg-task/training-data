@@ -1,0 +1,44 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "best performance" : {
+          "obtained" : {
+            "70.7 %" : {
+              "while using" : ["word - 1 , 2 - grams", "POS - 1 , 2 , 3 - grams"],
+              "from sentence" : "The best performance obtained is 70.7 % while using word - 1 , 2 - grams and POS - 1 , 2 , 3 - grams as features ."
+            }
+          }
+        },
+        "character - 3 , 4 grams" : {
+          "gave improvement over" : "word unigrams and bigrams",
+          "when" : {
+            "combined" : {
+              "with" : "POS tags",
+              "has" : {
+                "performance" : {
+                  "not" : "sustain"
+                }
+              }              
+            }
+          },
+          "from sentence" : "Although character - 3 , 4 grams gave improvement over word unigrams and bigrams , the performance did not sustain when combined with POS tags ."          
+        }
+      },
+      "Using" : {
+        "POS n-grams" : {
+          "gave" : {
+            "strong boost" : {
+              "of" : {
+                "5.2 points" : {
+                  "over" : "word unigrams and bigrams"
+                }
+              }
+            }
+          },
+          "from sentence" : "Using POS n-grams gave a strong boost of 5.2 points over word unigrams and bigrams ."
+        }
+      }
+    }
+  }  
+}

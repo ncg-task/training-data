@@ -1,0 +1,9 @@
+{
+  "has research problem" : [
+    ["READING COMPRE - HENSION", {"from sentence" : "COMBINING LOCAL CONVOLUTION WITH GLOBAL SELF - ATTENTION FOR READING COMPRE - HENSION"}],
+    ["machine reading and question answering ( Q&A )", {"from sentence" : "Current end - to - end machine reading and question answering ( Q&A ) models are primarily based on recurrent neural networks ( RNNs ) with attention ."}],
+    ["machine reading comprehension", {"from sentence" : "There is growing interest in the tasks of machine reading comprehension and automated question answering ."}],
+    ["automated question answering", {"from sentence" : "There is growing interest in the tasks of machine reading comprehension and automated question answering ."}],
+    ["machine comprehension", {"from sentence" : "In this paper , aiming to make the machine comprehension fast , we propose to remove the recurrent nature of these models ."}]
+  ]
+}

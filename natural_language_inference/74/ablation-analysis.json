@@ -1,0 +1,77 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "conduct" : {
+        "an ablation experiment" : {
+          "on" : {
+            "SNLI development dataset" : {
+              "has" : {
+                "result" : {
+                  "is" : "not satisfactory",
+                  "only using" : {
+                    "sentence embedding" : {
+                      "from" : "discourse markers",
+                      "to predict" : "answer",
+                      "is" : {
+                        "not ideal" : {
+                          "in" : "large - scale datasets"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "As shown in , we conduct an ablation experiment on SNLI development dataset to evaluate the individual contribution of each component of our model .
+The result is obviously not satisfactory , which indicates that only using sentence embedding from discourse markers to predict the answer is not ideal in large - scale datasets ."
+
+                },
+                "performance" : {
+                  "has" : {
+                    "drops a lot" : {
+                      "remove" : ["character - level embedding", "POS and NER features"]
+                    }
+                  },
+                  "from sentence" : "we remove the character - level embedding and the POS and NER features , the performance drops a lot ."
+                },
+                "exact match feature" : {
+                  "demonstrates" : {
+                    "effectiveness" : {
+                      "in" : "ablation result"
+                    }
+                  },
+                  "from sentence" : "The exact match feature also demonstrates its effectiveness in the ablation result ."
+                }
+              },
+              "remove" : {
+                "sentence encoder model" : {
+                  "observe that" : {
+                    "performance" : {
+                      "has" : {
+                        "drops significantly" : {
+                          "to" : "87 . 24 %"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "We then remove the sentence encoder model , which means we do n't use the knowledge transferred from the DMP task and thus the representations r p and r hare set to be zero vectors in the equation ( 6 ) and the equation .
+We observe that the performance drops significantly to 87 . 24 % , which is nearly 1.5 % to our DMAN model , which indicates that the discourse markers have deep connections with the logical relations between two sentences they links ."
+
+                }
+              },
+              "ablate" : {
+                "reinforcement learning part" : {
+                  "has" : {
+                    "result" : {
+                      "has" : "drops about 0.5 %"
+                    }
+                  },
+                  "from sentence" : "Finally , we ablate the reinforcement learning part , in other words , we only use the original loss function to optimize the model ( set ? = 1 ) .
+The result drops about 0.5 % , which proves that it is helpful to utilize all the information from the annotators ."
+
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

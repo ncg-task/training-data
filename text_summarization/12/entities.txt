@@ -1,0 +1,135 @@
+178	0	5	ABS +
+178	6	14	Based on
+178	15	24	ABS model
+178	27	39	further with
+178	40	57	two - layer LSTMs
+178	58	61	for
+178	66	83	encoder - decoder
+178	35	39	with
+178	89	105	500 hidden units
+178	106	108	in
+178	109	119	each layer
+179	0	10	s 2 s+ att
+180	8	17	implement
+180	20	48	sequence - to sequence model
+180	49	53	with
+180	54	63	attention
+164	3	13	initialize
+164	14	39	model parameters randomly
+164	40	45	using
+164	48	69	Gaussian distribution
+164	70	74	with
+164	75	88	Xavier scheme
+165	3	6	use
+165	7	11	Adam
+165	12	14	as
+165	19	39	optimizing algorithm
+166	55	68	learning rate
+166	73	78	0.001
+166	81	104	two momentum parameters
+166	105	130	? 1 = 0.9 and ? 2 = 0.999
+170	59	77	mini-batch size 64
+170	78	80	by
+170	81	92	grid search
+170	0	15	To both speedup
+170	20	49	training and converge quickly
+167	0	6	During
+167	7	15	training
+167	21	25	test
+167	30	64	model performance ( ROUGE - 2 F1 )
+167	65	67	on
+167	68	83	development set
+167	39	42	for
+167	88	107	every 2,000 batches
+169	8	13	apply
+169	14	31	gradient clipping
+169	32	36	with
+169	37	54	range [ ? 5 , 5 ]
+169	55	61	during
+169	62	70	training
+35	17	24	propose
+35	25	92	Selective Encoding for Abstractive Sentence Summarization ( SEASS )
+36	3	8	treat
+36	13	35	sentence summarization
+36	36	40	as a
+36	41	56	threephase task
+36	59	67	encoding
+36	70	79	selection
+36	86	94	decoding
+37	3	14	consists of
+37	17	33	sentence encoder
+37	38	60	selective gate network
+37	69	84	summary decoder
+38	0	5	First
+38	12	28	sentence encoder
+38	29	34	reads
+38	39	50	input words
+38	51	58	through
+38	62	70	RNN unit
+38	71	83	to construct
+38	88	123	first level sentence representation
+39	9	31	selective gate network
+39	32	39	selects
+39	44	63	encoded information
+39	64	76	to construct
+39	81	117	second level sentence representation
+40	4	23	selective mechanism
+40	24	32	controls
+40	37	53	information flow
+40	54	58	from
+40	59	77	encoder to decoder
+40	78	89	by applying
+40	92	104	gate network
+40	105	117	according to
+40	122	142	sentence information
+41	14	42	attention - equipped decoder
+41	43	52	generates
+41	57	64	summary
+41	65	70	using
+41	75	111	second level sentence representation
+2	23	57	Abstractive Sentence Summarization
+8	48	70	sentence summarization
+189	4	15	SEASS model
+189	16	20	with
+189	21	32	beam search
+189	33	44	outperforms
+189	45	64	all baseline models
+189	65	67	by
+189	70	82	large margin
+190	0	8	Even for
+190	9	22	greedy search
+190	35	61	still performs better than
+190	62	75	other methods
+191	0	15	For the popular
+191	16	32	ROUGE - 2 metric
+191	51	59	achieves
+191	60	74	17.54 F1 score
+191	79	99	performs better than
+191	104	118	previous works
+192	0	11	Compared to
+192	16	25	ABS model
+192	44	75	6.22 ROUGE - 2 F1 relative gain
+193	16	39	highest CAs 2s baseline
+193	52	60	achieves
+193	61	90	1.57 ROUGE - 2 F1 improvement
+193	95	101	passes
+193	106	122	significant test
+193	123	135	according to
+193	140	161	official ROUGE script
+199	23	28	SEASS
+199	29	40	outperforms
+199	41	65	all the baseline methods
+199	70	78	achieves
+199	79	101	29.21 , 9.56 and 25.51
+199	35	38	for
+199	106	130	ROUGE 1 , 2 and L recall
+200	161	177	English Gigaword
+200	0	11	Compared to
+200	16	27	ABS + model
+200	37	48	tuned using
+200	49	62	DUC 2003 data
+200	65	74	our model
+200	75	83	performs
+200	84	104	significantly better
+200	105	107	by
+200	108	135	1.07 ROUGE - 2 recall score

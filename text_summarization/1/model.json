@@ -1,0 +1,46 @@
+{
+  "has" : {
+    "Model" : {
+      "separates" : ["diversification and generation stages", {"from sentence" : "In this paper , we present a method for diverse generation that separates diversification and generation stages ."}],
+      "has" : {
+        "diversification stage" : {
+          "leverages" : {
+            "content selection" : {
+              "map" : "source to multiple sequences"
+            }
+          },
+          "from sentence" : "The diversification stage leverages content selection to map the source to multiple sequences , where each mapping is modeled by focusing on different tokens in the source ( oneto - many mapping ) ."
+        },
+        "generation stage" : {
+          "uses" : {
+            "standard encoder - decoder model" : {
+              "generate" : "target sequence given each selected content from the source"
+            }
+          },
+          "from sentence" : "The generation stage uses a standard encoder - decoder model to generate a target sequence given each selected content from the source ( one - to - one mapping ) ."
+        }
+      },
+      "present" : {
+        "generic module" : {
+           "called" : {
+            "SELECTOR" : {
+              "specialized for" : "diversification"
+            }
+           },
+           "used as" : {
+             "plug - and - play" : {
+               "to" : {
+                "arbitrary encoder - decoder model" : {
+                  "for" : "generation without architecture change"
+                }
+               }
+             }
+           }
+        },
+        "from sentence" : "We present a generic module called SELECTOR that is specialized for diversification .
+This module can be used as a plug - and - play to an arbitrary encoder - decoder model for generation without architecture change ."
+
+      }
+    }
+  }
+}

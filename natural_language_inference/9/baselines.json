@@ -1,0 +1,8 @@
+{
+  "has" : {
+    "Baselines" : {
+      "include" : ["LSTM", "End - to - end Memory Networks ( N2N )", "Dynamic Memory Networks ( DMN + )", "Gated End - to - end Memory Networks ( GMe m N2N )", "Differentiable Neural Computer ( DNC )"],
+      "from sentence" : "These include LSTM , End - to - end Memory Networks ( N2N ) , Dynamic Memory Networks ( DMN + ) , Gated End - to - end Memory Networks ( GMe m N2N ) , and Differentiable Neural Computer ( DNC ) ."
+    }
+  }
+}

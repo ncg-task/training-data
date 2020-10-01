@@ -1,0 +1,75 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "novel hard attention mechanism" : {
+          "called" : "reinforced sequence sampling ( RSS )",
+          "selects" : {
+            "tokens" : {
+              "from" : {
+                "input sequence" : {
+                  "in" : "parallel"
+                }
+              }
+            }
+          },
+          "is" : {
+            "highly parallelizable" : {
+              "without" : "any recurrent structure"
+            }
+          },
+          "from sentence" : "In this paper , we first propose a novel hard attention mechanism called \" reinforced sequence sampling ( RSS ) \" , which selects tokens from an input sequence in parallel , and differs from existing ones in that it is highly parallelizable without any recurrent structure ."
+        }
+      },
+      "develop" : {
+        "reinforced self - attention ( ReSA )" : {
+          "combines" : {
+            "RSS" : {
+              "with" : "soft self - attention"
+            }
+          },
+          "from sentence" : "We then develop a model , \" reinforced self - attention ( ReSA ) \" , which naturally combines the RSS with a soft self - attention ."
+        } 
+      },
+      "In" : {
+        "ReSA" : {
+          "has" : {
+            "two parameter - untied RSS" : {
+              "applied to" : {
+                "two copies" : {
+                  "of" : "input sequence"
+                }
+              }
+            },
+            "from sentence" : "In ReSA , two parameter - untied RSS are respectively applied to two copies of the input sequence , where the tokens from one and another are called dependent and head tokens , respectively ."
+          }
+        }
+      },
+      "has" : {
+        "Re SA" : {
+          "models" : {
+            "sparse dependencies" : {
+              "between" : {
+                "head and dependent tokens" : {
+                  "selected by" : "two RSS modules"
+                }
+              }
+            }
+          },
+          "from sentence" : "Re SA only models the sparse dependencies between the head and dependent tokens selected by the two RSS modules ."
+        }
+      },
+      "build" : {
+        "sentence - encoding model" : {
+          "name" : "reinforced self - attention network ( ReSAN )",
+          "based on" : {
+            "ReSA" : {
+              "without" : "any CNN / RNN structure"
+            }
+          },
+          "from sentence" : "Finally , we build an sentence - encoding model , \" reinforced self - attention network ( ReSAN ) \" , based on ReSA without any CNN / RNN structure ."
+        }
+      }
+    }
+  }
+}

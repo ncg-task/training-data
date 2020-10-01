@@ -1,0 +1,38 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "NVDM" : {
+          "extract" : {
+            "embeddings from NVDM" : {
+              "use them for" : "training linear classifiers"
+            } 
+          },
+          "from sentence" : "1 ) NVDM : Since NVDM and our proposed Bayesian SMM share similarities , we chose to extract the embeddings from NVDM and use them for training linear classifiers ."
+        },
+        "SMM" : {
+          "is" : "non-Bayesian SMM with 1 regularization over the rows in T matrix",
+          "from sentence" : "2 ) SMM : Our second baseline system is non-Bayesian SMM with 1 regularization over the rows in T matrix , i.e. , 1 SMM ."
+        },
+        "ULMFiT" : {
+          "is" : {
+            "universal language model" : {
+              "fine - tuned for" : "classification"
+            }
+          },
+          "from sentence" : "3 ) ULMFiT : The third baseline system is the universal language model fine - tuned for classification ( ULMFiT ) ."
+        },
+        "TF - IDF" : {
+          "is a" : {
+            "standard term frequency - inverse document frequency ( TF - IDF ) based document representation" : {
+              "followed by" : "multi-class logistic regression ( LR )"
+            }
+          },
+          "from sentence" : "4 ) TF - IDF :
+  The fourth baseline system is a standard term frequency - inverse document frequency ( TF - IDF ) based document representation , followed by multi-class logistic regression ( LR ) ."
+  
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "has" : {
+    "Approach" : {
+      "propose" : {
+        "token - level ensemble distillation" : {
+          "for" : "G2P conversion"
+        },
+        "from sentence" : "Inspired by the knowledge distillation in computer vision and natural language processing , in this work , we propose the token - level ensemble distillation for G2P conversion , to address the practical problems mentioned above ."
+      },
+      "use" : {
+        "knowledge distillation" : {
+          "to leverage" : "large amount of unlabeled words",
+          "train" : {
+            "teacher model" : {
+              "to generate" : {
+                "phoneme sequence" : {
+                  "as well as" : {
+                    "probability distribution" : {
+                      "given" : "unlabeled grapheme sequence"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "First , we use knowledge distillation to leverage the large amount of unlabeled words .
+Specifically , we train a teacher model to generate the phoneme sequence as well as its probability distribution given unlabeled grapheme sequence , and regard the unlabeled grapheme sequence and the generated phoneme sequence as pseudo labeled data , and add them into the original training data ."
+
+      },
+      "train" : {
+        "variety of models ( CNN , RNN and Transformer )" : {
+          "for" : {
+            "ensemble" : {
+              "to get" : "higher accuracy"
+            }
+          }
+        },
+        "from sentence" : "Second , we train a variety of models ( CNN , RNN and Transformer ) for ensemble to get higher accuracy , and transfer the knowledge of the ensemble models to a light - weight model that is suitable for online deployment , again by knowledge distillation ."
+      },
+      "transfer" : {
+        "knowledge of the ensemble models" : {
+          "to" : {
+            "light - weight model" : {
+              "suitable for" : "online deployment"
+            }
+          }
+        },
+        "from sentence" : "Second , we train a variety of models ( CNN , RNN and Transformer ) for ensemble to get higher accuracy , and transfer the knowledge of the ensemble models to a light - weight model that is suitable for online deployment , again by knowledge distillation ."
+      },
+      "adopt" : {
+        "Transformer" : {
+          "instead of" : "RNN or CNN",
+          "as" : "basic encoder - decoder model structure"
+        },
+        "from sentence" : "Besides , we adopt Transformer instead of RNN or CNN as the basic encoder - decoder model structure , since it demonstrates advantages in a variety of sequence to sequence tasks , such as neural machine translation , text summarization , automatic speech recognition ."
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+25	16	23	propose
+25	28	69	Key - Value Memory Network ( KV - MemNN )
+25	74	105	new neural network architecture
+25	111	122	generalizes
+25	127	150	original Memory Network
+26	4	14	KV - MemNN
+26	15	23	performs
+26	24	26	QA
+26	36	43	storing
+26	44	49	facts
+26	40	42	in
+26	61	84	value structured memory
+27	4	10	memory
+27	11	13	is
+27	14	22	designed
+27	48	54	to use
+27	55	59	keys
+27	60	70	to address
+27	71	88	relevant memories
+27	89	104	with respect to
+27	109	117	question
+28	35	41	encode
+28	42	57	prior knowledge
+28	86	97	to leverage
+28	107	125	complex transforms
+28	126	133	between
+28	134	149	keys and values
+4	0	26	Directly reading documents
+5	35	60	question answering ( QA )
+8	147	149	QA
+161	0	10	WikiMovies
+170	10	37	Key - Value Memory Networks
+170	38	48	outperform
+170	49	66	all other methods
+171	0	7	Reading
+171	8	12	from
+171	13	32	Wikipedia documents
+171	50	61	outperforms
+171	65	85	IE - based KB ( IE )
+187	0	6	WikiQA
+202	0	27	Key - Value Memory Networks
+202	28	38	outperform
+202	41	67	large set of other methods

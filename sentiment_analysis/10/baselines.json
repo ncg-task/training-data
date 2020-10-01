@@ -1,0 +1,114 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "c - LSTM" : {
+          "is" : {
+            "Biredectional LSTM" : {
+              "used to capture" : {
+                "context" : {
+                  "from" : {
+                    "surrounding utterances" : {
+                      "to generate" : "contextaware utterance representation"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "c - LSTM : Biredectional LSTM is used to capture the context from the surrounding utterances to generate contextaware utterance representation ."
+        },
+        "c- LSTM+ Att" : {
+          "has" : {
+            "variant attention" : {
+              "applied to" : "c - LSTM output",
+              "at" : "each timestamp"
+            }
+          },
+          "from sentence" : "c- LSTM+ Att :
+In this variant attention is applied applied to the c - LSTM output at each timestamp by following Eqs. and ."
+
+        },
+        "TFN" : {
+          "specific to" : "multimodal scenario",
+          "has" : {
+            "Tensor outer product" : {
+              "used to capture" : "intermodality and intra-modality interactions"
+            }            
+          },
+          "from sentence" : "TFN :
+This is specific to multimodal scenario .
+Tensor outer product is used to capture intermodality and intra-modality interactions .
+This model does not capture context from surrounding utterances ."
+
+        },
+        "MFN" : {
+          "Specific to" : "multimodal scenario",
+          "utilizes" : {
+            "multi-view learning" : {
+              "by modeling" : "view - specific and cross - view interactions"
+            }
+          },
+          "from sentence" : "MFN ) : Specific to multimodal scenario , this model utilizes multi-view learning by modeling view - specific and cross - view interactions ."
+        },
+        "CNN" : {
+          "identical to" : "our textual feature extractor network",
+          "does not use" : {
+            "contextual information" : {
+              "from" : "CNN : This is identical to our textual feature extractor network ( Section 3.2 ) and it does not use contextual information from the surrounding utterances ."
+            }
+          }
+        },
+        "Memnet" : {
+          "has" : {
+            "current utterance" : {
+              "fed to" : {
+                "memory network" : {
+                  "where" : {
+                    "memories" : {
+                      "correspond to" : "preceding utterances"
+                    }
+                  }
+                }
+              }
+            },
+            "output" : {
+              "from" : {
+                "memory network" : {
+                  "used as" : {
+                    "final utterance representation" : {
+                      "for" : "emotion classification"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Memnet : As described in , the current utterance is fed to a memory network , where the memories correspond to preceding utterances .
+The output from the memory network is used as the final utterance representation for emotion classification ."
+
+        },
+        "CMN" : {
+          "is" : {
+            "state - of - the - art method" : {
+              "models" : {
+                "utterance context" : {
+                  "from" : {
+                    "dialogue history" : {
+                      "using" : {
+                        "two distinct GRUs" : {
+                          "for" : "two speakers"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "CMN : This state - of - the - art method models utterance context from dialogue history using two distinct GRUs for two speakers ."
+        }
+      }
+    }
+  }
+}

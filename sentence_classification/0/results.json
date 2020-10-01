@@ -1,0 +1,179 @@
+{
+  "has" : {
+    "Results" : {
+      "observe" : {
+        "scaffold - enhanced models" : {
+          "achieve" : {
+            "clear improvements" : {
+              "over" : "state - of - the - art approach"
+            }
+          },
+          "from sentence" : "We observe that our scaffold - enhanced models achieve clear improvements over the state - of - the - art approach on this task ."
+        },
+        "results" : {
+          "on" : {
+            "categories" : {
+              "with" : {
+                "more number of instances" : {
+                  "are" : "higher"
+                }
+              }
+            }
+          },
+          "from sentence" : "Generally we observe that results on categories with more number of instances are higher ."
+        }        
+      },
+      "Starting with" : {
+        "BiLSTM - Attn" : {
+          "with" : {
+            "macro F1 score" : {
+              "of" : "51.8"
+            }
+          },
+          "adding" : {
+            "first scaffold task in ' BiLSTM - Attn + section title scaffold '" : {
+              "improves" : {
+                "F1 score" : {
+                  "to" : "56.9 (?= 5.1 )"
+                }
+              }
+            }
+          },
+          "from sentence" : "Starting with the ' BiLSTM - Attn ' baseline with a macro F1 score of 51.8 , adding the first scaffold task in ' BiLSTM - Attn + section title scaffold ' improves the F1 score to 56.9 (?= 5.1 ) ."
+        }
+      },
+      "Adding" : {
+        "second scaffold" : {
+          "in" : {
+            "BiLSTM - Attn + citation worthiness scaffold" : {
+              "results in" : {
+                "similar improvements" : {
+                  "has" : "56.3 (?= 4.5 )"
+                }
+              }
+            }
+          },
+          "from sentence" : "Adding the second scaffold in ' BiLSTM - Attn + citation worthiness scaffold ' also results in similar improvements : 56.3 (?= 4.5 ) ."
+        },
+        "both scaffolds" : {
+          "results in" : "further improvements",
+          "from sentence" : "Adding both scaffolds results in further improvements ."
+        }
+      },
+      "has" : {
+        "both scaffolds" : {
+          "used simulataneously in" : "BiLSTM - Attn + both scaffolds",
+          "has" : {
+            "F1 score" : {
+              "improves to" : "63.1 ( ?= 11.3 )"
+            }
+          },
+          "from sentence" : "When both scaffolds are used simultaneously in ' BiLSTM - Attn + both scaffolds ' , the F1 score further improves to 63.1 ( ?= 11.3 ) , suggesting that the two tasks provide complementary signal that is useful for citation intent prediction ."
+        },
+        "best results" : {
+          "add" : {
+            "ELMo vectors" : {
+              "to" : {
+                "input representations" : {
+                  "in" : "BiLSTM - Attn w / ELMo + both scaffolds"
+                }              
+              },
+              "achieving" : {
+                "F1" : {
+                  "of" : {
+                    "67.9" : {
+                      "has" : {
+                        "major improvement" : {
+                          "from" : {
+                            "previous state - of - the - art results" : {
+                              "of" : "54.6 ( ?= 13.3 )"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }              
+            },
+            "from sentence" : "The best result is achieved when we also add ELMo vectors to the input representations in ' BiLSTM - Attn w / ELMo + both scaffolds ' , achieving an F1 of 67.9 , a major improvement from the previous state - of - the - art results of 54.6 ( ?= 13.3 ) ."
+          },
+          "by using" : {
+            "ELMo representation" : {
+              "in addition to" : "both scaffolds"
+            },
+            "from sentence" : "And the best results are obtained by using ELMo representation in addition to both scaffolds ."
+          }
+        },
+        "Each scaffold task" : {
+          "improves" : "model performance",
+          "from sentence" : "Each scaffold task improves model performance ."
+        }
+      },
+      "note" : {
+        "scaffold tasks" : {
+          "provide" : {
+            "major contributions" : {
+              "on top of" : "ELMo - enabled baseline ( ?= 13.6 )"
+            }
+          },
+          "from sentence" : "We note that the scaffold tasks provide major contributions on top of the ELMo - enabled baseline ( ?= 13.6 ) , demonstrating the efficacy of using structural scaffolds for citation intent prediction ."
+        }
+      },
+      "experimented with" : {
+        "adding features" : {
+          "used in" : "our best model",
+          "observed" : {
+            "at least 1.7 % decline" : {
+              "in" : "performance"
+            }
+          } 
+        },
+        "from sentence" : "We also experimented with adding features used in to our best model and not only we did not see any improvements , but we observed at least 1.7 % decline in performance ."
+      },
+      "on" : {
+        "ACL - ARC" : {
+          "has" : {
+            "results" : {
+              "on" : {
+                "BACKGROUND category" : {
+                  "are" : {
+                    "highest" : {
+                      "as" : {
+                        "category" : {
+                          "is" : "most common"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "For example on ACL - ARC , the results on the BACKGROUND category are the highest as this category is the most common ."
+                },
+                "FUTUREWORK category" : {
+                  "are" : ["lowest", {"from sentence" : "Conversely , the results on the FUTUREWORK category are the lowest ."}],
+                  "has" : {
+                    "fewest data points" : {
+                      "thus" : {
+                        "harder" : {
+                          "for" : {
+                            "model" : {
+                              "to learn" : {
+                                "optimal parameters" : {
+                                  "for" : "correct classification"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "This category has the fewest data points ( see distribution of the categories in ) and thus it is harder for the model to learn the optimal parameters for correct classification in this category ."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

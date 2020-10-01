@@ -1,0 +1,102 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "use" : {
+        "batch size" : {
+          "of" : "B = 32",
+          "from sentence" : "We use a batch size of B = 32 , where for a batch of image - caption pairs each image ( caption ) is only related to one caption ( image ) ."
+        },
+        "D = 1024" : {
+          "for" : "common space mapping dimension",
+          "from sentence" : "We use D = 1024 for common space mapping dimension and ? = 0.25 for Leaky ReLU in the non-linear mappings ."
+        },
+        "? = 0.25" : {
+          "for" : {
+            "Leaky ReLU" : {
+              "in" : "non-linear mappings"
+            }
+          },
+          "from sentence" : "We use D = 1024 for common space mapping dimension and ? = 0.25 for Leaky ReLU in the non-linear mappings ."
+        }
+      },
+      "has" : {
+        "Image - caption pairs" : {
+          "sampled" : {
+            "randomly" : {
+              "with" : "uniform distribution"
+            }
+          },
+          "from sentence" : "Image - caption pairs are sampled randomly with a uniform distribution ."
+        },
+        "Both visual and textual networks weights" : {
+          "fixed during" : "training",
+          "from sentence" : "Both visual and textual networks weights are fixed during training and only common space mapping weights are trainable ."
+        },
+        "common space mapping weights" : {
+          "are" : "trainable",
+          "from sentence" : "Both visual and textual networks weights are fixed during training and only common space mapping weights are trainable ."
+        }
+      },
+      "train" : {
+        "network" : {
+          "for" : "20 epcohs",
+          "with" : {
+            "Adam optimizer" : {
+              "with" : {
+                "lr = 0.001" : {
+                  "where" : {
+                    "learning rate" : {
+                      "divided by" : {
+                        "2" : {
+                          "once at" : "10 - th epoch",
+                          "again at" : "15 - th epoch"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "We train the network for 20 epochs with the Adam optimizer with lr = 0.001 where the learning rate is divided by 2 once at the 10 - th epoch and again at the 15 - th epoch ."
+        }
+      },
+      "regularize" : {
+        "weights" : {
+          "of" : "mappings",
+          "with" : {
+            "l 2 regularization" : {
+              "with" : "reg value = 0.0005"
+            }
+          },
+          "from sentence" : "We regularize weights of the mappings with l 2 regularization with reg value = 0.0005 ."
+        }
+      },
+      "For" : {
+        "VGG" : {
+          "take" : {
+            "outputs" : {
+              "from" : "{ conv 4 1 , conv 4 3 , conv5 1 , conv5 3 }",
+              "map to" : {
+                "semantic feature maps" : {
+                  "with dimension" : "18181024"
+                }
+              }
+            }
+          },
+          "from sentence" : "For VGG , we take outputs from { conv 4 1 , conv 4 3 , conv5 1 , conv5 3 } and map to semantic feature maps with dimension 18181024 , and for PNAS - Net we take outputs from { Cell 5 , Cell 7 , Cell 9 , Cell 11 } pointing game accuracy attention correctness Ours Ours Ours Ours Class"
+        }
+      },
+      "for" : {
+        "PNAS - Net" : {
+          "take" : {
+            "outputs" : {
+              "from" : "{ Cell 5 , Cell 7 , Cell 9 , Cell 11 }"
+            }
+          },
+          "from sentence" : "For VGG , we take outputs from { conv 4 1 , conv 4 3 , conv5 1 , conv5 3 } and map to semantic feature maps with dimension 18181024 , and for PNAS - Net we take outputs from { Cell 5 , Cell 7 , Cell 9 , Cell 11 } pointing game accuracy attention correctness Ours Ours Ours Ours Class"
+        }
+      }
+    }
+  }
+}

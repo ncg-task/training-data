@@ -1,0 +1,75 @@
+{
+  "has" : {
+    "Results" : {
+      "observe" : {
+        "simple FFNN baselines" : {
+          "has" : {
+            "work better" : {
+              "than" : "more complex Siamese and Multi - Perspective CNN or LSTM models"
+            }
+          },
+          "from sentence" : "We observe that the simple FFNN baselines work better than more complex Siamese and Multi - Perspective CNN or LSTM models , more so if character n-gram based embeddings are used ."
+        }
+      },
+      "has" : {
+        "Our basic decomposable attention model DECATT word" : {
+          "without" : "pre-trained embeddings",
+          "is" : {
+            "better" : {
+              "than" : {
+                "most of the models" : {
+                  "used" : "GloVe embeddings" 
+                }
+              }
+            }
+          },
+          "from sentence" : "Our basic decomposable attention model DECATT word without pre-trained embeddings is better than most of the models , all of which used GloVe embeddings ."
+        },
+        "DECATT char model" : {
+          "without" : "any pretrained embeddings",
+          "outperforms" : {
+            "DE - CATT glove" : {
+              "that uses" : "task - agnostic GloVe embeddings"
+            }
+          },
+          "from sentence" : "An interesting observation is that DECATT char model without any pretrained embeddings outperforms DE - CATT glove that uses task - agnostic GloVe embeddings ."
+        }
+      },
+      "when" : {
+        "character n-gram embeddings" : {
+          "are" : {
+            "pre-trained" : {
+              "in" : {
+                "task - specific manner" : {
+                  "in" : "DECATT paralex ? char model",
+                  "observe" : {
+                    "significant boost" : {
+                      "in" : "performance"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Furthermore , when character n-gram embeddings are pre-trained in a task - specific manner in DECATT paralex ?
+char model , we observe a significant boost in performance ."
+
+        }
+      },
+      "note" : {
+        "our best performing model" : {
+          "is" : {
+            "pt - DECATT char" : {
+              "leverages" : {
+                "full power" : {
+                  "of" : "character embeddings"
+                }
+              }
+            }
+          },
+          "from sentence" : "Finally , we note that our best performing model is pt - DECATT char , which leverages the full power of character embeddings and pretraining the model on Paralex ."
+        }
+      }
+    }
+  }
+}

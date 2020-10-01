@@ -1,0 +1,53 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "has" : {
+        "word embeddings" : {
+          "for" : "all of the models",
+          "initialized with" : "100d GloVe vectors",
+          "fine - tuned during" : {
+            "training" : {
+              "to improve" : "performance"
+            }
+          },
+          "from sentence" : "The word embeddings for all of the models are initialized with the 100d GloVe vectors ( 840B token version , ) and fine - tuned during training to improve the performance ."
+        },
+        "other parameters" : {
+          "initialized by" : {
+            "randomly sampling" : {
+              "from" : {
+                "uniform distribution" : {
+                  "in" : "[ ? 0.1 , 0.1 ]"
+                }
+              }
+            }
+          },
+          "from sentence" : "The other parameters are initialized by randomly sampling from uniform distribution in [ ? 0.1 , 0.1 ] ."
+        }
+      },
+      "For" : {
+        "each task" : {
+          "take" : {
+            "hyperparameters" : {
+              "achieve" : {
+                "best performance" : {
+                  "on" : "development set",
+                  "via" : {
+                    "small grid search" : {
+                      "over" : {
+                        "combinations" : {
+                          "of" : ["initial learning rate [ 0.05 , 0.0005 , 0.0001 ]", "l 2 regularization [ 0.0 , 5 E? 5 , 1E? 5 , 1E? 6 ]", "threshold value"]
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "For each task , we take the hyperparameters which achieve the best performance on the development set via an small grid search over combinations of the initial learning rate [ 0.05 , 0.0005 , 0.0001 ] , l 2 regularization [ 0.0 , 5 E? 5 , 1E? 5 , 1E? 6 ] and the threshold value"
+            }
+          }
+        }
+      }
+    }
+  }
+}

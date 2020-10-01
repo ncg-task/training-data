@@ -1,0 +1,126 @@
+{
+  "has" : {
+    "Results" : {
+      "observe" : {
+        "all neural models" : {
+          "achieve" : {
+            "higher F 1 scores" : {
+              "than" : "logistic regression and patterns systems",
+              "demonstrates" : {
+                "effectiveness" : {
+                  "of" : "neural models",
+                  "for" : "relation extraction" 
+                }
+              }
+            }
+          },
+          "from sentence" : "We observe that all neural models achieve higher F 1 scores than the logistic regression and patterns systems , which demonstrates the effectiveness of neural models for relation extraction ."
+        }
+      },
+      "has" : {
+        "positional embeddings" : {
+          "help increase" : {
+            "F 1" : {
+              "by around" : {
+                "2 %" : {
+                  "over" : "plain CNN model"
+                }
+              }
+            }
+          },
+          "from sentence" : "Although positional embeddings help increase the F 1 by around 2 % over the plain CNN model , a simple ( 2 - layer ) LSTM model performs surprisingly better than CNN and dependency - based models ."          
+        },
+        "proposed position - aware mechanism" : {
+          "is" : "very effective",
+          "achieves" : {
+            "F 1 score" : {
+              "of" : {
+                "65.4 %" : {
+                  "with" : {
+                    "absolute increase" : {
+                      "of" : {
+                        "3.9 %" : {
+                          "over" : "best baseline neural model ( LSTM )"
+                        },
+                        "7.9 %" : {
+                          "over" : "baseline logistic regression system"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Lastly , our proposed position - aware mechanism is very effective and achieves an F 1 score of 65.4 % , with an absolute increase of 3.9 % over the best baseline neural model ( LSTM ) and 7.9 % over the baseline logistic regression system ."
+        },
+        "CNN - based models" : {
+          "tend to have"  : "higher precision",
+          "from sentence" : "CNN - based models tend to have higher precision ; RNN - based models have better recall ."
+        },
+        "RNN - based models" : {
+          "have" : "better recall",
+          "from sentence" : "CNN - based models tend to have higher precision ; RNN - based models have better recall ."          
+        },
+        "Endto - end cold start" : {
+          "has" : {
+            "slot filling scores" : {
+              "conflate" : {
+                "performance" : {
+                  "of" : "all modules in the system ( i.e. , entity recognizer , entity linker and relation extractor )"
+                }
+              }
+            }
+          },
+          "from sentence" : "Evaluating relation extraction systems on slot filling is particularly challenging in that : ( 1 ) Endto - end cold start slot filling scores conflate the performance of all modules in the system ( i.e. , entity recognizer , entity linker and relation extractor ) ."
+        },
+        "Errors" : {
+          "in" : {
+            "hop - 0 predictions" : {
+              "easily propagate to" : "hop - 1 predictions" 
+            }
+          },
+          "from sentence" : "( 2 ) Errors in hop - 0 predictions can easily propagate to hop - 1 predictions ."
+        }
+      },
+      "run" : {
+        "ensemble" : {
+          "of" : {
+            "position - aware attention model" : {
+              "takes" : {
+                "majority votes" : {
+                  "from" : {
+                    "5 runs" : {
+                      "with" : "random initializations"
+                    }
+                  }
+                }
+              },
+              "further pushes" : {
+                "F 1 score" : {
+                  "by" : "1.6 %"
+                }
+              },
+              "from sentence" : "We also run an ensemble of our position - aware attention model which takes majority votes from 5 runs with random initializations and it further pushes the F 1 score up by 1.6 % ."
+            }
+          }
+        }
+      },
+      "find" : {
+        "training" : {
+          "has" : {
+            "our logistic regression model" : {
+              "on" : ["TACRED", 
+              {"2 million bootstrapped examples" : {
+                "used in" : {
+                  "2015 Stanford system" : {
+                    "combining it with" : "patterns"
+                }}}}]
+            }
+          },
+          "from sentence" : "We find that : ( 1 ) by only training our logistic regression model on TACRED ( in contrast to on the 2 million bootstrapped examples used in the 2015 Stanford system ) and combining it with patterns , we obtain a higher hop - 0 F 1 score than the 2015 Stanford sys -"
+        }
+      }
+    }
+  }
+}

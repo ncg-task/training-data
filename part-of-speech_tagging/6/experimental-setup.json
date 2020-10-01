@@ -1,0 +1,48 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "has" : {
+        "jPTDP" : {
+          "implemented using" : "DYNET v 2.0",
+          "from sentence" : "Our jPTDP is implemented using DYNET v 2.0 ."
+        }
+      },
+      "optimize" : {
+        "objective function" : {
+          "using" : {
+            "Adam ( Kingma and Ba , 2014 )" : {
+              "with" : "default DYNET parameter settings"
+            }
+          }
+        },
+        "from sentence" : "We optimize the objective function using Adam ( Kingma and Ba , 2014 ) with default DYNET parameter settings and no mini-batches ."
+      },
+      "apply" : {
+        "word dropout rate" : {
+          "of" : "0.25"
+        },
+        "Gaussian noise" : {
+          "with" : "? = 0.2"
+        },
+        "from sentence" : "Following Kiperwasser and Goldberg ( 2016 b ) and , we apply a word dropout rate of 0.25 and Gaussian noise with ? = 0.2 ."
+      },
+      "run for" : ["30 epochs", {"from sentence" : "For training , we run for 30 epochs , and evaluate the mixed accuracy of correctly assigning POS tag together with dependency arc and relation type on the development set after each training epoch ."}],
+      "perform" : {
+        "minimal grid search" : {
+          "of" : {
+            "hyper - parameters" : {
+              "on" : "English"
+            }
+          },
+          "from sentence" : "We perform a minimal grid search of hyper - parameters on English ."
+        }
+      },
+      "compares" : {
+        "POS tagging and dependency parsing results" : {
+          "of" : "our model jPTDP",
+          "from sentence" : "compares the POS tagging and dependency parsing results of our model jPTDP with results reported in prior work , using the same experimental setup ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Answer Justification", {"from sentence" : "Tell Me Why : Using Question Answering as Distant Supervision for Answer Justification"}],
+    ["Developing interpretable machine learning ( ML ) models", {"from sentence" : "Developing interpretable machine learning ( ML ) models , that is , models where a human user can understand what the model is learning , is considered by many to be crucial for ensuring usability and accelerating progress ."}]
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "When" : {
+        "number of layers" : {
+          "is" : "only one",
+          "has" : {
+            "model" : {
+              "lacks" : "reasoning capability"
+            }
+          },
+          "from sentence" : "According to the ablation results , we infer that : ( a ) When the number of layers is only one , the model lacks reasoning capability ."
+        }
+      },
+      "In the case of" : {
+        "1 k dataset" : {
+          "when" : {
+            "too many layers" : {
+              "correctly training" : "model",
+              "becomes" : "increasingly difficult"
+            }
+          },
+          "from sentence" : "In the case of 1 k dataset , when there are too many layers ( 6 ) , it seems correctly training the model becomes increasingly difficult ."          
+        },
+        "10 k dataset" : {
+          "has" : {
+            "many layers ( 6 ) and hidden dimensions ( 200 )" : {
+              "helps" : "reasoning"
+            }
+          },
+          "from sentence" : "In the case of 10 k dataset , many layers ( 6 ) and hidden dimensions ( 200 ) helps reasoning , most notably in difficult task such as task 16 ."
+        }
+      },
+      "Adding" : {
+        "reset gate" : {
+          "has" : "helps",
+          "from sentence" : "( b ) Adding the reset gate helps ."
+        }
+      },
+      "Including" : {
+        "vector gates" : {
+          "has" : {
+            "hurts" : {
+              "in" : "1 k datasets"
+            }
+          },
+          "from sentence" : "( c ) Including vector gates hurts in 1 k datasets , as the model either overfits to the training data or converges to local minima ."
+        }
+      },
+      "has" : {
+        "vector gates" : {
+          "in" : {
+            "bAbI story - based QA 10 k dataset" : {
+              "sometimes" : "help"
+            }
+          },
+          "from sentence" : "On the other hand , vector gates in bAbI story - based QA 10 k dataset sometimes help ."
+        }
+      },
+      "hypothesized that" : {
+        "larger hidden state" : {
+          "required for" : "real data"
+        },
+        "from sentence" : "It can be hypothesized that a larger hidden state is required for real data . Parallelization ."
+      },
+      "Increasing" : {
+        "dimension" : {
+          "of" : {
+            "hidden state" : {
+              "to" : "100",
+              "in" : {
+                "dialog 's Task 6 ( DSTC2 )" : {
+                  "has" : "helps"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "( d ) Increasing the dimension of the hidden state to 100 in the dialog 's Task 6 ( DSTC2 ) helps , while there is not much improvement in the dialog 's Task 1 - 5 ."
+      }
+    }
+  }
+}

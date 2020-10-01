@@ -1,0 +1,81 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "see that" : {
+        "answer verification" : {
+          "makes" : {
+            "great contribution" : {
+              "to" : "overall improvement",
+              "confirms" : {
+                "our hypothesis" : {
+                  "that" : {
+                    "cross - passage answer verification" : {
+                      "has" : {
+                        "useful" : {
+                          "for" : "multi-passage MRC"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "From , we can see that the answer verification makes a great contribution to the overall improvement , which confirms our hypothesis that cross - passage answer verification is useful for the multi-passage MRC ."
+        }
+      },
+      "For" : {
+        "ablation" : {
+          "of" : {
+            "content model" : {
+              "has" : {
+                "analyze" : {
+                  "not only affect" : "content score itself",
+                  "violate" : "verification model"
+                },
+                "from sentence" : "For the ablation of the content model , we analyze that it will not only affect the content score itself , but also violate the verification model since the content probabilities are necessary for the answer representation , which will be further analyzed in Section 4.3 ."
+              }
+            }
+          }
+        }
+      },
+      "jointly training" : {
+        "three models" : {
+          "provide" : {
+            "great benefits" : {
+              "shows that" : {
+                "three tasks" : {
+                  "are" : "closely related",
+                  "can" : {
+                    "boost" : {
+                      "has" : {
+                        "each other" : {
+                          "with" : {
+                            "shared representations" : {
+                              "at" : "bottom layers"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Another discovery is that jointly training the three models can provide great benefits , which shows that the three tasks are actually closely related and can boost each other with shared representations at bottom layers ."
+            }
+          }
+        }
+      },
+      "achieve" : {
+        "improvement" : {
+          "of" : {
+            "nearly 3 points" : {
+              "without" : "yes / no classification"
+            }
+          },
+          "from sentence" : "At last , comparing our method with the baseline , we achieve an improvement of nearly 3 points without the yes / no classification ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,122 @@
+title
+Document Expansion by Query Prediction
+abstract
+One technique to improve the retrieval effectiveness of a search engine is to expand documents with terms that are related or representative of the documents ' content .
+From the perspective of a question answering system , this might comprise questions the document can potentially answer .
+Following this observation , we propose a simple method that predicts which queries will be issued fora given document and then expands it with those predictions with a vanilla sequence - to - sequence model , trained using datasets consisting of pairs of query and relevant documents .
+By combining our method with a highly - effective re-ranking component , we achieve the state of the art in two retrieval tasks .
+Ina latencycritical regime , retrieval results alone ( without re-ranking ) approach the effectiveness of more computationally expensive neural re-rankers but are much faster .
+Code to reproduce experiments and trained models can be found at https://github.
+com/nyu-dl/dl4ir-doc2query .
+Introduction
+The " vocabulary mismatch " problem , where users use query terms that differ from those used in relevant documents , is one of the central challenges in information retrieval .
+Prior to the advent of neural retrieval models , this problem has most often been tackled using query expansion techniques , where an initial round of retrieval can provide useful terms to augment the original query .
+Continuous vector space representations and neural networks , however , no longer depend on discrete onehot representations , and thus offer an exciting new approach to tackling this challenge .
+Despite the potential of neural models to match documents at the semantic level for improved ranking , most scalable search engines use exact Researchers are finding that cinnamon reduces blood sugar levels naturally when taken daily ...
+does cinnamon lower blood sugar ?
+does cinnamon lower blood sugar ?
+Researchers are finding that cinnamon reduces blood sugar levels naturally when taken daily ...
+Input : Document
+Output : Predicted Query : Given a document , our Doc2query model predicts a query , which is appended to the document .
+Expansion is applied to all documents in the corpus , which are then indexed and searched as before .
+term match between queries and documents to perform initial retrieval .
+Query expansion is about enriching the query representation while holding the document representation static .
+In this paper , we explore an alternative approach based on enriching the document representation ( prior to indexing ) .
+Focusing on question answering , we train a sequence - to - sequence model , that given a document , generates possible questions that the document might answer .
+An overview of the proposed method is shown in .
+We view this work as having several contributions :
+This is the first successful application of document expansion using neural networks that we are aware of .
+On the recent MS MARCO dataset , our approach is competitive with the best results on the official leaderboard , and we report the best - known results on TREC CAR .
+We further show that document expansion is more effective than query expansion on these two datasets .
+We accomplish this with relatively simple models using existing open - source toolkits , which allows easy replication of our results .
+Document expansion also presents another major advantage , since the enrichment is performed prior to indexing :
+Although retrieved output can be further re-ranked using a neural model to greatly enhance effectiveness , the output can also be returned as - is .
+These results already yield a noticeable improvement in effectiveness over a " bag of words " baseline without the need to apply expensive and slow neural network inference at retrieval time .
+Related Work
+Prior to the advent of continuous vector space representations and neural ranking models , information retrieval techniques were mostly limited to keyword matching ( i.e. , " one - hot " representations ) .
+Alternatives such as latent semantic indexing ) and its various successors never really gained significant traction .
+Approaches to tackling the vocabulary mismatch problem within these constraints include relevance feedback , query expansion , and modeling term relationships using statistical translation .
+These techniques share in their focus on enhancing query representations to better match documents .
+In this work , we adopt the alternative approach of enriching document representations , which works particularly well for speech ( Singhal and Pereira , 1999 ) and multi-lingual retrieval , where terms are noisy .
+Document expansion techniques have been less popular with IR researchers because they are less amenable to rapid experimentation .
+The corpus needs to be re-indexed every time the expansion technique changes ( typically , a costly process ) ; in contrast , manipulations to query representations can happen at retrieval time ( and hence are much faster ) .
+The success of document expansion has also been mixed ; for example , explore both query expansion and document expansion in the same framework and conclude that the former is consistently more effective .
+A new generation of neural ranking models offer solutions to the vocabulary mismatch problem based on continuous word representations and the ability to learn highly non-linear models of relevance ; see recent overviews by and .
+However , due to the size of most corpora and the impractical - ity of applying inference over every document in response to a query , nearly all implementations today deploy neural networks as re-rankers over initial candidate sets retrieved using standard inverted indexes and a term - based ranking model such as BM25 .
+Our work fits into this broad approach , where we take advantage of neural networks to augment document representations prior to indexing ; term - based retrieval then happens exactly as before .
+Of course , retrieved results can still be re-ranked by a stateof - the - art neural model , but the output of term - based ranking already appears to be quite good .
+In other words , our document expansion approach can leverage neural networks without their high inference - time costs .
+Method : Doc2query
+Our proposed method , which we call " Doc2query " , proceeds as follows :
+For each document , the task is to predict a set of queries for which that document will be relevant .
+Given a dataset of ( query , relevant document ) pairs , we use a sequence - to - sequence transformer model that takes as an input the document terms and produces a query .
+The document and target query are segmented using BPE after being tokenized with the Moses tokenizer .
+1
+To avoid excessive memory usage , we truncate each document to 400 tokens and queries to 100 tokens .
+Architecture and training details of our transformer model are described in Appendix A.
+Once the model is trained , we predict 10 queries using top -k random sampling and append them to each document in the corpus .
+We do not put any special markup to distinguish the original document text from the predicted queries .
+The expanded documents are indexed , and we retrieve a ranked list of documents for each query using BM25 .
+We optionally re-rank these retrieved documents using BERT as described by .
+Experimental Setup
+To train and evaluate the models , we use the following two datasets : TREC - CAR is a dataset where the input query is the concatenation of a Wikipedia article title with the title of one of its sections .
+The ground - truth documents are the paragraphs within that section .
+The corpus consists of all English Wikipedia paragraphs except the abstracts .
+The released dataset has five predefined folds , and we use the first four as a training set ( approx. 3M queries ) , and the remaining as a validation set ( approx. 700 k queries ) .
+The test set is the same as the one used to evaluate submissions to TREC - CAR 2017 ( approx. 2,250 queries ) .
+We evaluate the following ranking methods :
+BM25 : We use the Anserini open - source IR toolkit 3 to index the original ( non -expanded ) documents and BM25 to rank the passages .
+During evaluation , we use the top - 1000 re-ranked passages .
+BM25 + Doc2query :
+We first expand the documents using the proposed Doc2query method .
+We then index and rank the expanded documents exactly as in the BM25 method above .
+2
+https://github.com/dfcf93/MSMARCO /
+tree / master / Ranking 3 http://anserini.io/
+RM3 :
+To compare document expansion with query expansion , we applied the RM3 query expansion technique .
+We apply query expansion to both unexpanded documents ( BM25 + RM3 ) as well as the expanded documents ( BM25 + Doc2query + RM3 ) .
+BM25 + BERT : We index and retrieve documents as in the BM25 condition and further re-rank the documents with BERT as described in .
+BM25 + Doc2query + BERT : We expand , index , and retrieve documents as in the BM25 + Doc2query condition and further re-rank the documents with BERT .
+To evaluate the effectiveness of the methods on MS MARCO , we use its official metric , mean reciprocal rank of the top - 10 documents ( MRR@10 ) .
+For TREC - CAR , we use mean average precision ( MAP ) .
+Results
+Results on both datasets are shown in .
+BM25 is the baseline .
+Document expansion with our method ( BM25 + Doc2query ) improves retrieval effectiveness by ? 15 % for both datasets .
+When we combine document expansion with a state - of - the - art re-ranker ( BM25 + Doc2query + BERT ) , we achieve the best - known results to date on TREC CAR ; for MS MARCO , we are near the state of the art .
+4
+Our full re-ranking condition ( BM25 + Doc2query + BERT ) beats BM25 + BERT alone , which verifies that the contribution Input Document : July is the hottest month in Washington DC with an average temperature of 27C ( 80F ) and the coldest is January at 4C ( 38F ) with the most daily sunshine hours at 9 in July .
+The wettest month is May with an average of 100 mm of rain .
+Predicted Query : weather in washington dc what is the temperature in washington
+Input Document : The Delaware River flows through Philadelphia into the Delaware Bay .
+It flows through and aqueduct in the Roundout Reservoir and then flows through Philadelphia and New Jersey before emptying into the Delaware Bay .
+Predicted Query : what river flows through delaware where does the delaware river start and end Input Document : sex chromosome - ( genetics ) a chromosome that determines the sex of an individual ; mammals normally have two sex chromosomes chromosome -a threadlike strand of DNA in the cell nucleus that carries the genes in a linear order ; humans have 22 chromosome pairs plus two sex chromosomes .
+Predicted Query : what is the relationship between genes and chromosomes Target Query :
+which chromosome controls sex characteristics of Doc2query is indeed orthogonal to that from post - indexing re-ranking .
+Where exactly are these better scores coming from ?
+We show in examples of queries produced by our Doc2query model trained on MS MARCO .
+We notice that the model tends to copy some words from the input document ( e.g. , Washington DC , River , chromosome ) , meaning that it can effectively perform term re-weighting ( i.e. , increasing the importance of key terms ) .
+Nevertheless , the model also produces words not present in the input document ( e.g. , weather , relationship ) , which can be characterized as expansion by synonyms and other related terms .
+To quantify this analysis , we measured the proportion of predicted words that exist ( copied ) vs. not - exist ( new ) in the original document .
+Excluding stop words , which corresponds to 51 % of the predicted query words , we found that 31 % are new while the rest ( 69 % ) are copied .
+If we expand MS MARCO documents using only new words and retrieve the development set queries with BM25 , we obtain an MRR@10 of 18.8 ( as opposed to 18.4 when indexing with original documents ) .
+Expanding with copied words gives an MRR@10 of 19.7 .
+We achieve a higher MRR@10 of 21.5 when documents are expanded with both types of words , showing that they are complementary .
+Further analyses show that one source of improvement comes from having more relevant documents for the re-ranker to consider .
+We find that the Recall@1000 of the MS MARCO development set increased from 85.3 ( BM25 ) to 89.3 ( BM25 + Doc2query ) .
+Results show that BERT is indeed able to identify these correct answers from the improved candidate pool and bring them to the top of the ranked list , thus improving the overall MRR .
+As a contrastive condition , we find that query expansion with RM3 hurts in both datasets , whether applied to the unexpanded corpus ( BM25 + RM3 ) or the expanded version ( BM25 + Doc2query + RM3 ) .
+This is a somewhat surprising result because query expansion usually improves effectiveness in document retrieval , but this can likely be explained by the fact that both MS MARCO and CAR are precision oriented .
+This result shows that document expansion can be more effective than query expansion , most likely because there are more signals to exploit as documents are much longer .
+Finally , for production retrieval systems , latency is often an important factor .
+Our method without a re-ranker ( BM25 + Doc2query ) adds a small latency increase over baseline BM25 ( 50 ms vs. 90 ms ) but is approximately seven times faster than a neural re-ranker that has a three points higher MRR@10 ( Single Duet v2 , which is presented as a baseline in MS MARCO by the organizers ) .
+For certain operating scenarios , this tradeoff in quality for speed might be worthwhile .
+Conclusion
+We present the first successful use of document expansion based on neural networks .
+Document expansion holds substantial promise for neural models because documents are much longer and thus contain richer input signals .
+Furthermore , the general approach allows developers to shift the computational costs of neural network inference from retrieval to indexing .
+Our implementation is based on integrating three open - source toolkits : Open NMT , Anserini , and Tensor Flow BERT .
+The relative simplicity of our approach aids in the reproducibility of our results and paves the way for further improvements in document expansion . :
+Retrieval effectiveness on the development set of MS MARCO when using different decoding methods to produce queries .
+On the x - axis , we vary the number of predicted queries that are appended to the original documents .

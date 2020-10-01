@@ -1,0 +1,172 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "Natural Language Inference" : {
+          "Compared to" : {
+            "results" : {
+              "from" : {
+                "official leaderboard of SNLI" : {
+                  "has" : {
+                    "DiSAN" : {
+                      "outperforms" : "previous works",
+                      "improves" : {
+                        "best latest test accuracy" : {
+                          "achieved by" : "memory - based NSE encoder network",
+                          "by" : {
+                            "remarkable margin" : {
+                              "of" : "1.02 %"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "Compared to the results from the official leaderboard of SNLI in , DiSAN outperforms previous works and improves the best latest test accuracy ( achieved by a memory - based NSE encoder network ) by a remarkable margin of 1.02 % ."
+                }
+              }
+            }
+          },
+          "has" : {
+            "DiSAN" : {
+              "surpasses" : {
+                "RNN / CNN based models" : {
+                  "with" : ["more complicated architecture", "more parameters"],
+                  "by" : "large margins"
+                },
+                "from sentence" : "DiSAN surpasses the RNN / CNN based models with more complicated architecture and more parameters by large margins , e.g. , + 2.32 % to Bi - LSTM , + 1.42 % to Bi - LSTM with additive attention ."                
+              },
+              "outperforms" : {
+                "models" : {
+                  "with" : {
+                    "assistance" : {
+                      "of" : "semantic parsing tree"
+                    }
+                  },
+                  "from sentence" : "It even outperforms models with the assistance of a semantic parsing tree , e.g. , + 3.52 % to Tree - based CNN , + 2.42 % to SPINN - PI ."
+                }
+              }
+            },
+            "comparison" : {
+              "between" : {
+                "third baseline and DiSAN" : {
+                  "shows" : {
+                    "DiSAN" : {
+                      "has" : {
+                        "substantially outperform" : {
+                          "has" : {
+                            "multi-head attention" : {
+                              "by" : "1.45 %"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "Also , a comparison between the third baseline and DiSAN shows that DiSAN can substantially outperform multi-head attention by 1.45 % ."                  
+                },
+                "forth baseline and DiSAN" : {
+                  "shows" : {
+                    "DiSA block" : {
+                      "has" : {
+                        "outperform" : {
+                          "has" : {
+                            "Bi - LSTM layer" : {
+                              "in" : "context encoding"
+                            }
+                          },
+                          "improving" : {
+                            "test accuracy" : {
+                              "by" : "0.64 %"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "Moreover , a comparison between the forth baseline and DiSAN shows that the DiSA block can even outperform Bi - LSTM layer in context encoding , improving test accuracy by 0.64 % ."
+                },
+                "fifth baseline and DiSAN" : {
+                  "shows" : {
+                    "directional self - attention" : {
+                      "with" : "forward and backward masks ( with temporal order encoded )",
+                      "bring" : "0.96 % improvement"
+                    }
+                  },
+                  "from sentence" : "A comparison between the fifth baseline and DiSAN shows that directional self - attention with forward and backward masks ( with temporal order encoded ) can bring 0.96 % improvement ."
+                }
+              }
+            }
+          },
+          "shows" : {
+            "changing" : {
+              "has" : {
+                "token - wise attention" : {
+                  "to" : "multi-dimensional / feature - wise attention",
+                  "leads to" : {
+                    "3.31 % improvement" : {
+                      "on" : "word embedding based model"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "First , a comparison between the first two models shows that changing token - wise attention to multi-dimensional / feature - wise attention leads to 3.31 % improvement on a word embedding based model ."
+            }
+          }
+        },
+        "Sentiment Analysis" : {
+          "has" : {
+            "DiSAN" : {
+              "improves" : {
+                "last best accuracy" : {
+                  "given by" : "CNN - Tensor",
+                  "by" : "0.52 %"
+                },
+                "from sentence" : "To the best of our knowledge , DiSAN improves the last best accuracy ( given by CNN - Tensor ) by 0.52 % ."                
+              },
+              "achieves" : {
+                "better performance" : {
+                  "than" : "CNN - based models"
+                },
+                "from sentence" : "Additionally , DiSAN achieves better performance than CNN - based models ."
+              },
+              "has" : {
+                "outperforms" : {
+                  "such as" : {
+                    "NCSL" : {
+                      "has" : "+ 0.62 %"
+                    },
+                    "LR- Bi- LSTM" : {
+                      "has" : "+ 1.12 %"
+                    }
+                  },
+                  "from sentence" : "Nonetheless , DiSAN still outperforms these fancy models , such as NCSL ( + 0.62 % ) and LR- Bi- LSTM ( + 1.12 % ) . :"
+                }
+              }
+            }
+          },
+          "Compared to" : {
+            "tree - based models" : {
+              "with" : {
+                "heavy use" : {
+                  "of" : "prior structure"
+                }
+              },
+              "e.g." : ["MV - RNN", "RNTN", "Tree - LSTM"],
+              "has" : {
+                "DiSAN" : {
+                  "has" : {
+                    "outperforms" : {
+                      "by" : "7.32 % , 6.02 % and 0.72 %"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Compared to tree - based models with heavy use of the prior structure , e.g. , MV - RNN , RNTN and Tree - LSTM , DiSAN outperforms them by 7.32 % , 6.02 % and 0.72 % , respectively ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

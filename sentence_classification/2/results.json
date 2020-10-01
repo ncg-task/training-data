@@ -1,0 +1,122 @@
+{
+  "has" : {
+    "Results" : { 
+      "show" : {
+        "CNN + MCFA" : {
+          "achieves" : {
+            "state of the art performance" : {
+              "on" : "three of the four data sets"
+            }
+          },
+          "performs" : {
+            "competitively" : {
+              "on" : "one data set"
+            }
+          },
+          "from sentence" : "We show that CNN + MCFA achieves state of the art performance on three of the four data sets and performs competitively on one data set ."
+        }
+      },
+      "When" : {
+        "N = 1" : {
+          "has" : {
+            "MCFA" : {
+              "increases" : {
+                "performance" : {
+                  "of" : {
+                    "normal CNN" : {
+                      "from" : {
+                        "85.0" : {
+                           "to" : "87.6"
+                        }
+                      },
+                      "beating" : {
+                        "current state of the art" : {
+                          "on" : "CR data set"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "When N = 1 , MCFA increases the performance of a normal CNN from 85.0 to 87.6 , beating the current state of the art on the CR data set ."
+        },
+        "N = 10" : {
+          "has" : {
+            "MCFA" : {
+              "additionally beats" : {
+                "state of the art" : {
+                  "on" : "TREC data set"
+                }
+              }
+            }
+          },
+          "from sentence" : "When N = 10 , MCFA additionally beats the state of the art on the TREC data set ."
+        }
+      },
+      "has" : {
+        "our ensemble classifier" : {
+          "additionally outperforms" : {
+            "all competing models" : {
+              "on" : "MR data set"
+            }
+          },
+          "from sentence" : "Finally , our ensemble classifier additionally outperforms all competing models on the MR data set ."
+        }
+      },
+      "On" : {
+        "all data sets" : {
+           "except" : "SUBJ",
+           "has" : {
+             "accuracy" : {
+               "of" : {
+                "CNN + B1" : {
+                  "decreases from" : "base CNN accuracy"
+                }
+              }
+            }
+          },
+          "from sentence" : "On all data sets except SUBJ , the accuracy of CNN + B1 decreases from the base CNN accuracy , while the accuracy of our model always improves from the base CNN accuracy ."
+        }  
+      },
+      "conclude that" : {
+        "translations" : {
+          "are" : {
+            "better additional contexts" : {
+              "than" : "topics"
+            }
+          }
+        },
+        "from sentence" : "We also compare two different kinds of additional context : topics ( TopCNN ) and translations ( CNN + B1 , CNN + B2 , CNN + MCFA ) .
+Overall , we conclude that translations are better additional contexts than topics ."
+
+      },
+      "using" : {
+        "single context" : {
+          "has" : {
+            "translations" : {
+              "always outperform" : "topics"
+            }
+          },
+          "from sentence" : "When using a single context ( i.e. TopCNN word , TopCNN sent , and our models when N = 1 ) , translations always outperform topics even when using the baseline methods ."
+        }
+      },
+      "Using" : {
+        "topics" : {
+          "as" : "additional context",
+          "decrease" : {
+            "performance" : {
+              "of" : {
+                "CNN classifier" : {
+                  "on" : "most data sets"
+                }
+              }
+            }
+          },
+          "from sentence" : "Using topics as additional context also decreases the performance of the CNN classifier on most data sets , giving an adverse effect to the CNN classifier ."
+        }
+      }
+    }
+  }
+}

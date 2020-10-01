@@ -1,0 +1,37 @@
+{
+  "has" : {
+    "Model" : {
+      "called" : ["Recursive Neural Tensor Network ( RNTN )", {"from sentence" : "In order to capture the compositional effects with higher accuracy , we propose a new model called the Recursive Neural Tensor Network ( RNTN ) ."}],
+      "has" : {
+        "Recursive Neural Tensor Networks" : {
+          "takes as input" : {
+            "phrases" : {
+              "of" : "any length"
+            },
+            "from sentence" : "Recursive Neural Tensor Networks take as input phrases of any length ."            
+          },
+          "represent" : {
+            "phrase" : {
+              "through" : "word vectors and a parse tree",
+              "from sentence" : "They represent a phrase through word vectors and a parse tree and then compute vectors for higher nodes in the tree using the same tensor - based composition function ."
+            }
+          },
+          "compute" : {
+            "vectors" : {
+              "for" : {
+                "higher nodes" : {
+                  "in" : {
+                    "tree" : {
+                      "using" : "same tensor - based composition function"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "They represent a phrase through word vectors and a parse tree and then compute vectors for higher nodes in the tree using the same tensor - based composition function ."              
+            }
+          }          
+        }        
+      }
+    }
+  }
+}

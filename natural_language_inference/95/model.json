@@ -1,0 +1,80 @@
+{
+  "has" : {
+    "Model" : {
+      "consists of" : {
+        "three modules" : {
+          "follow" : {
+            "boundary - based MRC models" : {
+              "to find" : {
+                "answer candidate" : {
+                  "for" : "each passage",
+                  "by identifying" : {
+                    "start and end position" : {
+                      "of" : "answer"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "The overall framework of our model is demonstrated in , which consists of three modules .
+First , we follow the boundary - based MRC models to find an answer candidate for each passage by identifying the start and end position of the answer ( ."
+
+            }
+          },
+          "model" : {
+            "meanings" : {
+              "of" : {
+                "answer candidates" : {
+                  "extracted from" : "those passages"
+                }
+              }
+            },
+            "from sentence" : "Second , we model the meanings of the answer candidates extracted from those passages and use the content scores to measure the quality of the candidates from a second perspective ."
+          },
+          "use" : {
+            "content scores" : {
+              "to measure" : {
+                "quality" : {
+                  "of" : "candidates"
+                }
+              }
+            },
+            "from sentence" : "Second , we model the meanings of the answer candidates extracted from those passages and use the content scores to measure the quality of the candidates from a second perspective ."
+          },
+          "conduct" : {
+            "answer verification" : {
+              "by enabling" : {
+                "each answer candidate" : {
+                  "to attend" : {
+                    "other candidates" : {
+                      "based on" : "their representations"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Third , we conduct the answer verification by enabling each answer candidate to attend to the other candidates based on their representations ."
+            }
+          }
+        }
+      },
+      "has" : {
+        "final answer" : {
+          "determined by" : {
+            "three factors" : {
+              "has" : ["boundary", "content", "crosspassage answer verification", {"from sentence" : "Therefore , the final answer is determined by three factors : the boundary , the content and the crosspassage answer verification ."}],
+              "modeled using" : {
+                "different modules" : {
+                  "can be" : {
+                    "jointly trained" : {
+                      "in" : "our end - to - end framework"
+                    }
+                  },
+                  "from sentence" : "The three steps are modeled using different modules , which can be jointly trained in our end - to - end framework ."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

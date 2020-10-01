@@ -1,0 +1,60 @@
+{
+  "has" : {
+    "Dataset" : {
+      "construct" : {
+        "queries , answers and supporting passages" : {
+          "from" : "BMJ Case Reports",
+          "from sentence" : "For our dataset , we construct queries , answers and supporting passages from BMJ Case Reports , the largest online repository of such documents ."
+        }
+      },
+      "has" : {
+        "case report" : {
+          "is" : {
+            "detailed description" : {
+              "of" : {
+                "clinical case" : {
+                  "focuses on" : ["rare diseases", "unusual presentation of common conditions", "novel treatment methods"]
+                }
+              },
+              "from sentence" : "A case report is a detailed description of a clinical case that focuses on rare diseases , unusual presentation of common conditions and novel treatment methods ."
+            }
+          },
+          "contains" : {
+            "Learning points section" : {
+              "summarizing" : {
+                "key pieces" : {
+                  "of" : "information"
+                }
+              },
+              "from sentence" : "Each report contains a Learning points section , summarizing the key pieces of information from that report ."
+            }
+          }
+        },
+        "long support passages" : {
+          "includes" : {
+            "answers" : {
+              "which are" : "single - or multiword medical entities"
+            }
+          },
+          "from sentence" : "Our dataset contains around 100,000 queries on 12,000 case reports , has long support passages ( around 1,500 tokens on average ) and includes answers which are single - or multiword medical entities ."
+        }
+      },
+      "use" : {
+        "learning points" : {
+          "to create" : {
+            "queries" : {
+              "by blanking out" : "medical entity"
+            }
+          },
+          "from sentence" : "We use these learning points to create queries by blanking out a medical entity ."
+        }
+      },
+      "contains" : {
+        "around 100,000 queries" : {
+          "on" : "12,000 case reports"
+        },
+        "from sentence" : "Our dataset contains around 100,000 queries on 12,000 case reports , has long support passages ( around 1,500 tokens on average ) and includes answers which are single - or multiword medical entities ."
+      }
+    }
+  }
+}

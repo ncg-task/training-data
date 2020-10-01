@@ -1,0 +1,75 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "process" : {
+        "corpus" : {
+          "with" : {
+            "tokenizer" : {
+              "from" : "Stanford CorNLP"
+            }
+          },
+          "from sentence" : "We process the corpus with the tokenizer from Stanford CorNLP ."
+        }
+      },
+      "initialize" : {
+        "word embeddings" : {
+          "in" : "word representation layer",
+          "use" : {
+            "300 - dimensional GloVe word vectors" : {
+              "pre-trained from" : "840B Common Crawl corpus"
+            }
+          },
+          "from sentence" : "To initialize the word embeddings in the word representation layer , we use the 300 - dimensional GloVe word vectors pre-trained from the 840B Common Crawl corpus ."
+        }
+      },
+      "For" : {
+        "out - of - vocabulary ( OOV ) words" : {
+          "initialize" : {
+            "word embeddings" : {
+              "has" : "randomly"
+            }
+          },
+          "from sentence" : "For the out - of - vocabulary ( OOV ) words , we initialize the word embeddings randomly ."
+        }
+      },
+      "set" : {
+        "hidden size" : {
+          "as" : "100",
+          "for" : "all the LSTM layers",
+          "from sentence" : "We set the hidden size as 100 for all the LSTM layers , and set the number of perspectives l of our multiperspective matching function ( Equation ( 5 ) ) as 50 ."
+        },
+        "number of perspectives l" : {
+          "of" : "our multiperspective matching function",
+          "as" : "50",
+          "from sentence" : "We set the hidden size as 100 for all the LSTM layers , and set the number of perspectives l of our multiperspective matching function ( Equation ( 5 ) ) as 50 ."
+        },
+        "dropout ratio" : {
+          "as" : "0.2",
+          "from sentence" : "We apply dropout to every layers in , and set the dropout ratio as 0.2 ."
+        },
+        "learning rate" : {
+          "as" : "0.0001",
+          "from sentence" : "We set the learning rate as 0.0001 ."
+        }
+      },
+      "apply" : {
+        "dropout" : {
+          "to" : "every layers",
+          "from sentence" : "We apply dropout to every layers in , and set the dropout ratio as 0.2 ."
+        }
+      },
+      "minimize" : {
+        "cross entropy" : {
+          "of" : "be - ginning and end points",
+          "from sentence" : "To train the model , we minimize the cross entropy of the be - ginning and end points , and use the ADAM optimizer to update parameters ."
+        }
+      },
+      "use" : {
+        "ADAM optimizer" : {
+          "to update" : "parameters",
+          "from sentence" : "To train the model , we minimize the cross entropy of the be - ginning and end points , and use the ADAM optimizer to update parameters ."
+        }
+      }
+    } 
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "has" : {
+    "Results" : {
+      "report" : {
+        "averaged scores" : {
+          "across" : {
+            "five different runs" : {
+              "of" : "model"
+            }
+          },
+          "from sentence" : "We report averaged scores across five different runs of the model training ."
+        }
+      },
+      "has" : {
+        "span - based ensemble model" : {
+          "using" : {
+            "ELMo" : {
+              "achieved" : {
+                "best F1 scores" : {
+                  "has" : "87.4 F1 and 87.0 F1",
+                  "on" : "CoNLL - 2005 and CoNLL - 2012 datasets"
+                }
+              }
+            }
+          },
+          "from sentence" : "Overall , our span - based ensemble model using ELMo achieved the best F1 scores , 87.4 F1 and 87.0 F1 on the CoNLL - 2005 and CoNLL - 2012 datasets , respectively ."
+        },
+        "Our single and ensemble models" : {
+          "achieved" : {
+            "best F 1 scores" : {
+              "on" : {
+                "all test sets" : {
+                  "except" : "Brown test set"
+                }
+              }
+            }
+          },
+          "from sentence" : "Our single and ensemble models using ELMO achieved the best F 1 scores on all the test sets except the Brown test set ."
+        }
+      },
+      "In comparison with" : {
+        "CRF - based single model" : {
+          "has" : {
+            "our span - based single model" : {
+              "consistently yielded" : {
+                "better F 1 scores" : {
+                  "regardless of" : "word embeddings , SENNA and ELMO"
+                }
+              }
+            }
+          },
+          "from sentence" : "In comparison with the CRF - based single model , our span - based single model consistently yielded better F 1 scores regardless of the word embeddings , SENNA and ELMO ."
+        }
+      }
+    }
+  }
+}

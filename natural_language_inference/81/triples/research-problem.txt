@@ -1,0 +1,4 @@
+(Contribution||has research problem||MULTI - EVIDENCE QUESTION ANSWERING)
+(Contribution||has research problem||question answering)
+(Contribution||has research problem||question answering ( QA ))
+(Contribution||has research problem||neural question answering)

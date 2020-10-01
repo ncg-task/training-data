@@ -1,0 +1,64 @@
+{
+  "has" : {
+    "Model" : {
+      "introduces" : {
+        "Stack - augmented Parser - Interpreter Neural Network" : {
+          "name" : "SPINN",
+          "from sentence" : "This paper introduces a new model to address both these issues : the Stack - augmented Parser - Interpreter Neural Network , or SPINN , shown in ."
+        }
+      },
+      "has" : {
+        "SPINN" : {
+          "executes" : {
+            "computations" : {
+              "of" : "tree - structured model",
+              "in" : "linearized sequence"              
+            }
+          },
+          "incorporate" : {
+            "neural network parser" : {
+              "that produces" : "required parse structure"
+            }
+          },
+          "from sentence" : "SPINN executes the computations of a tree - structured model in a linearized sequence , and can incorporate a neural network parser that produces the required parse structure on the fly ."
+        }
+      },
+      "improves upon" : {
+        "TreeRNN architecture" : {
+          "At" : {
+            "test time" : {
+              "can simultaneously" : ["parse", {"interpret" : {"has" : "unparsed sentences"}}],
+              "removing" : {
+                "dependence" : {
+                  "on" : "external parser"
+                }
+              },
+              "from sentence" : "This design improves upon the TreeRNN architecture in three ways :
+At test time , it can simultaneously parse and interpret unparsed sentences , removing the dependence on an external parser at nearly no additional computational cost ."
+
+            }
+          },
+          "supports" : {
+            "batched computation" : {
+              "for" : "parsed and unparsed sentences",
+              "yielding" : {
+                "dramatic speedups" : {
+                  "over" : "standard TreeRNNs"
+                }
+              },
+              "from sentence" : "Secondly , it supports batched computation for both parsed and unparsed sentences , yielding dramatic speedups over standard TreeRNNs ."
+            },
+            "novel tree - sequence hybrid architecture" : {
+              "for handling" : {
+                "local linear context" : {
+                  "in" : "sentence interpretation"
+                }
+              },
+              "from sentence" : "Finally , it supports a novel tree - sequence hybrid architecture for handling local linear context in sentence interpretation ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

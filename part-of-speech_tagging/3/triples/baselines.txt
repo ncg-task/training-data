@@ -1,0 +1,6 @@
+(Contribution||has||Baselines)
+(Baselines||has||three baseline systems)
+(three baseline systems||name||BRNN , the bi-direction RNN)
+(three baseline systems||name||BLSTM , the bidirection LSTM)
+(three baseline systems||name||BLSTM - CNNs , the combination of BLSTM with CNN)
+(BLSTM - CNNs , the combination of BLSTM with CNN||to model||characterlevel information)

@@ -1,0 +1,88 @@
+{
+  "has" : {
+    "Results" : {
+      "on" : {
+        "MULTINLI" : {
+          "has" : {
+            "Our approach" : {
+              "without using" : "recurrent structure",
+              "achieves" : {
+                "new state - of - the - art performance" : {
+                  "of" : {
+                    "80.0 %" : {
+                      "exceeding" : {
+                        "current state - of - the - art performance" : {
+                          "by" : "more than 5 %"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "EXPERIMENT ON MULTINLI
+Our approach , without using any recurrent structure , achieves the new state - of - the - art performance of 80.0 % , exceeding current state - of - the - art performance by more than 5 % ."
+
+            }
+          },
+          "find" : {
+            "out - of - domain test performance" : {
+              "is" : {
+                "consistently lower" : {
+                  "than" : "in - domain test performance"
+                }
+              },
+              "from sentence" : "Unlike the observation from , we find the out - of - domain test performance is consistently lower than in - domain test performance ."
+            }
+          }
+        },
+        "SNLI" : {
+          "show" : {
+            "our model , DIIN" : {
+              "achieves" : {
+                "state - of - the - art performance" : {
+                  "on" : "competitive leaderboard"
+                },
+                "from sentence" : "We show our model , DIIN , achieves state - of - the - art performance on the competitive leaderboard ."
+              }
+            }
+          }
+        },
+        "QUORA QUESTION PAIR DATASET" : {
+          "has" : {
+            "BIMPM" : {
+              "models" : {
+                "different perspective of matching" : {
+                  "between" : {
+                    "sentence pair" : {
+                      "on" : "both direction"
+                    }
+                  }
+                }
+              },
+              "aggregates" : {
+                "matching vector" : {
+                  "with" : "LSTM"
+                }
+              },
+              "from sentence" : "EXPERIMENT ON QUORA QUESTION PAIR DATASET
+BIMPM models different perspective of matching between sentence pair on both direction , then aggregates matching vector with LSTM ."
+
+            },
+            "DECATT word and DECATT char" : {
+              "uses" : {
+                "automatically collected in - domain paraphrase data" : {
+                  "to noisy pretrain" : {
+                    "n-gram word embedding and ngram subword embedding" : {
+                      "on" : "decomposable attention model"
+                    }
+                  }
+                },
+                "from sentence" : "DECATT word and DECATT char uses automatically collected in - domain paraphrase data to noisy pretrain n-gram word embedding and ngram subword embedding correspondingly on decomposable attention model proposed by ."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

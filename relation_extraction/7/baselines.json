@@ -1,0 +1,38 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "Mintz" : {
+          "proposes" : "humandesigned feature model",
+          "from sentence" : "Mintz proposes the humandesigned feature model ."        
+        },
+        "MultiR" : {
+          "puts forward" : "graphical model",
+          "from sentence" : "MultiR puts forward a graphical model ."
+        },
+        "MIML" : {
+          "proposes" : "multi -instance multi-label model",
+          "from sentence" : "MIML proposes a multi -instance multi-label model ."
+        },
+        "PCNN" : {
+          "puts forward" : "piecewise CNN for relation extraction",
+          "from sentence" : "PCNN puts forward a piecewise CNN for relation extraction ."
+        },
+        "PCNN + ATT" : {
+          "proposes" : {
+            "selective attention mechanism" : {
+              "with" : "PCNN"
+            }
+          },
+          "from sentence" : "PCNN + ATT proposes the selective attention mechanism with PCNN ."
+        }
+      },
+      "proposes" : {
+        "BGRU" : {
+          "with" : "word - level attention mechanism"
+        },
+        "from sentence" : "BGRU proposes a BGRU with the word - level attention mechanism ."            
+      }
+    }
+  }
+}

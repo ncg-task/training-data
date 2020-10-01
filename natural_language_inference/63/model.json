@@ -1,0 +1,22 @@
+{
+  "has" : {
+    "Model" : {
+      "build" : {
+        "QA model" : {
+          "understand" : {
+            "long documents" : {
+              "by utilizing" : "Memory Augmented Neural Networks ( MANNs )"
+            }
+          },
+          "from sentence" : "In this work , we build a QA model that can understand long documents by utilizing Memory Augmented Neural Networks ( MANNs ) ."
+        }
+      },
+      "decouples" : {
+        "memory capacity" : {
+          "from" : "number of model parameters",
+          "from sentence" : "This type of neural networks decouples the memory capacity from the number of model parameters ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,154 @@
+36	19	26	propose
+36	29	56	novel word - level approach
+36	57	60	for
+36	61	99	distant supervised relation extraction
+36	100	111	by reducing
+36	112	132	inner-sentence noise
+36	137	146	improving
+36	147	157	robustness
+36	158	165	against
+36	166	177	noisy words
+37	0	9	To reduce
+37	10	29	innersentence noise
+37	35	42	utilize
+37	45	82	novel Sub - Tree Parse ( STP ) method
+37	83	92	to remove
+37	93	109	irrelevant words
+37	110	125	by intercepting
+37	128	135	subtree
+37	136	141	under
+37	146	189	parent of entities ' lowest common ancestor
+39	18	41	entity - wise attention
+39	53	65	to alleviate
+39	70	94	influence of noisy words
+39	70	72	in
+39	102	109	subtree
+39	114	123	emphasize
+39	128	152	task - relevant features
+40	36	46	initialize
+40	51	67	model parameters
+40	68	72	with
+40	73	91	a priori knowledge
+40	92	104	learned from
+40	109	140	entity type classification task
+40	141	143	by
+40	144	161	transfer learning
+234	0	5	Mintz
+234	6	14	proposes
+234	19	46	humandesigned feature model
+235	0	6	MultiR
+235	7	19	puts forward
+235	22	37	graphical model
+236	0	4	MIML
+236	5	13	proposes
+236	16	49	multi -instance multi-label model
+237	0	4	PCNN
+237	5	17	puts forward
+237	20	57	piecewise CNN for relation extraction
+238	0	10	PCNN + ATT
+238	11	19	proposes
+238	24	53	selective attention mechanism
+238	54	58	with
+238	0	4	PCNN
+239	5	13	proposes
+239	0	4	BGRU
+239	21	25	with
+239	30	62	word - level attention mechanism
+191	23	30	utilize
+191	31	39	word2vec
+191	42	50	to train
+191	51	66	word embeddings
+191	67	69	on
+191	70	80	NYT corpus
+193	4	24	grid search approach
+193	33	42	to select
+193	43	67	optimal learning rate lr
+193	68	71	for
+193	72	86	Adam optimizer
+193	87	92	among
+193	95	124	0.1 , 0.001 , 0.0005 , 0.0001
+193	129	141	GRU size m ?
+193	144	165	100 , 160 , 230 , 400
+193	170	197	position embedding size l ?
+193	200	216	5 , 10 , 15 , 20
+195	0	10	GRU size m
+195	11	14	230
+196	0	26	Word embedding dimension k
+196	27	29	50
+196	30	55	POS embedding dimension l
+196	27	28	5
+196	58	70	Batch size n
+196	27	29	50
+196	74	95	Entity - Task weights
+197	16	19	0.5
+199	0	3	0.3
+199	4	20	Learning rate lr
+199	21	26	0.001
+199	27	48	Dropout probability p
+199	49	52	0.5
+199	53	64	l 2 penalty
+200	0	6	0.0001
+2	0	26	Neural Relation Extraction
+13	0	19	Relation extraction
+36	61	99	distant supervised relation extraction
+206	14	21	observe
+206	31	36	model
+206	37	41	with
+206	46	49	STP
+206	50	58	performs
+206	59	63	best
+206	74	83	SDP model
+206	84	91	obtains
+206	95	112	even worse result
+206	113	117	than
+206	122	130	pure one
+207	4	18	PR curve areas
+207	19	21	of
+207	22	41	BGRU + SDP and BGRU
+207	42	51	are about
+207	52	67	0.332 and 0.337
+207	89	99	BGRU + STP
+207	100	115	increases it to
+207	116	121	0.366
+208	29	36	Our STP
+208	41	51	get rid of
+208	52	68	irrelevant words
+208	11	13	in
+208	72	85	each instance
+208	90	96	obtain
+208	97	133	more precise sentence representation
+210	10	20	SDP method
+210	24	49	not appropriate to handle
+210	50	73	low - quality sentences
+210	74	79	where
+210	80	98	key relation words
+210	103	109	not in
+210	10	13	SDP
+215	76	102	BGRU - WLA ( + STP ) + EWA
+215	103	114	outperforms
+215	115	128	BGRU (+ STP )
+216	26	39	PR curve area
+216	46	66	relative improvement
+216	67	69	of
+216	70	80	over 2.3 %
+218	0	3	EWA
+218	4	12	achieves
+218	13	33	further improvements
+218	38	49	outperforms
+218	54	62	baseline
+218	63	70	by over
+218	71	76	4.6 %
+228	46	60	models with TL
+228	61	68	achieve
+228	69	87	better performance
+228	96	103	improve
+228	108	121	PR curve area
+228	122	124	by
+228	125	135	over 4.7 %
+230	6	21	BGRU + STP + TL
+230	22	30	achieves
+230	35	51	best performance
+230	56	65	increases
+230	70	74	area
+230	75	77	to
+230	78	83	0.383

@@ -1,0 +1,41 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "Mazajak model" : {
+          "outperformed" : {
+            "current state - of - the - art models" : {
+              "on" : "SemEval and ASTD datasets"
+            },
+            "from sentence" : "As shown in the table , Mazajak model outperformed the current state - of - the - art models on the SemEval and ASTD datasets ."            
+          },
+           "achieved" : {
+            "high performance" : {
+              "on" : "ArSAS dataset",
+              "from sentence" : "In addition , it achieved a high performance on the ArSAS dataset ."
+            }
+          }         
+        },
+        "reported scores" : {
+          "higher than" : "current top systems",
+          "for" : {
+            "all the evaluation scores" : {
+              "including" : "average recall , F P N , and accuracy"
+            }
+          },
+          "from sentence" : "Our reported scores are higher than current top systems for all the evaluation scores , including average recall , F P N , and accuracy ."          
+        }
+      },
+      "for" : {
+        "our tool" : {
+          "represents" : {
+            "current state - of - the - art" : {
+              "for" : "Arabic SA"
+            }
+          },
+          "from sentence" : "These results confirm that our model choice for our tool represents the current state - of - the - art for Arabic SA ."
+        }
+      }      
+    }
+  }
+}

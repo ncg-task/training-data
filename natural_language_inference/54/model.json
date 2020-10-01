@@ -1,0 +1,21 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "Structural Embedding of Syntactic Trees ( SEST )" : {
+          "encode" : {
+            "syntactic information" : {
+              "structured by" : "constituency tree and dependency tree",
+              "into" : {
+                "neural attention models" : {
+                  "for" : "question answering task"
+                }
+              }
+            }
+          },
+          "from sentence" : "In this paper , we propose Structural Embedding of Syntactic Trees ( SEST ) that encode syntactic information structured by constituency tree and dependency tree into neural attention models for the question answering task ."
+        }
+      }
+    }
+  }
+}

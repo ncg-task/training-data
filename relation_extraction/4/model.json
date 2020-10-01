@@ -1,0 +1,37 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "new , effective neural network sequence model" : {
+          "for" : "relation classification",
+          "from sentence" : "We propose a new , effective neural network sequence model for relation classification ."
+        }
+      },
+      "has" : {
+        "architecture" : {
+          "better customized for" : ["slot filling task", {"from sentence" : "Its architecture is better customized for the slot filling task : the word representations are augmented by extra distributed representations of word position relative to the subject and object of the putative relation ."}],
+          "has" : {
+            "word representations" : {
+              "augmented by" : {
+                "extra distributed representations of word position" : {
+                  "relative to" : {
+                    "subject and object" : {
+                      "of" : "putative relation"
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "Its architecture is better customized for the slot filling task : the word representations are augmented by extra distributed representations of word position relative to the subject and object of the putative relation ."            
+          },
+        }
+      },
+      "means that" : {
+        "neural attention model" : {
+          "effectively exploit" : "combination of semantic similarity - based attention and positionbased attention",
+          "from sentence" : "This means that the neural attention model can effectively exploit the combination of semantic similarity - based attention and positionbased attention ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+(Contribution||has||Model)
+(Model||build||QA model)
+(QA model||understand||long documents)
+(long documents||by utilizing||Memory Augmented Neural Networks ( MANNs ))
+(Model||decouples||memory capacity)
+(memory capacity||from||number of model parameters)

@@ -1,0 +1,97 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "first initialize" : {
+        "parameters" : {
+          "of an" : {
+            "LSTM network" : {
+              "following" : {
+                "normal distribution N ( 0 , 1 )" : {
+                  "as" : {
+                    "oracle" : {
+                      "describing" : "real data distribution G oracle ( x t |x 1 , . . . , x t?1 )"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "To setup the synthetic data experiments , we first initialize the parameters of an LSTM network following the normal distribution N ( 0 , 1 ) as the oracle describing the real data distribution G oracle ( x t |x 1 , . . . , x t?1 ) ."
+      },
+      "In" : {
+        "SeqGAN algorithm" : {
+          "has" : {
+            "training set" : {
+              "for" : {
+                "discriminator" : {
+                  "is comprised by" : {
+                    "generated examples" : {
+                      "with" : ["label 0", {"instances" : {"from" : {"S" : {"with" : "label"}}}}]
+                      }
+                    }
+                  }
+                },
+                "from sentence" : "In SeqGAN algorithm , the training set for the discriminator is comprised by the generated examples with the label 0 and the instances from S with the label"
+              }
+            }
+          },
+          "scheduled sampling" : {
+            "training process" : {
+              "gradually changes"    : {
+                "from" : {
+                  "fully guided scheme feeding the true previous tokens" : {
+                    "into" : {
+                      "LSTM" : {
+                        "towards" : {
+                          "less guided scheme which mostly feeds the LSTM" : {
+                            "with" : "generated tokens"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "In the scheduled sampling , the training process gradually changes from a fully guided scheme feeding the true previous tokens into LSTM , towards a less guided scheme which mostly feeds the LSTM with its generated tokens ."
+            }          
+          }
+        },
+        "in" : {
+          "our synthetic data experiments" : {
+            "has" : {
+              "kernel size" : {
+                "from" : "1 to T"
+              },
+              "number" : {
+                "of" : {
+                  "each kernel size" : {
+                    "between" : "100 to 200"
+                  }
+                }
+              }              
+            }
+          },
+          "from sentence" : "For different tasks , one should design specific structure for the convolutional layer and in our synthetic data experiments , the kernel size is from 1 to T and the number of each kernel size is between 100 to 200 3 ."
+        },
+        "has" : {
+          "Dropout ) and L2 regularization" : {
+            "to avoid" : "over-fitting",
+            "from sentence" : "Dropout ) and L2 regularization are used to avoid over-fitting ."            
+          },
+          "curriculum rate ?" : {
+            "to control" : {
+              "probability" : {
+                "of" : {
+                  "replacing the true tokens" : {
+                    "with" : "generated ones"
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "A curriculum rate ? is used to control the probability of replacing the true tokens with the generated ones ."
+      }
+    }
+  }
+}

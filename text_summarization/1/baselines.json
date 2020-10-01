@@ -1,0 +1,65 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "Beam Search" : {
+          "keeps" : {
+            "K hypotheses" : {
+              "with" : {
+                "highest log-probability scores" : {
+                  "at" : "each decoding step"
+                }
+              }
+            }
+          },
+          "from sentence" : "Beam Search
+This baseline keeps K hypotheses with highest log-probability scores at each decoding step ."
+
+        },
+        "Truncated Sampling" : {
+          "randomly samples" : {
+            "words" : {
+              "from" : {
+                "top - 10 candidates" : {
+                  "of" : {
+                    "distribution" : {
+                      "at" : "decoding step"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Truncated Sampling
+This baseline randomly samples words from top - 10 candidates of the distribution at the decoding step . "
+
+        },
+        "Mixture Decoder" : {
+          "constructs" : {
+            "hard - MoE of K decoders" : {
+              "with" : "uniform mixing coefficient"
+            }
+          },
+          "conducts" : "parallel greedy decoding",
+          "from sentence" : "Mixture Decoder
+This baseline constructs a hard - MoE of K decoders with uniform mixing coefficient ( referred as hMup in ) and conducts parallel greedy decoding ."
+
+        },
+        "Mixture Selector ( Ours )" : {
+          "construct" : {
+            "hard - MoE of K SELECTORs" : {
+              "with" : {
+                "uniform mixing coefficient" : {
+                  "infers" : "K different focus from source sequence"
+                }
+              }
+            }
+          },
+          "from sentence" : "Mixture Selector ( Ours )
+We construct a hard - MoE of K SELECTORs with uniform mixing coefficient that infers K different focus from source sequence ."
+
+        }  
+      }
+    }
+  }  
+}

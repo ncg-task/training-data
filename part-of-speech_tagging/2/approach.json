@@ -1,0 +1,23 @@
+{
+  "has" : {
+    "Approach" : {
+      "present" : {
+        "transfer learning approach" : {
+          "based on" : "deep hierarchical recurrent neural network",
+          "between" : {
+            "source task and the target task" : {
+              "shares" : ["hidden feature repre-sentation", "part of the model parameters"]
+            }
+          },
+          "from sentence" : "We present a transfer learning approach based on a deep hierarchical recurrent neural network , which shares the hidden feature repre-sentation and part of the model parameters between the source task and the target task ."
+        }
+      },
+      "uses" : {
+        "gradient - based methods" : {
+          "for" : "efficient training",
+          "from sentence" : "Our approach combines the objectives of the two tasks and uses gradient - based methods for efficient training ."
+        }
+      }
+    }
+  }
+}

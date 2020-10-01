@@ -1,0 +1,54 @@
+{
+  "has" : {
+    "Results" : {
+      "on" : {
+        "Gigaword valid - 2000 dataset" : {
+          "present" : {
+            "R - 1 , R - 2 , and R - L scores" : {
+              "measures" : {
+                "overlapped unigrams , bigrams , and longest common subsequences" : {
+                  "between" : "system and reference summaries"
+                }
+              },
+              "from sentence" : "We first report results on the Gigaword valid - 2000 dataset in .
+We present R - 1 , R - 2 , and R - L scores ) that respectively measures the overlapped unigrams , bigrams , and longest common subsequences between the system and reference summaries 3 ."
+
+            }
+          },
+          "observe" : {
+            "models" : {
+              "with" : {
+                "structure - infused copy mechanisms" : {
+                  "superior to" : "baseline"
+                }
+              }
+            },
+            "from sentence" : "Overall , we observe that models equipped with the structure - infused copy mechanisms are superior to the baseline , suggesting that combining source syntactic structure with the copy mechanism is effective ."
+          },
+          "found" : {
+            "\" Struct + Hidden \" architecture" : {
+              "directly concatenates" : {
+                "structural embeddings" : {
+                  "with" : "encoder hidden states"
+                }
+              },
+              "outperforms" : "\" Struct + Input \""
+            },
+            "from sentence" : "We found that the \" Struct + Hidden \" architecture , which directly concatenates structural embeddings with the encoder hidden states , outperforms \" Struct + Input \" despite that the latter requires more parameters ."
+          },
+          "has" : {
+            "Struct + 2 Way + Word" : {
+              "demonstrates" : "strong performance",
+              "achieving" : {
+                "43.21 % , 21. 84 % , and 40.86 % F 1 scores" : {
+                  "for" : "R - 1 , R - 2 , and R - L"
+                }
+              },
+              "from sentence" : "\" Struct + 2 Way + Word \" also demonstrates strong performance , achieving 43.21 % , 21. 84 % , and 40.86 % F 1 scores , for R - 1 , R - 2 , and R - L respectively ."
+            }
+          }
+        } 
+      }
+    }
+  }
+}

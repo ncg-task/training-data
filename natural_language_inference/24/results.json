@@ -1,0 +1,56 @@
+{
+  "has" : {
+    "Results" : {
+      "observe" : {
+        "SAN" : {
+          "achieves" : ["76.235 EM", "84.056 F1"],
+          "has" : {
+            "outperforming" : {
+              "has" : "all other models"
+            }
+          },
+          "from sentence" : "We observe that SAN achieves 76.235 EM and 84.056 F1 , outperforming all other models ."
+        }
+      },
+      "has" : {
+        "Standard 1 - step model" : {
+          "achieves" : "75.139 EM",
+          "from sentence" : "Standard 1 - step model only achieves 75.139 EM and dynamic steps ( via ReasoNet ) achieves only 75.355 EM ."
+        },
+        "dynamic steps ( via ReasoNet )" : {
+          "achieves" : "only 75.355 EM",
+          "from sentence" : "Standard 1 - step model only achieves 75.139 EM and dynamic steps ( via ReasoNet ) achieves only 75.355 EM ."
+        },
+        "SAN" : {
+          "has" : {
+            "outperforms" : {
+              "has" : {
+                "5 - step memory net" : {
+                  "with" : "averaging",
+                  "from sentence" : "SAN also outperforms a 5 - step memory net with averaging , which implies averaging predictions is not the only thing that led to SAN 's superior results ; indeed , stochastic prediction dropout is an effective technique ."                  
+                }
+              },
+              "other" : {
+                "models" : {
+                  "in terms of" : "K- best oracle scores",
+                  "from sentence" : "SAN also outperforms the other models in terms of K- best oracle scores ."
+                }
+              }
+            }
+          }
+        }
+      },
+      "see that" : {
+        "SAN" : {
+          "is" : {
+            "very competitive" : {
+              "in" : "both single and ensemble settings",
+              "ranked" : "second",
+              "from sentence" : "We see that SAN is very competitive in both single and ensemble settings ( ranked in second ) despite its simplicity ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

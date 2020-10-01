@@ -1,0 +1,58 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "initialize" : {
+        "model parameters randomly" : {
+          "using" : {
+            "Gaussian distribution" : {
+              "with" : "Xavier scheme"
+            }
+          }
+        },
+        "from sentence" : "We initialize model parameters randomly using a Gaussian distribution with Xavier scheme ."
+      },
+      "use" : {
+        "Adam" : {
+          "as" : "optimizing algorithm",
+          "learning rate" : "0.001",
+          "two momentum parameters" : "? 1 = 0.9 and ? 2 = 0.999",
+          "from sentence" : "We use Adam as our optimizing algorithm .
+For the hyperparameters of Adam optimizer , we set the learning rate ? = 0.001 , two momentum parameters ? 1 = 0.9 and ? 2 = 0.999 respectively , and = 10 ?8 ."
+
+        },
+        "mini-batch size 64" : {
+          "by" : {
+            "grid search" : {
+              "To both speedup" : "training and converge quickly"
+            }
+          },
+          "from sentence" : "To both speedup the training and converge quickly , we use mini-batch size 64 by grid search ."          
+        }        
+      },
+      "During" : {
+        "training" : {
+          "test" : {
+            "model performance ( ROUGE - 2 F1 )" : {
+              "on" : {
+                "development set" : {
+                  "for" : "every 2,000 batches"
+                }
+              }
+            }
+          } 
+        },
+        "from sentence" : "During training , we test the model performance ( ROUGE - 2 F1 ) on development set for every 2,000 batches ."
+      },
+      "apply" : {
+        "gradient clipping" : {
+          "with" : {
+            "range [ ? 5 , 5 ]" : {
+              "during" : "training"
+            }
+          }
+        },
+        "from sentence" : "We also apply gradient clipping with range [ ? 5 , 5 ] during training ."
+      }
+    }
+  }
+}

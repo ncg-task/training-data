@@ -1,0 +1,100 @@
+124	3	10	observe
+124	20	33	three methods
+124	38	45	perform
+124	46	51	worse
+124	52	56	than
+124	57	65	R - BERT
+125	17	43	BERT - NO - SEP - NO - ENT
+125	44	52	performs
+125	53	58	worst
+125	61	65	with
+125	70	93	F1 8.16 absolute points
+125	94	104	worse than
+125	105	113	R - BERT
+128	0	4	BERT
+128	5	12	without
+128	13	36	special separate tokens
+128	37	51	can not locate
+128	56	71	target entities
+126	20	32	demonstrates
+126	47	100	special separate tokens and the hidden entity vectors
+126	101	105	make
+126	106	129	important contributions
+130	20	33	incorporating
+130	38	44	output
+130	45	47	of
+130	52	73	target entity vectors
+130	74	90	further enriches
+130	95	106	information
+130	117	124	to make
+130	125	149	more accurate prediction
+100	140	143	SVM
+100	146	149	RNN
+100	152	157	MVRNN
+100	160	173	CNN + Softmax
+100	176	179	FCM
+100	182	190	CR - CNN
+100	193	208	Attention - CNN
+100	211	235	Entity Attention Bi-LSTM
+95	3	6	add
+95	7	14	dropout
+95	15	21	before
+95	22	41	each add - on layer
+96	0	3	For
+96	8	30	pre-trained BERT model
+96	36	39	use
+96	44	63	uncased basic model
+25	19	24	apply
+25	29	50	pretrained BERT model
+25	51	54	for
+25	55	78	relation classification
+26	3	9	insert
+26	10	24	special tokens
+26	25	41	before and after
+26	46	61	target entities
+26	123	134	to identify
+26	139	148	locations
+26	149	151	of
+26	156	175	two target entities
+26	180	188	transfer
+26	193	204	information
+26	205	209	into
+26	214	224	BERT model
+26	62	76	before feeding
+26	81	85	text
+26	18	20	to
+26	89	93	BERT
+26	27	30	for
+26	98	111	fine - tuning
+27	8	14	locate
+27	19	28	positions
+27	29	31	of
+27	36	55	two target entities
+27	56	58	in
+27	63	79	output embedding
+27	80	84	from
+27	85	95	BERT model
+28	121	136	as the input to
+28	139	167	multi - layer neural network
+28	168	171	for
+28	172	186	classification
+28	3	6	use
+28	13	23	embeddings
+28	39	56	sentence encoding
+28	13	22	embedding
+28	69	71	of
+28	76	95	special first token
+28	96	113	in the setting of
+28	114	118	BERT
+2	65	88	Relation Classification
+103	7	15	see that
+103	16	24	R - BERT
+103	25	44	significantly beats
+103	53	69	baseline methods
+104	4	18	MACRO F1 value
+104	19	21	of
+104	22	30	R - BERT
+104	31	33	is
+104	34	40	89. 25
+104	52	68	much better than
+104	73	95	previous best solution

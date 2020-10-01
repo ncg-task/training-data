@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Machine Comprehension", {"from sentence" : "MEMEN : Multi-layer Embedding with Memory Networks for Machine Comprehension"}],
+    ["Machine comprehension ( MC ) style question answering", {"from sentence" : "Machine comprehension ( MC ) style question answering is a representative problem in natural language processing ."}],
+    ["Machine comprehension ( MC )", {"from sentence" : "Machine comprehension ( MC ) has gained significant popularity over the past few years and it is a coveted goal in the field of natural language processing and artificial intelligence ."}]
+  ]
+}

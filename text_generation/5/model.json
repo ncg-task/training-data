@@ -1,0 +1,26 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "dilated CNN" : {
+          "as" : {
+            "decoder" : {
+              "in" : "VAE"
+            }
+          }
+        },
+        "from sentence" : "We propose the use of a dilated CNN as a decoder in VAE , inspired by the recent success of using CNNs for audio , image and language modeling ( van den ."
+      },
+      "exploit" : {
+        "dilated CNN" : {
+          "for" : {
+            "flexibility" : {
+              "in varying the amount of" : "conditioning context"
+            }
+          }
+        },
+        "from sentence" : "In contrast with prior work where extremely large CNNs are used , we exploit the dilated CNN for its flexibility in varying the amount of conditioning context ."
+      }
+    }
+  }
+}

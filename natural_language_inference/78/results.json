@@ -1,0 +1,137 @@
+{
+  "has" : {
+    "Results" : {
+      "on" : {
+        "SNLI benchmark" : {
+          "On" : {
+            "cross sentence ( single model setting )" : {
+              "has" : {
+                "performance" : {
+                  "of" : "proposed CAFE model",
+                  "is" : "extremely competitive"
+                }
+              },
+              "from sentence" : "Table 1 reports our results on the SNLI benchmark .
+On the cross sentence ( single model setting ) , the performance of our proposed CAFE model is extremely competitive ."
+
+            }
+          },
+          "has" : {
+            "CAFE" : {
+              "obtains" : {
+                "88.5 % accuracy" : {
+                  "on" : "SNLI test set",
+                  "has" : "extremely competitive score"
+                },
+                "from sentence" : "CAFE obtains
+88.5 % accuracy on the SNLI test set , an extremely competitive score on the extremely popular benchmark ."                
+              },
+              "achieves" : {
+                "88.3 % and 88.1 % test accuracy" : {
+                  "with" : "only 3.5 M and 1.5 M parameters",
+                  "from sentence" : "For example , CAFE also achieves 88.3 % and 88.1 % test accuracy with only 3.5 M and 1.5 M parameters"
+                }
+              }
+            },
+            "CAFE + ELMo" : {
+              "achieves" : {
+                "89.0 score" : {
+                  "on" : "SNLI"
+                },
+                "from sentence" : "Due to resource constraints , we did not train CAFE + ELMo ensembles but a single run ( and single model ) of CAFE + ELMo already achieves 89.0 score on SNLI ."
+              },
+              "has" : {
+                "outperforms" : {
+                  "has" : {
+                    "state - of - theart ESIM and DIIN models" : {
+                      "with" : {
+                        "fraction" : {
+                          "of" : "parameter cost"
+                        }
+                      }
+                    },
+                    "from sentence" : "This outperforms the state - of - theart ESIM and DIIN models with only a fraction of the parameter cost ."
+                  }
+                },
+                "lightweight adaptation" : {
+                  "achieves" : "87.7 %",
+                  "from sentence" : "Moreover , our lightweight adaptation achieves 87.7 % with only 750K parameters , which makes it extremely performant amongst models having the same amount of parameters such as the decomposable attention model ( 86.8 % ) ."
+                }
+              }
+            },
+            "ensemble" : {
+              "of" : {
+                "5 CAFE models" : {
+                  "achieves" : {
+                    "89.3 % test accuracy" : {
+                      "has" : "best test scores"
+                    }
+                  },
+                  "from sentence" : "Finally , an ensemble of 5 CAFE models achieves 89.3 % test accuracy , the best test scores on the SNLI benchmark to date 3 ."
+                }
+              }
+            }
+          }
+        },
+        "MultiNLI" : {
+          "has" : {
+            "CAFE" : {
+              "has" : {
+                "significantly outperforms" : {
+                  "has" : "ESIM",
+                  "from sentence" : "On MultiNLI , CAFE significantly outperforms ESIM , a strong state - of - the - art model on both settings ."                  
+                },
+                "outperform" : {
+                  "has" : "ESIM + Read model", 
+                  "from sentence" : "We also outperform the ESIM + Read model ."
+                }
+              }
+            },
+            "ensemble of CAFE models" : {
+              "achieve" : "competitive re-sult",
+              "from sentence" : "An ensemble of CAFE models achieve competitive re-sult on the MultiNLI dataset ."
+            }
+          }
+        }
+      }
+      "On" : {
+        "SciTail" : {
+          "has" :{
+            "proposed CAFE model" : {
+              "achieves" : "state - of - the - art performance",
+              "from sentence" : "On SciTail , our proposed CAFE model achieves state - of - the - art performance ."
+            },
+            "performance gain" : {
+              "over" : {
+                "strong baselines" : {
+                  "such as" : ["DecompAtt", "ESIM"]
+                }
+              },
+              "are" : {
+                "10 % ? 13 %" : {
+                  "in terms of" : "accuracy"
+                }
+              },
+              "from sentence" : "The performance gain over strong baselines such as DecompAtt and ESIM are ?
+10 % ? 13 % in terms of accuracy ."
+
+            },
+            "CAFE" : {
+              "has" : {
+                "outperforms" : {
+                  "has" : "DGEM",
+                  "by" : {
+                    "significant margin" : {
+                      "of" : "5 %"
+                    }
+                  },
+                  "from sentence" : "CAFE also outperforms DGEM , which uses a graph - based attention for improved performance , by a significant margin of 5 % ."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }  
+}

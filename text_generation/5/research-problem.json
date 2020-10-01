@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Text Modeling", {"from sentence" : "Improved Variational Autoencoders for Text Modeling using Dilated Convolutions"}],
+    ["generative text modeling", {"from sentence" : "Recent work on generative text modeling has found that variational autoencoders ( VAE ) with LSTM decoders perform worse than simpler LSTM language models ( Bowman et al. , 2015 ) ."}]
+  ]
+}

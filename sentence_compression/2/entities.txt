@@ -1,0 +1,102 @@
+87	15	30	BASELINE - LSTM
+87	33	35	is
+87	38	59	multi - task learning
+88	9	24	predicting both
+88	25	63	CCG supertags and sentence compression
+88	82	84	at
+88	89	100	outer layer
+85	0	33	Both the baseline and our systems
+85	34	37	are
+85	38	68	three - layer bi - LSTM models
+85	69	80	trained for
+85	81	94	30 iterations
+85	95	99	with
+85	100	131	pretrained ( SENNA ) embeddings
+86	4	27	input and hidden layers
+86	28	31	are
+86	32	45	50 dimensions
+86	59	71	output layer
+86	75	82	predict
+86	83	92	sequences
+86	93	95	of
+86	96	106	two labels
+12	21	36	suggesting that
+12	37	62	eye - tracking recordings
+12	75	84	to induce
+12	85	98	better models
+12	99	102	for
+12	103	123	sentence compression
+12	99	102	for
+13	18	33	show how to use
+13	34	68	existing eye - tracking recordings
+13	69	79	to improve
+13	84	93	induction
+13	94	96	of
+13	97	138	Long Short - Term Memory models ( LSTMs )
+13	139	142	for
+13	143	163	sentence compression
+14	0	18	Our proposed model
+14	19	35	does not require
+14	45	79	gaze data and the compression data
+14	80	89	come from
+14	94	105	same source
+16	29	49	intriguing potential
+16	50	52	of
+16	53	62	this work
+16	66	77	in deriving
+16	78	108	sentence simplification models
+16	109	117	that are
+16	118	130	personalized
+16	131	134	for
+16	135	151	individual users
+16	154	162	based on
+16	163	185	their reading behavior
+15	25	28	use
+15	29	38	gaze data
+15	39	43	from
+15	44	51	readers
+15	52	54	of
+15	59	72	Dundee Corpus
+15	73	83	to improve
+15	84	112	sentence compression results
+15	102	104	on
+15	116	132	several datasets
+2	10	30	sentence compression
+93	16	22	across
+93	23	41	all three datasets
+93	44	53	including
+93	54	88	all three annotations of BROADCAST
+93	91	104	gaze features
+93	105	112	lead to
+93	113	125	improvements
+93	126	130	over
+93	135	163	baseline 3 - layer bi - LSTM
+94	7	22	CASCADED - LSTM
+94	23	25	is
+94	26	45	consistently better
+94	46	50	than
+94	51	67	MULTITASK - LSTM
+95	0	3	For
+95	4	22	all three datasets
+95	29	38	inclusion
+95	39	41	of
+95	42	55	gaze measures
+95	58	84	first pass duration ( FP )
+95	89	118	regression duration ( Regr. )
+95	121	129	leads to
+95	130	142	improvements
+95	143	147	over
+95	152	160	baseline
+100	0	4	With
+100	9	24	harder datasets
+100	31	40	impact of
+100	45	61	gaze information
+100	62	69	becomes
+100	70	78	stronger
+100	94	103	favouring
+100	108	129	cascaded architecture
+100	136	140	with
+100	141	153	improvements
+100	154	159	using
+100	165	184	first pass duration
+100	189	208	regression duration

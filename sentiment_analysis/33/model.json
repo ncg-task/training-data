@@ -1,0 +1,77 @@
+{
+  "has" : {
+    "Model" : {
+      "propose to employ" : {
+        "recurrent neural networks ( RNNs )" : {
+          "as" : {
+            "convolution filters" : {
+              "of" : "CNN systems"
+            }          
+          }
+        },
+        "from sentence" : "To overcome this , we propose to employ recurrent neural networks ( RNNs ) as convolution filters of CNN systems for various NLP tasks ."
+      },
+      "has" : {
+        "recurrent neural filters ( RNFs )" : {
+          "deal with" : {
+            "language compositionality" : {
+              "with" : {
+                "recurrent function" : {
+                  "that models" : "word relations"
+                }
+              }
+            }
+          },
+          "to implicitly model" : "long - term dependencies",
+          "from sentence" : "Our recurrent neural filters ( RNFs ) can naturally deal with language compositionality with a recurrent function that models word relations , and they are also able to implicitly model long - term dependencies ."
+        },
+        "RNFs" : {
+          "applied to" : {
+            "word sequences" : {
+              "of" : "moderate lengths"
+            }
+          },
+          "alleviates" : {
+            "some well - known drawbacks" : {
+              "of" : "RNNs",
+              "inlcuding" : {
+                "vulnerability" : {
+                  "to" : "gradient vanishing and exploding problems"
+                }
+              }
+            }
+          },
+          "from sentence" : "RNFs are typically applied to word sequences of moderate lengths , which alleviates some well - known drawbacks of RNNs , including their vulnerability to the gradient vanishing and exploding problems ."
+        },
+        "RNF - based CNN models" : {
+          "can be" : {
+            "3 - 8 x faster" : {
+              "than" : "RNN counterparts"
+            }
+          },
+          "from sentence" : "As a result , RNF - based CNN models can be 3 - 8 x faster than their RNN counterparts ."
+        }
+      },
+      "computation of" : {
+        "convolution operation" : {
+          "with" : {
+            "RNFs" : {
+              "can be" : {
+                "parallelized" : {
+                  "As in" : "conventional CNNs"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "As in conventional CNNs , the computation of the convolution operation with RNFs can be easily parallelized ."
+      },
+      "present" : {
+        "two RNF - based CNN architectures" : {
+          "for" : "sentence classification and answer sentence selection problems",
+          "from sentence" : "We present two RNF - based CNN architectures for sentence classification and answer sentence selection problems ."
+        }
+      }
+    }
+  }
+}

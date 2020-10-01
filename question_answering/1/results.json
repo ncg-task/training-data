@@ -1,0 +1,19 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "BIDAF ( ensemble )" : {
+          "achieves" : {
+            "EM score" : {
+              "of" : "73.3"
+            },
+            "F 1 score" : {
+              "of" : "81.1"
+            }
+          },
+          "from sentence" : "BIDAF ( ensemble ) achieves an EM score of 73.3 and an F 1 score of 81.1 , outperforming all previous approaches ."
+        }
+      }
+    }
+  }
+}

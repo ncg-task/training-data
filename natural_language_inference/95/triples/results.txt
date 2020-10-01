@@ -1,0 +1,8 @@
+(Contribution||has||Results)
+(Results||on||DuReader)
+(DuReader||see that||paragraph ranking)
+(paragraph ranking||boost||BiDAF baseline)
+(paragraph ranking||boost||significantly)
+(DuReader||has||our system ( single model ))
+(our system ( single model )||achieves||further improvement)
+(further improvement||by||large margin)

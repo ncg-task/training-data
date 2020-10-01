@@ -1,0 +1,45 @@
+{
+  "has" : {
+    "Model" : {
+      "has" : {
+        "Gated - Attention ( GA ) module" : {
+          "allows" : {
+            "query" : {
+              "to directly interact with" : {
+                "each dimension" : {
+                  "of" : {
+                    "token embeddings" : {
+                      "at" : "semantic - level"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "applied" : {
+            "layer - wise" : {
+              "as" : {
+                "information layers" : {
+                  "during" : "multi-hop representation learning process"
+                }
+              }
+            }
+          },
+          "from sentence" : "More specifically , unlike existing models where the query attention is applied either token - wise or sentence - wise to allow weighted aggregation , the Gated - Attention ( GA ) module proposed in this work allows the query to directly interact with each dimension of the token embeddings at the semantic - level , and is applied layer - wise as information filters during the multi-hop representation learning process ."
+        },
+        "fine - grained attention" : {
+          "enables" : {
+            "model" : {
+              "to learn" : {
+                "conditional token representations" : {
+                  "w.r.t." : "given question"
+                }
+              }
+            }
+          },
+          "from sentence" : "Such a fine - grained attention enables our model to learn conditional token representations w.r.t. the given question , leading to accurate answer selections ."
+        }
+      }
+    }
+  }
+}

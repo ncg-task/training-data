@@ -1,0 +1,90 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "Paragraph Vector" : {
+          "has" : {
+            "unsupervised framework" : {
+              "that learns" : {
+                "continuous distributed vector representations" : {
+                  "for" : "pieces of texts"
+                }
+              }
+            },
+            "from sentence" : "In this paper , we propose Paragraph Vector , an unsupervised framework that learns continuous distributed vector representations for pieces of texts ."
+          }
+        }
+      },
+      "name" : {
+        "Paragraph Vector" : {
+          "can be applied to" : "variable - length pieces of texts",
+          "from sentence" : "The name Paragraph Vector is to emphasize the fact that the method can be applied to variable - length pieces of texts , anything from a phrase or sentence to a large document ."
+        }
+      },
+      "has" : {
+        "vector representation" : {
+          "trained to be" : {
+            "useful" : {
+              "for predicting" : {
+                "words" : {
+                  "in" : "paragraph"
+                }
+              }
+            }
+          },
+          "from sentence" : "In our model , the vector representation is trained to be useful for predicting words in a paragraph ."
+        },
+        "Both word vectors and paragraph vectors" : {
+          "trained by" : ["stochastic gradient descent", "backpropagation"],
+          "from sentence" : "Both word vectors and paragraph vectors are trained by the stochastic gradient descent and backpropagation ."
+        },
+        "paragraph vectors" : {
+          "are" : {
+            "unique" : {
+              "among" : "paragraphs"
+            }
+          },
+          "from sentence" : "While paragraph vectors are unique among paragraphs , the word vectors are shared ."
+        },
+        "word vectors" : {
+          "are" : "shared",
+          "from sentence" : "While paragraph vectors are unique among paragraphs , the word vectors are shared ."
+        }
+      },
+      "concatenate" : {
+        "paragraph vector" : {
+          "with" : {
+            "several word vectors" : {
+              "from" : "paragraph"
+            }
+          },
+          "predict" : {
+            "following word" : {
+              "in" : "given context"
+            }
+          }
+        },
+        "from sentence" : "More precisely , we concatenate the paragraph vector with several word vectors from a paragraph and predict the following word in the given context ."
+      },
+      "At" : {
+        "prediction time" : {
+          "has" : {
+            "paragraph vectors" : {
+              "inferred by" : {
+                "fixing" : {
+                  "has" : "word vectors"
+                }
+              }
+            }
+          },
+          "training" : {
+            "new paragraph vector" : {
+              "until" : "convergence"
+            }
+          },
+          "from sentence" : "At prediction time , the paragraph vectors are inferred by fixing the word vectors and training the new paragraph vector until convergence ."
+        }
+      }
+    }
+  }
+}

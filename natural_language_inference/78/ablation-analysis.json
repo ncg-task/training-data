@@ -1,0 +1,87 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "has" : {
+        "1 - layer linear setting" : {
+          "performs" : "best",
+          "from sentence" : "The 1 - layer linear setting performs the best and is therefore reported in ."
+        }
+      },
+      "Using" : {
+        "ReLU" : {
+          "seems to be" : {
+            "worse" : {
+              "than" : "nonlinear FC layers"
+            },
+            "from sentence" : "Using ReLU seems to be worse than nonlinear FC layers ."
+          }
+        }
+      },
+      "explore" : {
+        "utility" : {
+          "of using" : {
+            "character and syntactic embeddings" : {
+              "found to" : {
+                "helped" : {
+                  "has" : "CAFE"
+                }
+              },
+              "from sentence" : "In , we explore the utility of using character and syntactic embeddings , which we found to have helped CAFE marginally ."
+            }
+          }
+        }
+      },
+      "remove" : {
+        "inter-attention alignment features" : {
+          "has" : {
+            "naturally impact" : {
+              "has" : {
+                "model performance" : {
+                  "has" : "significantly"
+                }
+              }
+            }
+          },
+          "from sentence" : "In ( 4 ) , we remove the inter-attention alignment features , which naturally impact the model performance significantly ."
+        }
+      },
+      "observe" : {
+        "both highway layers" : {
+          "have" : {
+            "marginally helped" : {
+              "has" : "overall performance"
+            }
+          },
+          "from sentence" : "We observe that both highway layers have marginally helped the overall performance ."
+        },
+        "Sub and Concat compositions" : {
+          "were" : {
+            "more important" : {
+              "than" : "Mul composition"
+            }
+          },
+          "from sentence" : "We observe that the Sub and Concat compositions were more important than the Mul composition ."
+        }
+      },
+      "replace" : {
+        "LSTM encoder" : {
+          "with" : "BiLSTM",
+          "observing" : {
+            "adding bi-directionality" : {
+              "has" : {
+                "did not improve" : {
+                  "has" : {
+                    "performance" : {
+                      "for" : "our model"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Finally , in ( 10 ) , we replace the LSTM encoder with a BiLSTM , observing that adding bi-directionality did not improve performance for our model ."
+        }
+      }
+    }
+  }
+}

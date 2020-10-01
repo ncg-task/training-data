@@ -1,0 +1,129 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "After removing" : {
+        "exact match binary feature" : {
+          "find that" : {
+            "performance" : {
+              "has" : {
+                "degrade" : {
+                  "to" : {
+                    "78.2" : {
+                      "on" : {
+                        "matched score" : {
+                          "on" : "development set"
+                        }
+                      }                      
+                    },
+                    "78.0" : {
+                      "on" : "mismatched score"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "After removing the exact match binary feature , we find the performance degrade to 78.2 on matched score on development set and 78.0 on mismatched score ."
+            }
+          }
+        }
+      },
+      "obtain" : {
+        "73.2" : {
+          "for" : "matched score"
+        },
+        "73.6" : {
+          "on" : "mismatched data"
+        },
+        "from sentence" : "We obtain 73.2 for matched score and 73.6 on mismatched data ."
+      },
+      "remove" : {
+        "encoding layer completely" : {
+          "obtain" : {
+            "73.5" : {
+              "for" : "matched score"
+            },
+            "73.2" : {
+              "for" : "mismatched score"
+            }
+          },
+          "demonstrate" : {
+            "feature extraction layer" : {
+              "have" : {
+                "powerful capability" : {
+                  "to capture" : "semantic feature"
+                }
+              }
+            }
+          },
+          "from sentence" : "If we remove encoding layer completely , then we 'll obtain a 73.5 for matched score and 73.2 for mismatched score .
+The result demonstrate the feature extraction layer have powerful capability to capture the semantic feature ."
+
+        },
+        "both self - attention and fuse gate" : {
+          "retaining only" : "highway network",
+          "has" : {
+            "result" : {
+              "has" : {
+                "improves" : {
+                  "to" : {
+                    "77.7 and 77.3" : {
+                      "on" : "matched and mismatched development set"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "In experiment 5 , we remove both self - attention and fuse gate , thus retaining only highway network .
+The result improves to 77.7 and 77.3 respectively on matched and mismatched development set ."
+
+        },
+        "fuse gate" : {
+          "has" : {
+            "performance" : {
+              "has" : {
+                "degrade" : {
+                  "to" : {
+                    "73.5" : {
+                      "for" : "matched score"
+                    },
+                    "73.8" : {
+                      "for" : "mismatched"
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "However , in experiment 6 , when we only remove fuse gate , to our surprise , the performance degrade to 73.5 for matched score and 73.8 for mismatched ."
+          }
+        }
+      },
+      "use" : {
+        "addition" : {
+          "of" : {
+            "representation" : {
+              "after" : {
+                "highway network" : {
+                  "and" : {
+                    "representation" : {
+                      "after" : "self - attention"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "as" : {
+            "skip connection" : {
+              "has" : {
+                "performance increase" : {
+                  "to" : "77.3 and 76.3"
+                }
+              }
+            }
+          },
+          "from sentence" : "On the other hand , if we use the addition of the representation after highway network and the representation after self - attention as skip connection as in experiment 7 , the performance increase to 77.3 and 76.3 ."
+        }
+      }
+    }
+  }
+}

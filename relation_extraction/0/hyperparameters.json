@@ -1,0 +1,65 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "train" : {
+        "our model" : {
+          "using" : {
+            "Adadelta" : {
+              "with" : "gradient clipping"
+            }
+          }
+        },
+        "from sentence" : "We train our model using Adadelta with gradient clipping ."
+      },
+      "regularize" : {
+        "our network" : {
+          "using" : {
+            "dropout" : {
+              "with" : {
+                "drop - out rate" : {
+                  "tuned using" : "development set"
+                }
+              }
+            }
+          },
+          "from sentence" : "We regularize our network using dropout with the drop - out rate tuned using development set ."
+        }
+      },
+      "have" : {
+        "3 hidden layers" : {
+          "in" : "our network",
+          "from sentence" : "We have 3 hidden layers in our network and the dimensionality of the hidden units is 100 ."
+        },
+        "dimensionality" : {
+          "of" : {
+            "hidden units" : {
+              "is" : "100"
+            }
+          },
+          "from sentence" : "We have 3 hidden layers in our network and the dimensionality of the hidden units is 100 ."
+        }
+      },
+      "has" : {
+        "weights" : {
+          "in" : {
+            "network" : {
+              "initialized from" : "random uniform noise",
+              "from sentence" : "All the weights in the network are initialized from small random uniform noise ."
+            }
+          }
+        }
+      },
+      "tune" : {
+        "hyperparameters" : {
+          "based on" : "ACE05 development set",
+          "use them for" : {
+            "training" : {
+              "on" : "ACE04 dataset"
+            }
+          },
+          "from sentence" : "We tune our hyperparameters based on ACE05 development set and use them for training on ACE04 dataset ."
+        }
+      }
+    }    
+  }
+}

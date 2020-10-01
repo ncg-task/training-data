@@ -1,0 +1,27 @@
+{
+  "has" : {
+    "Dataset" : {
+      "for" : {
+        "new complex and cross-domain semantic parsing task" : {
+          "introduce" : {
+            "Spider" : {
+              "consists of" : {
+                "200 databases" : {
+                  "with" : ["multiple tables", "10,181 questions", "5,693 corresponding complex SQL queries"]
+                }
+              }
+            }
+          },
+          "from sentence" : "To address the need for a large and high - quality dataset fora new complex and cross-domain semantic parsing task , we introduce Spider , which consists of 200 databases with multiple tables , 10,181 questions , and 5,693 corresponding complex SQL queries , all written by 11 college students spending a total of 1,000 man-hours ."
+        }
+      },
+      "creates and annotates" : ["questions", {"SQL queries" : {
+          "including" : {
+            "different SQL clauses" : {
+              "such as" : "joining and nested query"
+        }}}},
+        {"from sentence" : "As illustrates , given a database with multiple tables including foreign keys , our corpus creates and annotates complex questions and SQL queries including different SQL clauses such as joining and nested query ."}
+      ]
+    }
+  }
+}

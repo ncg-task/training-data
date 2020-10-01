@@ -1,0 +1,245 @@
+198	0	12	Non-Transfer
+199	154	175	Target Network ( TN )
+200	3	5	is
+200	10	52	proposed base model ( BiLSTM + C2A + Pas )
+200	53	63	trained on
+200	64	67	D t
+200	68	71	for
+200	76	87	target task
+204	0	19	Source- only ( SO )
+204	8	10	on
+205	3	7	uses
+205	10	24	source network
+205	25	35	trained on
+205	36	39	D s
+205	40	53	to initialize
+205	56	70	target network
+205	80	88	tests it
+205	92	95	D t
+206	0	18	Fine-tuning ( FT )
+206	24	32	advances
+206	33	35	SO
+206	36	59	with further finetuning
+206	64	78	target network
+206	79	81	on
+206	82	85	D t
+207	0	6	M- DAN
+207	12	14	is
+207	17	42	multi-adversarial version
+207	43	45	of
+207	46	80	Domain Adversarial Network ( DAN )
+207	83	91	based on
+207	92	122	multiple domain discriminators
+209	0	7	M - MMD
+209	41	47	aligns
+209	48	77	different class distributions
+209	78	85	between
+209	86	93	domains
+209	94	102	based on
+209	103	144	multiple Maximum Mean Discrepancy ( MMD )
+184	4	19	word embeddings
+184	24	40	initialized with
+184	41	70	200 - dimension GloVE vectors
+184	75	94	fine - tuned during
+184	99	107	training
+186	4	17	fc layer size
+186	18	20	is
+186	21	24	300
+187	4	31	Adam ( Kingma and Ba 2014 )
+187	35	42	used as
+187	47	56	optimizer
+187	57	61	with
+187	66	94	initial learning rate 10 ? 4
+188	0	9	Gradients
+188	10	14	with
+188	19	25	2 norm
+188	26	37	larger than
+188	38	40	40
+188	41	44	are
+188	45	55	normalized
+188	56	61	to be
+188	38	40	40
+189	0	11	All weights
+189	12	14	in
+189	15	23	networks
+189	28	53	randomly initialized from
+189	56	96	uniform distribution U ( ? 0.01 , 0.01 )
+190	4	15	batch sizes
+190	16	19	are
+190	20	29	64 and 32
+190	30	33	for
+190	34	59	source and target domains
+193	0	12	To alleviate
+193	13	24	overfitting
+193	30	35	apply
+193	36	43	dropout
+193	44	46	on
+193	51	66	word embeddings
+193	67	69	of
+193	74	81	context
+193	82	86	with
+193	87	103	dropout rate 0.5
+194	8	15	perform
+194	16	30	early stopping
+194	31	33	on
+194	38	52	validation set
+194	53	59	during
+194	64	80	training process
+195	24	32	tuned on
+195	33	71	10 % randomly held - out training data
+195	72	74	of
+195	79	92	target domain
+195	61	63	in
+195	96	105	R1?L task
+195	114	137	fixed to be used in all
+195	138	152	transfer pairs
+38	31	38	propose
+38	41	109	novel framework named Multi - Granularity Alignment Network ( MGAN )
+38	113	133	simultaneously align
+38	134	197	aspect granularity and aspect- specific feature representations
+38	198	204	across
+38	205	212	domains
+39	19	23	MGAN
+39	24	35	consists of
+39	36	48	two networks
+39	49	61	for learning
+39	62	95	aspect - specific representations
+39	49	52	for
+39	104	115	two domains
+46	4	7	CFA
+46	8	17	considers
+46	42	63	by maximally ensuring
+46	68	92	equivalent distributions
+46	93	97	from
+46	98	115	different domains
+46	124	128	same
+46	129	134	class
+46	141	160	semantic separation
+46	161	176	by guaranteeing
+46	79	92	distributions
+46	191	200	from both
+46	201	230	different classes and domains
+46	231	236	to be
+46	237	262	as dissimilar as possible
+40	8	17	to reduce
+40	22	38	task discrepancy
+40	39	46	between
+40	47	54	domains
+40	64	72	modeling
+40	77	86	two tasks
+40	87	89	at
+40	94	119	same fine - grained level
+40	125	132	propose
+40	135	178	novel Coarse2 Fine ( C2F ) attention module
+40	179	186	to help
+40	191	202	source task
+40	203	224	automatically capture
+40	229	254	corresponding aspect term
+40	51	53	in
+40	262	269	context
+40	270	277	towards
+40	282	303	given aspect category
+45	0	10	To prevent
+45	11	26	false alignment
+45	32	37	adopt
+45	42	79	Contrastive Feature Alignment ( CFA )
+45	104	125	to semantically align
+45	126	159	aspect - specific representations
+2	35	43	Transfer
+2	48	87	Aspect - level Sentiment Classification
+4	0	47	Aspect - level sentiment classification ( ASC )
+22	9	45	aspect - oriented sentiment analysis
+220	6	10	MGAN
+220	11	35	consistently outperforms
+220	40	55	MGAN w / o C2 F
+220	58	63	where
+220	64	74	C2F module
+220	75	77	of
+220	82	96	source network
+220	15	17	is
+220	100	107	removed
+220	116	143	source position information
+220	15	17	is
+220	147	153	missed
+220	182	184	by
+220	185	209	1.41 % , 1.03 % , 1.09 %
+220	30	33	for
+220	214	222	accuracy
+220	227	253	1.79 % , 3.62 % and 1.16 %
+220	30	33	for
+220	258	268	Macro - F1
+223	4	17	MGAN w / o PI
+223	26	42	does not utilize
+223	47	67	position information
+223	70	78	performs
+223	79	90	very poorly
+227	0	2	SO
+227	3	11	performs
+227	12	18	poorly
+228	4	24	popular technique FT
+228	25	40	can not achieve
+228	41	61	satisfactory results
+229	4	19	full model MGAN
+229	20	31	outperforms
+229	32	51	M - DAN and M - MMD
+229	52	54	by
+229	55	72	1.80 % and 1.33 %
+229	26	29	for
+229	77	85	accuracy
+229	90	107	1.90 % and 1.66 %
+229	26	29	for
+229	112	133	Marco - F1 on average
+231	13	17	MGAN
+231	18	43	considers both of them in
+231	46	68	point - wise surrogate
+231	88	96	improves
+231	101	112	performance
+231	33	35	of
+231	116	126	our method
+232	15	26	outperforms
+232	31	52	ablation MGAN w/ o SS
+232	53	61	removing
+232	66	90	semantic separation loss
+232	91	93	of
+232	98	101	CFA
+232	102	104	by
+232	105	111	0.81 %
+232	21	24	for
+232	116	124	accuracy
+232	129	135	1.00 %
+232	21	24	for
+232	140	161	Macro - F1 on average
+237	21	25	MGAN
+237	7	20	compared with
+237	21	35	MGAN w / o C2F
+237	51	55	uses
+237	32	35	C2F
+237	60	70	to capture
+237	71	97	more specific aspect terms
+237	98	102	from
+237	107	114	context
+237	115	122	towards
+237	127	142	aspect category
+237	192	197	helps
+237	202	213	source task
+237	63	70	capture
+237	222	251	more fine - grained semantics
+237	252	254	of
+237	127	142	aspect category
+237	275	304	detailed position information
+237	305	309	like
+237	314	325	target task
+241	10	24	benefited from
+241	25	44	distilled knowledge
+241	20	24	from
+241	54	65	source task
+241	68	72	MGAN
+241	73	89	can better model
+241	94	117	complicated relatedness
+241	118	125	between
+241	130	153	context and aspect term
+241	154	157	for
+241	162	177	target domain L
+241	184	198	MGAN w / o C2F
+241	199	207	performs
+241	208	214	poorly

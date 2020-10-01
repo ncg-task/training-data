@@ -1,0 +1,26 @@
+{
+  "has" : {
+    "Model" : {
+      "adopt" : [["match - LSTM model", {"from sentence" : "Specifically , observing that in the SQuAD dataset many questions are paraphrases of sentences from the original text , we adopt a match - LSTM model that we developed earlier for textual entailment ."}],
+	  [{"Pointer Net ( Ptr - Net ) model" : {"enables" : {"predictions" : {"of" : {"tokens" : {"from" : "input sequence only"}}}}}}, {"from sentence" : "We further adopt the Pointer Net ( Ptr - Net ) model developed by , which enables the predictions of tokens from the input sequence only rather than from a larger fixed vocabulary and thus allows us to generate answers that consist of multiple tokens from the original text ."}]
+	  ],
+      "propose" : {
+        "two ways" : {
+          "to apply" : {
+            "Ptr - Net model" : {
+              "for" : "our task"
+            }
+          },
+          "name" : ["sequence model", "boundary model"],
+          "from sentence" : "We propose two ways to apply the Ptr - Net model for our task : a sequence model and a boundary model ."
+        }
+      },
+      "extend" : {
+        "boundary model" : {
+          "with" : "search mechanism",
+          "from sentence" : "We also further extend the boundary model with a search mechanism ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "CATENA" : {
+          "is" : {
+            "best performing system" : {
+              "in" : "both tasks"
+            },
+            "from sentence" : "The evaluation shows that CATENA is the best performing system in both tasks , even if in Task C best precision and best recall are yielded by and , respectively ."            
+          },
+          "performs best on" : {
+            "timex - timex and event - timex relations" : {
+              "while" :{
+                "CAEVO" : {
+                  "achieves" : {
+                    "best results" : {
+                      "on" : "event - DCT and event - event pairs"
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "If we consider the different entity pairs , CATENA performs best on timex - timex and event - timex relations , while CAEVO still achieves the best results on event - DCT and event - event pairs ."
+          }
+        }
+      }
+    }
+  }
+}

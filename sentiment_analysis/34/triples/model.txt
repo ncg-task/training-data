@@ -1,0 +1,7 @@
+(Contribution||has||Model)
+(Model||present||Mazajak)
+(Mazajak||utilises||deep learning)
+(Mazajak||utilises||massive Arabic word embeddings)
+(Mazajak||has||Online Arabic sentiment analysis system)
+(Model||available as||online API)
+(online API||used by||other researchers)

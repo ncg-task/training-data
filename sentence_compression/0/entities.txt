@@ -1,0 +1,157 @@
+176	0	4	LSTM
+176	9	11	is
+176	19	53	basic LSTM - based deletion method
+178	0	6	LSTM +
+178	79	91	incorporated
+178	97	130	dependency parse tree information
+178	131	135	into
+178	140	150	LSTM model
+178	155	159	used
+178	164	174	prediction
+178	31	33	on
+178	182	195	previous word
+178	196	203	to help
+178	164	174	prediction
+178	31	33	on
+178	226	238	current word
+179	0	15	Traditional ILP
+180	2	4	is
+180	12	30	ILP - based method
+183	0	19	Abstractive seq2seq
+184	2	4	is
+184	11	53	abstractive sequence - to - sequence model
+184	54	64	trained on
+184	65	107	3.8 million Gigaword title - article pairs
+165	21	30	our model
+165	35	48	trained using
+165	53	67	Adam algorithm
+165	68	72	with
+165	75	88	learning rate
+165	89	103	initialized at
+165	104	109	0.001
+166	4	13	dimension
+166	14	16	of
+166	21	34	hidden layers
+166	14	16	of
+166	38	47	bi - LSTM
+166	48	50	is
+166	51	54	100
+167	0	15	Word embeddings
+167	20	36	initialized from
+167	37	81	GloVe 100 dimensional pre-trained embeddings
+168	0	29	POS and dependency embeddings
+168	34	59	randomly initialized with
+168	60	84	40 - dimensional vectors
+169	4	14	embeddings
+169	23	37	updated during
+169	38	46	training
+170	0	20	Dropping probability
+170	21	24	for
+170	25	39	dropout layers
+170	40	47	between
+170	48	67	stacked LSTM layers
+170	68	70	is
+170	71	74	0.5
+171	4	14	batch size
+171	18	24	set as
+171	25	27	30
+174	3	10	utilize
+174	14	36	open source ILP solver
+28	17	23	extend
+28	28	52	deletionbased LSTM model
+28	53	56	for
+28	57	77	sentence compression
+35	18	25	propose
+35	26	43	two major changes
+35	65	85	explicitly introduce
+35	86	135	POS embeddings and dependency relation embeddings
+35	136	140	into
+35	145	165	neural network model
+36	41	50	formulate
+36	55	72	final predictions
+36	73	75	as
+36	79	113	Integer Linear Programming problem
+36	114	128	to incorporate
+36	129	140	constraints
+36	141	149	based on
+36	150	169	syntactic relations
+36	170	177	between
+36	178	204	words and expected lengths
+36	205	207	of
+36	212	232	compressed sentences
+37	53	56	use
+37	57	76	bi-directional LSTM
+37	77	87	to include
+37	88	110	contextual information
+37	111	115	from
+37	116	146	both directions into the model
+2	44	64	Sentence Compression
+197	7	15	see that
+197	28	46	abstractive method
+197	47	56	performed
+197	57	63	poorly
+197	16	18	in
+197	67	90	cross - domain settings
+198	6	8	In
+198	13	32	in - domain setting
+198	85	102	our BiLSTM method
+198	35	39	with
+198	108	177	syntactic features ( BiLSTM + SynFeat and BiL - STM + SynFeat + ILP )
+198	178	186	performs
+198	187	209	similarly to or better
+198	210	214	than
+198	219	232	LSTM + method
+198	247	258	in terms of
+198	259	279	both F1 and accuracy
+202	13	38	out - of - domain setting
+202	41	92	our BiLSTM + SynFeat and BiLSTM+SynFeat+ILP methods
+202	93	111	clearly outperform
+202	116	139	LSTM and LSTM + methods
+199	16	26	our method
+199	30	43	comparable to
+199	48	61	LSTM + method
+199	62	64	in
+199	69	88	in - domain setting
+208	23	28	works
+208	29	44	reasonably well
+208	45	53	for both
+208	54	89	in - domain and out - ofdomain data
+204	10	32	Traditional ILP method
+204	38	43	works
+204	44	50	better
+204	51	55	than
+204	60	83	LSTM and LSTM + methods
+204	84	86	in
+204	91	116	out - of - domain setting
+206	31	39	performs
+206	40	45	worse
+206	46	48	in
+206	53	72	in - domain setting
+206	73	82	than both
+206	87	126	LSTM and LSTM + methods and our methods
+209	20	22	on
+209	23	34	Google News
+209	37	43	adding
+209	48	57	ILP layer
+209	58	67	decreased
+209	72	104	sentence compression performance
+216	16	18	in
+216	23	42	in - domain setting
+216	45	55	our method
+216	56	69	does not have
+216	70	83	any advantage
+216	84	88	over
+216	93	106	LSTM + method
+217	11	33	cross - domain setting
+217	36	46	our method
+217	52	56	uses
+217	57	60	ILP
+217	61	70	to impose
+217	71	97	syntax - based constraints
+217	106	114	performs
+217	115	121	better
+217	122	126	than
+217	134	138	when
+217	143	166	amount of training data
+217	167	169	is
+217	170	186	relatively small

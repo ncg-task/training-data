@@ -1,0 +1,8 @@
+{
+  "has research problem" : [
+    ["NATURAL LANGUAGE INFERENCE", {"from sentence" : "Published as a conference paper at ICLR 2018 NATURAL LANGUAGE INFERENCE OVER INTERACTION SPACE"}],
+    ["NLI", {"from sentence" : "Natural Language Inference ( NLI also known as recognizing textual entiailment , or RTE ) task requires one to determine whether the logical relationship between two sentences is among entailment ( if the premise is true , then the hypothesis must be true ) , contradiction ( if the premise is true , then the hypothesis must be false ) and neutral ( neither entailment nor contradiction ) ."}],
+    ["recognizing textual entiailment", {"from sentence" : "Natural Language Inference ( NLI also known as recognizing textual entiailment , or RTE ) task requires one to determine whether the logical relationship between two sentences is among entailment ( if the premise is true , then the hypothesis must be true ) , contradiction ( if the premise is true , then the hypothesis must be false ) and neutral ( neither entailment nor contradiction ) ."}],
+    ["RTE", {"from sentence" : "Natural Language Inference ( NLI also known as recognizing textual entiailment , or RTE ) task requires one to determine whether the logical relationship between two sentences is among entailment ( if the premise is true , then the hypothesis must be true ) , contradiction ( if the premise is true , then the hypothesis must be false ) and neutral ( neither entailment nor contradiction ) ."}]    
+  ]
+}

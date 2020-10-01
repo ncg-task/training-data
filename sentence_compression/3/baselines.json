@@ -1,0 +1,28 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "dependency - tree - based method" : {
+          "considers" : {
+            "sentence compression task" : {
+              "as" : {
+                "optimization problem" : {
+                  "by using" : "integer linear programming"
+                }
+              }
+            }
+          },
+          "from sentence" : "We choose several strong baselines ; the first one is the dependency - tree - based method that considers the sentence compression task as an optimization problem by using integer linear programming 5 ."
+        },
+        "long short - term memory networks ( LSTMs )" : {
+          "showed" : {
+            "strong promise" : {
+              "in" : "sentence compression"
+            }
+          },
+          "from sentence" : "The second method is the long short - term memory networks ( LSTMs ) which showed strong promise in sentence compression by ."
+        }
+      }
+    }
+  }
+}

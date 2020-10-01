@@ -1,0 +1,8 @@
+{
+  "has research problem" : [
+    ["Neural QA", {"from sentence" : "Making Neural QA as Simple as Possible but not Simpler"}],
+    ["question answering ( QA )", {"from sentence" : "Recent development of large - scale question answering ( QA ) datasets triggered a substantial amount of research into end - toend neural architectures for QA ."}],
+    ["QA", {"from sentence" : "Recent development of large - scale question answering ( QA ) datasets triggered a substantial amount of research into end - toend neural architectures for QA ."}],
+    ["Question answering", {"from sentence" : "Question answering is an important end - user task at the intersection of natural language processing ( NLP ) and information retrieval ( IR ) ."}]
+  ]
+}

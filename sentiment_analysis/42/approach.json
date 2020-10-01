@@ -1,0 +1,75 @@
+{
+  "has" : {
+    "Approach" : {
+      "develop" : {
+        "deep memory network" : {
+          "for" : "aspect level sentiment classification"
+        },
+        "from sentence" : "In pursuit of this goal , we develop deep memory network for aspect level sentiment classification , which is inspired by the recent success of computational models with attention mechanism and explicit memory ."
+      },
+      "is" : ["data - driven", "computationally efficient", {"from sentence" : "Our approach is data - driven , computationally efficient and does not rely on syntactic parser or sentiment lexicon ."}],
+      "consists of" : {
+        "multiple computational layers" : {
+          "with" : "shared parameters",
+          "from sentence" : "The approach consists of multiple computational layers with shared parameters ."
+        }
+      },
+      "has" : {
+        "Each layer" : {
+          "is" : {
+            "content - and location - based attention model" : {
+              "first learns" : {
+                "importance / weight" : {
+                  "of" : "each context word"
+                }
+              },
+              "utilizes" : {
+                "information" : {
+                  "to calculate" : "continuous text representation"
+                }
+              }
+            }
+          },
+          "from sentence" : "Each layer is a content - and location - based attention model , which first learns the importance / weight of each context word and then utilizes this information to calculate continuous text representation ."
+        },
+        "text representation" : {
+          "in" : {
+            "last layer" : {
+              "regarded as" : {
+                "feature" : {
+                  "for" : "sentiment classification"
+                }
+              }
+            }
+          },
+          "from sentence" : "The text representation in the last layer is regarded as the feature for sentiment classification ."
+        },
+        "every component" : {
+          "is" : "differentiable",
+          "has" : {
+            "entire model" : {
+              "could be efficiently trained" : {
+                "end - toend" : {
+                  "with" : {
+                    "gradient descent" : {
+                      "where" : {
+                        "loss function" : {
+                          "is" : {
+                            "cross - entropy error" : {
+                              "of" : "sentiment classification"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "As every component is differentiable , the entire model could be efficiently trained end - toend with gradient descent , where the loss function is the cross - entropy error of sentiment classification ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "has research problem" : [
+    ["Knowledge Base Question Answering", {"from sentence" : "Modeling Semantics with Gated Graph Neural Networks for Knowledge Base Question Answering"}],
+    ["Knowledge base question answering ( QA )", {"from sentence" : "Knowledge base question answering ( QA ) is an important natural language processing problem ."}],
+    ["QA", {"from sentence" : "QA requires precise modeling of the question semantics through the entities and relations available in the KB in order to retrieve the correct answer ."}],
+    ["KB QA", {"from sentence" : "In this paper , we describe a semantic parsing approach to the problem of KB QA ."}]
+  ]
+}

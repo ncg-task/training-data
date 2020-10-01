@@ -1,0 +1,101 @@
+{
+  "has" : {
+    "Model" : {
+      "use" : {
+        "multiple memory slots" : {
+          "outside" : {
+            "recurrence" : {
+              "to" : {
+                "piece - wise store representations" : {
+                  "of" : "input"
+                }
+              }
+            }
+          },
+          "from sentence" : "The idea is to use multiple memory slots outside the recurrence to piece - wise store representations of the input ; read and write operations for each slot can be modeled as an attention mechanism with a recurrent controller ."
+        },
+        "read and write operations" : {
+          "for" : {
+            "each slot" : {
+              "modeled as" : {
+                "attention mechanism" : {
+                  "with" : "recurrent controller"
+                }
+              }
+            }
+          },
+          "from sentence" : "The idea is to use multiple memory slots outside the recurrence to piece - wise store representations of the input ; read and write operations for each slot can be modeled as an attention mechanism with a recurrent controller ."
+        }
+      },
+      "leverage" : {
+        "memory and attention" : {
+          "to empower" : {
+            "recurrent network" : {
+              "with" : ["stronger memorization capability", {"ability" : {"to discover" : {"relations" : {"among" : "tokens"}}}}]
+            }
+          },
+          "from sentence" : "We also leverage memory and attention to empower a recurrent network with stronger memorization capability and more importantly the ability to discover relations among tokens ."
+        }
+      },
+      "realized by" : {
+        "inserting" : {
+          "has" : {
+            "memory network module" : {
+              "in" : {
+                "update" : {
+                  "of" : "recurrent network"
+                }
+              },
+              "together with" : {
+                "attention" : {
+                  "for" : "memory addressing"
+                }
+              }
+            }
+          },
+          "from sentence" : "This is realized by inserting a memory network module in the update of a recurrent network together with attention for memory addressing ."
+        }
+      },
+      "term" : {
+        "Long Short - Term Memory - Network ( LSTMN )" : {
+          "is" : {
+            "reading simulator" : {
+              "used for" : "sequence processing tasks"
+            }
+          },
+          "from sentence" : "The resulting model , which we term Long Short - Term Memory - Network ( LSTMN ) , is a reading simulator that can be used for sequence processing tasks ."
+        }
+      },
+      "processes" : {
+        "text" : {
+          "has" : "incrementally",
+          "while" : {
+            "learning" : {
+              "past tokens" : [
+                "in memory",
+                {"to what extent" : {
+                  "relate to" : {
+                  "current token" : {
+                    "being" : "processed"
+                  }
+                }}}
+              ]
+            }
+          },
+          "from sentence" : "The model processes text incrementally while learning which past tokens in the memory and to what extent they relate to the current token being processed ."
+        }
+      },
+      "induces" : {
+        "undirected relations" : {
+          "among" : "tokens",
+          "as an" : {
+            "intermediate step" : {
+              "of learning" : "representations"
+            }
+          },
+          "from sentence" : "As a result , the model induces undirected relations among tokens as an intermediate step of learning representations ."
+        }
+      }
+    }
+  }
+}

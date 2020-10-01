@@ -1,0 +1,87 @@
+133	10	18	TF - IDF
+133	19	21	is
+133	33	55	most impactful feature
+133	58	68	leading to
+133	71	81	large drop
+133	82	84	of
+133	85	94	12 points
+155	0	4	Code
+108	34	49	STAGG and COMPQ
+108	52	61	which are
+108	95	137	highest performing semantic parsing models
+108	138	140	on
+108	146	182	COMPLEXQUESTIONS and WEBQUES - TIONS
+117	0	5	WEBQA
+117	6	14	obtained
+117	15	23	32.6 F 1
+117	48	59	compared to
+117	60	68	40.9 F 1
+117	69	71	of
+117	72	77	COMPQ
+118	4	29	candidate extraction step
+118	30	35	finds
+118	40	54	correct answer
+118	31	33	in
+118	62	80	top - K candidates
+118	31	33	in
+118	84	90	65.9 %
+118	91	93	of
+118	94	114	development examples
+118	119	125	62.7 %
+118	91	93	of
+118	129	142	test examples
+119	11	19	test F 1
+119	20	22	on
+119	23	31	examples
+119	32	41	for which
+119	42	91	candidate extraction succeeded ( WEBQA - SUBSET )
+119	92	94	is
+119	95	123	51.9 ( 53.4 p@1 , 67.5 MRR )
+121	16	21	COMPQ
+121	22	30	obtained
+121	31	39	42.2 F 1
+121	40	42	on
+121	47	55	test set
+121	58	69	compared to
+121	70	78	40.9 F 1
+121	81	97	when training on
+121	98	122	COM - PLEXQUESTIONS only
+122	0	11	Restricting
+122	16	27	predictions
+122	28	30	to
+122	35	41	subset
+122	42	51	for which
+122	52	72	candidate extraction
+122	73	82	succeeded
+122	89	92	F 1
+122	93	95	of
+122	96	110	COMPQ - SUBSET
+122	111	113	is
+122	114	118	48.5
+122	111	113	is
+122	130	150	3.4 F 1 points lower
+122	151	155	than
+122	156	170	WEBQA - SUBSET
+18	3	10	develop
+18	13	38	simple log - linear model
+18	41	57	in the spirit of
+18	58	92	traditional web - based QA systems
+18	95	99	that
+18	100	117	answers questions
+18	118	120	by
+18	121	129	querying
+18	70	73	web
+18	142	152	extracting
+18	100	106	answer
+18	164	168	from
+18	169	190	returned web snippets
+19	7	28	our evaluation scheme
+19	32	44	suitable for
+19	45	72	semantic parsing benchmarks
+19	73	81	in which
+19	86	95	knowledge
+19	96	108	required for
+19	109	128	answering questions
+19	132	142	covered by
+19	147	150	web
+2	11	27	Semantic Parsing

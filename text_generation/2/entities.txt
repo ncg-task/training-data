@@ -1,0 +1,145 @@
+33	55	61	called
+33	62	70	Leak GAN
+33	71	81	to address
+33	82	134	both the non-informativeness and the sparsity issues
+34	0	7	LeakGAN
+34	24	33	providing
+34	34	52	richer information
+34	53	57	from
+34	62	75	discriminator
+34	72	74	to
+34	83	92	generator
+34	93	105	by borrowing
+34	110	125	recent advances
+34	30	32	in
+34	129	164	hierarchical reinforcement learning
+36	4	11	MANAGER
+36	15	20	along
+36	21	54	shortterm memory network ( LSTM )
+36	59	68	serves as
+36	71	79	mediator
+37	18	26	receives
+37	27	77	generator D 's high - level feature representation
+37	131	135	form
+37	140	152	guiding goal
+37	131	134	for
+37	161	174	WORKER module
+35	36	45	introduce
+35	48	72	hierarchical generator G
+35	81	92	consists of
+35	95	122	high - level MANAGER module
+35	129	154	low - level WORKER module
+40	7	12	given
+40	17	31	goal embedding
+40	32	43	produced by
+40	48	58	MAN - AGER
+40	65	71	WORKER
+40	72	85	first encodes
+40	86	109	current generated words
+40	110	114	with
+40	115	127	another LSTM
+40	130	143	then combines
+40	148	154	output
+40	155	157	of
+40	158	189	the LSTM and the goal embedding
+40	190	197	to take
+40	200	212	final action
+40	99	101	at
+40	216	229	current state
+164	27	33	choose
+164	38	54	CNN architecture
+164	55	57	as
+164	62	105	feature extractor and the binary classifier
+166	0	3	For
+166	8	33	synthetic data experiment
+166	40	55	CNN kernel size
+166	56	62	ranges
+166	63	74	from 1 to T
+170	8	17	generator
+170	23	28	adopt
+170	29	33	LSTM
+170	34	36	as
+170	41	76	architectures of MANAGER and WORKER
+170	77	87	to capture
+170	92	120	sequence context information
+167	4	13	number of
+167	14	25	each kernel
+167	29	36	between
+167	37	48	100 and 200
+168	19	34	feature of text
+168	5	7	is
+168	40	64	1,720 dimensional vector
+169	0	7	Dropout
+169	58	76	performed to avoid
+169	77	88	overfitting
+169	8	12	with
+169	17	31	keep rate 0.75
+169	36	53	L2 regularization
+171	4	11	MANAGER
+171	12	20	produces
+171	25	71	16 - dimensional goal embedding feature vector
+171	75	80	using
+171	85	96	feature map
+171	97	109	extracted by
+171	110	113	CNN
+172	4	24	goal duration time c
+172	25	29	is a
+172	30	44	hyperparameter
+172	45	51	set as
+172	52	53	4
+172	54	59	after
+172	60	88	some preliminary experiments
+2	5	20	Text Generation
+4	0	66	Automatically generating coherent and semantically meaningful text
+182	6	8	In
+182	13	31	pre-training stage
+182	34	41	LeakGAN
+182	46	59	already shown
+182	60	94	observable performance superiority
+182	95	106	compared to
+182	107	119	other models
+183	14	40	adversarial training stage
+183	43	51	Leak GAN
+183	52	57	shows
+183	60	87	better speed of convergence
+183	115	123	explores
+183	98	111	local minimum
+183	124	126	is
+183	127	147	significantly better
+183	148	152	than
+183	153	169	previous results
+196	0	2	In
+196	3	23	all measured metrics
+196	26	33	LeakGAN
+196	34	39	shows
+196	40	68	significant performance gain
+196	69	80	compared to
+196	81	96	baseline models
+208	12	14	of
+208	19	30	BLEU scores
+208	31	33	on
+208	38	50	COCO dataset
+208	51	59	indicate
+208	65	73	Leak GAN
+208	74	82	performs
+208	83	103	significantly better
+208	104	108	than
+208	109	124	baseline models
+208	51	53	in
+208	128	159	mid-length text generation task
+214	29	37	indicate
+214	43	50	LeakGAN
+214	51	71	successfully handles
+214	76	103	short text generation tasks
+231	4	15	performance
+231	16	18	on
+231	19	31	two datasets
+231	32	46	indicates that
+231	51	70	generated sentences
+231	71	73	of
+231	74	82	Leak GAN
+231	139	152	than those of
+231	153	159	SeqGAN
+231	71	73	of
+231	90	115	higher global consistency
+231	120	138	better readability

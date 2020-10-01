@@ -1,0 +1,8 @@
+(Contribution||has||Approach)
+(Approach||transform||( T ) ABSA)
+(( T ) ABSA||into||sentence - pair classification task)
+(Approach||fine - tune||pre-trained model)
+(pre-trained model||from||BERT)
+(Approach||investigate||several methods)
+(several methods||of||constructing)
+(constructing||an||auxiliary sentence)

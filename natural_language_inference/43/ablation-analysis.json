@@ -1,0 +1,17 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "has" : {
+        "TF - IDF" : {
+          "is" : "most impactful feature",
+          "leading to" : {
+            "large drop" : {
+              "of" : "12 points"
+            }
+          },
+          "from sentence" : "Note that TF - IDF is by far the most impactful feature , leading to a large drop of 12 points in performance ."
+        }
+      }
+    }
+  }
+}

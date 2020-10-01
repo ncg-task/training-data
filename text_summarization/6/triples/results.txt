@@ -1,0 +1,5 @@
+(Contribution||has||Results)
+(Results||has||ROUGE Evaluation)
+(ROUGE Evaluation||on||Chinese dataset LCSTS)
+(Chinese dataset LCSTS||has||Our model DRGD)
+(Our model DRGD||achieves||best performance)

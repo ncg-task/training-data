@@ -1,0 +1,33 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "YahooCQA" : {
+          "has" : {
+            "key competitors" : {
+              "are" : ["Neural Tensor LSTM ( NTN - LSTM )", {"HD - LSTM" : {"from" : "Tay et al."}}],
+              "from sentence" : "YahooCQA
+- The key competitors of this dataset are the Neural Tensor LSTM ( NTN - LSTM ) and HD - LSTM from Tay et al."
+
+            },
+            "implementation" : {
+              "of" : ["Convolutional Neural Tensor Network", "vanilla CNN model", "Okapi BM - 25 benchmark"],
+              "from sentence" : "along with their implementation of the Convolutional Neural Tensor Network , vanilla CNN model , and the Okapi BM - 25 benchmark ."
+            }
+          }
+        },
+        "WikiQA" : {
+          "has" : {
+            "key competitors" : {
+              "are" : ["Paragraph Vector ( PV )", {"PV + Cnt models" : {"of" : "Le and Mikolv"}}, {"CNN + Cnt model" : {"from" : "Yu et al."}}, "LCLR ( Yih et al . )"]
+            },
+            "from sentence" : "Additionally , we also report our own implementations of QA - BiLSTM , QA - CNN , AP - BiLSTM and AP - CNN on this dataset based on our experimental setup . WikiQA
+- The key competitors of this dataset are the Paragraph Vector ( PV ) and PV + Cnt models of Le and Mikolv , CNN + Cnt model from Yu et al. and LCLR ( Yih et al . ) ."
+
+          },
+          "compare with" : ["AP - CNN", "QA - BiLSTM / CNN", {"from sentence" : "For the clean version of this dataset , we also compare with AP - CNN and QA - BiLSTM / CNN ."}]
+        }
+      }
+    }
+  }
+}

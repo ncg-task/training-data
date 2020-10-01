@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Text Generation", {"from sentence" : "Long Text Generation via Adversarial Training with Leaked Information"}],
+    ["Automatically generating coherent and semantically meaningful text", {"from sentence" : "Automatically generating coherent and semantically meaningful text has many applications in machine translation , dialogue systems , image captioning , etc ."}]
+  ]
+}

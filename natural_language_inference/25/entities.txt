@@ -1,0 +1,79 @@
+90	3	6	use
+90	7	35	pre-trained GloVe embeddings
+90	36	50	of dimension d
+90	51	58	w = 300
+90	63	70	produce
+90	71	109	character - based word representations
+90	110	113	via
+90	114	122	dc = 100
+90	123	144	convolutional filters
+90	145	149	over
+90	150	170	character embeddings
+14	29	33	take
+14	36	41	model
+14	47	58	carries out
+14	59	101	only basic question - document interaction
+14	106	116	prepend to
+14	122	128	module
+14	129	142	that produces
+14	143	159	token embeddings
+14	160	162	by
+14	163	180	explicitly gating
+14	181	188	between
+14	189	234	contextual and non-contextual representations
+16	33	40	turn to
+16	43	65	semisupervised setting
+16	78	86	leverage
+16	89	103	language model
+16	106	120	pre-trained on
+16	121	142	large amounts of data
+16	145	147	as
+16	150	166	sequence encoder
+16	173	193	forcibly facilitates
+16	194	213	context utilization
+2	40	61	Reading Comprehension
+8	0	28	Reading comprehension ( RC )
+9	0	2	RC
+68	62	69	observe
+68	70	90	superior performance
+68	91	93	by
+68	98	112	contextual one
+68	115	127	illustrating
+68	132	139	benefit
+68	140	142	of
+68	143	160	contextualization
+76	17	30	less frequent
+76	45	47	is
+76	33	44	word - type
+76	70	86	gate activations
+76	62	65	are
+76	54	61	smaller
+84	59	70	performance
+84	71	77	due to
+84	78	87	utilizing
+84	92	108	LM hidden states
+84	109	111	of
+84	116	132	first LSTM layer
+84	133	156	significantly surpasses
+84	161	179	other two variants
+80	0	13	Supplementing
+80	18	29	calculation
+80	30	32	of
+80	33	51	token reembeddings
+80	52	56	with
+80	61	74	hidden states
+80	30	32	of
+80	80	101	strong language model
+80	102	114	proves to be
+80	115	131	highly effective
+83	91	98	showing
+83	103	110	benefit
+83	111	113	of
+83	114	122	training
+83	125	133	QA model
+83	95	97	in
+83	139	161	semisupervised fashion
+83	47	51	with
+83	169	189	large language model
+83	13	20	observe
+83	23	46	significant improvement

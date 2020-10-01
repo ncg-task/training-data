@@ -1,0 +1,16 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "target - sensitive memory networks ( TMNs )" : {
+          "can capture" : {
+            "sentiment interaction" : {
+              "between" : "targets and contexts"
+            }
+          },
+          "from sentence" : "To address this problem , we propose target - sensitive memory networks ( TMNs ) , which can capture the sentiment interaction between targets and contexts ."
+        }
+      }
+    }  
+  }
+}

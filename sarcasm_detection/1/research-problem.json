@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Contextual Sarcasm Detection", {"from sentence" : "CASCADE : Contextual Sarcasm Detection in Online Discussion Forums"}],
+    ["automated sarcasm detection", {"from sentence" : "The literature in automated sarcasm detection has mainly focused on lexical , syntactic and semantic - level analysis of text ."}],
+    ["sarcasm detection", {"from sentence" : "In this paper , we propose CASCADE ( a ContextuAl SarCasm DEtector ) that adopts a hybrid approach of both content and context - driven modeling for sarcasm detection in online social media discussions ."}]
+  ]  
+}

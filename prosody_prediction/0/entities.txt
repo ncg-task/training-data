@@ -1,0 +1,172 @@
+16	59	73	for predicting
+16	74	93	prosodic prominence
+16	94	98	from
+16	99	103	text
+16	113	121	based on
+16	126	161	recently published Libri TTS corpus
+16	164	174	containing
+16	175	225	automatically generated prosodic prominence labels
+16	59	62	for
+16	230	244	over 260 hours
+16	248	265	2.8 million words
+16	266	268	of
+16	269	288	English audio books
+16	291	298	read by
+16	299	322	1230 different speakers
+17	22	29	will be
+17	34	68	largest publicly available dataset
+17	69	73	with
+17	74	94	prosodic annotations
+84	44	50	models
+85	0	19	BERT - base uncased
+85	20	84	3 - layer 600D Bidirectional Long Short - Term Memory ( BiLSTM )
+85	123	151	Minitagger ( SVM ) ) + GloVe
+85	152	166	MarMoT ( CRF )
+85	167	190	Majority class per word
+88	3	6	use
+88	11	45	Huggingface PyTorch implementation
+88	46	48	of
+88	49	53	BERT
+88	54	66	available in
+88	71	99	pytorch transformers library
+88	113	120	further
+88	121	132	fine - tune
+88	133	139	during
+88	140	148	training
+90	31	56	smaller BERT - base model
+90	57	62	using
+90	67	86	uncased alternative
+91	9	19	batch size
+91	20	22	of
+91	23	25	32
+95	9	16	dropout
+95	17	19	of
+95	20	23	0.2
+95	24	31	between
+95	36	56	layers of the BiLSTM
+89	3	7	take
+89	12	29	last hidden layer
+89	30	32	of
+89	33	37	BERT
+89	42	47	train
+89	50	91	single fully - connected classifier layer
+89	66	68	on
+89	95	98	top
+89	107	114	mapping
+89	119	136	representation of
+89	137	146	each word
+89	95	97	to
+89	154	160	labels
+91	30	41	fine - tune
+91	46	51	model
+91	52	55	for
+92	0	3	For
+92	4	10	BiLSTM
+92	14	17	use
+92	18	62	pre-trained 300D Glo Ve 840B word embeddings
+97	8	11	SVM
+97	15	18	use
+97	19	46	Minitagger 4 implementation
+97	50	55	using
+97	56	70	each dimension
+97	71	73	of
+97	78	122	pre-trained 300D Glo Ve 840B word embeddings
+97	123	125	as
+97	126	134	features
+97	137	141	with
+97	142	158	context - size 1
+98	8	46	conditional random field ( CRF ) model
+98	50	53	use
+98	54	60	MarMot
+98	66	70	with
+98	75	96	default configuration
+94	18	21	add
+94	22	57	one fullyconnected classifier layer
+94	58	67	on top of
+94	72	78	BiLSTM
+94	81	88	mapping
+94	93	107	representation
+94	65	67	of
+94	111	120	each word
+94	61	63	to
+94	128	134	labels
+2	0	40	Predicting Prosodic Prominence from Text
+4	87	135	predicting prosodic prominence from written text
+20	0	18	Prosody prediction
+107	0	10	All models
+107	11	21	reach over
+107	22	26	80 %
+107	27	29	in
+107	34	61	2 - way classification task
+107	68	99	3 - way classification accuracy
+107	100	111	stays below
+107	112	116	70 %
+123	16	32	reached close to
+123	39	63	full predictive capacity
+123	64	68	with
+123	69	103	only 10 % of the training examples
+108	4	19	BERTbased model
+108	20	24	gets
+108	29	45	highest accuracy
+108	46	48	of
+108	49	66	83.2 % and 68.6 %
+108	67	69	in
+108	74	114	2 - way and 3 - way classification tasks
+112	4	17	3layer BiLSTM
+112	18	26	achieves
+112	27	33	82.1 %
+112	34	36	in
+112	41	63	2 - way classification
+112	68	74	66.4 %
+112	34	36	in
+112	82	109	3 - way classification task
+113	4	43	traditional feature - based classifiers
+113	44	51	perform
+113	52	66	slightly below
+113	71	92	neural network models
+113	95	99	with
+113	104	107	CRF
+113	108	117	obtaining
+113	118	135	81.8 % and 66.4 %
+113	47	50	for
+113	144	168	two classification tasks
+114	4	43	Minitagger SVM model 's test accuracies
+114	44	47	are
+114	48	62	slightly lower
+114	63	67	than
+114	72	78	CRF 's
+114	79	83	with
+114	84	117	80.8 % and 65.4 % test accuracies
+115	8	14	taking
+115	17	47	simple majority class per word
+115	48	53	gives
+115	54	60	80.2 %
+115	61	64	for
+115	69	96	2 - way classification task
+115	101	107	62.4 %
+115	61	64	for
+115	116	143	3 - way classification task
+122	0	3	For
+122	4	22	most of the models
+122	27	46	biggest improvement
+122	47	49	in
+122	50	61	performance
+122	65	78	achieved when
+122	79	85	moving
+122	86	90	from
+122	91	94	1 %
+122	9	11	of
+122	102	119	training examples
+122	120	122	to
+122	123	126	5 %
+128	140	144	with
+128	147	219	manually annotated test set from The Boston University radio news corpus
+132	4	16	good results
+132	40	47	provide
+132	48	63	further support
+132	64	67	for
+132	72	98	quality of the new dataset
+133	21	31	difference
+133	32	39	between
+133	40	55	BERT and BiLSTM
+133	59	70	much bigger

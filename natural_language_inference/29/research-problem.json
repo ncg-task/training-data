@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Product - Aware Answer Generation", {"from sentence" : "Product - Aware Answer Generation in E - Commerce Question - Answering"}],
+    ["question - answering ( QA )", {"from sentence" : "In recent years , the explosive popularity of question - answering ( QA ) is revitalizing the task of reading comprehension with promising results ."}],
+    ["reading comprehension", {"from sentence" : "In recent years , the explosive popularity of question - answering ( QA ) is revitalizing the task of reading comprehension with promising results ."}]
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "has" : {
+    "Results" : {
+      "see that" : {
+        "R - BERT" : {
+          "significantly beats" : "baseline methods",
+          "from sentence" : "We can see that R - BERT significantly beats all the baseline methods ."
+        }
+      },
+      "has" : {
+        "MACRO F1 value" : {
+          "of" : {
+            "R - BERT" : {
+              "is" : {
+                "89. 25" : {
+                  "much better than" : "previous best solution"
+                }
+              }
+            }
+          },
+          "from sentence" : "The MACRO F1 value of R - BERT is 89. 25 , which is much better than the previous best solution on this dataset ."
+        }
+      }
+    }
+  }
+}

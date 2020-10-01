@@ -1,0 +1,46 @@
+{
+  "has" : {
+    "Models" : {
+      "present" : {
+        "hierarchical neural network model" : {
+          "for" : "sequential sentence classification task",
+          "call" : "hierarchical sequential labeling network ( HSLN )",
+          "from sentence" : "In this work , we present a hierarchical neural network model for the sequential sentence classification task , which we call a hierarchical sequential labeling network ( HSLN ) ."
+        }
+      },
+      "first uses" : {
+        "RNN or CNN layer" : {
+          "to individually encode" : {
+            "sentence representation" : {
+              "from" : "sequence of word embeddings"
+            }
+          }
+        },
+        "from sentence" : "Our model first uses a RNN or CNN layer to individually encode the sentence representation from the sequence of word embeddings , then uses another bi - LSTM layer to take as input the individual sentence representation and output the contextualized sentence representation , subsequently uses a single - hidden - layer feed - forward network to transform the sentence representation to the probability vector , and finally optimizes the predicted label sequence jointly via a CRF layer ."
+      },
+      "uses" : {
+        "another bi - LSTM layer" : {
+          "take as input" : "individual sentence representation",
+          "output" : "contextualized sentence representation"
+        },
+        "from sentence" : "Our model first uses a RNN or CNN layer to individually encode the sentence representation from the sequence of word embeddings , then uses another bi - LSTM layer to take as input the individual sentence representation and output the contextualized sentence representation , subsequently uses a single - hidden - layer feed - forward network to transform the sentence representation to the probability vector , and finally optimizes the predicted label sequence jointly via a CRF layer ."
+      },
+      "subsequently uses" : {
+        "single - hidden - layer feed - forward network" : {
+          "to transform" : {
+            "sentence representation" : {
+              "to" : "probability vector"
+            }
+          }
+        },
+        "from sentence" : "Our model first uses a RNN or CNN layer to individually encode the sentence representation from the sequence of word embeddings , then uses another bi - LSTM layer to take as input the individual sentence representation and output the contextualized sentence representation , subsequently uses a single - hidden - layer feed - forward network to transform the sentence representation to the probability vector , and finally optimizes the predicted label sequence jointly via a CRF layer ."        
+      },
+      "optimizes" : {
+        "predicted label sequence jointly" : {
+          "via" : "CRF layer",
+          "from sentence" : "Our model first uses a RNN or CNN layer to individually encode the sentence representation from the sequence of word embeddings , then uses another bi - LSTM layer to take as input the individual sentence representation and output the contextualized sentence representation , subsequently uses a single - hidden - layer feed - forward network to transform the sentence representation to the probability vector , and finally optimizes the predicted label sequence jointly via a CRF layer ."
+        }
+      }
+    }
+  }
+}

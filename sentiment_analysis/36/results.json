@@ -1,0 +1,28 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "LSTM - based models" : {
+          "relying on" :  "sequential information",
+          "can perform" : {
+            "well" : {
+              "for" : "formal sentences",
+              "by capturing" : "more useful context features"
+            }
+          },
+          "from sentence" : "LSTM - based models relying on sequential information can perform well for formal sentences by capturing more useful context features ;"
+        }        
+      },
+      "For" : {
+        "ungrammatical text" : {
+          "has" : {
+            "CNN - based models" : {
+              "may have" : "some advantages"
+            }
+          },
+          "from sentence" : "For ungrammatical text , CNN - based models may have some advantages because CNN aims to extract the most informative n-gram features and is thus less sensitive to informal texts without strong sequential patterns ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "based on" : ["Multi - NLI development sets", {"from sentence" : "These ablation results are shown in and 4 , all based on the Multi - NLI development sets ."}],
+      "has" : {
+        "each added layer model" : {
+          "improves" : "accuracy",
+          "achieve" : {
+            "substantial improvement" : {
+              "in" : "accuracy ( around 2 % )",
+              "on" : "matched and mismatched settings",
+              "compared to" : "single - layer biLSTM"
+            }
+          },
+          "from sentence" : "As shown , each added layer model improves the accuracy and we achieve a substantial improvement in accuracy ( around 2 % ) on both matched and mismatched settings , compared to the single - layer biLSTM in ."
+        },
+        "last ablation" : {
+          "shows that" : {
+            "classifier" : {
+              "with" : {
+                "two layers of relu" : {
+                  "is" : "preferable"
+                }
+              }
+            }
+          },
+          "from sentence" : "The last ablation in shows that a classifier with two layers of relu is preferable than other options ."
+        }
+      },
+      "show" : {
+        "shortcut connections" : {
+          "among" : "biLSTM layers",
+          "is" : {
+            "important contributor" : {
+              "to" : {
+                "accuracy improvement" : {
+                  "around" : {
+                    "1.5 %" : {
+                      "on top of" : "full 3 - layered stacked - RNN model"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Next , in , we show that the shortcut connections among the biLSTM layers is also an important contributor to accuracy improvement ( around 1.5 % on top of the full 3 - layered stacked - RNN model ) ."
+        }
+      },
+      "show that" : {
+        "fine - tuning" : {
+          "has" : "word embeddings",
+          "improves" : {
+            "results" : {
+              "for both" : "in - domain task and cross - domain tasks"
+            }
+          },
+          "from sentence" : "Next , in , we show that fine - tuning the word embeddings also improves results , again for both the in - domain task and cross - domain tasks ( the ablation results are based on a smaller model with a 128 +256 2 - layer biLSTM ) ."
+        }
+      }
+    }
+  }
+}

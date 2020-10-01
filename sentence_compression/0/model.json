@@ -1,0 +1,54 @@
+{
+  "has" : {
+    "Model" : {
+      "extend" : {
+        "deletionbased LSTM model" : {
+          "for" : "sentence compression",
+          "from sentence" : "To this end , we extend the deletionbased LSTM model for sentence compression by ."
+        }
+      },
+      "propose" : {
+        "two major changes" : {
+          "explicitly introduce" : {
+            "POS embeddings and dependency relation embeddings" : {
+              "into" : "neural network model"
+            },
+            "from sentence" : "Specifically , we propose two major changes to the model by : We explicitly introduce POS embeddings and dependency relation embeddings into the neural network model ."
+          },
+          "formulate" : {
+            "final predictions" : {
+              "as" : {
+                "Integer Linear Programming problem" : {
+                  "to incorporate" : {
+                    "constraints" : {
+                      "based on" : {
+                        "syntactic relations" : {
+                          "between" : {
+                            "words and expected lengths" : {
+                              "of" : "compressed sentences"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "( 2 ) Inspired by a previous method , we formulate the final predictions as an Integer Linear Programming problem to incorporate constraints based on syntactic relations between words and expected lengths of the compressed sentences ."
+            }
+          }
+        }
+      },
+      "use" : {
+        "bi-directional LSTM" : {
+          "to include" : {
+            "contextual information" : {
+              "from" : "both directions into the model"
+            }
+          },
+          "from sentence" : "In addition to the two major changes above , we also use bi-directional LSTM to include contextual information from both directions into the model ."
+        }
+      }
+    }
+  }
+}

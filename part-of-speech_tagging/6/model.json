@@ -1,0 +1,22 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "novel neural architecture" : {
+          "for" : "joint POS tagging and graph - based dependency parsing",
+          "from sentence" : "In this paper , we propose a novel neural architecture for joint POS tagging and graph - based dependency parsing ."
+        }
+      },
+      "learns" : {
+        "latent feature representations" : {
+          "shared for" : {
+            "POS tagging and dependency parsing tasks" : {
+              "using" : "BiLSTMthe bidirectional LSTM"
+            }
+          },
+          "from sentence" : "Our model learns latent feature representations shared for both POS tagging and dependency parsing tasks by using BiLSTMthe bidirectional LSTM ."
+        }
+      }
+    }
+  }
+}

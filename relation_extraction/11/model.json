@@ -1,0 +1,48 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "RESIDE" : {
+          "is" : {
+            "novel distant supervised relation extraction method" : {
+              "utilizes" : {
+                "additional supervision" : {
+                  "from" : "KB",
+                  "through" : "neural network based architecture"        
+                }
+              },
+              "from sentence" : "In this paper , we propose RESIDE , a novel distant supervised relation extraction method which utilizes additional supervision from KB through its neural network based architecture ."
+            }
+          }
+        }
+      },
+      "has" : {
+        "RESIDE" : {
+          "makes" : {
+            "principled use" : {
+              "of" : {
+                "entity type and relation alias information" : {
+                  "from" : "KBs",
+                  "to impose" : {
+                    "soft constraints" : {
+                      "while predicting" : "relation"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "RESIDE makes principled use of entity type and relation alias information from KBs , to impose soft constraints while predicting the relation ."
+        }
+      },
+      "uses" : {
+        "encoded syntactic information" : {
+          "obtained from" : "Graph Convolution Networks ( GCN )",
+          "along with" : "embedded side information",
+          "to improve" : "neural relation extraction",
+          "from sentence" : "It uses encoded syntactic information obtained from Graph Convolution Networks ( GCN ) , along with embedded side information , to improve neural relation extraction ."
+        }
+      }
+    }
+  }
+}

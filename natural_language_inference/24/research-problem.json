@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Machine Reading Comprehension", {"from sentence" : "Stochastic Answer Networks for Machine Reading Comprehension"}],
+    ["Machine reading comprehension ( MRC )", {"from sentence" : "Machine reading comprehension ( MRC ) is a challenging task : the goal is to have machines read a text passage and then answer any question about the passage ."}],
+    ["MRC", {"from sentence" : "It has been hypothesized that difficult MRC problems require some form of multi-step synthesis and reasoning ."}]
+  ]
+}

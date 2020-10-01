@@ -1,0 +1,138 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "Dynamically Fused Graph Network ( DFGN )" : {
+          "has" : "novel method",
+          "from sentence" : "In this paper , we propose Dynamically Fused Graph Network ( DFGN ) , a novel method to address the aforementioned concerns for multi-hop text - based QA ."
+        },
+        "fusion process" : {
+          "in" : {
+            "DFGN" : {
+              "to solve" : "unrestricted QA challenge"
+            }
+          },
+          "from sentence" : "To solve the second challenge , we propose a fusion process in DFGN to solve the unrestricted QA challenge ."
+        }
+      },
+      "has" : {
+        "DFGN" : {
+          "constructs" : {
+            "dynamic entity graph" : {
+              "based on" : {
+                "entity mentions" : {
+                  "in" : "query and documents"
+                }
+              },
+              "has" : {
+                "process" : {
+                  "iterates in" : {
+                    "multiple rounds" : {
+                      "to achieve" : "multihop reasoning"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "For the first challenge , DFGN constructs a dynamic entity graph based on entity mentions in the query and documents .
+This process iterates in multiple rounds to achieve multihop reasoning ."
+
+        },
+        "fusion process" : {
+          "is" : {
+            "iteratively performed" : {
+              "at" : "each hop",
+              "through" : "document tokens and entities",
+              "has" : {
+                "final resulting answer" : {
+                  "obtained from" : "document tokens"
+                }
+              },
+              "from sentence" : "The fusion process is iteratively performed at each hop through the document tokens and entities , and the final resulting answer is then obtained from document tokens ."
+            }
+          },
+          "of" : {
+            "doc2 graph and graph2doc" : {
+              "along with" : "dynamic entity graph",
+              "has" : {
+                "jointly improve" : {
+                  "has" : {
+                    "interaction" : {
+                      "between" : {
+                        "information" : {
+                          "of" : ["documents", "entity graph"]
+                        }
+                      },
+                      "leading to" : {
+                        "less noisy entity graph" : {
+                          "has" : "more accurate answers"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "The fusion process of doc2 graph and graph2doc along with the dynamic entity graph jointly improve the interaction between the information of documents and the entity graph , leading to a less noisy entity graph and thus more accurate answers ."
+            }
+          }
+        }
+      },
+      "In" : {
+        "each round" : {
+          "has" : {
+            "DFGN" : {
+              "has" : {
+                "generates and reasons" : {
+                  "on" : {
+                    "dynamic graph" : {
+                      "has" : {
+                        "irrelevant entities" : {
+                          "are" : {
+                            "masked out" : {
+                              "while" : {
+                                "reasoning sources" : {
+                                  "are" : {
+                                    "preserved" : {
+                                      "via" : "mask prediction module"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "from sentence" : "In each round , DFGN generates and reasons on a dynamic graph , where irrelevant entities are masked out while only reasoning sources are preserved , via a mask prediction module ."
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "aggregate" : {
+        "information" : {
+          "from" : {
+            "documents" : {
+              "to" : "entity graph",
+              "name" : "doc2 graph"
+            }
+          },
+          "from sentence" : "We not only aggregate information from documents to the entity graph ( doc2 graph ) , but also propagate the information of the entity graph back to document representations ( graph2doc ) ."
+        }
+      },
+      "propagate" : {
+        "information" : {
+          "of" : {
+            "entity graph" : {
+              "back to" : "document representations"        
+            }
+          },
+          "from sentence" : "We not only aggregate information from documents to the entity graph ( doc2 graph ) , but also propagate the information of the entity graph back to document representations ( graph2doc ) ."
+        }
+      }
+    }
+  }
+}

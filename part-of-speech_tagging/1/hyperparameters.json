@@ -1,0 +1,115 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "has" : {
+        "size" : {
+          "of" : {
+            "dimensions" : {
+              "of" : {
+                "character embeddings" : {
+                  "is" : "32",
+                  "are" : {
+                    "randomly initialized" : {
+                      "using" : "uniform distribution"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "The size of the dimensions of character embeddings is 32 which are randomly initialized using a uniform distribution ."
+            }
+          }
+        },
+        "number of convolutional layers" : {
+          "are" : {
+            "5 and 9" : {
+              "for" : "IntNet - 5 and IntNet - 9"
+            }
+          },
+          "from sentence" : "The number of convolutional layers are 5 and 9 for IntNet - 5 and IntNet - 9 , respectively , and we have adopted the same weight initialization as that of ResNet ."
+        },
+        "state size" : {
+          "of" : {
+            "bi-directional LSTMs" : {
+              "set to" : "256"
+            }
+          },
+          "from sentence" : "The state size of the bi-directional LSTMs is set to 256 ."
+        },
+        "decay ratio" : {
+          "is" : "0.05",
+          "from sentence" : "0.05 is the decay ratio , the value of gradient clipping is 5 ."
+        },
+        "gradient clipping" : {
+          "is" : "5",
+          "from sentence" : "0.05 is the decay ratio , the value of gradient clipping is 5 ."
+        },
+        "Dropout" : {
+          "applied on" : {
+            "input" : {
+              "of" : "IntNet , LSTMs , and CRF"
+            }
+          },
+          "ratio" : "0.5",
+          "from sentence" : "Dropout is applied on the input of IntNet , LSTMs , and CRF , and its ratio 0.5 is fixed , but with no dropout inside of IntNet ."
+        }
+      },
+      "adopt" : {
+        "same initialization method" : {
+          "for" : {
+            "randomly initialized word embeddings" : {
+              "updated during" : "training"
+            }
+          },
+          "from sentence" : "We adopt the same initialization method for randomly initialized word embeddings that are updated during training ."
+        },
+        "standard BIOES tagging scheme" : {
+          "for" : "NER and Chunking",
+          "from sentence" : "We adopt standard BIOES tagging scheme for NER and Chunking ."
+        }
+      },
+      "For" : {
+        "IntNet" : {
+          "has" : {
+            "filter size" : {
+              "of" : {
+                "initial convolution" : {
+                  "is" : "32"
+                },
+                "other convolutions" : {
+                  "is" : "16"
+                }
+              }
+            }
+          },
+          "from sentence" : "For IntNet , the filter size of the initial convolution is 32 and that of other convolutions is 16 ."
+        }
+      },
+      "adopted" : {
+        "same weight initialization" : {
+          "as" : "ResNet",
+          "from sentence" : "The number of convolutional layers are 5 and 9 for IntNet - 5 and IntNet - 9 , respectively , and we have adopted the same weight initialization as that of ResNet ."
+        }
+      },
+      "use" : {
+        "pre-trained word embeddings" : {
+          "for" : "initialization",
+          "from sentence" : "We use pre-trained word embeddings for initialization , GloVe 100 - dimension word embeddings for English , and fastText 300 dimension word embeddings for Spanish , Dutch , and German ."
+        },
+        "GloVe 100 - dimension word embeddings" : {
+          "for" : "English",
+          "from sentence" : "We use pre-trained word embeddings for initialization , GloVe 100 - dimension word embeddings for English , and fastText 300 dimension word embeddings for Spanish , Dutch , and German ."
+        },
+        "fastText 300 dimension word embeddings" : {
+          "for" : "Spanish , Dutch , and German",
+          "from sentence" : "We use pre-trained word embeddings for initialization , GloVe 100 - dimension word embeddings for English , and fastText 300 dimension word embeddings for Spanish , Dutch , and German ."
+        } 
+      },
+      "employ" : {
+        "mini-batch stochastic gradient descent" : {
+          "with" : "momentum",
+          "from sentence" : "We employ mini-batch stochastic gradient descent with momentum ."
+        }
+      }
+    }
+  }
+}

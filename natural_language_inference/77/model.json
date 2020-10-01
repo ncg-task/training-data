@@ -1,0 +1,26 @@
+{
+  "has" : {
+    "Model" : {
+      "namely" : {
+        "FastQA" : {
+          "develop" : ["neural , bag - of - words ( BoW )", "recurrent neural network ( RNN )"],
+          "from sentence" : "In particular , we develop a simple neural , bag - of - words ( BoW ) - and a recurrent neural network ( RNN ) baseline , namely FastQA ."
+        }
+      },
+      "model" : {
+        "interaction" : {
+          "between" : {
+            "question and context" : {
+              "through" : {
+                "computable features" : {
+                  "on" : "word level"
+                }
+              }
+            }
+          },
+          "from sentence" : "Crucially , both models do not make use of a complex interaction layer but model interaction between question and context only through computable features on the word level ."
+        }
+      }
+    }
+  }
+}

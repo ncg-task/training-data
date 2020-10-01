@@ -1,0 +1,115 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "has" : {
+        "model" : {
+          "implemented in" : "Tensorflow",
+          "from sentence" : "Our model is implemented in Tensorflow ."
+        },
+        "sequence lengths" : {
+          "capped at" : {
+            "800/700/1500/1100" : {
+              "for" : "News QA , Search QA , Quasar - T and Narrative QA"
+            }
+          },
+          "from sentence" : "The sequence lengths are capped at 800/700/1500/1100 for News QA , Search QA , Quasar - T and Narrative QA respectively ."
+        },
+        "Batch size" : {
+          "tuned amongst" : "{ 16 , 32 , 64 }",
+          "from sentence" : "Batch size is tuned amongst { 16 , 32 , 64 } ."
+        },
+        "Dropout rate" : {
+          "tuned amongst" : "{ 0.1 , 0.2 , 0.3 }",
+          "applied to" : "all RNN and fully - connected layers",
+          "from sentence" : "Dropout rate is tuned amongst { 0.1 , 0.2 , 0.3 } and applied to all RNN and fully - connected layers ."
+        },
+        "size" : {
+          "of" : {
+            "character embeddings" : {
+              "set to" : "8"
+            },
+            "character RNN" : {
+              "set to" : "word - level RNN encoders"
+            }
+          },
+          "from sentence" : "The size of the character embeddings is set to 8 and the character RNN is set to the same as the word - level RNN encoders ."
+        },
+        "maximum characters per word" : {
+          "set to" : "16",
+          "from sentence" : "The maximum characters per word is set to 16 ."
+        },
+        "number of layers" : {
+          "in" : {
+            "DECAENC" : {
+              "set to" : "3"
+            }
+          },
+          "from sentence" : "The number of layers in DECAENC is set to 3 and the number of factors in the factorization kernel is set to 64 ."
+        },
+        "number of factors" : {
+          "in" : {
+            "factorization kernel" : {
+              "set to" : "64"
+            }
+          },
+          "from sentence" : "The number of layers in DECAENC is set to 3 and the number of factors in the factorization kernel is set to 64 ."          
+        }
+      },
+      "use" : {
+        "Adadelta" : {
+          "with" : {
+            "? = 0.5" : {
+              "for" : "News QA"
+            }
+          },
+          "from sentence" : "We use Adadelta with ? = 0.5 for News QA , Adam with ? = 0.001 for Search QA , Quasar - T and Narrative QA ."          
+        },
+        "Adam" : {
+          "with" : {
+            "? = 0.001" : {
+              "for" : ["Search QA", "Quasar - T", "Narrative QA"]
+            }
+          },
+          "from sentence" : "We use Adadelta with ? = 0.5 for News QA , Adam with ? = 0.001 for Search QA , Quasar - T and Narrative QA ."          
+        },
+        "CUDNN implementation" : {
+          "of" : "RNN encoder",
+          "from sentence" : "We use the CUDNN implementation of the RNN encoder ."
+        },
+        "learning rate decay factor" : {
+          "of" : "2",
+          "from sentence" : "We use a learning rate decay factor of 2 and patience of 3 epochs whenever the EM ( or ROUGE - L ) score on the development set does not increase ."
+        },
+        "patience" : {
+          "of" : "3 epochs",
+          "from sentence" : "We use a learning rate decay factor of 2 and patience of 3 epochs whenever the EM ( or ROUGE - L ) score on the development set does not increase ."          
+        }
+      },
+      "choice of" : {
+        "RNN encoder" : {
+          "tuned between" : "GRU and LSTM cells"
+        },
+        "hidden size" : {
+          "tuned amongst" : "{ 32 , 50 , 64 , 75 }"
+        },
+        "from sentence" : "The choice of the RNN encoder is tuned between GRU and LSTM cells and the hidden size is tuned amongst { 32 , 50 , 64 , 75 } ."
+      },
+      "apply" : {
+        "variational dropout" : {
+          "in - between" : "RNN layers",
+          "from sentence" : "We apply variational dropout in - between RNN layers ."
+        }
+      },
+      "initialize" : {
+        "word embeddings" : {
+          "with" : {
+            "300D Glo Ve embeddings" : {
+              "fixed during" : "training"
+            }
+          }
+        },
+        "from sentence" : "We initialize the word embeddings with 300D Glo Ve embeddings and are fixed during training ."
+      }
+    }
+  }
+}

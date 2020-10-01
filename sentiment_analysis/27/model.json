@@ -1,0 +1,96 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "novel method" : {
+          "to model" : {
+            "Sentiment Dependencies with Graph Convolutional Networks ( SDGCN )" : {
+              "for" : "aspect - level sentiment classification"
+            },
+            "from sentence" : "In this paper , we propose a novel method to model Sentiment Dependencies with Graph Convolutional Networks ( SDGCN ) for aspect - level sentiment classification ."
+          }
+        }
+      },
+      "has" : {
+        "GCN" : {
+          "is" : {
+            "simple and effective convolutional neural network" : {
+              "operating on" : {
+                "graphs" : {
+                  "can catch" : {
+                    "inter-dependent information" : {
+                      "from" : "rich relational data"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "GCN is a simple and effective convolutional neural network operating on graphs , which can catch inter-dependent information from rich relational data ."
+            }
+          }
+        },
+        "aspect" : {
+          "treated as" : "node",
+          "from sentence" : "In our case , an aspect is treated as a node , and an edge represents the sentiment dependency relation of two nodes ."
+        },
+        "edge" : {
+          "represents" : {
+            "sentiment dependency relation" : {
+              "of" : "two nodes"
+            }
+          },
+          "from sentence" : "In our case , an aspect is treated as a node , and an edge represents the sentiment dependency relation of two nodes ."
+        }
+      },
+      "For" : {
+        "every node" : {
+          "in" : "graph",
+          "has" : {
+            "GCN" : {
+              "encodes" : {
+                "relevant information" : {
+                  "about" : "neighborhoods",
+                  "as" : "new feature representation vector"
+                }
+              }
+            }
+          },          
+          "from sentence" : "For every node in graph , GCN encodes relevant information about its neighborhoods as a new feature representation vector ."
+        }
+      },
+      "learns" : {
+        "sentiment dependencies" : {
+          "of" : {
+            "aspects" : {
+              "via" : "graph structure"
+            }
+          },
+          "from sentence" : "Our model learns the sentiment dependencies of aspects via this graph structure ."
+        }
+      },
+      "first to consider" : {
+        "sentiment dependencies" : {
+          "between" : {
+            "aspects" : {
+              "in" : {
+                "one sentence" : {
+                  "for" : "aspect - level sentiment classification task"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "As far as we know , our work is the first to consider the sentiment dependencies between aspects in one sentence for aspect - level sentiment classification task ."
+      },
+      "applies" : {
+        "bidirectional attention mechanism" : {
+          "with" : {
+            "position encoding" : {
+              "before" : "GCN"
+            }
+          }
+        },
+        "from sentence" : "Furthermore , in order to capture the aspect - specific representations , our model applies bidirectional attention mechanism with position encoding before GCN ."
+      }
+    }
+  }
+}

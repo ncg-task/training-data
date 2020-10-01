@@ -1,0 +1,65 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "our implementation of ESIM" : {
+          "achieves" : {
+            "accuracy" : {
+              "of" : {
+                "76.8 %" : {
+                  "in" : "in - domain test set"
+                },
+                "75.8 %" : {
+                  "in" : "cross - domain test set"
+                }
+              }
+            }
+          },
+          "presents" : "state - of - the - art results",
+          "from sentence" : "In addition , we also use our implementation of ESIM , which achieves an accuracy of 76.8 % in the in - domain test set , and 75.8 % in the cross - domain test set , which presents the state - of - the - art results ."
+        }
+      },
+      "achieves" : {
+        "accuracies" : {
+          "of" : {
+            "73.5 % and 73.6 %" : {
+              "After removing" : "cross - sentence attention",
+              "adding" : "our gated - attention model",
+              "among" : {
+                "single models" : {
+                  "ranks" : {
+                    "first" : {
+                      "in" : "cross - domain test set"
+                    },
+                    "second" : {
+                      "in" : "in - domain test set"
+                    }
+                  }                  
+                }
+              },
+              "from sentence" : "After removing the cross - sentence attention and adding our gated - attention model , we achieve accuracies of 73.5 % and 73.6 % , which ranks first in the cross - domain test set and ranks second in the in - domain test set among the single models ."
+            }
+          }
+        }
+      },
+      "When" : {
+        "ensembling" : {
+          "our models" : {
+            "obtain" : {
+              "accuracies" : {
+                "has" : {
+                  "74.9 % and 74.9 %" : {
+                    "ranks" : {
+                      "first in" : "both test sets"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "When ensembling our models , we obtain accuracies 74.9 % and 74.9 % , which ranks first in both test sets ."
+        }
+      }
+    }
+  }
+}

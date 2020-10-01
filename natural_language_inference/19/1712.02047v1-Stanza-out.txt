@@ -1,0 +1,255 @@
+title
+Distance - based Self - Attention Network for Natural Language Inference
+abstract
+Attention mechanism has been used as an ancillary means to help RNN or CNN .
+However , the Transformer ( Vaswani et al. , 2017 ) recently recorded the state - of - theart performance in machine translation with a dramatic reduction in training time by solely using attention .
+Motivated by the Transformer , Directional Self Attention Network ( Shen et al. , 2017 ) , a fully attention - based sentence encoder , was proposed .
+It showed good performance with various data by using forward and backward directional information in a sentence .
+But in their study , not considered at all was the distance between words , an important feature when learning the local dependency to help understand the context of input text .
+We propose Distance - based Self - Attention Network , which considers the word distance by using a simple distance mask in order to model the local dependency without losing the ability of modeling global dependency which attention has inherent .
+Our model shows good performance with NLI data , and it records the new state - of - the - art result with SNLI data .
+Additionally , we show that our model has a strength in long sentences or documents . *
+The NLI task can be solved through two different approaches : sentence encoding - based models and joint models .
+The former separately encode each sentence , whereas the latter take into account the direct relationship between two sentences .
+Between them , sentence - encoding based models focus on training sentence encoder that can represent sentences in vector form well .
+We focus on the former approach , since the objective of our work is to develop an advanced sentenceencoding model .
+Introduction
+Sequence modeling has been employing Recurrent Neural Networks ( RNN ) or Convolutional Neural Networks ( CNN ) mostly .
+More recently , models incorporating attention mechanisms have shown good performance in machine translation , Natural Language Inference ( NLI ) , and Question Answering ( QA ) etc .
+Attention mechanisms used to be exploited in conjunction with RNN or CNN as an ancillary means to help improve performance .
+Lately , presented the first fully attention - based model , which recorded the state - of - the - art result in machine translation .
+As a fully attention - based model can consider all words in a sentence at once , parallelization leads to great reduction in training time .
+Motivated by , proposed the first fully attention - based sentence encoder .
+recorded good performance in a variety of tasks .
+In particular , they recorded the state - of - the - art result with Stanford Natural Language Inference ( SNLI ) dataset which is a representative dataset of NLI .
+The NLI task aims to classify the relationship between two sentences as entailment , contradiction , or neutral .
+One of the approaches to solving the NLI task is to use sentence - encoding based models .
+presented a sentence - encoding based model reflecting directional information in a sentence .
+However , the distance between words was not considered at all in their model , and the directional information simply involved words before and after the reference word .
+Altogether , positional information of words was not fully taken into account .
+As a result , the difference of importance between the distant words and the nearby words was not appropriately reflected .
+Hence lo - cal dependency was not properly modeled , which in turn failed to capture the context information in long sentences .
+To tackle this limitation , we propose Distancebased Self - Attention Network which introduces a distance mask which models the relative distance between words .
+In conjunction with a directional mask , the distance mask allows us to incorporate complete positional information of words in our model .
+Our Distance - based Self - Attention Network achieved good performance with NLI data , and recorded the state - of - the - art result with SNLI .
+Our model worked exceptionally well with long sentences , in particular .
+We also visualized the effect of the distance mask to show that our model can grasp both local dependency and global dependency .
+Related Works
+NLI tasks have been studied through models of various structures .
+Most of all , models combining attention with Long Short - Term Memory ( LSTM ) have performed well .
+improved the performance by adding the mean pooling vector to the conventional attention model in which attention is applied to hidden states of LSTM .
+used the input gates of the LSTM as attention weights to simplify the model structure .
+In and , short - cut connections in stacked LSTM , in combination with max - pooling originally suggested by , were proven effective in improving performance , recording the state - of - the - art performance in MultiNLI .
+And used the memory for sentence encoding motivated by Neural Turing Machine .
+was the first study to construct an end - to - end model with attention alone , and recorded the state - of - the - art performance in machine translation tasks . 's encoder - decoder framework consists of a multihead attention and a position - wise feed forward network as a basic building block which is deeply stacked combined with residual connection .
+The multi-head attention projects the input sentences to multiple subspaces and then computes the scaled dot -product attention in each subspace .
+The results in each subspace are then concatenated and projected again .
+Position - wise feed forward network adds non-linearity to vector representations of each position .
+In this way , the fully attentionbased model was constructed without using RNN or CNN , and the training cost was greatly reduced. , a very recent work , constructed a fully attention - based sentence encoder motivated by .
+They proposed a multi-dimensional attention mechanism that computes the attention by each dimension through modification of additive attention .
+In addition , their model exploits directional attention as well as fusion gate motivated by bi-directional LSTM .
+Directional information was reflected by introducing a simple directional mask .
+By adding a directional mask to the logit of attention , words in a specific direction in the sentence were masked to avoid attention .
+The extent to which attention results are ultimately reflected was determined through fusion gate .
+In our study , we construct our model based on 's basic building block , as well as 's key model structures .
+In order to model the distance between words , which was not considered in their works , we transform the multi-head attention in , in particular , to fit our objective .
+Details can be found in section 4 .
+Background
+In , the attention function is defined as follows by introducing the concept of query , key , and value .
+" An attention function can be described as mapping a query and a set of key - value pairs to an output , where the query , keys , values , and output are all vectors .
+The output is computed as a weighted sum of the values , where the weight assigned to each value is computed by a compatibility function of the query with the corresponding key . "
+The two most commonly used attentions are additive attention and dot-product attention .
+Additive Attention
+Let query , ith key , and ith value be q , k i , and vi respectively .
+Compatibility function of the query with the ith key is represented by the following equation 1 .
+where u ?
+Rd k , and ?( ) is an activation function usually chosen as tanh .
+And attention weight assigned to each ith value is computed by applying the softmax function to l i and final output is weighted sum of value as following equations .
+Dot - product
+Attention
+Dot - product attention is the same as additive attention except for compatibility function .
+In dotproduct attention , compatibility function is computed by the following equation 4 in place of the equation 1 .
+On implementation , dot-product attention is much faster and more space - efficient than additive attention due to optimized matrix multiplication .
+In practice , however , additive attention outperforms dot product attention for large values of d k .
+So used scaled dot-product attention instead of normal dot -product attention to prevent performance loss in large dimension as following equation 5 .
+4 Proposed Model
+Overall Architecture
+Our model 's overall architecture is shown in 1 .
+We follow the conventional architecture for training NLI data .
+First , the two input sentences , premise and hypothesis , are encoded as vectors , u and v respectively , through identical sentence encoders .
+For the encoded vectors u and v , the representation of relation between the two vectors is generated by the concatenation of u , v , | u ? v| , and u * v.
+Thereafter , a probability for each of the 3 - class is generated through the 300D ReLU layer and the 3 - way softmax output layer .
+We configured the model with the setting of 1 layer 300D as in to focus on the performance evaluation of the sentence encoder itself .
+Layer normalization and dropout are applied to 300D ReLU layer .
+Word Embedding Layer
+Let an input sentence be a sequence of discrete words x = [ x 1 , x 2 , , x n ] , where x i ?
+RN is a one - hot representation of the word i , and N is the vocabulary size .
+These one - hot representations are transformed into dense representations by us- ing the pre-trained word embedding .
+Let W e ?
+R deN be a pre-trained word embedding matrix .
+Then a sequence of dense word representations can be written as w = W ex = [ w 1 , w 2 , , w n ] , where w i ?
+R de is dense representation of the word i.
+Masked Multi - Head Attention
+The masked multi-head attention is a variation of the multi-head attention employed by .
+The scaled dot-product attention of is expressed as following :
+where Q , K ,
+V are matrices composed of a set of queries , keys , and values , respectively .
+We transform equation 6 and express the masked attention as following :
+Here , M dir ?
+R nn is the directional mask as proposed in , while M dis ?
+R nn is the distance mask proposed in this model .
+Hyper parameter ?
+is the distance - alpha tuned through validation data .
+M dir consists of the forward mask and backward mask as explained in .
+In the Forward Masked Multi - Head Attention phase , the forward mask is selected , and in the Backward Masked Multi - Head Attention phase , the backward mask .
+The forward masks prevent words that appear after a given word from being considered in the attention process , while backward masks prevent words that appear before from consideration by adding ?? to the logits before taking the softmax at the attention phase .
+The diagonal component of M dir is also set to ??
+so that each token does not consider itself to attention , and the information of each token is later transmitted through the fusion gate of section 4.2.3 M dis is shown in the .
+The ( i , j ) component of the distance mask is ?| i ? j| , representing the distance between ( i + 1 ) th word and ( j + 1 ) th word multiplied by ? 1 .
+By multiplying this value by ?
+and adding it to logit , the attention weight becomes smaller as distance increases .
+That is , the distance mask serves to concentrate on the local words around the reference word .
+Such a structure may appear similar to a CNN filter extracting a local feature .
+Yet , the big difference is that CNN only uses information in the window size , whereas our model considers all words in a sentence at once , concentrating on the local words by taking account of the relative distance between words .
+By using the distance mask , the distance between words , not considered through the directional mask of , was considered additionally , so the complete positional information of words was taken into consideration .
+*
+Figure 4 : Distance mask
+The masked multi-head attention can be expressed as following :
+are matrices created from n word embedding vectors of sentences and expressed as equation 9 .
+The masked multi-head attention first projects Q , K , V into h subspaces , respectively , and performs masked attention of equation 7 for each Q , K , V projection combination .
+The h attention result is concatenated before projection .
+*
+Fusion Gate
+At the fusion gate , raw word embedding S ?
+R nde and the result of masked multi-head attention H ?
+R nde in equation 10 are used as input .
+First , we generate SF , HF by projecting S , H using W S , W H ?
+R dede .
+Mathematically :
+Then create gate F as shown in equation 12
+Finally , we obtain the gated sum by using F .
+It is common in many papers including to use raw Sand H in gated sum .
+We , however , use the gated sum of SF and HF which resulted in a significant increase inaccuracy .
+* Multi-head attention is fast and efficient because it is based on dot -product attention .
+However , multi-dimensional attention has a disadvantage in that it consumes a lot of gpu memory because it requires several 4 - dimensional tensors on implementation .
+So , in our model , the multi-head attention was used as abase structure instead of the multi-dimensional attention .
+In addition , the performance of the actual implementation was also better with multi-head attention .
+Position - wise Feed Forward Networks
+We used position - wise feed forward network structure of as it is .
+The position - wise feed forward network employs the same fully connected network to each position of sentence , in which the fully connected layer consists of two linear transformations , with the ReLU activation in between .
+Mathematically :
+The FFN function of the above equation 13 is applied to each position of the result of the fusion gate .
+Note that position - wise feed forward network is combined with the residual connection as shown in .
+That is , FFN learns the residuals .
+In our model , d ff was set to 4d e .
+Pooling Layer
+The vector representation of input sentence is generated through the pooling layer after the concatenation of the results of forward directional self attention and backward directional self attention .
+That is , the input of pooling layer is
+We use the multi-dimensional source2token self - attention of for our multidimensional self - attention .
+For ith row vector of U , u i , logit l ( u i ) is computed as following :
+where
+.
+The calculations of logit consist of two linear transformations , with the Exponential Linear Units ( ELU ) activation function in between .
+Multi-dimensional attention differs from general attention in that the logit for an input vector is not a scalar but a vector with dimensions equal to the dimensions of the input vector .
+This allows each dimension of the input vector to have a scalar logit , and we can perform attention ton word tokens in each dimension , as illustrated below by equation 15 , 16 .
+Note that softmax is performed on the row dimension of L , not the column dimension .
+The 2 d e - dimensional output vector of multidimensional attention and the 2 d e - dimensional vector obtained by applying max pooling to U are concatenated to encode the input sentence as a 4d e - dimensional vector .
+Experiments and Results
+Dataset
+The dataset used in the experiments are SNLI and MultiNLI datasets .
+The SNLI dataset consists of 549,367 / 9,842 / 9,824 ( train / valid / test ) premise and hypothesis pairs ; and the MultiNLI dataset , 392,702 / 9,815 / 9,832 / 9,796 / 9,847 ( train / valid matched / valid mismatched / test matched / test mismatched ) sentence pairs .
+The two datasets have the same format , but sentences in the MultiNLI dataset are much longer than those in SNLI dataset .
+In addition , MultiNLI dataset consists of various genre information .
+If genres included in the train data are also found invalid ( test ) data , then the dataset is called " matched " ; if valid ( test ) data includes genres that are not in the train data , then the dataset is called " mismatched " .
+Training Details
+We used the Glove 840B 300D 1 ( d e = 300 ) for the pre-trained word embedding without any finetuning .
+This is to train the more universally usable sentence encoder .
+Layer normalization was applied to all linear projections of masked multihead attention , fusion gate , and multi-dimensional attention .
+We applied residual dropout as used in , with dropout to the output of masked multi-head attention and SF +H F +b F of fusion gate .
+1 https://nlp.stanford.edu/projects/glove/
+We set h = 5 , ? = 1.5 in the masked multi-head attention , and the dropout probability was set to 0.1 .
+Batch size was 64 , and the model was trained with Adam optimizer , with a learning rate of 0.001 .
+All models were implemented via Tensorflow on single Nvidia Geforce GTX 1080 Ti GPU .
+SNLI Results
+Experimental results of SNLI data compared with the existing models on the SNLI leader - board 2 are shown in .
+Compared with the existing state - of - the - art model , the number of parameters and the training time increased , but our results show the new state - of - theart record .
+We also looked at the model with distance mask removed to verify the effect of the distance mask proposed in this paper .
+Results show that the addition of the distance mask improved the performance without significantly affecting the training time or increasing the number of parameters . 49.4 50.4 + Unigram and bigram features 99.7 78.2 Sentence encoding - based models 100D LSTM encoders 220 k 84.8 77.6 300D LSTM encoders 3.0 m 83.9 80.6 1024D GRU encoders 15 m 98.8 81.4 300D Tree - based CNN encoders 3.5 m 83.3 82.1 300D SPINN - PI encoders 3.7 m 89.2 83.2 600D Bi- LSTM encoders 2.0 m 86.4 83.3 300D NTI - SLSTM - LSTM encoders 4.0 m 82.5 83.4 600D Bi-LSTM encoders+intra-attention 2.8 m 84.5 84.2 300D NSE encoders 3.0 m 86.2 84.6 600D
+Deep Gated Attn. BiLSTM encoders 11.6 m 90.5 85.5 600D
+Directional Self - Attention Network
+2 The improvement of the test accuracy by introducing the distance mask is only by 0.3 % point , potentially because SNLI data mostly consist of short sentences .
+Hence , we additionally examined how the effect of the distance mask changes as the average length of the two sentences of premise and hypothesis pair changes .
+The distribution of the average length of the two sentences of the SNLI test data is shown in , and the effect of the distance mask according to the average length change can be seen from .
+shows that the accuracy is similar until the average length is less than 25 , yet the test accuracy of the model without the distance mask deteriorates drastically for data of an average length exceeding 25 .
+This demonstrates that the distance mask has an advantage with long sentences or documents .
+MultiNLI Results
+The results of applying SNLI best model to MultiNLI dataset without additional parameter tuning are presented in .
+This once again confirms our model 's advantage in long sentences , given that the sentence is much longer in MultiNLI .
+Compared with the result of RepEVAL 2017 , we can see that the Distance - based Self - Attention Network performs well .
+When compared with the model of , our model showed similar average test accuracy with much lower number of parameters .
+Also , considering that the model of is a complex LSTM model , our model has an advantage in training time as a fully attention - based model .
+showed the best performance with 74.5 % accuracy in Matched Test .
+However , it is a very deep structured LSTM model with 140.2 m parameters .
+In our model , the inference layer is simply composed of 1 layer of 300D in order to focus on the training of sentence encoder .
+Both in and models , the inference layer was set very complex in order to improve the MultiNLI accuracy .
+Taking this into consideration , it can be seen that our Distance - based Self - Attention Network performs competitively given its simpler structure .
+Case Study
+A case study was conducted to investigate the role of each structure of the Distance - based Self - Attention Network .
+For this , a sentence " A lady stands outside of a Mexican market . " is picked Model Name
+SNLI Mix
+| ?|
+Matched Test Acc ( % ) Mismatched Test Acc ( % ) Baseline CBOW O 66.2 64.6 BiLSTM O 67.5 67.1 RepEval 2017
+Cha- level Intra-attention
+BiLSTM encoders O 67.9 68.2 BiLSTM + enhanced embedding + max pooling X 70.7 70.8 BiLSTM + Inner-attention O 72.1 72.1 Deep Gated Attn. BiLSTM encoders X 11.6 m 73.5 73.6 Shortcut - Stacked BiLSTM encoders O 140.2 m 74.5 73.5 Fully attention - based models Directional Self - Attention Network X 2.4 m 71.0 71.4 Our Distance - based Self - Attention Network X 4.7 m 74.1 72.9 among the premise sentences of SNLI test data .
+We focused on training encoders that can represent each sentence in a vector form well .
+Therefore , a case study was conducted on a single sentence , not a sentence pair .
+Masked Multi - Head Attention
+We first look at the attention weights in masked multi-head attention .
+Attention weights represent an by n matrix corresponding to softmax ( QK T ? d k + M dir + ?
+M dis ) of equation 7 , which is different for each head .
+Here we look at the average attention weights obtained by averaging the attention weights of each head .
+The attention weights for each head can be found in Appendix .
+The row of the matrix of represents each word of the sentence , and the column represents the attention weights for each word at each row .
+It can be seen that the attention weights are heavier to the nearby words as compared to those distant from the reference word .
+At the same time , ' outside ' in the forward mask and ' Mexican ' in the backward mask have high attention weights for several words .
+From this , it can be seen that important word is considered in the attention process .
+Distance Mask
+We compared the masked multi-head average attention weights for the longest sentence example in the SNLI test data , with length of 57 words to further verify the effect of the distance mask .
+Panels ( a ) and ( b ) of show results without considering distance , while ( c ) and ( d ) show the results with the distance mask .
+In panels ( a ) and ( b ) , very distant words are considered in the attention and the overall attention weights were reduced .
+This implies that each word does not focus on the important words in the attention process , but rather takes into account almost every word , resulting in noisier figures .
+However , in panels ( c ) and ( d ) , the neighboring words are seen more intensively , which im- plies that the local dependency has been well captured by our model .
+In addition , as shown in panel ( c ) , even if the word is far apart , it is still considered in the attention process if it is important .
+This demonstrates the effectiveness of the distance mask to identify local dependencies without losing the ability to grasp the global dependency .
+Fusion Gate
+We visualize the role of the fusion gate F ?
+R nde at forward directional self attention .
+represents the average gate value that averages d e - dimensional gate value for each word .
+If look at the results of both extremes , keyword ' Mexican ' has a low gate value , resulting in an output that greatly reflects the multi-head attention result .
+In contrast , ' of ' , '.' , the words of little importance , have large gate values , which indicates that the original word embedding is greatly reflected , not the multi-head attention result .
+As shown in , position - wise ffn is used in conjunction with a residual connection .
+That is , the final output of position - wise ffn for input x is the d e - dimensional vector of LayerNorm ( x + FFN ( x ) ) .
+visualizes the maximum value of this final output vector .
+In , keywords with a high deactivation ratio is shown in panel ( a ) and a high final max value in panel ( b ) .
+In case of a word corresponding to a keyword , deactivation occurs frequently in ( a ) , and residual learning is hardly achieved in the position - wise ffn , so that the output of the fusion gate is almost maintained .
+On the other hand , in case of non-important words , residual learning is performed in position - wise ffn because there is less deactivation in ( a ) , so that the max value of final output becomes smaller in ( b ) .
+This results in preventing non-important words from consideration in the subsequent pooling layer .
+In summary , position - wise ffn plays a key role in ensuring that non-critical words are paid less attention to in pooling layers .
+Pooling Layer
+For the multi-dimensional attention corresponding to ( a ) , we visualized the attention weights averaged for each word , where attention weights correspond to softmax ( L ) ?
+R n2 de in equation 15 .
+In max pooling , the max value is selected for each column of U ?
+R n2 de .
+Thus , in ( b ) , we visualize the percentage at which each word is selected in the max pooling operation for the 2d e dimension .
+It can be seen that panels ( a ) and ( b ) of are similar on the whole .
+In other words , both multi-dimensional attention and max pooling utilize information about key words intensively .
+A similar result can be expected by using only one of the pooling layers .
+However , experiment results show that using both multi-dimensional attention and max pooling layer gives better performance .
+In this paper , we propose the Distance - based Self - Attention Network reflecting the distance between words .
+By reflecting the word distance information , our model learns the local dependency without losing the ability to capture the global dependency .
+This was achieved through a simple distance mask , so that the performance of the NLI task could be improved while maintaining the number of parameters and training time .
+In particular , we recorded the new state - of - the - art performance for SNLI data .
+The introduction of the distance mask improves the performance with longer sentences .
+As the research on universal sentence encoders using NLI data was proposed by , we plan to carryout research on fully attention - based networks for universal sentence embedding as future work .
+We will also study the fully attention - based network in image data and speech data .
+Especially , regarding image data , capsule network recently proposed , and as research on new structure to replace CNN is going on , our future work will move in similar directions .

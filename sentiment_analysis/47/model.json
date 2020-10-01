@@ -1,0 +1,80 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "left - center - right separated neural network" : {
+          "with" : "rotatory attention mechanism ( LCR - Rot )",
+          "from sentence" : "With the attempt to better address the two problems , in this paper we propose a left - center - right separated neural network with rotatory attention mechanism ( LCR - Rot ) ."
+        },
+        "rotatory attention mechanism" : {
+          "take into account" : {
+            "interaction" : {
+              "between" : "targets and contexts",
+              "to better represent" : "targets and contexts"
+            }
+          },
+          "from sentence" : "On this basis , we further propose a rotatory attention mechanism to take into account the interaction between targets and contexts to better represent targets and contexts ."
+        }
+      },
+      "design" : {
+        "left - center - right separated LSTMs" : {
+          "contains" : {
+            "three LSTMs" : {
+              "i.e." : "left - , center - and right - LSTM"
+            }
+          },
+          "modeling" : {
+            "three parts" : {
+              "of" : {
+                "review" : {
+                  "name" : ["left context", "target phrase", "right context"]
+                }
+              }
+            }
+          },
+          "from sentence" : "Specifically , we design a left - center - right separated LSTMs that contains three LSTMs , i.e. , left - , center - and right - LSTM , respectively modeling the three parts of a review ( left context , target phrase and right context ) ."
+        }
+      },
+      "has" : {
+        "target2context attention" : {
+          "to capture" : {
+            "most indicative sentiment words" : {
+              "in" : "left / right contexts"
+            }
+          },
+          "from sentence" : "The target2context attention is used to capture the most indicative sentiment words in left / right contexts ."
+        },
+        "context2target attention" : {
+          "to capture" : {
+            "most important word" : {
+              "in" : "target"
+            }
+          },
+          "from sentence" : "Subsequently , the context2target attention is used to capture the most important word in the target ."
+        }
+      },
+      "leads to" : {
+        "two - side representation" : {
+          "of" : "target",
+          "name" : ["left - aware target", "right - aware target"],
+          "from sentence" : "This leads to a two - side representation of the target : left - aware target and right - aware target ."
+        }
+      },
+      "concatenate" : {
+        "component representations" : {
+          "as" : {
+            "final representation" : {
+              "of" : "sentence"
+            }
+          },
+          "feed it into" : {
+            "softmax layer" : {
+              "to predict" : "sentiment polarity"
+            }
+          } 
+        },
+        "from sentence" : "Finally , we concatenate the component representations as the final representation of the sentence and feed it into a softmax layer to predict the sentiment polarity ."
+      }
+    }
+  }
+}

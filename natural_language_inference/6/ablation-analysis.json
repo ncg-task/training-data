@@ -1,0 +1,43 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "achieves" : {
+        "good convergence" : {
+          "with" : "deeper models",
+          "from sentence" : "We were notable to achieve good convergence with deeper models ."
+        }
+      },
+      "seen that" : {
+        "all tasks" : {
+          "benefit from" : "deeper models"
+        },
+        "from sentence" : "It can be seen that all tasks benefit from deeper models , in particular XNLI and Tatoeba , suggesting that a single layer BiLSTM has not enough capacity to encode so many languages ."
+      },
+      "has" : {
+        "Multitask learning" : {
+          "has" : {
+            "NLI objective" : {
+              "leads to" : {
+                "better performance" : {
+                  "on" : "English NLI test set",
+                  "comes at" : {
+                    "cost" : {
+                      "of" : {
+                        "worse cross - lingual transfer performance" : {
+                          "in" : "XNLI and Tatoeba"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Multitask learning has been shown to be helpful to learn English sentence embeddings .
+As shown in , the NLI objective leads to a better performance on the English NLI test set , but this comes at the cost of a worse cross - lingual transfer performance in XNLI and Tatoeba ."
+
+            }
+          }          
+        }
+      }
+    }
+  }
+}

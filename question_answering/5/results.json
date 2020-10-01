@@ -1,0 +1,54 @@
+{
+  "has" : {
+    "Results" : {
+      "showed that" : {
+        "R 3" : {
+          "achieved" : {
+            "F1 56.0 , EM 50.9" : {
+              "on" : "Wiki domain"
+            },
+            "F1 68.5 , EM 63.0" : {
+              "on" : "Web domain"
+            }
+          },
+          "competitive to" : "state - of - the - arts"
+        },
+        "from sentence" : "The results showed that R 3 achieved F1 56.0 , EM 50.9 on Wiki domain and F1 68.5 , EM 63.0 on Web domain , which is competitive to the state - of - the - arts ."
+      },
+      "see that" : {
+        "full re-ranker" : {
+          "combination of" : "different re-rankers",
+          "significantly outperforms" : {
+            "previous best performance" : {
+              "by" : "large margin",
+              "especially on" : ["Quasar - T", "Search QA"]
+            }
+          },
+          "from sentence" : "From the results , we can clearly see that the full re-ranker , the combination of different re-rankers , significantly outperforms the previous best performance by a large margin , especially on Quasar - T and Search QA ."
+        },
+        "our coverage - based re-ranker" : {
+          "achieves" : {
+            "consistently good performance" : {
+              "on" : "three datasets"
+            }          
+          },
+          "from sentence" : "In addition , we see that our coverage - based re-ranker achieves consistently good performance on the three datasets , even though its performance is marginally lower than the strength - based re-ranker on the Search QA dataset ."
+        }
+      },
+      "has" : {
+        "our model" : {
+          "is" : {
+            "much better" : {
+              "than" : {
+                "human performance" : {
+                  "on" : "Search QA dataset"
+                }
+              }
+            }
+          },
+          "from sentence" : "Moreover , our model is much better than the human performance on the Search QA dataset ."
+        }
+      }
+    }
+  }
+}

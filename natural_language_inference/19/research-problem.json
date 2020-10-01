@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Natural Language Inference", {"from sentence" : "Distance - based Self - Attention Network for Natural Language Inference"}],
+    ["NLI", {"from sentence" : "Our model shows good performance with NLI data , and it records the new state - of - the - art result with SNLI data ."}],
+    ["Natural Language Inference ( NLI )", {"from sentence" : "More recently , models incorporating attention mechanisms have shown good performance in machine translation , Natural Language Inference ( NLI ) , and Question Answering ( QA ) etc ."}]
+  ]
+}

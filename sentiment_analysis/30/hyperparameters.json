@@ -1,0 +1,102 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "initialise" : {
+        "our model" : {
+          "with" : {
+            "GloVe" : {
+              "has" : "300 - D",
+              "trained on" : "42B tokens , 1.9 M vocab",
+              "not updated during" : "training"
+            }
+          }
+        },
+        "from sentence" : "We initialise our model with GloVe ( 300 - D , trained on 42B tokens , 1.9 M vocab , not updated during training : ) 4 and pre-process the corpus with tokenisation using NLTK ) and case folding ."
+      },
+      "pre-process" : {
+        "corpus" : {
+          "with" : {
+            "tokenisation" : {
+              "using" : ["NLTK", "case folding"]
+            }
+          }
+        },
+        "from sentence" : "We initialise our model with GloVe ( 300 - D , trained on 42B tokens , 1.9 M vocab , not updated during training : ) 4 and pre-process the corpus with tokenisation using NLTK ) and case folding ."        
+      },
+      "has" : {
+        "Training" : {
+          "carried out over" : "800 epochs",
+          "with" : "FTRL optimiser",
+          "from sentence" : "Training is carried out over 800 epochs with the FTRL optimiser and a batch size of 128 and learning rate of 0.05 ."
+        },
+        "batch size" : {
+          "of" : "128",
+          "from sentence" : "Training is carried out over 800 epochs with the FTRL optimiser and a batch size of 128 and learning rate of 0.05 ."
+        },
+        "learning rate" : {
+          "of" : "0.05",
+          "from sentence" : "Training is carried out over 800 epochs with the FTRL optimiser and a batch size of 128 and learning rate of 0.05 ."
+        },
+        "Dropout" : {
+          "applied to" : {
+            "output" : {
+              "in" : "final classifier"
+            }
+          },
+          "with" : {
+            "rate" : {
+              "of" : "0.2"
+            }
+          },
+          "from sentence" : "Dropout is applied to the output of ? in the final classifier ( Equation ) with a rate of 0.2 ."
+        }
+      },
+      "use" : {
+        "following hyper - parameters" : {
+          "for" : {
+            "weight matrices" : {
+              "in" : "weight matrices"
+            },
+            "hidden size" : {
+              "of" : {
+                "GRU" : {
+                  "is" : "300"
+                }
+              }
+            }
+          },
+          "from sentence" : "We use the following hyper - parameters for weight matrices in both directions : R ? R 3003 , H , U , V , Ware all matrices of size R 300300 , v ? R 300 , and hidden size of the GRU in Equation is 300 ."
+        }
+      },
+      "to curb" : {
+        "overfitting" : {
+          "regularise" : {
+            "last layer" : {
+              "with" : {
+                "L 2 penalty" : {
+                  "on" : "weights"
+                }
+              }
+            }
+          },
+          "from sentence" : "Lastly , to curb overfitting , we regularise the last layer ( Equation ) with an L 2 penalty on its weights : ?"
+        }
+      },
+      "empirically set" : {
+        "number of memory chains" : {
+          "to" : "6",
+          "with" : {
+            "keys of two of them" : {
+              "set to" : {
+                "same embeddings" : {
+                  "as" : "target words LOC1 and LOC2"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "We empirically set the number of memory chains to 6 , with the keys of two of them set to the same embeddings as the target words LOC1 and LOC2 , resp. , and the other 4 chains with free key embeddings which are updated during training , and therefore free to capture any entities ."
+      }
+    }
+  }
+}

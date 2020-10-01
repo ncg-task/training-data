@@ -1,0 +1,48 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "CNN - RNF - LSTM" : {
+          "achieves" : {
+            "53.4 % and 90.0 % accuracies" : {
+              "on" : "fine - grained and binary sentiment classification tasks",
+              "match" : {
+                "state - of the - art results" : {
+                  "on" : "Stanford Sentiment Treebank"
+                }
+              }
+            },
+            "from sentence" : "In particular , CNN - RNF - LSTM achieves 53.4 % and 90.0 % accuracies on the fine - grained and binary sentiment classification tasks respectively , which match the state - of the - art results on the Stanford Sentiment Treebank ."            
+          },
+          "obtains" : {
+            "competitive results" : {
+              "on" : "answer sentence selection datasets",
+              "despite" : {
+                "simple model architecture" : {
+                  "compared to" : "state - of - the - art systems"
+                }
+              }
+            },
+            "from sentence" : "CNN - RNF - LSTM also obtains competitive results on answer sentence selection datasets , despite the simple model architecture compared to state - of - the - art systems ."
+          }
+        },
+        "Conventional RNN models" : {
+          "benefit from" : {
+            "max pooling" : {
+              "especially on" : "answer sentence selection"
+            }
+          },
+          "from sentence" : "Conventional RNN models clearly benefit from max pooling , especially on the task of answer sentence selection ."
+        },
+        "RNF - based CNN models" : {
+          "perform" : {
+            "consistently better" : {
+              "than" : "max - pooled RNN models"
+            }
+          },
+          "from sentence" : "As a result , RNF - based CNN models perform consistently better than max - pooled RNN models ."
+        }
+      }      
+    }
+  }
+}

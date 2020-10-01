@@ -1,0 +1,62 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : ["regularized graph neural network ( RGNN )", {"from sentence" : "In this paper , we propose a regularized graph neural network ( RGNN ) aiming to address all three aforementioned challenges ."}],
+      "consider" : {
+        "each channel" : {
+          "in" : {
+            "EEG signals" : {
+              "as" : {
+                "node" : {
+                  "in" : "our graph"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "Inspired by , , we consider each channel in EEG signals as a node in our graph ."
+      },
+      "has" : {
+        "RGNN model" : {
+          "extends" : "simple graph convolution network ( SGC )",
+          "leverages" : {
+            "topological structure" : {
+              "of" : {
+                "EEG signals" : {
+                  "according to" : {
+                    "economy of brain network organization" : {
+                      "propose" : {
+                        "biologically supported sparse adjacency matrix" : {
+                          "to capture" : "local and global inter-channel relations"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Our RGNN model extends the simple graph convolution network ( SGC ) and leverages the topological structure of EEG signals , i.e. , according to the economy of brain network organization , we propose a biologically supported sparse adjacency matrix to capture both local and global inter-channel relations ."
+        },
+        "Local interchannel relations" : {
+          "connect" : "nearby groups of neurons",
+          "reveal" : {
+            "anatomical connectivity" : {
+              "at" : "macroscale"
+            }
+          },
+          "from sentence" : "Local interchannel relations connect nearby groups of neurons and may reveal anatomical connectivity at macroscale , ."
+        },
+        "Global inter-channel relations" : {
+          "connect" : {
+            "distant groups of neurons" : {
+              "between" : "left and right hemispheres"
+            }
+          },
+          "may reveal" : "emotion - related functional connectivity",
+          "from sentence" : "Global inter-channel relations connect distant groups of neurons between the left and right hemispheres and may reveal emotion - related functional connectivity , ."
+        }
+      }
+    }
+  }
+}

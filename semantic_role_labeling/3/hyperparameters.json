@@ -1,0 +1,162 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "initialize" : {
+        "weights" : {
+          "of" : {
+            "all sub-layers" : {
+              "as" : "random orthogonal matrices"
+            }
+          },
+          "from sentence" : "We initialize the weights of all sub-layers as random orthogonal matrices ."
+        },
+        "other parameters" : {
+          "by sampling" : {
+            "each element" : {
+              "from" : {
+                "Gaussian distribution" : {
+                  "with" : "mean 0 and variance 1 ? d"
+                }
+              }
+            }
+          },
+          "from sentence" : "For other parameters , we initialize them by sampling each element from a Gaussian distribution with mean 0 and variance 1 ? d ."
+        }
+      },
+      "has" : {
+        "embedding layer" : {
+          "can be" : ["initialized randomly", "pre-trained word embeddings"],
+          "from sentence" : "The embedding layer can be initialized randomly or using pre-trained word embeddings ."
+        },
+        "dimension" : {
+          "of" : {
+            "word embeddings and predicate mask embeddings" : {
+              "set to" : "100"
+            }
+          },
+          "from sentence" : "The dimension of word embeddings and predicate mask embeddings is set to 100 and the number of hidden layers is set to 10 ."
+        },
+        "number of hidden layers" : {
+          "set to" : "10",
+          "from sentence" : "The dimension of word embeddings and predicate mask embeddings is set to 100 and the number of hidden layers is set to 10 ."
+        },
+        "number of heads h" : {
+          "set to" : "8",
+          "from sentence" : "The number of heads h is set to 8 ."
+        },
+        "Dropout layers" : {
+          "added before" : {
+            "residual connections" : {
+              "with" : {
+                "keep probability" : {
+                  "of" : "0.8"
+                }
+              },
+              "from sentence" : "Dropout layers are added before residual connections with a keep probability of 0.8 ."
+            }
+          }
+        },
+        "Dropout" : {
+          "applied before" : ["attention softmax layer", "feed - froward ReLU hidden layer", {"keep probabilities" : {"set to" : "0.9"}}],
+          "from sentence" : "Dropout is also applied before the attention softmax layer and the feed - froward ReLU hidden layer , and the keep probabilities are set to 0.9 ."
+        },
+        "Learning Parameter optimization" : {
+          "performed using" : "stochastic gradient descent",
+          "from sentence" : "Learning Parameter optimization is performed using stochastic gradient descent ."
+        },
+        "SGD" : {
+          "contains" : {
+            "mini-batch" : {
+              "of approximately" : {
+                "4096 tokens" : {
+                  "for" : "CoNLL - 2005 dataset"
+                },
+                "8192 tokens" : {
+                  "for" : "CoNLL - 2012 dataset"
+                }
+              }
+            }
+          },
+          "from sentence" : "Each SGD contains a mini-batch of approximately 4096 tokens for the CoNLL - 2005 dataset and 8192 tokens for the CoNLL - 2012 dataset ."
+        },
+        "learning rate" : {
+          "initialized to" : "1.0",
+          "from sentence" : "The learning rate is initialized to 1.0 ."
+        }
+      },
+      "set" : {
+        "number of hidden units d" : {
+          "to" : "200",
+          "from sentence" : "We set the number of hidden units d to 200 ."
+        }
+      },
+      "employ" : {
+        "label smoothing technique" : {
+          "with" : {
+            "smoothing value" : {
+              "of" : {
+                "0.1" : {
+                  "during" : "training"
+                }
+              }
+            }
+          },
+          "from sentence" : "We also employ label smoothing technique with a smoothing value of 0.1 during training ."
+        }
+      },
+      "adopt" : {
+        "Adadelta" : {
+          "as" : "optimizer",
+          "from sentence" : "We adopt Adadelta ) ( = 10 6 and ? = 0.95 ) as the optimizer ."
+        }
+      },
+      "clip" : {
+        "norm" : {
+          "of" : {
+            "gradients" : {
+              "with" : "predefined threshold 1.0"
+            }
+          },
+          "To avoid" : "exploding gradients problem"
+        },
+        "from sentence" : "To avoid exploding gradients problem , we clip the norm of gradients with a predefined threshold 1.0 ."
+      },
+      "After training" : {
+        "400 k steps" : {
+          "halve" : {
+            "learning rate" : {
+              "every" : "100 K steps"
+            }
+          }
+        },
+        "from sentence" : "After training 400 k steps , we halve the learning rate every 100 K steps ."
+      },
+      "train" : {
+        "all models" : {
+          "for" : "600 K steps",
+          "from sentence" : "We train all models for 600 K steps ."
+        }
+      },
+      "For" : {
+        "DEEP - ATT" : {
+          "with" : "FFN sub - layers",
+          "has" : {
+            "whole training stage" : {
+              "takes" : {
+                "two days" : {
+                  "to" : {
+                    "finish" : {
+                      "on" : "single Titan X GPU"
+                    }
+                  },
+                  "which is" : "2.5 times faster"
+                }
+              }
+            }
+          },
+          "from sentence" : "For DEEP - ATT with FFN sub - layers , the whole training stage takes about two days to finish on a single Titan X GPU , which is 2.5 times faster than the previous approach ) ."
+        }
+      }
+    }
+  }
+}

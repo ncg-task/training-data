@@ -1,0 +1,84 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "ARE model" : {
+          "shows" : {
+            "baseline performance" : {
+              "use" : {
+                "minimal audio features" : {
+                  "such as" : {
+                    "MFCC and prosodic features" : {
+                      "with" : "simple architectures"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "First , our ARE model shows the baseline performance because we use minimal audio features , such as the MFCC and prosodic features with simple architectures ."
+        },
+        "TRE model" : {
+          "shows" : {
+            "higher performance gain" : {
+              "compared to" : "ARE"
+            }
+          },
+          "from sentence" : "On the other hand , the TRE model shows higher performance gain compared to the ARE ."
+        },
+        "MDRE" : {
+          "shows" : "substantial performance gain",
+          "achieves" : {
+            "state - of - the - art performance" : {
+              "with" : {
+                "WAP value" : {
+                  "of" : "0.718"
+                }
+              }
+            }
+          }
+          "from sentence" : "Second , the newly proposed model , MDRE , shows a substantial performance gain .
+It thus achieves the state - of - the - art performance with a WAP value of 0.718 ."
+
+        },
+        "MDREA" : {
+          "outperforms" : "best existing research results ( WAP 0.690 to 0.688 )",
+          "from sentence" : "Lastly , the attention model , MDREA , also outperforms the best existing research results ( WAP 0.690 to 0.688 ) ."
+        },
+        "label accuracy" : {
+          "of" : {
+            "processed transcripts" : {
+              "is" : "5.53 % WER"
+            }
+          },
+          "from sentence" : "The label accuracy of the processed transcripts is 5.53 % WER ."
+        },
+        "TRE - ASR , MDRE - ASR and MDREA - ASR models" : {
+          "reflect" : {
+            "degraded performance" : {
+              "compared to" : "TRE , MDRE and MDREA models"
+            }
+          },
+          "from sentence" : "The TRE - ASR , MDRE - ASR and MDREA - ASR models reflect degraded performance compared to that of the TRE , MDRE and MDREA models ."
+        }
+      },
+      "note" : {
+        "textual data" : {
+          "are" : {
+            "informative" : {
+              "in" : "emotion prediction tasks"
+            }
+          }
+        },
+        "recurrent encoder model" : {
+          "is" : {
+            "effective" : {
+              "in understanding" : "types of sequential data"
+            }
+          },
+          "from sentence" : "From this result , we note that textual data are informative in emotion prediction tasks , and the recurrent encoder model is effective in understanding these types of sequential data ."
+        }
+      }
+    }
+  }
+}

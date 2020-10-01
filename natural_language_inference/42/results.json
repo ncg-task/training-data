@@ -1,0 +1,80 @@
+{
+  "has" : {
+    "Results" : {
+      "Regarding" : {
+        "EM and F 1 scores" : {
+          "has" : {
+            "FABIR and BiDAF" : {
+              "showed" : "similar performances"
+            }
+          },
+          "from sentence" : "Regarding EM and F 1 scores , FABIR and BiDAF showed similar performances ."
+        }
+      },
+      "analyze" : {
+        "performance" : {
+          "of" : {
+            "FABIR and BiDAF" : {
+              "shows" : {
+                "shorter answers" : {
+                  "are" : {
+                    "easier" : {
+                      "for" : "both models"
+                    },
+                    "from sentence" : "In this section we analyze the performance of FABIR and BiDAF in the different types of question in SQuAD .
+shows that shorter answers are easier for both models : while they reach more than 75 % F1 for answers that are shorter than four words , for answers longer than ten words these scores drop to 60.4 % and 67.3 % for FABIR and BiDAF , respectively ."
+
+                  }
+                },
+                "best performance" : {
+                  "with" : "\" when \" questions",
+                  "from sentence" : "shows that both models had their best performance with \" when \" questions ."
+                }
+              },
+              "has" : {
+                "\" how long \" and \" how many \"" : {
+                  "proved" : {
+                    "easier" : {
+                      "to" : "respond"
+                    }
+                  },
+                  "possess" : {
+                    "same property" : {
+                      "of having" : {
+                        "smaller universe" : {
+                          "of" : "possible answers"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "Together with \" when \" questions , \" how long \" and \" how many \" also proved easier to respond , as they possess the same property of having a smaller universe of possible answers ."
+                },
+                "\" how \" and \" why \" questions" : {
+                  "resulted in" : "considerably lower F1 and EM scores",
+                  "from sentence" : "In contrast to these , \" how \" and \" why \" questions resulted in considerably lower F1 and EM scores , as they can be answered by any sentence , and hence require a deeper understanding of the text ."
+                },
+                "Questions" : {
+                  "expect" : {
+                    "\" yes \" or a \" no \"" : {
+                      "as" : "answer",
+                      "are" : "also difficult"
+                    }
+                  },
+                  "from sentence" : "Questions which expect a \" yes \" or a \" no \" as an answer are also difficult because it is not always possible to find those words in a snippet from the passage ."
+                },
+                "shorter passages" : {
+                  "showed" : {
+                    "worst performance" : {
+                      "for" : "both models"
+                    }
+                  },
+                  "from sentence" : "It is curious that shorter passages showed the worst performance for both models ."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

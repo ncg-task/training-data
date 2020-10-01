@@ -1,0 +1,91 @@
+{
+  "has" : {
+    "Model" : {
+      "proposed" : {
+        "natural language inference networks" : {
+          "composed of" : ["word embedding", "sequence encoder", "composition layer", "toplayer classifier", {"from sentence" : "We present here the proposed natural language inference networks which are composed of the following major components : word embedding , sequence encoder , composition layer , and the toplayer classifier ."}]
+        }
+      },
+      "has" : {
+        "Word Embedding" : {
+          "concatenate" : {
+            "embeddings" : {
+              "learned at" : {
+                "two different levels" : {
+                  "name" : ["character composition", "holistic word - level embedding"]
+                }
+              },
+              "to represent" : {
+                "each word" : {
+                  "in" : "sentence"
+                }
+              }
+            },
+            "from sentence" : "Word Embedding
+We concatenate embeddings learned at two different levels to represent each word in the sentence : the character composition and holistic word - level embedding ."
+
+          }
+        },
+        "Sequence Encoder" : {
+          "has" : {
+            "sentence pairs" : {
+              "fed into" : {
+                "sentence encoders" : {
+                  "to obtain" : "hidden vectors ( h p and h h )"
+                }
+              },
+              "from sentence" : "Sequence Encoder
+To represent words and their context in a premise and hypothesis , sentence pairs are fed into sentence encoders to obtain hidden vectors ( h p and h h ) ."
+
+            }
+          },
+          "use" : {
+            "stacked bidirectional LSTMs ( BiL - STM )" : {
+              "as" : "encoders",
+              "from sentence" : "We use stacked bidirectional LSTMs ( BiL - STM ) as the encoders ."
+            }
+          }
+        },
+        "Composition Layer" : {
+          "compose" : {
+            "hidden vectors" : {
+              "obtained by" : {
+                "sequence encoder layer ( h p and h h )" : {
+                  "To transform" : {
+                    "sentences" : {
+                      "into" : "fixed - length vector representations"
+                    }
+                  }                  
+                },
+                "from sentence" : "Composition Layer
+To transform sentences into fixed - length vector representations and reason using those representations , we need to compose the hidden vectors obtained by the sequence encoder layer ( h p and h h ) ."
+
+              }
+            }
+          },
+          "propose" : {
+            "intra-sentence gated - attention" : {
+              "to obtain" : "fixed - length vector",
+              "from sentence" : "We propose intra-sentence gated - attention to obtain a fixed - length vector ."
+            }
+          }
+        },
+        "Top - layer Classifier" : {
+          "has" : {
+            "Our inference model" : {
+              "feeds" : {
+                "resulting vectors" : {
+                  "to" : "final classifier",
+                  "to determine" : "overall inference relationship"
+                }
+              },
+              "from sentence" : "Top - layer Classifier
+Our inference model feeds the resulting vectors obtained above to the final classifier to determine the overall inference relationship ."
+
+            }
+          }
+        }
+      }
+    }
+  }
+}

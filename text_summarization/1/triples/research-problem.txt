@@ -1,0 +1,4 @@
+(Contribution||has research problem||Diverse Sequence Generation)
+(Contribution||has research problem||Generating diverse sequences)
+(Contribution||has research problem||Generating target sequences given a source sequence)
+(Contribution||has research problem||sequence generation)

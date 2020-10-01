@@ -1,0 +1,66 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "use" : {
+        "open - domain word embeddings" : {
+          "for" : {
+            "initialization" : {
+              "of" : "word vectors"
+            }
+          },
+          "from sentence" : "We use the open - domain word embeddings 1 for the initialization of word vectors ."
+        }
+      },
+      "initialize" : {
+        "other model parameters" : {
+          "from" : "uniform distribution U ( - 0.05 , 0.05 )"
+        },
+        "from sentence" : "We initialize other model parameters from a uniform distribution U ( - 0.05 , 0.05 ) ."
+      },
+      "has" : {
+        "dimension" : {
+          "are" : {
+            "300" : {
+              "of" : ["word embedding", "size of the hidden layers"]
+            }
+          },
+          "from sentence" : "The dimension of the word embedding and the size of the hidden layers are 300 ."
+        },
+        "learning rate" : {
+          "set to" : "0.01",
+          "from sentence" : "The learning rate is set to 0.01 and the dropout rate is set to 0.1 ."
+        },
+        "dropout rate" : {
+          "set to" : "0.1",
+          "from sentence" : "The learning rate is set to 0.01 and the dropout rate is set to 0.1 ."          
+        },
+        "Stochastic gradient descent" : {
+          "used as" : "our optimizer",
+          "from sentence" : "Stochastic gradient descent is used as our optimizer ."
+        }
+      },
+      "compare" : {
+        "memory networks" : {
+          "in" : "multiple computational layers version ( i.e. , multiple hops )",
+          "has" : {
+            "number of hops" : {
+              "set to" : "3"
+            }
+          }
+        },
+        "from sentence" : "We also compare the memory networks in their multiple computational layers version ( i.e. , multiple hops ) and the number of hops is set to 3 as used in the mentioned previous studies ."
+      },
+      "implemented" : {
+        "all models" : {
+          "in" : {
+            "TensorFlow environment" : {
+              "using" : "same input , embedding size , dropout rate , optimizer , etc."
+            }
+          }
+        },
+        "from sentence" : "We implemented all models in the TensorFlow environment using same input , embedding size , dropout rate , optimizer , etc."
+      },
+      
+    }
+  }
+}

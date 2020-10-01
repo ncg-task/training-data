@@ -1,0 +1,117 @@
+72	58	90	dependency - tree - based method
+72	96	105	considers
+72	110	135	sentence compression task
+72	26	28	as
+72	142	162	optimization problem
+72	163	171	by using
+72	172	198	integer linear programming
+82	25	68	long short - term memory networks ( LSTMs )
+82	75	81	showed
+82	82	96	strong promise
+82	97	99	in
+82	100	120	sentence compression
+99	2	44	https://github.com/code4conference/code4sc
+90	4	18	embedding size
+90	83	85	is
+90	86	89	128
+90	19	22	for
+90	23	27	word
+90	30	52	part - of - speech tag
+90	63	82	dependency relation
+92	4	21	mini - batch size
+92	26	37	chosen from
+92	38	54	[ 5 , 50 , 100 ]
+93	0	15	Vocabulary size
+93	16	19	was
+93	20	26	50,000
+94	4	17	learning rate
+94	18	21	for
+94	22	43	neural language model
+94	44	46	is
+94	47	56	2.5 e - 4
+94	63	70	1e - 05
+94	18	21	for
+94	79	93	policy network
+91	3	11	employed
+91	16	27	vanilla RNN
+91	28	32	with
+91	47	49	of
+91	50	53	512
+91	54	57	for
+91	67	81	policy network
+91	86	107	neural language model
+95	0	3	For
+95	4	19	policy learning
+95	25	29	used
+95	34	53	REINFORCE algorithm
+95	54	63	to update
+95	68	78	parameters
+95	79	81	of
+95	86	100	policy network
+95	105	109	find
+95	4	10	policy
+95	125	134	maximizes
+95	139	145	reward
+19	34	70	syntax - based neural language model
+19	74	84	trained on
+19	85	107	large - scale datasets
+19	44	46	as
+19	113	134	readability evaluator
+20	4	25	neural language model
+20	38	46	to learn
+20	51	76	correct word collocations
+20	77	88	in terms of
+20	94	100	syntax
+20	105	114	semantics
+22	4	18	policy network
+22	59	66	to form
+22	69	80	compression
+22	19	34	performs either
+22	35	41	RETAIN
+22	45	51	REMOVE
+22	87	95	receives
+22	98	133	reward ( e.g. , readability score )
+22	134	143	to update
+22	11	18	network
+21	18	27	formulate
+21	32	66	deletionbased sentence compression
+21	72	81	series of
+21	82	118	trialand - error deletion operations
+21	119	126	through
+21	129	161	reinforcement learning framework
+2	37	57	Sentence Compression
+4	56	93	deletion - based sentence compression
+107	24	51	Evaluator - SLMbased method
+107	52	58	yields
+107	61	78	large improvement
+107	79	83	over
+107	88	97	baselines
+109	9	12	for
+109	13	32	Google news dataset
+109	35	59	LSTMs ( LSTM + pos+dep )
+109	68	70	is
+109	73	99	relatively strong baseline
+109	132	152	dependency relations
+109	157	180	part - of - speech tags
+112	55	65	perplexity
+112	88	90	is
+112	179	183	76.5
+112	21	25	with
+112	137	158	0.2 million instances
+110	13	21	applying
+110	22	37	Evaluator - SLM
+110	67	75	observed
+110	40	63	only a tiny improvement
+112	0	3	For
+112	4	20	Gigaword dataset
+112	21	25	with
+112	26	48	1.02 million instances
+112	55	65	perplexity
+112	66	68	of
+112	73	87	language model
+112	88	90	is
+112	91	95	20.3
+114	12	22	shows that
+114	23	41	small improvements
+114	46	57	observed on
+114	58	70	two datasets

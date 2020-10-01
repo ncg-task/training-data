@@ -1,0 +1,68 @@
+150	3	7	used
+150	8	34	word embeddings ( d = 50 )
+150	45	59	computed using
+150	60	105	Collobert and Weston 's neural language model
+152	4	23	other model weights
+152	29	50	randomly intitialised
+152	51	56	using
+152	59	99	Gaussian distribution ( = 0 , ? = 0.01 )
+153	0	19	All hyperparameters
+153	25	38	optimised via
+153	39	50	grid search
+153	51	53	on
+153	58	91	MAP score on the development data
+159	0	8	L - BFGS
+159	18	26	to train
+159	31	61	logistic regression classifier
+159	64	68	with
+159	69	83	L2 regulariser
+159	84	86	of
+159	87	91	0.01
+154	3	6	use
+154	11	28	AdaGrad algorithm
+154	29	32	for
+154	33	41	training
+36	19	23	show
+36	31	68	neural network - based sentence model
+36	69	86	can be applied to
+36	91	124	task of answer sentence selection
+37	3	12	construct
+37	13	47	two distributional sentence models
+37	50	55	first
+37	58	80	bag - of - words model
+37	87	93	second
+37	98	110	bigram model
+37	111	119	based on
+37	122	150	convolutional neural network
+38	22	27	train
+38	68	84	supervised model
+38	85	93	to learn
+38	96	113	semantic matching
+38	114	121	between
+38	122	147	question and answer pairs
+38	18	54	pre-trained semantic word embeddings
+40	8	15	present
+40	19	35	enhanced version
+40	58	66	combines
+40	71	77	signal
+40	36	38	of
+40	85	115	distributed matching algorithm
+40	116	120	with
+40	121	154	two simple word matching features
+2	18	43	Answer Sentence Selection
+161	21	33	bigram model
+161	34	42	performs
+161	43	49	better
+161	50	54	than
+161	59	72	unigram model
+161	81	92	addition of
+161	97	131	IDF - weighted word count features
+161	132	153	significantly improve
+161	154	165	performance
+161	37	40	for
+161	170	181	both models
+161	182	184	by
+161	185	196	10 % - 15 %
+169	24	54	best models ( bigram + count )
+169	55	65	outperform
+169	66	79	all baselines

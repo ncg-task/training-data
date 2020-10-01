@@ -1,0 +1,8 @@
+(Contribution||has||Ablation analysis)
+(Ablation analysis||show||two ruminate layers)
+(two ruminate layers||are||important and helpful)
+(important and helpful||in contributing||performance)
+(Ablation analysis||worth noting||BiLSTM)
+(BiLSTM||in||context ruminate layer)
+(BiLSTM||contributes||substantially)
+(substantially||to||model performance)

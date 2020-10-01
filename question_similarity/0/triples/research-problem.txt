@@ -1,0 +1,6 @@
+(Contribution||has research problem||Semantic Question Similarity in Arabic)
+(Contribution||has research problem||semantic text question similarity)
+(Contribution||has research problem||Semantic Text Similarity ( STS ))
+(Contribution||has research problem||STS)
+(Contribution||has research problem||Semantic Question Similarity ( SQS ) for the Arabic language)
+(Contribution||has research problem||SQS)

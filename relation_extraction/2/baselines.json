@@ -1,0 +1,8 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : ["SVM", "RNN", "MVRNN", "CNN + Softmax", "FCM", "CR - CNN", "Attention - CNN", "Entity Attention Bi-LSTM"],
+      "from sentence" : "We compare our method , R - BERT , against results by multiple methods recently published for the SemEval - 2010 Task 8 dataset , including SVM , RNN , MVRNN , CNN + Softmax , FCM , CR - CNN , Attention - CNN , Entity Attention Bi-LSTM ."
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : ["interactive multitask learning network ( IMN )", {"from sentence" : "In this work , we propose an interactive multitask learning network ( IMN ) , which solves both tasks simultaneously , enabling the interactions between both tasks to be better exploited ."}],
+      "has" : {
+        "IMN" : {
+          "allows" : {
+            "AE and AS" : {
+              "to be trained together with" : {
+                "related document - level tasks" : {
+                  "exploiting" : {
+                    "knowledge" : {
+                      "from" : "larger document - level corpora"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Furthermore , IMN allows AE and AS to be trained together with related document - level tasks , exploiting the knowledge from larger document - level corpora ."              
+            },
+            "fined - grained tokenlevel classification tasks" : {
+              "to be trained together with" : "document - level classification tasks",
+              "from sentence" : "In addition , IMN allows fined - grained tokenlevel classification tasks to be trained together with document - level classification tasks ."
+            }
+          },
+          "explicitly models" : {
+            "interactions" : {
+              "between" : "tasks",
+              "through" : {
+                "message passing mechanism" : {
+                  "allowing" : {
+                    "different tasks" : {
+                      "to better influence" : "each other"
+                    }
+                  }
+                }
+              }              
+            },
+            "from sentence" : "In contrast to most multi-task learning schemes which share information through learning a common feature representation , IMN not only allows shared features , but also explicitly models the interactions between tasks through the message passing mechanism , allowing different tasks to better influence each other ."
+          }
+        },
+        "information" : {
+          "combined with" : "shared latent representation",
+          "made available to" : {
+            "all tasks" : {
+              "for" : "further processing"
+            }
+          },
+          "from sentence" : "The information is then combined with the shared latent representation and made available to all tasks for further processing ."
+        }
+      },
+      "introduces" : {
+        "novel message passing mechanism" : {
+          "allows" : {
+            "informative interactions" : {
+              "between" : "tasks"
+            }
+          },
+          "from sentence" : "IMN introduces a novel message passing mechanism that allows informative interactions between tasks ."
+        }
+      },
+      "sends" : {
+        "useful information" : {
+          "from" : {
+            "different tasks" : {
+              "back to" : "shared latent representation"
+            }
+          }
+        },
+        "from sentence" : "Specifically , it sends useful information from different tasks back to a shared latent representation ."
+      },
+      "incorporated" : {
+        "two document - level classification tasks" : {
+          "name" : ["sentiment classification ( DS )", "domain classification ( DD )"],
+          "to be jointly trained with" : {
+            "AE and AS" : {
+              "allowing" : {
+                "aspect - level tasks" : {
+                  "to benefit from" : "document - level information"
+                }
+              }
+            }
+          },
+          "from sentence" : "We incorporated two document - level classification tasks - sentiment classification ( DS ) and domain classification ( DD ) - to be jointly trained with AE and AS , allowing the aspect - level tasks to benefit from document - level information ."
+        }
+      }
+    }
+  }
+}

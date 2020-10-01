@@ -1,0 +1,8 @@
+{
+  "has research problem" : [
+    ["recurrent neural network ( RNN )", {"from sentence" : "We present a novel recurrent neural network ( RNN ) based model that combines the remembering ability of unitary RNNs with the ability of gated RNNs to effectively forget redundant / irrelevant information in its memory ."}],
+    ["Recurrent Neural Networks with gating units", {"from sentence" : "Recurrent Neural Networks with gating units - such as Long Short Term Memory ( LSTMs ) and Gated Recurrent Units ( GRUs ) )"}],
+    ["gating units for Recurrent Neural Networks", {"from sentence" : "These works have proven the importance of gating units for Recurrent Neural Networks ."}],
+    ["RNNs", {"from sentence" : "The main advantage of using these gated units in RNNs is primarily due to the ease of optimization of the models using them and to reduce the learning degeneracies such as vanishing gradients that can cripple conventional RNNs ."}]
+  ]
+}

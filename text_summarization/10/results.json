@@ -1,0 +1,49 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "Pointer + Coverage Baseline" : {
+          "On" : {
+            "Gigaword dataset" : {
+              "has" : {
+                "baseline model" : {
+                  "performs better than" : "all previous works"
+                }
+              }
+            }
+          },
+          "from sentence" : "Pointer + Coverage Baseline
+4 On Gigaword dataset , our baseline model ( with pointer only , since coverage not needed for this single - sentence summarization task ) performs better than all previous works , as shown in ."
+
+        },
+        "Multi - Task with Entailment Generation" : {
+          "shows" : {
+            "multi-task setting" : {
+              "better than" : "our strong baseline models"  
+            }
+          },
+          "from sentence" : "Multi - Task with Entailment Generation
+4 . shows that this multi-task setting is better than our strong baseline models and the improvements are statistically significant on all metrics 5 on both CNN / DailyMail ( p < 0.01 in ROUGE - 1 / ROUGE - L / METEOR and p < 0.05 in ROUGE - 2 ) and Gigaword ( p < 0.01 on all metrics ) datasets , showing that entailment generation task is inducing useful inference skills to the summarization task ( also see analysis examples in Sec. 7 ) ."
+
+        }
+      },
+      "For" : {
+        "multi-task learning with question generation" : {
+          "improvements" : { 
+            "statistically significant" : {
+              "for" : {
+                "CNN / DailyMail" : {
+                  "in" : ["ROUGE - 1 ( p < 0.01 )", "ROUGE - L ( p < 0.05 )", "METEOR ( p < 0.01 )"]
+                },
+                "Gigaword" : {
+                  "in" : "all metrics ( p < 0.01 )"
+                }
+              }
+            }
+          },
+          "from sentence" : "For multi-task learning with question generation , the improvements are statistically significant in ROUGE - 1 ( p < 0.01 ) , ROUGE - L ( p < 0.05 ) , and METEOR ( p < 0.01 ) for CNN / DailyMail and in all metrics ( p < 0.01 ) for Gigaword , compared to the respective baseline models ."
+        }
+      }
+    }
+  }
+}

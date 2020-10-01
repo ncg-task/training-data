@@ -1,0 +1,183 @@
+{
+  "has" : {
+    "Experiments" : {
+      "has" : {
+        "Tasks" : {
+          "has" : {
+            "QUESTION ANSWERING" : {
+              "has" : {
+                "Results" : {
+                  "adding" : {
+                    "any external information" : {
+                      "results in" : {
+                        "significant improvement" : {
+                          "over" : "baseline model",
+                          "has" : "3.7 - 10.5 points"
+                        }
+                      },
+                      "from sentence" : "Looking at the results one can see that adding any external information results in a significant improvement over the baseline model ( B ) ( 3.7 - 10.5 points ) ."
+                    },
+                    "spelling" : {
+                      "has" : {
+                        "helps more" : {
+                          "than" : {
+                            "adding" : {
+                              "has" : "dictionary"
+                            }
+                          },
+                          "has" : "3 points difference"
+                        }
+                      },
+                      "from sentence" : "We found that adding the spelling ( S ) helps more than adding a dictionary ( D ) ( 3 points difference ) , possibly due to relatively lower coverage of our dictionary ."
+                    }
+                  },
+                  "has" : {
+                    "dictionary alone" : {
+                      "has" : {
+                        "mean pooling" : {
+                          "performs" : {
+                            "similarly" : {
+                              "to" : "LSTM"
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "When the dictionary alone is used , mean pooling ( D3 ) performs similarly to LSTM ( D4 ) ."
+                    },
+                    "model with GLoVe embeddings ( G )" : {
+                      "is" : {
+                        "still ahead" : {
+                          "with" : "1.1 point margin"
+                        }
+                      },
+                      "from sentence" : "The model with GLoVe embeddings ( G ) is still ahead with a 1.1 point margin , but the gap has been shrunk ."
+                    }
+                  },
+                  "uses" : {
+                    "SD" : {
+                      "has" : {
+                        "1.1 point advantage" : {
+                          "over" : {
+                            "model" : {
+                              "uses" : "just the spelling"
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "However , the model that uses both ( SD ) has a 1.1 point advantage over the model that uses just the spelling ( S ) , demonstrating that combining several forms of auxiliary data allows the model to exploit the complementary information they provide ."
+                    }
+                  }
+                }
+              }
+            },
+            "ENTAILMENT PREDICTION" : {
+              "has" : {
+                "Results" : {
+                  "has" : {
+                    "spelling" : {
+                      "was" : {
+                        "not useful" : {
+                          "on" : "SNLI and MultiNLI"
+                        }
+                      },
+                      "from sentence" : "ENTAILMENT PREDICTION
+    Compared to the SQuAD results , an important difference is that spelling was not as useful on SNLI and MultiNLI ."
+    
+                    },
+                    "dictionary - enabled models" : {
+                      "has" : {
+                        "significantly outperform" : {
+                          "has" : "baseline models",
+                          "for" : {
+                            "sentences" : {
+                              "containing" : "rare words"
+                            }
+                          },
+                          "from sentence" : "shows that , as expected , dictionary - enabled models significantly outperform baseline models for sentences containing rare words ."
+                        }
+                      }
+                    }
+                  },
+                  "using" : {
+                    "fixed random embeddings" : {
+                      "for" : "OOV words",
+                      "has" : {
+                        "did not bring a significant advantage" : {
+                          "over" : "baseline"
+                        }
+                      },
+                      "from sentence" : "We also note that we tried using fixed random embeddings for OOV words as proposed by , and that this method did not bring a significant advantage over the baseline ."
+                    }
+                  }
+                }
+              }
+            },
+            "LANGUAGE MODELLING" : {
+              "has" : {
+                "Results" : {
+                  "using" : {
+                    "external information" : {
+                      "to compute" : {
+                        "embeddings" : {
+                           "of" : "unknown words"
+                        }
+                      },
+                      "has" : {
+                        "helps" : {
+                          "in" : "all cases"
+                        }
+                      },
+                      "from sentence" : "Similarly to our other experiments , using external information to compute embeddings of unknown words helps in all cases ."
+                    }
+                  },
+                  "note that" : {
+                    "lemma + lowercase" : {
+                      "performs" : {
+                        "worse" : {
+                          "than" : {
+                            "any model" : {
+                              "with" : "dictionary"
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "We note that lemma + lowercase performs worse than any model with the dictionary , which suggests that dictionary definitions are used in a non-trivial way ."
+                    }
+                  },
+                  "Adding" : {
+                    "spelling" : {
+                      "has" : {
+                        "consistently helps more" : {
+                          "than" : {
+                            "adding" : {
+                              "has" : "dictionary definitions"
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "Adding spelling consistently helps more than adding dictionary definitions ."
+                    }
+                  },
+                  "Using" : {
+                    "dictionary and spelling" : {
+                      "has" : {
+                        "consistently slightly better" : {
+                          "than" : "just spelling"
+                        }
+                      },
+                      "from sentence" : "Using both dictionary and spelling is consistently slightly better than using just spelling , and the improvement is more pronounced in the restricted setting ."
+                    },
+                    "Glo Ve embeddings" : {
+                      "results in" : "best perplexity",
+                      "from sentence" : "Using Glo Ve embeddings results in the best perplexity ."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

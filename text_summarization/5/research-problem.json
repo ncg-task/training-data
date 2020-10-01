@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Neural Summarization", {"from sentence" : "Retrieve , Rerank and Rewrite : Soft Template Based Neural Summarization"}],
+    ["abstractive sentence summarization" , {"from sentence" : "In this paper , we focus on an increasingly intriguing task , i.e. , abstractive sentence summarization , which generates a shorter version of a given sentence while attempting to preserve its original meaning ."}]
+  ]
+}

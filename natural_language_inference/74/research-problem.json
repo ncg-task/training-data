@@ -1,0 +1,8 @@
+{
+  "has research problem" : [
+    ["Natural Language Inference", {"from sentence" : "Discourse Marker Augmented Network with Reinforcement Learning for Natural Language Inference"}],
+    ["Natural Language Inference ( NLI )", {"from sentence" : "Natural Language Inference ( NLI ) , also known as Recognizing Textual Entailment ( RTE ) , is one of the most important problems in natural language processing ."}],
+    ["Recognizing Textual Entailment ( RTE )", {"from sentence" : "Natural Language Inference ( NLI ) , also known as Recognizing Textual Entailment ( RTE ) , is one of the most important problems in natural language processing ."}],
+    ["NLI", {"from sentence" : "While current approaches mostly focus on the interaction architectures of the sentences , in this paper , we propose to transfer knowledge from some important discourse markers to augment the quality of the NLI model ."}]
+  ]
+}

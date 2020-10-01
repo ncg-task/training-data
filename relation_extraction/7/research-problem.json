@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Neural Relation Extraction", {"from sentence" : "Neural Relation Extraction via Inner - Sentence Noise Reduction and Transfer Learning"}],
+    ["Relation extraction", {"from sentence" : "Relation extraction aims to extract relations between pairs of marked entities in raw texts ."}],
+    ["distant supervised relation extraction", {"from sentence" : "In this paper , we propose a novel word - level approach for distant supervised relation extraction by reducing inner-sentence noise and improving robustness against noisy words ."}]
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "has" : {
+    "Model" : {
+      "investigate" : {
+        "extrinsic signals" : {
+          "incorporated into" : {
+            "deep neural networks" : {
+              "for" : "sentiment analysis"
+            }
+          }
+        },
+        "from sentence" : "In this paper , we investigate how extrinsic signals can be incorporated into deep neural networks for sentiment analysis ."        
+      },
+      "consider" : {
+        "word embeddings" : {
+          "specialized for" : "sentiment analysis",
+          "lead to" : {
+            "stronger and more consistent gains" : {
+              "obtained using" : "out - of - domain data"
+            }
+          },
+          "from sentence" : "In our paper , we instead consider word embeddings specifically specialized for the task of sentiment analysis , studying how they can lead to stronger and more consistent gains , despite the fact that the embeddings were obtained using out - of - domain data ."
+        }
+      },
+      "propose" : {
+        "bespoke convolutional neural network architecture" : {
+          "with" : {
+            "separate memory module" : {
+              "dedicated to" : "sentiment embeddings"
+            }
+          },
+          "from sentence" : "We instead propose a bespoke convolutional neural network architecture with a separate memory module dedicated to the sentiment embeddings ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "our model" : {
+          "brings" : {
+            "substantial improvement" : {
+              "over" : {
+                "methods" : { 
+                  "that do not leverage" : "sentiment linguistic knowledge"
+                }
+              },
+              "from sentence" : "First , our model brings a substantial improvement over the methods that do not leverage sentiment linguistic knowledge ( e.g. , RNTN , LSTM , BiLSTM , CNN and ID - LSTM ) on both datasets ."
+            }
+          },
+          "consistently outperforms" : {
+            "LR - Bi - LSTM" : {
+              "which integrates" : {
+                "linguistic roles" : {
+                  "of" : "sentiment , negation and intensity words",
+                  "into" : {
+                    "neural networks" : {
+                      "via" : "linguistic regularization"
+                    }
+                  }                  
+                }
+              }
+            },
+            "from sentence" : "Second , our model also consistently outperforms LR - Bi - LSTM which integrates linguistic roles of sentiment , negation and intensity words into neural networks via the linguistic regularization ."
+          },
+          "achieves" : [{"2.4 % improvements" : {
+              "over" : "MR dataset"
+            }},
+            {"0.8 % improvements" : {
+              "over" : "SST dataset"
+            }},
+            "compared to LR - Bi - LSTM",
+            {"from sentence" : "For example , our model achieves 2.4 % improvements over the MR dataset and 0.8 % improvements over the SST dataset compared to LR - Bi - LSTM ."}
+          ]
+        }
+      }
+    }
+  }  
+}

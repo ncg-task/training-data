@@ -1,0 +1,129 @@
+226	0	5	Mintz
+226	6	16	represents
+226	19	63	traditional distantsupervision - based model
+227	0	6	MultiR
+227	7	9	is
+227	12	42	multi-instance learning method
+228	0	4	MIML
+228	5	7	is
+228	10	41	multi-instance multilabel model
+202	19	22	use
+202	27	58	Skip - gram model ( word2 vec )
+202	61	69	to train
+202	74	89	word embeddings
+202	90	92	on
+202	97	107	NYT corpus
+214	9	20	grid search
+214	21	33	to determine
+214	38	56	optimal parameters
+214	61	77	manually specify
+214	78	88	subsets of
+214	93	109	parameter spaces
+214	112	135	w ? { 1 , 2 , 3 , , 7 }
+214	140	162	n ? { 50 , 60 , , 300}
+217	7	15	Adadelta
+217	16	18	in
+217	23	39	update procedure
+213	15	19	tune
+213	31	37	models
+213	38	43	using
+213	44	67	three - fold validation
+213	65	67	on
+213	75	87	training set
+215	68	88	heuristically choose
+215	93	94	=
+215	95	96	5
+216	4	14	batch size
+216	18	26	fixed to
+216	27	29	50
+219	0	2	In
+219	7	24	dropout operation
+219	30	42	randomly set
+219	47	69	hidden unit activities
+219	70	72	to
+219	73	77	zero
+219	78	82	with
+219	85	96	probability
+219	97	99	of
+219	100	103	0.5
+219	104	110	during
+219	111	119	training
+36	19	26	propose
+36	29	100	novel model dubbed Piecewise Convolutional Neural Networks ( PC - NNs )
+36	101	105	with
+36	106	129	multi-instance learning
+37	31	69	distant supervised relation extraction
+37	73	83	treated as
+37	86	108	multi-instance problem
+52	4	35	piecewise max pooling procedure
+52	36	43	returns
+52	48	61	maximum value
+52	22	24	in
+52	65	77	each segment
+52	78	88	instead of
+52	91	111	single maximum value
+52	112	116	over
+52	121	136	entire sentence
+40	3	9	design
+40	13	31	objective function
+40	32	34	at
+40	39	48	bag level
+41	0	2	In
+41	7	23	learning process
+41	30	41	uncertainty
+41	42	44	of
+41	45	60	instance labels
+41	94	104	alleviates
+41	109	128	wrong label problem
+42	35	40	adopt
+42	41	67	convolutional architecture
+42	68	90	to automatically learn
+42	91	108	relevant features
+42	109	116	without
+42	117	146	complicated NLP preprocessing
+51	0	10	To capture
+51	11	50	structural and other latent information
+51	56	62	divide
+51	67	86	convolution results
+51	87	91	into
+51	92	106	three segments
+51	107	115	based on
+51	120	129	positions
+51	130	132	of
+51	137	155	two given entities
+51	160	166	devise
+51	169	196	piecewise max pooling layer
+51	197	207	instead of
+51	212	236	single max pooling layer
+2	0	43	Distant Supervision for Relation Extraction
+37	31	69	distant supervised relation extraction
+15	3	22	relation extraction
+229	97	109	demonstrates
+229	60	71	PCNNs + MIL
+229	127	135	achieves
+229	136	152	higher precision
+229	153	157	over
+229	162	184	entire range of recall
+230	0	11	PCNNs + MIL
+230	12	20	enhances
+230	25	31	recall
+230	32	34	to
+230	35	56	ap - proximately 34 %
+230	57	76	without any loss of
+230	77	86	precision
+231	0	16	In terms of both
+231	17	37	precision and recall
+231	40	51	PCNNs + MIL
+231	52	63	outperforms
+231	64	94	all other evaluated approaches
+235	0	31	Automatically learning features
+235	32	35	via
+235	36	41	PCNNs
+235	46	55	alleviate
+235	60	77	error propagation
+236	0	13	Incorporating
+236	14	37	multi-instance learning
+236	38	42	into
+236	45	73	convolutional neural network
+236	80	109	effective means of addressing
+236	114	133	wrong label problem

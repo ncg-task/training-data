@@ -1,0 +1,28 @@
+{
+  "has" : {
+    "Model" : {
+      "exploit" : {
+        "partial order structure" : {
+          "of" : "visual - semantic hierarchy",
+          "by learning" : {
+            "mapping" : {
+              "not" : {
+                "distance - preserving" : {
+                  "but" : "order - preserving"
+                }
+              },
+              "between" : ["visualsemantic hierarchy", {"partial order" : {"over" : "embedding space"}}],
+              "call" : {
+                "embeddings" : {
+                  "learned" : "order- embeddings",
+                  "from sentence" : "We call embeddings learned in this way order- embeddings ."
+                }
+              }
+            }
+          },
+          "from sentence" : "In contrast , we propose to exploit the partial order structure of the visual - semantic hierarchy by learning a mapping which is not distance - preserving but order - preserving between the visualsemantic hierarchy and a partial order over the embedding space ."
+        }
+      }
+    }
+  }
+}

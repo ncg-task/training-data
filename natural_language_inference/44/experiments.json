@@ -1,0 +1,173 @@
+{
+  "has" : {
+    "Experiments" : {
+      "has" : {
+        "Tasks" : {
+          "has" : {
+            "SQuAD and NewsQA" : {
+              "has" : {
+                "Results" : {
+                  "has" : {
+                    "selector" : {
+                      "has" : {
+                        "outperforms" : {
+                          "has" : {
+                            "TF - IDF method and the previous state - of - the - art" : {
+                              "by" : {
+                                "large margin" : {
+                                  "up to" : "2.9 % MAP"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "Results shows results in the task of sentence selection on SQuAD and New s QA . First , our selector outperforms TF - IDF method and the previous state - of - the - art by large margin ( up to 2.9 % MAP ) ."
+                    },
+                    "three training techniques" : {
+                      "has" : ["weight transfer", "data modification", "score normalization"],
+                      "improve" : {
+                        "performance" : {
+                          "by" : "up to 5.6 % MAP"
+                        }
+                      },
+                      "from sentence" : "Second , our three training techniques - weight transfer , data modification and score normalization - improve performance by up to 5.6 % MAP ."
+                    },
+                    "Dyn method" : {
+                      "achieves" : {
+                        "higher accuracy" : {
+                          "with" : {
+                            "less sentences" : {
+                              "than" : "Top k method"
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "Finally , our Dyn method achieves higher accuracy with less sentences than the Top k method ."
+                    }
+                  },
+                  "On" : {
+                    "News QA" : {
+                      "has" : {
+                        "Top 4" : {
+                          "achieves" : "92.5 accuracy"
+                        },
+                        "Dyn" : {
+                          "achieves" : {
+                            "94.6 accuracy" : {
+                              "with" :  "3.9 sentences per example"
+                            }
+                          }
+                        },
+                        "from sentence" : "On News QA , Top 4 achieves 92.5 accuracy , whereas Dyn achieves 94.6 accuracy with 3.9 sentences per example ."
+                      }
+                    },
+                    "SQuAD" : {
+                      "has" : {
+                        "S - Reader" : {
+                          "on" : {
+                            "SQuAD" : {
+                              "achieves" : {
+                                "speedup" : {
+                                  "has" : ["6.7 training", "3.6 inference"]
+                                }
+                              }
+                            },
+                            "News QA" : {
+                              "has" : {
+                                "speedup" : {
+                                  "has" : ["15.0 training", "6.9 inference"]
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "from sentence" : "On SQuAD , S - Reader achieves 6.7 training and 3.6 inference speedup on SQuAD , and 15.0 training and 6.9 inference speedup on News QA ."
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "Trivia QA and SQuAD - Open" : {
+              "has" : {
+                "Baselines" : {
+                  "compare with" : ["TF - IDF method", "our selector ( Dyn )", "published Rank1 - 3 models"],
+                  "from sentence" : "We compare with the results from the sentences selected by TF - IDF method and our selector ( Dyn ) .
+We also compare with published Rank1 - 3 models ."
+
+                },
+                "Results" : {
+                  "has" : {
+                    "MINI - MAL" : {
+                      "obtains" : {
+                        "higher F1 and EM" : {
+                          "over" : "FULL"
+                        }
+                      },
+                      "from sentence" : "Results shows results on Trivia QA ( Wikipedia ) and SQuAD - Open. First , MINI - MAL obtains higher F1 and EM over FULL , with the inference speedup of up to 13.8 ."
+                    },
+                    "model" : {
+                      "with" : {
+                        "our sentence selector" : {
+                          "with" : "Dyn",
+                          "achieves" : {
+                            "higher F1 and EM" : {
+                              "over" : {
+                                "model" : {
+                                  "with" : "TF - IDF selector"
+                                }
+                              }
+                            }
+                          },
+                          "from sentence" : "Second , the model with our sentence selector with Dyn achieves higher F1 and EM over the model with TF - IDF selector ."
+                        }
+                      }
+                    },
+                    "outperforms" : {
+                      "has" : {
+                        "state - of - the - art" : {
+                          "on" : "both dataset"
+                        }
+                      },
+                      "from sentence" : "Third , we outperforms the published state - of - the - art on both dataset ."
+                    }
+                  }
+                }
+              }
+            },
+            "SQuAD - Adversarial" : {
+              "has" : {
+                "Results" : {
+                  "shows" : {
+                    "MINIMAL" :{
+                      "has" : {
+                        "outperforms" : {
+                          "has" : "FULL",
+                          "achieving" : {
+                            "new state - of - the - art" : {
+                              "by" : {
+                                "large margin" : {
+                                  "has" : {
+                                    "+ 11.1 and + 11.5 F1" : {
+                                      "on" : "AddSent and Add OneSent"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "from sentence" : "Results shows that MINIMAL outperforms FULL , achieving the new state - of - the - art by large margin ( + 11.1 and + 11.5 F1 on AddSent and Add OneSent , respectively ) ."
+                      }
+                    }
+                  }
+                }
+              }              
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "performances" : {
+          "of" : {
+            "Seq2Seq - based basic models" : {
+              "are" : "very low",
+              "including" : ["Seq2Seq", "Seq2Seq + Attention", "Seq2Seq + Copying"],
+              "from sentence" : "The performances of the Seq2Seq - based basic models including Seq2Seq , Seq2Seq + Attention , and Seq2Seq + Copying are very low ."
+            },
+            "SQLNet and TypeSQL" : {
+              "utilize" : {
+                "SQL structure information" : {
+                  "to guide" : "SQL generation process"
+                }
+              },
+              "significantly outperform" : "other Seq2Seq models",
+              "from sentence" : "In contrast , SQLNet and TypeSQL that utilize SQL structure information to guide the SQL generation process significantly outperform other Seq2Seq models ."
+            }
+          }
+        },
+        "all models" : {
+          "struggle with" : "WHERE clause prediction",
+          "from sentence" : "As Component Matching results in shows , all models struggle with WHERE clause prediction the most ."
+        },
+        "overall performances" : {
+          "of" : {
+            "all models" : {
+              "are" : "low"
+            }
+          },
+          "from sentence" : "In general , the overall performances of all models are low , indicating that our task is challenging and there is still a large room for improvement ."
+        } 
+      }      
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "has" : {
+    "Model" : {
+      "using" : {
+        "ESIM model" : {
+          "as" : "baseline",
+          "add" : {
+            "a ention layer" : {
+              "behind" : "each Bi - LSTM layer"
+            }
+          },
+          "use" : {
+            "adaptive orientation embedding layer" : {
+              "to jointly represent" : "forward and backward vectors"
+            }
+          },
+          "from sentence" : "erefore , in this study , using ESIM model as the baseline , we add an a ention layer behind each Bi - LSTM layer , then use an adaptive orientation embedding layer to jointly represent the forward and backward vectors ."
+        }
+      },
+      "name" : {
+        "a ention boosted Bi - LSTM" : {
+          "as" : "Bi - a LSTM"
+        },
+        "from sentence" : "We name this a ention boosted Bi - LSTM as Bi - a LSTM , and denote the modi ed ESIM as aESIM ."
+      },
+      "denote" : {
+        "modi ed ESIM" : {
+          "as" : "aESIM"
+        },
+        "from sentence" : "We name this a ention boosted Bi - LSTM as Bi - a LSTM , and denote the modi ed ESIM as aESIM ."
+      }
+    }
+  }
+}

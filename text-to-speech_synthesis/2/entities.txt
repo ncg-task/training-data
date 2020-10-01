@@ -1,0 +1,103 @@
+18	16	27	to decouple
+18	28	44	speaker modeling
+18	45	49	from
+18	50	66	speech synthesis
+18	67	92	by independently training
+18	95	137	speaker - discriminative embedding network
+18	143	151	captures
+18	156	188	space of speaker characteristics
+18	84	92	training
+18	204	226	high quality TTS model
+18	227	229	on
+18	232	247	smaller dataset
+18	248	262	conditioned on
+18	267	310	representation learned by the first network
+20	3	8	train
+20	13	38	speaker embedding network
+20	39	41	on
+20	44	69	speaker verification task
+20	70	82	to determine
+20	86	142	two different utterances were spoken by the same speaker
+21	58	68	trained on
+21	69	89	untranscribed speech
+21	90	100	containing
+21	101	135	reverberation and background noise
+21	136	140	from
+21	143	167	large number of speakers
+2	60	88	Text - To - Speech Synthesis
+4	48	84	text - to - speech ( TTS ) synthesis
+10	28	46	build a TTS system
+123	4	18	proposed model
+123	19	27	achieved
+123	28	41	about 4.0 MOS
+123	42	44	in
+123	45	57	all datasets
+125	23	38	audio generated
+125	52	55	for
+125	56	71	unseen speakers
+125	72	110	is deemed to be at least as natural as
+125	116	143	generated for seen speakers
+126	19	41	MOS on unseen speakers
+126	42	56	is higher than
+126	28	41	seen speakers
+126	81	94	by as much as
+126	95	105	0.2 points
+126	23	25	on
+126	109	120	LibriSpeech
+135	4	14	scores for
+135	19	29	VCTK model
+135	30	62	tend to be higher than those for
+135	63	74	LibriSpeech
+135	77	87	reflecting
+135	92	121	cleaner nature of the dataset
+137	50	53	for
+137	4	25	seen speakers on VCTK
+137	32	46	proposed model
+137	47	72	performs about as well as
+137	77	85	baseline
+137	92	96	uses
+137	100	147	embedding lookup table for speaker conditioning
+160	45	55	trained on
+160	103	114	LibriSpeech
+160	121	139	synthesized speech
+160	153	168	most similar to
+160	173	192	ground truth voices
+164	29	31	on
+164	8	36	20 voice discrimination task
+164	40	46	obtain
+164	50	63	EER of 2.86 %
+169	4	21	PCA visualization
+169	31	36	shows
+169	42	64	synthesized utterances
+169	65	90	tend to lie very close to
+169	91	124	real speech from the same speaker
+169	125	127	in
+169	132	147	embedding space
+170	114	135	t - SNE visualization
+170	94	106	demonstrated
+170	10	30	synthetic utterances
+170	41	68	easily distinguishable from
+170	73	90	real human speech
+170	146	151	where
+170	20	30	utterances
+170	64	68	from
+170	168	190	each synthetic speaker
+170	64	68	from
+170	198	214	distinct cluster
+170	215	226	adjacent to
+170	229	255	cluster of real utterances
+170	64	68	from
+170	265	286	corresponding speaker
+185	79	100	improve significantly
+185	47	78	both naturalness and similarity
+185	0	2	As
+185	35	44	increases
+185	7	34	number of training speakers
+191	0	9	Bypassing
+191	14	37	speaker encoder network
+191	42	54	conditioning
+191	59	70	synthesizer
+191	43	45	on
+191	74	87	random points
+191	6	8	in
+191	95	118	speaker embedding space

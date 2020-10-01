@@ -1,0 +1,101 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "has" : {
+        "Our implementation" : {
+          "based on" : {
+            "PyTorch implementation" : {
+              "of" : "BERT"
+            }
+          },
+          "from sentence" : "Our implementation is based on the PyTorch implementation of BERT 6 ."
+        },
+        "all the layers" : {
+          "tuned with" : {
+            "moderate model size" : {
+              "has" : "increasing",
+              "as" : {
+                "extra SRL embedding volume" : {
+                  "is" : {
+                    "less than 15 %" : {
+                      "of" : "original encoder size"
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "We use the pre-trained weights of BERT and follow the same fine - tuning procedure as BERT without any modification , and all the layers are tuned with moderate model size increasing , as the extra SRL embedding volume is less than 15 % of the original encoder size ."
+          }
+        },
+        "batch size" : {
+          "selected in" : "{ 16 , 24 , 32 }",
+          "from sentence" : "The batch size is selected in { 16 , 24 , 32 } ."
+        },
+        "maximum number of epochs" : {
+          "set in" : "[ 2 , 5 ]",
+          "depending on" : "tasks",
+          "from sentence" : "The maximum number of epochs is set in [ 2 , 5 ] depending on tasks ."
+        },
+        "Texts" : {
+          "tokenized using" : "wordpieces",
+          "with" : {
+            "maximum length" : {
+              "of" : {
+                "384" : {
+                  "for" : "SQuAD"
+                },
+                "128 or 200" : {
+                  "for" : "other tasks"
+                }
+              }
+            }
+          },
+          "from sentence" : "Texts are tokenized using wordpieces , with maximum length of 384 for SQuAD and 128 or 200 for other tasks ."
+        },
+        "dimension" : {
+          "of" : {
+            "SRL embedding" : {
+              "set to" : "10"
+            }
+          },
+          "from sentence" : "The dimension of SRL embedding is set to 10 ."
+        },
+        "default maximum number" : {
+          "of" : {
+            "predicateargument structures m" : {
+              "set to" : "3"
+            }
+          },
+          "from sentence" : "The default maximum number of predicateargument structures m is set to 3 ."
+        }
+      },
+      "use" : {
+        "pre-trained weights" : {
+          "of" : "BERT",
+          "from sentence" : "We use the pre-trained weights of BERT and follow the same fine - tuning procedure as BERT without any modification , and all the layers are tuned with moderate model size increasing , as the extra SRL embedding volume is less than 15 % of the original encoder size ."
+        }
+      },
+      "follow" : {
+        "same fine - tuning procedure" : {
+          "as" : "BERT",
+          "without" : "any modification",
+          "from sentence" : "We use the pre-trained weights of BERT and follow the same fine - tuning procedure as BERT without any modification , and all the layers are tuned with moderate model size increasing , as the extra SRL embedding volume is less than 15 % of the original encoder size ."
+        }
+      },
+      "set" : {
+        "initial learning rate" : {
+          "in" : "{ 8e -6 , 1 e - 5 , 2 e - 5 , 3 e - 5 }",
+          "with" : {
+            "warm - up rate" : {
+              "of" : "0.1"
+            },
+            "L2 weight decay" : {
+              "of" : "0.01"
+            }
+          },
+          "from sentence" : "We set the initial learning rate in { 8e -6 , 1 e - 5 , 2 e - 5 , 3 e - 5 } with warm - up rate of 0.1 and L2 weight decay of 0.01 ."
+        }
+      }
+    }
+  }
+}

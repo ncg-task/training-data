@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Smile Recognition", {"from sentence" : "Deep Learning For Smile Recognition"}],
+    ["facial expression recognition", {"from sentence" : "Inspired by recent successes of deep learning in computer vision , we propose a novel application of deep convolutional neural networks to facial expression recognition , in particular smile recognition ."}]
+  ]
+}

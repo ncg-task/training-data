@@ -1,0 +1,65 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "use" : {
+        "Adam optimizer" : {
+          "for" : "ML and DCRL training",
+          "from sentence" : "We use the Adam optimizer [ Kingma and Ba , 2014 ] for both ML and DCRL training ."
+        }
+      },
+      "has" : {
+        "initial learning rates" : {
+          "are" : ["0.0008 and 0.0001", {"halved" : {"whenever meeting" : "bad iteration"}}, {"from sentence" : "The initial learning rates are 0.0008 and 0.0001 respectively , and are halved whenever meeting a bad iteration ."}]
+        },
+        "Word embeddings" : {
+          "remain" : {
+            "fixed" : {
+              "during" : "training"
+            }
+          },
+          "from sentence" : "Word embeddings remain fixed during training ."
+        },
+        "size" : {
+          "of" : {
+            "character embedding and corresponding LSTMs" : {
+              "is" : "50"
+            }
+          },
+          "from sentence" : "The size of character embedding and corresponding LSTMs is 50 , the main hidden size is 100 , and the hyperparameter ? is 3 ."
+        },
+        "main hidden size" : {
+          "is" : "100",
+          "from sentence" : "The size of character embedding and corresponding LSTMs is 50 , the main hidden size is 100 , and the hyperparameter ? is 3 ."
+        },
+        "hyperparameter" : {
+          "is" : "3",
+          "from sentence" : "The size of character embedding and corresponding LSTMs is 50 , the main hidden size is 100 , and the hyperparameter ? is 3 ."
+        }
+      },
+      "to prevent" : {
+        "overfitting" : {
+          "has" : {
+            "batch size" : {
+              "is" : "48"
+            },
+            "dropout rate" : {
+              "of" : "0.3"
+            }
+          }
+        },
+        "from sentence" : "The batch size is 48 and a dropout rate of 0.3 is used to prevent overfitting ."
+      },
+      "For" : {
+        "out of vocabulary words" : {
+          "set" : {
+            "embeddings" : {
+              "from" : "Gaussian distributions",
+              "keep them" : "trainable"
+            }
+          },
+          "from sentence" : "For out of vocabulary words , we set the embeddings from Gaussian distributions and keep them trainable ."
+        }
+      }
+    }
+  }
+}

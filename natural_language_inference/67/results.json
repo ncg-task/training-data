@@ -1,0 +1,57 @@
+{
+  "has" : {
+    "Results" : {
+      "on" : {
+        "SQuAD dataset" : {
+          "are" : {
+            "better" : {
+              "has" : {
+                "our exact match ( EM ) and F1" : {
+                  "on" : "development set"
+                }
+              }
+            },
+            "comparable" : {
+              "has" : {
+                "F1" : {
+                  "on" : "test set"
+                }
+              }
+            },
+            "from sentence" : "Results shows our main results on the SQuAD dataset .
+Compared to the scores reported in , our exact match ( EM ) and F1 on the development set and EM score on the test set are better , and F1 on the test set is comparable ."
+
+          }
+        }
+      },
+      "has" : {
+        "our baseline system" : {
+          "has" : {
+            "improves" : {
+              "has" : {
+                "10 % ( EM )" : {
+                  "over" : "feature - based ranking system"
+                }
+              }
+            }
+          },
+          "from sentence" : "As the first row of shows , our baseline system improves 10 % ( EM ) over , row 1 ) , the feature - based ranking system ."
+        }
+      },
+      "compared to" : {
+        "our DCR model" : {
+          "has" : {
+            "baseline" : {
+              "is" : {
+                "more than 12 % ( EM )" : {
+                  "has" : "behind"
+                }
+              }
+            } 
+          },
+          "from sentence" : "However when compared to our DCR model , row 2 ) , the baseline ( row 1 ) is more than 12 % ( EM ) behind even though it is based on the state - of - the - art model for cloze - style RC tasks ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "other tasks" : {
+          "observe" : {
+            "convergence speed improvement" : {
+              "of" : {
+                "NUTM" : {
+                  "over" : "NTM"
+                }
+              },
+              "validating" : {
+                "benefit" : {
+                  "of using" : {
+                    "two programs" : {
+                      "across" : "timesteps",
+                      "even for" : "single task setting"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Except for the Copy task , which is too simple , other tasks observe convergence speed improvement of NUTM over that of NTM , thereby validating the benefit of using two programs across timesteps even for the single task setting ."
+            }
+          }
+        },
+        "NUTM" : {
+          "requires" : {
+            "fewer training samples" : {
+              "to" : "converge"
+            }
+          },
+          "generalizes" : {
+            "better" : {
+              "to" : {
+                "unseen sequences" : {
+                  "that are" : {
+                    "longer" : {
+                      "than" : "training sequences"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "NUTM requires fewer training samples to converge and it generalizes better to unseen sequences that are longer than training sequences ."
+        }
+      }
+    }
+  }
+}

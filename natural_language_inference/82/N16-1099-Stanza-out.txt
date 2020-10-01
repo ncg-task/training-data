@@ -1,0 +1,115 @@
+title
+Dynamic Entity Representation with Max - pooling Improves Machine Reading
+abstract
+We propose a novel neural network model for machine reading , DER Network , which explicitly implements a reader building dynamic meaning representations for entities by gathering and accumulating information around the entities as it reads a document .
+Evaluated on a recent large scale dataset ( Hermann et al. , 2015 ) , our model exhibits better results than previous research , and we find that max - pooling is suited for modeling the accumulation of information on entities .
+Further analysis suggests that our model can put together multiple pieces of information encoded in different sentences to answer complicated questions .
+Our code for the model is available at https://github.
+com/soskek/der-network
+Introduction
+Machine reading systems can be tested on their ability to answer queries about contents of documents that they read , thus a central problem is how the information of documents should be organized in the system and retrieved by the queries .
+Recently , large scale datasets of document - queryanswer triples have been constructed from online newspaper articles and their summaries , by replacing named entities in the summaries with placeholders to form Cloze ) style questions ) .
+These datasets have enabled training and testing of complicated neural network models of hypothesized machine readers .
+( @entity1 ) @entity0 maybe @entity 2 in the popular @entity 4 superhero films , but he recently dealt in some advanced bionic technology himself .
+@entity0 recently presented a robotic arm to young @entity 7 , a @entity 8 boy who is missing his right arm from just above his elbow .
+the arm was made by @entity12 , a ! " [ X ] " star @entity0 presents a young child with a bionic arm ! :
+A document - query - answer triple constructed from a news article and its bullet point summary .
+An entity in the summary ( Robert Downey Jr. ) is replaced by the placeholder [ X ] to form a query .
+All entities are anonymized to exclude world knowledge and focus on reading comprehension .
+In this paper , we hypothesize that a reader without world knowledge can only understand a named entity by dynamically constructing its meaning from the contexts .
+For example , in , a reader reading the sentence " Robert Downey Jr. maybe Iron Man . . . " can only understand " Robert Downey Jr. " as something that " may be Iron Man " at this stage , given that it does not know Robert Downey Jr. a priori .
+Information about this entity can only be accumulated by its subsequent occurrence , such as " Downey recently presented a robotic arm . . . " .
+Thus , named entities basically serve as anchors to link multiple pieces of information encoded in different sentences .
+This insight has been reflected by the anonymization process in construction of the dataset , in which coreferent entities ( e.g. " Robert Downey Jr. " and " Downey " ) are replaced by randomly permuted abstract entity markers ( e.g. " @en - tity0 " ) , in order to prevent additional world knowledge from being attached to the surface form of the entities .
+We , however , take it as a strong motivation to implement a reader that dynamically builds meaning representations for each entity , by gathering and accumulating information on that entity as it reads a document ( Section 2 ) .
+Evaluation of our model , DER Network , exhibits better results than previous research ( Section 3 ) .
+In particular , we find that max - pooling of entity representations , which is intended to model the accumulation of information on entities , can drastically improve performance .
+Further analysis suggests that max - pooling can help our model draw multiple pieces of information from different sentences .
+Model
+Following Hermann et al. , our model estimates the conditional probability p ( e | D , q ) , where q is a query and Dis a document .
+A candidate answer for the query is denoted bye , which in this paper is any named entity .
+Our model can be factorized as :
+in which u ( q ) is the learned meaning for the query and v( e ; D , q ) the dynamically constructed meaning for an entity , depending on the document D and the query q.
+We note that ( 1 ) is in contrast to the factorization used by Hermann et al. :
+in which a vector u ( D , q ) is learned to represent the status of a reader after reading a document and a query , and this vector is used to retrieve an answer by coupling with the answer vector v ( a ) .
+1 Factorization ( 2 ) relies on the hypothesis that there exists a fixed vector for each candidate answer representing its meaning .
+However , as we argued in Section 1 , an entity surface does not possess meaning ; rather , it serves as an anchor to link pieces of information about it .
+Therefore , we hypothesize that the meaning representation v( e ; D , q ) of an entity e should be dynamically constructed from its surrounding contexts , and the meanings are " accumulated " through the reader reading the document D .
+We explain the construction of v (e ; D , q ) in Section 2.1 , and propose a max - pooling process for modeling information accumulation in Section 2.2 .
+Dynamic Entity Representation
+For any entity e , we take it s context c as any sentence that includes a token of e .
+Then , we use bidirectional single - layer LSTMs to encode c into vectors .
+LSTM is a neural cell that outputs a vector h c , t for each token tin the sentence c ; taking the word vector x c , t of the token as input , each h c, t is calculated recurrently from its precedent vector h c ,t ?
+1 or h c , t + 1 , depending on the direction of the encoding .
+Formally , we write forward and backward LSTMs as :
+Then , denoting the length of the sentence c as T and the index of the entity e token as ? , we define the dynamic entity representation d e , c as the concatenation of the vectors [ h c , T , h c , 1 , h c , ? , h c, ? ] encoded by a feed - forward layer :
+in which s e , c ( q ) is calculated by the attention mechanism , modeling the degree to which our reader should attend to a particular occurrence of an entity , given the query q.
+More precisely , s e , c ( q ) is defined as the following :
+where s e , c ( q ) is calculated by taking the softmax of s e , c ( q ) , which is calculated from the dynamic entity representation d e , c and the query vector q .
+The vector m , matrix W dm , and the bias b sin are learned parameters in the attention mechanism .
+Vector m is used hereto map a vector value to a scalar .
+The query vector 3 u ( q ) is constructed similarly as dynamic entity representations , using bidirectional LSTMs 4 to encode the query and then encoding the output vectors .
+More precisely , if we denote the length of the query as T and the index of the placeholder as ? , the query vector is calculated as :
+Then , v ( e ; D , q ) and u ( q ) are used in ( 1 ) to calculate probability p ( e | D , q ) .
+Max - pooling
+We expect the dynamic entity representation to capture information about an entity mentioned in a sentence .
+However , as an entity occurs multiple times in a document , information is accumulated as subsequent occurrences of the entity draw information from previous mentions .
+For example , in , the first sentence mentioning " Robert Downey Jr. " relates Downey to Iron Man , whereas a subsequent mention of " Downey " also relates him to a robotic arm .
+Both of the two pieces of information are necessary to answer the query " Iron Man star [ X ] presents . . . with a bionic arm " .
+Therefore , the dynamic entity representations as constructed individually from single sentences may not provide enough information for our reader model .
+We thus propose the use of max - pooling to model information accumulation of dynamic entity representations .
+More precisely , for each entity e , max - pooling takes the max value of each dimension of the vectors d e , c from all preceding contexts c .
+Then , in a subsequent sentence c where the entity occurs again at index ?
+, we use the vector
+as input for the LSTMs in ( 3 ) and ( 4 ) for encoding the context .
+This vector x c , ?
+draws information from preceding contexts , and is regarded as the meaning of the entity e that the reader understands so far , before reading the sentence c.
+It is used in place of a vector previously randomly initialized as a notion of e , in the construction of the new dynamic entity representation d e , c .
+852
+Evaluation
+We use the CNN - QA dataset for evaluating our model 's ability to answer questions about named entities .
+The dataset consists of ( D , q , e ) - triples , where the document Dis taken from online news articles , and the query q is formed by hiding a named entity e in a summarizing bullet point of the document .
+The training set has 90 k articles and 380 k queries , and both validation and test sets have 1 k articles and 3 k queries .
+An average article has about 25 entities and 700 word tokens .
+One trains a machine reading system on the data by maximizing likelihood of correct answers .
+We use Chainer 5 to implement our model 6 .
+Experimental Settings Named entities in CNN - QA are already recognized .
+For preprocessing , we segment sentences at punctuation marks " . " , " ! " , and " ? " .
+7
+We train our model 8 with hyper - parameters lightly tuned on the validation set 9 , and we conduct ablation test on several techniques that improve our basic model .
+Results
+As shown in , Max - pooling described in Section 2.2 drastically improves performance , showing the effect of accumulating information on entities .
+Another technique , called " Byway " , is based on the observation that the attention mechanism ( 5 ) must always promote some entity occurrences ( since all weights sum to 1 ) , which could be difficult if the entity does not answer the query .
+To counter this , we make an artificial occurrence for each entity with no contexts , which serves as a byway to attend when no other occurrences can be reasonably related to the query .
+This simple trick shows 5 http://chainer.org/
+6
+The implementation is available at https://github.
+com/soskek/der-network .
+7 Text in CNN - QA are tokenized without any sentence segmentations .
+Training process takes roughly a week ( 3 - 5 passes of the training data ) on a 6 - core 2.4 GHz Xeon CPU .
+9 Vector dimension : 300 , Dropout : 0.3 , Batch : 50 , Optimization : RMSProp with momentum ( momentum : 0.9 , decay : 0.95 ) , Learning rate : 1e - 4 divided by 2.0 per epoch , Gradient clipping factor : 10 . We initialize word vectors by uniform distribution , and other matrix parameters by Gaussians of mean 0 and variance 2 / ( # rows + # columns ) .
+Models
+Valid and * * from .
+( @entity1 ) @entity0 maybe @entity 2 in the popular @entity 4 superhero films , but he recently dealt in some advanced bionic technology himself .! !
+@entity 7 received his robotic arm in the summer , then later had it upgraded to resemble a " @entity 26 " arm .!
+this past saturday , @entity 7 received an even more impressive gift , from " @entity 2 " himself .! !
+the actor showed the child two arms , one from @entity0 's movies and one for @entity 7 : areal , working robotic @entity 2 arm .!:
+A correct answer found by max - pooling .
+Attention to each entity occurrence shown on left .
+clear effects , suggesting that the attention mechanism plays a key role in our model .
+Combining these two techniques helps more .
+Further , we note that initializing our model with pre-trained word vectors 10 is helpful , though world knowledge of entities has been prevented by the anonymization process .
+This suggests that pre-trained word vectors may still bring extra linguistic knowledge encoded in ordinary words .
+Finally , we note that our model , full DER Network , shows the best results compared to several previous reader models , endorsing our approach as promising .
+The 99 % confidence intervals of the results of full DER Network and the one initialized by word2vec on the test set were [ 0.700 , 0.740 ] and [ 0.708 , 0.749 ] , respectively ( measured by bootstrap tests ) .
+Analysis
+In the example shown in , our basic model missed by paying little attention to the second and third sentences , probably because it does not mention @entity0 ( Downey ) .
+In contrast , maxpooling of @entity2 ( Iron Man ) draws attention to the second and third sentences because Iron Man is said related to Downey in the first sentence .
+This helps Iron Man surpass @entity26 ( Transformers ) , which is the name of a different movie series in which robots appear but Downey does n't .
+Quantitatively , in the 479 samples in test set correctly answered by max - pooling but missed by basic model , the average occurrences of answer entities ( 8.0 ) is higher than the one ( 7.2 ) in the 1782 samples correctly answered by both models .
+This suggests that max - pooling especially helps samples with more entity mentions .
+Discussion
+It is actually a surprise for us that deep learning models , despite their vast amount of parameters , seem able to learn as intended by the designers .
+This also indicates a potential that additional linguistic intuitions modeled by deep learning methods can improve performances , as in the other work using maxpooling , attention , etc .
+In this work , we have focused on modeling a reader that dynamically builds meanings for entities .
+We believe the methodology can be inspiring to other problems as well .

@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Paraphrase Generation", {"from sentence" : "A Deep Generative Framework for Paraphrase Generation"}],
+    ["generating paraphrases automatically", {"from sentence" : "In this paper , we address the problem of generating paraphrases automatically ."}]
+  ]
+}

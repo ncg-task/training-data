@@ -1,0 +1,54 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "use" : {
+        "Adam ( Kingma and Ba , 2014 )" : {
+          "for" : "optimization",
+          "from sentence" : "We use the Adam ( Kingma and Ba , 2014 ) for optimization ."
+        },
+        "pretrained GloVe - 840B - 300D vectors" : {
+          "as" : "our word - level embeddings",
+          "has" : {
+            "fix" : {
+              "during" : "training process"
+            }
+          },
+          "from sentence" : "We use pretrained GloVe - 840B - 300D vectors as our word - level embeddings and fix these embeddings during the training process ."
+        }
+      },
+      "has" : {
+        "Stacked BiLSTM" : {
+          "has" : "3 layers",
+          "from sentence" : "Stacked BiLSTM has 3 layers , and all hidden states of BiLSTMs and MLP have 600 dimensions ."
+        },
+        "all hidden states" : {
+          "of" : {
+            "BiLSTMs and MLP" : {
+              "have" : "600 dimensions"
+            }
+          },
+          "from sentence" : "Stacked BiLSTM has 3 layers , and all hidden states of BiLSTMs and MLP have 600 dimensions ."
+        },
+        "100 dimensions" : {
+          "has" : {
+            "character embedding" : {
+              "has" : "15 dimensions"
+            },
+            "CNN filters length" : {
+              "is" : "[ 1 , 3 , 5 ]"
+            }              
+          },
+          "from sentence" : "The character embedding has 15 dimensions , and CNN filters length is [ 1 , 3 , 5 ] , each of those is 100 dimensions ."
+        },
+        "Out - of - vocabulary ( OOV ) words" : {
+          "has" : {
+            "initialized randomly" : {
+              "with" : "Gaussian samples"
+            }
+          },
+          "from sentence" : "Out - of - vocabulary ( OOV ) words are initialized randomly with Gaussian samples ."
+        }
+      }
+    }
+  }
+}

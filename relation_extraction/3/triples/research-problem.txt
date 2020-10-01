@@ -1,0 +1,7 @@
+(Contribution||has research problem||Extracting Multiple - Relations)
+(Contribution||has research problem||extracting multiple entity - relations)
+(Contribution||has research problem||multiple entityrelations extraction)
+(Contribution||has research problem||Relation extraction ( RE ))
+(Contribution||has research problem||RE)
+(Contribution||has research problem||multiplerelations extraction ( MRE ))
+(Contribution||has research problem||MRE)

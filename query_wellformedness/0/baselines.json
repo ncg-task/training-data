@@ -1,0 +1,21 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "majority class baseline" : {
+          "is" : "61.5 %",
+          "corresponds to" : "all queries being classified non-wellformed",
+          "from sentence" : "The majority class baseline is 61.5 % which corresponds to all queries being classified non-wellformed ."
+        },
+        "question word baseline" : {
+          "classifies" : {
+            "any query" : {
+              "starting with" : "question word"
+            }
+          },
+          "from sentence" : "The question word baseline that classifies any query starting with a question word word n-grams char n-grams POS n -grams pwf ( q ) :"
+        }
+      }
+    }
+  }
+}

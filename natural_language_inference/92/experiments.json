@@ -1,0 +1,103 @@
+{
+  "has" : {
+    "Experiments" : {
+      "has" : {
+        "Tasks" : {
+          "has" : {
+            "Multi-mention Reading Comprehension" : {
+              "has" : {
+                "Experimental setup" : {
+                  "use" : {
+                    "uncased version" : {
+                      "of" : "BERT base",
+                      "from sentence" : "We use uncased version of BERT base ."
+                    },
+                    "batch size" : {
+                      "of" : {
+                        "20" : {
+                          "for" : "two reading comprehension tasks"
+                        },
+                        "192" : {
+                          "for" : "two open - domain QA tasks"
+                        }
+                      },
+                      "from sentence" : "We use batch size of 20 for two reading comprehension tasks and 192 for two open - domain QA tasks ."
+                    }
+                  },
+                  "For" : {
+                    "opendomain QA tasks" : {
+                      "retrieve" : {
+                        "50 Wikipedia articles" : {
+                          "through" : "TF - IDF"
+                        }
+                      },
+                      "from sentence" : "For opendomain QA tasks , we retrieve 50 Wikipedia articles through TF - IDF ( Chen et al. , 2017 ) and further run to retrieve 20 ( for train ) or 80 ( for development and test ) paragraphs ."
+                    }
+                  },
+                  "try" : {
+                    "10 , 20 , 40 and 80 paragraphs" : {
+                      "on" : "development set",
+                      "to choose" : {
+                        "number of paragraphs" : {
+                          "to use on" : "test set"
+                        }
+                      },
+                      "from sentence" : "We try 10 , 20 , 40 and 80 paragraphs on the development set to choose the number of paragraphs to use on the test set ."
+                    }
+                  },
+                  "To avoid" : {
+                    "local optima" : {
+                      "perform" : "annealing",
+                      "from sentence" : "To avoid local optima , we perform annealing : at training step t , the model optimizes on MML objective with a probability of min ( t / ? , 1 ) and otherwise use our objective , where ?
+is a hyperparameter ."
+
+                    }
+                  }
+                },
+                "Results" : {
+                  "observe" : {
+                    "First - Only" : {
+                      "is" : "strong baseline",
+                      "from sentence" : "6 First of all , we observe that First - Only is a strong baseline across all the datasets ."
+                    }
+                  },
+                  "has" : {
+                    "MML" : {
+                      "achieves" : {
+                        "comparable result" : {
+                          "to" : "First - Only baseline"
+                        }
+                      },
+                      "from sentence" : "Second , while MML achieves comparable result to the First - Only baseline , our learning method outperforms others by 2 + F1 / ROUGE - L / EM consistently on all datasets ."
+                    },
+                    "our learning method" : {
+                      "has" : {
+                        "outperforms" : {
+                          "by" : "2 + F1 / ROUGE - L / EM",
+                          "on" : "all datasets"
+                        }
+                      },
+                      "from sentence" : "Second , while MML achieves comparable result to the First - Only baseline , our learning method outperforms others by 2 + F1 / ROUGE - L / EM consistently on all datasets ."
+                    },
+                    "our method" : {
+                      "achieves" : {
+                        "new state - of the - art" : {
+                          "on" : ["NARRATIVEQA", "TRIVIAQA - OPEN", "NATURALQUESTIONS - OPEN"]
+                        },
+                        "comparable" : {
+                          "to" : "state - of - the - art",
+                          "on" : "TRIVIAQA"
+                        },
+                        "from sentence" : "Lastly , our method achieves the new state - of the - art on NARRATIVEQA , TRIVIAQA - OPEN and NATURALQUESTIONS - OPEN , and is comparable to the state - of - the - art on TRIVIAQA , despite our aggressive truncation of documents ."
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

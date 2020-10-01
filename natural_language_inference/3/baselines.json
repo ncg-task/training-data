@@ -1,0 +1,58 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "Neural bag - of - words ( NBOW )" : {
+          "has" : {
+            "Each sequence" : {
+              "sum of" : {
+                "embeddings" : {
+                  "of" : "words it contains"
+                }
+              },
+              "has" : {
+                "concatenated and fed" : {
+                  "to" : "MLP"
+                }
+              }
+            }
+          },
+          "from sentence" : "Neural bag - of - words ( NBOW ) :
+Each sequence as the sum of the embeddings of the words it contains , then they are concatenated and fed to a MLP ."
+
+        },
+        "Single LSTM" : {
+          "encode" : "two sequences",
+          "from sentence" : "Single LSTM : A single LSTM to encode the two sequences , which is used in ."
+        },
+        "Parallel LSTMs" : {
+          "has" : {
+            "Two sequences" : {
+              "encoded by" : "two LSTMs separately",
+              "are" : {
+                "concatenated and fed" : {
+                  "to" : "MLP"
+                }
+              },
+              "from sentence" : "Parallel
+LSTMs : Two sequences are encoded by two LSTMs separately , then they are concatenated and fed to a MLP ."
+
+            }
+          }
+        },
+        "Attention LSTMs" : {
+          "has" : {
+            "attentive LSTM" : {
+              "to encode" : {
+                "two sentences" : {
+                  "into" : "semantic space"
+                }
+              }
+            }
+          },
+          "from sentence" : "Attention LSTMs : An attentive LSTM to encode two sentences into a semantic space , which used in ."
+        }
+      }
+    }
+  }
+}

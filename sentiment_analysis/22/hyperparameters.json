@@ -1,0 +1,62 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "use" : {
+        "300 - dimension word vectors" : {
+          "pre-trained by" : "GloVe",
+          "from sentence" : "We use 300 - dimension word vectors pre-trained by GloVe ( whose vocabulary size is 1.9M ) for our experiments , as previous works did ."
+        }
+      },
+      "has" : {
+        "All out - of - vocabulary words" : {
+          "initialized as" : "zero vectors",
+          "from sentence" : "All out - of - vocabulary words are initialized as zero vectors , and all biases are set to zero ."          
+        },
+        "all biases" : {
+          "set to" : "zero",
+          "from sentence" : "All out - of - vocabulary words are initialized as zero vectors , and all biases are set to zero ."          
+        },
+        "dimensions" : {
+          "set to" : {
+            "300" : {
+              "of" : "hidden states and fused embeddings"
+            }
+          },
+          "from sentence" : "The dimensions of hidden states and fused embeddings are set to 300 ."
+        },
+        "dimension" : {
+          "of" : {
+            "position embeddings" : {
+              "set to" : "50"
+            }
+          },
+          "from sentence" : "The dimension of position embeddings is set to 50 ."
+        },
+        "Keras" : {
+          "for implementing" : "neural network model",
+          "from sentence" : "Keras is used for implementing our neural network model ."
+        },
+        "paired t- test" : {
+          "used for" : "significance testing",
+          "from sentence" : "The paired t- test is used for the significance testing ."
+        }
+      },
+      "In" : {
+        "model training" : {
+          "set" : {
+            "learning rate" : {
+              "to" : "0.001"
+            },
+            "batch size" : {
+              "to" : 64
+            },
+            "dropout rate" : {
+              "to" : "0.5"
+            }
+          },
+          "from sentence" : "In model training , we set the learning rate to 0.001 , the batch size to 64 , and dropout rate to 0.5 ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "has" : {
+    "Experiments" : {
+      "has" : {
+        "Experimental setup" : {
+          "pre-train" : {
+            "large model" : {
+              "with" : {
+                "12 layers" : {
+                  "in" : "encoder and decoder"
+                },
+                "hidden size" : {
+                  "of" : "1024"
+                }
+              },
+              "from sentence" : "We pre-train a large model with 12 layers in each of the encoder and decoder , and a hidden size of 1024 ."
+            }
+          },
+          "Following" : {
+            "RoBERTa" : {
+              "use" : {
+                "batch size" : {
+                  "of" : "8000"
+                }
+              },
+              "trains" : {
+                "model" : {
+                  "for" : "500000 steps"
+                }
+              },
+              "from sentence" : "Following RoBERTa , we use a batch size of 8000 , and train the model for 500000 steps ."
+            }
+          },
+          "has" : {
+            "Documents" : {
+              "tokenized with" : {
+                "same byte - pair encoding" : {
+                  "as" : "GPT - 2"
+                },
+                "from sentence" : "Documents are tokenized with the same byte - pair encoding as GPT - 2 ."
+              }
+            }
+          },
+          "use" : {
+            "combination" : {
+              "of" : ["text infilling", "sentence permutation", {"from sentence" : "Based on the results in Section 4 , we use a combination of text infilling and sentence permutation ."}]
+            }
+          },
+          "mask" : {
+            "30 %" : {
+              "of" : {
+                "tokens" : {
+                  "in" : "each documents"
+                }
+              }
+            },
+            "from sentence" : "We mask 30 % of tokens in each document , and permute all sentences ."
+          },
+          "permute" : ["all sentences", {"from sentence" : "We mask 30 % of tokens in each document , and permute all sentences ."}],
+          "disabled" : {
+            "dropout" : {
+              "for" : {
+                "final 10 %" : {
+                  "of" : "training steps",
+                  "To help" : {
+                    "model" : {
+                      "better fit" : "data"
+                    }
+                  },
+                  "from sentence" : "To help the model better fit the data , we disabled dropout for the final 10 % of training steps ."
+                }
+              }
+            }
+          } 
+        },
+        "Baselines" : {
+          "has" : {
+            "RoBERTa" : {
+              "pre-trained with" : ["same resources", "different objective"],
+              "from sentence" : "The most directly comparable baseline is RoBERTa , which was pre-trained with the same resources , but a different objective ."
+            }
+          }
+        },
+        "Tasks" : {
+          "experiment with" : {
+            "several text generation tasks" : {
+              "present" : {
+                "results" : {
+                  "on" : {
+                    "two summarization datasets" : {
+                      "name" : ["CNN / DailyMail", "XSum"],
+                      "has" : {
+                        "BART" : {
+                          "has" : {
+                            "outperforms" : {
+                              "has" : [["all existing work", {"from sentence" : "We also experiment with several text generation tasks .
+To provide a comparison with the state - of - the - art in summarization , we present results on two summarization datasets , CNN / DailyMail and XSum , which have distinct properties .
+Nevertheless , BART outperforms all existing work ."
+
+                              }],
+                              {"best previous work" : {"leverages" : "BERT", "by" : {"roughly 6.0 points" : {"on" : "all ROUGE metrics", "representing" : {"significant advance" : {"in" : "performance"}}}}}, "from sentence" : "BART outperforms the best previous work , which leverages BERT , by roughly 6.0 points on all ROUGE metrics - representing a significant advance in performance on this problem ."}]
+                            }
+                          },
+
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "evaluate" : {
+                "dialogue response generation" : {
+                  "on" : "CONVAI2",
+                  "has" : {
+                    "BART" : {
+                      "has" : {
+                        "outperforms" : {
+                          "has" : "previous work",
+                          "on" : "two automated metrics"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "We evaluate dialogue response generation on CONVAI2 , in which agents must generate responses conditioned on both the previous context and a textually - specified persona .
+BART outperforms previous work on two automated metrics ."
+
+                }
+              },
+              "use" : {
+                "recently proposed ELI5 dataset" : {
+                  "find" : {
+                    "BART" : {
+                      "has" : {
+                        "outperforms" : {
+                          "has" : "best previous work",
+                          "by" : "1.2 ROUGE - L"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "We use the recently proposed ELI5 dataset to test the model 's ability to generate long freeform answers .
+We find BART outperforms the best previous work by 1.2 ROUGE - L , but the dataset remains a challenging , because answers are only weakly specified by the question ."
+
+                }
+              },
+              "experimented on" : {
+                "original WMT16 Romanian - English" : {
+                  "augmented with" : "back - translation data",
+                  "has" : {
+                    "Preliminary results" : {
+                      "suggested" : {
+                        "our approach" : {
+                          "was" : {
+                            "less effective" : {
+                              "without" : "back - translation data"
+                            }
+                          },
+                          "prone to" : "overfitting"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "For each row we experiment on the original WMT16 Romanian - English augmented with back - translation data .
+1 . Preliminary results suggested that our approach was less effective without back - translation data , and prone to overfitting - future work should explore additional regularization techniques ."
+
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

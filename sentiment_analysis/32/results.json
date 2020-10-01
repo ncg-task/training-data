@@ -1,0 +1,119 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "All the other methods" : {
+          "based on" : {
+            "LSTM models" : {
+              "better than" : "Majority method"
+            }
+          },
+          "from sentence" : "All the other methods are based on LSTM models and better than the Majority method , showing that LSTM has potentials in automatically generating representations and can all bring performance improvement for sentiment classification ."
+        },
+        "LSTM method" : {
+          "gets" : {
+            "worst performance" : {
+              "of" : "all the neural network baseline methods"
+            }
+          },
+          "from sentence" : "The LSTM method gets the worst performance of all the neural network baseline methods , because it treats targets equally with other context words and does not make full use of the target information ."
+        },
+        "TD - LSTM" : {
+          "outperforms" : {
+            "LSTM" : {
+              "over" : {
+                "1 percent and 2 percent" : {
+                  "on" : "Restaurant and Laptop category"
+                }
+              }
+            }
+          },
+          "from sentence" : "TD - LSTM outperforms LSTM over 1 percent and 2 percent on the Restaurant and Laptop category respectively , since it develops from the standard LSTM and processes the left and right contexts with targets ."
+        },
+        "both AE - LSTM and ATAE - LSTM" : {
+          "stably exceed" : "TD - LSTM method",
+          "from sentence" : "Further , both AE - LSTM and ATAE - LSTM stably exceed the TD - LSTM method because of the introduction of attention mechanism ."
+        },
+        "ATAE - LSTM" : {
+          "Compared with" : "AE - LSTM",
+          "especially enhance" : {
+            "interaction" : {
+              "between" : "context words and target"
+            }
+          },
+          "has" : {
+            "better performance" : {
+              "than" : "AE - LSTM"
+            }
+          },
+          "from sentence" : "Compared with AE - LSTM , ATAE - LSTM especially enhance the interaction between the context words and target and thus has a better performance than AE - LSTM ."
+        },
+        "more attentions" : {
+          "paid to" : "targets",
+          "achieves" : "higher accuracy",
+          "from sentence" : "The more attentions are paid to targets , the higher accuracy the system achieves ."
+        }
+      },
+      "For" : {
+        "AE - LSTM and ATAE - LSTM" : {
+          "capture" : {
+            "important information" : {
+              "in" : {
+                "context" : {
+                  "with" : {
+                    "supervision" : {
+                      "of" : "target"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "generate" : {
+            "more reasonable representations" : {
+              "for" : "aspect - level sentiment classification"
+            }
+          },
+          "from sentence" : "For AE - LSTM and ATAE - LSTM , they capture important information in the context with the supervision of target and generate more reasonable representations for aspect - level sentiment classification ."
+        }
+      },
+      "see" : {
+        "AE - LSTM and ATAE - LSTM" : {
+          "emphasize" : {
+            "modeling" : {
+              "of" : "targets",
+              "via" : "addition of the aspect embedding"              
+            }
+          },
+          "from sentence" : "We can also see that AE - LSTM and ATAE - LSTM further emphasize the modeling of targets via the addition of the aspect embedding , which is also the reason of performance improvement ."
+        },
+        "IAN" : {
+          "achieves" : {
+            "best performance" : {
+              "among" : "all baselines"
+            }
+          },
+          "from sentence" : "We can see that IAN achieves the best performance among all baselines ."
+        }
+      },
+      "Compared with" : {
+        "ATAE - LSTM model" : {
+          "has" : {
+            "IAN" : {
+              "improves" : {
+                "performance" : {
+                  "about" : {
+                    "1.4 % and 3.2 %" : {
+                      "on" : "Restaurant and Laptop categories"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Compared with ATAE - LSTM model , IAN improves the performance about 1.4 % and 3.2 % on the Restaurant and Laptop categories respectively ."
+        }
+      }
+    }  
+  }
+}

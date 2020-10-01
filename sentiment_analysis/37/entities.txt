@@ -1,0 +1,67 @@
+163	63	67	LSTM
+163	16	24	sentence
+163	28	34	fed to
+163	41	77	short - term memory ( LSTM ) network
+163	78	90	to propagate
+163	91	98	context
+163	99	104	among
+163	109	126	constituent words
+166	0	8	TD- LSTM
+167	12	20	sequence
+167	21	23	of
+167	24	108	words preceding ( left context ) and succeeding ( right context ) target aspect term
+167	113	119	fed to
+167	120	139	two different LSTMs
+172	52	63	ATAE - LSTM
+172	67	79	identical to
+172	54	63	AE - LSTM
+172	92	98	except
+172	59	63	LSTM
+172	111	119	fed with
+172	124	137	concatenation
+172	31	33	of
+172	141	193	aspect - term representation and word representation
+33	52	74	independently generate
+33	75	114	aspect - aware sentence representations
+33	115	118	for
+33	119	134	all the aspects
+33	135	140	using
+33	141	169	gated recurrent unit ( GRU )
+33	174	193	attention mechanism
+34	10	16	employ
+34	17	32	memory networks
+34	33	52	to repeatedly match
+34	57	85	target aspect representation
+34	86	90	with
+34	95	108	other aspects
+34	109	120	to generate
+34	121	149	more accurate representation
+34	150	152	of
+34	57	70	target aspect
+35	5	27	refined representation
+35	31	37	fed to
+35	40	58	softmax classifier
+35	59	62	for
+35	63	83	final classification
+2	62	95	Aspect - Based Sentiment Analysis
+4	0	18	Sentiment analysis
+13	0	42	Aspect - based sentiment analysis ( ABSA )
+26	15	19	ABSA
+196	6	13	evident
+196	36	50	our IARM model
+196	51	62	outperforms
+196	63	86	all the baseline models
+196	89	98	including
+196	103	119	state of the art
+196	122	132	in both of
+196	137	144	domains
+197	3	11	obtained
+197	12	30	bigger improvement
+197	7	9	in
+197	34	47	laptop domain
+197	50	52	of
+197	53	58	1.7 %
+197	61	72	compared to
+197	73	90	restaurant domain
+197	50	52	of
+197	96	101	1.4 %

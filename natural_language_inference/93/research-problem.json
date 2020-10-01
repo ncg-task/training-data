@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Reading Comprehension and Question Answering", {"from sentence" : "Gated Self - Matching Networks for Reading Comprehension and Question Answering"}],
+    ["reading comprehension style question answering", {"from sentence" : "In this paper , we present the gated selfmatching networks for reading comprehension style question answering , which aims to answer questions from a given passage ."}]
+  ]  
+}

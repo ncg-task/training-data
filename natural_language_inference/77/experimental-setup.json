@@ -1,0 +1,160 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "has" : {
+        "BoW Model" : {
+          "trained on" : {
+            "spans" : {
+              "up to length" : "10"
+            },
+            "from sentence" : "BoW Model
+The BoW model is trained on spans up to length 10 to keep the computation tractable ."
+
+          },
+          "As" : {
+            "pre-processing steps" : {
+              "has" : {
+                "lowercase" : {
+                  "has" : "all inputs"
+                },
+                "tokenize" : {
+                  "using" : "spacy"
+                }
+              },
+              "from sentence" : "As pre-processing steps we lowercase all inputs and tokenize it using spacy 4 ."
+            }
+          },
+          "has" : {
+            "binary word" : {
+              "in" : "question feature",
+              "computed on" : {
+                "lemmas" : {
+                  "provided by" : "spacy",
+                  "restricted to" : {
+                    "alphanumeric words" : {
+                      "are not" : "stopwords"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "The binary word in question feature is computed on lemmas provided by spacy and restricted to alphanumeric words that are not stopwords ."
+            }
+          },
+          "use" : {
+            "hidden dimensionality" : {
+              "of" : {
+                "n" : {
+                  "=" : "150"
+                },
+                "dropout" : {
+                  "at" : "input embeddings",
+                  "with" : {
+                    "same mask" : {
+                      "for" : "all words"
+                    }
+                  },
+                  "has" : {
+                    "rate" : {
+                      "of" : "0.2"
+                    }
+                  }
+                },
+                "fixed word - embeddings" : {
+                  "has" : {
+                    "300 - dimensional" : {
+                      "from" : "Glove"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Throughout all experiments we use a hidden dimensionality of n = 150 , dropout at the input embeddings with the same mask for all words and a rate of 0.2 and 300 - dimensional fixed word - embeddings from Glove ."
+            }
+          },
+          "employed" : {
+            "ADAM" : {
+              "for" : "optimization",
+              "with" : {
+                "initial learning - rate" : {
+                  "of" : "10 ?3"
+                }
+              },
+              "from sentence" : "We employed ADAM for optimization with an initial learning - rate of 10 ?3 which was halved whenever the F 1 measure on the development set dropped between epochs ."
+            }
+          },
+          "used" : {
+            "mini-batches" : {
+              "of" : {
+                "size" : {
+                  "has" : "32"
+                }
+              },
+              "from sentence" : "We used mini-batches of size 32 ."
+            }
+          }
+        },
+        "FastQA" : {
+          "tokenize" : {
+            "input" : {
+              "on" : ["whitespaces", "non-alphanumeric characters"]
+            },
+            "from sentence" : "FastQA
+We tokenize the input on whitespaces ( exclusive ) and non-alphanumeric characters ( inclusive ) ."
+
+          },
+          "has" : {
+            "binary word" : {
+              "in" : "question feature",
+              "computed on" : {
+                "words" : {
+                  "appear in" : "context"
+                }
+              },
+              "from sentence" : "The binary word in question feature is computed on the words as they appear in context ."
+            }
+          },
+          "use" : {
+            "hidden dimensionality" : {
+              "of" : {
+                "n" : {
+                  "=" : "300"
+                }
+              }
+            },
+            "variational dropout" : {
+              "at" : "input embeddings",
+              "with" : {
+                "same mask" : {
+                  "for" : "all words"
+                }
+              },
+              "has" : {
+                "rate" : {
+                  "of" : "0.5"
+                },
+                "fixed word - embeddings" : {
+                  "has" : {
+                    "300 dimensional" : {
+                      "from" : "Glove"
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "Throughout all experiments we use a hidden dimensionality of n = 300 , variational dropout at the input embeddings with the same mask for all words and a rate of 0.5 and 300 dimensional fixed word - embeddings from Glove ."
+          },
+          "employed" : {
+            "ADAM" : {
+              "for" : "optimization",
+              "with" : {
+                "initial learning - rate" : {
+                  "of" : "10 ?3"
+                }
+              }
+            },
+            "from sentence" : "We employed ADAM for optimization with an initial learning - rate of 10 ?3 which was halved whenever the F 1 measure on the development set dropped between checkpoints ."
+          }
+        }
+      }
+    }
+  }
+}

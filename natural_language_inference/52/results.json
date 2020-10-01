@@ -1,0 +1,94 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "QA Performance" : {
+          "has" : {
+            "Our full model" : {
+              "combines" : {
+                "IR ++ , lexical overlap , discourse , and embeddings - based features" : {
+                  "has" : {
+                    "P@1" : {
+                      "of" : {
+                        "53.3 %" : {
+                          "has" : {
+                            "absolute gain" : {
+                              "of" : "6.3 %",
+                              "over" : "strong IR baseline"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "from sentence" : "QA Performance
+  Our full model that combines IR ++ , lexical overlap , discourse , and embeddings - based features , has a P@1 of 53.3 % ( line 7 ) , an absolute gain of 6.3 % over the strong IR baseline despite using the same background knowledge ."
+  
+              }
+            }
+          },
+          "tackle" : {
+            "AI2 Kaggle question set" : {
+              "By way of" : {
+                "loose comparison" : {
+                  "has" : {
+                    "our model" : {
+                      "has" : "approximately 5 % higher performance"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "also tackle the AI2 Kaggle question set with an approach that learns alignments between questions and structured and semistructured KB data .
+By way of a loose comparison ( since we are evaluating on different data partitions ) , our model has approximately 5 % higher performance despite our simpler set of features and unstructured KB ."
+
+            }
+          },
+          "In comparison to" : {
+            "other systems" : {
+              "that" : {
+                "competed" : {
+                  "in" : {
+                    "Kaggle challenge" : {
+                      "has" : {
+                        "our system" : {
+                          "comes in" : {
+                            "7th place" : {
+                              "out of" : "170 competitors"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "In comparison to other systems that competed in the Kaggle challenge , our system comes in in 7th place out of 170 competitors ( top 4 % ) ."
+            }
+          }
+        },
+        "Justification Performance" : {
+          "has" : {
+            "61 %" : {
+              "of" : {
+                "top - ranked justifications" : {
+                  "from" : "our system",
+                  "rated as" : {
+                    "Good" : {
+                      "compared to" : {
+                        "52 %" : {
+                          "from" : "IR baseline"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "Note that 61 % of the top - ranked justifications from our system were rated as Good as compared to 52 % from the IR baseline ( a gain of 9 % ) , despite the systems using identical corpora ."
+                }
+              }
+            }
+          }          
+        }
+      }
+    }
+  }
+}

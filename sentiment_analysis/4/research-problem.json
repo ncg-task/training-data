@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Multimodal Emotion Detection", {"from sentence" : "ICON : Interactive Conversational Memory Network for Multimodal Emotion Detection"}],
+    ["Emotion recognition in conversations", {"from sentence" : "Emotion recognition in conversations is crucial for building empathetic machines ."}],
+    ["Analyzing emotional dynamics in conversations", {"from sentence" : "Analyzing emotional dynamics in conversations , however , poses complex challenges ."}]
+  ]
+}

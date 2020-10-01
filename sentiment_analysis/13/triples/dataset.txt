@@ -1,0 +1,8 @@
+(Contribution||has||Dataset)
+(Dataset||first builds||RRC dataset)
+(RRC dataset||called||ReviewRC)
+(ReviewRC||using||reviews)
+(reviews||from||SemEval 2016 Task 5)
+(SemEval 2016 Task 5||is a||popular dataset)
+(popular dataset||for||aspect - based sentiment analysis ( ABSA ))
+(aspect - based sentiment analysis ( ABSA )||in||domains of laptop and restaurant)

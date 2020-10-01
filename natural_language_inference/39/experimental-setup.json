@@ -1,0 +1,59 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "For" : {
+        "SICK and MSRVID experiments" : {
+          "used" : {
+            "300 - dimension" : {
+              "has" : "Glo Ve word embeddings"
+            }  
+          },
+          "from sentence" : "For the SICK and MSRVID experiments , we used 300 - dimension Glo Ve word embeddings ."
+        },
+        "STS2014 , WikiQA , and TrecQA experiments" : {
+          "trained on" : {
+            "word pairs" : {
+              "from" : {
+                "Paraphrase Database ( PPDB )" : {
+                  "used" : {
+                    "300 dimension" : {
+                      "has" : ["PARAGRAM - SL999 embeddings", "PARAGRAM - PHRASE embeddings"]
+                    }
+                  }                  
+                }
+              }
+            }
+          },
+          "from sentence" : "For the STS2014 , WikiQA , and TrecQA experiments , we used 300 dimension PARAGRAM - SL999 embeddings from and the PARAGRAM - PHRASE embeddings from , trained on word pairs from the Paraphrase Database ( PPDB ) ."
+        }
+      },
+      "has" : {
+        "Our timing experiments" : {
+          "conducted on" : "Intel Xeon E5 - 2680 CPU",
+          "from sentence" : "Our timing experiments were conducted on an Intel Xeon E5 - 2680 CPU ."
+        }
+      },
+      "Due to" : {
+        "sentence length variations" : {
+          "for" : {
+            "SICK and MSRVID data" : {
+              "padded" : {
+                "sentences" : {
+                  "to" : "32 words"
+                }
+              }
+            },
+            "STS2014 , WikiQA , and TrecQA data" : {
+              "padded" : {
+                "sentences" : {
+                  "to" : "48 words"
+                }
+              }
+            }
+          },
+          "from sentence" : "Due to sentence length variations , for the SICK and MSRVID data we padded the sentences to 32 words ; for the STS2014 , WikiQA , and TrecQA data , we padded the sentences to 48 words .."
+        }
+      }
+    }
+  }
+}

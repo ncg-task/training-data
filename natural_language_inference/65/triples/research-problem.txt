@@ -1,0 +1,2 @@
+(Contribution||has research problem||Neural networks ( NN ) with attention mechanisms)
+(Contribution||has research problem||attention mechanisms)

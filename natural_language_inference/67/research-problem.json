@@ -1,0 +1,8 @@
+{
+  "has research problem" : [
+    ["Reading Comprehension", {"from sentence" : "End - to - End Answer Chunk Extraction and Ranking for Reading Comprehension"}],
+    ["neural reading comprehension ( RC )", {"from sentence" : "This paper proposes dynamic chunk reader ( DCR ) , an end - toend neural reading comprehension ( RC ) model that is able to extract and rank a set of answer candidates from a given document to answer questions ."}],
+    ["Reading comprehension - based question answering ( RCQA )", {"from sentence" : "Reading comprehension - based question answering ( RCQA ) is the task of answering a question with a chunk of text taken from related document ( s ) ."}],
+    ["RCQA", {"from sentence" : "Different from the above two assumptions for RCQA , in the real - world QA scenario , people may ask questions about both entities ( factoid ) and non-entities such as explanations and reasons ( non -factoid ) ( see for examples ) ."}]
+  ]
+}

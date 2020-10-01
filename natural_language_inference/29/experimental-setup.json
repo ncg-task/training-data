@@ -1,0 +1,75 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "has" : {
+        "randomly initialize" : {
+          "has" : {
+            "network parameters" : {
+              "at" : {
+                "beginning" : {
+                  "of" : "experiments"
+                }
+              },
+              "Without using" : "pre-trained embeddings"
+            }
+          },
+          "from sentence" : "Without using pre-trained embeddings , we randomly initialize the network parameters at the beginning of our experiments ."
+        },
+        "All the RNN networks" : {
+          "have" : "512 hidden units"
+        },
+        "dimension" : {
+          "of" : {
+            "word embedding" : {
+              "is" : "256"
+            }
+          },
+          "from sentence" : "All the RNN networks have 512 hidden units and the dimension of word embedding is 256 ."
+        },
+        "Adagrad" : {
+          "with" : {
+            "learning rate" : {
+              "has" : {
+                "0.1" : {
+                  "to optimize" : "parameters"
+                }
+              }
+            },
+            "batch size" : {
+              "is" : "64"
+            },
+            "from sentence" : "Adagrad with learning rate 0.1 is used to optimize the parameters and batch size is 64 ."
+          }
+        }
+      },
+      "To produce" : {
+        "better answers" : {
+          "use" : {
+            "beam search" : {
+              "with" : {
+                "beam size" : {
+                  "has" : "4"
+                }
+              }
+            }
+          },
+          "from sentence" : "To produce better answers , we use beam search with beam size
+4 ."
+
+        }
+      },
+      "implement" : {
+        "our model" : {
+          "using" : "TensorFlow framework",
+          "from sentence" : "We implement our model using TensorFlow framework and train our model and all baseline models on NVIDIA Tesla P40 GPU ."
+        }
+      },
+      "train" : {
+        "our model and all baseline models" : {
+          "on" : "NVIDIA Tesla P40 GPU",
+          "from sentence" : "We implement our model using TensorFlow framework and train our model and all baseline models on NVIDIA Tesla P40 GPU ."
+        }
+      }
+    }
+  }
+}

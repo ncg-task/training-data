@@ -1,0 +1,4 @@
+(Contribution||has research problem||Modelling Interaction of Sentence Pair)
+(Contribution||has research problem||modelling the interactions of two sentences)
+(Contribution||has research problem||modelling the relevance / similarity of the sentence pair)
+(Contribution||has research problem||text semantic matching)

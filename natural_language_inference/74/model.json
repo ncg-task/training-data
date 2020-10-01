@@ -1,0 +1,58 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "Discourse Marker Augmented Network" : {
+          "for" : "natural language inference",
+          "where" : {
+            "transfer" : {
+              "has" : {
+                "knowledge" : {
+                  "from" : {
+                    "existing supervised task" : {
+                      "name" : "Discourse Marker Prediction ( DMP )",
+                      "to" : "integrated NLI model"
+                    }
+                  }
+                },
+                "from sentence" : "In this paper , we propose a Discourse Marker Augmented Network for natural language inference , where we transfer the knowledge from the existing supervised task : Discourse Marker Prediction ( DMP ) , to an integrated NLI model ."
+              }
+            }
+          }
+        },
+        "sentence encoder model" : {
+          "that learns" : {
+            "representations" : {
+              "of" : {
+                "sentences" : {
+                  "from" : "DMP task"
+                }
+              },
+              "inject" : {
+                "encoder" : {
+                  "to" : "NLI network"
+                }
+              },
+              "from sentence" : "We first propose a sentence encoder model that learns the representations of the sentences from the DMP task and then inject the encoder to the NLI network ."
+            }
+          }
+        }
+      },
+      "employ" : {
+        "reinforcement learning" : {
+          "with" : {
+            "reward" : {
+              "defined by" : {
+                "uniformity extent" : {
+                  "of" : "original labels",
+                  "to train" : "model"
+                }
+              }
+            }
+          },
+          "from sentence" : "In consideration of that different confidence level of the final labels should be discriminated , we employ reinforcement learning with a reward defined by the uniformity extent of the original labels to train the model ."
+        }
+      }
+    }
+  }
+}

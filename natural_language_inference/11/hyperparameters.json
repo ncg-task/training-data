@@ -1,0 +1,37 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "has" : {
+        "All models" : {
+          "trained" : [
+            "end - to - end", 
+            {"jointly" : {
+              "with" : "refinement module"}}, 
+            {"using dimensionality" : {
+              "of" : {
+                "n = 300" : {
+                  "for" : {
+                    "all but the TriviaQA experiments" : {
+                      "had to reduce" : {
+                        "n to 150" : {
+                          "due to" : "memory constraints"}}}}}}}}],
+          "from sentence" : "All models are trained end - to - end jointly with the refinement module using a dimensionality of n = 300 for all but the TriviaQA experiments for which we had to reduce n to 150 due to memory constraints ."
+        },
+        "All baselines" : {
+          "operate on" : "unrefined word embeddings",
+          "from sentence" : "All baselines operate on the unrefined word embeddings E 0 described in 3.1 ."
+        }
+      },
+      "For" : {
+        "DQA baseline system" : {
+          "add" : {
+            "lemma" : {
+              "in" : "question feature ( liq )"
+            }
+          },
+          "from sentence" : "For the DQA baseline system we add the lemma in - question feature ( liq ) suggested in ."
+        }
+      }
+    }    
+  }
+}

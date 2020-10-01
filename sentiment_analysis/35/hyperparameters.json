@@ -1,0 +1,87 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "has" : {
+        "word embeddings" : {
+          "initialized with" : "200 - dimension GloVE vectors",
+          "fine - tuned during" : "training",
+          "from sentence" : "The word embeddings are initialized with 200 - dimension GloVE vectors and fine - tuned during the training ."
+        },
+        "fc layer size" : {
+          "is" : "300",
+          "from sentence" : "The fc layer size is 300 ."
+        },
+        "Adam ( Kingma and Ba 2014 )" : {
+          "used as" : {
+            "optimizer" : {
+              "with" : "initial learning rate 10 ? 4"
+            }
+          },
+          "from sentence" : "The Adam ( Kingma and Ba 2014 ) is used as the optimizer with the initial learning rate 10 ? 4 ."
+        },
+        "Gradients" : {
+          "with" : {
+            "2 norm" : {
+              "larger than" : "40"
+            }
+          },
+          "are" : {
+            "normalized" : {
+              "to be" : "40"
+            }
+          },
+          "from sentence" : "Gradients with the 2 norm larger than 40 are normalized to be 40 ."
+        },
+        "All weights" : {
+          "in" : "networks",
+          "randomly initialized from" : "uniform distribution U ( ? 0.01 , 0.01 )",
+          "from sentence" : "All weights in networks are randomly initialized from a uniform distribution U ( ? 0.01 , 0.01 ) ."
+        },
+        "batch sizes" : {
+          "are" : {
+            "64 and 32" : {
+              "for" : "source and target domains"
+            }
+          },
+          "from sentence" : "The batch sizes are 64 and 32 for source and target domains , respectively ."
+        }
+      },
+      "To alleviate" : {
+        "overfitting" : {
+          "apply" : {
+            "dropout" : {
+              "on" : {
+                "word embeddings" : {
+                  "of" : "context",
+                  "with" : "dropout rate 0.5"
+                }
+              }
+            }
+          },
+          "from sentence" : "To alleviate overfitting , we apply dropout on the word embeddings of the context with dropout rate 0.5 ."
+        }
+      },
+      "perform" : {
+        "early stopping" : {
+          "on" : {
+            "validation set" : {
+              "during" : "training process"
+            }
+          }
+        },
+        "from sentence" : "We also perform early stopping on the validation set during the training process ."
+      },
+      "tuned on" : {
+        "10 % randomly held - out training data" : {
+          "of" : {
+            "target domain" : {
+              "in" : "R1?L task"
+            }
+          },
+          "fixed to be used in all" : "transfer pairs"
+        },
+        "from sentence" : "The hyperparameters are tuned on 10 % randomly held - out training data of the target domain in R1?L task and are fixed to be used in all transfer pairs ."
+      }
+    }
+  }  
+}

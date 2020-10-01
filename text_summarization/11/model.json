@@ -1,0 +1,37 @@
+{
+  "has" : {
+    "Model" : {
+      "of" : {
+        "global encoding" : {
+          "for" : "abstractive summarization",
+          "from sentence" : "To tackle this problem , we propose a model of global encoding for abstractive summarization ."
+        }
+      },
+      "set" : {
+        "convolutional gated unit" : {
+          "to perform" : {
+            "global encoding" : {
+              "on" : "source context"
+            }
+          }
+        },
+        "from sentence" : "We set a convolutional gated unit to perform global encoding on the source context ."
+      },
+      "has" : {
+        "gate" : {
+          "based on" : "convolutional neural network ( CNN )",
+          "filters" : {
+            "each encoder output" : {
+              "based on" : {
+                "global context" : {
+                  "due to" : "parameter sharing"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "The gate based on convolutional neural network ( CNN ) filters each encoder output based on the global context due to the parameter sharing , so that the representations at each time step are refined with consideration of the global context ."
+      }
+    }
+  }
+}

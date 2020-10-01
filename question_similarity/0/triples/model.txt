@@ -1,0 +1,7 @@
+(Contribution||has||Model)
+(Model||build||neural network model)
+(neural network model||with||four components)
+(Model||builds||sequence representation vectors)
+(sequence representation vectors||to predict||relation between the question pairs)
+(Model||uses||ELMo ( which stands for Embeddings from Language Models ) pre-trained contextual embeddings)
+(ELMo ( which stands for Embeddings from Language Models ) pre-trained contextual embeddings||as||input)

@@ -1,0 +1,47 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "has" : {
+        "char - level and word - level embeddings" : {
+          "contribute towards" : "model 's performance",
+          "from sentence" : "Both char - level and word - level embeddings contribute towards the model 's performance ."
+        },
+        "C2Q attention" : {
+          "proves to be" : {
+            "critical" : {
+              "with" : {
+                "drop" : {
+                  "of" : "more than 10 points"
+                }
+              }
+            }
+          },
+          "from sentence" : "C2Q attention proves to be critical with a drop of more than 10 points on both metrics ."
+        },
+        "proposed static attention" : {
+          "outperforms" : {
+            "dynamically computed attention" : {
+              "by" : "more than 3 points"
+            }
+          },
+          "from sentence" : "Despite being a simpler attention mechanism , our proposed static attention outperforms the dynamically computed attention by more than 3 points ."
+        }
+      },
+      "At" : {
+        "word embedding layer" : {
+          "has" : {
+            "query words" : {
+              "such as" : "When , Where and Who",
+              "not well aligned to" : {
+                "possible answers" : {
+                  "in" : "context"
+                }
+              }
+            }
+          },
+          "from sentence" : "At the word embedding layer , query words such as When , Where and Who are not well aligned to possible answers in the context , but this dramatically changes in the contextual embedding layer which has access to context from surrounding words and is just 1 layer below the attention layer ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "has" : {
+    "Model" : {
+      "extend" : {
+        "self - attention mechanism" : {
+          "with" : "syntax - guided constraint",
+          "to capture" : {
+            "syntax related parts" : {
+              "with" : "each concerned word"
+            }
+          },
+          "from sentence" : "In this paper , we extend the self - attention mechanism with syntax - guided constraint , to capture syntax related parts with each concerned word ."
+        }
+      },
+      "adopt" : {
+        "pre-trained dependency syntactic parse tree structure" : {
+          "to produce" : {
+            "related nodes" : {
+              "for" : {
+                "each word" : {
+                  "in" : "sentence",
+                  "regarding" : {
+                    "each word" : {
+                      "as" : "child node"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "namely" : "syntactic dependency of interest ( SDOI )",
+          "from sentence" : "Specifically , we adopt pre-trained dependency syntactic parse tree structure to produce the related nodes for each word in a sentence , namely syntactic dependency of interest ( SDOI ) , by regarding each word as a child node and the SDOI consists all its ancestor nodes and itself in the dependency parsing tree ."
+        }
+      },
+      "accommodates" : {
+        "SDOI information" : {
+          "propose" : {
+            "novel syntax - guided network ( SG - Net )" : {
+              "fuses" : "original SAN and SDOI - SAN",
+              "to provide" : {
+                "more linguistically inspired representation" : {
+                  "for" : "reading comprehension tasks"
+                }
+              }
+            }
+          },
+          "from sentence" : "To effectively accommodate such SDOI information , we propose a novel syntax - guided network ( SG - Net ) , which fuses the original SAN and SDOI - SAN , to provide more linguistically inspired representation for challenging reading comprehension tasks 1 ."
+        }
+      }
+    }
+  }
+}

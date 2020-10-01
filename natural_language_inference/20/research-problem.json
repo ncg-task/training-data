@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Sentence Embeddings", {"from sentence" : "Sentence Embeddings in NLI with Iterative Refinement Encoders"}],
+    ["Sentence - level representations", {"from sentence" : "Sentence - level representations are necessary for various NLP tasks ."}]
+  ]
+}

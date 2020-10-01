@@ -1,0 +1,44 @@
+{
+  "has" : {
+    "Results" : {
+      "see" : {
+        "NMM" : {
+          "trained with" : "TRAIN - ALL set",
+          "beats" : {
+            "all the previous state - of - the art systems" : {
+              "including" : {
+                "both methods" : {
+                  "using" : "feature engineering and deep learning models"
+                }
+              }
+            }
+          },
+          "from sentence" : "We can see a NMM trained with TRAIN - ALL set beats all the previous state - of - the art systems including both methods using feature engineering and deep learning models ."
+        }
+      },
+      "without combining" : {
+        "additional features" : {
+          "has" : {
+            "NMM" : {
+              "performs" : {
+                "well" : {
+                  "for" : "answer ranking",
+                  "showing" : {
+                    "significant improvements" : {
+                      "over" : {
+                        "previous deep learning model" : {
+                          "with no" : ["additional features", "linguistic feature engineering methods"]
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "Furthermore , even without combining additional features , a NMM still performs well for answer ranking , showing significant improvements over previous deep learning model with no additional features and linguistic feature engineering methods ."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

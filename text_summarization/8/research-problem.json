@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Abstractive Summarization" , {"from sentence" : "Bottom - Up Abstractive Summarization"}],
+    ["Text summarization", {"from sentence" : "Text summarization systems aim to generate natural language summaries that compress the information in a longer text ."}],
+    ["neural abstractive summarization", {"from sentence" : "Current state - of - the - art neural abstractive summarization models combine extractive and abstractive techniques by using pointergenerator style models which can copy words from the source document ."}]
+  ]
+}

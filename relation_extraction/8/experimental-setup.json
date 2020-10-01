@@ -1,0 +1,71 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "use" : {
+        "Skip - gram model ( word2 vec )" : {
+          "to train" : {
+            "word embeddings" : {
+              "on" : "NYT corpus"
+            }
+          },
+          "from sentence" : "In this paper , we use the Skip - gram model ( word2 vec ) 5 to train the word embeddings on the NYT corpus ."
+        },
+        "grid search" : {
+          "to determine" : "optimal parameters",
+          "manually specify" : {
+            "subsets" : {
+              "of" : {
+                "parameter spaces" : {
+                  "has" : ["w ? { 1 , 2 , 3 , , 7 }", "n ? { 50 , 60 , , 300}"]
+                }
+              }
+            }
+          },
+          "from sentence" : "We use a grid search to determine the optimal parameters and manually specify subsets of the parameter spaces : w ? { 1 , 2 , 3 , , 7 } and n ? { 50 , 60 , , 300}. shows all parameters used in the experiments ."
+        },
+        "Adadelta" : {
+          "in" : "update procedure",
+          "from sentence" : "We use Adadelta in the update procedure ; it relies on two main parameters , ? and ? , which do not significantly affect the performance ."
+        }
+      },
+      "tune" : {
+        "models" : {
+          "using" : {
+            "three - fold validation" : {
+              "on" : "training set"
+            }
+          },
+          "from sentence" : "Following , we tune all of the models using three - fold validation on the training set ."
+        }
+      },
+      "heuristically choose" : {
+        "dp" : {
+          "=" : "5"
+        },
+        "from sentence" : "Because the position dimension has little effect on the result , we heuristically choose d p = 5 ."
+      },
+      "has" : {
+        "batch size" : {
+          "fixed to" : "50",
+          "from sentence" : "The batch size is fixed to 50 ."
+        }
+      },
+      "In" : {
+        "dropout operation" : {
+          "randomly set" : {
+            "hidden unit activities" : {
+              "to" : "zero",
+              "with" : {
+                "probability" : {
+                  "of" : "0.5"
+                }
+              },
+              "during" : "training"
+            }
+          },
+          "from sentence" : "In the dropout operation , we randomly set the hidden unit activities to zero with a probability of 0.5 during training ."
+        }
+      }
+    }
+  }
+}

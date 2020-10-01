@@ -1,0 +1,67 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "novel method" : {
+          "employs" : {
+            "recurrent neural network based multimodal multi-utterance attention framework" : {
+              "for" : "sentiment prediction"
+            }
+          },
+          "from sentence" : "In this paper , we propose a novel method that employs a recurrent neural network based multimodal multi-utterance attention framework for sentiment prediction ."          
+        },
+        "novel fusion method" : {
+          "focusing on" : {
+            "inter-modality relations" : {
+              "computed between" : "target utterance and its context"
+            }
+          },
+          "from sentence" : "To better address these concerns we propose a novel fusion method by focusing on inter-modality relations computed between the target utterance and its context ."
+        }
+      },
+      "has" : {
+        "attention mechanism" : {
+          "attend to" : {
+            "important contextual utterances" : {
+              "having" : {
+                "higher relatedness or similarity" : {
+                  "with" : "target utterance"
+                }
+              }
+            }
+          },
+          "from sentence" : "The attention mechanism is then used to attend to the important contextual utterances having higher relatedness or similarity ( computed using inter-modality correlations ) with the target utterance ."
+        }
+      },
+      "attend over" : {
+        "contextual utterances" : {
+          "by computing" : {
+            "correlations" : {
+              "among" : {
+                "modalities" : {
+                  "of" : "target utterance and the context utterances"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "Unlike previous approaches that simply apply attentions over the contextual utterance for classification , we attend over the contextual utterances by computing correlations among the modalities of the target utterance and the context utterances ."
+      },
+      "facilitates" : {
+        "modality selection" : {
+          "attending over" : "contextual utterances",
+          "generates" : {
+            "better multimodal feature representation" : {
+              "when" : {
+                "modalities from the context" : {
+                  "combined with" : "modalities of the target utterance"
+                }
+              }
+            }
+          },
+          "from sentence" : "The model facilitates this modality selection by attending over the contextual utterances and thus generates better multimodal feature representation when these modalities from the context are combined with the modalities of the target utterance ."
+        }
+      }
+    }
+  }
+}

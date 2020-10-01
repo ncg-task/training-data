@@ -1,0 +1,7 @@
+(Contribution||has||Hyperparameters)
+(Hyperparameters||regularize||our model)
+(our model||using||dropout)
+(Hyperparameters||use||gradient clipping)
+(gradient clipping||to avoid||exploding gradients)
+(Hyperparameters||train||model)
+(model||using||Nadam ( Dozat , 2016 ) SGD)

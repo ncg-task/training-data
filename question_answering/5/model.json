@@ -1,0 +1,93 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "method" : {
+          "to improve" : "open - domain QA",
+          "by explicitly aggregating" : {
+            "evidence" : {
+              "from across" : "multiple passages"
+            }
+          },
+          "from sentence" : "In this paper , we propose a method to improve open - domain QA by explicitly aggregating evidence from across multiple passages ."
+        }
+      },
+      "formulate" : {
+        "evidence aggregation" : {
+          "as" : "answer re-ranking problem",
+          "from sentence" : "We formulate the above evidence aggregation as an answer re-ranking problem ."
+        }
+      },
+      "for" : {
+        "each answer candidate" : {
+          "efficiently incorporate" : {
+            "global information" : {
+              "from" : {
+                "multiple pieces" : {
+                  "of" : "textual evidence"
+                }
+              },
+              "without" : {
+                "significantly increasing" : {
+                  "has" : {
+                    "complexity" : {
+                      "of" : {
+                        "prediction" : {
+                          "of" : "RC model"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Here we apply the idea of re-ranking ; for each answer candidate , we efficiently incorporate global information from multiple pieces of textual evidence without significantly increasing the complexity of the prediction of the RC model ."
+            }
+          }
+        }
+      },
+      "has" : {
+        "re-rankers" : {
+          "are" : {
+            "strength - based re-ranker" : {
+              "ranks" : {
+                "answer candidates" : {
+                  "according to how often" : {
+                    "evidence" : {
+                      "occurs in" : "different passages"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "A strength - based re-ranker , which ranks the answer candidates according to how often their evidence occurs in different passages ."
+            },
+            "coverage - based re-ranker" : {
+              "aims to rank" : {
+                "answer candidate" : {
+                  "has" : {
+                    "higher" : {
+                      "if" : {
+                        "union" : {
+                          "of" : {
+                            "all its contexts" : {
+                              "in" : "different passages",
+                              "could cover" : {
+                                "more aspects" : {
+                                  "included in" : "question"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "A coverage - based re-ranker , which aims to rank an answer candidate higher if the union of all its contexts in different passages could cover more aspects included in the question ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

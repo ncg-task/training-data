@@ -1,0 +1,57 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "memnet" : {
+          "is" : "end - toend memory network",
+          "from sentence" : "memnet is an end - toend memory network ."
+        },
+        "cLSTM" : {
+          "classifies" : {
+            "utterances" : {
+              "using" : {
+                "neighboring utterances ( of same speaker )" : {
+                  "as" : "context"
+                }
+              }
+            },
+            "from sentence" : "cLSTM 4 classifies utterances using neighboring utterances ( of same speaker ) as context ."
+          }
+        },
+        "TFN" : {
+          "models" : {
+            "intra-and intermodality dynamics" : {
+              "by explicitly aggregating" : "uni - , bi- and trimodal interactions"
+            }
+          },
+          "from sentence" : "TFN 5 models intra-and intermodality dynamics by explicitly aggregating uni - , bi- and trimodal interactions ."
+        },
+        "MFN" : {
+          "performs" : {
+            "multi-view learning" : {
+              "by using" : {
+                "Delta - memory Attention Network" : {
+                  "has" : {
+                    "fusion mechanism" : {
+                      "to learn" : "cross - view interactions"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "MFN performs multi-view learning by using Delta - memory Attention Network , a fusion mechanism to learn cross - view interactions ."
+        },
+        "CMN models" : {
+          "separate" : {
+            "contexts" : {
+              "for" : "speaker and listener",
+              "to an" : "utterance"              
+            }
+          },
+          "from sentence" : "CMN models separate contexts for both speaker and listener to an utterance ."
+        }
+      }
+    }
+  }
+}

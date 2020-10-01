@@ -1,0 +1,78 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "CDM layer" : {
+          "works better on" : "twitter dataset",
+          "from sentence" : "The CDM layer works better on twitter dataset because there area lot of non-standard grammar usage and language abbreviations within it , and the local context focus techniques can promote to infer the polarity of terms ."
+        },
+        "joint model based on BERT - BASE" : {
+          "achieved" : {
+            "hopeful performance" : {
+              "on" : "all three datasets"
+            }
+          },
+          "even surpassed" : {
+            "other proposed BERT based improved models" : {
+              "on" : "some datasets"
+            }
+          },
+          "from sentence" : "After optimizing the model parameters according to the empirical result , the joint model based on BERT - BASE achieved hopeful performance on all three datasets and even surpassed other proposed BERT based improved models on some datasets , such as BERT - PT , AEN - BERT , SDGCN - BERT , and soon ."
+        },
+        "ATEPC - Fusion" : {
+          "is" : {
+            "supplementary scheme" : {
+              "of" : "LCF mechanism"
+            }
+          },
+          "adopts" : {
+            "moderate approach" : {
+              "to generate" : "local context features"
+            }
+          },
+          "show" : {
+            "performance" : {
+              "better than" : "existing BERT - based models"
+            }
+          },
+          "from sentence" : "ATEPC - Fusion is a supplementary scheme of LCF mechanism , and it adopts a moderate approach to generate local context features .
+The experimental results show that its performance is also better than the existing BERT - based models ."
+
+        }
+      },
+      "Compared with" : {
+        "BERT - BASE model" : {
+          "has" : {
+            "BERT - SPC" : {
+              "significantly improves" : {
+                "accuracy and F 1 score" : {
+                  "of" : "aspect polarity classification"
+                }
+              }
+            }
+          },
+          "from sentence" : "Compared with the BERT - BASE model , BERT - SPC significantly improves the accuracy and F 1 score of aspect polarity classification ."
+        }
+      },
+      "for" : {
+        "first time" : {
+          "has" : {
+            "BERT - SPC" : {
+              "has increased" : {
+                "F 1 score" : {
+                  "of" : {
+                    "ATE subtask" : {
+                      "on" : "three datasets"
+                    }
+                  },
+                  "up to" : "99 %"                  
+                }
+              },
+              "from sentence" : "In addition , for the first time , BERT - SPC has increased the F 1 score of ATE subtask on three datasets up to 99 % ."
+            }  
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "has research problem" : [
+    ["Aspect - Based Sentiment Analysis", {"from sentence" : "IARM : Inter-Aspect Relation Modeling with Memory Networks in Aspect - Based Sentiment Analysis"}],
+    ["Sentiment analysis", {"from sentence" : "Sentiment analysis has immense implications in modern businesses through user-feedback mining ."}],
+    ["Aspect - based sentiment analysis ( ABSA )", {"from sentence" : "Aspect - based sentiment analysis ( ABSA ) caters to these needs ."}],
+    ["ABSA", {"from sentence" : "The aim of the ABSA classifier is to learn these connections between the aspects and their sentiment bearing phrases ."}]
+  ]
+}

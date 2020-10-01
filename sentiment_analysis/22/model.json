@@ -1,0 +1,45 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "hierarchical attention based positionaware network ( HAPN )" : {
+          "for" : "aspect - level sentiment classification",
+          "from sentence" : "Based on the analysis above , in this paper , we propose a hierarchical attention based positionaware network ( HAPN ) for aspect - level sentiment classification ."
+        }
+      },
+      "has" : {
+        "position - aware encoding layer" : {
+          "for modelling" : "sentence",
+          "to achieve" : {
+            "position - aware abstract representation" : {
+              "of" : "each word"
+            }
+          },
+          "from sentence" : "A position - aware encoding layer is introduced for modelling the sentence to achieve the position - aware abstract representation of each word ."
+        },
+        "succinct fusion mechanism" : {
+          "proposed to" : {
+            "fuse" : {
+              "information of" : {
+                "aspects and the contexts" : {
+                  "achieving" : "final sentence representation"
+                }
+              }
+            }
+          },
+          "from sentence" : "On this basis , a succinct fusion mechanism is further proposed to fuse the information of aspects and the contexts , achieving the final sentence representation ."
+        }
+      },
+      "feed" : {
+        "achieved sentence representation" : {
+          "into" : {
+            "softmax layer" : {
+              "to predict" : "sentiment polarity"
+            }
+          }
+        },
+        "from sentence" : "Finally , we feed the achieved sentence representation into a softmax layer to predict the sentiment polarity ."
+      }
+    }
+  }
+}

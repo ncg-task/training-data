@@ -1,0 +1,5 @@
+(Contribution||has||Hyperparameters)
+(Hyperparameters||add||dropout)
+(dropout||before||each add - on layer)
+(Hyperparameters||For||pre-trained BERT model)
+(pre-trained BERT model||use||uncased basic model)

@@ -1,0 +1,84 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "RNTN" : {
+          "name" : "Recursive Tensor Neural Network",
+          "to model" : {
+            "correlations" : {
+              "between" : {
+                "different dimensions" : {
+                  "of" : "child nodes vectors"
+                }
+              }
+            }
+          },
+          "from sentence" : "RNTN : Recursive Tensor Neural Network ) is used to model correlations between different dimensions of child nodes vectors ."
+        },
+        "LSTM / Bi-LSTM" : {
+          "employ" : ["Long Short - Term Memory", {"bidirectional variant" : {"to capture" : "sequential information"}}],
+          "from sentence" : "LSTM / Bi-LSTM : Cho et al. ( 2014 ) employs Long Short - Term Memory and the bidirectional variant to capture sequential information ."
+        },
+        "Tree-LSTM" : {
+          "has" : {
+            "Memory cells" : {
+              "introduced by" : "Tree - Structured Long Short - Term Memory"
+            },
+            "gates" : {
+              "into" : "tree - structured neural network"    
+            }
+          },
+          "from sentence" : "Tree-LSTM : Memory cells was introduced by Tree - Structured Long Short - Term Memory and gates into tree - structured neural network , which is beneficial to capture semantic relatedness by parsing syntax trees ."
+        },
+        "CNN" : {
+          "name" : "Convolutional Neural Networks",
+          "to generate" : "task - specific sentence representation",
+          "from sentence" : "CNN : Convolutional Neural Networks ) is applied to generate task - specific sentence representation ."
+        },
+        "NCSL" : {
+          "name" : "Neural Context - Sensitive Lexicon ( NSCL )",
+          "to obtain" : {
+            "prior sentiment scores of words" : {
+              "in" : "sentence"
+            }          
+          },
+          "from sentence" : "NCSL : designs a Neural Context - Sensitive Lexicon ( NSCL ) to obtain prior sentiment scores of words in the sentence ."
+        },
+        "LR - Bi-LSTM" : {
+          "imposes" : {
+            "linguistic roles" : {
+              "into" : "neural networks",
+              "by applying" : {
+                "linguistic regularization" : {
+                  "on" : "intermediate outputs",
+                  "with" : "KL divergence"
+                }
+              }              
+            }
+          },
+          "from sentence" : "LR - Bi-LSTM : imposes linguistic roles into neural networks by applying linguistic regularization on intermediate outputs with KL divergence ."
+        },
+        "Self - attention" : {
+          "proposes" : {
+            "selfattention mechanism" : {
+              "to learn" : "structured sentence embedding"
+            }
+          },
+          "from sentence" : "Self - attention : proposes a selfattention mechanism to learn structured sentence embedding ."
+        },
+        "ID - LSTM" : {
+          "uses" : {
+            "reinforcement learning" : {
+              "to learn" : {
+                "structured sentence representation" : {
+                  "for" : "sentiment classification"
+                }
+              }
+            },
+            "from sentence" : "ID - LSTM : uses reinforcement learning to learn structured sentence representation for sentiment classification ."
+          }
+        }
+      }
+    }
+  }
+}

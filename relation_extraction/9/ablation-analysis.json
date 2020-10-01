@@ -1,0 +1,51 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "evaluating" : {
+        "several simplified models" : {
+          "has" : {
+            "first simplification" : {
+              "to use" : {
+                "model" : {
+                  "without" : "input attention mechanism",
+                  "with" : "pooling attention layer"
+                }
+              }
+            },
+            "second" : {
+              "removes" : "both attention mechanisms",
+              "from sentence" : "The second removes both attention mechanisms ."
+            },
+            "third" : {
+              "removes" : "both forms of attention",
+              "uses" : {
+                "regular objective function" : {
+                  "based on" : {
+                    "inner product s = r w" : {
+                      "for" : ["sentence representation r", "relation class embedding w"]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "To better quantify the contribution of the different components of our model , we also conduct an ablation study evaluating several simplified models .
+The first simplification is to use our model without the input attention mechanism but with the pooling attention layer .
+The second removes both attention mechanisms .
+The third removes both forms of attention and additionally uses a regular objective function based on the inner product s = r w for a sentence representation r and relation class embedding w."        
+
+      },
+      "observe that" : {
+        "all three of our components" : {
+          "lead to" : {
+            "noticeable improvements" : {
+              "over" : "baselines"
+            }
+          }
+        },
+        "from sentence" : "We observe that all three of our components lead to noticeable improvements over these baselines ."
+      }
+    }
+  }
+}

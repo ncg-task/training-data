@@ -1,0 +1,59 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "has" : {
+        "Self vs Dual History" : {
+          "Compared to" : {
+            "dual - history variants ( variants 3 , 5 , and 7 )" : {
+              "has" : {
+                "these models" : {
+                  "provide" : "lesser performance"
+                }
+              }
+            },
+            "from sentence" : "Compared to the dual - history variants ( variants 3 , 5 , and 7 ) , these models provide lesser performance ."
+          }
+        },
+        "DGIM" : {
+          "prevents" : {
+            "storage of dynamic influences" : {
+              "between" : {
+                "speakers" : {
+                  "at each" : "historical time step",
+                  "leads to" : "performance deterioration"
+                }  
+              }
+            }
+          },
+          "from sentence" : "DGIM prevents the storage of dynamic influences between speakers at each historical time step and leads to performance deterioration ."
+        },
+        "Multi - hop vs No - hop" : {
+          "removal of" : {
+            "multi-hop" : {
+              "leads to" : {
+                "worse performance" : {
+                  "than" : "removal of DGIM"
+                }
+              }
+            },
+            "from sentence" : "Also , removal of multi-hop leads to worse performance than the removal of DGIM ."
+          },
+          "has" : {
+            "best performance" : {
+              "achieved by" : {
+                "variant 6" : {
+                  "which contains" : {
+                    "all the proposed modules" : {
+                      "in" : "its pipeline"
+                    }                  
+                  }
+                }
+              },
+              "from sentence" : "However , best performance is achieved by variant 6 which contains all the proposed modules in its pipeline ."
+            }
+          }
+        }        
+      }      
+    }
+  }
+}

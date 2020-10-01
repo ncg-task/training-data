@@ -1,0 +1,60 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "fast and effective neural network" : {
+          "for" : {
+            "ACSA and ATSA" : {
+              "based on" : "convolutions and gating mechanisms"
+            }
+          },
+          "from sentence" : "In this paper , we propose a fast and effective neural network for ACSA and ATSA based on convolutions and gating mechanisms , which has much less training time than LSTM based networks , but with better accuracy ."
+        }  
+      },
+      "For" : {
+        "ACSA task" : {
+          "has" : {
+            "our model" : {
+              "has" : {
+                "two separate convolutional layers" : {
+                  "on the top of" : {
+                    "embedding layer" : {
+                      "whose" : {
+                        "outputs" : {
+                          "are combined by" : "novel gating units"
+                        }
+                      }
+                    }
+                  }
+                },
+                "from sentence" : "For ACSA task , our model has two separate convolutional layers on the top of the embedding layer , whose outputs are combined by novel gating units ."
+              }
+            }
+          }
+        },
+        "ATSA task" : {
+          "extend" : {
+            "our model" : {
+              "to include" : {
+                "another convolutional layer" : {
+                  "for" : "target expressions"
+                }
+              }
+            },
+            "from sentence" : "For ATSA task , where the aspect terms consist of multiple words , we extend our model to include another convolutional layer for the target expressions ."
+          }
+        }
+      },
+      "proposed" : {
+        "gating units" : {
+          "have" : {
+            "two nonlinear gates" : {
+              "connected to" : "one convolutional layer"
+            }
+          },
+          "from sentence" : "The proposed gating units have two nonlinear gates , each of which is connected to one convolutional layer ."
+        }
+      }
+    }
+  }
+}

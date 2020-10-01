@@ -1,0 +1,82 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "DECAPROP" : {
+          "achieves" : {
+            "state - of - the - art performance" : {
+              "on" : "all four datasets"
+            },
+            "from sentence" : "Overall , our results are optimistic and promising , with results indicating that DECAPROP achieves state - of - the - art performance 6 on all four datasets . 66.2 75.9 DCN + CoVE 71.3 79.9 R- NET 72.3 80.6 R - NET"
+          },
+          "outperforms" : {
+            "existing state - of - the - art" : {
+              "i.e." : "recent AMANDA model",
+              "by" : ["+ 4.7 % EM", "+ 2.6 % F1"],
+              "from sentence" : "On this dataset , DECAPROP outperforms the existing state - of - the - art , i.e. , the recent AMANDA model by ( + 4.7 % EM / + 2.6 % F1 ) ."
+            }
+          }
+        },
+        "our proposed model" : {
+          "outperforms" : {
+            "well - established baselines" : {
+              "such as" : ["Match - LSTM ( + 18 % EM / + 16.3 % F1 )", "BiDAF ( + 16 % EM / + 14 % F1 )"]
+            }
+          },
+          "from sentence" : "Moreover , our proposed model also outperforms well - established baselines such as Match - LSTM ( + 18 % EM / + 16.3 % F1 ) and BiDAF ( + 16 % EM / + 14 % F1 ) ."
+        }
+      },
+      "on" : {
+        "Quasar - T" : {
+          "has" : {
+            "Our model" : {
+              "achieves" : {
+                "state - of - the - art performance" : {
+                  "outperforming" : {
+                    "state - of - the - art R 3 ( Reinforced Ranker Reader )" : {
+                      "by" : {
+                        "considerable margin" : {
+                          "of" : "+ 4.4 % EM / + 6 % F1"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "reports the results on Quasar - T .
+Our model achieves state - of - the - art performance on this dataset , outperforming the state - of - the - art R 3 ( Reinforced Ranker Reader ) by a considerable margin of + 4.4 % EM / + 6 % F1 ."
+
+                }
+              }
+            },
+            "our model" : {
+              "outperforms" : {
+                "AMANDA" : {
+                  "by" : "+ 15.4 % EM and + 14.2 % in terms of F1 score",
+                  "from sentence" : "On the original setting , our model outperforms AMANDA by + 15.4 % EM and + 14.2 % in terms of F1 score ."                  
+                },
+                "AQA" : {
+                  "has" : "+ 18.1 % EM / + 18 % F1",
+                  "from sentence" : "On the overall setting , our model outperforms both AQA ( + 18.1 % EM / + 18 % F1 ) and Reinforced Reader Ranker ( + 7.8 % EM / + 8.3 % F1 ) ."
+                },
+                "Reinforced Reader Ranker" : {
+                  "has" : "+ 7.8 % EM / + 8.3 % F1",
+                  "from sentence" : "On the overall setting , our model outperforms both AQA ( + 18.1 % EM / + 18 % F1 ) and Reinforced Reader Ranker ( + 7.8 % EM / + 8.3 % F1 ) ."
+                }
+              }
+            }
+          }
+        },
+        "popular SQuAD benchmark" : {
+          "has" : {
+            "our model" : {
+              "does not achieve" : "state - of - the - art performance",
+              "can outperform" : "base R - NET",
+              "from sentence" : "SQuAD reports dev scores 8 of our model against several representative models on the popular SQuAD benchmark .
+While our model does not achieve state - of - the - art performance , our model can outperform the base R - NET ( both our implementation as well as the published score ) ."
+
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "attention mechanism" : {
+          "to enforce" : "model",
+          "to attend" : "important part of a sentence",         
+          "from sentence" : "In this paper , we propose an attention mechanism to enforce the model to attend to the important part of a sentence , in response to a specific aspect ."
+        }
+      },
+      "design" : {
+        "aspect - tosentence attention mechanism" : {
+          "can concentrate on" : {
+            "key part" : {
+              "of" : "sentence",
+              "given" : "aspect"
+            }
+          },
+          "from sentence" : "We design an aspect - tosentence attention mechanism that can concentrate on the key part of a sentence given the aspect ."
+        }
+      },
+      "explore" : {
+        "potential correlation" : {
+          "of" : {
+            "aspect and sentiment polarity" : {
+              "in" : "aspect - level sentiment classification"
+            }
+          },
+          "from sentence" : "We explore the potential correlation of aspect and sentiment polarity in aspect - level sentiment classification ."
+        }
+      },
+      "to capture" : {
+        "important information" : {
+          "in response to" : "given aspect"
+        },
+        "design" : {
+          "has" : "attentionbased LSTM"
+        },
+        "from sentence" : "In order to capture important information in response to a given aspect , we design an attentionbased LSTM ."
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "has research problem" : [
+    ["Extracting Multiple - Relations", {"from sentence" : "Extracting Multiple - Relations in One - Pass with Pre-Trained Transformers"}],
+    ["extracting multiple entity - relations", {"from sentence" : "The state - of - the - art solutions for extracting multiple entity - relations from an input paragraph always require a multiple - pass encoding on the input ."}],
+    ["multiple entityrelations extraction", {"from sentence" : "This paper proposes a new solution that can complete the multiple entityrelations extraction task with only one - pass encoding on the input corpus , and achieve anew state - of - the - art accuracy performance , as demonstrated in the ACE 2005 benchmark ."}],
+    ["Relation extraction ( RE )", {"from sentence" : "Relation extraction ( RE ) aims to find the semantic relation between a pair of entity mentions from an input paragraph ."}],
+    ["RE", {"from sentence" : "One particular type of the RE task is multiplerelations extraction ( MRE ) that aims to recognize relations of multiple pairs of entity mentions from an input paragraph ."}],
+    ["multiplerelations extraction ( MRE )", {"from sentence" : "One particular type of the RE task is multiplerelations extraction ( MRE ) that aims to recognize relations of multiple pairs of entity mentions from an input paragraph ."}],
+    ["MRE", {"from sentence" : "Because in real - world applications , whose input paragraphs dominantly contain multiple pairs of entities , an efficient and effective solution for MRE has more important and more practical implications ."}]
+  ]
+}

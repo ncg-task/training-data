@@ -1,0 +1,102 @@
+14	3	10	examine
+14	13	32	simple model family
+14	39	67	decomposable attention model
+14	82	107	shown promise in modeling
+14	108	134	natural language inference
+16	8	19	to mitigate
+16	20	33	data sparsity
+16	39	45	modify
+16	50	70	input representation
+16	71	73	of
+16	78	106	decomposable attention model
+16	107	113	to use
+16	114	118	sums
+16	71	73	of
+16	122	149	character n-gram embeddings
+16	150	160	instead of
+16	161	176	word embeddings
+18	61	69	pretrain
+18	70	94	all our model parameters
+18	3	5	on
+18	102	162	noisy , automatically collected question - paraphrase corpus
+18	163	170	Paralex
+18	173	184	followed by
+18	185	198	fine - tuning
+18	84	94	parameters
+18	3	5	on
+18	221	234	Quora dataset
+99	39	41	by
+99	42	53	grid search
+99	54	56	on
+99	61	76	development set
+99	130	149	embedding dimension
+99	152	155	300
+99	160	193	shape of all feedforward networks
+99	196	206	two layers
+99	207	211	with
+99	212	229	400 and 200 width
+99	234	257	character n -gram sizes
+99	260	261	5
+99	266	278	context size
+99	281	282	1
+99	287	300	learning rate
+99	303	306	0.1
+99	88	91	for
+99	316	338	pretraining and tuning
+99	343	353	batch size
+99	356	359	256
+99	88	91	for
+99	316	327	pretraining
+99	380	382	64
+99	88	91	for
+99	332	338	tuning
+99	398	411	dropout ratio
+99	303	306	0.1
+99	88	91	for
+99	332	338	tuning
+99	435	455	prediction threshold
+99	458	477	positive paraphrase
+99	88	91	for
+2	0	45	Neural Paraphrase Identification of Questions
+4	40	78	paraphrase identification of questions
+8	0	34	Question paraphrase identification
+116	3	10	observe
+116	20	41	simple FFNN baselines
+116	42	53	work better
+116	54	58	than
+116	59	122	more complex Siamese and Multi - Perspective CNN or LSTM models
+117	0	50	Our basic decomposable attention model DECATT word
+117	51	58	without
+117	59	81	pre-trained embeddings
+117	82	84	is
+117	85	91	better
+117	92	96	than
+117	97	115	most of the models
+117	131	135	used
+117	136	152	GloVe embeddings
+118	35	52	DECATT char model
+118	53	60	without
+118	61	86	any pretrained embeddings
+118	87	98	outperforms
+118	99	114	DE - CATT glove
+118	115	124	that uses
+118	125	157	task - agnostic GloVe embeddings
+119	14	18	when
+119	19	46	character n-gram embeddings
+119	47	50	are
+119	51	62	pre-trained
+119	42	44	in
+119	68	90	task - specific manner
+119	42	44	in
+119	42	44	in
+120	16	23	observe
+120	26	43	significant boost
+120	47	58	performance
+124	13	17	note
+124	23	48	our best performing model
+124	49	51	is
+124	52	68	pt - DECATT char
+124	77	86	leverages
+124	91	101	full power
+124	102	104	of
+124	105	125	character embeddings

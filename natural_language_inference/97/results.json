@@ -1,0 +1,52 @@
+{
+  "has" : {
+    "Results" : {
+      "On" : {
+        "MCTest - 500" : {
+          "has" : {
+            "Parallel Hierarchical model" : {
+              "has" : {
+                "significantly outperforms" : {
+                  "has" : {
+                    "these methods" : {
+                      "on" : "single questions ( > 2 % )"
+                    }
+                  }
+                },
+                "slightly outperforms" : {
+                  "has" : {
+                    "latter two" : {
+                      "on" : "multi questions ( ? 0.3 % )"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "On MCTest - 500 , the Parallel Hierarchical model significantly outperforms these methods on single questions ( > 2 % ) and slightly outperforms the latter two on multi questions ( ? 0.3 % ) and overall ( ?
+1 % ) ."
+
+            }
+          }
+        }
+      },
+      "has" : {
+        "method" : {
+          "achieves" : {
+            "best overall result" : {
+              "on" : "MCTest - 160",
+              "from sentence" : "The method of achieves the best overall result on MCTest - 160 ."
+            }
+          }
+        },
+        "our model" : {
+          "has" : {
+            "outperforming" : {
+              "has" : "alternatives",
+              "by" : {"large margin" : {"across" : "board ( > 15 % )"}},
+              "from sentence" : "Here we see our model outperforming the alternatives by a large margin across the board ( > 15 % ) ."              
+            }
+          }
+        }
+      }
+    }
+  }
+}

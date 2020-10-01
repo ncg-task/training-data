@@ -1,0 +1,77 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "PCFG - Trans" : {
+          "has" : "rule - based system",
+          "from sentence" : "PCFG - Trans
+The rule - based system 1 modified on the code released by ."
+
+        },
+        "s 2 s+ att" : {
+          "implement" : "seq2seq with attention",
+          "from sentence" : "s 2 s+ att
+We implement a seq2seq with attention as the baseline method ."
+
+        },
+        "NQG" : {
+          "extend" : {
+            "s 2s+ att" : {
+              "with" : {
+                "feature - rich encoder" : {
+                  "to build" : "NQG system"
+                }
+              }
+            }
+          },
+          "from sentence" : "NQG
+We extend the s 2s+ att with our feature - rich encoder to build the NQG system ."
+
+        },
+        "NQG +" : {
+          "incorporate" : {
+            "copy mechanism" : {
+              "deal with" : "rare words problem"
+            }
+          },
+          "from sentence" : "NQG + Based on NQG , we incorporate copy mechanism to deal with rare words problem ."
+        },
+        "NQG + Pretrain" : {
+          "Based on" : {
+            "NQG +" : {
+              "initialize" : {
+                "word embedding matrix" : {
+                  "with" : "pre-trained GloVe vectors"
+                }
+              }
+            }
+          },
+          "from sentence" : "NQG + Pretrain Based on NQG + , we initialize the word embedding matrix with pre-trained GloVe vectors ."
+        },
+        "NQG + STshare" : {
+          "Based on" : "NQG +",
+          "make" : {
+            "encoder and decoder" : {
+              "share" : "same embedding matrix"
+            }
+          },
+          "from sentence" : "NQG + STshare Based on NQG + , we make the encoder and decoder share the same embedding matrix ."
+        },
+        "NQG ++" : {
+          "Based on" : {
+            "NQG +" : {
+              "use" : {
+                "pre-train word embedding and STshare methods" : {
+                  "to further improve" : "performance"
+                }
+              }
+            }
+          },
+          "from sentence" : "NQG ++
+Based on NQG + , we use both pre-train word embedding and STshare methods , to further improve the performance ."
+
+        }
+      }
+    }
+  }  
+}

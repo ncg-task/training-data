@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["language representations", {"from sentence" : "The latest work on language representations carefully integrates contextualized features into language model training , which enables a series of success especially in various machine reading comprehension and natural language inference tasks ."}],
+    ["learning universal language representations", {"from sentence" : "Recently , deep contextual language model ( LM ) has been shown effective for learning universal language representations , achieving state - of - the - art results in a series of flagship natural language understanding ( NLU ) tasks ."}]
+  ]
+}

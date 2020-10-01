@@ -1,0 +1,71 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "has" : {
+        "word embeddings" : {
+          "initialized by" : "pre-trained Glove vector",
+          "from sentence" : "In our experiments , all word embedding are initialized by the pre-trained Glove vector 2 ."
+        },
+        "weight matrices" : {
+          "given" : {
+            "initial value" : {
+              "by" : {
+                "sampling" : {
+                  "from" : "uniform distribution U ( ?0.1 , 0.1 )"
+                }
+              }
+            }
+          },
+          "from sentence" : "All the weight matrices are given the initial value by sampling from the uniform distribution U ( ?0.1 , 0.1 ) , and all the biases are set to zero ."
+        },
+        "biases" : {
+          "are set to" : "zero",
+          "from sentence" : "All the weight matrices are given the initial value by sampling from the uniform distribution U ( ?0.1 , 0.1 ) , and all the biases are set to zero ."
+        },
+        "dimension" : {
+          "of" : {
+            "word embedding and aspect term embedding" : {
+              "set to" : "300",
+              "from sentence" : "The dimension of the word embedding and aspect term embedding are set to 300 , and the number of the hidden units are set to 200 ."              
+            },
+            "position embedding" : {
+              "set to" : {
+                "100" : {
+                  "which is" : {
+                    "randomly initialized and updated" : {
+                      "during" : "training process"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "The dimension of position embedding is set to 100 , which is randomly initialized and updated during the training process ."
+            }
+          }
+        },
+        "hidden states" : {
+          "set to" : "200",
+          "from sentence" : "The dimension of the word embedding and aspect term embedding are set to 300 , and the number of the hidden units are set to 200 ."
+        }
+      },
+      "use" : {
+        "Tensorflow" : {
+          "to implement" : "our proposed model"
+        }
+      },
+      "employ" : {
+        "Momentum" : {
+          "as" : "training method",
+          "whose" : {
+            "momentum parameter ?" : {
+              "set to" : "0.9"
+            },
+            "initial learning rate" : {
+              "set to" : "0.01"
+            }
+          },
+          "from sentence" : "We use Tensorflow to implement our proposed model and employ the Momentum as the training method , whose momentum parameter ? is set to 0.9 , ? is set to 10 ? 6 , and the initial learning rate is set to 0.01 ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Multi - Passage Machine Reading Comprehension", {"from sentence" : "Multi - Passage Machine Reading Comprehension with Cross - Passage Answer Verification"}],
+    ["Machine reading comprehension ( MRC )", {"from sentence" : "Machine reading comprehension ( MRC ) on real web data usually requires the machine to answer a question by analyzing multiple passages retrieved by search engine ."}],
+    ["MRC", {"from sentence" : "Compared with MRC on a single passage , multi-passage MRC is more challenging , since we are likely to get multiple confusing answer candidates from different passages ."}]
+  ]
+}

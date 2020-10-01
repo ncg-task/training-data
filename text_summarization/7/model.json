@@ -1,0 +1,32 @@
+{
+  "has" : {
+    "Model" : {
+      "jointly estimate" : {
+        "upper-bound frequency" : {
+          "of" : {
+            "each target vocabulary" : {
+              "that can occur in" : {
+                "summary" : {
+                  "during" : "encoding process"
+                }
+              }
+            }
+          },
+          "control" : {
+            "output words" : {
+              "in" : "each decoding step"
+            }
+          }
+        },
+        "from sentence" : "The basic idea of our method is to jointly estimate the upper-bound frequency of each target vocabulary that can occur in a summary during the encoding process and exploit the estimation to control the output words in each decoding step ."
+      },
+      "additional component" : ["wordfrequency estimation ( WFE ) sub-model", {"from sentence" : "We refer to our additional component as a wordfrequency estimation ( WFE ) sub-model ."}],
+      "has" : {
+        "WFE sub-model" : {
+          "explicitly manages" : ["how many times each word has been generated so far", "might be generated in the future"],
+          "from sentence" : "The WFE sub-model explicitly manages how many times each word has been generated so far and might be generated in the future during the decoding process ."
+        }
+      }
+    }
+  }
+}

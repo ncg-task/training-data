@@ -1,0 +1,100 @@
+92	0	4	Code
+92	50	90	https://github.com/tanthongtan/dv-cosine
+94	0	11	Grid search
+94	16	31	performed using
+94	32	57	20 % of the training data
+94	13	15	as
+94	63	77	validation set
+94	87	99	to determine
+94	103	127	 optimal hyperparameters
+94	147	153	to use
+94	156	205	constant learning rate or learning rate annealing
+97	52	65	learning rate
+97	45	49	from
+97	71	104	[ 0.25 , 0.025 , 0.0025 , 0.001 ]
+101	4	25	optimal learning rate
+101	26	40	in the case of
+101	41	58	cosine similarity
+101	59	61	is
+101	62	77	extremely small
+101	80	90	suggesting
+101	93	114	chaotic error surface
+105	4	11	weights
+105	12	14	of
+105	19	27	networks
+105	28	32	were
+105	33	44	initialized
+105	45	49	from
+105	52	72	uniform distribution
+105	33	35	in
+105	80	85	range
+105	12	14	of
+105	89	108	[ - 0.001 , 0.001 ]
+97	15	19	tune
+97	24	44	number of iterations
+100	15	20	using
+100	21	47	L2 regularized dot product
+100	84	95	chosen from
+100	96	114	[ 1 , 0.1 , 0.01 ]
+103	18	26	requires
+103	29	52	larger number of epochs
+103	53	56	for
+103	57	68	convergence
+104	0	3	For
+104	8	20	distribution
+104	21	24	for
+104	25	48	sampling negative words
+104	54	58	used
+104	63	82	n-gram distribution
+104	83	92	raised to
+104	97	111	3 / 4 th power
+13	11	26	aims to improve
+13	36	61	document embedding models
+13	62	73	by training
+13	74	93	document embeddings
+13	94	99	using
+13	100	117	cosine similarity
+14	36	45	trying to
+14	46	53	predict
+14	54	59	given
+14	62	70	document
+14	77	94	words / n - grams
+14	14	16	in
+14	62	70	document
+14	134	142	maximize
+14	295	312	cosine similarity
+2	0	24	Sentiment Classification
+4	3	44	document - level sentiment classification
+10	41	65	sentiment classification
+10	94	147	binary sentiment classification of long movie reviews
+109	13	27	see that using
+109	28	45	cosine similarity
+109	46	56	instead of
+109	57	68	dot product
+109	69	77	improves
+109	78	86	accuracy
+111	21	33	suggest that
+111	34	43	switching
+111	44	48	from
+111	49	60	dot product
+111	18	20	to
+111	64	81	cosine similarity
+111	88	96	improves
+111	97	105	accuracy
+115	8	14	during
+115	15	26	grid search
+115	42	63	initial learning rate
+115	64	67	was
+115	68	72	0.25
+116	0	11	Introducing
+116	12	29	L2 regularization
+116	30	32	to
+116	33	44	dot product
+116	45	53	improves
+116	54	62	accuracy
+116	63	66	for
+116	67	76	all cases
+116	77	83	except
+116	86	98	depreciation
+116	99	119	in the case of using
+116	120	128	unigrams

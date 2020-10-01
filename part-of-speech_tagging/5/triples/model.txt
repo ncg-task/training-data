@@ -1,0 +1,7 @@
+(Contribution||has||Model)
+(Model||learn||context sensitive initial character and word representations)
+(context sensitive initial character and word representations||through||two separate sentence - level recurrent models)
+(context sensitive initial character and word representations||combined via||meta-BiLSTM model)
+(meta-BiLSTM model||builds||unified representation)
+(unified representation||used for||syntactic tagging)
+(unified representation||of||each word)

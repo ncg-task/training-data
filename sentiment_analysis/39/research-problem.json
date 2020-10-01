@@ -1,0 +1,9 @@
+{
+  "has research problem" : [
+    ["Targeted Aspect Based Sentiment Analysis", {"from sentence" : "SentiHood : Targeted Aspect Based Sentiment Analysis Dataset for Urban Neighbourhoods"}],
+    ["targeted aspect - based sentiment analysis", {"from sentence" : "In this paper , we introduce the task of targeted aspect - based sentiment analysis ."}],
+    ["Sentiment analysis", {"from sentence" : "Sentiment analysis is an important task in natural language processing ."}],
+    ["Aspect - based sentiment analysis ( ABSA )", {"from sentence" : "Aspect - based sentiment analysis ( ABSA ) relates to the task of extracting fine - grained information by identifying the polarity towards different aspects of an entity in the same unit of text , and recognizing the polarity associated with each aspect separately ."}],
+    ["Targeted sentiment analysis", {"from sentence" : "Targeted sentiment analysis investigates the classification of opinion polarities towards certain target entity mentions in given sentences ( often a tweet ) ."}]
+  ]
+}

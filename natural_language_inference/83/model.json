@@ -1,0 +1,78 @@
+{
+  "has" : {
+    "Model" : {
+      "explore" : {
+        "three semantic aspects" : {
+          "of" : "story understanding",
+          "has" : [
+            {"sequence of events" : {
+              "described in" : "story"
+            }},
+            {"evolution" : {
+              "of" : "sentiment and emotional trajectories"
+            }},
+            "topical consistency"
+          ],
+          "from sentence" : "In this paper we explore three semantic aspects of story understanding : ( i ) the sequence of events described in the story , ( ii ) the evolution of sentiment and emotional trajectories , and ( iii ) topical consistency ."
+        }
+      },
+      "has" : {
+        "first aspect" : {
+          "motivated from" : "semantic script induction",
+          "evaluates if" : {
+            "events" : {
+              "described in" : "ending - alternative",
+              "likely to" : {
+                "occur" : {
+                  "within" : {
+                    "sequence of events" : {
+                      "described in" : "preceding context"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "The first aspect is motivated from approaches in semantic script induction , and evaluates if events described in an ending - alternative are likely to occur within the sequence of events described in the preceding context ."
+        }
+      },
+      "evaluating if" : {
+        "sentiment" : {
+          "described in" : "ending option",
+          "has" : {
+            "makes sense" : {
+              "considering" : {
+                "context" : {
+                  "of" : "story"
+                }
+              }
+            }
+          },
+          "from sentence" : "Our model captures this by evaluating if the sentiment described in an ending option makes sense considering the context of the story ."
+        }
+      },
+      "analyzing if" : {
+        "topic" : {
+          "of" : "ending option",
+          "consistent with" : "preceding context",
+          "from sentence" : "Our model accounts for that by analyzing if the topic of an ending option is consistent with the preceding context ."
+        }
+      },
+      "present" : {
+        "log - linear model" : {
+          "used to" : {
+            "weigh" : {
+              "has" : {
+                "various aspects" : {
+                  "of" : "story"
+                }
+              },
+              "using" : "hidden variable"
+            }
+          },
+          "from sentence" : "We present a log - linear model that is used to weigh the various aspects of the story using a hidden variable ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,288 @@
+{
+  "has" : {
+    "Experiments" : {
+      "has" : {
+        "Tasks" : {
+          "has" : {
+            "CNN and Daily Mail Datasets" : {
+              "has" : {
+                "Experimental setup" : {
+                  "has" : {
+                    "Vocab Size" : {
+                      "keep" : {
+                        "most frequent | V | = 101 k words" : {
+                          "in" : "CNN dataset"
+                        },
+                        "| V | = 151 k words" : {
+                          "in" : "Daily Mail dataset"
+                        }
+                      },
+                      "from sentence" : "CNN and Daily Mail Datasets
+Vocab Size : For training our ReasoNet , we keep the most frequent | V | = 101 k words ( not including 584 entities and 1 placeholder marker ) in the CNN dataset , and | V | = 151 k words ( not including 530 entities and 1 placeholder marker ) in the Daily Mail dataset ."
+
+                    },
+                    "Embedding Layer" : {
+                      "choose" : "300 - dimensional word embeddings",
+                      "use" : {
+                        "300 - dimensional pretrained Glove word embeddings" : {
+                          "for" : "initialization"
+                        }
+                      },
+                      "apply" : {
+                        "dropout" : {
+                          "with" : {
+                            "probability 0.2" : {
+                              "to" : "embedding layer"
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "Embedding Layer :
+We choose 300 - dimensional word embeddings , and use the 300 - dimensional pretrained Glove word embeddings for initialization .
+We also apply dropout with probability 0.2 to the embedding layer ."
+
+                    },
+                    "absolute value" : {
+                      "of" : {
+                        "gradient" : {
+                          "on" : "each parameter",
+                          "is" : {
+                            "clipped" : {
+                              "within" : "0.001"
+                            }
+                          }
+                        }  
+                      },
+                      "from sentence" : "The absolute value of gradient on each parameter is clipped within 0.001 ."
+                    },
+                    "batch size" : {
+                      "is" : {
+                        "64" : {
+                          "for" : "both CNN and Daily Mail datasets"
+                        }
+                      },
+                      "from sentence" : "The batch size is 64 for both CNN and Daily Mail datasets ."
+                    }
+                  },
+                  "use" : {
+                    "ADAM optimizer" : {
+                      "for" : "parameter optimization",
+                      "with" : {
+                        "initial learning rate" : {
+                          "of" : "0.0005 , ? 1 = 0.9 and ? 2 = 0.999"
+                        }
+                      },
+                      "from sentence" : "We use ADAM optimizer for parameter optimization with an initial learning rate of 0.0005 , ? 1 = 0.9 and ? 2 = 0.999 ;"
+                    }
+                  },
+                  "trained on" : ["GTX TitanX 12 GB", {"from sentence" : "Models are trained on GTX TitanX 12 GB ."}]
+                },
+                "Results" : {
+                  "Comparing with" : {
+                    "AS Reader" : {
+                      "has" : {
+                        "ReasoNet" : {
+                          "shows" : {
+                            "signi cant improvement" : {
+                              "by capturing" : {
+                                "reasoning" : {
+                                  "in" : "paragraph"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "Comparing with the AS Reader , ReasoNet shows the signi cant improvement by capturing multi-turn reasoning in the paragraph ."
+                    }
+                  },
+                  "has" : {
+                    "Iterative Attention Reader , EpiReader and GA Reader" : {
+                      "are" : {
+                        "three multi-turn reasoning models" : {
+                          "with" : "xed reasoning steps"
+                        }
+                      },
+                      "has" : {
+                        "outperforms" : {
+                          "has" : "ReasoNet",
+                          "by integrating" : {
+                            "termination gate" : {
+                              "in" : "model",
+                              "allows" : {
+                                "di erent reasoning steps" : {
+                                  "for" : "di erent test cases"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "Iterative Attention Reader , EpiReader and GA Reader are the three multi-turn reasoning models with xed reasoning steps .
+ReasoNet also outperforms all of them by integrating termination gate in the model which allows di erent reasoning steps for di erent test cases ."
+
+                    },
+                    "ReasoNet" : {
+                      "obtains" : {
+                        "comparable results" : {
+                          "with" : "AoA Reader",
+                          "on" : "CNN test set"
+                        }
+                      },
+                      "from sentence" : "ReasoNet obtains comparable results with AoA Reader on CNN test set ."
+                    }
+                  }
+                }
+              }
+            },
+            "SQuAD Dataset" : {
+              "has" : {
+                "Experimental setup" : {
+                  "has" : {
+                    "Vocab Size" : {
+                      "use" : {
+                        "python NLTK tokenizer" : {
+                          "to preprocess" : {
+                            "passages and questions" : {
+                              "obtain about" : {
+                                "100K words" : {
+                                  "in" : "vocabulary"
+                                }
+                              }
+                            }
+                          },
+                          "from sentence" : "SQuAD Dataset
+Vocab Size :
+We use the python NLTK tokenizer 6 to preprocess passages and questions , and obtain about 100K words in the vocabulary ."
+
+                        }
+                      }
+                    },
+                    "Embedding Layer" : {
+                      "use" : {
+                        "100 - dimensional pretrained Glove vectors" : {
+                          "as" : "word embeddings",
+                          "from sentence" : "Embedding Layer : We use the 100 - dimensional pretrained Glove vectors as word embeddings ."
+                        }
+                      }
+                    },
+                    "maximum reasoning step T max" : {
+                      "set to" : "10",
+                      "from sentence" : "The maximum reasoning step T max is set to 10 in SQuAD experiments ."
+                    }
+                  },
+                  "use" : {
+                    "AdaDelta optimizer" : {
+                      "for" : {
+                        "parameter optimization" : {
+                          "with" : {
+                            "initial learning rate" : {
+                              "of" : "0.5"
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "We use AdaDelta optimizer for parameter optimization with an initial learning rate of 0.5 and a batch size Results :"
+                    }
+                  }
+                },
+                "Results" : {
+                  "demonstrate" : {
+                    "ReasoNet" : {
+                      "has" : {
+                        "outperforms" : {
+                          "has" : "all existing published approaches"
+                        }
+                      },
+                      "from sentence" : "In , we demonstrate that ReasoNet outperforms all existing published approaches ."
+                    }
+                  },
+                  "compare" : {
+                    "ReasoNet" : {
+                      "exceeds" : "BiDAF",
+                      "both in" : "single model and ensemble model cases",
+                      "from sentence" : "While we compare ReasoNet with BiDAF , ReasoNet exceeds BiDAF both in single model and ensemble model cases ."
+                    }
+                  },
+                  "has" : {
+                    "ReasoNet" : {
+                      "holds" : {
+                        "second position" : {
+                          "in" : {
+                            "all the competing approaches" : {
+                              "in" : "SQuAD leaderboard"
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "In the bottom part of , we compare ReasoNet with all unpublished methods at the time of this submission , ReasoNet holds the second position in all the competing approaches in the SQuAD leaderboard ."
+                    }
+                  }
+                }
+              }
+            },
+            "Graph Reachability" : {
+              "has" : {
+                "Experimental setup" : {
+                  "has" : {
+                    "Embedding Layer" : {
+                      "use" : {
+                        "100 - dimensional embedding vector" : {
+                          "for" : {
+                            "each symbol" : {
+                              "in" : "query and graph description"
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "Graph Reachability
+Embedding Layer
+We use a 100 - dimensional embedding vector for each symbol in the query and graph description ."
+
+                    },
+                    "maximum reasoning step T max" : {
+                      "set to" : {
+                        "15 and 25" : {
+                          "for" : "small graph and large graph dataset"
+                        }
+                      },
+                      "from sentence" : "The maximum reasoning step T max is set to 15 and 25 for the small graph and large graph dataset , respectively ."
+                    }
+                  },
+                  "use" : {
+                    "AdaDelta optimizer" : {
+                      "for" : "parameter optimization",
+                      "with" : {
+                        "initial learning rate" : {
+                          "of" : "0.5"
+                        },
+                        "batch size" : {
+                          "of" : "32"
+                        }
+                      },
+                      "from sentence" : "We use AdaDelta optimizer for parameter optimization with an initial learning rate of 0.5 and a batch size of 32 ."
+                    }
+                  }
+                },
+                "Results" : {
+                  "has" : {
+                    "Deep LSTM Reader" : {
+                      "achieves" : {
+                        "90.92 % and 71.55 % accuracy" : {
+                          "in" : "small and large graph dataset"
+                        },
+                        "from sentence" : "Deep LSTM
+Reader achieves 90.92 % and 71.55 % accuracy in the small and large graph dataset , respectively , which indicates the graph reachibility task is not trivial ."
+
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    } 
+  }
+}

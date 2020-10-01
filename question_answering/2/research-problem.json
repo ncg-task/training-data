@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Visual Question Answering", {"from sentence" : "Focal Visual - Text Attention for Visual Question Answering"}],
+    ["Visual question answering ( VQA )", {"from sentence" : "Visual question answering ( VQA ) is a successful direction utilizing both computer vision and natural language processing techniques to solve an interesting problem : given a pair of image and a question ( in natural language ) , the goal is to learn an inference model that can the answer questions according to cues discovered from the image ."}],
+    ["VQA", {"from sentence" : "Extending from VQA on a single image , this paper considers the following problem :"}]
+  ]
+}

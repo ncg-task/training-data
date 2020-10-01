@@ -1,0 +1,47 @@
+{
+  "has" : {
+    "Model" : {
+      "has" : {
+        "syntax - based neural language model" : {
+          "trained on" : {
+            "large - scale datasets" : {
+              "as" : "readability evaluator"
+            }
+          },
+          "from sentence" : "To answer the above questions , a syntax - based neural language model is trained on large - scale datasets as a readability evaluator ." 
+        },
+        "neural language model" : {
+          "to learn" : {
+            "correct word collocations" : {
+              "in terms of" : ["syntax", "semantics"]
+            }
+          },
+          "from sentence" : "The neural language model is supposed to learn the correct word collocations in terms of both syntax and semantics ."
+        },
+        "policy network" : {
+          "to form" : {
+            "compression" : {
+              "performs either" : ["RETAIN", "REMOVE"]
+            }
+          },
+          "receives" : {
+            "reward ( e.g. , readability score )" : {
+              "to update" : "network"
+            }
+          },
+          "from sentence" : "The policy network performs either RETAIN or REMOVE action to form a compression , and receives a reward ( e.g. , readability score ) to update the network ."
+        }
+      },
+      "formulate" : {
+        "deletionbased sentence compression" : {
+          "series of" : {
+            "trialand - error deletion operations" : {
+              "through" : "reinforcement learning framework"
+            }
+          },
+          "from sentence" : "Subsequently , we formulate the deletionbased sentence compression as a series of trialand - error deletion operations through a reinforcement learning framework ."
+        }
+      }
+    }
+  }
+}

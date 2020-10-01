@@ -1,0 +1,53 @@
+132	3	8	train
+132	13	61	model parameters and word / character embeddings
+132	62	64	by
+132	69	115	mini-batch stochastic gradient descent ( SGD )
+132	116	120	with
+132	121	131	batch size
+132	132	134	10
+132	137	145	momentum
+132	146	149	0.9
+132	152	173	initial learning rate
+132	174	178	0.01
+132	183	193	decay rate
+132	194	198	0.05
+133	8	11	use
+133	14	31	gradient clipping
+133	32	34	of
+133	35	38	5.0
+134	15	27	trained with
+134	28	42	early stopping
+134	45	53	based on
+134	58	81	development performance
+32	71	100	propose and carefully analyze
+32	103	150	neural part - of - speech ( POS ) tagging model
+32	151	164	that exploits
+32	165	185	adversarial training
+33	0	4	With
+33	7	25	BiLSTM - CRF model
+33	26	28	as
+33	33	52	baseline POS tagger
+33	58	63	apply
+33	64	84	adversarial training
+33	88	99	considering
+33	100	113	perturbations
+33	114	116	to
+33	117	150	input word / character embeddings
+2	20	46	Part - of - Speech Tagging
+6	41	59	neural POS tagging
+139	0	17	PTB - WSJ dataset
+141	80	82	on
+141	18	49	baseline ( BiLSTM - CRF ) model
+141	71	79	performs
+141	80	86	on par
+141	87	91	with
+141	92	128	other state - of - the - art systems
+141	52	60	accuracy
+141	61	68	97.54 %
+142	0	10	Built upon
+142	31	64	adversarial training ( AT ) model
+142	65	72	reaches
+142	73	81	accuracy
+142	82	89	97.58 %
+142	127	140	outperforming
+142	141	159	recent POS taggers

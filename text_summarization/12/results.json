@@ -1,0 +1,80 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "English Gigaword" : {
+          "has" : {
+            "SEASS model" : {
+              "with" : {
+                "beam search" : {
+                  "outperforms" : {
+                    "all baseline models" : {
+                      "by" : "large margin"
+                    }
+                  }
+                },
+                "from sentence" : "Our SEASS model with beam search outperforms all baseline models by a large margin ."                
+              },
+              "Even for" : {
+                "greedy search" : {
+                  "still performs better than" : "other methods"
+                },
+                "from sentence" : "Even for greedy search , our model still performs better than other methods which used beam search ."
+              },
+              "For the popular" : {
+                "ROUGE - 2 metric" : {
+                  "achieves" : "17.54 F1 score",
+                  "performs better than" : "previous works"
+                },
+                "from sentence" : "For the popular ROUGE - 2 metric , our SEASS model achieves 17.54 F1 score and performs better than the previous works ."      
+              },
+              "Compared to" : {
+                "ABS model" : {
+                  "has" : "6.22 ROUGE - 2 F1 relative gain",
+                  "from sentence" : "Compared to the ABS model , our model has a 6.22 ROUGE - 2 F1 relative gain ."
+                },
+                "highest CAs 2s baseline" : {
+                  "achieves" : "1.57 ROUGE - 2 F1 improvement",
+                  "passes" : {
+                    "significant test" : {
+                      "according to" : "official ROUGE script"
+                    }
+                  },
+                  "from sentence" : "Compared to the highest CAs 2s baseline , our model achieves 1.57 ROUGE - 2 F1 improvement and passes the significant test according to the official ROUGE script . "
+                }
+              }
+            }
+          }
+        },
+        "DUC 2004" : {
+          "has" : {
+            "SEASS" : {
+              "outperforms" : "all the baseline methods",
+              "achieves" : {
+                "29.21 , 9.56 and 25.51" : {
+                  "for" : "ROUGE 1 , 2 and L recall"
+                }
+              },
+              "from sentence" : "As summarized in , our SEASS outperforms all the baseline methods and achieves 29.21 , 9.56 and 25.51 for ROUGE 1 , 2 and L recall ."
+            }
+          },
+          "Compared to" : {
+            "ABS + model" : {
+              "tuned using" : "DUC 2003 data",
+              "has" : {
+                "our model" : {
+                  "performs" : {
+                    "significantly better" : {
+                      "by" : "1.07 ROUGE - 2 recall score"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Compared to the ABS + model which is tuned using DUC 2003 data , our model performs significantly better by 1.07 ROUGE - 2 recall score and is trained only with English Gigaword sentence - summary data without being tuned using DUC data ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

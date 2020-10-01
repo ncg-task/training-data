@@ -1,0 +1,133 @@
+151	0	7	applied
+151	8	16	BiDAF ++
+151	21	47	strong extractive QA model
+151	48	50	to
+151	51	63	QuAC dataset
+156	49	55	- FLOW
+156	58	65	removes
+156	70	84	flow component
+156	85	89	from
+156	90	98	IF layer
+156	128	141	- QHIER - RNN
+156	58	65	removes
+156	156	180	hierarchical LSTM layers
+156	79	81	on
+156	184	206	final question vectors
+37	25	60	https://github.com/momohuang/FlowQA
+13	3	10	present
+13	11	17	FLOWQA
+13	28	40	designed for
+13	41	77	conversational machine comprehension
+14	11	13	is
+14	0	6	FLOWQA
+14	7	18	consists of
+14	19	38	two main components
+14	43	60	base neural model
+14	61	64	for
+14	65	81	single - turn MC
+14	88	102	FLOW mechanism
+14	108	115	encodes
+14	120	140	conversation history
+17	5	19	FLOW mechanism
+17	2	4	is
+17	28	48	remarkably effective
+17	49	60	at tracking
+17	65	77	world states
+17	78	81	for
+17	82	118	sequential instruction understanding
+18	19	25	can be
+18	26	32	viewed
+18	33	35	as
+18	36	68	stacking single - turn QA models
+18	69	74	along
+18	79	97	dialog progression
+18	132	140	building
+18	141	157	information flow
+18	69	74	along
+18	79	85	dialog
+19	5	25	information transfer
+19	26	37	happens for
+19	38	55	each context word
+19	58	66	allowing
+19	67	83	rich information
+19	5	7	in
+19	91	108	reasoning process
+19	109	111	to
+19	112	116	flow
+15	82	86	feed
+15	106	135	entire hidden representations
+15	136	152	generated during
+15	157	164	process
+15	8	10	of
+15	168	196	answering previous questions
+22	26	33	propose
+22	37	78	alternating parallel processing structure
+22	81	86	which
+22	87	97	alternates
+22	98	105	between
+22	106	129	sequentially processing
+22	130	143	one dimension
+22	144	158	in parallel of
+22	163	178	other dimension
+22	190	199	speeds up
+22	200	208	training
+22	209	222	significantly
+2	38	74	CONVERSATIONAL MACHINE COMPREHENSION
+29	18	61	conversational machine comprehension ( MC )
+158	0	6	FLOWQA
+158	7	13	yields
+158	14	37	substantial improvement
+158	38	42	over
+158	43	58	existing models
+158	59	61	on
+158	62	75	both datasets
+158	78	89	+ 7.2 % F 1
+158	59	61	on
+158	93	97	CoQA
+158	100	111	+ 4.0 % F 1
+158	59	61	on
+158	115	119	QuAC
+161	3	12	find that
+161	13	17	FLOW
+161	18	20	is
+161	23	41	critical component
+162	0	8	Removing
+162	9	20	QHier - RNN
+162	27	39	minor impact
+162	42	47	0.1 %
+162	48	50	on
+162	51	64	both datasets
+162	75	83	removing
+162	84	88	FLOW
+162	89	99	results in
+162	102	130	substantial performance drop
+162	133	154	with or without using
+162	155	163	QHierRNN
+162	166	173	2 - 3 %
+162	48	50	on
+162	177	181	QuAC
+162	184	189	4.1 %
+162	48	50	on
+162	193	197	CoQA
+166	3	12	comparing
+166	13	32	0 - Ans and 1 - Ans
+166	33	35	on
+166	36	48	two datasets
+166	67	76	providing
+166	77	89	gold answers
+166	90	92	is
+166	93	105	more crucial
+166	106	109	for
+166	110	114	QuAC
+171	0	8	Based on
+171	13	26	training time
+171	38	43	takes
+171	27	37	each epoch
+171	107	114	speedup
+171	115	117	is
+171	118	122	8.1x
+171	6	8	on
+171	126	130	CoQA
+171	135	140	4.2 x
+171	6	8	on
+171	144	148	QuAC

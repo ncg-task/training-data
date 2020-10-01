@@ -1,0 +1,22 @@
+{
+  "has" : {
+    "Results" : {
+      "found that" : {
+        "performance fluctuates" : {
+          "with" : "different random initialization"
+        },
+        "from sentence" : "In our implementation , we found that the performance fluctuates with different random initialization , which is a well - known issue in training neural networks ."
+      },
+      "On average" : {
+        "our algorithm" : {
+          "better than" : "baseline methods",
+          "from sentence" : "On average , our algorithm is better than these baseline methods and our best trained model outperforms them in a large margin ."
+        },
+        "our best trained model" : {
+          "outperforms them in" : "large margin",
+          "from sentence" : "On average , our algorithm is better than these baseline methods and our best trained model outperforms them in a large margin ."
+        }
+      }
+    }
+  }
+}

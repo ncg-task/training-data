@@ -1,0 +1,263 @@
+170	0	24	Comparing the results of
+170	25	63	AEN - GloVe and AEN - Glo Ve w / o LSR
+170	69	76	observe
+170	86	94	accuracy
+170	22	24	of
+170	41	63	AEN - Glo Ve w / o LSR
+170	121	126	drops
+170	127	140	significantly
+170	141	143	on
+170	144	162	all three datasets
+172	4	23	overall performance
+172	24	26	of
+172	27	64	AEN - GloVe and AEN - Glo Ve - BiLSTM
+172	65	67	is
+172	68	84	relatively close
+172	43	55	AEN - Glo Ve
+172	100	108	performs
+172	109	115	better
+172	116	118	on
+172	123	141	Restaurant dataset
+173	19	31	AEN - Glo Ve
+173	36	52	fewer parameters
+173	60	69	easier to
+173	70	81	parallelize
+180	0	33	AEN - Glo Ve 's lightweight level
+180	34	39	ranks
+180	40	46	second
+181	22	32	model size
+181	33	35	of
+181	36	57	AEN - Glo Ve - BiLSTM
+181	61	70	more than
+181	71	76	twice
+181	33	35	of
+181	85	96	AEN - GloVe
+181	103	117	does not bring
+181	118	146	any performance improvements
+137	8	14	design
+137	17	41	basic BERT - based model
+137	42	53	to evaluate
+137	58	69	performance
+137	70	72	of
+137	73	83	AEN - BERT
+139	0	19	Feature - based SVM
+139	20	22	is
+139	25	71	traditional support vector machine based model
+139	72	76	with
+139	77	106	extensive feature engineering
+140	0	8	Rec - NN
+140	17	21	uses
+140	22	27	rules
+140	28	40	to transform
+140	45	60	dependency tree
+140	65	68	put
+140	73	87	opinion target
+140	88	90	at
+140	95	99	root
+140	111	117	learns
+140	122	145	sentence representation
+140	146	152	toward
+140	81	87	target
+140	160	163	via
+140	164	184	semantic composition
+140	185	190	using
+140	191	204	Recursive NNs
+141	0	6	MemNet
+141	7	11	uses
+141	12	42	multi-hops of attention layers
+141	33	35	on
+141	50	73	context word embeddings
+141	74	77	for
+141	78	101	sentence representation
+141	102	124	to explicitly captures
+141	129	139	importance
+141	23	25	of
+141	143	160	each context word
+143	0	9	TD - LSTM
+143	10	17	extends
+143	5	9	LSTM
+143	23	31	by using
+143	32	49	two LSTM networks
+143	50	58	to model
+143	63	75	left context
+143	76	80	with
+143	81	87	target
+143	96	109	right context
+143	76	80	with
+143	81	87	target
+145	0	11	ATAE - LSTM
+145	7	11	LSTM
+146	23	34	strengthens
+146	39	66	effect of target embeddings
+146	69	82	which appends
+146	49	66	target embeddings
+146	105	109	with
+146	110	130	each word embeddings
+146	135	138	use
+146	105	109	with
+146	149	158	attention
+146	159	165	to get
+146	170	190	final representation
+146	191	194	for
+146	195	209	classification
+147	0	3	IAN
+147	4	10	learns
+147	15	30	representations
+147	31	33	of
+147	38	56	target and context
+147	57	61	with
+147	62	86	two LSTMs and attentions
+147	103	118	which generates
+147	15	30	representations
+147	139	142	for
+147	143	163	targets and contexts
+147	164	179	with respect to
+147	180	190	each other
+148	0	3	RAM
+148	4	15	strengthens
+148	16	25	Mem - Net
+148	26	41	by representing
+148	42	48	memory
+148	49	53	with
+148	54	72	bidirectional LSTM
+148	77	82	using
+148	85	113	gated recurrent unit network
+148	114	124	to combine
+148	129	155	multiple attention outputs
+148	156	159	for
+148	160	183	sentence representation
+150	0	20	AEN - GloVe w/ o PCT
+150	21	28	ablates
+150	29	39	PCT module
+151	0	20	AEN - GloVe w/ o MHA
+151	21	28	ablates
+151	29	39	MHA module
+152	0	20	AEN - GloVe w/ o LSR
+152	21	28	ablates
+152	29	59	label smoothing regularization
+153	0	16	AEN-GloVe-BiLSTM
+153	17	25	replaces
+153	30	55	attentional encoder layer
+153	56	60	with
+153	61	83	two bidirectional LSTM
+155	0	10	BERT - SPC
+155	11	16	feeds
+155	77	81	into
+155	86	102	basic BERT model
+155	103	106	for
+155	107	140	sentence pair classification task
+126	0	5	shows
+126	10	47	number of training and test instances
+126	23	25	in
+126	51	64	each category
+127	0	15	Word embeddings
+127	11	13	in
+127	19	31	AEN - Glo Ve
+127	32	53	do not get updated in
+127	58	74	learning process
+127	84	95	fine - tune
+127	96	112	pre-trained BERT
+127	11	13	in
+127	118	128	AEN - BERT
+128	0	25	Embedding dimension d dim
+128	26	28	is
+128	29	32	300
+128	33	36	for
+128	37	42	GloVe
+128	50	53	768
+128	33	36	for
+128	58	73	pretrained BERT
+129	0	9	Dimension
+129	10	12	of
+129	13	32	hidden states d hid
+129	36	42	set to
+129	43	46	300
+130	4	11	weights
+130	12	14	of
+130	15	24	our model
+130	29	45	initialized with
+130	46	67	Glorot initialization
+133	0	39	Adam optimizer ( Kingma and Ba , 2014 )
+133	43	53	applied to
+133	54	60	update
+133	61	79	all the parameters
+131	0	6	During
+131	7	15	training
+131	21	24	set
+131	25	50	label smoothing parameter
+131	51	53	to
+131	54	57	0.2
+132	27	29	is
+132	30	36	10 ? 5
+132	41	53	dropout rate
+132	27	29	is
+132	57	60	0.1
+26	11	18	propose
+26	22	43	attention based model
+27	15	24	our model
+27	25	32	eschews
+27	33	43	recurrence
+27	48	55	employs
+27	56	65	attention
+27	66	68	as
+27	71	94	competitive alternative
+27	95	102	to draw
+27	107	146	introspective and interactive semantics
+27	147	154	between
+27	155	179	target and context words
+28	0	12	To deal with
+28	17	42	label unreliability issue
+28	48	54	employ
+28	57	87	label smoothing regularization
+28	88	100	to encourage
+28	105	110	model
+28	111	116	to be
+28	117	131	less confident
+28	8	12	with
+28	137	149	fuzzy labels
+29	8	13	apply
+29	14	30	pre-trained BERT
+2	32	65	Targeted Sentiment Classification
+12	39	72	fine - grained sentiment analysis
+16	76	124	fine - grained targeted sentiment classification
+161	4	23	overall performance
+161	24	26	of
+161	27	36	TD - LSTM
+161	37	39	is
+161	40	48	not good
+161	63	68	makes
+161	71	86	rough treatment
+161	24	26	of
+161	94	106	target words
+162	0	25	ATAE - LSTM , IAN and RAM
+162	26	29	are
+162	30	52	attention based models
+162	60	73	stably exceed
+162	78	94	TD - LSTM method
+162	37	39	on
+162	98	128	Restaurant and Laptop datasets
+163	0	3	RAM
+163	7	18	better than
+163	19	41	other RNN based models
+163	51	67	does not perform
+163	68	72	well
+163	73	75	on
+163	76	91	Twitter dataset
+164	0	19	Feature - based SVM
+164	23	28	still
+164	31	51	competitive baseline
+164	58	68	relying on
+164	69	97	manually - designed features
+165	0	8	Rec - NN
+165	9	13	gets
+165	18	36	worst performances
+165	37	42	among
+165	43	71	all neural network baselines
+166	0	4	Like
+166	5	8	AEN
+166	11	18	Mem Net
+166	24	31	eschews
+166	32	42	recurrence
+166	53	72	overall performance
+166	73	75	is
+166	76	84	not good

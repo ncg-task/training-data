@@ -1,0 +1,3 @@
+(Contribution||has research problem||Learning document embeddings)
+(Contribution||has research problem||topic identification)
+(Contribution||has research problem||L EARNING word and document embeddings)

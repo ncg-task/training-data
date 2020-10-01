@@ -1,0 +1,47 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "new LSTM - based architecture" : {
+          "for learning" : "natural language inference",
+          "from sentence" : "In this paper , we propose a new LSTM - based architecture for learning natural language inference ."
+        }
+      },
+      "use" : {
+        "LSTM" : {
+          "to perform" : {
+            "word - by - word matching" : {
+              "of" : {
+                "hypothesis" : {
+                  "with" : "premise"
+                }
+              }
+            },
+            "from sentence" : "Instead , we use an LSTM to perform word - by - word matching of the hypothesis with the premise ."
+          }
+        }
+      },
+      "has" : {
+        "Our LSTM" : {
+          "sequentially processes" : "hypothesis",
+          "at each position" : {
+            "tries to match" : {
+              "has" : {
+                "current word" : {
+                  "in" : "hypothesis",
+                  "with" : {
+                    "attention - weighted representation" : {
+                      "of" : "premise"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Our LSTM sequentially processes the hypothesis , and at each position , it tries to match the current word in the hypothesis with an attention - weighted representation of the premise ."
+        }
+      },
+      "refer to" : ["match - LSTM", {"m LSTM" : {"for" : "short"}}, {"from sentence" : "We refer to this architecture a match - LSTM , or m LSTM for short ."}]
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "has" : {
+        "slight increment" : {
+          "from" : {
+            "RAGF" : {
+              "to" : "RAGFD"
+            }
+          },
+          "demonstrates" : {
+            "effectiveness" : {
+              "of" : "discriminator"
+            }
+          },
+          "from sentence" : "There is a slight increment from RAGF to RAGFD , which demonstrates the effectiveness of discriminator ."
+        }
+      },
+      "find that" : {
+        "RAGFWD" : {
+          "achieves" : {
+            "4.3 % improvement" : {
+              "over" : "RAGFD",
+              "in terms of" : "BLEU"
+            }
+          }
+        },
+        "PAAG" : {
+          "has" : {
+            "outperforms" : {
+              "has" : {
+                "RAGFWD" : {
+                  "has" : {
+                    "4.1 %" : {
+                      "in terms of" : "BLEU"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "From , we find that RAGFWD achieves a 4.3 % improvement over RAGFD in terms of BLEU , and PAAG outperforms RAGFWD 4.1 % in terms of BLEU ."        
+      },
+      "conclude that" : {
+        "performance" : {
+          "of" : {
+            "PAAG" : {
+              "benefits from" : {
+                "Wasserstein distance based adversarial learning" : {
+                  "with" : "gradient penalty",
+                  "can help" : {
+                    "our model" : {
+                      "to achieve" : {
+                        "better performance" : {
+                          "than" : {
+                            "model" : {
+                              "using" : "vanilla GAN architecture"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Accordingly , we conclude that the performance of PAAG benefits from using Wasserstein distance based adversarial learning with gradient penalty .
+This approach can help our model to achieve a better performance than the model using the vanilla GAN architecture ."
+
+        }
+      }
+    }
+  }
+}

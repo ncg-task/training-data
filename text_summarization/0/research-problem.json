@@ -1,0 +1,8 @@
+{
+  "has research problem" : [
+    ["Abstractive Text Summarization", {"from sentence" : "Abstractive Text Summarization by Incorporating Reader Comments"}],
+    ["neural abstractive summarization", {"from sentence" : "In neural abstractive summarization field , conventional sequence - to - sequence based models often suffer from summarizing the wrong aspect of the document with respect to the main aspect ."}],
+    ["reader - aware abstractive summary generation", {"from sentence" : "To tackle this problem , we propose the task of reader - aware abstractive summary generation , which utilizes the reader comments to help the model produce better summary about the main aspect ."}],
+    ["abstractive summarization", {"from sentence" : "Unlike traditional abstractive summarization task , reader - aware summarization confronts two main challenges :"}]
+  ]
+}

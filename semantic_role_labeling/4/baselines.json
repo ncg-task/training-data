@@ -1,0 +1,7 @@
+{
+  "has" : {
+    "Baselines" : {
+      "use" : ["BiLSTM - CRF model", {"from sentence" : "For comparison , as a model based on BIO tagging approaches , we use the BiLSTM - CRF model proposed by ."}]
+    }
+  }
+}

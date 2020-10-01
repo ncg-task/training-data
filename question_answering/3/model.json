@@ -1,0 +1,67 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "new compositional encoder" : {
+          "be used" : {
+            "in place" : {
+              "of" : "standard RNN encoders"
+            }
+          },
+          "serve as" : {
+            "new module" : {
+              "complementary to" : "existing neural architectures"
+            }
+          },
+          "from sentence" : "To this end , we propose a new compositional encoder that can either be used in place of standard RNN encoders or serve as a new module that is complementary to existing neural architectures ."
+        }
+      },
+      "has" : {
+        "Our proposed encoder" : {
+          "leverages" : {
+            "dilated compositions" : {
+              "to model" : {
+                "relationships" : {
+                  "across" : "multiple granularities"
+                }
+              }
+            }
+          },
+          "from sentence" : "Our proposed encoder leverages dilated compositions to model relationships across multiple granularities ."
+        },
+        "output" : {
+          "of" : {
+            "dilated composition mechanism" : {
+              "acts as" : "gating functions",
+              "used to learn" : {
+                "compositional representations" : {
+                  "of" : "input sequence"
+                }
+              }
+            }
+          },
+          "from sentence" : "The output of the dilated composition mechanism acts as gating functions , which are then used to learn compositional representations of the input sequence ."
+        }
+      },
+      "for" : {
+        "given word" : {
+          "in" : "target sequence",
+          "has" : {
+            "our encoder" : {
+              "exploits" : {
+                "long - term ( far ) and short - term ( near ) information" : {
+                  "to decide" : {
+                    "information" : {
+                      "to" : "retain"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "That is , for a given word in the target sequence , our encoder exploits both long - term ( far ) and short - term ( near ) information to decide how much information to retain for it ."
+        }
+      }
+    }
+  }
+}

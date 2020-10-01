@@ -1,0 +1,76 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "has" : {
+        "Hyper QA" : {
+          "implemented in" : "Tensor - Flow",
+          "from sentence" : "Hyper QA is implemented in Tensor - Flow ."
+        },
+        "batch size" : {
+          "is" : {
+            "tuned" : {
+              "amongst" : "{ 50 , 100 , 200 }",
+              "from sentence" : "The batch size is tuned amongst { 50 , 100 , 200 } ."
+            } 
+          }
+        },
+        "Models" : {
+          "trained for" : "25 epochs",
+          "has" : {
+            "model parameters" : {
+              "are" : {
+                "saved" : {
+                  "each time" : {
+                    "performance" : {
+                      "on" : "validation set",
+                      "is" : "topped"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Models are trained for 25 epochs and the model parameters are saved each time the performance on the validation set is topped ."
+        },
+        "dimension" : {
+          "of" : {
+            "projection layer" : {
+              "is" : {
+                "tuned" : {
+                  "amongst" : "{ 100 , 200 , 300 , 400 }"
+                }
+              },
+              "from sentence" : "The dimension of the projection layer is tuned amongst { 100 , 200 , 300 , 400 } ."
+            }
+          }
+        },
+        "L2 regularization" : {
+          "is" : {
+            "tuned" : {
+              "amongst" : "{ 0.001 , 0.0001 , 0.00001 }"
+            }
+          },
+          "from sentence" : "L2 regularization is tuned amongst { 0.001 , 0.0001 , 0.00001 }."
+        },
+        "negative sampling rate" : {
+          "is" : {
+            "tuned" : {
+              "from" : "2 to 8"
+            }
+          },
+          "from sentence" : "The negative sampling rate is tuned from 2 to 8 ."
+        }
+      },
+      "adopt" : {
+        "AdaGrad optimizer" : {
+          "with" : {
+            "initial learning rate" : {
+              "tuned amongst" : "{ 0.2 , 0.1 , 0.05 , 0.01 }"
+            }
+          },
+          "from sentence" : "We adopt the AdaGrad optimizer with initial learning rate tuned amongst { 0.2 , 0.1 , 0.05 , 0.01 } ."
+        }
+      }
+    }
+  }
+}

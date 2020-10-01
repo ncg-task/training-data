@@ -1,0 +1,56 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "relative performance" : {
+          "of" : {
+            "SuBiL - STM and SuBiLSTM - Tied" : {
+              "are" : "fairly close"
+            }
+          },
+          "from sentence" : "The relative performance of SuBiL - STM and SuBiLSTM - Tied are fairly close to each other , as shown by the relative gains in ."
+        },
+        "SuBiLSTM - Tied" : {
+          "works" : {
+            "better" : {
+              "on" : "small datasets ( SST and TREC )"
+            }
+          },
+          "from sentence" : "SuBiLSTM - Tied works better on small datasets ( SST and TREC ) , probably owing to the regularizing effect of using the same LSTM to encode both suffixes and prefixes ."
+        },
+        "training complexity" : {
+          "for both" : {
+            "models" : {
+              "is" : "similar",
+              "has" : {
+                "SuBILSTM - Tied" : {
+                  "with" : {
+                    "half the parameters" : {
+                      "should be" : {
+                        "more favored model" : {
+                          "for" : "sentence modeling tasks"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "The training complexity for both the models is similar and hence , with half the parameters , SuBILSTM - Tied should be the more favored model for sentence modeling tasks ."
+        }
+      },
+      "For" : {
+        "larger datasets ( SNLI and QUORA )" : {
+          "has" : {
+            "SuBILSTM" : {
+              "edges out" : "tied version",
+              "owing to" : "larger capacity"
+            }
+          },
+          "from sentence" : "For the larger datasets ( SNLI and QUORA ) , SuBILSTM slightly edges out the tied version owing to its larger capacity ."
+        }
+      }
+    }
+  }
+}

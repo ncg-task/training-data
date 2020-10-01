@@ -1,0 +1,169 @@
+208	3	9	notice
+208	15	26	reattention
+208	31	46	more influences
+208	24	26	on
+208	50	58	EM score
+208	65	69	DCRL
+208	70	89	contributes more to
+208	90	99	F1 metric
+208	106	119	removing both
+208	128	138	results in
+208	139	149	huge drops
+208	24	26	on
+208	153	165	both metrics
+209	0	9	Replacing
+209	10	14	DCRL
+209	15	19	with
+209	20	24	SCST
+209	30	36	causes
+209	39	55	marginal decline
+209	56	58	of
+209	59	70	performance
+209	71	73	on
+209	74	86	both metrics
+210	21	47	default attention function
+210	48	52	with
+210	57	94	dot product : f ( u , v ) = u v ( 5 )
+210	101	113	both metrics
+210	114	125	suffer from
+210	126	138	degradations
+212	0	8	Removing
+212	9	34	any of the two heuristics
+212	35	43	leads to
+212	44	69	some performance declines
+212	76	97	heuristic subtraction
+212	28	30	is
+212	101	115	more effective
+212	116	120	than
+212	121	135	multiplication
+214	18	41	highway - like function
+214	46	58	outperformed
+214	63	79	simpler variants
+217	18	37	very deep alignment
+217	38	42	with
+217	43	51	5 blocks
+217	52	62	results in
+217	65	96	significant performance decline
+216	15	20	using
+216	21	29	2 blocks
+216	30	36	causes
+216	39	62	slight performance drop
+216	71	84	increasing to
+216	85	93	4 blocks
+216	94	108	barely affects
+216	113	124	SoTA result
+190	3	6	use
+190	11	25	Adam optimizer
+190	51	54	for
+190	60	80	ML and DCRL training
+191	4	26	initial learning rates
+191	27	30	are
+191	31	48	0.0008 and 0.0001
+191	72	78	halved
+191	79	95	whenever meeting
+191	98	111	bad iteration
+193	0	15	Word embeddings
+193	16	22	remain
+193	23	28	fixed
+193	29	35	during
+193	36	44	training
+195	4	8	size
+195	9	11	of
+195	12	55	character embedding and corresponding LSTMs
+195	56	58	is
+195	59	61	50
+195	68	84	main hidden size
+195	56	58	is
+195	88	91	100
+195	102	116	hyperparameter
+195	56	58	is
+195	122	123	3
+192	55	65	to prevent
+192	66	77	overfitting
+192	4	14	batch size
+192	15	17	is
+192	18	20	48
+192	27	39	dropout rate
+192	40	42	of
+192	43	46	0.3
+194	0	3	For
+194	4	27	out of vocabulary words
+194	33	36	set
+194	41	51	embeddings
+194	52	56	from
+194	57	79	Gaussian distributions
+194	84	93	keep them
+194	94	103	trainable
+27	34	41	present
+27	44	65	reattention mechanism
+27	66	70	that
+27	71	91	temporally memorizes
+27	92	107	past attentions
+27	112	121	uses them
+27	125	131	refine
+27	132	150	current attentions
+27	128	130	in
+27	156	190	multi-round alignment architecture
+28	4	15	computation
+28	19	27	based on
+28	42	51	two words
+28	59	64	share
+28	65	82	similar semantics
+28	83	85	if
+28	92	102	attentions
+28	103	108	about
+28	109	119	same texts
+28	61	64	are
+28	124	141	highly overlapped
+28	148	150	be
+28	151	163	less similar
+29	16	27	reattention
+29	32	34	be
+29	35	52	more concentrated
+29	53	55	if
+29	56	71	past attentions
+29	72	80	focus on
+29	81	91	same parts
+29	92	94	of
+29	99	104	input
+29	113	139	relatively more distracted
+29	146	157	to focus on
+29	158	169	new regions
+29	53	55	if
+29	56	71	past attentions
+29	189	192	are
+29	193	214	not overlapped at all
+30	31	37	extend
+30	42	69	traditional training method
+30	70	74	with
+30	77	91	novel approach
+30	92	98	called
+30	99	140	dynamic - critical reinforcement learning
+31	124	143	dynamically decides
+31	148	171	reward and the baseline
+31	172	184	according to
+31	185	208	two sampling strategies
+2	31	60	Machine Reading Comprehension
+198	23	25	on
+198	30	45	hidden test set
+198	46	48	of
+198	49	54	SQuAD
+198	46	48	of
+198	46	48	of
+200	14	26	R.M - Reader
+200	27	35	achieves
+200	39	47	EM score
+200	51	57	79.5 %
+200	62	70	F1 score
+200	74	80	86.6 %
+204	29	52	comfortably outperforms
+204	57	72	previous models
+204	73	75	by
+204	76	89	more than 6 %
+204	90	92	in
+204	98	115	EM and F 1 scores
+202	0	18	Our ensemble model
+202	19	27	improves
+202	32	39	metrics
+202	40	42	to
+202	43	60	82.3 % and 88.5 %

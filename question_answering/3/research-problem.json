@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Reading Comprehension", {"from sentence" : "Multi - Granular Sequence Encoding via Dilated Compositional Units for Reading Comprehension"}],
+    ["reading comprehension ( RC )", {"from sentence" : "This paper presents anew compositional encoder for reading comprehension ( RC ) ."}],
+    ["RC", {"from sentence" : "We conduct experiments on three RC datasets , showing that our proposed encoder demonstrates very promising results both as a standalone encoder as well as a complementary building block ."}]
+  ]
+}

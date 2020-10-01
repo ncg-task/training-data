@@ -1,0 +1,90 @@
+{
+  "has" : {
+    "Results" : {
+      "For" : {
+        "WikiQA dataset" : {
+          "has" : {
+            "pointwise learning approach" : {
+              "shows" : {
+                "better performance" : {
+                  "than" : "listwise learning approach"
+                }
+              }
+            },
+            "from sentence" : "Wiki QA : For the WikiQA dataset , the pointwise learning approach shows a better performance than the listwise learning approach ."
+          },
+          "combine" : {
+            "LM" : {
+              "with" : "base model ( Comp - Clip + LM )",
+              "observe" : {
+                "significant improvement" : {
+                  "in" : {
+                    "performance" : {
+                      "in terms of" : "MAP ( 0.714 to 0.746 absolute )"
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "We combine LM with the base model ( Comp - Clip + LM ) and observe a significant improvement in performance in terms of MAP ( 0.714 to 0.746 absolute ) ."
+          },
+          "add" : {
+            "LC method ( Comp - Clip + LM + LC )" : {
+              "has" : {
+                "best previous results" : {
+                  "are" : {
+                    "surpassed" : {
+                      "in terms of" : "MAP ( 0.718 to 0.764 absolute )"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "When we add the LC method ( Comp - Clip + LM + LC ) , the best previous results are surpassed in terms of MAP ( 0.718 to 0.764 absolute ) ."
+            }
+          }
+        }
+      },
+      "with" : {
+        "TREC - QA dataset" : {
+          "has" : {
+            "pointwise learning approach" : {
+              "shows" : "excellent performance",
+              "from sentence" : "The pointwise learning approach also shows excellent performance with the TREC - QA dataset ."              
+            },
+            "our model" : {
+              "outperforms" : {
+                "best previous result" : {
+                  "add" : "LC method , ( Comp - Clip + LM + LC )",
+                  "in terms of" : {
+                    "MAP" : {
+                      "has" : {
+                        "0.865"  : {
+                          "to" : "0.868"
+                        } 
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "In particular , our model outperforms the best previous result when we add LC method , ( Comp - Clip + LM + LC ) in terms of MAP ( 0.865 to 0.868 ) ."
+            }            
+          },
+          "achieve" : {
+            "additional performance gains" : {
+              "in terms of" : {
+                "MAP" : {
+                  "apply" : {
+                    "LM , LC , and TL" : {
+                      "has" : "0.850 , 0.868 and 0.875"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "As in the WikiQA case , we achieve additional performance gains in terms of the MAP as we apply LM , LC , and TL ( 0.850 , 0.868 and 0.875 , respectively ) ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

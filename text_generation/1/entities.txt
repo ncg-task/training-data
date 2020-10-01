@@ -1,0 +1,143 @@
+28	19	26	propose
+28	29	65	novel adversarial learning framework
+28	68	75	RankGAN
+32	70	75	train
+32	80	86	ranker
+32	87	94	to rank
+32	99	126	machine - written sentences
+32	127	137	lower than
+32	138	163	human - written sentences
+32	164	179	with respect to
+32	182	200	reference sentence
+32	201	209	which is
+32	210	223	human-written
+29	8	14	learns
+29	19	24	model
+29	25	29	from
+29	34	62	relative ranking information
+29	63	70	between
+29	71	126	the machine - written and the human - written sentences
+29	47	49	in
+29	133	154	adversarial framework
+30	29	34	relax
+30	39	47	training
+30	48	50	of
+30	55	68	discriminator
+30	65	67	to
+30	74	115	learning - to - rank optimization problem
+31	19	27	proposed
+31	28	51	new adversarial network
+31	52	63	consists of
+31	64	89	two neural network models
+31	92	116	a generator and a ranker
+33	17	22	train
+33	27	36	generator
+33	37	50	to synthesize
+33	51	60	sentences
+33	61	74	which confuse
+33	79	85	ranker
+33	86	93	so that
+33	94	121	machine - written sentences
+33	126	144	ranked higher than
+33	145	170	human - written sentences
+34	0	6	During
+34	7	15	learning
+34	21	26	adopt
+34	31	56	policy gradient technique
+34	57	68	to overcome
+34	73	99	non-differentiable problem
+35	18	25	viewing
+35	28	60	set of data samples collectively
+35	65	75	evaluating
+35	82	89	quality
+35	90	97	through
+35	98	114	relative ranking
+35	32	34	of
+35	40	47	samples
+35	121	134	discriminator
+35	138	150	able to make
+35	151	168	better assessment
+35	215	220	helps
+35	225	234	generator
+35	235	243	to learn
+35	151	157	better
+36	14	26	suitable for
+36	27	44	language learning
+36	45	61	in comparison to
+36	62	79	conventional GANs
+2	24	43	Language Generation
+189	33	40	RankGAN
+189	41	49	performs
+189	50	65	more favourably
+189	66	73	against
+189	78	94	compared methods
+191	42	44	on
+191	6	32	MLE , PG - BLEU and SeqGAN
+191	33	40	tend to
+191	41	49	converge
+191	50	55	after
+191	56	75	200 training epochs
+191	82	98	proposed RankGAN
+191	99	120	consistently improves
+191	125	143	language generator
+191	148	156	achieves
+191	157	173	relatively lower
+191	174	183	NLL score
+193	6	18	worth noting
+193	28	44	proposed RankGAN
+193	45	53	achieves
+193	54	72	better performance
+193	73	77	than
+193	86	95	PG - BLEU
+209	73	81	estimate
+209	86	96	similarity
+209	97	104	between
+211	10	19	seen that
+211	24	41	proposed Rank GAN
+211	42	50	performs
+211	51	66	more favourably
+211	67	78	compared to
+211	83	113	state - of - the - art methods
+211	114	125	in terms of
+211	126	140	BLEU - 2 score
+238	40	51	in terms of
+238	56	78	human evaluation score
+238	0	7	RankGAN
+238	8	19	outperforms
+238	24	39	compared method
+249	0	7	RankGAN
+249	8	16	achieves
+249	17	35	better performance
+249	36	40	than
+249	45	58	other methods
+249	59	70	in terms of
+249	71	91	different BLEU score
+251	25	34	our model
+251	38	54	able to generate
+251	55	79	fluent , novel sentences
+251	89	104	not existing in
+251	109	121	training set
+257	21	46	human - written sentences
+257	47	50	get
+257	55	68	highest score
+257	69	81	comparing to
+257	86	101	language models
+258	0	5	Among
+258	10	25	GANs approaches
+258	28	35	RankGAN
+258	36	44	receives
+258	45	57	better score
+258	58	62	than
+258	63	69	SeqGAN
+266	21	36	proposed method
+266	37	45	achieves
+266	46	76	consistently higher BLEU score
+266	77	81	than
+266	86	99	other methods
+266	100	111	in terms of
+266	116	142	different n-grams criteria
+267	25	41	proposed RankGAN
+267	42	60	is able to capture
+267	65	83	transition pattern
+267	84	89	among
+267	94	99	words

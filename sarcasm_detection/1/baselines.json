@@ -1,0 +1,55 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "Bag - of - Words" : {
+          "uses" : {
+            "comment 's" : {
+              "has" : {
+                "word counts" : {
+                  "as" : {
+                    "features" : {
+                      "in" : "vector"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "This model uses a comment 's word - counts as features in a vector ."
+            }
+          }
+        },
+        "CNN" : {
+          "has" : "individual CNN version",
+          "from sentence" : "CNN : We compare our model with this individual CNN version ."
+        },
+        "CNN - SVM" : {
+          "consists of" : {
+            "CNN" : {
+              "for" : "content modeling"
+            },
+            "other pre-trained CNNs" : {
+              "for extracting" : {
+                "sentiment , emotion and personality features" : {
+                  "from" : "given comment"
+                }
+              }
+            }
+          },
+          "from sentence" : "CNN - SVM :
+This model proposed by consists of a CNN for content modeling and other pre-trained CNNs for extracting sentiment , emotion and personality features from the given comment ."
+
+        },
+        "CUE - CNN" : {
+          "models" : {
+            "user embeddings" : {
+              "method akin to" : "ParagraphVector"
+            },
+            "from sentence" : "CUE - CNN :
+This method proposed by also models user embeddings with a method akin to ParagraphVector ."
+
+          }
+        }
+      }
+    }
+  }  
+}

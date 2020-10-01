@@ -1,0 +1,94 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "Majority" : {
+          "is" : "basic baseline method",
+          "assigns" : {
+            "majority sentiment label" : {
+              "in" : {
+                "training set" : {
+                  "to each" : {
+                    "instance" : {
+                      "in" : "test set"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "( 1 ) Majority is a basic baseline method , which assigns the majority sentiment label in training set to each instance in the test set ."
+        },
+        "Feature - based SVM" : {
+          "performs" : {
+            "state - of - the - art" : {
+              "on" : "aspect level sentiment classification"
+            }
+          },
+          "from sentence" : "( 2 ) Feature - based SVM performs state - of - the - art on aspect level sentiment classification ."
+        },
+        "three LSTM models" : {
+          "In" : {
+            "LSTM" : {
+              "has" : {
+                "LSTM based recurrent model" : {
+                  "applied from" : {
+                    "start" : {
+                      "to" : {
+                        "end" : {
+                          "of" : "sentence"
+                        }
+                      }
+                    }
+                  }
+                },
+                "last hidden vector" : {
+                  "used as" : "sentence representation"
+                }
+              }
+            },
+            "TDLSTM" : {
+              "extends" : "LSTM",
+              "by taking into account" : "aspect",
+              "uses" : {
+                "two LSTM networks" : {
+                  "has" : "forward one and a backward one",
+                  "towards" : "aspect"
+                }
+              }
+            },
+            "TDLSTM + ATT" : {
+              "extends" : "TDLSTM",
+              "by incorporating" : {
+                "attention mechanism" : {
+                  "over" : "hidden vectors"
+                }
+              }
+            }          
+          },
+          "from sentence" : "( 3 ) We compare with three LSTM models ( Tang et al. , 2015 a ) ) .
+In LSTM , a LSTM based recurrent model is applied from the start to the end of a sentence , and the last hidden vector is used as the sentence representation .
+TDLSTM extends LSTM by taking into account of the aspect , and uses two LSTM networks , a forward one and a backward one , towards the aspect .
+TDLSTM + ATT extends TDLSTM by incorporating an attention mechanism ( Bahdanau et al. , 2015 ) over the hidden vectors ."
+
+        }
+      },
+      "use" : {
+        "same Glove word vectors" : {
+          "for" : "fair comparison",
+          "from sentence" : "We use the same Glove word vectors for fair comparison ."
+        }
+      },
+      "implement" : {
+        "ContextAVG" : {
+          "is" : {
+            "simplistic version" : {
+              "of" : "our approach"
+            }
+          },
+          "from sentence" : "( 4 ) We also implement ContextAVG , a simplistic version of our approach ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "has" : {
+    "Dataset" : {
+      "for predicting" : {
+        "prosodic prominence" : {
+          "from" : "text",
+          "based on" : "recently published Libri TTS corpus",
+          "containing" : {
+            "automatically generated prosodic prominence labels" : {
+              "for" : ["over 260 hours", {"2.8 million words" : {"of" : "English audio books"}}],
+              "read by" : "1230 different speakers"
+            }
+          }
+        },
+        "from sentence" : "In this paper we introduce a new NLP dataset and benchmark for predicting prosodic prominence from text which is based on the recently published Libri TTS corpus , containing automatically generated prosodic prominence labels for over 260 hours or 2.8 million words of English audio books , read by 1230 different speakers ."
+      },
+      "will be" : {
+        "largest publicly available dataset" : {
+          "with" : "prosodic annotations",
+          "from sentence" : "To our knowledge this will be the largest publicly available dataset with prosodic annotations ."
+        }
+      }
+    }
+  }
+}

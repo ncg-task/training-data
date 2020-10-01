@@ -1,0 +1,75 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "used" : {
+        "Glove 840B 300D 1 ( d e = 300 )" : {
+          "for" : {
+            "pre-trained word embedding" : {
+              "without" : "finetuning"
+            }
+          },
+          "train" : "more universally usable sentence encoder"
+        },
+        "from sentence" : "We used the Glove 840B 300D 1 ( d e = 300 ) for the pre-trained word embedding without any finetuning .
+This is to train the more universally usable sentence encoder ."        
+
+      },
+      "has" : {
+        "Layer normalization" : {
+          "applied to" : {
+            "all linear projections" : {
+              "of" : ["masked multihead attention", "fusion gate", "multi-dimensional attention"]
+            }
+          },
+          "from sentence" : "Layer normalization was applied to all linear projections of masked multihead attention , fusion gate , and multi-dimensional attention ."
+        },
+        "dropout probability" : {
+          "set to" : "0.1",
+          "from sentence" : "We set h = 5 , ? = 1.5 in the masked multi-head attention , and the dropout probability was set to 0.1 ."
+        },
+        "Batch size" : {
+          "was" : "64",
+          "from sentence" : "Batch size was 64 , and the model was trained with Adam optimizer , with a learning rate of 0.001 ."
+        },
+        "model" : {
+          "trained with" : {
+            "Adam optimizer" : {
+              "with" : {
+                "learning rate" : {
+                  "of" : "0.001"
+                }
+              },
+              "from sentence" : "Batch size was 64 , and the model was trained with Adam optimizer , with a learning rate of 0.001 ."
+            }
+          }
+        }
+      },
+      "applied" : {
+        "residual dropout" : {
+          "with" : {
+            "dropout" : {
+              "to" : {
+                "output" : {
+                  "of" : ["masked multi-head attention", "SF +H F +b F of fusion gate"]
+                }
+              }
+            }
+          },
+          "from sentence" : "We applied residual dropout as used in , with dropout to the output of masked multi-head attention and SF +H F +b F of fusion gate ."
+        }
+      },
+      "set" : {
+        "h = 5 , ? = 1.5" : {
+          "in" : "masked multi-head attention",
+          "from sentence" : "We set h = 5 , ? = 1.5 in the masked multi-head attention , and the dropout probability was set to 0.1 ."
+        }
+      },
+      "implemented via" : {
+        "Tensorflow" : {
+          "on" : "single Nvidia Geforce GTX 1080 Ti GPU"
+        },
+        "from sentence" : "All models were implemented via Tensorflow on single Nvidia Geforce GTX 1080 Ti GPU ."
+      }
+    }
+  }
+}

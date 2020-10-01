@@ -1,0 +1,42 @@
+{
+  "has" : {
+    "Approach" : {
+      "explore" : {
+        "various deep learning based architectures" : {
+          "combine them in" : {
+            "ensemble based architecture" : {
+              "to allow" : {
+                "training" : {
+                  "across" : {
+                    "different modalities" : {
+                      "using" : "variations of the better individual models"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "We explore various deep learning based architectures to first get the best individual detection accuracy from each of the different modes .
+We then combine them in an ensemble based architecture to allow for training across the different modalities using the variations of the better individual models ."
+
+        }
+      },
+      "has" : {
+        "Our ensemble" : {
+          "consists of" : ["Long Short Term Memory networks", "Convolution Neural Networks", "fully connected Multi - Layer Perceptrons"],
+          "using techniques" : ["Dropout", {"adaptive optimizers" : {"such as" : "Adam"}}, "pretrained word - embedding models and Attention based RNN decoders"],
+          "from sentence" : "Our ensemble consists of Long Short Term Memory networks , Convolution Neural Networks , fully connected Multi - Layer Perceptrons and we complement them using techniques such as Dropout , adaptive optimizers such as Adam , pretrained word - embedding models and Attention based RNN decoders ."
+        }        
+      },
+      "allows us to" : {
+        "individually target" : {
+          "each" : "modality"
+        },
+        "perform feature fusion" : {
+          "at" : "final stage"
+        },
+        "from sentence" : "This allows us to individually target each modality and only perform feature fusion at the final stage ."
+      }
+    }  
+  }
+}

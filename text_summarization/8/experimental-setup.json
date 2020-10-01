@@ -1,0 +1,50 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "has" : {
+        "inference parameters" : {
+          "tuned on" : "200 example subset",
+          "from sentence" : "All inference parameters are tuned on a 200 example subset of the validation set ."
+        },
+        "Length penalty parameter" : {
+          "ranging from" : "0.6 to 1.4",
+          "from sentence" : "Length penalty parameter ? and copy mask differ across models , with ? ranging from 0.6 to 1.4 , and ranging from 0.1 to 0.2 ."
+        },
+        "copy mask" : {
+          "ranging from" : "0.1 to 0.2",
+          "from sentence" : "Length penalty parameter ? and copy mask differ across models , with ? ranging from 0.6 to 1.4 , and ranging from 0.1 to 0.2 ."
+        },
+        "coverage penalty parameter" : {
+          "set to" : "10",
+          "from sentence" : "The coverage penalty parameter ? is set to 10 , and the copy attention normalization parameter ? to 2 for both approaches ."
+        },
+        "copy attention normalization parameter" : {
+          "to" : "2",
+          "from sentence" : "The coverage penalty parameter ? is set to 10 , and the copy attention normalization parameter ? to 2 for both approaches ."
+        }
+      },
+      "minimum length of" : {
+        "generated summary" : {
+          "is set to" : {
+            "35" : {
+              "for" : "CNN - DM"
+            },
+            "6" : {
+              "for" : "NYT"
+            }
+          }
+        },
+        "from sentence" : "The minimum length of the generated summary is set to 35 for CNN - DM and 6 for NYT ."
+      },
+      "use" : {
+        "AllenNLP" : {
+          "for" : "content selector"
+        },
+        "Open NMT - py" : {
+          "for" : "abstractive models"
+        },
+        "from sentence" : "We use AllenNLP for the content selector , and Open NMT - py for the abstractive models ."
+      }
+    }
+  }
+}

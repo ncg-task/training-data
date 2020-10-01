@@ -1,0 +1,65 @@
+{
+  "has" : {
+    "Model" : {
+      "developed" : {
+        "TRANX" : {
+          "name" : "TRANsition - based abstract syntaX parser",
+          "for" : "semantic parsing and code generation",
+          "from sentence" : "Inspired by this existing research , we have developed TRANX , a TRANsition - based abstract synta
+X parser for semantic parsing and code generation ."
+
+        }
+      },
+      "has" : {
+        "TRANX" : {
+          "designed with" : {
+            "following principles" : {
+              "has" : {
+                "Generalization ability" : {
+                  "employs" : {
+                    "ASTs" : {
+                      "as" : "general - purpose intermediate meaning representation" 
+                    }
+                  },
+                  "has" : {
+                    "task - dependent grammar" : {
+                      "provided to" : {
+                        "system" : {
+                          "as" : {
+                            "external knowledge" : {
+                              "to guide" : "parsing process"
+                            }
+                          }
+                        }
+                      }
+                    }  
+                  },
+                  "from sentence" : "Generalization ability TRANX employs ASTs as a general - purpose intermediate meaning representation , and the task - dependent grammar is provided to the system as external knowledge to guide the parsing process , therefore decoupling the semantic parsing procedure with specificities of grammars ."
+                },
+                "Extensibility" : {
+                  "uses" : {
+                    "simple transition system" : {
+                      "to parse" : "NL utterances"
+                    }
+                  },
+                  "from sentence" : "Extensibility TRANX uses a simple transition system to parse NL utterances into tree -"
+                },
+                "Effectiveness" : {
+                  "test" : {
+                    "TRANX" : {
+                      "on" : {
+                        "semantic parsing": {"name" : ["ATIS", "GEO"]}, 
+                        "code generation" : {"name" : ["DJANGO", "WIKISQL"]}
+                      }
+                    },
+                    "from sentence" : "We test TRANX on four semantic parsing ( ATIS , GEO ) and code generation ( DJANGO , WIKISQL ) tasks , and demonstrate that TRANX is capable of generalizing to different domains while registering strong performance , out - performing existing neural networkbased approaches on three of the four datasets ( GEO , ATIS , DJANGO ) ."
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

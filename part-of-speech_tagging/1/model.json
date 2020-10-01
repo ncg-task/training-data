@@ -1,0 +1,53 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "IntNet" : {
+          "has" : {
+            "funnel - shaped wide convolutional neural network" : {
+              "for learning" : {
+                "internal structure of words" : {
+                  "by composing" : "characters"
+                }
+              },
+              "from sentence" : "Furthermore , we propose IntNet , a funnel - shaped wide convolutional neural network for learning the internal structure of words by composing their characters ."
+            }
+          }
+        }
+      },
+      "has" : {
+        "funnel - shaped Int - Net" : {
+          "explores" : {
+            "deeper and wider architecture" : {
+              "with no" : {
+                "down - sampling" : {
+                  "for learning" : {
+                    "character - to - word representations" : {
+                      "from" : "limited supervised training corpora"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Unlike previous CNN - based approaches , our funnel - shaped Int - Net explores deeper and wider architecture with no down - sampling for learning character - to - word representations from limited supervised training corpora ."
+        }
+      },
+      "combine" : {
+        "IntNet model" : {
+          "with" : {
+            "LSTM - CRF" : {
+              "captures" : ["word shape", "context information"],
+              "jointly decodes" : {
+                "tags" : {
+                  "for" : "sequence labeling"
+                }
+              }
+            }
+          },
+          "from sentence" : "Lastly , we combine our IntNet model with LSTM - CRF , which captures both word shape and context information , and jointly decode tags for sequence labeling ."
+        }
+      }
+    }
+  }
+}

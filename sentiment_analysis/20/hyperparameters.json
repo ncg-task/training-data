@@ -1,0 +1,101 @@
+{
+  "has" : {
+    "Hyper-parameters" : {
+      "has" : {
+        "MSA Model" : {
+          "size of" : {
+            "embedding layer" : {
+              "is" : "300"
+            },
+            "from sentence" : "The size of the embedding layer is 300 , and the LSTM layers 150 ( 300 for BiLSTM ) ."            
+          },
+          "has" : ["LSTM layers 150", {"from sentence" : "The size of the embedding layer is 300 , and the LSTM layers 150 ( 300 for BiLSTM ) ."}],
+          "add" : {
+            "Gaussian noise" : {
+              "with" : "? = 0.2",
+              "from sentence" : "We add Gaussian noise with ? = 0.2 and dropout of 0.3 at the embedding layer , dropout of 0.5 at the LSTM layers and dropout of 0.25 at the recurrent connections of the LSTM ."              
+            },
+            "dropout" : {
+              "of" : {
+                "0.3" : {
+                  "at" : "embedding layer"
+                },
+                "0.5" : {
+                  "at" : "LSTM layers"
+                },
+                "0.25" : {
+                  "at" : {
+                    "recurrent connections" : {
+                      "of" : "LSTM"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "We add Gaussian noise with ? = 0.2 and dropout of 0.3 at the embedding layer , dropout of 0.5 at the LSTM layers and dropout of 0.25 at the recurrent connections of the LSTM ."              
+            },
+            "L 2 regularization" : {
+              "of" : {
+                "0.0001" : {
+                  "at" : "loss function"
+                }
+              },
+              "from sentence" : "Finally , we add L 2 regularization of 0.0001 at the loss function ."
+            }
+          }
+        },
+        "TSA Model" : {
+          "size of" : {
+            "embedding layer" : {
+              "is" : "300"
+            },
+            "LSTM layers" : {
+              "has" : "64"
+            },
+            "from sentence" : "The size of the embedding layer is 300 , and the LSTM layers 64 ( 128 for BiLSTM ) ."
+          },
+          "insert" : {
+            "Gaussian noise" : {
+              "with" : {
+                "? = 0.2" : {
+                  "at" : {
+                    "embedding layer" : {
+                      "of" : "both inputs"
+                    }
+                  }
+                },
+                "dropout" : {
+                  "of" : {
+                    "0.3" : {
+                      "at" : {
+                        "embedding layer" : {
+                          "of" : "message"
+                        }
+                      }
+                    },
+                    "0.2" : {
+                      "at" : ["LSTM layer", {"recurrent connection" : {"of" : "LSTM layer"}}]
+                    },
+                    "0.3" : {
+                      "at" : "attention layer and the Maxout layer"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "We insert Gaussian noise with ? = 0.2 at the embedding layer of both inputs and dropout of 0.3 at the embedding layer of the message , dropout of 0.2 at the LSTM layer and the recurrent connection of the LSTM layer and dropout of 0.3 at the attention layer and the Maxout layer ."
+            }
+          },
+          "add" : {
+            "L 2 regularization" : {
+              "of" : {
+                "0.001" : {
+                  "at" : "loss function"
+                }
+              }
+            },
+            "from sentence" : "Finally , we add L 2 regularization of 0.001 at the loss function ."
+          }
+        }
+      }
+    }
+  }
+}

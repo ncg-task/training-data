@@ -1,0 +1,32 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "has" : {
+        "transfers" : {
+          "of" : {
+            "LSTM and embedding layer" : {
+              "are" : {
+                "more useful" : {
+                  "than" : "output layer"
+                }
+              }
+            }
+          },
+          "from sentence" : "( 2 ) Overall , transfers of the LSTM and embedding layer are more useful than the output layer ."
+        },
+        "Transfer of the embedding layer" : {
+          "is" : {
+            "more helpful" : {
+              "on" : "D3 and D4"
+            }
+          },
+          "from sentence" : "( 3 ) Transfer of the embedding layer is more helpful on D3 and D4 ."
+        },
+        "Sentiment information" : {
+          "not adequately captured by" : "Glo Ve word embeddings",
+          "from sentence" : "Sentiment information is not adequately captured by Glo Ve word embeddings ."
+        }
+      }
+    }
+  }
+}

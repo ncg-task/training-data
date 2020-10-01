@@ -1,0 +1,4 @@
+(Contribution||has research problem||Story Comprehension)
+(Contribution||has research problem||Automatic story comprehension)
+(Contribution||has research problem||automatically understanding stories)
+(Contribution||has research problem||story - cloze)

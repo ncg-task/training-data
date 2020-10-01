@@ -1,0 +1,103 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "In" : {
+        "paragraph selection stage" : {
+          "use" : {
+            "uncased version of BERT Tokenizer" : {
+              "to tokenize" : "all passages and questions"
+            }
+          },
+          "from sentence" : "In paragraph selection stage , we use the uncased version of BERT Tokenizer to tokenize all passages and questions ."
+        },
+        "graph construction stage" : {
+          "use" : {
+            "pretrained NER model" : {
+              "from" : "Stanford CoreNLP Toolkits",
+              "to extract" : "named entities"
+            }
+          },
+          "from sentence" : "In graph construction stage , we use a pretrained NER model from Stanford CoreNLP Toolkits 1 to extract named entities ."
+        },
+        "encoding stage" : {
+          "use" : {
+            "pre-trained BERT model" : {
+              "as" : "encoder",
+              "has" : {
+                "d 1" :{
+                  "is" : "768"
+                }
+              },
+              "from sentence" : "In the encoding stage , we also use a pre-trained BERT model as the encoder , thus d 1 is 768 ."
+            }
+          }
+        }
+      },
+      "has" : {
+        "encoding vectors" : {
+          "of" : "sentence pairs",
+          "generated from" : "pre-trained BERT model",
+          "from sentence" : "The encoding vectors of sentence pairs are generated from a pre-trained BERT model ."
+        },
+        "maximum number of entities" : {
+          "in" : "graph",
+          "set to" : "40",
+          "from sentence" : "The maximum number of entities in a graph is set to be 40 ."
+        },
+        "Each entity node" : {
+          "in" : "entity graphs",
+          "has" : {
+            "average degree" : {
+              "of" : "3.52"
+            }
+          },
+          "from sentence" : "Each entity node in the entity graphs has an average degree of 3.52 ."
+        },
+        "hidden state dimensions d 2" : {
+          "set to" : "300",
+          "from sentence" : "All the hidden state dimensions d 2 are set to 300 ."
+        }
+      },
+      "set" : {
+        "relatively low threshold" : {
+          "during" : {
+            "selection" : {
+              "on" : {
+                "supporting facts" : {
+                  "to keep" : ["high recall ( 97 % )", "reasonable precision ( 69 % )"]
+                }
+              }
+            }
+          },
+          "from sentence" : "We set a relatively low threshold during selection to keep a high recall ( 97 % ) and a reasonable precision ( 69 % ) on supporting facts ."
+        },
+        "dropout rate" : {
+          "for" : {
+            "all hidden units" : {
+              "of" : {
+                "LSTM and dynamic graph attention" : {
+                  "to" : "0.3 and 0.5"
+                }
+              }
+            },
+            "from sentence" : "We set the dropout rate for all hidden units of LSTM and dynamic graph attention to 0.3 and 0.5 respectively ."
+          }
+        }
+      },
+      "For" : {
+        "optimization" : {
+          "use" : {
+            "Adam Optimizer" : {
+              "with" : {
+                "initial learning rate" : {
+                  "of" : "1 e ?4"
+                }
+              }
+            }
+          },
+          "from sentence" : "For optimization , we use Adam Optimizer with an initial learning rate of 1 e ?4 ."
+        }
+      }
+    }
+  }
+}

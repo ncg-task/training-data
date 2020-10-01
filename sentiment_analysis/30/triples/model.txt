@@ -1,0 +1,6 @@
+(Contribution||has||Model)
+(Model||propose||novel model architecture)
+(novel model architecture||augmented with||multiple " memory chains ")
+(novel model architecture||for||TABSA)
+(Model||equipped with||delayed memory update mechanism)
+(delayed memory update mechanism||to keep track of||numerous entities independently)

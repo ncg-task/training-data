@@ -1,0 +1,6 @@
+(Contribution||has||Model)
+(Model||propose||Structural Embedding of Syntactic Trees ( SEST ))
+(Structural Embedding of Syntactic Trees ( SEST )||encode||syntactic information)
+(syntactic information||into||neural attention models)
+(neural attention models||for||question answering task)
+(syntactic information||structured by||constituency tree and dependency tree)

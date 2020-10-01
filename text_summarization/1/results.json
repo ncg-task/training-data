@@ -1,0 +1,63 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "Diversity vs. Accuracy Trade - off" : {
+          "show" : {
+            "mixture SELECTOR method" : {
+              "outperforms" : {
+                "all baselines" : {
+                  "in" : "Top - 1 and oracle metrics"
+                }
+              },
+              "achieves" : {
+                "best trade - off" : {
+                  "between" : "diversity and accuracy"
+                }
+              },
+              "from sentence" : "The tables show that our mixture SELECTOR method outperforms all baselines in Top - 1 and oracle metrics and achieves the best trade - off between diversity and accuracy ."
+            }
+          },
+          "has" : {
+            "our method" : {
+              "scores" : {
+                "state - of - the - art BLEU" : {
+                  "in" : {
+                    "question generation" : {
+                      "on" : {
+                        "SQuAD and ROUGE" : {
+                          "in" : "abstractive summarization in CNN - DM"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Notably , our method scores state - of - the - art BLEU - 4 in question generation on SQuAD and ROUGE comparable to state - of - the - art methods in abstractive summarization in CNN - DM ( See also for state - of - the - art results in CNN - DM ) ."
+            }
+          }
+        },
+        "Diversity vs. Number of Mixtures" : {
+          "compare" : {
+            "effect of number of mixtures" : {
+              "in" : " SELECTOR and Mixture Decoder"
+            },
+            "from sentence" : "Diversity vs. Number of Mixtures
+Here we compare the effect of number of mixtures in our SELECTOR and Mixture Decoder ."
+
+          },
+          "for" : {
+            "Mixture Decoder" : {
+              "show" : {
+                "pairwise similarity increases ( diversity ?)" : {
+                  "when" : "number of mixtures increases"
+                }
+              }
+            },
+            "from sentence" : "show that pairwise similarity increases ( diversity ?) when the number of mixtures increases for Mixture Decoder ."
+          }
+        }        
+      }
+    }
+  }
+}

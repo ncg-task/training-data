@@ -1,0 +1,8 @@
+{
+  "has research problem" : [
+    ["Text to Speech", {"from sentence" : "FastSpeech : Fast , Robust and Controllable Text to Speech"}],
+    ["Neural network based end - to - end text to speech ( TTS )", {"from sentence" : "Neural network based end - to - end text to speech ( TTS ) has significantly improved the quality of synthesized speech ."}],
+    ["Text to speech ( TTS )", {"from sentence" : "Text to speech ( TTS ) has attracted a lot of attention in recent years due to the advance in deep learning ."}],
+    ["Neural network based TTS", {"from sentence" : "Neural network based TTS has outperformed conventional concatenative and statistical parametric approaches in terms of speech quality ."}]
+  ]
+}

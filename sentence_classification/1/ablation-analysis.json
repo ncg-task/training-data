@@ -1,0 +1,51 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "has" : {
+        "HSLN - CNN model" : {
+          "suffers a little more from" : "component removal",
+          "than" : "HSLN - RNN model",
+          "from sentence" : "As can be seen from , our HSLN - CNN model uni-formly suffers a little more from the component removal than the HSLN - RNN model , indicating that the HSLN - RNN model is more robust ."
+        },
+        "dropout regularization and attention - based pooling components" : {
+          "add to" : "our system",
+          "further improve" : {
+            "model" : {
+              "in" : "limited extent"
+            }
+          },
+          "from sentence" : "Last but not the least , the dropout regularization and attention - based pooling components we add to our system can help further improve the model in a limited extent . :"
+        }
+      },
+      "When" : {
+        "context enriching layer" : {
+          "is" : {
+            "removed" : {
+              "has" : {
+                "both models" : {
+                  "experience" : "most significant performance drop",
+                  "on par with" : "previous stateof - the - art results"
+                }
+              }
+            }
+          },
+          "from sentence" : "When the context enriching layer is removed , both models experience the most significant performance drop and can only be on par with the previous stateof - the - art results , strongly demonstrating that this proposed component is the key to the performance improvement of our model ."
+        }
+      },
+      "even without" : {
+        "label sequence optimization layer" : {
+          "has" : {
+            "our model" : {
+              "significantly outperforms" : {
+                "best published methods" : {
+                  "empowered by" : "this layer"
+                }
+              }
+            }
+          },
+          "from sentence" : "Furthermore , even without the label sequence optimization layer , our model still significantly outperforms the best published methods that are empowered by this layer , indicating that the context enriching layer we propose can help optimize the label sequence by considering the context information from the surrounding sentences ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "has" : {
+    "Model" : {
+      "present" : {
+        "deep generative framework" : {
+          "for automatically generating" : {
+            "paraphrases" : {
+              "given" : "sentence"
+            }
+          },
+          "from sentence" : "In this paper , we present a deep generative framework for automatically generating paraphrases , given a sentence ."
+        },
+        "mechanism" : {
+          "to condition" : {
+            "our VAE model" : {
+              "on" : "original sentence",
+              "to generate" : "paraphrases"
+            }
+          },
+          "from sentence" : "To address this limitation , we present a mechanism to condition our VAE model on the original sentence for which we wish to generate the paraphrases ."
+        }
+      },
+      "has" : {
+        "framework" : {
+          "combines" : {
+            "power" : {
+              "of" : [{"sequenceto - sequence models" : {"specifically" : "long short - term memory ( LSTM )"}}, {"deep generative models" : {"specifically" : "variational autoencoder ( VAE )"}}],
+              "to develop" : {
+                "novel , end - to - end deep learning architecture" : {
+                  "for" : {
+                    "task": {
+                      "of" : "paraphrase generation"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Our framework combines the power of sequenceto - sequence models , specifically the long short - term memory ( LSTM ) , and deep generative models , specifically the variational autoencoder ( VAE ) , to develop a novel , end - to - end deep learning architecture for the task of paraphrase generation ."
+        },
+        "our method" : {
+          "conditions" : {
+            "both the sides" : {
+              "i.e." : "encoder and decoder",
+              "of" : {
+                "VAE" : {
+                  "on" : {
+                    "intermediate representation" : {
+                      "of" : {
+                        "input question" : {
+                          "obtained through" : "LSTM"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "Unlike these methods where number of classes are finite , and do not require any intermediate representation , our method conditions both the sides ( i.e. encoder and decoder ) of VAE on the intermediate representation of the input question obtained through LSTM ."
+          }
+        },
+        "deep generative model" : {
+          "enjoys" : "simple , modular architecture",
+          "can generate" : ["single", "multiple , semantically sensible , paraphrases"],
+          "from sentence" : "In contrast , our deep generative model enjoys a simple , modular architecture , and can generate not just a single but multiple , semantically sensible , paraphrases for any given sentence ."
+        },
+        "proposed method" : {
+          "where" : {
+            "all variations" : {
+              "of" : {
+                "relatively better quality" : {
+                  "are" : "top beam - search result",
+                  "generated based on" : {
+                    "different z" : {
+                      "sampled from" : "latent space"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "This is in contrast to the proposed method where all variations will be of relatively better quality since they are the top beam - search result , generated based on different z sampled from a latent space ."
+        }
+      }
+    }
+  }
+}

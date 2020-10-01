@@ -1,0 +1,21 @@
+{
+  "has" : {
+    "Results" : {
+      "Despite" : {
+        "training" : {
+          "on" : "fraction of the data available",
+          "has" : {
+            "proposed BERT - based models" : {
+              "surpass" : {
+                "previous state - of - the - art models" : {
+                  "by" : "large margin"
+                }
+              }
+            }
+          },
+          "from sentence" : "Despite training on a fraction of the data available , the proposed BERT - based models surpass the previous state - of - the - art models by a large margin on both of the tasks ."
+        }
+      }      
+    }
+  }
+}

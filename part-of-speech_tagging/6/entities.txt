@@ -1,0 +1,79 @@
+7	78	117	https://github.com/ datquocnguyen/jPTDP
+75	4	9	jPTDP
+75	13	30	implemented using
+75	31	42	DYNET v 2.0
+76	3	11	optimize
+76	16	34	objective function
+76	35	40	using
+76	41	70	Adam ( Kingma and Ba , 2014 )
+76	71	75	with
+76	76	108	default DYNET parameter settings
+78	55	60	apply
+78	63	80	word dropout rate
+78	81	83	of
+78	84	88	0.25
+78	93	107	Gaussian noise
+78	108	112	with
+78	113	120	? = 0.2
+79	18	25	run for
+79	26	35	30 epochs
+80	3	10	perform
+80	13	32	minimal grid search
+80	33	35	of
+80	36	54	hyper - parameters
+80	55	57	on
+80	58	65	English
+84	0	8	compares
+84	13	55	POS tagging and dependency parsing results
+84	56	58	of
+84	59	74	our model jPTDP
+19	19	26	propose
+19	29	54	novel neural architecture
+19	55	58	for
+19	59	113	joint POS tagging and graph - based dependency parsing
+20	10	16	learns
+20	17	47	latent feature representations
+20	48	58	shared for
+20	64	104	POS tagging and dependency parsing tasks
+20	108	113	using
+20	114	142	BiLSTMthe bidirectional LSTM
+2	33	87	Joint POS Tagging and Graph - based Dependency Parsing
+90	0	11	In terms of
+90	12	30	dependency parsing
+90	49	64	our model jPTDP
+90	65	76	outperforms
+90	77	96	Stack - propagation
+91	41	49	produces
+91	50	84	about 7 % absolute lower LAS score
+91	85	89	than
+91	90	109	Stack - propagation
+91	107	109	on
+91	113	125	Dutch ( nl )
+94	0	14	Without taking
+94	17	19	nl
+94	22	34	into account
+94	41	59	averaged LAS score
+94	60	64	over
+94	65	88	all remaining languages
+94	89	91	is
+94	92	113	1.1 % absolute higher
+94	114	118	than
+94	119	141	Stack - propagation 's
+96	16	21	shows
+96	25	49	absolute LAS improvement
+96	50	52	of
+96	53	58	4.4 %
+96	59	61	on
+96	62	69	average
+96	184	214	morphologically rich languages
+96	215	218	get
+96	222	242	averaged improvement
+96	50	52	of
+96	246	251	9.3 %
+98	9	14	jPDTP
+98	31	39	good for
+98	40	70	morphologically rich languages
+98	73	77	with
+98	78	103	1.7 % higher averaged LAS
+98	104	108	than
+98	109	128	Stack - propagation

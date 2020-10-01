@@ -1,0 +1,7 @@
+(Contribution||has||Model)
+(Model||to predict||given query)
+(given query||is||well - formed natural language question)
+(Model||train||feed - forward neural network classifier)
+(feed - forward neural network classifier||uses||lexical and syntactic features)
+(lexical and syntactic features||extracted from||query)
+(query||on||data)

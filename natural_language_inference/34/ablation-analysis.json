@@ -1,0 +1,74 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "of" : {
+        "QA performances" : {
+          "in" : {
+            "development set" : {
+              "of" : "Hotpot QA",
+              "see that" : {
+                "each of our model components" : {
+                  "provide" : {
+                    "from 1 % to 2 %" : {
+                      "has" : {
+                        "relative gain" : {
+                          "over" : "QA performance"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "The ablation results of QA performances in the development set of Hotpot QA are shown in .
+From the table we can see that each of our model components can provide from 1 % to 2 % relative gain over the QA performance ."
+
+        }
+      },
+      "using" : {
+        "1 - layer fusion block" : {
+          "leads to" : {
+            "obvious performance loss" : {
+              "implies" : {
+                "significance" : {
+                  "of" : {
+                    "performing" : {
+                      "has" : {
+                        "multi-hop reasoning" : {
+                          "in" : "Hotpot QA"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Particularly , using a 1 - layer fusion block leads to an obvious performance loss , which implies the significance of performing multi-hop reasoning in Hotpot QA ."
+            }
+          }
+        }
+      },
+      "has" : {
+        "dataset abla-tion results" : {
+          "show" : {
+            "our model" : {
+              "has" : {
+                "not very sensitive" : {
+                  "to" : "noisy paragraphs",
+                  "comparing with" : "baseline model",
+                  "can achieve" : {
+                    "more than 5 % performance gain" : {
+                      "in" : ["gold paragraphs only", "supporting facts only"]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Besides , the dataset abla-tion results show that our model is not very sensitive to the noisy paragraphs comparing with the baseline model which can achieve a more than 5 % performance gain in the \" gold paragraphs only \" and \" supporting facts only \" settings ."
+          
+        }
+      }
+    }
+  }
+}

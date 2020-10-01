@@ -1,0 +1,52 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "Max - pooling" : {
+          "has" : {
+            "drastically improves" : {
+              "has" : "performance",
+              "from sentence" : "As shown in , Max - pooling described in Section 2.2 drastically improves performance , showing the effect of accumulating information on entities ."
+            }
+          }
+        },
+        "99 % confidence intervals" : {
+          "of" : {
+            "results" : {
+              "of" : {
+                "full DER Network and the one initialized by word2vec" : {
+                  "on" : "test set",
+                  "were" : ["[ 0.700 , 0.740 ]", "[ 0.708 , 0.749 ]"]
+                }
+              }
+            }
+          },
+          "from sentence" : "The 99 % confidence intervals of the results of full DER Network and the one initialized by word2vec on the test set were [ 0.700 , 0.740 ] and [ 0.708 , 0.749 ] , respectively ( measured by bootstrap tests ) ."
+        }
+      },
+      "note that" : {
+        "initializing" : {
+          "has" : {
+            "our model" : {
+              "with" : {
+                "pre-trained word vectors" : {
+                  "is" : "helpful"
+                }
+              }
+            },
+            "from sentence" : "Further , we note that initializing our model with pre-trained word vectors 10 is helpful , though world knowledge of entities has been prevented by the anonymization process ."
+          }
+        },
+        "our model" : {
+          "name" : "full DER Network",
+          "shows" : {
+            "best results" : {
+              "compared to" : "several previous reader models",
+              "from sentence" : "Finally , we note that our model , full DER Network , shows the best results compared to several previous reader models , endorsing our approach as promising ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

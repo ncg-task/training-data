@@ -1,0 +1,19 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "implemented using" : ["Tensor Flow python pack", {"from sentence" : "All the neural models presented in this paper were implemented using the Tensor Flow python pack - ."}],
+      "minimize" : {
+        "crossentropy error" : {
+          "using" : ["Adam optimizer", {"L2regularization" : {"on" : "set of weights"}}],
+          "from sentence" : "We minimize the crossentropy error using the Adam optimizer and L2regularization on the set of weights ."
+        }
+      },
+      "For" : {
+        "individual models ( before joining )" : {
+          "use" : ["200 training epochs", {"batch size" : {"of" : "100"}}],
+          "from sentence" : "For the individual models ( before joining ) , we use 200 training epochs and a batch size of 100 ."
+        }
+      }
+    }
+  }
+}

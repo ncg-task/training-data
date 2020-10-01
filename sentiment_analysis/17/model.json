@@ -1,0 +1,34 @@
+{
+  "has" : {
+    "Model" : {
+      "introduce" : {
+        "generalization of the standard LSTM architecture" : {
+          "to" : {
+            "tree - structured network topologies" : {
+              "show" : {
+                "superiority" : {
+                  "for representing" : {
+                    "sentence meaning" : {
+                      "over" : "sequential LSTM"
+                    }                    
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "In this paper , we introduce a generalization of the standard LSTM architecture to tree - structured network topologies and show its superiority for representing sentence meaning over a sequential LSTM ."
+        }
+      },
+      "has" : {
+        "tree - structured LSTM , or Tree - LSTM" : {
+          "composes" : {
+            "state" : {
+              "from" : ["input vector", {"hidden states" : {"of" : "arbitrarily many child units"}}]
+            }
+          },
+          "from sentence" : "While the standard LSTM composes its hidden state from the input at the current time step and the hidden state of the LSTM unit in the previous time step , the tree - structured LSTM , or Tree - LSTM , composes its state from an input vector and the hidden states of arbitrarily many child units ."
+        }
+      }
+    }
+  }
+}

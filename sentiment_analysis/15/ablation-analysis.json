@@ -1,0 +1,44 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "has" : {
+        "RNTN" : {
+          "has" : {
+            "highest reveral accuacy" : {
+              "showing its ability to" : "structurally learn negation of positive sentences",
+              "from sentence" : "The RNTN has the highest reversal accuracy , showing its ability to structurally learn negation of positive sentences ."               
+            }
+          }
+        }
+      },
+      "shows" : {
+        "typical case" : {
+          "in which" : {
+            "sentiment" : {
+              "made" : {
+                "more positive" : {
+                  "by switching" : {
+                    "main class" : {
+                      "from" : "negative to neutral"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "shows a typical case in which sentiment was made more positive by switching the main class from negative to neutral even though both not and dull were negative ."
+        }
+      },
+      "conclude" : {
+        "RNTN" : {
+          "best able to identify" : {
+            "effect of negations" : {
+              "upon" : "positive and negative sentiment sentences"
+            }
+          } 
+        },
+        "from sentence" : "Therefore we can conclude that the RNTN is best able to identify the effect of negations upon both positive and negative sentiment sentences . :"
+      }
+    }
+  }
+}

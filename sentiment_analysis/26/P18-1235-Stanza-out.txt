@@ -1,0 +1,245 @@
+title
+A Helping Hand : Transfer Learning for Deep Sentiment Analysis
+abstract
+Deep convolutional neural networks excel at sentiment polarity classification , but tend to require substantial amounts of training data , which moreover differs quite significantly between domains .
+In this work , we present an approach to feed generic cues into the training process of such networks , leading to better generalization abilities given limited training data .
+We propose to induce sentiment embeddings via supervision on extrinsic data , which are then fed into the model via a dedicated memorybased component .
+We observe significant gains in effectiveness on a range of different datasets in seven different languages .
+Introduction
+Over the past decades , sentiment analysis has grown from an academic endeavour to an essential analytics tool .
+Across the globe , people are voicing their opinion in online social media , product review sites , booking platforms , blogs , etc .
+Hence , it is important to keep abreast of ongoing developments in all pertinent markets , accounting for different domains as well as different languages .
+In recent years , deep neural architectures based on convolutional or recurrent layers have become established as the preeminent models for supervised sentiment polarity classification .
+At the same time , it is also frequently observed that deep neural networks tend to be particularly data - hungry .
+This is a problem in many real - world settings , where large amounts of training examples maybe too costly to obtain for every target domain .
+A model trained on movie reviews , for instance , will fare very poorly on the task of assessing restaurant or hotel reviews , let alone tweets about politicians .
+In this paper , we investigate how extrinsic signals can be incorporated into deep neural networks for sentiment analysis .
+Numerous papers have found the use of regular pre-trained word vector representations to be beneficial for sentiment analysis .
+In our paper , we instead consider word embeddings specifically specialized for the task of sentiment analysis , studying how they can lead to stronger and more consistent gains , despite the fact that the embeddings were obtained using out - of - domain data .
+An intuitive solution would be to concatenate regular embeddings , which provide semantic relatedness cues , with sentiment polarity cues that are captured in additional dimensions .
+We instead propose a bespoke convolutional neural network architecture with a separate memory module dedicated to the sentiment embeddings .
+Our empirical study shows that the sentiment embeddings can lead to consistent gains across different datasets in a diverse set of domains and languages if a suitable neural network architecture is used .
+Approach
+Sentiment Embedding Computation
+Our goal is to incorporate external cues into a deep neural network such that the network is able to generalize better even when training data is scarce .
+While in computer vision , weights pre-trained on ImageNet are often used for transfer learning , the most popular way to incorporate external information into deep neural networks for text is to draw on word embeddings trained on vast amounts of word context information .
+Indeed , the semantic relatedness signals provided by such representations often lead to slightly improved results in polarity classification tasks .
+However , the co-occurrence - based objectives of word2vec and Glo Ve do not consider sentiment specifically .
+We thus seek to examine how complementary sentiment - specific information from an external source can give rise to further gains .
+Transfer Learning .
+To this end , our goal is to induce sentiment embeddings that capture sentiment polarity signals in multiple domains and hence maybe useful across a range of different sentiment analysis tasks .
+The multi-domain nature of these distinguish them from the kinds of generic polarity scores captured in sentiment polarity lexicons .
+We achieve this via transfer learning from trained models , benefiting from supervision on a series of sentiment polarity tasks from different domains .
+Given a training collection consisting of n binary classification tasks ( e.g. , with documents inn different domains ) , we learn n corresponding polarity prediction models .
+From these , we then extract token - level scores that are tied to specific prediction outcomes .
+Specifically , we train n linear models f i ( x ) = w ix + bi for tasks i = 1 , . . . , n.
+Then , each vocabulary word index j is assigned anew ndimensional word vector x j = ( w 1 , j , , w n , j ) that incorporates the linear coefficients for that word across the different linear models .
+A minor challenge is that navely using bag - ofword features can lead to counter - intuitive weights .
+If a word such as " pleased " in one domain mainly occurs after the word " not " , while the reviews in another domain primarily used " pleased " in its unnegated form , then " pleased " would be assessed as possessing opposite polarities in different domains .
+To avoid this , we assume that features are preprocessed to better reflect whether words occur in a negated context .
+In our experiments , we simply treat occurrences of " not word " as a single feature " not word " .
+Of course , one can replace this heuristic with much more sophisticated techniques that fully account for the scope of a wider range of negation constructions .
+Graph - Based Extension .
+Most sentiment - related resources are available for the English language .
+To produce vectors for other languages in our experiments , we rely on cross-lingual projection via graph - based propagation .
+At this point , we have a set of initial sentiment embedding vectors ?
+x ?
+Rn for words x ? V 0 .
+We assume that we have a lexical knowledge graph G L = ( V , AL ) with anode set consisting of an extended multilingual vocabulary V ?
+V 0 and a set of weighted directed arcs AL = { ( x 1 , x 1 , w 1 ) , . . . , ( x m , x m , w m ) } .
+Each such arc reflects a weighted semantic connection between two vocabulary items x , x ?
+V , where vocabulary items are words labeled with their respective language .
+Typically , many of the arcs in the G L would reflect translational equivalence , but in our experiments , we also include monolingual links between semantically related words .
+Given this data , we aim to minimize
+The first component of this objective seeks to ensure that sentiment embeddings of words accord with those of their connected words , in terms of the dot product .
+The second part ensures that the deviation from any available initial word vectors ?
+x is minimal ( for some very high constant C ) .
+For optimization , we preinitialize v x =?
+x for all x ?
+V 0 , and then rely on stochastic gradient descent steps .
+Dual - Module Memory based CNNs
+To feed this sentiment information into our architecture , we propose a Dual - Module Memory based Convolutional Neural Network ( DM - MCNN ) approach , which incorporates a dedicated memory module to process the sentiment embeddings , as illustrated in .
+While the module with regular word embeddings enables the model to learn salient patterns and harness the nearest neighbour and linear substructure properties of word embeddings , we conjecture that a separate sentiment memory module allows for better exploiting the information brought to the table by the sentiment embeddings .
+Convolutional Module Inputs and Filters .
+The Convolutional Module input of the DM - MCNN is a sentence matrix S ?
+R sd , the rows of which represent the words of the input sentence after tokenization .
+In the case of S , i.e. , in the regular module , each word is represented by its conventional word vector representation .
+Here , s refers to the length of a sentence , and d represents the dimensionality of the regular word vectors .
+We perform convolutional operations on these matrices via linear filters .
+Given rows representing discrete words , we rely on weight matrices W ?
+R hd with region size h.
+We use the notation S i:j to denote the sub-matrix of S from row i to row j.
+Supposing that the weight matrix has a filter width of h , a wide convolution is induced such that out - of - range submatrix values S i , j with i < 1 or i > s are taken to be zero .
+Thus , applying the filter on sub-matrices of S yields the output sequence o ?
+R s+h?1 as
+where the operator provides the sum of an element - wise multiplication .
+Wide convolutions ensure that filters can cover words at the margins of the normal weight matrix .
+Next , the c i in feature maps c ?
+R s+h?1 are computed as :
+Multiple Layers in Memory Module .
+The memory module obtains as input a sequence of sentiment embedding vectors for the input , and attempts to draw conclusions about the overall sentiment polarity of the entire input sequence .
+Given a set of sentence words S = {w 1 , w 2 , w 3 , . . . , w n } , each word is mapped to its sentiment embedding vector of dimension d sand we denote this set of vectors as V s .
+The preliminary sentiment level v p is also a vector of dimensionality d s .
+We take the mean of all sentiment vectors vi for words w i ?
+S to initialize v p .
+Next , we compute a vector s of similarities s i between v p and each sentiment word vector vi , by taking the inner product , followed by 2 - normalization and a softmax :
+As the sentiment embeddings used in our paper are generated from a linear model , the degree of correspondence between v p and vi can adequately be assessed by the inner product .
+The resulting vector of scores scan be regarded as yielding sentiment weights for each word in the sentence .
+We apply 2 - normalization to ensure a more balanced weight distribution .
+The output sentiment level vector v o is then a sum over the sentiment inputs vi weighted by the 2 - normalized vector of similarities :
+This processing can be repeated in multiple passes , akin to how end - to - end memory networks for question answering often perform multiple hops .
+While in the first iteration , v p was set to the mean sentiment vector , subsequent passes may allow us to iteratively refine this vector .
+Assuming that v k o has been produced by the k - th pass , then the subsequent level v k +1 pin the next pass is :
+The intuition here is that multiple passes can enable the model to adaptively retrieve iterative sentiment level statistics beyond the initial average sentiment information .
+Merging Layer and Prediction .
+Subsequently , for the convolutional module , 1 d - max pooling is applied to c , which ought to capture the most prominent signals .
+In the memory module , the final sentiment vector is modulated by a weight matrix W s ?
+R lds to form a feature vector of dimensionality l.
+In general , we can use multiple filters to obtain several features in the convolutional module , while the memory module allows for adjusting the number of passes over the memory .
+Finally , the outputs of these two modules are concatenated to form a fixed - length vector , which is passed to a fully connected softmax layer to obtain the final output probabilities .
+Loss Function and Training .
+Our loss function is the cross -entropy function
+where n is the number of training examples , C is the set of ( two ) classes , y i , c are ground truth labels fora given training example and class c , and ?
+i , c are corresponding label probabilities predicted by the model , as emitted by the softmax layer .
+We train our model using Adam optimization for better robustness across different datasets .
+Further details about our training regime follow in the Experiments section .
+Experiments
+We now turn to our extensive empirical evaluation , which assesses the effectiveness of our novel architecture with sentiment word vectors .
+Experimental Setup
+Datasets .
+For evaluation , we use real world datasets for 7 different languages , taken from a range of different sources that cover several domains .
+These are summarized in , with ISO 639 - 3 language codes .
+In our experimental setup , these are all cast as binary polarity classification tasks , for which we use accuracy as our evaluation metric .
+The Stanford Sentiment Treebank ( SST ) dataset consists of movie reviews taken from the Rotten Tomatoes website , including binary labels .
+We only used sentence - level data in our experiment . The SemEval- 2016 Task 5 ( SE16 - T5 ) dataset provides Spanish reviews of restaurants .
+It targeted aspect - based sentiment analysis , so we converted the entity - level annotations to sentence - level polarity labels via voting .
+As the number of entities per sentence is often one or very low , this process is reasonably precise .
+In any case , it enables us to compare the ability of different model variants to learn to recognize pertinent words .
+From TripAdvisor ( TA ) , we crawled German , Russian , Italian , Czech , and Japanese reviews of restaurants and hotels .
+We removed threestar reviews , as these can be regarded as neutral ones , so reviews with a rating < 3 are considered negative , while those with a rating >
+3 were deemed positive . The Amazon Fine Food Reviews AFF ( McAuley and Leskovec , 2013 ) dataset provides food reviews left on Amazon .
+We chose a random subset of it with preprocessing as for TripAdvisor .
+As there was no test set provided for TripAdvisor or for the Amazon Fine Food Reviews data , we randomly partitioned this data into training , validation , and test splits with a 80%/10% / 20 % ratio .
+Additionally , 10 % of the training sets from SE16 - T5 were randomly extracted and reserved for validation , while SST provides its own validation set .
+The new datasets are available from http : //gerard.demelo.org/sentiment/.
+Embeddings .
+The standard pre-trained word vectors used for English are the GloVe ones trained on 840 billion tokens of Common Crawl data 1 , while for other languages , we rely on the Facebook fastText Wikipedia embeddings as input representations .
+All of these are 300 - dimensional .
+The vectors are either fed to the CNN , or to the convolutional module of the DM - MCNN during initialization , while unknown words are initialized with zeros .
+All words , including the unknown ones , are fine - tuned during the training process .
+For our transfer learning approach , our experiments rely on the multi-domain sentiment dataset by , collected from Amazon customers reviews .
+This dataset includes 25 categories of products and is used to generate our sentiment embeddings using linear models .
+Specifically , we train linear SVMs using scikit - learn to extract word coefficients in each domain and also for the union of all domains together , yielding a 26 - dimensional sentiment embedding .
+For comparison and analysis , we also consider several alternative forms of infusing external cues .
+Firstly , lexicon - driven methods have often been used for domain - independent sentiment analysis .
+We consider a recent sentiment lexicon called VADER .
+The polar - Stanford NLP group .
+These contain separate domain - specific scores for 250 different Reddit communities , and hence result in 250 - dimensional embeddings .
+For cross - lingual projection , we extract links between words from a 2017 dump of the English edition of Wiktionary .
+We restrict the vocabulary link set to include the languages in , mining corresponding translation , synonymy , derivation , and etymological links from Wiktionary .
+Neural Network Details .
+For CNNs , we make use of the well - known CNN - non-static architecture and hyperparameters proposed by , with a learning rate of 0.0006 , obtained by tuning on the validation data .
+For our DM - MCNN models , the configuration of the convolutional module is the same as for CNNs , and the remaining hyperparameter values were as well tuned on the validation sets .
+An overview of the relevant network parameter values is given in .
+For greater efficiency and better convergence properties , the training relies on mini-batches .
+Our implementation considers the maximal sentence length in each mini-batch and zero - pads all other sentences to this length under convolutional module , thus enabling uniform and fast processing of each mini-batch .
+All neural network architectures are implemented using the PyTorch framework 2 .
+Results and Analysis
+Baseline Results .
+Our main results are summarized in .
+We compare both regular CNNs and our dual - module alternative DM - MCNNs under a variety of settings .
+A common approach is to use a CNN with randomly initialized word vectors .
+Comparing this to CNNs with GloVe / fastText embeddings , where Glo Ve is used for English , and fastText is used for all other languages , we observe substantial improvements across all datasets .
+This shows that word vectors do tend to convey pertinent word semantics signals that enable models to generalize better .
+Note also that the accuracy using GloVe on the English movies review dataset is consistent with numbers reported in previous work .
+Dual - Module Architecture .
+Next , we consider our DM - MCNNs with their dual - module mechanism to take advantage of transfer learning .
+We observe fairly consistent and sometimes quite substan - tial gains over CNNs with just the GloVe / fastText vectors .
+We see that the sentiment embeddings provide important complementary signals beyond what is provided in regular word embeddings , and that our dual - module approach succeeds at exploiting these signals across a range of different domains and languages .
+Our transfer learning approach leads to sentiment embeddings that capture signals from multiple domains .
+The model successfully picks the pertinent parts of this signal for datasets from domains as different as movie reviews and food reviews .
+We report results for two different training conditions .
+In the first condition ( with fine - tuning ) , the sentiment embedding matrix is preinitialized using the data from our transfer learning procedure , but the model is then able to modify these arbitrarily via backpropagation .
+In the second condition ( no fine - tuning ) , we simply use our sentiment embedding matrix as is , and do not update it .
+Instead , the model is able to update its various other parameters , particularly its various weight matrices and bias vectors .
+While both training conditions outperform the CNN baseline , there is no obvious winner among the two .
+When the training data set is very small and hence there is a significant risk of overfitting , one maybe best advised to forgo fine - tuning .
+In contrast , when it is somewhat larger ( as for our English datasets , which each have over 5,000 training instances ) or when the language is particularly idiosyncratic or not covered sufficiently well by our cross-lingual projection procedure ( such as perhaps for Japanese ) , then fine - tuning is recommended .
+In this case , fine - tuning may allow the model to adjust the embeddings to cater to domain - specific mean - ings and corpus-specific correlations , while also overcoming possible sparsity of the cross-lingual vectors resulting from alack of coverage of the translation dictionary .
+It is important to note that many of the results in stem from embeddings that were created automatically using cross - lingual projection .
+Our transfer learning embeddings were induced from entirely English data .
+Although the automatically projected cross - lingual embeddings are very noisy and limited in their coverage , particularly with respect to inflected forms , our model succeeds in exploiting them to obtain substantial gains in several different languages and domains .
+Alternative Embedding Methods .
+For a more detailed analysis , we conducted additional experiments with alternative embedding conditions .
+In particular , as a simpler means of achieving gains over standard CNNs , we propose to use CNNs with word vectors augmented with sentiment cues .
+Given that regular word embeddings appear to be useful for capturing semantics , one may conjecture that extending these word vectors with additional dimensions to capture sentiment information can lead to improved results .
+For this , we simply concatenate the regular word embeddings with different forms of sentiment embeddings that we have obtained , including those from the sentiment lexicon VADER , from the Stanford SocialSent project , and from our transfer learning procedure via Amazon reviews .
+To conduct these experiments , we also produced cross - lingual projections of the VADER and SocialSent embedding data .
+The results of using these embeddings as opposed to regular ones are somewhat mixed .
+Con-catenating the VADER embeddings or our transfer learning ones leads to minor improvements on English , and our cross-lingual projection of them leads to occasional gains , but the results are far from consistent .
+Even on English , adding the 250 dimensional SocialSent embedding seems to degrade the effectiveness of the CNN , although all input information that was previously there continues to be provided to it .
+This suggests that a simple concatenation may harm the model 's ability to harness the semantic information carried by regular word vectors .
+This risk seems more pronounced for larger - dimensional sentiment embeddings .
+In contrast , with our DM - MCNNs approach , the sentiment information is provided to the model in a separate memory module that makes multiple passes over this data before combining it with the regular CNN module 's signals .
+Thus , the model can exploit the two kinds of information independently , and learn a suitable way to aggregate them to produce an overall output classification .
+This hence demonstrates not only that the sentiment embeddings tend to provide important complementary signals but also that a dual - module approach is best - suited to incorporate such signals into deep neural models .
+We also analysed our DM - MCNNs with alternative embeddings .
+When we feed random sentiment embeddings into them , not unexpectedly , in many cases the results do not improve much .
+This is because our memory module has been designed to leverage informative prior information and to reweight its signals based on this assumption .
+Hence , it is important to feed genuine sentiment cues into the memory module .
+Yet , on some languages , we nevertheless note improvements over the CNN baseline .
+In these cases , even if similarities between pairs of sentiment vectors initially do not carry any significance , backpropagation may have succeeded in updating the sentiment embedding matrix such that eventually the memory module becomes able to discern salient patterns in the data .
+We also considered our DM - MCNNs when feeding the VADER or SocialSent embeddings into the memory module .
+In this case , it also mostly succeeded in outperforming the CNN baseline .
+In fact , on the Italian TripAdvisor dataset , the SocialSent embeddings yielded the overall strongest results .
+In all other cases , however , our transfer learning embeddings proved more effective .
+We believe that this is because they are obtained in a data - driven manner based on an objective that directly seeks to optimize for classification accuracy .
+Influence of Training Set Size .
+To look into the effect of our approach with restricted training data , we first consider the SST dataset as an instructive example .
+We set the training set size to 20 % , 50 % , 100 % of its original size and compared our full dual module model with sentiment embeddings against state - of - the - art methods .
+The results are given in .
+Our dual module CNN has a sizeable lead over other methods when only using 20 % of SST training set .
+Given that we study how to incorporate extrinsic cues into a deep neural model , we consider CNN - Ruleq and Gumbel Tree - LSTM as the relevant baseline methods .
+The CNN - Rule - q method used an iterative distillation method that exploits structured information from logical rules , which for SST is based on the word but to determine the weights in the neural network .
+The Gumbel Tree - LSTM approach incorporates a Straight - Through Gumbel - Softmax into a treestructured LSTM architecture that learns how to compose task - specific tree structures starting from plain raw text .
+They all require a large amount of data to pickup sufficient information during training , while our method is able to efficiently capture sentiment information from our transfer learning even though the data is scarce .
+For further analysis , we also artificially reduce the training set sizes to 50 % of the original sizes given in for our multilingual datasets .
+The results are plotted in .
+We compare : 1 ) the CNN model baseline , 2 ) the CNN model but concatenating our sentiment embeddings from transfer learning , and 3 ) our full dual module model with these sentiment embeddings .
+We already saw in Table 3 that we obtain reasonable gains over generic embeddings when using the full training sets .
+In , we additionally observe that the gains are overall much more remarkable on smaller training sets .
+This shows that the sentiment embeddings are most useful when they are of high quality and domain - specific training data is scarce , although a modest amount of training data is still needed for the model to be able to adapt to the target domain .
+Inspection of the DM - MCNN - learned Deep Sentiment Information .
+To further investigate what the model is learning , we examine the changes of weights of words on the English SST dataset when using the VADER sentiment embeddings 83.75 85.45 86.49 Gumbel Tree - LSTM with DM - MCNNs .
+Although these are not as powerful as our transfer learning embeddings , the VADER embeddings are the most easily interpretable here , since they are one - dimensional , and thus can be regarded as word - specific weights .
+The result is visualized in .
+Here , the dark - shaded segments ( in blue ) refer to the original weights , while the light - shaded segments ( in red ) refer to the adjusted weights after training .
+The mediumshaded segments ( in purple ) reflect the overlap between the two .
+Hence , whenever we observe a dark ( blue ) segment above a medium ( purple ) segment in a bar , we can infer that the fine - tuned weight fora word ( e.g. , for " plays " in was lower than the original weight of that word .
+Conversely , whenever we observe alight ( red ) segment at the top , the weight increased during training ( e.g. , for hilarious ) .
+Generally , dark ( blue ) segments reflect decreased weight magnitudes and light ( red ) ones reflect increased weight magnitudes , both on the positive and on the negative side .
+We consider in the top 50 weight changes only of words that were already covered by the original VADER sentiment embeddings .
+Here , it is worth noting that the weight magnitudes of positive words such as " laugh " , " appealing " and negative words such as " lack " , " missing " increase further , while words such as " damn " , " interest " , " war " see decreases in magnitude , presumably due to their ambiguity and context ( e.g. , " damn good " , " lost the interest " , descriptions of war movies ) .
+Hence , the figure confirms that our DM - MCNN approach is able to exploit and customize the provided sentiment weights for the target domain .
+However , unlike the VADER data , our transfer learning approach results in multi-dimensional sentiment embeddings that can more easily capture multiple domains right from the start , thus making it possible to use them even without further fine - tuning .
+Related Work
+Sentiment Mining and Embeddings .
+There is along history of work on collecting word polarity scores manually or via graphbased propagation from seeds .
+present a probabilistic topic model that exploits sentiment supervision during training , leading to rep - resentations that include sentiment signals .
+However , in their experiments , the semantic - only models mostly outperform the corresponding full models with extra sentiment signals .
+showed that one can acquire sentiment information by learning from millions of training examples via distant supervision .
+While prior work used such signals for rule - based sentiment analysis or for feature engineering in SVMs and other shallow models , our study examines how they are best be incorporated into deep neural models , as the baseline of navely feeding them into the model does notwork sufficiently well .
+Neural Architectures .
+In terms of architectures , deep recursive neural networks were soon outperformed by deep convolutional and recurrent neural networks ( ? rsoy and Cardie , 2014 ; .
+Recent work has investigated more involved models , with ingredients such as Tree - LSTMs , hierarchical attention , user and product attention , aspectspecific modeling , and part of speech - specific transition functions .
+Large ensemble models also tend to outperform individually trained sentiment analysis models .
+The goal of our study is not necessarily to devise the most sophisticated stateof - the - art neural architecture , but to demonstrate how external sentiment cues can be incorporated such architectures .
+Our initial explorations relied on a simple dual - channel convolutional neural network .
+The present work proposes a more sophisticated approach , drawing on ideas from attention mechanisms in machine translation as well as from memory networks and iterative attention , which have proven useful for tasks such as question answering .
+We incorporate these ideas into a separate memory module that operates alongside the regular convolutional module .
+Conclusions
+Deep neural networks are widely used in sentiment polarity classification , but suffer from their dependence on very large annotated training corpora .
+In this paper , we study how to incorporate extrinsic cues into the network , beyond just generic word embeddings .
+We have found that this is best achieved using a dual - module approach that encourages the learning of models with favourable generalization abilities .
+Our experiments show that this can lead to gains across a number of different languages and domains .
+Our embeddings and multilingual datasets are freely available from http : //gerard.demelo.org/sentiment/.

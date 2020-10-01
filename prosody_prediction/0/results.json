@@ -1,0 +1,138 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "All models" : {
+          "reach over" : {
+            "80 %" : {
+              "in" : "2 - way classification task"
+            },
+            "from sentence" : "All models reach over 80 % in the 2 - way classification task while 3 - way classification accuracy stays below 70 % for all of them ."            
+          },
+          "has" : {
+            "3 - way classification accuracy" : {
+              "stays below" : "70 %"
+            },
+            "from sentence" : "All models reach over 80 % in the 2 - way classification task while 3 - way classification accuracy stays below 70 % for all of them ."            
+          },
+          "reached close to" : {
+            "full predictive capacity" : {
+              "with" : "only 10 % of the training examples"
+            },
+            "from sentence" : "All models have reached close to their full predictive capacity with only 10 % of the training examples ."
+          }
+        },
+        "BERTbased model" : {
+          "gets" : {
+            "highest accuracy" : {
+              "of" : {
+                "83.2 % and 68.6 %" : {
+                  "in" : "2 - way and 3 - way classification tasks"
+                }
+              }
+            }
+          },
+          "from sentence" : "The BERTbased model gets the highest accuracy of 83.2 % and 68.6 % in the 2 - way and 3 - way classification tasks , respectively , demonstrating the value of a pytorch - transformers 4 https://github.com/karlstratos/"
+        },
+        "3layer BiLSTM" : {
+          "achieves" : {
+            "82.1 %" : {
+              "in" : "2 - way classification"
+            },
+            "66.4 %" : {
+              "in" : "3 - way classification task"
+            }
+          },
+          "from sentence" : "The 3layer BiLSTM achieves 82.1 % in the 2 - way classification and 66.4 % in the 3 - way classification task ."
+        },
+        "traditional feature - based classifiers" : {
+          "perform" : {
+            "slightly below" : {
+              "has" : {
+                "neural network models" : {
+                  "with" : {
+                    "CRF" : {
+                      "obtaining" : {
+                        "81.8 % and 66.4 %" : {
+                          "for" : "two classification tasks"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "The traditional feature - based classifiers perform slightly below the neural network models , with the CRF obtaining 81.8 % and 66.4 % for the two classification tasks , respectively ."
+        },
+        "Minitagger SVM model 's test accuracies" : {
+          "are" : {
+            "slightly lower" : {
+              "than" : {
+                "CRF 's" : {
+                  "with" : "80.8 % and 65.4 % test accuracies"
+                }
+              }
+            }
+          },
+          "from sentence" : "The Minitagger SVM model 's test accuracies are slightly lower than the CRF 's with 80.8 % and 65.4 % test accuracies ."
+        }
+      },
+      "taking" : {
+        "simple majority class per word" : {
+          "gives" : {
+            "80.2 %" : {
+              "for" : "2 - way classification task"
+            },
+            "62.4 %" : {
+              "for" : "3 - way classification task"
+            }
+          },
+          "from sentence" : "Finally taking a simple majority class per word gives 80.2 % for the 2 - way classification task and 62.4 % for the 3 - way classification task ."
+        }
+      },
+      "For" : {
+        "most of the models" : {
+          "has" : {
+            "biggest improvement" : {
+              "in" : "performance",
+              "achieved when" : {
+                "moving" : {
+                  "from" : {
+                    "1 %" : {
+                      "of" : "training examples",
+                      "to" : "5 %"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "For most of the models the biggest improvement in performance is achieved when moving from 1 % of the training examples to 5 % ."
+        }
+      },
+      "with" : {
+        "manually annotated test set from The Boston University radio news corpus" : {
+          "has" : {
+            "good results" : {
+              "provide" : {
+                "further support" : {
+                  "for" : "quality of the new dataset"
+                }
+              },
+              "from sentence" : "As the proposed dataset has been automatically generated as described in Section 3 , we also tested the best two models , BERT and BiLSTM , with a manually annotated test set from The Boston University radio news corpus . :
+The good results 6 from this experiment provide further support for the quality of the new dataset ."
+
+            },
+            "difference" : {
+              "between" : "BERT and BiLSTM",
+              "has" : "much bigger",
+              "from sentence" : "Notice also that the difference between BERT and BiLSTM is much bigger with this test set ( + 3.9 % compared to + 1.1 % ) ."
+            }
+          }
+
+        }
+      }
+    }
+  }
+}

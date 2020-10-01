@@ -1,0 +1,231 @@
+274	0	11	Compared to
+274	16	66	dual - history variants ( variants 3 , 5 , and 7 )
+274	69	81	these models
+274	82	89	provide
+274	90	108	lesser performance
+277	0	4	DGIM
+277	5	13	prevents
+277	18	47	storage of dynamic influences
+277	48	55	between
+277	56	64	speakers
+277	65	72	at each
+277	73	93	historical time step
+277	98	106	leads to
+277	107	132	performance deterioration
+279	7	17	removal of
+279	18	27	multi-hop
+279	28	36	leads to
+279	37	54	worse performance
+279	55	59	than
+279	64	79	removal of DGIM
+281	10	26	best performance
+281	30	41	achieved by
+281	42	51	variant 6
+281	52	66	which contains
+281	67	91	all the proposed modules
+281	63	65	in
+281	95	107	its pipeline
+233	0	6	memnet
+233	7	9	is
+233	13	39	end - toend memory network
+235	0	5	cLSTM
+235	8	18	classifies
+235	19	29	utterances
+235	30	35	using
+235	36	78	neighboring utterances ( of same speaker )
+235	10	12	as
+235	82	89	context
+237	0	3	TFN
+237	6	12	models
+237	13	45	intra-and intermodality dynamics
+237	46	71	by explicitly aggregating
+237	72	109	uni - , bi- and trimodal interactions
+239	0	3	MFN
+239	4	12	performs
+239	13	32	multi-view learning
+239	33	41	by using
+239	42	74	Delta - memory Attention Network
+239	79	95	fusion mechanism
+239	96	104	to learn
+239	105	130	cross - view interactions
+241	0	10	CMN models
+241	11	19	separate
+241	20	28	contexts
+241	29	32	for
+241	38	58	speaker and listener
+241	59	64	to an
+241	65	74	utterance
+219	0	24	20 % of the training set
+219	28	35	used as
+219	36	50	validation set
+219	51	54	for
+219	55	79	hyper - parameter tuning
+221	0	11	Termination
+221	12	14	of
+221	19	35	training - phase
+221	39	49	decided by
+221	50	66	early - stopping
+221	67	71	with
+221	74	82	patience
+221	12	14	of
+221	86	135	10 d = 100 dv = 512 dem = 100 K = 40 R = 3 epochs
+222	4	11	network
+222	15	27	subjected to
+222	28	42	regularization
+222	43	57	in the form of
+222	58	89	Dropout and Gradient - clipping
+222	50	53	for
+222	96	100	norm
+222	55	57	of
+222	104	106	40
+223	14	37	best hyper - parameters
+223	42	55	decided using
+223	58	68	gridsearch
+220	3	6	use
+220	11	50	Adam optimizer ( Kingma and Ba , 2014 )
+220	51	54	for
+220	55	63	training
+220	68	78	parameters
+220	79	92	starting with
+220	96	117	initial learning rate
+220	118	120	of
+220	121	126	0.001
+225	0	3	For
+225	4	33	multimodal feature extraction
+225	39	46	explore
+225	47	64	different designs
+225	65	68	for
+225	73	86	employed CNNs
+226	4	8	text
+226	14	18	find
+226	23	39	single layer CNN
+226	40	62	to perform at par with
+226	63	78	deeper variants
+227	4	19	visual features
+227	34	44	deeper CNN
+227	45	53	provides
+227	54	76	better representations
+228	8	12	find
+228	18	51	contextually conditioned features
+228	52	71	perform better than
+228	72	95	context - less features
+20	3	10	propose
+20	11	61	Interactive COnversational memory Network ( ICON )
+20	66	84	multimodal network
+20	85	100	for identifying
+20	101	109	emotions
+20	97	99	in
+20	113	131	utterance - videos
+28	11	19	extracts
+28	20	39	multimodal features
+28	40	44	from
+28	45	64	all utterancevideos
+29	7	12	given
+29	15	29	test utterance
+29	30	35	to be
+29	36	46	classified
+29	49	53	ICON
+29	54	63	considers
+29	68	88	preceding utterances
+29	89	91	of
+29	92	105	both speakers
+29	106	120	falling within
+29	123	139	context - window
+29	144	150	models
+29	157	184	self - emotional influences
+29	185	190	using
+29	191	218	local gated recurrent units
+30	14	28	to incorporate
+30	29	54	inter -speaker influences
+30	59	80	global representation
+30	81	83	is
+30	84	93	generated
+30	94	99	using
+30	102	105	GRU
+30	111	118	intakes
+30	119	125	output
+30	126	128	of
+30	133	143	local GRUs
+31	0	3	For
+31	4	17	each instance
+31	9	11	in
+31	25	41	context - window
+31	48	54	output
+31	55	57	of
+31	63	73	global GRU
+31	77	86	stored as
+31	89	100	memory cell
+32	6	14	memories
+32	24	36	subjected to
+32	37	65	multiple read / write cycles
+32	66	78	that include
+32	79	98	attention mechanism
+32	99	113	for generating
+32	114	134	contextual summaries
+32	135	137	of
+32	142	164	conversational history
+33	0	2	At
+33	3	17	each iteration
+33	24	60	representation of the test utterance
+33	64	77	improved with
+33	83	105	summary representation
+33	118	126	used for
+33	127	137	prediction
+2	53	81	Multimodal Emotion Detection
+4	0	36	Emotion recognition in conversations
+16	0	45	Analyzing emotional dynamics in conversations
+246	0	4	ICON
+246	5	25	performs better than
+246	30	45	compared models
+246	46	50	with
+246	51	83	significant performance increase
+246	75	77	in
+246	87	112	emotions ( ? 2.1 % acc. )
+249	12	22	manages to
+249	33	41	identify
+249	23	32	correctly
+249	46	83	relatively similar excitement emotion
+249	84	86	by
+249	89	101	large margin
+264	14	30	trimodal network
+264	31	39	provides
+264	44	60	best performance
+264	70	81	preceded by
+264	86	102	bimodal variants
+266	20	45	audio and visual modality
+266	101	115	when used with
+266	116	120	text
+266	145	151	shared
+266	123	141	complementary data
+266	152	162	to improve
+266	163	182	overall performance
+247	0	3	For
+247	4	16	each emotion
+247	19	23	ICON
+247	24	35	outperforms
+247	36	59	all the compared models
+247	60	70	except for
+247	71	88	happiness emotion
+248	14	25	performance
+248	35	46	at par with
+248	47	53	c LSTM
+248	54	61	without
+248	64	79	significant gap
+251	0	2	In
+251	11	17	labels
+251	20	24	ICON
+251	25	32	attains
+251	33	53	improved performance
+251	54	58	over
+251	63	75	counterparts
+263	0	8	presents
+263	25	56	different combinations of modes
+263	57	64	used by
+263	65	69	ICON
+263	44	46	on
+263	73	80	IEMOCAP
+265	0	5	Among
+265	6	15	unimodals
+265	18	35	language modality
+265	36	44	performs
+265	49	53	best

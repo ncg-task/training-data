@@ -1,0 +1,17 @@
+{
+  "has" : {
+    "Approach" : {
+      "explore" : {
+        "supervised learning" : {
+          "of" : {
+            "task - specific , dynamic meta-embeddings" : {
+              "apply" : "sentence representations"
+            }
+          },
+          "from sentence" : "In this work , we explore the supervised learning of task - specific , dynamic meta-embeddings , and apply the technique to sentence representations ."
+        }
+      },
+      "is" : ["embedding - agnostic", {"from sentence" : "First , it is embedding - agnostic , meaning that one of the main ( and perhaps most important ) hyperparameters in NLP pipelines is made obsolete ."}]
+    }
+  }
+}

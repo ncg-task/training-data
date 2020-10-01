@@ -1,0 +1,383 @@
+title
+Commonsense for Generative Multi - Hop Question Answering Tasks
+abstract
+Reading comprehension QA tasks have seen a recent surge in popularity , yet most works have focused on fact - finding extractive QA .
+We instead focus on a more challenging multihop generative task ( NarrativeQA ) , which requires the model to reason , gather , and synthesize disjoint pieces of information within the context to generate an answer .
+This type of multi-step reasoning also often requires understanding implicit relations , which humans resolve via external , background commonsense knowledge .
+We first present a strong generative baseline that uses a multi-attention mechanism to perform multiple hops of reasoning and a pointer - generator decoder to synthesize the answer .
+This model performs substantially better than previous generative models , and is competitive with current state - of - theart span prediction models .
+We next introduce a novel system for selecting grounded multi-hop relational commonsense information from Concept Net via a pointwise mutual information and term - frequency based scoring function .
+Finally , we effectively use this extracted commonsense information to fill in gaps of reasoning between context hops , using a selectively - gated attention mechanism .
+This boosts the model 's performance significantly ( also verified via human evaluation ) , establishing a new state - of - the - art for the task .
+We also show promising initial results of the generalizability of our background knowledge enhancements by demonstrating some improvement on QAngaroo - WikiHop , another multihop reasoning dataset .
+narrative
+Reading comprehension QA tasks have seen a recent surge in popularity , yet most works have focused on fact - finding extractive QA .
+We instead focus on a more challenging multihop generative task ( NarrativeQA ) , which requires the model to reason , gather , and synthesize disjoint pieces of information within the context to generate an answer .
+This type of multi-step reasoning also often requires understanding implicit relations , which humans resolve via external , background commonsense knowledge .
+We first present a strong generative baseline that uses a multi-attention mechanism to perform multiple hops of reasoning and a pointer - generator decoder to synthesize the answer .
+This model performs substantially better than previous generative models , and is competitive with current state - of - theart span prediction models .
+We next introduce a novel system for selecting grounded multi-hop relational commonsense information from Concept Net via a pointwise mutual information and term - frequency based scoring function .
+Finally , we effectively use this extracted commonsense information to fill in gaps of reasoning between context hops , using a selectively - gated attention mechanism .
+This boosts the model 's performance significantly ( also verified via human evaluation ) , establishing a new state - of - the - art for the task .
+We also show promising initial results of the generalizability of our background knowledge enhancements by demonstrating some improvement on QAngaroo - WikiHop , another multihop reasoning dataset .
+Introduction
+In this paper , we explore the task of machine reading comprehension ( MRC ) based QA .
+This * Equal contribution .
+We publicly release all our code , models , and data at :
+https://github.com/yicheng-w/CommonSenseMultiHopQA task tests a model 's natural language understanding capabilities by asking it to answer a question based on a passage of relevant content .
+Much progress has been made in reasoning - based MRC - QA on the bAbI dataset , which contains questions that require the combination of multiple disjoint pieces of evidence in the context .
+However , due to its synthetic nature , bAb I evidences have smaller lexicons and simpler passage structures when compared to humangenerated text .
+There also have been several attempts at the MRC - QA task on human - generated text .
+Large scale datasets such as CNN / DM and have made the training of end - to - end neural models possible .
+However , these datasets are fact - based and do not place heavy emphasis on multi-hop reasoning capabilities .
+More recent datasets such as QAngaroo have prompted a strong focus on multi-hop reasoning in very long texts .
+However , QAngaroo is an extractive dataset where answers are guaranteed to be spans within the context ; hence , this is more focused on fact finding and linking , and does not require models to synthesize and generate new information .
+We focus on the recently published Narra - tive QA generative dataset that contains questions requiring multi-hop reasoning for long , complex stories and other narratives , which requires the model to go beyond fact linking and to synthesize non-span answers .
+Hence , models that perform well on previous reasoning tasks have had limited success on this dataset .
+In this paper , we first propose the Multi - Hop Pointer - Generator Model ( MHPGM ) , a strong baseline model that uses multiple hops of bidirectional attention , self - attention , and a pointer - generator decoder to effectively read and reason within along passage and synthesize a coherent response .
+Our model achieves 41.49 Rouge - L and 17.33 METEOR on the summary subtask of Narrative QA , substantially better than the performance of previous generative models .
+Next , to address the issue that understanding human - generated text and performing longdistance reasoning on it often involves intermittent access to missing hops of external commonsense ( background ) knowledge , we present an algorithm for selecting useful , grounded multi-hop relational knowledge paths from ConceptNet ) via a pointwise mutual information ( PMI ) and term - frequency - based scoring function .
+We then present a novel method of inserting these selected commonsense paths between the hops of document - context reasoning within our model , via the Necessary and Optional Information Cell ( NOIC ) , which employs a selectivelygated attention mechanism that utilizes commonsense information to effectively fill in gaps of inference .
+With these additions , we further improve performance on the Narrative QA dataset , achieving 44.16 Rouge - L and 19.03 METEOR ( also verified via human evaluation ) .
+We also provide manual analysis on the effectiveness of our commonsense selection algorithm .
+Finally , to show the generalizability of our multi-hop reasoning and commonsense methods , we show some promising initial results via the addition of commonsense information over the baseline on , an extractive dataset for multi-hop reasoning from a different domain .
+Related Work
+Machine Reading Comprehension :
+MRC has long been a task used to assess a model 's ability to understand and reason about language .
+Large scale datasets such as CNN / Daily Mail and have encouraged the development of many advanced , high performing attention - based neural models .
+Concurrently , datasets such as bAbI have focused specifically on multi-step reasoning by requiring the model to reason with disjoint pieces of information .
+On this task , it has been shown that iteratively updating the query representation with information from the context can effectively emulate multi-step reasoning .
+More recently , there has been an increase in multi-paragraph , multi-hop inference QA datasets such as QAngaroo and .
+These datasets have much longer contexts than previous datasets , and answering a question often requires the synthesis of multiple discontiguous pieces of evidence .
+It has been shown that models designed for previous tasks have limited success on these new datasets .
+In our work , we expand upon Gated Attention to create a baseline model better suited for complex MRC datasets such as Narrative QA by improving its attention and gating mechanisms , expanding its generation capabilities , and allowing access to external commonsense for connecting implicit relations .
+Commonsense/ Background
+Knowledge : Commonsense or background knowledge has been used for several tasks including opinion mining , sentiment analysis , handwritten text recognition , and more recently , dialogue .
+These approaches add commonsense knowledge as relation triples or features from external databases .
+Recently , largescale graphical commonsense databases such as ConceptNet ( Speer and Havasi , 2012 ) use graphical structure to express intricate relations between concepts , but effective goal - oriented graph traversal has not been extensively used in previous commonsense incorporation efforts .
+Knowledgebase QA is a task in which systems are asked to find answers to questions by traversing knowledge graphs .
+Knowledge path extraction has been shown to be effective at the task .
+We apply these techniques to MRC - QA by using them to extract useful commonsense knowledge paths that fully utilize the graphical nature of databases such as ConceptNet .
+Incorporation of External Knowledge :
+There have been several attempts at using external knowledge to boost model performance on a variety of tasks : showed that adding lexical information from semantic databases such as WordNet improves performance on NLI ; Xu et al. ( 2017 ) used a gated recall - LSTM mechanism to incorporate commonsense information into token representations in dialogue .
+In integrated external background knowledge into an NLU model by using contextually - refined word embeddings which integrated information from Con-ceptNet ( single - hop relations mapped to unstructured text ) via a single layer bidirectional LSTM .
+Concurrently to our work , showed improvements on a cloze - style task by incorporating commonsense knowledge via a context - to - commonsense attention , where commonsense relations were extracted as triples .
+This work represented commonsense relations as keyvalue pairs and combined context representation and commonsense via a static gate .
+Differing from previous works , we employ multi-hop commonsense paths ( multiple connected edges within ConceptNet graph that give us information beyond a single relationship triple ) to help with our MRC model .
+Moreover , we use this in tandem with our multi-hop reasoning architecture to incorporate different aspects of the commonsense relationship path at each hop , in order to bridge different inference gaps in the multi - hop QA task .
+Additionally , our model performs synthesis with its external , background knowledge as it generates , rather than extracts , its answer .
+Methods
+Multi - Hop Pointer - Generator Baseline
+We first rigorously state the problem of generative QA as follows : given two sequences of input tokens : the context , X C = {w C 1 , w C 2 , . . . , w C n } and the query , X Q = {w Q 1 , w Q 2 , . . . , w Q m } , the system should generate a series of answer tokens X a = {w a 1 , w a 2 , . . . , w a p }.
+As outlined in previous sections , an effective generative QA model needs to be able to perform several hops of reasoning overlong and complex passages .
+It would also need to be able to generate coherent statements to answer complex questions while having the ability to copy rare words such as specific entities from the reading context .
+With these in mind , we propose the Multi - Hop Pointer - Generator Model ( MHPGM ) baseline , a novel combination of previous works with the following major components :
+Embedding Layer : The tokens are embedded into both learned word embeddings and pretrained context - aware embeddings ( ELMo ) .
+Reasoning Layer :
+The embedded context is then passed through k reasoning cells , each of which iteratively updates the context representation with information from the query via BiDAF attention , emulating a single reasoning step within the multi-step reasoning process .
+Self - Attention Layer : The context representation is passed through a layer of self - attention to resolve long - term dependencies and co-reference within the context .
+Pointer - Generator Decoding Layer :
+A attention - pointer - generator decoder that attends on and potentially copies from the context is used to create the answer .
+The overall model is illustrated in , and the layers are described in further detail below .
+Embedding layer :
+We embed each word from the context and question with a learned embedding space of dimension d .
+We also obtain contextaware embeddings for each word via the pretrained embedding from language models ( ELMo ) ( 1024 dimensions ) .
+The embedded representation for each word in the context or question , e Ci ore Q i ?
+R d+1024 , is the concatenation of its learned word embedding and ELMo embedding .
+Reasoning layer :
+Our reasoning layer is composed of k reasoning cells ( see ) , where each incrementally updates the context representation .
+The t th reasoning cell 's inputs are the previous step 's output ( {c t? 1 i } n i=1 ) and the embedded question ( {e Q i } m i =1 ) .
+It first creates step- specific context and query encodings via cell - specific bidirectional LSTMs :
+Then , we use bidirectional attention to emulate a hop of reasoning by focusing on relevant aspects of the context .
+Specifically , we first compute context - to - query attention :
+where W t 1 , W t 2 , W t 3 are trainable parameters , and is elementwise multiplication .
+We then compute a query - to - context attention vector :
+Attention Distribution
+We then obtain the updated context representation :
+where ; is concatenation , ct is the cell 's output .
+The initial input of the reasoning layer is the embedded context representation , i.e. , c 0 = e C , and the final output of the reasoning layer is the output of the last cell , ck .
+Self - Attention Layer :
+As the final layer before answer generation , we utilize a residual static selfattention mechanism ( Clark and Gardner , 2018 ) to help the model process long contexts with longterm dependencies .
+The input of this layer is the output of the last reasoning cell , ck .
+We first pass this representation through a fully - connected layer and then a bi-directional LSTM to obtain another representation of the context c SA .
+We obtain the self attention representation c :
+where W 4 , W 5 , and W 6 are trainable parameters .
+The output of the self - attention layer is generated by another layer of bidirectional LSTM .
+At decoding step t , the decoder receives the input x t ( embedded representation of last timestep 's output ) , the last time step 's hidden state s t?1 and context vector a t?1 .
+The decoder computes the current hidden state st as :
+This hidden state is then used to compute a probability distribution over the generative vocabulary :
+We employ Bahdanau attention mechanism to attend over the context ( c being the output of self - attention layer ) :
+" What is the connection between Esther and Lady Dedlock ? "
+" Mother and daughter . "
+We utilize a pointer mechanism that allows the decoder to directly copy tokens from the context based on ?
+i .
+We calculate a selection distribution p sel ?
+R 2 , where p sel 1 is the probability of generating a token from P gen and p sel 2 is the probability of copying a word from the context :
+Our final output distribution at timestep t is a weighted sum of the generative distribution and the copy distribution :
+Commonsense Selection and Representation
+In QA tasks that require multiple hops of reasoning , the model often needs knowledge of relations not directly stated in the context to reach the correct conclusion .
+In the datasets we consider , manual analysis shows that external knowledge is frequently needed for inference ( see ) .
+Even with a large amount of training data , it is very unlikely that a model is able to learn every nuanced relation between concepts and apply the correct ones ( as in about a question .
+We remedy this issue by introducing grounded commonsense ( background ) information using relations between concepts from ConceptNet ( Speer and Havasi , 2012 ) 1 that help inference by introducing useful connections between concepts in the context and question .
+Due to the size of the semantic network and the large amount of unnecessary information , we need an effective way of selecting relations which provides novel information while being grounded by the context - query pair .
+Our commonsense selection strategy is twofold : ( 1 ) collect potentially relevant concepts via a tree construction method aimed at selecting with high recall candidate reasoning paths , and ( 2 ) rank and filter these paths to ensure both the quality and variety of added information via a 3 - step scoring strategy ( initial node scoring , cumulative node scoring , and path selection ) .
+We will refer to as a running example throughout this section .
+2
+Tree Construction
+Given context
+C and question Q , we want to construct paths grounded in the pair that emulate reasoning steps required to answer the question .
+In this section , we build ' prototype ' paths by constructing trees rooted in concepts in the query with the following branching steps 3 to emulate multihop reasoning process .
+For each concept c 1 in the question , we do : Direct Interaction :
+In the first level , we select relations r 1 from ConceptNet that directly link c 1 to a concept within the context , c 2 ? C , e.g. , in , we have lady ?
+church , lady ?
+mother , lady ?
+person .
+Multi -
+Hop :
+We then select relations in Concept - Net r 2 that link c 2 to another concept in the context , c 3 ?
+C .
+This emulates a potential reason - ing hop within the context of the MRC task , e.g. , church ?
+house , mother ?
+daughter , person ?
+lover .
+Outside Knowledge :
+We then allow an unconstrained hop into c 3 's neighbors in ConceptNet , getting to c 4 ? n bh ( c 3 ) via r 3 ( nbh ( v ) is the set of nodes that can be reached from v in one hop ) .
+This emulates the gathering of useful external information to complete paths within the context , e.g. , house ?
+child , daughter ?
+child .
+Context - Grounding :
+To ensure that the external knowledge is indeed helpful to the task , and also to explicitly link 2nd degree neighbor concepts within the context , we finish the process by grounding it again into context by connecting c 4 to c 5 ?
+C via r 4 , e.g. , child ?
+their .
+Rank and Filter
+This tree building process collects a large number of potentially relevant and useful paths .
+However , this step also introduces a large amount of noise .
+For example , given the question and full context ( not depicted in the figure ) in , we obtain the path " between ?
+hard ?
+being ?
+cottage ?
+country " using our tree building method , which is not relevant to our question .
+Therefore , to improve the precision of useful concepts , we rank these knowledge paths by their relevance and filter out noise using the following 3 - step scoring method :
+Initial Node Scoring :
+We want to select paths with nodes that are important to the context , in order to provide the most useful commonsense relations .
+We approximate importance and saliency for concepts in the context by their termfrequency , under the heuristic that important concepts occur more frequently .
+Thus we score c ? {c 2 , c 3 , c 5 } by : score ( c ) = count ( c ) / | C| , where | C| is the context length and count ( ) is the number of times a concept appears in the context .
+In , this ensures that concepts like daughter are scored highly due to their frequency in the context .
+For c 4 , we use a special scoring function as it is an unconstrained hop into ConceptNet .
+We want c 4 to be a logically consistent next step in reasoning following the path of c 1 to c 3 , e.g. , in , we see that child is a logically consistent next step after the partial path of mother ?
+daughter .
+We approximate this based on the heuristic that logically consistent paths occur more frequently .
+Therefore , we score this node via Pointwise Mutual Information ( PMI ) between the partial path c 1?3 and c 4 :
+Further , it is well known that PMI has high sensitivity to low - frequency values , thus we use normalized PMI ( NPMI ) ( Bouma , 2009 ) :
+Since the branching at each juncture represents a hop in the multi-hop reasoning process , and hops at different levels or with different parent nodes do not ' compete ' with each other , we normalize each node 's score against its siblings : n-score ( c ) = softmax siblings ( c ) ( score ( c ) ) .
+Cumulative Node Scoring :
+We want to add commonsense paths consisting of multiple hops of relevant information , thus we re-score each node based not only on its relevance and saliency but also that of its tree descendants .
+We do this by computing a cumulative node score from the bottom up , whereat the leaf nodes , we have c-score = n-score , and for cl not a leaf node , we have c-score ( c l ) = n-score ( c l ) + f ( c l ) where f of anode is the average of the c-scores of its top 2 highest scoring children .
+For example , given the paths lady ?
+mother ?
+daughter , lady ?
+mother ?
+married , and lady ?
+mother ?
+book , we start the cumulative scoring at the leaf nodes , which in this case are daughter , married , and book , where daughter and married are scored much higher than book due to their more frequent occurrences .
+Then , to cumulatively score mother , we would take the average score of its two highest scoring children ( in this case married and daughter ) and compound that with the score of mother itself .
+Note that the poor scoring of the irrelevant concept book does not affect the scoring of mother , which is quite high due to the concept 's frequent occurrence and the relevance of its top scoring children .
+Path Selection :
+We select paths in a top - down breath - first fashion in order to add information relevant to different parts of the context .
+Starting at the root , we recursively take two of its children with the highest cumulative scores until we reach a leaf , selecting up to 2 4 = 16 paths .
+For example , if we were at node mother , this allows us to select the child node daughter and married over the child node book .
+These selected paths , as well as their partial sub-paths , are what we add as external information to the QA model , i.e. , we add the complete path lady , AtLocation , church , Relat - ed To , house , Related To , child , Related To , their , but also truncated versions of the path , including lady , AtLocation , church , Related To , house , Re-lated To , child .
+We directly give these paths to the model as sequences of tokens .
+Overall , our sampling strategy provides the knowledge that a lady can be a mother and that mother is connected to daughter .
+This creates a logical connection between lady and daughter which helps highlight the importance of our second piece of evidence ( see ) .
+Likewise , the commonsense information we extracted create a similar connection in our third piece of evidence , which states the explicit connection between daughter and Esther .
+We also successfully extract a more story context - centric connection , in which commonsense provides the knowledge that a lady is at the location church , which directs to another piece of evidence in the context .
+Additionally , this path also encodes a relation between lady and child , byway of church , which is how lady and Esther are explicitly connected in the story .
+Commonsense Model Incorporation
+Given the list of commonsense logic paths as sequences of words :
+represents the list of tokens that makeup a single path , we first embed these commonsense tokens into the learned embedding space used by the model , giving us the embedded commonsense tokens , e CS ij ?
+Rd .
+We want to use these commonsense paths to fill in the gaps of reasoning between hops of inference .
+Thus , we propose Necessary and Optional Information Cell ( NOIC ) , a variation of our base reasoning cell used in the reasoning layer that is capable of incorporating optional helpful information .
+NOIC
+This cell is an extension to the base reasoning cell that allows the model to use commonsense information to fill in gaps of reasoning .
+An example of this is on the bottom left of , where we see that the cell first performs the operations done in the base reasoning cell and then adds optional , commonsense information .
+At reasoning step t , after obtaining the output of the base reasoning cell , ct , we create a cell - specific representation for commonsense information by concatenating the embedded commonsense paths so that each path has a single vector representation , u CS i .
+We then project it to the same dimension as ct
+We use an attention layer to model the interaction between commonsense and the context :
+Finally , we combine this commonsense - aware context representation with the original ct i via a sigmoid gate , since commonsense information is often not necessary at every step of inference :
+We use co t as the output of the current reasoning step instead of ct .
+As we replace each base reasoning cell with NOIC , we selectively incorporate commonsense at every step of inference .
+Results
+Main Experiment
+The results of our model on both Narrative QA and WikiHop with and without commonsense incorporation are shown in and .
+We see empirically that our model outperforms all generative models on NarrativeQA , and is competitive with the top span prediction models .
+Furthermore , with the NOIC commonsense integration , we were able to further improve performance ( p < 0.001 on all metrics 5 ) , establishing a new state - of - the - art for the task .
+We also see that our model performs reasonably well on WikiHop , and further achieves promising initial improvements via the addition of commonsense , hinting at the generalizability of our approaches .
+We speculate that the improvement is smaller on Wikihop because only approximately 11 % of WikiHop data points require commonsense and because WikiHop data requires more fact - based commonsense ( e.g. , from Freebase ) as opposed to semantics - based commonsense ( e.g. , from Con-ceptNet ( Speer and Havasi , 2012 ) ) .
+6
+Model Ablations
+We also tested the effectiveness of each component of our architecture as well as the effective - 5 Stat. significance computed using bootstrap test with 100K iterations .
+All results here are for the standard ( non - oracle ) unmasked and not -validated dataset .
+Welbl et al. ( 2018 ) has reported higher numbers on different data settings which are not comparable to our results .
+ness of adding commonsense information on the Narrative QA validation set , with results shown in .
+Experiment 1 and 5 are our models presented in were also important for the model 's performance and that self - attention is able to contribute significantly to performance on top of other components of the model .
+Finally , we see that effectively introducing external knowledge via our commonsense selection algorithm and NOIC can improve performance even further on top of our strong baseline .
+Commonsense Ablations
+We also conducted experiments testing the effectiveness of our commonsense selection and incorporation techniques .
+We first tried to naively add ConceptNet information by initializing the word embeddings with the ConceptNet - trained embeddings , NumberBatch ( Speer and Havasi , 2012 ) ( we also change embedding size from 256 to 300 ) .
+Then , to verify the effectiveness of our commonsense selection and grounding algorithm , we test our best model on in - domain noise by giving each context - query pair a set of random relations grounded in other context - query pairs .
+This should teach the model about general commonsense relations present in the domain of Narra - tive QA but does not provide grounding that fills in specific hops of inference .
+We also experimented with a simpler commonsense extraction method of using a single hop from the query to the context .
+The results of these are shown in , where we see that neither NumberBatch nor random - relationships nor single - hop common - sense offer statistically significant improvements 7 , whereas our commonsense selection and incorporation mechanism improves performance significantly across all metrics .
+We also present several examples of extracted commonsense and its model attention visualization in the supplementary .
+Human Evaluation Analysis
+We also conduct human evaluation analysis on both the quality of the selected commonsense relations , as well as the performance of our final model .
+Commonsense Selection :
+We conducted manual analysis on a 50 sample subset of the Narrative QA test set to check the effectiveness of our commonsense selection algorithm .
+Specifically , given a context - query pair , as well as the commonsense selected by our algorithm , we conduct two independent evaluations : ( 1 ) was any external commonsense knowledge necessary for answering the question ? ;
+( 2 ) were the commonsense relations provided by our algorithm relevant to the question ?
+The result for these two evaluations as well as how they overlap with each other are shown in , where we see that 50 % of the cases required external commonsense knowledge , and on a majority ( 34 % ) of those cases our algorithm was able to select the correct / relevant commonsense information to fill in gaps of inference .
+We also see that in general , our algorithm was able to provide useful commonsense 48 % of the time .
+Model Performance :
+We also conduct human evaluation to verify that our commonsense incorporated model was indeed better than MHPGM .
+The improvement in Rouge - L and METEOR for all three ablation approaches have p ? 0.15 with the bootstrap test .
+We randomly selected 100 examples from the Nar-rative QA test set , along with both models ' predicted answers , and for each datapoint , we asked 3 external human evaluators ( fluent English speakers ) to decide ( without knowing which model produced each response ) if one is strictly better than the other , or that they were similar in quality ( bothgood or both - bad ) .
+As shown in , we see that the human evaluation results are in agreement with that of the automatic evaluation metrics : our commonsense incorporation has a reasonable impact on the overall correctness of the model .
+The inter-annotator agreement had a Fleiss ? = 0.831 , indicating ' almost - perfect ' agreement between the annotators ( Landis and Koch , 1977 ) .
+Conclusion
+We present an effective reasoning - generative QA architecture that is a novel combination of previous work , which uses multiple hops of bidirectional attention and a pointer - generator decoder to effectively perform multi-hop reasoning and synthesize a coherent and correct answer .
+Further , we introduce an algorithm to select grounded , useful paths of commonsense knowledge to fill in the gaps of inference required for QA , as well a Necessary and Optional Information Cell ( NOIC ) which successfully incorporates this information during multi-hop reasoning to achieve the new state - of - the - art on Narrative QA ..
+Narrative
+QA is a generative QA dataset where the passages are either stories or summaries of stories , and the questions ask about complex aspects of the narratives such as event timelines , characters , relations between characters , etc .
+Each question has two answers which are generated by human annotators and usually can not be found in the passage directly .
+We focus on the summary subtask in this paper , where summaries have lengths of up to 1000 words .
+References
+We also test our model on WikiHop , a fact based , multi-hop dataset .
+Questions in WikiHop often require a model to read several documents in order to obtain an answer .
+We focus on the multiple - choice part of WikiHop , where models are tasked with picking the correct response from a pool of candidates .
+We rank candidate responses by calculating their generation probability based on our model .
+As this is a multi-document QA task , we first rank the candidate documents via TF - IDF cosine distance with the question , and then take the top k documents such that their combined length is less than 1300 words .
+Evaluation Metrics
+We evaluate Narrative
+QA on the metrics proposed by its original authors : Bleu - 1 , , and .
+We also evaluate on CIDEr as it places emphasize on annotator consensus .
+For WikiHop , we evaluate on accuracy .
+Training Details
+In training for both datasets , we minimize the negative log probability of generating the ground - truth answer with the Adam optimizer with an initial learning rate of 0.001 , a dropout - rate of 0.2 ( dropout is applied to the input of each RNN layer ) and batch size of 24 .
+We use 256 dimensional word embeddings and a hidden size of 128 for all RNNs and k = 3 hops of multi attention .
+At inference time we use greedy decoding to generate the answer .
+For both Narrative QA and WikiHop , we reached these parameters via tuning on the full , official validation set .
+A.2 Commonsense Extraction Examples
+In , and 10 ( see next page ) , we demonstrate extracted commonsense examples for questions that require commonsense to reach an answer .
+We bold words in the question and in the extracted commonsense in cases where the commonsense knowledge explicitly bridges gaps between implicitly connected words in the context or question .
+The relevant context is also displayed , with context words that are key to answering the question ( via commonsense ) marked in bold .
+These are then followed by a context visualization described in the next section .
+A.3 Commonsense Integration Visualization
+We also visualize how much commonsense information is integrated into each part of the context by providing a visualization of the z i value ( see end of Sec. 3.3 of main file ) for i ?
+{ 1 , 2 , 3 } , which is the gate value signifying how much commonsense - attention representation is used in the output context representation .
+In the following examples ( next page ) , we use shades of blue to represent the average of ( 1 ? z i ) at each word in the context ( normalized within each hop ) , with deeper blue indicating the use of more commonsense information .
+As a general trend , we see that in the earlier hops , words which are near tokens that occur in both the context and commonsense paths have high activation , but the activation becomes more focused on the passage 's key words w.r.t. the question , as the number of hops increase .
+maurya has lost her husband , and five of her sons to the sea .
+as the play begins nora and cathleen receive word from the priest that a body , that maybe their brother michael , has washed upon shore in donegal , the island farthest north of their home island of inishmaan .
+bartley is planning to sail to connemara to sell a horse , and ignores maurya s pleas to stay .
+he leaves gracefully .
+maury a predicts that by nightfall she will have no living sons , and her daughters chide her for sending bartley off with an ill word .
+maury a goes after bartley to bless his voyage , and nora and cathleen receive clothing from the drowned corpse that confirms it is their brother .
+maury a returns home claiming to have seen the ghost of michael riding behind bartley and begins lamenting the loss of the men in her family to the sea , after which some villagers bring in the corpse of bartley , who has fallen off his horse into the sea and drowned .
+this speech of maurya sis famous in irish drama :
+( raising her head and speaking as if she did not see the people around her ) they re all gone now , and there is n't anything more the sea can do tome ... .
+i ll have no call now to be up crying and praying when the wind breaks from the south , and you can hear the surf is in the east , and the surf is in the west , making a great stir with the two noises , and they hitting one on the other .
+i ll have no call now to be going down and getting holy water in the dark nights after samhain , and i wo n't care what way the sea is when the other women will be keening .
+( to nora ) give me the holy water , nora ; there s a small sup still on the dresser .
+maury a has lost her husband , and five of her sons to the sea .
+as the play begins nora and cathleen receive word from the priest that a body , that maybe their brother michael , has washed upon shore in donegal , the island farthest north of their home island of inishmaan .
+bartley is planning to sail to connemara to sell a horse , and ignores maurya s pleas to stay .
+he leaves gracefully .
+maurya predicts that by nightfall she will have no living sons , and her daughters chide her for sending bartley off with an ill word .
+maury a goes after bartley to bless his voyage , and nora and cathleen receive clothing from the drowned corpse that confirms it is their brother .
+maury a returns home claiming to have seen the ghost of michael riding behind bartley and begins lamenting the loss of the men in her family to the sea , after which some villagers bring in the corpse of bartley , who has fallen off his horse into the sea and drowned .
+this speech of maurya sis famous in irish drama :
+( raising her head and speaking as if she did not seethe people around her ) they re all gone now , and there is n't anything more the sea can do tome ... .
+i ll have no call now to be up crying and praying when the wind breaks from the south , and you can hear the surf is in the east , and the surf is in the west , making a great stir with the two noises , and they hitting one on the other .
+i ll have no call now to be going down and getting holy water in the dark nights after samhain , and i wo n't care what way the sea is when the other women will be keening .
+( to nora ) give me the holy water , nora ; there s a small sup still on the dresser .
+Commonsense Extraction and Visualization Examples
+Question
+What duty does ruth have to fulfill when her aunt dies ?
+Context " .. ruth anvoy , a young american woman with a wealthy father , comes to britain to visit her widowed aunt lady coxon .. "
+" .. having made a promise to her now - deceased husband , lady coxon has for years been seeking to bestow a sum of 13,000 pounds upon a talented intellectual whose potential has been hampered by lack of money .
+having failed to find such a person , lady coxon tells anvoy that upon her death the money will be left to her , and she must carry on the quest .. " " .. anvoy , having lost nearly all her wealth , has only the 13,000 pounds from lady coxon , with amoral but not legal obligation to give it away .. " " .. she awards the coxon fund to saltram , who lives off it exactly as he lived off his friends , producing nothing of intellectual value .. "
+Answers she must giveaway the 13,000 pounds to an appropriate recipient .
+/ bestow 13000 to the appropriate person frank saltram is a man who apparently has a towering intellect , but one that manifests itself only in sparkling table - talk .
+he has areal and power gift to delight with his conversation , particularly when intoxicated , but other than conversation he produces nothing .
+saltram also recognises no obligations or duties , is ungrateful and utterly unreliable , and is apparently prone to immoral acts .
+he lives off others , particularly the mulvilles , who , convinced of saltram s genius and genuinely enjoying his talk , host him for months at a time .
+in the opinion of the unnamed narrator , saltram is not a deliberate conman ; he simply suffers from a want of dignity .
+the story revolves around saltram and a group of people who are fascinated by him .
+ruth anvoy , a young american woman with a wealthy father , comes to britain to visit her widowed aunt lady coxon .
+there she meets george gravener , a man with areal intellect and a future in politics , and the two become engaged .
+she also meets saltram , and is fascinated and impressed by his talk and intellect , though aware that he has shortcomings of character .
+having made a promise to her nowdeceased husband , lady coxon has for years been seeking to bestow a sum of 13,000 pounds upon a talented intellectual whose potential has been hampered by lack of money .
+having failed to find such a person , lady coxon tells anvoy that upon her death the money will be left to her , and she must carry on the quest .
+anvoy s father suffers heavy financial losses and loses most of what he has .
+he dies , and shortly afterwards lady coxon dies .
+anvoy , having lost nearly all her wealth , has only the 13,000 pounds from lady coxon , with amoral but not legal obligation to give it away .
+gravener urges her to keep the money , as it could be used to buy them a house once they are married .
+she refuses , and their relationship becomes strained . later , she entertains the idea of giving the money to saltram , who gravener despises as a fraud and not a gentleman .
+eventually their engagement is broken off .
+finally , the unnamed narrator is given a sealed letter and asked to give it to anvoy .
+the letter is understood to contain a denunciation of saltram s most immoral acts .
+the narrator must decide whether to blight saltram s prospects by delivering the letter .
+he is willing to do so if it will save his friend gravener s engagement with anvoy , but gravener is unable to assure him of this .
+eventually he does offer the letter to anvoy , but anvoy declines to read it .
+she awards the coxon fund to saltram , who lives off it exactly as he lived off his friends , producing nothing of intellectual value .
+thus the only result of the award is the mulvilles and others lose the pleasure of saltram s conversation .
+frank saltram is a man who apparently has a towering intellect , but one that manifests itself only in sparkling table - talk .
+he has areal and power gift to delight with his conversation , particularly when intoxicated , but other than conversation he produces nothing .
+saltram also recognises no obligations or duties , is ungrateful and utterly unreliable , and is apparently prone to immoral acts .
+he lives off others , particularly the mulvilles , who , convinced of saltram s genius and genuinely enjoying his talk , host him for months at a time .
+in the opinion of the unnamed narrator , saltram is not a deliberate conman ; he simply suffers from a want of dignity .
+the story revolves around saltram and a group of people who are fascinated by him .
+ruth anvoy , a young american woman with a wealthy father , comes to britain to visit her widowed aunt lady coxon .
+there she meets george gravener , a man with areal intellect and a future in politics , and the two become engaged .
+she also meets saltram , and is fascinated and impressed by his talk and intellect , though aware that he has shortcomings of character .
+having made a promise to her nowdeceased husband , lady coxon has for years been seeking to bestow a sum of 13,000 pounds upon a talented intellectual whose potential has been hampered by lack of money .
+having failed to find such a person , lady coxon tells anvoy that upon her death the money will be left to her , and she must carry on the quest .
+anvoy s father suffers heavy financial losses and loses most of what he has .
+he dies , and shortly afterwards lady coxon dies .
+anvoy , having lost nearly all her wealth , has only the 13,000 pounds from lady coxon , with amoral but not legal obligation to give it away .
+gravener urges her to keep the money , as it could be used to buy them a house once they are married .
+she refuses , and their relationship becomes strained . later , she entertains the idea of giving the money to saltram , who gravener despises as a fraud and not a gentleman .
+eventually their engagement is broken off .
+finally , the unnamed narrator is given a sealed letter and asked to give it to anvoy .
+the letter is understood to contain a denunciation of saltram s most immoral acts .
+the narrator must decide whether to blight saltram s prospects by delivering the letter .
+he is willing to do so if it will save his friend gravener s engagement with anvoy , but gravener is unable to assure him of this .
+eventually he does offer the letter to anvoy , but anvoy declines to read it .
+she awards the coxon fund to saltram , who lives off it exactly as he lived off his friends , producing nothing of intellectual value .
+thus the only result of the award is the mulvilles and others lose the pleasure of saltram s conversation .
+frank saltram is a man who apparently has a towering intellect , but one that manifests itself only in sparkling table - talk .
+he has areal and power gift to delight with his conversation , particularly when intoxicated , but other than conversation he produces nothing .
+saltram also recognises no obligations or duties , is ungrateful and utterly unreliable , and is apparently prone to immoral acts .
+he lives off others , particularly the mulvilles , who , convinced of saltram s genius and genuinely enjoying his talk , host him for months at a time .
+in the opinion of the unnamed narrator , saltram is not a deliberate conman ; he simply suffers from a want of dignity .
+the story revolves around saltram and a group of people who are fascinated by him .
+ruth anvoy , a young american woman with a wealthy father , comes to britain to visit her widowed aunt lady coxon .
+there she meets george gravener , a man with areal intellect and a future in politics , and the two become engaged .
+she also meets saltram , and is fascinated and impressed by his talk and intellect , though aware that he has shortcomings of character .
+having made a promise to her nowdeceased husband , lady coxon has for years been seeking to bestow a sum of 13,000 pounds upon a talented intellectual whose potential has been hampered by lack of money .
+having failed to find such a person , lady coxon tells anvoy that upon her death the money will be left to her , and she must carry on the quest .
+anvoy s father suffers heavy financial losses and loses most of what he has .
+he dies , and shortly afterwards lady coxon dies .
+anvoy , having lost nearly all her wealth , has only the 13,000 pounds from lady coxon , with amoral but not legal obligation to give it away .
+gravener urges her to keep the money , as it could be used to buy them a house once they are married .
+she refuses , and their relationship becomes strained . later , she entertains the idea of giving the money to saltram , who gravener despises as a fraud and not a gentleman .
+eventually their engagement is broken off .
+finally , the unnamed narrator is given a sealed letter and asked to give it to anvoy .
+the letter is understood to contain a denunciation of saltram s most immoral acts .
+the narrator must decide whether to blight saltram s prospects by delivering the letter .
+he is willing to do so if it will save his friend gravener s engagement with anvoy , but gravener is unable to assure him of this .
+eventually he does offer the letter to anvoy , but anvoy declines to read it .
+she awards the coxon fund to saltram , who lives off it exactly as he lived off his friends , producing nothing of intellectual value .
+thus the only result of the award is the mulvilles and others lose the pleasure of saltram s conversation .

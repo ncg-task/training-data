@@ -1,0 +1,78 @@
+{
+  "has" : {
+    "Dataset" : {
+      "introduce" : {
+        "Sci - Cite" : {
+          "is" : {
+            "new dataset" : {
+              "of" : "citation intents",
+              "that is" : {
+                "significantly larger , more coarse - grained and generaldomain" : {
+                  "compared with" : "existing datasets"
+                }
+              }
+            }
+          },
+          "from sentence" : "To address these limitations , we introduce Sci - Cite , a new dataset of citation intents that is significantly larger , more coarse - grained and generaldomain compared with existing datasets ."
+        }
+      },
+      "consider" : {
+        "three intent categories" : {
+          "name" : ["BACK - GROUND", "METHOD", "RESULTCOMPARISON"],
+          "from sentence" : "We consider three intent categories outlined in : BACK - GROUND , METHOD and RESULTCOMPARISON ."
+        }
+      },
+      "has" : {
+        "Citation intent" : {
+          "of" : {
+            "sentence extractions" : {
+              "labeled through" : "crowdsourcing platform"
+            }
+          },
+          "from sentence" : "Citation intent of sentence extractions was labeled through the crowdsourcing platform ."
+        },
+        "Citation contexts" : {
+          "annotated by" : {
+            "850 crowdsource workers" : {
+              "made" : "total of 29,926 annotations",
+              "individually made" : "4 and 240 annotations"
+            },
+            "from sentence" : "Citation contexts were annotated by 850 crowdsource workers who made a total of 29,926 annotations and individually made between 4 and 240 annotations ."            
+          },
+          "has" : {
+            "sentence" : {
+              "was" : {
+                "annotated" : {
+                  "on average" : "3.74 times"
+                }
+              },
+              "from sentence" : "Each sentence was annotated , on average , 3.74 times ."
+            }
+          },
+          "resulted in" : {
+            "total 9,159" : {
+              "has" : {
+                "crowdsourced instances" : {
+                  "divided to" : {
+                    "training and validation sets" : {
+                      "with" : {
+                        "90 %" : {
+                          "of" : {
+                            "data" : {
+                              "used for" : "training set"
+                            }
+                          } 
+                        }
+                      }
+                    }
+                  }
+                },
+                "from sentence" : "This resulted in a total 9,159 crowdsourced instances which were divided to training and validation sets with 90 % of the data used for the training set ."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

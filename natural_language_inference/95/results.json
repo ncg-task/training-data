@@ -1,0 +1,28 @@
+{
+  "has" : {
+    "Results" : {
+      "on" : {
+        "DuReader" : {
+          "see that" : {
+            "paragraph ranking" : {
+              "boost" : ["BiDAF baseline", "significantly"],
+              "from sentence" : "Results on DuReader
+We can see that this paragraph ranking can boost the BiDAF baseline significantly ."
+
+            }
+          },
+          "has" : {
+            "our system ( single model )" : {
+              "achieves" : {
+                "further improvement" : {
+                  "by" : "large margin"
+                }
+              },
+              "from sentence" : "Finally , we implement our system based on this new strategy , and our system ( single model ) achieves further improvement by a large margin ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "has" : {
+    "Approach" : {
+      "propose" : {
+        "novel progressive self - supervised attention learning approach" : {
+          "for" : "neural ASC models",
+          "from sentence" : "In this paper , we propose a novel progressive self - supervised attention learning approach for neural ASC models ."
+        }
+      },
+      "able to automatically and incrementally mine" : {
+        "attention supervision information" : {
+          "from" : "training corpus",
+          "exploited to guide" : {
+            "training" : {
+              "of" : {
+                "attention mechanisms" : {
+                  "in" : "ASC models"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "Our method is able to automatically and incrementally mine attention supervision information from a training corpus , which can be exploited to guide the training of attention mechanisms in ASC models ."
+      },
+      "roots in" : {
+        "context word" : {
+          "with" : {
+            "maximum attention weight" : {
+              "has" : {
+                "greatest impact" : {
+                  "on" : {
+                    "sentiment prediction" : {
+                      "of" : "input service"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "The basic idea behind our approach roots in the following fact : the context word with the maximum attention weight has the greatest impact on the sentiment prediction of an input sentence ."
+        }
+      }
+    }    
+  }
+}

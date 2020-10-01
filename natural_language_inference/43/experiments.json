@@ -1,0 +1,111 @@
+{
+  "has" : {
+    "Experiments" : {
+      "has" : {
+        "Baselines" : {
+          "has" : {
+            "STAGG and COMPQ" : {
+              "which are" : {
+                "highest performing semantic parsing models" : {
+                  "on" : "COMPLEXQUESTIONS and WEBQUES - TIONS"
+                }
+              },
+              "from sentence" : "We compare our model , WEBQA , to STAGG and COMPQ , which are to the best of our knowledge the highest performing semantic parsing models on both COMPLEXQUESTIONS and WEBQUES - TIONS ."
+            }
+          }
+        },
+        "Results" : {
+          "has" : {
+            "WEBQA" : {
+              "obtained" : {
+                "32.6 F 1" : {
+                  "compared to" : {
+                    "40.9 F 1" : {
+                      "of" : "COMPQ"
+                    }
+                  }
+                },
+                "from sentence" : "WEBQA obtained 32.6 F 1 ( 33.5 p@1 , 42.4 MRR ) compared to 40.9 F 1 of COMPQ ."
+              }
+            },
+            "candidate extraction step" : {
+              "finds" : {
+                "correct answer" : {
+                  "in" : {
+                    "top - K candidates" : {
+                      "in" : {
+                        "65.9 %" : {
+                          "of" : "development examples"
+                        },
+                        "62.7 %" : {
+                          "of" : "test examples"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Our candidate extraction step finds the correct answer in the top - K candidates in 65.9 % of development examples and 62.7 % of test examples ."
+            },
+            "test F 1" : {
+              "on" : {
+                "examples" : {
+                  "for which" : {
+                    "candidate extraction succeeded ( WEBQA - SUBSET )" : {
+                      "is" : "51.9 ( 53.4 p@1 , 67.5 MRR )"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Thus , our test F 1 on examples for which candidate extraction succeeded ( WEBQA - SUBSET ) is 51.9 ( 53.4 p@1 , 67.5 MRR ) ."
+            },
+            "COMPQ" : {
+              "obtained" : {
+                "42.2 F 1" : {
+                  "on" : "test set",
+                  "compared to" : {
+                    "40.9 F 1" : {
+                      "when training on" : "COM - PLEXQUESTIONS only"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "In this setup , COMPQ obtained 42.2 F 1 on the test set ( compared to 40.9 F 1 , when training on COM - PLEXQUESTIONS only , as we do ) ."
+            }
+          },
+          "Restricting" : {
+            "predictions" : {
+              "to" : {
+                "subset" : {
+                  "for which" : {
+                    "candidate extraction" : {
+                      "has" : "succeeded"
+                    }
+                  }
+                }
+              },
+              "has" : {
+                "F 1" : {
+                  "of" : {
+                    "COMPQ - SUBSET" : {
+                      "is" : {
+                        "48.5" : {
+                          "is" : {
+                            "3.4 F 1 points lower" : {
+                              "than" : "WEBQA - SUBSET"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Restricting the predictions to the subset for which candidate extraction succeeded , the F 1 of COMPQ - SUBSET is 48.5 , which is 3.4 F 1 points lower than WEBQA - SUBSET , which was trained on less data ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

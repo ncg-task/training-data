@@ -1,0 +1,16 @@
+{
+  "has" : {
+    "Model" : {
+      "explore" : {
+        "two transfer methods" : {
+          "to incorporate" : {
+            "knowledge" : {
+              "name" : ["pretraining", "multi-task learning"]
+            }
+          },
+          "from sentence" : "Specifically , we explore two transfer methods to incorporate this sort of knowledge - pretraining and multi-task learning ."
+        }
+      }
+    }
+  }
+}

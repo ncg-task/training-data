@@ -1,0 +1,4 @@
+(Contribution||has research problem||Sentiment Classification)
+(Contribution||has research problem||document - level sentiment classification)
+(Contribution||has research problem||sentiment classification)
+(Contribution||has research problem||binary sentiment classification of long movie reviews)

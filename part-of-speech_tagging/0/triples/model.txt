@@ -1,0 +1,8 @@
+(Contribution||has||Model)
+(Model||propose and carefully analyze||neural part - of - speech ( POS ) tagging model)
+(neural part - of - speech ( POS ) tagging model||that exploits||adversarial training)
+(Model||With||BiLSTM - CRF model)
+(BiLSTM - CRF model||as||baseline POS tagger)
+(BiLSTM - CRF model||apply||adversarial training)
+(adversarial training||considering||perturbations)
+(perturbations||to||input word / character embeddings)

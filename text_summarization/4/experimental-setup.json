@@ -1,0 +1,111 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "reduce" : {
+        "size of the input , output , and entity vocabularies" : {
+          "to" : "at most 50 K"
+        },
+        "from sentence" : "For both datasets , we further reduce the size of the input , output , and entity vocabularies to at most 50 K as suggested in and replace less frequent words to \" < unk > \" ."
+      },
+      "replace" : {
+        "less frequent words" : {
+          "to" : "< unk >"
+        },
+        "from sentence" : "For both datasets , we further reduce the size of the input , output , and entity vocabularies to at most 50 K as suggested in and replace less frequent words to \" < unk > \" ."        
+      },
+      "initialize" : {
+        "word and entity vectors" : {
+          "use" : {
+            "pre-trained vectors" : {
+              "name" : ["300D Glove", "1000D wiki2vec"]
+            }
+          }
+        },
+        "from sentence" : "We use 300D Glove 6 and 1000D wiki2vec 7 pre-trained vectors to initialize our word and entity vectors ."
+      },
+      "For" : {
+        "GRUs" : {
+          "set" : {
+            "state size" : {
+              "to" : "500"
+            }
+          },
+          "from sentence" : "For GRUs , we set the state size to 500 ."
+        },
+        "CNN" : {
+          "set" : {
+            "h = 3 , 4 , 5" : {
+              "with" : "400 , 300 , 300 feature maps"
+            }
+          },
+          "from sentence" : "For CNN , we set h = 3 , 4 , 5 with 400 , 300 , 300 feature maps , respectively ."
+        },
+        "firm attention" : {
+          "tuned" : {
+            "k" : {
+              "by calculating" : {
+                "perplexity" : {
+                  "of" : {
+                    "model" : {
+                      "starting with" : "smaller values ( i.e. k = 1 , 2 , 5 , 10 , 20 , ... )",
+                      "stopping when" : {
+                        "perplexity of the model becomes worse" : {
+                          "than" : "previous model"
+                        }
+                      }
+                    }
+                  }
+                }
+              }  
+            }
+          },
+          "from sentence" : "For firm attention , k is tuned by calculating the perplexity of the model starting with smaller values ( i.e. k = 1 , 2 , 5 , 10 , 20 , ... ) and stopping when the perplexity of the model becomes worse than the previous model ."
+        }
+      },
+      "use" : {
+        "dropout" : {
+          "on" : {
+            "all non-linear connections" : {
+              "with" : "dropout rate of 0.5"
+            }
+          },
+          "from sentence" : "We use dropout on all non-linear connections with a dropout rate of 0.5 ."            
+        },
+        "beam search" : {
+          "of size" : {
+            "10" : {
+              "to generate" : "summary"
+            }
+          },
+          "from sentence" : "We use beam search of size 10 to generate the summary ."
+        }
+      },
+      "set" : {
+        "batch sizes" : {
+          "of" : {
+            "Gigaword and CNN datasets" : {
+              "to" : "80 and 10"
+            }
+          }
+        },
+        "from sentence" : "We set the batch sizes of Gigaword and CNN datasets to 80 and 10 , respectively ."
+      },
+      "Training is done via" : {
+        "stochastic gradient descent" : {
+          "over" : {
+            "shuffled mini-batches" : {
+              "with" : ["Adadelta update rule", "l 2 constraint ( Hinton et al. , 2012 ) of 3"]
+            }
+          }
+        } ,
+        "from sentence" : "Training is done via stochastic gradient descent over shuffled mini-batches with the Adadelta update rule , with l 2 constraint ( Hinton et al. , 2012 ) of 3 ."
+      },
+      "perform" : {
+        "early stopping" : {
+          "using" : "subset of the given development dataset"
+        },
+        "from sentence" : "We perform early stopping using a subset of the given development dataset ."
+      }      
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "tokenize" : {
+        "corpora" : {
+          "with" : "NLTK"
+        },
+        "from sentence" : "We tokenize the corpora with NLTK 2 ."
+      },
+      "use" : {
+        "300 dimension" : {
+          "has" : {
+            "pre-trained word vectors" : {
+              "from" : "GloVe",
+              "from sentence" : "We use the 300 dimension pre-trained word vectors from GloVe ( Pennington , Socher , and Manning 2014 ) and we do not update them during training ."              
+            }
+          }
+        },
+        "50 - dimension" : {
+          "has" : "character - level embedding vectors",
+          "from sentence" : "We use 50 - dimension character - level embedding vectors ."
+        },
+        "dropout" : {
+          "with" : {
+            "probability 0.3" : {
+              "for" : "every learnable layer"
+            }
+          },
+          "from sentence" : "We use dropout ) with probability 0.3 for every learnable layer ."
+        },
+        "Adam optimizer" : {
+          "with" : {
+            "learning rate" : {
+              "of" : "0.001"
+            },
+            "clipnorm" : {
+              "of" : "5"
+            }
+          },
+          "from sentence" : "We use the Adam optimizer with learning rate of 0.001 and clipnorm of 5 ."
+        }
+      },
+      "has" : {
+        "out - of - vocabulary words" : {
+          "initialized with" : "zero vectors",
+          "from sentence" : "The out - of - vocabulary words are initialized with zero vectors ."
+        },
+        "number of hidden units" : {
+          "in" : "all the LSTMs",
+          "is" : "150",
+          "from sentence" : "The number of hidden units in all the LSTMs is 150 ."
+        }
+      },
+      "For" : {
+        "multi-factor attentive encoding" : {
+          "choose" : "4 factors",
+          "from sentence" : "For multi-factor attentive encoding , we choose 4 factors ( m ) based on our experimental findings ( refer to ) ."
+        }
+      },
+      "During" : {
+        "training" : {
+          "has" : {
+            "minibatch size" : {
+              "fixed at" : "60"
+            }
+          },
+          "from sentence" : "During training , the minibatch size is fixed at 60 ."
+        }
+      }
+    }
+  }
+}

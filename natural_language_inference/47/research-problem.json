@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["natural language inference", {"from sentence" : "A large annotated corpus for learning natural language inference"}],
+    ["natural language inference ( NLI )", {"from sentence" : "Thus , natural language inference ( NLI ) - characterizing and using these relations in computational systems ) - is essential in tasks ranging from information retrieval to semantic parsing to commonsense reasoning ."}],
+    ["NLI", {"from sentence" : "NLI has been addressed using a variety of techniques , including those based on symbolic logic , knowledge bases , and neural networks ."}]
+  ]
+}

@@ -1,0 +1,172 @@
+202	36	41	using
+202	42	69	level - attention mechanism
+202	70	78	based on
+202	79	103	multi-level feature maps
+202	104	126	significantly improves
+202	131	142	performance
+202	143	147	over
+202	148	190	single visual - textual feature comparison
+204	37	45	see that
+204	46	64	non-linear mapping
+204	9	11	in
+204	72	77	model
+204	78	80	is
+204	81	97	really important
+204	104	113	replacing
+204	114	125	any mapping
+204	126	130	with
+204	133	143	linear one
+204	144	166	significantly degrades
+204	171	182	performance
+205	7	20	also see that
+205	21	39	non-linear mapping
+205	40	45	seems
+205	46	60	more important
+205	22	24	on
+205	68	79	visual side
+208	36	40	show
+208	45	55	importance
+208	56	64	of using
+208	67	103	strong contextualized text embedding
+208	104	106	as
+208	111	122	performance
+208	123	142	drops significantly
+209	86	94	applying
+209	25	32	softmax
+209	103	111	leads to
+209	114	134	very negative effect
+209	33	35	on
+209	142	153	performance
+168	3	6	use
+168	9	19	batch size
+168	20	22	of
+168	23	29	B = 32
+171	7	15	D = 1024
+171	16	19	for
+171	20	50	common space mapping dimension
+171	55	63	? = 0.25
+171	16	19	for
+171	68	78	Leaky ReLU
+171	37	39	in
+171	86	105	non-linear mappings
+169	0	21	Image - caption pairs
+169	26	33	sampled
+169	34	42	randomly
+169	43	47	with
+169	50	70	uniform distribution
+176	0	40	Both visual and textual networks weights
+176	45	57	fixed during
+176	58	66	training
+176	76	104	common space mapping weights
+176	41	44	are
+176	109	118	trainable
+170	3	8	train
+170	13	20	network
+170	21	24	for
+170	35	39	with
+170	44	58	Adam optimizer
+170	35	39	with
+170	64	74	lr = 0.001
+170	75	80	where
+170	85	98	learning rate
+170	102	112	divided by
+170	25	26	2
+170	115	122	once at
+170	127	140	10 - th epoch
+170	145	153	again at
+170	158	171	15 - th epoch
+172	3	13	regularize
+172	14	21	weights
+172	22	24	of
+172	29	37	mappings
+172	38	42	with
+172	43	61	l 2 regularization
+172	38	42	with
+172	67	85	reg value = 0.0005
+173	0	3	For
+173	4	7	VGG
+173	13	17	take
+173	18	25	outputs
+173	26	30	from
+173	31	74	{ conv 4 1 , conv 4 3 , conv5 1 , conv5 3 }
+173	79	85	map to
+173	86	107	semantic feature maps
+173	108	122	with dimension
+173	123	131	18181024
+173	138	141	for
+173	142	152	PNAS - Net
+173	13	17	take
+173	18	25	outputs
+173	26	30	from
+173	174	212	{ Cell 5 , Cell 7 , Cell 9 , Cell 11 }
+24	29	45	explicitly learn
+24	48	66	non-linear mapping
+24	67	69	of
+24	74	103	visual and textual modalities
+24	104	108	into
+24	111	123	common space
+24	136	138	at
+24	139	160	different granularity
+24	161	164	for
+24	165	176	each domain
+26	5	25	common space mapping
+26	29	41	trained with
+26	42	58	weak supervision
+26	63	75	exploited at
+26	76	87	test - time
+26	37	41	with
+26	95	139	multi - level multimodal attention mechanism
+26	142	147	where
+26	150	167	natural formalism
+26	168	181	for computing
+26	182	200	attention heatmaps
+26	73	75	at
+26	204	214	each level
+26	217	234	attended features
+26	239	257	pertinence scoring
+26	274	279	solve
+26	284	305	phrase grounding task
+26	306	331	elegantly and effectively
+2	51	75	Image - Phrase Grounding
+4	26	42	phrase grounding
+187	12	21	show that
+187	26	32	method
+187	33	58	significantly outperforms
+187	59	93	all state - of - the - art methods
+187	94	96	in
+187	97	128	all conditions and all datasets
+192	18	27	3rd level
+192	28	37	dominates
+192	42	51	selection
+192	62	71	4th level
+192	80	93	important for
+192	94	112	several categories
+192	113	120	such as
+192	121	138	scene and animals
+193	4	13	1st level
+193	17	37	exploited mostly for
+193	42	71	animals and people categories
+188	17	19	on
+188	281	291	Flickr30 k
+188	17	19	on
+188	62	67	model
+188	248	270	state - of - the - art
+188	17	19	on
+189	3	15	observe that
+189	16	26	our method
+189	27	34	obtains
+189	37	55	higher performance
+189	59	80	almost all categories
+189	66	80	all categories
+190	10	18	based on
+190	19	26	PNASNet
+190	27	51	consistently outperforms
+190	100	112	both metrics
+194	4	27	full sentence selection
+194	28	44	relies mostly on
+194	49	58	3rd level
+194	75	78	for
+194	79	93	some sentences
+194	98	107	4th model
+194	112	116	been
+194	117	125	selected

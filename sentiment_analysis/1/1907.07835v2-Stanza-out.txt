@@ -1,0 +1,396 @@
+title
+EEG - Based Emotion Recognition Using Regularized Graph Neural Networks
+abstract
+EEG signals measure the neuronal activities on different brain regions via electrodes .
+Many existing studies on EEG - based emotion recognition do not exploit the topological structure of EEG signals .
+In this paper , we propose a regularized graph neural network ( RGNN ) for EEG - based emotion recognition , which is biologically supported and captures both local and global inter-channel relations .
+Specifically , we model the inter-channel relations in EEG signals via an adjacency matrix in our graph neural network where the connection and sparseness of the adjacency matrix are supported by the neurosicience theories of human brain organization .
+In addition , we propose two regularizers , namely node - wise domain adversarial training ( NodeDAT ) and emotion - aware distribution learning ( EmotionDL ) , to improve the robustness of our model against cross - subject EEG variations and noisy labels , respectively .
+To thoroughly evaluate our model , we conduct extensive experiments in both subject - dependent and subject - independent classification settings on two public datasets : SEED and SEED - IV .
+Our model obtains better performance than competitive baselines such as SVM , DBN , DGCNN , BiDANN , and the state - of - the - art BiHDM inmost experimental settings .
+Our model analysis demonstrates that the proposed biologically supported adjacency matrix and two regularizers contribute consistent and significant gain to the performance .
+Investigations on the neuronal activities reveal that pre-frontal , parietal and occipital regions maybe the most informative regions for emotion recognition , which is consistent with relevant prior studies .
+In addition , experimental results suggest that global inter-channel relations between the left and right hemispheres are important for emotion recognition and local inter-channel relations between ( FP1 , AF3 ) , ( F6 , F8 ) and ( FP2 , AF4 ) may also provide useful information .
+INTRODUCTION
+E MOTION recognition is an important subarea of affective computing , which focuses on recognizing human emotions based on a variety of modalities , such as audio- visual expressions , body language , physiological signals , etc .
+Compared to other modalities , physiological signals , such as electroencephalogram ( EEG ) , electrocardiogram ( ECG ) , electromyogram ( EMG ) , galvanic skin response ( GSR ) , etc. , have the advantage of being difficult to hide or disguise .
+In recent years , due to the rapid development of noninvasive , easy - to - use and inexpensive EEG recording devices , EEG - based emotion recognition has received an increasing amount of attention in both research and applications .
+Emotion models can be broadly categorized into discrete models and dimensional models .
+The former categorizes emotions into discrete entities , e.g. , anger , disgust , fear , happiness , sadness , and surprise in Ekman 's theory .
+The latter describes emotions using their underlying dimensions , e.g. , valence , arousal and dominance , which measures emotions from unpleasant to pleasant , passive to active , and submissive to dominant , respectively .
+EEG signals measure voltage fluctuations from the cortex in the brain and have been shown to reveal important information about human emotional states .
+For example , greater relative left frontal EEG activity has been observed P. Zhong , D. when experiencing positive emotions .
+The voltage fluctuations on different brain regions are measured by electrodes attached to the scalp .
+Each electrode collects EEG signals in one channel .
+The collected EEG signals are often analyzed in specific frequency bands for each channel , namely delta ( 1 - 4 Hz ) , thet a ( 4 -7 Hz ) , alpha , beta , and gamma ( > 30 Hz ) .
+Many existing EEG - based emotion recognition methods are primarily based on the supervised machine learning approach wherein features are extracted from preprocessed EEG signals in each channel over a time window and then a classifier is trained on the extracted features to recognize emotions .
+Wang et al.
+compared power spectral density features ( PSD ) , wavelet features and nonlinear dynamical features with a Support Vector Machine ( SVM ) classifier .
+Zheng and Lu investigated critical frequency bands and channels using PSD , differential entropy ( DE ) and PSD asymmetry features , and obtained robust accuracy using deep belief networks ( DBN ) .
+However , most existing EEGbased emotion recognition approaches do not address the following three challenges :
+1 ) the topological structure of EEG signals are not effectively exploited to learn more discriminative EEG representations ; 2 ) EEG signals vary significantly across different subjects , which hinders the generalizability of the trained classifiers ; and 3 ) participants may not always generate the intended emotions when watching emotion - eliciting stimuli .
+Consequently , the emotion labels in the collected EEG data are noisy and may not be consistent with the actual elicited emotions .
+There have been several attempts to address the first challenge .
+Zhang et al. and Zhang et al .
+incorporated spatial relations in EEG signals using convolutional neural networks ( CNN ) and recurrent neural networks ( RNN ) , respectively .
+However , their approaches require a 2D representation of EEG channels on the scalp , which may cause information loss during flattening because channels are actually arranged in the 3D space .
+In addition , their approach of using CNNs and RNNs to capture inter-channel relations has difficulty in learning long - range dependencies .
+Graph neural networks ( GNN ) has been applied in to capture inter-channel relations using an adjacency matrix .
+However , similar to CNNs and RNNs , their approach only considers relations between the nearest channels , which thus may lose valuable information between distant channels , such as PSD asymmetry between channels on the left and right hemispheres in the frontal region , which has been shown as informative in valence prediction .
+A recent work applies RNNs to learn EEG representations in the two hemispheres separately and then adopts the asymmetric differences between them to recognize emotions .
+However , their approach is limited to using only the bi-hemispherical discrepancies and ignores other useful features such as neuronal activities recorded from each channel .
+In recent years , several studies , investigated the transferability of EEG - based emotion recognition models across subjects .
+Lan et al.
+compared several domain adaptation techniques such as maximum independence domain adaptation ( MIDA ) , transfer component analysis ( TCA ) , subspace alignment ( SA ) , etc .
+They found that the subject - independent classification accuracy can be improved by around 10 % .
+Li et al. applied domain adversarial learning to lower the influence of individual subject on EEG data and obtained improved performance as well .
+However , their approaches do not exploit any graph structure and only leads to small performance improvement ( see Section 7.1 ) .
+To the best of our knowledge , no attempt has been made to address the problem of noisy labels in EEG - based emotion recognition .
+In this paper , we propose a regularized graph neural network ( RGNN ) aiming to address all three aforementioned challenges .
+Graph analysis for human brain has been studied extensively in the neuroscience literature , .
+However , making an accurate connectome is still an open question and subject to different scales .
+Inspired by , , we consider each channel in EEG signals as a node in our graph .
+Our RGNN model extends the simple graph convolution network ( SGC ) and leverages the topological structure of EEG signals , i.e. , according to the economy of brain network organization , we propose a biologically supported sparse adjacency matrix to capture both local and global inter-channel relations .
+Local interchannel relations connect nearby groups of neurons and may reveal anatomical connectivity at macroscale , .
+Global inter-channel relations connect distant groups of neurons between the left and right hemispheres and may reveal emotion - related functional connectivity , .
+In addition , we propose a node - wise domain adversarial training ( NodeDAT ) to regularize our graph model for better generalization in subject - independent classification scenarios .
+Different from the domain adversarial training adopted by , , our Node DAT gives a finer - grained regularization by minimizing the domain discrepancies be-tween features in the source and target domains for each channel / node .
+Moreover , we propose an emotion - aware distribution learning ( Emotion DL ) method to address the problem of noisy labels in the datasets .
+Prior studies have shown that noisy labels can adversely impact classification accuracy .
+Instead of learning single - label classification , our Emotion DL learns a distribution of labels of the training data and thus acts as a regularizer to improve the robustness of our model against noisy labels .
+Finally , we conduct extensive experiments to validate the effectiveness of our proposed model and investigate emotion - related informative neuronal activities .
+In summary , the main contributions of this paper are as follows :
+1 ) We propose a regularized graph neural network ( RGNN ) model to recognize emotions based on EEG signals .
+Our model is biologically supported and captures both local and global inter-channel relations .
+2 ) We propose two regularizers : a node - wise domain adversarial training ( NodeDAT ) and an emotionaware distribution learning ( EmotionDL ) , which aim to improve the robustness of our model against cross - subject variations and noisy labels , respectively .
+3 ) We conduct extensive experiment in both subjectdependent and subject - independent classification settings on two public EEG datasets , namely SEED and SEED - IV .
+Experimental results demonstrate the effectiveness of our proposed model and regularizers .
+In addition , our RGNN achieves superior performance over the state - of - the - art baselines inmost experimental settings .
+4 ) We investigate the neuronal activities and the results reveal that pre-frontal , parietal and occipital regions maybe the most informative regions for emotion recognition .
+In addition , global inter-channel relations between the left and right hemispheres are important and local inter-channel relations between ( FP1 , AF3 ) , ( F6 , F8 ) and ( FP2 , AF4 ) may also provide useful information .
+RELATED WORK
+In this section , we review related work in the fields of EEG - based emotion recognition , graph neural networks , unsupervised domain adaptation and learning with noisy labels .
+EEG - Based Emotion Recognition
+EEG feature extractors and classifiers are the two fundamental components in the machine learning approach of EEGbased emotion recognition .
+EEG features can be broadly divided into single - channel features and multi-channel ones .
+The majority of existing features are single - channel features such as statistical features , , fractal dimension ( FD ) , PSD , differential entropy ( DE ) , and wavelet features .
+A few features are computed on multiple channels to capture the inter-channel relations , e.g. , the asymmetry features of PSD and functional connectivity , , where common indices such as correlation , coherence and phase synchronization were used estimate brain functional connectivity between channels .
+However , leveraging functional connectivity require labor - intensive manual connectivity analysis for each subject and may not be ideal for real - time applications .
+EEG classifiers can be broadly divided into topologyinvariant classifiers and topology - aware ones .
+The majority of existing classifiers are topology - invariant classifiers such as SVM , k - Nearest Neighbors ( KNN ) , DBNs and RNNs , which do not take the topological structure of EEG features into account when learning the EEG representations .
+In contrast , topology - aware classifiers such as CNNs , , , and GNNs consider the inter-channel topological relations and learn EEG representations for each channel by aggregating features from nearby channels using convolutional operations either in the Euclidean space or in the non-Euclidean space .
+However , as discussed in Section 1 , existing CNNs and GNNs have difficulty in learning the dependencies between distant channels , which may reveal important emotion - related information .
+Recently ,
+Zhang et al. and Li et al.
+proposed to use RNNs to learn spatial topological relations between channels by scanning electrodes in both vertical and horizontal directions .
+However , their approaches do not fully exploit the topological structure of EEG channels .
+For example , two topologically close channels maybe faraway from each other in the scanning sequence .
+Graph Neural Networks
+Graph neural networks ( GNN ) is a class of neural networks dealing with data in the graph domains , e.g. , molecular structures , social networks and knowledge graphs .
+One early work on GNNs aimed to learn a converged static state embedding for each node in the graph using a transition function applied to its neighborhood .
+Later , inspired by the convolutional operation of CNN in Euclidean domains , Bruna et al. combined spectral graph theory with neural networks and defined convolutional operations in graph domains using the spectral filters computed from the normalized graph Laplacian .
+Following this line of research , Defferrard et al. proposed fast localized convolutions by using a recursive formulation of the K-order Chebyshev polynomials to approximate the filters .
+The resulting representation for each node is an aggregation of its K thorder neighborhood .
+Kipf and Welling further limited K = 1 and proposed the standard graph convolutional network ( GCN ) with a faster localized graph convolutional operation .
+The convolutional layers in GCN can be stacked K times to effectively convolve the K th -order neighborhood of anode .
+Recently ,
+Wu et al. simplified GCN by removing the nonlinearities between convolutional layers in GCN and proposed the simple graph convolution network ( SGC ) , which effectively behaves like a linear feature transformation followed by a logistic regression .
+SGC performs orders of magnitude faster than GCNs with comparable classification accuracy .
+In this paper , we extend SGC to model EEG signals and propose a biologically supported adjacency matrix and two regularizers for robust EEG - based emotion recognition .
+Apart from the convolution operation used in GCNs , there are other types of operations in GNNs , such as attention or RNN .
+However , they are often trained significantly slower than SGC .
+Unsupervised Domain Adaptation
+Unsupervised domain adaptation aims to mitigate the domain shift in knowledge transfer from a supervised source domain to an unsupervised target domain .
+The most common approaches are instance re-weighting , domaininvariant feature learning , domain mapping and normalization statistics .
+Instance re-weighting methods aim to infer the resampling weight directly by feature distribution matching across source and target domains in a non-parametric manner .
+Domain - invariant feature leaning methods align features from both source and target domains to a common feature space .
+The alignment can be achieved by minimizing divergence , maximizing reconstruction or adversarial training .
+The domain mapping technique is typically applied in the computer vision field where pixel - level image - to - image translation from one domain to another domain improves domain adaptation performance .
+Normalization statistics are based on the assumption that the batch norm statistics learn domain knowledge .
+Cariucci et al.
+performed domain adaptation by modulating the batch norm layers ' statistics from source to target domain .
+Our proposed NodeDAT regularizer extends the domain adversarial training to graph neural networks and achieves finer - grained regularization by minimizing the discrepancies between features in source and target domains for each channel / node individually .
+Learning with Noisy Labels
+Commonly adopted approaches to learning with noisy labels are based on the noise transition matrix and robust loss functions .
+The noise transition matrix specifies the probabilities of transition from each ground true label to each noisy label and is often applied to modify the crossentropy loss .
+The matrix can be pre-computed as a prior or estimated from noisy data .
+A few studies tackle noisy labels by using noise - tolerant robust loss functions , such as unhinged loss and ramp loss .
+Several other approaches include bootstrap that leverages predicted labels to generate training targets and alternatively updating network parameters and labels during training .
+Our proposed Emotion DL regularizer is inspired by , which applies distribution learning to learn labels with ambiguity in the computer vision domain .
+PRELIMINARIES
+In this section , we introduce the preliminaries of the simple graph convolution network ( SGC ) and its spectral analysis , which is the basis of our RGNN model .
+Simple Graph Convolution Network ( SGC )
+Given a graph G = ( V , E ) , where V denotes a set of nodes and E denotes a set of edges between nodes in V .
+Data on V can be represented by a feature matrix X ?
+R nd , where n denotes the number of nodes and d denotes the input feature dimension .
+The edge set E can be represented by a weighted adjacency matrix A ?
+R nn with self - loops , i.e. , A ii = 1 , i = 1 , 2 , ... , n.
+In general , GNNs learn a feature transformation function for X and produces output Z ?
+R nd , where d denotes the output feature dimension .
+Between adjacent layers in GNNs , the feature transformation can be written as
+where l = 0 , 1 , ... , L ?
+1 , L denotes the number of layers , H 0 = X , H L = Z , and f denotes the function we want to learn .
+A simple definition off would be
+where ?
+denotes a non-linear function and W l denotes a weight matrix at layer l .
+For each node x , function f simply sums up all node features in its neighborhood including x itself , followed by a non-linear transformation .
+However , one major limitation off in is that repeatedly applying f along multiple layers may lead to H l with overly large values due to summation .
+Kipf and Welling alleviated this limitation by proposing the graph convolution network ( GCN ) as follows :
+where D denotes the diagonal degree matrix of A , i.e. ,
+prevents
+H from growing overly large .
+If we ignore ?
+and W l temporarily and expand , the hidden state H l + 1 i for node x i , i = 1 , 2 , ... , n , can be computed via
+Note that each neighboring H l j is now normalized by both the degrees of x i and x j .
+Therefore , essentially , for each node , the feature transformation function fin GCN is a nonlinear transformation of the weighted sum of node features of itself and its neighborhood .
+Successively applying
+L graph convolutional layers aggregates node features within a neighborhood of size L.
+To further accelerate training while keeping comparable performance , Wu et al.
+proposed SGC by removing the non-linear function ? in ( 3 ) and reparameterizing all linear transformations
+W l across all layers into one linear transformation W as follows :
+where S = D ? 1 2 AD 1 2 , and W = W L?1 W L?2 ... W 0 .
+Essentially , SGC computes a topology - aware linear trans - formation X = S L X , followed by one final linear transformation Z = XW .
+Spectral Graph Convolution
+We analyze GCN from the perspective of spectral graph theory .
+Graph Fourier analysis relies on the graph Laplacian L = D ?
+A or the normalized graph Lapla -
+SinceL is asymmetric positive semidefinite matrix , it can be decomposed as L = U?U T , where U is the orthonormal eigenvector matrix ofL and ? = diag ( ?
+1 , ... , ? N ) is the diagonal matrix of corresponding eigenvalues .
+Given graph data X , the graph Fourier transform of X is X = UT X , and the inverse Fourier transform of X is X = UX .
+Hence , the graph convolution between X and a filter G is computed as follows :
+where denotes element - wise multiplication , and ? = diag ( ?
+1 , ..., ?
+N ) denotes a diagonal matrix with n spectral filter coefficients .
+To reduce the current learning complexity of O ( n ) to that of conventional CNN , i.e. , O ( K ) , ( 6 ) can be approximated using the Kth order polynomials as follows :
+where ?
+i denotes coefficients .
+To further reduce computational cost , Defferrard et al. proposed to use Chebyshev polynomials to approximate the filtering operation as follows :
+where ?
+i denotes learnable parameters , L denotes the scaled normalized Laplacian L = 2 ? maxL ?
+I with its eigenvalues lying within [ ? 1 , 1 ] , and Ti ( x ) denotes the Chebyshev polynomials recursively defined as
+The GCN proposed in made a few approximations to simplify the filtering operation in ( 8 ) :
+1 ) use K = 1 ; 2 ) set ? max = 2 ; and 3 ) set ?
+0 = ??
+1 . The resulted GCN arrives at .
+Essentially , the graph convolutional operations defined in and behave like a low - pass filter by smoothing the features of each node on the graph using node features in its neighborhood .
+REGULARIZED GRAPH NEURAL NETWORK
+In this section we present our regularized graph neural network ( RGNN ) , specifically , the biologically supported adjacency matrix , and RGNN with two regularizers , i.e. , node - wise domain adversarial training ( NodeDAT ) and emotion - aware distribution learning ( EmotionDL ) .
+Adjacency Matrix in RGNN
+The adjacency matrix A ?
+R nn in RGNN represents the topological structure of EEG channels , where n denotes the number of channels in EEG signals or nodes on the graph .
+Each entry A ij in the adjacency matrix indicates the weight of connection between channels i and j.
+Note that A contains self - loops .
+To reduce overfitting , we model A as asymmetric matrix by using only n ( n + 1 ) 2 number of parameters instead of n 2 .
+Salvador et al.
+observed that the strength of connection between brain regions decays as an inverse square or gravity - law function of physical distance . :
+The 62 - channel EEG placement used to collect data in SEED and SEED - IV .
+Gray symmetric channels are connected globally via red dashed lines .
+Hence , we initialize the local inter-channel relations in our adjacency matrix as follows :
+where d ij , i , j = 1 , 2 , ... , n , denotes the physical distance between channels i and j , computed from the data sheet of the recording device , and ?
+denotes a sparsity hyperparameter controlling the decay rate of the connection between channels .
+Bullmore and Sporns proposed that the brain organization is shaped by an economic trade - off between minimizing wiring costs and network running costs .
+Minimizing wiring costs encourages local inter-channel connections as modelled in .
+However , minimizing network running costs encourages certain global inter-channel connections for high efficiency of information transfer across the network as a whole .
+To this end , we add several global connections to our adjacency matrix .
+The global connections are subject to the specific EEG channel placement adopted in experiments .
+depicts the global connections in both SEED and SEED - IV .
+The selection of global channels is supported by prior studies showing that the asymmetry in neuronal activities between the left and right hemispheres is informative in valence and arousal predictions , , .
+To leverage the differential asymmetry information , we initialize the global inter-channel relations in A to [ ?1 , 0 ] as follows :
+where ( i , j ) denotes the indices of empirically selected symmetric channel pairs that balance wiring cost and global efficiency : ( FP1 , FP2 ) , ( AF3 , AF4 ) , ( F5 , F6 ) , ( FC5 , FC6 ) , ( C5 , C6 ) , ( CP5 , CP6 ) , ( P5 , P6 ) , ( PO5 , PO6 ) , and ( O1 , O2 ) .
+Note that our adjacency matrix A obtained in ( 10 ) aims to represent the brain network which combines both local anatomical connectivity and emotion - related global functional connectivity .
+The last step in constructing the adjacency matrix is finding an optimal value of ? to regularize the weights of connections between local channels .
+Achard and Bullmore observed that sparse f MRI networks , comprising around 20 % of all possible connections , typically maximize the efficiency of the network topology .
+Thus , we choose ?
+such that around 20 % of entries in A are larger than 0.1 in absolute values .
+We empirically pick 0.1 as the threshold of having negligible connections between channels .
+Dynamics of RGNN
+Our RGNN model extends the SGC model .
+The architecture of RGNN is illustrated in .
+Given EEG features X ?
+RN nd and labels Y ? Z N , where N denotes the number of training samples , n denotes the number of nodes or channels , d denotes the input feature dimension , Y i ? { 0 , 1 , ... , C ?1 } denotes the label index , and C denotes the number of classes .
+Our model aims to minimize the following cross - entropy loss :
+where ?
+denotes the model parameters we want to optimize , and ?
+denotes the L1 sparse regularization strength of our adjacency matrix A .
+By passing each feature matrix X i into our RGNN , the output probability of class Y i can be computed as
+where S ?
+R nn , W ? R dd and L follow the definitions in , ?( x ) = max ( 0 , x ) , W O ?
+Rd C denotes the output weight matrix , and pool ( ) denotes the sum pooling across all nodes on the graph .
+We choose sum pooling because it demonstrated more expressive power than mean pooling and max pooling .
+Note that we use the absolute values of A to compute the degree matrix D because A has negative elements , e.g. , global connections .
+Node - wise Domain Adversarial Training
+EEG signals vary significantly across different subjects , which hinders the generalizability of trained classifiers .
+To improve subject - independent classification performance , we extend the domain adversatial training by proposing a node - wise domain adversarial training ( NodeDAT ) to reduce the discrepancies between source and target domains , i.e. , training and testing sets , respectively .
+Specifically , a domain classifier is proposed to classify each node representation into either source domain or target domain .
+Compared to , which only regularizes the pooled representation in the last layer , our NodeDAT has finer - grained regularization because it explicitly regularizes each node representation before pooling ( see Section 7.1 ) .
+During optimization , our model aims to confuse the domain classifier by learning domain - invariant representations for each node .
+Specifically , given source / training data XS ?
+RN nd ( in this subsection , we denote X by XS for better clarity ) and unlabelled target / testing data X T ?
+RN nd , wherein practice X T can be either oversampled or donwsampled to have the same number of samples as XS , the domain classifier aims to minimize the sum of the following two binary cross - entropy losses :
+where 0 and 1 denote source and target domains , respectively .
+Intuitively the domain classifier aims to classify source data as 0 and target data as 1 .
+The domain probabilities p D ( ) j for node j are computed as
+where Z Note that our domain classifier implements a gradient reversal layer ( GRL ) to reverse the gradients of the domain classifier during backpropagation .
+The gradients are further scaled by a GRL scaling factor ?
+which gradually increases from 0 to 1 as the training progresses .
+The gradually increasing ?
+allows our domain classifier to be less sensitive to noisy inputs at the early stages of the training process .
+Specifically , as suggested in , we let ? = 2 1 +e ?10 p ? 1 , where p ?
+[ 0 , 1 ] denotes the training progress .
+Emotion - aware Distribution
+Learning
+Participants may not always generate the intended emotions when watching emotion - eliciting stimuli .
+To address the problem of noisy emotion labels in the datasets , we propose an emotion - aware distribution learning method ( EmotionDL ) to learn a distribution of classes instead of one single class for each training sample .
+Specifically , we convert each training label Y i ? { 0 , 1 , ... , C ? 1 } into a prior probability distribution of all classes ?
+i ? RC , where ?
+ic denotes the probability of class c in ?
+i .
+The conversion is dataset - dependent .
+In SEED , there are three classes : negative , neutral , and positive with corresponding class indices 0 , 1 , and 2 , respectively .
+We convert Y as follows :
+where ?
+[ 0 , 1 ] denotes a hyper - parameter controlling the noise level in the training labels .
+This conversion mechanism is based on our assumption that participants are unlikely to generate opposite emotions when watching emotioneliciting stimuli .
+Therefore , the converted class distribution centers on the original class and has non-zero and zero probabilities at its nearest and opposite classes , respectively .
+In SEED - IV , there are four classes : neutral , sad , fear , and happy with corresponding class indices 0 , 1 , 2 , and 3 , respectively .
+We can convert Y as follows :
+The intuition behind this conversion is based on the distances between the four emotions on the valence - arousal plane .
+Specifically , in the self - reported ratings , neutral , sad , fear , and happy movie ratings cluster in the zero valence zero arousal , negative valence negative arousal , negative valence positive arousal , and positive valence positive arousal regions , respectively .
+Thus , we assume that participants are likely to generate emotions that have similar ratings in either valence or arousal dimensions , e.g. , both angry and happy have high arousal , but unlikely to generate emotions that are faraway in both dimensions , e.g. , sad and happy are different in both valence and arousal .
+After obtaining the converted class distributions ? , our model can be optimized by minimizing the following Kullback - Leibler ( KL ) divergence instead of ( 11 ) :
+where p ( Y| X i , ? ) denotes the output probability distribution computed via .
+Note that our EmotionDL is different from label smoothing , which simply adds uniform noise to other classes .
+Optimization of RGNN
+Combining both NodeDAT and Emotion DL , the overall loss function ?
+of RGNN is computed as follows :
+The detailed algorithm for training RGNN is presented in Algorithm
+1 . repeat Draw one batch of training samples X B and ?
+B from X and ? , respectively ; Draw one batch of testing samples X TB from X T ; Compute degree matrix D based on ( 3 ) ;
+Algorithm
+1 The Training Algorithm for RGNN
+7 :
+Compute normalized adjacency matrix S based on ( 5 ) ; Compute output representation Z based on ( 12 ) ; Use X B and ?
+B to compute KL loss ? based on ( 17 ) ; Use X B and X TB to compute domain loss ?
+D based on ( 13 ) ; Compute GRL scaling factor ? ;
+Update
+; until all samples in X are drawn ;
+EXPERIMENTAL
+SETTINGS
+In this section , we present the datasets , classification settings and model settings in our experiments .
+Datasets
+We use both SEED and SEED - IV datasets in our experiments .
+The SEED dataset comprises EEG data of 15 subjects ( 7 males ) recorded in 62 channels using the ESI NeuroScan System 1 .
+The EEG data was collected when 1 .
+https://compumedicsneuroscan.com/ participants watch emotion - eliciting movies in three types of emotions , namely negative , neutral and positive .
+Each movie lasts around 4 minutes .
+There are three sessions of data collected and each session comprises 15 trials / movies for each subject .
+To make a fair comparison with existing studies , we directly use the pre-computed differential entropy ( DE ) features smoothed by linear dynamic systems ( LDS ) , in SEED .
+DE extends the idea of Shannon entropy and measures the complexity of a continuous random variable .
+For a fixed length EEG segment , DE features are computed as the logarithm energy spectrum in a certain frequency band .
+In SEED , DE features are pre-computed over five frequency bands ( delta , theta , alpha , beta and gamma ) for each second of EEG signals ( without overlapping ) in each channel .
+The SEED - IV dataset comprises EEG data of 15 subjects ( 7 males ) recorded in 62 channels
+2 .
+The recording device is the same as the one used in SEED .
+The EEG data were collected when participants watch emotion - eliciting movies in four types of emotions , namely , neutral , sad , fear , and happy .
+Each movie lasts around 2 minutes .
+There are three sessions of data collected and each session comprises 24 trials / movies for each subject .
+Similar to SEED , we adopt the pre-computed DE features from SEED - IV .
+Classification Settings
+We conduct both subject - dependent and subjectindependent classifications on both SEED and SEED - IV to evaluate our model .
+Subject - Dependent Classification
+Subject - Independent Classification
+Similar to , presents the subject - independent classification results .
+When using features from all frequency bands , our model performs marginally worse than BiHDM on SEED but much better than BiHDM on SEED - IV ( nearly 5 % improvement ) .
+In addition , our model achieves the lowest standard deviation inaccuracy compared to all baselines on both datasets , demonstrating the robustness of our model .
+Comparing the results shown in Tables 1 and 2 , we find that the accuracy obtained in subject - independent settings is consistently worse than the accuracy obtained in subjectdependent settings by around 5 % to 30 % for every model .
+This finding is unsurprising because the variability of EEG signals across subjects makes subject - independent classification more challenging .
+However , the interesting part is that the performance gap between these two settings is gradually decreasing from around 27 % on SEED and 19 % on SEED - IV using SVM to around 9 % on SEED and 6 % on SEED - IV using our model .
+One possible reason for the diminishing gap is that recent deep learning models in subjectindependent settings are becoming better at leveraging a larger amount of data and learning more subject - invariant EEG representations .
+This observation seems to indicate that transfer learning maybe a necessary tool for emotion recognition in cross - subject settings .
+With the increasing amount of data available from different subjects and a proper transfer learning tool , it would not be surprising that subject - independent classification accuracy will surpass the subject - dependent classification accuracy in the future .
+Model Settings in RGNN
+For our RGNN in all experiments , we empirically set the number of convolutional layers L = 2 , dropout rate of 0.7 at the output fully - connected layer , and batch size of 16 .
+We use Adam optimization with default values , i.e. , ? 1 = 0.9 and ? 2 = 0.999 .
+We only tune the output feature dimension d , label noise level , learning rate ? , L1 regularization factor ? , and L2 regularization for each experiment .
+Note that we only adopt NodeDAT in subjectindependent classification experiments .
+We compare our model with several baselines , which are cited from published results , , , .
+PERFORMANCE EVALUATIONS
+In this section we present model evaluation results in both subject - dependent and subject - independent classification settings on both datasets .
+We also investigate critical frequency bands and confusion matrix of our model .
+presents the subject - dependent classification accuracy ( mean / standard deviation ) of our RGNN model and all baselines on both SEED and SEED - IV using the precomputed DE features .
+The performance on SEED using DE feature in the individual delta , theta , alpha , beta , and gamma bands is reported as well .
+It is encouraging to see that our model achieves superior performance on both datasets as compared to all baselines including the stateof - the - art BiHDM when DE features from all frequency bands are used .
+It is worth noting that our model improves the accuracy of the state - of - the - art model on SEED - IV by around 5 % .
+In particular , our model performs better than DGCNN , which is another GNN - based model that leverages the topological structure in EEG signals .
+Besides the proposed two regularizers ( see ) , the main performance improvement can be attributed to two factors :
+1 ) our adjacency matrix incorporates the global inter-channel asymmetry relation between the left and right hemispheres ; and 2 ) our model has less concern of overfitting by extending SGC , which is much simpler than ChebNet used in DGCNN .
+Performance Comparison of Frequency Bands
+We further compare the performance of our model and all baselines using features from different frequency bands , as reported in .
+In subject - dependent experiments on SEED , STRNN achieves the highest accuracy in delta , theta and alpha bands , BiDANN performs best in beta band , and our model performs best in gamma band .
+In subject - independent experiments on SEED , BiDANN - S achieves the highest accuracy in theta and alpha bands , and our model performs best in delta , beta and gamma bands .
+We investigate the critical frequency bands for emotion recognition .
+For both subject - dependent and subjectindependent settings on SEED , we compare the performance of each model across different frequency bands .
+In general , most models including our model achieve better performance on beta and gamma bands than delta , theta and alpha bands , with one exception of STRNN , which performs the worst on gamma band .
+This observation is consistent with the literature , .
+One subtle difference between our model and other models is that our model performs consistently better in gamma band than beta band , whereas other models perform comparably in both bands , indicating that gamma band maybe the most discriminative band for our model .
+Confusion Matrix
+We present the confusion matrix of our model in .
+For both subject - dependent and subject - independent settings on SEED , our model can recognize better for positive and neutral emotions than negative emotion .
+By combining training data from other subjects ( see ( a ) and ( b ) ) , our model is getting much worse at detecting negative emotion , indicating that participants are likely to generate distinct EEG patterns when experiencing negative emotion .
+Similar phenomenon is observed in SEED - IV for sad emotion as well ( see ) .
+For SEED - IV , our model performs significantly better on sad emotion than all other emotions in both classification settings .
+We notice that fear is the only emotion that performs better in subject - independent classification than in subject - dependent classification .
+This finding indicates that participants watching horror movies may generate similar EEG patterns .
+MODEL ANALYSIS ON RGNN
+In this section we conduct ablation study and sensitivity analysis for model .
+Ablation Study
+We conduct ablation study to investigate the contribution of each key component in our model .
+reports the results obtained in subject - independent setting on both datasets .
+The two major designs in our adjacency matrix A , i.e. , global connection and symmetric adjacency matrix designs , are helpful in recognizing emotions .
+The global connection models the asymmetric difference between neuronal activities in the left and right hemispheres and have been shown to reveal certain emotions , , .
+The symmetric adjacency matrix design is mostly motivated to reduce the number of model parameters and prevent overfitting , especially in subject - dependent classifications where lesser training data is available .
+Our NodeDAT regularizer has a noticeable positive impact on the performance of our model , which demonstrates that domain adaptation is significantly helpful in crosssubject classification .
+To further investigate the impact of our node - level domain classifier , we further experimented with replacing NodeDAT with a generic domain classifier ( DAT ) that operates after the pooling operation , i.e. , ( - NodeDAT + DAT ) in .
+The clear performance gap between ( - NodeDAT + DAT ) and our RGNN model indicates that our NodeDAT can better regularize the model by learning subject - invariant representation at node level than graph level .
+In addition , if NodeDAT is removed , the performance of our model has a greater variance , demonstrating the importance of NodeDAT in improving the robustness of our model against cross - subject variations .
+Our Emotion
+DL regularizer improves performance of our model by around 3 % in accuracy on both datasets .
+This performance gain validates our assumption that participants are not always generating the intended emotions when watching emotion - eliciting stimuli .
+In addition , our Emotion DL can be easily adopted by other deep learning models .
+Sensitivity Analysis
+We analyze the performance of our model across varying L1 sparsity coefficient ?
+( see ) and noise coefficient in Emotion DL ( see and ) , as illustrated in .
+For subject - dependent classification , increasing ?
+from 0 to 0.1 will generally increase the model performance .
+However , for subject - independent classification , increasing ?
+beyond a certain threshold , i.e , 0.01 in , will decrease the model performance .
+One possible explanation for the difference in model behaviors is that there is much less training data in subject - dependent classification , which requires a stronger regularization to reduce overfitting , whereas for subject - independent classification where the number of training data is less of a concern , adding stronger and regularization may introduce bias and hinder the learning efficacy .
+As illustrated in , our model behaves consistently across different experimental settings with varying noise coefficient .
+Specifically , by increasing , the performance of our model first increases and then decreases .
+In particular , our model usually performs best when is set to 0.2 , demonstrating the existence of label noises and the necessity of addressing them on both datasets .
+Introducing excessive noise in Emotion DL causes performance drop , which is expected because excessive noise weakens the true learning signals .
+NEURONAL ACTIVITY ANALYSIS FOR EMOTION RECOGNITION
+In this section we analyze and identify important neuronal activities for emotion recognition .
+that there are strong activations on the prefrontal , parietal , and occipital regions , indicating that these regions maybe strongly related to the emotion processing of the brain .
+Our finding is consistent with existing studies , which observed that asymmetrical frontal and parietal EEG activity may reflect changes on both valence and arousal , .
+The synchronization between frontal and occipital regions has also been reported to be related to positive and fear emotion , .
+The symmetry pattern on the activation map of channels indicate again that the asymmetry in EEG activity between the left and right hemispheres is critical for emotion recognition .
+shows the top 10 connections between channels having the largest edge weights in our adjacency matrix A . Note that all global connections remain among the strongest connections after A is learned , demonstrating again that global inter-channel relations are essential for emotion recognition .
+It is obvious from that there are both similarities and differences between these two plots , indicating that our initialization strategy presented in can capture local inter-channel relations to a certain degree .
+One notable difference between the two plots is that a few strong connections are gone in , e.g. , ( POZ , PO3 ) , ( PO6 , PO8 ) , and ( P3 , P5 ) , indicating that these connections may not be critical for emotion recognition .
+In addition , it is clear from that the connection between the channel pair ( FP1 , AF3 ) is the strongest , followed by ( F6 , F8 ) , ( FP2 , AF4 ) , and ( PO8 , CB2 ) , indicating that local inter-channel relations in the frontal region maybe important for emotion recognition .
+Activation Maps of Channels
+Inter-channel Relations
+CONCLUSION
+In this paper , we propose a regularized graph neural network for emotion recognition based on EEG signals .
+Our model is biologically supported to capture both local and global inter-channel relations .
+In addition , we propose two regularizers , namely NodeDAT and Emotion DL , to improve the robustness of our model against cross - subject EEG variations and noisy labels .
+We evaluate our model in both subject - dependent and subject - independent classification settings on two public datasets SEED and SEED - IV .
+Our model obtains better performance than a few competitive baselines such as SVM , DBN , DGCNN , BiDANN , and the state - of - the - art BiHDM inmost classification settings .
+Notably , our model achieves accuracy of 79.37 % and 73 . 84 % in subject - dependent and subject - independent classifications on SEED - IV , respectively , outperforming the current stateof - the - art model by around 5 % .
+Our model analysis demonstrates that our proposed biologically supported adjacency matrix and two regularizers contribute consistent and significant gain to the performance of our model .
+Investigations on the neuronal activities reveal that pre-frontal , parietal and occipital regions maybe the most informative regions in emotion recognition .
+In addition , global interchannel relations between the left and right hemispheres are important and local inter-channel relations between ( FP1 , AF3 ) , ( F6 , F8 ) and ( FP2 , AF4 ) may also provide useful information .
+In the future , we plan to investigate how to apply our model to EEG signals that have a smaller number of channels .
+A simpler version of our model maybe necessary to avoid overfitting on these datasets .
+In addition , how to incorporate global connections on these smaller graphs maybe worth exploring .

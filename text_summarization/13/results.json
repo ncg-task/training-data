@@ -1,0 +1,16 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "ILP model" : {
+          "ROUGE scores" : "surprisingly low",
+          "from sentence" : "The ILP model ROUGE scores are surprisingly low ."
+        },
+        "C2 F" : {
+          "significantly worse than" : "soft attention results",
+          "from sentence" : "C2 F results are significantly worse than soft attention results ."
+        }
+      }
+    }
+  }
+}

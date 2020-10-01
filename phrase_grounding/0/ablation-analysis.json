@@ -1,0 +1,68 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "using" : {
+        "level - attention mechanism" : {
+          "based on" : "multi-level feature maps",
+          "significantly improves" : {
+            "performance" : {
+              "over" : "single visual - textual feature comparison"
+            }
+          },
+          "from sentence" : "The results in rows 1 , 2 show that using level - attention mechanism based on multi-level feature maps significantly improves the performance over single visual - textual feature comparison ."
+        }
+      },
+      "see that" : {
+        "non-linear mapping" : {
+          "in" : "model",
+          "is" : "really important",
+          "from sentence" : "By comparing rows 2 , 4 , 5 , 7 , we see that non-linear mapping in our model is really important , and replacing any mapping with a linear one significantly degrades the performance ."          
+        }
+      },
+      "replacing" : {
+        "any mapping" : {
+          "with" : {
+            "linear one" : {
+              "significantly degrades" : "performance"
+            }
+          }
+        },
+        "from sentence" : "By comparing rows 2 , 4 , 5 , 7 , we see that non-linear mapping in our model is really important , and replacing any mapping with a linear one significantly degrades the performance ."
+      },
+      "also see that" : {
+        "non-linear mapping" : {
+          "seems" : {
+            "more important" : {
+              "on" : "visual side"
+            }
+          },
+          "from sentence" : "We can also see that non-linear mapping seems more important on the visual side , but best results are obtained with both text and visual non-linear mappings ."
+        }
+      },
+      "show" : {
+        "importance" : {
+          "of using" : {
+            "strong contextualized text embedding" : {
+              "as" : {
+                "performance" : {
+                  "has" : "drops significantly"
+                }
+              }
+            }
+          },
+          "from sentence" : "The results in rows 1 , 3 and 2 , 6 show the importance of using a strong contextualized text embedding as the performance drops significantly ."
+        }
+      },
+      "applying" : {
+        "softmax" : {
+          "leads to" : {
+            "very negative effect" : {
+              "on" : "performance"
+            }
+          },
+          "from sentence" : "We also study the use of softmax on the heatmaps , comparing rows 2 , 8 , we see that applying softmax leads to a very negative effect on the performance ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+(Contribution||has||Model)
+(Model||jointly predicts||POS and the log frequency of the word)
+(Model||introduce||novel model)
+(novel model||has||bi - LSTM trained with auxiliary loss)

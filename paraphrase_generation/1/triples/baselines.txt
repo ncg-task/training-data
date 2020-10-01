@@ -1,0 +1,8 @@
+(Contribution||has||Baselines)
+(Baselines||has||Residual LSTM)
+(Residual LSTM||is||current state - of - the - art)
+(current state - of - the - art||on||MSCOCO dataset)
+(Baselines||compared||standard VAE model)
+(standard VAE model||i.e.||unsupervised version)
+(Baselines||compared||" supervised " variant VAE - S)
+(" supervised " variant VAE - S||of||unsupervised model)

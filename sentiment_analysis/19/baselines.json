@@ -1,0 +1,16 @@
+{
+  "has" : {
+    "Baselines" : {
+      "compare" : {
+        "SuBiLSTM and SuBiLSTM - Tied" : {
+          "with" : {
+            "single - layer BiLSTM and a 2 - layer BiLSTM encoder" : {
+              "with" : "same hidden dimension"
+            }
+          },
+          "from sentence" : "For each of the tasks , we compare SuBiLSTM and SuBiLSTM - Tied with a single - layer BiLSTM and a 2 - layer BiLSTM encoder with the same hidden dimension ."
+        }
+      }
+    }
+  }
+}

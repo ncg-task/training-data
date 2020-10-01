@@ -1,0 +1,121 @@
+155	0	32	Neural bag - of - words ( NBOW )
+155	13	15	of
+156	0	13	Each sequence
+156	21	27	sum of
+156	32	42	embeddings
+156	50	67	words it contains
+156	84	104	concatenated and fed
+156	105	107	to
+156	110	113	MLP
+157	0	11	Single LSTM
+157	31	37	encode
+157	42	55	two sequences
+159	8	21	Two sequences
+159	26	36	encoded by
+159	37	57	two LSTMs separately
+159	22	25	are
+159	74	94	concatenated and fed
+159	95	97	to
+159	100	103	MLP
+160	0	15	Attention LSTMs
+160	21	35	attentive LSTM
+160	36	45	to encode
+160	46	59	two sentences
+160	60	64	into
+160	67	81	semantic space
+151	4	19	word embeddings
+151	20	23	for
+151	24	41	all of the models
+151	46	62	initialized with
+151	67	85	100d GloVe vectors
+151	115	134	fine - tuned during
+151	135	143	training
+151	144	154	to improve
+151	159	170	performance
+152	4	20	other parameters
+152	25	39	initialized by
+152	40	57	randomly sampling
+152	58	62	from
+152	63	83	uniform distribution
+152	25	27	in
+152	87	102	[ ? 0.1 , 0.1 ]
+153	0	3	For
+153	4	13	each task
+153	19	23	take
+153	28	43	hyperparameters
+153	50	57	achieve
+153	62	78	best performance
+153	79	81	on
+153	86	101	development set
+153	102	105	via
+153	109	126	small grid search
+153	127	131	over
+153	132	144	combinations
+153	145	147	of
+153	152	200	initial learning rate [ 0.05 , 0.0005 , 0.0001 ]
+153	203	254	l 2 regularization [ 0.0 , 5 E? 5 , 1E? 5 , 1E? 6 ]
+153	263	278	threshold value
+28	19	26	propose
+28	29	65	new deep neural network architecture
+28	66	74	to model
+28	79	98	strong interactions
+28	99	101	of
+28	102	115	two sentences
+31	26	49	two interdependent ways
+31	50	53	for
+31	58	73	coupled - LSTMs
+31	76	112	loosely coupled model ( LC - LSTMs )
+31	117	153	tightly coupled model ( TC - LSTMs )
+29	65	72	utilize
+29	73	97	two interdependent LSTMs
+29	100	106	called
+29	107	122	coupled - LSTMs
+29	125	140	to fully affect
+29	141	151	each other
+29	49	51	at
+29	155	175	different time steps
+33	11	30	all the information
+33	31	33	of
+33	34	49	four directions
+33	31	33	of
+33	53	68	coupled - LSTMs
+33	74	83	aggregate
+33	93	98	adopt
+33	101	125	dynamic pooling strategy
+33	126	149	to automatically select
+33	154	190	most informative interaction signals
+34	13	27	feed them into
+34	30	51	fully connected layer
+34	54	65	followed by
+34	69	81	output layer
+34	82	92	to compute
+34	97	111	matching score
+30	4	10	output
+30	11	13	of
+30	14	29	coupled - LSTMs
+30	30	32	at
+30	33	42	each step
+30	43	53	depends on
+30	54	68	both sentences
+2	0	38	Modelling Interaction of Sentence Pair
+4	39	82	modelling the interactions of two sentences
+12	40	97	modelling the relevance / similarity of the sentence pair
+12	121	143	text semantic matching
+170	4	58	proposed two C - LSTMs models with four stacked blocks
+170	59	69	outperform
+170	70	95	all the competitor models
+170	104	118	indicates that
+170	119	149	our thinner and deeper network
+170	150	171	does work effectively
+173	0	13	Compared with
+173	14	29	attention LSTMs
+173	32	46	our two models
+173	47	54	achieve
+173	55	73	comparable results
+173	82	87	using
+173	88	126	much fewer parameters ( nearly 1 / 5 )
+174	0	11	By stacking
+174	12	21	C - LSTMs
+174	28	39	performance
+174	52	60	improved
+174	61	74	significantly

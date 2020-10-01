@@ -1,0 +1,63 @@
+39	63	104	https :// github.com/stanfordnlp/treelstm
+182	40	48	tuned on
+182	53	68	development set
+183	3	14	initialized
+183	15	39	our word representations
+183	40	45	using
+183	46	96	publicly available 300 - dimensional Glove vectors
+185	0	3	For
+185	8	37	sentiment classification task
+185	40	60	word representations
+185	66	73	updated
+185	74	89	during training
+185	90	94	with
+185	97	110	learning rate
+185	111	113	of
+185	114	117	0.1
+186	8	33	semantic relatedness task
+186	36	56	word representations
+186	62	66	held
+186	67	72	fixed
+187	0	10	Our models
+187	16	29	trained using
+187	30	37	AdaGrad
+187	38	42	with
+187	45	58	learning rate
+187	59	61	of
+187	62	66	0.05
+187	73	87	minibatch size
+187	59	61	of
+187	91	93	25
+188	4	20	model parameters
+188	26	42	regularized with
+188	45	85	per-minibatch L2 regularization strength
+188	86	88	of
+188	89	94	10 ?4
+189	4	24	sentiment classifier
+189	29	59	additionally regularized using
+189	60	67	dropout
+189	68	72	with
+189	75	87	dropout rate
+189	88	90	of
+189	91	94	0.5
+33	19	28	introduce
+33	31	79	generalization of the standard LSTM architecture
+33	80	82	to
+33	83	119	tree - structured network topologies
+33	124	128	show
+33	133	144	superiority
+33	145	161	for representing
+33	162	178	sentence meaning
+33	179	183	over
+33	186	201	sequential LSTM
+34	160	199	tree - structured LSTM , or Tree - LSTM
+34	24	32	composes
+34	44	49	state
+34	50	54	from
+34	229	241	input vector
+34	250	263	hidden states
+34	111	113	of
+34	267	295	arbitrarily many child units
+2	0	33	Improved Semantic Representations
+8	86	138	predicting the semantic relatedness of two sentences
+8	170	194	sentiment classification

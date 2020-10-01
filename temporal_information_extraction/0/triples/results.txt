@@ -1,0 +1,8 @@
+(Contribution||has||Results)
+(Results||has||CATENA)
+(CATENA||is||best performing system)
+(best performing system||in||both tasks)
+(CATENA||performs best on||timex - timex and event - timex relations)
+(timex - timex and event - timex relations||while||CAEVO)
+(CAEVO||achieves||best results)
+(best results||on||event - DCT and event - event pairs)

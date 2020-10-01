@@ -1,0 +1,91 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "task agnostic BERT EM and BERT EM + MTB models" : {
+          "outperform" : {
+            "previous published state of the art" : {
+              "on" : {
+                "FewRel task" : {
+                  "when they have not seen" : "any FewRel training data" 
+                }
+              },
+              "from sentence" : "shows that the task agnostic BERT EM and BERT EM + MTB models outperform the previous published state of the art on FewRel task even when they have not seen any FewRel training data ."
+            }
+          }
+        },
+        "additional MTB based training" : {
+          "further increases" : {
+            "F 1 scores" : {
+              "for" : "all tasks"
+            }
+          },
+          "from sentence" : "The additional MTB based training further increases F 1 scores for all tasks ."
+        }
+      },
+      "For" : {
+        "BERT EM + MTB" : {
+          "increase" : {
+            "very significant" : {
+              "has" : {          
+                "8.8 %" : {
+                  "on" : "5 - way - 1 - shot task"
+                },
+                "12.7 %" : {
+                  "on" : "10 - way - 1 - shot task"
+                }
+              }
+            },
+            "from sentence" : "For BERT EM + MTB , the increase over 's supervised approach is very significant - 8.8 % on the 5 - way - 1 - shot task and 12.7 % on the 10 - way - 1 - shot task ."            
+          },
+          "significantly outperforms" : ["BERT EM", {"from sentence" : "BERT EM + MTB also significantly outperforms BERT EM in this unsupervised setting , which is to be expected since there is no relation - specific loss during BERT EM 's training ."}]
+        }
+      },
+      "given" : {
+        "access" : {
+          "to" : {
+            "all of the training data" : {
+              "has" : {
+                "BERT EM" : {
+                  "approaches" : "BERT EM + MTB 's performance"
+                }
+              }
+            }
+          },
+          "from sentence" : "When given access to all of the training data , BERT EM approaches BERT EM + MTB 's performance ."
+        }
+      },
+      "show that" : {
+        "MTB training" : {
+          "could be used to" : {
+            "significantly reduce effort" : {
+              "in implementing" : "exemplar based relation extraction system"
+            }
+          },
+          "from sentence" : "The results in show that MTB training could be used to significantly reduce effort in implementing an exemplar based relation extraction system ."
+        }
+      },
+      "see that" : {
+        "MTB based training" : {
+          "even more effective for" : "low - resource cases",
+          "from sentence" : "For all tasks , we see that MTB based training is even more effective for low - resource cases , where there is a larger gap in performance between our BERT EM and BERT EM + MTB based classifiers ."
+        }
+      },
+      "training by" : {
+        "matching the blanks" : {
+          "can" : {
+            "significantly reduce" : {
+              "amount of" : {
+                "human input" : {
+                  "to create" : "relation extractors",
+                  "populate" : "knowledge base"
+                }
+              }
+            }
+          },
+          "from sentence" : "This further supports our argument that training by matching the blanks can significantly reduce the amount of human input required to create relation extractors , and populate a knowledge base ."
+        }
+      }
+    }    
+  }
+}

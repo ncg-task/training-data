@@ -1,0 +1,93 @@
+{
+  "has" : {
+    "Model" : {
+      "introduces" : {
+        "composite function" : {
+          "name" : ["recurrent relational network", {"from sentence" : "Toward generally realizing the ability to methodically reason about objects and their interactions over many steps , this paper introduces a composite function , the recurrent relational network ."}],
+          "Toward generally realizing" : {
+            "ability" : {
+              "to methodically reason about" : ["objects", {"interactions" : {"over" : "many steps"}}]
+            },
+            "from sentence" : "Toward generally realizing the ability to methodically reason about objects and their interactions over many steps , this paper introduces a composite function , the recurrent relational network ."            
+          },
+          "serves" : {
+            "modular component" : {
+              "for" : {
+                "many - step relational reasoning" : {
+                  "in" : "end - to - end differentiable learning systems"
+                }
+              },
+              "from sentence" : "It serves as a modular component for many - step relational reasoning in end - to - end differentiable learning systems ."
+            }
+          },
+          "encodes" : {
+            "inductive biases" : {
+              "that" : {
+                "objects" : {
+                  "exist in" : "world",
+                  "described by" : {
+                    "properties" : {
+                      "change over" : "time"
+                    }
+                  },
+                  "affect" : {
+                    "each other" : {
+                      "invariant to" : "time"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "It encodes the inductive biases that 1 ) objects exists in the world 2 ) they can be sufficiently described by properties 3 ) properties can changeover time 4 ) objects can affect each other and 5 ) given the properties , the effects object have on each other is invariant to time ."
+            }
+          }
+        }
+      },
+      "decompose" : {
+        "function" : {
+          "for" : "relational reasoning",
+          "into" : {
+            "two components" : {
+              "name" : [
+                {"perceptual front - end" : {
+                  "to recognize" : {
+                    "objects" : {
+                      "in" : "raw input"
+                    }
+                  }, 
+                  "represent as" : "vectors"
+                  }}, 
+                  {"relational reasoning module" : {
+                    "uses" : {
+                      "representation" : {
+                        "to reason about" : "objects and their interactions"}}}}, {"from sentence" : "An important insight from the work of is to decompose a function for relational reasoning into two components or \" modules \" :
+a perceptual front - end , which is tasked to recognize objects in the raw input and represent them as vectors , and a relational reasoning module , which uses the representation to reason about the objects and their interactions ."
+
+              }],
+              "trained" : ["jointly end - to - end", {"from sentence" : "Both modules are trained jointly end - to - end ."}]
+            }
+          }
+        }
+      },
+      "has" : {
+        "relational reasoning module" : {
+          "implements" : {
+            "interface" : {
+              "operates on" : {
+                "graph" : {
+                  "of" : "nodes and directed edges",
+                  "where" : {
+                    "nodes" : {
+                      "represented by" : "real valued vectors",
+                      "is" : "differentiable"
+                    }
+                  }
+                },
+                "from sentence" : "In computer science parlance , the relational reasoning module implements an interface : it operates on a graph of nodes and directed edges , where the nodes are represented by real valued vectors , and is differentiable ."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

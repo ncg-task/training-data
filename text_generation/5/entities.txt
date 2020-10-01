@@ -1,0 +1,137 @@
+216	7	10	see
+216	16	33	SCNN - VAE - Semi
+216	42	70	best classification accuracy
+216	71	73	of
+216	74	78	65.5
+218	20	37	LCNN - VAE - Semi
+218	46	61	best NLL result
+182	15	18	use
+182	19	45	KL cost annealing strategy
+183	3	6	set
+183	11	25	initial weight
+183	26	28	of
+183	29	41	KL cost term
+183	42	47	to be
+183	48	52	0.01
+183	57	65	increase
+183	69	77	linearly
+183	78	83	until
+183	86	103	given iteration T
+180	7	17	batch size
+180	18	20	of
+180	21	23	32
+154	10	14	LSTM
+154	15	17	as
+154	21	28	encoder
+154	29	32	for
+154	33	36	VAE
+165	7	23	Gumbel - softmax
+165	24	33	to sample
+165	34	50	y from q ( y|x )
+168	9	24	vocabulary size
+168	25	27	of
+168	28	32	20 k
+168	33	36	for
+168	37	51	both data sets
+173	7	11	Adam
+173	12	23	to optimize
+173	24	34	all models
+173	43	56	learning rate
+173	60	73	selected from
+173	74	106	[ 2e - 3 , 1 e - 3 , 7.5 e - 4 ]
+177	24	33	drop word
+177	34	37	for
+177	42	54	LSTM decoder
+177	61	76	drop word ratio
+177	80	93	selected from
+177	96	115	0 , 0.3 , 0.5 , 0.7
+168	47	50	set
+168	64	88	word embedding dimension
+168	89	94	to be
+168	95	98	512
+154	41	48	explore
+154	49	63	LSTMs and CNNs
+154	15	17	as
+154	67	75	decoders
+155	0	3	For
+155	4	8	CNNs
+156	3	6	set
+156	11	34	convolution filter size
+156	35	40	to be
+156	41	42	3
+178	8	19	CNN decoder
+178	25	28	use
+178	31	44	dropout ratio
+178	45	47	of
+178	48	51	0.1
+178	40	42	at
+178	55	65	each layer
+170	40	42	in
+170	43	55	CNN decoders
+170	4	22	number of channels
+170	23	26	for
+170	27	39	convolutions
+170	56	58	is
+170	59	73	512 internally
+170	78	93	1024 externally
+175	17	21	find
+175	22	35	learning rate
+175	36	55	1e - 3 and ?1 = 0.5
+175	56	66	to perform
+175	71	75	best
+176	3	9	select
+176	10	23	dropout ratio
+176	24	26	of
+176	27	61	LSTMs ( both encoder and decoder )
+176	62	66	from
+176	69	78	0.3 , 0.5
+33	3	10	propose
+33	24	35	dilated CNN
+33	36	38	as
+33	41	48	decoder
+33	49	51	in
+33	52	55	VAE
+34	69	76	exploit
+34	81	92	dilated CNN
+34	93	96	for
+34	101	112	flexibility
+34	113	137	in varying the amount of
+34	138	158	conditioning context
+2	38	51	Text Modeling
+4	15	39	generative text modeling
+186	12	15	for
+186	16	33	language modeling
+191	0	3	For
+191	4	24	SCNN , MCNN and LCNN
+191	31	42	VAE results
+191	43	55	improve over
+191	56	66	LM results
+191	67	71	from
+191	72	77	345.3
+191	78	80	to
+191	81	86	337.8
+191	89	94	338.3
+191	78	80	to
+191	98	103	336.2
+191	110	115	335.4
+191	78	80	to
+191	119	124	333.9
+195	0	4	When
+195	5	9	LCNN
+195	13	20	used as
+195	25	32	decoder
+195	38	44	obtain
+195	48	65	optimal trade off
+195	66	79	between using
+195	80	128	contextual information and latent representation
+196	0	10	LCNN - VAE
+196	11	19	achieves
+196	22	25	NLL
+196	26	28	of
+196	29	34	333.9
+196	43	56	improves over
+196	57	66	LSTM - LM
+196	67	71	with
+196	22	25	NLL
+196	26	28	of
+196	79	84	334.9

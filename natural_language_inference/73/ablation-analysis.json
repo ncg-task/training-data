@@ -1,0 +1,34 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "In terms of" : {
+        "prediction quality" : {
+          "has" : {
+            "unselected head tokens" : {
+              "contribute to" : "prediction",
+              "bringing" : "0.2 % improvement"
+            }
+          },
+          "using" : {
+            "separate RSS modules" : {
+              "to select" : "head and dependent tokens",
+              "improves" : {
+                "accuracy" : {
+                  "by" : "0.5 %"
+                }
+              }
+            },
+            "hard attention and soft self - attention modules" : {
+              "improve" : {
+                "accuracy" : {
+                  "by" : "0.3 % and 2.9 %"
+                }
+              }
+            },
+            "from sentence" : "In terms of prediction quality , the results show that 1 ) the unselected head tokens do contribute to the prediction , bringing 0.2 % improvement ; 2 ) using separate RSS modules to select the head and dependent tokens improves accuracy by 0.5 % ; and 3 ) hard attention and soft self - attention modules improve the accuracy by 0.3 % and 2.9 % respectively ."
+          }
+        }
+      }
+    }
+  }
+}

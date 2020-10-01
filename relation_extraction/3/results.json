@@ -1,0 +1,163 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "first observation" : {
+          "is that" : {
+            "our model architecture" : {
+              "achieves" : {
+                "much better results" : {
+                  "compared to" : "previous state - of - the - art methods"
+                }
+              },
+              "from sentence" : "The first observation is that our model architecture achieves much better results compared to the previous state - of - the - art methods ."
+            }
+          }
+        },
+        "BERT SP" : {
+          "successfully adapt" : {
+            "pre-trained BERT" : {
+              "to" : "MRE task"
+            }
+          },
+          "achieves" : "comparable performance",
+          "from sentence" : "The simpler version of our approach , BERT SP , can successfully adapt the pre-trained BERT to the MRE task , and achieves comparable performance at the 3 Note the usage of relative position embeddings does notwork for one - pass MRE , since each word corresponds to a varying number of position embedding vectors ."
+        },
+        "Our full model" : {
+          "with" : {
+            "structured fine - tuning" : {
+              "of" : "attention layers"
+            }
+          },
+          "brings" : {
+            "further improvement" : {
+              "of" : "about 5.5 %",
+              "in" : "MRE one - pass setting",
+              "achieves" : {
+                "new state - of - the - art performance" : {
+                  "compared to" : "methods with domain adaptation"
+                }
+              }
+            }
+          },
+          "from sentence" : "Our full model , with the structured fine - tuning of attention layers , brings further improvement of about 5.5 % , in the MRE one - pass setting , and achieves a new state - of - the - art performance when compared to the methods with domain adaptation ."
+        },
+        "Our Entity - Aware BERT SP" : {
+          "gives" : {
+            "comparable results" : {
+              "to" : {
+                "top - ranked system" : {
+                  "in" : "shared task"
+                }
+              },
+              "with" : ["slightly lower Macro - F1", "slightly higher Micro - F1"]
+            }
+          },
+          "from sentence" : "Our Entity - Aware BERT SP gives comparable results to the top - ranked system in the shared task , with slightly lower Macro - F1 , which is the official metric of the task , and slightly higher Micro - F1 ."
+        }
+      },
+      "Note" : {
+        "our method" : {
+          "not designed for" : "domain adaptation",
+          "still outperforms" : {
+            "methods" : {
+              "with" : "domain adaptation"
+            }
+          },
+          "from sentence" : "Note that our method was not designed for domain adaptation , it still outperforms those methods with domain adaptation ."
+        }
+      },
+      "Among" : {
+        "all the BERT - based approaches" : {
+          "finetuning" : {
+            "off - the - shelf BERT" : {
+              "does not give" : "satisfying result"
+            }
+          },
+          "from sentence" : "Among all the BERT - based approaches , finetuning the off - the - shelf BERT does not give a satisfying result , because the sentence embeddings can not distinguish different entity pairs ." 
+        }
+      },
+      "works for" : {
+        "singlerelation per pass setting" : {
+          "has" : {
+            "performance" : {
+              "lags behind using" : {
+                "only indicators" : {
+                  "of" : "two target entities"
+                }
+              }
+            },
+            "from sentence" : "It works for the singlerelation per pass setting , but the performance lags behind using only indicators of the two target entities ."
+          }
+        }
+      },
+      "For" : {
+        "BERT SP" : {
+          "with" : {
+            "entity indicators" : {
+              "on" : "inputs"
+            },
+            "from sentence" : "For BERT SP with entity indicators on inputs , it is expected to perform slightly better in the single - relation setting , because of the mixture of information from multiple pairs .
+A 2 % gap is observed as expected ."
+
+          },
+          "observed" : ["2 % gap", {"from sentence" : "For BERT SP with entity indicators on inputs , it is expected to perform slightly better in the single - relation setting , because of the mixture of information from multiple pairs .
+A 2 % gap is observed as expected ."
+
+          }]
+        },
+        "BERT SP with position embeddings" : {
+          "on" : "final attention layer",
+          "train" : {
+            "model" : {
+              "in" : "single - relation setting"
+            }
+          },
+          "test with" : {
+            "two different settings" : {
+              "so" : {
+                "results" : {
+                  "are" : "same"
+                }
+              }              
+            }
+          },
+          "from sentence" : "For BERT SP with position embeddings on the final attention layer , we train the model in the single - relation setting and test with two different settings , so the results are the same ."
+        }
+      },
+      "When predicting" : {
+        "multiple relations" : {
+          "in" : "one - pass",
+          "have" : {
+            "0.9 % drop" : {
+              "on" : "Macro - F1"
+            },
+            "further 0.8 % improvement" : {
+              "on" : "Micro - F1"
+            }
+          }
+        },
+        "from sentence" : "When predicting multiple relations in one - pass , we have 0.9 % drop on Macro - F1 , but a further 0.8 % improvement on Micro - F1 ."
+      },
+      "compared to" : {
+        "top singlemodel result" : {
+          "which makes use of" : {
+            "additional word and entity embeddings" : {
+              "pretrained on" : "in - domain data",
+              "has" : {
+                "our methods" : {
+                  "demonstrate" : {
+                    "clear advantage" : {
+                      "as" : "single model"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "On the other hand , compared to the top singlemodel result , which makes use of additional word and entity embeddings pretrained on in - domain data , our methods demonstrate clear advantage as a single model ."
+        }
+      }
+    }
+  }
+}

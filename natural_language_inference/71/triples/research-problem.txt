@@ -1,0 +1,4 @@
+(Contribution||has research problem||recurrent neural network ( RNN ))
+(Contribution||has research problem||Recurrent Neural Networks with gating units)
+(Contribution||has research problem||gating units for Recurrent Neural Networks)
+(Contribution||has research problem||RNNs)

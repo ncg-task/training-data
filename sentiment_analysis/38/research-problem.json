@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Representation learning", {"from sentence" : "Representation learning ) plays a critical role in many modern machine learning systems ."}],
+    ["sentiment analysis", {"from sentence" : "We focus in on the task of sentiment analysis and attempt to learn an unsupervised representation that accurately contains this concept ."}]
+  ]
+}

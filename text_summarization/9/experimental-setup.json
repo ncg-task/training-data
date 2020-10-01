@@ -1,0 +1,80 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "implemented" : {
+        "our models" : {
+          "in" : "Torch library"
+        },
+        "from sentence" : "We implemented our models in the Torch library ( http://torch.ch/)"
+      },
+      "optimize" : {
+        "our loss" : {
+          "used" : {
+            "stochastic gradient descent" : {
+              "with" : {
+                "mini-batches" : {
+                  "of size" : "32"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "2 . To optimize our loss ( Equation 5 ) we used stochastic gradient descent with mini-batches of size 32 ."
+      },
+      "During" : {
+        "training" : {
+          "measure" : {
+            "perplexity" : {
+              "of" : {
+                "summaries" : {
+                  "in" : "validation set"
+                }
+              }
+            }
+          },
+          "adjust" : {
+            "hyper - parameters" : {
+              "such as" : "learning rate"
+            }
+          }
+        },
+        "from sentence" : "During training we measure the perplexity of the summaries in the validation set and adjust our hyper - parameters , such as the learning rate , based on this number ."
+      },
+      "For" : {
+        "decoder" : {
+          "experimented with" : ["Elman RNN", "Long - Short Term Memory ( LSTM ) architecture"]
+        },
+        "from sentence" : "For the decoder we experimented with both the Elman RNN and the Long - Short Term Memory ( LSTM ) architecture ( as discussed in 3.1 ) ."
+      },
+      "choose" : {
+        "hyper - parameters" : {
+          "based on" : "grid search",
+          "picked the one which gave" : {
+            "best perplexity" : {
+              "on" : "validation set"
+            }
+          }
+        },
+        "from sentence" : "We chose hyper - parameters based on a grid search and picked the one which gave the best perplexity on the validation set ."
+      },
+      "has" : {
+        "final Elman architecture ( RAS - Elman )" : {
+          "uses" : {
+            "single layer" : {
+              "with" : "H = 512 , ? = 0.5 , ? = 2 , and ? = 10"
+            }
+          },
+          "from sentence" : "Our final Elman architecture ( RAS - Elman ) uses a single layer with H = 512 , ? = 0.5 , ? = 2 , and ? = 10 ."
+        },
+        "LSTM model ( RAS - LSTM )" : {
+          "has" : {
+            "single layer" : {
+              "with" : "H = 512 , ? = 0.1 , ? = 2 , and ? = 10"
+            }
+          },
+          "from sentence" : "The LSTM model ( RAS - LSTM ) also has a single layer with H = 512 , ? = 0.1 , ? = 2 , and ? = 10 ."
+        }
+      }
+    }
+  }
+}

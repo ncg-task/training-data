@@ -1,0 +1,83 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "randomly select" : {
+        "20 %" : {
+          "of" : {
+            "training data" : {
+              "as" : "validation set",
+              "to tune" : "hyperparameters"
+            }
+          }
+        },
+        "from sentence" : "In experiments , we first randomly select 20 % of training data as validation set to tune the hyperparameters ."
+      },
+      "has" : {
+        "weight matrics" : {
+          "randomly initialized from" : "uniform distribution U ( ?10 ?4 , 10 ?4 )",
+          "from sentence" : "All weight matrices are randomly initialized from uniform distribution U ( ?10 ?4 , 10 ?4 ) and all bias terms are set to zero ."
+        },
+        "bias terms" : {
+          "set to" : "zero",
+          "from sentence" : "All weight matrices are randomly initialized from uniform distribution U ( ?10 ?4 , 10 ?4 ) and all bias terms are set to zero ."
+        },
+        "L 2 regularization coefficient" : {
+          "set to" : "10 ? 4",
+          "from sentence" : "The L 2 regularization coefficient is set to 10 ? 4 and the dropout keep rate is set to 0.2 ."
+        },
+        "dropout keep rate" : {
+          "set to" : "0.2",
+          "from sentence" : "The L 2 regularization coefficient is set to 10 ? 4 and the dropout keep rate is set to 0.2 ."
+        },
+        "word embeddings" : {
+          "initialized with" : "300 - dimensional Glove vectors",
+          "fixed during" : "training",
+          "from sentence" : "The word embeddings are initialized with 300 - dimensional Glove vectors and are fixed during training ."
+        },
+        "dimension" : {
+          "of" : {
+            "LSTM hidden states" : {
+              "set to" : "150"
+            }
+          },
+          "from sentence" : "The dimension of LSTM hidden states is set to 150 ."
+        },
+        "initial learning rate" : {
+          "is" : {
+            "0.01" : {
+              "for" : "Adam optimizer"
+            }
+          },
+          "from sentence" : "The initial learning rate is 0.01 for the Adam optimizer ."
+        },
+        "training loss" : {
+          "does not" : {
+            "drop" : {
+              "after" : "every three epochs",
+              "decrease" : {
+                "learning rate" : {
+                  "by" : "half"
+                }
+              }
+            }
+          },
+          "from sentence" : "If the training loss does not drop after every three epochs , we decrease the learning rate by half ."
+        },
+        "batch size" : {
+          "set as" : "25",
+          "from sentence" : "The batch size is set as 25 ."
+        }
+      },
+      "For" : {
+        "out of vocabulary words" : {
+          "initialize them" : {
+            "randomly" : {
+              "from" : "uniform distribution U ( ? 0.01 , 0.01 )"
+            }
+          },
+          "from sentence" : "For the out of vocabulary words we initialize them randomly from uniform distribution U ( ? 0.01 , 0.01 ) ."
+        }
+      }
+    }
+  }
+}

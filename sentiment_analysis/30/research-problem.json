@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Targeted Aspect - based Sentiment Analysis", {"from sentence" : "Recurrent Entity Networks with Delayed Memory Update for Targeted Aspect - based Sentiment Analysis"}],
+    ["targeted aspect - based sentiment analysis ( TABSA )", {"from sentence" : "While neural networks have been shown to achieve impressive results for sentence - level sentiment analysis , targeted aspect - based sentiment analysis ( TABSA ) - extraction of finegrained opinion polarity w.r.t. a pre-defined set of aspects - remains a difficult task ."}]
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "ABS" : {
+          "apply" : {
+            "seq2seq model" : {
+              "to" : "abstractive sentence summarization"
+            },
+            "from sentence" : "ABS . first apply the seq2seq model to abstractive sentence summarization ."
+          }
+        },
+        "ABS +" : {
+          "propose" : {
+            "neural machine translation model" : {
+              "with" : {
+                "two - layer LSTMs" : {
+                  "for" : "encoder - decoder"
+                }
+              }
+            }
+          },
+          "from sentence" : "ABS +. propose a neural machine translation model with two - layer LSTMs for the encoder - decoder ."
+        },
+        "Seq2seq" : {
+          "is a" : {
+            "standard seq2seq model" : {
+              "with" : "attention mechanism",
+              "from sentence" : "Seq2seq .
+This is a standard seq2seq model with attention mechanism ."
+
+            }
+          }
+        },
+        "Seq2seq + MTL" : {
+          "with" : {
+            "entailment - aware encoder" : {
+              "applies" : {
+                "multi-task learning ( MTL ) framework" : {
+                  "to" : "seq2seq model"
+                }
+              }
+            }
+          },
+          "from sentence" : "Seq2seq + MTL .
+This is our proposed model with entailment - aware encoder , which applies a multi-task learning ( MTL ) framework to seq2seq model ."
+
+        },
+        "Seq2seq + MTL ( Share decoder )" : {
+          "propose" : {
+            "multi - task learning ( MTL ) framework" : {
+              "in which" : {
+                "decoder" : {
+                  "is shared for" : "summarization generation and entailment generation task"
+                }
+              }
+            }
+          },
+          "from sentence" : "Seq2seq + MTL ( Share decoder ) .
+propose a multi - task learning ( MTL ) framework in which the decoder is shared for summarization generation and entailment generation task ."
+
+        },
+        "Seq2seq + ERAML" : {
+          "with" : {
+            "entailment - aware decoder" : {
+              "constitutes" : "Entailment Reward Augmented Maximum Likelihood ( ERAML ) training framework"
+            }
+          },
+          "from sentence" : "Seq2seq + ERAML .
+This is our proposed model with entailment - aware decoder , which conducts an Entailment Reward Augmented Maximum Likelihood ( ERAML ) training framework ."
+
+        },
+        "Seq2seq + ROUGE -2 RAML" : {
+          "apply" : {
+            "ROUGE - 2 RAML training" : {
+              "for" : "seq2seq model"
+            },
+            "from sentence" : "Seq2seq + ROUGE -2 RAML .
+We apply ROUGE - 2 RAML training for seq2seq model ."
+
+          }
+        },
+        "Seq2seq + RL" : {
+          "implement" : {
+            "Reinforcement Learning ( RL ) models" : {
+              "with" : {
+                "reward metrics" : {
+                  "of" : "Entailment and ROUGE - 2"
+                }
+              }
+            }
+          },
+          "from sentence" : "Seq2seq + RL .
+We implement Reinforcement Learning ( RL ) models ( policy gradient ) with reward metrics of Entailment and ROUGE - 2 ."
+
+        },
+        "Seq2seq + selective" : {
+          "employ" : {
+            "selective encoding model" : {
+              "to control" : {
+                "information flow" : {
+                  "from" : "encoder to decoder"
+                }
+              } 
+            }
+          },
+          "from sentence" : "Seq2seq + selective .
+employ a selective encoding model to control the information flow from encoder to decoder ."
+
+        }
+      }
+    }
+  }
+}

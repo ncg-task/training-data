@@ -1,0 +1,8 @@
+{
+  "has research problem" : [
+    ["Multimodal Speech Emotion Recognition and Ambiguity Resolution", {"from sentence" : "Multimodal Speech Emotion Recognition and Ambiguity Resolution"}],
+    ["Identifying emotion from speech", {"from sentence" : "Identifying emotion from speech is a nontrivial task pertaining to the ambiguous definition of emotion itself ."}],
+    ["Speech Emotion Recognition ( SER )", {"from sentence" : "With the rise of deep learning algorithms , there have been multiple attempts to tackle the task of Speech Emotion Recognition ( SER ) as in [ 2 ] and ."}],
+    ["SER", {"from sentence" : "In this work , we explore the implication of hand - crafted features for SER and compare the performance of lighter machine learning models with the heavily data - reliant deep learning models ."}]
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "has" : {
+        "full SPINN" : {
+          "has" : ["Our optimized C ++/ CUDA models", "Theano source code"],
+          "from sentence" : "Our optimized C ++/ CUDA models and the Theano source code for the full SPINN are available at https://github.com / stanfordnlp/spinn. 30 tokens or fewer ."
+        },
+        "fix" : {
+          "at" : {
+            "300" : {
+              "has" : ["model dimension D", "word embedding dimension"]
+            }
+          },
+          "from sentence" : "We fix the model dimension D and the word embedding dimension at 300 ."
+        },
+        "CPU performance test" : {
+          "on" : {
+            "2.20 GHz 16 core Intel Xeon E5-2660 processor" : {
+              "with" : "hyperthreading"
+            }
+          },
+          "from sentence" : "We run the CPU performance test on a 2.20 GHz 16 core Intel Xeon E5-2660 processor with hyperthreading enabled ."
+        }
+      },
+      "on" : {
+        "NVIDIA Titan X GPU" : {
+          "test" : ["thin - stack implementation", "RNN model"],
+          "from sentence" : "We test our thin - stack implementation and the RNN model on an NVIDIA Titan X GPU ."
+        }
+      }
+    }
+  }
+}

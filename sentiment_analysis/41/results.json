@@ -1,0 +1,86 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "LSTM" : {
+          "has" : {
+            "Standard LSTM" : {
+              "can not capture" : {
+                "aspect information" : {
+                  "in" : "sentence"
+                }
+              }
+            },
+            "from sentence" : "LSTM : Standard LSTM can not capture any aspect information in sentence , so it must get the same ( a ) the aspect of this sentence : service ( b ) the aspect of this sentence : food : Attention Visualizations ."
+          },
+          "can not take advantage of" : {
+            "aspect information" : {
+              "has" : "worst performance"
+            },
+            "from sentence" : "Since it can not take advantage of the aspect information , not surprisingly the model has worst performance ."
+          }
+        },
+        "TD - LSTM" : {
+          "can improve" : {
+            "performance" : {
+              "of" : "sentiment classifier",
+              "by treating" : {
+                "aspect" : {
+                  "as" : "target"
+                }
+              }
+            },
+            "from sentence" : "TD - LSTM : TD - LSTM can improve the performance of sentiment classifier by treating an aspect as a target ."            
+          },
+          "there is no" : {
+            "attention mechanism" : {
+              "in" : {
+                "TD - LSTM" : {
+                  "can not" : {
+                    "know" : {
+                      "which" : {
+                        "words" : {
+                          "are" : {
+                            "important" : {
+                              "for" : "given aspect"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "Since there is no attention mechanism in TD - LSTM , it can not \" know \" which words are important for a given aspect ."
+          }
+        },
+        "TC - LSTM" : {
+          "performs" : {
+            "worse" : {
+              "than" : "LSTM and TD - LSTM"
+            },
+            "from sentence" : "It is worth noting that TC - LSTM performs worse than LSTM and TD - LSTM in ."
+          }
+        },
+        "ATAE - LSTM" : {
+          "addresses" : {
+            "shortcoming" : {
+              "of" : {
+                "unconformity" : {
+                  "between" : "word vectors and aspect embeddings"
+                }
+              }
+            }
+          },
+          "capture" : {
+            "most important information" : {
+              "in response to" : "given aspect"
+            }
+          },
+          "from sentence" : "ATAE - LSTM not only addresses the shortcoming of the unconformity between word vectors and aspect embeddings , but also can capture the most important information in response to a given aspect ."
+        }        
+      }      
+    }
+  }
+}

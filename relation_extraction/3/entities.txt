@@ -1,0 +1,163 @@
+77	0	7	BERT SP
+77	10	46	BERT with structured prediction only
+78	0	22	Entity - Aware BERT SP
+78	25	39	our full model
+79	0	60	BERT SP with position embedding on the final attention layer
+79	28	30	in
+80	2	4	is
+80	2	4	is
+80	10	34	more straightforward way
+80	35	45	to achieve
+80	46	49	MRE
+80	53	63	one - pass
+80	92	97	using
+80	98	117	position embeddings
+83	0	45	BERT SP with entity indicators on input layer
+83	51	59	replaces
+83	60	90	our structured attention layer
+83	97	101	adds
+83	20	30	indicators
+83	113	115	of
+83	116	154	entities ( transformed to embeddings )
+16	10	18	presents
+16	21	29	solution
+16	39	46	resolve
+16	51	86	inefficient multiple - passes issue
+16	87	89	of
+16	90	108	existing solutions
+16	109	112	for
+16	113	116	MRE
+16	117	128	by encoding
+16	133	148	input only once
+17	19	36	proposed solution
+17	40	55	built on top of
+17	60	138	existing transformer - based , pretrained general - purposed language encoders
+18	17	20	use
+18	21	85	Bidirectional Encoder Representations from Transformers ( BERT )
+18	86	88	as
+18	93	120	transformer - based encoder
+19	77	86	introduce
+19	89	116	structured prediction layer
+19	117	131	for predicting
+19	132	150	multiple relations
+19	117	120	for
+19	155	177	different entity pairs
+19	193	197	make
+19	202	222	selfattention layers
+19	223	231	aware of
+19	236	245	positions
+19	229	231	of
+19	249	262	all en-tities
+19	39	41	in
+19	270	285	input paragraph
+2	0	31	Extracting Multiple - Relations
+4	41	79	extracting multiple entity - relations
+5	57	92	multiple entityrelations extraction
+10	0	26	Relation extraction ( RE )
+12	27	29	RE
+12	38	74	multiplerelations extraction ( MRE )
+13	150	153	MRE
+86	4	21	first observation
+86	22	29	is that
+86	30	52	our model architecture
+86	53	61	achieves
+86	62	81	much better results
+86	82	93	compared to
+86	98	137	previous state - of - the - art methods
+90	38	45	BERT SP
+90	52	70	successfully adapt
+90	75	91	pre-trained BERT
+90	92	94	to
+90	99	107	MRE task
+90	114	122	achieves
+90	123	145	comparable performance
+94	0	14	Our full model
+94	17	21	with
+94	26	50	structured fine - tuning
+94	51	53	of
+94	54	70	attention layers
+94	73	79	brings
+94	80	99	further improvement
+94	51	53	of
+94	103	114	about 5.5 %
+94	38	40	in
+94	124	146	MRE one - pass setting
+94	153	161	achieves
+94	164	202	new state - of - the - art performance
+94	208	219	compared to
+94	224	254	methods with domain adaptation
+117	0	26	Our Entity - Aware BERT SP
+117	27	32	gives
+117	33	51	comparable results
+117	52	54	to
+117	59	78	top - ranked system
+117	79	81	in
+117	86	97	shared task
+117	100	104	with
+117	105	130	slightly lower Macro - F1
+117	180	206	slightly higher Micro - F1
+87	0	4	Note
+87	10	20	our method
+87	25	41	not designed for
+87	42	59	domain adaptation
+87	65	82	still outperforms
+87	89	96	methods
+87	97	101	with
+87	42	59	domain adaptation
+89	0	5	Among
+89	6	37	all the BERT - based approaches
+89	40	50	finetuning
+89	55	77	off - the - shelf BERT
+89	78	91	does not give
+89	94	111	satisfying result
+92	3	12	works for
+92	17	48	singlerelation per pass setting
+92	59	70	performance
+92	71	88	lags behind using
+92	89	104	only indicators
+92	105	107	of
+92	112	131	two target entities
+99	0	3	For
+99	4	11	BERT SP
+99	12	16	with
+99	17	34	entity indicators
+99	35	37	on
+99	38	44	inputs
+100	13	21	observed
+100	2	9	2 % gap
+103	4	36	BERT SP with position embeddings
+103	23	25	on
+103	44	65	final attention layer
+103	71	76	train
+103	81	86	model
+103	32	34	in
+103	94	119	single - relation setting
+103	124	128	test
+103	12	16	with
+103	134	156	two different settings
+103	159	161	so
+103	166	173	results
+103	174	177	are
+103	182	186	same
+118	0	15	When predicting
+118	16	34	multiple relations
+118	12	14	in
+118	38	48	one - pass
+118	54	58	have
+118	59	69	0.9 % drop
+118	31	33	on
+118	73	83	Macro - F1
+118	92	117	further 0.8 % improvement
+118	31	33	on
+118	121	131	Micro - F1
+120	20	31	compared to
+120	36	58	top singlemodel result
+120	61	79	which makes use of
+120	80	117	additional word and entity embeddings
+120	118	131	pretrained on
+120	132	148	in - domain data
+120	151	162	our methods
+120	163	174	demonstrate
+120	175	190	clear advantage
+120	191	193	as
+120	196	208	single model

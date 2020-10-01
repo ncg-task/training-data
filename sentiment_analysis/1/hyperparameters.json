@@ -1,0 +1,41 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "has" : {
+        "RGNN" : {
+          "empirically" : {
+            "set" : {
+              "has" : {
+                "number" : {
+                  "of" : "convolutional layers L = 2"
+                },
+                "dropout rate" : {
+                  "of" : {
+                    "0.7" : {
+                      "at" : "output fully - connected layer"
+                    }
+                  }
+                },
+                "batch size" : {
+                  "of" :  "16"
+                }
+              }
+            }
+          },
+          "from sentence" : "For our RGNN in all experiments , we empirically set the number of convolutional layers L = 2 , dropout rate of 0.7 at the output fully - connected layer , and batch size of 16 ."
+        }
+      },
+      "use" : {
+        "Adam optimization" : {
+          "with" : {
+            "default values" : {
+              "i.e." : "? 1 = 0.9 and ? 2 = 0.999"
+            }
+          },
+          "from sentence" : "We use Adam optimization with default values , i.e. , ? 1 = 0.9 and ? 2 = 0.999 ."
+        }
+      },
+      "tune" : ["output feature dimension d", "label noise level", "learning rate ?", "L1 regularization factor ?", "L2 regularization", {"from sentence" : "We only tune the output feature dimension d , label noise level , learning rate ? , L1 regularization factor ? , and L2 regularization for each experiment ."}]
+    }
+  }
+}

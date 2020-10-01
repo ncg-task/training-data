@@ -1,0 +1,34 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "Our vanilla approach" : {
+          "achieves" : {
+            "state - of - theart results" : {
+              "with" : {
+                "almost an order of magnitude fewer parameters" : {
+                  "than" : "LSTMN"
+                }
+              }
+            }
+          },
+          "from sentence" : "Our vanilla approach achieves state - of - theart results with almost an order of magnitude fewer parameters than the LSTMN of ."
+        }
+      },
+      "Adding" : {
+        "intra-sentence attention" : {
+          "gives" : {
+            "considerable improvement" : {
+              "of" : {
+                "0.5 percentage points" : {
+                  "over" : "existing state of the art"
+                }
+              }
+            }
+          },
+          "from sentence" : "Adding intra-sentence attention gives a considerable improvement of 0.5 percentage points over the existing state of the art ."
+        }
+      }
+    }
+  }
+}

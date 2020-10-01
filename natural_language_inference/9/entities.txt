@@ -1,0 +1,184 @@
+229	39	49	infer that
+229	58	62	When
+229	67	83	number of layers
+229	84	86	is
+229	87	95	only one
+229	102	107	model
+229	108	113	lacks
+229	114	134	reasoning capability
+230	0	14	In the case of
+230	15	26	1 k dataset
+230	29	33	when
+230	44	59	too many layers
+230	77	95	correctly training
+230	100	105	model
+230	106	113	becomes
+230	114	136	increasingly difficult
+231	15	27	10 k dataset
+231	30	77	many layers ( 6 ) and hidden dimensions ( 200 )
+231	78	83	helps
+231	84	93	reasoning
+232	6	12	Adding
+232	17	27	reset gate
+232	28	33	helps
+233	6	15	Including
+233	16	28	vector gates
+233	29	34	hurts
+233	12	14	in
+233	38	50	1 k datasets
+234	20	32	vector gates
+234	33	35	in
+234	36	70	bAbI story - based QA 10 k dataset
+234	71	80	sometimes
+234	81	85	help
+236	10	27	hypothesized that
+236	30	49	larger hidden state
+236	53	65	required for
+236	66	75	real data
+235	6	16	Increasing
+235	21	30	dimension
+235	31	33	of
+235	38	50	hidden state
+235	51	53	to
+235	54	57	100
+235	13	15	in
+235	65	91	dialog 's Task 6 ( DSTC2 )
+235	92	97	helps
+217	6	13	include
+217	14	18	LSTM
+217	21	59	End - to - end Memory Networks ( N2N )
+217	62	95	Dynamic Memory Networks ( DMN + )
+217	98	148	Gated End - to - end Memory Networks ( GMe m N2N )
+217	155	193	Differentiable Neural Computer ( DNC )
+204	3	11	withhold
+204	12	16	10 %
+204	17	19	of
+204	24	32	training
+204	33	36	for
+204	37	48	development
+205	3	6	use
+205	11	28	hidden state size
+205	29	31	of
+205	32	34	50
+205	35	37	by
+205	38	45	deafult
+206	0	11	Batch sizes
+206	12	14	of
+206	15	17	32
+206	18	21	for
+206	22	46	bAbI story - based QA 1k
+206	49	61	bAb I dialog
+206	66	78	DSTC2 dialog
+206	85	88	128
+206	18	21	for
+206	93	105	bAbI QA 10 k
+207	4	11	weights
+207	12	14	in
+207	19	43	input and output modules
+207	48	64	initialized with
+207	65	74	zero mean
+207	83	112	standard deviation of 1 / ? d
+209	0	11	Forget bias
+209	12	14	of
+209	15	18	2.5
+209	22	30	used for
+209	31	43	update gates
+210	0	15	L2 weight decay
+210	16	18	of
+210	19	47	0.001 ( 0.0005 for QA 10 k )
+210	51	59	used for
+210	60	71	all weights
+211	4	17	loss function
+211	18	20	is
+211	25	38	cross entropy
+211	39	46	between
+211	47	73	v and the one - hot vector
+211	74	76	of
+211	81	92	true answer
+212	4	8	loss
+212	12	24	minimized by
+212	25	52	stochastic gradient descent
+212	53	56	for
+212	57	77	maximally 500 epochs
+212	84	92	training
+212	9	11	is
+212	96	109	early stopped
+212	110	112	if
+212	4	8	loss
+212	122	124	on
+212	129	145	development data
+212	151	163	not decrease
+212	53	56	for
+212	168	177	50 epochs
+213	4	17	learning rate
+213	21	34	controlled by
+213	35	42	AdaGrad
+213	43	47	with
+213	52	73	initial learning rate
+213	74	76	of
+213	77	100	0.5 ( 0.1 for QA 10 k )
+214	63	69	repeat
+214	70	93	each training procedure
+214	94	124	10 times ( 50 times for 10 k )
+214	125	129	with
+214	134	159	new random initialization
+214	160	162	of
+214	167	174	weights
+24	21	56	Query - Reduction Network 1 ( QRN )
+24	59	61	is
+24	64	85	single recurrent unit
+24	86	100	that addresses
+24	105	135	long - term dependency problem
+24	136	138	of
+24	139	162	most RNN - based models
+24	163	177	by simplifying
+24	182	198	recurrent update
+24	207	213	taking
+24	218	227	advantage
+24	136	138	of
+24	231	248	RNN 's capability
+24	249	257	to model
+24	258	273	sequential data
+25	4	13	considers
+25	18	35	context sentences
+25	36	38	as
+25	41	49	sequence
+25	50	52	of
+25	53	78	state - changing triggers
+25	158	166	observes
+25	180	192	through time
+25	85	95	transforms
+25	112	126	original query
+25	127	129	to
+25	132	151	more informed query
+33	48	62	better encodes
+33	63	83	locality information
+33	172	185	query updates
+33	190	199	performed
+33	200	207	locally
+2	76	94	QUESTION ANSWERING
+4	40	93	question answering when reasoning over multiple facts
+220	0	2	In
+220	3	11	1 k data
+220	14	62	QRN 's ' 2 r' ( 2 layers + reset gate + d = 50 )
+220	63	74	outperforms
+220	75	91	all other models
+220	92	94	by
+220	97	121	large margin ( 2.8 + % )
+221	3	15	10 k dataset
+221	22	38	average accuracy
+221	39	41	of
+221	42	100	QRN 's ' 6r200 ' ( 6 layers + reset gate + d = 200 ) model
+221	101	112	outperforms
+221	113	132	all previous models
+221	133	135	by
+221	138	162	large margin ( 2.5 + % )
+221	165	174	achieving
+221	177	197	nearly perfect score
+221	39	41	of
+221	201	207	99.7 %
+225	0	3	QRN
+225	4	15	outperforms
+225	16	29	previous work
+225	30	32	by
+225	35	59	large margin ( 2.0 + % )

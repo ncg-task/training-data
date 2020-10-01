@@ -1,0 +1,53 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "when training" : {
+        "initial SWAG model" : {
+          "use" : {
+            "hyperparameters" : {
+              "recommended in" : "BERT paper",
+              "namely" : {
+                "batch size" : {
+                  "of" : "16"
+                },
+                "learning rate" : {
+                  "of" : "2 e - 5"
+                },
+                "epochs" : {
+                  "has" : "3"
+                }
+              },
+              "from sentence" : "Also , when training the initial SWAG model we use the hyperparameters recommended in the BERT paper , namely a batch size of 16 , learning rate of 2 e - 5 , and 3 epochs ."
+            }
+          }
+        }
+      },
+      "replaced" : {
+        "5e - 5 learning rate" : {
+          "in" : "original grid search",
+          "with" : "1 e - 5",
+          "from sentence" : "In our initial experiments , we found that a lower learning rate and more training epochs produced higher accuracy on CODAH , so we replaced the 5e - 5 learning rate in the original grid search with 1 e - 5 , and we added a 6 - epoch setting ."
+        }
+      },
+      "added" : ["6 - epoch setting", {"from sentence" : "In our initial experiments , we found that a lower learning rate and more training epochs produced higher accuracy on CODAH , so we replaced the 5e - 5 learning rate in the original grid search with 1 e - 5 , and we added a 6 - epoch setting ."}],
+      "has" : {
+        "final hyperparameter grid" : {
+          "has" : {
+            "Batch size" : {
+              "has" : "16 , 32"
+            },
+            "Learning rate" : {
+              "has" : "1 e - 5 , 2 e - 5 , 3 e - 5"
+            },
+            "Number of epochs" : {
+              "has" : "3 , 4 , 6"
+            }
+          },
+          "from sentence" : "The final hyperparameter grid is as follows :
+Batch size : 16 , 32 Learning rate : 1 e - 5 , 2 e - 5 , 3 e - 5 Number of epochs : 3 , 4 , 6 In addition , we observed that in rare cases BERT fails to train ; that is , after several training epochs it has accuracy approximately equal to that of random guessing ."
+
+        }
+      }
+    }
+  }
+}

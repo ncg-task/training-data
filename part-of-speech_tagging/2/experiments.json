@@ -1,0 +1,183 @@
+{
+  "has" : {
+    "Experiments" : {
+      "has" : {
+        "TRANSFER LEARNING PERFORMANCE" : {
+          "has" : {
+            "Hyperparameters" : {
+              "set" : {
+                "character embedding dimension" : {
+                  "at" : "25"
+                },
+                "word embedding dimension" : {
+                  "at" : {
+                    "50" : {
+                      "for" : "English"
+                    },
+                    "64" : {
+                      "for" : "Spanish"
+                    }
+                  }
+                },
+                "dimension" : {
+                  "of" : {
+                    "hidden states" : {
+                      "of" : {
+                        "character - level GRUs" : {
+                          "at" : "80"
+                        },
+                        "word - level GRUs" : {
+                          "at" : "300"
+                        }
+                      }
+                    }
+                  }
+                },
+                "initial learning rate" : {
+                  "at" : "0.01"
+                },
+                "from sentence" : "We fix the hyperparameters for all the results reported in this section : we set the character embedding dimension at 25 , the word embedding dimension at 50 for English and 64 for Spanish , the dimension of hidden states of the character - level GRUs at 80 , the dimension of hidden states of the word - level GRUs at 300 , and the initial learning rate at 0.01 ."
+              }
+            },
+            "Results" : {
+              "has" : {
+                "our transfer learning approach" : {
+                  "has" : {
+                    "improve the performance" : {
+                      "on" : {
+                        "Twitter POS tagging and NER" : {
+                          "for" : "all labeling rates"
+                        }
+                      }
+                    },
+                    "improvements" : {
+                      "with" : {
+                        "0.1 labels" : {
+                          "are" : {
+                            "more than 8 %" : {
+                              "for" : "both datasets"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "from sentence" : "As shown in and 2 ( e ) , our transfer learning approach can improve the performance on Twitter POS tagging and NER for all labeling rates , and the improvements with 0.1 labels are more than 8 % for both datasets ."
+                  }
+                },
+                "Cross - application transfer" : {
+                  "leads to" : {
+                    "substantial improvement" : {
+                      "under" : "low - resource conditions"
+                    }
+                  },
+                  "from sentence" : "Cross - application transfer also leads to substantial improvement under low - resource conditions ."
+                }
+              },
+              "see that" : {
+                "transfer learning approach" : {
+                  "has" : {
+                    "consistently improved" : {
+                      "over" : "non-transfer results"
+                    }
+                  },
+                  "from sentence" : "We can see that our transfer learning approach consistently improved over the non-transfer results ."
+                }
+              },
+              "observe that" : {
+                "improvement" : {
+                  "by" : {
+                    "transfer learning" : {
+                      "is" : {
+                        "more substantial" : {
+                          "when" : {
+                            "labeling rate" : {
+                              "is" : "lower"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "from sentence" : "We also observe that the improvement by transfer learning is more substantial when the labeling rate is lower ."
+                  }
+                }
+              }                
+            }
+          }
+        },
+        "COMPARISON WITH STATE - OF - THE - ART RESULTS" : {
+          "has" : {
+            "Hyperparameters" : {
+              "use" : {
+                "publicly available pretrained word embeddings" : {
+                  "as" : "initialization",
+                  "from sentence" : "We use publicly available pretrained word embeddings as initialization ."
+                }
+              },
+              "On" : {
+                "English datasets" : {
+                  "experiment with" : ["50 - dimensional SENNA embeddings", "100 - dimensional GloVe embeddings"],
+                  "use" : {
+                    "development set" : {
+                      "to choose" : {
+                        "embeddings" : {
+                          "for" : "different tasks and settings"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "On the English datasets , following previous works that are based on neural networks , we experiment with both the 50 - dimensional SENNA embeddings and the 100 - dimensional GloVe embeddings and use the development set to choose the embeddings for different tasks and settings ."
+                }
+              },
+              "For" : {
+                "Spanish and Dutch" : {
+                  "use" : "64 - dimensional Polyglot embeddings",
+                  "from sentence" : "For Spanish and Dutch , we use the 64 - dimensional Polyglot embeddings ."
+                }
+              },
+              "set" : {
+                "hidden state dimensions" : {
+                  "to be" : {
+                    "300" : {
+                      "for" : "word - level GRU"
+                    }
+                  },
+                  "from sentence" : "We set the hidden state dimensions to be 300 for the word - level GRU ."
+                }
+              },
+              "has" : {
+                "initial learning rate" : {
+                  "for" : {
+                    "AdaGrad" : {
+                      "fixed at" : "0.01"
+                    }
+                  },
+                  "from sentence" : "The initial learning rate for AdaGrad is fixed at 0.01 ."
+                }
+              }
+            },
+            "Results" : {
+              "has" : {
+                "transfer learning approach" : {
+                  "achieves" : {
+                    "new state - of - the - art results" : {
+                      "on" : "all the considered benchmark datasets"
+                    }
+                  },
+                  "from sentence" : "First , our transfer learning approach achieves new state - of - the - art results on all the considered benchmark datasets except PTB POS tagging , which indicates that transfer learning can still improve the performance even on datasets with relatively abundant labels ."
+                },
+                "our base model ( w/o transfer )" : {
+                  "performs" : {
+                    "competitively" : {
+                      "compared to" : "state - of - the - art systems"
+                    }
+                  },
+                  "from sentence" : "Second , our base model ( w/o transfer ) performs competitively compared to the state - of - the - art systems , which means that the improvements shown in Section 4.2 are obtained over a strong baseline ."
+                }
+              }              
+            }
+          }          
+        }
+      }
+    }
+  }
+}

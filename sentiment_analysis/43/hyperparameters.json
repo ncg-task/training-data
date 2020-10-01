@@ -1,0 +1,54 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "has" : {
+        "word embeddings" : {
+          "for both" : {
+            "context and aspect words" : {
+              "initialized by" : "Glove"
+            }
+          },
+          "from sentence" : "In our experiments , word embeddings for both context and aspect words are initialized by Glove ."
+        },
+        "dimension" : {
+          "set to" : {
+            "300" : {
+              "of" : ["word embedding d v", "hidden state"]
+            }
+          },
+          "from sentence" : "The dimension of word embedding d v and hidden stated are 1 The detailed task introduction can be found in http://alt.qcri.org/semeval2014/task4/.
+set to 300 ."
+
+        },
+        "weight matrix and bias" : {
+          "are" : {
+            "initialized" : {
+              "by" : {
+                "sampling" : {
+                  "from" : "uniform distribution U ( 0.01 , 0.01 )"
+                }
+              }
+            }
+          },
+          "from sentence" : "The weight matrix and bias are initialized by sampling from a uniform distribution U ( 0.01 , 0.01 ) ."
+        },
+        "coefficient" : {
+          "of" : {
+            "L 2 regularization" : {
+              "is" : "10 ? 5"
+            }
+          },
+          "from sentence" : "The coefficient ? of L 2 regularization item is 10 ? 5 , the parameter ?
+of aspect alignment loss and dropout rate are set to 0.5 ."
+
+        },
+        "drop rate" : {
+          "set to" : "0.5",
+          "from sentence" : "The coefficient ? of L 2 regularization item is 10 ? 5 , the parameter ?
+of aspect alignment loss and dropout rate are set to 0.5 ."
+
+        }
+      }    
+    }
+  }
+}

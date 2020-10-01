@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["machine comprehension ( MC )", {"from sentence" : "To answer the question in machine comprehension ( MC ) task , the models need to establish the interaction between the question and the context ."}],
+    ["question answering ( QA )", {"from sentence" : "Machine comprehension ( MC ) - especially in the form of question answering ( QA ) - is therefore attracting a significant amount of attention from the machine learning community ."}]
+  ]
+}

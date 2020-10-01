@@ -1,0 +1,162 @@
+{
+  "has" : {
+    "Experiments" : {
+      "on" : {
+        "Tasks" : {
+          "on" : {
+            "paraphrase identification task" : {
+              "has" : {
+                "Baselines" : {
+                  "under" : {
+                    "Siamese framework" : {
+                      "implement" : {
+                        "two baseline models" : {
+                          "name" : ["Siamese - CNN", "Siamese - LSTM"]
+                        }
+                      },
+                      "from sentence" : "First , under the Siamese framework , we implement two baseline models : \" Siamese - CNN \" and \" Siamese - LSTM \" ."
+                    }
+                  },
+                  "implement" : {
+                    "two more baseline models" : {
+                      "name" : ["Multi - Perspective - CNN", "Multi - Perspective - LSTM"],
+                      "from sentence" : "Second , based on the two baseline models , we implement two more baseline models \" Multi - Perspective - CNN \" and \" Multi - Perspective - LSTM \" ."
+                    }
+                  },
+                  "re-implement" : {
+                    "\" L.D.C. \" model" : {
+                      "is" : {
+                        "model" : {
+                          "under" : "\" matchingaggregation \" framework"
+                        }
+                      }
+                    },
+                    "from sentence" : "Third , we re-implement the \" L.D.C. \" model proposed by , which is a model under the \" matchingaggregation \" framework and acquires the state - of - the - art performance on several tasks ."
+                  }
+                },
+                "Results" : {
+                  "experiment on" : ["\" Quora Question Pairs \" dataset", {"from sentence" : "In this Sub-section , we compare our model with state - of - theart models on the paraphrase identification task .
+        We still experiment on the \" Quora Question Pairs \" dataset , and use the same dataset partition as Sub-section 4.2 ."
+		
+					}],
+        
+                  "see that" : {
+                    "\" Multi - Perspective - CNN \" ( or \" Multi- Perspective - LSTM \" )" : {
+                      "works" : {
+                        "much better" : {
+                          "than" : "\" Siamese - CNN \" ( or \" Siamese - LSTM \" )"
+                        }
+                      },
+                      "from sentence" : "We can see that \" Multi - Perspective - CNN \" ( or \" Multi- Perspective - LSTM \" ) works much better than \" Siamese - CNN \" ( or \" Siamese - LSTM \" ) , which further indicates that our multi-perspective cosine matching func - Models Accuracy 81.4 82.1 83.5 85.0 85.1 86.1 86.3 86.8 87.3 87.5 tion ( Eq. ) is very effective for matching vectors ."
+                    }
+                  },
+                  "has" : {
+                    "Our \" BiMPM \" model" : {
+                      "has" : {
+                        "outperforms" : {
+                          "has" : "\" L.D.C. \" model",
+                          "by" : "more than two percent"
+                        }
+                      },
+                      "from sentence" : "Our \" BiMPM \" model outperforms the \" L.D.C. \" model by more than two percent ."
+                    }
+                  }
+                }
+              }
+            },
+            "natural language inference task" : {
+              "over" : {
+                "SNLI dataset" : {
+                  "has" : {
+                    "Results" : {
+                      "see that" : {
+                        "Only P ? Q" : {
+                          "has" : {
+                            "works significantly better" : {
+                              "than" : "Only P ? Q",
+                              "tells" : {
+                                "matching the hypothesis" : {
+                                  "against" : "premise",
+                                  "is" : {
+                                    "more effective" : {
+                                      "than" : "other way around"
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "from sentence" : "In this Sub-section , we evaluate our model on the natural language inference task over the SNLI dataset .
+First , we can see that \" Only P ?
+Q \" works significantly better than \" Only P ?
+Q \" , which tells us that , for natural language inference , matching the hypothesis against the premise is more effective than the other way around ."
+
+                          }
+                        }
+                      },
+                      "has" : {
+                        "our \" BiMPM \" model" : {
+                          "works" : {
+                            "much better" : {
+                              "than" : "Only P ? Q"
+                            }
+                          },
+                          "from sentence" : "Second , our \" BiMPM \" model works much better than \" Only P ?
+Q \" , which reveals that matching premise against the hypothesis can also bring some benefits ."
+                        },
+                        "our models" : {
+                          "achieve" : {
+                            "state - of - the - art performance" : {
+                              "in both" : "single and ensemble scenarios",
+                              "for" : "natural language inference task"
+                            },
+                            "from sentence" : "Therefore , our models achieve the state - of - the - art performance in both single and ensemble scenarios for the natural language inference task ."
+                          }
+                        }
+                      },
+                      "observe that" : {
+                        "our single model \" BiMPM \"" : {
+                          "on par with" : "state - of - the - art single models"
+                        },
+                        "our ' BiMPM ( Ensemble )" : {
+                          "works" : {
+                            "much better" : {
+                              "than" : "Ensemble"
+                            }
+                          }
+                        },
+                        "from sentence" : "Finally , comparing our models with all the state - of - the - art models , we can observe that our single model \" BiMPM \" is on par with the state - of - the - art single models , and our ' BiMPM ( Ensemble ) \" works much better than \" ( Ensemble ) \" ."
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "for" : {
+            "answer sentence selection tasks" : {
+              "experiment on" : {
+                "two datasets" : {
+                  "name" : ["TREC - QA", "WikiQA", {"from sentence" : "In this Sub-section , we study the effectiveness of our model for answer sentence selection tasks .
+We experiment on two datasets : TREC - QA and WikiQA ."
+
+                  }]
+                }
+              },
+              "see that" : {
+                "performance" : {
+                  "from" : "our model",
+                    "is" : {
+                      "on par" : {
+                        "with" : "state - of - the - art models"
+                      }
+                    },
+                    "from sentence" : "We can see that the performance from our model is on par with the state - of - the - art models ."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

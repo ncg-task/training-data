@@ -1,0 +1,43 @@
+{
+  "has" : {
+    "Approach" : {
+      "based on" : ["long short - term memory ( LSTM ) neural networks", {"from sentence" : "Because of advantages of neural networks , we approach this aspect level sentiment classification problem based on long short - term memory ( LSTM ) neural networks ."}],
+      "models" : {
+        "aspects and texts simultaneously" : {
+          "using" : "LSTMs",
+          "from sentence" : "Previous LSTM - based methods mainly focus on modeling texts separately , while our approach models aspects and texts simultaneously using LSTMs ."
+        }
+      },
+      "has" : {
+        "target representation and text representation" : {
+          "generated from" : "LSTMs",
+          "interact with" : {
+            "each other" : {
+              "by" : "attention - over - attention ( AOA ) module"
+            }
+          },          
+          "from sentence" : "Furthermore , the target representation and text representation generated from LSTMs interact with each other by an attention - over - attention ( AOA ) module ."
+        },
+        "AOA" : {
+          "automatically generates" : {
+            "mutual attentions" : {
+              "not only from" : "aspect - to - text",
+              "but also" : "text - to - aspect"
+            }
+          },
+          "from sentence" : "AOA automatically generates mutual attentions not only from aspect - to - text but also text - to - aspect ."
+        }
+      },
+      "choose" : {
+        "AOA" : {
+          "to attend" : {
+            "most important parts" : {
+              "in both" : "aspect and sentence"
+            }
+          }
+        },
+        "from sentence" : "That is why we choose AOA to attend to the most important parts in both aspect and sentence ."
+      }
+    }
+  }
+}

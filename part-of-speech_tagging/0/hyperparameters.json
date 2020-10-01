@@ -1,0 +1,41 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "train" : {
+        "model parameters and word / character embeddings" : {
+          "by" : {
+            "mini-batch stochastic gradient descent ( SGD )" : {
+              "with" : {
+                "batch size" : {
+                  "has" : "10"
+                },
+                "momentum" : {
+                  "has" : "0.9"
+                },
+                "initial learning rate" : {
+                  "has" : "0.01"
+                },
+                "decay rate" : {
+                  "has" : "0.05"
+                }
+              }
+            }
+          },
+          "from sentence" : "We train the model parameters and word / character embeddings by the mini-batch stochastic gradient descent ( SGD ) with batch size 10 , momentum 0.9 , initial learning rate 0.01 and decay rate 0.05 ."
+        }
+      },
+      "use" : {
+        "gradient clipping" : {
+          "of" : "5.0",
+          "from sentence" : "We also use a gradient clipping of 5.0 ."
+        }
+      },
+      "trained with" : {
+        "early stopping" : {
+          "based on" : "development performance"
+        },
+        "from sentence" : "The models are trained with early stopping ) based on the development performance ."
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Recognizing textual entailment ( RTE )", {"from sentence" : "Recognizing textual entailment ( RTE ) is the task of determining whether two natural language sentences are ( i ) contradicting each other , ( ii ) not related , or whether ( iii ) the first sentence ( called premise ) entails the second sentence ( called hypothesis ) ."}],
+    ["RTE", {"from sentence" : "This task is important since many natural language processing ( NLP ) problems , such as information extraction , relation extraction , text summarization or machine translation , rely on it explicitly or implicitly and could benefit from more accurate RTE systems ."}]
+  ]
+}

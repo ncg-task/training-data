@@ -1,0 +1,48 @@
+{
+  "has" : {
+    "Model" : {
+      "present" : {
+        "novel architecture" : {
+          "considers" : {
+            "other relations" : {
+              "in" : "sentence",
+              "as" : "context",
+              "for predicting" : {
+                "label" : {
+                  "of" : "target relation"
+                }
+              }
+            }
+          },
+          "from sentence" : "We present a novel architecture that considers other relations in the sentence as a context for predicting the label of the target relation ."
+        }
+      },
+      "has" : {
+        "architecture" : {
+          "uses" : {
+            "LSTM - based encoder" : {
+              "to jointly learn" : {
+                "representations" : {
+                  "for" : {
+                    "all relations" : {
+                      "in" : "single sentence"
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "Our architecture uses an LSTM - based encoder to jointly learn representations for all relations in a single sentence ."
+          }
+        }
+      },
+      "are" : {
+        "combined" : {
+          "representation of" : "target relation",
+          "representations of" : "context relations",
+          "to make" : "final prediction",
+          "from sentence" : "The representation of the target relation and representations of the context relations are combined to make the final prediction ."
+        }
+      }
+    }
+  }
+}

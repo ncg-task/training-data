@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Natural Language Inference", {"from sentence" : "Recurrent Neural Network - Based Sentence Encoder with Gated Attention for Natural Language Inference"}],
+    ["natural language inference ( NLI )", {"from sentence" : "Task aims to evaluate language understanding models for sentence representation with natural language inference ( NLI ) tasks , where a sentence is represented as a fixedlength vector ."}],
+    ["NLI", {"from sentence" : "Specifically , NLI is concerned with determining whether a hypothesis sentence h can be inferred from a premise sentence p."}]
+  ]
+}

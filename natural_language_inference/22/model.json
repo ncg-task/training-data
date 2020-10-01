@@ -1,0 +1,50 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "extension" : {
+          "of" : "BIDAF",
+          "called" : "Ruminating Reader",
+          "uses" : {
+            "second pass" : {
+              "of" : {
+                "reading and reasoning" : {
+                  "to avoid" : "mistakes",
+                  "to ensure" : {
+                    "effectively use" : {
+                      "has" : {
+                        "full context" : {
+                          "when selecting" : "answer"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "We propose an extension of BIDAF , called Ruminating Reader , which uses a second pass of reading and reasoning to allow it to learn to avoid mistakes and to ensure that it is able to effectively use the full context when selecting an answer ."
+        }
+      },
+      "introduce" : {
+        "two novel layer types" : {
+          "name" : "ruminate layers",
+          "use" : {
+            "gating mechanisms" : {
+              "to fuse" : "first and second passes"
+            }
+          },
+          "from sentence" : "In addition to adding a second pass , we also introduce two novel layer types , the ruminate layers , which use gating mechanisms to fuse the obtained from the first and second passes ."
+        },
+        "answer-question similarity loss" : {
+          "to penalize" : {
+            "overlap" : {
+              "between" : "question and predicted answer"
+            }
+          },
+          "from sentence" : "In addition , we introduce an answer-question similarity loss to penalize overlap between question and predicted answer , a common feature in the errors of our base model ."
+        }
+      }
+    }
+  }
+}

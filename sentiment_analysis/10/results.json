@@ -1,0 +1,72 @@
+{
+  "has" : {
+    "Results" : {
+      "on average" : {
+        "Di - alogue RNN" : {
+          "outperforms" : {
+            "all the baseline methods" : {
+              "including" : "state - of - the - art CMN"
+            }
+          }
+        },
+        "from sentence" : "As expected , on average Di - alogue RNN outperforms all the baseline methods , including the state - of - the - art CMN , on both of the datasets ."
+      },
+      "for" : {
+        "IEMOCAP dataset" : {
+          "has" : {
+            "our model" : {
+              "surpasses" : {
+                "state - of - the - art method CMN" : {
+                  "by" : ["2.77 % accuracy", "3.76 % f 1 - score"]
+                }
+              }
+            }
+          },
+          "from sentence" : "As evidenced by , for IEMOCAP dataset , our model surpasses the state - of - the - art method CMN by 2.77 % accuracy and 3.76 % f 1 - score on average ."
+        }
+      },
+      "has" : {
+        "AVEC" : {
+          "has" : {
+            "DialogueRNN" : {
+              "outperforms" : {
+                "CMN" : {
+                  "for" : "valence , arousal , expectancy , and power attributes"
+                }
+              }
+            }
+          },
+          "from sentence" : "AVEC DialogueRNN outperforms CMN for valence , arousal , expectancy , and power attributes ; see ."
+        },
+        "DialogueRNN vs. DialogueRNN Variants" : {
+          "has" : {
+            "DialogueRNN l" : {
+              "using" : {
+                "explicit listener state update" : {
+                  "yields" : {
+                    "slightly worse performance" : {
+                      "than" : "regular DialogueRNN"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "DialogueRNN l :
+Following , using explicit listener state update yields slightly worse performance than regular DialogueRNN ."
+
+            },
+            "BiDialogueRNN" : {
+              "outperforms" : {
+                "Dialogue RNN" : {
+                  "on" : "both datasets"
+                }
+              },
+              "from sentence" : "BiDialogueRNN : Since BiDialogueRNN captures context from the future utterances , we expect improved performance from it over DialogueRNN .
+This is confirmed in , where BiDialogueRNN outperforms Dialogue RNN on average on both datasets ."
+
+            }
+          }
+        }
+      }
+    }
+  }
+}

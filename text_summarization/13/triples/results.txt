@@ -1,0 +1,5 @@
+(Contribution||has||Results)
+(Results||has||ILP model)
+(ILP model||ROUGE scores||surprisingly low)
+(Results||has||C2 F)
+(C2 F||significantly worse than||soft attention results)

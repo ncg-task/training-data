@@ -1,0 +1,111 @@
+118	0	8	To train
+118	9	18	our model
+118	24	28	used
+118	29	56	stochastic gradient descent
+118	57	61	with
+118	66	80	ADAM optimizer
+118	116	137	initial learning rate
+118	138	140	of
+118	141	146	0.001
+119	3	6	set
+119	11	21	batch size
+119	22	24	to
+119	25	27	32
+119	35	40	decay
+119	45	58	learning rate
+119	59	61	by
+119	62	65	0.8
+119	66	68	if
+119	73	81	accuracy
+119	82	84	on
+119	89	103	validation set
+119	109	121	not increase
+119	122	127	after
+119	130	142	half - epoch
+119	145	149	i.e.
+119	150	162	2000 batches
+119	165	168	for
+119	169	172	CBT
+119	179	191	5000 batches
+119	165	168	for
+119	198	201	CNN
+120	3	13	initialize
+120	14	25	all weights
+120	26	28	of
+120	29	38	our model
+120	39	41	by
+120	42	50	sampling
+120	51	55	from
+120	60	94	normal distribution N ( 0 , 0.05 )
+121	16	37	GRU recurrent weights
+121	38	41	are
+121	42	53	initialized
+121	54	59	to be
+121	60	70	orthogonal
+121	75	81	biases
+121	38	41	are
+121	42	53	initialized
+121	54	56	to
+121	101	105	zero
+125	0	9	Our model
+125	13	27	implemented in
+125	28	34	Theano
+125	37	42	using
+125	47	60	Keras library
+122	9	21	to stabilize
+122	26	34	learning
+122	40	44	clip
+122	49	58	gradients
+122	59	61	if
+122	68	72	norm
+122	76	88	greater than
+122	89	90	5
+124	14	21	setting
+124	22	46	embedding regularization
+124	47	49	to
+124	50	56	0.0001
+124	95	101	worked
+124	102	110	robustly
+124	111	117	across
+124	122	130	datasets
+19	79	86	propose
+19	89	135	novel neural attention - based inference model
+19	145	155	to perform
+19	156	191	machine reading comprehension tasks
+20	10	21	first reads
+20	26	48	document and the query
+20	49	54	using
+20	57	81	recurrent neural network
+21	10	17	deploys
+21	21	48	iterative inference process
+21	49	59	to uncover
+21	64	81	inferential links
+21	93	100	between
+21	105	123	missing query word
+21	113	118	query
+21	146	154	document
+22	11	19	involves
+22	22	59	novel alternating attention mechanism
+22	65	78	first attends
+22	82	95	some parts of
+22	100	105	query
+22	108	118	then finds
+22	125	146	corresponding matches
+22	147	159	by attending
+22	167	175	document
+23	4	10	result
+23	41	54	fed back into
+23	59	86	iterative inference process
+23	87	94	to seed
+23	99	115	next search step
+25	0	5	After
+25	8	34	fixed number of iterations
+25	41	46	model
+25	47	51	uses
+25	54	61	summary
+25	21	23	of
+25	69	86	inference process
+25	87	97	to predict
+25	102	108	answer
+2	43	58	Machine Reading
+4	59	80	machine comprehension

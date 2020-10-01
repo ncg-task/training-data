@@ -1,0 +1,30 @@
+24	27	30	use
+24	35	42	context
+24	52	66	by considering
+24	67	76	exemplars
+24	103	113	difference
+24	114	121	between
+24	122	155	relevant and irrelevant exemplars
+25	3	11	consider
+25	12	30	different contexts
+25	31	45	in the form of
+25	46	90	Location , Caption , and Part of Speech tags
+26	22	26	uses
+26	29	49	differential context
+26	50	66	obtained through
+26	67	103	supporting and contrasting exemplars
+26	104	113	to obtain
+26	116	140	differentiable embedding
+27	18	25	used by
+27	28	44	question decoder
+27	45	54	to decode
+27	59	79	appropriate question
+36	18	25	propose
+36	28	59	multimodal differential network
+36	60	68	to solve
+36	73	77	task
+36	78	80	of
+36	81	107	visual question generation
+2	36	62	Visual Question Generation
+4	0	42	Generating natural questions from an image
+18	56	97	generating natural questions for an image

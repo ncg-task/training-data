@@ -1,0 +1,98 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "adopt" : {
+        "multi - layer - CNN structure" : {
+          "from" : "CNN - based encoders",
+          "from sentence" : "We adopt the multi - layer - CNN structure from as the CNN - based encoders in our proposed network ."
+        },
+        "released domainspecific embeddings" : {
+          "for" : {
+            "restaurant and laptop domains" : {
+              "with" : "100 dimensions"
+            }
+          },
+          "trained on" : {
+            "large domain - specific corpus" : {
+              "using" : "fast Text"
+            }
+          },
+          "from sentence" : "We adopt their released domainspecific embeddings for restaurant and laptop domains with 100 dimensions , which are trained on a large domain - specific corpus using fast Text ."          
+        }
+      },
+      "For" : {
+        "word embedding initialization" : {
+          "concatenate" : ["general - purpose embedding matrix", "domain - specific embedding matrix", {"from sentence" : "For word embedding initialization , we concatenate a general - purpose embedding matrix and a domain - specific embedding matrix 7 following ."}]
+        }
+      },
+      "has" : {
+        "general - purpose embeddings" : {
+          "are" : {
+            "pre-trained Glove vectors" : {
+              "with" : "300 dimensions"
+            }
+          },
+          "from sentence" : "The general - purpose embeddings are pre-trained Glove vectors with 300 dimensions ."
+        },
+        "Learning rate and batch size" : {
+          "set to" : {
+            "conventional values" : {
+              "without specific tuning for" : "our task"
+            },
+            "from sentence" : "Learning rate and batch size are set to conventional values without specific tuning for our task ."
+          }
+        }
+      },
+      "tune" : {
+        "maximum number of iterations T" : {
+          "in" : {
+            "message passing mechanism" : {
+              "by training" : {
+                "IMN ?d" : {
+                  "via" : "cross validation"
+                }
+              }
+            },
+            "from sentence" : "We tune the maximum number of iterations T in the message passing mechanism by training IMN ?d via cross validation on D1 ."
+          },
+          "set to" : ["2", {"from sentence" : "It is set to 2 ."}]
+        }
+      },
+      "use" : {
+        "Adam optimizer" : {
+          "with" : {
+            "learning rate" : {
+              "set to" : "10 ? 4"
+            }
+          },
+          "set" : {
+            "batch size" : {
+              "to" : "32"
+            }
+          },
+          "from sentence" : "We use Adam optimizer with learning rate set to 10 ? 4 , and we set batch size to 32 ."
+        }
+      },
+      "At" : {
+        "training phase" : {
+          "randomly sample" : {
+            "20 %" : {
+              "of" : {
+                "training data" : {
+                  "from" : "aspect - level dataset"
+                }
+              },
+              "as" : "development set"
+            }
+          },
+          "use" : {
+            "remaining 80 %" : {
+              "for" : "training"
+            }
+          },
+          "from sentence" : "At training phase , we randomly sample 20 % of the training data from the aspect - level dataset as the development set and only use the remaining 80 % for training ."
+        }
+      }
+    }
+  }
+}

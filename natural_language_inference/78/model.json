@@ -1,0 +1,45 @@
+{
+  "has" : {
+    "Model" : {
+      "has" : [["several new novel components", {"from sentence" : "This paper presents a new neural model for NLI .
+There are several new novel components in our work ."
+
+      }], 
+      [{"scalar valued feature" : {
+        "used to" : {
+          "augment" : {
+          "has" : "base word representation"}}}}, 
+          {"from sentence" : "Each scalar valued feature is used to augment the base word representation , allowing the subsequent RNN encoder layers to benefit from not only global but also cross sentence information ."}]],
+      "propose" : {
+        "compare , compress and propagate ( Com Prop ) architecture" : {
+          "has" : {
+            "compressed alignment features" : {
+              "propagated to" : {
+                "upper layers" : {
+                  "such as" : "RNN - based encoder"
+                }
+              },
+              "for enhancing" : "representation learning"
+            }
+          },
+          "from sentence" : "Firstly , we propose a compare , compress and propagate ( Com Prop ) architecture where compressed alignment features are propagated to upper layers ( such as a RNN - based encoder ) for enhancing representation learning ."
+        }
+      },
+      "achieve" : {
+        "efficient propagation" : {
+          "of" : "alignment features",
+          "propose" : {
+            "alignment factorization layers" : {
+              "to reduce" : {
+                "each alignment vector" : {
+                  "to" : "single scalar valued feature"
+                }
+              }
+            }
+          },
+          "from sentence" : "Secondly , in order to achieve an efficient propagation of alignment features , we propose alignment factorization layers to reduce each alignment vector to a single scalar valued feature ."
+        }
+      }
+    }
+  }
+}

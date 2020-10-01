@@ -1,0 +1,40 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "BERT SP" : {
+          "has" : "BERT with structured prediction only",
+          "from sentence" : "BERT SP : BERT with structured prediction only , which includes proposed improvement in 3.1 ."
+        },
+        "Entity - Aware BERT SP" : {
+          "is" : "our full model",
+          "from sentence" : "Entity - Aware BERT SP : our full model , which includes both improvements in 3.1 and 3.2 ."
+        },
+        "BERT SP with position embedding on the final attention layer" : {
+          "is" : {
+            "more straightforward way" : {
+              "to achieve" : {
+                "MRE" : {
+                  "in" : "one - pass",
+                  "using" : "position embeddings"
+                }
+              }
+            }
+          },
+          "from sentence" : "BERT SP with position embedding on the final attention layer .
+This is a more straightforward way to achieve MRE in one - pass derived from previous works using position embeddings ."
+
+        },
+        "BERT SP with entity indicators on input layer" : {
+          "replaces" : "our structured attention layer",
+          "adds" : {
+            "indicators" : {
+              "of" : "entities ( transformed to embeddings )"
+            }
+          },
+          "from sentence" : "BERT SP with entity indicators on input layer : it replaces our structured attention layer , and adds indicators of entities ( transformed to embeddings )"
+        }
+      }      
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "has" : {
+    "Approach" : {
+      "propose" : {
+        "two novel approaches" : {
+          "for improving" : "effectiveness of attention models",
+          "from sentence" : "We propose two novel approaches for improving the effectiveness of attention models ."
+        }
+      },
+      "has" : {
+        "first approach" : {
+          "model" : {
+            "each target" : {
+              "as" : {
+                "mixture" : {
+                  "of" : "K aspect embeddings"
+                }
+              },
+              "from sentence" : "The first approach is a new way of encoding a target which better captures the aspect semantics of the target expression .
+To address this problem , inspired by , we instead model each target as a mixture of K aspect embeddings where we would like each embedded aspect to represent a cluster of closely related targets ."
+
+            }
+          },
+          "use" : {
+            "autoencoder structure" : {
+              "to learn" : {
+                "both the aspect embeddings as well as the representation of the target" : {
+                  "as" : {
+                    "weighted combination" : {
+                      "of" : "aspect embeddings"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "We use an autoencoder structure to learn both the aspect embeddings as well as the representation of the target as a weighted combination of the aspect embeddings ."
+            }
+          },
+          "has" : {
+            "autoencoder structure" : {
+              "jointly trained with" : {
+                "neural attention - based sentiment classifier" : {
+                  "to provide" : {
+                    "good target representation" : {
+                      "as well as" : {
+                        "high accuracy" : {
+                          "on" : "predicted sentiment"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "The autoencoder structure is jointly trained with a neural attention - based sentiment classifier to provide a good target representation as well as a high accuracy on the predicted sentiment ."
+            }
+          }
+        },
+        "second approach" : {
+          "exploits" : {
+            "syntactic information" : {
+              "to contruct" : "syntax - based attention model"
+            },
+            "from sentence" : "Our second approach exploits syntactic information to construct a syntax - based attention model ."
+          },
+          "has" : {
+            "syntax - based attention mechanism" : {
+              "selectively focuses on" : {
+                "small subset of context words" : {
+                  "close to" : {
+                    "target" : {
+                      "on" : {
+                        "syntactic path" : {
+                          "obtained by" : {
+                            "applying a dependency parser" : {
+                              "on" : "review sentence"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Instead , our syntax - based attention mechanism selectively focuses on a small subset of context words that are close to the target on the syntactic path which is obtained by applying a dependency parser on the review sentence ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

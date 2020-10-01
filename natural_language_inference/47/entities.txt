@@ -1,0 +1,89 @@
+19	29	39	introduces
+19	44	95	Stanford Natural Language Inference ( SNLI ) corpus
+19	100	110	collection
+19	111	113	of
+19	114	128	sentence pairs
+19	129	140	labeled for
+19	141	151	entailment
+19	154	167	contradiction
+19	174	195	semantic independence
+20	0	2	At
+20	3	25	570,152 sentence pairs
+20	28	32	SNLI
+20	33	35	is
+20	36	66	two orders of magnitude larger
+20	67	71	than
+20	76	91	other resources
+20	47	49	of
+20	95	103	its type
+21	54	74	sentences and labels
+21	80	90	written by
+21	91	97	humans
+21	6	8	in
+21	103	134	grounded , naturalistic context
+22	0	2	In
+22	5	30	separate validation phase
+22	36	45	collected
+22	46	71	four additional judgments
+22	72	75	for
+22	76	86	each label
+22	72	75	for
+22	91	97	56,941
+22	98	100	of
+22	105	113	examples
+22	98	100	of
+23	0	8	Of these
+23	11	15	98 %
+23	19	24	cases
+23	25	36	emerge with
+23	39	63	threeannotator consensus
+23	70	74	58 %
+23	75	78	see
+23	81	100	unanimous consensus
+23	101	105	from
+23	106	125	all five annotators
+2	38	64	natural language inference
+11	7	41	natural language inference ( NLI )
+12	0	3	NLI
+163	4	22	sum of words model
+163	23	32	performed
+163	33	47	slightly worse
+163	48	52	than
+163	57	101	fundamentally similar lexicalized classifier
+165	73	76	gap
+165	77	84	between
+165	85	112	train and test set accuracy
+165	113	115	is
+165	116	132	relatively small
+165	133	136	for
+165	137	168	all three neural network models
+168	127	149	somewhat steeper slope
+168	72	75	for
+168	25	29	LSTM
+168	163	173	hints that
+168	178	194	ability to learn
+168	195	233	arbitrarily structured representations
+168	234	236	of
+168	237	253	sentence meaning
+168	258	265	give it
+168	269	278	advantage
+168	279	283	over
+168	288	322	more constrained lexicalized model
+168	9	11	on
+168	332	347	larger datasets
+164	0	2	Of
+164	7	21	two RNN models
+164	28	35	LSTM 's
+164	36	55	more robust ability
+164	56	64	to learn
+164	65	89	long - term dependencies
+164	90	96	serves
+164	100	104	well
+164	166	178	resulting in
+164	179	190	performance
+164	191	198	that is
+164	199	221	essentially equivalent
+164	56	58	to
+164	229	251	lexicalized classifier
+164	66	68	on
+164	259	267	test set

@@ -1,0 +1,38 @@
+{
+  "has" : {
+    "Approach" : {
+      "study" : {
+        "task" : {
+          "of" : {
+            "learning" : {
+              "has" : "universal representations of sentences",
+              "from sentence" : "In this paper , we study the task of learning universal representations of sentences , i.e. , a sentence encoder model that is trained on a large corpus and subsequently transferred to other tasks ."
+            }
+          }
+        }
+      },
+      "has" : {
+        "sentence encoder model" : {
+          "trained on" : "large corpus",
+          "subsequently transferred to" : "other tasks",
+          "from sentence" : "In this paper , we study the task of learning universal representations of sentences , i.e. , a sentence encoder model that is trained on a large corpus and subsequently transferred to other tasks ."
+        }
+      },
+      "investigate" : {
+        "supervised learning" : {
+          "can be" : "leveraged",
+          "from sentence" : "Here , we investigate whether supervised learning can be leveraged instead , taking inspiration from previous results in computer vision , where many models are pretrained on the ImageNet ) before being transferred ."
+        },
+        "impact" : {
+          "of" : {
+            "sentence encoding architecture" : {
+              "on" : "representational transferability",
+              "compare" : "convolutional , recurrent and even simpler word composition schemes",
+              "from sentence" : "Hence , we investigate the impact of the sentence encoding architecture on representational transferability , and compare convolutional , recurrent and even simpler word composition schemes ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

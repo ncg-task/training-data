@@ -1,0 +1,97 @@
+168	27	43	good convergence
+168	44	48	with
+168	49	62	deeper models
+169	10	19	seen that
+169	20	29	all tasks
+169	30	42	benefit from
+169	43	56	deeper models
+172	0	18	Multitask learning
+172	15	17	in
+174	18	31	NLI objective
+174	32	40	leads to
+174	43	61	better performance
+174	62	64	on
+174	69	89	English NLI test set
+174	101	109	comes at
+174	114	118	cost
+174	119	121	of
+174	124	166	worse cross - lingual transfer performance
+174	170	186	XNLI and Tatoeba
+9	91	134	https://github.com / facebookresearch/LASER
+107	2	21	Our proposed method
+107	22	29	obtains
+107	34	46	best results
+107	26	28	in
+107	50	86	zero - shot cross - lingual transfer
+107	87	90	for
+107	91	116	all languages but Spanish
+108	15	31	transfer results
+108	32	35	are
+108	36	58	strong and homogeneous
+108	59	65	across
+108	66	79	all languages
+111	21	45	zero - short performance
+111	46	48	is
+111	49	70	( at most ) 5 % lower
+111	71	75	than
+111	87	94	English
+111	97	106	including
+111	107	124	distant languages
+111	125	129	like
+111	130	161	Arabic , Chinese and Vietnamese
+111	184	207	remarkable good results
+111	80	82	on
+111	211	235	low - resource languages
+111	125	129	like
+111	241	248	Swahili
+114	21	31	outperform
+114	32	45	all baselines
+114	64	66	by
+114	69	87	substantial margin
+132	14	24	our system
+132	25	32	obtains
+132	37	59	best published results
+132	60	63	for
+132	64	93	5 of the 7 transfer languages
+146	14	24	our system
+146	25	36	establishes
+146	39	65	new state - of - the - art
+146	66	69	for
+146	70	88	all language pairs
+146	89	110	with the exception of
+146	111	133	English - Chinese test
+147	8	18	outperform
+147	19	47	Artetxe and Schwenk ( 2018 )
+157	69	91	similarity error rates
+157	92	101	below 5 %
+157	141	144	for
+157	102	105	are
+157	26	30	with
+157	80	90	error rate
+157	26	30	with
+158	24	36	37 languages
+158	55	67	48 languages
+158	87	97	below 10 %
+158	102	104	55
+158	110	124	less than 20 %
+159	15	27	15 languages
+159	28	44	with error rates
+159	45	55	above 50 %
+21	22	35	interested in
+21	36	83	universal language agnostic sentence embeddings
+21	86	93	that is
+21	96	118	vector representations
+21	119	121	of
+21	122	131	sentences
+21	132	140	that are
+21	141	148	general
+21	149	164	with respect to
+21	165	179	two dimensions
+21	186	200	input language
+21	209	217	NLP task
+23	17	22	train
+23	25	39	single encoder
+23	40	49	to handle
+23	50	68	multiple languages
+2	0	42	Massively Multilingual Sentence Embeddings
+4	38	81	joint multilingual sentence representations

@@ -1,0 +1,82 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "has" : {
+        "GAN Setting" : {
+          "choose" : {
+            "CNN architecture" : {
+              "as" : "feature extractor and the binary classifier",
+              "from sentence" : "For the discriminator , we choose the CNN architecture as the feature extractor and the binary classifier ."
+            }
+          },
+          "For" : {
+            "synthetic data experiment" : {
+              "has" : {
+                "CNN kernel size" : {
+                  "ranges" : "from 1 to T"
+                }
+              },
+              "from sentence" : "For the synthetic data experiment , the CNN kernel size ranges from 1 to T ."
+            },
+            "generator" : {
+              "adopt" : {
+                "LSTM" : {
+                  "as" : {
+                    "architectures of MANAGER and WORKER" : {
+                      "to capture" : "sequence context information"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "For the generator , we adopt LSTM as the architectures of MANAGER and WORKER to capture the sequence context information ."
+            }
+          },
+          "number of" : {
+            "each kernel" : {
+              "between" : "100 and 200"
+            },
+            "from sentence" : "The number of each kernel is between 100 and 200 ."
+          },
+          "has" : {
+            "feature of text" : {
+              "is" : "1,720 dimensional vector",
+              "from sentence" : "In this case , the feature of text is a 1,720 dimensional vector ."
+            },
+            "Dropout" : {
+              "performed to avoid" : {
+                "overfitting" : {
+                  "with" : ["keep rate 0.75", "L2 regularization"]    
+                }
+              },
+              "from sentence" : "Dropout with the keep rate 0.75 and L2 regularization are performed to avoid overfitting ."
+            },
+            "MANAGER" : {
+              "produces" : {
+                "16 - dimensional goal embedding feature vector" : {
+                  "using" : {
+                    "feature map" : {
+                      "extracted by" : "CNN"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "The MANAGER produces the 16 - dimensional goal embedding feature vector wt using the feature map extracted by CNN ."
+            },
+            "goal duration time c" : {
+              "is a" : {
+                "hyperparameter" : {
+                  "set as" : {
+                    "4" : { 
+                      "after" : "some preliminary experiments"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "The goal duration time c is a hyperparameter set as 4 after some preliminary experiments ."
+            }
+          }
+        }        
+      }
+    }
+  }
+}

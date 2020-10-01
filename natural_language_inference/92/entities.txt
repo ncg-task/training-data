@@ -1,0 +1,107 @@
+164	3	6	use
+164	7	22	uncased version
+164	23	25	of
+164	26	35	BERT base
+166	7	17	batch size
+166	18	20	of
+166	21	23	20
+166	24	27	for
+166	28	59	two reading comprehension tasks
+166	64	67	192
+166	24	27	for
+166	72	98	two open - domain QA tasks
+168	0	3	For
+168	4	23	opendomain QA tasks
+168	29	37	retrieve
+168	38	59	50 Wikipedia articles
+168	60	67	through
+168	68	76	TF - IDF
+169	3	6	try
+169	7	37	10 , 20 , 40 and 80 paragraphs
+169	38	40	on
+169	45	60	development set
+169	61	70	to choose
+169	75	95	number of paragraphs
+169	96	105	to use on
+169	110	118	test set
+170	0	8	To avoid
+170	9	21	local optima
+170	27	34	perform
+170	35	44	annealing
+176	20	27	observe
+176	33	45	First - Only
+176	46	48	is
+176	51	66	strong baseline
+178	15	18	MML
+178	19	27	achieves
+178	28	45	comparable result
+178	46	48	to
+178	53	74	First - Only baseline
+178	77	96	our learning method
+178	97	108	outperforms
+178	116	118	by
+178	119	142	2 + F1 / ROUGE - L / EM
+178	3	5	on
+178	159	171	all datasets
+179	9	19	our method
+179	20	28	achieves
+179	33	57	new state - of the - art
+179	58	60	on
+179	61	72	NARRATIVEQA
+179	75	90	TRIVIAQA - OPEN
+179	95	118	NATURALQUESTIONS - OPEN
+179	128	138	comparable
+179	139	141	to
+179	146	168	state - of - the - art
+179	58	60	on
+179	75	83	TRIVIAQA
+20	42	51	formulate
+20	54	94	wide range of weakly supervised QA tasks
+20	90	92	as
+20	98	142	discrete latent - variable learning problems
+25	3	14	demonstrate
+25	20	23	for
+25	24	54	many recently introduced tasks
+25	66	76	group into
+25	77	93	three categories
+25	114	129	relatively easy
+25	130	143	to precompute
+25	146	198	discrete , task - specific set of possible solutions
+25	199	212	that contains
+25	234	244	along with
+25	247	280	modest number of spurious options
+26	4	22	learning challenge
+26	31	43	to determine
+26	44	58	which solution
+26	9	11	in
+26	66	69	set
+26	23	25	is
+26	77	88	correct one
+26	91	107	while estimating
+26	110	127	complete QA model
+29	20	32	hard updates
+29	38	54	strongly enforce
+29	59	72	prior beliefs
+29	78	86	there is
+29	89	112	single correct solution
+27	3	8	model
+27	13	38	set of possible solutions
+27	39	41	as
+27	44	68	discrete latent variable
+27	75	82	develop
+27	85	102	learning strategy
+27	108	112	uses
+27	113	148	hard - EM - style parameter updates
+28	32	40	predicts
+28	45	65	most likely solution
+28	66	78	according to
+28	83	96	current model
+28	97	101	from
+28	106	121	precomputed set
+28	135	142	updates
+28	147	163	model parameters
+28	164	184	to further encourage
+28	189	203	own prediction
+2	32	68	Weakly Supervised Question Answering
+4	5	30	question answering ( QA )
+8	102	104	QA

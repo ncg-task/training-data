@@ -1,0 +1,35 @@
+{
+  "has" : {
+    "Approach" : {
+      "explore" : {
+        "alternative approach" : {
+          "based on" : {
+            "enriching" : {
+              "has" : "document representation"
+            }
+          },
+          "from sentence" : "In this paper , we explore an alternative approach based on enriching the document representation ( prior to indexing ) ."
+        }
+      },
+      "train" : {
+        "sequence - to - sequence model" : {
+          "given" : {
+            "document" : {
+              "generates" : {
+                "possible questions" : {
+                  "that" : {
+                    "document" : {
+                      "might" : "answer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "Focusing on" : "question answering"
+        },
+        "from sentence" : "Focusing on question answering , we train a sequence - to - sequence model , that given a document , generates possible questions that the document might answer ."            
+      }
+    }
+  }
+}

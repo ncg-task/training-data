@@ -1,0 +1,72 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "Our proposed model" : {
+          "achieves" : {
+            "new SOTA" : {
+              "on" : "RE",
+              "with" : {
+                "F 1" : {
+                  "of" : "62. 83"
+                }
+              }
+            },
+            "from sentence" : "Our proposed model achieves a new SOTA on RE with a F 1 of 62. 83 , more than 2.3 F 1 above the previous SOTA ."            
+          },
+          "also beats" : {
+            "multitask model" : {
+              "which uses" : {
+                "signals" : {
+                  "from" : "additional tasks"
+                }
+              },
+              "by more than" : "1.5 F 1 points"
+            },
+            "from sentence" : "Our proposed model also beats a multitask model which uses signals from additional tasks by more than 1.5 F 1 points ."
+          }
+        },
+        "Recall gains" : {
+          "for" : {
+            "RE" : {
+              "has" : "4.3 absolute points"
+            }
+          },
+          "much higher than for" : {
+            "EMD" : {
+              "has" : "0.6 absolute points"
+            }
+          },
+          "from sentence" : "The Recall gains for RE ( 4.3 absolute points ) are much higher than for EMD ( 0.6 absolute points ) ."
+        },
+        "our large gains" : {
+          "in" : {
+            "RE Recall ( and F 1 )" : {
+              "showcase" : {
+                "effectiveness" : {
+                  "of" : {
+                    "our simple modeling of ordered span pairs" : {
+                      "for" : "relation extraction"
+                    }
+                  }
+                },
+                "from sentence" : "Thus , our large gains in RE Recall ( and F 1 ) showcase the effectiveness of our simple modeling of ordered span pairs for relation extraction ( Section 3.3 ) ."
+              }
+            }
+          }
+        }
+      },
+      "For" : {
+        "both tasks" : {
+          "than" : {
+            "previous works" : {
+              "close to" : "our model 's Precision",
+              "significantly higher" : "Recall"
+            }
+          },
+          "from sentence" : "For both tasks , our model 's Precision is close to and Recall is significantly higher than previous works ."
+        }
+      }
+    }
+  }
+}

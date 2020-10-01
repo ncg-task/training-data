@@ -1,0 +1,46 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "use" : {
+        "context window" : {
+          "of" : {
+            "size" : {
+              "has" : {
+                "3" : {
+                  "for" : "Insurance QA"
+                },
+                "4" : {
+                  "for" : ["TREC - QA", "Wiki QA"]
+                }
+              }
+            }
+          },
+          "from sentence" : "We use a context window of size 3 for Insurance QA , while we set this parameter to 4 for TREC - QA and Wiki QA ."
+        },
+        "learning rate schedule" : {
+          "that" : {
+            "decreases" : {
+              "has" : {
+                "learning rate" : {
+                  "For" : ["AP - CNN", "AP - biLSTM", "QA - LSTM"]
+                }
+              }
+            }
+          },
+          "from sentence" : "For AP - CNN , AP - biLSTM and QA - LSTM , we also use a learning rate schedule that decreases the learning rate ?"
+        }
+      },
+      "has" : {
+        "best results" : {
+          "achieved using" : "between 15 and 25 training epochs",
+          "from sentence" : "Using the selected hyperparameters , the best results are normally achieved using between 15 and 25 training epochs ."
+        },
+        "four NN architectures" : {
+          "name" : ["QA - CNN", "AP - CNN", "QA - biLSTM", "AP - biLSTM"],
+          "implemented using" : "Theano",
+          "from sentence" : "In our experiments , the four NN architectures QA - CNN , AP - CNN , QA - biLSTM and AP - biLSTM are implemented using Theano ."
+        }
+      }
+    }
+  }
+}

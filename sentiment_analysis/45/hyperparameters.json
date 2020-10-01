@@ -1,0 +1,49 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "use" : {
+        "pre-trained uncased BERT - base model" : {
+          "for" : "fine - tuning",
+          "from sentence" : "We use the pre-trained uncased BERT - base model 5 for fine - tuning ."
+        }
+      },
+      "has" : {
+        "number of Transformer blocks" : {
+          "is" : "12",
+          "from sentence" : "The number of Transformer blocks is 12 , the hidden layer size is 768 , the number of self - attention heads is 12 , and the total number of parameters for the pretrained model is 110M ."    
+        },
+        "hidden layer size" : {
+          "is" : "768",
+          "from sentence" : "The number of Transformer blocks is 12 , the hidden layer size is 768 , the number of self - attention heads is 12 , and the total number of parameters for the pretrained model is 110M ."    
+        },
+        "number of self - attention heads" : {
+          "is" : "12",
+          "from sentence" : "The number of Transformer blocks is 12 , the hidden layer size is 768 , the number of self - attention heads is 12 , and the total number of parameters for the pretrained model is 110M ."    
+        },
+        "total number of parameters" : {
+          "for" : "pretrained model",
+          "is" : "110M",
+          "from sentence" : "The number of Transformer blocks is 12 , the hidden layer size is 768 , the number of self - attention heads is 12 , and the total number of parameters for the pretrained model is 110M ."    
+        },
+        "dropout probability" : {
+          "at" : "0.1",
+          "from sentence" : "the dropout probability at 0.1 , set the number of epochs to 4 ."
+        },
+        "initial learning rate" : {
+          "is" : "2 e - 5",
+          "from sentence" : "The initial learning rate is 2 e - 5 , and the batch size is 24 ."
+        },
+        "batch size" : {
+          "is" : "24",
+          "from sentence" : "The initial learning rate is 2 e - 5 , and the batch size is 24 ."
+        }
+      },
+      "set" : {
+        "number of epochs" : {
+          "to" : "4",
+          "from sentence" : "the dropout probability at 0.1 , set the number of epochs to 4 ."
+        }
+      }
+    }
+  }
+}

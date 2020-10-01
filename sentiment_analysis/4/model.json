@@ -1,0 +1,119 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "Interactive COnversational memory Network ( ICON )" : {
+          "has" : {
+            "multimodal network" : {
+              "for identifying" : {
+                "emotions" : {
+                  "in" : "utterance - videos"
+                }
+              } 
+            }
+          },
+          "from sentence" : "We propose Interactive COnversational memory Network ( ICON ) , a multimodal network for identifying emotions in utterance - videos ."
+        }
+      },
+      "extracts" : {
+        "multimodal features" : {
+          "from" : "all utterancevideos"
+        },
+        "from sentence" : "First , it extracts multimodal features from all utterancevideos ."
+      },
+      "given" : {
+        "test utterance" : {
+          "to be" : "classified",
+          "has" : {
+            "ICON" : {
+              "considers" : {
+                "preceding utterances" : {
+                  "of" : {
+                    "both speakers" : {
+                      "falling within" : "context - window"
+                    }
+                  }
+                }
+              },
+              "models" : {
+                "self - emotional influences" : {
+                  "using" : "local gated recurrent units"
+                }
+              }              
+            }
+          },
+          "from sentence" : "Next , given a test utterance to be classified , ICON considers the preceding utterances of both speakers falling within a context - window and models their self - emotional influences using local gated recurrent units ."
+        }
+      },
+      "to incorporate" : {
+        "inter -speaker influences" : {
+          "has" : {
+            "global representation" : {
+              "is" : {
+                "generated" : { 
+                  "using" : {
+                    "GRU" : {
+                      "intakes" : {
+                        "output" : {
+                          "of" : "local GRUs"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "Furthermore , to incorporate inter -speaker influences , a global representation is generated using a GRU that intakes output of the local GRUs ."
+      },
+      "For" : {
+        "each instance" : {
+          "in" : {
+            "context - window" : {
+              "has" : {
+                "output" : {
+                  "of" : {
+                    "global GRU" : {
+                      "stored as" : "memory cell"
+                    }
+                  }
+                }
+              }
+            }  
+          },
+          "from sentence" : "For each instance in the context - window , the output of this global GRU is stored as a memory cell ."
+        }
+      },
+      "has" : {
+        "memories" : {
+          "subjected to" : {
+            "multiple read / write cycles" : {
+              "that include" : {
+                "attention mechanism" : {
+                  "for generating" : {
+                    "contextual summaries" : {
+                      "of" : "conversational history"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "These memories are then subjected to multiple read / write cycles that include attention mechanism for generating contextual summaries of the conversational history ."
+        }
+      },
+      "At" : {
+        "each iteration" : {
+          "has" : {
+            "representation of the test utterance" : {
+              "improved with" : "summary representation",
+              "used for" : "prediction"
+            }
+          },
+          "from sentence" : "At each iteration , the representation of the test utterance is improved with this summary representation and finally used for prediction ."
+        }
+      }
+    }
+  }
+}

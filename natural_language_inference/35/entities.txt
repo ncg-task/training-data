@@ -1,0 +1,81 @@
+24	19	26	propose
+24	27	33	Masque
+24	38	54	generative model
+24	55	58	for
+24	59	75	multi-passage RC
+28	3	12	introduce
+28	17	46	pointer - generator mechanism
+28	47	61	for generating
+28	65	83	abstractive answer
+28	84	88	from
+28	93	101	question
+28	106	123	multiple passages
+28	132	138	covers
+28	139	160	various answer styles
+31	13	33	multi-style learning
+31	34	46	that enables
+31	47	56	our model
+31	57	67	to control
+31	68	81	answer styles
+31	86	94	improves
+31	95	97	RC
+31	98	101	for
+31	102	121	all styles involved
+29	3	9	extend
+29	14	23	mechanism
+29	24	26	to
+29	29	50	Transformer based one
+29	51	62	that allows
+29	63	68	words
+29	69	89	to be generated from
+29	92	102	vocabulary
+29	107	124	to be copied from
+29	129	137	question
+29	142	150	passages
+32	19	38	pointer - generator
+32	35	37	to
+32	44	63	conditional decoder
+32	67	78	introducing
+32	82	98	artificial token
+32	99	115	corresponding to
+32	116	126	each style
+33	0	3	For
+33	4	22	each decoding step
+33	28	36	controls
+33	41	56	mixture weights
+33	57	61	over
+33	62	81	three distributions
+2	14	46	Generative Reading Comprehension
+4	19	58	generative reading comprehension ( RC )
+15	11	39	reading comprehension ( RC )
+16	40	42	RC
+24	59	75	multi-passage RC
+181	5	14	our model
+181	15	22	achieve
+181	23	57	state - of - the - art performance
+182	59	61	on
+182	0	5	shows
+182	11	27	our single model
+182	30	42	trained with
+182	43	53	two styles
+182	58	73	controlled with
+182	78	87	NQA style
+182	90	104	pushed forward
+182	109	131	state - of - the - art
+182	132	134	by
+182	137	155	significant margin
+183	4	21	evaluation scores
+183	22	24	of
+183	29	34	model
+183	35	50	controlled with
+183	55	64	NLG style
+183	65	69	were
+183	70	73	low
+184	7	16	our model
+184	17	24	without
+184	25	45	multi-style learning
+184	82	94	outperformed
+184	99	108	baselines
+184	109	120	in terms of
+184	121	130	ROUGE - L
+186	15	26	NarrativeQA

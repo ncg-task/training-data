@@ -1,0 +1,34 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "Distancebased Self - Attention Network" : {
+          "introduces" : {
+            "distance mask" : {
+              "models" : {
+                "relative distance" : {
+                  "between" : "words"
+                }
+              },
+              "from sentence" : "To tackle this limitation , we propose Distancebased Self - Attention Network which introduces a distance mask which models the relative distance between words ."
+            }
+          }
+        }
+      },
+      "In conjunction with" : {
+        "directional mask" : {
+          "has" : {
+            "distance mask" : {
+              "allows us to incorporate" : {
+                "complete positional information of words" : {
+                  "in" : "our model"
+                }
+              }
+            }
+          },
+          "from sentence" : "In conjunction with a directional mask , the distance mask allows us to incorporate complete positional information of words in our model ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,2 @@
+(Contribution||has research problem||Community Question Answering ( c QA ))
+(Contribution||has research problem||c QA)

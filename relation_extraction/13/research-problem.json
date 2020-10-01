@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Relation Learning", {"from sentence" : "Matching the Blanks : Distributional Similarity for Relation Learning"}],
+    ["identify and extract relations between entities", {"from sentence" : "Reading text to identify and extract relations between entities has been along standing goal in natural language processing ."}],
+    ["relation extraction", {"from sentence" : "Typically efforts in relation extraction fall into one of three groups ."}]
+  ]
+}

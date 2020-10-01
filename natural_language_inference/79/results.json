@@ -1,0 +1,54 @@
+{
+  "has" : {
+    "Results" : {
+      "for" : {
+        "long documents" : {
+          "has" : {
+            "bag - of - words models" : {
+              "perform" : "quite well",
+              "has" : {
+                "difficult to improve" : {
+                  "using" : "word vectors"
+                }
+              },
+              "from sentence" : "As can be seen from the for long documents , bag - of - words models perform quite well and it is difficult to improve upon them using word vectors ."
+            }
+          }
+        }
+      },
+      "has" : {
+        "combination of two models" : {
+          "yields" : {
+            "improvement" : {
+              "has" : {
+                "approximately 1.5 %" : {
+                  "in terms of" : "error rates"
+                }
+              }
+            }
+          },
+          "from sentence" : "The combination of two models yields an improvement approximately 1.5 % in terms of error rates ."
+        },
+        "method described" : {
+          "is" : {
+            "only approach" : {
+              "goes" : {
+                "significantly beyond barrier" : {
+                  "of" : "10 % error rate"
+                }
+              }
+            },
+            "from sentence" : "The method described in this paper is the only approach that goes significantly beyond the barrier of 10 % error rate ."
+          },
+          "achieves" : {
+            "7.42 %" : {
+              "which is" : ["another 1.3 % absolute improvement", "15 % relative improvement"],
+              "over" : "best previous result"
+            },
+            "from sentence" : "It achieves 7.42 % which is another 1.3 % absolute improvement ( or 15 % relative improvement ) over the best previous result of .."
+          }
+        }
+      }
+    }
+  }  
+}

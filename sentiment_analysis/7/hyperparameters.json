@@ -1,0 +1,54 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "has" : {
+        "text transcript" : {
+          "of" : "each of the utterance",
+          "use" : {
+            "pretrained Glove embeddings" : {
+              "of" : "dimension 300",
+              "along with" : {
+                "maximum sequence length" : {
+                  "of" : "500"
+                }
+              },
+              "to obtain" : {
+                "( 500,300 ) vector" : {
+                  "for" : "each utterance"
+                }
+              },
+              "from sentence" : "For the text transcript of each of the utterance we use pretrained Glove embeddings of dimension 300 , along with the maximum sequence length of 500 to obtain a ( 500,300 ) vector for each utterance ."
+            }
+          }
+        }
+      },
+      "For" : {
+        "Mocap data" : {
+          "for" : {
+            "each different mode" : {
+              "such as" : "face , hand , head rotation",
+              "sample" : {
+                "feature values" : {
+                  "between" : "start and finish time values",
+                  "split them into" : "200 partitioned arrays"
+                }  
+              }
+            },
+            "from sentence" : "For the Mocap data , for each different mode such as face , hand , head rotation we sample all the feature values between the start and finish time values and split them into 200 partitioned arrays ."            
+          },
+          "average each of" : {
+            "200 arrays" : {
+              "along" : "columns ( 165 for faces , 18 for hands , and 6 for rotation )",
+              "concatenate all of them to obtain" : {
+                "( 200,189 ) dimension vector" : {
+                  "for" : "utterance"
+                }
+              }
+            },
+            "from sentence" : "We then average each of the 200 arrays along the columns ( 165 for faces , 18 for hands , and 6 for rotation ) , and finally concatenate all of them to obtain ( 200,189 ) dimension vector for each utterance ."
+          }
+        }
+      }
+    }
+  }
+}

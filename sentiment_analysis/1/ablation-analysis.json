@@ -1,0 +1,80 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "has" : {
+        "two major designs" : {
+          "in" : {
+            "adjacency matrix A" : {
+              "i.e." : "global connection and symmetric adjacency matrix designs",
+              "helpful in" : "recognizing emotions"
+            }
+          },
+          "from sentence" : "The two major designs in our adjacency matrix A , i.e. , global connection and symmetric adjacency matrix designs , are helpful in recognizing emotions ."
+        },
+        "global connection" : {
+          "models" : {
+            "asymmetric difference" : {
+              "between" : {
+                "neuronal activities" : {
+                  "in" : "left and right hemispheres"
+                }
+              }
+            }
+          },
+          "shown to reveal" : "certain emotions",
+          "from sentence" : "The global connection models the asymmetric difference between neuronal activities in the left and right hemispheres and have been shown to reveal certain emotions , , ."
+        },
+        "NodeDAT regularizer" : {
+          "has" : {
+            "noticeable positive impact" : {
+              "on" : {
+                "performance" : {
+                  "of" : "our model"
+                }
+              }
+            }
+          },
+          "from sentence" : "Our NodeDAT regularizer has a noticeable positive impact on the performance of our model , which demonstrates that domain adaptation is significantly helpful in crosssubject classification ."
+        },
+        "DL regularizer" : {
+          "improves" : {
+            "performance" : {
+              "of" : {
+                "our model" : {
+                  "by" : {
+                    "around 3 %" : {
+                      "in" : {
+                        "accuracy" : {
+                          "on" : "both datasets"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "DL regularizer improves performance of our model by around 3 % in accuracy on both datasets ."
+        }
+      },
+      "if" : {
+        "NodeDAT" : {
+          "is" : {
+            "removed" : {
+              "has" : {
+                "performance" : {
+                  "of" : {
+                    "our model" : {
+                      "has" : "greater variance"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "In addition , if NodeDAT is removed , the performance of our model has a greater variance , demonstrating the importance of NodeDAT in improving the robustness of our model against cross - subject variations ."
+        }
+      }
+    }
+  }
+}

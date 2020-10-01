@@ -1,0 +1,99 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "apply" : {
+        "proposed model" : {
+          "to" : "aspect - level sentiment classification",
+          "from sentence" : "We apply the proposed model to aspect - level sentiment classification ."
+        }
+      },
+      "In" : {
+        "our experiments" : {
+          "has" : {
+            "all word vectors" : {
+              "are" : {
+                "initialized" : {
+                  "by" : "Glove"
+                }
+              }
+            }
+          },
+          "from sentence" : "In our experiments , all word vectors are initialized by Glove 1 ."
+        }
+      },
+      "has" : {
+        "word embedding vectors" : {
+          "pre-trained on" : {
+            "unlabeled corpus" : {
+              "whose" : {
+                "size" : {
+                  "is" : "about 840 billion"
+                }
+              }
+            }
+          },
+          "from sentence" : "The word embedding vectors are pre-trained on an unlabeled corpus whose size is about 840 billion ."
+        },
+        "other parameters" : {
+          "initialized by" : {
+            "sampling" : {
+              "from" : "uniform distribution U (?? , ? )"
+            }
+          },
+          "from sentence" : "The other parameters are initialized by sampling from a uniform distribution U (?? , ? ) ."
+        },
+        "dimension" : {
+          "are" : {
+            "300" : {
+              "of" : ["word vectors", "aspect embeddings", "size of hidden layer"]
+            }
+          },
+          "from sentence" : "The dimension of word vectors , aspect embeddings and the size of hidden layer are 300 ."
+        },
+        "length" : {
+          "of" : {
+            "attention weights" : {
+              "same as" : {
+                "length" : {
+                  "of" : "sentence"
+                }
+              }
+            }
+          },
+          "from sentence" : "The length of attention weights is the same as the length of sentence ."
+        },
+        "Theano" : {
+          "used for" : {
+            "implementing" : {
+              "has" : "neural network models"
+            }
+          },
+          "from sentence" : "Theano is used for implementing our neural network models ."
+        }
+      },
+      "trained" : {
+        "all models" : {
+          "with" : {
+            "batch size" : {
+              "of" : "25 examples"
+            },
+            "momentum" : {
+              "of" : "0.9"
+            },
+            "L 2 - regularization weight" : {
+              "of" : "0.001"
+            },
+            "initial learning rate" : {
+              "of" : {
+                "0.01" : {
+                  "for" : "AdaGrad"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "We trained all models with a batch size of 25 examples , and a momentum of 0.9 , L 2 - regularization weight of 0.001 and initial learning rate of 0.01 for AdaGrad ."
+      }
+    }
+  }
+}

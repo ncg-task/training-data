@@ -1,0 +1,26 @@
+{
+  "has" : {
+    "Model" : {
+      "to predict" : {
+        "given query" : {
+          "is" : "well - formed natural language question",
+          "from sentence" : "Thus , in this paper we present a model to predict whether a given query is a well - formed natural language question ."
+        }
+      },
+      "train" : {
+        "feed - forward neural network classifier" : {
+          "uses" : {
+            "lexical and syntactic features" : {
+              "extracted from" : {
+                "query" : {
+                  "on" : "data"
+                }
+              }
+            }
+          },
+          "from sentence" : "We then train a feed - forward neural network classifier that uses the lexical and syntactic features extracted from the query on this data ( 2.2 ) ."
+        }
+      }
+    }
+  }
+}

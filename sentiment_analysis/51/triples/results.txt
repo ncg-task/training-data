@@ -1,0 +1,5 @@
+(Contribution||has||Results)
+(Results||see that||our model)
+(our model||performs||better)
+(better||in terms of||accuracy)
+(accuracy||than||many popular and sophisticated NLP models)

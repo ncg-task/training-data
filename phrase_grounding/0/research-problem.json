@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Image - Phrase Grounding", {"from sentence" : "Multi - level Multimodal Common Semantic Space for Image - Phrase Grounding"}],
+    ["phrase grounding", {"from sentence" : "We address the problem of phrase grounding by learning a multi - level common semantic space shared by the textual and visual modalities ."}]
+  ]
+}

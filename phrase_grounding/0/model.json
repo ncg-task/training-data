@@ -1,0 +1,50 @@
+{
+  "has" : {
+    "Model" : {
+      "explicitly learn" : {
+        "non-linear mapping" : {
+          "of" : {
+            "visual and textual modalities" : {
+              "into" : "common space",
+              "at" : {
+                "different granularity" : {
+                  "for" : "each domain"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "In this work , we propose to explicitly learn a non-linear mapping of the visual and textual modalities into a common space , and do so at different granularity for each domain ."
+      },
+      "has" : {
+        "common space mapping" : {
+          "trained with" : "weak supervision",
+          "exploited at" : {
+            "test - time" : {
+              "with" : {
+                "multi - level multimodal attention mechanism" : {
+                  "where" : {
+                    "natural formalism" : {
+                      "for computing" : [
+                        {"attention heatmaps" : {
+                          "at" : "each level"
+                        }},
+                        "attended features", "pertinence scoring"
+                      ],
+                      "solve" : {
+                        "phrase grounding task" : {
+                          "has" : "elegantly and effectively"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "This common space mapping is trained with weak supervision and exploited at test - time with a multi - level multimodal attention mechanism , where a natural formalism for computing attention heatmaps at each level , attended features and pertinence scoring , enables us to solve the phrase grounding task elegantly and effectively ."
+        }
+      }
+    }
+  }
+}

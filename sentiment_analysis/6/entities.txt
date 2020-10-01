@@ -1,0 +1,77 @@
+36	66	73	develop
+36	76	85	framework
+36	86	94	based on
+36	95	125	long shortterm memory ( LSTM )
+36	131	136	takes
+36	139	161	sequence of utterances
+36	87	89	as
+36	165	170	input
+36	175	183	extracts
+36	184	218	contextual utterancelevel features
+40	10	19	preserves
+40	24	40	sequential order
+40	41	43	of
+40	44	54	utterances
+40	59	66	enables
+40	67	89	consecutive utterances
+40	90	98	to share
+40	99	110	information
+40	118	127	providing
+40	128	150	contextual information
+40	90	92	to
+40	158	208	utterance - level sentiment classification process
+2	0	38	Context - Dependent Sentiment Analysis
+4	84	122	identification of sentiments in videos
+9	0	18	Sentiment analysis
+11	0	19	Emotion recognition
+22	37	66	multimodal sentiment analysis
+237	14	50	trained contextual unimodal features
+237	51	55	help
+237	60	89	hierarchical fusion framework
+237	90	103	to outperform
+237	108	134	non-hierarchical framework
+240	4	26	non-hierarchical model
+240	27	38	outperforms
+240	43	61	baseline uni - SVM
+243	6	15	bc - LSTM
+243	16	29	has access to
+243	39	74	preceding and following information
+243	75	77	of
+243	82	100	utterance sequence
+243	106	114	performs
+243	115	134	consistently better
+243	72	74	on
+243	138	169	all the datasets over sc - LSTM
+245	4	27	performance improvement
+245	28	30	is
+245	31	43	in the range
+245	44	46	of
+245	47	61	0.3 % to 1.5 %
+245	62	64	on
+245	65	87	MOSI and MOUD datasets
+248	0	26	Every LSTM network variant
+248	31	43	outperformed
+248	48	66	baseline uni - SVM
+248	67	69	on
+248	70	86	all the datasets
+248	87	103	by the margin of
+248	104	114	2 % to 5 %
+242	12	17	noted
+242	23	51	both sc - LSTM and bc - LSTM
+242	52	59	perform
+242	60	70	quite well
+242	71	73	on
+242	78	140	multimodal emotion recognition and sentiment analysis datasets
+246	0	2	On
+246	7	22	IEMOCAP dataset
+246	29	52	performance improvement
+246	53	55	of
+246	56	79	bc - LSTM and sc - LSTM
+246	80	84	over
+246	85	92	h- LSTM
+246	96	111	in the range of
+246	112	122	1 % to 5 %
+255	24	28	show
+255	38	53	proposed method
+255	54	69	outperformes by
+255	72	90	significant margin

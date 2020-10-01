@@ -1,0 +1,65 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "learn" : {
+        "word vectors and paragraph vectors" : {
+          "using" : {
+            "75,000 training documents" : {
+              "has" : ["25,000 labeled", "50,000 unlabeled instances"]
+            }
+          },
+          "from sentence" : "We learn the word vectors and paragraph vectors using 75,000 training documents ( 25,000 labeled and 50,000 unlabeled instances ) ."
+        }
+      },
+      "has" : {
+        "paragraph vectors" : {
+          "for" : "25,000 labeled instances",
+          "fed through" : {
+            "neural network" : {
+              "with" : {
+                "one hidden layer" : {
+                  "with" : "50 units"
+                }
+              }
+            },
+            "logistic classifier" : {
+              "to predict" : "sentiment"
+            }
+          },
+          "from sentence" : "The paragraph vectors for the 25,000 labeled instances are then fed through a neural network with one hidden layer with 50 units and a logistic classifier to learn to predict the sentiment ."
+        },
+        "optimal window size" : {
+          "is" : "10 words",
+          "from sentence" : "In particular , we cross validate the window size , and the optimal window size is 10 words ."
+        },
+        "vector" : {
+          "presented to" : {
+            "classifier" : {
+              "concatenation of" : [{"PV - DBOW" : {"has" :  {"learned vector representations" : {"have" : "400 dimensions"}}}}, {"PV - DM" : {"has" : {"learned vector representations" : {"have" : {"400 dimensions" : {"for" : "words and documents"}}}}}}]
+            },
+            "from sentence" : "The vector presented to the classifier is a concatenation of two vectors , one from PV - DBOW and one from PV - DM .
+In PV - DBOW , the learned vector representations have 400 dimensions .
+In PV - DM , the learned vector representations have 400 dimensions for both words and documents ."
+
+          }
+        },
+        "Special characters" : {
+          "such as" : {
+            ", .!?" : {
+              "treated as" : "normal word"
+            }
+          },
+          "from sentence" : "Special characters such as , .!?
+are treated as a normal word ."
+
+        }
+      },
+      "To predict" : {
+        "10 - th word" : {
+          "concatenate" : ["paragraph vectors", "word vectors"]
+        },
+        "from sentence" : "To predict the 10 - th word , we concatenate the paragraph vectors and word vectors ."
+      }
+    }
+  }
+}

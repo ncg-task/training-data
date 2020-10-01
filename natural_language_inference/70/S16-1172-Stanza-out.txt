@@ -1,0 +1,175 @@
+title
+KeLP at SemEval-2016 Task 3 : Learning Semantic Relations between Questions and Answers
+abstract
+This paper describes the KeLP system participating in the SemEval - 2016 Community Question Answering ( c QA ) task .
+The challenge tasks are modeled as binary classification problems : kernel - based classifiers are trained on the SemEval datasets and their scores are used to sort the instances and produce the final ranking .
+All classifiers and kernels have been implemented within the Kernel - based Learning Platform called KeLP .
+Our primary submission ranked first in Subtask A , third in Subtask B and second in Subtask C .
+These ranks are based on MAP , which is the referring challenge system score .
+Our approach outperforms all the other systems with respect to all the other challenge metrics .
+2
+https://github.com/SAG-KeLP
+Introduction
+This paper describes the KeLP system participating in the SemEval - 2016 cQA challenge .
+In this task , participants are asked to automatically provide good answers in a c QA setting .
+In particular , the main task is : given a new question and a large collection of question - comment threads created by a user community , rank the most useful comments on the top .
+We participated in all English subtasks : the datasets were extracted from Qatar Living 1 , a web forum where people pose questions about multiple aspects of their daily life in Qatar .
+Three subtasks are associated with the English challenge : Subtask A : Given a question q and its first 10 comments c 1 , . . . , c 10 in its question thread , re-rank these 10 comments according to their relevance with respect to the question , i.e. , the good comments have to be ranked above potential or bad comments .
+Subtask B : Given a new question o and the set of the first 10 related questions q 1 , . . . , q 10 ( retrieved by a search engine ) , re-rank the related questions according to their similarity with respect too , i.e. , the perfect match and relevant questions should be ranked above the irrelevant ones .
+Subtask C : Given a new question o , and the set of the first 10 related questions , q 1 , . . . , q 10 , ( retrieved by a search engine ) , each one associated with its first 10 comments , c q 1 , . . . , c q 10 , appearing in its thread , re-rank the 100 comments according to their relevance with respect too , i.e. , the good comments are to be ranked above potential or bad comments .
+All the above subtasks have been modeled as binary classification problems : kernel - based classifiers are trained and the classification score is used to sort the instances and produce the final ranking .
+All classifiers and kernels have been implemented within the Kernel - based Learning Platform 2 ( KeLP ) , thus determining the team 's name .
+The proposed solution provides three main contributions : ( i ) we employ the approach proposed in , which applies tree kernels directly to question and answer texts modeled as pairs of linked syntactic trees .
+We further improve the methods using the kernels proposed in .
+( ii ) we extended the features developed in , by adopting several features ( also derived from Word Embeddings ) .
+( iii ) we propose a stacking schema so that classifiers for Subtask B and C exploit the inferences obtained in the previous subtasks .
+Our primary submission ranked first in Subtask A , third in Subtask B and second in Subtask C , demonstrating that the proposed method is very accurate and adaptable to different learning problems .
+These ranks are based on the MAP metric .
+However , if we consider the other metrics also adopted in the challenge ( e.g. , F 1 or Accuracy ) our approach outperforms all the remaining systems .
+In the remaining , Section 2 introduces the system , Sections 3 and 4 describe the feature and kernel modeling , while Section 5 reports official results .
+The KeLP system : an overview
+In the three subtasks , the underlying problem is to understand if two texts are related .
+Thus , in subtasks A and C , each pair , ( question , comment ) , generates a training instance fora binary Support Vector Machine ( SVM ) , where the positive label is associated with a good comment and the negative label includes the potential and bad comments .
+In Subtask B , we evaluated the similarity between two questions .
+Each pair generates a training instance for SVM , where the positive label is associated with the perfect match or relevant classes and the negative label is associated with the irrelevant ; the resulting classification score is used to rank the question pairs .
+In KeLP , the SVM learning algorithm operates on a linear combination of kernel functions , each one applied over a specific representation of the targeted examples : ( i ) feature vectors containing linguistic similarities between the texts in a pair ; ( ii ) shallow syntactic trees that encode the lexical and morphosyntactic information shared between text pairs ; ( iii ) feature vectors capturing task - specific information ; ( iv ) in subtasks B and C , feature vectors encoding stacked information derived by applying the classifiers obtained in the previous subtasks .
+While ( i ) and ( ii ) use linguistic information that can be applied in any semantic processing task defined over text pairs ( see Sec. 3 ) , the information derived via ( iii ) and ( iv ) is task specific ( see Sec. 4 ) .
+Learning from Text Pairs with Kernels
+The problem of deciding whether two questions are related or whether a comment answers a question , can be somehow connected to the problems of recognizing textual entailment , and paraphrase identification .
+From a machine learning perspective , in these tasks , an example is a pair of texts , instead of a single entity .
+Conventional approaches convert input text pairs into feature vectors where each feature represents a score corresponding to a certain type of shared information or similarity between the elements within a pair .
+These intra-pair similarity approaches can not capture complex relational pattern between the elements in the pair , such as a rewriting rule characterizing a valid paraphrase , or a questionanswer pattern .
+Such information might be manually encoded into specific features , but it would require a complex feature engineering and a deep knowledge of the linguistic involved phenomena .
+To automatize relational learning between pairs of texts , e.g. , in case of QA , one of the early works is .
+This approach was improved in several subsequent researches , exploiting relational tags and linked open data .
+In particular , in , we propose new inter-pair methods to directly employ text pairs into a kernel - based learning framework .
+In the proposed approach , we integrate the information derived from simple intra-pair similarity functions ( Section 3.1 ) and from the structural analogies ( Section 3.2 ) .
+Intra-pair similarities
+In subtasks A and C , a good comment is likely to share similar terms with the question .
+In subtask Ba question that is relevant to another probably shows common words .
+Following this intuition , given a text pair ( either question / comment or question / question ) , we define a feature vector whose dimensions reflect the following similarity metrics :
+Cosine similarity , Jaccard coefficient and containment measure of n-grams of word lemmas .
+It captures lexical information and word ordering information ( n = 1 , 2 , 3 , 4 was used in all experiments ) .
+Cosine similarity of n-grams of part - of - speech tags .
+It considers a shallow syntactic similarity ( n = 1 , 2 , 3 , 4 was used in all experiments ) .
+Partial tree kernel between the parse tree of the sentences .
+It performs a deep syntactic comparison .
+Longest common substring measure determines the length of the longest contiguous sequence of characters shared by two text segments .
+Longest common subsequence measure ( Allison and Dix , 1986 ) drops the contiguity requirement of the previous measure and allows to detect similarity in case of word insertions / deletions .
+Greedy String Tiling provides a similarity between two sentences by counting the number of shuffles in their subparts .
+Cosine similarity between additive representations of word embeddings generated by applying word2vec to the entire Qatar Living corpus from SemEval 2015 3 .
+We derived 250 dimensional vectors for 37,000 words by applying the settings min-count = 50 , window = 5 , iter = 10 and negative = 10 .
+Five features are derived considering ( i ) only nouns , ( ii ) only adjectives , ( iii ) only verbs , ( iv ) only adverbs and ( v ) all the above words .
+These metrics are computed in all the subtasks between the two elements within a pair , i.e. , q and c i for subtask A , q and o for subtask B , o and c i for subtask C .
+In addition , in subtasks B and C , the similarity metrics ( except the Partial Tree Kernel similarity ) are computed between o and the entire thread of q , concatenating q with its answers .
+Similarities between q and o are also employed in subtask C.
+Inter-pair kernel methods
+The kernels we proposed in can be directly applied to Subtask B and to subtasks A and C for learning question / question and question / answer similarities , respectively .
+As shown in , a pair of sentences is represented as pair of their corresponding shallow parse trees , where common or semantically similar lexical nodes are linked using a tagging strategy ( which is propagated to their upper constituents ) .
+This method discriminates aligned sub-fragments from non-aligned ones , allowing the learning algorithm to capture relational patterns , e.g. , the REL - best beach and the RELbest option .
+Thus , given two pairs of sentences pa = a 1 , a 2 and p b = b 1 , b 2 , some tree kernel combinations can be defined :
+, where TK is a generic tree kernel , such as the Partial Tree Kernel ( PTK ) , or the Smoothed Partial Tree Kernel ( SPTK ) .
+Tree kernels , computing the shared substructures between parse trees , are effective in evaluating the syntactic similarity between two texts .
+The proposed tree kernel combinations extend such reasoning to text pairs , and can capture emerging pairwise patterns .
+Therefore this method can be effective in recognizing valid question / answer pairs , or similar questions , even in those cases in which the two texts have few words in common that would cause the failure of any intra-pair approach .
+Task Specific Features
+In this section , we describe features specifically developed for c QA .
+A single feature vector is generated for each of the following group of features .
+Ranking Features
+The ten questions related to an original question are retrieved using a search engine .
+We use their absolute and relative ranks 4 as features for subtasks B and C ( for the latter the question rank is given to all the comments within the related question thread ) .
+Heuristics
+We adopt the heuristic features described in , which can be applied to subtasks A and C .
+In particular forty - four boolean features express whether a comment : ( i ) includes URLs or emails ( 2 feats . ) .
+( ii ) contains the word " yes " , " sure " , " no " , " can " , " neither " , " okay " , and " sorry " , as well as symbols '? ' and ' @ ' ( 9 feats . ) ; ( iii ) starts with " yes " ( 1 feat . ) ; ( iv ) includes a sequence of three or more repeated characters or a word longer than fifteen characters ( 2 feats . ) ; ( v ) belongs to one of the categories of the forum ( Socializing , Life in Qatar , etc. ) ( 26 feats . ) ; ( vi ) has been posted by the same user who posted the question , such a comment can include a question ( i.e. , it contains a question mark ) , and acknowledgment ( e.g. , it contains thank* , acknowl * ) , or none of them ( 4 feats . ) ;
+An additional feature captures the length of the comment ( as longer - good - comments usually contain detailed information to answer a question ) .
+Thread - based features
+In c QA , comments in a thread typically reflect an underlying concrete discussion , which contains more information than in a sequence of independent answers retreived from different documents .
+For instance , users replicate to each other , ask for further details , or can tease other users .
+Therefore , as discussed in , comments in a common thread are strongly interconnected .
+To exploit such thread - level dependencies , we used some specific features for subtasks A and C .
+The following notation will be adopted : q is the question posted by user u q , c is a comment from user u c , in the comment thread .
+The first four features indicate whether c appears in the proximity of a comment by u q .
+The assumption is that an acknowledgment or further questions by u q in the thread could signal a good answer .
+More specifically , they test if among the comments following c there is one by u q ( i ) containing an acknowledgment , ( ii ) not containing an acknowledgment , ( iii ) containing a question , and , ( iv ) if among the comments preceding c there is one by u q containing a question .
+These four features depend on the distance k , in terms of the number of comments , between c and the closest comment by u q : f ( c ) = 1.1 ?
+0.1 k 0 if no comments by u q exist , that is , the closer the comment to u q , the higher the value assigned to this feature .
+Other features try to model potential dialogues , which at the end represent bad comments , by identifying interlacing comments between two users .
+These dialogue features are identifying conversation chains :
+Comments by other users can appear in between the nodes of this " pseudo-conversation " chain .
+Three features consider whether a comment is at the beginning , in the middle , or at the end of such a chain .
+Three more features are defined when u j = u q , i.e. , the user who asked the question is one of the participants of these pseudo - conversations .
+Another interesting aspect is whether a user u i has been particularly active in a question thread .
+One boolean feature captures whether u i wrote more than one comment in the current thread .
+Three more features identify the first , the middle and the last comments by u i .
+One extra feature counts the total number of comments written by u i .
+Moreover , it can be empirically observed that the likelihood of a comment being good decreases with its position in the thread .
+Therefore , another real - valued feature was included : i / 10 , where i represents the position of the comment in the thread .
+Stacking classifiers across subtasks
+The three subtasks are interconnected : the predictions from a subtask can provide useful information to carryout the other subtasks .
+This suggests the use of a stacking strategy .
+Stacking classifiers in Subtask B .
+If the comments in the question thread of q are good answers for an original question o , we can suppose that o and q are strongly related .
+In Subtask B , we thus exploit the model trained on Subtask A .
+In particular , given the original question o , and the related question q with its comments , c 1 . . . c n , we use the model from Subtask A to classify the question / comment pairs , q , c i and o , c i , obtaining respectively the scores p q , c i and p o , c i .
+We consider these scores as distributions and derive the following features : ( i ) mean squared error ( MSE ) = i ( p q , c i ? p o , c i ) 2 ; ( ii ) Pearson correlation coefficient between the p q , c 1 , . . . , p q , cn and the p o , c 1 , . . . , p o , cn ; ( iii ) ten features corresponding to the sorted differences between p q , c i and p o , c i ; ( iv ) agreement percentage , i.e. , percentage of times sign ( p q , c i ) = sign ( p o , c i ) ; ( v ) max score = maxi ( p o , c i ) ; ( vi ) mean score = 1 n i p o , c i ; ( vii ) positive percentage , i.e. , percentage of times p o , c i > 0 ; ( viii ) normalized positive percentage , i.e. , percentage of times p o , c i > 0 when p q , c i >
+0 . Stacking classifiers in Subtask C .
+A good comment fora question q should be also good for an original question o if q and o are strongly related , i.e. , q is relevant or a perfect match too .
+We thus developed a stacking strategy for Subtask C that uses the following scores in the classification step , w.r.t. an original question o and the comment c i from the thread of q:
+p q , c i , which is the score of the pair q , c i provided by the model trained on Subtask A ;
+p o , c i , which is the score of the pair o , c i provided by the model trained on Subtask A ;
+p o , q , which is the score of the pair o , q provided by the model trained on Subtask B.
+Starting from these scores , we built the following features : ( i ) values and signs of p q , c i , p o , c i and p o , q ( 6 feats ) ; ( ii ) a boolean feature indicating whether both p q , c i and p o , q are positive ; ( iii ) min value = min ( p q , c i , p o , q ) ; ( iv ) max value = max ( p q , c i , p o , q ) ; ( v ) average value = 1 2 ( p q , c i + p o , q ) .
+Submission and Results
+We chose parameters using a 10 fold cross validation ( cv ) on the official train and development sets
+5 .
+In Subtask B , some features depend on the scores provided on Subtask A , while in Subtask C the dependency is from both Subtasks A and B. Such scores are generated with the 10 - fold cv .
+We used the OpenNLP pipeline for lemmatization , POS tagging and chunking to generate the tree representations described in Section 3.2 .
+All the kernel - based learning models are implemented in KeLP .
+For all the tasks , we used the C - SVM learning algorithm .
+The MAP@10 was the official metric .
+In addition , results are also reported in Average Recall ( AvgR ) , We merged the official Train1 , Train2 and Dev sets .
+Mean Reciprocal Rank ( MRR ) , Precision ( P ) , Recall ( R ) , F 1 , and Accuracy ( Acc ) .
+Subtask A
+Model :
+The learning model operates on questioncomment pairs p = q , c .
+The kernel is PTK + ( p a , p b ) + LK A ( p a , p b ) .
+Such kernel linearly combines PTK + ( p a , p b ) = PTK ( q 1 , q 2 ) + PTK ( c 1 , c 2 ) ( see Section 3.2 ) with a linear kernel LK A that operates on feature vectors including : ( i ) the similarity metrics between q and c described in Section 3.1 ; ( ii ) the heuristic features introduced in Section 4.2 ; ( iii ) the thread - based features discussed in Section 4.3 .
+PTK uses the default parameters , while the best SVM regularization parameter we estimated during cv is C = 1 .
+Results : reports the outcome on Subtask A .
+The good results on the 10 fold cross validations are confirmed on the official test set : the model is very accurate and achieved the first position among 12 systems , with the best MAP .
+In this task the data distribution among classes is quite balanced and the accuracy is also a good performance indicator .
+In this case we achieved the second position .
+Subtask B
+Model :
+The proposed system operates on questionquestion pairs p = o , q . The kernel is
+, by adopting the kernels defined in Section 3.2 .
+This task is close to Paraphrase Identification , which is inherently symmetric .
+Therefore , in our primary submission , we adopted a tree kernel combination that exploits such characteristic , performing cross comparisons between the questions within pairs :
+.
+Such combination is based on the SPTK with standard parameters and a word similarity derived from the word embeddings described in Section 3.1 .
+LK B is a linear kernel that oper - ates on feature vectors including : ( i ) the similarity metrics between o and q , and between o and the entire answer thread of q , as described in Section 3.1 ; ( ii ) ranking features discussed in Section 4.1 ; ( iii ) the features derived from the Subtask A scores ( see Section 4.4 ) .
+The best SVM regularization parameter estimated during the tuning stage is C = 5 .
+We made two additional submissions in which the model has minor variations : in the Contrastive 1 ( KC1 ) , we substituted All SPTK with SPTK + whereas in the contrastive 2 ( KC2 ) we do not include the features derived from the Subtask A scores .
+Results : shows the results on Subtask B .
+On the official test set , our primary submission achieved the third position w.r.t. MAP among 11 systems .
+Differently from what observed in the tuning stage , on the official test set the contrastive systems achieve a higher MAP and would have ranked second .
+The primary system achieves the highest F 1 and accuracy on both tuning and test stages .
+Considering these two metrics , our primary submission is overall the best model .
+Subtask C Model :
+The learning model operates on the triplet , o , q , c , using the kernel , PTK + ( p a , p b ) + LK C ( t a , tb ) , where PTK + ( p a , p b ) = PTK ( o 1 , o 2 ) + PTK ( c 1 , c 2 ) ( see Section 3.2 ) and LK C is a linear kernel operating on feature vectors , which include : ( i ) the similarity metrics between o and c , between o and q , and between o and the entire thread of q , as described in Section 3.1 ; ( ii ) the heuristic features introduced in Section 4.2 ; ( iii ) the thread - based features discussed in 4.3 ; ( iv ) the ranking features ( see Section 4.1 ) ; ( v ) the features derived from the scores of subtasks A and B , described in Section 4.4 . :
+Results on Subtask C on the official development set , and on the official test set .
+KeLP is our primary submission , while KC1 and KC2 are the contrastive ones .
+IR is the baseline system based on the search engine results PTK uses the default parameters .
+The subtask data is rather imbalanced , as the number of negative examples is about 10 times the positive ones .
+We took this into account by setting the regularization parameter for the positive class , C p = #negatives #positives C , as in .
+The best SVM regularization parameter estimated during the tuning stage is C = 5 .
+We also submitted a Contrastive 1 ( KC1 ) with PTK + using All PTK and a Constrastive 2 ( KC2 ) identical as KC1 but with C set to 2 .
+Results : shows the results for Subtask C .
+The organizers reported that the training labels were affected by noise , while the development labels were double - checked .
+Therefore , we decided to perform parameter tuning applying cv to the development set only .
+Our primary submission achieved the second highest MAP , while our Contrastive 2 is the best result .
+It should be also noted that the F 1 our system is the best among 10 primary submissions .
+In this subtask , accuracy is not a reliable measure , as the data is significantly imbalanced .
+Ina future work we would like to change the learning paradigm from classification , e.g. , demonstrated in for several NLP applications , to a learning to rank problem .
+This can be enabled by the preference kernel and should have a positive impact on the MAP metric since the SVM classification algorithm we used optimizes accuracy .

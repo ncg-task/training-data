@@ -1,0 +1,139 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "read - then - verify system" : {
+          "aims to be" : {
+            "robust" : {
+              "to" : "unanswerable questions"
+            }
+          },
+          "from sentence" : "To address the above issue , we propose a read - then - verify system that aims to be robust to unanswerable questions in this paper ."
+        }
+      },
+      "has" : {
+        "our system" : {
+          "consists of" : {
+            "two components" : {
+              "has" : {
+                "no-answer reader" : {
+                  "for extracting" : "candidate answers",
+                  "detecting" : "unanswerable questions"
+                },
+                "answer verifier" : {
+                  "for deciding" : {
+                    "extracted candidate" : {
+                      "is" : "legitimate"
+                    }
+                  }
+                },
+                "from sentence" : "As shown in , our system consists of two components : ( 1 ) a no-answer reader for extracting candidate answers and detecting unanswerable questions , and ( 2 ) an answer verifier for deciding whether or not the extracted candidate is legitimate ."
+              }
+            }
+          }
+        }
+      },
+      "augment" : {
+        "existing readers" : {
+          "with" : "two auxiliary losses",
+          "from sentence" : "First , we augment existing readers with two auxiliary losses , to better handle answer extraction and no - answer detection respectively ."
+        }
+      },
+      "introducing" : {
+        "independent span loss" : {
+          "aims to" : {
+            "concentrate" : {
+              "on" : "answer extraction task"
+            }
+          },
+          "from sentence" : "We solve this problem by introducing an independent span loss that aims to concentrate on the answer extraction task regardless of the answerability of the question ."
+        }
+      },
+      "leverage" : {
+        "multi-head pointer network" : {
+          "to generate" : {
+            "two pairs of span scores" : {
+              "where" : {
+                "one pair" : {
+                  "is" : {
+                    "normalized" : {
+                      "with" : "no -answer score"
+                    }
+                  }
+                },
+                "other" : {
+                  "used for" : "auxiliary loss"
+                }
+              },
+              "from sentence" : "In order to not conflict with no - answer detection , we leverage a multi-head pointer network to generate two pairs of span scores , where one pair is normalized with the no -answer score and the other is used for our auxiliary loss ."
+            }
+          }
+        }
+      },
+      "present" : {
+        "another independent noanswer loss" : {
+          "to further alleviate" : "confliction",
+          "focusing on" : {
+            "no-answer detection task" : {
+              "without" : {
+                "shared normalization" : {
+                  "of" : "answer extraction"
+                }
+              }
+            }
+          },
+          "from sentence" : "Besides , we present another independent noanswer loss to further alleviate the confliction , by focusing on the no-answer detection task without considering the shared normalization of answer extraction ."
+        }
+      },
+      "introduce" : {
+        "additional answer verifying phase" : {
+          "aims at" : {
+            "finding" : {
+              "has" : {
+                "local entailment" : {
+                  "supports" : "answer"
+                }
+              }
+            }
+          },
+          "from sentence" : "Second , in addition to the standard reading phase , we introduce an additional answer verifying phase , which aims at finding local entailment that supports the answer by comparing the answer sentence with the question ."
+        }
+      },
+      "investigate" : {
+        "three different architectures" : {
+          "for" : ["answer verifying task", {"from sentence" : "Inspired by recent advances in natural language inference ( NLI ) , we investigate three different architectures for the answer verifying task ."}],
+          "has" : {
+            "first one" : {
+              "is" : {
+                "sequential model" : {
+                  "takes" : {
+                    "two sentences" : {
+                      "as" : "along sequence"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "The first one is a sequential model that takes two sentences as along sequence , while the second one attempts to capture interactions between two sentences ."
+            },
+            "second one" : {
+              "capture" : {
+                "interactions" : {
+                  "between" : "two sentences"
+                }
+              },
+              "from sentence" : "The first one is a sequential model that takes two sentences as along sequence , while the second one attempts to capture interactions between two sentences ."
+            },
+            "last one" : {
+              "is" : {
+                "hybrid model" : {
+                  "that combines" : "above two models"
+                }
+              },
+              "from sentence" : "The last one is a hybrid model that combines the above two models to test if the performance can be further improved ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

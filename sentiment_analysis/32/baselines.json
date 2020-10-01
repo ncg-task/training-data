@@ -1,0 +1,65 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "Majority" : {
+          "is" : "basic baseline method",
+          "assigns" : {
+            "largest sentiment polarity" : {
+              "in" : {
+                "training set" : {
+                  "to" : {
+                    "each sample" : {
+                      "in" : "test set"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Majority is a basic baseline method , which assigns the largest sentiment polarity in the training set to each sample in the test set ."
+        },
+        "LSTM" : {
+          "uses" : {
+            "one LSTM network" : {
+              "to model" : "context"
+            }
+          },
+          "get" : {
+            "hidden state" : {
+              "of" : "each word"
+            }
+          },
+          "from sentence" : "LSTM only uses one LSTM network to model the context and get the hidden state of each word ."
+        },
+        "TD - LSTM" : {
+          "adopts" : {
+            "two long short - term memory ( LSTM ) networks" : {
+              "to model" : {
+                "left context" : {
+                  "with" : "target"
+                },
+                "right context" : {
+                  "with" : "target"
+                }
+              }
+            }
+          },
+          "from sentence" : "TD - LSTM adopts two long short - term memory ( LSTM ) networks to model the left context with target and the right context with target respectively ."
+        },
+        "AE - LSTM" : {
+          "represents" : {
+            "targets" : {
+              "with" : "aspect embeddings"
+            }
+          },
+          "from sentence" : "AE - LSTM represents targets with aspect embeddings ."
+        },
+        "ATAE - LSTM" : {
+          "based on" : "AE - LSTM",
+          "from sentence" : "ATAE - LSTM is developed based on AE - LSTM ."
+        }
+      }
+    }
+  }  
+}

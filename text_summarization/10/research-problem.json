@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Multi - Task Summarization", {"from sentence" : "Soft Layer - Specific Multi - Task Summarization with Entailment and Question Generation"}],
+    ["abstractive summarization", {"from sentence" : "We improve these important aspects of abstractive summarization via multi-task learning with the auxiliary tasks of question generation and entailment generation , where the former teaches the summarization model how to look for salient questioning - worthy details , and the latter teaches the model how to rewrite a summary which is a directed - logical subset of the input document ."}],
+    ["abstractive text summarization", {"from sentence" : "In this work , we improve abstractive text summarization via soft , high - level ( semantic ) layerspecific multi-task learning with two relevant auxiliary tasks ."}]
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "use" : {
+        "10 %" : {
+          "of" : {
+            "training set" : {
+              "as" : {
+                "held - out validation set" : {
+                  "for" : "hyperparameter tuning"
+                }
+              }
+            }
+          },
+          "from sentence" : "We use 10 % of the training set as a held - out validation set for hyperparameter tuning ."
+        },
+        "Stochastic Gradient Descent ( SGD ) optimizer" : {
+          "starting with" : {
+            "initial learning Utterances" : {
+              "whose history has" : "atleast 3 similar emotion labels",
+              "from sentence" : "To optimize the parameters , we use Stochastic Gradient Descent ( SGD ) optimizer , starting with an initial learning Utterances whose history has atleast 3 similar emotion labels in either own history or the history of the other person , is counted in case 1 or 2 , respectively ."
+            }
+          }
+        }
+      },
+      "has" : {
+        "annealing approach" : {
+          "halves" : {
+            "lr" : {
+              "every" : "20 epochs"
+            }
+          },
+          "has" : {
+            "termination" : {
+              "decided using" : {
+                "early - stop measure" : {
+                  "with" : {
+                    "patience" : {
+                      "of" : {
+                        "12" : {
+                          "by monitoring" : "validation loss"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "An annealing approach halves the lr every 20 epochs and termination is decided using an early - stop measure with a patience of 12 by monitoring the validation loss ."
+        },
+        "Gradient clipping" : {
+          "used for" : {
+            "regularization" : {
+              "with" : {
+                "norm" : {
+                  "set to" : "40"
+                }
+              }
+            }
+          },
+          "from sentence" : "Gradient clipping is used for regularization with a norm set to 40 ."
+        },
+        "dimension size" : {
+          "of" : {
+            "memory cells d" : {
+              "set as" : "50"
+            }
+          },
+          "from sentence" : "The dimension size of the memory cells d is set as 50 ."
+        }
+      },
+      "decided using" : ["Random Search", {"from sentence" : "Hyperparameters are decided using a Random Search ."}],
+      "Based on" : {
+        "validation performance" : {
+          "has" : {
+            "context window length K" : {
+              "set to" : "40"
+            },
+            "number of hops R" : {
+              "fixed at" : "3 hops"
+            }
+          },
+          "from sentence" : "Based on validation performance , context window length K is set to be 40 and the number of hops R is fixed at 3 hops ." 
+        }
+      }
+    }
+  }
+}

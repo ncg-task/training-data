@@ -1,0 +1,64 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "has" : {
+        "dimensions" : {
+          "of" : {
+            "characterlevel embedding and word embedding ( Glo Ve )" : {
+              "set to" : "300"
+            }
+          },
+          "from sentence" : "In our experiments , the dimensions of characterlevel embedding and word embedding ( Glo Ve ) are both set to 300 ."
+        },
+        "Kernel sizes" : {
+          "of" : {
+            "multi-gram convolution" : {
+              "for" : "Char - CNN"
+            }
+          },
+          "set to" : "2 , 3",
+          "from sentence" : "Kernel sizes of multi-gram convolution for Char - CNN are set to 2 , 3 , respectively ."
+        },
+        "weight matrices" : {
+          "initialized as" : "random orthogonal matrices",
+          "from sentence" : "All the weight matrices are initialized as random orthogonal matrices , and we set all the bias vectors as zero vectors ."
+        },
+        "size" : {
+          "of" : {
+            "mini-batch" : {
+              "is" : "60"
+            }
+          },
+          "from sentence" : "The size of mini-batch is 60 ."
+        },
+        "dropout rate" : {
+          "is" : "0.5",
+          "from sentence" : "The dropout rate is 0.5 , and the coefficient ?"
+        },
+        "coefficient" : {
+          "of" : {
+            "L 2 normalization" : {
+              "set to" : "10 ?5"
+            }
+          },
+          "from sentence" : "The dropout rate is 0.5 , and the coefficient ?
+of L 2 normalization is set to 10 ?5 . is set to 10 ? 4 . ?"
+
+        }
+      },
+      "set" : {
+        "all the bias vectors" : {
+          "as" : "zero vectors",
+          "from sentence" : "All the weight matrices are initialized as random orthogonal matrices , and we set all the bias vectors as zero vectors ."
+        }
+      },
+      "optimize" : {
+        "proposed model" : {
+          "with" : "RMSprop algorithm",
+          "using" : "mini-batch training"
+        },
+        "from sentence" : "We optimize the proposed model with RMSprop algorithm , using mini-batch training ."
+      }
+    }
+  }
+}

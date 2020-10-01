@@ -1,0 +1,119 @@
+{
+  "has" : {
+    "Results" : {
+      "see that" : {
+        "set d" : {
+          "to" : {
+            "300" : {
+              "has" : {
+                "our model" : {
+                  "achieves" : {
+                    "accuracy" : {
+                      "of" : {
+                        "86.1 %" : {
+                          "on" : "test data"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "We have the following observations : ( 1 ) First of all , we can see that when we set d to 300 , our model achieves an accuracy of 86.1 % on the test data , which to the best of our knowledge is the highest on and |?| M is the number of parameters excluding the word embeddings ."
+        }
+      },
+      "compare" : {
+        "our m LSTM model" : {
+          "with" : "word - by - word attention model",
+          "under" : {
+            "same setting" : {
+              "with" : {
+                "d" : {
+                  "=" : "150"
+                }
+              }
+            }
+          },
+          "see that" : {
+            "our performance" : {
+              "on" : {
+                "test data ( 85.7 % )" : {
+                  "is" : {
+                    "higher" : {
+                      "than" : "their model ( 82.6 % )"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "( 2 ) If we compare our m LSTM model with our implementation of the word - by - word attention model by under the same setting with d = 150 , we can see that our performance on the test data ( 85.7 % ) is higher than that of their model ( 82.6 % ) ."
+        }
+      },
+      "has" : {
+        "performance" : {
+          "of" : {
+            "mLSTM" : {
+              "with" : "bi - LSTM sentence modeling",
+              "compared with" : {
+                "model" : {
+                  "with" : "standard LSTM sentence modeling",
+                  "when" : {
+                    "d" : {
+                      "set to" : "150"
+                    }
+                  },
+                  "shows that" : {
+                    "bi - LSTM" : {
+                      "to process" : "original sentences",
+                      "has" : {
+                        "helps" : {
+                          "has" : {
+                            "86.0 % vs. 85.7 %" : {
+                              "on" : "test data"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "( 3 ) The performance of mLSTM with bi - LSTM sentence modeling compared with the model with standard LSTM sentence modeling when d is set to 150 shows that using bi - LSTM to process the original sentences helps ( 86.0 % vs. 85.7 % on the test data ) , but the difference is small and the complexity of bi - LSTM is much higher than LSTM ."
+            }
+          }
+        }
+      },
+      "experimented with" : {
+        "m LSTM model" : {
+          "using" : {
+            "pre-trained word embeddings" : {
+              "instead of" : "LSTMgenerated hidden states",
+              "as" : {
+                "initial representations" : {
+                  "of" : "premise and the hypothesis",
+                  "able to achieve" : {
+                    "accuracy" : {
+                      "of" : {
+                        "85.3 %" : {
+                          "on" : "test data",
+                          "is" : {
+                            "better" : {
+                              "than" : "previously reported state of the art"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "( 4 ) Interestingly , when we experimented with the m LSTM model using the pre-trained word embeddings instead of LSTMgenerated hidden states as initial representations of the premise and the hypothesis , we were able to achieve an accuracy of 85.3 % on the test data , which is still better than previously reported state of the art ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

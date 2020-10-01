@@ -1,0 +1,97 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "test" : {
+        "performance" : {
+          "for" : {
+            "content - based CNN only" : {
+              "provides" : {
+                "worst relative performance" : {
+                  "with" : {
+                    "almost 10 % lesser accuracy" : {
+                      "than" : "optimal"
+                    }
+                  }
+                },
+                "from sentence" : "First , we test performance for the content - based CNN only ( row 1 ) .
+This setting provides the worst relative performance with almost 10 % lesser accuracy than optimal ."
+
+              },
+              "include" : {
+                "contextual features" : {
+                  "has" : {
+                    "effect" : {
+                      "of" : {
+                        "discourse features" : {
+                          "primarily seen in" : "Pol dataset",
+                          "getting" : {
+                            "increase" : {
+                              "of" : "3 % in F1"
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "Here , the effect of discourse features is primarily seen in the Pol dataset getting an increase of 3 % in F1 ( row 2 ) ."
+                    }
+                  }
+                }
+              },
+              "introduced" : {
+                "user embeddings" : {
+                  "observed" : {
+                    "major boost" : {
+                      "in" : "performance"
+                    }
+                  },
+                  "from sentence" : "A major boost in performance is observed ( 8 ? 12 % accuracy and F1 ) when user embeddings are introduced ( row 5 ) ."
+                }              
+              }
+            }
+          }
+        }
+      },
+      "has" : {
+        "CASCADE" : {
+          "consisting of" : {
+            "CNN" : {
+              "with" : {
+                "user embeddings and contextual discourse features" : {
+                  "provide" : {
+                    "best performance" : {
+                      "in" : "all three datasets"
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "Overall , CASCADE consisting of CNN with user embeddings and contextual discourse features provide the best performance in all three datasets ( row 6 ) ."
+          }
+        }
+      },
+      "use of" : {
+        "CCA" : {
+          "for" : {
+            "generation" : {
+              "of" : {
+                "user embeddings" : {
+                  "replace it with" : {
+                    "simple concatenation" : {
+                      "causes" : {
+                        "significant drop" : {
+                          "in" : "performance"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "We challenge the use of CCA for the generation of user embeddings and thus replace it with simple concatenation .
+This however causes a significant drop in performance ( row 3 ) ."
+
+            }
+          }
+        }
+      }
+    }
+  }
+}

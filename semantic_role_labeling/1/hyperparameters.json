@@ -1,0 +1,24 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "train" : {
+        "model" : {
+          "using" : "Nadam ( Dozat , 2016 ) SGD",
+          "from sentence" : "We train the model using Nadam ( Dozat , 2016 ) SGD combined with the learning rate schedule in ."
+        }
+      },
+      "regularize" : {
+        "our model" : {
+          "using" : "dropout"
+        },
+        "from sentence" : "In addition to MTL , we regularize our model using dropout ."
+      },
+      "use" : {
+        "gradient clipping" : {
+          "to avoid" : "exploding gradients",
+          "from sentence" : "We use gradient clipping to avoid exploding gradients ."
+        }
+      }
+    }
+  }
+}

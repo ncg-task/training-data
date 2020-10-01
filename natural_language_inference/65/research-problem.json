@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Neural networks ( NN ) with attention mechanisms", {"from sentence" : "Neural networks ( NN ) with attention mechanisms have recently proven to be successful at different computer vision ( CV ) and natural language processing ( NLP ) tasks such as image captioning , machine translation and factoid question answering ."}],
+    ["attention mechanisms", {"from sentence" : "However , most recent work on neural attention models have focused on one - way attention mechanisms based on recurrent neural networks designed . for generation tasks ."}]
+  ]
+}

@@ -1,0 +1,4 @@
+(Contribution||has||Dataset)
+(Dataset||introduce||COmmonsense Dataset Adversarially - authored by Humans ( CODAH ))
+(COmmonsense Dataset Adversarially - authored by Humans ( CODAH )||for||commonsense question answering)
+(commonsense question answering||in the style of||SWAG multiple choice sentence completion)

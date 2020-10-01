@@ -1,0 +1,63 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "summarization framework" : {
+          "named" : "reader - aware summary generator ( RASG )",
+          "incorporates" : {
+            "reader comments" : {
+              "to improve" : "summarization performance"
+            }
+          }
+        },
+        "from sentence" : "In this paper , we propose a summarization framework named reader - aware summary generator ( RASG ) that incorporates reader comments to improve the summarization performance ."
+      },
+      "employed" : {
+        "seq2seq architecture with attention mechanism" : {
+          "as" : "basic summary generator"
+        },
+        "from sentence" : "Specifically , a seq2seq architecture with attention mechanism is employed as the basic summary generator ."
+      },
+      "calculate alignment between" : {
+        "reader comments words and document words" : {
+          "regarded as" : {
+            "reader attention" : {
+              "representing" : "reader focused aspect"
+            }
+          }
+        },
+        "from sentence" : "We first calculate alignment between the reader comments words and document words , and this alignment information is regarded as reader attention representing the \" reader focused aspect \" ."
+      },
+      "treat" : {
+        "decoder attention weights" : {
+          "as" : {
+            "focused aspect of the generated summary" : {
+              "a.k.a." : "decoder focused aspect"
+            }
+          }
+        },
+        "from sentence" : "Then , we treat the decoder attention weights as the focused aspect of the generated summary , a.k.a. , \" decoder focused aspect \" ."
+      },
+      "After" : {
+        "each decoding step" : {
+          "designed" : {
+            "supervisor" : {
+              "to measure" : {
+                "distance" : {
+                  "between" : "reader focused aspect and the decoder focused aspect"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "After each decoding step , a supervisor is designed to measure the distance between the reader focused aspect and the decoder focused aspect ."
+      },
+      "training of" : {
+        "framework RASG" : {
+          "conducted in" : "adversarial way"
+        },
+        "from sentence" : "The training of our framework RASG is conducted in an adversarial way ."
+      }
+    }
+  }
+}

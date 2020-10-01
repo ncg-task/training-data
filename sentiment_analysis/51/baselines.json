@@ -1,0 +1,69 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "Word embeddings" : {
+          "has" : {
+            "word vectors" : {
+              "pretrained on" : {
+                "large text corpus" : {
+                  "such as" : "Wikipedia dump"
+                }
+              },
+              "averaged to get" : {
+                "document vector" : {
+                  "fed to" : {
+                    "sentiment classifier" : { 
+                      "to compute" : "sentiment score"
+                    }
+                  }
+                }
+              }              
+            }
+          },
+          "from sentence" : "1 ) Word embeddings :
+In this method , the word vectors pretrained on large text corpus such as Wikipedia dump are averaged to get the document vector , which is then fed to the sentiment classifier to compute the sentiment score ."
+
+        },
+        "Recursive networks" : {
+          "has" : {
+            "Various types of recursive neural networks ( RNN )" : {
+              "applied on" : "SST"
+            }
+          },
+          "from sentence" : "2 ) Recursive networks :
+Various types of recursive neural networks ( RNN ) have been applied on SST ."
+
+        },
+        "Recurrent networks" : {
+          "has" : {
+            "Sophisticated recurrent networks" : {
+              "such as" : {
+                "left - to - right and bidrectional LSTM networks" : {
+                  "applied on" : "SST"
+                }
+              }
+            }          
+          },
+          "from sentence" : "3 ) Recurrent networks :
+Sophisticated recurrent networks such as left - to - right and bidrectional LSTM networks have also been applied on SST ."
+
+        },
+        "Convolutional networks" : {
+          "has" : {
+            "input sequences" : {
+              "passed through" : {
+                "1 - dimensional convolutional neural network" : {
+                  "as" : "feature extractors"
+                }
+              }
+            } 
+          },
+          "from sentence" : "4 ) Convolutional networks :
+In this approach , the input sequences were passed through a 1 - dimensional convolutional neural network as feature extractors ."
+
+        }
+      }
+    }
+  }
+}

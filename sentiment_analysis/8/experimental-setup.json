@@ -1,0 +1,62 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "use" : {
+        "librosa , a Python library" : {
+          "to process" : "audio files",
+          "from sentence" : "We use librosa , a Python library , to process the audio files and extract features from them ."          
+        },
+        "scikit - learn and xgboost" : {
+          "to implement" : "all the ML classifiers ( RF , XGB , SVM , MNB , and LR ) and the MLP",
+          "from sentence" : "We use scikit - learn and xgboost [ 25 ] , the machine learning libraries for Python , to implement all the ML classifiers ( RF , XGB , SVM , MNB , and LR ) and the MLP ."
+        },
+        "PyTorch" : {
+          "to implement" : "LSTM classifiers",
+          "from sentence" : "We use PyTorch to implement the LSTM classifiers described earlier ."
+        }
+      },
+      "to regularize" : {
+        "hidden space" : {
+          "of" : "LSTM classifiers",
+          "use" : {
+            "shut - off mechanism" : {
+              "called" : "dropout",
+              "where" : {
+                "fraction of neurons are not used" : {
+                  "for" : "final prediction"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "In order to regularize the hidden space of the LSTM classifiers , we use a shut - off mechanism , called dropout , where a fraction of neurons are not used for final prediction ."
+      },
+      "randomly split" : {
+        "our dataset" : {
+          "into" : "train ( 80 % ) and test ( 20 % ) set"
+        },
+        "from sentence" : "We randomly split our dataset into a train ( 80 % ) and test ( 20 % ) set ."
+      },
+      "has" : {
+        "LSTM classifiers" : {
+          "trained on" : "NVIDIA Titan X GPU",
+          "from sentence" : "The LSTM classifiers were trained on an NVIDIA Titan X GPU for faster processing ."
+        }
+      },
+      "stop" : {
+        "training" : {
+          "when" : {
+            "do not see any improvement" : {
+              "in" : {
+                "validation performance" : {
+                  "for" : "> 10 epochs"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "We stop the training when we do not see any improvement in validation performance for > 10 epochs ."
+      }
+    }
+  }
+}

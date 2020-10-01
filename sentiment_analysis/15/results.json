@@ -1,0 +1,65 @@
+{
+  "has" : {
+    "Results" : {
+      "showed" : {
+        "fine grained classification" : {
+          "into" : {
+            "5 classes" : {
+              "is" : {
+                "reasonable approximation" : {
+                  "to capture" : "most of the data variation"
+                }
+              }
+            }
+          } 
+        },
+        "from sentence" : "showed that a fine grained classification into 5 classes is a reasonable approximation to capture most of the data variation ."
+      },
+      "has" : {
+        "RNTN" : {
+          "gets" : "highest performance",
+          "followed by" : "MV - RNN and RNN",
+          "from sentence" : "The RNTN gets the highest performance , followed by the MV - RNN and RNN ."
+        },
+        "recursive models" : {
+          "work" : {
+            "very well" : {
+              "on" : {
+                "shorter phrases" : {
+                  "where" : {
+                    "negation and compostion" : {
+                      "are" : "important"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "The recursive models work very well on shorter phrases , where negation and composition are important , while bag of features baselines perform well only with longer sentences ."
+        },
+        "bag of features baselines" : {
+          "perform" : {
+            "well" : {
+              "with" : "only sentences"
+            }
+          },
+          "from sentence" : "The recursive models work very well on shorter phrases , where negation and composition are important , while bag of features baselines perform well only with longer sentences ."
+        }
+      },
+      "combination of" : {
+        "new sentiment treebank and the RNTN" : {
+          "pushes" : {
+            "state of the art" : {
+              "on" : {
+                "short phrases" : {
+                  "up to" : "85.4 %"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "The combination of the new sentiment treebank and the RNTN pushes the state of the art on short phrases up to 85.4 % ."
+      }
+    }
+  }
+}

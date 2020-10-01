@@ -1,0 +1,89 @@
+{
+  "has" : {
+    "Results" : {
+      "on" : {
+        "SemEvalCQA" : {
+          "has" : {
+            "proposed approach" : {
+              "achieves" : "highly competitive performance",
+              "from sentence" : "reports the experimental results on SemEvalCQA .
+Our proposed approach achieves highly competitive performance on this dataset ."
+
+            },
+            "performance" : {
+              "of" : {
+                "our model" : {
+                  "on" : "MAP",
+                  "is" : {
+                    "marginally short" : {
+                      "from" : "best performing model"
+                    }
+                  },
+                  "from sentence" : "The performance of our model on MAP is marginally short from the best performing model ."
+                }
+              }
+            }
+          },
+          "obtained" : {
+            "best P@1 performance overall" : {
+              "has" : {
+                "outperforming" : {
+                  "has" : {
+                    "state - of - the - art AI - CNN model" : {
+                      "by" : {
+                        "3 %" : {
+                          "in terms of" : "P@1"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Specifically , we have obtained the best P@1 performance overall , outperforming the state - of - the - art AI - CNN model by 3 % in terms of P@1 ."
+            }
+          }
+        },
+        "TrecQA ( raw )" : {
+          "has" : {
+            "Hyper QA" : {
+              "achieves" : {
+                "competitive performance" : {
+                  "on" : "MAP and MRR metrics"
+                },
+                "from sentence" : "reports the results on TrecQA ( raw ) .
+Hyper QA achieves very competitive performance on both MAP and MRR metrics ."
+
+              },
+              "has" : {
+                "outperforms" : {
+                  "has" : {
+                    "basic CNN model of ( S&M )" : {
+                      "by" : "2 % ? 3 %",
+                      "in terms of" : "MAP / MRR",
+                      "from sentence" : "Specifically , Hyper QA outperforms the basic CNN model of ( S&M ) by 2 % ? 3 % in terms of MAP / MRR ."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "TrecQA ( clean )" : {
+          "has" : {
+            "Hyper QA" : {
+              "has" : {
+                "outperforms" : {
+                  "has" : ["MP - CNN", "AP - CNN", "QA - CNN"],
+                  "from sentence" : "Similarly , reports the results on TrecQA ( clean ) .
+Similarly , Hyper
+QA also outperforms MP - CNN , AP - CNN and QA - CNN ."
+
+                }
+              }
+            }
+          }
+        }
+      }      
+    }
+  }
+}

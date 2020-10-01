@@ -1,0 +1,37 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "our system" : {
+          "obtains" : {
+            "state - of the - art results" : {
+              "on" : {
+                "test set" : {
+                  "by achieving" : {
+                    "EM score" : {
+                      "of" : "71.7"
+                    },
+                    "F 1 score" : {
+                      "of" : "74.2"
+                    }
+                  }                  
+                }
+              },
+              "from sentence" : "As we can see , our system obtains state - of the - art results by achieving an EM score of 71.7 and a F 1 score of 74.2 on the test set ."
+            }
+          }
+        }
+      },
+      "Notice that" : {
+        "SLQA +" : {
+          "reached" : {
+            "comparable result" : {
+              "compared to" : "our approach"
+            },
+            "from sentence" : "Notice that SLQA + has reached a comparable result compared to our approach ."
+          }
+        }
+      }
+    }
+  }  
+}

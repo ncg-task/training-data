@@ -1,0 +1,77 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "use" : {
+        "pre-trained 300 - D Glove 840B vectors" : {
+          "to initialize" : "our word embedding vectors",
+          "from sentence" : "We use pre-trained 300 - D Glove 840B vectors to initialize our word embedding vectors ."
+        },
+        "fairly small batch size" : {
+          "of" : "32",
+          "from sentence" : "We use a fairly small batch size of 32 to provide more exploration power to the model ."
+        }        
+      },
+      "has" : {
+        "All hidden states" : {
+          "of" : {
+            "BiLSTMs" : {
+              "during" : {
+                "input encoding and inference" : {
+                  "have" : "450 dimensions"
+                }
+              }
+            },
+            "from sentence" : "All hidden states of BiLSTMs during input encoding and inference have 450 dimensions ( r = 300 and d = 450 ) ."
+          }
+        },
+        "weights" : {
+          "learned by" : {
+            "minimizing" : {
+              "has" : {
+                "log - loss" : {
+                  "on" : "training data"
+                }
+              },
+              "via" : "Adam optimizer"
+            }
+          },
+          "from sentence" : "The weights are learned by minimizing the log - loss on the training data via the Adam optimizer ( Kingma and Ba , 2014 ) ."
+        },
+        "initial learning rate" : {
+          "is" : "0.0004",
+          "from sentence" : "The initial learning rate is 0.0004 ."
+        }
+      },
+      "To avoid" : {
+        "overfitting" : {
+          "use" : {
+            "dropout" : {
+              "with" : {
+                "rate" : {
+                  "of" : "0.4"
+                }
+              },
+              "for" : "regularization",
+              "applied to" : "all feedforward connections"
+            }
+          },
+          "from sentence" : "To avoid overfitting , we use dropout with the rate of 0.4 for regularization , which is applied to all feedforward connections ."
+        }
+      },
+      "During" : {
+        "training" : {
+          "has" : {
+            "word embeddings" : {
+              "updated to learn" : {
+                "effective representations" : {
+                  "for" : "NLI task"
+                }
+              },
+              "from sentence" : "During training , the word embeddings are updated to learn effective representations for the NLI task ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

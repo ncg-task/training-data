@@ -1,0 +1,121 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "Majority" : {
+          "is" : "basic baseline",
+          "chooses" : {
+            "largest sentiment polarity" : {
+              "in" : {
+                "training set" : {
+                  "to each" : {
+                    "instance" : {
+                      "in" : "test set"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Majority is the basic baseline , which chooses the largest sentiment polarity in the training set to each instance in the test set ."
+        },
+        "MemNet" : {
+          "applys" : {
+            "multi-hop attentions" : {
+              "on" : "word embeddings"
+            }
+          },
+          "learns" : {
+            "attention weights" : {
+              "on" : {
+                "context word vectors" : {
+                  "with respect to" : "averaged query vector"
+                }
+              }
+            }
+          },
+          "from sentence" : "MemNet applys multi-hop attentions on the word embeddings , learns the attention weights on context word vectors with respect to the averaged query vector ."
+        },
+        "IAN" : {
+          "interactively learns" : {
+            "coarse - grained attentions" : {
+              "between" : "context and aspect",
+              "concatenate" : {
+                "vectors" : {
+                  "for" : "prediction"
+                }
+              }
+            }
+          },
+          "from sentence" : "IAN interactively learns the coarse - grained attentions between the context and aspect , and concatenate the vectors for prediction ."
+        },
+        "BILSTM - ATT -G" : {
+          "models" : {
+            "left and right context" : {
+              "with" : "two attention - based LSTMs"
+            }
+          },
+          "utilizes" : {
+            "gates" : {
+              "to control" : {
+                "importance" : {
+                  "of" : ["left context", "right context", {"entire sentence" : {"for" : "prediction"}}]
+                }
+              }
+            }
+          },
+          "from sentence" : "BILSTM - ATT -G ( Liu and Zhang , 2017 ) models left and right context with two attention - based LSTMs and utilizes gates to control the importance of left context , right context and the entire sentence for prediction ."
+        },
+        "RAM" : {
+          "learns" : {
+            "multi-hop attentions" : {
+              "on" : {
+                "hidden states" : {
+                  "of" : {
+                    "bidirectional LSTM networks" : {
+                      "for" : "context words"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "proposes to use" : {
+            "GRU network" : {
+              "to get" : {
+                "aggregated vector" : {
+                  "from" : "attentions"
+                }      
+              }
+            }
+          },
+          "from sentence" : "RAM learns multi-hop attentions on the hidden states of bidirectional LSTM networks for context words , and proposes to use GRU network to get the aggregated vector from the attentions ."
+        },
+        "MGAN - C" : {
+          "employs" : {
+            "coarse - grained attentions" : {
+              "for" : "prediction"
+            }
+          },
+          "from sentence" : "MGAN - C only employs the coarse - grained attentions for prediction , which is similar with IAN ."
+        },
+        "MGAN - F" : {
+          "utilizes" : {
+            "proposed fine - grained attentions" : {
+              "for" : "prediction"
+            }
+          },
+          "from sentence" : "MGAN - F only utilizes the proposed fine - grained attentions for prediction ."
+        },
+        "MGAN - CF" : {
+          "adopts both" : "coarse - grained and fine - grained attentions",
+          "from sentence" : "MGAN - CF adopts both the coarse - grained and fine - grained attentions , while without applying the aspect alignment loss ."
+        },
+        "MGAN" : {
+          "is" : "complete multi-grained attention network model",
+          "from sentence" : "MGAN is the complete multi-grained attention network model ."
+        }
+      }
+    }
+  }
+}

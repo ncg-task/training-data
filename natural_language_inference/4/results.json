@@ -1,0 +1,42 @@
+{
+  "has" : {
+    "Results" : {
+      "Comparison to" : {
+        "baseline DCN with CoVe" : {
+          "has" : {
+            "DCN +" : {
+              "outperforms" : {
+                "baseline" : {
+                  "on" : {
+                    "SQuAD development set" : {
+                      "by" : ["3.2 % exact match accuracy", "3.2 % F1"]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Comparison to baseline DCN with CoVe. DCN + outperforms the baseline by 3.2 % exact match accuracy and 3.2 % F1 on the SQuAD development set ."
+        }
+      },
+      "shows" : {
+        "consistent performance gain" : {
+          "of" : "DCN +",
+          "over" : "baseline",
+          "across" : ["question types", "question lengths", "answer lengths"]
+        },
+        "from sentence" : "shows the consistent performance gain of DCN + over the baseline across question types , question lengths , and answer lengths ."
+      },
+      "has" : {
+        "DCN +" : {
+          "provides" : {
+            "significant advantage" : {
+              "for" : "long questions"
+            }
+          },
+          "from sentence" : "In particular , DCN + provides a significant advantage for long questions ."
+        }
+      }
+    }
+  }
+}

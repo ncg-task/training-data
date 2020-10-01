@@ -1,0 +1,136 @@
+164	0	9	TC - LSTM
+164	12	21	Two LSTMs
+164	26	33	used to
+164	34	39	model
+164	44	66	left and right context
+164	67	69	of
+164	74	80	target
+164	103	116	concatenation
+164	67	69	of
+164	120	139	two representations
+164	26	33	used to
+164	151	158	predict
+164	163	168	label
+165	0	6	MemNet
+165	12	16	uses
+165	21	40	attention mechanism
+165	41	45	over
+165	50	64	word embedding
+165	41	45	over
+165	70	85	multiple rounds
+165	86	98	to aggregate
+165	103	114	information
+165	61	63	in
+165	122	130	sentence
+166	0	3	IAN
+166	10	16	adopts
+166	17	26	two LSTMs
+166	27	36	to derive
+166	41	56	representations
+166	57	59	of
+166	64	93	context and the target phrase
+166	116	129	concatenation
+166	133	139	fed to
+166	144	157	softmax layer
+168	0	15	BILSTM - ATT -G
+168	21	27	models
+168	28	51	left and right contexts
+168	52	57	using
+168	58	85	two attention - based LSTMs
+168	90	102	makes use of
+168	105	123	special gate layer
+168	124	134	to combine
+168	141	160	two representations
+170	0	9	TNet - AS
+170	12	25	Without using
+170	29	45	attention module
+151	4	19	number of units
+151	20	22	in
+151	27	50	encoder and the decoder
+151	51	53	is
+151	54	57	100
+151	66	81	latent variable
+151	11	13	of
+151	88	95	size 50
+151	104	120	number of layers
+151	121	128	of both
+151	129	147	Transformer blocks
+151	51	53	is
+151	151	152	2
+151	159	188	number of selfattention heads
+151	51	53	is
+151	192	193	8
+158	19	28	KL weight
+158	32	41	set to be
+158	42	48	1e - 4
+29	19	27	proposed
+29	30	61	classifier - agnostic framework
+29	68	73	named
+29	74	189	Aspect - term Semi-supervised Variational Autoencoder ( Kingma and Welling , 2014 ) based on Transformer ( ASVAET )
+30	4	27	variational autoencoder
+30	28	34	offers
+30	39	50	flexibility
+30	51	63	to customize
+30	68	83	model structure
+34	19	33	representation
+34	34	36	of
+34	41	56	lexical context
+34	60	72	extracted by
+34	77	84	encoder
+34	93	125	aspect - term sentiment polarity
+34	129	142	inferred from
+34	147	171	specific ATSA classifier
+33	0	12	By regarding
+33	17	42	aspect sentiment polarity
+33	43	45	of
+33	50	64	unlabeled data
+33	17	19	as
+33	72	96	discrete latent variable
+33	103	108	model
+33	109	127	implicitly induces
+33	24	42	sentiment polarity
+33	151	154	via
+33	159	180	variational inference
+38	14	27	by separating
+38	32	46	representation
+38	47	49	of
+38	54	68	input sentence
+38	75	85	classifier
+38	86	93	becomes
+38	97	115	independent module
+38	24	26	in
+38	119	132	our framework
+2	28	60	Aspect - term Sentiment Analysis
+4	0	41	Aspect - term sentiment analysis ( ATSA )
+13	70	111	aspect - term sentiment analysis ( ATSA )
+13	116	161	aspect - category sentiment analysis ( ACSA )
+14	0	4	ACSA
+15	20	24	ATSA
+197	15	21	ASVAET
+197	25	40	able to improve
+197	41	63	supervised performance
+197	55	58	for
+197	81	96	all classifiers
+201	11	22	outperforms
+201	27	58	compared semisupervised methods
+199	4	13	TNet - AS
+199	14	25	outperforms
+199	30	48	other three models
+198	0	3	For
+198	8	14	MemNet
+198	21	34	test accuracy
+198	42	53	improved by
+198	54	63	about 2 %
+198	51	53	by
+198	71	77	TSSVAE
+200	0	13	Compared with
+200	18	51	other two semi-supervised methods
+200	58	64	ASVAET
+200	70	75	shows
+200	76	90	better results
+202	4	15	adoption of
+202	16	49	indomain pre-trained word vectors
+202	53	67	beneficial for
+202	72	83	performance
+202	84	97	compared with
+202	102	115	Glove vectors

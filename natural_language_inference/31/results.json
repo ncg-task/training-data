@@ -1,0 +1,30 @@
+{
+  "has" : {
+    "Results" : {
+      "on" : {
+        "Wiki QA dataset" : {
+          "obtain" : {
+            "result" : {
+              "on par with" : "state - of - the - art"
+            }
+          },
+          "from sentence" : "Results on Wiki
+QA dataset are listed in .
+We obtain a result on par with the state - of - the - art reported on this dataset ."
+
+        }
+      },
+      "has" : {
+        "method" : {
+          "perform" : {
+            "well" : {
+              "in" : "answer selection task",
+              "without" : "any taskspecific modifications"
+            }
+          },
+          "from sentence" : "Our method can perform well in the answer selection task without any taskspecific modifications ."
+        }
+      }
+    }
+  }
+}

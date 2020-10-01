@@ -1,0 +1,56 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "has" : {
+        "n-gram functionality" : {
+          "is" : "important",
+          "contributing" : "almost 5 % accuracy improvement",
+          "from sentence" : "Not surprisingly , the n-gram functionality is important , contributing almost 5 % accuracy improvement ."
+        },
+        "top N function" : {
+          "contributes" : {
+            "very little" : {
+              "to" : "overall performance"
+            }
+          },
+          "from sentence" : "The top N function contributes very little to the overall performance , suggesting that most multi questions have their evidence distributed across contiguous sentences ."
+        },
+        "Simple word - by - word matching" : {
+          "has" : {
+            "useful" : {
+              "on" : "MCTest"
+            }
+          },
+          "from sentence" : "Simple word - by - word matching is obviously useful on MCTest ."
+        },
+        "sequential sliding window" : {
+          "makes" : "3 % contribution",
+          "from sentence" : "The sequential sliding window makes a 3 % contribution , highlighting the importance of word - distance measures ."
+        },
+        "dependency - based sliding window" : {
+          "makes" : "minor contribution",
+          "from sentence" : "On the other hand , the dependency - based sliding window makes only a minor contribution ."
+        },
+        "exogenous word weights" : {
+          "make" : {
+            "significant contribution" : {
+              "of" : "almost 5 %"
+            }
+          },
+          "from sentence" : "Finally , the exogenous word weights make a significant contribution of almost 5 % ."
+        }
+      },
+      "Ablating" : {
+        "sentential component" : {
+          "made" : "most significant difference",
+          "reducing" : {
+            "performance" : {
+              "by" : "more than 5 %"
+            }
+          },
+          "from sentence" : "Ablating the sentential component made the most significant difference , reducing performance by more than 5 % ."
+        }
+      }
+    }
+  }
+}

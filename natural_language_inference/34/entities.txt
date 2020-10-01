@@ -1,0 +1,205 @@
+230	21	23	of
+230	24	39	QA performances
+230	40	42	in
+230	47	62	development set
+230	21	23	of
+230	66	75	Hotpot QA
+230	24	38	QA performance
+231	22	30	see that
+231	31	59	each of our model components
+231	64	71	provide
+231	72	87	from 1 % to 2 %
+231	88	101	relative gain
+231	102	106	over
+232	15	20	using
+232	23	45	1 - layer fusion block
+232	46	54	leads to
+232	58	82	obvious performance loss
+232	91	98	implies
+232	103	115	significance
+232	116	118	of
+232	119	129	performing
+232	130	149	multi-hop reasoning
+232	17	19	in
+232	153	162	Hotpot QA
+233	14	39	dataset abla-tion results
+233	40	44	show
+233	50	59	our model
+233	63	81	not very sensitive
+233	82	84	to
+233	89	105	noisy paragraphs
+233	106	120	comparing with
+233	125	139	baseline model
+233	146	157	can achieve
+233	160	190	more than 5 % performance gain
+233	112	114	in
+233	200	220	gold paragraphs only
+233	229	250	supporting facts only
+209	0	2	In
+209	3	28	paragraph selection stage
+209	34	37	use
+209	42	75	uncased version of BERT Tokenizer
+209	76	87	to tokenize
+209	88	114	all passages and questions
+212	3	27	graph construction stage
+212	33	36	use
+212	39	59	pretrained NER model
+212	60	64	from
+212	65	90	Stanford CoreNLP Toolkits
+212	93	103	to extract
+212	104	118	named entities
+215	7	21	encoding stage
+215	32	35	use
+215	38	60	pre-trained BERT model
+215	61	63	as
+215	68	75	encoder
+215	83	86	d 1
+215	87	89	is
+215	90	93	768
+210	4	20	encoding vectors
+210	21	23	of
+210	24	38	sentence pairs
+210	43	57	generated from
+210	60	82	pre-trained BERT model
+213	4	30	maximum number of entities
+213	31	33	in
+213	36	41	graph
+213	45	51	set to
+213	55	57	40
+214	0	16	Each entity node
+214	17	19	in
+214	24	37	entity graphs
+214	45	59	average degree
+214	60	62	of
+214	63	67	3.52
+216	8	35	hidden state dimensions d 2
+216	40	46	set to
+216	47	50	300
+211	3	6	set
+211	9	33	relatively low threshold
+211	34	40	during
+211	41	50	selection
+211	48	50	on
+211	121	137	supporting facts
+211	51	58	to keep
+211	61	81	high recall ( 97 % )
+211	88	117	reasonable precision ( 69 % )
+217	11	23	dropout rate
+217	24	27	for
+217	28	44	all hidden units
+217	45	47	of
+217	48	80	LSTM and dynamic graph attention
+217	81	83	to
+217	84	95	0.3 and 0.5
+218	0	3	For
+218	4	16	optimization
+218	22	25	use
+218	26	40	Adam Optimizer
+218	41	45	with
+218	49	70	initial learning rate
+218	71	73	of
+218	74	80	1 e ?4
+50	19	26	propose
+50	27	67	Dynamically Fused Graph Network ( DFGN )
+50	72	84	novel method
+56	45	59	fusion process
+56	60	62	in
+56	63	67	DFGN
+56	68	76	to solve
+56	81	106	unrestricted QA challenge
+51	26	30	DFGN
+51	31	41	constructs
+51	44	64	dynamic entity graph
+51	65	73	based on
+51	74	89	entity mentions
+51	90	92	in
+51	97	116	query and documents
+52	5	12	process
+52	13	24	iterates in
+52	25	40	multiple rounds
+52	41	51	to achieve
+52	52	70	multihop reasoning
+58	4	18	fusion process
+58	19	21	is
+58	22	43	iteratively performed
+58	26	28	at
+58	47	55	each hop
+58	56	63	through
+58	68	96	document tokens and entities
+58	107	129	final resulting answer
+58	138	151	obtained from
+58	68	83	document tokens
+59	19	21	of
+59	22	46	doc2 graph and graph2doc
+59	47	57	along with
+59	62	82	dynamic entity graph
+59	83	98	jointly improve
+59	103	114	interaction
+59	115	122	between
+59	127	138	information
+59	19	21	of
+59	142	151	documents
+59	70	82	entity graph
+59	175	185	leading to
+59	188	211	less noisy entity graph
+59	221	242	more accurate answers
+53	0	2	In
+53	3	13	each round
+53	16	20	DFGN
+53	21	42	generates and reasons
+53	39	41	on
+53	48	61	dynamic graph
+53	70	89	irrelevant entities
+53	90	93	are
+53	94	104	masked out
+53	105	110	while
+53	116	133	reasoning sources
+53	90	93	are
+53	138	147	preserved
+53	150	153	via
+53	156	178	mask prediction module
+57	12	21	aggregate
+57	22	33	information
+57	34	38	from
+57	39	48	documents
+57	49	51	to
+57	56	68	entity graph
+57	71	81	doc2 graph
+57	95	104	propagate
+57	22	33	information
+57	121	123	of
+57	56	68	entity graph
+57	141	148	back to
+57	149	173	document representations
+2	36	55	Multi-hop Reasoning
+4	0	40	Text - based question answering ( TBQA )
+13	0	25	Question answering ( QA )
+14	0	2	QA
+222	43	45	in
+222	120	136	private test set
+222	93	95	of
+222	140	149	Hotpot QA
+222	27	29	on
+223	22	30	see that
+223	31	40	our model
+223	41	49	achieves
+223	54	72	second best result
+223	80	91	leaderboard
+223	103	112	March 1st
+224	41	58	joint performance
+224	59	61	of
+224	62	71	our model
+224	72	75	are
+224	76	87	competitive
+224	88	95	against
+224	96	137	state - of - the - art unpublished models
+227	12	16	show
+227	22	31	our model
+227	32	40	achieves
+227	43	53	1.5 % gain
+227	51	53	in
+227	61	77	joint F1 - score
+227	78	82	with
+227	87	99	entity graph
+227	100	110	built from
+227	113	137	better entity recognizer

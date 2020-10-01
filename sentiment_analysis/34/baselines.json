@@ -1,0 +1,26 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "best performing system" : {
+          "in" : "SemEval 2017 task",
+          "from sentence" : "The best performing system in the SemEval 2017 task is the one described in which achieved an F P N of 0.61 ."
+        }
+      },
+      "For" : {
+        "ASTD" : {
+          "has" : {
+            "best reported results" : {
+              "by" : {
+                "ensemble system" : {
+                  "combining output of" : "CNN and Bi - LSTM architectures"
+                }
+              }
+            }
+          },
+          "from sentence" : "For the ASTD , the best reported results are by who used an ensemble system combining output of CNN and Bi - LSTM architectures , which achieved an F P N of 0.71 ."
+        }
+      }
+    }
+  }
+}

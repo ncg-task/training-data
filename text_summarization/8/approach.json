@@ -1,0 +1,54 @@
+{
+  "has" : {
+    "Approach" : {
+      "consider" : ["bottom - up attention", {"from sentence" : "Motivated by this approach , we consider bottom - up attention for neural abstractive summarization ."}],
+      "first selects" : {
+        "selection mask" : {
+          "for" : "source document",
+          "by this mask" : "constrains a standard neural model"
+        },
+        "from sentence" : "Our approach first selects a selection mask for the source document and then constrains a standard neural model by this mask ."
+      },
+      "incorporates" : {
+        "separate content selection system" : {
+          "to decide" : {
+            "relevant aspects" : {
+               "of" : "source document"
+            }
+          }
+        },
+        "from sentence" : "Our full model incorporates a separate content selection system to decide on relevant aspects of the source document ."
+      },
+      "frame" : {
+        "selection task" : {
+          "as a" : {
+            "sequence - tagging problem" : {
+              "with the objective of" : {
+                "identifying tokens" : {
+                  "from" : "document",
+                  "part of" : "summary"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "We frame this selection task as a sequence - tagging problem , with the objective of identifying tokens from a document that are part of its summary ."
+      },
+      "employ" : {
+        "masking" : {
+          "to constrain" : {
+            "copying words" : {
+              "to" : {
+                "selected parts" : {
+                  "of" : "text"
+                }
+              }
+            }
+          },
+          "produces" : "grammatical outputs"
+        },
+        "from sentence" : "To incorporate bottom - up attention into abstractive summarization models , we employ masking to constrain copying words to the selected parts of the text , which produces grammatical outputs ."
+      }
+    }
+  }
+}

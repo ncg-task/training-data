@@ -1,0 +1,22 @@
+{
+  "has" : {
+    "Model" : {
+      "learn" : {
+        "context sensitive initial character and word representations" : {
+          "through" : ["two separate sentence - level recurrent models", {"from sentence" : "We propose a novel model where we learn context sensitive initial character and word representations through two separate sentence - level recurrent models ."}],
+          "combined via" : {
+            "meta-BiLSTM model" : {
+              "builds" : {
+                "unified representation" : {
+                  "of" : "each word",
+                  "used for" : "syntactic tagging"
+                }
+              },
+              "from sentence" : "These are then combined via a meta-BiLSTM model that builds a unified representation of each word that is then used for syntactic tagging ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

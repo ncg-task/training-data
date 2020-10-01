@@ -1,0 +1,53 @@
+{
+  "has" : {
+    "Model" : {
+      "develop" : {
+        "new architecture" : {
+          "for dynamically incorporating" : {
+            "external background knowledge" : {
+              "in" : "NLU models"
+            }
+          },
+          "from sentence" : "In this paper , we develop a new architecture for dynamically incorporating external background knowledge in NLU models ."
+        }
+      },
+      "has" : {
+        "supplementary knowledge" : {
+          "retrieved from" : {
+            "external knowledge sources" : {
+              "name" : ["ConceptNet", "Wikipedia"],
+              "assist with understanding" : "text inputs"
+            }
+          },
+          "from sentence" : "Rather than relying only on static knowledge implicitly present in the training data , supplementary knowledge is retrieved from external knowledge sources ( in this paper , ConceptNet and Wikipedia ) to assist with understanding text inputs ."
+        },
+        "retrieved supplementary texts" : {
+          "read together with" : "task inputs",
+          "by" : {
+            "initial reading module" : {
+              "whose" : {
+                "outputs" : {
+                  "are" : {
+                  "contextually refined word embeddings" : {
+                    "used as" : {
+                      "input" : {
+                        "to" : "task - specific NLU architecture",
+                        "from sentence" : "These refined embeddings are then used as input to a task - specific NLU architecture ( any architecture that reads text as a sequence of word embeddings can be used here ) ."
+                        }
+                      }  
+                    }
+                  }
+                }
+              },
+              "from sentence" : "The retrieved supplementary texts are read together with the task inputs by an initial reading module whose outputs are contextually refined word embeddings ( 3 ) ."            
+            }
+          }
+        },
+        "initial reading module and the task module" : {
+          "are learnt" : "jointly , end - to - end",
+          "from sentence" : "The initial reading module and the task module are learnt jointly , end - to - end ."
+        }
+      }
+    }
+  }
+}

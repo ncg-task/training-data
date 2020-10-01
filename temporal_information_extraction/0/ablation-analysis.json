@@ -1,0 +1,40 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "running" : {
+        "transitive closure module" : {
+          "after" : {
+            "temporal rule - based sieve ( RB + TR )" : {
+              "results in" : "improving recall"
+            }
+          }
+        },
+        "from sentence" : "As expected , running a transitive closure module after the temporal rule - based sieve ( RB + TR ) results in improving recall , but the overall performance is still lacking ( less than .30 F1-score ) ."
+      },
+      "Combining" : {
+        "rule - based and machine - learned sieves ( RB + ML )" : {
+          "yields" : {
+            "slight improvement" : {
+              "compared with" : {
+                "enabling only the machine - learned sieve" : {
+                  "in" : "system ( ML )"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "Combining rule - based and machine - learned sieves ( RB + ML ) yields a slight improvement compared with enabling only the machine - learned sieve in the system ( ML ) ."
+      },
+      "Introducing" : {
+        "temporal reasoner module" : {
+          "between" : {
+            "two sieves ( RB + TR + ML )" : {
+              "proves to be" : "even more beneficial"
+            }
+          },
+          "from sentence" : "Introducing the temporal reasoner module between the two sieves ( RB + TR + ML ) proves to be even more beneficial ."
+        }
+      }
+    }
+  }
+}

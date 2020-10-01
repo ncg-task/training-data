@@ -1,0 +1,103 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "hybrid network" : {
+          "named" : "CASCADE",
+          "utilizes" : {
+            "content and contextual - information" : {
+              "required for" : "sarcasm detection"
+            }
+          },
+          "from sentence" : "Particularly , we propose a hybrid network , named CASCADE , that utilizes both content and contextual - information required for sarcasm detection ."
+        }
+      },
+      "performs" : {
+        "user profiling" : {
+          "to create" : {
+            "user embeddings" : {
+              "that capture" : {
+                "indicative behavioral traits" : {
+                  "for" : "sarcasm"
+                }
+              }
+            }
+          },
+          "from sentence" : "First , it performs user profiling to create user embeddings that capture indicative behavioral traits for sarcasm ."
+        },
+        "content - modeling" : {
+          "using" : {
+            "Convolutional Neural Network ( CNN )" : {
+              "to extract" : "syntactic features"
+            }
+          },
+          "from sentence" : "It performs content - modeling using a Convolutional Neural Network ( CNN ) to extract its syntactic features ."
+        }        
+      },
+      "makes use of" : {
+        "users ' historical posts" : {
+          "to model" : {
+            "writing style ( stylometry ) and personality indicators" : {
+              "fused into" : {
+                "comprehensive user embeddings" : {
+                  "using" : {
+                    "multi-view fusion approach" : {
+                      "name" : "Canonical Correlation Analysis ( CCA )"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "It makes use of users ' historical posts to model their writing style ( stylometry ) and personality indicators , which are then fused into comprehensive user embeddings using a multi-view fusion approach , Canonical Correlation Analysis ( CCA ) ."
+            }
+          }
+        }
+      },
+      "extracts" : {
+        "contextual information" : {
+          "from" : {
+            "discourse" : {
+              "of" : "comments",
+              "in" : "discussion forums"
+            }
+          },
+          "from sentence" : "Second , it extracts contextual information from the discourse of comments in the discussion forums ."
+        }
+      },
+      "done by" : {
+        "document modeling" : {
+          "of" : {
+            "consolidated comments" : {
+              "belonging to" : "same forum"
+            }
+          },
+          "from sentence" : "This is done by document modeling of these consolidated comments belonging to the same forum ."
+        }
+      },
+      "After" : {
+        "contextual modeling phase" : {
+          "has" : {
+            "CASCADE" : {
+              "provided with" : {
+                "comment" : {
+                  "for" : "sarcasm detection"
+                }
+              }
+            }
+          },
+          "from sentence" : "After the contextual modeling phase , CASCADE is provided with a comment for sarcasm detection ."
+        }
+      },
+      "has" : {
+        "CNN representation" : {
+          "concatenated with" : "relevant user embedding and discourse features",
+          "to get" : {
+            "final representation" : {
+              "used for" : "classification"
+            }
+          },
+          "from sentence" : "This CNN representation is then concatenated with the relevant user embedding and discourse features to get the final representation which is used for classification ."
+        }
+      }
+    }
+  }
+}

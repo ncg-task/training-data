@@ -1,0 +1,8 @@
+{
+  "has research problem" : [
+    ["Story Comprehension", {"from sentence" : "Story Comprehension for Predicting What Happens Next"}],
+    ["Automatic story comprehension", {"from sentence" : "Automatic story comprehension is a fundamental challenge in Natural Language Understanding , and can enable computers to learn about social norms , human behavior and commonsense ."}],
+    ["automatically understanding stories", {"from sentence" : "For these reasons , automatically understanding stories is an interesting but challenging task for Computational Linguists ."}],
+    ["story - cloze", {"from sentence" : "Recently , introduced the story - cloze task for testing this ability , albeit without the aspect of language generation ."}]
+  ]
+}

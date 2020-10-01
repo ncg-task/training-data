@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Learning document embeddings", {"from sentence" : "Learning document embeddings along with their uncertainties"}],
+    ["topic identification", {"from sentence" : "We also present a generative Gaussian linear classifier for topic identification that exploits the uncertainty in document embeddings ."}],
+    ["L EARNING word and document embeddings", {"from sentence" : "L EARNING word and document embeddings have proven to be useful in wide range of information retrieval , speech and natural language processing applications -."}]
+  ]
+}

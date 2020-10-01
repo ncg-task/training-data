@@ -1,0 +1,155 @@
+195	7	15	see that
+195	16	33	all modifications
+195	34	41	lead to
+195	44	53	new model
+197	0	5	Among
+197	6	20	all components
+197	23	36	three of them
+197	37	41	have
+197	42	63	noticeable influences
+197	66	77	max pooling
+197	80	113	difference in the attention stage
+197	120	137	dependent reading
+199	5	15	illustrate
+199	20	30	importance
+199	31	33	of
+199	34	73	our proposed dependent reading strategy
+199	80	88	leads to
+199	89	112	significant improvement
+199	61	63	in
+199	135	149	encoding stage
+203	0	12	demonstrates
+203	33	49	best performance
+203	50	54	with
+203	55	80	450 - dimensional BiLSTMs
+128	3	6	use
+128	7	45	pre-trained 300 - D Glove 840B vectors
+128	46	59	to initialize
+128	60	86	our word embedding vectors
+134	9	32	fairly small batch size
+134	33	35	of
+134	36	38	32
+129	0	17	All hidden states
+129	18	20	of
+129	21	28	BiLSTMs
+129	29	35	during
+129	36	64	input encoding and inference
+129	65	69	have
+129	70	84	450 dimensions
+130	4	11	weights
+130	16	26	learned by
+130	27	37	minimizing
+130	42	52	log - loss
+130	53	55	on
+130	60	73	training data
+130	74	77	via
+130	82	96	Adam optimizer
+131	4	25	initial learning rate
+131	26	28	is
+131	29	35	0.0004
+132	0	8	To avoid
+132	9	20	overfitting
+132	26	29	use
+132	30	37	dropout
+132	38	42	with
+132	47	51	rate
+132	52	54	of
+132	55	58	0.4
+132	59	62	for
+132	63	77	regularization
+132	89	99	applied to
+132	100	127	all feedforward connections
+133	0	6	During
+133	7	15	training
+133	22	37	word embeddings
+133	42	58	updated to learn
+133	59	84	effective representations
+133	85	88	for
+133	93	101	NLI task
+30	3	10	propose
+30	13	71	dependent reading bidirectional LSTM ( DR - BiLSTM ) model
+31	49	62	first encodes
+31	8	36	premise u and a hypothesis v
+31	68	79	considering
+31	80	90	dependency
+31	69	71	on
+31	94	104	each other
+32	17	24	employs
+32	27	51	soft attention mechanism
+32	52	62	to extract
+32	63	83	relevant information
+32	84	88	from
+32	89	104	these encodings
+33	4	38	augmented sentence representations
+33	48	57	passed to
+33	62	77	inference stage
+33	86	90	uses
+33	93	127	similar dependent reading strategy
+33	62	64	in
+33	131	146	both directions
+34	12	20	decision
+34	24	36	made through
+34	39	71	multi - layer perceptron ( MLP )
+34	72	80	based on
+34	85	107	aggregated information
+2	54	80	Natural Language Inference
+4	61	95	natural language inference ( NLI )
+12	12	15	NLI
+174	0	22	DR - BiLSTM ( Single )
+174	23	31	achieves
+174	32	47	88.5 % accuracy
+174	48	50	on
+174	55	63	test set
+174	70	72	is
+174	88	108	best reported result
+174	109	114	among
+174	119	141	existing single models
+177	123	130	obtains
+177	38	46	accuracy
+177	47	49	of
+177	147	153	88.5 %
+177	162	186	considerably outperforms
+177	191	219	previous non-ensemble models
+177	0	24	DR - BiLSTM ( Ensemble )
+177	25	33	achieves
+177	38	46	accuracy
+177	47	49	of
+177	50	56	89.3 %
+177	63	74	best result
+177	75	86	observed on
+177	87	91	SNLI
+183	4	18	ensemble model
+183	19	43	considerably outperforms
+183	48	78	current state - of - the - art
+183	79	91	by obtaining
+183	92	107	89.3 % accuracy
+186	20	43	preprocessing mechanism
+186	44	52	leads to
+186	53	73	further improvements
+186	74	76	of
+186	77	92	0.4 % and 0.3 %
+186	93	95	on
+186	100	113	SNLI test set
+186	114	117	for
+186	118	148	our single and ensemble models
+187	10	26	our single model
+187	31	63	DR - BiLSTM ( Single ) + Process
+187	68	75	obtains
+187	80	114	state - of - the - art performance
+187	115	119	over
+187	125	160	reported single and ensemble models
+187	161	174	by performing
+187	177	202	simple preprocessing step
+188	16	49	DR - BiLSTM ( Ensem . ) + Process
+188	52	63	outperforms
+188	68	99	existing state - of - the - art
+188	100	110	remarkably
+188	113	130	0.7 % improvement
+178	7	16	utilizing
+178	19	45	trivial preprocessing step
+178	46	55	yields to
+178	56	76	further improvements
+178	77	79	of
+178	80	95	0.4 % and 0.3 %
+178	96	99	for
+178	100	138	single and ensemble DR - BiLSTM models

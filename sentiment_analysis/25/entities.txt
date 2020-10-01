@@ -1,0 +1,182 @@
+155	0	12	NRC - Canada
+155	13	15	is
+155	20	30	top method
+155	31	33	in
+155	34	53	SemEval 2014 Task 4
+155	54	57	for
+155	58	76	ACSA and ATSA task
+158	0	3	CNN
+158	7	21	widely used on
+158	22	46	text classification task
+161	0	9	TD - LSTM
+161	10	14	uses
+161	15	32	two LSTM networks
+161	33	41	to model
+161	46	78	preceding and following contexts
+161	79	81	of
+161	86	92	target
+161	93	104	to generate
+161	105	138	target - dependent representation
+161	139	142	for
+161	143	163	sentiment prediction
+162	0	11	ATAE - LSTM
+162	12	14	is
+162	18	40	attention - based LSTM
+162	41	44	for
+162	45	54	ACSA task
+164	0	3	IAN
+164	4	14	stands for
+164	15	44	interactive attention network
+164	11	14	for
+164	49	58	ATSA task
+164	75	83	based on
+164	84	113	LSTM and attention mechanisms
+165	0	3	RAM
+165	4	6	is
+165	9	36	recurrent attention network
+165	37	40	for
+165	41	50	ATSA task
+165	59	63	uses
+165	64	102	LSTM and multiple attention mechanisms
+166	0	3	GCN
+166	4	14	stands for
+166	15	49	gated convolutional neural network
+166	52	60	in which
+166	61	65	GTRU
+166	66	79	does not have
+166	84	100	aspect embedding
+166	84	86	as
+166	107	123	additional input
+148	21	43	word embedding vectors
+148	48	64	initialized with
+148	65	94	300 - dimension GloVe vectors
+148	105	119	pre-trained on
+148	120	134	unlabeled data
+148	135	137	of
+148	138	156	840 billion tokens
+149	0	27	Words out of the vocabulary
+149	10	12	of
+149	31	37	Glo Ve
+149	38	41	are
+149	42	62	randomly initialized
+149	63	67	with
+149	70	110	uniform distribution U ( ? 0.25 , 0.25 )
+152	4	17	neural models
+152	22	36	implemented in
+152	37	44	PyTorch
+150	3	6	use
+150	7	14	Adagrad
+150	15	19	with
+150	22	32	batch size
+150	33	35	of
+150	36	48	32 instances
+150	51	72	default learning rate
+150	33	35	of
+150	76	83	1 e ? 2
+150	90	104	maximal epochs
+150	33	35	of
+150	108	110	30
+151	8	17	fine tune
+151	18	32	early stopping
+151	33	37	with
+151	38	63	5 - fold cross validation
+151	3	5	on
+151	67	84	training datasets
+33	19	26	propose
+33	29	62	fast and effective neural network
+33	63	66	for
+33	67	80	ACSA and ATSA
+33	81	89	based on
+33	90	124	convolutions and gating mechanisms
+34	0	3	For
+34	4	13	ACSA task
+34	16	25	our model
+34	30	63	two separate convolutional layers
+34	64	77	on the top of
+34	82	97	embedding layer
+34	100	105	whose
+34	106	113	outputs
+34	114	129	are combined by
+34	130	148	novel gating units
+40	4	13	ATSA task
+40	70	76	extend
+40	77	86	our model
+40	87	97	to include
+40	98	125	another convolutional layer
+40	126	129	for
+40	134	152	target expressions
+36	4	12	proposed
+36	13	25	gating units
+36	26	30	have
+36	31	50	two nonlinear gates
+36	70	82	connected to
+36	83	106	one convolutional layer
+2	0	31	Aspect Based Sentiment Analysis
+4	0	40	Aspect based sentiment analysis ( ABSA )
+5	53	98	aspect - category sentiment analysis ( ACSA )
+5	103	144	aspect - term sentiment analysis ( ATSA )
+18	43	47	ABSA
+19	12	16	ACSA
+20	32	36	ATSA
+172	0	28	LSTM based model ATAE - LSTM
+172	37	54	worst performance
+172	55	57	of
+172	58	77	all neural networks
+177	0	4	GCAE
+177	5	13	improves
+177	18	29	performance
+177	30	32	by
+177	33	47	1.1 % to 2.5 %
+177	48	61	compared with
+177	62	73	ATAE - LSTM
+189	109	113	ACSA
+189	5	13	achieves
+189	14	33	4 % higher accuracy
+189	34	38	than
+189	39	50	ATAE - LSTM
+189	51	53	on
+189	54	72	Restaurant - Large
+189	77	87	5 % higher
+189	51	53	on
+189	91	118	SemEval - 2014 on ACSA task
+190	10	13	GCN
+190	63	75	higher score
+190	76	80	than
+190	81	85	GCAE
+190	86	88	on
+190	93	120	original restaurant dataset
+184	0	27	Without the large amount of
+184	28	46	sentiment lexicons
+184	49	52	SVM
+184	53	60	perform
+184	61	66	worse
+184	67	71	than
+184	72	86	neural methods
+185	39	50	performance
+185	54	63	increased
+185	64	66	by
+185	67	72	7.6 %
+197	0	3	IAN
+197	8	26	better performance
+197	27	31	than
+197	32	57	TD - LSTM and ATAE - LSTM
+198	0	3	RAM
+198	9	17	achieves
+198	18	31	good accuracy
+198	32	44	by combining
+198	45	64	multiple attentions
+198	65	69	with
+198	72	96	recurrent neural network
+201	81	85	GCAE
+201	86	97	outperforms
+201	98	131	other neural models and basic SVM
+199	0	2	On
+199	27	31	GCAE
+199	36	55	1 % higher accuracy
+199	56	60	than
+199	61	64	RAM
+199	65	67	on
+199	68	83	restaurant data
+199	88	100	1.7 % higher
+199	65	67	on
+199	104	115	laptop data

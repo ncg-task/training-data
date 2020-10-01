@@ -1,0 +1,106 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "Majority" : {
+          "assigns" : {
+            "sentiment polarity" : {
+              "has" : {
+                "largest probability" : {
+                  "in" : "training set"
+                }
+              }
+            }
+          },
+          "from sentence" : "Majority assigns the sentiment polarity that has the largest probability in the training set ; 2 . Simple SVM is a SVM classifier with simple features such as unigrams and bigrams ; 3 . Feature - enhanced SVM is a SVM classifier with a state - of - the - art feature template which contains n-gram features , parse features and lexicon features ; 4 . LSTM represents a standard LSTM for aspect - based sentiment classification task ; 5 . TD - LSTM adopts two LSTMs to model the left context with target and the right context with target respectively ; 74.30 66.50 66.50 TD- LSTM 75.60 68.10 70.80 AE - LSTM 76.60 68.90 - ATAE - LSTM 77.20 68.70 - GRNN- G3 79.55 * 71.47 * 70.09 * MemNet 79.98 * 70.33 * 70.52 * IAN 78.60 72.10 - LCR - Rot ( our approach ) 81.34 75.24 72.69 : The performance ( classification accuracy ) of different methods on three datasets ."
+        },
+        "Simple SVM" : {
+          "is" : {
+            "SVM classifier" : {
+              "with" : {
+                "simple features" : {
+                  "such as" : "unigrams and bigrams"
+                }
+              }
+            }
+          },
+          "from sentence" : "Majority assigns the sentiment polarity that has the largest probability in the training set ; 2 . Simple SVM is a SVM classifier with simple features such as unigrams and bigrams ; 3 . Feature - enhanced SVM is a SVM classifier with a state - of - the - art feature template which contains n-gram features , parse features and lexicon features ; 4 . LSTM represents a standard LSTM for aspect - based sentiment classification task ; 5 . TD - LSTM adopts two LSTMs to model the left context with target and the right context with target respectively ; 74.30 66.50 66.50 TD- LSTM 75.60 68.10 70.80 AE - LSTM 76.60 68.90 - ATAE - LSTM 77.20 68.70 - GRNN- G3 79.55 * 71.47 * 70.09 * MemNet 79.98 * 70.33 * 70.52 * IAN 78.60 72.10 - LCR - Rot ( our approach ) 81.34 75.24 72.69 : The performance ( classification accuracy ) of different methods on three datasets ."
+        },
+        "Feature - enhanced SVM" : {
+          "is" : {
+            "SVM classifier" : {
+              "with" : {
+                "state - of - the - art feature template" : {
+                  "which contains" : ["n-gram features", "parse features", "lexicon features"]
+                }
+              }
+            }          
+          },
+          "from sentence" : "Majority assigns the sentiment polarity that has the largest probability in the training set ; 2 . Simple SVM is a SVM classifier with simple features such as unigrams and bigrams ; 3 . Feature - enhanced SVM is a SVM classifier with a state - of - the - art feature template which contains n-gram features , parse features and lexicon features ; 4 . LSTM represents a standard LSTM for aspect - based sentiment classification task ; 5 . TD - LSTM adopts two LSTMs to model the left context with target and the right context with target respectively ; 74.30 66.50 66.50 TD- LSTM 75.60 68.10 70.80 AE - LSTM 76.60 68.90 - ATAE - LSTM 77.20 68.70 - GRNN- G3 79.55 * 71.47 * 70.09 * MemNet 79.98 * 70.33 * 70.52 * IAN 78.60 72.10 - LCR - Rot ( our approach ) 81.34 75.24 72.69 : The performance ( classification accuracy ) of different methods on three datasets ."
+        },
+        "TD - LSTM" : {
+          "adopts" : "two LSTMs",
+          "to model" : {
+            "left context" : {
+              "with" : "target"
+            },
+            "right context" : {
+              "with" : "target"
+            }
+          },
+          "from sentence" : "Majority assigns the sentiment polarity that has the largest probability in the training set ; 2 . Simple SVM is a SVM classifier with simple features such as unigrams and bigrams ; 3 . Feature - enhanced SVM is a SVM classifier with a state - of - the - art feature template which contains n-gram features , parse features and lexicon features ; 4 . LSTM represents a standard LSTM for aspect - based sentiment classification task ; 5 . TD - LSTM adopts two LSTMs to model the left context with target and the right context with target respectively ; 74.30 66.50 66.50 TD- LSTM 75.60 68.10 70.80 AE - LSTM 76.60 68.90 - ATAE - LSTM 77.20 68.70 - GRNN- G3 79.55 * 71.47 * 70.09 * MemNet 79.98 * 70.33 * 70.52 * IAN 78.60 72.10 - LCR - Rot ( our approach ) 81.34 75.24 72.69 : The performance ( classification accuracy ) of different methods on three datasets ."
+        },
+        "AE - LSTM" : {
+          "is" : {
+            "upgraded version" : {
+              "of" : "LSTM"
+            }
+          },
+          "from sentence" : "6 . AE - LSTM is an upgraded version of LSTM ."
+        },
+        "ATAE - LSTM" : {
+          "developed based on" : "AE - LSTM",
+          "from sentence" : "7 . ATAE - LSTM is developed based on AE - LSTM ."
+        },
+        "GRNN - G3" : {
+          "adopts" : {
+            "Gated - RNN" : {
+              "to represent" : "sentence",
+              "use" : {
+                "three - way structure" : {
+                  "to leverage" : "contexts"
+                }
+              }
+            }
+          },
+          "from sentence" : "8 . GRNN - G3 adopts a Gated - RNN to represent sentence and use a three - way structure to leverage contexts ."
+        },
+        "MemNet" : {
+          "is" : {
+            "deep memory network" : {
+              "considers" : {
+                "content and position" : {
+                  "of" : "target"
+                }
+              }
+            }
+          },
+          "from sentence" : "MemNet is a deep memory network which considers the content and position of target ."
+        },
+        "IAN" : {
+          "interactively learns" : {
+            "attentions" : {
+              "in" : "contexts and targets"
+            }
+          },
+          "generate" : {
+            "representations" : {
+              "for" : "targets and contexts"
+            }           
+          },
+          "from sentence" : "IAN interactively learns attentions in the contexts and targets , and generate the representations for targets and contexts separately ."
+        }
+      }
+    }
+  }
+}

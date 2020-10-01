@@ -1,0 +1,122 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "withhold" : {
+        "10 %" : {
+          "of" : "training",
+          "for" : "development"
+        },
+        "from sentence" : "We withhold 10 % of the training for development ."
+      },
+      "use" : {
+        "hidden state size" : {
+          "of" : {
+            "50" : {
+              "by" : "deafult"
+            }
+          }
+        },
+        "from sentence" : "We use the hidden state size of 50 by deafult ."
+      },
+      "has" : {
+        "Batch sizes" : {
+          "of" : {
+            "32" : {
+              "for" : ["bAbI story - based QA 1k", "bAb I dialog", "DSTC2 dialog"]
+            },
+            "128" : {
+              "for" : "bAbI QA 10 k"
+            }
+          },
+          "from sentence" : "Batch sizes of 32 for bAbI story - based QA 1k , bAb I dialog and DSTC2 dialog , and 128 for bAbI QA 10 k are used ."
+        },
+        "weights" : {
+          "in" : {
+            "input and output modules" : {
+              "initialized with" : ["zero mean", "standard deviation of 1 / ? d"]
+            }
+          },
+          "from sentence" : "The weights in the input and output modules are initialized with zero mean and the standard deviation of 1 / ? d."
+        },
+        "Forget bias" : {
+          "of" : {
+            "2.5" : {
+              "used for" : "update gates"
+            }
+          },
+          "from sentence" : "Forget bias of 2.5 is used for update gates ( no bias for reset gates ) ."
+        },
+        "L2 weight decay" : {
+          "of" : {
+            "0.001 ( 0.0005 for QA 10 k )" : {
+              "used for" : "all weights"
+            }
+          },
+          "from sentence" : "L2 weight decay of 0.001 ( 0.0005 for QA 10 k ) is used for all weights ."
+        },
+        "loss function" : {
+          "is" : {
+            "cross entropy" : {
+              "between" : {
+                "v and the one - hot vector" : {
+                  "of" : "true answer"
+                }
+              }
+            }
+          },
+          "from sentence" : "The loss function is the cross entropy between v and the one - hot vector of the true answer ."
+        },
+        "loss" : {
+          "minimized by" : {
+            "stochastic gradient descent" : {
+              "for" : "maximally 500 epochs"
+            }
+          }
+        },
+        "training" : {
+          "is" : {
+            "early stopped" : {
+              "if" : {
+                "loss" : {
+                  "on" : "development data",
+                  "has" : {
+                    "not decrease" : {
+                      "for" : "50 epochs"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "The loss is minimized by stochastic gradient descent for maximally 500 epochs , but training is early stopped if the loss on the development data does not decrease for 50 epochs ."
+        },
+        "learning rate" : {
+          "controlled by" : {
+            "AdaGrad" : {
+              "with" : {
+                "initial learning rate" : {
+                  "of" : "0.5 ( 0.1 for QA 10 k )"
+                }
+              }
+            }
+          },
+          "from sentence" : "The learning rate is controlled by AdaGrad with the initial learning rate of 0.5 ( 0.1 for QA 10 k ) ."
+        }
+      },
+      "repeat" : {
+        "each training procedure" : {
+          "has" : {
+            "10 times ( 50 times for 10 k )" : {
+              "with" : {
+                "new random initialization" : {
+                  "of" : "weights"
+                }
+              }
+            }
+          },
+          "from sentence" : "Since the model is sensitive to the weight initialization , we repeat each training procedure 10 times ( 50 times for 10 k ) with the new random initialization of the weights and report the result on the test data with the lowest loss on the development data ."
+        }
+      }
+    }
+  }
+}

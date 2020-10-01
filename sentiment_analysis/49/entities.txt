@@ -1,0 +1,121 @@
+149	3	6	use
+149	7	26	Bi-directional GRUs
+149	27	33	having
+149	34	45	300 neurons
+149	53	64	followed by
+149	67	78	dense layer
+149	79	92	consisting of
+149	93	104	100 neurons
+150	0	9	Utilizing
+150	14	25	dense layer
+150	31	38	project
+150	43	57	input features
+150	58	60	of
+150	61	85	all the three modalities
+150	86	88	to
+150	93	108	same dimensions
+151	46	61	as a measure of
+151	62	76	regularization
+151	3	6	set
+151	7	14	dropout
+151	15	16	=
+151	17	29	0.5 ( MOSI )
+151	32	45	0.3 ( MOSEI )
+152	65	68	for
+152	73	88	Bi - GRU layers
+152	22	25	use
+152	26	33	dropout
+152	34	35	=
+152	36	48	0.4 ( MOSI )
+152	51	64	0.3 ( MOSEI )
+153	3	9	employ
+153	10	34	ReLu activation function
+153	35	37	in
+153	42	54	dense layers
+153	61	79	softmax activation
+153	35	37	in
+153	87	113	final classification layer
+154	0	3	For
+154	4	24	training the network
+154	28	31	set
+154	36	46	batch size
+154	47	48	=
+154	49	51	32
+154	54	57	use
+154	58	72	Adam optimizer
+154	73	77	with
+154	78	107	cross - entropy loss function
+154	112	121	train for
+154	122	131	50 epochs
+26	19	26	propose
+26	29	41	novel method
+26	47	54	employs
+26	57	134	recurrent neural network based multimodal multi-utterance attention framework
+26	135	138	for
+26	139	159	sentiment prediction
+31	46	65	novel fusion method
+31	69	80	focusing on
+31	81	105	inter-modality relations
+31	106	122	computed between
+31	127	159	target utterance and its context
+37	4	23	attention mechanism
+37	40	49	attend to
+37	54	85	important contextual utterances
+37	86	92	having
+37	93	125	higher relatedness or similarity
+37	173	177	with
+37	182	198	target utterance
+38	110	121	attend over
+38	126	147	contextual utterances
+38	148	160	by computing
+38	161	173	correlations
+38	174	179	among
+38	184	194	modalities
+38	195	197	of
+38	202	245	target utterance and the context utterances
+40	10	21	facilitates
+40	27	45	modality selection
+40	49	63	attending over
+40	68	89	contextual utterances
+40	99	108	generates
+40	109	149	better multimodal feature representation
+40	150	154	when
+40	161	188	modalities from the context
+40	193	206	combined with
+40	211	245	modalities of the target utterance
+2	37	67	Multi-modal Sentiment Analysis
+12	16	34	sentiment analysis
+158	0	3	For
+158	4	17	MOSEI dataset
+158	23	29	obtain
+158	30	48	better performance
+158	49	53	with
+158	54	58	text
+160	4	31	text - acoustic input pairs
+160	37	43	obtain
+160	48	66	highest accuracies
+160	67	71	with
+160	72	102	79. 74 % , 79.60 % and 79.32 %
+160	103	106	for
+160	107	151	MMMU - BA , MMUU - SA and MU - SA frameworks
+162	13	28	experiment with
+162	29	45	tri-modal inputs
+162	50	57	observe
+162	61	81	improved performance
+162	82	84	of
+162	85	115	79. 80 % , 79.76 % and 79.63 %
+162	73	76	for
+162	120	164	MMMU - BA , MMUU - SA and MU - SA frameworks
+164	4	27	performance improvement
+164	37	48	found to be
+164	49	85	statistically significant ( T-test )
+164	86	90	than
+164	95	129	bimodality and uni-modality inputs
+165	13	20	observe
+165	30	49	MMMU - BA framework
+165	50	57	reports
+165	62	75	best accuracy
+165	76	78	of
+165	79	88	79 . 80 %
+165	89	92	for
+165	97	110	MOSEI dataset

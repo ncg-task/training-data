@@ -1,0 +1,72 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "LR" : {
+          "has" : {
+            "logistic regression classifier" : {
+              "with" : "n-gram and pos-tag features",
+              "from sentence" : "LR : a logistic regression classifier with n-gram and pos-tag features ."
+            }
+          }
+        },
+        "LSTM - Final" : {
+          "is" : {
+            "biLSTM model" : {
+              "with" : "final state as a representation"
+            }
+          },
+          "from sentence" : "LSTM - Final ) : a biLSTM model with the final state as a representation ."
+        },
+        "LSTM - Loc" : {
+          "is" : {
+            "biLSTM model" : {
+              "with" : {
+                "state" : {
+                  "associated with" : "target position as a representation"
+                }
+              }
+            }
+          },
+          "from sentence" : "LSTM - Loc ) : a biLSTM model with the state associated with the target position as a representation ."
+        },
+        "LSTM + TA + SA" : {
+          "is" : {
+            "biLSTM model" : {
+              "introduces" : "complex target - level and sentence - level attention mechanisms"
+            }
+          },
+          "from sentence" : "LSTM + TA + SA ) : a biLSTM model which introduces complex target - level and sentence - level attention mechanisms ."
+        },
+        "SenticLSTM" : {
+          "is" : {
+            "upgraded version" : {
+              "of" : {
+                "LSTM + TA + SA model" : {
+                  "introduces" : "external information from Sentic - Net"
+                }
+              }
+            }
+          },
+          "from sentence" : "SenticLSTM : an upgraded version of the LSTM + TA + SA model which introduces external information from Sentic - Net ."
+        },
+        "Dmu - Entnet" : {
+          "is" : {
+            "bidirectional EntNet" : {
+              "with" : {
+                "external \" memory chains \"" : {
+                  "with" : {
+                    "delayed memory update mechanism" : {
+                      "to track" : "entities"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Dmu - Entnet : a bidirectional EntNet with external \" memory chains \" with a delayed memory update mechanism to track entities ."
+        }
+      }
+    }
+  }
+}

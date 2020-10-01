@@ -1,0 +1,55 @@
+{
+  "has" : {
+    "Model" : {
+      "named" : ["Fully Attention - Based Information Retriever ( FABIR )", {"from sentence" : "Inspired by the positive results of Vaswani et al. in machine translation , we have applied a similar architecture to the domain of question - answering , a model that we have named Fully Attention - Based Information Retriever ( FABIR ) ."}],
+      "to verify" : {
+        "how much performance" : {
+          "get exclusively from" : {
+            "attention mechanism" : {
+              "without combining it with" : "several other techniques"
+            }
+          }
+        },
+        "from sentence" : "Our goal then was to verify how much performance we can get exclusively from the attention mechanism , without combining it with several other techniques ."
+      },
+      "has" : {
+        "Convolutional attention" : {
+          "has" : {
+            "novel attention mechanism" : {
+              "encodes" : {
+                "many - to - many relationships" : {
+                  "between" : "words",
+                  "enabling" : "richer contextual representations"
+                }
+              }
+            }
+          },
+          "from sentence" : "Convolutional attention : a novel attention mechanism that encodes many - to - many relationships between words , enabling richer contextual representations ."
+        },
+        "Reduction layer" : {
+          "has" : {
+            "new layer design" : {
+              "fits" : {
+                "pipeline" : {
+                  "proposed by" : "Vaswani et al ."
+                }
+              }
+            }
+          },
+          "from sentence" : "Reduction layer : a new layer design that fits the pipeline proposed by Vaswani et al .
+and compresses the input embedding size for subsequent layers ( this is especially beneficial when employing pre-trained embeddings ) ."
+
+        },
+        "Column - wise cross - attention" : {
+          "modify" : "crossattention operation",
+          "propose" : {
+            "new technique" : {
+              "better suited to" : "question - answering"
+            }
+          },
+          "from sentence" : "Column - wise cross - attention : we modify the crossattention operation by and propose a new technique that is better suited to question - answering ."
+        }
+      }
+    }
+  }
+}

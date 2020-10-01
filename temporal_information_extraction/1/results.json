@@ -1,0 +1,93 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "TE3 Task C - Relation Only" : {
+          "see" : {
+            "UT - Time" : {
+              "is about" : {
+                "3 %" : {
+                  "better than" : {
+                    "AP - 1" : {
+                      "in" : "absolute value of F 1"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "We can see that UT - Time is about 3 % better than AP - 1 in the absolute value of F 1 , which is expected since UTTime included more advanced features derived from syntactic parse trees ."
+            }
+          },
+          "On top of" : {
+            "AP - 2" : {
+              "has" : {
+                "global inference step" : {
+                  "enforcing" : {
+                    "symmetry and transitivity constraints" : {
+                      "further improve" : {
+                        "F 1 score" : {
+                          "by" : "9.3 %"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "On top of AP - 2 , a global inference step enforcing symmetry and transitivity constraints ( \" AP + ILP \" ) can further improve the F 1 score by 9.3 % , which is consistent with previous observations ."
+          },
+          "has" : {
+            "SP + ILP" : {
+              "further improved" : {
+                "performance" : {
+                  "in" : "precision , recall , and F 1"
+                }
+              },
+              "reaching" : {
+                "F 1 score" : {
+                  "of" : "67.2 %"
+                }
+              },
+              "from sentence" : "SP + ILP further improved the performance in precision , recall , and F 1 significantly ( per the McNemar 's test with p < 0.0005 ) , reaching an F 1 score of 67.2 % ."
+            }
+          }
+        },
+        "TE3 Task C" : {
+          "improvement of" : {
+            "SP + ILP" : {
+              "over" : {
+                "AP" : {
+                  "was" : "small"
+                }
+              }
+            },
+            "from sentence" : "The improvement of SP + ILP ( line 4 ) over AP ( line 2 ) was small and AP + ILP ( line 3 ) was even worse than AP , which necessitates the use of a better approach towards vague TLINKs ."
+          },
+          "has" : {
+            "AP + ILP" : {
+              "even worse than" : "AP",
+              "from sentence" : "The improvement of SP + ILP ( line 4 ) over AP ( line 2 ) was small and AP + ILP ( line 3 ) was even worse than AP , which necessitates the use of a better approach towards vague TLINKs ."
+            }
+          },
+          "applying" : {
+            "postfiltering method" : {
+              "able to achieve" : {
+                "better performances" : {
+                  "using" : "SP + ILP"
+                }
+              }
+            },
+            "from sentence" : "By applying the postfiltering method proposed in Sec. 4 , we were able to achieve better performances using SP + ILP ( line 5 ) , which shows the effectiveness of this strategy ."
+          }
+        },
+        "Comparison with CAEVO" : {
+          "has" : {
+            "SP + ILP" : {
+              "outperformed" : "CAEVO",
+              "from sentence" : "SP + ILP outperformed CAEVO and if additional unlabeled dataset TE3 - SV was used , CoDL + ILP achieved the best score with a relative improvement in F 1 score being 6.3 % ."
+            }            
+          }
+        }
+      }
+    }
+  }
+}

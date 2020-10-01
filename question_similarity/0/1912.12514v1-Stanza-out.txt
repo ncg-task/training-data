@@ -1,0 +1,138 @@
+title
+Tha3aroon at NSURL - 2019 Task 8 : Semantic Question Similarity in Arabic
+abstract
+In this paper , we describe our team 's effort on the semantic text question similarity task of NSURL 2019 .
+Our top performing system utilizes several innovative data augmentation techniques to enlarge the training data .
+Then , it takes ELMo pre-trained contextual embeddings of the data and feeds them into an ON - LSTM network with self - attention .
+This results in sequence representation vectors that are used to predict the relation between the question pairs .
+The model is ranked in the 1st place with 96.499 F1score ( same as the second place F1-score ) and the 2nd place with 94.848 F1- score ( differs by 1.076 F1-score from the first place ) on the public and private leaderboards , respectively .
+Introduction
+Semantic Text Similarity ( STS ) problems are both real - life and challenging .
+For example , in the paraphrase identification task , STS is used to predict if one sentence is a paraphrase of the other or not .
+Also , in answer sentence selection task , it is utilized to determine the relevance between question - answer pairs and rank the answers sentences from the most relevant to the least .
+This idea can also be applied to search engines in order to find documents relevant to a query .
+A new task has been proposed by Mawdoo3 1 company with a new dataset provided by their data annotation team for Semantic Question Similarity ( SQS ) for the Arabic language .
+SQS is a variant of STS , which aims to compare a pair of questions and determine whether they have the same meaning or not .
+The SQS in Arabic task is one of the shared tasks of the Workshop on NLP Solutions for Under Resourced Languages and it consists of 12K questions pairs .
+In this paper , we describe our team 's efforts to tackle this task .
+After preprocessing the data , we use four data augmentation steps to enlarge the training data to about four times the size of the original training data .
+We then build a neural network model with four components .
+The model uses ELMo ( which stands for Embeddings from Language Models ) pre-trained contextual embeddings as an input and builds sequence representation vectors that are used to predict the relation between the question pairs .
+The task is hosted on Kaggle 2 platform and our model is ranked in the first place with 96.499 F1- score ( same as the second place F1-score ) and in the second place with 94.848 F1 - score ( differs by 1.076 F1-score from the first place ) on the public and private leaderboards , respectively .
+The rest of this paper is organized as follows .
+In Section 2 , we describe our methodology , including data preprocessing , data augmentation , and model structure , while in Section 3 , we present our experimental results and discuss some insights from our model .
+Finally , the paper is concluded in Section 4 .
+Methodology
+In this section , we present a detailed description of our model .
+We start by discussing the preprecessing steps we take before going into the details of the first novel aspect of our work , which is the data augmentation techniques .
+We then discuss the neural network model starting from the input all the way to the decision step .
+The implementation is available on a public repository .
+3
+Data Preprocessing
+In this work , we only consider one preprocessing step , which is to separate the punctuation marks shown in from the letters .
+For example , if the question was : " " , then it will be processed as follows : " " .
+This is done to preserve as much information as possible in the questions while keeping the words clear of punctuations .
+Data Augmentation
+The training data contains 11,997 question pairs : 5,397 labeled as 1 ( i.e. , similar ) and 6,600 labeled as 0 ( i.e. , not similar ) .
+To obtain a larger dataset , we augment the data using the following rules .
+Suppose we have questions A , B and C
+Positive Transitive :
+If A is similar to B , and B is similar to C , then A is similar to C.
+Negative Transitive :
+If A is similar to B , and B is NOT similar to C , then A is NOT similar to C.
+Note : The previous two rules generates 5,490 extra examples ( bringing the total up to 17,487 ) .
+Symmetric :
+If A is similar to B then B is similar to A , and if A is not similar to B then B is not similar to A.
+Note :
+This rule doubles the number of examples to 34,974 in total .
+shows the growth of the training dataset after each data augmentation step .
+Model Structure
+We now discuss our model structure , which is shown in .
+As the figure shows , the model structure can be divided into the following components / layers : input layer , sequence representation extraction layer , merging layer and decision layer .
+The following subsections explain each layer / component in details .
+Input
+To build meaningful representations for the input sequences , we use the Arabic ELMo pre-trained model 4 to extract contextual words embeddings with size 1024 and feed them as input to our model .
+The representations extracted from the ELMo model are the averaged sum of word encoder and both first and second Long Short - Term Memory ( LSTM ) hidden layers .
+These representations are affected by the context in which they appear .
+For example , the word " " will have different embedding vectors related to the following two sentences as they have different Translation :
+Ali went away .
+Sequence Representation Extractor
+This component takes the ELMo embeddings related to each word in the question as an input and feeds them into two a special kind of bidirectional LSTM layers called Ordered Neurons LSTM ( ON - LSTM ) 5 introduced in with 256 hidden units , 20 % dropout rate , and 8 as the chunk size for each of them .
+Then , it applies sequence weighted attention 6 proposed by on the outputs of the second ON - LSTM layer to get the final question representation .
+This component uses the same weights to compute representations for each question in the pair .
+The details of this component are as follows .
+Since NLP data are structured in a hierarchical manner , the authors of ON - LSTM proposed anew form of update and activation functions ( in order to enforce a bias towards structuring a hierarchy of the data ) to the standard LSTM model reported below :
+The newly proposed activation function is cumax = cumsum ( sof tmax ( x ) ) , where cumsum denotes the cumulative sum function .
+Among the desired properties of this function is to control the updates on the memory cell such that the higher ranking neurons get updated less frequently ( storing long - term and global information ) compared to the lower ranking neurons , which are updated more frequently ( storing short - term and local information ) .
+This makes the neurons updates dependent on each other in contrast to the updates on the standard LSTM neurons .
+The following equations define the new master input and forget gates and the new memory cell update function based on the new activation func -
+The attention mechanism ( inspired by ) allows the model to learn to decide the importance of each word and build the final question representation vector based on important words only , while tuning out less important words .
+With a single parameter , w a , the attention mechanism can be described as follows :
+The weight matrix w a is the only new trainable parameter which learns the attention mechanism over the outputs of the second ON - LSTM layer .
+To calculate the importance scores , at , for each time step , it first multiplies each time step output , ht , by the weight matrix , w a , and normalizes the results using a Softmax function .
+Finally , the final sequence representation , v , is the weighted sum overall ON - LSTM outputs using the importance scores calculated earlier as weights .
+Merging Technique
+After extracting the representations related to each question , we merge them using pairwise squared distance function applied to the representation vectors of the two questions in each question pair .
+More formally , if V 1 and V 2 are these representation vectors , then , the merged representation vector V m can be expressed as follows :
+This component allows for the Symmetric augmentation step ( Section 2.2 ) to enhance the results , since the examples are computationally different ( in the back propagation step ) from the ( B , A ) examples .
+Deep Neural Network
+The final component is a deep neural network that consists of four fully - connected layers with 1024 , 512 , 256 , and 128 units using ReLU activation function and 20 % dropout rate applied to each layer .
+This network takes the merged representation vector , V m , as an input and predicts the label using a Sigmoid function as an output .
+Experiments and Results
+In this section , we start by discussing our experimental setup .
+We then discuss all experiments conducted and provide detailed analysis of their results .
+Experimental Setup
+All experiments discussed in this work have been done on the Google Colab 7 environment using Tesla T4 GPU accelerator with the following hyperparameters :
+The experiments are divided into two sets .
+The first set aims to explore the effect of the Recurrent Neural Network ( RNN ) cell type , while the second set aims to explore the effect of the data augmentation techniques mentioned in Section 2.2 .
+For each experiment , five models are trained and the following results are reported :
+Minimum F1 score gained on the test set .
+Maximum F1 score gained on the test set .
+Average F1 score gained from the five trained models .
+Majority Voting F1 score gained by ensembling the five trained models .
+Effect of RNN Cell Type
+In this experiments set , we use the same structure described in Section 2.3 while changing the RNN cell type only .
+We use all 45,514 examples from the augmented dataset in the training process .
+The tested RNN cells are : Gated Recurrent Unit ( GRU ) , LSTM ) and ON - LSTM .
+The latter one is tested using two chunk sizes , 4 and 8 , in order to explore the effect of chunk size on the training process and the size of the model .
+shows the model size in terms of trainable parameters and the training time for each RNN cell type , while shows the F1-scores of the model using different RNN cells .
+Best results are shown in bold .
+The tables show that while GRU cells are the most efficient , the ON - LSTM cells ( with chunk size 8 ) are the most effective ( in terms of all considered measures ) .
+Effect of Data Augmentation
+In this experiments set , we use the RNN cell type that gives the best results in Section 3.2 ( ON - LSTM with chunk size 8 ) and the same model structure described in Section 2.3 to explore the effect of data augmentation steps mentioned in Section 2.2 .
+The data augmentation steps have an effect on two factors , the training time and the accuracy measurement ( F1 - score ) .
+shows the av - 7 https://colab.research.google.com erage training time over five runs for each data augmentation step .
+Moreover , shows the F1-scores of the trained model using different data augmentation types , best results shown in bold .
+The tables show that each augmentation step affects the model 's efficiency negatively .
+This is expected since each step incrementally increases the size of the dataset .
+On the other hand , not each increment step has a positive effect on the model 's effectiveness .
+Such trends are worth exploring in a more exhaustive study .
+Finally , it is worth mentioning that the last experiments in both experiment sets are the same .
+So , they both have the same results .
+Other Attempts
+We test several other techniques to explore how they might affect our model .
+For example , using pre-trained FastText embeddings as an input to our model yields worse F1score on both public and private leaderboards with 94.254 and 93.118 , respectively , compared with the ELMo contextual embeddings model .
+In another experiment , we use the thought vector outputted from the second ON - LSTM layer as input for the decision component .
+However , the sequence weighted attention gives better results by about 1 point of the F1-score .
+Moreover , an attempt to overcome the weakness of the Arabic ELMo model is done by translating the data to English using Google Translate 8 and treating the problem as an English SQS problem instead , but the results are much worse with 88.868 and 87.504 F1 - scores on public and private leaderboards , respectively .
+This is probably because a lot of information is lost during the translation process .
+Discussion
+This section briefly analyzes the questions representations learnt by our model .
+With the sequence weighted attention layer , the model reduces all the information about the sequence extracted using the ON - LSTMs down to a 512 fixed - size vector .
+By extracting these vectors from our best model and plotting them on a 2D plane using t- SNE ( Maaten and Hinton , 2008 ) dimensionality reduction algorithm , we notice some very useful observations .
+For example , the model learns to map questions that ask about the same thing to have nearby representations in the vector space such as the questions in with the form : " How to prepare ' something ' ? " .
+The same thing goes for the questions in with the form : " What is the definition of ' something ' ? " .
+Ina similar manner , in , the questions ask about different types of languages like " What is the formal language in Portugal ? " and " What is PHP language ? " are close , as well as , the questions in that ask about places like " Where is Sweden ? " ,
+" Where is the Karak area in Jordan ? " , and " Where is the Kremlin Castle ? " .
+To further illustrate the usefulness of the sequence weighted attention layer , shows that the attention layer learns to focus more on the key words in the questions that would determine what the question is actually asking about .
+This allows the model to make better decisions for whether the the questions are similar or not , even if the questions have similar words but ask about different things .
+The first and second questions ask about " What is the general manager ? " .
+So , the attention layer focuses on " the general manager " which is " " .
+However , in the third and fourth questions , one asks " What is the most beautiful thing that is said about death ? " and the other ones asks " What is death ? " , although both questions are related to " death " which is "
+" but the attention layer distinguishes them as not similar , wherein the former one , the focus is concentrated by order on the words " " , "
+" and " " ( " said " , " most beautiful " and " death " ) , while the latter one focuses mostly on " " ( " death " ) .
+Conclusion
+In this paper , we described our team 's effort on the semantic text question similarity task of NSURL 2019 .
+Our top performing system utilizes several innovative data augmentation techniques to enlarge the training data .
+Then , it takes ELMo pre-trained contextual embeddings as an input and builds sequence representation vectors that are used to predict the relation between the question pairs .
+The model was ranked in the 1st place with 96.499 F1- score ( same as the second place F1-score ) and the 2nd place with 94.848 F1- score ( differs by 1.076 F1-score from the first place ) on the public and private leaderboards , respectively .

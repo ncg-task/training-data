@@ -1,0 +1,48 @@
+11	47	83	https://yale-lily. github.io/ spider
+34	20	23	for
+34	64	114	new complex and cross-domain semantic parsing task
+34	120	129	introduce
+34	130	136	Spider
+34	145	156	consists of
+34	157	170	200 databases
+34	171	175	with
+34	176	191	multiple tables
+34	194	210	10,181 questions
+34	217	256	5,693 corresponding complex SQL queries
+35	91	112	creates and annotates
+35	121	130	questions
+35	135	146	SQL queries
+35	55	64	including
+35	157	178	different SQL clauses
+35	179	186	such as
+35	187	211	joining and nested query
+2	41	48	Dataset
+2	53	96	Complex and Cross - Domain Semantic Parsing
+2	101	116	Text - to - SQL
+2	53	116	Complex and Cross - Domain Semantic Parsing and Text - to - SQL
+13	0	23	Semantic parsing ( SP )
+19	22	24	SP
+248	4	16	performances
+248	17	19	of
+248	24	52	Seq2Seq - based basic models
+248	117	120	are
+248	121	129	very low
+248	53	62	including
+248	24	31	Seq2Seq
+248	73	92	Seq2Seq + Attention
+248	99	116	Seq2Seq + Copying
+253	14	32	SQLNet and TypeSQL
+253	38	45	utilize
+253	46	71	SQL structure information
+253	72	80	to guide
+253	85	107	SQL generation process
+253	108	132	significantly outperform
+253	133	153	other Seq2Seq models
+255	41	51	all models
+255	52	65	struggle with
+255	66	89	WHERE clause prediction
+258	17	37	overall performances
+258	38	40	of
+258	41	51	all models
+258	52	55	are
+258	56	59	low

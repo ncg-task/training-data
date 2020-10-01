@@ -1,0 +1,36 @@
+{
+  "has" : {
+    "Approach" : {
+      "in" : {
+        "context" : {
+          "of" : {
+            "simple one - to - many multi -task learning ( MTL ) framework" : {
+              "wherein" : {
+                "single recurrent sentence encoder" : {
+                  "shared across" : "multiple tasks"
+                }
+              },
+              "from sentence" : "Our work exploits this in the context of a simple one - to - many multi -task learning ( MTL ) framework , wherein a single recurrent sentence encoder is shared across multiple tasks ."
+            }
+          }
+        }
+      },
+      "aims at" : {
+        "learning" : {
+          "has" : "fixed - length distributed sentence representations",
+          "from sentence" : "While our work aims at learning fixed - length distributed sentence representations , it is not always practical to assume that the entire \" meaning \" of a sentence can be encoded into a fixed - length vector ."
+        }
+      },
+      "combine" : {
+        "benefits" : {
+          "of" : {
+            "diverse sentence - representation learning objectives" : {
+              "into" : "single multi-task framework",
+              "from sentence" : "The primary contribution of our work is to combine the benefits of diverse sentence - representation learning objectives into a single multi-task framework ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

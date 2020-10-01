@@ -1,0 +1,64 @@
+{
+  "has" : {
+    "Results" : {
+      "across" :{
+        "all three datasets" : {
+          "including" : "all three annotations of BROADCAST",
+          "has" : {
+            "gaze features" : {
+              "lead to" : {
+                "improvements" : {
+                  "over" : "baseline 3 - layer bi - LSTM"
+                }
+              },
+              "from sentence" : "We observe that across all three datasets , including all three annotations of BROADCAST , gaze features lead to improvements over our baseline 3 - layer bi - LSTM ."
+            },
+            "CASCADED - LSTM" : {
+              "is" : {
+                "consistently better" : {
+                  "than" : "MULTITASK - LSTM"
+                }
+              },
+              "from sentence" : "Also , CASCADED - LSTM is consistently better than MULTITASK - LSTM . : Results ( F1 ) ."
+            }
+          }
+        }
+      },
+      "For" : {
+        "all three datasets" : {
+          "has" : {
+            "inclusion" : {
+              "of" : {
+                "gaze measures" : {
+                  "name" : ["first pass duration ( FP )", "regression duration ( Regr. )"],
+                  "leads to" : {
+                    "improvements" : {
+                      "over" : "baseline"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "For all three datasets , the inclusion of gaze measures ( first pass duration ( FP ) and regression duration ( Regr. ) ) leads to improvements over the baseline ."
+        }
+      },
+      "With" : {
+        "harder datasets" : {
+          "impact of" : {
+            "gaze information" : {
+              "becomes" : "stronger",
+              "favouring" : "cascaded architecture",
+              "with" : {
+                "improvements" : {
+                  "using" : ["first pass duration", "regression duration"]
+                }
+              }
+            }
+          },
+          "from sentence" : "With the harder datasets , the impact of the gaze information becomes stronger , consistently favouring the cascaded architecture , and with improvements using both first pass duration and regression duration , the late measure associated with interpretation of content ."
+        }
+      }
+    }
+  }  
+}

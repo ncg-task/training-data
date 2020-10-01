@@ -1,0 +1,10 @@
+{
+  "has research problem" : [
+    ["Aspect - term Sentiment Analysis", {"from sentence" : "Variational Semi-supervised Aspect - term Sentiment Analysis via Transformer"}],
+    ["Aspect - term sentiment analysis ( ATSA )", {"from sentence" : "Aspect - term sentiment analysis ( ATSA ) is a long - standing challenge in natural language processing ."}],
+    ["aspect - term sentiment analysis ( ATSA )", {"from sentence" : "Aspect based sentiment analysis ( ABSA ) has two sub - tasks , namely aspect - term sentiment analysis ( ATSA ) and aspect - category sentiment analysis ( ACSA ) ."}],
+    ["aspect - category sentiment analysis ( ACSA )", {"from sentence" : "Aspect based sentiment analysis ( ABSA ) has two sub - tasks , namely aspect - term sentiment analysis ( ATSA ) and aspect - category sentiment analysis ( ACSA ) ."}],
+    ["ACSA", {"from sentence" : "ACSA is to infer the sentiment polarity with regard to the predefined categories , e.g. , the aspect food , price , ambience ."}],
+    ["ATSA", {"from sentence" : "On the other hand , ATSA aims at classifying the sentiment polarity of a given aspect word or phrase in the text ."}]
+  ] 
+}

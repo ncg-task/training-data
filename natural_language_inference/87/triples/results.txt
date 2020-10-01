@@ -1,0 +1,8 @@
+(Contribution||has||Results)
+(Results||adding||extra answer verifier module)
+(extra answer verifier module||yield||better result)
+(Results||has||outperforms)
+(outperforms||achieves||2nd place)
+(2nd place||when submitting||SG - NET)
+(2nd place||on||leaderboard)
+(outperforms||has||all the published works)

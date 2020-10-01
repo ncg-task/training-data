@@ -1,0 +1,5 @@
+(Contribution||has||Dataset)
+(Dataset||contains||more than 100 k questions)
+(Dataset||collected||first large - scale dataset of questions and answers)
+(first large - scale dataset of questions and answers||called||SimpleQuestions)
+(first large - scale dataset of questions and answers||based on||KB)

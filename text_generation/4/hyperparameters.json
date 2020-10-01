@@ -1,0 +1,44 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "has" : {
+        "Skip - Thought encoder" : {
+          "encodes" : {
+            "sentences" : {
+              "with" : {
+                "length" : {
+                  "less than" : "30 words"
+                }
+              },
+              "using" : {
+                "2400 GRU units" : {
+                  "with" : {
+                    "word vector" : {
+                      "dimensionality of" : {
+                        "620" : {
+                          "to produce" : "4800 - dimensional combineskip vectors"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "The Skip - Thought encoder for the model encodes sentences with length less than 30 words using 2400 GRU units with word vector dimensionality of 620 to produce 4800 - dimensional combineskip vectors . ."
+        },
+        "combine - skip vectors" : {
+          "with" : {
+            "first 2400 dimensions" : {
+              "being" : "uni-skip model"
+            },
+            "last 2400 bi-skip model" : {
+              "found to be" : "best performing in the experiments"
+            }
+          },
+          "from sentence" : "The combine - skip vectors , with the first 2400 dimensions being uni-skip model and the last 2400 bi-skip model , are used as they have been found to be the best performing in the experiments"
+        }
+      }
+    }
+  }
+}

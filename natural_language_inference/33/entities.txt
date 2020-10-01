@@ -1,0 +1,131 @@
+26	23	25	in
+26	30	37	context
+26	38	40	of
+26	43	104	simple one - to - many multi -task learning ( MTL ) framework
+26	107	114	wherein
+26	117	150	single recurrent sentence encoder
+26	154	167	shared across
+26	168	182	multiple tasks
+29	15	22	aims at
+29	23	31	learning
+29	32	83	fixed - length distributed sentence representations
+31	43	50	combine
+31	55	63	benefits
+31	25	27	of
+31	67	120	diverse sentence - representation learning objectives
+31	121	125	into
+31	128	155	single multi-task framework
+2	45	109	LEARNING GENERAL PURPOSE DISTRIBUTED SEN - TENCE REPRESENTATIONS
+4	86	129	distributed vector representations of words
+6	36	82	learning representations of sequences of words
+18	39	90	learning general - purpose sentence representations
+136	24	30	adding
+136	31	41	more tasks
+136	42	50	improves
+136	55	75	transfer performance
+136	76	78	of
+136	79	88	our model
+137	0	10	Increasing
+137	15	23	capacity
+137	24	44	our sentence encoder
+137	45	49	with
+137	50	75	more hidden units ( + L )
+137	76	86	as well as
+137	90	115	additional layer ( + 2L )
+137	121	128	lead to
+137	129	158	improved transfer performance
+138	3	10	observe
+138	11	16	gains
+138	17	19	of
+138	20	31	1.1 - 2.0 %
+138	32	34	on
+138	39	69	sentiment classification tasks
+138	72	74	MR
+138	77	79	CR
+138	82	86	SUBJ
+138	89	93	MPQA
+138	96	100	over
+138	101	110	Infersent
+143	27	48	0.2-0.5 % improvement
+143	49	53	over
+143	58	86	decomposable attention model
+139	3	14	demonstrate
+139	15	32	substantial gains
+139	6	8	on
+139	36	40	TREC
+139	43	46	6 %
+139	47	51	over
+139	52	61	Infersent
+139	66	77	roughly 2 %
+139	47	51	over
+139	87	97	CNN - LSTM
+139	102	115	outperforming
+139	123	154	competitive supervised baseline
+140	3	6	see
+140	7	20	similar gains
+140	23	28	2.3 %
+140	31	33	on
+140	34	68	paraphrase identification ( MPRC )
+140	71	78	closing
+140	83	86	gap
+140	31	33	on
+140	90	111	supervised approaches
+140	112	124	trained from
+140	125	132	scratch
+141	4	15	addition of
+141	16	36	constituency parsing
+141	37	45	improves
+141	46	57	performance
+141	10	12	on
+141	61	94	sentence relatedness ( SICK - R )
+141	99	122	entailment ( SICK - E )
+142	8	17	show that
+142	25	33	training
+142	37	40	MLP
+142	41	50	on top of
+142	51	85	our fixed sentence representations
+142	86	97	outperforms
+142	98	144	several strong & complex supervised approaches
+142	145	153	that use
+142	154	174	attention mechanisms
+144	0	10	When using
+144	18	32	small fraction
+144	33	35	of
+144	40	53	training data
+144	101	108	able to
+144	109	119	outperform
+144	124	159	Siamese and Multi - Perspective CNN
+144	5	10	using
+144	166	177	roughly 6 %
+144	33	35	of
+144	185	207	available training set
+145	8	18	outperform
+145	23	39	Deconv LVM model
+150	0	15	Representations
+150	16	35	learned solely from
+150	36	39	NLI
+150	43	52	appear to
+150	53	59	encode
+150	60	66	syntax
+150	71	89	incorporation into
+150	90	114	our multi-task framework
+150	115	123	does not
+150	124	131	amplify
+150	137	143	signal
+147	30	42	observe that
+147	47	70	learned word embeddings
+147	71	74	are
+147	75	86	competitive
+147	87	91	with
+147	92	107	popular methods
+147	108	115	such as
+147	116	121	GloVe
+147	124	132	word2vec
+147	139	147	fasttext
+151	28	52	sentence characteristics
+151	53	60	such as
+151	61	82	length and word order
+151	83	86	are
+151	87	101	better encoded
+151	111	122	addition of
+151	123	130	parsing

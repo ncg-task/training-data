@@ -1,0 +1,76 @@
+{
+  "has" : {
+    "Model" : {
+      "suggesting that" : {
+        "eye - tracking recordings" : {
+          "to induce" : {
+            "better models" : {
+              "for" : {
+                "sentence compression" : {
+                  "for" : "text simplication"
+                }
+              }
+            }
+          },
+          "from sentence" : "We go beyond this by suggesting that eye - tracking recordings can be used to induce better models for sentence compression for text simplification ."
+        }
+      },
+      "show how to use" : {
+        "existing eye - tracking recordings" : {
+          "to improve" : {
+            "induction" : {
+              "of" : {
+                "Long Short - Term Memory models ( LSTMs )" : {
+                  "for" : "sentence compression"
+                }
+              }
+            }
+          },
+          "from sentence" : "Specifically , we show how to use existing eye - tracking recordings to improve the induction of Long Short - Term Memory models ( LSTMs ) for sentence compression ."
+        }
+      },
+      "has" : {
+        "Our proposed model" : {
+          "does not require" : {
+            "gaze data and the compression data" : {
+              "come from" : "same source"
+            }
+          },
+          "from sentence" : "Our proposed model does not require that the gaze data and the compression data come from the same source ."
+        },
+        "intriguing potential" : {
+          "of" : {
+            "this work" : {
+              "in deriving" : {
+                "sentence simplification models" : {
+                  "that are" : {
+                    "personalized" : {
+                      "for" : "individual users",
+                      "based on" : "their reading behavior"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "While not explored here , an intriguing potential of this work is in deriving sentence simplification models that are personalized for individual users , based on their reading behavior ."
+        }
+      },
+      "use" : {
+        "gaze data" : {
+          "from" : {
+            "readers" : {
+              "of" : "Dundee Corpus"
+            }
+          },
+          "to improve" : {
+            "sentence compression results" : {
+              "on" : "several datasets"
+            }
+          },          
+          "from sentence" : "Indeed , in this work we use gaze data from readers of the Dundee Corpus to improve sentence compression results on several datasets ."
+        }
+      }
+    }
+  }
+}

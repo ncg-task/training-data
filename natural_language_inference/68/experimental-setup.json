@@ -1,0 +1,37 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "tokenize" : ["all the passages , questions and answers", {"from sentence" : "We first tokenize all the passages , questions and answers ."}],
+      "use" : {
+        "word embeddings" : {
+          "from" : "GloVe",
+          "to initialize" : "model",
+          "from sentence" : "We use word embeddings from GloVe to initialize the model ."
+        },
+        "ADAMAX" : {
+          "with" : {
+            "coefficients" : {
+              "has" : "? 1 = 0.9 and ? 2 = 0.999",
+              "to optimize" : "model"
+            }
+          },
+          "from sentence" : "We use ADAMAX with the coefficients ? 1 = 0.9 and ?
+2 = 0.999 to optimize the model ."
+
+        }
+      },
+      "has" : {
+        "Words" : {
+          "not found in" : "Glo Ve",
+          "initialized as" : "zero vectors",
+          "from sentence" : "Words not found in Glo Ve are initialized as zero vectors ."
+        },
+        "dimensionality l" : {
+          "of" : "hidden layers",
+          "set to be" : "150 or 300",
+          "from sentence" : "The dimensionality l of the hidden layers is set to be 150 or 300 ."
+        }
+      }
+    }
+  }
+}

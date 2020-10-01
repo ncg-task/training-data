@@ -1,0 +1,7 @@
+(Contribution||has||Model)
+(Model||exploit||dilated CNN)
+(dilated CNN||for||flexibility)
+(flexibility||in varying the amount of||conditioning context)
+(Model||propose||dilated CNN)
+(dilated CNN||as||decoder)
+(decoder||in||VAE)

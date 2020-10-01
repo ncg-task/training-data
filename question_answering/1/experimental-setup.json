@@ -1,0 +1,89 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "has" : {
+        "Each paragraph and question" : {
+          "tokenized by" : "regular - expression - based word tokenizer ( PTB Tokenizer )",
+          "fed into" : "model",
+          "from sentence" : "Each paragraph and question are tokenized by a regular - expression - based word tokenizer ( PTB Tokenizer ) and fed into the model ."
+        },
+        "hidden state size ( d )" : {
+          "of" : {
+            "model" : {
+              "is" : "100"
+            }
+          },
+          "from sentence" : "The hidden state size ( d ) of the model is 100 ."
+        },
+        "The model" : {
+          "has about" : "2.6 million parameters",
+          "from sentence" : "The model has about 2.6 million parameters ."
+        },
+        "dropout ) rate" : {
+          "of" : {
+            "0.2" : {
+              "used for" : ["CNN", "all LSTM layers", {"linear transformation" : {"before" : {"softmax" : {"for" : "answers"}}}}]
+            }
+          },
+          "from sentence" : "A dropout ) rate of 0.2 is used for the CNN , all LSTM layers , and the linear transformation before the softmax for the answers ."
+        },
+        "training process" : {
+          "takes" : {
+            "roughly 20 hours" : {
+              "on" : "single Titan X GPU"
+            }
+          },
+          "from sentence" : "The training process takes roughly 20 hours on a single Titan X GPU ."
+        }
+      },
+      "use" : {
+        "100 1D filters" : {
+          "for" : "CNN char embedding",
+          "with" : "width of 5",
+          "from sentence" : "We use 100 1D filters for CNN char embedding , each with a width of 5 ."
+        },
+        "AdaDelta ( Zeiler , 2012 ) optimizer" : {
+          "with" : {
+            "minibatch size" : {
+              "of" : "60"
+            },
+            "initial learning rate" : {
+              "of" : "0.5",
+              "for" : "12 epochs"
+            }
+          },
+          "from sentence" : "We use the AdaDelta ( Zeiler , 2012 ) optimizer , with a minibatch size of 60 and an initial learning rate of 0.5 , for 12 epochs ."
+        }
+      },
+      "During" : {
+        "training" : {
+          "has" : {
+            "moving averages" : {
+              "of" : {
+                "all weights" : {
+                  "of" : "model",
+                  "maintained with" : {
+                    "exponential decay rate" : {
+                      "of" : "0.999"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "During training , the moving averages of all weights of the model are maintained with the exponential decay rate of 0.999 ."
+        }
+      },
+      "At" : {
+        "test time" : {
+          "are used" : {
+            "moving averages" : {
+              "instead of" : "raw weights"
+            }
+          },
+          "from sentence" : "At test time , the moving averages instead of the raw weights are used ."
+        }
+      }
+    }
+  }
+}

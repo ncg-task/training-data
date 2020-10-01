@@ -1,0 +1,133 @@
+146	3	8	apply
+146	13	27	proposed model
+146	28	30	to
+146	31	70	aspect - level sentiment classification
+147	0	2	In
+147	3	18	our experiments
+147	21	37	all word vectors
+147	38	41	are
+147	42	53	initialized
+147	54	56	by
+147	57	62	Glove
+148	4	26	word embedding vectors
+148	31	45	pre-trained on
+148	49	65	unlabeled corpus
+148	66	71	whose
+148	72	76	size
+148	77	79	is
+148	80	97	about 840 billion
+149	4	20	other parameters
+149	25	39	initialized by
+149	40	48	sampling
+149	49	53	from
+149	56	88	uniform distribution U (?? , ? )
+150	4	13	dimension
+150	79	82	are
+150	83	86	300
+150	14	16	of
+150	17	29	word vectors
+150	32	49	aspect embeddings
+150	58	78	size of hidden layer
+151	4	10	length
+151	11	13	of
+151	14	31	attention weights
+151	39	46	same as
+151	4	10	length
+151	11	13	of
+151	61	69	sentence
+152	0	6	Theano
+152	10	18	used for
+152	19	31	implementing
+152	36	57	neural network models
+153	3	10	trained
+153	11	21	all models
+153	22	26	with
+153	29	39	batch size
+153	40	42	of
+153	43	54	25 examples
+153	63	71	momentum
+153	40	42	of
+153	75	78	0.9
+153	81	108	L 2 - regularization weight
+153	40	42	of
+153	112	117	0.001
+153	122	143	initial learning rate
+153	40	42	of
+153	147	151	0.01
+153	152	155	for
+153	156	163	AdaGrad
+24	19	26	propose
+24	30	49	attention mechanism
+24	50	60	to enforce
+24	65	70	model
+24	71	80	to attend
+24	88	116	important part of a sentence
+25	3	9	design
+25	13	52	aspect - tosentence attention mechanism
+25	58	76	can concentrate on
+25	81	89	key part
+25	90	92	of
+25	24	32	sentence
+25	104	109	given
+25	13	19	aspect
+26	3	10	explore
+26	15	36	potential correlation
+26	37	39	of
+26	40	69	aspect and sentiment polarity
+26	70	72	in
+26	73	112	aspect - level sentiment classification
+27	9	19	to capture
+27	20	41	important information
+27	42	56	in response to
+27	59	71	given aspect
+27	77	83	design
+27	87	106	attentionbased LSTM
+2	27	66	Aspect - level Sentiment Classification
+4	65	83	sentiment analysis
+15	29	68	aspect - level sentiment classification
+176	0	4	LSTM
+176	7	20	Standard LSTM
+176	21	36	can not capture
+176	41	59	aspect information
+176	48	50	in
+176	63	71	sentence
+182	9	34	can not take advantage of
+182	39	57	aspect information
+182	91	108	worst performance
+183	0	9	TD - LSTM
+183	22	33	can improve
+183	38	49	performance
+183	50	52	of
+183	53	73	sentiment classifier
+183	74	85	by treating
+183	89	95	aspect
+183	65	67	as
+183	101	107	target
+184	6	17	there is no
+184	18	37	attention mechanism
+184	1	3	in
+184	41	50	TD - LSTM
+184	56	63	can not
+184	66	70	know
+184	73	78	which
+184	79	84	words
+184	85	88	are
+184	89	98	important
+184	99	102	for
+184	105	117	given aspect
+186	24	33	TC - LSTM
+186	34	42	performs
+186	43	48	worse
+186	49	53	than
+186	54	72	LSTM and TD - LSTM
+190	0	11	ATAE - LSTM
+190	21	30	addresses
+190	35	46	shortcoming
+190	47	49	of
+190	54	66	unconformity
+190	67	74	between
+190	75	109	word vectors and aspect embeddings
+190	125	132	capture
+190	137	163	most important information
+190	164	178	in response to
+190	181	193	given aspect

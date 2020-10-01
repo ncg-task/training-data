@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Multi - Paragraph Reading Comprehension", {"from sentence" : "Simple and Effective Multi - Paragraph Reading Comprehension"}],
+    ["neural paragraph - level question answering", {"from sentence" : "We consider the problem of adapting neural paragraph - level question answering models to the case where entire documents are given as input ."}],
+    ["answering questions given a related paragraph", {"from sentence" : "The recent success of neural models at answering questions given a related paragraph suggests neural models have the potential to be a key part of a solution to this problem ."}]
+  ]
+}

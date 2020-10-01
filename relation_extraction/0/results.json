@@ -1,0 +1,88 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "Multiple Relations" : {
+          "find that" : {
+            "modifying our objective" : {
+              "to include" : {
+                "multiple relations" : {
+                  "improves" : {
+                    "recall" : {
+                      "of" : "our system",
+                      "on" : "relations",
+                      "leading to" : {
+                        "slight improvement" : {
+                          "on" : "overall performance on relations"
+                        }
+                      }
+                    }
+                  }
+                }  
+              },
+              "from sentence" : "Multiple Relations
+We find that modifying our objective to include multiple relations improves the recall of our system on relations , leading to slight improvement on the overall performance on relations ."
+
+            }
+          }
+        },
+        "PHYS relation" : {
+          "is" : {
+            "easier identified" : {
+              "with respect to" : {
+                "GPE entity" : {
+                  "than" : "PER entity"                  
+                }
+              }
+            }
+          },
+          "from sentence" : "PHYS relation is easier identified with respect to GPE entity than PER entity ."
+        }
+      },
+      "adding" : {
+        "bidirectional encoding" : {
+          "to" : "our system",
+          "find" : {
+            "significantly improve" : {
+              "has" : {
+                "performance" : {
+                  "of" : "our system",
+                  "compared to" : "left - to - right encoding"
+                }
+              }
+            }
+          },
+          "from sentence" : "By adding bidirectional encoding to our system , we find that we can significantly improve the performance of our system compared to left - to - right encoding ."
+        }
+      },
+      "improves" : {
+        "precision" : {
+          "compared to" : {
+            "left - toright decoding" : {
+              "combined with" : "multiple relations objective"
+            }
+          },
+          "from sentence" : "It also improves precision compared to left - toright decoding combined with multiple relations objective ."
+        }
+      },
+      "find that for" : {
+        "some relations" : {
+          "is" : {
+            "easier" : {
+              "to detect" : {
+                "with respect to" : {
+                  "has" : {
+                    "one of the entities" : {
+                      "in" : "entity pair"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "We find that for some relations it is easier to detect them with respect to one of the entities in the entity pair ."
+        }
+      }
+    }
+  }
+}

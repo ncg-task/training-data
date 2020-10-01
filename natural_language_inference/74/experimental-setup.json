@@ -1,0 +1,114 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "use" : {
+        "Stanford CoreNLP toolkit" : {
+          "to tokenize" : "words",
+          "generate" : "POS and NER tags",
+          "from sentence" : "We use the Stanford CoreNLP toolkit to tokenize the words and generate POS and NER tags ."
+        },
+        "AdaDelta" : {
+          "for" : "optimization",
+          "with" : "? as 0.95 and as 1 e - 8",
+          "from sentence" : "We use the AdaDelta for optimization as described in with ? as 0.95 and as 1 e - 8 ."
+        }
+      },
+      "has" : {
+        "word embeddings" : {
+          "initialized by" : "300d Glove",
+          "from sentence" : "The word embeddings are initialized by 300d Glove , the dimensions of POS and NER embeddings are 30 and 10 ."
+        },
+        "dimensions" : {
+          "of" : {
+            "POS and NER embeddings" : {
+              "are" : "30 and 10"
+            }
+          },
+          "from sentence" : "The word embeddings are initialized by 300d Glove , the dimensions of POS and NER embeddings are 30 and 10 ."
+        }
+      },
+      "apply" : {
+        "Tensorflow r 1.3" : {
+          "as" : "our neural network framework",
+          "from sentence" : "We apply Tensorflow r 1.3 as our neural network framework ."
+        },
+        "dropout" : {
+          "between" : "layers",
+          "with" : {
+            "initial ratio" : {
+              "of" : "0.9"
+            }
+          },
+          "from sentence" : "We set the hidden size as 300 for all the LSTM layers and apply dropout between layers with an initial ratio of 0.9 , the decay rate as 0.97 for every 5000 step ."
+        },
+        "decay rate" : {
+          "as" : {
+            "0.97" : {
+              "for" : "every 5000 step"
+            }
+          },
+          "from sentence" : "We set the hidden size as 300 for all the LSTM layers and apply dropout between layers with an initial ratio of 0.9 , the decay rate as 0.97 for every 5000 step ."
+        }
+      },
+      "set" : {
+        "hidden size" : {
+          "as" : {
+            "300" : {
+              "for" : "all the LSTM layers"
+            }
+          },
+          "from sentence" : "We set the hidden size as 300 for all the LSTM layers and apply dropout between layers with an initial ratio of 0.9 , the decay rate as 0.97 for every 5000 step ."
+        },
+        "our batch size" : {
+          "as" : "36",
+          "from sentence" : "We set our batch size as 36 and the initial learning rate as 0.6 ."
+        },
+        "initial learning rate" : {
+          "as" : "0.6",
+          "from sentence" : "We set our batch size as 36 and the initial learning rate as 0.6 ."
+        }
+      },
+      "For" : {
+        "DMP task" : {
+          "use" : {
+            "stochastic gradient descent" : {
+              "with" : {
+                "initial learning rate" : {
+                  "as" : "0.1"
+                }
+              },
+              "from sentence" : "For DMP task , we use stochastic gradient descent with initial learning rate as 0.1 , and we anneal by half each time the validation accuracy is lower than the previous epoch ."
+            }
+          },
+          "has" : {
+            "number of epochs" : {
+              "set to" : "10",
+              "from sentence" : "The number of epochs is set to be 10 , and the feedforward dropout rate is 0.2 ."
+            },
+            "feedforward dropout rate" : {
+              "is" : "0.2",
+              "from sentence" : "The number of epochs is set to be 10 , and the feedforward dropout rate is 0.2 ."
+            },
+            "anneal" : {
+              "by" : "half",
+              "has" : {
+                "each time" : {
+                  "has" : {
+                    "validation accuracy" : {
+                      "is" : {
+                        "lower" : {
+                          "than" : "previous epoch"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "For DMP task , we use stochastic gradient descent with initial learning rate as 0.1 , and we anneal by half each time the validation accuracy is lower than the previous epoch ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

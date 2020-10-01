@@ -1,0 +1,157 @@
+{
+  "has" : {
+    "Experiments" : {
+      "has" : {
+        "Tasks" : {
+          "has" : {
+            "Predictive Performance" : {
+              "has" : {
+                "Baselines" : {
+                  "compared" : {
+                    "performance" : {
+                      "on" : {
+                        "development dataset" : {
+                          "of" : "SQuAD"
+                        }
+                      }
+                      "has" : ["baseline approach BiDAF", {"proposed SEST approaches" : {"including" : ["SE - POS", "SECT - LSTM", "SECT - CNN", "SEDT - LSTM", "SEDT - CNN"]}}],
+                      "from sentence" : "We first compared the performance of single models between the baseline approach BiDAF and the proposed SEST approaches , including SE - POS , SECT - LSTM , SECT - CNN , SEDT - LSTM , and SEDT - CNN , on the development dataset of SQuAD ."
+                    }
+                  }
+                },
+                "Results" : {
+                  "has" : {
+                    "our propose models" : {
+                      "achieve" : {
+                        "higher relative improvements" : {
+                          "in" : {
+                            "EM scores" : {
+                              "than" : "F 1 scores",
+                              "over" : "baseline methods"
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "Another observation is that our propose models achieve higher relative improvements in EM scores than F 1 scores over the baseline methods , providing the evidence that syntactic information can accurately locate the boundaries of the answer ."
+                    }
+                  },
+                  "found that" : {
+                    "SECT - LSTM and SEDT - LSTM" : {
+                      "have" : {
+                        "better performance" : {
+                          "than" : "CNN counterparts"
+                        }
+                      },
+                      "from sentence" : "Moreover , we found that both SECT - LSTM and SEDT - LSTM have better performance than their CNN counterparts , which suggests that LSTM can more effectively preserve the syntactic information ."
+                    }
+                  }
+                }
+              }
+            },
+            "Contribution of Syntactic Sequence" : {
+              "has" : {
+                "Results" : {
+                  "are" : {
+                    "important" : {
+                      "for" : {
+                        "models" : {
+                          "to work" : "properly"
+                        }
+                      },
+                      "both" : ["ordering", {"contents" : {"of" : "syntactic tree"}}],
+                      "from sentence" : "Contribution of Syntactic Sequence
+    From the table we see that both the ordering and the contents of the syntactic tree are important for the models to work properly : constituency and dependency trees achieved over 20 % boost on performance compared to the randomly generated ones and our proposed ordering also out - performed the random ordering ."
+    
+                    }
+                  },
+                  "has" : {
+                    "constituency and dependency trees" : {
+                      "achieved" : {
+                        "over 20 % boost" : {
+                          "on" : "performance",
+                          "compared to" : "randomly generated ones",
+                          "has" : {
+                            "our proposed ordering" : {
+                              "out - performed" : "random ordering"
+                            }
+                          }
+                        },
+                        "from sentence" : "Contribution of Syntactic Sequence
+    From the table we see that both the ordering and the contents of the syntactic tree are important for the models to work properly : constituency and dependency trees achieved over 20 % boost on performance compared to the randomly generated ones and our proposed ordering also out - performed the random ordering ."
+    
+                      }
+                    },
+                    "ordering" : {
+                      "of" : {
+                        "dependency trees" : {
+                          "seems to have" : {
+                            "less impact" : {
+                              "on" : "performance",
+                              "compared to" : "constituency trees"
+                            }
+                          },
+                          "from sentence" : "It also worth mentioning that the ordering of dependency trees seems to have less impact on the performance compared to that of the constituency trees ."
+                        }
+                      }
+                    }
+                  }                  
+                }
+              }
+            },
+            "Window Size Analysis" : {
+              "has" : {
+                "Results" : {
+                  "limiting" : {
+                    "window size" : {
+                      "has" : {
+                        "benefits" : {
+                          "has" : {
+                            "performance" : {
+                              "of" : "our models"
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "Window Size Analysis
+In practice , we found that limiting the window size also benefits the performance of our models ."
+
+                    }
+                  },
+                  "illustrate" : {
+                    "performances" : {
+                      "of" : "models",
+                      "has" : {
+                        "increase" : {
+                          "with" : {
+                            "length" : {
+                              "of" : "window"
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "In general the results illustrate that performances of the models increase with the length of the window ."
+                    }
+                  },
+                  "observed" : {
+                    "larger window size" : {
+                      "does not generate" : {
+                        "predictive results" : {
+                          "as good as" : {
+                            "one with window size" : {
+                              "set to" : "10"
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "We also observed that larger window size does not generate predictive results that is as good as the one with window size set to 10 ."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

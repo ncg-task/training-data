@@ -1,0 +1,412 @@
+title
+Learning document embeddings along with their uncertainties
+abstract
+Majority of the text modelling techniques yield only point - estimates of document embeddings and lack in capturing the uncertainty of the estimates .
+These uncertainties give a notion of how well the embeddings represent a document .
+We present Bayesian subspace multinomial model ( Bayesian SMM ) , a generative log - linear model that learns to represent documents in the form of Gaussian distributions , thereby encoding the uncertainty in its covariance .
+Additionally , in the proposed Bayesian SMM , we address a commonly encountered problem of intractability that appears during variational inference in mixed - logit models .
+We also present a generative Gaussian linear classifier for topic identification that exploits the uncertainty in document embeddings .
+Our intrinsic evaluation using perplexity measure shows that the proposed Bayesian SMM fits the data better as compared to the state - of - the - art neural variational document model on ( Fisher ) speech and ( 20 Newsgroups ) text corpora .
+Our topic identification experiments show that the proposed systems are robust to over-fitting on unseen test data .
+The topic ID results show that the proposed model is outperforms state - of - the - art unsupervised topic models and achieve comparable results to the state - of - the - art fully supervised discriminative models .
+narrative
+Learning document embeddings along with their uncertainties Santosh Kesiraju , Old?ich Plchot , Luk Burget , and Suryakanth V Gangashetty
+Abstract - Majority of the text modelling techniques yield only point - estimates of document embeddings and lack in capturing the uncertainty of the estimates .
+These uncertainties give a notion of how well the embeddings represent a document .
+We present Bayesian subspace multinomial model ( Bayesian SMM ) , a generative log - linear model that learns to represent documents in the form of Gaussian distributions , thereby encoding the uncertainty in its covariance .
+Additionally , in the proposed Bayesian SMM , we address a commonly encountered problem of intractability that appears during variational inference in mixed - logit models .
+We also present a generative Gaussian linear classifier for topic identification that exploits the uncertainty in document embeddings .
+Our intrinsic evaluation using perplexity measure shows that the proposed Bayesian SMM fits the data better as compared to the state - of - the - art neural variational document model on ( Fisher ) speech and ( 20 Newsgroups ) text corpora .
+Our topic identification experiments show that the proposed systems are robust to over-fitting on unseen test data .
+The topic ID results show that the proposed model is outperforms state - of - the - art unsupervised topic models and achieve comparable results to the state - of - the - art fully supervised discriminative models .
+Index Terms - Bayesian methods , embeddings , topic identification
+I. INTRODUCTION
+L EARNING word and document embeddings have proven to be useful in wide range of information retrieval , speech and natural language processing applications -.
+These embeddings elicit the latent semantic relations present among the co-occurring words in a sentence or bag - of - words from a document .
+Majority of the techniques for learning these embeddings are based on two complementary ideologies , ( i ) topic modelling , and ( ii ) word prediction .
+The former methods are primarily built on top of bag - of - words model and tend to capture higher level semantics such as topics .
+The latter techniques capture lower level semantics by exploiting the contextual information of words in a sequence -.
+On the other hand , there is a growing interest towards developing pre-trained language models , , that are then finetuned for specific tasks such as document classification , question answering , named entity recognition , etc .
+Although these models achieve state - of - the - art results in several NLP tasks ; they require enormous computational resources to train .
+Latent variable models area popular choice in unsupervised learning ; where the observed data is assumed to be S. generated through the latent variables according to a stochastic process .
+The goal is then to estimate the model parameters , and also the latent variables .
+In probabilistic topic models ( PTMs ) the latent variables are attributed to topics , and the generative process assumes that every topic is a sample from a distribution over words in the vocabulary and documents are generated from the distribution of ( latent ) topics .
+Recent works showed that auto - encoders can also be seen as generative models for images and text , .
+Generative models allows us to incorporate prior information about the latent variables , and with the help of variational Bayes ( VB ) techniques , , , one can infer posterior distribution over the latent variables instead of just point - estimates .
+The posterior distribution captures uncertainty of the latent variable estimates while trying to explain ( fit ) the observed data and our prior belief .
+In the context of text modelling , these latent variables are seen as embeddings .
+In this paper , we present Bayesian subspace multinomial model ( Bayesian SMM ) as a generative model for bag - ofwords representation of documents .
+We show that our model can learn to represent each document in the form of a Gaussian distribution , thereby encoding the uncertainty in its covariance .
+Further , we propose a generative Gaussian classifier that exploits this uncertainty for topic identification ( ID ) .
+The proposed VB framework can be extended in a straightforward way for subspace n-gram model , that can model n-gram distribution of words in sentences .
+Earlier , ( non-Bayesian ) SMM was used for learning document embeddings in an unsupervised fashion .
+They were then used for training linear classifiers for topic ID from spoken and textual documents , .
+However , one of the limitations was that the learned document embeddings ( also termed as document i-vectors ) were only point - estimates and were prone to over-fitting , especially for shorter documents .
+Our proposed model can overcome this problem by capturing the uncertainty of the embeddings in the form of posterior distributions .
+Given the significant prior research in PTMs and related algorithms for learning representations , it is important to draw precise relations between the presented model and former works .
+We do this from the following viewpoints : ( a ) Graphical models illustrating the dependency of random and observed variables , ( b ) assumptions of distributions over random variables and their limitations , and ( c ) approximations made during the inference and their consequences .
+The contributions of this paper are as follows : ( a ) we present Bayesian subspace multinomial model and analyse its relation to popular models such as latent Dirichlet allocation ( LDA ) , correlated topic model ( CTM ) , paragraph vector ( PV - DBOW ) and neural variational document model ( NVDM ) , ( b ) we adapt tricks from for faster and efficient variational inference of the proposed model , ( c ) we combine optimization techniques from , and use them to train the proposed model , ( d ) we propose a generative Gaussian classifier that exploits uncertainty in the posterior distribution of document embeddings , ( e ) we provide experimental results on both text and speech data showing that the proposed document representations achieve state - of - theart perplexity scores , and ( f ) with our proposed classification systems , we illustrate robustness of the model to over-fitting and at the same time obtain superior classification results when compared systems based on state - of - the - art unsupervised models .
+We begin with the description of Bayesian SMM in Section II , followed by VB for the model in Section III .
+The complete VB training procedure and algorithm is presented in Section III - A .
+The procedure for inferring the document embedding posterior distributions for ( unseen ) documents is described in Section III - B. Section IV presents a generative Gaussian classifier that exploits the uncertainty encoded in document embedding posterior distributions .
+Relationship between Bayesian SMM and existing popular topic models is described in Section V .
+Experimental details are given in Section VI , followed by results and analysis in Section VII .
+Finally , we conclude and discuss directions for future research in Section VIII
+II .
+BAYESIAN SUBSPACE MULTINOMIAL MODEL
+Our generative probabilistic model assumes that the training data ( bag - of - words ) were generated as follows :
+For each document , a K-dimensional latent vector w is generated from isotropic Gaussian prior with mean 0 and precision ?:
+The latent vector w is a low dimensional embedding ( K V ) of document - specific distribution of words , where V is the size of the vocabulary .
+More precisely , for each document , the Vdimensional vector of word probabilities is calculated as :
+where {m , T } are parameters of the model .
+The vector m known as universal background model represents log unigram probabilities of words .
+T known as total variability matrix , is a low - rank matrix defining subspace of document - specific distributions .
+Finally , for each document , a vector of word counts x ( bagof - words ) is sampled from Multinomial distribution :
+where N is the number of words in the document .
+The above described generative process fully defines our Bayesian model , which we will now use to address the following problems : given training data X , we estimate model parameters {m , T } and , for any given document x , we infer posterior distribution over corresponding document embedding Note that such distribution also encodes the inferred uncertainty about such representation .
+Using Bayes ' rule , the posterior distribution of document embedding w is written as 1 :
+In numerator of ( 4 ) , p ( w ) represents prior distribution of document embeddings ( 1 ) and p ( x |w ) represents the likelihood of observed data .
+According to our generative process , we assume that every document x is a sample from Multinomial distribution ( 3 ) , and the log -likelihood is given as follows :
+where ti represents a row in matrix T .
+The problem arises while computing the denominator in .
+It involves solving the integral over a product of likelihood term containing the softmax function and Gaussian distribution ( prior ) .
+There exists no analytical form for this integral .
+This is a generic problem that arises while performing Bayesian inference for mixed - logit models , , multi-class logistic regression or any other model where likelihood function and prior are not conjugate to each other .
+In such cases , one can resort to variational inference and find an approximation to the posterior distribution p ( w|x ) .
+This approximation to the true posterior is referred as variational distribution q ( w ) , and is obtained by minimizing the Kullback - Leibler ( KL ) divergence , D KL ( q || p ) between the approximate and true posterior .
+We can express log marginal ( evidence ) of the data as :
+Here H [ q ] represents the entropy of q ( w ) .
+Given the data x , log p ( x ) is a constant with respect tow , and D KL ( q || p ) can be minimized by maximizing L ( q ) , which is known as Evidence Lower BOund ( ELBO ) fora document .
+This is the standard formulation of variational Bayes , where the problem of finding an approximate posterior is transformed into optimization of the functional L ( q ) .
+III .
+VARIATIONAL BAYES
+In this section , using the VB framework , we derive and explain the procedure for estimating model parameters {m , T } and inferring the variational distribution , q ( w ) .
+Before proceeding , we note that our model assumes that all documents and the corresponding document embeddings ( latent variables ) are independent .
+This can be seen from the graphical model in .
+Hence , we derive the inference only for one document embedding w , given an observed vector of word counts x .
+We chose the variational distribution q ( w ) to be Gaussian , with mean ?
+and precision ? , i.e. , q ( w ) = N ( w | ? , ? ?1 ) . The functional L ( q ) now becomes :
+The term A from ( 11 ) is the negative KL divergence between the variational distribution q ( w ) and the documentindependent prior from ( 1 ) .
+This can be computed analytically as :
+where K denotes the document embedding dimensionality .
+The term B from ( 11 ) is the expectation over log -likelihood of a document :
+( 13 ) involves solving the expectation over log - sum - exp operation ( denoted by F ) , which is intractable .
+It appears when dealing with variational inference in mixed - logit models , .
+We can approximate F with empirical expectation using samples from q ( w ) , but F is a function of q ( w ) , whose parameters we are seeking by optimizing L ( q ) .
+The corresponding gradients of L ( q ) with respect to q ( w ) will exhibit high variance if we directly take samples from q ( w ) for the empirical expectation .
+To overcome this , we will reparametrize the random variable w .
+This is done by introducing a differentiable function g over another random variable .
+If p ( ) = N ( 0 , I ) , then ,
+where L is the Cholesky factor of ? ?
+1
+.
+Using this reparametrization of w , we obtain the following approximation :
+where R denotes the total number of samples r from p( ) .
+Combining , and , we get the approximation to L ( q ) .
+We will introduce the document suffix d , to make the notation explicit :
+For the entire training data X , the complete ELBO will be simply the summation overall the documents , i.e. , d L ( q d ) .
+A. Training
+The variational Bayes ( VB ) training procedure for Bayesian SMM is stochastic because of the sampling involved in the re-parametrization trick .
+Like the standard VB approach , we optimize ELBO alternately with respect to q ( w ) and {m , T }.
+Since we do not have closed form update equations , we perform gradient - based updates .
+Additionally , we regularize rows in matrix T while optimizing .
+Thus , the final objective function becomes ,
+where we have added the term for 1 regularization of rows in matrix T , with corresponding weight ?.
+The same regularization was previously used for non Bayesian SMM in .
+This can also be seen as obtaining a maximum a posteriori estimate of T with Laplace priors .
+1 ) Parameter initialization :
+The vector m is initialized to log uni-gram probabilities estimated from training data .
+The values in matrix T are randomly initialized from N ( 0 , 0.001 ) .
+The prior over latent variables p ( w ) is set to isotropic Gaussian distribution with mean 0 and ? = { 1 , 10 }.
+The variational distribution q ( w ) is initialized to N ( 0 , diag ( 0.1 ) ) .
+Later in Section VII - A , we will show that initializing the posterior to a sharper Gaussian distribution helps to speedup the convergence .
+2 ) Optimization :
+The gradient - based updates are done by ADAM optimization scheme ; in addition to the following tricks :
+We simplified the variational distribution q ( w ) by making its precision matrix ?
+diagonal
+2 .
+Further , while updating it , we used log standard deviation parametrization , i.e. ,
+The gradients of the objective ( 16 ) w.r.t. the mean ?
+is given as follows :
+where ,
+The gradient w.r.t log standard deviation ?
+is given as :
+where 1 represents a column vector of ones , denotes element - wise product , and exp is element - wise exponential operation .
+The 1 regularization term makes the objective function ( 17 ) discontinuous ( non-differentiable ) at points where it crosses the orthant .
+Hence , we used sub-gradients and employed orthant - wise learning .
+The gradient of the objective w.r.t. a row ti in matrix T is computed as follows :
+Here , sign and exp operate element - wise .
+The sub-gradient ?t i is defined as :
+Finally , the rows in matrix T are updated according to ,
+where , d i is the step in ascent direction ,
+Here , ?
+is the learning rate , f i and s i represents bias corrected first and second moments ( as required by ADAM ) of sub -gradient ?t
+i respectively .
+PO represents orthant projection , which ensures that the update step does not cross the point of non-differentiability .
+It is defined as ,
+The orthant projection introduces explicit zeros in the estimated T matrix and , results in sparse solution .
+Unlike in , we do not require to apply the sign projection , because both the gradient ?t i and step d point to the same orthant ( due to properties of ADAM ) .
+The stochastic VB training is outlined in Algorithm 1 . compute sub-gradients ?t
+i using and 12 update rows in T using ( 24 ) 13 until convergence or max iterations
+B. Inferring embeddings for new documents
+After obtaining the model parameters from VB training , we can infer ( extract ) the posterior distribution of document embedding q ( w ) for any given document x .
+This is done by iteratively updating the parameters of q ( w ) that maximize L ( q ) from .
+These updates are performed by following the same ADAM optimization scheme as in training .
+Note that the embeddings are extracted by maximizing the ELBO , that does not involve any supervision ( topic labels ) .
+These embeddings which are in the form of posterior distributions will be used as input features for training topic ID classifiers .
+Alternatively , one can use only the mean of the posterior distributions as point estimates of document embeddings .
+IV .
+GAUSSIAN CLASSIFIER WITH UNCERTAINTY
+In this section , we will present a generative Gaussian classifier that exploits the uncertainty in posterior distributions of document embedding .
+Moreover , it also exploits the same uncertainty while computing the posterior probability of class labels .
+The proposed classifier is called Gaussian linear classifier with uncertainty ( GLCU ) and is inspired by , .
+It can be seen as an extension to the simple Gaussian linear classifier ( GLC ) .
+Let = 1 . . .
+L denote class labels , d = 1 . . .
+D represent document indices , and h d represent the class label of document din one - hot encoding .
+GLC assumes that every class is Gaussian distributed with a specific mean , and a shared precision matrix D.
+Let M denote a matrix of class means , with representing a column .
+GLC is described by the following model :
+where
+In our case , however , the training examples come in the form of posterior distributions ,
+) as extracted using our Bayesian SMM .
+In such case , the proper ML training procedure should maximize the expected classconditional likelihood , with the expectation over w d calculated for each training example with respect to its posterior distri-
+However , it is more convenient to introduce an equivalent model , where the observations are the means ?
+d of the posteriors q ( w d ) and the uncertainty encoded in ? ?
+1 dis introduced into the model through the latent variable yd as ,
+The resulting model is called GLCU .
+Since the random variables yd and dare Gaussiandistributed , the resulting class conditional likelihood is obtained using convolution of two Gaussians , i.e ,
+GLCU can be trained by estimating its parameters ? , that maximize the class conditional likelihood of training data .
+This can be done efficiently by using the following EM algorithm .
+A. EM algorithm
+In the E-step , we calculate the posterior distribution of latent variables :
+where ,
+In the M-step , we maximize the auxiliary function Q with respect to model parameters ?.
+It is the expectation of log joint - probability with respect to p ( y d | ? d ) , i.e. ,
+Maximizing the auxiliary function Q w.r.t. ? , we have :
+where , ad = u d ? (? d ? d ) , and , I is the set of documents from class .
+To train the GLCU model , we alternate between E-step and M- step until convergence .
+Given a test document embedding posterior distribution q ( w ) = N ( w | ? , ? ? 1 ) , we compute the class conditional likelihood according to , and the posterior probability of a class C k is obtained by applying the Bayes ' rule :
+V .
+RELATED MODELS
+In this section , we review and relate some of the popular PTMs and neural network based document models .
+We begin with a brief review of LDA , a probabilistic generative model for bag - of - words representation of documents .
+A. Latent Dirichlet allocation
+Let ?
+1:K represent K topics .
+LDA assumes that every topic ?
+k is a distribution over a fixed vocabulary of size V .
+Every document dis generated by a two step process :
+First , a document - specific vector ( embedding ) representing a distribution over K topics is sampled , i.e. , ? d ? Dir ( ? ) .
+Then , for each word in the document d , a topic indicator variable z i is sampled : z i ? Multi (? d ; 1 ) and the word xi is in turn sampled from the topic - specific distribution : x i ? Multi (? zi ; 1 ) .
+The topic ( ? ) and document ( ? ) vectors live in ( V ? 1 ) and ( K ?1 ) simplexes respectively .
+For every word x i in document d , there is a discrete latent variable z i that tells which topic was responsible for generating the word .
+This can be seen from the respective graphical model in .
+During inference , the generative process is inverted to obtain posterior distribution over latent variables , p (? , z | x , ? , ? 1:K ) , given the observed data and prior belief .
+Since the true posterior is intractable , Blei resorted to variational inference which finds an approximation to the true posterior as a variational distribution q ( ? , z ) .
+Further , meanfield approximation was made to make the inference tractable , i.e. , q (? , z ) = q (? ) i q ( z i ) .
+In the original model proposed by Blei , the parameters ?
+were obtained using maximum likelihood approach .
+The choice of Dirichlet distribution for q ( ? ) simplifies the inference process because of the Dirichlet - Multinomial conjugacy .
+However , the assumption of Dirichlet distribution causes limitations to the model , and q ( ? ) can not capture correlations between topics in each document .
+This was the motivation for Blei to model documents with Gaussian distributions , and the resulting model is called correlated topic model ( CTM ) .
+The generative process fora document in CTM is same as in LDA , except for document vectors are now drawn from Gaussian , i.e. ,
+In this formulation , the document embeddings ?
+are no longer in the ( K ?
+1 ) simplex , rather they are dependent through the logistic normal .
+This is the same as in our proposed Bayesian SMM ( 1 ) .
+The advantage is that the document vectors can model the correlations in topics .
+The topic distributions over vocabulary ? , however , still remained Discrete .
+In Bayesian SMM , the topic - word distributions ( T ) are not Discrete , hence it can model the correlations between words and ( latent ) topics .
+The variational inference in CTM is similar to that of LDA including the mean - field approximation , because of the discrete latent variable z ) .
+An additional problem is dealing with the non-conjugacy .
+More specifically , it is the intractability while solving the expectation over log -sumexp function ( see F from ) .
+Blei used Jensen 's inequality to form an upper bound on F , and this in - turn acted as lower bound on ELBO .
+In our proposed Bayesian SMM , we also encountered the same problem , and we approximated F using the re-parametrization trick ( Section III ) .
+There exist similar approximation techniques based on Quasi Monte Carlo sampling .
+Unlike in LDA or CTM , Bayesian SMM does not require to make mean - field approximation , because the topic - word mixture is not Discrete thus eliminating the need for discrete latent variable z .
+C. Subspace multinomial model
+SMM is a log - linear model ; originally proposed for modelling discrete prosodic features for the task of speaker verification .
+Later , it was used for phonotatic language recognition and eventually for topic identification and document clustering , .
+Similar model was proposed by Maas for unsupervised learning of word representations .
+One of the major differences among these works is the type of regularization used for matrix T .
+Another major difference is in obtaining embeddings w d fora given test document .
+Maas obtained them by projecting the vector of word counts x d onto the matrix T , i.e. , w d = T x d , whereas , extracted the embeddings by maximizing regularized log - likelihood function .
+The embeddings extracted using SMM are prone to over-fitting .
+Our Bayesian SMM overcomes this problem by capturing the uncertainty of document embeddings in the posterior distribution .
+Our experimental analysis in section VII - C illustrates the robustness of Bayesian SMM .
+D. Paragraph vector
+Paragraph vector bag - of - words ( PV - DBOW ) is also a log - linear model , which is trained stochastically to maximize the likelihood of a set of words from a given document .
+SMM can be seen as a special case of PV - DBOW , since it maximizes the likelihood of all the words in a document .
+E .
+Neural network based models
+Neural variational document model ( NVDM ) is an adaptation of variational auto - encoders for document modelling .
+The encoder models the posterior distribution of latent variables given the input , i.e. , p ? ( z | x ) , and the decoder models distribution of input data given the latent variable , i.e. , p ? ( x | z ) .
+In NVDM , the authors used bag - of - words as input , while their encoder and decoders are two - layer feed - forward neural networks .
+The decoder part of NVDM is similar to Bayesian SMM , as both the models maximize expected loglikelihood of data , assuming Multinomial distribution .
+In simple terms , Bayesian SMM is a decoder with a single feed forward layer .
+For a given test document , in NVDM , the approximate posterior distribution of latent variables is obtained directly by forward propagating through the encoder ; whereas in Bayesian SMM , it is obtained by iteratively optimizing ELBO .
+The experiments in Section VII show that the posterior distributions obtained from Bayesian SMM represent the data better as compared to the ones obtained directly from the encoder of NVDM .
+F. Sparsity in topic models
+Sparsity is often one of the desired properties in topic models , .
+Sparse coding inspired topic model was proposed by , where the authors have obtained sparse representations for both documents and words .
+1 regularization over T for SMM ( 1 SMM ) was observed to yield better results when compared to LDA , STC and 2 regularized SMM ( 2 SMM ) .
+Relation between SMM and sparse additive generative model ( SAGE ) was explained in .
+In , the authors proposed an algorithm to obtain sparse document embeddings ( called sparse composite document vector ( SCDV ) ) from pre-trained word embeddings .
+In our proposed Bayesian SMM , we introduce sparsity into the model parameters T by applying 1 regularization and using orthantwise learning .
+VI .
+EXPERIMENTS A. Datasets
+We have conducted experiments on both speech and text corpora .
+The speech data used is Fisher phase 1 corpus 3 , which is a collection of 5850 conversational telephone speech recordings with a closed set of 40 topics .
+Each conversation is approximately 10 minutes long with two sides of the call and is supposedly about one topic .
+We considered each side of the call ( recording ) as an independent document , which resulted in a total of 11700 documents .
+presents the details of data splits ; they are the same as used in earlier research , , .
+Our preprocessing involved removing punctuation and special characters , but we did not remove any stop words .
+Using Kaldi open - source toolkit , we trained a sequence discriminative DNN - HMM automatic speech recognizer ( ASR ) system to obtain automatic transcriptions .
+The ASR system resulted in 18 % word - errorrate on a held - out test set .
+We report experimental results on both manual and automatic transcriptions .
+The vocabulary size while using manual transcriptions was 24854 , for automatic , it was 18292 , and the average document length is 830 , and 856 words respectively .
+The text corpus used is 20 Newsgroups 4 , which contains 11314 training and 7532 test documents over 20 topics .
+Our preprocessing involved removing punctuation and words that do not occur in at least two documents , which resulted in a vocabulary of 56433 words .
+The average document length is 290 words .
+B. Hyper- parameters of Bayesian SMM
+In our topic ID experiments , we observed that the embedding dimension ( K ) and regularization weight ( ? ) for rows in matrix T are the two important hyper - parameters .
+The embedding dimension was chosen from K = { 100 , . . . , 800 } , and regularization weight from ? = { 0.0001 , . . . , 10.0 }.
+C. Proposed topic ID systems
+Our Bayesian SMM is an unsupervised model trained iteratively by optimizing the ELBO ; it does not necessarily correlate with the performance of topic ID .
+It is valid for SMM , NVDM or any other generative model trained without supervision .
+A typical way to overcome this problem is to have an early stopping mechanism ( ESM ) , which requires to evaluate the topic ID accuracy on a held - out ( or crossvalidation ) set at regular intervals during the training .
+It can then be used to stop the training earlier if needed .
+Using the above described scheme , we trained three different classifiers : ( i ) Gaussian linear classifier ( GLC ) , ( ii ) multi-class logistic regression ( LR ) , and , ( iii ) Gaussian linear classifier with uncertainty ( GLCU ) .
+Note that GLC and LR can not exploit the uncertainty in the document embeddings ; and are trained using only the mean parameter ?
+of the posterior distributions ; whereas GLCU is trained using the full posterior distribution q ( w ) , i.e. , along with the uncertainties of document embeddings as described in Section IV .
+GLC and GLCU does not have any hyper - parameters to tune , while the 2 regularization weight of LR was tuned using crossvalidation experiments .
+D. Baseline topic ID systems
+1 ) NVDM : Since NVDM and our proposed Bayesian SMM share similarities , we chose to extract the embeddings from NVDM and use them for training linear classifiers .
+Given a trained NVDM model , embeddings for any test document can be extracted just by forward propagating through the encoder .
+Although this is computationally cheaper , one needs to decide when to stop training , as a fully converged NVDM may not yield optimal embeddings for discriminative tasks such as topic ID .
+Hence , we used the same early stopping mechanism as described in earlier section .
+We used the same three classifier pipelines ( LR , GLC , GLCU ) as we used for Bayesian SMM .
+Our architecture and training scheme are similar to ones proposed in , i.e. , two feed forward layers with either 500 or 1000 hidden units and { sigmoid , ReLU , tanh } activation functions .
+The latent dimension was chosen from K = { 100 , . . . , 800 }.
+The hyper - parameters were tuned based on cross-validation experiments .
+2 ) SMM : Our second baseline system is non-Bayesian SMM with 1 regularization over the rows in T matrix , i.e. , 1 SMM .
+It was trained with hyper - parameters such as embedding dimension K = { 100 , . . . , 800 } , and regularization weight ? = { 0.0001 , . . . , 10.0 }.
+The embeddings obtained from SMM were then used to train GLC and LR classifiers .
+Note that we can not use GLCU here , because SMM yields only point - estimates of embeddings .
+We used the same early stopping mechanism to train the classifiers .
+The experimental analysis in Section VII - C shows that Bayesian SMM is more robust to over-fitting when compared to SMM and NVDM , and does not require an early stopping mechanism .
+3 ) ULMFiT : The third baseline system is the universal language model fine - tuned for classification ( ULMFiT ) .
+The pre-trained 5 model consists of 3 BiLSTM layers .
+Finetuning the model involves two steps : ( a ) fine - tuning LM on the target dataset and ( b ) training classifier ( MLP layer ) on the target dataset .
+We trained several models with various drop - out rates .
+More specifically , the LM was fine - tuned for 15 epochs 6 , with drop - out rates from : { 0.2 , . . . , 0.6 }.
+The classifier was fine - tuned for 50 epochs with drop - out rates from : { 0.2 , . . . , 0.6 }.
+A held - out development set was used to tune the hyper - parameters ( drop - out rates , and fine - tuning epochs ) .
+4 ) TF - IDF :
+The fourth baseline system is a standard term frequency - inverse document frequency ( TF - IDF ) based document representation , followed by multi-class logistic regression ( LR ) .
+Although TF - IDF is not a topic model , the classification performance of TF - IDF based systems are often close to state - of - the - art systems .
+VII .
+RESULTS AND DISCUSSION
+A. Convergence rate of Bayesian SMM
+We observed that the posterior distributions extracted using Bayesian SMM are always much sharper than standard Normal distribution .
+Hence we initialized the variational distribution to N ( 0 , diag ( 0.1 ) ) to speedup the convergence .
+shows objective ( ELBO ) plotted for two different initializations of variational distribution .
+Here , the model was trained on 20 Newsgroups corpus , with the embedding dimension K = 100 , regularization weight ? = 1.0 and prior set to standard Normal .
+We can observe that the model initialized to N ( 0 , diag ( 0.1 ) ) converges faster as compared to the one initialized to standard Normal .
+In all the further experiments , we initialized 7 both the prior and variational distributions to N ( 0 , diag ( 0.1 ) ) .
+B. Perplexity
+Perplexity is an intrinsic measure for topic models , .
+It is computed as an average of every test document according to :
+or for an entire test corpus according to :
+where
+Nd is the number of word tokens in document d.
+In our case , log p ( x ) from ( 9 ) can not be evaluated , because the KL divergence from variational distribution q to the true posterior p can not be computed ; as the true posterior is intractable .
+We can only compute L ( q ) , which is a lower bound on log p ( x ) ; thus the resulting perplexity values act as upper bounds .
+This is true for NVDM or any other model in the VB framework where the true posterior is intractable .
+We estimated L ( q ) from ( 16 ) using 32 samples , i.e. , R = 32 , in order to compute perplexity .
+In , the authors used 20 samples .
+We present the comparison of 20 Newsgroups test data perplexities obtained using Bayesian SMM and NVDM in .
+It shows the perplexities of 20 Newsgroups corpus under full and a limited vocabulary of 2000 words .
+We also show the perplexity computed using the maximum likelihood probabilities estimated on the test data .
+It acts as the lower bound on the test perplexities .
+NVDM was shown to achieve superior perplexity scores when compared to LDA , docNADE , Deep Auto Regressive Neural Network models .
+To the best of our knowledge , our model achieves state - of - the - art perplexity scores on 20 Newsgroups corpus under limited and full vocabulary conditions .
+In further investigation , we trained both Bayesian SMM and NVDM until convergence .
+At regular checkpoints during the training , we froze the model , extracted the embeddings for both training and test data , and computed the perplexities ; shown in .
+We can observe that both the Bayesian SMM and NVDM fit the training data equally well ( low perplexities ) .
+However , in the case of NVDM , the perplexity of test data increases after certain number of iterations ; suggesting that NVDM fails to generalize and over-fits on the training data .
+In the case of Bayesian SMM , the perplexity of the test data decreases and remains stable , illustrating the robustness of our model .
+C. Early stopping mechanism for topic ID systems
+The embeddings extracted from a model trained purely in an unsupervised fashion does not necessarily yield optimum results when used in a supervised scenario .
+As discussed earlier in Sections VI - C , and VI - D , an early stopping mechanism ( ESM ) during the training of an unsupervised model ( eg : NVDM , SMM , and Bayesian SMM ) is required to get optimal performance from the subsequent topic ID system .
+The following experiment illustrates the idea of ESM :
+We trained SMM , Bayesian SMM and NVDM on Fisher data until convergence .
+At regular checkpoints during the training , we froze the model , extracted the embeddings for both training and test data .
+We chose GLC for SMM , GLCU for NVDM , and Bayesian SMM as topic ID classifiers .
+We then evaluated the topic ID accuracy on the cross-validation 8 represents the best cross-validation score and the corresponding test score obtained using the early stopping mechanism ( ESM ) .
+The embedding dimension was set to 100 for all the models .
+and test sets .
+shows the topic ID accuracy on crossvalidation and test sets obtained at regular checkpoints for all the three models .
+The circular dot ( ) represents the best cross -validation score and the corresponding test score that is obtained by employing ESM .
+In case of ( non-Bayesian ) SMM , the test accuracy drops significantly after certain number of iterations ; suggesting the strong need of ESM .
+The crossvalidation accuracies of NVDM and Bayesian SMM are similar and remain consistent over the iterations .
+However , the test accuracy of NVDM is much lower than that of Bayesian SMM and also decreases over the iterations .
+On the other hand , the test accuracy of Bayesian SMM increases and stays consistent .
+It shows the robustness of our proposed model , which in addition , does not require any ESM .
+In all the further topic ID experiments , we report classification results for Bayesian SMM without ESM ; while the results for SMM , and NVDM are with ESM .
+D. Topic ID results
+This section presents the topic ID results in terms of classification accuracy ( in % ) and cross-entropy ( CE ) on the test sets .
+Cross - entropy gives a notion of how confident the classifier is about its prediction .
+A well calibrated classifier tends to have lower cross - entropy .
+presents the classification results on Fisher speech corpora with manual and automatic transcriptions , where the first two rows are the results from earlier published works .
+Hazen , used discriminative vocabulary selection followed by a nave Bayes ( NB ) classifier .
+Having a limited ( small ) vocabulary is the major drawback of this approach .
+Although we have used the same training and test splits , May had slightly larger vocabulary than ours , and their best system is similar to our baseline TF - IDF based system .
+The remaining rows in show our baselines and proposed systems .
+We can see that our proposed systems achieve consistently better accuracies ; notably , GLCU which exploits the uncertainty in document embeddings has much lower cross - entropy than its counterpart , GLC .
+To the best of our knowledge , the proposed systems achieve the best classification results on Fisher corpora with the current set - up , i.e. , treating each side of the conversation as an independent document .
+It can be observed ULMFiT has the lowest cross - entropy among all the systems .
+presents classification results on 20 Newsgroups dataset .
+The first three rows give the results as reported in earlier works .
+Pappagari et al. , proposed a CNN - based discriminative model trained to jointly optimize categorical cross - entropy loss for classification task along with binary cross - entropy for verification task .
+Sparse composite document vector ( SCDV ) exploits pre-trained word embeddings to obtain sparse document embeddings , whereas neural tensor skip - gram model ( NTSG ) extends the idea of a skipgram model for obtaining document embeddings .
+The authors in ( SCDV ) have shown superior classification results as compared to paragraph vector , LDA , NTSG , and other systems .
+The next rows in present our baselines and proposed systems .
+We see that the topic ID systems based on Bayesian SMM and logistic regression is better than all the other models , except for the purely discriminative CNN model .
+We can also see that all the topic ID systems based on Bayesian SMM are consistently better than variational auto encoder inspired NVDM , and ( non-Bayesian ) SMM .
+The advantages of the proposed Bayesian SMM are summarized as follows : ( a ) the document embeddings are Gaussian distributed which enables to train simple generative classifiers like GLC , or GLCU ; that can extended to newer classes easily , ( b ) although the Bayesian is trained in an unsupervised fashion , it does not require any early stopping mechanism to yield optimal topic ID results ; document embeddings extracted from a fully converged or model can be directly used for classification tasks without any fine - tuning .
+E. Uncertainty in document embeddings
+The uncertainty captured in the posterior distribution of document embeddings correlates strongly with size of the document .
+The trace of the covariance matrix of the inferred posterior distributions gives us the notion of such a correlation .
+shows an example of uncertainty captured in the embeddings .
+Here , the Bayesian SMM was trained on 20 Newsgroups with an embedding dimension of 100 .
+VIII .
+CONCLUSIONS AND FUTURE WORK
+We have presented a generative model for learning document representations ( embeddings ) and their uncertainties .
+Our proposed model achieved state - of - the - art perplexity results on the standard 20 Newsgroups and Fisher datasets .
+Next , we have shown that the proposed model is robust to overfitting and unlike in SMM and NVDM , it does not require any early stopping mechanism for topic ID .
+We proposed an extension to simple Gaussian linear classifier that exploits the uncertainty in document embeddings and achieves better crossentropy scores on the test data as compared to the simple GLC .
+Using simple linear classifiers on the obtained document embeddings , we achieved superior classification results on Fisher speech 20 Newsgroups text corpora .
+We also addressed a commonly encountered problem of intractability while performing variational inference in mixed - logit models by using the re-parametrization trick .
+This idea can be translated in a straightforwardly for subspace n-gram model for learning sentence embeddings and also for learning word embeddings along with their uncertainties .
+The proposed Bayesian SMM can be extended to have topic - specific priors for document embeddings , which enables to encode topic label uncertainty explicitly in the document embeddings .
+There exists other scoring mechanisms that exploit the uncertainty in embeddings , which we plan to explore in our future works .
+APPENDIX A GRADIENTS OF LOWER BOUND
+The variational distribution is diagonal with the following parametrization :
+The lower bound fora single document is :
+where g( ) = ? + diag ( exp{ ?} )
+.
+It is convenient to have the following derivatives :
+Derivatives of the parameters of variational distribution :
+Taking derivative of the objective function ( ) with respect to mean parameter ?
+and using :
+Taking the derivative of objective function ( ( 44 ) ) with respect to ?
+and using ( 47 ) :
+Derivatives of the model parameters :
+Taking the derivative of complete objective with respect to a row t k from matrix T :
+APPENDIX B EM ALGORITHM FOR GLCU E - STEP :
+Obtaining the posterior distribution of latent variable p ( y d | ? d , ? ) .
+Using the results from
+resulting in :
+Taking derivative with respect to shared precision matrix D and equating it to zero :

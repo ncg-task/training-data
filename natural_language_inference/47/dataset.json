@@ -1,0 +1,84 @@
+{
+  "has" : {
+    "Dataset" : {
+      "introduces" : {
+        "Stanford Natural Language Inference ( SNLI ) corpus" : {
+          "has" : {
+            "collection" : {
+              "of" : {
+                "sentence pairs" : {
+                  "labeled for" : ["entailment", "contradiction", "semantic independence"]
+                }
+              }
+            }
+          },
+          "from sentence" : "To address this , this paper introduces the Stanford Natural Language Inference ( SNLI ) corpus , a collection of sentence pairs labeled for entailment , contradiction , and semantic independence ."
+        }
+      },
+      "At" : {
+        "570,152 sentence pairs" : {
+          "has" : {
+            "SNLI" : { 
+              "is" : {
+                "two orders of magnitude larger" : {
+                  "than" : {
+                    "other resources" : {
+                      "of" : "its type"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "At 570,152 sentence pairs , SNLI is two orders of magnitude larger than all other resources of its type ."
+        }
+      },
+      "has" : {
+        "sentences and labels" : {
+          "written by" : {
+            "humans" : {
+              "in" : "grounded , naturalistic context"
+            }
+          },
+          "from sentence" : "And , in contrast to many such resources , all of its sentences and labels were written by humans in a grounded , naturalistic context ."
+        }
+      },
+      "In" : {
+        "separate validation phase" : {
+          "collected" : {
+            "four additional judgments" : {
+              "for" : {
+                "each label" : {
+                  "for" : {
+                    "56,941" : {
+                      "of" : "examples"
+                    }
+                  }
+                }
+              },
+              "Of these" : {
+                "98 %" : {
+                  "of" : {
+                    "cases" : {
+                      "emerge with" : "threeannotator consensus"
+                    }
+                  }
+                },
+                "58 %" : {
+                  "see" : {
+                    "unanimous consensus" : {
+                      "from" : "all five annotators"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "In a separate validation phase , we collected four additional judgments for each label for 56,941 of the examples .
+Of these , 98 % of cases emerge with a threeannotator consensus , and 58 % see a unanimous consensus from all five annotators ."
+
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "has" : {
+        "Both the coarse - grain module and the fine - grain module" : {
+          "contribute to" : "model performance",
+          "from sentence" : "Both the coarse - grain module and the fine - grain module significantly contribute to model performance ."
+        },
+        "fine - grain - only model" : {
+          "has" : {
+            "under-performs" : {
+              "has" : ["coarse - grain - only model", {"consistently" : {"across" : "almost all length measures"}}],
+              "from sentence" : "The fine - grain - only model under-performs the coarse - grain - only model consistently across almost all length measures ."
+            },
+            "matches or outperforms" : {
+              "has" : {
+                "coarse - grain - only model" : {
+                  "on" : {
+                    "examples" : {
+                      "with" : [{"large number" : {"of" : "support documents"}}, "long support documents"]
+                    }
+                  },
+                  "from sentence" : "However , the fine - grain - only model matches or outperforms the coarse - grain - only model on examples with a large number of support documents or with long support documents ."
+                }
+              }
+            }
+          }
+        }
+      },
+      "result in" : {
+        "less performance degradation" : {
+          "Replacing" : {
+            "selfattention layers" : {
+              "with" : "mean - pooling"
+            },
+            "bidirectional GRUs" : {
+              "with" : "unidirectional GRUs"
+            }
+          },
+          "from sentence" : "Replacing selfattention layers with mean - pooling and the bidirectional GRUs with unidirectional GRUs result in less performance degradation ."
+        }
+      },
+      "Replacing" : {
+        "encoder" : {
+          "with" : {
+            "projection" : {
+              "over" : "word embeddings",
+              "result in" : "significant performance drop"
+            }
+          }
+        },
+        "from sentence" : "Replacing the encoder with a projection over word embeddings result in significant performance drop , which suggests that contextual encodings that capture positional information is crucial to this task ."
+      }
+    }
+  }
+}

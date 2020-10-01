@@ -1,0 +1,92 @@
+{
+  "has" : {
+    "Results" : {
+      "see that" : {
+        "multitasking" : {
+          "with" : {
+            "paraphrase data" : {
+              "is" : "essential",
+              "improves" : {
+                "F1" : {
+                  "from" : {
+                    "0.60" : {
+                      "to" : "0.68"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "First , we can see that multitasking with paraphrase data is essential since it improves F1 from 0.60 to 0.68 ."
+            }
+          }
+        }
+      },
+      "has" : {
+        "Fine - tuning" : {
+          "has" : {
+            "embedding model" : {
+              "is" : {
+                "very beneficial" : {
+                  "to optimize" : "top of the list"
+                }
+              },
+              "grants" : {
+                "bump" : {
+                  "of" : {
+                    "5 points" : {
+                      "of" : "F1"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Fine - tuning the embedding model is very beneficial to optimize the top of the list and grants a bump of 5 points of F1 : carefully tuning the similarity makes a clear difference ."
+            }
+          }
+        },
+        "All versions of our system" : {
+          "has" : {
+            "greatly outperform" : {
+              "has" : "paralex"
+            },
+            "fine - tuned model" : {
+              "improves" : {
+                "F1 - score" : {
+                  "by" : "almost 20 points"
+                }
+              }
+            },
+            "from sentence" : "All versions of our system greatly outperform paralex : the fine - tuned model improves the F1 - score by almost 20 points and , according to , is better in precision for all levels of recall ."
+          }
+        },
+        "string matching" : {
+          "has" : {
+            "greatly improves" : {
+              "has" : "results",
+              "both" : "precision and recall"
+            },
+            "significantly reduces" : {
+              "has" : "evaluation time"
+            }
+          },
+          "from sentence" : "As expected , string matching greatly improves results , both in precision and recall , and also significantly reduces evaluation time ."
+        },
+        "final F1" : {
+          "obtained by" : {
+            "our fine - tuned model" : {
+              "is" : {
+                "even better" : {
+                  "then" : {
+                    "result" : {
+                      "of" : "paralex"
+                    }
+                  },
+                  "in" : "reranking"
+                }
+              }
+            }
+          },
+          "from sentence" : "The final F1 obtained by our fine - tuned model is even better then the result of paralex in reranking , which is pretty remarkable , because this time , this setting advantages it quite a lot ."
+        }
+      }
+    }
+  }
+}

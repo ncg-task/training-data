@@ -1,0 +1,69 @@
+{
+  "has" : {
+    "Results" : {
+      "for" : {
+        "language modeling" : {
+          "For" : {
+            "SCNN , MCNN and LCNN" : {
+              "has" : {
+                "VAE results" : {
+                  "improve over" : {
+                    "LM results" : {
+                      "from" : {
+                        "345.3" : {
+                          "to" : "337.8"
+                        },
+                        "338.3" : {
+                          "to" : "336.2"
+                        },
+                        "335.4" : {
+                          "to" : "333.9"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "The results for language modeling are shown in .
+For SCNN , MCNN and LCNN , the VAE results improve over LM results from 345.3 to 337.8 , 338.3 to 336.2 , and 335.4 to 333.9 respectively ."
+
+            }
+          },
+          "When" : {
+            "LCNN" : {
+              "used as" : {
+                "decoder" : {
+                  "obtain" : {
+                    "optimal trade off" : {
+                      "between using" : "contextual information and latent representation"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "When LCNN is used as the decoder , we obtain an optimal trade off between using contextual information and latent representation ."
+            }
+          },
+          "has" : {
+            "LCNN - VAE" : {
+              "achieves" : {
+                "NLL" : {
+                  "of" : "333.9"
+                }
+              },
+              "improves over" : {
+                "LSTM - LM" : {
+                  "with" : {
+                    "NLL" : {
+                      "of" : "334.9"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "LCNN - VAE achieves a NLL of 333.9 , which improves over LSTM - LM with NLL of 334.9 ."
+            }            
+          }
+        }
+      }
+    }
+  }
+}

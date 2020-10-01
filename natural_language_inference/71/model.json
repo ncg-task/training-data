@@ -1,0 +1,50 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "new architecture" : {
+          "name" : "Gated Orthogonal Recurrent Unit ( GORU )",
+          "combines" : {
+            "ability" : {
+              "to capture" : {
+                "long term dependencies" : {
+                  "by using" : "orthogonal matrices"    
+                }
+              },
+              "to" : {
+                "forget" : {
+                  "by using" : "GRU structure"
+                }
+              }
+            }
+          },
+          "from sentence" : "We propose a new architecture , the Gated Orthogonal Recurrent Unit ( GORU ) , which combines the advantages of the above two frameworks , namely ( i ) the ability to capture long term dependencies by using orthogonal matrices and ( ii ) the ability to \" forget \" by using a GRU structure ."
+        }
+      },
+      "demonstrate" : {
+        "GORU" : {
+          "able to learn" : {
+            "long term dependencies" : {
+              "has" : "effectively"
+            },
+            "from sentence" : "We demonstrate that GORU is able to learn long term dependencies effectively , even in complicated datasets which require a forgetting ability ."
+          }
+        }
+      },
+      "focus on" : {
+        "implementation" : {
+          "of" : {
+            "orthogonal transition matrices" : {
+              "which is" : {
+                "subset" : {
+                  "of" : "unitary matrices"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "In this work , we focus on implementation of orthogonal transition matrices which is just a subset of the unitary matrices ."
+      }
+    }
+  }
+}

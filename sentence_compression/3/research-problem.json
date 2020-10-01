@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Sentence Compression", {"from sentence" : "A Language Model based Evaluator for Sentence Compression"}],
+    ["deletion - based sentence compression", {"from sentence" : "We herein present a language - modelbased evaluator for deletion - based sentence compression , and viewed this task as a series of deletion - and - evaluation operations using the evaluator ."}]
+  ]
+}

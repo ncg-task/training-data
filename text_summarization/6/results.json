@@ -1,0 +1,22 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "ROUGE Evaluation" : {
+          "on" : {
+            "Chinese dataset LCSTS" : {
+              "has" : {
+                "Our model DRGD" : {
+                  "achieves" : "best performance"
+                }
+              },
+              "from sentence" : "The results on the Chinese dataset LCSTS are shown in .
+Our model DRGD also achieves the best performance ."
+
+            }
+          }
+        }
+      }
+    }
+  }
+}

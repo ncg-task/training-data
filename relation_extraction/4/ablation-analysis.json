@@ -1,0 +1,158 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "presents" : {
+        "results of an ablation test" : {
+          "of" : {
+            "our position - aware attention model" : {
+              "on" : ["development set of TACRED", {"from sentence" : "presents the results of an ablation test of our position - aware attention model on the development set of TACRED ."}],
+              "contributes" : {
+                "about 1.5 % F 1" : {
+                  "where" : {
+                    "position - aware term" : {
+                      "contributed" : "about 1 % F 1 score"
+                    }
+                  }
+                },
+                "from sentence" : "The entire attention mechanism contributes about 1.5 % F 1 , where the position - aware term in Eq.
+( 3 ) alone contributes about 1 % F 1 score ."
+
+              }
+            }
+          }
+        }
+      },
+      "shows how" : {
+        "slot filling evaluation scores" : {
+          "has" : {
+            "change" : {
+              "as" : {
+                "amount of negative ( i.e. , no relation ) training data" : {
+                  "provided to" : "our proposed model"
+                }
+              }
+            }
+          },
+          "from sentence" : "Impact of negative examples .
+shows how the slot filling evaluation scores change as we change the amount of negative ( i.e. , no relation ) training data provided to our proposed model ."
+
+        }
+      },
+      "At" : {
+        "hop - 0 level" : {
+          "provide more" : "negative examples",
+          "has" : {
+            "precision" : {
+              "has" : "increases"
+            },
+            "F 1 score" : {
+              "keeps" : "increasing"
+            }
+          },
+          "while" : {
+            "recall" : {
+              "stays" : "almost unchanged"
+            }
+          },
+          "from sentence" : "We find that : ( 1 ) At hop - 0 level , precision increases as we provide more negative examples , while recall stays almost unchanged .
+F 1 score keeps increasing ."
+
+        },
+        "hop - all level" : {
+          "has" : {
+            "F 1 score" : {
+              "increases by" : {
+                "Performance" : {
+                  "by" : "sentence length"
+                }
+              },
+              "from sentence" : "( 2 ) At hop - all level , F 1 score increases by Performance by sentence length ."
+            }
+          }
+        }
+      },      
+      "find that" : {
+        "Performance" : {
+          "of" : "all models",
+          "degrades" : {
+            "substantially" : {
+              "as" : {
+                "sentences" : {
+                  "get" : "longer"
+                }
+              }
+            }
+          },
+          "from sentence" : "We find that : ( 1 ) Performance of all models degrades substantially as the sentences get longer ."
+        }
+      },
+      "compared with" : {
+        "CNN - PE model" : {
+          "has" : {
+            "position - aware attention model" : {
+              "achieves" : {
+                "improved F1 scores" : {
+                  "on" : "30 out of the 41 slot types",
+                  "with" : {
+                    "top 5 slot types" : {
+                      "being" : ["org : members", "per: country of death", "org : shareholders", "per:children", "per:religion"]
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "When compared with the CNN - PE model , our position - aware attention model achieves improved F 1 scores on 30 out of the 41 slot types , with the top 5 slot types being org : members , per: country of death , org : shareholders , per:children and per:religion ."            
+          }
+        },
+        "SDP - LSTM model" : {
+          "has" : {
+            "our model" : {
+              "achieves" : {
+                "improved F 1 scores" : {
+                  "on" : "26 out of the 41 slot types",
+                  "with" : {
+                    "top 5 slot" : {
+                      "being" : ["org : political / religious affiliation", "per: country of death", "org : alternate names", "per:religion", "per: alternate names"]
+                    }
+                  }
+                },
+                "from sentence" : "When compared with SDP - LSTM model , our model achieves improved F 1 scores on 26 out of the 41 slot types , with the top 5 slot types being org : political / religious affiliation , per: country of death , org : alternate names , per:religion and per: alternate names ."
+              }
+            }
+          }
+        }
+      },
+      "observe that" : {
+        "slot types" : {
+          "with" : "relatively sparse training examples",
+          "improved by" : "position - aware attention model"
+        },
+        "from sentence" : "We observe that slot types with relatively sparse training examples tend to be improved by using the position - aware attention model ."
+      },
+      "find" : {
+        "model" : {
+          "to pay" : {
+            "more attention" : {
+              "to" : {
+                "words" : {
+                  "informative for" : "relation"
+                }
+              }
+            }
+          },
+          "from sentence" : "We find that the model learns to pay more attention to words that are informative for the relation ( e.g. , \" graduated from \" , \" niece \" and \" chairman \" ) , though it still makes mistakes ( e.g. , \" refused to name the three \" ) ."
+        }
+      },
+      "observe" : {
+        "model" : {
+          "tends to put" : {
+            "lot of weight" : { 
+              "onto" : "object entities"
+            }
+          },
+          "from sentence" : "We also observe that the model tends to put a lot of weight onto object entities , as the object NER signatures are very informative to the classification of relations ."
+        }
+      }
+    }
+  }
+}

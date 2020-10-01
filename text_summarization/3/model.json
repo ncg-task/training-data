@@ -1,0 +1,57 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "novel model" : {
+          "based on" : {
+            "concept pointer generator" : {
+              "encourages the generation of" : "conceptual and abstract words"    
+            }
+          }
+        },
+        "from sentence" : "Hence , in this paper , we propose a novel model based on a concept pointer generator that encourages the generation of conceptual and abstract words ."
+      },
+      "alleviates" : ["OOV problems", {"from sentence" : "As a hidden benefit , the model also alleviates the OOV problems ."}],
+      "uses" : {
+        "pointer network" : {
+          "to capture" : {
+            "salient information" : {
+              "from" : "source text"
+            }
+          }
+        },
+        "from sentence" : "Our model uses pointer network to capture the salient information from a source text , and then employs another pointer to generalize the detailed words according to their upper level of expressions ."
+      },
+      "employs" : {
+        "another pointer" : {
+          "to generalize" : {
+            "detailed words" : {
+              "according to" : "upper level of expressions"
+            }
+          }
+        },
+        "from sentence" : "Our model uses pointer network to capture the salient information from a source text , and then employs another pointer to generalize the detailed words according to their upper level of expressions ."
+      },
+      "has" : {
+        "optimization function" : {
+          "adaptive so as to cater for" : {
+            "different datasets" : {
+              "with" : "distantly - supervised training"
+            }
+          },
+          "from sentence" : "The optimization function is adaptive so as to cater for different datasets with distantly - supervised training ."
+        }
+      },
+      "optimized end - to - end" : {
+        "network" : {
+          "using" : {
+            "reinforcement learning" : {
+              "with" : "distant - supervision strategy"
+            }
+          }
+        },
+        "from sentence" : "The network is then optimized end - to - end using reinforcement learning , with the distant - supervision strategy as a complement to further improve the summary ."
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "use" : {
+        "pre-trained R 3 model" : {
+          "to generate" : {
+            "top 50 candidate spans" : {
+              "for" : "training , development and test datasets",
+              "use them for" : "further ranking"
+            }
+          },
+          "from sentence" : "We first use a pre-trained R 3 model , which gets the state - of - the - art performance on the three public datasets we consider , to generate the top 50 candidate spans for the training , development and test datasets , and we use them for further ranking ."
+        }
+      },
+      "For" : {
+        "coverage - based re-ranker" : {
+          "use" : {
+            "Adam" : {
+              "to optimize" : "model"
+            }
+          },
+          "from sentence" : "For the coverage - based re-ranker , we use Adam to optimize the model ."
+        }
+      },
+      "set" : {
+        "all the words" : {
+          "beyond" : "Glove",
+          "as" : "zero vectors",
+          "from sentence" : "We set all the words beyond Glove as zero vectors ."
+        },
+        "l" : {
+          "to" : "300",
+          "from sentence" : "We set l to 300 , batch size to 30 , learning rate to 0.002 ."
+        },
+        "batch size" : {
+          "to" : "30",
+          "from sentence" : "We set l to 300 , batch size to 30 , learning rate to 0.002 ."
+        },
+        "learning rate" : {
+          "to" : "0.002",
+          "from sentence" : "We set l to 300 , batch size to 30 , learning rate to 0.002 ."
+        }
+      },
+      "tune" : {
+        "dropout probability" : {
+          "from" : "0 to 0.5"
+        },
+        "number of candidate answers" : {
+          "for" : {
+            "re-ranking ( K )" : {
+              "in" : "[ 3 , 5 , 10 ]"
+            }
+          }
+        },
+        "from sentence" : "We tune the dropout probability from 0 to 0.5 and the number of candidate answers for re-ranking ( K ) in [ 3 , 5 , 10 ] 11 ."
+      }
+    }
+  }
+}

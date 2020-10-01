@@ -1,0 +1,44 @@
+{
+  "has" : {
+    "Results" : {
+      "on" : {
+        "datasets Restaurant and Laptop" : {
+          "observe" : {
+            "our proposed PBAN model" : {
+              "achieves" : {
+                "best performance" : {
+                  "among" : "methods"
+                }
+              }
+            },
+            "from sentence" : "shows the performance of our model and other baseline models on datasets Restaurant and Laptop respectively .
+We can observe that our proposed PBAN model achieves the best performance among all methods ."            
+          },
+          "by integrating" : {
+            "position information and the bidirectional attention mechanism" : {
+              "has" : {
+                "PBAN" : {
+                  "achieves" : "state - of - the - art performances",
+                  "effectively judge" : {
+                    "sentiment polarity" : {
+                      "of" : {
+                        "different aspect term" : {
+                          "in" : {
+                            "corresponding sentence" : {
+                              "to improve" : "classification accuracy"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "Generally speaking , by integrating the position information and the bidirectional attention mechanism , PBAN achieves the state - of - the - art performances , and it can effectively judge the sentiment polarity of different aspect term in its corresponding sentence so as to improve the classification accuracy ."
+          }
+        }
+      }
+    }
+  }
+}

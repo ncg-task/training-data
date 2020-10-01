@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Abstractive Sentence Summarization", {"from sentence" : "Ensure the Correctness of the Summary : Incorporate Entailment Knowledge into Abstractive Sentence Summarization"}],
+    ["sentence summarization", {"from sentence" : "In this paper , we investigate the sentence summarization task that produces a summary from a source sentence ."}]
+  ]
+}

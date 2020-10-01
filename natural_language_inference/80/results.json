@@ -1,0 +1,112 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "DR - BiLSTM ( Single )" : {
+          "achieves" : {
+            "88.5 % accuracy" : {
+              "on" : "test set",
+              "is" : {
+                "best reported result" : {
+                  "among" : "existing single models"
+                }
+              },
+              "from sentence" : "DR - BiLSTM ( Single ) achieves 88.5 % accuracy on the test set which is noticeably the best reported result among the existing single models for this task ."
+            }
+          },
+          "obtains" : {
+            "accuracy" : {
+              "of" : {
+                "88.5 %" : {
+                  "has" : {
+                    "considerably outperforms" : {
+                      "has" : "previous non-ensemble models"
+                    }
+                  }
+                },
+                "from sentence" : "DR - BiLSTM ( Ensemble ) achieves the accuracy of 89.3 % , the best result observed on SNLI , while DR - BiLSTM ( Single ) obtains the accuracy of 88.5 % , which considerably outperforms the previous non-ensemble models ."                
+              }
+            }
+          }
+        },
+        "DR - BiLSTM ( Ensemble )" : {
+          "achieves" : {
+            "accuracy" : {
+              "of" : {
+                "89.3 %" : {
+                  "has" : {
+                    "best result" : {
+                      "observed on" : "SNLI"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "DR - BiLSTM ( Ensemble ) achieves the accuracy of 89.3 % , the best result observed on SNLI , while DR - BiLSTM ( Single ) obtains the accuracy of 88.5 % , which considerably outperforms the previous non-ensemble models ."
+        },
+        "ensemble model" : {
+          "has" : {
+            "considerably outperforms" : {
+              "has" : {
+                "current state - of - the - art" : {
+                  "by obtaining" : "89.3 % accuracy"
+                }
+              }
+            }
+          },
+          "from sentence" : "Our ensemble model considerably outperforms the current state - of - the - art by obtaining 89.3 % accuracy ."
+        },
+        "preprocessing mechanism" : {
+          "leads to" : {
+            "further improvements" : {
+              "of" : {
+                "0.4 % and 0.3 %" : {
+                  "on" : "SNLI test set",
+                  "for" : "our single and ensemble models"
+                }
+              }
+            }
+          },
+          "from sentence" : "We can see that our preprocessing mechanism leads to further improvements of 0.4 % and 0.3 % on the SNLI test set for our single and ensemble models respectively ."
+        },
+        "our single model" : {
+          "name" : "DR - BiLSTM ( Single ) + Process",
+          "obtains" : {
+            "state - of - the - art performance" : {
+              "over" : {
+                "reported single and ensemble models" : {
+                  "by performing" : "simple preprocessing step"
+                }
+              }
+            }
+          },
+          "from sentence" : "In fact , our single model ( \" DR - BiLSTM ( Single ) + Process \" ) obtains the state - of - the - art performance over both reported single and ensemble models by performing a simple preprocessing step ."
+        },
+        "DR - BiLSTM ( Ensem . ) + Process" : {
+          "has" : {
+            "outperforms" : {
+              "has" : {
+                "existing state - of - the - art" : {
+                  "has" : ["remarkably", "0.7 % improvement"]
+                }
+              }
+            }
+          },
+          "from sentence" : "Furthermore , \" DR - BiLSTM ( Ensem . ) + Process \" outperforms the existing state - of - the - art remarkably ( 0.7 % improvement ) ."
+        }
+      },
+      "utilizing" : {
+        "trivial preprocessing step" : {
+          "yields to" : {
+            "further improvements" : {
+              "of" : "0.4 % and 0.3 %",
+              "for" : "single and ensemble DR - BiLSTM models"
+            }
+          },
+          "from sentence" : "Also , utilizing a trivial preprocessing step yields to further improvements of 0.4 % and 0.3 % for single and ensemble DR - BiLSTM models respectively ."
+        }
+      }
+    }
+  }
+}

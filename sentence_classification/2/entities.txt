@@ -1,0 +1,172 @@
+20	19	26	propose
+20	31	52	usage of translations
+20	53	55	as
+20	56	103	compelling and effective domain - free contexts
+37	29	35	method
+37	36	47	to mitigate
+37	52	69	possible problems
+37	70	80	when using
+37	81	101	translated sentences
+37	102	104	as
+37	105	112	context
+42	33	40	present
+42	43	108	neural attentionbased multiple context fixing attachment ( MCFA )
+43	0	4	MCFA
+43	5	7	is
+43	10	27	series of modules
+43	33	37	uses
+43	105	107	as
+43	108	115	context
+43	116	122	to fix
+43	123	140	a sentence vector
+46	5	13	computes
+46	14	44	two sentence usability metrics
+46	45	55	to control
+46	60	85	noise when fixing vectors
+46	94	108	self usability
+46	119	125	weighs
+46	130	140	confidence
+46	141	149	of using
+46	150	160	sentence a
+46	161	171	in solving
+46	176	180	task
+47	6	24	relative usability
+47	39	45	weighs
+47	50	63	confidence of
+47	64	69	using
+47	70	80	sentence a
+47	84	90	fixing
+47	91	101	sentence b
+49	14	28	attached after
+49	29	50	encoding the sentence
+49	59	84	makes it widely adaptable
+49	85	100	to other models
+51	11	16	moves
+51	21	28	vectors
+51	29	35	inside
+51	40	50	same space
+51	58	67	preserves
+51	72	79	meaning
+51	80	82	of
+51	83	100	vector dimensions
+150	0	12	Tokenization
+150	16	26	done using
+150	31	47	polyglot library
+159	0	8	Training
+159	12	20	done via
+159	21	48	stochastic gradient descent
+159	49	53	over
+159	54	75	shuffled mini-batches
+159	76	80	with
+159	85	105	Adadelta update rule
+151	3	22	experiment on using
+151	23	60	only one additional context ( N = 1 )
+151	71	107	all ten languages at once ( N = 10 )
+153	0	3	For
+153	4	11	our CNN
+153	17	20	use
+153	21	43	rectified linear units
+153	48	61	three filters
+153	62	66	with
+153	67	103	different window sizes h = 3 , 4 , 5
+153	62	66	with
+153	109	130	100 feature maps each
+154	8	29	final sentence vector
+154	35	46	concatenate
+154	51	63	feature maps
+154	64	70	to get
+154	73	95	300 - dimension vector
+155	3	6	use
+155	7	14	dropout
+155	15	17	on
+155	18	43	all nonlinear connections
+155	44	48	with
+155	51	63	dropout rate
+155	64	66	of
+155	67	70	0.5
+156	15	29	l 2 constraint
+156	30	32	of
+156	33	34	3
+157	7	35	FastText pre-trained vectors
+157	38	41	for
+157	42	59	all our data sets
+158	0	6	During
+158	7	15	training
+158	21	24	use
+158	25	40	mini-batch size
+158	41	43	of
+158	44	46	50
+160	3	10	perform
+160	11	25	early stopping
+160	26	31	using
+160	34	45	random 10 %
+160	46	48	of
+160	53	65	training set
+160	66	68	as
+160	73	88	development set
+2	40	63	Sentence Classification
+169	3	7	show
+169	13	23	CNN + MCFA
+169	24	32	achieves
+169	33	61	state of the art performance
+169	62	64	on
+169	65	92	three of the four data sets
+169	97	105	performs
+169	106	119	competitively
+169	62	64	on
+169	123	135	one data set
+170	0	4	When
+170	5	10	N = 1
+170	13	17	MCFA
+170	18	27	increases
+170	32	43	performance
+170	44	46	of
+170	49	59	normal CNN
+170	60	64	from
+170	65	69	85.0
+170	70	72	to
+170	73	77	87.6
+170	80	87	beating
+170	92	116	current state of the art
+170	117	119	on
+170	124	135	CR data set
+171	5	11	N = 10
+171	14	18	MCFA
+171	19	37	additionally beats
+171	42	58	state of the art
+171	25	27	on
+171	66	79	TREC data set
+172	10	33	our ensemble classifier
+172	34	58	additionally outperforms
+172	59	79	all competing models
+172	40	42	on
+172	87	98	MR data set
+186	0	2	On
+186	3	16	all data sets
+186	17	23	except
+186	24	28	SUBJ
+186	35	43	accuracy
+186	44	46	of
+186	47	55	CNN + B1
+186	56	70	decreases from
+186	75	92	base CNN accuracy
+188	82	94	translations
+188	12	15	are
+188	60	66	topics
+189	13	26	conclude that
+189	44	70	better additional contexts
+189	71	75	than
+190	5	10	using
+190	13	27	single context
+190	93	105	translations
+190	106	123	always outperform
+190	124	130	topics
+191	0	5	Using
+191	6	12	topics
+191	13	15	as
+191	16	34	additional context
+191	40	48	decrease
+191	54	68	performance of
+191	73	87	CNN classifier
+191	22	24	on
+191	91	105	most data sets

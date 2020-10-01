@@ -1,0 +1,39 @@
+{
+  "has" : {
+    "Model" : {
+      "present" : {
+        "novel neural architecture" : {
+          "called" : "RASOR",
+          "builds" : {
+            "fixed - length span representations" : {
+              "reusing" : {
+                "recurrent computations" : {
+                  "for" : "shared substructures"
+                }
+              }
+            }
+          },
+          "from sentence" : "To overcome this , we present a novel neural architecture called RASOR that builds fixed - length span representations , reusing recurrent computations for shared substructures ."
+        }
+      },
+      "demonstrate" : {
+        "directly classifying" : {
+          "each of" : "competing spans"
+        },
+        "training" : {
+          "with" : {
+            "global normalization" : {
+              "over" : "all possible spans",
+              "leads to" : {
+                "significant increase" : {
+                  "in" : "performance"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "We demonstrate that directly classifying each of the competing spans , and training with global normalization overall possible spans , leads to a significant increase in performance ."
+      }
+    }
+  }
+}

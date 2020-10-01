@@ -1,0 +1,84 @@
+19	148	157	collected
+19	162	214	first large - scale dataset of questions and answers
+19	215	223	based on
+19	226	228	KB
+19	231	237	called
+19	238	253	SimpleQuestions
+20	49	57	contains
+20	58	83	more than 100 k questions
+229	4	45	embedding dimension and the learning rate
+229	51	63	chosen among
+229	64	115	{ 64 , 128 , 256 } and { 1 , 0.1 , ... , 1.0e ? 4 }
+229	139	145	margin
+229	93	96	0.1
+230	4	10	set to
+24	34	41	present
+24	45	72	embedding - based QA system
+24	73	88	developed under
+24	93	133	framework of Memory Networks ( Mem NNs )
+26	8	10	in
+26	4	14	setting of
+26	19	28	simple QA
+26	29	43	corresponds to
+26	48	68	elementary operation
+26	69	82	of performing
+26	85	98	single lookup
+26	8	10	in
+26	106	112	memory
+2	45	60	Memory Networks
+2	0	39	Large - scale Simple Question Answering
+4	9	41	large - scale question answering
+5	240	246	can be
+5	69	94	simple question answering
+12	267	292	Simple Question Answering
+254	0	2	On
+254	3	15	WebQuestions
+254	69	90	86 % of the questions
+254	102	115	answered with
+254	118	140	single supporting fact
+254	147	158	performance
+254	159	182	increases significantly
+254	185	189	from
+254	190	196	36.2 %
+254	197	199	to
+254	200	215	41.0 % F1-score
+255	0	5	Using
+255	10	27	bigger FB5M as KB
+255	33	43	not change
+255	44	55	performance
+255	56	58	on
+255	59	74	SimpleQuestions
+259	17	20	are
+259	4	16	best results
+259	17	20	are
+259	21	34	67 % accuracy
+259	41	45	68 %
+259	46	49	for
+259	54	74	ensemble of 5 models
+262	9	15	notice
+262	21	27	models
+262	28	38	trained on
+262	41	58	single QA dataset
+262	59	66	perform
+262	67	73	poorly
+262	36	38	on
+262	81	95	other datasets
+263	20	31	training on
+263	32	45	both datasets
+263	51	59	improves
+263	60	71	performance
+266	6	17	paraphrases
+266	21	32	not seem to
+266	33	42	help much
+266	43	45	on
+266	46	78	WebQuestions and SimpleQuestions
+266	81	92	except when
+266	93	101	training
+266	102	111	only with
+266	112	131	synthetic questions
+266	139	143	have
+266	146	161	dramatic impact
+266	43	45	on
+266	169	180	performance
+266	43	45	on
+266	184	190	Reverb

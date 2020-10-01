@@ -1,0 +1,89 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "models" : {
+          "that take" : {
+            "context" : {
+              "into" : "account"
+            }
+          },
+          "perform" : {
+            "similar" : {
+              "to" : {
+                "baselines" : {
+                  "at" : "smallest recall numbers" 
+                }
+              }
+            },
+            "start" : {
+              "to" : {
+                "positively deviate" : {
+                  "at" : "higher recall rates"
+                }
+              }
+            }
+          },
+          "from sentence" : "The models that take the context into account perform similar to the baselines at the smallest recall numbers , but start to positively deviate from them at higher recall rates ."
+        },
+        "ContextAtt model" : {
+          "performs" : {
+            "better" : {
+              "than" : "any other system",
+              "over" : "entire recall range"
+            },
+            "from sentence" : "In particular , the ContextAtt model performs better than any other system in our study over the entire recall range ."
+          }
+        }
+      },
+      "Compared to" : {
+        "competitive LSTM - baseline" : {
+          "has" : {
+            "ContextAtt model" : {
+              "achieves" : {
+                "24 % reduction" : {
+                  "of" : "average error"
+                }
+              }
+            }
+          },
+          "from sentence" : "Compared to the competitive LSTM - baseline that uses the same relation encoder , the ContextAtt model achieves a 24 % reduction of the average error : from 0.2096 0.002 to 0.1590 0.002 ."
+        }
+      },
+      "shows" : {
+        "ContextAtt model" : {
+          "performs" : "best",
+          "over" : "all relation types",
+          "from sentence" : "shows that the ContextAtt model performs best over all relation types ."
+        }
+      },
+      "see that" : {
+        "ContextSum" : {
+          "does n't universally outperforms" : "LSTM - baseline",
+          "from sentence" : "One can also see that the ContextSum does n't universally outperforms the LSTM - baseline ."
+        }
+      },
+      "using" : {
+        "attention" : {
+          "crucial to extract" : {
+            "relevant information" : {
+              "from" : "context relations"
+            }
+          },
+          "from sentence" : "It demonstrates again that using attention is crucial to extract relevant information from the context relations ."
+        }
+      },
+      "observe" : {
+        "context - enabled model" : {
+          "demonstrates" : {
+            "most improvement" : {
+              "on" : "precision"
+            }
+          },
+          "useful for" : "taxonomy relations",
+          "from sentence" : "On the relation - specific results we observe that the context - enabled model demonstrates the most improvement on precision and seems to be especially useful for taxonomy relations ( see SUBCLASS OF , PART OF ) ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : ["attention based neural matching model ( a NMM )", {"from sentence" : "To handle these issues in the existing deep learning architectures for ranking answers , we propose an attention based neural matching model ( a NMM ) ."}],
+      "has" : {
+        "Deep neural network with value - shared weights" : {
+          "introduce" : {
+            "novel value - shared weighting scheme" : {
+              "in" : "deep neural networks"
+            },
+            "from sentence" : "Deep neural network with value - shared weights :
+We introduce a novel value - shared weighting scheme in deep neural networks as a counterpart of the position - shared weighting scheme in CNNs , based on the idea that semantic matching between a question and answer is mainly about the ( semantic similarity ) value regularities rather than spatial regularities ."
+
+          }
+        },
+        "Incorporate attention scheme over question terms" : {
+          "incorporate" : {
+            "attention scheme" : {
+              "over" : {
+                "question terms" : {
+                  "using" : "gating function"
+                }
+              },
+              "from sentence" : "Incorporate attention scheme over question terms :
+We incorporate the attention scheme over the question terms using a gating function , so that we can explicitly discriminate the question term importance ."
+
+            }
+          }
+        }
+      }
+    }
+  }
+}

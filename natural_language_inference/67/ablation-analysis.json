@@ -1,0 +1,46 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "replacing" : {
+        "word - by - word attention" : {
+          "with" : {
+            "Attentive Reader" : {
+              "has" : {
+                "style attention" : {
+                  "has" : {
+                    "decreases" : {
+                      "has" : "EM score",
+                      "by about" : "4.5 %"
+                    }
+                  }
+                }
+              }
+            } 
+          },
+          "from sentence" : "First , replacing the word - by - word attention with Attentive Reader style attention decreases the EM score by about 4.5 % , showing the strength of our proposed attention mechanism ."
+        }
+      },
+      "shows" : {
+        "POS feature ( 1 ) and question - word feature ( 3 )" : {
+          "are" : "two most important features",
+          "from sentence" : "The result shows that POS feature ( 1 ) and question - word feature ( 3 ) are the two most important features ."
+        }
+      },
+      "combining" : {
+        "DCR model" : {
+          "with" : "proposed POS - trie constraints",
+          "yields" : {
+            "score" : {
+              "similar to" : {
+                "DCR model" : {
+                  "with" : "all possible n-gram chunks"
+                }
+              }
+            }
+          },
+          "from sentence" : "Finally , combining the DCR model with the proposed POS - trie constraints yields a score similar to the one obtained using the DCR model with all possible n-gram chunks ."
+        }
+      }
+    }
+  }
+}

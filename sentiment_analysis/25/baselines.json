@@ -1,0 +1,77 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "NRC - Canada" : {
+          "is" : {
+            "top method" : {
+              "in" : "SemEval 2014 Task 4",
+              "for" : "ACSA and ATSA task"
+            }
+          },
+          "from sentence" : "NRC - Canada is the top method in SemEval 2014 Task 4 for ACSA and ATSA task ."
+        },
+        "CNN" : {
+          "widely used on" : "text classification task",
+          "from sentence" : "CNN is widely used on text classification task ."
+        },
+        "TD - LSTM" : {
+          "uses" : {
+            "two LSTM networks" : {
+              "to model" : {
+                "preceding and following contexts" : {
+                  "of" : "target"
+                }
+              },
+              "to generate" : {
+                "target - dependent representation" : {
+                  "for" : "sentiment prediction"
+                }
+              }
+            },
+            "from sentence" : "TD - LSTM uses two LSTM networks to model the preceding and following contexts of the target to generate target - dependent representation for sentiment prediction ."
+          }
+        },
+        "ATAE - LSTM" : {
+          "is" : {
+            "attention - based LSTM" : {
+              "for" : "ACSA task"
+            }
+          },
+          "from sentence" : "ATAE - LSTM is an attention - based LSTM for ACSA task ."
+        },
+        "IAN" : {
+          "stands for" : {
+            "interactive attention network" : {
+              "for" : "ATSA task"
+            }  
+          },
+          "based on" : "LSTM and attention mechanisms",
+          "from sentence" : "IAN stands for interactive attention network for ATSA task , which is also based on LSTM and attention mechanisms ."
+        },
+        "RAM" : {
+          "is" : {
+            "recurrent attention network" : {
+              "for" : "ATSA task"
+            }
+          },
+          "uses" : "LSTM and multiple attention mechanisms",
+          "from sentence" : "RAM is a recurrent attention network for ATSA task , which uses LSTM and multiple attention mechanisms ."
+        },
+        "GCN" : {
+          "stands for" : "gated convolutional neural network",
+          "in which" : {
+            "GTRU" : {
+              "does not have" : {
+                "aspect embedding" : {
+                  "as" : "additional input"
+                }
+              }
+            }
+          },
+          "from sentence" : "GCN stands for gated convolutional neural network , in which GTRU does not have the aspect embedding as an additional input ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "has" : {
+    "Model" : {
+      "introduce" : {
+        "gated self - matching network" : {
+          "has" : {
+            "end - to - end neural network model" : {
+              "for" : "reading comprehension and question answering"
+            }
+          },
+          "from sentence" : "Inspired by , we introduce a gated self - matching network , illustrated in , an end - to - end neural network model for reading comprehension and question answering ."
+        }
+      },
+      "consists of" : {
+        "four parts" : {
+          "has" : [
+            {"recurrent network encoder" : {
+              "to build" : {
+                "representation" : {
+                  "for" : "questions and passages"
+                }
+              }
+            }},
+            {"gated matching layer" : {
+              "to match" : "question and passage"
+            }},
+            {"self - matching layer" : {
+              "to aggregate" : {
+                "information" : {
+                  "from" : "whole passage"
+                }
+              }
+            }},
+            "pointernetwork based answer boundary prediction layer"
+          ],
+          "from sentence" : "Our model consists of four parts :
+1 ) the recurrent network encoder to build representation for questions and passages separately , 2 ) the gated matching layer to match the question and passage , 3 ) the self - matching layer to aggregate information from the whole passage , and 4 ) the pointernetwork based answer boundary prediction layer ."
+
+        }
+      }
+    }
+  }
+}

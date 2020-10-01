@@ -1,0 +1,80 @@
+{
+  "has" : {
+    "Model" : {
+      "present" : {
+        "deep attentional neural network ( DEEPATT )" : {
+          "for" : "SRL",
+          "from sentence" : "To address these problems above , we present a deep attentional neural network ( DEEPATT ) for the task of SRL 1 ."
+        }
+      },
+      "rely on" : {
+        "self - attention mechanism" : {
+          "directly draws" : {
+            "global dependencies" : {
+              "of" : "inputs"
+            }
+          },
+          "from sentence" : "Our models rely on the self - attention mechanism which directly draws the global dependencies of the inputs ."
+        }
+      },
+      "major advantage of" : {
+        "self - attention" : {
+          "conducts" : {
+            "direct connections" : {
+              "between" : {
+                "two arbitrary tokens" : {
+                  "in" : "sentence"
+                }
+              }
+            },
+            "from sentence" : "In contrast to RNNs , a major advantage of self - attention is that it conducts direct connections between two arbitrary tokens in a sentence ."            
+          },
+          "has" : {
+            "distant elements" : {
+              "can interact with" : {
+                "each other" : {
+                  "by" : "shorter paths",
+                  "allows" : {
+                    "unimpeded information flow" : {
+                      "through" : "network"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Therefore , distant elements can interact with each other by shorter paths ( O ( 1 ) v.s. O ( n ) ) , which allows unimpeded information flow through the network ."
+            }
+          },
+          "provides" : {
+            "more flexible way" : {
+              "to select , represent and synthesize" : {
+                "information" : {
+                  "of" : "inputs",
+                  "complementary to" : "RNN based models"
+                }
+              },
+              "from sentence" : "Self - attention also provides a more flexible way to select , represent and synthesize the information of the inputs and is complementary to RNN based models ."
+            }
+          }
+        }
+      },
+      "Along with" : {
+        "self - attention" : {
+          "has" : {
+            "DEEP - ATT" : {
+              "comes with" : {
+                "three variants" : {
+                  "to further enhance" : {
+                    "representations" : {
+                      "uses" : ["recurrent ( RNN )", "convolutional ( CNN )", "feed - forward ( FFN ) neural network"]                      
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Along with self - attention , DEEP - ATT comes with three variants which uses recurrent ( RNN ) , convolutional ( CNN ) and feed - forward ( FFN ) neural network to further enhance the representations ."
+        }
+      }
+    }
+  }
+}

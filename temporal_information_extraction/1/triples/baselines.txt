@@ -1,0 +1,8 @@
+(Contribution||has||Baselines)
+(Baselines||has||regularized averaged perceptron ( AP ))
+(regularized averaged perceptron ( AP )||implemented in||LBJava package)
+(Baselines||On top of||first baseline)
+(first baseline||performed||global inference)
+(Baselines||used||same feature set)
+(same feature set||as in||proposed structured perceptron ( SP ))
+(same feature set||as in||CoDL)

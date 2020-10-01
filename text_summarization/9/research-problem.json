@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Abstractive Sentence Summarization", {"from sentence" : "Abstractive Sentence Summarization with Attentive Recurrent Neural Networks"}],
+    ["text summarization", {"from sentence" : "Generating a condensed version of a passage while preserving its meaning is known as text summarization ."}]
+  ]
+}

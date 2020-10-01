@@ -1,0 +1,4 @@
+(Contribution||has research problem||Natural Language Inference)
+(Contribution||has research problem||Natural Language Inference ( NLI ))
+(Contribution||has research problem||Recognizing Textual Entailment ( RTE ))
+(Contribution||has research problem||NLI)

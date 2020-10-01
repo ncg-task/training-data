@@ -1,0 +1,54 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "LSTM" : {
+          "has" : {
+            "sentence" : {
+              "fed to" : {
+                "short - term memory ( LSTM ) network" : {
+                  "to propagate" : {
+                    "context" : {
+                      "among" : "constituent words"
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "Following , the sentence is fed to along short - term memory ( LSTM ) network to propagate context among the constituent words ."
+          }
+        },
+        "TD- LSTM" : {
+          "has" : {
+            "sequence" : {
+              "of" : {
+                "words preceding ( left context ) and succeeding ( right context ) target aspect term" : {
+                  "fed to" : "two different LSTMs"
+                }                
+              }
+            }
+          },
+          "from sentence" : "TD- LSTM
+Following , sequence of words preceding ( left context ) and succeeding ( right context ) target aspect term are fed to two different LSTMs ."
+
+        },
+        "ATAE - LSTM" : {
+          "identical to" : {
+            "AE - LSTM" : {
+              "except" : {
+                "LSTM" : {
+                  "fed with" : {
+                    "concatenation" : {
+                      "of" : "aspect - term representation and word representation"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "This representation is fed to softmax classifier. , ATAE - LSTM is identical to AE - LSTM , except the LSTM is fed with the concatenation of aspect - term representation and word representation . , target - aspect and its context are sent to two distinct LSTMs and the means of the hidden outputs are taken as intermediate aspect representation and context representation respectively ."
+        }
+      }
+    }
+  }
+}

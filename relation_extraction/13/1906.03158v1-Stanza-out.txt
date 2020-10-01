@@ -1,0 +1,213 @@
+title
+Matching the Blanks : Distributional Similarity for Relation Learning
+abstract
+General purpose relation extractors , which can model arbitrary relations , area core aspiration in information extraction .
+Efforts have been made to build general purpose extractors that represent relations with their surface forms , or which jointly embed surface forms with relations from an existing knowledge graph .
+However , both of these approaches are limited in their ability to generalize .
+In this paper , we build on extensions of Harris ' distributional hypothesis to relations , as well as recent advances in learning text representations ( specifically , BERT ) , to build task agnostic relation representations solely from entity - linked text .
+We show that these representations significantly outperform previous work on exemplar based relation extraction ( FewRel ) even without using any of that task 's training data .
+We also show that models initialized with our task agnostic representations , and then tuned on supervised relation extraction datasets , significantly outperform the previous methods on Se - m Eval 2010 Task 8 , KBP37 , and TACRED .
+Introduction
+Reading text to identify and extract relations between entities has been along standing goal in natural language processing .
+Typically efforts in relation extraction fall into one of three groups .
+Ina first group , supervised , or distantly supervised relation extractors ) learn a mapping from text to relations in a limited schema .
+Forming a second group , open information extraction removes the limitations of a predefined schema by instead representing relations using their surface forms , which increases scope but also leads * Work done as part of the Google AI residency .
+to an associated lack of generality since many surface forms can express the same relation .
+Finally , the universal schema embraces both the diversity of text , and the concise nature of schematic relations , to build a joint representation that has been extended to arbitrary textual input , and arbitrary entity pairs .
+However , like distantly supervised relation extractors , universal schema rely on large knowledge graphs ( typically Freebase ) that can be aligned to text .
+Building on 's extension of Harris ' distributional hypothesis to relations , as well as recent advances in learning word representations from observations of their contexts , we propose a new method of learning relation representations directly from text .
+First , we study the ability of the Transformer neural network architecture to encode relations between entity pairs , and we identify a method of representation that outperforms previous work in supervised relation extraction .
+Then , we present a method of training this relation representation without any supervision from a knowledge graph or human annotators by matching the blanks .
+[ BLANK ] , inspired by Cale 's earlier cover , recorded one of the most acclaimed versions of " [ BLANK ] "
+[ BLANK ] 's rendition of " [ BLANK ] " has been called " one of the great songs " by Time , and is included on Rolling Stone 's list of " The 500 Greatest Songs of All Time " .
+Following , we assume access to a corpus of text in which entities have been linked to unique identifiers and we define a rela-tion statement to be a block of text containing two marked entities .
+From this , we create training data that contains relation statements in which the entities have been replaced with a special symbol , as illustrated in .
+Our training procedure takes in pairs of blank - containing relation statements , and has an objective that encourages relation representations to be similar if they range over the same pairs of entities .
+After training , we employ learned relation representations to the recently released FewRel task in which specific relations , such as ' original language of work ' are represented with a few exemplars , such as The Crowd ( Italian : La Folla ) is a 1951 Italian film .
+presented FewRel as a supervised dataset , intended to evaluate models ' ability to adapt to relations from new domains attest time .
+We show that through training by matching the blanks , we can outperform 's top performance on FewRel , without having seen any of the FewRel training data .
+We also show that a model pre-trained by matching the blanks and tuned on FewRel outperforms humans on the FewRel evaluation .
+Similarly , by training by matching the blanks and then tuning on labeled data , we significantly improve performance on the SemEval 2010 Task 8 , and TACRED relation extraction benchmarks .
+Overview
+Task definition
+In this paper , we focus on learning mappings from relation statements to relation representations .
+Formally , let x = [ x 0 . . . x n ] be a sequence of tokens , where x 0 = [ CLS ] and x n = [ SEP ] are special start and end markers .
+Let s 1 = ( i , j ) and s 2 = ( k , l ) be pairs of integers such that 0 < i < j ? 1 , j < k , k ? l ? 1 , and l ? n.
+A relation statement is a triple r = ( x , s 1 , s 2 ) , where the indices in s 1 and s 2 delimit entity mentions in x : the sequence [ x i . . . x j?1 ] mentions an entity , and so does the sequence [ x k . . . x l?1 ] .
+Our goal is to learn a function hr = f ? ( r ) that maps the relation statement to a fixed - length vector hr ?
+Rd that represents the relation expressed in x between the entities marked by s 1 and s 2 .
+Contributions
+This paper contains two main contributions .
+First , in Section 3.1 we investigate different architectures for the relation encoder f ? , all built on top of the widely used Transformer se-quence model .
+We evaluate each of these architectures by applying them to a suite of relation extraction benchmarks with supervised training .
+Our second , more significant , contributionpresented in Section 4 - is to show that f ?
+can be learned from widely available distant supervision in the form of entity linked text .
+Architectures for Relation Learning
+The primary goal of this work is to develop models that produce relation representations directly from text .
+Given the strong performance of recent deep transformers trained on variants of language modeling , we adopt 's BERT model as the basis for our work .
+In this section , we explore different methods of representing relations with the Transformer model .
+Relation Classification and Extraction Tasks
+We evaluate the different methods of representation on a suite of supervised relation extraction benchmarks .
+The relation extractions tasks we use can be broadly categorized into two types : fully supervised relation extraction , and few - shot relation matching .
+For the supervised tasks , the goal is to , given a relation statement r , predict a relation type t ?
+T where T is a fixed dictionary of relation types and t = 0 typically denotes alack of relation between the entities in the relation statement .
+For this type of task we evaluate on SemEval 2010 Task 8 ( Hendrickx et al. , 2009 ) , KBP - 37 and TACRED .
+More formally ,
+In the case of few - shot relation matching , a set of candidate relation statements are ranked , and matched , according to a query relation statement .
+In this task , examples in the test and development sets typically contain relation types not present in the training set .
+For this type of task , we evaluate on the FewRel dataset .
+Specifically , we are given K sets of N labeled relation statements S k = { ( r 0 , t 0 ) . . . ( r N , t N ) } where ti ?
+{ 1 . . .
+K } is the corresponding relation type .
+The goal is to predict the t q ?
+{ 1 . . .
+K } fora query relation statement r q .
+Relation Representations from Deep Transformers
+Model
+In all experiments in this section , we start with the BERT LARGE model made available by and train towards task - specific losses .
+Since BERT has not previously been applied to the problem of relation representation , we aim to answer two primary modeling questions : ( 1 ) how do we represent entities of interest in the input to BERT , and ( 2 ) how do we extract a fixed length representation of a relation from BERT 's output .
+We present three options for both the input encoding , and the output relation representation .
+Six combinations of these are illustrated in .
+Entity span identification
+Recall , from Section 2 , that the relation statement r = ( x , s 1 , s 2 ) contains the sequence of tokens x and the entity span identifiers s 1 and s 2 .
+We present three different options forgetting information about the focus spans s 1 and s 2 into our BERT encoder .
+Standard input
+First we experiment with a BERT model that does not have access to any explicit identification of the entity spans s 1 and s 2 .
+We refer to this choice as the STANDARD input .
+This is an important reference point , since we believe that BERT has the ability to identify entities in x , but with the STANDARD input there is noway of knowing which two entities are in focus when x contains more than two entity mentions .
+Positional embeddings
+For each of the tokens in its input , BERT also adds a segmentation embedding , primarily used to add sentence segmentation information to the model .
+To address the STANDARD representation 's lack of explicit entity identification , we introduce two new segmentation embeddings , one that is added to all tokens in the span s 1 , while the other is added to all tokens in the span s 2 .
+This approach is analogous to previous work where positional embeddings have been applied to relation extraction .
+Entity marker tokens
+Finally , we augment x with four reserved word pieces to mark the begin and end of each entity mention in the relation statement .
+We introduce the [ E1 start ] , [ E1 end ] , [ E2 start ] and [ E2 end ] and modify x to giv ?
+and we feed this token sequence into BERT instead of x .
+We also update the entity indicess 1 = ( i + 1 , j + 1 ) ands 2 = ( k + 3 , l + 3 ) to account for the inserted tokens .
+We refer to this representation of the input as ENTITY MARKERS .
+Fixed length relation representation
+We now introduce three separate methods of extracting a fixed length relation representation hr from the BERT encoder .
+The three variants rely on extracting the last hidden layers of the transformer network , which we define as H = [ h 0 , ...h n ] for n = | x | ( or | x | if entity marker tokens are used ) .
+[ CLS ] token
+Recall from Section 2 that each x starts with a reserved [ CLS ] token .
+BERT 's output state that corresponds to this token is used by as a fixed length sentence representation .
+We adopt the [ CLS ] output , h 0 , as our first relation representation .
+Entity mention pooling
+We obtain hr by maxpooling the final hidden layers corresponding to the word pieces in each entity mention , to get two vectors he 1 = MAXPOOL ( [h i ...h j?1 ]) and he 2 = MAXPOOL ( [h k ...h l?1 ] ) representing the two entity mentions .
+We concatenate these two vectors to get the single representation hr = he 1 |h e 2 where a|b is the concatenation of a and b.
+We refer to this architecture as MENTION POOLING .
+Entity start state
+Finally , we propose simply representing the relation between two entities with the concatenation of the final hidden states corresponding their respective start tokens , when EN - TITY MARKERS are used .
+Recalling that ENTITY MARKERS inserts tokens in x , creating offsets in s 1 and s 2 , our representation of the relation is r h = hi |h j+2 .
+We refer to this output representation as ENTITY START output .
+Note that this can only be applied to the ENTITY MARKERS input .
+illustrates a few of the variants we evaluated in this section .
+In addition to defining the model input and output architecture , we fix the training loss used to train the models ( which is illustrated in ) .
+In all models , the output representation from the Transformer network is fed into a fully connected layer that either contains a linear activation , or ( 2 ) performs layer normalization on the representation .
+We treat the choice of post Transfomer layer as a hyper - parameter and use the best performing layer type for each task .
+For the supervised tasks , we introduce anew classification layer W ?
+R KxH where H is the size of the relation representation and K is the number of relation types .
+The classification loss is the standard cross entropy of the softmax of hr W T with respect to the true relation type .
+For the few - shot task , we use the dot product between relation representation of the query statement and each of the candidate statements as a similarity score .
+In this case , we also apply across entropy loss of the softmax of similarity scores with respect to the true class .
+We perform task - specific fine - tuning of the BERT model , for all variants , with the following set of hyper - parameters : shows the results of model variants on the three supervised relation extraction tasks and the 5 - way - 1 - shot variant of the few - shot relation classification task .
+For all four tasks , the model using the ENTITY MARKERS input representation and ENTITY START output representation achieves the best scores .
+From the results , it is clear that adding positional information in the input is critical for the model to learn useful relation representations .
+Unlike previous work that have benefited from positional embeddings , the deep Transformers benefits the most from seeing the new entity boundary word pieces ( ENTITY MARKERS ) .
+It is also worth noting that the best variant outperforms previous published models on all four tasks .
+For the remainder of the paper , we will use this architecture when further training and evaluating our models .
+Learning by Matching the Blanks
+So far , we have used human labeled training data to train our relation statement encoder f ? .
+Inspired by open information extraction , which derives relations directly from tagged text , we now introduce anew method of training f ? without a predefined ontology , or relation - labeled training data .
+Instead , we declare that for any pair of relation statements rand r , the inner product f ? ( r ) f ? ( r ) should be high if the two relation statements , rand r , express semantically similar relations .
+And , this inner product should below if the two relation statements express semantically different relations .
+Unlike related work in distant supervision for information extraction ) , we do not use relation labels at training time .
+Instead , we observe that there is a high degree of redundancy in web text , and each relation between an arbitrary pair of entities is likely to be stated multiple times .
+Subsequently , r = ( x , s 1 , s 2 ) is more likely to encode the same semantic relation as r = ( x , s 1 , s 2 ) if s 1 refers to the same entity ass 1 , and s 2 refers to the same entity ass 2 .
+Starting with this observation , we introduce anew method of learning f ? from entity linked text .
+We introduce this method of learning by matching the blanks ( MTB ) .
+In Section 5 we show that MTB learns relation representations that can be used without any further tuning for relation extraction - even beating previous work that trained on human labeled data .
+Learning Setup
+Let E be a predefined set of entities .
+And let D = [ ( r 0 , e 0 1 , e 0 2 ) . . . ( r N , e N 1 , e N 2 ) ] be a corpus of relation statements that have been labeled with two entities e i 1 ?
+E and e i 2 ?
+E. Recall , from Section 2 , that r i = ( x i , s i 1 , s i 2 ) , where s i 1 and s i 2 delimit entity mentions in xi .
+Each item in Dis created by pairing the relation statement r i with the two entities e i 1 and e i 2 corresponding to the spans s i 1 and s i 2 , respectively .
+We aim to learn a relation statement encoder f ?
+that we can use to determine whether or not two relation statements encode the same relation .
+To do this , we define the following binary classifier
+to assign a probability to the case that rand r encode the same relation ( l = 1 ) , or not ( l = 0 ) .
+We will then learn the parameterization off ? that rA In 1976 , e1 ( then of Bell Labs ) published e 2 , the first of his books on programming inspired by the Unix operating system .
+rB
+The " e2 " series spread the essence of " C / Unix thinking " with makeovers for Fortran and Pascal .
+e 1's Ratfor was eventually put in the public domain .
+r C e 1 worked at Bell Labs alongside e 3 creators Ken Thompson and Dennis Ritchie .
+Mentions e 1 = Brian Kernighan ,
+e 2 = Software Tools , e3 = Unix ( 1 ) ? e 1 ,e 1 ? e 2 ,e 2 log p ( l = 1 |r , r ) + ( 1 ? ? e 1 ,e 1 ? e 2 ,e 2 ) log ( 1 ? p ( l = 1|r , r ) )
+where ?
+e ,e is the Kronecker delta that takes the value 1 iff e = e , and 0 otherwise .
+Introducing Blanks
+Readers may have noticed that the loss in Equation 1 can be minimized perfectly by the entity linking system used to create D. And , since this linking system does not have any notion of relations , it is not reasonable to assume that f ? will somehow magically build meaningful relation representations .
+To avoid simply relearning the entity linking system , we introduce a modified corpus where eachr i = ( x i , s i 1 , s i 2 ) contains a relation statement in which one or both entity mentions may have been replaced by a special [ BLANK ] symbol .
+Specifically , x contains the span defined by s 1 with probability ?.
+Otherwise , the span has been replaced with a single [ BLANK ] symbol .
+The same is true for s 2 .
+Only ?
+2 of the relation statements in D explicitly name both of the entities that participate in the relation .
+As a result , minimizing L ( D ) requires f ? to do more than simply identifying named entities in r.
+We hypothesize that training on D will result in a f ? that encodes the semantic relation between the two possibly elided entity spans .
+Results in Section 5 support this hypothesis .
+Matching the Blanks Training
+To train a model with matching the blank task , we construct a training setup similar to BERT , where two losses are used concurrently : the masked language model loss and the matching the blanks loss .
+For generating the training corpus , we use English Wikipedia and extract text passages from the HTML paragraph blocks , ignoring lists , and tables .
+We use an off - the - shelf entity linking system 1 to annotate text spans with a unique knowledge base identifier ( e.g. , Freebase ID or Wikipedia URL ) .
+The span annotations include not only proper names , but other referential entities such as common nouns and pronouns .
+From this annotated corpus we extract relation statements where each statement contains at least two grounded entities within a fixed sized window of tokens 2 .
+To prevent a large bias towards relation statements that involve popular entities , we limit the number of relation statements that contain the same entity by randomly sampling a constant number of relation statements that contain any given entity .
+We use these statements to train model parameters to minimize L ( D ) as described in the previous section .
+In practice , it is not possible to compare every pair of relation statements , as in Equation 1 , and so we use a noise - contrastive estimation .
+In this estimation , we consider all positive pairs of relation statements that contain the same entity , so there is no change to the contribution of the first term in Equation 1 - where ? e 1 ,e 1 ? e 2 ,e 2 = 1 . The approximation does , however , change the contribution of the second term .
+Instead of summing overall pairs of relation statements that do not contain the same pair of entities , we sample a set of negatives that are either randomly sampled uniformly from the set of all relation statement pairs , or are sampled from the set of relation statements that share just a single 5 - way 5 - way 10 - way 10 - way 1 - shot 5 - shot :
+Test results for FewRel few - shot relation classification task .
+Proto
+Net is the best published system from .
+At the time of writing , our BERTEM + MTB model outperforms the top model on the leaderboard ( http : //www.zhuhao.me/fewrel / ) by over 10 % on the 5 - way - 1 - shot and over 15 % on the 10 - way - 1 - shot configurations .
+entity .
+We include the second set ' hard ' negatives to account for the fact that most randomly sampled relation statement pairs are very unlikely to be even remotely topically related , and we would like to ensure that the training procedure sees pairs of relation statements that refer to similar , but different , relations .
+Finally , we probabilistically replace each entity 's mention with [ BLANK ] symbols , with a probability of ? = 0.7 , as described in Section 3.2 , to ensure that the model is not confounded by the absence of [ BLANK ] symbols in the evaluation tasks .
+In total , we generate 600 million relation statement pairs from English Wikipedia , roughly split between 50 % positive and 50 % strong negative pairs .
+Experimental Evaluation
+In this section , we evaluate the impact of training by matching the blanks .
+We start with the best BERT based model from Section 3.3 , which we call BERT EM , and we compare this to a variant that is trained with the matching the blanks task ( BERT EM + MTB ) .
+We train the BERT EM + MTB model by initializing the Transformer weights to the weights from BERT LARGE and use the following parameters :
+We report results on all of the tasks from Section 3.1 , using the same task - specific training methodology for both BERT EM and BERT EM + MTB .
+Few - shot Relation Matching
+First , we investigate the ability of BERT EM + MTB to solve the FewRel task without any task - specific training data .
+Since FewRel is an exemplar - based approach , we can just rank each candidate rela - tion statement according to its representation 's inner product with the exemplars ' representations .
+shows that the task agnostic BERT EM and BERT EM + MTB models outperform the previous published state of the art on FewRel task even when they have not seen any FewRel training data .
+For BERT EM + MTB , the increase over 's supervised approach is very significant - 8.8 % on the 5 - way - 1 - shot task and 12.7 % on the 10 - way - 1 - shot task .
+BERT EM + MTB also significantly outperforms BERT EM in this unsupervised setting , which is to be expected since there is no relation - specific loss during BERT EM 's training .
+To investigate the impact of supervision on BERT EM and BERT EM + MTB , we introduce increasing amounts of FewRel 's training data .
+shows the increase in performance as we either increase the number of training examples for each relation type , or we increase the number of relation types in the training data .
+When given access to all of the training data , BERT EM approaches BERT EM + MTB 's performance .
+However , when we keep all relation types during training , and vary the number of types per example , BERT EM + MTB only needs 6 % of the training data to match the performance of a BERT EM model trained on all of the training data .
+We observe that maintaining a diversity of relation types , and reducing the number of examples per type , is the most effective way to reduce annotation effort for this task .
+The results in show that MTB training could be used to significantly reduce effort in implementing an exemplar based relation extraction system .
+Finally , we report BERT EM + MTB 's performance on all of FewRel 's fully supervised tasks in Table 3 .
+We see that it outperforms the human upper bound reported by , and it significantly outperforms all other submissions to the FewRel leaderboard , published or unpublished .
+outperform previously published results for these three tasks .
+The additional MTB based training further increases F 1 scores for all tasks .
+We also analyzed the performance of our two models while reducing the amount of supervised task specific tuning data .
+The results displayed in show the development set performance when tuning on a random subset of the task specific training data .
+For all tasks , we see that MTB based training is even more effective for low - resource cases , where there is a larger gap in performance between our BERT EM and BERT EM + MTB based classifiers .
+This further supports our argument that training by matching the blanks can significantly reduce the amount of human input required to create relation extractors , and populate a knowledge base .
+Supervised Relation Extraction
+Conclusion and Future Work
+In this paper we study the problem of producing useful relation representations directly from text .
+We describe a novel training setup , which we call matching the blanks , which relies solely on entity resolution annotations .
+When coupled with anew architecture for fine - tuning relation representations in BERT , our models achieves state - of the - art results on three relation extraction tasks , and outperforms human accuracy on few - shot relation matching .
+In addition , we show how the new model is particularly effective in low - resource regimes , and we argue that it could significantly reduce the amount of human effort required to create relation extractors .
+In future work , we plan to work on relation discovery by clustering relation statements that have similar representations according to BERT EM + MTB .
+This would take us some of the way toward our goal of truly general purpose relation identification and extraction .
+We will also study representations of relations and entities that can be used to store relation triples in a distributed knowledge base .
+This is inspired by recent work in knowledge base embedding .

@@ -1,0 +1,86 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "TC - LSTM" : {
+          "has" : {
+            "Two LSTMs" : {
+              "used to" : {
+                "model" : {
+                  "has" : {
+                    "left and right context" : {
+                      "of" : "target"
+                    }
+                  }
+                }
+              }
+            },
+            "concatenation" : {
+              "of" : {
+                "two representations" : {
+                  "used to" : {
+                    "predict" : {
+                      "has" : "label"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "TC - LSTM : Two LSTMs are used to model the left and right context of the target separately , then the concatenation of two representations is used to predict the label ."
+        },
+        "MemNet" : {
+          "uses" : {
+            "attention mechanism" : {
+              "over" : {
+                "word embedding" : {
+                  "over" : "multiple rounds"
+                }
+              },
+              "to aggregate" : {
+                "information" : {
+                  "in" : "sentence"
+                }
+              }
+            }
+          },
+          "from sentence" : "MemNet : It uses the attention mechanism over the word embedding over multiple rounds to aggregate the information in the sentence , the vector of the final round is used for the prediction ."
+        },
+        "IAN" : {
+          "adopts" : {
+            "two LSTMs" : {
+              "to derive" : {
+                "representations" : {
+                  "of" : "context and the target phrase"
+                }
+              }
+            }
+          },
+          "has" : {
+            "concatenation" : {
+              "fed to" : "softmax layer"
+            }
+          },
+          "from sentence" : "IAN : IAN adopts two LSTMs to derive the representations of the context and the target phrase interactively and the concatenation is fed to the softmax layer ."
+        },
+        "BILSTM - ATT -G" : {
+          "models" : {
+            "left and right contexts" : {
+              "using" : "two attention - based LSTMs"
+            }
+          },
+          "makes use of" : {
+            "special gate layer" : {
+              "to combine" : "two representations"
+            }
+          },
+          "from sentence" : "BILSTM - ATT -G : It models left and right contexts using two attention - based LSTMs and makes use of a special gate layer to combine these two representations ."
+        },
+        "TNet - AS" : {
+          "Without using" : "attention module",
+          "from sentence" : "TNet - AS : Without using an attention module , TNet adopts a convolutional layer to get salient features from the transformed word representations originated from a bidirectional LSTM layer ."
+        }
+      }      
+    }
+  }
+}

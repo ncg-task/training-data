@@ -1,0 +1,62 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "has" : {
+        "word embedding vectors" : {
+          "initialized with" : {
+            "300 - dimension GloVe vectors" : {
+              "pre-trained on" : {
+                "unlabeled data" : {
+                  "of" : "840 billion tokens"
+                }
+              }
+            }
+          },
+          "from sentence" : "In our experiments , word embedding vectors are initialized with 300 - dimension GloVe vectors which are pre-trained on unlabeled data of 840 billion tokens ."
+        },
+        "Words out of the vocabulary" : {
+          "of" : {
+            "Glo Ve" : {
+              "are" : {
+                "randomly initialized" : {
+                  "with" : "uniform distribution U ( ? 0.25 , 0.25 )"
+                }
+              },
+              "from sentence" : "Words out of the vocabulary of Glo Ve are randomly initialized with a uniform distribution U ( ? 0.25 , 0.25 ) ."
+            }
+          }
+        },
+        "neural models" : {
+          "implemented in" : "PyTorch",
+          "from sentence" : "All neural models are implemented in PyTorch ."
+        }
+      },
+      "use" : {
+        "Adagrad" : {
+          "with" : {
+            "batch size" : {
+              "of" : "32 instances"
+            },
+            "default learning rate" : {
+              "of" : "1 e ? 2"
+            },
+            "maximal epochs" : {
+              "of" : "30"
+            }
+          },
+          "from sentence" : "We use Adagrad with a batch size of 32 instances , default learning rate of 1 e ? 2 , and maximal epochs of 30 ."
+        }
+      },
+      "fine tune" : {
+        "early stopping" : {
+          "with" : {
+            "5 - fold cross validation" : {
+              "on" : "training datasets"
+            }
+          }
+        },
+        "from sentence" : "We only fine tune early stopping with 5 - fold cross validation on training datasets ."
+      }
+    }
+  }
+}

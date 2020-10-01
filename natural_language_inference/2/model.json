@@ -1,0 +1,50 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "end - to - end question - focused multi-factor attention network" : {
+          "for" : "document - based question answering",
+          "name" : "AMANDA",
+          "learns to" : {
+            "aggregate" : {
+              "has" : {
+                "evidence" : {
+                  "distributed across" : "multiple sentences"
+                }
+              }
+            }
+          },
+          "identifies" : {
+            "important question words" : {
+              "to help" : {
+                "extract" : {
+                  "has" : "answer"
+                }
+              }
+            }
+          },
+          "from sentence" : "In this work , we propose an end - to - end question - focused multi-factor attention network for document - based question answering ( AMANDA ) , which learns to aggregate evidence distributed across multiple sentences and identifies the important question words to help extract the answer ."
+        }
+      },
+      "has" : {
+        "AMANDA" : {
+          "extracts" : {
+            "answer" : {
+              "by synthesizing" : {
+                "relevant facts" : {
+                  "from" : "passage"
+                }
+              },
+              "by implicitly determining" : {
+                "suitable answer type" : {
+                  "during" : "prediction"
+                }
+              }
+            }
+          },
+          "from sentence" : "Intuitively , AMANDA extracts the answer not only by synthesizing relevant facts from the passage but also by implicitly determining the suitable answer type during prediction ."
+        }
+      }
+    }
+  }
+}

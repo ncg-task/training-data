@@ -1,0 +1,24 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "regularized averaged perceptron ( AP )" : {
+          "implemented in" : "LBJava package",
+          "from sentence" : "The first is the regularized averaged perceptron ( AP ) implemented in the LBJava package and is a local method ."
+        }
+      },
+      "On top of" : {
+        "first baseline" : {
+          "performed" : "global inference",
+          "from sentence" : "On top of the first baseline , we performed global inference in Eq ."
+        }
+      },
+      "used" : {
+        "same feature set": {
+          "as in" : ["proposed structured perceptron ( SP )", "CoDL"],
+          "from sentence" : "Both of them used the same feature set ( i.e. , as designed in ) as in the proposed structured perceptron ( SP ) and CoDL for fair comparisons ."
+        }
+      }
+    }
+  }
+}

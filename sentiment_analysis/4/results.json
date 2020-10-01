@@ -1,0 +1,106 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "ICON" : {
+          "performs better than" : {
+            "compared models" : {
+              "with" : {
+                "significant performance increase" : {
+                  "in" : "emotions ( ? 2.1 % acc. )"
+                }
+              }
+            },
+            "from sentence" : "ICON performs better than the compared models with significant performance increase in emotions ( ? 2.1 % acc. ) ."            
+          },
+          "manages to" : {
+            "identify" : {
+              "correctly" : {
+                "relatively similar excitement emotion" : {
+                  "by" : "large margin"
+                }
+              } 
+            },
+            "from sentence" : "Also , ICON manages to correctly identify the relatively similar excitement emotion by a large margin ."
+          }
+        },
+        "trimodal network" : {
+          "provides" : {
+            "best performance" : {
+              "preceded by" : "bimodal variants"
+            }
+          },
+          "from sentence" : "As seen , the trimodal network provides the best performance which is preceded by the bimodal variants ."
+        },
+        "audio and visual modality" : {
+          "when used with" : {
+            "text" : {
+              "shared" : {
+                "complementary data" : {
+                  "to improve" : "overall performance"
+                }
+              }
+            }
+          },
+          "from sentence" : "Interestingly , the audio and visual modality , on their own , do not provide good performance , but when used with text , complementary data is shared to improve overall performance ."
+        }
+      },
+      "For" : {
+        "each emotion" : {
+          "has" : {
+            "ICON" : {
+              "outperforms" : {
+                "all the compared models" : {
+                  "except for" : "happiness emotion"
+                }
+              },
+              "has" : {
+                "performance" : {
+                  "at par with" : "c LSTM",
+                  "without" : "significant gap"
+                }
+              }
+            }
+          },
+          "from sentence" : "For each emotion , ICON outperforms all the compared models except for happiness emotion .
+However , its performance is still at par with c LSTM without a significant gap ."
+
+        }
+      },
+      "In" : {
+        "labels" : {
+          "has" : {
+            "ICON" : {
+              "attains" : {
+                "improved performance" : {
+                  "over" : "counterparts"
+                }
+              }
+            }
+          },
+          "from sentence" : "In all the labels , ICON attains improved performance over its counterparts , suggesting the efficacy of its context - modeling scheme ."
+        }
+      },
+      "presents" : {
+        "different combinations of modes" : {
+          "used by" : {
+            "ICON" : {
+              "on" : "IEMOCAP"
+            }
+          }
+        },
+        "from sentence" : "presents the results for different combinations of modes used by ICON on IEMOCAP ."
+      },
+      "Among" : {
+        "unimodals" : {
+          "has" : {
+            "language modality" : {
+              "performs" : "best"
+            }
+          }
+        },
+        "from sentence" : "Among unimodals , language modality performs the best , reaffirming its significance in multimodal systems ."
+      }
+    }
+  }
+}

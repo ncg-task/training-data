@@ -1,0 +1,236 @@
+274	17	43	both context and knowledge
+274	48	60	essential to
+274	65	83	strong performance
+274	84	86	of
+274	87	90	KET
+274	23	25	on
+274	94	106	all datasets
+275	10	18	removing
+275	19	26	context
+275	33	47	greater impact
+275	20	22	on
+275	51	69	long conversations
+275	70	74	than
+275	75	94	short conversations
+199	0	6	c LSTM
+199	11	32	contextual LSTM model
+200	40	42	is
+200	3	39	utterance - level bidirectional LSTM
+200	48	57	to encode
+200	58	72	each utterance
+201	2	37	context - level unidirectional LSTM
+201	46	55	to encode
+201	2	9	context
+204	0	9	CNN+cLSTM
+204	0	3	CNN
+204	27	37	to extract
+204	38	56	utterance features
+205	3	9	c LSTM
+205	18	34	applied to learn
+205	35	58	context representations
+206	0	9	BERT BASE
+208	3	8	treat
+208	9	23	each utterance
+208	24	28	with
+208	33	40	context
+208	41	43	as
+208	46	61	single document
+209	3	8	limit
+209	13	28	document length
+209	29	31	to
+209	36	51	last 100 tokens
+209	52	60	to allow
+209	61	78	larger batch size
+211	0	11	DialogueRNN
+211	18	43	stateof - the - art model
+211	44	47	for
+211	48	65	emotion detection
+211	66	68	in
+211	69	90	textual conversations
+212	3	14	models both
+212	15	47	context and speakers information
+216	0	18	KET SingleSelfAttn
+217	3	10	replace
+217	15	44	hierarchical self - attention
+217	45	47	by
+217	50	79	single self - attention layer
+217	80	88	to learn
+217	89	112	context representations
+218	0	21	Contextual utterances
+218	22	25	are
+218	26	47	concatenated together
+218	48	56	prior to
+218	61	90	single self - attention layer
+219	0	11	KET StdAttn
+220	3	10	replace
+220	15	61	dynamic contextaware affective graph attention
+220	62	64	by
+220	69	93	standard graph attention
+222	3	15	preprocessed
+222	16	28	all datasets
+222	29	31	by
+222	32	46	lower - casing
+222	51	63	tokenization
+222	64	69	using
+222	70	75	Spacy
+224	3	6	use
+224	11	24	released code
+224	25	28	for
+224	29	54	BERT BASE and DialogueRNN
+227	7	23	Glo Ve embedding
+227	24	27	for
+227	28	42	initialization
+227	20	22	in
+227	50	83	word and concept embedding layers
+225	0	3	For
+225	4	16	each dataset
+225	19	29	all models
+225	30	33	are
+225	34	46	fine - tuned
+225	47	55	based on
+225	62	73	performance
+225	53	55	on
+225	81	95	validation set
+226	4	13	our model
+226	14	16	in
+226	17	29	all datasets
+226	35	38	use
+226	39	81	Adam optimization ( Kingma and Ba , 2014 )
+226	82	86	with
+226	89	99	batch size
+226	100	102	of
+226	103	105	64
+226	110	123	learning rate
+226	100	102	of
+226	127	133	0.0001
+228	104	106	is
+228	8	21	class weights
+228	22	24	in
+228	25	45	cross - entropy loss
+228	46	49	for
+228	50	62	each dataset
+228	68	79	set them as
+228	84	89	ratio
+228	90	92	of
+228	97	115	class distribution
+228	22	24	in
+228	123	137	validation set
+228	138	140	to
+228	97	115	class distribution
+228	22	24	in
+228	171	183	training set
+29	17	24	propose
+29	27	67	Knowledge - Enriched Transformer ( KET )
+29	83	94	incorporate
+29	95	146	contextual information and external knowledge bases
+33	27	66	hierarchical self - attention mechanism
+33	67	75	allowing
+33	76	79	KET
+33	80	88	to model
+33	93	132	hierarchical structure of conversations
+31	56	67	Transformer
+31	4	48	self - attention and cross-attention modules
+31	68	75	capture
+31	80	126	intra-sentence and inter-sentence correlations
+32	4	16	shorter path
+32	17	19	of
+32	20	36	information flow
+32	90	96	allows
+32	97	100	KET
+32	101	109	to model
+32	110	149	contextual information more efficiently
+34	10	19	separates
+34	20	40	context and response
+34	41	45	into
+34	50	69	encoder and decoder
+35	14	21	exploit
+35	22	43	commonsense knowledge
+35	49	57	leverage
+35	58	82	external knowledge bases
+35	83	96	to facilitate
+35	101	127	understanding of each word
+35	111	113	in
+35	135	145	utterances
+35	146	161	by referring to
+35	162	188	related knowledge entities
+36	4	21	referring process
+36	22	24	is
+36	25	32	dynamic
+36	37	53	balances between
+36	54	83	relatedness and affectiveness
+36	84	86	of
+36	91	119	retrieved knowledge entities
+36	120	125	using
+36	128	179	context - aware affective graph attention mechanism
+2	37	79	Emotion Detection in Textual Conversations
+5	12	55	detecting emotions in textual conversations
+14	32	113	detecting emotions ( e.g. , happy , sad , angry , etc. ) in textual conversations
+237	0	6	c LSTM
+237	7	15	performs
+237	16	31	reasonably well
+237	20	22	on
+237	35	84	short conversations ( i.e. , EC and DailyDialog )
+237	95	100	worst
+237	20	22	on
+237	104	161	long conversations ( i.e. , MELD , EmoryNLP and IEMOCAP )
+240	0	9	BERT BASE
+240	10	18	achieves
+240	19	47	very competitive performance
+240	48	50	on
+240	51	63	all datasets
+240	64	70	except
+240	71	73	EC
+240	74	80	due to
+240	85	114	strong representational power
+240	115	118	via
+240	119	151	bi-directional context modelling
+240	152	157	using
+240	162	173	Transformer
+243	16	27	DialogueRNN
+243	28	48	performs better than
+243	49	58	our model
+243	59	61	on
+243	62	69	IEMOCAP
+246	4	16	KET variants
+246	17	51	KET SingleSelfAttn and KET StdAttn
+246	52	59	perform
+246	60	70	comparably
+246	71	75	with
+246	80	94	best baselines
+246	95	97	on
+246	98	110	all datasets
+246	111	117	except
+246	118	125	IEMOCAP
+247	32	48	noticeably worse
+247	49	53	than
+247	54	57	KET
+247	58	60	on
+247	61	73	all datasets
+247	74	80	except
+247	81	83	EC
+248	86	95	KET model
+248	13	15	on
+248	99	101	EC
+239	14	18	when
+239	23	45	utterance - level LSTM
+239	46	48	in
+239	49	55	c LSTM
+239	59	70	replaced by
+239	71	79	features
+239	80	92	extracted by
+239	93	96	CNN
+239	129	134	model
+239	135	143	performs
+239	144	164	significantly better
+239	165	169	than
+239	49	55	c LSTM
+239	4	6	on
+239	180	198	long conversations
+245	13	27	indicates that
+245	28	37	our model
+245	2	4	is
+245	41	47	robust
+245	48	54	across
+245	55	63	datasets
+245	64	68	with
+245	69	121	varying training sizes , context lengths and domains

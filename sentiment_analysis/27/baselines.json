@@ -1,0 +1,133 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "TD - LSTM" : {
+          "constructs" : {
+            "aspect-specific representation" : {
+              "by" : {
+                "left context" : {
+                  "with" : "aspect"
+                },
+                "right context" : {
+                  "with" : "aspect"
+                }
+              }
+            },
+            "from sentence" : "TD - LSTM constructs aspect-specific representation by the left context with aspect and the right context with aspect , then employs two LSTMs to model them respectively ."            
+          },
+          "employs" : ["two LSTMs", {"from sentence" : "TD - LSTM constructs aspect-specific representation by the left context with aspect and the right context with aspect , then employs two LSTMs to model them respectively ."}],
+          "has" : {
+            "last hidden states" : {
+              "of" : "two LSTMS",
+              "has" : {
+                "finally concatenated" : {
+                  "for predicting" : {
+                    "sentiment polarity" : {
+                      "of" : "aspect"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "The last hidden states of the two LSTMs are finally concatenated for predicting the sentiment polarity of the aspect ."
+            }
+          }
+        },
+        "ATAE - LSTM" : {
+          "attaches" : {
+            "aspect embedding" : {
+              "to" : {
+                "each word embedding" : {
+                  "to capture" : "aspect - dependent information"
+                }
+              }
+            }
+          },
+          "employs" : {
+            "attention mechanism" : {
+              "to get" : {
+                "sentence representation" : {
+                  "for" : "final classification"
+                }
+              }
+            }
+          },
+          "from sentence" : "ATAE - LSTM first attaches the aspect embedding to each word embedding to capture aspect - dependent information , and then employs attention mechanism to get the sentence representation for final classification ."
+        },
+        "Mem Net" : {
+          "uses" : {
+            "deep memory network" : {
+              "on" : {
+                "context word embeddings" : {
+                  "for" : {
+                    "sentence representation" : {
+                      "to capture" : {
+                        "relevance" : {
+                          "between" : "each context word and the aspect"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Mem Net uses a deep memory network on the context word embeddings for sentence representation to capture the relevance between each context word and the aspect ."
+        },
+        "IAN" : {
+          "generates" : {
+            "representations" : {
+              "for" : {
+                "aspect terms and contexts" : {
+                  "with" : "two attention - based LSTM network"
+                }
+              }
+            }
+          },
+          "from sentence" : "IAN generates the representations for aspect terms and contexts with two attention - based LSTM network separately ."
+        },
+        "RAM" : {
+          "employs" : {
+            "gated recurrent unit network" : {
+              "to model" : "multiple attention mechanism"
+            }
+          },
+          "captures" : {
+            "relevance" : {
+              "between" : "each context word and the aspect"
+            }
+          },
+          "from sentence" : "RAM [ 10 ] employs a gated recurrent unit network to model a multiple attention mechanism , and captures the relevance between each context word and the aspect ."
+        },
+        "PBAN" : {
+          "appends" : {
+            "position embedding" : {
+              "into" : "each word embedding"
+            },
+            "from sentence" : "PBAN appends the position embedding into each word embedding ."
+          }
+        },
+        "TSN" : {
+          "is" : {
+            "two - stage framework" : {
+              "for" : "aspect - level sentiment analysis"
+            },
+            "from sentence" : "TSN is a two - stage framework for aspect - level sentiment analysis ."
+          }
+        },
+        "AEN" : {
+          "consists of" : ["embedding layer", "attentional encoder layer", "aspect - specific attention layer", "output layer"],
+          "from sentence" : "AEN mainly consists of an embedding layer , an attentional encoder layer , an aspect - specific attention layer , and an output layer ."
+        },
+        "AEN - BERT" : {
+          "is" : {
+            "AEN" : {
+              "with" : "BERT embedding"
+            }
+          },
+          "from sentence" : "AEN - BERT is AEN with BERT embedding ."
+        }
+      }      
+    }
+  }
+}

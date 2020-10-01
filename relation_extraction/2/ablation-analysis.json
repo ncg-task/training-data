@@ -1,0 +1,52 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "observe" : {
+        "three methods" : {
+          "perform" : {
+            "worse" : {
+              "than" : "R - BERT"
+            }
+          },
+          "from sentence" : "We observe that the three methods all perform worse than R - BERT ."
+        }
+      },
+      "has" : {
+        "BERT - NO - SEP - NO - ENT" : {
+          "performs" : {
+            "worst" : {
+              "with" : {
+                "F1 8.16 absolute points" : {
+                  "worse than" : "R - BERT"
+                }
+              }
+            }
+          },
+          "from sentence" : "Of the methods , BERT - NO - SEP - NO - ENT performs worst , with its F1 8.16 absolute points worse than R - BERT ."
+        },
+        "BERT" : {
+          "without" : "special separate tokens",
+          "can not locate" : "target entities",
+          "from sentence" : "BERT without special separate tokens can not locate the target entities and lose this key information ."
+        }
+      },
+      "demonstrates" : {
+        "special separate tokens and the hidden entity vectors" : {
+          "make" : "important contributions"
+        },
+        "from sentence" : "This ablation study demonstrates that both the special separate tokens and the hidden entity vectors make important contributions to our approach ."
+      },
+      "incorporating" : {
+        "output" : {
+          "of" : {
+            "target entity vectors" : {
+              "further enriches" : "information",
+              "to make" : "more accurate prediction"
+            }
+          }
+        },
+        "from sentence" : "On the other hand , incorporating the output of the target entity vectors further enriches the information and helps to make more accurate prediction ."
+      }
+    }
+  }
+}

@@ -1,0 +1,3 @@
+(Contribution||has research problem||Convolutional Neural Networks with Recurrent Neural Filters)
+(Contribution||has research problem||model convolution filters with RNNs)
+(Contribution||has research problem||employ recurrent neural networks ( RNNs ) as convolution filters of CNN systems)

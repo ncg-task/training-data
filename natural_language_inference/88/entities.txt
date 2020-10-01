@@ -1,0 +1,234 @@
+144	25	54	https://github.com/cheng6076/
+146	0	17	Language Modeling
+152	3	7	used
+152	8	35	stochastic gradient descent
+152	36	39	for
+152	40	52	optimization
+152	53	57	with
+152	61	82	initial learning rate
+152	83	85	of
+152	86	90	0.65
+152	99	105	decays
+152	106	108	by
+152	111	117	factor
+152	83	85	of
+152	121	125	0.85
+152	126	129	per
+152	130	135	epoch
+153	3	14	renormalize
+153	19	27	gradient
+153	28	30	if
+153	5	9	norm
+153	43	55	greater than
+153	56	57	5
+154	4	21	mini - batch size
+154	26	32	set to
+154	33	35	40
+155	4	14	dimensions
+155	15	17	of
+155	22	37	word embeddings
+155	43	49	set to
+155	50	53	150
+155	54	57	for
+155	58	68	all models
+157	19	63	Kneser - Ney 5 - gram language model ( KN5 )
+157	80	89	serves as
+157	92	111	non-neural baseline
+157	112	115	for
+157	120	142	language modeling task
+160	4	25	gated - feedback LSTM
+160	30	44	feedback gates
+160	45	55	connecting
+160	60	73	hidden states
+160	74	80	across
+160	81	100	multiple time steps
+160	27	29	as
+160	107	123	adaptive control
+160	124	126	of
+160	131	147	information flow
+161	4	22	depth - gated LSTM
+161	23	27	uses
+161	30	40	depth gate
+161	41	51	to connect
+161	52	64	memory cells
+161	65	67	of
+161	68	94	vertically adjacent layers
+172	0	5	Among
+172	8	30	all deep architectures
+172	37	56	three - layer LSTMN
+172	62	70	performs
+172	71	75	best
+200	40	43	are
+200	44	57	LSTM variants
+203	25	31	report
+203	36	47	performance
+203	48	50	of
+203	55	77	paragraph vector model
+193	3	7	used
+193	8	45	pretrained 300 - D Glove 840B vectors
+193	46	59	to initialize
+193	64	79	word embeddings
+195	8	37	Adam ( Kingma and Ba , 2015 )
+195	38	41	for
+195	42	54	optimization
+195	55	59	with
+195	64	87	two momentum parameters
+195	88	94	set to
+195	95	108	0.9 and 0.999
+194	4	12	gradient
+194	13	16	for
+194	17	22	words
+194	23	27	with
+194	28	44	Glove embeddings
+194	51	60	scaled by
+194	61	65	0.35
+194	40	42	in
+194	73	84	first epoch
+194	85	90	after
+194	97	116	all word embeddings
+194	122	129	updated
+194	130	138	normally
+196	4	25	initial learning rate
+196	30	36	set to
+196	37	43	2E - 3
+197	4	27	regularization constant
+197	28	31	was
+197	32	38	1E - 4
+197	47	62	mini-batch size
+197	28	31	was
+197	67	68	5
+198	2	14	dropout rate
+198	15	17	of
+198	18	21	0.5
+198	26	36	applied to
+198	41	66	neural network classifier
+204	15	24	show that
+204	25	54	both 1 - and 2 - layer LSTMNs
+204	55	65	outperform
+204	70	84	LSTM baselines
+206	0	2	On
+206	7	53	fine - grained and binary classification tasks
+206	54	73	our 2 - layer LSTMN
+206	74	82	performs
+206	83	88	close
+206	89	91	to
+206	96	107	best system
+208	0	26	Natural Language Inference
+220	3	7	used
+220	8	46	pre-trained 300 - D Glove 840B vectors
+220	47	60	to initialize
+220	65	80	word embeddings
+221	0	35	Out - of - vocabulary ( OOV ) words
+221	41	52	initialized
+221	53	61	randomly
+221	62	66	with
+221	67	83	Gaussian samples
+224	8	37	Adam ( Kingma and Ba , 2015 )
+224	38	41	for
+224	42	54	optimization
+224	55	59	with
+224	64	87	two momentum parameters
+224	88	94	set to
+224	95	108	0.9 and 0.999
+224	132	153	initial learning rate
+224	88	94	set to
+224	161	167	1E - 3
+225	4	20	mini- batch size
+225	25	31	set to
+225	32	40	16 or 32
+222	8	15	updated
+222	16	27	OOV vectors
+222	28	30	in
+222	35	46	first epoch
+222	49	54	after
+222	61	80	all word embeddings
+222	8	15	updated
+222	94	102	normally
+223	4	16	dropout rate
+223	21	34	selected from
+223	35	60	[ 0.1 , 0.2 , 0.3 , 0.4 ]
+228	111	151	shared LSTM ( Rocktschel et al. , 2016 )
+228	156	188	word - by - word attention model
+228	197	223	matching LSTM ( m LSTM ; )
+230	8	16	compared
+230	35	60	bag - of - words baseline
+231	0	6	LSTMNs
+231	7	14	achieve
+231	15	33	better performance
+233	8	15	observe
+233	21	27	fusion
+233	28	30	is
+233	31	51	generally beneficial
+233	63	74	deep fusion
+233	75	92	slightly improves
+233	93	97	over
+233	98	112	shallow fusion
+235	0	4	With
+235	5	22	standard training
+235	29	40	deep fusion
+235	41	46	yield
+235	52	86	state - of - the - art performance
+42	15	18	use
+42	19	40	multiple memory slots
+42	41	48	outside
+42	53	63	recurrence
+42	12	14	to
+42	67	101	piece - wise store representations
+42	102	104	of
+42	109	114	input
+42	117	142	read and write operations
+42	143	146	for
+42	147	156	each slot
+42	164	174	modeled as
+42	178	197	attention mechanism
+42	198	202	with
+42	205	225	recurrent controller
+43	8	16	leverage
+43	17	37	memory and attention
+43	38	48	to empower
+43	51	68	recurrent network
+43	69	73	with
+43	74	106	stronger memorization capability
+43	99	106	ability
+43	140	151	to discover
+43	152	161	relations
+43	162	167	among
+43	168	174	tokens
+44	8	19	realized by
+44	20	29	inserting
+44	32	53	memory network module
+44	20	22	in
+44	61	67	update
+44	68	70	of
+44	73	90	recurrent network
+44	91	104	together with
+44	105	114	attention
+44	115	118	for
+44	119	136	memory addressing
+47	31	35	term
+47	36	80	Long Short - Term Memory - Network ( LSTMN )
+47	83	85	is
+47	88	105	reading simulator
+47	118	126	used for
+47	127	152	sequence processing tasks
+49	10	19	processes
+49	20	24	text
+49	25	38	incrementally
+49	39	44	while
+49	45	53	learning
+49	60	71	past tokens
+49	25	27	in
+49	79	85	memory
+49	110	119	relate to
+49	124	137	current token
+49	138	143	being
+49	144	153	processed
+50	24	31	induces
+50	32	52	undirected relations
+50	53	58	among
+50	59	65	tokens
+50	66	71	as an
+50	72	89	intermediate step
+50	90	101	of learning
+50	102	117	representations
+2	40	55	Machine Reading

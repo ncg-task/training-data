@@ -1,0 +1,34 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "has" : {
+        "both context and knowledge" : {
+          "essential to" : {
+            "strong performance" : {
+              "of" : {
+                "KET" : {
+                  "on" : "all datasets"
+                }
+              }
+            }
+          },
+          "from sentence" : "It is clear that both context and knowledge are essential to the strong performance of KET on all datasets ."
+        }
+      },
+      "removing" : {
+        "context" : {
+          "has" : {
+            "greater impact" : {
+              "on" : {
+                "long conversations" : {
+                  "than" : "short conversations"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "Note that removing context has a greater impact on long conversations than short conversations , which is expected because more contextual information is lost in long conversations ."
+      }
+    }
+  }
+}

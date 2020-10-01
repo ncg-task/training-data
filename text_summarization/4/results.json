@@ -1,0 +1,70 @@
+{
+  "has" : {
+    "Results" : {
+      "In" : {
+        "Gigaword dataset" : {
+          "where" : "texts are short",
+          "has" : {
+            "our best model" : {
+              "achieves" : {
+                "comparable performance" : {
+                  "with" : "current state - of - the - art"
+                }
+              }
+            }
+          },
+          "from sentence" : "In Gigaword dataset where the texts are short , our best model achieves a comparable performance with the current state - of - the - art ."
+        },
+        "CNN dataset" : {
+          "where" : "texts are longer",
+          "has" : {
+            "our best model" : {
+              "outperforms" : "all the previous models"
+            }
+          },
+          "from sentence" : "In CNN dataset where the texts are longer , our best model outperforms all the previous models ."
+        }
+      },
+      "has" : {
+        "E2T" : {
+          "achieves" : {
+            "significant improvement" : {
+              "over" : {
+                "baseline model BASE" : {
+                  "with" : {
+                    "at least 2 ROUGE" : {
+                      "has" : {
+                        "1 points increase" : {
+                          "in" : "Gigaword dataset"
+                        }
+                      }
+                    },
+                    "6 ROUGE" : {
+                      "has" : {
+                        "1 points increase" : {
+                          "in" : "CNN dataset"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Overall , E2T achieves a significant improvement over the baseline model BASE , with at least 2 ROUGE - 1 points increase in the Gigaword dataset and 6 ROUGE - 1 points increase in the CNN dataset ."
+        }
+      },
+      "Among" : {
+        "model variants" : {
+          "has" : {
+            "CNN - based encoder" : {
+              "with" : ["selective disambiguation", "firm attention"],
+              "performs" : "best"
+            }
+          }
+        },
+        "from sentence" : "Among the model variants , the CNN - based encoder with selective disambiguation and firm attention performs the best ."
+      }
+    }
+  }
+}

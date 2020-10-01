@@ -1,0 +1,8 @@
+(Contribution||has||Model)
+(Model||namely||FastQA)
+(FastQA||develop||neural , bag - of - words ( BoW ))
+(FastQA||develop||recurrent neural network ( RNN ))
+(Model||model||interaction)
+(interaction||between||question and context)
+(question and context||through||computable features)
+(computable features||on||word level)

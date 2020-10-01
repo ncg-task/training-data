@@ -1,0 +1,142 @@
+260	23	43	n-gram functionality
+260	9	11	is
+260	47	56	important
+260	59	71	contributing
+260	72	103	almost 5 % accuracy improvement
+263	4	18	top N function
+263	19	30	contributes
+263	31	42	very little
+263	4	6	to
+263	50	69	overall performance
+265	0	32	Simple word - by - word matching
+265	46	52	useful
+265	53	55	on
+265	56	62	MCTest
+266	4	29	sequential sliding window
+266	30	35	makes
+266	38	54	3 % contribution
+267	24	57	dependency - based sliding window
+267	58	63	makes
+267	71	89	minor contribution
+270	14	36	exogenous word weights
+270	37	41	make
+270	44	68	significant contribution
+270	69	71	of
+270	72	82	almost 5 %
+264	0	8	Ablating
+264	13	33	sentential component
+264	34	38	made
+264	43	70	most significant difference
+264	73	81	reducing
+264	82	93	performance
+264	94	96	by
+264	97	110	more than 5 %
+218	0	3	For
+218	4	16	word vectors
+218	20	23	use
+218	24	63	Google 's publicly available embeddings
+218	66	78	trained with
+218	79	87	word2vec
+218	88	90	on
+218	95	127	100 - billion - word News corpus
+219	18	22	kept
+219	23	28	fixed
+219	29	39	throughout
+219	40	48	training
+220	12	15	are
+220	16	33	300 - dimensional
+231	114	118	used
+231	119	122	0.5
+231	123	125	as
+231	130	149	dropout probability
+235	12	26	Adam optimizer
+235	27	31	with
+235	36	53	standard settings
+235	85	98	learning rate
+235	99	101	of
+235	102	107	0.003
+232	0	7	Dropout
+232	8	20	occurs after
+232	21	57	all neural - network transformations
+232	89	99	allowed to
+232	100	106	change
+232	107	111	with
+232	112	120	training
+21	3	10	present
+21	13	45	parallel - hierarchical approach
+21	46	48	to
+21	49	70	machine comprehension
+21	71	82	designed to
+21	83	92	work well
+21	53	55	in
+21	98	120	data - limited setting
+26	10	19	learns to
+26	20	30	comprehend
+26	31	33	at
+26	36	46	high level
+26	47	56	even when
+26	57	61	data
+26	62	64	is
+26	65	71	sparse
+27	32	40	compares
+27	45	75	question and answer candidates
+27	8	10	to
+27	83	87	text
+27	88	93	using
+27	94	123	several distinct perspectives
+29	4	24	semantic perspective
+29	25	33	compares
+29	38	48	hypothesis
+29	49	51	to
+29	52	61	sentences
+29	62	64	in
+29	69	73	text
+29	74	83	viewed as
+29	84	118	single , self - contained thoughts
+29	131	148	represented using
+29	151	173	sum and transformation
+29	174	176	of
+29	177	199	word embedding vectors
+30	4	32	word - by - word perspective
+30	33	43	focuses on
+30	44	62	similarity matches
+30	63	70	between
+30	71	87	individual words
+30	88	92	from
+30	93	112	hypothesis and text
+30	56	58	at
+30	118	132	various scales
+31	36	44	consider
+31	45	52	matches
+31	53	57	over
+31	58	76	complete sentences
+32	8	11	use
+32	14	28	sliding window
+32	29	38	acting on
+32	41	60	subsentential scale
+2	36	57	Machine Comprehension
+4	0	31	Understanding unstructured text
+16	0	28	Machine comprehension ( MC )
+247	0	2	On
+247	3	15	MCTest - 500
+247	22	49	Parallel Hierarchical model
+247	50	75	significantly outperforms
+247	76	89	these methods
+247	90	92	on
+247	93	119	single questions ( > 2 % )
+247	124	144	slightly outperforms
+247	149	159	latter two
+247	90	92	on
+247	163	190	multi questions ( ? 0.3 % )
+249	4	10	method
+249	14	22	achieves
+249	27	46	best overall result
+249	47	49	on
+249	50	62	MCTest - 160
+253	12	21	our model
+253	22	35	outperforming
+253	40	52	alternatives
+253	53	55	by
+253	58	70	large margin
+253	71	77	across
+253	82	98	board ( > 15 % )

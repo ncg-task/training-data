@@ -1,0 +1,34 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "has" : {
+        "default learning rate" : {
+          "has" : "0.1",
+          "from sentence" : "epochs , default learning rate ( 0.1 ) , 128 dimensions for word embeddings , 100 for character and byte embeddings , 100 hidden states and Gaussian noise with ?= 0.2 ."
+        },
+        "128 dimensions" : {
+          "for" : "word embeddings",
+          "from sentence" : "epochs , default learning rate ( 0.1 ) , 128 dimensions for word embeddings , 100 for character and byte embeddings , 100 hidden states and Gaussian noise with ?= 0.2 ."
+        },
+        "100" : {
+          "for" : "character and byte embeddings",
+          "has" : "hidden states",
+          "from sentence" : "epochs , default learning rate ( 0.1 ) , 128 dimensions for word embeddings , 100 for character and byte embeddings , 100 hidden states and Gaussian noise with ?= 0.2 ."
+        },
+        "Gaussian noise" : {
+          "with" : "0.2",
+          "from sentence" : "epochs , default learning rate ( 0.1 ) , 128 dimensions for word embeddings , 100 for character and byte embeddings , 100 hidden states and Gaussian noise with ?= 0.2 ."
+        },
+        "training" : {
+          "is" : {
+            "stochastic" : {
+              "use" : "fixed seed"
+            }
+          },
+          "from sentence" : "As training is stochastic in nature , we use a fixed seed throughout ."
+        }
+      },
+      "use" : ["offthe - shelf polyglot embeddings", {"from sentence" : "In that case we use offthe - shelf polyglot embeddings ."}]
+    }
+  }  
+}

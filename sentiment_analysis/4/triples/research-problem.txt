@@ -1,0 +1,3 @@
+(Contribution||has research problem||Multimodal Emotion Detection)
+(Contribution||has research problem||Emotion recognition in conversations)
+(Contribution||has research problem||Analyzing emotional dynamics in conversations)

@@ -1,0 +1,138 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "Review Sentiment Analysis" : {
+          "has" : {
+            "The representation learned by our model" : {
+              "achieves" : {
+                "91.8 %" : {
+                  "significantly outperforming" : {
+                    "state of the art" : {
+                      "of" : "90.2 %",
+                      "by" : "30 model ensemble"
+                    }
+                  }
+                },
+                "from sentence" : "The representation learned by our model achieves 91.8 % significantly outperforming the state of the art of 90.2 % by a 30 model ensemble ."
+              },
+              "matches" : {
+                "performance" : {
+                  "of" : "baselines",
+                  "using" : "dozen labeled examples"
+                },
+                "from sentence" : "It matches the performance of baselines using as few as a dozen labeled examples and outperforms all previous results with only a few hundred labeled examples ."
+              },
+              "outperforms" : {
+                "all previous results" : {
+                  "with" : "few hundred labeled examples"
+                },
+                "from sentence" : "It matches the performance of baselines using as few as a dozen labeled examples and outperforms all previous results with only a few hundred labeled examples ."                
+              },
+              "does not reach" : {
+                "state of the art" : {
+                  "of" : "53.6 %",
+                  "on" : "fine - grained subtask",
+                  "achieving" : "52.9 %"
+                },
+                "from sentence" : "Confusingly , despite a 16 % relative error reduction on the binary subtask , it does not reach the state of the art of 53.6 % on the fine - grained subtask , achieving 52.9 % ."
+              }
+            },
+            "L1 regularization" : {
+              "Fitting" : {
+                "threshold" : {
+                  "achieves" : {
+                    "test accuracy" : {
+                      "of" : "92.30 %",
+                      "outperforms" : "strong supervised results"
+                    }
+                  },
+                  "has" : {
+                    "91.87 %" : {
+                      "of" : "NB - SVM trigram",
+                      "still below" : {
+                        "semi-supervised state of the art" : {
+                          "of" : "94.09 %"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "L1 regularization is known to reduce sample complexity when there are many irrelevant features .
+Fitting a threshold to this single unit achieves a test accuracy of 92.30 % which outperforms a strong supervised results on the dataset , the 91.87 % of NB - SVM trigram , but is still below the semi-supervised state of the art of 94.09 % ."
+
+            }
+          },
+          "Using" : {
+            "full 4096 unit representation" : {
+              "achieves" : "92.88 %",
+              "from sentence" : "Using the full 4096 unit representation achieves 92.88 % ."
+            }
+          }
+        },
+        "Capacity Ceiling" : {
+          "try" : {
+            "approach" : {
+              "on" : {
+                "binary version" : {
+                  "of" : "Yelp Dataset Challenge in 2015"
+                }
+              },
+              "from sentence" : "We try our approach on the binary version of the Yelp Dataset Challenge in 2015 as introduced in ."
+            }
+          },
+          "Using" : {
+            "full dataset" : {
+              "achieve" : "95 . 22 % test accuracy",
+              "from sentence" : "Using the full dataset , we achieve 95 . 22 % test accuracy ."
+            }
+          },
+          "observed" : {
+            "capacity ceiling" : {
+              "is" : {
+                "interesting phenomena and stumbling point" : {
+                  "for" : "scaling our unsupervised representations"
+                }
+              },
+              "from sentence" : "The observed capacity ceiling is an interesting phenomena and stumbling point for scaling our unsupervised representations ."
+            }
+          },
+          "there is" : {
+            "notable drop" : {
+              "in" : {
+                "relative performance" : {
+                  "of" : {
+                    "our approach" : {
+                      "transitioning from" : "sentence to document datasets"                    
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Additionally , there is a notable drop in the relative performance of our approach transitioning from sentence to document datasets ."
+            }
+          },
+          "has" : {
+            "labeled data" : {
+              "has" : {
+                "increases" : {
+                  "has" : {
+                    "performance" : {
+                      "of" : {
+                        "simple linear model" : {
+                          "train on top of" : "static representation"  
+                        }
+                      },
+                      "will eventually" : "saturate"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Finally , as the amount of labeled data increases , the performance of the simple linear model we train on top of our static representation will eventually saturate ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

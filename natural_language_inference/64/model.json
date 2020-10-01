@@ -1,0 +1,62 @@
+{
+  "has" : {
+    "Model" : {
+      "study" : {
+        "Transformer - based models" : {
+          "for" : "AS2",
+          "provide" : {
+            "effective solutions" : {
+              "to tackle" : {
+                "data scarceness problem" : {
+                  "for" : "AS2"
+                },
+                "instability" : {
+                  "of" : "finetuning step"
+                }
+              }
+            }
+          },
+          "from sentence" : "In this paper , we study the use of Transformer - based models for AS2 and provide effective solutions to tackle the data scarceness problem for AS2 and the instability of the finetuning step ."          
+        }
+      },
+      "has" : {
+        "improve" : {
+          "has" : {
+            "stability" : {
+              "of" : "Transformer models",
+              "by adding" : {
+                "intermediate fine - tuning step" : {
+                  "aims at" : {
+                    "specializing" : {
+                      "to" : "target task ( AS2 )"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "We improve stability of Transformer models by adding an intermediate fine - tuning step , which aims at specializing them to the target task ( AS2 ) , i.e. , this step transfers a pretrained language model to a model for the target task ."
+            }
+          }
+        }
+      },
+      "show" : {
+        "transferred model" : {
+          "can be" : {
+            "effectively adapted" : {
+              "to" : "target domain",
+              "with" : {
+                "subsequent finetuning step" : {
+                  "when using" : {
+                    "target data" : {
+                      "of" : "small size"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "We show that the transferred model can be effectively adapted to the target domain with a subsequent finetuning step , even when using target data of small size ."
+        }
+      }
+    }
+  }
+}

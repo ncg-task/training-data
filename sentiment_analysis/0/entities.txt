@@ -1,0 +1,150 @@
+162	4	13	ARE model
+162	18	40	incorrectly classifies
+162	41	64	most instances of happy
+162	32	34	as
+162	68	87	neutral ( 43.51 % )
+163	22	37	emotion classes
+163	42	66	frequently confused with
+163	71	84	neutral class
+165	20	29	TRE model
+165	34	39	shows
+165	40	64	greater prediction gains
+165	65	78	in predicting
+165	83	94	happy class
+165	100	111	compared to
+165	116	150	ARE model ( 35.15 % to 75. 73 % ) 
+168	4	14	MDRE model
+168	17	32	compensates for
+168	37	47	weaknesses
+168	48	50	of
+168	55	90	previous two models ( ARE and TRE )
+168	95	108	benefits from
+168	115	124	strengths
+168	125	127	to
+168	130	147	surprising degree
+170	18	28	occurrence
+170	29	31	of
+170	66	72	 cases
+170	36	38	in
+170	80	89	TRE model
+170	93	105	reduced from
+170	106	125	16 . 20 % to 9.15 %
+123	44	47	use
+123	48	52	GRUs
+123	53	66	as they yield
+123	67	89	comparable performance
+123	90	100	to that of
+123	105	109	LSTM
+123	114	121	include
+123	124	138	smaller number
+123	19	21	of
+123	142	159	weight parameters
+124	9	25	max encoder step
+124	26	28	of
+124	29	32	750
+124	33	36	for
+124	41	52	audio input
+124	108	111	128
+124	33	36	for
+124	120	130	text input
+124	142	148	covers
+124	153	167	maximum length
+124	26	28	of
+124	175	186	transcripts
+134	52	72	released transcripts
+134	73	75	of
+134	80	95	IEMOCAP dataset
+134	96	99	for
+134	100	110	simplicity
+125	4	19	vocabulary size
+125	20	22	of
+125	27	34	dataset
+125	35	37	is
+125	38	43	3,747
+125	46	55	including
+125	67	73	 token
+125	82	92	represents
+125	93	106	unknown words
+125	67	73	 token
+125	142	158	used to indicate
+125	159	178	padding information
+125	179	200	added while preparing
+125	201	216	mini-batch data
+126	4	51	number of hidden units and the number of layers
+126	52	54	in
+126	59	62	RNN
+126	63	66	for
+126	67	108	each model ( ARE , TRE , MDRE and MDREA )
+126	113	130	selected based on
+126	131	174	extensive hyperparameter search experiments
+127	4	11	weights
+127	12	14	of
+127	19	31	hidden units
+127	36	53	initialized using
+133	20	40	text embedding layer
+133	44	60	initialized from
+133	61	96	pretrained word - embedding vectors
+23	56	60	uses
+23	61	92	high - level text transcription
+23	95	105	as well as
+23	106	131	low - level audio signals
+23	134	144	to utilize
+23	149	160	information
+23	161	177	contained within
+23	178	201	low - resource datasets
+27	19	26	propose
+27	29	68	novel deep dual recurrent encoder model
+27	74	97	simultaneously utilizes
+27	98	117	audio and text data
+27	118	132	in recognizing
+27	133	141	emotions
+27	142	146	from
+27	147	153	speech
+2	11	37	SPEECH EMOTION RECOGNITION
+144	12	21	ARE model
+144	22	27	shows
+144	32	52	baseline performance
+144	57	60	use
+144	68	90	minimal audio features
+144	93	100	such as
+144	105	131	MFCC and prosodic features
+144	132	136	with
+144	137	157	simple architectures
+145	24	33	TRE model
+145	34	39	shows
+145	40	63	higher performance gain
+145	64	75	compared to
+145	80	83	ARE
+147	36	40	MDRE
+147	43	48	shows
+147	51	79	substantial performance gain
+148	8	16	achieves
+148	21	55	state - of - the - art performance
+148	56	60	with
+148	63	72	WAP value
+148	29	31	of
+148	76	81	0.718
+150	31	36	MDREA
+150	44	55	outperforms
+150	60	113	best existing research results ( WAP 0.690 to 0.688 )
+156	4	18	label accuracy
+156	19	21	of
+156	26	47	processed transcripts
+156	48	50	is
+156	51	61	5.53 % WER
+157	4	49	TRE - ASR , MDRE - ASR and MDREA - ASR models
+157	50	57	reflect
+157	58	78	degraded performance
+157	79	90	compared to
+157	103	130	TRE , MDRE and MDREA models
+146	22	26	note
+146	32	44	textual data
+146	45	48	are
+146	49	60	informative
+146	49	51	in
+146	64	88	emotion prediction tasks
+146	99	122	recurrent encoder model
+146	7	9	is
+146	126	135	effective
+146	136	152	in understanding
+146	159	183	types of sequential data

@@ -1,0 +1,12 @@
+{
+  "has" : {
+    "Experimental Setup" : {
+      "done on" : {
+        "Google Colab 7 environment" : {
+          "using" : "Tesla T4 GPU accelerator"
+        },
+        "from sentence" : "All experiments discussed in this work have been done on the Google Colab 7 environment using Tesla T4 GPU accelerator with the following hyperparameters :"
+      }
+    }
+  }
+}

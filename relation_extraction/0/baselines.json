@@ -1,0 +1,48 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "feature - based structured perceptron model" : {
+          "with" : "efficient beam - search",
+          "employ" : {
+            "segment - based decoder" : {
+              "instead of" : "token - based decoding"
+            }
+          },
+          "from sentence" : "The model proposed by is a feature - based structured perceptron model with efficient beam - search .
+They employ a segment - based decoder instead of token - based decoding ."
+
+        },
+        "SPTree" : {
+          "proposed" : {
+            "LSTM - based model" : {
+              "with" : {
+                "sequence layer" : {
+                  "for" : "entity identification"
+                },
+                "entity identification" : {
+                  "which identifies" : "relations between pairs of candidate entities"
+                }
+              }
+            }
+          },
+          "from sentence" : "( SPTree ) recently proposed a LSTM - based model with a sequence layer for entity identification , and a tree - based dependency layer which identifies relations between pairs of candidate entities using the shortest dependency path between them ."
+        }
+      },
+      "employed" : {
+        "our previous approach" : {
+          "for" : {
+            "extraction" : {
+              "of" : {
+                "opinion entities and relations" : {
+                  "to" : "this task"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "We also employed our previous approach for extraction of opinion entities and relations to this task ."
+      }
+    }
+  }
+}

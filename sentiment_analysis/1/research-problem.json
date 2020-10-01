@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["EEG - Based Emotion Recognition", {"from sentence" : "EEG - Based Emotion Recognition Using Regularized Graph Neural Networks"}],
+    ["E MOTION recognition", {"from sentence" : "E MOTION recognition is an important subarea of affective computing , which focuses on recognizing human emotions based on a variety of modalities , such as audio- visual expressions , body language , physiological signals , etc ."}]
+  ]
+}

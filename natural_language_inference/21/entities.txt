@@ -1,0 +1,206 @@
+180	57	59	as
+180	60	82	optimization objective
+180	3	6	use
+180	7	25	cross-entropy loss
+180	26	30	plus
+180	31	56	L2 regularization penalty
+181	3	11	minimize
+181	15	17	by
+181	18	26	Adadelta
+181	66	70	with
+181	71	81	batch size
+181	44	46	of
+181	85	87	64
+183	0	21	Initial learning rate
+183	25	31	set to
+183	32	35	0.5
+184	4	19	weight matrices
+184	24	38	initialized by
+184	39	60	Glorot Initialization
+184	71	77	biases
+184	82	98	initialized with
+184	99	100	0
+186	4	31	Out - of - Vocabulary words
+186	32	34	in
+186	35	47	training set
+186	52	72	randomly initialized
+186	73	75	by
+186	76	96	uniform distribution
+186	97	104	between
+186	105	122	( ? 0.05 , 0.05 )
+189	4	35	L2 regularization decay factors
+189	38	41	are
+189	42	60	5 10 ?5 and 10 ? 4
+189	61	64	for
+189	65	106	language inference and sentiment analysis
+192	0	19	Hidden units number
+192	20	23	d h
+192	27	33	set to
+192	34	37	300
+193	0	20	Activation functions
+193	27	30	are
+193	31	62	ELU ( exponential linear unit )
+185	3	13	initialize
+185	18	32	word embedding
+185	3	5	in
+185	36	37	x
+185	38	40	by
+185	41	75	300D Glo Ve 6B pre-trained vectors
+188	3	6	use
+188	7	14	Dropout
+188	17	21	with
+188	22	38	keep probability
+188	39	43	0.75
+188	44	47	for
+188	48	66	language inference
+188	71	74	0.8
+188	44	47	for
+188	79	97	sentiment analysis
+194	15	31	implemented with
+194	32	44	TensorFlow 2
+194	49	55	run on
+31	3	10	propose
+31	13	38	novel attention mechanism
+31	44	56	differs from
+31	57	70	previous ones
+31	71	73	in
+31	89	106	multi-dimensional
+31	257	268	directional
+32	3	10	compute
+32	11	35	feature - wise attention
+32	36	41	since
+32	42	54	each element
+32	37	39	in
+32	60	68	sequence
+32	80	94	represented by
+32	97	103	vector
+33	3	8	apply
+33	9	25	positional masks
+33	26	28	to
+33	29	51	attention distribution
+33	67	80	easily encode
+33	81	106	prior structure knowledge
+33	107	114	such as
+33	115	129	temporal order
+33	134	152	dependency parsing
+35	8	13	build
+35	16	66	light - weight and RNN / CNN - free neural network
+35	71	117	Directional Self - Attention Network ( DiSAN )
+35	122	125	for
+35	126	143	sentence encoding
+37	0	2	In
+37	3	8	DiSAN
+37	15	29	input sequence
+37	33	45	processed by
+37	46	100	directional ( forward and backward ) self - attentions
+37	101	109	to model
+37	110	128	context dependency
+37	133	140	produce
+37	141	172	context - aware representations
+37	60	63	for
+37	177	187	all tokens
+38	9	36	multi-dimensional attention
+38	37	45	computes
+38	48	69	vector representation
+38	70	72	of
+38	77	92	entire sequence
+38	108	119	passed into
+38	122	156	classification / regression module
+38	157	167	to compute
+2	49	88	RNN / CNN - Free Language Understanding
+216	0	11	Compared to
+216	16	23	results
+216	24	28	from
+216	33	61	official leaderboard of SNLI
+216	67	72	DiSAN
+216	73	84	outperforms
+216	85	99	previous works
+216	104	112	improves
+216	117	142	best latest test accuracy
+216	145	156	achieved by
+216	159	193	memory - based NSE encoder network
+216	154	156	by
+216	201	218	remarkable margin
+216	33	35	of
+216	222	228	1.02 %
+217	0	5	DiSAN
+217	6	15	surpasses
+217	20	42	RNN / CNN based models
+217	43	47	with
+217	48	77	more complicated architecture
+217	82	97	more parameters
+217	98	100	by
+217	101	114	large margins
+218	8	19	outperforms
+218	20	26	models
+218	27	31	with
+218	36	46	assistance
+218	47	49	of
+218	52	73	semantic parsing tree
+221	9	19	comparison
+221	20	27	between
+221	32	56	third baseline and DiSAN
+221	57	62	shows
+221	51	56	DiSAN
+221	78	102	substantially outperform
+221	103	123	multi-head attention
+221	124	126	by
+221	127	133	1.45 %
+222	36	60	forth baseline and DiSAN
+222	61	66	shows
+222	76	86	DiSA block
+222	96	106	outperform
+222	107	122	Bi - LSTM layer
+222	47	49	in
+222	126	142	context encoding
+222	145	154	improving
+222	155	168	test accuracy
+222	169	171	by
+222	172	178	0.64 %
+223	25	49	fifth baseline and DiSAN
+223	50	55	shows
+223	61	89	directional self - attention
+223	90	94	with
+223	95	153	forward and backward masks ( with temporal order encoded )
+223	158	163	bring
+223	164	182	0.96 % improvement
+220	50	55	shows
+220	61	69	changing
+220	70	92	token - wise attention
+220	70	72	to
+220	96	140	multi-dimensional / feature - wise attention
+220	141	149	leads to
+220	150	168	3.31 % improvement
+220	18	20	on
+220	174	200	word embedding based model
+236	31	36	DiSAN
+236	37	45	improves
+236	50	68	last best accuracy
+236	71	79	given by
+236	80	92	CNN - Tensor
+236	77	79	by
+236	98	104	0.52 %
+238	21	29	achieves
+238	30	48	better performance
+238	49	53	than
+238	54	72	CNN - based models
+241	26	37	outperforms
+241	59	66	such as
+241	67	71	NCSL
+241	74	82	+ 0.62 %
+241	89	101	LR- Bi- LSTM
+241	104	112	+ 1.12 %
+237	0	11	Compared to
+237	12	31	tree - based models
+237	32	36	with
+237	37	46	heavy use
+237	47	49	of
+237	54	69	prior structure
+237	72	76	e.g.
+237	79	87	MV - RNN
+237	90	94	RNTN
+237	99	110	Tree - LSTM
+237	113	118	DiSAN
+237	119	130	outperforms
+237	136	138	by
+237	139	165	7.32 % , 6.02 % and 0.72 %

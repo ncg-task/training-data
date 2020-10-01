@@ -1,0 +1,8 @@
+{
+  "has research problem" : [
+    ["Diverse Sequence Generation", {"from sentence" : "Mixture Content Selection for Diverse Sequence Generation"}],
+    ["Generating diverse sequences", {"from sentence" : "Generating diverse sequences is important in many NLP applications such as question generation or summarization that exhibit semantically one - to - many relationships between source and the target sequences ."}],
+    ["Generating target sequences given a source sequence", {"from sentence" : "Generating target sequences given a source sequence has applications in a wide range of problems in NLP with different types of relationships between the source and target sequences ."}],
+    ["sequence generation", {"from sentence" : "Encoder - decoder models are widely used for sequence generation , most notably in machine translation where neural models are now often almost as good as human translators in some language pairs ."}]
+  ]
+}

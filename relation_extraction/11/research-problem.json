@@ -1,0 +1,8 @@
+{
+  "has research problem" : [
+    ["Distantly - Supervised Neural Relation Extraction", {"from sentence" : "RESIDE : Improving Distantly - Supervised Neural Relation Extraction using Side Information"}],
+    ["Distantly - supervised Relation Extraction ( RE )", {"from sentence" : "Distantly - supervised Relation Extraction ( RE ) methods train an extractor by automatically aligning relation instances in a Knowledge Base ( KB ) with unstructured text ."}],
+    ["Relation Extraction ( RE )", {"from sentence" : "Relation Extraction ( RE ) attempts to fill this gap by extracting semantic relationships between entity pairs from plain text ."}],
+    ["RE", {"from sentence" : "RE models usually ignore such readily available side information ."}]
+  ]
+}

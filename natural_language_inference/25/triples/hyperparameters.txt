@@ -1,0 +1,7 @@
+(Contribution||has||Hyperparameters)
+(Hyperparameters||use||pre-trained GloVe embeddings)
+(pre-trained GloVe embeddings||of dimension d||w = 300)
+(Hyperparameters||produce||character - based word representations)
+(character - based word representations||via||dc = 100)
+(dc = 100||has||convolutional filters)
+(convolutional filters||over||character embeddings)

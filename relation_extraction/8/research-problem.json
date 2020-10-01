@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Distant Supervision for Relation Extraction", {"from sentence" : "Distant Supervision for Relation Extraction via Piecewise Convolutional Neural Networks"}],
+    ["distant supervised relation extraction", {"from sentence" : "To address the first problem , distant supervised relation extraction is treated as a multi-instance problem similar to previous studies ."}],
+    ["relation extraction", {"from sentence" : "In relation extraction , one challenge that is faced when building a machine learning system is the generation of training examples ."}]
+  ]
+}

@@ -1,0 +1,8 @@
+(Contribution||has||Results)
+(Results||has||Baselines)
+(Baselines||perform||reasonably well)
+(Baselines||perform||much better)
+(much better||than||random baseline)
+(Baselines||has||clear scope)
+(clear scope||for||improvement)
+(clear scope||for||machine learning methods)

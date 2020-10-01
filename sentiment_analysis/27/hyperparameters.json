@@ -1,0 +1,104 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "to initialize" : {
+        "word embeddings" : {
+          "use" : ["GloVe 3 word vector", "pre-trained language model word representation BERT"]
+        },
+        "from sentence" : "In our implementation , we respectively use the GloVe 3 word vector and the pre-trained language model word representation BERT 4 to initialize the word embeddings ."
+      },
+      "has" : {
+        "dimension" : {
+          "of" : {
+            "each word vector" : {
+              "is" : {
+                "300" : {
+                  "for" : "GloVe"
+                },
+                "768" : {
+                  "for" : "BERT"
+                }
+              }
+            }
+          },
+          "from sentence" : "The dimension of each word vector is 300 for GloVe and 768 for BERT ."
+        },
+        "number" : {
+          "of" : {
+            "LSTM hidden units" : {
+              "set to" : "300"
+            }
+          },
+          "from sentence" : "The number of LSTM hidden units is set to 300 , and the output dimension of GCN layer is set to 600 ."
+        },
+        "output dimension" : {
+          "of" : {
+            "GCN layer" : {
+              "set to" : "600"
+            }
+          },
+          "from sentence" : "The number of LSTM hidden units is set to 300 , and the output dimension of GCN layer is set to 600 ."
+        },
+        "weight matrix" : {
+          "of" : {
+            "last fully connect layer" : {
+              "randomly initialized by" : "normal distribution N ( 0 , 1 )"
+            }
+          },
+          "from sentence" : "The weight matrix of last fully connect layer is randomly initialized by a normal distribution N ( 0 , 1 ) ."
+        },
+        "all the weight matrices" : {
+          "Besides" : "last fully connect layer",
+          "randomly initialized by" : "uniform distribution U ( ? 0.01 , 0.01 )",
+          "from sentence" : "Besides the last fully connect layer , all the weight matrices are randomly initialized by a uniform distribution U ( ? 0.01 , 0.01 ) ."
+        }
+      },
+      "add" : {
+        "L2-regularization" : {
+          "to" : {
+            "last fully connect layer" : {
+              "with" : {
+                "weight" : {
+                  "of" : "0.01"
+                }
+              },
+              "from sentence" : "In addition , we add L2-regularization to the last fully connect layer with a weight of 0.01 ."
+            }  
+          }
+        }  
+      },
+      "During" : {
+        "training" : {
+          "set" : {
+            "dropout" : {
+              "to" : "0.5"
+            }
+          },
+          "has" : {
+            "batch size" : {
+              "set to" : "32"
+            },
+            "optimizer" : {
+              "is" : {
+                "Adam Optimizer" : {
+                  "with" : {
+                    "learning rate" : {
+                      "of" : "0.001"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "During training , we set dropout to 0.5 , the batch size is set to 32 and the optimizer is Adam Optimizer with a learning rate of 0.001 ."
+        }
+      },
+      "implement" : {
+        "proposed model" : {
+          "using" : "Tensorflow"
+        },
+        "from sentence" : "We implement our proposed model using Tensorflow 5 ."
+      }
+    }
+  }
+}

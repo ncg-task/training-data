@@ -1,0 +1,3 @@
+(Contribution||has research problem||OPEN - DOMAIN QUESTION ANSWERING)
+(Contribution||has research problem||Open-domain question answering ( QA ))
+(Contribution||has research problem||open - domain QA)

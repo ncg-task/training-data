@@ -1,0 +1,59 @@
+{
+  "has" : {
+    "Dataset" : {
+      "has" : {
+        "WIKIHOP" : {
+          "uses" : {
+            "sets" : {
+              "of" : {
+                "WIKIPEDIA articles" : {
+                  "where" : {
+                    "answers" : {
+                      "to" : {
+                        "queries" : {
+                          "about" : {
+                            "specific properties" : {
+                              "of" : "entity",
+                              "can not be located in" : "entity 's article"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "The first , WIKIHOP , uses sets of WIKIPEDIA articles where answers to queries about specific properties of an entity can not be located in the entity 's article ."
+                }
+              }
+            }
+          }
+        },
+        "MEDHOP" : {
+          "has" : {
+            "goal" : {
+              "to establish" : {
+                "drug - drug interactions" : {
+                  "based on" : {
+                    "scientific findings" : {
+                      "about" : {
+                        "drugs and proteins and their interactions" : {
+                          "found across" : "multiple MEDLINE abstracts"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "In the second dataset , MEDHOP , the goal is to establish drug - drug interactions based on scientific findings about drugs and proteins and their interactions , found across multiple MEDLINE abstracts ."
+                }
+              }
+            }
+          }
+        }
+      },
+      "draw upon" : {
+        "existing Knowledge Bases ( KBs )" : {
+          "name" : "WIKIDATA and DRUG - BANK",
+          "from sentence" : "For both datasets we draw upon existing Knowledge Bases ( KBs ) , WIKIDATA and DRUG - BANK , as ground truth , utilizing distant supervision ) to induce the data - similar to and ."
+        }
+      }
+    }
+  }
+}

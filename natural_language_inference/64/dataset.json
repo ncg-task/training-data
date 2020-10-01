@@ -1,0 +1,21 @@
+{
+  "has" : {
+    "Dataset" : {
+      "built" : {
+        "ASNQ" : {
+          "for" : "AS2",
+          "by transforming" : {
+            "recently released Natural Questions ( NQ ) corpus" : {
+              "from" : {
+                "MR" : {
+                  "to" : "AS2 task"
+                }
+              }
+            }
+          },
+          "from sentence" : "We built ASNQ , a dataset for AS2 , by transforming the recently released Natural Questions ( NQ ) corpus ) from MR to AS2 task ."
+        }
+      }
+    }
+  }
+}

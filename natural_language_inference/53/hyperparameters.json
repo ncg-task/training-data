@@ -1,0 +1,79 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "For" : {
+        "models" : {
+          "trained on" : "SNLI",
+          "use" : {
+            "SGD" : {
+              "with" : {
+                "learning rate" : {
+                  "of" : "0.1"
+                },
+                "weight decay" : {
+                  "of" : "0.99"
+                }
+              }
+            }
+          },
+          "from sentence" : "For all our models trained on SNLI , we use SGD with a learning rate of 0.1 and a weight decay of 0.99 ."
+        },
+        "classifier" : {
+          "use" : {
+            "multi - layer perceptron" : {
+              "with" : {
+                "1 hidden - layer" : {
+                  "of" : "512 hidden units"
+                }
+              },
+              "from sentence" : "For the classifier , we use a multi - layer perceptron with 1 hidden - layer of 512 hidden units ."
+            }
+          }
+        }
+      },
+      "At" : {
+        "each epoch" : {
+          "divide" : {
+            "learning rate" : {
+              "by" : "5",
+              "if" : {
+                "dev accuracy" : {
+                  "has" : "decreases"
+                }
+              }
+            }
+          },
+          "from sentence" : "At each epoch , we divide the learning rate by 5 if the dev accuracy decreases ."
+        }
+      },
+      "use" : {
+        "minibatches" : {
+          "of size" : "64",
+          "has" : {
+            "training" : {
+              "is" : {
+                "stopped" : {
+                  "when" : {
+                    "learning rate" : {
+                      "goes under" : "threshold of 10 ?5"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "We use minibatches of size 64 and training is stopped when the learning rate goes under the threshold of 10 ?5 ."
+        },
+        "opensource GloVe vectors" : {
+          "trained on" : {
+            "Common Crawl 840B" : {
+              "with" : "300 dimensions",
+              "as" : "fixed word embeddings"
+            }
+          },
+          "from sentence" : "We use opensource GloVe vectors trained on Common Crawl 840B with 300 dimensions as fixed word embeddings ."
+        }
+      }
+    }
+  }  
+}

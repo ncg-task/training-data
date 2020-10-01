@@ -1,0 +1,36 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "novel framework" : {
+          "named" : "Smarnet",
+          "from sentence" : "In this paper , we propose the novel framework named Smarnet with the hope that it can become as smart as humans ."
+        }
+      },
+      "introduce" : {
+        "Smarnet framework" : {
+          "exploits" : {
+            "fine - grained word understanding" : {
+              "with" : "various attribution discriminations"
+            }
+          },
+          "from sentence" : "Specifically , we first introduce the Smarnet framework that exploits fine - grained word understanding with various attribution discriminations , like humans recite words with corresponding properties ." 
+        }
+      },
+      "develop" : {
+        "interactive attention" : {
+          "with" : "memory network",
+          "to mimic" : "human reading procedure",
+          "from sentence" : "We then develop the interactive attention with memory network to mimic human reading procedure ."
+        }
+      },
+      "add" : {
+        "checking layer" : {
+          "on" : "answer refining",
+          "to ensure" : "accuracy",
+          "from sentence" : "We also add a checking layer on the answer refining in order to ensure the accuracy ."
+        }
+      }
+    }
+  }
+}

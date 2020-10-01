@@ -1,0 +1,152 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "Document expansion" : {
+          "with" : {
+            "our method ( BM25 + Doc2query )" : {
+              "improves" : {
+                "retrieval effectiveness" : {
+                  "by" : "15 %",
+                  "for" : "both datasets"
+                }
+              },
+              "from sentence" : "Document expansion with our method ( BM25 + Doc2query ) improves retrieval effectiveness by ? 15 % for both datasets ."
+            }
+          }
+        },
+        "Our full re-ranking condition ( BM25 + Doc2query + BERT )" : {
+          "beats" : "BM25 + BERT alone",
+          "from sentence" : "Our full re-ranking condition ( BM25 + Doc2query + BERT ) beats BM25 + BERT alone , which verifies that the contribution Input Document : July is the hottest month in Washington DC with an average temperature of 27C ( 80F ) and the coldest is January at 4C ( 38F ) with the most daily sunshine hours at 9 in July ."
+        },
+        "Our method without a re-ranker ( BM25 + Doc2query )" : {
+          "adds" : {
+            "small latency" : {
+              "over" : "baseline BM25 ( 50 ms vs. 90 ms )"
+            }
+          },
+          "is" : {
+            "seven times faster" : {
+              "than" : {
+                "neural re-ranker" : {
+                  "that has" : "three points higher MRR@10"
+                }
+              }
+            }
+          },
+          "from sentence" : "Our method without a re-ranker ( BM25 + Doc2query ) adds a small latency increase over baseline BM25 ( 50 ms vs. 90 ms ) but is approximately seven times faster than a neural re-ranker that has a three points higher MRR@10 ( Single Duet v2 , which is presented as a baseline in MS MARCO by the organizers ) ."
+        }
+      },
+      "combine" : {
+        "document expansion" : {
+          "with" : {
+            "state - of - the - art re-ranker ( BM25 + Doc2query + BERT )" : {
+              "achieve" : {
+                "best - known results" : {
+                  "on" : "TREC CAR"
+                }
+              },
+              "for" : {
+                "MS MARCO" : {
+                  "near" : "state of the art"
+                }
+              }
+            }
+          },
+          "from sentence" : "When we combine document expansion with a state - of - the - art re-ranker ( BM25 + Doc2query + BERT ) , we achieve the best - known results to date on TREC CAR ; for MS MARCO , we are near the state of the art ."
+        }
+      },
+      "notice that" : {
+        "model" : {
+          "copy" : {
+            "some words" : {
+              "from" : "input document"
+            }
+          },
+          "produces" : {
+            "words" : {
+              "not present in" : "input document",
+              "characterized as" : {
+                "expansion" : {
+                  "by" : "synonyms and other related terms"
+                }
+              }
+            }
+          },
+          "from sentence" : "We notice that the model tends to copy some words from the input document ( e.g. , Washington DC , River , chromosome ) , meaning that it can effectively perform term re-weighting ( i.e. , increasing the importance of key terms ) .
+Nevertheless , the model also produces words not present in the input document ( e.g. , weather , relationship ) , which can be characterized as expansion by synonyms and other related terms ."
+
+        }
+      },
+      "expand" : {
+        "MS MARCO documents" : {
+          "using" : "only new words",
+          "retrieve" : {
+            "development set queries" : {
+              "with" : "BM25"
+            }
+          },
+          "obtain" : {
+            "MRR@10" : {
+              "of" : "18.8"
+            }
+          },
+          "from sentence" : "If we expand MS MARCO documents using only new words and retrieve the development set queries with BM25 , we obtain an MRR@10 of 18.8 ( as opposed to 18.4 when indexing with original documents ) ."
+        }
+      },
+      "Expanding with" : {
+        "copied words" : {
+          "gives" : {
+            "MRR@10" : {
+              "of" : "19.7"
+            }
+          }
+        },
+        "from sentence" : "Expanding with copied words gives an MRR@10 of 19.7 ."
+      },
+      "achieve" : {
+        "higher MRR@10" : {
+          "of" : "21.5",
+          "when" : {
+            "documents" : {
+              "expanded with" : "both types of words"
+            }
+          },
+          "from sentence" : "We achieve a higher MRR@10 of 21.5 when documents are expanded with both types of words , showing that they are complementary ."
+        }
+      },
+      "find that" : {
+        "Recall@1000" : {
+          "of" : {
+            "MS MARCO development set" : {
+              "increased from" : {
+                "85.3 ( BM25 )" : {
+                  "to" : "89.3 ( BM25 + Doc2query )"
+                }
+              }
+            }
+          },
+          "from sentence" : "We find that the Recall@1000 of the MS MARCO development set increased from 85.3 ( BM25 ) to 89.3 ( BM25 + Doc2query ) ."          
+        },
+        "query expansion" : {
+          "with" : {
+            "RM3" : {
+              "has" : {
+                "hurts" : {
+                  "in" : "both datasets"
+                }
+              }
+            }
+          },
+          "from sentence" : "As a contrastive condition , we find that query expansion with RM3 hurts in both datasets , whether applied to the unexpanded corpus ( BM25 + RM3 ) or the expanded version ( BM25 + Doc2query + RM3 ) ."
+        }
+      },
+      "show that" : {
+        "document expansion" : {
+          "more effective than" : "query expansion"
+        },
+        "from sentence" : "This result shows that document expansion can be more effective than query expansion , most likely because there are more signals to exploit as documents are much longer ."
+      }
+    }
+  }
+}

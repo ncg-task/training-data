@@ -1,0 +1,5 @@
+(Contribution||has||Model)
+(Model||explore||two transfer methods)
+(two transfer methods||to incorporate||knowledge)
+(knowledge||name||pretraining)
+(knowledge||name||multi-task learning)

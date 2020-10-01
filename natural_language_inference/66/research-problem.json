@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Natural Language Inference", {"from sentence" : "Learning Natural Language Inference with LSTM"}],
+    ["Natural language inference ( NLI )", {"from sentence" : "Natural language inference ( NLI ) is a fundamentally important task in natural language processing that has many applications ."}],
+    ["NLI", {"from sentence" : "In this paper , we propose a special long short - term memory ( LSTM ) architecture for NLI ."}]
+  ]
+}

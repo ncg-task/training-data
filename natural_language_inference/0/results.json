@@ -1,0 +1,104 @@
+{
+  "has" : {
+    "Results" : {
+      "observe that" : {
+        "feature engineering" : {
+          "leads to" : {
+            "significant improvements" : {
+              "for" : "WDW and CBT datasets",
+              "not for" : "CNN and Daily Mail datasets"
+            }
+          },
+          "from sentence" : "Interestingly , we observe that feature engineering leads to significant improvements for WDW and CBT datasets , but not for CNN and Daily Mail datasets ."
+        }
+      },
+      "fixing" : {
+        "word embeddings" : {
+          "provides" : {
+            "improvement" : {
+              "for" : "WDW and CBT",
+              "not for" : "CNN and Daily Mail"
+            }
+          },
+          "from sentence" : "Similarly , fixing the word embeddings provides an improvement for the WDW and CBT , but not for CNN and Daily Mail ."
+        }
+      },
+      "on" : {
+        "WDW dataset" : {
+          "has" : {
+            "basic version of the GA Reader" : {
+              "outperforms" : "all previously published models",
+              "when trained on" : "Strict setting"
+            }
+          },
+          "from sentence" : "Comparing with prior work , on the WDW dataset the basic version of the GA Reader outperforms all previously published models when trained on the Strict setting ."
+        },
+        "CBT - CN" : {
+          "has" : {
+            "GA Reader" : {
+              "with" : "qe-comm feature",
+              "outperforms" : {
+                "all previously published single models" : {
+                  "except" : ["NSE", {"AS Reader" : {"trained on" : "larger corpus"}}]
+                }
+              }
+            }
+          },
+          "from sentence" : "Lastly , on CBT - CN the GA Reader with the qe-comm feature outperforms all previously published single models except the NSE , and AS Reader trained on a larger corpus ."
+        }        
+      },
+      "adding" : {
+        "qecomm feature" : {
+          "has" : {
+            "performance" : {
+              "has" : {
+                "increases" : {
+                  "by" : "3.2 % and 3.5 %",
+                  "on" : "Strict and Relaxed settings"
+                }
+              }
+            }
+          },
+          "from sentence" : "By adding the qecomm feature the performance increases by 3.2 % and 3.5 % on the Strict and Relaxed settings respectively to set anew state of the art on this dataset ."
+        }
+      },
+      "On" : {
+        "CNN and Daily Mail datasets" : {
+          "has" : {
+            "GA Reader" : {
+              "leads to" : {
+                "improvement" : {
+                  "of" : {
+                    "3.2 % and 4.3 %" : {
+                      "over" : "best previous single models"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "On the CNN and Daily Mail datasets the GA Reader leads to an improvement of 3.2 % and 4.3 % respectively over the best previous single models ."
+        }
+      },
+      "For" : {
+        "CBT - NE" : {
+          "has" : {
+            "GA Reader" : {
+              "with" : "qecomm feature",
+              "outperforms" : {
+                "all previous single and ensemble models" : {
+                  "except" : {
+                    "AS Reader" : {
+                      "trained on" : "much larger BookTest Corpus"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "For CBT - NE , GA Reader with the qecomm feature outperforms all previous single and ensemble models except the AS Reader trained on the much larger BookTest Corpus ."
+        }
+      }
+    }
+  }
+}

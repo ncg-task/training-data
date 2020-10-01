@@ -1,0 +1,205 @@
+194	13	16	use
+194	17	27	LSTM - CRF
+194	28	32	with
+194	33	69	randomly initialized word embeddings
+195	3	8	adopt
+195	9	43	two state - of - the - art methods
+195	44	46	in
+195	47	64	sequence labeling
+195	67	77	denoted as
+195	78	89	char - LSTM
+195	94	104	char - CNN
+196	3	6	add
+196	7	18	more layers
+196	19	21	to
+196	26	42	char - CNN model
+196	47	55	refer to
+196	64	97	char - CNN - 5 and char - CNN - 9
+196	113	116	for
+196	117	145	5 and 9 convolutional layers
+197	21	41	residual connections
+197	42	44	to
+197	49	63	char - CNN - 9
+197	68	79	refer it as
+197	80	93	char - ResNet
+198	10	15	apply
+198	16	30	3 dense blocks
+198	31	39	based on
+198	40	53	char - ResNet
+198	63	74	refer to as
+198	75	90	char - DenseNet
+177	4	8	size
+177	9	11	of
+177	16	26	dimensions
+177	9	11	of
+177	30	50	character embeddings
+177	51	53	is
+177	54	56	32
+177	63	66	are
+177	67	87	randomly initialized
+177	88	93	using
+177	96	116	uniform distribution
+181	4	34	number of convolutional layers
+181	35	38	are
+181	39	46	5 and 9
+181	47	50	for
+181	51	76	IntNet - 5 and IntNet - 9
+183	4	14	state size
+183	15	17	of
+183	22	42	bi-directional LSTMs
+183	46	52	set to
+183	53	56	256
+190	12	23	decay ratio
+190	5	7	is
+190	0	4	0.05
+190	39	56	gradient clipping
+190	5	7	is
+190	3	4	5
+191	0	7	Dropout
+191	11	21	applied on
+191	26	31	input
+191	32	34	of
+191	35	59	IntNet , LSTMs , and CRF
+191	70	75	ratio
+191	76	79	0.5
+178	3	8	adopt
+178	13	39	same initialization method
+178	40	43	for
+178	44	80	randomly initialized word embeddings
+178	90	104	updated during
+178	105	113	training
+184	9	38	standard BIOES tagging scheme
+184	39	42	for
+184	43	59	NER and Chunking
+179	0	3	For
+179	4	10	IntNet
+179	17	28	filter size
+179	29	31	of
+179	36	55	initial convolution
+179	56	58	is
+179	59	61	32
+179	74	92	other convolutions
+179	56	58	is
+179	96	98	16
+181	106	113	adopted
+181	118	144	same weight initialization
+181	145	147	as
+181	156	162	ResNet
+182	3	6	use
+182	7	34	pre-trained word embeddings
+182	35	38	for
+182	39	53	initialization
+182	56	93	GloVe 100 - dimension word embeddings
+182	35	38	for
+182	98	105	English
+182	112	150	fastText 300 dimension word embeddings
+182	35	38	for
+182	155	183	Spanish , Dutch , and German
+186	3	9	employ
+186	10	48	mini-batch stochastic gradient descent
+186	49	53	with
+186	54	62	momentum
+43	17	24	propose
+43	25	31	IntNet
+43	36	85	funnel - shaped wide convolutional neural network
+43	86	98	for learning
+43	103	130	internal structure of words
+43	131	143	by composing
+43	150	160	characters
+44	45	70	funnel - shaped Int - Net
+44	71	79	explores
+44	80	109	deeper and wider architecture
+44	110	117	with no
+44	118	133	down - sampling
+44	134	146	for learning
+44	147	184	character - to - word representations
+44	185	189	from
+44	190	225	limited supervised training corpora
+45	12	19	combine
+45	24	36	IntNet model
+45	37	41	with
+45	42	52	LSTM - CRF
+45	61	69	captures
+45	75	85	word shape
+45	90	109	context information
+45	131	135	tags
+45	100	103	for
+45	140	157	sequence labeling
+2	48	65	Sequence Labeling
+204	53	61	F1 score
+204	62	70	does not
+204	71	83	improve much
+204	84	88	when
+204	101	104	add
+204	105	116	more layers
+209	4	82	proposed character - to - word model , char - IntNet - 5 and char - IntNet - 9
+209	93	101	improves
+209	106	113	results
+209	114	120	across
+209	121	133	all datasets
+210	4	10	IntNet
+210	11	36	significantly outperforms
+210	37	69	other character embedding models
+205	8	15	observe
+205	16	34	some accuracy drop
+205	35	39	when
+205	43	64	continuously increase
+205	69	74	depth
+211	23	40	char - IntNet - 5
+211	41	43	is
+211	44	58	more effective
+211	59	71	for learning
+211	72	109	character - to - word representations
+211	110	114	than
+211	115	132	char - IntNet - 9
+211	68	70	in
+211	136	153	most of the cases
+207	17	20	add
+207	21	41	residual connections
+207	42	44	to
+207	45	59	char - CNN - 9
+207	60	62	as
+207	63	80	char - ResNet - 9
+207	89	102	confirms that
+207	21	41	residual connections
+207	128	138	help train
+207	139	150	deep layers
+208	11	18	improve
+208	19	36	char - ResNet - 9
+208	37	48	by changing
+208	49	69	residual connections
+208	70	74	into
+208	75	98	dense connection blocks
+208	99	101	as
+208	102	121	char - DenseNet - 9
+208	130	140	shows that
+208	145	162	dense connections
+208	163	166	are
+208	167	173	better
+208	174	178	than
+208	49	69	residual connections
+208	200	212	for learning
+208	213	235	word shape information
+221	76	82	IntNet
+221	83	91	improves
+221	96	107	F - 1 score
+221	108	112	over
+221	117	144	stateof - the - art results
+221	145	157	by more than
+221	158	161	2 %
+221	35	38	for
+221	166	183	Dutch and Spanish
+220	18	27	show that
+220	28	45	our char - IntNet
+220	56	64	improves
+220	65	72	results
+220	73	79	across
+220	80	109	different models and datasets
+222	8	18	shows that
+222	23	30	results
+222	31	33	of
+222	34	44	LSTM - CRF
+222	45	48	are
+222	49	71	significantly improved
+222	72	84	after adding
+222	85	113	character - to - word models

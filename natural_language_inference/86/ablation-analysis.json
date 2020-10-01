@@ -1,0 +1,39 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "removing" : {
+        "any components" : {
+          "from" : "MPCM model",
+          "has" : {
+            "decreases" : {
+              "has" : {
+                "performance" : {
+                  "has" : "significantly"
+                } 
+              }
+            }
+          },
+          "from sentence" : "We can see that removing any components from the MPCM model decreases the performance significantly ."
+        }
+      },
+      "Among" : {
+        "all the layers" : {
+          "has" : {
+            "Aggregation Layer" : {
+              "is" : "most crucial layer"
+            }
+          },
+          "from sentence" : "Among all the layers , the Aggregation Layer is the most crucial layer ."
+        },
+        "all the matching strategies" : {
+          "has" : {
+            "Maxpooling - Matching" : {
+              "has" : "biggest effect"
+            }
+          },
+          "from sentence" : "Among all the matching strategies , Maxpooling - Matching has the biggest effect ."
+        }
+      }
+    }
+  }
+}

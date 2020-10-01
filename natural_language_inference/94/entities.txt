@@ -1,0 +1,108 @@
+224	105	121	self - attention
+224	125	143	able to contribute
+224	144	157	significantly
+224	130	132	to
+224	84	95	performance
+224	173	182	on top of
+224	183	212	other components of the model
+225	13	21	see that
+225	22	45	effectively introducing
+225	46	64	external knowledge
+225	118	125	improve
+225	126	137	performance
+225	151	160	on top of
+225	161	180	our strong baseline
+225	65	68	via
+225	69	104	our commonsense selection algorithm
+225	109	113	NOIC
+232	190	243	our commonsense selection and incorporation mechanism
+232	244	252	improves
+232	253	278	performance significantly
+232	279	285	across
+232	286	297	all metrics
+27	0	50	https://github.com/yicheng-w/CommonSenseMultiHopQA
+37	19	32	first propose
+37	37	84	Multi - Hop Pointer - Generator Model ( MHPGM )
+37	89	110	strong baseline model
+37	116	120	uses
+37	121	134	multiple hops
+37	135	137	of
+37	138	161	bidirectional attention
+37	164	180	self - attention
+37	189	216	pointer - generator decoder
+37	217	231	to effectively
+37	232	247	read and reason
+37	248	254	within
+37	255	268	along passage
+37	273	283	synthesize
+37	286	303	coherent response
+39	219	226	present
+39	230	239	algorithm
+39	240	253	for selecting
+39	254	308	useful , grounded multi-hop relational knowledge paths
+39	309	313	from
+39	314	324	ConceptNet
+39	327	330	via
+39	333	369	pointwise mutual information ( PMI )
+39	374	415	term - frequency - based scoring function
+40	18	30	novel method
+40	31	33	of
+40	34	43	inserting
+40	50	76	selected commonsense paths
+40	77	84	between
+40	89	93	hops
+40	31	33	of
+40	97	125	document - context reasoning
+40	126	132	within
+40	133	142	our model
+40	145	148	via
+40	153	201	Necessary and Optional Information Cell ( NOIC )
+40	210	217	employs
+40	220	256	selectivelygated attention mechanism
+40	257	270	that utilizes
+40	271	294	commonsense information
+40	295	317	to effectively fill in
+40	318	335	gaps of inference
+2	16	57	Generative Multi - Hop Question Answering
+14	0	24	Reading comprehension QA
+24	39	85	machine reading comprehension ( MRC ) based QA
+28	31	57	reasoning - based MRC - QA
+214	3	23	see empirically that
+214	24	33	our model
+214	34	45	outperforms
+214	46	67	all generative models
+214	68	70	on
+214	71	82	NarrativeQA
+214	92	103	competitive
+214	104	108	with
+214	113	139	top span prediction models
+215	14	18	with
+215	23	51	NOIC commonsense integration
+215	62	69	able to
+215	70	85	further improve
+215	86	97	performance
+215	131	143	establishing
+215	146	172	new state - of - the - art
+215	89	92	for
+215	181	185	task
+216	8	16	see that
+216	17	26	our model
+216	27	35	performs
+216	36	51	reasonably well
+216	40	42	on
+216	55	62	WikiHop
+216	77	85	achieves
+216	86	116	promising initial improvements
+216	117	120	via
+216	125	133	addition
+216	134	136	of
+216	137	148	commonsense
+216	151	161	hinting at
+216	166	182	generalizability
+216	134	136	of
+216	186	200	our approaches
+217	3	12	speculate
+217	22	33	improvement
+217	37	44	smaller
+217	45	47	on
+217	48	55	Wikihop

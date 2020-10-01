@@ -1,0 +1,8 @@
+{
+  "has research problem" : [
+    ["Neural Question Generation from Text", {"from sentence" : "Neural Question Generation from Text : A Preliminary Study"}],
+    ["Automatic question generation", {"from sentence" : "Automatic question generation aims to generate questions from a text passage where the generated questions can be answered by certain sub- spans of the given passage ."}],
+    ["Automatic question generation from natural language text", {"from sentence" : "Automatic question generation from natural language text aims to generate questions taking text as input , which has the potential value of education purpose ) ."}],
+    ["question generation", {"from sentence" : "As the reverse task of question answering , question generation also has the potential for providing a large scale corpus of question - answer pairs ."}]
+  ]
+}

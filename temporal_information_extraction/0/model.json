@@ -1,0 +1,75 @@
+{
+  "has" : {
+    "Model" : {
+      "name" : {
+        "CATENA system" : {
+          "includes" : {
+            "two main classification modules" : {
+              "one for" : "temporal",
+              "other for" : "causal relations"
+            }
+          },
+          "from sentence" : "The CATENA system includes two main classification modules , one for temporal and the other for causal relations between events ."
+        }
+      },
+      "take as input" : {
+        "document" : {
+          "annotated with" : {
+            "temporal entities" : {
+              "according to" : "TimeML guidelines",
+              "including" : ["document creation time ( DCT )", "events and time expressions ( timexes )"]
+            }
+          },
+          "from sentence" : "As shown in , they both take as input a document annotated with the so - called temporal entities according to TimeML guidelines , including the document creation time ( DCT ) , events and time expressions ( timexes ) ."
+        }
+      },
+      "has" : {
+        "output" : {
+          "is" : {
+            "same document" : {
+              "with" : {
+                "temporal links ( TLINKs )" : {
+                  "set between" : {
+                    "pairs" : {
+                      "of" : "temporal entities"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "The output is the same document with temporal links ( TLINKs ) set between pairs of temporal entities , each assigned to one of the TimeML temporal relation types , such as or SIMULTANEOUS , which denotes the temporal ordering ."
+            }
+          },
+          "has" : {
+            "document" : {
+              "annotated with" : {
+                "causal relations ( CLINKs )" : {
+                  "between" : "event pairs"
+                }
+              },
+              "from sentence" : "The document is also annotated with causal relations ( CLINKs ) between event pairs ."
+            },
+            "modules" : {
+              "for" : {
+                "temporal and causal relation classification" : {
+                  "rely both on" : {
+                    "sieve - based architecture" : {
+                      "in which" : {
+                        "remaining unlabelled pairs" : {
+                          "after running" : "rule - based component"
+                        }
+                      }
+                    },
+                    "transitive reasoner" : {
+                      "fed into" : "supervised classifier"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "The modules for temporal and causal relation classification rely both on a sieve - based architecture , in which the remaining unlabelled pairs - after running a rule - based component and / or a transitive reasoner are fed into a supervised classifier ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "use" : {
+        "KL cost annealing strategy" : {
+          "set" : {
+            "initial weight" : {
+              "of" : {
+                "KL cost term" : {
+                  "to be" : "0.01",
+                  "increase" : {
+                    "linearly" : {
+                      "until" : "given iteration T"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Following , we use KL cost annealing strategy .
+We set the initial weight of KL cost term to be 0.01 and increase it linearly until a given iteration T ."
+
+        },
+        "batch size" : {
+          "of" : "32",
+          "from sentence" : "We use batch size of 32 and all model are trained for 40 epochs ."
+        },
+        "LSTM" : {
+          "as" : {
+            "encoder" : {
+              "for" : "VAE"
+            }
+          },
+          "from sentence" : "We use an LSTM as an encoder for VAE and explore LSTMs and CNNs as decoders ."          
+        },
+        "Gumbel - softmax" : {
+          "to sample" : "y from q ( y|x )",
+          "from sentence" : "We use Gumbel - softmax to sample y from q ( y|x ) ."
+        },
+        "vocabulary size" : {
+          "of" : {
+            "20 k" : {
+              "for" : "both data sets"
+            }
+          },
+          "from sentence" : "We use a vocabulary size of 20 k for both data sets and set the word embedding dimension to be 512 ."
+        },
+        "Adam" : {
+          "to optimize" : "all models",
+          "from sentence" : "We use Adam to optimize all models and the learning rate is selected from [ 2e - 3 , 1 e - 3 , 7.5 e - 4 ] and ?"
+        },
+        "learning rate" : {
+          "selected from" : "[ 2e - 3 , 1 e - 3 , 7.5 e - 4 ]",
+          "from sentence" : "We use Adam to optimize all models and the learning rate is selected from [ 2e - 3 , 1 e - 3 , 7.5 e - 4 ] and ?"
+        },
+        "drop word" : {
+          "for" : "LSTM decoder",
+          "from sentence" : "Following , we also use drop word for the LSTM decoder , the drop word ratio is selected from [ 0 , 0.3 , 0.5 , 0.7 ] ."
+        },
+        "drop word ratio" : {
+          "selected from" : "0 , 0.3 , 0.5 , 0.7",
+          "from sentence" : "Following , we also use drop word for the LSTM decoder , the drop word ratio is selected from [ 0 , 0.3 , 0.5 , 0.7 ] ."          
+        }
+      },
+      "set" : {
+        "word embedding dimension" : {
+          "to be" : "512",
+          "from sentence" : "We use a vocabulary size of 20 k for both data sets and set the word embedding dimension to be 512 ."
+        }  
+      },
+      "explore" : {
+        "LSTMs and CNNs" : {
+          "as" : "decoders"
+        },
+        "from sentence" : "We use an LSTM as an encoder for VAE and explore LSTMs and CNNs as decoders ."
+      },
+      "For" : {
+        "CNNs" : {
+          "set" : {
+            "convolution filter size" : {
+              "to be" : "3"
+            }
+          },
+          "from sentence" : "For CNNs , we explore several different configurations .
+We set the convolution filter size to be 3 and gradually increase the depth and dilation from [ 1 , 2 , 4 ] , ] to ."
+
+        },
+        "CNN decoder" : {
+          "use" : {
+            "dropout ratio" : {
+              "of" : {
+                "0.1" : {
+                  "at" : "each layer"
+                }
+              }
+            }
+          },
+          "from sentence" : "For the CNN decoder , we use a dropout ratio of 0.1 at each layer ."
+        }
+      },
+      "in" : {
+        "CNN decoders" : {
+          "has" : {
+            "number of channels" : {
+              "for" : {
+                "convolutions" : {
+                  "is" : ["512 internally", "1024 externally"]
+                }
+              }
+            },
+            "from sentence" : "The number of channels for convolutions in CNN decoders is 512 internally and 1024 externally , as shown in Section 2.3 ."
+          }
+        }
+      },
+      "find" : {
+        "learning rate" : {
+          "has" : {
+            "1e - 3 and ?1 = 0.5" : {
+              "to perform" : "best"
+            }
+          }
+        },
+        "from sentence" : "Empirically , we find learning rate 1e - 3 and ?1 = 0.5 to perform the best ."
+      },
+      "select" : {
+        "dropout ratio" : {
+          "of" : {
+            "LSTMs ( both encoder and decoder )" : {
+              "from" : "0.3 , 0.5"
+            }
+          }
+        },
+        "from sentence" : "We select dropout ratio of LSTMs ( both encoder and decoder ) from [ 0.3 , 0.5 ] ."
+      }
+    }
+  }  
+}

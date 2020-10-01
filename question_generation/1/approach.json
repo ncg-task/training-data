@@ -1,0 +1,51 @@
+{
+  "has" : {
+    "Approach" : {
+      "use" : {
+        "context" : {
+          "by considering" : "exemplars"
+        },
+        "difference" : {
+          "between" : "relevant and irrelevant exemplars"
+        },
+        "from sentence" : "To solve this problem , we use the context obtained by considering exemplars , specifically we use the difference between relevant and irrelevant exemplars ."
+      },
+      "consider" : {
+        "different contexts" : {
+          "in the form of" : "Location , Caption , and Part of Speech tags",
+          "from sentence" : "We consider different contexts in the form of Location , Caption , and Part of Speech tags ."
+        }
+      },
+      "uses" : {
+        "differential context" : {
+          "obtained through" : {
+            "supporting and contrasting exemplars" : {
+              "to obtain" : {
+                "differentiable embedding" : {
+                  "used by" : {
+                    "question decoder" : {
+                      "to decode" : "appropriate question"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Our method implicitly uses a differential context obtained through supporting and contrasting exemplars to obtain a differentiable embedding .
+This embedding is used by a question decoder to decode the appropriate question ."
+
+        }
+      },
+      "propose" : {
+        "multimodal differential network" : {
+          "to solve" : {
+            "task" : {
+              "of" : "visual question generation"
+            }
+          },
+          "from sentence" : "To summarize , we propose a multimodal differential network to solve the task of visual question generation ."
+        }
+      }
+    }
+  }
+}

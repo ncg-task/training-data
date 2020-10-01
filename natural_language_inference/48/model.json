@@ -1,0 +1,69 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "novel neural attention - based inference model" : {
+          "to perform" : "machine reading comprehension tasks",
+          "from sentence" : "Encouraged by the recent success of deep learning attention architectures , we propose a novel neural attention - based inference model designed to perform machine reading comprehension tasks ."
+        }
+      },
+      "first reads" : {
+        "document and the query" : {
+          "using" : "recurrent neural network",
+          "from sentence" : "The model first reads the document and the query using a recurrent neural network ."
+        }
+      },
+      "deploys" : {
+        "iterative inference process" : {
+          "to uncover" : {
+            "inferential links" : {
+              "between" : ["missing query word", "query", "document"]
+            },
+            "from sentence" : "Then , it deploys an iterative inference process to uncover the inferential links that exist between the missing query word , the query , and the document ."            
+          },
+          "involves" : {
+            "novel alternating attention mechanism" : {
+              "first attends" : {
+                "some parts" : {
+                  "of" : "query"
+                }
+              },
+              "then finds" : {
+                "corresponding matches" : {
+                  "by attending" : "document"
+                }
+              },
+              "has" : {
+                "result" : {
+                  "fed back into" : {
+                    "iterative inference process" : {
+                      "to seed" : "next search step"
+                    }
+                  }
+                }
+              }
+              "from sentence" : "This phase involves a novel alternating attention mechanism ; it first attends to some parts of the query , then finds their corresponding matches by attending to the document .
+The result of this alternating search is fed back into the iterative inference process to seed the next search step ."
+
+            }
+          },
+          "After" : {
+            "fixed number of iterations" : {
+              "has" : {
+                "model" : {
+                  "uses" : {
+                    "summary" : {
+                      "of" : "inference process",
+                      "to predict" : "answer"
+                    }
+                  }
+                },
+                "from sentence" : "After a fixed number of iterations , the model uses a summary of its inference process to predict the answer ."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

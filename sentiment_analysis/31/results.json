@@ -1,0 +1,30 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "Our two models" : {
+          "achieve" : {
+            "best performance" : {
+              "compared to" : "baselines"
+            }
+          },
+          "from sentence" : "Our two models achieve the best performance when compared to these baselines as shown in , which shows that our proposed neural units effectively captures the aspect - specific features ."
+        },
+        "vanilla CNN" : {
+          "works" : ["quite well", {"from sentence" : "Surprisingly , a vanilla CNN works quite well on this problem ."}],
+          "beats" : ["welldesigned LSTM models", {"from sentence" : "It even beats these welldesigned LSTM models , which further proves that using CNN - based methods is a direction worth exploring ."}]
+        }
+      },
+      "Compared to" : {
+        "recently proposed model AF - LSTM" : {
+          "has" : {
+            "our method" : {
+              "achieve" : "2 % - 5 % improvements"
+            }
+          },
+          "from sentence" : "Compared to one recently proposed model AF - LSTM , our method achieve 2 % - 5 % improvements ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "preprocessed" : {
+        "all datasets" : {
+          "by" : ["lower - casing", {"tokenization" : {"using" : "Spacy"}}],
+          "from sentence" : "We preprocessed all datasets by lower - casing and tokenization using Spacy 2 ."
+        }
+      },
+      "use" : {
+        "released code" : {
+          "for" : "BERT BASE and DialogueRNN",
+          "from sentence" : "We use the released code for BERT BASE and DialogueRNN ."
+        },
+        "Glo Ve embedding" : {
+          "for" : {
+            "initialization" : {
+              "in" : "word and concept embedding layers"
+            }
+          },
+          "from sentence" : "We use Glo Ve embedding for initialization in the word and concept embedding layers"
+        }
+      },
+      "For" : {
+        "each dataset" : {
+          "has" : {
+            "all models" : {
+              "are" : {
+                "fine - tuned" : {
+                  "based on" : {
+                    "performance" : {
+                      "on" : "validation set"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "For each dataset , all models are fine - tuned based on their performance on the validation set ."
+        },
+        "our model" : {
+          "in" : {
+            "all datasets" : {
+              "use" : {
+                "Adam optimization ( Kingma and Ba , 2014 )" : {
+                  "with" : {
+                    "batch size" : {
+                      "of" : "64"
+                    },
+                    "learning rate" : {
+                      "of" : "0.0001"
+                    }
+                  }
+                }  
+              }
+            }
+          },
+          "from sentence" : "For our model in all datasets , we use Adam optimization ( Kingma and Ba , 2014 ) with a batch size of 64 and learning rate of 0.0001 throughout the training process ."
+        },
+        "class weights" : {
+          "in" : {
+            "cross - entropy loss" : {
+              "for" : "each dataset"
+            }
+          },
+          "set them as" : {
+            "ratio" : {
+              "of" : {
+                "class distribution" : {
+                  "in" : "validation set",
+                  "to" : {
+                    "class distribution" : {
+                      "in" : "training set"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "For the class weights in cross - entropy loss for each dataset , we set them as the ratio of the class distribution in the validation set to the class distribution in the training set ."
+        }
+      }
+    }
+  }
+}

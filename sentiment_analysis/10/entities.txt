@@ -1,0 +1,134 @@
+149	0	8	c - LSTM
+149	30	32	is
+149	11	29	Biredectional LSTM
+149	33	48	used to capture
+149	53	60	context
+149	61	65	from
+149	70	92	surrounding utterances
+149	93	104	to generate
+149	105	142	contextaware utterance representation
+151	0	12	c- LSTM+ Att
+152	8	25	variant attention
+152	37	47	applied to
+152	52	67	c - LSTM output
+152	16	18	at
+152	71	85	each timestamp
+154	0	3	TFN
+155	8	19	specific to
+155	20	39	multimodal scenario
+156	0	20	Tensor outer product
+156	24	39	used to capture
+156	40	85	intermodality and intra-modality interactions
+158	0	3	MFN
+158	8	19	Specific to
+158	20	39	multimodal scenario
+158	53	61	utilizes
+158	62	81	multi-view learning
+158	82	93	by modeling
+158	94	139	view - specific and cross - view interactions
+161	0	6	Memnet
+161	31	48	current utterance
+161	52	58	fed to
+161	61	75	memory network
+161	78	83	where
+161	88	96	memories
+161	97	110	correspond to
+161	111	131	preceding utterances
+161	61	75	memory network
+162	11	15	from
+162	4	10	output
+162	11	15	from
+162	38	45	used as
+162	50	80	final utterance representation
+162	81	84	for
+162	85	107	emotion classification
+163	0	3	CMN
+163	8	10	is
+163	11	40	state - of - the - art method
+163	41	47	models
+163	48	65	utterance context
+163	66	70	from
+163	71	87	dialogue history
+163	88	93	using
+163	94	111	two distinct GRUs
+163	112	115	for
+163	116	128	two speakers
+18	13	31	DialogueRNN system
+18	32	39	employs
+18	40	75	three gated recurrent units ( GRU )
+19	4	22	incoming utterance
+19	26	34	fed into
+19	35	43	two GRUs
+19	44	50	called
+19	51	75	global GRU and party GRU
+22	4	14	global GRU
+22	15	22	encodes
+22	23	54	corresponding party information
+22	55	69	while encoding
+22	73	82	utterance
+23	0	14	Attending over
+23	24	55	gives contextual representation
+23	61	79	has information of
+23	80	104	all preceding utterances
+23	105	107	by
+23	108	125	different parties
+23	6	8	in
+23	133	145	conversation
+24	4	17	speaker state
+24	18	28	depends on
+24	34	41	context
+24	42	49	through
+24	50	93	attention and the speaker 's previous state
+26	14	35	updated speaker state
+26	39	47	fed into
+26	52	63	emotion GRU
+26	64	73	to decode
+26	78	100	emotion representation
+26	101	103	of
+26	108	123	given utterance
+26	135	143	used for
+26	144	166	emotion classification
+25	18	27	at time t
+25	34	47	speaker state
+25	48	78	directly gets information from
+25	83	108	speaker 's previous state
+25	113	123	global GRU
+25	124	148	which has information on
+25	153	170	preceding parties
+27	0	9	At time t
+27	16	32	emotion GRU cell
+27	33	37	gets
+27	42	100	emotion representation of t ? 1 and the speaker state of t
+2	35	69	Emotion Detection in Conversations
+170	14	24	on average
+170	25	40	Di - alogue RNN
+170	41	52	outperforms
+170	53	77	all the baseline methods
+170	80	89	including
+170	94	120	state - of - the - art CMN
+174	18	21	for
+174	22	37	IEMOCAP dataset
+174	40	49	our model
+174	50	59	surpasses
+174	64	97	state - of - the - art method CMN
+174	13	15	by
+174	101	116	2.77 % accuracy
+174	121	139	3.76 % f 1 - score
+182	0	4	AVEC
+182	5	16	DialogueRNN
+182	17	28	outperforms
+182	29	32	CMN
+182	23	26	for
+182	37	90	valence , arousal , expectancy , and power attributes
+187	0	13	DialogueRNN l
+188	12	17	using
+188	18	48	explicit listener state update
+188	49	55	yields
+188	56	82	slightly worse performance
+188	83	87	than
+188	88	107	regular DialogueRNN
+193	0	13	BiDialogueRNN
+193	46	48	on
+194	43	54	outperforms
+194	55	67	Dialogue RNN
+194	82	95	both datasets

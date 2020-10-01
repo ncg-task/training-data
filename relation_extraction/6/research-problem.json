@@ -1,0 +1,8 @@
+{
+  "has research problem" : [
+    ["Knowledge Base Relation Extraction", {"from sentence" : "Context - Aware Representations for Knowledge Base Relation Extraction"}],
+    ["sentence - level relation extraction", {"from sentence" : "We demonstrate that for sentence - level relation extraction it is beneficial to consider other relations in the sentential context while predicting the target relation ."}],
+    ["relation extraction", {"from sentence" : "The main goal of relation extraction is to determine a type of relation between two target entities that appear together in a text ."}],
+    ["sentential relation extraction", {"from sentence" : "In this paper , we consider the sentential relation extraction task : to each occurrence of the target entity pair e 1 , e 2 in some sentence s one has to assign a relation type r from a given set R. A triple e 1 , r , e 2 is called a relation instance and we refer to the relation of the target entity pair as target relation ."}]
+  ]
+}

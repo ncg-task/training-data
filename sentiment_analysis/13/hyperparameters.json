@@ -1,0 +1,90 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "adopt" : {
+        "BERT BASE ( uncased )" : {
+          "as" : {
+            "basis" : {
+              "for" : "all experiments"
+            }
+          }
+        },
+        "from sentence" : "We adopt BERT BASE ( uncased ) as the basis for all experiments" 
+      },
+      "leverage" : {
+        "FP16 computation" : {
+          "to reduce" : {
+            "size" : {
+              "of both" : ["model", {"hidden representations" : {"of" : "data"}}]
+            }
+          }
+        },
+        "from sentence" : "10 . Since post - training may take a large footprint on GPU memory ( as BERT pretraining ) , we leverage FP16 computation 11 to reduce the size of both the model and hidden representations of data ."
+      },
+      "set" : {
+        "static loss scale" : {
+          "of" : "2",
+          "in" : "FP",
+          "from sentence" : "We set a static loss scale of 2 in FP16 , which can avoid any over / under - flow of floating point computation ."
+        }
+      },
+      "has" : {
+        "maximum length" : {
+          "of" : {
+            "post -training" : {
+              "set to" : {
+                "320" : {
+                  "with" : {
+                    "batch size" : {
+                      "of" : {
+                        "16" : {
+                          "for each type of" : "knowledge"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "The maximum length of post -training is set to 320 with a batch size of 16 for each type of knowledge ."
+        },
+        "number of subbatch u" : {
+          "set to" : {
+            "2" : {
+              "good enough to store" : {
+                "sub - batch iteration" : {
+                  "into" : {
+                    "GPU memory" : {
+                      "of" : "11G"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "The number of subbatch u is set to 2 , which is good enough to store each sub - batch iteration into a GPU memory of 11G ."
+        }
+      },
+      "use" : {
+        "Adam optimizer" : {
+          "set" : {
+            "learning rate" : {
+              "to be" : "3e - 5"
+            }
+          },
+          "from sentence" : "We use Adam optimizer and set the learning rate to be 3e - 5 ."
+        }
+      },
+      "train" : {
+        "70,000 steps" : {
+          "for" : "laptop domain"
+        },
+        "140,000 steps" : {
+          "for" : "restaurant domain"
+        },
+        "from sentence" : "We train 70,000 steps for the laptop domain and 140,000 steps for the restaurant domain , which roughly have one pass over the preprocessed data on the respective domain ."
+      }
+    }
+  }
+}

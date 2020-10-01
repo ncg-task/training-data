@@ -1,0 +1,94 @@
+75	3	11	consider
+75	12	24	CNN variants
+75	25	29	with
+75	30	53	linear filters and RNFs
+76	0	3	For
+76	4	8	RNFs
+76	14	19	adopt
+76	20	39	two implementations
+76	40	48	based on
+76	49	63	GRUs and LSTMs
+77	8	23	compare against
+77	38	50	RNN variants
+77	53	56	GRU
+77	59	63	LSTM
+77	53	56	GRU
+77	70	74	with
+77	75	86	max pooling
+77	59	63	LSTM
+77	70	74	with
+77	75	86	max pooling
+18	22	39	propose to employ
+18	40	74	recurrent neural networks ( RNNs )
+18	75	77	as
+18	78	97	convolution filters
+18	98	100	of
+18	101	112	CNN systems
+19	4	37	recurrent neural filters ( RNFs )
+19	52	61	deal with
+19	62	87	language compositionality
+19	57	61	with
+19	95	113	recurrent function
+19	114	125	that models
+19	126	140	word relations
+19	166	185	to implicitly model
+19	186	210	long - term dependencies
+20	0	4	RNFs
+20	19	29	applied to
+20	30	44	word sequences
+20	45	47	of
+20	48	64	moderate lengths
+20	73	83	alleviates
+20	84	111	some well - known drawbacks
+20	45	47	of
+20	115	119	RNNs
+20	138	151	vulnerability
+20	27	29	to
+20	159	200	gradient vanishing and exploding problems
+22	14	36	RNF - based CNN models
+22	37	43	can be
+22	44	58	3 - 8 x faster
+22	59	63	than
+22	70	86	RNN counterparts
+21	30	44	computation of
+21	49	70	convolution operation
+21	71	75	with
+21	76	80	RNFs
+21	81	87	can be
+21	95	107	parallelized
+21	0	5	As in
+21	6	23	conventional CNNs
+23	3	10	present
+23	11	44	two RNF - based CNN architectures
+23	45	48	for
+23	49	111	sentence classification and answer sentence selection problems
+2	0	59	Convolutional Neural Networks with Recurrent Neural Filters
+7	18	53	model convolution filters with RNNs
+18	33	112	employ recurrent neural networks ( RNNs ) as convolution filters of CNN systems
+81	16	32	CNN - RNF - LSTM
+81	33	41	achieves
+81	42	70	53.4 % and 90.0 % accuracies
+81	71	73	on
+81	78	134	fine - grained and binary sentiment classification tasks
+81	156	161	match
+81	166	194	state - of the - art results
+81	71	73	on
+81	202	229	Stanford Sentiment Treebank
+82	22	29	obtains
+82	30	49	competitive results
+82	50	52	on
+82	53	87	answer sentence selection datasets
+82	90	97	despite
+82	102	127	simple model architecture
+82	128	139	compared to
+82	140	170	state - of - the - art systems
+83	0	23	Conventional RNN models
+83	32	44	benefit from
+83	45	56	max pooling
+83	59	72	especially on
+83	85	110	answer sentence selection
+87	14	36	RNF - based CNN models
+87	37	44	perform
+87	45	64	consistently better
+87	65	69	than
+87	70	93	max - pooled RNN models

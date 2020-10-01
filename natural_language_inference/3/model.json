@@ -1,0 +1,71 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "new deep neural network architecture" : {
+          "to model" : {
+            "strong interactions" : {
+              "of" : "two sentences"
+            }
+          },
+          "from sentence" : "In this paper , we propose a new deep neural network architecture to model the strong interactions of two sentences ."
+        },
+        "two interdependent ways" : {
+          "for" : {
+            "coupled - LSTMs" : {
+              "name" : ["loosely coupled model ( LC - LSTMs )", "tightly coupled model ( TC - LSTMs )"]
+            }
+          },
+          "from sentence" : "Specifically , we propose two interdependent ways for the coupled - LSTMs : loosely coupled model ( LC - LSTMs ) and tightly coupled model ( TC - LSTMs ) ."
+        }
+      },
+      "utilize" : {
+        "two interdependent LSTMs" : {
+          "called" : "coupled - LSTMs",
+          "to fully affect" : {
+            "each other" : {
+              "at" : "different time steps"
+            }
+          },
+          "from sentence" : "Different with modelling two sentences with separated LSTMs , we utilize two interdependent LSTMs , called coupled - LSTMs , to fully affect each other at different time steps ."
+        },
+        "all the information" : {
+          "of" : {
+            "four directions" : {
+              "of" : "coupled - LSTMs"
+            },
+            "from sentence" : "To utilize all the information of four directions of coupled - LSTMs , we aggregate them and adopt a dynamic pooling strategy to automatically select the most informative interaction signals ."            
+          },
+          "has" : ["aggregate", {"from sentence" : "To utilize all the information of four directions of coupled - LSTMs , we aggregate them and adopt a dynamic pooling strategy to automatically select the most informative interaction signals ."}],
+          "adopt" : {
+            "dynamic pooling strategy" : {
+              "to automatically select" : "most informative interaction signals"
+            },
+            "from sentence" : "To utilize all the information of four directions of coupled - LSTMs , we aggregate them and adopt a dynamic pooling strategy to automatically select the most informative interaction signals ."
+          },
+          "feed them into" : {
+            "fully connected layer" : {
+              "followed by" : {
+                "output layer" : {
+                  "to compute" : "matching score"
+                }
+              }
+            },
+            "from sentence" : "Finally , we feed them into a fully connected layer , followed by an output layer to compute the matching score ."
+          }
+        }
+      },
+      "has" : {
+        "output" : {
+          "of" : {
+            "coupled - LSTMs" : {
+              "at" : "each step",
+              "depends on" : "both sentences"
+            }
+          },
+          "from sentence" : "The output of coupled - LSTMs at each step depends on both sentences ."
+        }
+      }
+    }
+  }
+}

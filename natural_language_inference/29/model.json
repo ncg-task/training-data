@@ -1,0 +1,58 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "product - aware answer generator ( PAAG )" : {
+          "has" : {
+            "product related question answering model" : {
+              "incorporates" : {
+                "customer reviews" : {
+                  "with" : "product attributes"
+                }
+              }
+            }
+          },
+          "from sentence" : "In this paper , we propose the product - aware answer generator ( PAAG ) , a product related question answering model which incorporates customer reviews with product attributes ."
+        },
+        "recurrent neural network ( RNN ) based decoder" : {
+          "combines" : {
+            "product - aware review representation and attributes" : {
+              "to generate" : "answer"
+            }
+          },
+          "from sentence" : "Eventually , we propose a recurrent neural network ( RNN ) based decoder , which combines product - aware review representation and attributes to generate the answer ."
+        }
+      },
+      "employ" : {
+        "attention mechanism" : {
+          "to model" : {
+            "interactions" : {
+              "between" : "question and reviews"
+            }
+          },
+          "from sentence" : "Specifically , at the beginning we employ an attention mechanism to model interactions between a question and reviews ."
+        },
+        "key - value memory network" : {
+          "to store" : "product attributes",
+          "extract" : {
+            "relevance values" : {
+              "according to" : "question"
+            }
+          },
+          "from sentence" : "Simultaneously , we employ a key - value memory network to store the product attributes and extract the relevance values according to the question ."
+        }
+      },
+      "to tackle" : {
+        "meaningless answers" : {
+          "propose" : {
+            "adversarial learning mechanism" : {
+              "in" : "loss calculation",
+              "for optimizing" : "parameters"
+            }
+          },
+          "from sentence" : "More importantly , to tackle the problem of meaningless answers , we propose an adversarial learning mechanism in the loss calculation for optimizing parameters ."
+        }
+      }
+    }
+  }
+}

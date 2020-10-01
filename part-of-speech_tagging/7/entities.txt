@@ -1,0 +1,56 @@
+58	26	64	https : //github.com/bplank/bilstm-aux
+52	9	30	default learning rate
+52	33	36	0.1
+52	41	55	128 dimensions
+52	56	59	for
+52	60	75	word embeddings
+52	78	81	100
+52	56	59	for
+52	86	115	character and byte embeddings
+52	122	135	hidden states
+52	140	154	Gaussian noise
+52	155	159	with
+52	163	166	0.2
+53	3	11	training
+53	12	14	is
+53	15	25	stochastic
+53	41	44	use
+53	47	57	fixed seed
+55	16	19	use
+55	20	54	offthe - shelf polyglot embeddings
+22	13	22	introduce
+22	25	36	novel model
+22	41	78	bi - LSTM trained with auxiliary loss
+23	10	26	jointly predicts
+23	31	68	POS and the log frequency of the word
+2	0	39	Multilingual Part - of - Speech Tagging
+5	104	115	POS tagging
+79	33	41	compared
+79	42	69	Tnt , HunPos and TreeTagger
+79	74	79	found
+79	42	45	Tnt
+79	84	89	to be
+79	90	109	consistently better
+79	110	114	than
+79	115	125	Treetagger
+80	4	50	combined word + character representation model
+80	51	53	is
+80	58	77	best representation
+80	80	93	outperforming
+80	98	106	baseline
+80	42	44	on
+80	110	148	all except one language ( Indonesian )
+81	21	28	reaches
+81	33	52	biggest improvement
+81	82	84	on
+81	85	103	Hebrew and Slovene
+81	55	79	more than + 2 % accuracy
+85	4	23	overall best system
+85	24	26	is
+85	31	59	multi-task bi - LSTM FREQBIN
+82	0	12	Initializing
+82	17	47	word embeddings ( + POLYGLOT )
+82	48	52	with
+82	53	98	off - the - shelf languagespecific embeddings
+82	107	115	improves
+82	116	124	accuracy

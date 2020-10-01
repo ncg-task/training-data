@@ -1,0 +1,54 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "densely - connected recurrent network" : {
+          "where" : {
+            "recurrent hidden features" : {
+              "retained to" : "uppermost layer"
+            }
+          },
+          "from sentence" : "Inspired by Densenet ) , we propose a densely - connected recurrent network where the recurrent hidden features are retained to the uppermost layer ."
+        }
+      },
+      "instead of" : {
+        "conventional summation operation" : {
+          "used" : {
+            "concatenation operation" : {
+              "in combination with" : "attention mechanism",
+              "to preserve" : {
+                "co-attentive information" : {
+                  "has" : "better"
+                }
+              }
+            }
+          },
+          "from sentence" : "In addition , instead of the conventional summation operation , the concatenation operation is used in combination with the attention mechanism to preserve co-attentive information better ."
+        }
+      },
+      "called" : {
+        "DRCN" : {
+          "abbreviation for" : "Densely - connected Recurrent and Co -attentive neural Network",
+          "from sentence" : "The proposed architecture shown in is called DRCN which is an abbreviation for Densely - connected Recurrent and Co -attentive neural Network ."
+        }
+      },
+      "proposed" : {
+        "DRCN" : {
+          "utilize" : {
+            "increased representational power" : {
+              "of" : ["deeper recurrent networks", "attentive information"]
+            }
+          },
+          "from sentence" : "The proposed DRCN can utilize the increased representational power of deeper recurrent networks and attentive information ."
+        }
+      },
+      "adopted" : ["autoencoder", {"from sentence" : "Furthermore , to alleviate the problem of an ever- increasing feature vector size due to concatenation operations , we adopted an autoencoder and forwarded a fixed length vector to the higher layer recurrent module as shown in the figure ."}],
+      "forwarded" : {
+        "fixed length vector" : {
+          "to" : "higher layer recurrent module"
+        },
+        "from sentence" : "Furthermore , to alleviate the problem of an ever- increasing feature vector size due to concatenation operations , we adopted an autoencoder and forwarded a fixed length vector to the higher layer recurrent module as shown in the figure ."
+      }
+    }
+  }
+}

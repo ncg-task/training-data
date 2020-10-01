@@ -1,0 +1,42 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "BERT - single" : {
+          "achieved" : "better results",
+          "from sentence" : "We find that BERT - single has achieved better results on these two subtasks , and BERT - pair has achieved further improvements over BERT - single ."
+        },
+        "BERT - pair" : {
+          "achieved" : {
+            "further improvements" : {
+              "over" : "BERT - single"
+            }
+          },
+          "from sentence" : "We find that BERT - single has achieved better results on these two subtasks , and BERT - pair has achieved further improvements over BERT - single ."
+        },
+        "BERT - pair - NLI - B model" : {
+          "achieves" : {
+            "best performance" : {
+              "for" : "aspect category detection"
+            }
+          },
+          "from sentence" : "The BERT - pair - NLI - B model achieves the best performance for aspect category detection ."
+        }
+      },
+      "For" : {
+        "aspect category polarity" : {
+          "has" : {
+            "BERTpair - QA - B" : {
+              "performs" : {
+                "best" : {
+                  "on" : "all 4 - way , 3 - way , and binary settings"
+                }
+              }
+            },
+            "from sentence" : "For aspect category polarity , BERTpair - QA - B performs best on all 4 - way , 3 - way , and binary settings ."
+          }
+        }
+      }
+    }
+  }
+}

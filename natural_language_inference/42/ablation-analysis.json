@@ -1,0 +1,78 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "confirms" : {
+        "effectiveness" : {
+          "of" : {
+            "char- embeddings" : {
+              "addition" : {
+                "has" : {
+                  "increased" : {
+                    "F1 and EM scores" : {
+                      "by" : "2.7 % and 3.1 %"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "This analysis confirms the effectiveness of char- embeddings , as its addition increased the F1 and EM scores , by 2.7 % and 3.1 % , respectively ."
+            }
+          }
+        }
+      },
+      "when" : {
+        "convolutional attention" : {
+          "replaced by" : {
+            "standard attention mechanism" : {
+              "has" : {
+                "performance" : {
+                  "has" : {
+                    "dropped" : {
+                      "by" : {
+                        "2.4 %" : {
+                          "in" : "F1"
+                        },
+                        "2.5 %" : {
+                          "in" : "EM"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Most importantly , when the convolutional attention was replaced by the standard attention mechanism proposed in , the performance dropped by 2.4 % in F1 and 2.5 % in EM ."
+            }
+          }
+        }
+      },
+      "indicate" : {
+        "reduction layer" : {
+          "capable of producing" : {
+            "useful word representations" : {
+              "when" : {
+                "compressing" : {
+                  "has" : "embeddings"
+                }
+              }
+            },
+            "from sentence" : "Moreover , the tests also indicate that the reduction layer is capable of producing useful word representations when compressing the embeddings ."
+          },
+          "replaced" : {
+            "standard feedforward layer" : {
+              "with" : "same reduction ratio",
+              "has" : {
+                "drop" : {
+                  "of" : {
+                    "2.1 % and 2.5 %" : {
+                      "in" : "F1 and EM scores"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Indeed , when we replaced that layer by a standard feedforward layer with the same reduction ratio , there was a drop of 2.1 % and 2.5 % in the F1 and EM scores , respectively ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

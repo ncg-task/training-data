@@ -1,0 +1,85 @@
+{
+  "has" : {
+    "Results" : {
+      "see" : {
+        "n-gram representation" : {
+          "with" : "location masking",
+          "achieves" : {
+            "slightly better results" : {
+              "over" : "left - right context"
+            }
+          },
+          "from sentence" : "As we can see , the n-gram representation with location masking achieves slightly better results over the left - right context ."
+        }
+      },
+      "by adding" : {
+        "POS information" : {
+          "gain" : {
+            "increase" : {
+              "in" : "performance"
+            }
+          },
+          "from sentence" : "Also , by adding POS information , we gain an increase in the performance ."
+        }
+      },
+      "Separating" : {
+        "left and the right context ( LR - Left - Right )" : {
+          "for" : "BoW representation",
+          "does not improve" : "performance"
+        },
+        "from sentence" : "Separating the left and the right context ( LR - Left - Right ) for BoW representation , does not improve the performance ."
+      },
+      "Among" : {
+        "two variations of LSTM" : {
+          "has" : {
+            "model" : {
+              "with" : {
+                "final state embeddings" : {
+                  "does" : {
+                    "slightly better" : {
+                      "than" : {
+                        "model" : {
+                          "use" : "embeddings at the location index"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Amongst the two variations of LSTM , the model with final state embeddings does slightly better than the model where we use the embeddings at the location index , however they are not significantly different ( with a p valueless than 0.01 ) ."
+        }
+      },
+      "interesting to note" : {
+        "best LSTM model" : {
+          "not superior to" : "logistic regression model",
+          "in terms of" : "AUC"
+        },
+        "from sentence" : "It is interesting to note that the best LSTM model is not superior to logistic regression model , especially in terms of AUC ."
+      },
+      "for" : {
+        "logistic regression model" : {
+          "with" : "n-grams and POS information",
+          "interesting observation is that" : {
+            "F 1 measure" : {
+              "is" : "very low"     
+            },
+            "performance" : {
+              "is" : {
+                "superior" : {
+                  "to" : {
+                    "other models" : {
+                      "in terms of" : "AUC"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Another interesting observation is that the F 1 measure for logistic regression model with n-grams and POS information is very low while this model 's performance is superior to other models in terms of AUC ."
+        }
+      }      
+    }
+  }
+}

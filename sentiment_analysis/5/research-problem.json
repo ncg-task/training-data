@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["EEG Emotion Recognition", {"from sentence" : "A Novel Bi-hemispheric Discrepancy Model for EEG Emotion Recognition"}],
+    ["electroencephalograph ( EEG ) emotion recognition", {"from sentence" : "Inspired by this study , in this paper , we propose a novel bi-hemispheric discrepancy model ( BiHDM ) to learn the asymmetric differences between two hemispheres for electroencephalograph ( EEG ) emotion recognition ."}],
+    ["emotion recognition", {"from sentence" : "As the first step to make machines capture human emotions , emotion recognition has received substantial attention from human - machine - interaction ( HMI ) and pattern recognition research communities in recent years , , ."}]
+  ]
+}

@@ -1,0 +1,239 @@
+175	14	18	uses
+175	21	41	similar architecture
+175	42	44	to
+175	49	93	proposed neural multitask learning framework
+175	116	125	optimizes
+175	130	137	network
+175	138	141	for
+175	146	155	main loss
+175	156	165	regarding
+175	170	208	citation intent classification ( L 1 )
+8	37	72	https://github.com/ allenai/scicite
+121	34	43	introduce
+121	44	54	Sci - Cite
+121	96	98	is
+121	59	70	new dataset
+121	71	73	of
+121	74	90	citation intents
+121	91	98	that is
+121	99	161	significantly larger , more coarse - grained and generaldomain
+121	162	175	compared with
+121	176	193	existing datasets
+125	3	11	consider
+125	12	35	three intent categories
+125	50	63	BACK - GROUND
+125	66	72	METHOD
+125	77	93	RESULTCOMPARISON
+128	0	15	Citation intent
+128	16	18	of
+128	19	39	sentence extractions
+128	44	59	labeled through
+128	64	86	crowdsourcing platform
+142	0	17	Citation contexts
+142	23	35	annotated by
+142	36	59	850 crowdsource workers
+142	64	68	made
+142	71	98	total of 29,926 annotations
+142	103	120	individually made
+142	129	150	4 and 240 annotations
+143	5	13	sentence
+143	14	17	was
+143	18	27	annotated
+143	30	40	on average
+143	43	53	3.74 times
+144	5	16	resulted in
+144	19	30	total 9,159
+144	31	53	crowdsourced instances
+144	65	75	divided to
+144	76	104	training and validation sets
+144	105	109	with
+144	110	114	90 %
+144	115	117	of
+144	122	126	data
+144	127	135	used for
+144	140	152	training set
+155	3	12	implement
+155	17	44	proposed scaffold framework
+155	45	50	using
+155	55	71	AllenNLP library
+156	0	3	For
+156	4	24	word representations
+156	30	33	use
+156	34	65	100 - dimensional GloVe vectors
+156	66	76	trained on
+156	79	85	corpus
+156	86	88	of
+156	89	98	6B tokens
+156	99	103	from
+156	104	126	Wikipedia and Gigaword
+157	4	30	contextual representations
+157	36	39	use
+157	40	52	ELMo vectors
+157	65	69	with
+157	70	91	output dimension size
+157	92	94	of
+157	95	100	1,024
+157	117	127	trained on
+157	130	137	dataset
+157	92	94	of
+157	141	153	5.5 B tokens
+159	4	26	each of scaffold tasks
+159	32	35	use
+159	38	56	single - layer MLP
+159	122	129	between
+159	134	157	hidden and input layers
+159	57	61	with
+159	62	77	20 hidden nodes
+159	80	95	ReLU activation
+159	102	114	Dropout rate
+159	9	11	of
+159	118	121	0.2
+158	3	6	use
+158	9	30	single - layer BiLSTM
+158	31	35	with
+158	38	59	hidden dimension size
+158	60	62	of
+158	63	65	50
+165	7	13	Beaker
+165	17	20	for
+165	21	44	running the experiments
+164	0	10	Batch size
+164	11	13	is
+164	14	15	8
+164	16	19	for
+164	20	37	ACL - ARC dataset
+164	42	44	32
+164	16	19	for
+164	49	64	SciCite dataset
+23	17	24	propose
+23	27	62	neural multitask learning framework
+23	63	77	to incorporate
+23	78	87	knowledge
+23	88	92	into
+23	93	102	citations
+23	103	107	from
+23	112	142	structure of scientific papers
+24	27	46	two auxiliary tasks
+24	42	44	as
+24	50	70	structural scaffolds
+24	71	81	to improve
+24	82	108	citation intent prediction
+27	43	68	neural scaffold framework
+27	69	72	for
+27	73	103	citation intent classification
+27	104	123	to incorporate into
+27	124	133	citations
+27	134	143	knowledge
+27	144	148	from
+27	149	179	structure of scientific papers
+26	0	2	On
+26	3	15	two datasets
+26	21	30	show that
+26	35	65	proposed neural scaffold model
+26	66	77	outperforms
+26	78	94	existing methods
+26	95	97	by
+26	98	111	large margins
+2	25	82	Citation Intent Classification in Scientific Publications
+4	0	57	Identifying the intent of a citation in scientific papers
+19	42	72	citation intent classification
+182	3	10	observe
+182	20	46	scaffold - enhanced models
+182	47	54	achieve
+182	55	73	clear improvements
+182	74	78	over
+182	83	114	state - of - the - art approach
+198	26	33	results
+198	34	36	on
+198	37	47	categories
+198	48	52	with
+198	53	77	more number of instances
+198	78	81	are
+198	82	88	higher
+183	0	13	Starting with
+183	20	33	BiLSTM - Attn
+183	9	13	with
+183	52	66	macro F1 score
+183	67	69	of
+183	70	74	51.8
+183	77	83	adding
+183	88	153	first scaffold task in ' BiLSTM - Attn + section title scaffold '
+183	154	162	improves
+183	58	66	F1 score
+183	176	178	to
+183	179	193	56.9 (?= 5.1 )
+184	0	6	Adding
+184	11	26	second scaffold
+184	3	5	in
+184	32	76	BiLSTM - Attn + citation worthiness scaffold
+184	84	94	results in
+184	95	115	similar improvements
+184	118	132	56.3 (?= 4.5 )
+193	7	21	both scaffolds
+193	22	32	results in
+193	33	53	further improvements
+185	5	19	both scaffolds
+185	49	79	BiLSTM - Attn + both scaffolds
+185	88	96	F1 score
+185	105	116	improves to
+185	117	133	63.1 ( ?= 11.3 )
+186	41	44	add
+186	45	57	ELMo vectors
+186	53	55	to
+186	65	86	input representations
+186	65	67	in
+186	92	131	BiLSTM - Attn w / ELMo + both scaffolds
+186	136	145	achieving
+186	149	151	F1
+186	152	154	of
+186	155	159	67.9
+186	164	181	major improvement
+186	182	186	from
+186	191	230	previous state - of - the - art results
+186	152	154	of
+186	234	250	54.6 ( ?= 13.3 )
+194	8	20	best results
+194	34	42	by using
+194	43	62	ELMo representation
+194	63	77	in addition to
+194	78	92	both scaffolds
+192	0	18	Each scaffold task
+192	19	27	improves
+192	28	45	model performance
+187	3	7	note
+187	17	31	scaffold tasks
+187	32	39	provide
+187	40	59	major contributions
+187	60	69	on top of
+187	74	109	ELMo - enabled baseline ( ?= 13.6 )
+189	8	25	experimented with
+189	26	41	adding features
+189	42	49	used in
+189	53	67	our best model
+189	122	130	observed
+189	131	153	at least 1.7 % decline
+189	29	31	in
+189	157	168	performance
+199	12	14	on
+199	15	24	ACL - ARC
+199	31	38	results
+199	12	14	on
+199	46	65	BACKGROUND category
+199	66	69	are
+199	74	81	highest
+199	82	84	as
+199	57	65	category
+199	87	89	is
+199	106	117	most common
+200	32	51	FUTUREWORK category
+200	52	55	are
+200	60	66	lowest
+201	22	40	fewest data points
+201	87	91	thus
+201	98	104	harder
+201	105	108	for
+201	113	118	model
+201	119	127	to learn
+201	132	150	optimal parameters
+201	105	108	for
+201	155	177	correct classification

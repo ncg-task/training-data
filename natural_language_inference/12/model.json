@@ -1,0 +1,50 @@
+{
+  "has" : {
+    "Model" : {
+      "follow" : {
+        "former approach" : {
+          "of" : "encoding - based models"
+        },
+        "from sentence" : "In this paper , we follow the former approach of encoding - based models , and propose a novel yet simple sequential sentence encoder for the Multi - NLI problem ."
+      },
+      "propose" : {
+        "novel yet simple sequential sentence encoder" : {
+          "for" : "Multi - NLI problem"
+        },
+        "from sentence" : "In this paper , we follow the former approach of encoding - based models , and propose a novel yet simple sequential sentence encoder for the Multi - NLI problem ."        
+      },
+      "has" : {
+        "stacked ( multi-layered ) bidirectional LSTM - RNN" : {
+          "with" : ["shortcut connections", "word embedding fine - tuning"],
+          "from sentence" : "It is basically a stacked ( multi-layered ) bidirectional LSTM - RNN with shortcut connections ( feeding all previous layers ' outputs and word embeddings to each layer ) and word embedding fine - tuning ."
+        },
+        "overall supervised model" : {
+          "uses" : {
+            "shortcutstacked encoders" : {
+              "to encode" : {
+                "two input sentences" : {
+                  "into" : "two vectors"
+                }
+              }
+            }
+          },
+          "use" : {
+            "classifier" : {
+              "over" : {
+                "vector combination" : {
+                  "to label" : {
+                    "relationship" : {
+                      "between" : "two sentences",
+                      "as" : ["entailment", "contradiction", "neural"]
+                    }
+                  },
+                  "from sentence" : "The overall supervised model uses these shortcutstacked encoders to encode two input sentences into two vectors , and then we use a classifier over the vector combination to label the relationship between these two sentences as that of entailment , contradiction , or neural ( similar to the classifier setup of and ) ."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

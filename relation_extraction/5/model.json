@@ -1,0 +1,38 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "novel extension of the graph convolutional network" : {
+          "tailored for" : "relation extraction",
+          "from sentence" : "In this work , we propose a novel extension of the graph convolutional network ) that is tailored for relation extraction ."
+        }
+      },
+      "encodes" : {
+        "dependency structure" : {
+          "over" : {
+            "input sentence" : {
+              "with" : "efficient graph convolution operations"
+            }
+          },
+          "extracts" : {
+            "entity - centric representations" : {
+              "to make" : "robust relation predictions"
+            }
+          },
+          "from sentence" : "Our model encodes the dependency structure over the input sentence with efficient graph convolution operations , then extracts entity - centric representations to make robust relation predictions ."
+        }
+      },
+      "apply" : {
+        "novel path - centric pruning technique" : {
+          "to remove" : {
+            "irrelevant information" : {
+              "from" : "the tree",
+              "maximally keeping" : "relevant content"
+            }
+          }
+        },
+        "from sentence" : "We also apply a novel path - centric pruning technique to remove irrelevant information from the tree while maximally keeping relevant content , which further improves the performance of several dependencybased models including ours ."
+      }
+    }
+  }
+}

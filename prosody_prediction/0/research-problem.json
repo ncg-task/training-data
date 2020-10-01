@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Predicting Prosodic Prominence from Text", {"from sentence" : "Predicting Prosodic Prominence from Text with Pre-trained Contextualized Word Representations"}],
+    ["predicting prosodic prominence from written text", {"from sentence" : "In this paper we introduce a new natural language processing dataset and benchmark for predicting prosodic prominence from written text ."}],
+    ["Prosody prediction", {"from sentence" : "Prosody prediction can be turned into a sequence labeling task by giving each word in a text a discrete prominence value based on the amount of emphasis the speaker gives to the word when reading the text ."}]
+  ]
+}

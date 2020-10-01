@@ -1,0 +1,91 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "trained contextual unimodal features" : {
+          "help" : {
+            "hierarchical fusion framework" : {
+              "to outperform" : "non-hierarchical framework"
+            }
+          },
+          "from sentence" : "As expected , trained contextual unimodal features help the hierarchical fusion framework to outperform the non-hierarchical framework ."
+        },
+        "non-hierarchical model" : {
+          "outperforms" : "baseline uni - SVM",
+          "from sentence" : "The non-hierarchical model outperforms the baseline uni - SVM , which confirms that it is the contextsensitive learning paradigm that plays the key role in improving performance over the baseline ."
+        },
+        "bc - LSTM" : {
+          "has access to" : {
+            "preceding and following information" : {
+              "of" : {
+                "utterance sequence" : {
+                  "performs" : {
+                    "consistently better" : {
+                      "on" : "all the datasets over sc - LSTM"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Since bc - LSTM has access to both the preceding and following information of the utterance sequence , it performs consistently better on all the datasets over sc - LSTM ."
+        },
+        "performance improvement" : {
+          "is" : {
+            "in the range" : {
+              "of" : {
+                "0.3 % to 1.5 %" : {
+                  "on" : "MOSI and MOUD datasets"
+                }
+              }
+            }
+          },
+          "from sentence" : "The performance improvement is in the range of 0.3 % to 1.5 % on MOSI and MOUD datasets ."
+        },
+        "Every LSTM network variant" : {
+          "outperformed" : {
+            "baseline uni - SVM" : {
+              "on" : {
+                "all the datasets" : {
+                  "by the margin of" : "2 % to 5 %"
+                }
+              }
+            }
+          },
+          "from sentence" : "Every LSTM network variant has outperformed the baseline uni - SVM on all the datasets by the margin of 2 % to 5 % ( see ) ."
+        }
+      },
+      "noted" : {
+        "both sc - LSTM and bc - LSTM" : {
+          "perform" : {
+            "quite well" : {
+              "on" : "multimodal emotion recognition and sentiment analysis datasets"
+            }
+          },
+          "from sentence" : "It is to be noted that both sc - LSTM and bc - LSTM perform quite well on the multimodal emotion recognition and sentiment analysis datasets ."
+        }
+      },
+      "On" : {
+        "IEMOCAP dataset" : {
+          "has" : {
+            "performance improvement" : {
+              "of" : {
+                "bc - LSTM and sc - LSTM" : {
+                  "over" : "h- LSTM"
+                }
+              },
+              "in the range of" : "1 % to 5 %"
+            }
+          },
+          "from sentence" : "On the IEMOCAP dataset , the performance improvement of bc - LSTM and sc - LSTM over h- LSTM is in the range of 1 % to 5 % ."
+        }
+      },
+      "show" : {
+        "proposed method" : {
+          "outperformes by" : "significant margin"
+        },
+        "from sentence" : "Experimental results in show that the proposed method outperformes by a significant margin ."
+      }
+    }
+  }
+}

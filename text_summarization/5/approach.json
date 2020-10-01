@@ -1,0 +1,88 @@
+{
+  "has" : {
+    "Approach" : {
+      "combine" : ["seq2seq and template based summarization approaches", {"from sentence" : "Due to the strong rewriting ability of the seq2seq framework , in this paper , we propose to combine the seq2seq and template based summarization approaches ."}],
+      "call" : {
+        "summarization system" : {
+          "name" : {
+            "Re 3 Sum" : {
+              "consists of" : {
+                "three modules" : {
+                  "name" : ["Retrieve", "Rerank", "Rewrite"]
+                }
+              }
+            }
+          },
+          "from sentence" : "We call our summarization system Re 3 Sum , which consists of three modules : Retrieve , Rerank and Rewrite ."
+        }
+      },
+      "utilize" : {
+        "widely - used Information Retrieval ( IR ) platform" : {
+          "to find out" : {
+            "candidate soft templates" : {
+              "from" : "training corpus"
+            }
+          }
+        },
+        "from sentence" : "We utilize a widely - used Information Retrieval ( IR ) platform to find out candidate soft templates from the training corpus ."
+      },
+      "extend" : {
+        "seq2seq model" : {
+          "to jointly learn" : ["template saliency measurement ( Rerank )", "final summary generation ( Rewrite )"]
+        },
+        "from sentence" : "Then , we extend the seq2seq model to jointly learn template saliency measurement ( Rerank ) and final summary generation ( Rewrite ) ."
+      },
+      "has" : {
+        "Recurrent Neural Network ( RNN ) encoder" : {
+          "applied to" : {
+            "convert" : {
+              "into" : {
+                "hidden states" : {
+                  "name" : ["input sentence", "each candidate template"]
+                }
+              }
+            }
+          },
+          "from sentence" : "Specifically , a Recurrent Neural Network ( RNN ) encoder is applied to convert the input sentence and each candidate template into hidden states ."
+        }
+      },
+      "In" : {
+        "Rerank" : {
+          "measure" : {
+            "informativeness" : {
+              "of" : {
+                "candidate template" : {
+                  "according to" : {
+                    "hidden state relevance" : {
+                      "to" : "input sentence"
+                    }
+                  },
+                  "with" : {
+                    "highest predicted informativeness" : {
+                      "is regarded as" : "actual soft template"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "In Rerank , we measure the informativeness of a candidate template according to its hidden state relevance to the input sentence .
+The candidate template with the highest predicted informativeness is regarded as the actual soft template ."
+
+        },
+        "Rewrite" : {
+          "generated" : {
+            "summary" : {
+              "according to" : {
+                "hidden states" : {
+                  "of both" : "sentence and template"
+                }
+              }
+            }
+          },
+          "from sentence" : "In Rewrite , the summary is generated according to the hidden states of both the sentence and template ."
+        }
+      }
+    }
+  }
+}

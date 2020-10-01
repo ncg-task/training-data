@@ -1,0 +1,102 @@
+51	33	69	https://github.com/Websail-NU /CODAH
+24	44	51	Dataset
+24	18	27	introduce
+24	32	96	COmmonsense Dataset Adversarially - authored by Humans ( CODAH )
+24	97	100	for
+24	101	131	commonsense question answering
+24	132	147	in the style of
+24	148	188	SWAG multiple choice sentence completion
+114	7	20	when training
+114	25	43	initial SWAG model
+114	47	50	use
+114	55	70	hyperparameters
+114	71	85	recommended in
+114	90	100	BERT paper
+114	103	109	namely
+114	112	122	batch size
+114	123	125	of
+114	126	128	16
+114	131	144	learning rate
+114	123	125	of
+114	148	155	2 e - 5
+114	164	170	epochs
+114	162	163	3
+115	132	140	replaced
+115	145	165	5e - 5 learning rate
+115	7	9	in
+115	173	193	original grid search
+115	194	198	with
+115	199	206	1 e - 5
+115	216	221	added
+115	224	241	6 - epoch setting
+116	4	29	final hyperparameter grid
+117	0	10	Batch size
+117	13	20	16 , 32
+117	21	34	Learning rate
+117	37	64	1 e - 5 , 2 e - 5 , 3 e - 5
+117	65	81	Number of epochs
+117	84	93	3 , 4 , 6
+25	3	10	propose
+25	13	25	novel method
+25	26	29	for
+25	30	49	question generation
+25	52	60	in which
+25	61	77	human annotators
+25	82	93	educated on
+25	98	106	workings
+25	107	109	of
+25	112	159	state - of - the - art question answering model
+25	170	178	asked to
+25	179	185	submit
+25	186	195	questions
+25	201	221	adversarially target
+25	226	236	weaknesses
+26	0	10	Annotators
+26	15	27	rewarded for
+26	28	39	submissions
+26	40	48	in which
+26	53	58	model
+26	59	64	fails
+26	65	76	to identify
+26	81	108	correct sentence completion
+26	114	130	before and after
+26	131	144	fine - tuning
+26	36	38	on
+26	151	183	ample of the submitted questions
+2	36	54	Question Answering
+4	0	21	Commonsense reasoning
+16	84	115	commonsense reasoning over text
+24	101	131	commonsense question answering
+122	0	2	As
+122	5	13	baseline
+122	19	27	evaluate
+122	28	39	both models
+122	40	42	on
+122	47	85	full SWAG training and validation sets
+122	88	97	providing
+122	101	109	accuracy
+122	110	112	of
+122	113	119	84.2 %
+122	40	42	on
+122	123	127	BERT
+122	132	138	80.2 %
+122	40	42	on
+122	142	145	GPT
+123	76	81	train
+123	86	92	models
+123	93	95	on
+123	98	104	sample
+123	105	107	of
+123	108	128	2,241 SWAG questions
+123	208	216	evaluate
+123	93	95	on
+123	229	253	full SWAG validation set
+124	5	13	produces
+124	17	25	accuracy
+124	26	28	of
+124	29	35	75.2 %
+124	36	39	for
+124	40	44	BERT
+124	92	98	63.6 %
+124	36	39	for
+124	103	106	GPT

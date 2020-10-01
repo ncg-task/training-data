@@ -1,0 +1,148 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "Trivia QA Web" : {
+          "find" : {
+            "effective" : {
+              "to be" : ["TF - IDF ranking", "sum objective"],
+              "from sentence" : "We find both TF - IDF ranking and the sum objective to be effective ; even without changing the model we achieve state - of - the - art results ."
+            }
+          },
+          "Using" : {
+            "refined model" : {
+              "has" : {
+                "increases" : {
+                  "has" : {
+                    "gain" : {
+                      "by" : "another 4 points"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Using our refined model increases the gain by another 4 points ."
+            }
+          },
+          "has" : {
+            "shared - norm , merge , and no-answer training methods" : {
+              "has" : {
+                "improve" : {
+                  "has" : {
+                    "model 's ability" : {
+                      "to utilize" : "more text"
+                    }
+                  },
+                  "with" : {
+                    "shared - norm method" : {
+                      "being" : {
+                        "significantly ahead" : {
+                          "of" : {
+                            "others" : {
+                              "on" : "verified set"
+                            } 
+                          }
+                        },
+                        "tied" : {
+                          "with" : {
+                            "merge approach" : {
+                              "on" : "general set"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "The shared - norm , merge , and no-answer training methods improve the model 's ability to utilize more text , with the shared - norm method being significantly ahead of the others on the verified set and tied with the merge approach on the general set ."
+                }
+              }
+            }
+          }
+        },
+        "Trivia QA Unfiltered" : {
+          "has" : {
+            "base model" : {
+              "starts to" : {
+                "lose" : {
+                  "has" : "performance",
+                  "as" : {
+                    "more paragraphs" : {
+                      "are" : "used"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Note the base model starts to lose performance as more paragraphs are used , showing that errors are being caused by the model being overly confident in incorrect extractions . :"
+            }
+          }
+        },
+        "SquAD" : {
+          "has" : {
+            "all our approaches" : {
+              "has" : "some benefit",
+              "from sentence" : "While all our approaches had some benefit , the shared - norm model is the strongest , and is the only one to not lose performance as large numbers of paragraphs are used ."
+            },
+            "shared - norm model" : {
+              "is" : "strongest",
+              "has" : {
+                "not lose" : {
+                  "has" : {
+                    "performance" : {
+                      "as" : {
+                        "large numbers of paragraphs" : {
+                          "are" : "used"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "While all our approaches had some benefit , the shared - norm model is the strongest , and is the only one to not lose performance as large numbers of paragraphs are used ."
+            },
+            "Our paragraph - level model" : {
+              "is" : "competitive",
+              "from sentence" : "Our paragraph - level model is competitive on this task , and our variations to handle the multi-paragraph setting only cause a minor loss of performance ."
+            },
+            "our variations" : {
+              "to handle" : {
+                "multi-paragraph setting" : {
+                  "cause" : {
+                    "minor loss" : {
+                      "of" : "performance"
+                    }
+                  },
+                  "from sentence" : "Our paragraph - level model is competitive on this task , and our variations to handle the multi-paragraph setting only cause a minor loss of performance ."
+                }
+              }
+            },
+            "base model" : {
+              "starts to" : {
+                "drop" : {
+                  "in" : "performance",
+                  "once" : {
+                    "more than two paragraphs" : {
+                      "are" : "used"
+                    }
+                  }
+                },
+                "from sentence" : "The base model starts to drop in performance once more than two paragraphs are used ."
+              }
+            },
+            "shared - norm approach" : {
+              "able to" : {
+                "reach" : {
+                  "has" : {
+                    "peak performance" : {
+                      "of" : ["72.37 F1", "64.08 EM"],
+                      "given" : "15 paragraphs"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "However , the shared - norm approach is able to reach a peak performance of 72.37 F1 and 64.08 EM given 15 paragraphs ."
+            }
+          }
+        }
+      }    
+    }
+  }
+}

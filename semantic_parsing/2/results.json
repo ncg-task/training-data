@@ -1,0 +1,110 @@
+{
+  "has" : {
+    "Results" : {
+      "observe" : {
+        "COARSE2FINE" : {
+          "outperforms" : "ONESTAGE",
+          "suggests" : {
+            "disentangling" : {
+              "has" : {
+                "high - level" : {
+                  "from" : "low - level information"
+                }
+              }
+            }
+          },
+          "from sentence" : "Overall , we observe that COARSE2FINE outperforms ONESTAGE , which suggests that disentangling high - level from low - level information dur - 62.3 SNM + COPY 71 and .
+ing decoding is beneficial ."
+
+        },
+        "sketch encoder" : {
+          "is" : "beneficial",
+          "there is" : {
+            "8.9 point difference" : {
+              "in accuracy between" : "COARSE2FINE and the oracle"
+            }
+          },
+          "from sentence" : "Again we observe that the sketch encoder is beneficial and that there is an 8.9 point difference in accuracy between COARSE2FINE and the oracle ."
+        }
+      },
+      "has" : {
+        "our method" : {
+          "performs" : {
+            "competitively" : {
+              "despite use of" : "relatively simple decoders"
+            }
+          },
+          "from sentence" : "Compared with previous neural models that utilize syntax or grammatical information ( SEQ2 TREE , ASN ; the second block in ) , our method performs competitively despite the use of relatively simple decoders ."
+        },
+        "our model" : {
+          "superior to" : ["ONESTAGE", "previous best performing systems"],
+          "from sentence" : "Our model is superior to ONESTAGE as well as to previous best performing systems ."
+        },
+        "COARSE2FINE 's accuracies" : {
+          "on" : {
+            "aggregation agg op and agg col" : {
+              "are" : {
+                "90.2 % and 92.0 %" : {
+                  "comparable to" : "SQLNET"
+                }
+              },
+              "from sentence" : "COARSE2FINE 's accuracies on aggregation agg op and agg col are 90.2 % and 92.0 % , respectively , which is comparable to SQLNET ."
+            }
+          }
+        },
+        "most gain" : {
+          "obtained by" : {
+            "improved decoder" : {
+              "of" : "WHERE clause"
+            }
+          },
+          "from sentence" : "So the most gain is obtained by the improved decoder of the WHERE clause ."
+        },
+        "Sketches" : {
+          "produced by" : {
+            "COARSE2FINE" : {
+              "are" : "more accurate"
+            }
+          },
+          "from sentence" : "Sketches produced by COARSE2FINE are more accurate across the board ."
+        }
+      },
+      "predicting" : {
+        "sketch" : {
+          "has" : "correctly",
+          "boosts" : "performance"
+        },
+        "from sentence" : "As can be seen , predicting the sketch correctly boosts performance ."
+      },
+      "find" : {
+        "tableaware input encoder" : {
+          "is" : {
+            "critical" : {
+              "for" : {
+                "doing well" : {
+                  "on" : "this task"
+                }
+              }
+            }
+          },
+          "from sentence" : "We also find that a tableaware input encoder is critical for doing well on this task , since the same question might lead to different SQL queries depending on the table schemas ."
+        }
+      },
+      "On" : {
+        "WIKISQL" : {
+          "has" : {
+            "sketches" : {
+              "predicted by" : "COARSE2FINE",
+              "are" : {
+                "marginally better" : {
+                  "compared with" : "ONESTAGE"
+                }
+              }
+            },
+            "from sentence" : "On WIKISQL , the sketches predicted by COARSE2FINE are marginally better compared with ONESTAGE ."
+          }
+        }
+      }
+    }
+  }
+}

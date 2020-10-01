@@ -1,0 +1,5 @@
+(Contribution||has||Approach)
+(Approach||explore||supervised learning)
+(supervised learning||of||task - specific , dynamic meta-embeddings)
+(task - specific , dynamic meta-embeddings||apply||sentence representations)
+(Approach||is||embedding - agnostic)

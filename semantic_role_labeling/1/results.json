@@ -1,0 +1,96 @@
+{
+  "has" : {
+    "Results" : {
+      "on" : {
+        "CoNLL - 2005 shared task and the CoNLL - 2012 English subset of OntoNotes 5.0" : {
+          "achieving" : {
+            "state - of - the - art results" : {
+              "for" : {
+                "single model" : {
+                  "with" : "predicted predicates",
+                  "on" : "both corpora"
+                }
+              },
+              "from sentence" : "We present results on the CoNLL - 2005 shared task and the CoNLL - 2012 English subset of OntoNotes 5.0 , achieving state - of - the - art results for a single model with predicted predicates on both corpora ."
+            }
+          }
+        }
+      },
+      "demonstrate that" : {
+        "our models" : {
+          "benefit from" : {
+            "injecting" : {
+              "has" : "state - of - the - art predicted parses",
+              "at" : "test time"              
+            }
+          }
+        },
+        "from sentence" : "We demonstrate that our models benefit from injecting state - of - the - art predicted parses at test time ( + D&M ) by fixing the attention to parses predicted by Dozat and Manning ( 2017 ) , the winner of the 2017 CoNLL shared task which we re-train using ELMo embeddings ."
+      },
+      "For" : {
+        "models" : {
+          "using" : "GloVe embeddings",
+          "has" : {
+            "our syntax - free SA model" : {
+              "achieves" : {
+                "new state - of - the - art" : {
+                  "by jointly predicting" : ["predicates", "POS", "SRL"]
+                }
+              },
+              "from sentence" : "For models using GloVe embeddings , our syntax - free SA model already achieves a new state - of - the - art by jointly predicting predicates , POS and SRL ."
+            }
+          }
+        }
+      },
+      "has" : {
+        "LISA" : {
+          "with" : {
+            "own parses" : {
+              "performs" : {
+                "comparably" : {
+                  "to" : "SA"
+                }
+              }              
+            }
+          },
+          "when supplied with" : {
+            "D&M parses" : {
+              "out - performs" : {
+                "previous state - of - the - art" : {
+                  "by" : "2.5 F1 points"
+                }
+              }
+            }
+          },
+          "from sentence" : "LISA with it s own parses performs comparably to SA , but when supplied with D&M parses LISA out - performs the previous state - of - the - art by 2.5 F1 points ."
+        }
+      },
+      "On" : {
+        "out - ofdomain Brown test set" : {
+          "has" : {
+            "LISA" : {
+              "performs" : {
+                "comparably" : {
+                  "to" : "syntax - free counterpart",
+                  "with" : "its own parses"
+                }
+              },
+              "with" : {
+                "D&M parses" : {
+                  "performs" : "exceptionally well"
+                }
+              },
+              "from sentence" : "On the out - ofdomain Brown test set , LISA also performs comparably to its syntax - free counterpart with its own parses , but with D&M parses LISA performs exceptionally well , more than 3.5 F1 points higher than He et al .."
+            }
+          }
+        }
+      },
+      "Incorporating" : {
+        "ELMo em-beddings" : {
+          "improves" : "all scores"
+        },
+        "from sentence" : "Incorporating ELMo em-beddings improves all scores ."
+      }
+    }
+  }
+}

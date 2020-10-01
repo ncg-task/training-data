@@ -1,0 +1,77 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "has" : {
+        "dimension" : {
+          "of" : {
+            "embedding vector" : {
+              "set to" : "300"
+            },
+            "both encoder and decoder" : {
+              "is" : "600"
+            }
+          },
+          "from sentence" : "The dimension of the embedding vector is set to 300 , the dimension of both encoder and decoder is 600 , and the latent space dimension is 1100 ."
+        },
+        "latent space dimension" : {
+          "is" : "1100",
+          "from sentence" : "The dimension of the embedding vector is set to 300 , the dimension of both encoder and decoder is 600 , and the latent space dimension is 1100 ."
+        },
+        "number of layers" : {
+          "in" : {
+            "encoder" : {
+              "is" : "1"
+            },
+            "decoder" : {
+              "has" : "2"
+            }
+          },
+          "from sentence" : "The number of layers in the encoder is 1 and in decoder
+2 . Models are trained with stochastic gradient descent with learning rate fixed at a value of 5 10 ? 5 with dropout rate of 30 % ."
+
+        },
+        "Batch size" : {
+          "kept at" : "32",
+          "from sentence" : "Batch size is kept at 32 ."
+        },
+        "Number of units" : {
+          "in" : {
+            "LSTM" : {
+              "set to be" : {
+                "maximum length" : {
+                  "of" : {
+                    "sequence" : {
+                      "in" : "training data"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Number of units in LSTM are set to be the maximum length of the sequence in the training data ."
+        }
+      },
+      "trained with" : {
+        "stochastic gradient descent" : {
+          "with" : {
+            "learning rate" : {
+              "fixed at" : "value of 5 10 ? 5"
+            },
+            "dropout rate" : {
+              "of" : "30 %"
+            }
+          }
+        },
+        "from sentence" : "The number of layers in the encoder is 1 and in decoder
+2 . Models are trained with stochastic gradient descent with learning rate fixed at a value of 5 10 ? 5 with dropout rate of 30 % ."
+
+      },
+      "trained for" : {
+        "predefined number of iterations" : {
+          "rather than" : "fixed number of epochs"
+        },
+        "from sentence" : "Models are trained for a predefined number of iterations , rather than a fixed number of epochs ."
+      }
+    }
+  }
+}

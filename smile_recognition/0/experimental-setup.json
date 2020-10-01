@@ -1,0 +1,70 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "has" : {
+        "some parameters" : {
+          "fixed to" : {
+            "reasonable and empirical values" : {
+              "such as" : ["size of convolutions ( 5 5 pixels , 32 feature maps )", "size of subsamplings ( 2 2 pixels using max pooling )"]
+            }
+          },
+          "from sentence" : "Due to training time constraints , some parameters have been fixed to reasonable and empirical values , such as the size of convolutions ( 5 5 pixels , 32 feature maps ) and the size of subsamplings ( 2 2 pixels using max pooling ) ."
+        },
+        "All layers" : {
+          "use" : "ReLU units",
+          "except of" : {
+            "softmax" : {
+              "used in" : "output layer"
+            }
+          },
+          "from sentence" : "All layers use ReLU units , except of softmax being used in the output layer ."
+        },
+        "learning rate" : {
+          "fixed to" : "? = 0.01",
+          "not subject to" : "model selection",
+          "from sentence" : "The learning rate is fixed to ? = 0.01 and not subject to model selection as it would significantly prolong the model selection ."
+        },
+        "entire database" : {
+          "randomly split into" : "60% / 20 % / 20 % training / validation / test ratio",
+          "from sentence" : "The entire database has been randomly split into a 60% / 20 % / 20 % training / validation / test ratio ."
+        },
+        "Stochastic gradient descent" : {
+          "with" : {
+            "batch size" : {
+              "of" : "500"
+            }
+          },
+          "from sentence" : "Stochastic gradient descent with a batch size of 500 is used ."
+        },
+        "model" : {
+          "trained for" : {
+            "50 epochs" : {
+              "in" : "model selection"
+            }
+          },
+          "from sentence" : "Each model was trained for 50 epochs in the model selection ."
+        }
+      },
+      "apply to" : {
+        "momentum" : {
+          "fixed to" : "= 0.9"
+        },
+        "from sentence" : "The same considerations apply to the momentum , which is fixed to = 0.9 ."
+      },
+      "implemented using" : ["Lasagne", {"from sentence" : "The model is implemented using Lasagne 4 and the generated CUDA code is executed on a Tesla K40c 9 as training on a GPU allows to perform a comprehensive model selection in a feasible amount of time ."}],
+      "generated" : {
+        "CUDA code" : {
+          "executed on" : "Tesla K40c",
+          "from sentence" : "The model is implemented using Lasagne 4 and the generated CUDA code is executed on a Tesla K40c 9 as training on a GPU allows to perform a comprehensive model selection in a feasible amount of time ."
+        }
+      },
+      "conatins" : {
+        "four parameters" : {
+          "to be" : "optimized",
+          "name" : ["number of convolutions", "number of hidden layers", "number of units per hidden layer", "dropout factor"]
+        },
+        "from sentence" : "contains the four parameters to be optimized : the number of convolutions , the number of hidden layers , the number of units per hidden layer and the dropout factor ."
+      }
+    }
+  }
+}

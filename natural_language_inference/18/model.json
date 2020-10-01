@@ -1,0 +1,122 @@
+{
+  "has" : {
+    "Model" : {
+      "introduces" : {
+        "neural variational framework" : {
+          "for" : {
+            "generative models" : {
+              "of" : "text"
+            }
+          },
+          "inspired by" : "variational autoencoder",
+          "from sentence" : "This paper introduces a neural variational framework for generative models of text , inspired by the variational autoencoder ."
+        }
+      },
+      "build" : {
+        "inference network" : {
+          "implemented by" : {
+            "deep neural network" : {
+              "conditioned on" : "text"
+            }
+          },
+          "to approximate" : {
+            "intractable distributions" : {
+              "over" : "latent variables"
+            }
+          },
+          "from sentence" : "The principle idea is to build an inference network , implemented by a deep neural network conditioned on text , to approximate the intractable distributions over the latent variables ."
+        }
+      },
+      "has" : {
+        "neural variational inference" : {
+          "learns to model" : "posterior probability",
+          "from sentence" : "Instead of providing an analytic approximation , as in traditional variational Bayes , neural variational inference learns to model the posterior probability , thus endowing the model with strong generalisation abilities ."
+        },
+        "primary feature" : {
+          "of" : {
+            "NVDM" : {
+              "is" : {
+                "each word" : {
+                  "generated directly from" : {
+                    "dense continuous document representation" : {
+                      "instead of" : "more common binary semantic vector"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "A primary feature of NVDM is that each word is generated directly from a dense continuous document representation instead of the more common binary semantic vector ."
+        },
+        "NASM" : {
+          "is" : {
+            "supervised conditional model" : {
+              "imbues" : {
+                "LSTMs" : {
+                  "with" : "latent stochastic attention mechanism",
+                  "to model" : {
+                    "semantics" : {
+                      "of" : "question - answer pairs"
+                    }
+                  },
+                  "from sentence" : "The NASM ( is a supervised conditional model which imbues LSTMs with a latent stochastic attention mechanism to model the semantics of question - answer pairs and predict their relatedness ."
+                }
+              }
+            }
+          },
+          "has" : {
+            "attention model" : {
+              "designed to" : {
+                "focus" : {
+                  "on" : {
+                    "phrases" : {
+                      "of" : "answer"
+                    }
+                  }
+                }
+              },
+              "strongly connected to" : "question semantics",
+              "modelled by" : "latent distribution",
+              "from sentence" : "The attention model is designed to focus on the phrases of an answer that are strongly connected to the question semantics and is modelled by a latent distribution ."
+            },
+            "Bayesian inference" : {
+              "provides" : {
+                "natural safeguard" : {
+                  "against" : "overfitting"
+                }
+              },
+              "from sentence" : "Bayesian inference provides a natural safeguard against overfitting , especially as the training sets available for this task are small ."
+            }
+          }
+        }
+      },
+      "using" : {
+        "reparameterisation method" : {
+          "has" : {
+            "inference network" : {
+              "trained through" : {
+                "back - propagating" : {
+                  "has" : {
+                    "unbiased and low variance gradients" : {
+                      "w.r.t." : "latent variables"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "By using the reparameterisation method , the inference network is trained through back - propagating unbiased and low variance gradients w.r.t. the latent variables ."
+        }
+      },
+      "propose" : {
+        "Neural Variational Document Model ( NVDM )" : {
+          "for" : "document modelling"
+        },
+        "Neural Answer Selection Model ( NASM )" : {
+          "for" : "question answering"
+        },
+        "from sentence" : "Within this framework , we propose a Neural Variational Document Model ( NVDM ) for document modelling and a Neural Answer Selection Model ( NASM ) for question answering , a task that selects the sentences that correctly answer a factoid question from a set of candidate sentences ."
+      }
+    }
+  }
+}

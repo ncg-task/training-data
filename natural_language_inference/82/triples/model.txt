@@ -1,0 +1,7 @@
+(Contribution||has||Model)
+(Model||implement||reader)
+(reader||dynamically builds||meaning representations)
+(meaning representations||for||each entity)
+(meaning representations||by gathering and accumulating||information)
+(information||as it reads||document)
+(information||on||entity)

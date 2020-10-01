@@ -1,0 +1,66 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : ["Selective Encoding for Abstractive Sentence Summarization ( SEASS )", {"from sentence" : "In this paper we propose Selective Encoding for Abstractive Sentence Summarization ( SEASS ) ."}],
+      "treat" : {
+        "sentence summarization" : {
+          "as a" : {
+            "threephase task" : {
+              "name" : ["encoding" , "selection" , "decoding"]
+            }
+          },
+          "from sentence" : "We treat the sentence summarization as a threephase task : encoding , selection , and decoding ."
+        }
+      },
+      "consists of" : ["sentence encoder", "selective gate network", "summary decoder", {"from sentence" : "It consists of a sentence encoder , a selective gate network , and a summary decoder ."}],
+      "First" : {
+        "sentence encoder" : {
+          "reads" : {
+            "input words" : {
+              "through" : {
+                "RNN unit" : {
+                  "to construct" : "first level sentence representation"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "First , the sentence encoder reads the input words through an RNN unit to construct the first level sentence representation ."
+      },
+      "has" : {
+        "selective gate network" : {
+          "selects" : {
+            "encoded information" : {
+              "to construct" : "second level sentence representation"
+            }
+          },
+          "from sentence" : "Then the selective gate network selects the encoded information to construct the second level sentence representation ."
+        },
+        "selective mechanism" : {
+          "controls" : {
+            "information flow" : {
+              "from" : {
+                "encoder to decoder" : {
+                  "by applying" : {
+                    "gate network" : {
+                      "according to" : "sentence information"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "The selective mechanism controls the information flow from encoder to decoder by applying a gate network according to the sentence information , which helps improve encoding effectiveness and release the burden of the decoder ."
+        },
+        "attention - equipped decoder" : {
+          "generates" : {
+            "summary" : {
+              "using" : "second level sentence representation"
+            }
+          },
+          "from sentence" : "Finally , the attention - equipped decoder generates the summary using the second level sentence representation ."
+        }
+      }
+    }
+  } 
+}

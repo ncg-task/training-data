@@ -1,0 +1,12 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "Our performance" : {
+          "matches" : "prior state of the art",
+          "from sentence" : "Our performance matches the prior state of the art , however the comparison is not fair ."
+        }        
+      }
+    }
+  }
+}

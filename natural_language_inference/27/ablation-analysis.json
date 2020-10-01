@@ -1,0 +1,125 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "use of" : {
+        "convolutions" : {
+          "in" : "encoders",
+          "is" : {
+            "crucial" : {
+              "has" : {
+                "both F1 and EM" : {
+                  "has" : {
+                    "drop drastically" : {
+                      "by" : {
+                        "almost 3 percent" : {
+                          "if" : "removed"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "As can be seen from the table , the use of convolutions in the encoders is crucial : both F1 and EM drop drastically by almost 3 percent if it is removed ."
+                }
+              }
+            }
+          }
+        }
+      },
+      "has" : {
+        "Self- attention" : {
+          "in" : {
+            "encoders" : {
+              "is" : {
+                "necessary component" : {
+                  "that contributes" : {
+                    "1.4/1.3 gain of EM / F1" : {
+                      "to" : "ultimate performance"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Self- attention in the encoders is also a necessary component that contributes 1.4/1.3 gain of EM / F1 to the ultimate performance ."
+            }
+          }
+        },
+        "data augmentation" : {
+          "proves to be" : {
+            "helpful" : {
+              "in" : "further boosting performance"
+            }
+          },
+          "from sentence" : "As the last block of rows in the table shows , data augmentation proves to be helpful in further boosting performance ."
+        },
+        "ratio ( 3:1:1 )" : {
+          "yields" : {
+            "best performance" : {
+              "with" : {
+                "1.5/1.1 gain" : {
+                  "over" : {
+                    "base model" : {
+                      "on" : "EM / F1"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Empirically , the ratio ( 3:1:1 ) yields the best performance , with 1.5/1.1 gain over the base model on EM / F1 ."
+            }
+          }
+        }
+      },
+      "Making" : {
+        "training data" : {
+          "has" : {
+            "twice as large" : {
+              "by adding" : "En - Fr - En data only",
+              "yields" : {
+                "increase" : {
+                  "in" : {
+                    "F1" : {
+                      "by" : "0.5 percent"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Making the training data twice as large by adding the En - Fr - En data only ( ratio 1:1 between original training data and augmented data , as indicated by row \" data augmentation 2 ( 1:1:0 ) \" ) yields an increase in the F1 by 0.5 percent ."
+            }
+          }
+        }
+      },
+      "observe that" : {
+        "good sampling ratio" : {
+          "between" : {
+            "original and augmented data" : {
+              "during" : "training",
+              "can further" : {
+                "boost" : {
+                  "has" : "model performance"
+                }
+              }
+            }
+          },
+          "from sentence" : "Although injecting more data beyond 3 does not benefit the model , we observe that a good sampling ratio between the original and augmented data during training can further boost the model performance ."
+        }
+      },
+      "increase" : {
+        "sampling weight" : {
+          "of" : "augmented data",
+          "from" : {
+            "( 1:1:1 )" : {
+              "to" : "( 1:2:1 )"
+            }
+          },
+          "has" : {
+            "EM / F1 performance" : {
+              "has" : {
+                "drops" : {
+                  "by" : "0.5/0.3"
+                }
+              }
+            }
+          },
+          "from sentence" : "In particular , when we increase the sampling weight of augmented data from ( 1:1:1 ) to ( 1:2:1 ) , the EM / F1 performance drops by 0.5/0.3 ."
+        }
+      }
+    }
+  }
+}

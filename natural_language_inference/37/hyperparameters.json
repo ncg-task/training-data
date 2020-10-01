@@ -1,0 +1,90 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "train" : {
+        "model" : {
+          "with" : {
+            "Adadelta optimizer ( Zeiler , 2012 )" : {
+              "with" : {
+                "batch size" : {
+                  "has" : {
+                    "60" : {
+                      "for" : "Triv - ia QA"
+                    },
+                    "45" : {
+                      "for" : "SQuAD"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "We train the model with the Adadelta optimizer ( Zeiler , 2012 ) with a batch size 60 for Triv - ia QA and 45 for SQuAD ."
+            }
+          }
+        }
+      },
+      "has" : {
+        "Glo Ve 300 dimensional word vectors" : {
+          "used for" : "word embeddings",
+          "from sentence" : "The Glo Ve 300 dimensional word vectors released by are used for word embeddings ."
+        }
+      },
+      "On" : {
+        "SQuAD" : {
+          "use" : {
+            "dimensionality" : {
+              "of size" : {
+                "100" : {
+                  "for" : "GRUs"
+                },
+                "200" : {
+                  "for" : {
+                    "linear layers" : {
+                      "employed after" : "each attention mechanism"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "On SQuAD , we use a dimensionality of size 100 for the GRUs and of size 200 for the linear layers employed after each attention mechanism ."
+            }
+          }
+        }
+      },
+      "for" : {
+        "TriviaQA" : {
+          "using" : {
+            "larger dimensionality" : {
+              "of" : {
+                "140" : {
+                  "for" : "each GRU"
+                },
+                "280" : {
+                  "for" : {
+                    "linear layers" : {
+                      "is" : "beneficial"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "We find for TriviaQA , likely because there is more data , using a larger dimensionality of 140 for each GRU and 280 for the linear layers is beneficial ."
+            }
+          }
+        }
+      },
+      "During" : {
+        "training" : {
+          "maintain" : {
+            "exponential moving average" : {
+              "of" : "weights",
+              "with" : {
+                "decay rate" : {
+                  "of" : "0.999"
+                }
+              },
+              "from sentence" : "During training , we maintain an exponential moving average of the weights with a decay rate of 0.999 ."
+            }
+          }
+        }
+      }
+    }
+  }  
+}

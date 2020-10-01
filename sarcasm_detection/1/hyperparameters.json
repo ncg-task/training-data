@@ -1,0 +1,61 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "holdout" : {
+        "10 %" : {
+          "of" : "training data",
+          "for" : "validation"
+        },
+        "from sentence" : "We holdout 10 % of the training data for validation ."
+      },
+      "To optimize" : {
+        "parameters" : {
+          "has" : {
+            "Adam optimizer" : {
+              "starting with" : {
+                "initial learning rate" : {
+                  "of" : "1e ? 4"
+                }
+              }
+            }
+          },
+          "from sentence" : "To optimize the parameters , Adam optimizer ( Kingma and Ba , 2014 ) is used , starting with an initial learning rate of 1e ? 4 ."
+        }
+      },
+      "has" : {
+        "Training termination" : {
+          "decided using" : {
+            "early stopping technique" : {
+              "with" : {
+                "patience" : {
+                  "of" : "12"
+                }
+              }
+            }
+          },
+          "from sentence" : "Training termination is decided using early stopping technique with a patience of 12 ."
+        }
+      },
+      "For" : {
+        "batched - modeling" : {
+          "of" : {
+            "comments" : {
+              "in" : "CNNs",
+              "has" : {
+                "each comment" : {
+                  "is" : {
+                    "restricted or padded" : {
+                      "to" : "100 words",
+                      "for" : "uniformity"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "For the batched - modeling of comments in CNNs , each comment is either restricted or padded to 100 words for uniformity ."
+        }
+      }
+    }
+  }
+}

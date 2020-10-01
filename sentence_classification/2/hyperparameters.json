@@ -1,0 +1,78 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "has" : {
+        "Tokenization" : {
+          "done using" : "polyglot library",
+          "from sentence" : "Tokenization is done using the polyglot library 7 ."
+        },
+        "Training" : {
+          "done via" : {
+            "stochastic gradient descent" : {
+              "over" : {
+                "shuffled mini-batches" : {
+                  "with" : "Adadelta update rule"
+                }
+              }
+            }
+          },
+          "from sentence" : "Training is done via stochastic gradient descent over shuffled mini-batches with the Adadelta update rule ."
+        }
+      },
+      "experiment on using" : ["only one additional context ( N = 1 )", "all ten languages at once ( N = 10 )", {"from sentence" : "We experiment on using only one additional context ( N = 1 ) and using all ten languages at once ( N = 10 ) ."}],
+      "For" : {
+        "our CNN" : {
+          "use" : ["rectified linear units", {"three filters" : {"with" : {"different window sizes h = 3 , 4 , 5" : {"with" : "100 feature maps each"}}}}, {"from sentence" : "For our CNN , we use rectified linear units and three filters with different window sizes h = 3 , 4 , 5 with 100 feature maps each , following ."}]
+        },
+        "final sentence vector" : {
+          "concatenate" : {
+            "feature maps" : {
+              "to get" : "300 - dimension vector"
+            }
+          },
+          "from sentence" : "For the final sentence vector , we concatenate the feature maps to get a 300 - dimension vector ."
+        }
+      },
+      "use" : {
+        "dropout" : {
+          "on" : "all nonlinear connections",
+          "with" : {
+            "dropout rate" : {
+              "of" : "0.5"
+            }
+          },
+          "from sentence" : "We use dropout on all nonlinear connections with a dropout rate of 0.5 ."
+        },
+        "l 2 constraint" : {
+          "of" : "3",
+          "from sentence" : "We also use an l 2 constraint of 3 , following for accurate comparisons ."
+        },
+        "FastText pre-trained vectors" : {
+          "for" : "all our data sets",
+          "from sentence" : "We use FastText pre-trained vectors 8 for all our data sets and their corresponding additional context ."
+        }
+      },
+      "During" : {
+        "training" : {
+          "use" : {
+            "mini-batch size" : {
+              "of" : "50"
+            }
+          }
+        },
+        "from sentence" : "During training , we use mini-batch size of 50 ."
+      },
+      "perform" : {
+        "early stopping" : {
+          "using" : {
+            "random 10 %" : {
+              "of" : "training set",
+              "as" : "development set"              
+            }
+          },
+          "from sentence" : "We perform early stopping using a random 10 % of the training set as the development set ."
+        }
+      }
+    }
+  }
+}

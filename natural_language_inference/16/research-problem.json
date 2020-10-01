@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Natural language sentence matching", {"from sentence" : "Natural language sentence matching is a fundamental technology fora variety of tasks ."}],
+    ["Natural language sentence matching ( NLSM )", {"from sentence" : "Natural language sentence matching ( NLSM ) is the task of comparing two sentences and identifying the relationship between them ."}],
+    ["NLSM", {"from sentence" : "For example , in a paraphrase identification task , NLSM is used to determine whether two sentences are paraphrase or not ."}]
+  ]
+}

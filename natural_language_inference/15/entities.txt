@@ -1,0 +1,279 @@
+156	87	96	could see
+156	106	117	performance
+156	118	121	was
+156	122	135	rather higher
+156	136	146	because of
+156	151	172	regularization effect
+162	4	10	result
+162	11	16	shows
+162	26	43	dense connections
+162	44	48	over
+162	49	67	attentive features
+162	68	71	are
+162	72	86	more effective
+172	4	10	models
+172	21	31	which have
+172	32	43	connections
+172	44	51	between
+172	52	58	layers
+172	61	64	are
+172	65	76	more robust
+172	77	79	to
+172	84	110	increased depth of network
+172	127	139	performances
+172	155	162	tend to
+172	163	170	degrade
+172	89	91	as
+172	52	58	layers
+172	181	184	get
+172	185	191	deeper
+173	25	29	with
+173	30	47	dense connections
+173	48	59	rather than
+173	60	80	residual connections
+173	83	87	have
+173	88	106	higher performance
+174	131	147	dense connection
+174	41	43	is
+174	151	165	more effective
+174	166	170	than
+174	175	194	residual connection
+163	8	15	removed
+163	16	33	dense connections
+163	34	38	over
+163	39	79	both co-attentive and recurrent features
+163	90	101	performance
+163	102	110	degraded
+163	111	113	to
+163	114	120	88.5 %
+167	25	36	demonstrate
+167	46	62	dense connection
+167	63	68	using
+167	69	92	concatenation operation
+167	93	97	over
+167	98	111	deeper layers
+167	118	142	more powerful capability
+167	143	152	retaining
+167	153	173	collective knowledge
+167	174	182	to learn
+167	183	200	textual semantics
+169	21	26	shows
+169	36	47	connections
+169	48	53	among
+169	58	64	layers
+169	69	86	important to help
+169	87	100	gradient flow
+170	42	63	attentive information
+170	64	78	functioning as
+170	81	97	soft - alignment
+170	98	100	is
+170	101	124	significantly effective
+170	52	54	in
+170	128	154	semantic sentence matching
+174	15	25	connection
+174	26	33	between
+174	34	40	layers
+174	41	43	is
+174	44	53	essential
+174	84	92	endowing
+174	93	120	more representational power
+113	3	14	initialized
+113	15	29	word embedding
+113	30	34	with
+113	35	54	300d Glo Ve vectors
+113	156	171	word embeddings
+113	172	175	for
+113	180	207	out - of - vocabulary words
+113	3	14	initialized
+113	225	233	randomly
+117	4	11	dropout
+117	16	29	applied after
+117	34	69	word and character embedding layers
+117	70	74	with
+117	77	86	keep rate
+117	87	89	of
+117	90	93	0.5
+118	12	26	applied before
+118	31	55	fully - connected layers
+118	56	60	with
+118	63	72	keep rate
+118	73	75	of
+118	76	79	0.8
+120	4	23	batch normalization
+120	28	38	applied on
+120	43	67	fully - connected layers
+120	75	78	for
+120	83	106	one - way type datasets
+121	4	21	RMSProp optimizer
+121	22	26	with
+121	30	51	initial learning rate
+121	52	54	of
+121	55	60	0.001
+122	4	17	learning rate
+122	22	34	decreased by
+122	37	43	factor
+122	44	46	of
+122	47	51	0.85
+122	52	56	when
+122	74	90	does not improve
+123	4	11	weights
+123	12	18	except
+123	19	37	embedding matrices
+123	42	56	constrained by
+123	57	74	L2 regularization
+123	75	79	with
+123	82	115	regularization constant ? = 10 ?6
+124	4	20	sequence lengths
+124	21	23	of
+124	28	36	sentence
+124	37	40	are
+124	41	54	all different
+124	55	58	for
+124	59	71	each dataset
+124	74	76	35
+124	55	58	for
+124	81	85	SNLI
+124	88	90	55
+124	55	58	for
+124	95	103	MultiNLI
+124	106	108	25
+124	55	58	for
+124	113	132	Quora question pair
+124	137	139	50
+124	55	58	for
+124	144	150	TrecQA
+114	8	28	randomly initialized
+114	29	48	character embedding
+114	49	53	with
+114	56	66	16d vector
+114	71	80	extracted
+114	81	109	32d character representation
+114	49	53	with
+114	117	138	convolutional network
+115	0	3	For
+115	8	44	densely - connected recurrent layers
+115	50	57	stacked
+115	58	66	5 layers
+115	67	85	each of which have
+115	86	102	100 hidden units
+119	8	28	bottleneck component
+119	34	37	set
+119	38	54	200 hidden units
+119	55	57	as
+119	58	74	encoded features
+119	75	77	of
+119	82	93	autoencoder
+119	94	98	with
+119	101	113	dropout rate
+119	75	77	of
+119	117	120	0.2
+116	3	6	set
+116	7	24	1000 hidden units
+116	25	40	with respect to
+116	45	66	fullyconnected layers
+31	28	35	propose
+31	38	75	densely - connected recurrent network
+31	76	81	where
+31	86	111	recurrent hidden features
+31	116	127	retained to
+31	132	147	uppermost layer
+32	14	24	instead of
+32	29	61	conventional summation operation
+32	95	99	used
+32	68	91	concatenation operation
+32	100	119	in combination with
+32	124	143	attention mechanism
+32	144	155	to preserve
+32	156	180	co-attentive information
+32	181	187	better
+33	38	44	called
+33	45	49	DRCN
+33	62	78	abbreviation for
+33	79	141	Densely - connected Recurrent and Co -attentive neural Network
+34	4	12	proposed
+34	13	17	DRCN
+34	22	29	utilize
+34	34	66	increased representational power
+34	67	69	of
+34	70	95	deeper recurrent networks
+34	100	121	attentive information
+35	119	126	adopted
+35	130	141	autoencoder
+35	146	155	forwarded
+35	158	177	fixed length vector
+35	14	16	to
+35	185	214	higher layer recurrent module
+2	0	26	Semantic Sentence Matching
+4	0	17	Sentence matching
+133	4	17	proposed DRCN
+133	18	25	obtains
+133	29	37	accuracy
+133	38	40	of
+133	41	47	88.9 %
+133	54	56	is
+133	59	76	competitive score
+134	4	18	ensemble model
+134	19	27	achieves
+134	31	39	accuracy
+134	40	42	of
+134	43	49	90.1 %
+134	58	62	sets
+134	67	103	new state - of the - art performance
+135	19	23	with
+135	24	51	53 m parameters ( 6.7 m 8 )
+135	52	63	outperforms
+135	68	84	LM - Transformer
+135	85	90	whose
+135	95	115	number of parameters
+135	116	118	is
+135	119	123	85 m
+136	14	24	in case of
+136	29	52	encoding - based method
+136	58	64	obtain
+136	69	85	best performance
+136	22	24	of
+136	89	95	86.5 %
+136	96	103	without
+136	108	141	co-attention and exact match flag
+137	53	55	of
+137	56	72	MultiNLI dataset
+138	0	14	Our plain DRCN
+138	21	44	competitive performance
+138	45	52	without
+138	57	81	contextualized knowledge
+139	6	18	by combining
+139	19	23	DRCN
+139	24	28	with
+139	33	37	ELMo
+139	100	109	our model
+139	110	121	outperforms
+139	126	142	LM - Transformer
+139	143	152	which has
+139	153	168	85 m parameters
+139	24	28	with
+139	174	190	fewer parameters
+139	44	46	of
+139	194	198	61 m
+144	12	14	on
+145	30	57	Quora question pair dataset
+147	3	11	obtained
+147	12	22	accuracies
+147	23	25	of
+147	26	45	90.15 % and 91.30 %
+147	7	9	in
+147	49	76	single and ensemble methods
+147	94	104	surpassing
+147	109	146	previous state - of - the - art model
+147	23	25	of
+147	150	154	DIIN
+148	62	87	TrecQA and SelQA datasets
+150	14	27	proposed DRCN
+150	28	33	using
+150	34	55	collective attentions
+150	56	60	over
+150	61	76	multiple layers
+150	79	87	achieves
+150	92	128	new state - of the - art performance
+150	131	140	exceeding
+150	145	187	current state - of - the - art performance
+150	188	201	significantly

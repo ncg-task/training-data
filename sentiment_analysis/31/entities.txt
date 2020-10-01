@@ -1,0 +1,142 @@
+127	0	9	TD - LSTM
+127	10	14	uses
+127	15	32	two LSTM networks
+127	33	41	to model
+127	46	78	preceding and following contexts
+127	79	90	surrounding
+127	95	106	aspect term
+129	0	9	AT - LSTM
+129	10	18	combines
+129	23	45	sentence hidden states
+129	46	50	from
+129	5	9	LSTM
+129	58	62	with
+129	67	88	aspect term embedding
+129	89	100	to generate
+129	105	121	attention vector
+131	0	11	ATAE - LSTM
+131	20	27	extends
+131	28	37	AT - LSTM
+131	38	50	by appending
+131	55	71	aspect embedding
+131	72	76	into
+131	77	93	each word vector
+132	0	9	AF - LSTM
+132	10	20	introduces
+132	23	53	word - aspect fusion attention
+132	54	62	to learn
+132	63	88	associative relationships
+132	89	96	between
+132	97	121	aspect and context words
+133	0	3	CNN
+133	4	8	uses
+133	13	25	architecture
+133	38	68	without explicitly considering
+133	69	75	aspect
+112	3	6	use
+112	7	16	rectifier
+112	17	19	as
+112	20	41	non-linear function f
+112	25	27	in
+112	49	62	CNN g , CNN t
+112	67	74	sigmoid
+112	25	27	in
+112	82	87	CNN s
+112	90	109	filter window sizes
+112	110	112	of
+112	113	153	1 , 2 , 3 , 4 with 100 feature maps each
+112	156	179	l 2 regularization term
+112	110	112	of
+112	183	188	0.001
+112	193	207	minibatch size
+112	110	112	of
+112	211	213	25
+113	0	31	Parameterized filters and gates
+113	32	36	have
+113	41	61	same size and number
+113	62	64	as
+113	65	79	normal filters
+114	9	31	generated uniformly by
+114	32	35	CNN
+114	36	40	with
+114	41	53	window sizes
+114	54	56	of
+114	57	70	1 , 2 , 3 , 4
+115	4	19	word embeddings
+115	24	40	initialized with
+115	41	72	300 - dimensional Glove vectors
+115	81	93	fixed during
+115	94	102	training
+118	4	16	dropout rate
+118	20	29	chosen as
+118	30	33	0.3
+119	0	8	Training
+119	12	24	done through
+119	25	63	mini-batch stochastic gradient descent
+119	64	68	with
+119	69	85	Adam update rule
+120	4	25	initial learning rate
+120	26	28	is
+120	29	34	0.001
+121	7	20	training loss
+121	21	29	does not
+121	30	34	drop
+121	35	40	after
+121	41	59	every three epochs
+121	65	73	decrease
+121	78	91	learning rate
+121	92	94	by
+121	95	99	half
+116	0	3	For
+116	8	31	out of vocabulary words
+116	35	50	initialize them
+116	51	59	randomly
+116	60	64	from
+116	65	105	uniform distribution U ( ? 0.01 , 0.01 )
+117	3	8	apply
+117	9	16	dropout
+117	17	19	on
+117	24	53	final classification features
+117	54	56	of
+117	57	65	PG - CNN
+122	3	8	adopt
+122	9	23	early stopping
+122	24	32	based on
+122	37	52	validation loss
+122	30	32	on
+122	56	72	development sets
+20	25	32	propose
+20	33	87	two simple yet effective convolutional neural networks
+20	88	92	with
+20	93	111	aspect information
+22	18	24	design
+22	25	47	two novel neural units
+22	53	57	take
+22	58	72	target aspects
+22	73	77	into
+22	78	85	account
+23	0	6	One is
+23	7	27	parameterized filter
+23	34	42	other is
+23	43	61	parameterized gate
+24	6	11	units
+24	21	35	generated from
+24	36	62	aspect - specific features
+2	48	85	Aspect Level Sentiment Classification
+8	91	115	sentiment classification
+12	15	47	general sentiment classification
+137	0	14	Our two models
+137	15	22	achieve
+137	27	43	best performance
+137	49	60	compared to
+137	67	76	baselines
+139	17	28	vanilla CNN
+139	29	34	works
+139	35	45	quite well
+140	8	13	beats
+140	20	44	welldesigned LSTM models
+138	0	11	Compared to
+138	16	49	recently proposed model AF - LSTM
+138	52	62	our method
+138	63	70	achieve
+138	71	93	2 % - 5 % improvements

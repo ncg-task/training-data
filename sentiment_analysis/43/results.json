@@ -1,0 +1,81 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "Majority" : {
+          "performs" : "worst",
+          "from sentence" : "( 1 ) Majority performs worst since it only utilizes the data distribution information ."
+        },
+        "MGAN" : {
+          "outperforms" : "Majority and Feature + SVM",
+          "from sentence" : "Our method MGAN outperforms Majority and Feature + SVM since MGAN could learn the high quality representation for prediction ."
+        },
+        "ATAE - LSTM" : {
+          "is" : {
+            "better" : {
+              "than" : "LSTM"
+            }
+          },
+          "from sentence" : "( 2 ) ATAE - LSTM is better than LSTM since it employs attention mechanism on the hidden states and combines with attention embedding to generate the final representation ."
+        },
+        "TD - LSTM" : {
+          "performs" : {
+            "slightly better" : {
+              "than" : "ATAE - LSTM",
+              "from sentence" : "TD - LSTM performs slightly better than ATAE - LSTM , and it employs two LSTM networks to capture the left and right context of the aspect ."              
+            },
+            "worse" : {
+              "than" : "our method MGAN",
+              "from sentence" : "TD - LSTM performs worse than our method MGAN since it could not properly pay more attentions on the important parts of the context ."
+            }
+          }
+        },
+        "IAN" : {
+          "achieves" : {
+            "slightly better results" : {
+              "with" : "previous LSTM - based methods"
+            }
+          },
+          "from sentence" : "( 3 ) IAN achieves slightly better results with the previous LSTM - based methods , which interactively learns the attended aspect and context vector as final representation ."
+        },
+        "Our method" : {
+          "consistently performs" : {
+            "better" : {
+              "than" : "IAN"
+            }
+          },
+          "from sentence" : "Our method consistently performs better than IAN since we utilize the finegrained attention vectors to relieve the information loss in IAN ."
+        },
+        "BILSTM - ATT - G" : {
+          "models" : {
+            "left context and right context" : {
+              "using" : "attention - based LSTMs"
+            }
+          },
+          "achieves" : {
+            "better performance" : {
+              "than" : "MemNet"
+            }
+          },
+          "from sentence" : "BILSTM - ATT - G models left context and right context using attention - based LSTMs , which achieves better performance than MemNet ."
+        },
+        "RAM" : {
+          "performs" : {
+            "better" : {
+              "than" : "other baselines"
+            }
+          },
+          "from sentence" : "RAM performs better than other baselines ."
+        },
+        "Our proposed MGAN" : {
+          "consistently performs" : {
+            "better" : {
+              "than" : ["MemNet", "BILSTM - ATT - G", "RAM"]
+            },
+            "from sentence" : "Our proposed MGAN consistently performs better than MemNet , BILSTM - ATT - G and RAM on all three datasets ."
+          }
+        }
+      }
+    }
+  }
+}

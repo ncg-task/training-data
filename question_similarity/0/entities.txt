@@ -1,0 +1,82 @@
+85	49	56	done on
+85	61	87	Google Colab 7 environment
+85	88	93	using
+85	94	118	Tesla T4 GPU accelerator
+19	8	13	build
+19	16	36	neural network model
+19	37	41	with
+19	42	57	four components
+20	10	14	uses
+20	15	106	ELMo ( which stands for Embeddings from Language Models ) pre-trained contextual embeddings
+20	107	109	as
+20	113	118	input
+20	123	129	builds
+20	130	161	sequence representation vectors
+20	176	186	to predict
+20	191	226	relation between the question pairs
+2	35	73	Semantic Question Similarity in Arabic
+4	54	87	semantic text question similarity
+10	0	32	Semantic Text Similarity ( STS )
+11	54	57	STS
+14	112	172	Semantic Question Similarity ( SQS ) for the Arabic language
+15	0	3	SQS
+100	27	36	GRU cells
+100	37	40	are
+100	45	59	most efficient
+100	66	81	ON - LSTM cells
+100	84	88	with
+100	89	101	chunk size 8
+100	37	40	are
+100	112	126	most effective
+100	129	140	in terms of
+100	141	164	all considered measures
+106	21	43	each augmentation step
+106	44	51	affects
+106	56	75	model 's efficiency
+106	76	86	negatively
+108	20	23	not
+108	24	43	each increment step
+108	50	65	positive effect
+108	66	68	on
+108	73	95	model 's effectiveness
+116	14	41	sequence weighted attention
+116	42	47	gives
+116	48	62	better results
+116	63	65	by
+116	66	79	about 1 point
+116	80	82	of
+116	87	95	F1-score
+114	14	19	using
+114	20	51	pre-trained FastText embeddings
+114	33	35	as
+114	58	63	input
+114	64	66	to
+114	67	76	our model
+114	77	83	yields
+114	84	97	worse F1score
+114	98	100	on
+114	106	137	public and private leaderboards
+114	138	142	with
+114	143	160	94.254 and 93.118
+114	178	191	compared with
+114	196	228	ELMo contextual embeddings model
+117	25	33	overcome
+117	38	46	weakness
+117	47	49	of
+117	54	71	Arabic ELMo model
+117	80	94	by translating
+117	99	103	data
+117	22	24	to
+117	107	114	English
+117	115	120	using
+117	121	137	Google Translate
+117	144	152	treating
+117	157	164	problem
+117	165	167	as
+117	171	190	English SQS problem
+117	209	220	results are
+117	221	231	much worse
+117	232	236	with
+117	237	266	88.868 and 87.504 F1 - scores
+117	76	78	on
+117	270	301	public and private leaderboards

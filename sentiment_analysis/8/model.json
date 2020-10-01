@@ -1,0 +1,66 @@
+{
+  "has" : {
+    "Model" : {
+      "explore" : {
+        "implication of hand - crafted features" : {
+          "for" : "SER"
+        },
+        "from sentence" : "In this work , we explore the implication of hand - crafted features for SER and compare the performance of lighter machine learning models with the heavily data - reliant deep learning models ."
+      },
+      "compare" : {
+        "performance" : {
+          "of" : {
+            "lighter machine learning models" : {
+              "with" : "heavily data - reliant deep learning models"
+            }
+          }
+        },
+        "from sentence" : "In this work , we explore the implication of hand - crafted features for SER and compare the performance of lighter machine learning models with the heavily data - reliant deep learning models ."
+      },
+      "combine" : {
+        "features" : {
+          "from" : {
+            "textual modality" : {
+              "to understand" : "correlation between different modalities",
+              "aid" : "ambiguity resolution"
+            }
+          }
+        },
+        "from sentence" : "Furthermore , we also combine features from the textual modality to understand the correlation between different modalities and aid ambiguity resolution ."
+      },
+      "extract" : {
+        "handcrafted features" : {
+          "from" : {
+            "time domain" : {
+              "of" : "audio signal"
+            }
+          },
+          "train" : "respective models"
+        },
+        "from sentence" : "For both the approaches , we first extract handcrafted features from the time domain of the audio signal and train the respective models ."
+      },
+      "In" : {
+        "first approach" : {
+          "train" : {
+            "traditional machine learning classifiers" : {
+              "namely" : ["Random Forests", "Gradient Boosting", "Support Vector Machines", "Naive - Bayes", "Logistic Regression"]
+            }
+          },
+          "from sentence" : "In the first approach , we train traditional machine learning classifiers , namely , Random Forests , Gradient Boosting , Support Vector Machines , Naive - Bayes and Logistic Regression ."
+        },
+        "second approach" : {
+          "build" : {
+            "Multi - Layer Perceptron and an LSTM classifier" : {
+              "to recognize" : {
+                "emotion" : {
+                  "given" : "speech signal"
+                }
+              }
+            }
+          },
+          "from sentence" : "In the second approach , we build a Multi - Layer Perceptron and an LSTM classifier to recognize emotion given a speech signal ."
+        }
+      }
+    }
+  }
+}

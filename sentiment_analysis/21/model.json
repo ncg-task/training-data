@@ -1,0 +1,30 @@
+{
+  "has" : {
+    "Model" : {
+      "aims to improve" : {
+        "document embedding models" : {
+          "by training" : {
+            "document embeddings" : {
+              "using" : "cosine similarity"
+            }
+          }
+        },
+        "from sentence" : "This paper aims to improve existing document embedding models by training document embeddings using cosine similarity instead of dot product ."
+      },
+      "trying to" : {
+        "predict" : {
+          "given" : "document",
+          "has" : {
+            "words / n - grams" : {
+              "in" : "document"
+            }
+          }
+        },
+        "maximize" : {
+          "has" : "cosine similarity"
+        },
+        "from sentence" : "For example , in the basic model of trying to predict given a document - the words / n - grams in the document , instead of trying to maximize the dot product between a document vector and vectors of the words / n - grams in the document over the training set , we 'll be trying to maximize the cosine similarity instead ."
+      }
+    }
+  }
+}

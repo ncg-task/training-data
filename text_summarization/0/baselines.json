@@ -1,0 +1,41 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "S2S" : {
+          "name" : ["Sequence - to - sequence framework", {"from sentence" : "( 1 ) S2S : Sequence - to - sequence framework has been proposed for language generation task ."}]
+        },
+        "S2SR" : {
+          "add" : {
+            "reader attention on attention distribution ? t" : {
+              "in" : "decoding step"
+            }
+          },
+          "from sentence" : "( 2 ) S2SR : We simply add the reader attention on attention distribution ? t , in each decoding step ."
+        },
+        "CGU" : {
+          "propose to use" : "convolutional gated unit",
+          "from sentence" : "( 3 ) CGU : propose to use the convolutional gated unit to refine the source representation , which achieves the state - of - the - art performance on social media text summarization dataset ."
+        },
+        "LEAD1" : {
+          "selects" : "first sentence of document as the summary",
+          "from sentence" : "( 4 ) LEAD1 : LEAD1 is a commonly used baseline , which selects the first sentence of document as the summary ."
+        },
+        "TextRank" : {
+          "propose to build" : "graph",
+          "add" : {
+            "each sentence" : {
+              "as" : "vertex"
+            }
+          },
+          "use" : {
+            "link" : {
+              "to represent" : "semantic similarity"
+            }
+          },
+          "from sentence" : "( 5 ) TextRank : propose to build a graph , then add each sentence as a vertex and use link to represent semantic similarity ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "has" : {
+    "Model" : {
+      "step further towards" : {
+        "UTM" : {
+          "by coupling" : {
+            "MANN" : {
+              "with" : "external program memory"
+            }
+          }
+        },
+        "from sentence" : "Our goal is to advance a step further towards UTM by coupling a MANN with an external program memory ."
+      },
+      "has" : {
+        "program memory" : {
+          "co-exists with" : {
+            "data memory" : {
+              "in" : ["MANN", {"learning" : {"has" : "complicated tasks", "providing" : ["flexibility", "reuseability", "modularity"]}}]
+            },
+            "from sentence" : "The program memory co-exists with the data memory in the MANN , providing more flexibility , reuseability and modularity in learning complicated tasks ."
+          },
+          "stores" : {
+            "weights" : {
+              "of" : "MANN 's controller network",
+              "retrieved" : {
+                "quickly" : {
+                  "via" : {
+                    "key - value attention mechanism" : {
+                      "across" : "timesteps"
+                    }
+                  }
+                }
+              },
+              "updated" : {
+                "slowly" : {
+                  "via" : "backpropagation"
+                }
+              }
+            }
+          },
+          "from sentence" : "The program memory stores the weights of the MANN 's controller network , which are retrieved quickly via a key - value attention mechanism across timesteps yet updated slowly via backpropagation ."
+        }
+      },
+      "referred to" : {
+        "Neural Stored - program Memory ( NSM )" : {
+          "learn to" : {
+            "switch" : {
+              "has" : {
+                "programs / weights" : {
+                  "in" : {
+                    "controller network" : {
+                      "has" : "appropriately"
+                    }
+                  },
+                  "adapting to" : {
+                    "different functionalities" : {
+                      "aligning with" : [{"different parts" : {"of" : "sequential task"}}, {"different tasks" : {"in" : "continual and few - shot learning"}}]
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "By introducing a meta network to moderate the operations of the program memory , our model , henceforth referred to as Neural Stored - program Memory ( NSM ) , can learn to switch the programs / weights in the controller network appropriately , adapting to different functionalities aligning with different parts of a sequential task , or different tasks in continual and few - shot learning ."
+          }
+        }
+      }
+    }
+  }
+}

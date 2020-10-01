@@ -1,0 +1,52 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "adopt" : ["Whole Word Masking BERT", {"from sentence" : "We adopt the Whole Word Masking BERT as the baseline 6 ."}],
+      "has" : {
+        "initial learning rate" : {
+          "set in" : "{ 8e -6 , 1 e - 5 , 2 e - 5 , 3 e - 5 }",
+          "with" : {
+            "warm - up rate" : {
+              "of" : "0.1"
+            },
+            "L2 weight decay" : {
+              "of" : "0.01"
+            }
+          },
+          "from sentence" : "The initial learning rate is set in { 8e -6 , 1 e - 5 , 2 e - 5 , 3 e - 5 } with warm - up rate of 0.1 and L2 weight decay of 0.01 ."
+        },
+        "batch size" : {
+          "selected in" : "{ 16 , 20 , 32 }",
+          "from sentence" : "The batch size is selected in { 16 , 20 , 32 } ."
+        },
+        "maximum number of epochs" : {
+          "set to" : "3 or 10",
+          "from sentence" : "The maximum number of epochs is set to 3 or 10 depending on tasks ."
+        },
+        "weight" : {
+          "in" : "dual context aggregation",
+          "is" : "0.5",
+          "from sentence" : "The weight ?
+in the dual context aggregation is 0.5 ."
+
+        },
+        "texts" : {
+          "are" : {
+            "tokenized" : {
+              "using" : "wordpieces",
+              "from sentence" : "All the texts are tokenized using wordpieces , and the maximum input length is set to 384 for both of SQuAD and RACE ."
+            }
+          }
+        },
+        "maximum input length" : {
+          "set to" : {
+            "384" : {
+              "for" : "SQuAD and RACE"
+            }
+          },
+          "from sentence" : "All the texts are tokenized using wordpieces , and the maximum input length is set to 384 for both of SQuAD and RACE ."
+        }
+      }
+    }
+  }
+}

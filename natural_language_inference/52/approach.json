@@ -1,0 +1,67 @@
+{
+  "has" : {
+    "Approach" : {
+      "that" : {
+        "learns" : {
+          "to" : "select and explain answers",
+          "when" : {
+            "only supervision available" : {
+              "is" : {
+                "which answer is correct" : {
+                  "not" : "how to explain it"
+                }
+              }
+            }
+          },
+          "from sentence" : "Within this domain , we propose an approach that learns to both select and explain answers , when the only supervision available is for which answer is correct ( but not how to explain it ) ."
+        }
+      },
+      "chooses" : {
+        "justifications" : {
+          "that provide" : {
+            "most help" : {
+              "towards" : {
+                "ranking" : {
+                  "has" : {
+                    "correct answers" : {
+                      "has" : {
+                        "higher" : {
+                          "than" : "incorrect ones"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Intuitively , our approach chooses the justifications that provide the most help towards ranking the correct answers higher than incorrect ones ."
+        }
+      },
+      "formally" : {
+        "our neural network approach" : {
+          "has" : {
+            "alternates" : {
+              "using" : {
+                "current model" : {
+                  "with" : "max - pooling", 
+                  "to choose" : {
+                    "highest scoring justifications" : {
+                      "for" : "correct answers"
+                    }
+                  }
+                }
+              },
+              "optimizing" : {
+                "answer ranking model" : {
+                  "given" : "justifications"
+                }
+              },
+              "from sentence" : "More formally , our neural network approach alternates between using the current model with max - pooling to choose the highest scoring justifications for correct answers , and optimizing the answer ranking model given these justifications ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

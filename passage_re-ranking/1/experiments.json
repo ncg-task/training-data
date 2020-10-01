@@ -1,0 +1,79 @@
+{
+  "has" : {
+    "Experiments" : {
+      "on" : {
+        "MS MARCO" : {
+          "has" : {
+            "Hyperparameters" : {
+              "fine - tune" : {
+                "model" : {
+                  "using" : "TPUs",
+                  "with" : {
+                    "batch size" : {
+                      "of" : "32"
+                    }
+                  },
+                  "for" : "400 k iterations",
+                  "takes" : "approximately 70 hours"
+                },
+                "from sentence" : "We fine - tune the model using TPUs 1 with a batch size of 32 ( 32 sequences * 512 tokens = 16,384 tokens / batch ) for 400 k iterations , which takes approximately 70 hours ."
+              },
+              "use" : { 
+                "ADAM ( Kingma & Ba , 2014 )" : {
+                  "with" : {
+                    "initial learning rate" : {
+                      "set to" : "3 10 ?6 , ? 1 = 0.9 , ? 2 = 0.999"
+                    },
+                    "L2 weight decay" : {
+                      "of" : "0.01"
+                    },
+                    "learning rate warmup" : {
+                      "over" : "first 10,000 steps"
+                    },
+                    "linear decay" : {
+                      "of" : "learning rate"
+                    }
+                  },
+                  "from sentence" : "We use ADAM ( Kingma & Ba , 2014 ) with the initial learning rate set to 3 10 ?6 , ? 1 = 0.9 , ? 2 = 0.999 , L2 weight decay of 0.01 , learning rate warmup over the first 10,000 steps , and linear decay of the learning rate ."
+                },
+                "dropout probability" : {
+                  "of" : {
+                    "0.1" : {
+                      "on" : "all layers"
+                    }
+                  },
+                  "from sentence" : "We use a dropout probability of 0.1 on all layers ."
+                }
+              }
+            }
+          }
+        },
+        "TREC - CAR" : {
+          "For" : {
+            "fine - tuning" : {
+              "has" : {
+                "data" : {
+                  "generate" : {
+                    "our query - passage pairs" : {
+                      "by retrieving" : {
+                        "top ten passages" : {
+                          "from" : {
+                            "entire TREC - CAR corpus" : {
+                              "using" : "BM25"
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "For the fine - tuning data , we generate our query - passage pairs by retrieving the top ten passages from the entire TREC - CAR corpus using BM25 ."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "train" : ["400 k iterations", "12.8 M examples", {"from sentence" : "We train it for 400 k iterations , or 12.8 M examples ( 400 k iterations * 32 pairs / batch ) , which corresponds to only 40 % of the training set ."}]
+        }
+      }
+    }
+  }
+}

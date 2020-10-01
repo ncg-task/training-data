@@ -1,0 +1,3 @@
+{
+  "Code" : ["https://github.com/luheng/lsgn", {"from sentence" : "Each edge is identified by independently predicting which role , if any , holds between every possible pair of text spans , while using aggressive beam 1 Code and models : https://github.com/luheng/lsgn pruning for efficiency ."}]
+}

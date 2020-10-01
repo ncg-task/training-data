@@ -1,0 +1,4 @@
+(Contribution||has research problem||Knowledge Base Relation Extraction)
+(Contribution||has research problem||sentence - level relation extraction)
+(Contribution||has research problem||relation extraction)
+(Contribution||has research problem||sentential relation extraction)

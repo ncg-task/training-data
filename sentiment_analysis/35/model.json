@@ -1,0 +1,89 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "novel framework named Multi - Granularity Alignment Network ( MGAN )" : {
+          "simultaneously align" : {
+            "aspect granularity and aspect- specific feature representations" : {
+              "across" : "domains"
+            }
+          },
+          "from sentence" : "To resolve the challenges , we propose a novel framework named Multi - Granularity Alignment Network ( MGAN ) to simultaneously align aspect granularity and aspect- specific feature representations across domains ."
+        }
+      },
+      "has" : {
+        "MGAN" : {
+          "consists of" : {
+            "two networks" : {
+              "for learning" : {
+                "aspect - specific representations" : {
+                  "for" : "two domains"
+                }
+              }
+            }
+          },
+          "from sentence" : "Specifically , the MGAN consists of two networks for learning aspect - specific representations for the two domains , respectively ."
+        },
+        "CFA" : {
+          "considers" : {
+            "sematic alignment" : {
+              "by maximally ensuring" : {
+                "equivalent distributions" : {
+                  "from" : {
+                    "different domains" : {
+                      "same" : "class"
+                    }
+                  } 
+                }              
+              }
+            },
+            "semantic separation" : {
+              "by guaranteeing" : {
+                "distributions" : {
+                  "from both" : "different classes and domains",
+                  "to be" : "as dissimilar as possible"
+                }
+              }
+            }
+          },
+          "from sentence" : "The CFA considers both semantic alignment by maximally ensuring the equivalent distributions from different domains but the same class , and semantic separation by guaranteeing distributions from both different classes and domains to be as dissimilar as possible ."
+        }
+      },
+      "to reduce" : {
+        "task discrepancy" : {
+          "between" : "domains",
+          "modeling" : {
+            "two tasks" : {
+              "at" : "same fine - grained level"
+            }
+          },
+          "propose" : {
+            "novel Coarse2 Fine ( C2F ) attention module" : {
+              "to help" : {
+                "source task" : {
+                  "automatically capture" : {
+                    "corresponding aspect term" : {
+                      "in" : "context",
+                      "towards" : "given aspect category"
+                    }  
+                  }
+                }
+              }
+            }  
+          },
+          "from sentence" : "First , to reduce the task discrepancy between domains , i.e. , modeling the two tasks at the same fine - grained level , we propose a novel Coarse2 Fine ( C2F ) attention module to help the source task automatically capture the corresponding aspect term in the context towards the given aspect category ( e.g. , \" salmon \" to the \" food \" ) ."
+        }
+      },
+      "To prevent" : {
+        "false alignment" : {
+          "adopt" : {
+            "Contrastive Feature Alignment ( CFA )" : {
+              "to semantically align" : "aspect - specific representations"
+            }
+          },
+          "from sentence" : "To prevent false alignment , we adopt the Contrastive Feature Alignment ( CFA ) ( Motiian et al. 2017 ) to semantically align aspect - specific representations ."
+        }  
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Answer Selection", {"from sentence" : "A Compare - Aggregate Model with Latent Clustering for Answer Selection"}],
+    ["sentence - level answer- selection", {"from sentence" : "In this paper , we propose a novel method for a sentence - level answer- selection task that is a fundamental problem in natural language processing ."}],
+    ["Automatic question answering ( QA )", {"from sentence" : "Automatic question answering ( QA ) is a primary objective of artificial intelligence ."}]
+  ]
+}

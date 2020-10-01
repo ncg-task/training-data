@@ -1,0 +1,273 @@
+title
+Neural Variational Inference for Text Processing Phil Blunsom 12
+abstract
+Recent advances in neural variational inference have spawned a renaissance in deep latent variable models .
+In this paper we introduce a generic variational inference framework for generative and conditional models of text .
+While traditional variational methods derive an analytic approximation for the intractable distributions over latent variables , here we construct an inference network conditioned on the discrete text input to provide the variational distribution .
+We validate this framework on two very different text modelling applications , generative document modelling and supervised question answering .
+Our neural variational document model combines a continuous stochastic document representation with a bagof - words generative model and achieves the lowest reported perplexities on two standard test corpora .
+The neural answer selection model employs a stochastic representation layer within an attention mechanism to extract the semantics between a question and answer pair .
+On two question answering benchmarks this model exceeds all previous published benchmarks .
+Introduction
+Probabilistic generative models underpin many successful applications within the field of natural language processing ( NLP ) .
+Their popularity stems from their ability to use unlabelled data effectively , to incorporate abundant linguistic features , and to learn interpretable dependencies among data .
+However these successes are tempered by the fact that as the structure of such generative models becomes deeper and more complex , true Bayesian inference becomes intractable due to the high dimensional integrals required .
+Markov chain Monte Carlo ( MCMC )
+Proceedings of the 33 rd International Conference on Machine Learning , New York , NY , USA , 2016 .
+JMLR : W&CP volume
+48 . Copyright 2016 by the author ( s ) .
+and variational inference are the standard approaches for approximating these integrals .
+However the computational cost of the former results in impractical training for the large and deep neural networks which are now fashionable , and the latter is conventionally confined due to the underestimation of posterior variance .
+The lack of effective and efficient inference methods hinders our ability to create highly expressive models of text , especially in the situation where the model is non-conjugate .
+This paper introduces a neural variational framework for generative models of text , inspired by the variational autoencoder .
+The principle idea is to build an inference network , implemented by a deep neural network conditioned on text , to approximate the intractable distributions over the latent variables .
+Instead of providing an analytic approximation , as in traditional variational Bayes , neural variational inference learns to model the posterior probability , thus endowing the model with strong generalisation abilities .
+Due to the flexibility of deep neural networks , the inference network is capable of learning complicated non-linear distributions and processing structured inputs such as word sequences .
+Inference networks can be designed as , but not restricted to , multilayer perceptrons ( MLP ) , convolutional neural networks ( CNN ) , and recurrent neural networks ( RNN ) , approaches which are rarely used in conventional generative models .
+By using the reparameterisation method , the inference network is trained through back - propagating unbiased and low variance gradients w.r.t. the latent variables .
+Within this framework , we propose a Neural Variational Document Model ( NVDM ) for document modelling and a Neural Answer Selection Model ( NASM ) for question answering , a task that selects the sentences that correctly answer a factoid question from a set of candidate sentences .
+The NVDM is an unsupervised generative model of text which aims to extract a continuous semantic latent variable for each document .
+This model can be interpreted as a variational auto - encoder : an MLP encoder ( inference network ) compresses the bag - of - words document representation into a continuous latent distribution , and a softmax decoder ( generative model ) reconstructs the document by generating the words independently .
+A primary feature of NVDM is that each word is generated directly from a dense continuous document representation instead of the more common binary semantic vector .
+Our experiments demonstrate that our neural document model achieves the stateof - the - art perplexities on the 20 New s Groups and RCV1 - v 2 .
+The NASM ( is a supervised conditional model which imbues LSTMs with a latent stochastic attention mechanism to model the semantics of question - answer pairs and predict their relatedness .
+The attention model is designed to focus on the phrases of an answer that are strongly connected to the question semantics and is modelled by a latent distribution .
+This mechanism allows the model to deal with the ambiguity inherent in the task and learns pair- specific representations that are more effective at predicting answer matches , rather than independent embeddings of question and answer sentences .
+Bayesian inference provides a natural safeguard against overfitting , especially as the training sets available for this task are small .
+The experiments show that the LSTM with a latent stochastic attention mechanism learns an effective attention model and outperforms both previously published results , and our own strong nonstochastic attention baselines .
+In summary , we demonstrate the effectiveness of neural variational inference for text processing on two diverse tasks .
+These models are simple , expressive and can be trained efficiently with the highly scalable stochastic gradient back - propagation .
+Our neural variational framework is suitable for both unsupervised and supervised learning tasks , and can be generalised to incorporate any type of neural networks .
+Neural Variational Inference Framework
+Latent variable modelling is popular in many NLP problems , but it is non-trivial to carryout effective and efficient inference for models with complex and deep structure .
+In this section we introduce a generic neural variational inference framework that we apply to both the unsupervised NVDM and supervised NASM in the follow sections .
+We define a generative model with a latent variable h , which can be considered as the stochastic units in deep neural networks .
+We designate the observed parent and child nodes of h as x and y respectively .
+Hence , the joint distribution of the generative model is p ? ( x , y ) = hp ? ( y|h ) p ? ( h|x ) p ( x ) , and the variational lower bound L is derived as :
+where ?
+parameterises the generative distributions p ? ( y|h ) and p ? ( h|x ) .
+In order to have a tight lower bound , the variational distribution q ( h ) should approach the true posterior p ( h|x , y ) .
+Here , we employ a parameterised diagonal Gaussian N ( h| ( x , y ) , diag ( ?
+2 ( x , y ) ) ) as q ? ( h|x , y ) .
+The three steps to construct the inference network are :
+1 .
+Construct vector representations of the observed variables : u = f x ( x ) , v = f y ( y ) .
+2 .
+Assemble a joint representation : ? = g ( u , v ) .
+3 .
+Parameterise the variational distribution over the latent variable : = l 1 ( ? ) , log ? = l 2 ( ? ) . f x ( ) and f y ( ) can be any type of deep neural networks that are suitable for the observed data ; g ( ) is an MLP that concatenates the vector representations of the conditioning variables ; l ( ) is a linear transformation which outputs the parameters of the Gaussian distribution .
+By sampling from the variational distribution , h ? q ? ( h|x , y ) , we are able to carryout stochastic back - propagation to optimise the lower bound ( Eq. 1 ) .
+During training , the model parameters ?
+together with the inference network parameters ?
+are updated by stochastic back - propagation based on the samples h drawn from q ? ( h|x , y ) .
+For the gradients w.r.t. ? , we have the form :
+For the gradients w.r.t. ?
+we reparameterise h = + ? and sample ( l ) ? N ( 0 , I ) to reduce the variance in stochastic estimation .
+The update of ?
+can be carried out by backpropagating the gradients w.r.t. and ?:
+It is worth mentioning that unsupervised learning is a special case of the neural variational framework where h has no parent node x .
+In that case h is directly drawn from the prior p ( h ) instead of the conditional distribution p ? ( h|x ) , and s ( h ) = log p ? ( y |h ) p ? ( h ) ? log q ? ( h|y ) .
+Here we only discuss the scenario where the latent variables are continuous and the parameterised diagonal Gaussian is employed as the variational distribution .
+However the framework is also suitable for discrete units , and the only modification needed is to replace the Gaussian with a multinomial parameterised by the outputs of a softmax function .
+Though the reparameterisation trick for continuous variables is not applicable for this case , a policy gradient approach can help to alleviate the high variance problem during stochastic estimation .
+proposed a variational inference framework for semi-supervised learning , but the prior distribution over the hidden variable p ( h ) remains as the standard Gaussian prior , while we apply a conditional parameterised Gaussian distribution , which is jointly learned with the variational distribution .
+Neural Variational Document Model
+The Neural Variational Document Model ( ) is a simple instance of unsupervised learning where a continuous hidden variable h ?
+R K , which generates all the words in a document independently , is introduced to represent its semantic content .
+Let X ?
+R | V | be the bag - of - words representation of a document and x i ?
+R | V | be the one - hot representation of the word at position i .
+As an unsupervised generative model , we could interpret NVDM as a variational autoencoder : an MLP encoder q ( h|X ) compresses document representations into continuous hidden vectors ( X ? h ) ; a softmax decoder p ( X |h ) = N i =1 p ( x i | h ) reconstructs the documents by independently generating the words ( h ? {x i }) .
+To maximise the log - likelihood log h p ( X|h ) p ( h ) of documents , we derive the lower bound :
+where N is the number of words in the document and p ( h ) is a Gaussian prior for h .
+Here , we consider N is observed for all the documents .
+The conditional probability over words p ? ( x i |h ) ( decoder ) is modelled by multinomial logistic regression and shared across documents :
+where R ?
+R K|V | learns the semantic word embeddings and b xi represents the bias term .
+As there is no supervision information for the latent semantics , h , the posterior approximation q ? ( h|X ) is only conditioned on the current document X .
+The inference network q ? ( h|X ) = N ( h| ( X ) , diag ( ?
+2 ( X ) ) ) is modelled as :
+For each document X , the neural network generates its own parameters and ?
+that parameterise the latent distribution over document semantics h.
+Based on the samples h ? q ? ( h|X ) , the lower bound ( Eq. 5 ) can be optimised by back - propagating the stochastic gradients w.r.t. ? and ?.
+Since p ( h ) is a standard Gaussian prior , the Gaussian KL -
+can be computed analytically to further lower the variance of the gradients .
+Moreover , it also acts as a regulariser for updating the parameters of the inference network q ? ( h|X ) .
+Neural Answer Selection Model
+Answer sentence selection is a question answering paradigm where a model must identify the correct sentences answering a factual question from a set of candidate sentences .
+Assume a question q is associated with a set of answer sentences {a 1 , a 2 , ... , an } , together with their judgements {y 1 , y 2 , ... , y n } , where y m = 1 if the answer am is correct and y m = 0 otherwise .
+This is a classification task where we treat each training data point as a triple ( q , a , y ) while predicting y for the unlabelled question - answer pair ( q , a ) .
+The Neural Answer Selection Model ( ) is a supervised model that learns the question and answer representations and predicts their relatedness .
+It employs two different LSTMs to embed raw question inputs q and answer inputs a. Let sq ( j ) and s a ( i ) be the state outputs of the two LSTMs , and i , j be the positions of the states .
+Conventionally , the last state outputs sq ( | q | ) and s a ( | a | ) , as the independent question and answer representations , can be used for relatedness prediction .
+In NASM , however , we aim to learn pair- specific representations through a latent attention mechanism , which is more effective for pair relatedness prediction .
+NASM applies an attention model to focus on the words in the answer sentence that are prominent for predicting the answer matched to the current question .
+Instead of using a deterministic question vector , such ass q ( | q| ) , NASM employs a latent distribution p ? ( h|q ) to model the question semantics , which is a parameterised diagonal Gaussian N ( h| ( q ) , diag ( ? 2 ( q ) ) ) .
+Therefore , the attention model extracts a context vector c ( a , h) by iteratively attending to the answer tokens based on the stochastic vector h ? p ? ( h|q ) .
+In doing so the model is able to adapt to the ambiguity inherent in questions and obtain salient information through attention .
+Compared to its deterministic counterpart ( applying sq ( | q | ) as the question semantics ) , the stochastic units incorporated into NASM allow multi-modal attention distributions .
+Further , by marginalising over the latent variables , NASM is more robust against overfitting , which is important for small question answering training sets .
+In this model , the conditional distribution p ? ( h|q ) is :
+For each question q , the neural network generates the corresponding parameters and ?
+that parameterise the latent distribution over question semantics h.
+Following Bahdanau et al. , the attention model is defined as :
+where ?( i ) is the normalised attention score at answer token i , and the context vector c ( a , h) is the weighted sum of all the state outputs s a ( i ) .
+We adopt z q ( q ) , z a ( a , h) as the question and answer representations for predicting their relatedness y. z q ( q ) is a deterministic vector that is equal to sq ( | q | ) , while z a ( a , h) is a combination of the sequence output s a ( | a | ) and the context vector c ( a , h) ( Eq. 14 ) .
+For the prediction of pair relatedness y , we model the conditional probability distribution p ? ( y|z q , z a ) by sigmoid function :
+To maximise the log - likelihood log p ( y | q , a ) we use the variational lower bound :
+Following the neural variational inference framework , we construct a deep neural network as the inference network
+where q and a are also modelled by LSTMs 1 , and the relatedness label y is modelled by a simple linear transformation into the vector s y .
+According to the joint representation ? ? , we then generate the parameters ? and ? ? , which parameterise the variational distribution over the question semantics h.
+To emphasise , though both p ? ( h|q ) and q ? ( h|q , a , y ) are modelled as parameterised Gaussian distributions , q ? ( h|q , a , y ) as an approximation only functions during inference by producing samples to compute the stochastic gradients , while p ? ( h|q ) is the generative distribution that generates the samples for predicting the question - answer relatedness y.
+Based on the samples h ? q ? ( h|q , a , y ) , we use SGVB to optimise the lower bound ( Eq.16 ) .
+The model parameters ?
+and the inference network parameters ?
+are updated jointly using their stochastic gradients .
+In this case , similar to the NVDM , the Gaussian KL divergence D KL [ q ? ( h|q , a , y ) ) p ? ( h|q ) ] can be analytically computed during training process .
+Experiments
+Dataset & Setup for Document Modelling
+We experiment with NVDM on two standard news corpora : the 20 News Groups 2 and the Reuters RCV1 - v2 3 .
+The former is a collection of newsgroup documents , consisting of 11,314 training and 7,531 test articles .
+The latter is a large collection from Reuters newswire stories with 794,414 training and 10,000 test cases .
+The vocabulary size of these two datasets are set as 2,000 and 10,000 .
+To make a direct comparison with the prior work we follow the same preprocessing procedure and setup as Hinton & Salakhutdinov arabs collection ( b ) The five nearest words in the semantic space .
+Adam and tuned by hold - out validation perplexity .
+We alternately optimise the generative model and the inference network by fixing the parameters of one while updating the parameters of the other .
+presents the test document perplexity .
+The first column lists the models , and the second column shows the dimension of latent variables used in the experiments .
+The final two columns present the perplexity achieved by each topic model on the 20 New s Groups and RCV1 - v2 datasets .
+In document modelling , perplexity is computed by exp ( ?
+1
+Experiments on Document Modelling
+, where Dis the number of documents , Nd represents the length of the dth document and log p ( X ) = log p ( X |h ) p ( h ) dh is the log probability of the words in the document .
+Since log p ( X ) is intractable in the NVDM , we use the variational lower bound ( which is an upper bound on perplexity ) to compute the perplexity following .
+apply discrete latent variables , here NVDM employs a continuous stochastic document representation .
+The experimental results indicate that NVDM achieves the best performance on both datasets .
+For the experiments on RCV1 - v2 dataset , the NVDM with latent variable of 50 dimension performs even better than the fDARN with 200 dimension .
+It demonstrates that our document model with continuous latent variables has higher expressiveness and better generalisation ability .
+compares the 5 nearest words selected according to the semantic vector learned from NVDM and docNADE .
+While all the baseline models listed in
+In addition to the perplexities , we also qualitatively evaluate the semantic information learned by NVDM on the 20 News Groups dataset with latent variables of 50 dimension .
+We assume each dimension in the latent space represents a topic that corresponds to a specific semantic meaning .
+presents 5 randomly selected topics with 10 words that have the strongest positive connection with the topic .
+Based on the words in each column , we can deduce their corresponding topics as : Space , Religion , Encryption , Sport and Policy .
+Although the model does not impose independent interpretability on the latent representation dimensions , we still see that the NVDM learns locally interpretable structure .
+Dataset & Setup for Answer Sentence Selection
+We experiment on two answer selection datasets , the QASent and the WikiQA datasets .
+QASent is created from the TREC QA track , and the WikiQA is constructed from Wikipedia , which is less noisy and less biased towards lexical overlap 4 . summarises the statistics of the two datasets ..
+Bigram - CNN is the simple convolutional model reported in .
+Deep CNN is the deep convolutional model from .
+WA is a model based on word alignment .
+LCLR is the SVM - based classifier trained using a set of features .
+Model +
+Cnt means that the result is obtained from a combination of a lexical overlap feature and the output from the distributional model .
+In order to investigate the effectiveness of our NASM model we also implemented two strong baseline modelsa vanilla LSTM model ( LSTM ) and an LSTM model with a deterministic attention mechanism ( LSTM + Att ) .
+The former directly applies the QA matching function ( Eq. 15 ) on the independent question and answer representations which are the last state outputs sq ( | q | ) and s a ( | a | ) from the question and answer LSTM models .
+The latter adds an attention model to learn pair- specific representation for prediction on the basis of the vanilla LSTM .
+Moreover , LSTM +
+Att is the deterministic counterpart of NASM , which has the same neural network architecture as NASM .
+The only difference is that it replaces the stochastic units h with deterministic ones , and no inference network is required to carryout stochastic estimation .
+Following previous work , for each of our models we also add a lexical overlap feature by combining a co-occurrence word count feature with the probability generated from the neural model .
+MAP and MRR are adopted as the evaluation metrics for this task .
+To facilitate direct comparison with previous work we follow the same experimental setup as and .
+The word embeddings ( K = 50 ) are obtained by running the word2vec tool on the English Wikipedia dump and the AQUAINT 5 corpus .
+We use LSTMs with 3 layers and 50 hidden units , and apply 40 % dropout after the embedding layer .
+For the construction of the inference network , we use an MLP ( Eq. 10 ) with 2 layers and tanh units of 50 dimension , and an MLP ( Eq. 17 ) with 2 layers and tanh units of 150 dimension for modelling the joint representation .
+During training we carry out stochastic estimation by taking one sample for computing the gradients , while in prediction we use 20 samples to calculate the expectation of the lower bound .
+presents the standard deviation of NASM 's MAP scores while using different numbers of samples .
+Considering the trade - off between computational cost and variance , we chose 20 samples for prediction in all the experiments .
+The models are trained using Adam , with hyperparameters selected by optimising the MAP score on the development set .
+that the evaluation scripts used by previous work are noisy - 4 out of 72 questions in the test set are treated answered incorrectly .
+This makes the MAP and MRR scores ?
+4 % lower than the true scores .
+Since and use a cleaned - up evaluation scripts , we apply the original noisy scripts to re-evaluate their outputs in A NASM the peso is subdivided into 100 centavos , represented by " _ UNK _ " Q2 how much is centavos in mexico A LSTM the actress who played lolita , sue lyon , was fourteen at the time of filming .
+Experiments on Answer Sentence Selection
+A NASM the actress who played lolita , sue lyon , was fourteen at the time of filming .
+MAP and 6 % on MRR .
+The LSTM + Att performs slightly better than the vanilla LSTM model , and our NASM improves the results further .
+Since the QASent dataset is biased towards lexical overlapping features , after combining with a co-occurrence word count feature , our best model NASM outperforms all the previous models , including both neural network based models and classifiers with a set of hand - crafted features ( e.g. LCLR ) .
+Similarly , on the Wik - iQA dataset , all of our models outperform the previous distributional models by a large margin .
+By including a word count feature , our models improve further and achieve the state - of - the - art .
+Notably , on both datasets , our two LSTMbased models have set strong baselines and NASM works even better , which demonstrates the effectiveness of introducing stochastic units to model question semantics in this answer sentence selection task .
+Q1 how old was sue lyon when she made lolita
+In , we compare the effectiveness of the latent attention mechanism ( NASM ) and its deterministic counterpart ( LSTM + Att ) by visualising the attention scores on the answer sentences .
+For most of the negative answer sentences , neither of the two attention models can attend to reasonable words that are beneficial for predicting relatedness .
+But for the correct answer sentences , such as the ones in , both attention models are able to capture crucial information by attending to different parts of the sentence based on the question semantics .
+Interestingly , compared to the deterministic counterpart LSTM + Att , our NASM assigns higher attention scores on the prominent words that are relevant to the question , which forms a more peaked distribution and in turn helps the model achieve better performance .
+In order to have an intuitive observation on the latent distributions , we present Hinton diagrams of their log standard deviation parameters ( .
+Ina Hinton diagram , the size of a square is proportional to a value 's magnitude , and the colour ( black / white ) indicates its sign ( positive / negative ) .
+In this case , we visualise the parameters order to make the results directly comparable with previous work. of 50 conditional distributions p ? ( h|q ) with the questions selected from 5 different groups , which start with ' howwhere ' .
+All the log standard deviations are initialised as zero before training .
+According to , we can see that the questions starting with ' how ' have more white areas , which indicates higher variances or more uncertainties are in these dimensions .
+By contrast , the questions starting with ' what ' have black squares in almost every dimension .
+Intuitively , it is more difficult to understand and answer the questions starting with ' how ' than the others , while the ' what ' questions commonly have explicit words indicating the possible answers .
+To validate this , we compute the stratified MAP scores based on different question type .
+The MAP of ' how ' questions is 0.524 which is the lowest among the five groups .
+Hence empirically , ' how ' questions are harder to ' understand and answer ' .
+Discussion
+As shown in the experiments , neural variational inference brings consistent improvements on the performance of both NLP tasks .
+The basic intuition is that the latent distributions grant the ability to sum overall the possibilities in terms of semantics .
+From the perspective of optimisation , one of the most important reasons is that Bayesian learning guards against overfitting .
+According to Eq. 5 in NVDM , since we adopt p ( h ) as a standard Gaussian prior , the KL divergence term D KL [ q ? ( h|X ) p ( h ) ] can be analytically computed as 1 2 ( K ?  2 ? ? 2 + log | diag ( ?
+2 ) | ) .
+It is not difficult to find that it actually acts as L2 regulariser when we update the .
+Similarly , in NASM ( Eq. 16 ) , we also have the KL divergence term D KL [ q ? ( h|q , a , y ) ) p ? ( h|q ) ] .
+Different from NVDM , it attempts to minimise the distance between q ? ( h|q , a , y ) ) and p ? ( h|q ) that are both conditional distributions .
+Because p ? ( h|q ) as well as q ? ( h|q , a , y ) ) are learned during training , the two distributions are mutually restrained while being updated .
+Therefore , NVDM simply penalises the large and encourages q ? ( h|X ) to approach the prior p ( h ) for every document X , but in NASM , p ? ( h|q ) acts like a moving baseline distribution which regularises the update of q ? ( h|q , a , y ) ) for every different conditions .
+In practice , we carryout early stopping by observing the prediction performance on development dataset for the question answer selection task .
+Using the same learning rate and neural network structure , LSTM + Att reaches optimal performance and starts to overfit on training dataset generally at the 20th iteration , while NASM starts to overfit around the 35th iteration .
+More interestingly , in the question answer selection experiments , NASM learns more peaked attention scores than its deterministic counterpart LSTM + Att . For the update process of LSTM + Att , we find there exists a relatively big variance in the gradients w.r.t. question semantics ( LSTM + Att applies deterministic sq ( | q | ) while NASM applies stochastic h) .
+This is because the training dataset is small and contains many negative answer sentences that brings no benefit but noise to the learning of the attention model .
+In contrast , for the update process of NASM , we observe more stable gradients w.r.t. the parameters of latent distributions .
+The optimisation of the lower bound on one hand maximises the conditional log -likelihood ( that the deterministic counterpart cares about ) and on the other hand minimises the KL - divergence ( that regularises the gradients ) .
+Hence , each update of the lower bound actually keeps the gradients w.r.t. from swinging heavily .
+Besides , since the values of ?
+are not very significant in this case , the distribution of attention scores mainly depends on .
+Therefore , the learning of the attention model benefits from the regularisation as well , and it explains the fact that NASM learns more peaked attention scores which in turn helps achieve a better prediction performance .
+Since the computations of NVDM and NASM can be parallelised on GPU and only one sample is required during training process , it is very efficient to carryout the neural variational inference .
+Moreover , for both NVDM and NASM , all the parameters are updated by backpropagation .
+Thus , the increased computation time for the stochastic units only comes from the added parameters of the inference network .
+Related Work
+Training an inference network to approximate the variational distribution was first proposed in the context of Helmholtz machines , but applications of these directed generative models come up against the problem of establishing low variance gradient estimators .
+Recent advances in neural variational inference mitigate this problem by reparameterising the continuous random variables , using control variates or approximating the posterior with importance sampling .
+The instantiations of these ideas have demonstrated strong performance on the tasks of image processing .
+The recent variants of generative auto - encoder are also very competitive .
+applies the similar idea of introducing stochastic units for expression classification , but its inference is carried out by Monte Carlo EM algorithm with the reliance on importance sampling , which is less efficient and lack of scalability .
+Another class of neural generative models make use of the autoregressive assumption .
+Applications of these models on document modelling achieve significant improvements on generating documents , compared to conventional probabilistic topic models and also the RBMs .
+While these models that use binary semantic vectors , our NVDM employs dense continuous document representations which are both expressive and easy to train .
+The semantic word vector model also employs a continuous semantic vector to generate words , but the model is trained by MAP inference which does not permit the calculation of the posterior distribution .
+Avery similar idea to NVDM is , which employs VAE to generate sentences from a continuous space .
+Apart from the work mentioned above , there is other interesting work on question answering with deep neural networks .
+One of the popular streams is mapping factoid questions with answer triples in the knowledge base .
+Moreover , ; ; further exploit memory networks , where long - term memories act as dynamic knowledge bases .
+Another attention - based model applies the attentive network to help read and comprehend for long articles .
+Conclusion
+This paper introduced a deep neural variational inference framework for generative models of text .
+We experimented on two diverse tasks , document modelling and question answer selection tasks to demonstrate the effectiveness of this framework , wherein both cases our models achieve state of the art performance .
+Apart from the promising results , our model also has the advantages of ( 1 ) simple , expressive , and efficient when training with the SGVB algorithm ;
+( 2 ) suitable for both unsupervised and supervised learning tasks ; and ( 3 ) capable of generalising to incorporate any type of neural network . ( 1 ) Inference Network q ? ( h|X ) :
+A.
+t- SNE Visualisation of Document Representations
+( 2 ) Generative Model p ? ( X|h ) :
+The variational lower bound to be optimised : ( 32 ) ? = sq ( | q | ) ||s a ( | a | ) ||s y ( 33 ) ? ? = tanh ( W 6 ? + b 6 ) ( 34 ) ? ? = tanh ( W 7 ? ? + b 7 ) ( 35 ) ? = W 8 ? ? + b 8 ( 36 ) log ? ? = W 9 ? ? + b 9 ( 37 ) h ? N ( ? ( q , a , y ) , diag ( ?
+2 ? ( q , a , y ) ) )
+( 2 ) Generative Model p ? ( h|q ) :
+( 3 ) KL Divergence D KL [ q ? ( h|q , a , y ) || p ? ( h|q ) ] :
+The variational lower bound to be optimised :
+C. Computational Complexity
+The computational complexity of NVDM fora training document is C ? + C ? = O ( LK 2 + KSV ) .
+Here , C ? = O ( LK 2 ) represents the cost for the inference network to generate a sample , where L is the number of the layers in the inference network and K is the average dimension of these layers .
+Besides , C ? = O ( KSV ) is the cost of reconstructing the document from a sample , where S is the average length of the documents and V represents the volume of words applied in this document model , which is conventionally much lager than K .
+The computational complexity of NASM fora training question - answer pair is C ? + C ? = O ( ( L + S ) K 2 + SW ) .
+The inference network needs C ? = 2 SW + 2 K + LK 2 = O ( LK 2 + SW ) .
+It takes 2 SW + 2 K to produce the joint representation fora question - answer pair and it s label , where Wis the total number of parameters of an LSTM and S is the average length of the sentences .
+Based on the joint representation , an MLP spends LK 2 to generate a sample , where L is the number of layers and K represents the average dimension .
+The generative model requires C ? = 2SW + LK 2 + SK 2 +5K 2 + 2K 2 = O ( ( L+S ) K 2 + SW ) .
+Similarly , it costs 2 SW + LK 2 to construct the generative latent distribution , where 2 SW can be saved if the LSTMs are shared by the inference network and the generative model .
+Besides , the attention model takes SK 2 + 5K 2 and the relatedness prediction takes the last 2 K 2 .
+Since the computations of NVDM and NASM can be parallelised in GPU and only one sample is required during training process , it is very efficient to carryout the neural variational inference .
+As NVDM is an instantiation of variational auto - encoder , its computational complexity is the same as the deterministic auto -encoder .
+In addition , the computational complexity of LSTM + Att , the deterministic counterpart of NASM , is also O ( ( L +S ) K 2 + SW ) .
+There is only O ( LK 2 ) time increase by introducing an inference network for NASM when compared to LSTM + Att .

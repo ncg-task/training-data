@@ -1,0 +1,28 @@
+{
+  "has" : {
+    "Model" : {
+      "benefits from" : ["very recent advances in deep learning", {"from sentence" : "In particular , we will present a model which benefits from the very recent advances in deep learning and uses word embeddings and Long Short Term Memory models ( LSTMs ) to output surprisingly readable and informative compressions ."}],
+      "uses" : {
+        "word embeddings and Long Short Term Memory models ( LSTMs )" : {
+          "to output" : "surprisingly readable and informative compressions"
+        },
+        "from sentence" : "In particular , we will present a model which benefits from the very recent advances in deep learning and uses word embeddings and Long Short Term Memory models ( LSTMs ) to output surprisingly readable and informative compressions ."
+      },
+      "Trained on" : {
+        "corpus" : {
+          "of" : {
+            "less than two million" : {
+              "automatically extracted" : "parallel sentences"
+            }
+          },
+          "using" : {
+            "standard tool" : {
+              "to obtain" : "word embeddings"
+            }
+          }            
+        },
+        "from sentence" : "Trained on a corpus of less than two million automatically extracted parallel sentences and using a standard tool to obtain word embeddings , in its best and most simple configuration it achieves 4.5 points out of 5 in readability and 3.8 points in informativeness in an extensive evaluation with human judges ."
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "found" : {
+        "large drops" : {
+          "removing" : "context modeling component",
+          "from sentence" : "We found large drops when removing the context modeling component , indicating that the context information provided by the Bi - LSTMs is crucial for the following components ( e.g. , interaction modeling ) ."
+        }
+      },
+      "use" : {
+        "similarity focus layer" : {
+          "is" : {
+            "beneficial" : {
+              "on" : "WikiQA data"
+            }
+          },
+          "from sentence" : "The use of our similarity focus layer is also beneficial , especially on the WikiQA data ."
+        }
+      },
+      "replaced" : {
+        "entire similarity focus layer" : {
+          "with" : {
+            "random dropout layer ( p = 0.3 )" : {
+              "has" : {
+                "hurts" : {
+                  "has" : "accuracy"
+                }
+              }
+            }
+          },
+          "from sentence" : "When we replaced the entire similarity focus layer with a random dropout layer ( p = 0.3 ) , the dropout layer hurts accuracy ; this shows the importance of directing the model to focus on important pairwise word interactions , to better capture similarity ."
+        }
+      }
+    }
+  }
+}

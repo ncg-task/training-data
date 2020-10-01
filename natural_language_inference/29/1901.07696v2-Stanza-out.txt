@@ -1,0 +1,366 @@
+title
+Product - Aware Answer Generation in E - Commerce Question - Answering
+abstract
+In e-commerce portals , generating answers for product - related questions has become a crucial task .
+In this paper , we propose the task of product - aware answer generation , which tends to generate an accurate and complete answer from large - scale unlabeled e-commerce reviews and product attributes .
+Unlike existing question - answering problems , answer generation in e-commerce confronts three main challenges :
+( 1 ) Reviews are informal and noisy ; ( 2 ) joint modeling of reviews and key - value product attributes is challenging ; ( 3 ) traditional methods easily generate meaningless answers .
+To tackle above challenges , we propose an adversarial learning based model , named PAAG , which is composed of three components : a questionaware review representation module , a key - value memory network encoding attributes , and a recurrent neural network as a sequence generator .
+Specifically , we employ a convolutional discriminator to distinguish whether our generated answer matches the facts .
+To extract the salience part of reviews , an attention - based review reader is proposed to capture the most relevant words given the question .
+Conducted on a large - scale real - world e-commerce dataset , our extensive experiments verify the effectiveness of each module in our proposed model .
+Moreover , our experiments show that our model achieves the state - of - the - art performance in terms of both automatic metrics and human evaluations .
+INTRODUCTION
+In recent years , the explosive popularity of question - answering ( QA ) is revitalizing the task of reading comprehension with promising results .
+Unlike traditional knowledge - based QA methods that require a structured knowledge graph as the input and output resource description framework ( RDF ) triples , most of reading comprehension approaches read context passages and extract text spans from input text as answers .
+E-commerce are playing an increasingly important role in our daily life .
+As a convenience of users , more and more e-commerce portals provide community question - answering services that allow users to pose product - aware questions to other consumers who purchased the same product before .
+Unfortunately , many productaware questions lack of proposer answers .
+Under the circumstances , users have to read the product 's reviews to find the answer by themselves .
+Given product attributes and reviews , an answer is manually generated following a cascade procedure : ( 1 ) a user skims reviews and finds relevant sentences ; ( 2 ) she / he extracts useful semantic units ; and the user jointly combines these semantic units with attributes , and writes a proper answer .
+However , the information overload phenomenon makes this procedure an energy - draining process to pursue an answer from a rapidly increasing number of reviews .
+Consequently , automatic product - aware question - answering become more and more helpful in this scenario .
+The task on which we focus is the product - aware answer generation given reviews and product attributes .
+Our goal is to respond product - aware questions automatically given a large amount of reviews and attributes of a specific product .
+Unlike either a " yes / no " binary classification task or a review ranking task , product - aware answer generation provides a natural - sounding sentence as an answer .
+The definition of our task is similar as the reading comprehension .
+However , most of existing reading comprehension solutions only extract text spans from contextual passages .
+Since the target of product - aware answer generation is to generate a naturalsounding answer instead of text spans , most of reading comprehension methods and datasets ( e.g. , SQuAD ) are not applicable .
+As far as we know , only few of reading comprehension approaches aim to generate a natural - sounding answers from extraction results .
+With a promising performance on MS - MARCO , S - Net framework proposed by Tan et al.
+focuses on synthesizing answers from extraction results .
+However , S - Net requires a large amount of labeling data for extracting text spans , which is still unrealistic given a huge number of reviews .
+Moreover , product reviews from e-commerce website are informal and noisy , whereas in reading comprehension the given context passages are usually in a formal style .
+Generally , existing reading comprehension approaches confront three challenges when addressing product - aware question answering :
+( 1 ) Review text is irrelevant and noisy .
+( 2 ) It 's extremely expensive to label large amounts of explicit text spans from real - world e-commerce platforms .
+( 3 ) Traditional loss function calculation in reading comprehension tends to generate meaningless answers such as " I do n't know " .
+In this paper , we propose the product - aware answer generator ( PAAG ) , a product related question answering model which incorporates customer reviews with product attributes .
+Specifically , at the beginning we employ an attention mechanism to model interactions between a question and reviews .
+Simultaneously , we employ a key - value memory network to store the product attributes and extract the relevance values according to the question .
+Eventually , we propose a recurrent neural network ( RNN ) based decoder , which combines product - aware review representation and attributes to generate the answer .
+More importantly , to tackle the problem of meaningless answers , we propose an adversarial learning mechanism in the loss calculation for optimizing parameters .
+Conducted on a large - scale real - world e-commerce dataset , we evaluate the performance of PAAG using extensive experiments .
+Experimental results demonstrate that the PAAG model achieves significant improvement over other baselines , including the state - of - the - art reading comprehension model .
+Furthermore , we also examine the effectiveness of each module in PAAG .
+Our experiments verify that adversarial learning is capable to significantly improve the denoising and facts extracting capacity of PAAG .
+To sum up , our contributions can be summarized as follows :
+We propose a product - aware answer generation task .
+To tackle this task , we propose an end - to - end learning method to extract fact that is helpful for answering questions from reviews and attributes and then generate answer text .
+Due to the review is in an informal style with noise , we propose an attention based review reader and use the Wasserstein distance based adversarial learning method to learn to denoise the review text .
+The discriminator can also give an additional training signal for generating more consistence answer .
+Experiments conducted on a large - scale real - world dataset show that our PAAG method outperforms all baselines , include the state - of - the - art model in terms of all metrics .
+The effectiveness of each module in PAAG is also demonstrated in our experiments .
+RELATED WORK
+We detail related work on product - aware question - answering , reading comprehension , and sequence - to - sequence architecture .
+Product - aware question answering .
+In recent years , productaware question answering has received several attention .
+Most of existing strategies aim at extracting relevant sentences from input text to answer the given question .
+Yu et al. propose a framework for opinion QA , which first organizes reviews into a hierarchy structure and retrieves review sentence as the answer .
+Yu et al. propose an answer prediction model by incorporating an aspect analytic model to learn latent aspect - specific review representation for predicting the answer .
+External knowledge has been considered with the development of knowledge graphs .
+McAuley et al.
+propose a method using reviews as knowledge to predict the answer , where they classify answers into two types , binary answers ( i.e. " yes " or " no " ) and open - ended answers .
+Incorporating review information , recent studies employ ranking strategies to optimize an answer from candidate answers .
+Meanwhile , productaware question retrieval and ranking has also been studied .
+Cui et al.
+propose a system which combines questions with RDF triples .
+Yu et al. propose a model which retrieves the most similar queries from candidate QA pairs , and uses corresponding answer as the final result .
+However , all above task settings differ from our task .
+Unlike above approaches , our method is aimed to generate an answer from scratch , based on both reviews and product attributes .
+Reading Comprehension .
+Given a question and relevant passages , reading comprehension extracts a text span from passages as an answer .
+Recently , based on a widely applied dataset , i.e. , SQuAD , many appraoches have been proposed .
+Seo et al. use bi-directional attention flow mechanism to obtain a queryaware passage representation .
+Wang et al.
+propose a model to match the question with passage using gated attention - based recurrent networks to obtain the question - aware passage representation .
+Consisting exclusively of convolution and self - attention , QANet achieves the state - of - the - art performance in reading comprehension .
+As mentioned above , most of the effective methods contain question - aware passage representation for generating a better answer .
+This mechanism make the models focus on the important part of passage according to the question .
+Following these previous work , our method models the reviews of product with a question aware mechanism .
+Sequence - to - sequence architecture .
+In recent years , sequenceto - sequence ( seq2seq ) based neural networks have been proved effective in generating a fluent sentence .
+The seq2seq model is originally proposed for machine translation and later adapted to various natural language generation tasks , such as text summarization and dialogue generation .
+Rush et al .
+apply the seq2seq mechanism with attention model to text summarization field .
+Then See et al .
+add copy mechanism and coverage loss to generate summarization without out - of - vocabulary and redundancy words .
+The seq2seq architecture has also been broadly used in dialogue system .
+Tao et al. propose a multi-head attention mechanism to capture multiple semantic aspects of the query and generate a more informative response .
+Different from seq2seq models , our model utilizes not only the information in input sequence but also many external knowledge from user reviews and product attributes to generate the answer that matches the facts .
+Unlike traditional seq2seq model , there are several tasks which input data is in keyvalue structure instead of a sequence .
+In order to utilize these data when generating text , key - value memory network ( KVMN ) is purposed to store this type of data .
+He et al. incorporate copying and retrieving knowledge from knowledge base stored in KVMN to generate natural answers within an encoder - decoder framework .
+Tu et al. use a KVMN to store the translate history which gives model the opportunity to take advantage of document - level information instead of translate sentences in an isolation way .
+We will use the KVMN architecture in our model to store and retrieve the product attributes data .
+PROBLEM FORMULATION
+Before introducing our answer generation task for product - aware question , we introduce our notation and key concepts .
+At the beginning , fora product , we assume there is a question
+where a k i is the name of i - th attribute and av i is the attribute content .
+In our task , we assume that each attribute , both key a k i and value av i are represented as a single word .
+Given a question X q , an answer generator reads the reviews X rand attributes A , then generates an answer ? = {? 1 ,? 2 , . . . ,?
+Ty }.
+The goal is to generate an answer ?
+that is not only grammatically correct but also consistent with product attributes and opinions in the reviews .
+Essentially , the generator tries to optimize the parameters to maximize the probability
+PAAG MODEL 4.1 Overview
+In this section , we propose our product - aware answer generator model , abbreviated as PAAG .
+The overview of PAAG is shown in .
+PAAG can be split into two main parts : answer generator and consistency discriminator .
+We start by detailing the answer generator which generates an answer according to the reviews and attributes .
+We then describe the consistency discriminator which distinguishes whether the generated answer matches the facts given by reviews and attributes .
+Answer generator .
+( 1 ) Review reader : ( See Section 4.2 )
+In this part , we encode the review text into vector representations .
+By matching the relevance of the given question , we signify important semantic units of reviews .
+( 2 ) Attributes encoder : ( See Section 4.3 ) Our model stores the product attributes information into a keyvalue memory network .
+For each key - value pair , a correlation score between a key and the question is aggregated into the value .
+( 3 ) Facts decoder :
+To generate the answer , we use the RNN - based decoder which fuses the facts extracted from reviews and attributes when generating words .
+Consistency discriminator .
+( See Section 4.5 ) Existing approaches easily generate a grammatically correct answer but conflicts to the facts .
+In order to produce factual answer , we use a discriminator to determine whether the generated sentence matches the facts .
+By employing the earth - mover distance to optimize our network , we use the result of discriminator as a training signal to encourage our model to produce a better answer .
+Review reader
+At the beginning , we use an embedding matrix e to map one - hot representation of each word in the question X q , reviews X r , and attributes A to a high - dimensional vector space .
+We denote e ( x ) as the embedding representation of word x .
+From these embedding representations , we employ a bi-directional recurrent neural network ( Bi - RNN ) to model the temporal interactions between words :
+where h qt and hr i , t denote the hidden state of t-th step in Bi - RNN for question X q and i - th review in X r respectively .
+We denote the final hidden state h q T q of Bi - RNN q as the vector representation of the question X q .
+Following , we choose the long short - term memory ( LSTM ) as a cell of Bi- RNN .
+For producing a fixed size vector representation of reviews , an intuitive method is to conduct an average - pooling strategy on all the hidden states of each review , which neglects the question - oriented salient part of the review .
+Accordingly , we propose a gated attentionbased method to incorporate the focus point of question into the review representation .
+Furthermore , we add an additional gate which learns the relevance between question X q and review X r via a soft - alignment , so we have :
+where W q , W r , v are all trainable parameters .
+?
+i , j ?
+R refers to the importance score of the j - th word in the i - th review given X q .
+Thereafter , we apply the attention - pooling operation on each review hidden state hr i , to produce the question - aware review representation c r i , shown in :
+Given an answer generation procedure , not all the reviews are useful to answer the question due to the informal style problem .
+Thus if we directly calculate the arithmetic mean vector of all reviews ' representations , we can not capture salient passages .
+To tackle this problem , a gated fusion method is utilized hereto sum up all the review representations .
+We first calculate the relevance between each review representation c r i and question representation h
+where W f is a trainable parameter .
+Afterwards , we use a softmax function to simulate the relevance score u i , i.e. , u ? i , shown in Equation 8 .
+Then we use u ?
+i as the weight of the i - th review to do weighted - average on review representation c r i overall reviews , so we have : ates the final answer according to the facts learned by the two modules introduced before .
+( 4 ) Consistency discriminator distinguishes whether the generated answer matches the extracted facts , and we also use the result of discriminator as another training signal .
+Attributes encoder
+The attributes of a product can be seen as structured knowledge data in our task .
+As key - value memory network ( KVMN ) is shown effective in structured data utilization , in our work we employ KVMN to store product attributes for generating answers .
+Correspondingly , we store the word embedding of each attribute 's key and value in the KVMN .
+The read operation in our KVMN is divided into two steps : key matching and value combination .
+Key matching
+The goal of key matching is to calculate the relevance between each attribute and the given question .
+Given question X q , for the i - th attribute a i = ( a k i , av i ) ?
+A , we calculate the probability of a i over X q , i.e. , P ( a i | X q ) , as the matching score .
+To this end , we exploit the question representation h q T q to calculate the probability distribution :
+Since question representation h q T q and attribute key representation e ( a k i ) are not in the same semantic space , following , we use a trainable key matching parameter W a to transform these representations into a same space .
+Value combination
+As the relevance between question X q and attribute a i , the matching score P ( a i | X q ) can help to capture the most relevant attribute for generating a correct answer .
+Therefore , as shown in , the attribute encoder reads the information m from KVMN via summing over the stored attribute values , and guide the follow - up answer generation , so we have :
+Facts decoder
+PAAG generates an answer based on a set of facts extracted from reviews and attributes .
+Same as our encoder settings , we set LSTM as a cell in our RNN - based facts decoder .
+We concatenate the question , review and attribute representations and apply a linear transform , then use this vector as the initial stated 0 ; at every decoding step , we feed a context vector ?
+t into RNN cell .
+At t- th decoding step , context vector ?
+t summarizes the input question and review , and we will show the detail of producing ?
+tat follows .
+The procedure of t-th decoding step is shown in .
+We use the notion [ ; ] as the concatenation of two vectors .
+where W e , be are the trainable parameters , d t is the hidden state of t- th decoding step .
+Similar with the seq2seq with attention mechanism , we use the hidden state of previous step d t ?1 to attend the question hidden states and review hidden states to get the context vector ?
+t of current decoding step .
+The algorithm of attending reviews hidden states is same as attending question hidden states , so we use h * i to represent the hidden state where * can be r or q.
+where W s , W dare all trainable parameters .
+After two attention procedures of question and review finished , we concatenate context vector ?
+rt and ?
+qt with a balanced gate ?
+which is determined by decoder stated t :
+The context vector ? t , which can be seen as a representation of reading from the question and reviews , is concatenated with the decoder stated t and then fed into a linear transformation layer to conduct the generated word distribution P v over the vocabulary .
+At the t - th decoding step , we set the loss as the negative log likelihood of the target wordy t :
+In order to handle the out - of - vocabulary ( OOV ) problem , we equip the pointer network with our decoder , which makes our decoder capable to copy words from question .
+The procedure of pointer network is the same as the model proposed by See et al. , and we omit this procedure in our paper due to the limited space .
+Up to now , we can use loss ?
+to compute gradients for all the parameters in answer generator and use gradient descent method to update these parameters .
+But the correctness constraint given by cross entropy loss loss ?
+is not enough .
+So we need a classifier to judge whether the generated answer is consistent with the facts .
+In this way , we use this classification result to guide the answer generator to produce more consistent answers .
+Consistency discriminator
+To generate sentences which are more consistent with the facts , we add a discriminator to provide additional training signals for the answer generator .
+We propose a convolutional neural network ( CNN ) based classifier as discriminator .
+The goal of this classifier is to distinguish whether a sentence is consistent with the given facts .
+So we can use the confidence of classifying a sentence as a training signal to encourage the answer generator to produce a better answer .
+We use the answer generated by the facts decoder presented in Section 4.4 as the negative sample for classification , and use the representation of ground truth answer as the positive sample .
+As forgiving a positive sample for discriminator , we use an RNN to encode the ground truth answer into a vector representation .
+Since the ground truth is encoded by another RNN which is different from the decoder RNN of do t , we use a linear transformation to transform the high - dimensional space ofd ?
+t to the same space as do tin .
+where W z and b z are all trainable parameters .
+For training the discriminator ability of capturing whether an answer is consistent with the facts , we construct another negative samples to train the discriminator .
+We present an answer decoder ( shown at the bottom of , which employs the same decoding mechanism as the facts decoder but no fact is attached during decoding .
+Specifically , we use the hidden stated o t shown in Equation 18 as the representation of each word in the generated sentence by the facts decoder .
+Similarly , the decoder RNN without feeding facts representation ?
+t generates hidden states d ft .
+We used ft as the representation of generated answer without facts support .
+Then a two - dimensional convolutional layer convolves the hidden states d * t with multiple convolutional kernels of different widths .
+Each kernel corresponds a linguistic feature detector which extracts a specific pattern of multi-grained n-grams .
+A convolutional filter W c maps hidden states in the receptive field to a single feature .
+As we slide the filter across the whole sentence , we obtain a sequence of new features n = [ n 1 , n 2 , . . . , n l ] , shown in Equation :
+where W c , b care all trainable parameters and ?
+denotes the convolution operation .
+For each convolutional filter , the max - pooling layer takes the maximal value among the generated convolutional features n f , no and n ?
+respectively , resulting in a fixed - size vector N f , No and N ? .
+Then we obtain the classification result D ( d * t ) ?
+R through an interaction between N * and the facts , i.e. , attribute representation m and review representation c r .
+So we have :
+where
+W h , b hare all trainable parameters .
+Here we apply the Vanilla generative adversarial network ( GAN ) with a sigmoid function on the D ( d * t ) to produce the classification probability and tries to minimize the Jensen - Shannon divergence between real and generated data distribution .
+However , as vanilla GAN often leads to gradient vanishing as the discriminator saturates , which makes the discriminator can not give the correct training signal .
+Inspired by previous work , we tackle this problem by minimize the earth - mover ( also called Wasserstein - 1 ) distance W ( P r , P ? ) instead of Jensen - Shannon divergence .
+Informally , given a distribution Pr of ground truth answer and a distribution P ? of facts - based answer or answer without facts .
+Then we minimize the cost of transporting mass from Pr to P ? .
+The discriminator D ?
+Dis a 1 - Lipschitz function , where Dis the set of 1 - Lipschitz functions .
+In order to meet the Lipschitz constraint of discriminator D , we use an alternative way to enforce the Lipschitz constraint .
+We add a gradient norm of the output of D with respect to its input , which is simply sampled uniformly along a straight line between points sampled from the ground truth representation d
+where ? ?
+U [ 0 , 1 ] is a random number and ?
+is a coefficient of gradient penalty term .
+Then we can use the optimization methods to update the parameters of discriminator use the loss function loss d .
+Meanwhile , we add the ? D ( d o t ) to the previous defined loss ?
+in to encourage the answer generator produce better result .
+EXPERIMENTAL SETUP 5.1 Research questions
+We list four research questions that guide the remainder of the paper :
+RQ1 : What is the overall performance of PAAG ?
+Does it outperform state - of - the - art baselines ?
+RQ2 : What is the effect of each module in PAAG ?
+Does the discriminator give a useful training signal to the answer generation module ?
+RQ3 : Is PAAG capable to extract useful information from noisy reviews ?
+RQ4 :
+What is the performance of PAAG at different data domain ?
+Dataset
+We collect a large - scale dataset from a real - world e-commerce website , including question - answering pairs , reviews , and product attributes .
+This dataset is available at https://github.com/gsh199449/
+productqa .
+On this website , users can post a question about the product .
+Most questions are asking for an experience of user who has already bought the product .
+In the collected data , each QA pair is associated with the reviews and attributes of the corresponding product .
+We remove all QA pairs without any relevant review and split the whole dataset into training and testing set .
+In total , our dataset contains cover 469,953 products and 38 product categories .
+The average length of question is 9.03 words and ground truth answer is 10.3 words .
+The average number of attribute is 9.0 keyvalue pairs .
+There are 78.74 % of training samples have more than 10 relevant reviews and 75. 33 % of training samples have more than 5 attributes .
+Evaluation metrics
+To evaluate our proposed method , we employ BLEU to measure the quality of generated sentence by computing overlapping lexical units ( e.g. , unigram , bigram ) with the reference sentence .
+We also consider three embedding - based metrics ( including Embedding Average , Embedding Greedy and Embedding Extreme ) to evaluate our model , following several recent studies on text generation .
+These three metrics compute the semantic similarity between the generated and reference answer according to the word embedding .
+Since automatic evaluation metrics may not always consistent with human perception , we use human evaluation in our experiment .
+Three annotators are invited to judge the quality of 100 randomly sampled answer generated by different models .
+These annotators are all well - educated Ph.D. students and they are all native speakers .
+Two of them have the background of NLP / summarization and another annotator does not major in computer science .
+We show human annotators a question , several reviews and attributes of the product along with answers generated from each model .
+Statistical significance of observed differences between the performance of two runs are tested using a two - tailed paired t- test and is denoted using ? ( or ? ) for strong significance for ? = 0.01 .
+Comparisons
+In order to prove the effectiveness of each module in PAAG , we conduct some ablation models shown in .
+To evaluate the performance of our dataset and the proposed framework , we compare our model with the following baselines :
+( 1 ) S2SA : Sequence - to - sequence framework has been proposed for language generation task .
+We use seq2seq framework which is equipped with attention mechanism and copy mechanism as baseline method .
+The input sequence is question and ground truth output sequence is the answer .
+( 2 ) S2SAR : We implement a simple method which can incorporate the review information when generating the answer .
+Different from the S2SA , we use an RNN to read all the reviews and concatenate the final state of this RNN with encoder final state as the initial state of decoder RNN .
+( 3 ) SNet : S- Net is a two - stage state - of - the - art model which extracts some text spans from multiple documents context and synthesis the answer from those spans .
+Due to the difference between our dataset and MS - MARCO , our dataset does not have text span label ground truth for training the evidence extraction module .
+So we use the predicted extraction probability to do weighted sum the original review word embeddings , and use this representation as extracted evidence to feed into the answer generation module .
+( 4 ) QS : We implement the query - based summarization model proposed by Hasselqvist et al ..
+Accordingly , we use product reviews as original passage and answer as a summary .
+( 5 ) BM25 : BM25 is a bag - of - words retrieval function that ranks a set of reviews based on the question terms appearing in each review .
+We use the top review of ranking list as the answer .
+( 6 ) TF - IDF : Term Frequency - Inverse Document
+Frequency is a numerical statistic that is intended to reflect how important a question word is to a review .
+We use this statistic to model the relevance between review and question and select the most similar review as the answer of question .
+Implementation details
+Without using pre-trained embeddings , we randomly initialize the network parameters at the beginning of our experiments .
+All the RNN networks have 512 hidden units and the dimension of word embedding is 256 .
+To produce better answers , we use beam search with beam size
+4 .
+Adagrad with learning rate 0.1 is used to optimize the parameters and batch size is 64 .
+We implement our model using TensorFlow framework and train our model and all baseline models on NVIDIA Tesla P40 GPU .
+EXPERIMENTAL RESULT 6.1 Overall performance
+For research question RQ1 , to demonstrate the effectiveness of PAAG , we examine the overall performance in term of BLEU , embedding metrics and human evaluation .
+and list performances of all comparisons in terms of two automatic evaluation metrics .
+Significant differences are with respect to SNet ( row with shaded background ) .
+In these experimental results , we see that PAAG achieves a 111 % , 8 % and 62.73 % increment over the stateof - the - art baseline SNet in terms of BLEU , embedding greedy and consistency score , respectively .
+In , we see that our PAAG outperforms all the baseline significantly in semantic distance with respect to the ground truth .
+For human evaluation , we ask annotators to rate each generated answer according to two aspects : consistency and fluency .
+The rating score ranges from 1 to 3 , and 3 is the best .
+We finally take the average across answers and annotators , as shown in .
+In , we can see that PAAG outperforms other baseline models in both sentence fluency and consistency with the facts .
+We calculate the variance score in , which shows that annotators agree with each other 's judgments inmost cases .
+Although the BLEU score of S2 SAR is lower than the S2SA , the embedding score and human score for S2 SAR are higher than S2SA .
+Regardless of few word overlapping between generated and ground answer , the human evaluation and results in terms of embedding metrics verify S2 SAR outperforms S2SA .
+This observation demonstrates the effectiveness of incorporating review in answer generation .
+To explore the difficulty of this task , we use a very intuitive method by adding the review information into decoder shown in S2SAR .
+Although there is a small increment of S2 SAR with respect to S2SA in all metrics , we still find a noticeable gap between S2SAR and PAAG .
+This observation demonstrates that PAAG makes better use of review and attribute information than the simple method S2SAR .
+In view of the facts extracted from the review and attributes , we examine directly using the most similar review to question as the answer .
+More specifically , we evaluate the performance of the top of review ranking list which is ranked by text similarity algorithm such as BM25 and TF - IDF .
+From the result of three metrics , the performance of extractive methods is worth than all the generative methods .
+It is worth noting that since the answer generated by extractive methods is written by human , it have very high fluency scores .
+But these answers may not match the question , so the consistency score is very low .
+Consequently , using the most similar review to question as answer is not a better method than generating answers from scratch .
+As our task definition and query based text summarization have some similarities in someway , we can seethe reviews as original passage and answer as a query based summary .
+We also use the query - based text summarization algorithm to generate answer .
+Similarly , we also employ a reading comprehension method SNet to tackle this task .
+Since query - based text summarization and reading comprehension models are not defined to tackle QA task in e-commerce scenario , it can not fully utilize the interactions between question , review , and attributes .
+These methods also lack of ability of denoising the reviews .
+Ablation studies
+Next we turn to research question RQ2 .
+We conduct ablation tests on the usage of adversarial learning method .
+The BLEU score of each ablation model is shown in .
+In the method RAGFD , we use the vanilla GAN architecture which minimize the divergence .
+There is a slight increment from RAGF to RAGFD , which demonstrates the effectiveness of discriminator .
+From , we find that RAGFWD achieves a 4.3 % improvement over RAGFD in terms of BLEU , and PAAG outperforms RAGFWD 4.1 % in terms of BLEU .
+Accordingly , we conclude that the performance of PAAG benefits from using Wasserstein distance based adversarial learning with gradient penalty .
+This approach can help our model to achieve a better performance than the model using the vanilla GAN architecture .
+Denoising ability
+To address RQ3 , in this section we provide an analysis of the denoising ability of our model .
+According to and , we observe RAGF achieves 2.1 % improvement over SASAR , in terms of BLEU .
+Such observation demonstrates that question - aware review generation module gives the denoising ability to the model .
+To further investigate the effectiveness of extracting facts from reviews , we visualize two question - review attention maps , shown in .
+Question of the left figure in is " Will the color fade when cleaning ? " and the right is " Is it convenient to clean " .
+The review of the left figure is " Good shopping experience .
+The pants were washed without discoloration and no color difference compared to the picture .
+It looks good , comfortable and cheap . " and the right is " The color looks good and the texture is great .
+I have n't started it yet , but it 's very easy to clean " .
+In this figure , we can see that there is a very strong interaction between question word ??
+( cleaning ) and phrase in review ??????
+( very easy to clean ) .
+Concretely , these figures show that the question - review attention module can capture the salience semantic part in review according to the question .
+In the most cases , the higher word overlap between question and review , the more useful the review is .
+To prove the ability of review gated fusion module shown in Equation 8 , we use the BM25 algorithm to calculate the similarity between question and each review .
+Then we calculate the cosine distance between the salience score produced by review gated fusion module calculated and BM25 similarity score , shown in .
+In order to demonstrate the denoising ability of adversarial learning method , we compare our full model PAAG with the baseline model RAGF , this experiment proves that the usage of WGAN can encourage our model to capture the salience review better .
+Discussions
+Finally , we address RQ4 . shows an example and its corresponding generated answers by different methods .
+We observe that S2 SA only generates the answer which is fluent , but generated answers are contradictory to the facts .
+Due to there is no fact consistency constraint in RAGF , it will also face this problem when generating answers
+However , PAAG overcomes this shortcoming by using consistency constraint given by discriminator at training , and then produce the answer which is not only fluent but also consistent with the facts .
+We evaluate performances of PAAG on different categories .
+Shown in , we see that our proposed model beats the other two baselines ( S2 SA and S2SAR ) , on majority of product categories in terms of BLEU score .
+To prove the significance of the above results , we also do the paired student t- test between our model and baseline methods , the p-value of S2SA is 0.0086 and S2 SAR is 0.0100 .
+From the t- test , we can see that the performance of our model is significantly higher than other baselines .
+To investigate the robustness of parameter , we train our model in different parameter size and evaluate them by embedding metric shown in .
+As the training progresses , the performance of each model is rising .
+However , the model with a large number of parameters does not have a great advantage in the final performance of the model with a smaller parameters .
+CONCLUSION
+In this paper , we have proposed the task of product - aware answer generation , which aims to generate an answer fora product - aware question from product reviews and attributes .
+To address this task , we have proposed product - aware answer generator ( PAAG ) :
+An attention - based question aware review reader is used to extract semantic units from reviews , and key - value memory network based attribute encoder is employed to fuse relevant attributes .
+In order to encourage the model to produce answers that match facts , we have employed an adversarial learning mechanism to give additional training signals for the answer generation .
+To tackle the shortcomings of vanilla GAN , we have applied the Wasserstein distance as value function in the training of consistency discriminator .
+In our experiments , we have demonstrated the effectiveness of PAAG and have found significant improvements over state - of - the - art baselines in terms of metric - based evaluations and human evaluations .
+Moreover , we have verified the effectiveness of each module in PAAG for improving product - aware answer generation .
+Future work involves extending our model to multiple hop of memory network used as attribute encoder .

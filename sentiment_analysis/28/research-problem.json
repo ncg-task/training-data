@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Targeted Sentiment Classification", {"from sentence" : "Attentional Encoder Network for Targeted Sentiment Classification"}],
+    ["fine - grained sentiment analysis", {"from sentence" : "Targeted sentiment classification is a fine - grained sentiment analysis task , which aims at determining the sentiment polarities ( e.g. , negative , neutral , or positive ) of a sentence over \" opinion targets \" that explicitly appear in the sentence ."}],
+    ["fine - grained targeted sentiment classification", {"from sentence" : "However , these neural network models are still in infancy to deal with the fine - grained targeted sentiment classification task ."}]
+  ]
+}

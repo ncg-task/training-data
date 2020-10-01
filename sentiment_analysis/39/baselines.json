@@ -1,0 +1,51 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "Logistic Regression" : {
+          "based on" : {
+            "linguistic features" : {
+              "such as" : ["n-grams", "POS information", "more hand - engineered features"],
+              "from sentence" : "Many existing works in the aspect - based sentiment analysis task , 3 use a classifier , such as logistic regression or SVM , based on linguistic features such as n-grams , POS information or more hand - engineered features ."
+            }
+          },
+          "define" : {
+            "sparse representations of locations" : {
+              "name" : ["Mask target entity n-grams", "Left - right n- grams", "Left right pooling"]
+            },
+            "from sentence" : "More concretely , we define the following sparse representations of locations :
+Mask target entity n-grams :
+Left - right n- grams : we create an n-gram representation for both the right and the left context around each location mention .
+Left right pooling :"
+
+          }
+        },
+        "Long Short - Term Memory ( LSTM )" : {
+          "use" : {
+            "bidirectional LSTM" : {
+              "to learn" : {
+                "classifier" : {
+                  "for" : "each of the aspects"
+                }
+              },
+              "from sentence" : "Inspired by the recent success of applying deep neural networks on language tasks , we use a bidirectional LSTM to learn a classifier for each of the aspects ."
+            }
+          },
+          "has" : {
+            "Representations" : {
+              "for" : {
+                "location ( e l )" : {
+                  "using" : ["Final output state ( LSTM - Final )", "Location output state ( LSTM - Location )"]
+                }
+              },
+              "from sentence" : "Representations for a location ( e l ) are obtained using one of the following two approaches :
+Final output state ( LSTM - Final ) : e l is the output embedding of the bidirectional LSTM .
+Location output state ( LSTM - Location ) :"
+
+            }            
+          }
+        }
+      }      
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "has" : {
+    "Results" : {
+      "on" : {
+        "hidden test set" : {
+          "of" : {
+            "SQuAD" : {
+              "has" : {
+                "R.M - Reader" : {
+                  "achieves" : {
+                    "EM score" : {
+                      "of" : "79.5 %"
+                    },
+                    "F1 score" : {
+                      "of" : "86.6 %"
+                    },
+                    "from sentence" : "We submitted our model on the hidden test set of SQuAD for evaluation .
+As shown in , R.M - Reader achieves an EM score of 79.5 % and F1 score of 86.6 % ."
+
+                  },
+                  "has" : {
+                    "comfortably outperforms" : {
+                      "has" : {
+                        "previous models" : {
+                          "by" : {
+                            "more than 6 %" : {
+                              "in" : "EM and F 1 scores"
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "As we can see , R.M - Reader comfortably outperforms all previous models by more than 6 % in both EM and F 1 scores , indicating that our model is more robust against adversarial attacks ."
+                    }
+                  }
+                },
+                "Our ensemble model" : {
+                  "improves" : {
+                    "metrics" : {
+                      "to" : "82.3 % and 88.5 %"
+                    },
+                    "from sentence" : "Our ensemble model improves the metrics to 82.3 % and 88.5 % respectively 2 . shows the performance comparison on two adversarial datasets , Add Sent and Add OneSent ."
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

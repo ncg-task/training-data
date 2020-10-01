@@ -1,0 +1,124 @@
+title
+Modelling Interaction of Sentence Pair with Coupled-LSTMs
+abstract
+Recently, there is rising interest in modelling the interactions of two sentences with deep neural networks. However, most of the existing methods encode two sequences with separate encoders, in which a sentence is encoded with little or no information from the other sentence. In this paper, we propose a deep architecture to model the strong interaction of sentence pair with two coupled-LSTMs. Specifically, we introduce two coupled ways to model the interdependences of two LSTMs, coupling the local contextualized interactions of two sentences. We then aggregate these interactions and use a dynamic pooling to select the most informative features. Experiments on two very large datasets demonstrate the efficacy of our proposed architecture and its superiority to state-ofthe-art methods.
+Introduction
+Distributed representations of words or sentences have been widely used in many natural language processing (NLP) tasks, such as text classification, question answering and machine translation and soon. Among these tasks, a common problem is modelling the relevance/similarity of the sentence pair, which is also called text semantic matching.
+Recently, deep learning based models is rising a substantial interest in text semantic matching and have achieved some great progresses.
+According to the phases of interaction between two sentences, previous models can be classified into three categories.
+Weak interaction Models Some early works focus on sentence level interactions, such as ARC-I, and soon. These models first encode two sequences with some basic (Neural Bagof-words, BOW) or advanced (RNN, CNN) components of neural networks separately, and then compute the matching * Corresponding author. score based on the distributed vectors of two sentences. In this paradigm, two sentences have no interaction until arriving final phase.
+Semi-interaction Models Some improved methods focus on utilizing multi-granularity representation (word, phrase and sentence level), such as MultiGranCNN and Multi-Perspective. Another kind of models use soft attention mechanism to obtain the representation of one sentence by depending on representation of another sentence, such as ABCNN, Attention LSTM. These models can alleviate the weak interaction problem, but are still insufficient to model the contextualized interaction on the word as well as phrase level.
+Strong Interaction Models These models directly build an interaction space between two sentences and model the interaction at different positions. ARC-II and MV-LSTM. These models enable the model to easily capture the difference between semantic capacity of two sentences.
+In this paper, we propose anew deep neural network architecture to model the strong interactions of two sentences. Different with modelling two sentences with separated LSTMs, we utilize two interdependent LSTMs, called coupled-LSTMs, to fully affect each other at different time steps. The output of coupled-LSTMs at each step depends on both sentences. Specifically, we propose two interdependent ways for the coupled-LSTMs: loosely coupled model (LC-LSTMs) and tightly coupled model (TC-LSTMs). Similar to bidirectional LSTM for single sentence, there are four directions can be used in coupled-LSTMs. To utilize all the information of four directions of coupled-LSTMs, we aggregate them and adopt a dynamic pooling strategy to automatically select the most informative interaction signals. Finally, we feed them into a fully connected layer, followed by an output layer to compute the matching score.
+The contributions of this paper can be summarized as follows.
+1. Different with the architectures of using similarity matrix, our proposed architecture directly model the strong interactions of two sentences with coupled-LSTMs, which can capture the useful local semantic relevances of two sentences. Our architecture can also capture the multiple granular interactions by several stacked coupled-LSTMs layers.
+2. Compared to the previous works on text matching, we perform extensive empirical studies on two very large datasets. The massive scale of the datasets allows us to train a very deep neural networks. Experiment results demonstrate that our proposed architecture is more effective than state-of-the-art methods.
+
+Sentence Modelling with LSTM
+Long short-term memory network (LSTM)] is a type of recurrent neural network (RNN), and specifically addresses the issue of learning long-term dependencies. LSTM maintains a memory cell that updates and exposes its content only when deemed necessary. While there are numerous LSTM variants, here we use the LSTM architecture used by, which is similar to the architecture of but without peep-hole connections.
+We define the LSTM units at each time step t to be a collection of vectors in Rd : an input gate it , a forget gate ft , an output gate o t , a memory cell ct and a hidden state ht . dis the number of the LSTM units. The elements of the gating vectors it , ft and o tare in [0, 1].
+The LSTM is precisely specified as follows.
+where x t is the input at the current time step; T A,b is an affine transformation which depends on parameters of the network A and b. ? denotes the logistic sigmoid function and denotes elementwise multiplication. Intuitively, the forget gate controls the amount of which each unit of the memory cell is erased, the input gate controls how much each unit is updated, and the output gate controls the exposure of the internal memory state. The update of each LSTM unit can be written precisely as follows
+Here, the function LSTM(·, ·, ·) is a shorthand for Eq. (1-3).
+
+Coupled-LSTMs for Strong Sentence Interaction
+To deal with two sentences, one straightforward method is to model them with two separate LSTMs. However, this method is difficult to model local interactions of two sentences. An improved way is to introduce attention mechanism, which has  Inspired by the multi-dimensional recurrent neural network and grid LSTM in computer vision community, we propose two models to capture the interdependences between two parallel LSTMs, called coupled-LSTMs (C-LSTMs).
+To facilitate our models, we firstly give some definitions. Given two sequences X = x 1 , x 2 , · · · , x n and Y = y 1 , y 2 , · · · , y m , we let xi ? Rd denote the embedded representation of the word xi . The standard LSTM have one temporal dimension. When dealing with a sentence, LSTM regards the position as time step. At position i of sentence x 1:n , the output hi reflects the meaning of subsequence
+To model the interaction of two sentences as early as possible, we define h i,j to represent the interaction of the subsequences x 0:i and y 0:j .(c) and 1(d) illustrate our two propose models. For intuitive comparison of weak interaction parallel LSTMs, we also give parallel LSTMs and attention LSTMs in(a) and 1(b).
+We describe our two proposed models as follows.
+
+Loosely Coupled-LSTMs (LC-LSTMs)
+To model the local contextual interactions of two sentences, we enable two LSTMs to be interdependent at different positions.
+
+Tightly Coupled-LSTMs (TC-LSTMs)
+The hidden states of LC-LSTMs are the combination of the hidden states of two interdependent LSTMs, whose memory cells are separated. Inspired by the configuration of the multidimensional LSTM, we further conflate both the hidden states and the memory cells of two LSTMs. We assume that h i,j directly model the interaction of the subsequences x 0:i and y 0:j , which depends on two previous interaction h i?1,j and h i,j?1 , where i, j are the positions in sentence X and Y . We define a tightly coupled-LSTMs units as follows.
+where the gating units i i,j and o i,j determine which memory units are affected by the inputs throughc i,j , and which memory cells are written to the hidden units h i,j . T A,b is an affine transformation which depends on parameters of the network A and b. In contrast to the standard LSTM defined overtime, each memory unit c i,j of a tightly coupled-LSTMs has two preceding states c i,j?1 and c i?1,j and two corresponding forget gates f 1 i,j and f 2 i,j .
+
+Analysis of Two Proposed Models
+Our two proposed coupled-LSTMs can be formulated as
+where C-LSTMs can be either TC-LSTMs or LC-LSTMs.
+The input consisted of two type of information at step (i, j) in coupled-LSTMs: temporal dimension hi?1,j, hi,j?1, ci?1,j, ci,j?1 and depth dimension xi, yj. The difference between TC-LSTMs and LC-LSTMs is the dependence of information from temporal and depth dimension.
+
+Interaction Between Temporal Dimensions
+The TC-LSTMs model the interactions at position (i, j) by merging the internal memory ci?1,j ci,j?1 and hidden state hi?1,j hi,j?1 along row and column dimensions. In contrast with TC-LSTMs, LC-LSTMs firstly use two standard LSTMs in parallel, producing hidden states h 1 i,j and h 2 i,j along row and column dimensions respectively, which are then merged together flowing next step.
+Interaction Between Depth Dimension In TC-LSTMs, each hidden state hi,j at higher layer receives a fusion of information xi and yj, flowed from lower layer. However, in LC-LSTMs, the information xi and yj are accepted by two corresponding LSTMs at the higher layer separately.
+The two architectures have their own characteristics, TC-LSTMs give more strong interactions among different dimensions while LC-LSTMs ensures the two sequences interact closely without being conflated using two separated LSTMs.
+
+Comparison of LC-LSTMs and word-by-word Attention LSTMs
+The main idea of attention LSTMs is that the representation of sentence X is obtained dynamically based on the alignment degree between the words in sentence X and Y, which is asymmetric unidirectional encoding. Nevertheless, in LC-LSTM, each hidden state of each step is obtained with the consideration of interaction between two sequences with symmetrical encoding fashion.
+4 End-to-End Architecture for Sentence Matching
+In this section, we present an end-to-end deep architecture for matching two sentences, as shown in.
+
+Embedding Layer
+To model the sentences with neural model, we firstly need transform the one-hot representation of word into the distributed representation. All words of two sequences X = x1, x2, · · · , xn and Y = y1, y2, · · · , ym will be mapped into low dimensional vector representations, which are taken as input of the network.
+
+Stacked Coupled-LSTMs Layers
+After the embedding layer, we use our proposed coupled-LSTMs to capture the strong interactions between two sentences. A basic block consists of five layers. We firstly use four directional coupled-LSTMs to model the local interactions with different information flows. And then we sum the outputs of these LSTMs by aggregation layer. To increase the learning capabilities of the coupled-LSTMs, we stack the basic block on top of each other.
+
+Four Directional Coupled-LSTMs Layers
+The C-LSTMs is defined along a certain pre-defined direction, we can extend them to access to the surrounding context in all directions. Similar to bi-directional LSTM, there are four directions in coupled-LSTMs.
+(h 1 i,j , c 1 i,j ) = C-LSTMs(hi?1,j, hi,j?1, ci?1,j, ci,j?1, xi, yj), (h 2 i,j , c 2 i,j ) = C-LSTMs(hi?1,j, hi,j+1, ci?1,j, ci,j+1, xi, yj), (h 3 i,j , c 3 i,j ) = C-LSTMs(hi+1,j, hi,j+1, ci+1,j, ci,j+1, xi, yj), (h 4 i,j , c 4 i,j ) = C-LSTMs(hi+1,j, hi,j?1, ci+1,j, ci,j?1, xi, yj).
+
+Aggregation Layer
+The aggregation layer sums the outputs of four directional coupled-LSTMs into a vector.?
+where the superscript t of hi,j denotes the different directions.
+x1, · · · , xn y1, · · · , ym · · · Pooling Fully Connected Layer
+
+Output Layer
+The output layer depends on the types of the tasks, we choose the corresponding form of output layer. There are two popular types of text matching tasks in NLP. One is ranking task, such as community question answering. Another is classification task, such as textual entailment. 1. For ranking task, the output is a scalar matching score, which is obtained by a linear transformation after the last fullyconnected layer.
+2. For classification task, the outputs are the probabilities of the different classes, which is computed by a softmax function after the last fully-connected layer.
+
+Stacking C-LSTMs Blocks
+To increase the capabilities of network of learning multiple granularities of interactions, we stack several blocks (four C-LSTMs layers and one aggregation layer) to form deep architectures.
+
+Pooling Layer
+The output of stacked coupled-LSTMs layers is a tensor H ? R n×m×d , where n and mare the lengths of sentences, and dis the number of hidden neurons. We apply dynamic pooling to automatically extract R p×q subsampling matrix in each slice Hi ? R n×m , similar to. More formally, for each slice matrix Hi, we partition the rows and columns of Hi into p × q roughly equal grids. These grid are non-overlapping. Then we select the maximum value within each grid. Since each slice Hi consists of the hidden states of one neuron at different positions, the pooling operation can be regarded as the most informative interactions captured by the neuron.
+Thus, we get a p × q × d tensor, which is further reshaped into a vector.
+
+Fully-Connected Layer
+The vector obtained by pooling layer is fed into a full connection layer to obtain a final more abstractive representation.
+
+Training
+Our proposed architecture can deal with different sentence matching tasks. The loss functions varies with different tasks.
+Max-Margin Loss for Ranking Task Given a positive sentence pair (X, Y ) and its corresponding negative pair (X,? ). The matching score s(X, Y ) should be larger than s(X,? ).
+For this task, we use the contrastive max-margin criterion   The ranking-based loss is defined as
+where s(X, Y ) is predicted matching score for (X, Y ).
+
+Cross-entropy Loss for Classification Task
+where l is one-hot representation of the ground-truth label l;l is predicted probabilities of labels; C is the class number.
+To minimize the objective, we use stochastic gradient descent with the diagonal variant of AdaGrad. To prevent exploding gradients, we perform gradient clipping by scaling the gradient when the norm exceeds a threshold.
+
+Experiment
+In this section, we investigate the empirical performances of our proposed model on two different text matching tasks: classification task (recognizing textual entailment) and ranking task (matching of question and answer).
+
+Hyperparameters and Training
+The word embeddings for all of the models are initialized with the 100d GloVe vectors (840B token version,) and fine-tuned during training to improve the performance. The other parameters are initialized by randomly sampling from uniform distribution in [?0.1, 0.1].
+For each task, we take the hyperparameters which achieve the best performance on the development set via an small grid search over combinations of the initial learning rate [0.05, 0.0005, 0.0001], l2 regularization [0.0, 5E?5, 1E?5, 1E?6] and the threshold value
+
+Competitor Methods
+• Neural bag-of-words (NBOW): Each sequence as the sum of the embeddings of the words it contains, then they are concatenated and fed to a MLP.
+• Single LSTM: A single LSTM to encode the two sequences, which is used in.
+• Parallel LSTMs: Two sequences are encoded by two LSTMs separately, then they are concatenated and fed to a MLP.
+• Attention LSTMs: An attentive LSTM to encode two sentences into a semantic space, which used in.
+
+Experiment-I: Recognizing Textual Entailment
+Recognizing textual entailment (RTE) is a task to determine the semantic relationship between two sentences. We use the Stanford Natural Language Inference Corpus (SNLI). This corpus contains 570K sentence pairs, and all of the sentences and labels stem from human annotators. SNLI is two orders of magnitude larger than all other existing RTE corpora. Therefore, the massive scale of SNLI allows us to train powerful neural networks such as our proposed architecture in this paper. shows the evaluation results on SNLI. The 3rd column of the table gives the number of parameters of different models without the word embeddings.
+
+Results
+Our proposed two C-LSTMs models with four stacked blocks outperform all the competitor models, which indicates that our thinner and deeper network does work effectively.
+Besides, we can see both LC-LSTMs and TC-LSTMs benefit from multi-directional layer, while the latter obtains more gains than the former. We attribute this discrepancy between two models to their different mechanisms of controlling the information flow from depth dimension.
+Compared with attention LSTMs, our two models achieve comparable results to them using much fewer parameters (nearly 1/5). By stacking C-LSTMs, the performance of them are improved significantly, and the four stacked TC-LSTMs achieve 85.1% accuracy on this dataset. Moreover, we can see TC-LSTMs achieve better performance than LC-LSTMs on this task, which need fine-grained reasoning over pairs of words as well as phrases.
+
+Understanding Behaviors of Neurons in C-LSTMs
+To get an intuitive understanding of how the C-LSTMs work on this problem, we examined the neuron activations in the last aggregation layer while evaluating the test set using TC-LSTMs. We find that some cells are bound to certain roles.
+Let h i,j,k denotes the activation of the k-th neuron at the position of (i, j), where i ? {1, . . . , n} and j ? {1, . . . , m}. By visualizing the hidden state h i,j,k and analyzing the maximum activation, we can find that there exist multiple interpretable neurons. For example, when some contextualized local perspectives are semantically related at point (i, j) of the sentence pair, the activation value of hidden neuron h i,j,k tend to be maximum, meaning that the model could capture some reasoning patterns. illustrates this phenomenon. In, a neuron shows its ability to monitor the local contextual interactions about color. The activation in the patch, including the word pair "(red, green)", is much higher than others. This is informative pattern for the relation prediction of these two sentences, whose ground truth is contradiction. An interesting thing is there are two words describing color in the sentence " A person in a red shirt and black pants hunched over.". Our model ignores the useless word "black", which indicates that this neuron selectively captures pattern by contextual understanding, not just word level interaction.
+In, another neuron shows that it can capture the local contextual interactions, such as "(walking down the street, outside)". These patterns can be easily captured by pooling layer and provide a strong support for the final prediction. illustrates multiple interpretable neurons and some representative word or phrase pairs which can activate these neurons. These cases show that our models can capture contextual interactions beyond word level.
+
+Error Analysis
+Although our models C-LSTMs are more sensitive to the discrepancy of the semantic capacity between two sentences, some Index of Cell Word or Phrase Pairs 3-th (in a pool, swimming), (near a fountain, next to the ocean), (street, outside) 9-th (doing a skateboard, skateboarding), (sidewalk with, inside), (standing, seated) 17-th (blue jacket, blue jacket), (wearing black, wearing white), (green uniform, red uniform) 25-th (a man, two other men), (a man, two girls), (an old woman, two people)  semantic mistakes at the phrasal level still exist. For example, our models failed to capture the key informative pattern when predicting the entailment sentence pair "A girl takes off her shoes and eats blue cotton candy/The girl is eating while barefoot." Besides, despite the large size of the training corpus, it's still very different to solve some cases, which depend on the combination of the world knowledge and context-sensitive inferences. For example, given an entailment pair "a man grabs his crotch during apolitical demonstration/The man is making a crude gesture", all models predict "neutral". This analysis suggests that some architectural improvements or external world knowledge are necessary to eliminate all errors instead of simply scaling up the basic model.
+
+Experiment-II: Matching Question and Answer
+Matching question answering (MQA) is atypical task for semantic matching. Given a question, we need select a correct answer from some candidate answers.
+In this paper, we use the dataset collected from Yahoo! Answers with the getByCategory function provided in Yahoo! Answers API, which produces 963, 072 questions and corresponding best answers. We then select the pairs in which the length of questions and answers are both in the interval, thus obtaining 220, 000 question answer pairs to form the positive pairs.
+For negative pairs, we first use each question's best answer as a query to retrieval top 1, 000 results from the whole answer set with Lucene, where 4 or 9 answers will be selected randomly to construct the negative pairs.
+The whole dataset is divided into training, validation and testing data with proportion 20 : 1 : 1. Moreover, we give two test settings: selecting the best answer from 5 and 10 candidates respectively.

@@ -1,0 +1,97 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "notice" : {
+        "reattention" : {
+          "has" : {
+            "more influences" : {
+              "on" : "EM score"
+            }
+          }
+        },
+        "DCRL" : {
+          "contributes more to" : "F1 metric"
+        },
+        "removing both" : {
+          "results in" : {
+            "huge drops" : {
+              "on" : "both metrics"
+            },
+            "from sentence" : "We notice that reattention has more influences on EM score while DCRL contributes more to F1 metric , and removing both of them results in huge drops on both metrics ."
+          }
+        }
+      },
+      "Replacing" : {
+        "DCRL" : {
+          "with" : "SCST",
+          "causes" : {
+            "marginal decline" : {
+              "of" : {
+                "performance" : {
+                  "on" : "both metrics"
+                }
+              }
+            }
+          },
+          "from sentence" : "Replacing DCRL with SCST also causes a marginal decline of performance on both metrics ."
+        }
+      },
+      "replace" : {
+        "default attention function" : {
+          "with" : "dot product : f ( u , v ) = u v ( 5 )",
+          "has" : {
+            "both metrics" : {
+              "suffer from" : "degradations"
+            }
+          },
+          "from sentence" : "Next , we relace the default attention function with the dot product : f ( u , v ) = u v ( 5 ) , and both metrics suffer from degradations ."
+        }
+      },
+      "Removing" : {
+        "any of the two heuristics" : {
+          "leads to" : "some performance declines",
+          "has" : {
+            "heuristic subtraction" : {
+              "is" : {
+                "more effective" : {
+                  "than" : "multiplication"
+                }
+              }
+            }
+          },
+          "from sentence" : "Removing any of the two heuristics leads to some performance declines , and heuristic subtraction is more effective than multiplication ."
+        }
+      },
+      "has" : {
+        "highway - like function" : {
+          "has" : {
+            "outperformed" : {
+              "has" : "simpler variants"
+            }
+          },
+          "from sentence" : "In both cases the highway - like function has outperformed its simpler variants ."
+        },
+        "very deep alignment" : {
+          "with" : {
+            "5 blocks" : {
+              "results in" : "significant performance decline"
+            }
+          },
+          "from sentence" : "Interestingly , a very deep alignment with 5 blocks results in a significant performance decline ."
+        }
+      },
+      "using" : {
+        "2 blocks" : {
+          "causes" : "slight performance drop",
+          "from sentence" : "We notice that using 2 blocks causes a slight performance drop , while increasing to 4 blocks barely affects the SoTA result ."
+        }
+      },
+      "increasing to" : {
+        "4 blocks" : {
+          "barely affects" : "SoTA result"
+        },
+        "from sentence" : "We notice that using 2 blocks causes a slight performance drop , while increasing to 4 blocks barely affects the SoTA result ."
+      }
+    }
+  }  
+}

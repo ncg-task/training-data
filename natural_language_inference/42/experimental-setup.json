@@ -1,0 +1,114 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "trained" : {
+        "FABIR model" : {
+          "during" : "54 epochs",
+          "with" : {
+            "batch size" : {
+              "of" : "75"
+            }
+          },
+          "in" : {
+            "GPU NVidia Titan X" : {
+              "with" : {
+                "12 GB" : {
+                  "of" : "RAM"
+                }
+              }
+            }
+          },
+          "from sentence" : "We have trained our FABIR model during 54 epochs with a batch size of 75 in a GPU NVidia Titan X with 12 GB of RAM ."
+        }
+      },
+      "developed" : {
+        "our model" : {
+          "in" : "Tensorflow",
+          "from sentence" : "We developed our model in Tensorflow and made it available at https://worksheets.codalab.org/worksheets/ 0xee647ea284674396831ecb5aae9ca297 / for replicability ."
+        }
+      },
+      "pre-processed" : {
+        "texts" : {
+          "with" : "NLTK Tokenizer",
+          "from sentence" : "We pre-processed the texts with the NLTK Tokenizer ."
+        }
+      },
+      "For" : {
+        "regularization" : {
+          "applied" : {
+            "residual and attention dropout" : {
+              "of" : {
+                "0.9" : {
+                  "in" : "processing layers"
+                },
+                "0.8" : {
+                  "in" : "reduction layer"
+                }
+              }
+            }
+          },
+          "from sentence" : "For regularization , we applied residual and attention dropout of 0.9 in processing layers and of 0.8 in the reduction layer ."
+        }
+      },
+      "In" : {
+        "character - level embedding process" : {
+          "has" : {
+            "dropout" : {
+              "of" : {
+                "0.75" : {
+                  "added before" : "convolution"
+                }
+              }
+            }
+          },
+          "from sentence" : "In the character - level embedding process , a dropout of 0.75 was added before the convolution ."
+        }
+      },
+      "has" : {
+        "dropout" : {
+          "of" : {
+            "0.8" : {
+              "added before" : {
+                "each convolutional layer" : {
+                  "in" : "answer selector"
+                }
+              }
+            }
+          },
+          "from sentence" : "Additionally , a dropout of 0.8 was added before each convolutional layer in the answer selector ."
+        }
+      },
+      "set" : {
+        "processing layers dimension" : {
+          "has" : {
+            "d model" : {
+              "to" : "100"
+            }
+          }
+        },
+        "number of heads" : {
+          "has" : {
+            "n heads" : {
+              "in" : {
+                "each attention sublayer" : {
+                  "to" : "4"
+                }
+              }
+            }
+          }
+        },
+        "feed - forward hidden size" : {
+          "to" : {
+            "200" : {
+              "in" : "processing layers"
+            },
+            "400" : {
+              "in" : "reduction layer"
+            }
+          }
+        },
+        "from sentence" : "We set processing layers dimension d model to 100 , the number of heads n heads in each attention sublayer to 4 , the feed - forward hidden size to 200 in processing layers and 400 in the reduction layer ."
+      }
+    }    
+  }
+}

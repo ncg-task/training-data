@@ -1,0 +1,31 @@
+{
+  "has" : {
+    "Dataset" : {
+      "call" : ["NarrativeQA", {"from sentence" : "We present a new task and dataset , which we call NarrativeQA , which will test and reward artificial agents approaching this level of competence ( Section 3 ) ."}],
+      "consists of" : {
+        "stories" : {
+          "which are" : {
+            "books and movie scripts" : {
+              "with" : {
+                "human written questions and answers" : {
+                  "based solely on" : "human - generated abstractive summaries"
+                }
+              }
+            }
+          },
+          "from sentence" : "The dataset consists of stories , which are books and movie scripts , with human written questions and answers based solely on human - generated abstractive summaries ."
+        }
+      },
+      "has" : {
+        "questions" : {
+          "maybe" : {
+            "answered" : {
+              "using" : ["summaries", "full story text"]
+            }
+          },
+          "from sentence" : "For the RC tasks , questions maybe answered using just the summaries or the full story text ."
+        }
+      }
+    }
+  }
+}

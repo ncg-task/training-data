@@ -1,0 +1,64 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "has" : {
+        "embedding size" : {
+          "is" : "128",
+          "for" : ["word", "part - of - speech tag", "dependency relation"],
+          "from sentence" : "The embedding size for word , part - of - speech tag , and the dependency relation is 128 ."
+        },
+        "mini - batch size" : {
+          "chosen from" : "[ 5 , 50 , 100 ]",
+          "from sentence" : "The mini - batch size was chosen from [ 5 , 50 , 100 ] ."
+        },
+        "Vocabulary size" : {
+          "was" : "50,000",
+          "from sentence" : "Vocabulary size was 50,000 ."
+        },
+        "learning rate" : {
+          "for" : {
+            "neural language model" : {
+              "is" : "2.5 e - 4"
+            }
+          },
+          "has" : {
+            "1e - 05" : {
+              "for" : "policy network"
+            }
+          },          
+          "from sentence" : "The learning rate for neural language model is 2.5 e - 4 , and 1e - 05 for the policy network ."
+        }
+      },
+      "employed" : {
+        "vanilla RNN" : {
+          "with" : {
+            "hidden state" : {
+              "of" : "512",
+              "for" : ["policy network", "neural language model"]
+            }
+          },
+          "from sentence" : "We employed the vanilla RNN with a hidden size of 512 for both the policy network and neural language model ."
+        }
+      },
+      "For" : {
+        "policy learning" : {
+          "used" : {
+            "REINFORCE algorithm" : {
+              "to update" : {
+                "parameters" : {
+                  "of" : "policy network"
+                }
+              }
+            }
+          },
+          "find" : {
+            "policy" : {
+              "maximizes" : "reward"
+            }
+          },
+          "from sentence" : "For policy learning , we used the REINFORCE algorithm to update the parameters of the policy network and find an policy that maximizes the reward ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+25	21	30	proposing
+25	34	58	attentive neural network
+25	67	77	capable of
+25	78	87	reasoning
+25	88	92	over
+25	93	104	entailments
+25	75	77	of
+25	108	113	pairs
+25	75	77	of
+25	117	134	words and phrases
+25	135	148	by processing
+25	153	163	hypothesis
+25	164	178	conditioned on
+25	183	190	premise
+26	43	50	present
+26	53	65	neural model
+26	66	74	based on
+26	75	80	LSTMs
+26	86	91	reads
+26	92	105	two sentences
+26	106	108	in
+26	109	115	one go
+26	234	240	extend
+26	259	302	neural word - by - word attention mechanism
+26	303	315	to encourage
+26	316	325	reasoning
+26	326	330	over
+26	331	342	entailments
+26	343	345	of
+26	346	351	pairs
+26	343	345	of
+26	355	372	words and phrases
+16	0	38	Recognizing textual entailment ( RTE )
+17	253	256	RTE
+99	14	24	processing
+99	29	39	hypothesis
+99	40	54	conditioned on
+99	59	66	premise
+99	115	120	gives
+99	124	135	improvement
+99	75	77	of
+99	139	160	3.3 percentage points
+99	21	23	in
+99	164	172	accuracy
+99	173	177	over
+99	178	199	Bowman et al. 's LSTM
+105	0	8	Our LSTM
+105	9	20	outperforms
+105	23	52	simple lexicalized classifier
+105	53	55	by
+105	56	77	2.7 percentage points
+108	3	16	incorporating
+108	20	39	attention mechanism
+108	43	48	found
+108	51	71	0.9 percentage point
+108	72	83	improvement
+108	84	88	over
+108	91	102	single LSTM
+108	137	157	1.4 percentage point
+108	158	166	increase
+108	84	88	over
+108	174	189	benchmark model
+108	195	199	uses
+108	200	209	two LSTMs
+108	210	213	for
+108	214	234	conditional encoding
+114	0	8	Enabling
+114	13	18	model
+114	22	28	attend
+114	34	48	output vectors
+114	49	51	of
+114	56	63	premise
+114	64	67	for
+114	68	78	every word
+114	5	7	in
+114	86	96	hypothesis
+114	97	103	yields
+114	104	132	another 1.2 percentage point
+114	133	144	improvement
+114	145	156	compared to
+114	157	166	attending
+114	167	180	based only on
+114	185	203	last output vector
+114	49	51	of
+114	56	63	premise
+117	0	8	Allowing
+117	13	18	model
+117	27	33	attend
+117	43	53	hypothesis
+117	54	62	based on
+117	67	74	premise
+117	80	83	not
+117	92	99	improve
+117	100	111	performance
+117	103	106	for
+117	116	119	RTE

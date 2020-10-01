@@ -1,0 +1,93 @@
+126	16	24	removing
+126	25	39	any components
+126	40	44	from
+126	49	59	MPCM model
+126	60	69	decreases
+126	74	85	performance
+126	86	99	significantly
+127	0	5	Among
+127	6	20	all the layers
+127	27	44	Aggregation Layer
+127	45	47	is
+127	52	70	most crucial layer
+128	6	33	all the matching strategies
+128	36	57	Maxpooling - Matching
+128	66	80	biggest effect
+102	3	10	process
+102	15	21	corpus
+102	22	26	with
+102	31	40	tokenizer
+102	41	45	from
+102	46	61	Stanford CorNLP
+104	3	13	initialize
+104	18	33	word embeddings
+104	3	5	in
+104	41	66	word representation layer
+104	72	75	use
+104	80	116	300 - dimensional GloVe word vectors
+104	117	133	pre-trained from
+104	138	162	840B Common Crawl corpus
+105	0	3	For
+105	8	43	out - of - vocabulary ( OOV ) words
+105	49	59	initialize
+105	64	79	word embeddings
+105	80	88	randomly
+106	3	6	set
+106	11	22	hidden size
+106	23	25	as
+106	26	29	100
+106	30	33	for
+106	34	53	all the LSTM layers
+106	68	92	number of perspectives l
+106	75	77	of
+106	96	134	our multiperspective matching function
+106	23	25	as
+106	157	159	50
+107	50	63	dropout ratio
+107	64	66	as
+107	67	70	0.2
+109	11	24	learning rate
+109	25	27	as
+109	28	34	0.0001
+107	3	8	apply
+107	9	16	dropout
+107	17	19	to
+107	20	32	every layers
+108	24	32	minimize
+108	37	50	cross entropy
+108	51	53	of
+108	58	85	be - ginning and end points
+108	92	95	use
+108	100	114	ADAM optimizer
+108	115	124	to update
+108	125	135	parameters
+27	49	56	propose
+27	60	100	end - to - end deep neural network model
+27	101	104	for
+27	105	126	machine comprehension
+29	30	36	design
+29	39	90	Multi - Perspective Context Matching ( MPCM ) model
+29	91	102	to identify
+29	107	118	answer span
+29	119	130	by matching
+29	135	142	context
+29	143	145	of
+29	146	156	each point
+29	72	74	in
+29	164	171	passage
+29	172	176	with
+29	181	189	question
+29	190	194	from
+29	195	216	multiple perspectives
+30	86	96	identifies
+30	101	112	answer span
+30	113	126	by predicting
+30	131	158	beginning and ending points
+30	159	171	individually
+30	172	176	with
+30	177	222	globally normalized probability distributions
+30	223	229	across
+30	234	247	whole passage
+2	41	62	Machine Comprehension
+4	9	37	machine comprehension ( MC )
+4	33	35	MC

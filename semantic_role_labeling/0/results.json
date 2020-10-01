@@ -1,0 +1,36 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "joint model" : {
+          "outperforms" : "previous best pipeline system",
+          "by" : {
+            "F1 difference" : {
+              "of" : "anywhere between 1.3 and 6.0"
+            }
+          },
+          "from sentence" : "As shown in , 2 our joint model outperforms the previous best pipeline system by an F1 difference of anywhere between 1.3 and 6.0 in every setting ."          
+        }
+      },
+      "On" : {
+        "all datasets" : {
+          "has" : {
+            "our model" : {
+              "able to" : {
+                "predict" : {
+                  "over" : {
+                    "40 %" : {
+                      "of" : "sentences",
+                      "has" : "completely correctly"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "On all datasets , our model is able to predict over 40 % of the sentences completely correctly ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

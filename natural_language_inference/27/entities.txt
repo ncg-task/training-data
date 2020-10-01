@@ -1,0 +1,241 @@
+247	36	42	use of
+247	43	55	convolutions
+247	56	58	in
+247	63	71	encoders
+247	72	74	is
+247	75	82	crucial
+247	85	99	both F1 and EM
+247	100	116	drop drastically
+247	117	119	by
+247	120	136	almost 3 percent
+247	137	139	if
+247	146	153	removed
+248	0	15	Self- attention
+248	16	18	in
+248	23	31	encoders
+248	32	34	is
+248	42	61	necessary component
+248	62	78	that contributes
+248	79	102	1.4/1.3 gain of EM / F1
+248	103	105	to
+248	110	130	ultimate performance
+254	47	64	data augmentation
+254	65	77	proves to be
+254	78	85	helpful
+254	26	28	in
+254	89	117	further boosting performance
+264	18	33	ratio ( 3:1:1 )
+264	34	40	yields
+264	45	61	best performance
+264	64	68	with
+264	69	81	1.5/1.1 gain
+264	82	86	over
+264	91	101	base model
+264	102	104	on
+264	105	112	EM / F1
+255	0	6	Making
+255	11	24	training data
+255	25	39	twice as large
+255	40	49	by adding
+255	54	76	En - Fr - En data only
+255	197	203	yields
+255	207	215	increase
+255	3	5	in
+255	223	225	F1
+255	40	42	by
+255	229	240	0.5 percent
+259	70	82	observe that
+259	85	104	good sampling ratio
+259	105	112	between
+259	117	144	original and augmented data
+259	145	151	during
+259	152	160	training
+259	161	172	can further
+259	173	178	boost
+259	183	200	model performance
+260	24	32	increase
+260	37	52	sampling weight
+260	53	55	of
+260	56	70	augmented data
+260	71	75	from
+260	76	85	( 1:1:1 )
+260	86	88	to
+260	89	98	( 1:2:1 )
+260	105	124	EM / F1 performance
+260	125	130	drops
+260	131	133	by
+260	134	141	0.5/0.3
+182	12	14	ON
+182	15	20	SQUAD
+201	3	9	employ
+201	10	19	two types
+201	20	22	of
+201	23	47	standard regularizations
+202	11	14	use
+202	15	30	L2 weight decay
+202	31	33	on
+202	34	61	all the trainable variables
+202	64	78	with parameter
+202	79	90	? = 3 10 ?7
+203	20	27	dropout
+203	9	11	on
+203	31	35	word
+203	38	58	character embeddings
+203	63	77	between layers
+203	80	85	where
+203	90	122	word and character dropout rates
+203	123	126	are
+203	127	139	0.1 and 0.05
+203	109	121	dropout rate
+203	63	70	between
+203	184	200	every two layers
+203	201	203	is
+203	127	130	0.1
+207	11	25	ADAM optimizer
+207	49	53	with
+207	54	87	? 1 = 0.8 , ? 2 = 0.999 , = 10 ?7
+208	9	39	learning rate warm - up scheme
+208	40	44	with
+208	48	67	inverse exponential
+208	68	76	increase
+208	77	81	from
+208	82	85	0.0
+208	86	88	to
+208	89	94	0.001
+208	14	16	in
+208	102	118	first 1000 steps
+208	125	129	then
+208	130	138	maintain
+208	141	163	constant learning rate
+208	164	167	for
+208	172	193	remainder of training
+204	8	13	adopt
+204	18	59	stochastic depth method ( layer dropout )
+204	60	66	within
+204	67	104	each embedding or model encoder layer
+204	107	112	where
+204	113	123	sublayer l
+204	128	173	survival probability pl = 1 ? l L ( 1 ? p L )
+204	107	112	where
+204	160	161	L
+204	182	184	is
+204	189	199	last layer
+204	168	171	p L
+204	152	153	=
+204	210	213	0.9
+205	4	49	hidden size and the convolution filter number
+205	50	53	are
+205	58	61	128
+205	68	78	batch size
+205	79	81	is
+205	82	84	32
+205	87	101	training steps
+205	50	53	are
+205	106	111	150 K
+205	112	115	for
+205	116	129	original data
+205	132	137	250 K
+205	112	115	for
+205	144	163	data augmentation 2
+205	172	177	340 K
+205	112	115	for
+205	184	203	data augmentation 3
+206	4	33	numbers of convolution layers
+206	34	36	in
+206	41	71	embedding and modeling encoder
+206	72	75	are
+206	76	83	4 and 2
+206	86	98	kernel sizes
+206	72	75	are
+206	103	110	7 and 5
+206	121	134	block numbers
+206	135	138	for
+206	143	151	encoders
+206	72	75	are
+206	156	163	1 and 7
+209	0	26	Exponential moving average
+209	30	40	applied on
+209	41	64	all trainable variables
+209	65	69	with
+209	72	89	decay rate 0.9999
+210	13	22	implement
+210	23	32	our model
+210	1	3	in
+210	36	42	Python
+210	43	48	using
+210	49	59	Tensorflow
+210	64	72	carryout
+210	73	88	our experiments
+210	40	42	on
+210	95	111	NVIDIA p 100 GPU
+219	36	68	accuracy ( EM / F1 ) performance
+219	69	71	of
+219	72	81	our model
+219	82	84	is
+219	85	91	on par
+219	92	96	with
+219	101	130	state - of - the - art models
+220	16	25	our model
+220	26	36	trained on
+220	41	57	original dataset
+220	58	69	outperforms
+220	70	114	all the documented results in the literature
+220	117	128	in terms of
+220	134	150	EM and F1 scores
+221	5	17	trained with
+221	22	36	augmented data
+221	13	17	with
+221	42	64	proper sampling scheme
+221	67	76	our model
+221	77	84	can get
+221	85	109	significant gain 1.5/1.1
+221	110	112	on
+221	113	120	EM / F1
+222	21	23	on
+222	28	45	official test set
+222	46	48	is
+222	49	58	76.2/84.6
+222	61	66	which
+222	67	92	significantly outperforms
+222	97	129	best documented result 73.2/81.8
+21	23	30	to make
+21	35	56	machine comprehension
+21	57	61	fast
+21	78	84	remove
+21	89	121	recurrent nature of these models
+22	23	26	use
+22	27	61	convolutions and self - attentions
+22	62	64	as
+22	69	84	building blocks
+22	85	87	of
+22	88	96	encoders
+22	102	120	separately encodes
+22	125	142	query and context
+23	8	13	learn
+23	18	30	interactions
+23	31	38	between
+23	39	59	context and question
+23	60	62	by
+23	63	82	standard attentions
+24	4	28	resulting representation
+24	29	31	is
+24	32	45	encoded again
+24	46	50	with
+24	51	80	our recurrency - free encoder
+24	81	87	before
+24	96	104	decoding
+24	105	107	to
+24	112	123	probability
+24	124	126	of
+24	127	140	each position
+24	141	146	being
+24	151	163	start or end
+24	124	126	of
+24	171	182	answer span
+25	3	7	call
+25	13	31	architecture QANet
+3	61	85	READING COMPRE - HENSION
+5	23	69	machine reading and question answering ( Q&A )
+14	42	71	machine reading comprehension
+14	76	104	automated question answering
+21	35	56	machine comprehension

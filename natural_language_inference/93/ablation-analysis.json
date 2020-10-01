@@ -1,0 +1,48 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "has" : {
+        "positively contribute" : {
+          "to" : {
+            "final results" : {
+              "of" : "gated self - matching networks"
+            }
+          },
+          "has" : ["attention - based recurrent network ( GARNN )", "self - matching attention mechanism"],
+          "from sentence" : "attention - based recurrent network ( GARNN ) and self - matching attention mechanism positively contribute to the final results of gated self - matching networks ."
+        },
+        "Characterlevel embeddings" : {
+          "contribute towards" : "model 's performance",
+          "can" : {
+            "better handle" : {
+              "has" : "out - ofvocab or rare words"
+            }
+          },
+          "from sentence" : "Characterlevel embeddings contribute towards the model 's performance since it can better handle out - ofvocab or rare words ."
+        },
+        "Character - level embeddings" : {
+          "not" : "utilized",
+          "from sentence" : "Character - level embeddings are not utilized ."
+        },
+        "gate" : {
+          "introduced in" : {
+            "question and passage matching layer" : {
+              "has" : {
+                "helpful" : {
+                  "for" : "GRU and LSTM"
+                }
+              },
+              "from sentence" : "As shown in , the gate introduced in question and passage matching layer is helpful for both GRU and LSTM on the SQuAD dataset ."
+            }
+          }
+        }
+      },
+      "Removing" : {
+        "self - matching" : {
+          "results in" : "3.5 point EM drop",
+          "from sentence" : "Removing self - matching results in 3.5 point EM drop , which reveals that information in the passage plays an important role ."
+        }
+      }
+    }
+  }
+}

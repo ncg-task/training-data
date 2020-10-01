@@ -1,0 +1,50 @@
+{
+  "has" : {
+    "Results" : {
+      "shows" : {
+        "RAS - Elman and RAS - LSTM models" : {
+          "achieve" : {
+            "lower perplexity" : {
+              "than" : "ABS"
+            }
+          }
+        },
+        "from sentence" : "shows that both our RAS - Elman and RAS - LSTM models achieve lower perplexity than ABS as well as other models reported in ."
+      },
+      "has" : {
+        "RAS - LSTM" : {
+          "performs slightly worse than" : "RAS - Elman",
+          "from sentence" : "The RAS - LSTM performs slightly worse than RAS - Elman , most likely due to over-fitting ."
+        },
+        "ROUGE results" : {
+          "show" : {
+            "our models" : {
+              "comfortably outperform" : {
+                "ABS and ABS +" : {
+                  "by" : {
+                    "wide margin" : {
+                      "on" : "all metrics"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "The ROUGE results show that our models comfortably outperform both ABS and ABS + by a wide margin on all metrics ."
+        }
+      },
+      "On" : {
+        "DUC - 2004" : {
+          "show" : {
+            "our models" : {
+              "better than" : "ABS +"
+            }
+          },
+          "from sentence" : "On DUC - 2004 we report recall ROUGE as is customary on this dataset .
+The results ( Table 3 ) show that our models are better than ABS + ."
+
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "has" : {
+    "Model" : {
+      "enrich" : {
+        "sentence contextual semantics" : {
+          "in" : {
+            "multiple predicate - specific argument sequences" : {
+              "by presenting" : {
+                "SemBERT : Semantics - aware BERT" : {
+                  "is" : {
+                    "fine - tuned BERT" : {
+                      "with" : "explicit contextual semantic clues"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Thus we are motivated to enrich the sentence contextual semantics in multiple predicate - specific argument sequences by presenting SemBERT : Semantics - aware BERT , which is a fine - tuned BERT with explicit contextual semantic clues ."
+        }
+      },
+      "has" : {
+        "proposed SemBERT" : {
+          "learns" : {
+            "representation" : {
+              "in" : "fine - grained manner"
+            }
+          },
+          "takes" : [{"strengths" : {"of" : {"BERT" : {"on" : "plain context representation"}}}}, {"explicit semantics" : {"for" : "deeper meaning representation"}}],
+          "from sentence" : "The proposed SemBERT learns the representation in a fine - grained manner and takes both strengths of BERT on plain context representation and explicit semantics for deeper meaning representation ."
+        }
+      },
+      "consists of" : {
+        "three components" : {
+          "has" : {
+            "an out - ofshelf semantic role labeler" : {
+              "to annotate" : {
+                "input sentences" : {
+                  "with" : "variety of semantic role labels"
+                }
+              }
+            },
+            "sequence encoder" : {
+              "where" : {
+                "pre-trained language model" : {
+                  "used to build" : {
+                    "representation" : {
+                      "for input" : "raw texts"
+                    }
+                  }
+                },
+                "semantic role labels" : {
+                  "mapped to" : {
+                    "embedding" : {
+                      "in" : "parallel"
+                    }
+                  }
+                }
+              }
+            },
+            "semantic integration component" : {
+              "to integrate" : {
+                "text representation" : {
+                  "with" : {
+                    "contextual explicit semantic embedding" : {
+                      "to obtain" : {
+                        "joint representation" : {
+                          "for" : "downstream tasks"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Our model consists of three components :
+1 ) an out - ofshelf semantic role labeler to annotate the input sentences with a variety of semantic role labels ; 2 ) an sequence encoder where a pre-trained language model is used to build representation for input raw texts and the semantic role labels are mapped to embedding in parallel ; 3 ) a semantic integration component to integrate the text representation with the contextual explicit semantic embedding to obtain the joint representation for downstream tasks ."
+
+        }
+      }
+    }
+  }
+}

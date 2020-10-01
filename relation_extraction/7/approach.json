@@ -1,0 +1,58 @@
+{
+  "has" : {
+    "Approach" : {
+      "propose" : {
+        "novel word - level approach" : {
+          "for" : "distant supervised relation extraction",
+          "by reducing" : "inner-sentence noise",
+          "improving" : {
+            "robustness" : {
+              "against" : "noisy words"
+            }
+          },
+          "from sentence" : "In this paper , we propose a novel word - level approach for distant supervised relation extraction by reducing inner-sentence noise and improving robustness against noisy words ."
+        }
+      },
+      "To reduce" : {
+        "innersentence noise" : {
+          "utilize" : {
+            "novel Sub - Tree Parse ( STP ) method" : {
+              "to remove" : "irrelevant words",
+              "by intercepting" : {
+                "subtree" : {
+                  "under" : "parent of entities ' lowest common ancestor"
+                }
+              }              
+            }
+          }
+        },
+        "from sentence" : "To reduce innersentence noise , we utilize a novel Sub - Tree Parse ( STP ) method to remove irrelevant words by intercepting a subtree under the parent of entities ' lowest common ancestor ."
+      },
+      "has" : {
+        "entity - wise attention" : {
+          "to alleviate" : {
+            "influence of noisy words" : {
+              "in" : "subtree"
+            }
+          },
+          "emphasize" : "task - relevant features",
+          "from sentence" : "Furthermore , the entity - wise attention is adopted to alleviate the influence of noisy words in the subtree and emphasize the task - relevant features ."
+        }
+      },
+      "initialize" : {
+        "model parameters" : {
+          "with" : {
+            "a priori knowledge" : {
+              "learned from" : {
+                "entity type classification task" : {
+                  "by" : "transfer learning"
+                }
+              }
+            }
+          },
+          "from sentence" : "To tackle the second challenge , we initialize our model parameters with a priori knowledge learned from the entity type classification task by transfer learning ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "outperforms" : {
+          "has" : "all the published works",
+          "achieves" : {
+            "2nd place" : {
+              "on" : "leaderboard",
+              "when submitting" : "SG - NET"
+            }
+          },
+          "from sentence" : "It also outperforms all the published works and achieves the 2nd place on the leaderboard when submitting SG - NET ."
+        }
+      },
+      "adding" : {
+        "extra answer verifier module" : {
+          "yield" : "better result",
+          "from sentence" : "We also find that adding an extra answer verifier module could yield better result , which is pre-trained only to determine whether question is answerable or not with the same training data as SG - Net ."
+        }
+      }
+    }
+  }
+}

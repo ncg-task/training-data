@@ -1,0 +1,22 @@
+{
+  "has" : {
+    "Model" : {
+      "implement" : {
+        "reader" : {
+          "dynamically builds" : {
+            "meaning representations" : {
+              "for" : "each entity",
+              "by gathering and accumulating" : {
+                "information" : {
+                  "on" : "entity",
+                  "as it reads" : "document"
+                }
+              }
+            },
+            "from sentence" : "We , however , take it as a strong motivation to implement a reader that dynamically builds meaning representations for each entity , by gathering and accumulating information on that entity as it reads a document ( Section 2 ) ."
+          }
+        }
+      }
+    }
+  }
+}

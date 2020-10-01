@@ -1,0 +1,77 @@
+19	11	31	study the ability of
+19	36	75	Transformer neural network architecture
+19	76	85	to encode
+19	86	95	relations
+19	96	103	between
+19	104	116	entity pairs
+19	126	134	identify
+19	147	161	representation
+19	162	178	that outperforms
+19	179	192	previous work
+19	193	195	in
+19	196	226	supervised relation extraction
+20	10	17	present
+20	20	26	method
+20	27	29	of
+20	30	38	training
+20	44	67	relation representation
+20	68	75	without
+20	76	91	any supervision
+20	92	96	from
+20	99	134	knowledge graph or human annotators
+20	135	146	by matching
+20	151	157	blanks
+2	52	69	Relation Learning
+11	16	63	identify and extract relations between entities
+12	21	40	relation extraction
+187	15	61	task agnostic BERT EM and BERT EM + MTB models
+187	62	72	outperform
+187	77	112	previous published state of the art
+187	113	115	on
+187	116	127	FewRel task
+187	133	156	when they have not seen
+187	157	181	any FewRel training data
+199	4	33	additional MTB based training
+199	34	51	further increases
+199	52	62	F 1 scores
+199	63	66	for
+199	67	76	all tasks
+188	0	3	For
+188	4	17	BERT EM + MTB
+188	24	32	increase
+188	64	80	very significant
+188	83	88	8.8 %
+188	89	91	on
+188	96	119	5 - way - 1 - shot task
+188	124	130	12.7 %
+188	89	91	on
+188	138	162	10 - way - 1 - shot task
+189	19	44	significantly outperforms
+189	0	7	BERT EM
+192	5	10	given
+192	11	17	access
+192	18	20	to
+192	21	45	all of the training data
+192	48	55	BERT EM
+192	56	66	approaches
+192	67	95	BERT EM + MTB 's performance
+195	15	24	show that
+195	25	37	MTB training
+195	38	54	could be used to
+195	55	82	significantly reduce effort
+195	83	98	in implementing
+195	102	143	exemplar based relation extraction system
+202	19	27	see that
+202	28	46	MTB based training
+202	50	73	even more effective for
+202	74	94	low - resource cases
+203	40	51	training by
+203	52	71	matching the blanks
+203	72	75	can
+203	76	96	significantly reduce
+203	101	110	amount of
+203	111	122	human input
+203	132	141	to create
+203	142	161	relation extractors
+203	168	176	populate
+203	179	193	knowledge base

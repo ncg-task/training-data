@@ -1,0 +1,8 @@
+{
+  "has research problem" : [
+    ["Large - scale Simple Question Answering", {"from sentence" : "Large - scale Simple Question Answering with Memory Networks"}],
+    ["large - scale question answering", {"from sentence" : "Training large - scale question answering systems is complicated because training sources usually cover a small portion of the range of possible questions ."}],
+    ["simple question answering", {"from sentence" : "This paper studies the impact of multitask and transfer learning for simple question answering ; a setting for which the reasoning required to answer is quite easy , as long as one can retrieve the correct evidence given a question , which can be difficult in large - scale conditions ."}],
+    ["Simple Question Answering", {"from sentence" : "However , while most recent efforts have focused on designing systems with higher reasoning capabilities , that could jointly retrieve and use multiple facts to answer , the simpler problem of answering questions that refer to a single fact of the KB , which we call Simple Question Answering in this paper , is still far from solved ."}]
+  ]
+}

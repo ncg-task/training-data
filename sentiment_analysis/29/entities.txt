@@ -1,0 +1,136 @@
+24	106	114	based on
+24	115	164	long short - term memory ( LSTM ) neural networks
+25	93	99	models
+25	100	132	aspects and texts simultaneously
+25	133	138	using
+25	139	144	LSTMs
+26	18	63	target representation and text representation
+26	64	78	generated from
+26	79	84	LSTMs
+26	85	98	interact with
+26	99	109	each other
+26	110	112	by
+26	116	159	attention - over - attention ( AOA ) module
+27	0	3	AOA
+27	4	27	automatically generates
+27	28	45	mutual attentions
+27	46	59	not only from
+27	60	78	aspect - to - text
+27	79	87	but also
+27	88	106	text - to - aspect
+33	15	21	choose
+33	22	25	AOA
+33	26	35	to attend
+33	43	63	most important parts
+33	64	71	in both
+33	72	91	aspect and sentence
+134	0	8	Majority
+134	9	11	is
+134	14	35	basic baseline method
+134	44	51	assigns
+134	56	82	largest sentiment polarity
+134	25	27	in
+134	90	102	training set
+134	103	105	to
+134	106	117	each sample
+134	25	27	in
+134	125	133	test set
+135	0	4	LSTM
+135	5	9	uses
+135	10	26	one LSTM network
+135	27	35	to model
+135	40	48	sentence
+135	59	76	last hidden state
+135	80	87	used as
+135	92	115	sentence representation
+135	116	119	for
+135	124	144	final classification
+136	0	9	TD - LSTM
+136	10	14	uses
+136	15	32	two LSTM networks
+136	33	41	to model
+136	46	78	preceding and following contexts
+136	79	90	surrounding
+136	95	106	aspect term
+138	0	9	AT - LSTM
+138	10	22	first models
+138	27	35	sentence
+138	36	39	via
+138	42	52	LSTM model
+141	0	11	ATAE - LSTM
+141	12	27	further extends
+141	28	37	AT - LSTM
+141	38	50	by appending
+141	55	71	aspect embedding
+141	72	76	into
+141	77	93	each word vector
+142	0	3	IAN
+142	4	8	uses
+142	9	26	two LSTM networks
+142	27	35	to model
+142	40	64	sentence and aspect term
+120	26	41	randomly select
+120	42	46	20 %
+120	47	49	of
+120	50	63	training data
+120	64	66	as
+120	67	81	validation set
+120	82	89	to tune
+120	94	109	hyperparameters
+121	24	49	randomly initialized from
+121	50	91	uniform distribution U ( ?10 ?4 , 10 ?4 )
+121	100	110	bias terms
+121	115	121	set to
+121	122	126	zero
+122	4	34	L 2 regularization coefficient
+122	38	44	set to
+122	45	51	10 ? 4
+122	60	77	dropout keep rate
+122	38	44	set to
+122	88	91	0.2
+123	4	19	word embeddings
+123	24	40	initialized with
+123	41	72	300 - dimensional Glove vectors
+123	81	93	fixed during
+123	94	102	training
+125	4	13	dimension
+125	14	16	of
+125	17	35	LSTM hidden states
+125	39	45	set to
+125	46	49	150
+126	4	25	initial learning rate
+126	26	28	is
+126	29	33	0.01
+126	34	37	for
+126	42	56	Adam optimizer
+127	7	20	training loss
+127	21	29	does not
+127	30	34	drop
+127	35	40	after
+127	41	59	every three epochs
+127	65	73	decrease
+127	78	91	learning rate
+127	92	94	by
+127	95	99	half
+128	4	14	batch size
+128	18	24	set as
+128	25	27	25
+124	0	3	For
+124	8	31	out of vocabulary words
+124	35	50	initialize them
+124	51	59	randomly
+124	60	64	from
+124	65	105	uniform distribution U ( ? 0.01 , 0.01 )
+2	0	37	Aspect Level Sentiment Classification
+4	0	39	Aspect - level sentiment classification
+150	27	37	found that
+150	42	64	performance fluctuates
+150	65	69	with
+150	70	101	different random initialization
+152	8	24	baseline methods
+153	0	10	On average
+153	13	26	our algorithm
+153	30	41	better than
+153	69	91	our best trained model
+153	92	111	outperforms them in
+153	114	126	large margin

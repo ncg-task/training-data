@@ -1,0 +1,158 @@
+190	5	45	char - level and word - level embeddings
+190	46	64	contribute towards
+190	69	89	model 's performance
+195	0	13	C2Q attention
+195	14	26	proves to be
+195	27	35	critical
+195	36	40	with
+195	43	47	drop
+195	48	50	of
+195	51	70	more than 10 points
+199	50	75	proposed static attention
+199	76	87	outperforms
+199	92	122	dynamically computed attention
+199	123	125	by
+199	126	144	more than 3 points
+207	0	2	At
+207	7	27	word embedding layer
+207	30	41	query words
+207	42	49	such as
+207	50	70	When , Where and Who
+207	75	94	not well aligned to
+207	95	111	possible answers
+207	18	20	in
+207	119	126	context
+174	0	27	Each paragraph and question
+174	32	44	tokenized by
+174	47	108	regular - expression - based word tokenizer ( PTB Tokenizer )
+174	113	121	fed into
+174	126	131	model
+176	4	27	hidden state size ( d )
+176	28	30	of
+176	35	40	model
+176	41	43	is
+176	44	47	100
+177	0	9	The model
+177	10	19	has about
+177	20	42	2.6 million parameters
+179	2	16	dropout ) rate
+179	17	19	of
+179	20	23	0.2
+179	27	35	used for
+179	40	43	CNN
+179	46	61	all LSTM layers
+179	72	93	linear transformation
+179	94	100	before
+179	105	112	softmax
+179	32	35	for
+179	121	128	answers
+182	4	20	training process
+182	21	26	takes
+182	27	43	roughly 20 hours
+182	44	46	on
+182	49	67	single Titan X GPU
+175	3	6	use
+175	7	21	100 1D filters
+175	22	25	for
+175	26	44	CNN char embedding
+175	52	56	with
+175	59	69	width of 5
+178	11	47	AdaDelta ( Zeiler , 2012 ) optimizer
+178	50	54	with
+178	57	71	minibatch size
+178	72	74	of
+178	75	77	60
+178	85	106	initial learning rate
+178	72	74	of
+178	110	113	0.5
+178	116	119	for
+178	120	129	12 epochs
+180	0	6	During
+180	7	15	training
+180	22	37	moving averages
+180	38	40	of
+180	41	52	all weights
+180	38	40	of
+180	60	65	model
+180	70	85	maintained with
+180	90	112	exponential decay rate
+180	38	40	of
+180	116	121	0.999
+181	0	2	At
+181	3	12	test time
+181	62	70	are used
+181	19	34	moving averages
+181	35	45	instead of
+181	50	61	raw weights
+17	19	28	introduce
+17	33	81	Bi- Directional Attention Flow ( BIDAF ) network
+17	86	123	hierarchical multi-stage architecture
+17	124	136	for modeling
+17	141	156	representations
+17	157	159	of
+17	164	181	context paragraph
+17	150	152	at
+17	185	216	different levels of granularity
+18	0	5	BIDAF
+18	6	14	includes
+18	15	75	character - level , word - level , and contextual embeddings
+18	82	86	uses
+18	87	116	bi-directional attention flow
+18	117	126	to obtain
+18	129	165	query - aware context representation
+21	14	23	attention
+21	27	39	computed for
+21	40	55	every time step
+21	66	81	attended vector
+21	14	16	at
+21	85	99	each time step
+21	159	169	allowed to
+21	170	182	flow through
+21	78	80	to
+21	190	215	subsequent modeling layer
+23	12	15	use
+23	18	51	memory - less attention mechanism
+23	32	41	attention
+23	32	41	attention
+23	32	34	at
+23	32	34	at
+26	3	9	forces
+26	14	29	attention layer
+26	30	41	to focus on
+26	42	50	learning
+26	65	72	between
+26	77	98	query and the context
+26	105	112	enables
+26	117	131	modeling layer
+26	30	41	to focus on
+26	42	50	learning
+26	157	168	interaction
+26	169	175	within
+26	180	216	query - aware context representation
+27	8	14	allows
+27	32	46	each time step
+27	47	52	to be
+27	53	63	unaffected
+27	64	68	from
+27	69	90	incorrect attendances
+27	94	113	previous time steps
+29	15	35	attention mechanisms
+29	36	38	in
+29	39	54	both directions
+29	57	77	query - to - context
+29	82	102	context - to - query
+29	105	118	which provide
+29	65	67	to
+29	148	158	each other
+2	36	57	MACHINE COMPREHENSION
+4	0	28	Machine comprehension ( MC )
+5	67	69	MC
+10	46	71	question answering ( QA )
+187	0	18	BIDAF ( ensemble )
+187	19	27	achieves
+187	31	39	EM score
+187	40	42	of
+187	43	47	73.3
+187	55	64	F 1 score
+187	40	42	of
+187	68	72	81.1

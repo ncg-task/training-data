@@ -1,0 +1,7 @@
+(Contribution||has||Baselines)
+(Baselines||has||MultiR)
+(MultiR||is||multi-instance learning method)
+(Baselines||has||Mintz)
+(Mintz||represents||traditional distantsupervision - based model)
+(Baselines||has||MIML)
+(MIML||is||multi-instance multilabel model)

@@ -1,0 +1,41 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "observe" : {
+        "substantial drop" : {
+          "when removing" : {
+            "tokenspecific attentions" : {
+              "over" : "query in the GA module",
+              "allow gating" : {
+                "individual tokens" : {
+                  "in" : "document",
+                  "by" : {
+                    "parts of the query" : {
+                      "relevant to" : {
+                        "token" : {
+                          "rather than" : "overall query representation"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Next , we observe a substantial drop when removing tokenspecific attentions over the query in the GA module , which allow gating individual tokens in the document only by parts of the query relevant to that token rather than the overall query representation ."
+        }
+      },
+      "removing" : {
+        "character embeddings" : {
+          "used for" : "WDW and CBT",
+          "leads to" : {
+            "reduction" : {
+              "of" : "about 1 % in the performance"
+            }
+          },
+          "from sentence" : "Finally , removing the character embeddings , which were only used for WDW and CBT , leads to a reduction of about 1 % in the performance ."
+        }
+      }
+    }
+  }
+}

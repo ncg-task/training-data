@@ -1,0 +1,71 @@
+{
+  "has" : {
+    "Dataset" : {
+      "name" : {
+        "SentiHood" : {
+          "contains" : {
+            "annotated sentences" : {
+              "containing" : "one or two location entity mentions",
+              "from sentence" : "SentiHood currently contains annotated sentences containing one or two location entity mentions ."              
+            },
+            "5215 sentences" : {
+              "with" : {
+                "3862 sentences" : {
+                  "containing" : "single location"
+                },
+                "1353 sentences" : {
+                  "containing" : "multiple ( two ) locations"
+                }
+              },
+              "from sentence" : "2 Sen-tiHood contains 5215 sentences with 3862 sentences containing a single location and 1353 sentences containing multiple ( two ) locations ."
+            }
+            
+          }
+        }
+      },
+      "has" : {
+        "\" Positive \" sentiment" : {
+          "dominant for" : {
+            "aspects" : {
+              "such as" : "dining and shopping"
+            },
+            "from sentence" : "\" Positive \" sentiment is dominant for aspects such as dining and shopping ."            
+          }
+        },
+        "general aspect" : {
+          "is" : {
+            "most frequent aspect" : {
+              "with" : "over 2000 sentences"
+            }
+          },
+          "from sentence" : "The general aspect is the most frequent aspect with over 2000 sentences while aspect touristy has occurred in less than 100 sentences ."
+        },
+        "aspect touristy" : {
+          "occurred in" : "less than 100 sentences",
+          "from sentence" : "The general aspect is the most frequent aspect with over 2000 sentences while aspect touristy has occurred in less than 100 sentences ."
+        },
+        "total number of opinions ( 5920 )" : {
+          "in" : "dataset",
+          "higher than" : {
+            "number of sentences" : {
+              "since" : {
+                "each sentence" : {
+                  "can contains" : "one or more opinions"
+                }
+              }
+            }
+          },
+          "from sentence" : "Notice that since each sentence can contain one or more opinions , the total number of opinions ( 5920 ) in the dataset is higher than the number of sentences ."
+        },
+        "Location entity names" : {
+          "masked by" : {
+            "location1 and location 2" : {
+              "in" : "whole dataset"
+            }
+          },
+          "from sentence" : "Location entity names are masked by location1 and location 2 in the whole dataset , so the task does not involve identification and segmentation of the named entities ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "use" : {
+        "Bi-directional GRUs" : {
+          "having" : {
+            "300 neurons" : {
+              "followed by" : {
+                "dense layer" : {
+                  "consisting of" : "100 neurons"
+                }
+              }
+            }
+          },
+          "from sentence" : "We use Bi-directional GRUs having 300 neurons , each followed by a dense layer consisting of 100 neurons ."
+        }
+      },
+      "Utilizing" : {
+        "dense layer" : {
+          "project" : {
+            "input features" : {
+              "of" : "all the three modalities",
+              "to" : "same dimensions"
+            }
+          },
+          "from sentence" : "Utilizing the dense layer , we project the input features of all the three modalities to the same dimensions ."
+        }
+      },
+      "as a measure of" : {
+        "regularization" : {
+          "set" : {
+            "dropout" : {
+              "=" : ["0.5 ( MOSI )", "0.3 ( MOSEI )"]
+            }
+          }
+        },
+        "from sentence" : "We set dropout = 0.5 ( MOSI ) & 0.3 ( MOSEI ) as a measure of regularization ."
+      },
+      "for" : {
+        "Bi - GRU layers" : {
+          "use" : {
+            "dropout" : {
+              "=" : ["0.4 ( MOSI )", "0.3 ( MOSEI )"]
+            }
+          }
+        },
+        "from sentence" : "In addition , we also use dropout = 0.4 ( MOSI ) & 0.3 ( MOSEI ) for the Bi - GRU layers ."
+      },
+      "employ" : {
+        "ReLu activation function" : {
+          "in" : "dense layers"
+        },
+        "softmax activation" : {
+          "in" : "final classification layer"
+        },
+        "from sentence" : "We employ ReLu activation function in the dense layers , and softmax activation in the final classification layer ."
+      },
+      "For" : {
+        "training the network" : {
+          "set" : {
+            "batch size" : {
+              "=" : "32"
+            }
+          },
+          "use" : {
+            "Adam optimizer" : {
+              "with" : "cross - entropy loss function"
+            }
+          },
+          "train for" : "50 epochs",
+          "from sentence" : "For training the network we set the batch size = 32 , use Adam optimizer with cross - entropy loss function and train for 50 epochs ."
+        }
+      }
+    }
+  }  
+}

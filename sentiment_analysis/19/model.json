@@ -1,0 +1,41 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "simple , general and effective technique" : {
+          "to compute" : {
+            "contextual representations" : {
+              "that capture" : "long range dependencies"
+            }
+          },
+          "from sentence" : "In this paper , we propose a simple , general and effective technique to compute contextual representations that capture long range dependencies ."
+        }
+      },
+      "For" : {
+        "each token t" : {
+          "encode both" : {
+            "prefix and suffix" : {
+              "in both" : "forward and reverse direction"
+            }
+          },
+          "from sentence" : "For each token t , we encode both its prefix and suffix in both the forward and reverse direction ."
+        }
+      },
+      "combine" : {
+        "prefix and suffix representations" : {
+          "by" : {
+            "simple max - pooling operation" : {
+              "to produce" : {
+                "richer contextual representation" : {
+                  "in both" : "forward and reverse direction"
+                }
+              }
+            }
+          },
+          "from sentence" : "Further , we combine the prefix and suffix representations by a simple max - pooling operation to produce a richer contextual representation of t in both the forward and reverse direction ."
+        }
+      },
+      "call" : ["Suffix BiLSTM", {"SuBiLSTM" : {"in" : "short"}}, {"from sentence" : "We call our model Suffix BiLSTM or SuBiLSTM in short ."}]
+    }
+  }
+}

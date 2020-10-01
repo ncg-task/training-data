@@ -1,0 +1,51 @@
+{
+  "has" : {
+    "Baselines" : {
+      "use" : {
+        "LSTM - CRF" : {
+          "with" : "randomly initialized word embeddings",
+          "from sentence" : "Firstly , we use LSTM - CRF with randomly initialized word embeddings as our initial baseline ."
+        }
+      },
+      "adopt" : {
+        "two state - of - the - art methods" : {
+          "in" : "sequence labeling",
+          "denoted as" : ["char - LSTM", "char - CNN"],
+          "from sentence" : "We adopt two state - of - the - art methods in sequence labeling , denoted as char - LSTM and char - CNN ."
+        }
+      },
+      "add" : {
+        "more layers" : {
+          "to" : {
+            "char - CNN model" : {
+              "refer to" : {
+                "char - CNN - 5 and char - CNN - 9" : {
+                  "for" : "5 and 9 convolutional layers"
+                }
+              },
+              "from sentence" : "We add more layers to the char - CNN model and refer to that as char - CNN - 5 and char - CNN - 9 , respectively for 5 and 9 convolutional layers ."
+            }
+          }
+        },
+        "residual connections" : {
+          "to" : {
+            "char - CNN - 9" : {
+              "refer it as" : "char - ResNet"
+            }
+          },
+          "from sentence" : "Furthermore , we add residual connections to the char - CNN - 9 and refer it as char - ResNet ."
+        }
+      },
+      "apply" : {
+        "3 dense blocks" : {
+          "based on" : {
+            "char - ResNet" : {
+              "refer to as" : "char - DenseNet"
+            }
+          },
+          "from sentence" : "Also , we apply 3 dense blocks based on char - ResNet which we refer to as char - DenseNet , to compare the difference between residual connection and dense connection ."
+        }
+      }
+    }    
+  }
+}

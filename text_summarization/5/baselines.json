@@ -1,0 +1,37 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "OpenNMT" : {
+          "implement" : ["standard attentional seq2seq model", {"from sentence" : "OpenNMT
+We also implement the standard attentional seq2seq model with OpenNMT .
+All the settings are the same as our system ."
+
+          }]
+        },
+        "FTSum" : {
+          "encoded" : {
+            "facts" : {
+              "extracted from" : {
+                "source sentence" : {
+                  "to improve" : {
+                    "generated summaries" : {
+                      "both" : ["faithfulness", "informativeness"]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "FTSum encoded the facts extracted from the source sentence to improve both the faithfulness and informativeness of generated summaries ."
+        },
+        "PIPELINE" : {
+          "trains" : ["Rerank module", "Rewrite module"],
+          "from sentence" : "In addition , to evaluate the effectiveness of our joint learning framework , we develop a baseline named \" PIPELINE \" .
+However , it trains the Rerank module and Rewrite module in pipeline ."
+
+        }
+      }
+    }
+  }
+}

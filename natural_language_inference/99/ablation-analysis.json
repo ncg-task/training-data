@@ -1,0 +1,70 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "see" : {
+        "full features integration" : {
+          "obtain" : "best performance",
+          "from sentence" : "We see the full features integration obtain the best performance , which demonstrates the necessity of combining all the features into consideration ."
+        }
+      },
+      "Among" : {
+        "all the feature ablations" : {
+          "has" : {
+            "drop" : {
+              "has" : ["Part - Of - Speech", "Exact Match", "Qtype features"],
+              "much more than" : "other features"
+            }
+          },
+          "from sentence" : "Among all the feature ablations , the Part - Of - Speech , Exact Match , Qtype features drop much more than the other features , which shows the importance of these three features ."
+        }
+      },
+      "has" : {
+        "final ablation" : {
+          "of" : {
+            "POS and NER" : {
+              "can see" : {
+                "performance decays" : {
+                  "over" : "3 % point"
+                }
+              },
+              "from sentence" : "As for the final ablation of POS and NER , we can see the performance decays over 3 % point , which clearly proves the usefulness of the comprehensive lexical information ."
+            }
+          }
+        }
+      },
+      "replace" : {
+        "our input gate mechanism" : {
+          "into" : "simplified feature concatenation strategy",
+          "has" : {
+            "performance" : {
+              "has" : {
+                "drops" : {
+                  "has" : {
+                    "nearly 2.3 %" : {
+                      "on" : "EM score"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "We first replace our input gate mechanism into simplified feature concatenation strategy , the performance drops nearly 2.3 % on the EM score , which proves the effectiveness of our proposed dynamic input gating mechanism ."
+        }
+      },
+      "employing" : {
+        "question influence" : {
+          "on" : {
+            "passage encoding" : {
+              "has" : {
+                "boost" : {
+                  "has" : ["result", {"up to 1.3 %" : {"on" : "EM score"}}]
+                }
+              },
+              "from sentence" : "The result proves that our modification of employing question influence on the passage encoding can boost the result up to 1.3 % on the EM score ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

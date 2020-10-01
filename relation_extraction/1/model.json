@@ -1,0 +1,17 @@
+{
+  "has" : {
+    "Model" : {
+      "show" : {
+        "simple neural architectures" : {
+          "built on top of" : "BERT",
+          "yields" : {
+            "state - of - the - art performance" : {
+              "on" : "variety of benchmark datasets"
+            }
+          },
+          "from sentence" : "We show that simple neural architectures built on top of BERT yields state - of - the - art performance on a variety of benchmark datasets for these two tasks ."
+        }
+      }
+    }
+  }
+}

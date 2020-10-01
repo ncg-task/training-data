@@ -1,0 +1,48 @@
+{
+  "has" : {
+    "Results" : {
+      "see" : {
+        "our model" : {
+          "has" : {
+            "outperforms" : {
+              "has" : "all other baselines"
+            }
+          },
+          "achieves" : {
+            "state - of - the - art result" : {
+              "on" : "all subsets on TriviaQA"
+            }
+          },
+          "from sentence" : "As we can see in , our model outperforms all other baselines and achieves the state - of - the - art result on all subsets on TriviaQA ."
+        }
+      },
+      "use" : {
+        "Stanford Question Answering Dataset ( SQuAD ) v 1.1" : {
+          "has" : {
+            "our model" : {
+              "is" : {
+                "competitive" : {
+                  "to" : {
+                    "state - of - the - art method" : {
+                      "achieves" : {
+                        "exact match score" : {
+                          "of" : "75.37 %"
+                        },
+                        "F1 score" : {
+                          "of" : "82 . 66 %"
+                        }
+                      }                      
+                    }
+                  }
+                }
+              },
+              "from sentence" : "We also use the Stanford Question Answering Dataset ( SQuAD ) v 1.1 to conduct our experiments .
+The results of this dataset are all exhibited on a leaderboard , and top methods are almost all ensemble models , our model achieves an exact match score of 75.37 % and an F1 score of 82 . 66 % , which is competitive to state - of - the - art method ."
+
+            }
+          }
+        }
+      }
+    }
+  }
+}

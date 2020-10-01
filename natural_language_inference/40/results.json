@@ -1,0 +1,173 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "Story Based" : {
+          "has" : {
+            "Our model" : {
+              "achieves" : "new state - of - the - art results",
+              "has" : {
+                "outperforming" : {
+                  "has" : {
+                    "strong baselines" : {
+                      "such as" : "QRNs"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Story Based
+Our model achieves new state - of - the - art results , outperforming strong baselines such as QRNs ."
+
+            },
+            "Both variants of MAGE" : {
+              "has" : {
+                "substantially outperform" : {
+                  "has" : {
+                    "QRNs" : {
+                      "are" : {
+                        "current state - of - the - art models" : {
+                          "on" : "bAbi dataset"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "Both variants of MAGE substantially outperform QRNs , which are the current state - of - the - art models on the bAbi dataset ."
+                }
+              }
+            }
+          },
+          "observe" : {
+            "proposed MAGE architecture" : {
+              "has" : {
+                "substantially improve" : {
+                  "has" : {
+                    "performance" : {
+                      "for" : "both bi - GRUs and GAs"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Moreover , we observe that the proposed MAGE architecture can substantially improve the performance for both bi - GRUs and GAs ."
+            }
+          },
+          "Adding" : {
+            "same information" : {
+              "as" : {
+                "one - hot features" : {
+                  "fails to" : {
+                    "improve" : {
+                      "has" : "performance"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Adding the same information as one - hot features fails to improve the performance , which indicates that the inductive bias we employ on MAGE is useful ."
+            }
+          },
+          "showing" : {
+            "our proposed architecture" : {
+              "is" : "superior",
+              "perform" : {
+                "worse" : {
+                  "has" : ["DAG - RNN baseline", "shared version of MAGE"]
+                }
+              },
+              "from sentence" : "The DAG - RNN baseline from and the shared version of MAGE ( where edge representations are tied ) also perform worse , showing that our proposed architecture is superior ."
+            }
+          }
+        },
+        "Broad Context Language Modeling" : {
+          "pick" : {
+            "LAMBADA dataset" : {
+              "has" : {
+                "Our implementation of GA" : {
+                  "gave" : "higher performance",
+                  "from sentence" : "Broad Context Language Modeling :
+For our second benchmark we pick the LAMBADA dataset from , where the task is to predict the last word in a given passage .
+Our implementation of GA gave higher performance than that reported by , without the use of linguistic features ."
+
+                }
+              },
+              "On" : {
+                "simple bi - GRU architecture" : {
+                  "see" : {
+                    "improvement" : {
+                      "of" : {
+                        "1.7 %" : {
+                          "by incorporating" : {
+                            "coreference edges" : {
+                              "in" : "graph"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "On the simple bi - GRU architecture we see an improvement of 1.7 % by incorporating coreference edges in the graph , whereas the one - hot baseline does not lead to any improvement ."
+                },
+                "multi - layer GA architecture" : {
+                  "has" : {
+                    "coreference edges" : {
+                      "lead to" : {
+                        "improvement" : {
+                          "of" : {
+                            "2 %" : {
+                              "setting" : "new state - of - theart"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "On the multi - layer GA architecture , the coreference edges again lead to an improvement of 2 % , setting a new state - of - theart on this dataset ."
+                }
+              }
+            }
+          }
+        },
+        "Cloze - style QA" : {
+          "on" : {
+            "CNN dataset" : {
+              "Augmenting" : {
+                "bi - GRU model" : {
+                  "with" : {
+                    "MAGE" : {
+                      "leads to" : {
+                        "improvement" : {
+                          "of" : "2.5 %",
+                          "on" : "test set"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "Cloze - style QA : Lastly , we test our models on the CNN dataset from , which consists of pairs of news articles and a cloze - style question over the contents .
+Augmenting the bi - GRU model with MAGE leads to an improvement of 2.5 % on the test set ."
+
+                }
+              },
+              "has" : {
+                "previous best results" : {
+                  "achieved by" : {
+                    "GA Reader" : {
+                      "adding" : {
+                        "MAGE" : {
+                          "leads to" : {
+                            "further improvement" : {
+                              "of" : "0.7 %",
+                              "setting" : "new state of the art"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "The previous best results for this dataset were achieved by the GA Reader , and we see that adding MAGE to it leads to a further improvement of 0.7 % , setting a new state of the art ."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

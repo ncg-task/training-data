@@ -1,0 +1,299 @@
+196	0	9	TD - LSTM
+196	10	20	constructs
+196	21	51	aspect-specific representation
+196	52	54	by
+196	59	71	left context
+196	72	76	with
+196	21	27	aspect
+196	92	105	right context
+196	72	76	with
+196	21	27	aspect
+196	125	132	employs
+196	133	142	two LSTMs
+197	4	22	last hidden states
+197	23	25	of
+197	44	64	finally concatenated
+197	65	79	for predicting
+197	84	102	sentiment polarity
+197	23	25	of
+197	110	116	aspect
+198	0	11	ATAE - LSTM
+198	18	26	attaches
+198	31	47	aspect embedding
+198	48	50	to
+198	51	70	each word embedding
+198	71	81	to capture
+198	82	112	aspect - dependent information
+198	124	131	employs
+198	132	151	attention mechanism
+198	152	158	to get
+198	163	186	sentence representation
+198	103	106	for
+198	191	211	final classification
+199	0	7	Mem Net
+199	8	12	uses
+199	15	34	deep memory network
+199	35	37	on
+199	42	65	context word embeddings
+199	66	69	for
+199	70	93	sentence representation
+199	94	104	to capture
+199	109	118	relevance
+199	119	126	between
+199	127	159	each context word and the aspect
+201	0	3	IAN
+201	4	13	generates
+201	18	33	representations
+201	34	37	for
+201	38	63	aspect terms and contexts
+201	64	68	with
+201	69	103	two attention - based LSTM network
+203	0	3	RAM
+203	11	18	employs
+203	21	49	gated recurrent unit network
+203	50	58	to model
+203	61	89	multiple attention mechanism
+203	96	104	captures
+203	109	118	relevance
+203	119	126	between
+203	127	159	each context word and the aspect
+205	0	4	PBAN
+205	5	12	appends
+205	17	35	position embedding
+205	36	40	into
+205	41	60	each word embedding
+207	0	3	TSN
+207	4	6	is
+207	9	30	two - stage framework
+207	31	34	for
+207	35	68	aspect - level sentiment analysis
+210	0	3	AEN
+210	11	22	consists of
+210	26	41	embedding layer
+210	47	72	attentional encoder layer
+210	78	111	aspect - specific attention layer
+210	121	133	output layer
+212	0	10	AEN - BERT
+212	11	13	is
+212	0	3	AEN
+212	18	22	with
+212	23	37	BERT embedding
+184	130	143	to initialize
+184	148	163	word embeddings
+184	40	43	use
+184	48	67	GloVe 3 word vector
+184	76	127	pre-trained language model word representation BERT
+185	4	13	dimension
+185	14	16	of
+185	17	33	each word vector
+185	34	36	is
+185	37	40	300
+185	41	44	for
+185	45	50	GloVe
+185	55	58	768
+185	41	44	for
+185	63	67	BERT
+186	4	10	number
+186	11	13	of
+186	14	31	LSTM hidden units
+186	35	41	set to
+186	42	45	300
+186	56	72	output dimension
+186	11	13	of
+186	76	85	GCN layer
+186	35	41	set to
+186	96	99	600
+187	4	17	weight matrix
+187	18	20	of
+187	21	45	last fully connect layer
+187	49	72	randomly initialized by
+187	75	106	normal distribution N ( 0 , 1 )
+188	39	62	all the weight matrices
+188	0	7	Besides
+188	12	36	last fully connect layer
+188	67	90	randomly initialized by
+188	93	133	uniform distribution U ( ? 0.01 , 0.01 )
+189	3	6	add
+189	21	38	L2-regularization
+189	39	41	to
+189	46	70	last fully connect layer
+189	71	75	with
+189	78	84	weight
+189	85	87	of
+189	88	92	0.01
+190	0	6	During
+190	7	15	training
+190	21	24	set
+190	25	32	dropout
+190	33	35	to
+190	36	39	0.5
+190	46	56	batch size
+190	60	66	set to
+190	67	69	32
+190	78	87	optimizer
+190	57	59	is
+190	91	105	Adam Optimizer
+190	106	110	with
+190	113	126	learning rate
+190	127	129	of
+190	130	135	0.001
+191	3	12	implement
+191	17	31	proposed model
+191	32	37	using
+191	38	48	Tensorflow
+39	19	26	propose
+39	29	41	novel method
+39	42	50	to model
+39	51	117	Sentiment Dependencies with Graph Convolutional Networks ( SDGCN )
+39	118	121	for
+39	122	161	aspect - level sentiment classification
+40	0	3	GCN
+40	4	6	is
+40	9	58	simple and effective convolutional neural network
+40	59	71	operating on
+40	72	78	graphs
+40	87	96	can catch
+40	97	124	inter-dependent information
+40	125	129	from
+40	130	150	rich relational data
+42	17	23	aspect
+42	27	37	treated as
+42	40	44	node
+42	54	58	edge
+42	59	69	represents
+42	74	103	sentiment dependency relation
+42	104	106	of
+42	107	116	two nodes
+41	0	3	For
+41	4	14	every node
+41	15	17	in
+41	18	23	graph
+41	26	29	GCN
+41	30	37	encodes
+41	38	58	relevant information
+41	59	64	about
+41	69	82	neighborhoods
+41	83	85	as
+41	88	121	new feature representation vector
+43	10	16	learns
+43	21	43	sentiment dependencies
+43	44	46	of
+43	47	54	aspects
+43	55	58	via
+43	64	79	graph structure
+44	36	53	first to consider
+44	58	80	sentiment dependencies
+44	81	88	between
+44	89	96	aspects
+44	97	99	in
+44	100	112	one sentence
+44	113	116	for
+44	117	161	aspect - level sentiment classification task
+45	84	91	applies
+45	92	125	bidirectional attention mechanism
+45	126	130	with
+45	131	148	position encoding
+45	149	155	before
+45	156	159	GCN
+2	70	109	Aspect - level Sentiment Classification
+14	31	49	sentiment analysis
+218	0	5	Among
+218	6	35	all the GloVe - based methods
+218	42	60	TD - LSTM approach
+218	61	69	performs
+218	70	75	worst
+220	0	12	After taking
+220	17	27	importance
+220	28	30	of
+220	35	41	aspect
+220	42	46	into
+220	47	54	account
+220	55	59	with
+220	60	79	attention mechanism
+220	87	94	achieve
+220	97	115	stable improvement
+220	116	128	comparing to
+220	133	142	TD - LSTM
+221	0	3	RAM
+221	4	12	achieves
+221	15	33	better performance
+221	34	38	than
+221	39	75	other basic attention - based models
+222	0	4	PBAN
+222	5	13	achieves
+222	16	35	similar performance
+222	36	38	as
+222	39	42	RAM
+222	43	55	by employing
+222	58	76	position embedding
+223	25	36	better than
+223	37	40	RAM
+223	41	43	on
+223	44	62	Restaurant dataset
+223	69	79	worse than
+223	80	83	RAN
+223	41	43	on
+223	87	101	Laptop dataset
+225	0	3	AEN
+225	7	27	slightly better than
+225	28	31	TSN
+225	38	54	still worse than
+225	55	67	RAM and PBAN
+229	15	53	two models ( SDGCN - A and SDGCN - G )
+229	54	58	with
+229	59	79	position information
+229	80	84	gain
+229	87	110	significant improvement
+229	111	122	compared to
+229	15	25	two models
+229	138	145	without
+229	59	79	position information
+224	0	13	Compared with
+224	14	26	RAM and PBAN
+224	33	52	overall performance
+224	53	55	of
+224	56	59	TSN
+224	63	79	not perform well
+224	80	87	on both
+224	88	125	Restaurant dataset and Laptop dataset
+227	0	9	Comparing
+227	14	21	results
+227	22	24	of
+227	25	74	SDGCN - A w/o position and SDGCN - G w/o position
+227	77	100	SDGCN - A and SDGCN - G
+227	121	128	observe
+227	27	30	GCN
+227	142	152	built with
+227	153	170	global - relation
+227	174	194	slightly higher than
+227	195	225	built with adjacent - relation
+227	226	233	in both
+227	234	265	accuracy and Macro - F1 measure
+231	0	13	Benefits from
+231	18	23	power
+231	24	26	of
+231	27	43	pre-trained BERT
+231	46	65	BERT - based models
+231	71	76	shown
+231	77	93	huge superiority
+231	94	98	over
+231	99	119	GloVe - based models
+232	14	27	compared with
+232	28	38	AEN - BERT
+232	41	43	on
+232	48	66	Restaurant dataset
+232	69	81	SDGCN - BERT
+232	82	90	achieves
+232	91	109	absolute increases
+232	110	112	of
+232	113	130	1.09 % and 1.86 %
+232	100	102	in
+232	134	165	accuracy and Macro - F1 measure
+232	185	190	gains
+232	91	109	absolute increases
+232	110	112	of
+232	213	230	1.42 % and 2.03 %
+232	100	102	in
+232	134	165	accuracy and Macro - F1 measure
+232	41	43	on
+232	286	300	Laptop dataset

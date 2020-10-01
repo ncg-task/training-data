@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["MACHINE COMPREHENSION", {"from sentence" : "MACHINE COMPREHENSION USING MATCH - LSTM AND ANSWER POINTER"}],
+    ["Machine comprehension of text", {"from sentence" : "Machine comprehension of text is an important problem in natural language processing ."}]
+  ]
+}

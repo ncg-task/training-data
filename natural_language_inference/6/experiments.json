@@ -1,0 +1,120 @@
+{
+  "has" : {
+    "Experiments" : {
+      "has" : {
+        "XNLI : cross - lingual NLI" : {
+          "has" : {
+            "Our proposed method" : {
+              "obtains" : {
+                "best results" : {
+                  "in" : {
+                    "zero - shot cross - lingual transfer" : {
+                      "for" : "all languages but Spanish"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "9 Our proposed method obtains the best results in zero - shot cross - lingual transfer for all languages but Spanish ."
+            },
+            "transfer results" : {
+              "are" : {
+                "strong and homogeneous" : {
+                  "across" : "all languages"
+                },
+                "from sentence" : "Moreover , our transfer results are strong and homogeneous across all languages :"
+              }
+            },
+            "zero - short performance" : {
+              "is" : {
+                "( at most ) 5 % lower" : {
+                  "than" : {
+                    "English" : {
+                      "including" : {
+                        "distant languages" : {
+                          "like" : "Arabic , Chinese and Vietnamese"
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "for 11 of them , the zero - short performance is ( at most ) 5 % lower than the one on English , including distant languages like Arabic , Chinese and Vietnamese , and we also achieve remarkable good results on low - resource languages like Swahili ."
+                }
+              }
+            }
+          },
+          "achieves" : {
+            "remarkable good results" : {
+              "on" : {
+                "low - resource languages" : {
+                  "like" : "Swahili"
+                }
+              },
+              "from sentence" : "for 11 of them , the zero - short performance is ( at most ) 5 % lower than the one on English , including distant languages like Arabic , Chinese and Vietnamese , and we also achieve remarkable good results on low - resource languages like Swahili ."
+            }
+          },
+          "outperform" : {
+            "all baselines" : {
+              "by" : "substantial margin"
+            },
+            "from sentence" : "10 Finally , we also outperform all baselines of Conneau et al. by a substantial margin , with the additional advantage that we use a single pre-trained encoder , whereas X - BiLSTM learns a separate encoder for each language ."
+          }
+        },
+        "MLDoc : cross - lingual classification" : {
+          "has" : {
+            "our system" : {
+              "obtains" : {
+                "best published results" : {
+                  "for" : "5 of the 7 transfer languages"
+                }
+              },
+              "from sentence" : "As shown in , our system obtains the best published results for 5 of the 7 transfer languages ."
+            }
+          }
+        },
+        "BUCC : bitext mining" : {
+          "has" : {
+            "our system" : {
+              "establishes" : {
+                "new state - of - the - art" : {
+                  "for" : "all language pairs",
+                  "with the exception of" : "English - Chinese test"
+                }
+              }
+            },
+            "from sentence" : "As shown in , our system establishes a new state - of - the - art for all language pairs with the exception of English - Chinese test ."            
+          },
+          "outperform" : ["Artetxe and Schwenk ( 2018 )", {"from sentence" : "We also outperform Artetxe and Schwenk ( 2018 ) themselves , who use two separate models covering 4 languages each ."}]
+        },
+        "Tatoeba : similarity search" : {
+          "has" : {
+            "similarity error rates" : {
+              "has" : { 
+                "below 5 %" : {
+                  "for" : "37 languages"
+                }
+              }
+            }
+          },
+          "are" : {
+            "48 languages" : {
+              "with" : {
+                "error rate" : {
+                  "has" : "below 10 %"
+                }
+              }
+            },
+            "55" : {
+              "with" : "less than 20 %"
+            },
+            "15 languages" : {
+              "with error rates" : "above 50 %"
+            },
+            "from sentence" : "Contrasting these results with those of XNLI , one would assume that similarity error rates below 5 % are indicative of strong downstream performance .
+11 This is the case for 37 languages , while there are 48 languages with an error rate below 10 % and 55 with less than 20 % .
+There are only 15 languages with error rates above 50 % ."
+
+          }
+        }
+      }
+    }
+  }
+}

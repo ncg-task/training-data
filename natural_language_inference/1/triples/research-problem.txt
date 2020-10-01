@@ -1,0 +1,4 @@
+(Contribution||has research problem||Large - scale Simple Question Answering)
+(Contribution||has research problem||large - scale question answering)
+(Contribution||has research problem||simple question answering)
+(Contribution||has research problem||Simple Question Answering)

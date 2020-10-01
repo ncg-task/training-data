@@ -1,0 +1,93 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "Removing" : {
+        "independent span loss ( indep - I )" : {
+          "results in" : {
+            "performance drop" : {
+              "for" : "all answerable questions ( HasAns )"
+            }
+          },
+          "from sentence" : "Removing the independent span loss ( indep - I ) results in a performance drop for all answerable questions ( HasAns ) , indicating that this loss helps the model in better identifying the answer boundary ."
+        }
+      },
+      "Ablating" : {
+        "independent no - answer loss ( indep - II )" : {
+          "causes" : {
+            "little influence" : {
+              "on" : "HasAns"
+            }
+          },
+          "leads to" : {
+            "severe decline" : {
+              "on" : "no - answer accuracy ( NoAns ACC )"
+            }
+          },
+          "from sentence" : "Ablating independent no - answer loss ( indep - II ) , on the other hand , causes little influence on HasAns , but leads to a severe decline on no - answer accuracy ( NoAns ACC ) ."
+        },
+        "two auxiliary losses" : {
+          "leads to" : {
+            "overall degradation" : {
+              "on" : "curve"
+            },
+            "outperforms" : {
+              "has" : "baseline",
+              "by" : "large margin"
+            }
+          },
+          "from sentence" : "Ablating two auxiliary losses , however , leads to an overall degradation on the curve , but it still outperforms the baseline by a large margin ."
+        }
+      },
+      "deleting" : {
+        "both of two losses" : {
+          "causes" : {
+            "degradation" : {
+              "of" : {
+                "more than 1.5 points" : {
+                  "on" : {
+                    "overall performance" : {
+                      "in terms of" : "F1",
+                      "with or without" : "ELMo embeddings"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Finally , deleting both of two losses causes a degradation of more than 1.5 points on the overall performance in terms of F1 , with or without ELMo embeddings ."
+        }
+      },
+      "Adding" : {
+        "ELMo embeddings" : {
+          "does not" : {
+            "boost" : {
+              "has" : "performance"
+            }
+          },
+          "from sentence" : "Adding ELMo embeddings , however , does not boost the performance ."
+        }
+      },
+      "find that" : {
+        "improvment" : {
+          "on" : "noanswer accuracy",
+          "is" : "significant",
+          "from sentence" : "We find that the improvement on noanswer accuracy is significant ."
+        }
+      },
+      "observe" : {
+        "RMR + ELMo + Verifier" : {
+          "achieves" : {
+            "best precision" : {
+              "when" : {
+                "recall" : {
+                  "is" : "less than 80"
+                }
+              }
+            }
+          },
+          "from sentence" : "We observe that RMR + ELMo + Verifier achieves the best precision when the recall is less than 80 ."
+        }
+      }
+    }
+  }
+}

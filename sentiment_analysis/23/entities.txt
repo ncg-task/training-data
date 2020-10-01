@@ -1,0 +1,95 @@
+193	0	2	In
+193	3	20	our d-TBCNN model
+193	27	42	number of units
+193	43	45	is
+193	46	49	300
+193	50	53	for
+193	54	65	convolution
+193	70	73	200
+193	50	53	for
+193	82	99	last hidden layer
+194	0	15	Word embeddings
+194	16	19	are
+194	20	35	300 dimensional
+194	38	64	pretrained ourselves using
+194	65	73	word2vec
+197	0	7	Dropout
+197	19	29	applied to
+197	30	57	both weights and embeddings
+198	0	17	All hidden layers
+198	22	36	dropped out by
+198	37	41	50 %
+198	48	58	embeddings
+198	59	63	40 %
+194	74	82	To train
+194	83	92	our model
+194	98	105	compute
+194	106	114	gradient
+194	115	117	by
+194	118	136	back - propagation
+194	141	146	apply
+194	147	174	stochastic gradient descent
+194	175	179	with
+194	180	194	mini-batch 200
+195	3	6	use
+195	7	11	ReLU
+195	12	14	as
+195	19	38	activation function
+196	0	3	For
+196	4	18	regularization
+196	24	27	add
+196	28	37	2 penalty
+196	38	41	for
+196	42	49	weights
+196	50	54	with
+196	57	68	coefficient
+196	69	71	of
+196	72	77	10 ?5
+26	19	26	propose
+26	29	54	novel neural architecture
+26	55	58	for
+26	59	91	discriminative sentence modeling
+26	94	100	called
+26	105	156	Tree - Based Convolutional Neural Network ( TBCNN )
+27	15	23	leverage
+27	24	56	different sentence parsing trees
+28	10	18	variants
+28	23	33	denoted as
+28	34	42	c- TBCNN
+28	47	56	d - TBCNN
+29	12	36	tree - based convolution
+29	43	48	apply
+29	51	83	set of subtree feature detectors
+29	86	98	sliding over
+29	103	122	entire parsing tree
+29	9	11	of
+29	128	136	sentence
+29	144	151	pooling
+29	152	194	aggregates these extracted feature vectors
+29	198	204	taking
+29	209	222	maximum value
+29	90	92	in
+29	226	240	each dimension
+2	0	39	Discriminative Neural Sentence Modeling
+208	18	31	d-TBCNN model
+208	32	40	achieves
+209	0	15	87.9 % accuracy
+210	0	2	In
+210	5	31	more controlled comparison
+210	34	38	with
+210	39	60	shallow architectures
+210	69	137	basic interaction ( linearly transformed and non-linearly squashed )
+210	140	146	TBCNNs
+210	168	191	consistently outperform
+210	192	196	RNNs
+210	197	199	to
+210	202	246	large extent ( 50.4 - 51.4 % versus 43.2 % )
+210	291	296	 CNNs
+210	297	309	by more than
+210	310	314	10 %
+212	8	15	observe
+212	16	24	d- TBCNN
+212	25	33	achieves
+212	34	52	higher performance
+212	53	57	than
+212	58	67	c - TBCNN

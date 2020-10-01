@@ -1,0 +1,74 @@
+190	3	8	found
+190	9	20	large drops
+190	26	34	removing
+190	39	65	context modeling component
+191	4	7	use
+191	15	37	similarity focus layer
+191	38	40	is
+191	46	56	beneficial
+191	70	72	on
+191	77	88	WikiQA data
+192	8	16	replaced
+192	21	50	entire similarity focus layer
+192	51	55	with
+192	58	90	random dropout layer ( p = 0.3 )
+192	111	116	hurts
+192	117	125	accuracy
+16	17	25	focus on
+16	26	35	capturing
+16	36	75	fine - grained word - level information
+18	8	24	instead of using
+18	25	42	sentence modeling
+18	48	55	propose
+18	56	90	pairwise word interaction modeling
+18	91	106	that encourages
+18	107	141	explicit word context interactions
+18	142	148	across
+18	149	158	sentences
+20	9	17	based on
+20	22	48	pairwise word interactions
+20	54	62	describe
+20	65	93	novel similarity focus layer
+20	94	99	which
+20	100	105	helps
+20	110	115	model
+20	116	136	selectively identify
+20	137	164	important word interactions
+20	165	177	depending on
+20	199	221	similarity measurement
+155	0	3	For
+155	8	35	SICK and MSRVID experiments
+155	41	45	used
+155	46	61	300 - dimension
+155	62	84	Glo Ve word embeddings
+156	8	49	STS2014 , WikiQA , and TrecQA experiments
+156	151	161	trained on
+156	162	172	word pairs
+156	102	106	from
+156	182	210	Paraphrase Database ( PPDB )
+156	55	59	used
+156	60	73	300 dimension
+156	74	101	PARAGRAM - SL999 embeddings
+156	115	143	PARAGRAM - PHRASE embeddings
+161	0	22	Our timing experiments
+161	28	40	conducted on
+161	44	68	Intel Xeon E5 - 2680 CPU
+162	0	6	Due to
+162	7	33	sentence length variations
+162	36	39	for
+162	44	64	SICK and MSRVID data
+162	68	74	padded
+162	79	88	sentences
+162	4	6	to
+162	92	100	32 words
+162	111	145	STS2014 , WikiQA , and TrecQA data
+162	68	74	padded
+162	79	88	sentences
+162	4	6	to
+162	175	183	48 words
+2	65	96	Semantic Similarity Measurement
+4	0	30	Textual similarity measurement
+9	43	78	semantic textual similarity ( STS )
+178	41	125	paragraph vector ( PV ) , CNN , and PV - Cnt / CNN - Cnt with word matching features
+179	0	9	Our model
+179	10	21	outperforms

@@ -1,0 +1,102 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "implement" : {
+        "Comp - Clip model" : {
+          "apply" : {
+            "context projection weight matrix" : {
+              "with" : "100 dimensions",
+              "shared between" : ["question part", "answer part"]
+            }
+          },
+          "from sentence" : "To implement the Comp - Clip model , we apply a context projection weight matrix with 100 dimensions that are shared between the question part and the answer part ( eq. 1 ) ."
+        }
+      },
+      "In" : {
+        "aggregation part" : {
+          "use" : {
+            "1 - D CNN" : {
+              "with" : "total of 500 filters"
+            }
+          },
+          "from sentence" : "In the aggregation part , we use 1 - D CNN with a total of 500 filters , which involves five types of filters K ? R {1,2,3,4,5}100 , 100 per type ."
+        }
+      },
+      "select" : {
+        "k" : {
+          "as" : {
+            "6 and 4" : {
+              "for" : {
+                "WikiQA and TREC - QA case" : {
+                  "apply" : "8 latent clusters"
+                }
+              }
+            }
+          },
+          "from sentence" : "We select k ( for the kmax - pool in equation 5 ) as 6 and 4 for the WikiQA and TREC - QA case , respectively .
+In both datasets , we apply 8 latent clusters ."
+
+        }
+      },
+      "has" : {
+        "vocabulary size" : {
+          "in" : {
+            "WiKiQA , TREC - QA and QNLI dataset" : {
+              "are" : "30,104 , 56,908 and 154,442"
+            }
+          },
+          "from sentence" : "The vocabulary size in the WiKiQA , TREC - QA and QNLI dataset are 30,104 , 56,908 and 154,442 , respectively ."
+        }
+      },
+      "applying" : {
+        "TL" : {
+          "has" : {
+            "vocabulary size" : {
+              "set to" : "154,442"
+            },
+            "dimension" : {
+              "of" : {
+                "context projection weight matrix" : {
+                  "set to" : "300"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "When applying the TL , the vocabulary size is set to 154,442 , and the dimension of the context projection weight matrix is set to 300 ."
+      },
+      "use" : {
+        "Adam optimizer" : {
+          "including" : {
+            "gradient clipping" : {
+              "by" : {
+                "norm" : {
+                  "at" : {
+                    "threshold" : {
+                      "of" : "5"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "We use the Adam optimizer , including gradient clipping , by the norm at a threshold of 5 ."
+        }
+      },
+      "For" : {
+        "regularization" : {
+          "applied" : {
+            "dropout" : {
+              "with" : {
+                "ratio" : {
+                  "of" : "0.5"
+                }
+              }
+            }
+          },
+          "from sentence" : "For the purpose of regularization , we applied a dropout with a ratio of 0.5 .."
+        }
+      }
+    }
+  }
+}

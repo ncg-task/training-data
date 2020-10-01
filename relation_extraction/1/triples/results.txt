@@ -1,0 +1,8 @@
+(Contribution||has||Results)
+(Results||see||BERT - LSTM - large model)
+(BERT - LSTM - large model||achieves||state - of - the - art F 1 score)
+(state - of - the - art F 1 score||among||single models)
+(BERT - LSTM - large model||outperforms||ensemble model)
+(ensemble model||has||in - domain and out - of - domain tests)
+(ensemble model||on||CoNLL 2005)
+(Results||falls short on||CoNLL 2012 benchmark)

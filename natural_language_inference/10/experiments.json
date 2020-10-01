@@ -1,0 +1,206 @@
+{
+  "has" : {
+    "Experiments" : {
+      "has" : {
+        "Tasks" : {
+          "has" : {
+            "Natural Language Inference" : {
+              "has" : {
+                "Experimental setup" : {
+                  "initialize" : {
+                    "word embedding matrix" : {
+                      "with" : "GloVe 300D pretrained vectors",
+                      "from sentence" : "Similar to 100D experiments , we initialize the word embedding matrix with GloVe 300D pretrained vectors 4 , however we do not update the word representations during training ."
+                    }
+                  },
+                  "has" : {
+                    "dropout probability" : {
+                      "set to" : "0.2",
+                      "from sentence" : "The dropout probability is set to 0.2 and word embeddings are not updated during training ."
+                    },
+                    "size" : {
+                      "of" : {
+                        "mini-batches" : {
+                          "set to" : "128"
+                        }
+                      },
+                      "from sentence" : "The size of mini-batches is set to 128 in all experiments , and hyperparameters are tuned using the validation split ."
+                    },
+                    "temperature parameter" : {
+                      "of" : {
+                        "Gumbel - Softmax" : {
+                          "set to" : "1.0"
+                        }
+                      },
+                      "from sentence" : "The temperature parameter ? of Gumbel - Softmax is set to 1.0 , and we did not find that temperature annealing improves performance ."
+                    }
+                  },
+                  "For training" : {
+                    "models" : {
+                      "used" : "Adam optimizer"
+                    },
+                    "from sentence" : "For training models , Adam optimizer is used ."
+                  },
+                  "on" : {
+                    "machine" : {
+                      "with" : "NVIDIA Titan Xp GPU",
+                      "from sentence" : "All of our models converged within a few hours on a machine with NVIDIA Titan Xp GPU ."
+                    }
+                  }
+                },
+                "Results" : {
+                  "see that" : {
+                    "LSTM - based leaf transformation" : {
+                      "has" : {
+                        "clear advantage" : {
+                          "over" : "affine - transformation - based one"
+                        }
+                      },
+                      "from sentence" : "First , we can see that LSTM - based leaf transformation has a clear advantage over the affine - transformation - based one ."
+                    }
+                  },
+                  "find that" : {
+                    "our 100D and 300D model" : {
+                      "outperform" : {
+                        "all other models" : {
+                          "of" : "similar numbers of parameters"
+                        }
+                      }
+                    },
+                    "from sentence" : "Secondly , comparing ours with other models , we find that our 100D and 300D model outperform all other models of similar numbers of parameters ."
+                  },
+                  "has" : {
+                    "Our 600D model" : {
+                      "achieves" : {
+                        "accuracy" : {
+                          "of" : {
+                            "86.0 %" : {
+                              "comparable to" : "state - of - the - art model"
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "Our 600D model achieves the accuracy of 86.0 % , which is comparable to that of the state - of - the - art model , while using far less parameters ."
+                    }
+                  }
+                }
+              }
+            },
+            "Sentiment Analysis" : {
+              "has" : {
+                "Hyperparameters" : {
+                  "is" : {
+                    "single - hidden layer MLP" : {
+                      "with" : "ReLU activation function",
+                      "from sentence" : "is a single - hidden layer MLP with the ReLU activation function ."
+                    }
+                  },
+                  "trained" : {
+                    "SST - 2 model" : {
+                      "with hyperparameters" : ["D x = 300 , D h = 300 , D c = 300", {"from sentence" : "We trained our SST - 2 model with hyperparameters D x = 300 , D h = 300 , D c = 300 ."}],
+                      "has" : {
+                        "word vectors" : {
+                          "has" : {
+                            "initialized" : {
+                              "with" : "GloVe 300D pretrained vectors"
+                            },
+                            "fine - tuned" : {
+                              "during" : "training"
+                            }
+                          },
+                          "from sentence" : "The word vectors are initialized with GloVe 300D pretrained vectors and fine - tuned during training ."
+                        },
+                        "size" : {
+                          "of" : {
+                            "mini-batches" : {
+                              "set to" : "32"
+                            }
+                          },
+                          "from sentence" : "The size of mini-batches is set to 32 and Adadelta optimizer is used for optimization ."
+                        },
+                        "Adadelta optimizer" : {
+                          "used for" : "optimization",
+                          "from sentence" : "The size of mini-batches is set to 32 and Adadelta optimizer is used for optimization ."
+                        }
+                      },
+                      "apply" : {
+                        "dropout ( p = 0.5 )" : {
+                          "on" : {
+                            "output" : {
+                              "of" : "word embedding layer"
+                            },
+                            "input and the output" : {
+                              "of" : "MLP layer"
+                            }
+                          }
+                        },
+                        "from sentence" : "We apply dropout ( p = 0.5 ) on the output of the word embedding layer and the input and the output of the MLP layer ."
+                      }                      
+                    }
+                  },
+                  "For" : {
+                    "SST - 5 model" : {
+                      "has" : {
+                        "hyperparameters" : {
+                          "set to" : "D x = 300 , D h = 300 , D c = 1024"
+                        }
+                      },
+                      "optimize" : {
+                        "model" : {
+                          "using" : {
+                            "Adadelta optimizer" : {
+                              "with" : "batch size 64",
+                              "apply" : {
+                                "dropout" : {
+                                  "with" : "p = 0.5"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "For our SST - 5 model , hyperparameters are set to D x = 300 , D h = 300 , D c = 1024 . Similar to the SST - 2 model , we optimize the model using Adadelta optimizer with batch size 64 and apply dropout with p = 0.5 ."
+                    }
+                  }
+                },
+                "Results" : {
+                  "has" : {
+                    "SST - 2 model" : {
+                      "outperforms" : {
+                        "all other models" : {
+                          "has" : "substantially",
+                          "except" : "byte - m LSTM"
+                        }
+                      },
+                      "from sentence" : "Our SST - 2 model outperforms all other models substantially except byte - m LSTM , where a byte - level language model trained on the large product review dataset is used to obtain sentence representations ."
+                    }
+                  },
+                  "see that" : {
+                    "performance" : {
+                      "of" : {
+                        "our SST - 5 model" : {
+                          "on par with" : "current state - of - the - art model"
+                        }
+                      },
+                      "from sentence" : "We also see that the performance of our SST - 5 model is on par with that of the current state - of - the - art model , which is pretrained on large parallel datasets and uses character n-gram embeddings alongside word embeddings , even though our model does not utilize external resources other than GloVe vectors and only uses wordlevel representations ."
+                    }
+                  },
+                  "utilizing" : {
+                    "pretraining and character n-gram embeddings" : {
+                      "improves" : {
+                        "validation accuracy" : {
+                          "by" : ["2.8 % ( SST - 2 )", "1.7 % ( SST - 5 )"]
+                        }
+                      }
+                    },
+                    "from sentence" : "The authors of stated that utilizing pretraining and character n-gram embeddings improves validation accuracy by 2.8 % ( SST - 2 ) or 1.7 % ( SST - 5 ) ."
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }  
+}

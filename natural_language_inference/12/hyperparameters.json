@@ -1,0 +1,59 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "use" : {
+        "cross - entropy loss" : {
+          "as" : {
+            "training objective" : {
+              "with" : {
+                "Adam" : {
+                  "with" : "32 batch size"
+                }
+              }
+            }
+          },
+          "from sentence" : "We use cross - entropy loss as the training objective with Adam - based opti-Model Accuracy SNLI Multi - NLI Matched Multi - NLI Mismatched CBOW 80.6 65.2 64.6 biLSTM Encoder 81.5 67.5 67.1 300D Tree - CNN Encoder 82.1 --300D SPINN - PI Encoder 83.2 --300D NSE Encoder 84.6 --biLSTM -Max Encoder 84 . mization with 32 batch size ."
+        }
+      },
+      "has" : {
+        "starting learning rate" : {
+          "is" : {
+            "0.0002" : {
+              "with" : {
+                "half decay" : {
+                  "every" : "two epochs"
+                }
+              }
+            }
+          },
+          "from sentence" : "The starting learning rate is 0.0002 with half decay every two epochs ."
+        },
+        "number of hidden units" : {
+          "for" : "MLP",
+          "in" : "classifier",
+          "is" : "1600",
+          "from sentence" : "The number of hidden units for MLP in classifier is 1600 ."
+        },
+        "Dropout layer" : {
+          "applied on" : {
+            "output" : {
+              "of" : "each layer of MLP",
+              "with" : {
+                "dropout rate" : {
+                  "set to" : "0.1"
+                }
+              }
+            }
+          },
+          "from sentence" : "Dropout layer is also applied on the output of each layer of MLP , with dropout rate set to 0.1 ."
+        }
+      },
+      "used" : {
+        "pre-trained 300D Glove 840B vectors" : {
+          "to initialize" : "word embeddings",
+          "from sentence" : "We used pre-trained 300D Glove 840B vectors to initialize the word embeddings ."
+        }
+      }
+    }
+  }
+}

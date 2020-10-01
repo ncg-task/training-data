@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Abstractive Summarization", {"from sentence" : "Entity Commonsense Representation for Neural Abstractive Summarization"}],
+    ["Text summarization", {"from sentence" : "Text summarization is a task to generate a shorter and concise version of a text while preserving the meaning of the original text ."}]
+  ]
+}

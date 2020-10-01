@@ -1,0 +1,62 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "has" : {
+        "ARE model" : {
+          "incorrectly classifies" : {
+            "most instances of happy" : {
+              "as" : "neutral ( 43.51 % )"
+            },
+            "from sentence" : "The ARE model ( ) incorrectly classifies most instances of happy as neutral ( 43.51 % ) ; thus , it shows reduced accuracy ( 35.15 % ) in predicting the the happy class ."            
+          },
+          "has" : {
+            "emotion classes" : {
+              "frequently confused with" : "neutral class",
+              "from sentence" : "Overall , most of the emotion classes are frequently confused with the neutral class ."
+            }
+          }
+        },
+        "TRE model" : {
+          "shows" : {
+            "greater prediction gains" : {
+              "in predicting" : {
+                "happy class" : {
+                  "compared to" : "ARE model ( 35.15 % to 75. 73 % ) "
+                }
+              }
+            }
+          },
+          "from sentence" : "Interestingly , the TRE model ( ) shows greater prediction gains in predicting the happy class when compared to the ARE model ( 35.15 % to 75. 73 % ) ."
+        },
+        "MDRE model" : {
+          "compensates for" : {
+            "weaknesses" : {
+              "of" : "previous two models ( ARE and TRE )"
+            },
+            "from sentence" : "The MDRE model ) compensates for the weaknesses of the previous two models ( ARE and TRE ) and benefits from their strengths to a surprising degree ."
+          },
+          "benefits from" : {
+            "strengths" : {
+              "to" : "surprising degree"
+            },
+            "from sentence" : "The MDRE model ) compensates for the weaknesses of the previous two models ( ARE and TRE ) and benefits from their strengths to a surprising degree ."            
+          },
+          "has" : {
+            "occurrence" : {
+              "of" : {
+                "incorrect \" sad - to - happy \" cases" : {
+                  "in" : {
+                    "TRE model" : {
+                      "reduced from" : "16 . 20 % to 9.15 %"
+                    }
+                  } 
+                }
+              },
+              "from sentence" : "Furthermore , the occurrence of the incorrect \" sad - to - happy \" cases in the TRE model is reduced from 16 . 20 % to 9.15 % ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

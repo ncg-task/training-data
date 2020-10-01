@@ -1,0 +1,8 @@
+{
+  "has research problem" : [
+    ["LEARNING GENERAL PURPOSE DISTRIBUTED SEN - TENCE REPRESENTATIONS", {"from sentence" : "Published as a conference paper at ICLR 2018 LEARNING GENERAL PURPOSE DISTRIBUTED SEN - TENCE REPRESENTATIONS VIA LARGE SCALE MULTI - TASK LEARNING"}],
+    ["distributed vector representations of words", {"from sentence" : "A lot of the recent success in natural language processing ( NLP ) has been driven by distributed vector representations of words trained on large amounts of text in an unsupervised manner ."}],
+    ["learning representations of sequences of words", {"from sentence" : "However , extending this success to learning representations of sequences of words , such as sentences , remains an open problem ."}],
+    ["learning general - purpose sentence representations", {"from sentence" : "Some recent work has addressed this by learning general - purpose sentence representations ."}]
+  ]
+}

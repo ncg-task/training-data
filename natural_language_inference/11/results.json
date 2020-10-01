@@ -1,0 +1,110 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "Wikipedia ( W )" : {
+          "yields" : {
+            "further , significant improvements" : {
+              "on" : "TriviaQA",
+              "has" : {
+                "slightly outperforming" : {
+                  "has" : "current state of the art model"
+                }
+              }
+            }
+          },
+          "from sentence" : "Wikipedia
+( W ) yields further , significant improvements on TriviaQA , slightly outperforming the current state of the art model ."
+
+        },
+        "RTE experiments" : {
+          "introduction of" : {
+            "our refinement strategy" : {
+              "has" : {
+                "almost always helps" : {
+                  "with and without" : "external knowledge"
+                }
+              },
+              "from sentence" : "shows the results of our RTE experiments .
+In general , the introduction of our refinement strategy almost always helps , both with and without external knowledge ."
+
+            }
+          },
+          "When providing" : {
+            "additional background knowledge" : {
+              "from" : "ConceptNet",
+              "has" : {
+                "our BiLSTM based models" : {
+                  "has" : "improve substantially"
+                },
+                "ESIM - based models" : {
+                  "has" : {
+                    "improve" : {
+                      "only on" : "more difficult MultiNLI dataset"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "When providing additional background knowledge from ConceptNet , our BiLSTM based models improve substantially , while the ESIM - based models improve only on the more difficult MultiNLI dataset ."
+            }
+          },
+          "has" : {
+            "our models" : {
+              "acquit" : {
+                "quite well" : {
+                  "on" : "MultiNLI benchmark"
+                },
+                "competitively" : {
+                  "on" : "SNLI benchmark"
+                }
+              },
+              "from sentence" : "Compared to previously published state of the art systems , our models acquit themselves quite well on the MultiNLI benchmark , and competitively on the SNLI benchmark ."
+            },
+            "both ESIM and our BiL - STM models" : {
+              "trained with" : {
+                "knowledge" : {
+                  "from" : "ConceptNet",
+                  "sensitive to" : {
+                    "semantics" : {
+                      "of" : "provided assertions"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Nevertheless , both ESIM and our BiL - STM models when trained with knowledge from ConceptNet are sensitive to the semantics of the provided assertions as demonstrated in our analysis in 5.3 ."
+            }
+          },
+          "find that" : {
+            "little impact" : {
+              "of using" : {
+                "external knowledge" : {
+                  "on" : {
+                    "RTE task" : {
+                      "with" : "ESIM"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "We do find that there is little impact of using external knowledge on the RTE task with ESIM , although the refinement strategy helps using just p + q."
+            }
+          },
+          "increasing" : {
+            "coverage" : {
+              "of" : {
+                "assertions" : {
+                  "in" : "ConceptNet",
+                  "most likely yield" : {
+                    "improved performance" : {
+                      "without retraining" : "our models"
+                    }
+                  },
+                  "from sentence" : "Furthermore , increasing the coverage of assertions in ConceptNet would most likely yield improved performance even without retraining our models ."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

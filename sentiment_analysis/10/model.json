@@ -1,0 +1,81 @@
+{
+  "has" : {
+    "Model" : {
+      "has" : {
+        "DialogueRNN system" : {
+          "employs" : "three gated recurrent units ( GRU )",
+          "from sentence" : "Our proposed DialogueRNN system employs three gated recurrent units ( GRU ) to model these aspects ."
+        },
+        "incoming utterance" : {
+          "fed into" : {
+            "two GRUs" : {
+              "called" : "global GRU and party GRU"
+            }
+          },
+          "from sentence" : "The incoming utterance is fed into two GRUs called global GRU and party GRU to update the context and party Copyright 2019 , Association for the Advancement of Artificial Intelligence ( www.aaai.org ) .
+All rights reserved .
+state , respectively ."
+
+        },
+        "global GRU" : {
+          "encodes" : {
+            "corresponding party information" : {
+              "while encoding" : "utterance"
+            },
+            "from sentence" : "The global GRU encodes corresponding party information while encoding an utterance ."            
+          },
+          "Attending over" : {
+            "gives contextual representation" : {
+              "has information of" : {
+                "all preceding utterances" : {
+                  "by" : {
+                    "different parties" : {
+                      "in" : "conversation"
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "Attending over this GRU gives contextual representation that has information of all preceding utterances by different parties in the conversation ."
+          }         
+        },
+        "speaker state" : {
+          "depends on" : {
+            "context" : {
+              "through" : "attention and the speaker 's previous state"
+            }
+          },
+          "from sentence" : "The speaker state depends on this context through attention and the speaker 's previous state ."
+        },
+        "updated speaker state" : {
+          "fed into" : {
+            "emotion GRU" : {
+              "to decode" : {
+                "emotion representation" : {
+                  "of" : {
+                    "given utterance" : {
+                      "used for" : "emotion classification"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "from sentence" : "Finally , the updated speaker state is fed into the emotion GRU to decode the emotion representation of the given utterance , which is used for emotion classification ."
+        }
+      },
+      "at time t" : {
+        "speaker state" : {
+          "directly gets information from" : ["speaker 's previous state", {"global GRU" : {"which has information on" : "preceding parties"}}],
+          "from sentence" : "This ensures that at time t , the speaker state directly gets information from the speaker 's previous state and global GRU which has information on the preceding parties ."
+        }
+      },
+      "At time t" : {
+        "emotion GRU cell" : {
+          "gets" : "emotion representation of t ? 1 and the speaker state of t"
+        },
+        "from sentence" : "At time t , the emotion GRU cell gets the emotion representation of t ? 1 and the speaker state of t ."
+      }
+    }
+  }
+}

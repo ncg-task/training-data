@@ -1,0 +1,70 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "BM25" : {
+          "use" : {
+            "Anserini open - source IR toolkit" : {
+              "to index" : "original ( non -expanded ) documents"
+            }
+          },
+          "to rank" : "passages",
+          "from sentence" : "BM25 : We use the Anserini open - source IR toolkit 3 to index the original ( non -expanded ) documents and BM25 to rank the passages ."
+        },
+        "BM25 + Doc2query" : {
+          "expand" : {
+            "documents" : {
+              "using" : "proposed Doc2query method"
+            }
+          },
+          "index and rank" : {
+            "expanded documents" : {
+              "exactly as in" : "BM25 method"
+            }
+          },
+          "from sentence" : "BM25 + Doc2query :
+We first expand the documents using the proposed Doc2query method .
+We then index and rank the expanded documents exactly as in the BM25 method above ."
+
+        },
+        "RM3" : {
+          "compare" : {
+            "document expansion" : {
+              "with" : "query expansion",
+              "applied" : "RM3 query expansion technique"
+            }
+          },
+          "from sentence" : "RM3 :
+To compare document expansion with query expansion , we applied the RM3 query expansion technique ."
+
+        },
+        "BM25 + BERT" : {
+          "index and retrieve" : {
+            "documents" : {
+              "as in" : "BM25 condition"
+            }
+          },
+          "further re-rank" : {
+            "documents" : {
+              "with" : "BERT"
+            }
+          },
+          "from sentence" : "BM25 + BERT : We index and retrieve documents as in the BM25 condition and further re-rank the documents with BERT as described in ."
+        },
+        "BM25 + Doc2query + BERT" : {
+          "expand , index , and retrieve" : {
+            "documents" : {
+              "as in" : "BM25 + Doc2query condition"
+            }
+          },
+          "further re-rank" : {
+            "documents" : {
+              "with" : "BERT"
+            }
+          },
+          "from sentence" : "BM25 + Doc2query + BERT : We expand , index , and retrieve documents as in the BM25 + Doc2query condition and further re-rank the documents with BERT ."
+        }
+      }
+    }
+  }
+}

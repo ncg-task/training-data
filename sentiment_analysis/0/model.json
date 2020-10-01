@@ -1,0 +1,31 @@
+{
+  "has" : { 
+    "Model" : {
+      "uses" : {
+        "high - level text transcription" : {
+          "as well as" : "low - level audio signals",
+          "to utilize" : {
+            "information" : {
+              "contained within" : "low - resource datasets"
+            }
+          },
+          "from sentence" : "To overcome these limitations , we propose a model that uses high - level text transcription , as well as low - level audio signals , to utilize the information contained within low - resource datasets to a greater degree ."
+        }
+      },
+      "propose" : {
+        "novel deep dual recurrent encoder model" : {
+          "simultaneously utilizes" : {
+            "audio and text data" : {
+              "in recognizing" : {
+                "emotions" : {
+                  "from" : "speech"
+                }
+              }  
+            }
+          }
+        },
+        "from sentence" : "In this paper , we propose a novel deep dual recurrent encoder model that simultaneously utilizes audio and text data in recognizing emotions from speech ."
+      }
+    }
+  }
+}

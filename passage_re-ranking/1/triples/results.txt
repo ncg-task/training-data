@@ -1,0 +1,6 @@
+(Contribution||has||Results)
+(Results||Despite||training)
+(training||has||proposed BERT - based models)
+(proposed BERT - based models||surpass||previous state - of - the - art models)
+(previous state - of - the - art models||by||large margin)
+(training||on||fraction of the data available)

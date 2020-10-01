@@ -1,0 +1,63 @@
+{
+  "has" : {
+    "Model" : {
+      "relies on" : ["alignment", {"from sentence" : "In contrast to existing approaches , our approach only relies on alignment and is fully computationally decomposable with respect to the input text ."}],
+      "has" : {
+        "fully computationally decomposable" : {
+          "with respect to" : "input text",
+          "from sentence" : "In contrast to existing approaches , our approach only relies on alignment and is fully computationally decomposable with respect to the input text ."
+        }
+      },
+      "Given" : {
+        "two sentences" : {
+          "has" : {
+            "each word" : {
+              "repre-sented by" : "embedding vector",
+              "from sentence" : "Given two sentences , where each word is repre-sented by an embedding vector , we first create a soft alignment matrix using neural attention ."
+            },
+            "results" : {
+              "of" : "subproblems",
+              "has" : {
+                "merged" : {
+                  "to produce" : "final classification"
+                }
+              },
+              "from sentence" : "Finally , the results of these subproblems are merged to produce the final classification ."
+            }
+          },
+          "create" : {
+            "soft alignment matrix" : {
+              "using" : "neural attention",
+              "from sentence" : "Given two sentences , where each word is repre-sented by an embedding vector , we first create a soft alignment matrix using neural attention ."
+            }
+          },
+          "use" : {
+            "( soft ) alignment" : {
+              "to decompose" : {
+                "task" : {
+                  "into" : "subproblems"
+                }
+              },
+              "from sentence" : "We then use the ( soft ) alignment to decompose the task into subproblems that are solved separately ."
+            }
+          }
+        }
+      },
+      "apply" : {
+        "intra-sentence attention" : {
+          "to endow" : {
+            "model" : {
+              "with" : {
+                "richer encoding" : {
+                  "of" : "substructures",
+                  "prior to" : "alignment step"
+                }
+              }
+            }
+          },
+          "from sentence" : "In addition , we optionally apply intra-sentence attention to endow the model with a richer encoding of substructures prior to the alignment step ."
+        }
+      }
+    }
+  }
+}

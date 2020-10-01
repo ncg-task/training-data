@@ -1,0 +1,106 @@
+161	11	14	add
+161	15	19	ELMo
+161	126	128	to
+161	126	128	to
+161	26	28	is
+162	5	11	helped
+162	12	38	our model ( MAMCN + ELMo )
+162	39	49	to improve
+162	50	52	F1
+162	56	61	85.13
+162	66	68	EM
+162	72	77	77.44
+162	89	93	best
+162	94	99	among
+162	104	110	models
+162	111	120	only with
+162	125	156	additional feature augmentation
+168	3	10	replace
+168	19	30	BiGRU units
+168	31	35	with
+168	41	56	embedding block
+168	57	63	except
+168	68	84	controller layer
+168	47	49	in
+168	88	119	our model ( MAMCN + ELMo + DC )
+169	3	10	achieve
+169	15	43	state of the art performance
+169	46	67	86.73 F1 and 79.69 EM
+137	3	10	develop
+137	11	16	MAMCN
+137	17	22	using
+137	23	59	Tensorflow 1 deep learning framework
+137	64	80	Sonnet 2 library
+138	0	3	For
+138	8	30	word - level embedding
+138	36	44	tokenize
+138	49	58	documents
+138	59	64	using
+138	59	77	using NLTK toolkit
+138	82	92	substitute
+138	93	98	words
+138	99	103	with
+138	104	112	GloVe 6B
+139	0	2	In
+139	7	24	memory controller
+139	30	33	use
+139	34	54	100 x 36 size memory
+139	55	71	initialized with
+139	72	77	zeros
+139	80	81	4
+139	82	92	read heads
+139	34	35	1
+139	99	109	write head
+140	4	13	optimizer
+140	14	16	is
+140	17	43	AdaDelta ( Zeiler , 2012 )
+140	44	48	with
+140	52	73	initial learning rate
+140	74	76	of
+140	77	80	0.5
+141	39	49	batch size
+141	53	59	set to
+141	60	62	30
+141	3	8	train
+141	13	18	model
+141	19	22	for
+141	23	32	12 epochs
+142	0	6	During
+142	11	19	training
+142	25	29	keep
+142	34	60	exponential moving average
+142	61	63	of
+142	64	71	weights
+142	72	76	with
+142	77	88	0.001 decay
+142	115	124	test time
+24	18	23	build
+24	26	34	QA model
+24	44	54	understand
+24	55	69	long documents
+24	70	82	by utilizing
+24	83	125	Memory Augmented Neural Networks ( MANNs )
+25	29	38	decouples
+25	43	58	memory capacity
+25	59	63	from
+25	68	94	number of model parameters
+2	52	81	Machine Reading Comprehension
+4	0	28	Reading Comprehension ( RC )
+5	91	93	RC
+12	57	111	answer span prediction style Question Answering ( QA )
+13	81	83	QA
+147	0	10	QUASAR - T
+150	88	118	our proposed memory controller
+150	119	124	gives
+150	125	153	more performance improvement
+150	133	136	for
+150	133	136	for
+151	3	10	achieve
+151	11	32	68.13 EM and 70.32 F1
+151	37	52	short documents
+151	57	72	63.44 and 65.19
+151	77	91	long documents
+152	0	8	TriviaQA
+156	0	9	Our model
+156	10	18	achieves
+156	23	51	state of the art performance

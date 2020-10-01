@@ -1,0 +1,86 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "has" : {
+        "300 - dimension Glo Ve vectors" : {
+          "to initialize" : {
+            "E and E" : {
+              "when" : {
+                "pretraining" : {
+                  "not conducted for" : "weight initialization"
+                }
+              }
+            }
+          },
+          "from sentence" : "In all experiments , 300 - dimension Glo Ve vectors are used to initialize E and E when pretraining is not conducted for weight initialization ."
+        },
+        "vectors" : {
+          "used for" : {
+            "initializing E" : {
+              "in" : "pretraining phase"
+            },
+            "from sentence" : "These vectors are also used for initializing E in the pretraining phase ."
+          }
+        }
+      },
+      "randomly sample" : {
+        "20 %" : {
+          "of" : {
+            "original training data" : {
+              "from" : "aspectlevel dataset"
+            }
+          },
+          "as" : "development set"          
+        },
+        "from sentence" : "We randomly sample 20 % of the original training data from the aspectlevel dataset as the development set and only use the remaining 80 % for training ."
+      },
+      "For" : {
+        "all experiments" : {
+          "has" : {
+            "dimension" : {
+              "of" : {
+                "LSTM hidden vectors" : {
+                  "set to" : "300"
+                }
+              }
+            }
+          },
+          "from sentence" : "For all experiments , the dimension of LSTM hidden vectors is set to 300 , ?"
+        }
+      },
+      "use" : {
+        "dropout" : {
+          "with" : {
+            "probability 0.5" : {
+              "on" : {
+                "sentence / document representations" : {
+                  "before" : "output layer"
+                }
+              }
+            }
+          },
+          "from sentence" : "is set to 0.1 , and we use dropout with probability 0.5 on sentence / document representations before the output layer ."
+        },
+        "RMSProp" : {
+          "as" : {
+            "optimizer" : {
+              "with" : {
+                "decay rate" : {
+                  "set to" : "0.9"
+                },
+                "base learning rate" : {
+                  "set to" : "0.001"
+                }
+              }
+            }
+          },
+          "from sentence" : "We use RMSProp as the optimizer with the decay rate set to 0.9 and the base learning rate set to 0.001 ."
+        },
+        "mini - batch size" : {
+          "set to" : "32",
+          "from sentence" : "The mini - batch size is set to 32 ."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "has" : {
+    "Baselines" : {
+      "has" : {
+        "Average Context" : {
+          "has" : {
+            "first one" : {
+              "named" : "AC - S",
+              "averages" : {
+                "word vectors" : {
+                  "before" : "target",
+                  "after" : "target"
+                }
+              }
+            },
+            "second one" : {
+              "named" : "AC",
+              "averages" : {
+                "word vectors" : {
+                  "of" : "full context"
+                }
+              }
+            }
+          },
+          "from sentence" : "Average Context :
+There are two versions of this method .
+The first one , named AC - S , averages the word vectors before the target and the word vectors after the target separately .
+The second one , named AC , averages the word vectors of the full context ."
+
+        },
+        "SVM" : {
+          "on" : "surface features , lexicon features and parsing features",
+          "from sentence" : "SVM : The traditional state - of - the - art method using SVMs on surface features , lexicon features and parsing features , which is the best team in SemEval 2014 ."
+        },
+        "Rec - NN" : {
+          "firstly uses" : {
+            "rules" : {
+              "to transform" : "dependency tree"
+            }
+          },
+          "put" : {
+            "opinion target" : {
+              "at" : "root"
+            }
+          },
+          "performs" : {
+            "semantic composition" : {
+              "with" : {
+                "Recursive NNs" : {
+                  "for" : "sentiment prediction"
+                }
+              }
+            }
+          },
+          "from sentence" : "Rec - NN : It firstly uses rules to transform the dependency tree and put the opinion target at the root , and then performs semantic composition with Recursive NNs for sentiment prediction ."
+        },
+        "TD- LSTM" : {
+          "uses" : {
+            "forward LSTM and a backward LSTM" : {
+              "to abstract" : {
+                "information" : {
+                  "before and after" : "target"
+                }
+              }
+            }
+          },
+          "from sentence" : "TD- LSTM : It uses a forward LSTM and a backward LSTM to abstract the information before and after the target ."
+        },
+        "TD - LSTM - A" : {
+          "developed" : {
+            "TD - LSTM" : {
+              "have" : {
+                "one attention" : {
+                  "on" : "outputs"
+                }
+              }
+            }
+          },
+          "from sentence" : "TD - LSTM - A : We developed TD - LSTM to make it have one attention on the outputs of 3 https://github.com/svn2github/word2vec
+forward and backward LSTMs , respectively ."
+
+        },
+        "MemNet" : {
+          "applies" : {
+            "attention" : {
+              "has" : "multiple times",
+              "on" : "word embeddings"
+            }
+          },
+          "has" : {
+            "last attention 's output" : {
+              "fed to" : {
+                "softmax" : {
+                  "for" : "prediction"
+                }
+              }
+            }
+          },
+          "from sentence" : "MemNet : It applies attention multiple times on the word embeddings , and the last attention 's output is fed to softmax for prediction , without combining the results of different attentions ."
+        }
+      }
+    }
+  }
+}

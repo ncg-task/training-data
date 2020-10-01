@@ -1,0 +1,7 @@
+(Contribution||has||Results)
+(Results||worth noticing||baseline model S2SR)
+(baseline model S2SR||achieves better performance than||S2S)
+(Results||see that||RASG)
+(RASG||achieves||11.0 % , 9.1 % and 6.6 % increment)
+(11.0 % , 9.1 % and 6.6 % increment||over||state - of - the - art method CGU)
+(state - of - the - art method CGU||in terms of||ROUGE - 1 , ROUGE - 2 and ROUGE - L)

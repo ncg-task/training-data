@@ -1,0 +1,5 @@
+(Contribution||has research problem||Question Answering)
+(Contribution||has research problem||answer questions on a broad range of topics)
+(Contribution||has research problem||automatically answer questions asked in natural language on any topic or in any domain)
+(Contribution||has research problem||open - domain question answering ( or open QA ))
+(Contribution||has research problem||open QA)

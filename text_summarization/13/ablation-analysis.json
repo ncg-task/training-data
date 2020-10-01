@@ -1,0 +1,60 @@
+{
+  "has" : {
+    "Ablation analysis" : {
+      "has" : {
+        "Sharpness of Attention" : {
+          "compute" : {
+            "entropy numbers" : {
+              "by averaging" : {
+                "overall generated words" : {
+                  "in" : "validation set"
+                }
+              }
+            },
+            "from sentence" : "We compute the entropy numbers by averaging overall generated words in the validation set ."
+          },
+          "note" : {
+            "entropy of C2F" : {
+              "is" : "very low"
+            },
+            "from sentence" : "We note that the entropy of C2F is very low ( before taking the argmax attest time ) ."
+          },
+          "has" : {
+            "model" : {
+              "learns to focus on" : {
+                "few top - level chunks" : {
+                  "of" : {
+                    "document" : {
+                      "over" : "course of generation"
+                    }
+                  }
+                },
+                "from sentence" : "This is exactly what we had hoped for - we will see that the model in fact learns to focus on only a few top - level chunks of the document over the course of generation ."
+              }
+            }
+          }
+        },
+        "Attention Heatmaps" : {
+          "In" : {
+            "HIER" : {
+              "observe" : {
+                "attention becomes washed out" : {
+                  "averaging" : "all of the encoder hidden states"
+                }
+              },
+              "from sentence" : "In HIER , we observe that the attention becomes washed out ( in accord with its high entropy ) and is essentially averaging all of the encoder hidden states ."
+            },
+            "C2 F" : {
+              "get" : {
+                "very sharp attention" : {
+                  "on" : "some rows"
+                }
+              },
+              "from sentence" : "In C2 F , we see that we get very sharp attention on some rows as we had hoped ."
+            }
+          }          
+        }
+      }      
+    }
+  }
+}

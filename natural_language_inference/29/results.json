@@ -1,0 +1,60 @@
+{
+  "has" : {
+    "Results" : {
+      "see that" : {
+        "PAAG" : {
+          "over" : {
+            "stateof - the - art baseline SNet" : {
+              "achieves" : ["111 %", "8 %", "62.73 % increment"],
+              "in terms of" : ["BLEU", "embedding greedy", "consistency score"],
+              "from sentence" : "In these experimental results , we see that PAAG achieves a 111 % , 8 % and 62.73 % increment over the stateof - the - art baseline SNet in terms of BLEU , embedding greedy and consistency score , respectively ."
+            }
+          },
+          "has" : {
+            "outperforms" : {
+              "has" : {
+                "all the baseline" : {
+                  "has" : "significantly",
+                  "in" : {
+                    "semantic distance" : {
+                      "with respect to" : "ground truth"
+                    },
+                    "from sentence" : "In , we see that our PAAG outperforms all the baseline significantly in semantic distance with respect to the ground truth ."                    
+                  }
+                },
+                "other baseline models" : {
+                  "in" : {
+                    "both sentence fluency and consistency" : {
+                      "with" : "facts"
+                    }
+                  },
+                  "from sentence" : "In , we can see that PAAG outperforms other baseline models in both sentence fluency and consistency with the facts ."
+                }
+              }
+            }
+          }
+        }
+      },
+      "has" : {
+        "small increment" : {
+          "of" : {
+            "S2 SAR" : {
+              "with respect to" : {
+                "S2SA" : {
+                  "in" : "all metrics"
+                }
+              }
+            }
+          },
+          "from sentence" : "Although there is a small increment of S2 SAR with respect to S2SA in all metrics , we still find a noticeable gap between S2SAR and PAAG ."
+        }
+      },
+      "find" : {
+        "noticeable gap" : {
+          "between" : "S2SAR and PAAG"
+        },
+        "from sentence" : "Although there is a small increment of S2 SAR with respect to S2SA in all metrics , we still find a noticeable gap between S2SAR and PAAG ."
+      }
+    }
+  }
+}

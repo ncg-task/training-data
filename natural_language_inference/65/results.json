@@ -1,0 +1,129 @@
+{
+  "has" : {
+    "Results" : {
+      "for" : {
+        "Insurance QA dataset" : {
+          "see that" : {
+            "AP - CNN" : {
+              "has" : {
+                "outperforms" : {
+                  "has" : "QA - CNN",
+                  "by" : {
+                    "large margin" : {
+                      "in" : ["both test sets", "dev set"]
+                    }
+                  }
+                }
+              },
+              "from sentence" : "In , we present the experimental results of the four NNs for the Insurance QA dataset .
+On the bottom part of this table , we can see that AP - CNN outperforms QA - CNN by a large margin in both test sets , as well as in the dev set ."
+
+            }
+          },
+          "has" : {
+            "AP - biLSTM" : {
+              "has" : {
+                "outperforms" : {
+                  "has" : "QA - biLSTM"
+                }
+              },
+              "from sentence" : "AP - biLSTM also outperforms the QA - biLSTM in all the three sets ."
+            },
+            "AP - CNN and AP - biLSTM" : {
+              "have" : ["similar performance", {"from sentence" : "AP - CNN and AP - biLSTM have similar performance ."}],
+              "has" : {
+                "outperform" : {
+                  "has" : "state - of - the - art systems",
+                  "from sentence" : "Both AP - CNN and AP - biLSTM outperform the state - of - the - art systems ."
+                }
+              }
+            }
+          }
+        },
+        "TREC - QA dataset" : {
+          "has" : {
+            "AP - CNN" : {
+              "has" : {
+                "outperforms" : {
+                  "has" : {
+                    "QA - CNN" : {
+                      "by" : {
+                        "large margin" : {
+                          "in" : "both metrics"
+                        },
+                        "from sentence" : "In , we present the experimental results of the four NNs for the TREC - QA dataset .
+We use the official trec eval that AP - CNN outperforms QA - CNN by a large margin in both metrics ."                        
+                      }
+                    },
+                    "state - of - the - art systems" : {
+                      "in" : {
+                        "both metrics" : {
+                          "name" : "MAP and MRR"
+                        },
+                        "from sentence" : "AP - CNN outperforms the state - of - the - art systems in both metrics , MAP and MRR ."
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "AP - biLSTM" : {
+              "has" : {
+                "outperforms" : {
+                  "has" : {
+                    "QA - biLSTM" : {
+                      "has" : {
+                        "performance" : {
+                          "has" : {
+                            "not as good" : {
+                              "as" : "AP - CNN"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "from sentence" : "AP - biLSTM outperforms the QA - biLSTM , but its performance is not as good as the of AP - CNN ."
+                }
+              }
+            }
+          }
+        },
+        "WikiQA dataset" : {
+          "has" : {
+            "AP - CNN" : {
+              "has" : {
+                "outperforms" : {
+                  "has" : "QA - CNN"
+                }
+              },
+              "from sentence" : "shows the experimental results of the four NNs for the WikiQA dataset .
+Like in the other two datasets , AP - CNN outperforms QA - CNN , and AP - biLSTM outperforms the QA - biLSTM ."
+
+            },
+            "AP - biLSTM" : {
+              "has" : {
+                "outperforms" : {
+                  "has" : "QA - biLSTM"
+                },
+                "from sentence" : "Like in the other two datasets , AP - CNN outperforms QA - CNN , and AP - biLSTM outperforms the QA - biLSTM ."
+              }
+            },
+            "difference of performance" : {
+              "between" : {
+                "AP - CNN and QA - CNN" : {
+                  "is" : {
+                    "smaller" : {
+                      "than" : "Insurance QA dataset"
+                    }
+                  }
+                }
+              },
+              "from sentence" : "The difference of performance between AP - CNN and QA - CNN is smaller than the one for the Insurance QA dataset ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "has" : {
+    "Results" : {
+      "has" : {
+        "FLOWQA" : {
+          "yields" : {
+            "substantial improvement" : {
+              "over" : "existing models",
+              "on" : "both datasets",
+              "has" : {
+                "+ 7.2 % F 1" : {
+                  "on" : "CoQA"
+                },
+                "+ 4.0 % F 1" : {
+                  "on" : "QuAC"
+                }
+              },
+              "from sentence" : "FLOWQA yields substantial improvement over existing models on both datasets ( + 7.2 % F 1 on CoQA , + 4.0 % F 1 on QuAC ) ."
+            }
+          }
+        }
+      },
+      "find that" : {
+        "FLOW" : {
+          "is" : "critical component",
+          "from sentence" : "We find that FLOW is a critical component ."
+        }
+      },
+      "Removing" : {
+        "QHier - RNN" : {
+          "has" : {
+            "minor impact" : {
+              "has" : "0.1 %",
+              "on" : "both datasets"
+            }
+          },
+          "from sentence" : "Removing QHier - RNN has a minor impact ( 0.1 % on both datasets ) , while removing FLOW results in a substantial performance drop , with or without using QHierRNN ( 2 - 3 % on QuAC , 4.1 % on CoQA ) ."
+        }
+      },
+      "removing" : {
+        "FLOW" : {
+          "results in" : {
+            "substantial performance drop" : {
+              "with or without using" : "QHierRNN",
+              "has" : {
+                "2 - 3 %" : {
+                  "on" : "QuAC"
+                },
+                "4.1 %" : {
+                  "on" : "CoQA"
+                }
+              },
+              "from sentence" : "Removing QHier - RNN has a minor impact ( 0.1 % on both datasets ) , while removing FLOW results in a substantial performance drop , with or without using QHierRNN ( 2 - 3 % on QuAC , 4.1 % on CoQA ) ."
+            }
+          }
+        }
+      },
+      "comparing" : {
+        "0 - Ans and 1 - Ans" : {
+          "on" : "two datasets",
+          "providing" : {
+            "gold answers" : {
+              "is" : {
+                "more crucial" : {
+                  "for" : "QuAC"
+                }
+              }
+            }          
+          },
+          "from sentence" : "By comparing 0 - Ans and 1 - Ans on two datasets , we can see that providing gold answers is more crucial for QuAC ."
+        }
+      },
+      "Based on" : {
+        "training time" : {
+          "takes" : "each epoch",
+          "has" : {
+            "speedup" : {
+              "is" : {
+                "8.1x" : {
+                  "on" : "CoQA"
+                },
+                "4.2 x" : {
+                  "on" : "QuAC"
+                }
+              }
+            }
+          },
+          "from sentence" : "Based on the training time each epoch takes ( i.e. , time needed for passing through the data once ) , the speedup is 8.1x on CoQA and 4.2 x on QuAC ."
+        }
+      }
+    }
+  }
+}

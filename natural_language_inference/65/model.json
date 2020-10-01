@@ -1,0 +1,92 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "Attentive Pooling ( AP )" : {
+          "has" : {
+            "two - way attention mechanism" : {
+              "that" : {
+                "significantly improves" : {
+                  "has" : {
+                    "discriminative models ' performance" : {
+                      "on" : "pair - wise ranking or classification",
+                      "by enabling" : {
+                        "joint learning" : {
+                          "of" : {
+                            "representations" : {
+                              "of" : {
+                                "inputs" : {
+                                  "as well as" : "their similarity measurement"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "The key contribution of this work is that we propose Attentive Pooling ( AP ) , a two - way attention mechanism , that significantly improves such discriminative models ' performance on pair - wise ranking or classification , by enabling a joint learning of the representations of both inputs as well as their similarity measurement ."
+            }
+          }
+        }
+      },
+      "has" : {
+        "AP" : {
+          "enables" : {
+            "pooling layer" : {
+              "to be aware of" : {
+                "current input pair" : {
+                  "in a way that" : {
+                    "information" : {
+                      "from" : "two input items",
+                      "directly influence" : {
+                        "computation" : {
+                          "of" : "each other 's representations"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Specifically , AP enables the pooling layer to be aware of the current input pair , in a way that information from the two input items can directly influence the computation of each other 's representations ."
+            }
+          },
+          "consists of" : {
+            "learning" : {
+              "has" : {
+                "similarity measure" : {
+                  "over" : {
+                    "projected segments ( e.g. trigrams )" : {
+                      "of" : {
+                        "two items" : {
+                          "in" : "input pair"
+                        }
+                      },
+                      "using" : {
+                        "similarity scores" : {
+                          "between" : "segments",
+                          "to compute" : {
+                            "attention vectors" : {
+                              "in" : "both directions"
+                            }
+                          }
+                        }
+                      },
+                      "from sentence" : "The main idea in AP consists of learning a similarity measure over projected segments ( e.g. trigrams ) of the two items in the input pair , and using the similarity scores between the segments to compute attention vectors in both directions ."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "attention vectors" : {
+          "to perform" : "pooling",
+          "from sentence" : "Next , the attention vectors are used to perform pooling ."
+        }
+      }
+    }
+  }
+}

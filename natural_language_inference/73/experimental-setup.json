@@ -1,0 +1,27 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "has" : {
+        "experiments" : {
+          "conducted in" : {
+            "Python" : {
+              "with" : "Tensorflow"
+            }
+          },
+          "run on" : "Nvidia GTX 1080 Ti",
+          "from sentence" : "All experiments are conducted in Python with Tensorflow and run on a Nvidia GTX 1080 Ti ."
+        }
+      },
+      "use" : [{"Adadelta" : {
+          "as" : "optimizer",
+          "performs" : {
+            "more stable" : {
+              "than" : "Adam",
+              "on" : "ReSAN"
+            }
+          },
+          "from sentence" : "We use Adadelta as optimizer , which performs more stable than Adam on ReSAN ."
+        }}, ["300D Glo Ve 6B pre-trained vectors", {"from sentence" : "We use 300D Glo Ve 6B pre-trained vectors"}]]
+    }
+  }
+}
