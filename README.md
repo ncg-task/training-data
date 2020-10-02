@@ -18,7 +18,6 @@ The repository is organized as follows:
         │   │   └── model.json                         # `model` information unit in json format; in some articles it is called `approach`
         │   │   └── ...                                # there are 12 information units in all and each article may be annotated by 3 or 6
         │   └── triples/                               # the folder containing information unit triples one per line
-        │   └── triples/                               # the folder containing information unit triples one per line
         │   │   └── research-problem.txt               # `research problem` triples (one research problem statement per line)
         │   │   └── model.txt                          # `model` triples (one statement per line)
         │   │   └── ...                                # there are 12 information units in all and each article may be annotated by 3 or 6
