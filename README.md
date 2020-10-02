@@ -1,5 +1,5 @@
-# train-data
-Training data for the NLPContributionGraph Shared Task 11 at SemEval-2021
+# training-data
+`Training Data` for the NLPContributionGraph Shared Task 11 at SemEval-2021
 
 For Codalab evaluations in the Practice phase, participants submissions will be evaluated against the [`Trial Data`](https://github.com/ncg-task/trial-data)
 
