@@ -1,10 +1,6 @@
 # training-data
 `Training Data` for the NLPContributionGraph Shared Task 11 at SemEval-2021
 
-For Codalab evaluations in the Practice phase, participants submissions will be evaluated against the [`Trial Data`](https://github.com/ncg-task/trial-data)
-
-Note: we advice participants to not tune their systems on the `Trial Data` as in the evaluation phases the `Test Data` will be blind
-
 The repository is organized as follows:
 
     README.md                            
@@ -27,3 +23,8 @@ The repository is organized as follows:
         └── ...                                        # there are 25 tasks selected overall, so this repeats 24 more times
 
 ### Dataset Statistics
+
+
+### Competition Evaluations
+
+In the Practice Phase on Codalab, participants submissions will be evaluated against the [`Trial Data`](https://github.com/ncg-task/trial-data). In this regard, we advice participants to not tune their systems on the `Trial Data` as in the evaluation phases the `Test Data` will be blind.
