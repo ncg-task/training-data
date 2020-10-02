@@ -1,7 +1,7 @@
 # train-data
 Training data for the NLPContributionGraph Shared Task 11 at SemEval-2021
 
-Participants are urged to append the https://github.com/ncg-task/trial-data to this set for complete data
+For Codalab evaluations in the Practice phase, participants systems will be evaluated against the https://github.com/ncg-task/trial-data 
 
 The repository is organized as follows:
 
