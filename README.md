@@ -22,7 +22,7 @@ The repository is organized as follows:
         │   │   └── research-problem.txt               # `research problem` triples (one research problem statement per line)
         │   │   └── model.txt                          # `model` triples (one statement per line)
         │   │   └── ...                                # there are 12 information units in all and each article may be annotated by 3 or 6
-        │   └── ...                                    # there are ten articles annotated for each task, so this repeats nine more times
-        └── ...                                        # there are five tasks selected overall, so this repeats four more times
+        │   └── ...                                    # there are between 1 to 100 articles annotated for each task, so this repeats for the remaining annotated articles
+        └── ...                                        # there are 25 tasks selected overall, so this repeats 24 more times
 
 ### Dataset Statistics
