@@ -22,36 +22,36 @@ The repository is organized as follows:
         │   └── ...                                    # there are between 1 to 100 articles annotated for each task, so this repeats for the remaining annotated articles
         └── ...                                        # there are 25 tasks selected overall, so this repeats 24 more times
 
-### Training Data Statistics
+### Data Elements Counts
 
 Total files: 238
 
 || Tasks | info-Units | sentences | entities | triples total | subject | predicate | object |
 | :---: | :---: |:---:|  :---:   |   :---:  | :---: |  :---:  |   :---:   |  :---: |
-|1 | natural_language_inference    |    |     |     | 7330 |     |     |     |
-|2 | negation_scope_resolution     |    |     |     |  94  |     |     |     |
-|3 |   paraphrase_generation       |    |     |     |  175 |     |     |     |
-|4 |   part-of-speech_tagging      |    |     |     |  479 |     |     |     |
-|5 |     passage_re-ranking        |    |     |     |  123 |     |     |     |
-|6 |      phrase_grounding         |    |     |     |  102 |     |     |     |
-|7 |     prosody_prediction        |    |     |     |  103 |     |     |     |
-|8 |    query_wellformedness       |    |     |     |  35  |     |     |     |
-|9 |     question_answering        |    |     |     | 640  |     |     |     |
-|10|    question_generation        |    |     |     |  87  |     |     |     |
-|11|    question_similarity        |    |     |     |  51  |     |     |     |
-|12|    relation_extraction        |    |     |     | 1084 |     |     |     |
-|13|     sarcasm_detection         |    |     |     | 136  |     |     |     |
-|14|     semantic_parsing          |    |     |     | 180  |     |     |     |
-|15| semantic_role_labeling        |    |     |     | 318  |     |     |     |
-|16| sentence_classification       |    |     |     | 297  |     |     |     |
-|17| sentence_compression          |    |     |     | 248  |     |     |     |
-|18|   sentiment_analysis          |    |     |     | 4086 |     |     |     |
-|19|   smile_recognition           |    |     |     |  54  |     |     |     |
-|20|temporal_information_extraction|    |     |     |  93  |     |     |     |
-|21|   text-to-speech_synthesis    |    |     |     | 192  |     |     |     |
-|22|       text_generation         |    |     |     | 420  |     |     |     |
-|23|     text_summarization        |    |     |     | 1010 |     |     |     |
-|24|        topic_models           |    |     |     |  48  |     |     |     |
+|1 | natural_language_inference    |    |     |     | 7330 |3171 |1251 |5242 |
+|2 | negation_scope_resolution     |    |     |     |  94  | 50  | 42  | 80  |
+|3 |   paraphrase_generation       |    |     |     |  175 | 99  | 77  | 160 |
+|4 |   part-of-speech_tagging      |    |     |     |  479 | 249 | 156 | 401 |
+|5 |     passage_re-ranking        |    |     |     |  123 | 63  | 66  | 103 |
+|6 |      phrase_grounding         |    |     |     |  102 | 58  | 53  | 94  |
+|7 |     prosody_prediction        |    |     |     |  103 | 58  | 43  | 97  |
+|8 |    query_wellformedness       |    |     |     |  35  | 22  | 25  | 33  |
+|9 |     question_answering        |    |     |     | 640  | 332 | 203 | 547 |
+|10|    question_generation        |    |     |     |  87  | 45  | 44  | 74  |
+|11|    question_similarity        |    |     |     |  51  | 30  | 26  | 49  |
+|12|    relation_extraction        |    |     |     | 1084 | 552 | 372 | 922 |
+|13|     sarcasm_detection         |    |     |     | 136  | 77  | 73  | 116 |
+|14|     semantic_parsing          |    |     |     | 180  | 91  | 74  | 157 |
+|15| semantic_role_labeling        |    |     |     | 318  | 163 | 137 | 288 |
+|16| sentence_classification       |    |     |     | 297  | 167 | 134 | 273 |
+|17| sentence_compression          |    |     |     | 248  | 138 | 104 | 223 |
+|18|   sentiment_analysis          |    |     |     | 4086 |1864 | 940 |2967 |
+|19|   smile_recognition           |    |     |     |  54  | 29  | 34  | 49  |
+|20|temporal_information_extraction|    |     |     |  93  | 58  | 62  | 85  |
+|21|   text-to-speech_synthesis    |    |     |     | 192  | 103 | 98  | 174 |
+|22|       text_generation         |    |     |     | 420  | 222 | 165 | 351 |
+|23|     text_summarization        |    |     |     | 1010 | 513 | 346 | 825 |
+|24|        topic_models           |    |     |     |  48  | 30  | 28  | 48  |
 
 
 ### Note
