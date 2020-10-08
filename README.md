@@ -27,7 +27,7 @@ The repository is organized as follows:
 Total files: 238
 
 || Tasks | info-Units | sentences | entities | triples total | subject | predicate | object |
-| :---: | :---: |:---:|  :---:   |   :---:  | :---: |  :---:  |   :---:   |  :---: |
+| :---  | :---: |:---:|  :---:   |   :---:  | :---: |  :---:  |   :---:   |  :---: |
 |1 | natural_language_inference    |    |     |     | 7330 |3171 |1251 |5242 |
 |2 | negation_scope_resolution     |    |     |     |  94  | 50  | 42  | 80  |
 |3 |   paraphrase_generation       |    |     |     |  175 | 99  | 77  | 160 |
