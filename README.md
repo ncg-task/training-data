@@ -22,9 +22,9 @@ The repository is organized as follows:
         │   └── ...                                    # there are between 1 to 100 articles annotated for each task, so this repeats for the remaining annotated articles
         └── ...                                        # there are 25 tasks selected overall, so this repeats 24 more times
 
-### Data Elements Counts
+### Data Element Counts
 
-Total files: 238
+Total Papers Annotated: 238
 
 || Tasks | info-units | sentences | entities | total triples | total unique triples | subject | predicate | object |
 | :---:  | :--- |:---:|  :---:   |   :---:  | :---: | :---: |  :---:  |   :---:   |  :---: |
