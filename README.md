@@ -26,12 +26,7 @@ The repository is organized as follows:
 
 Total files: 238
 
-|             |          Grouping           ||
-First Header  | Second Header | Third Header |
- ------------ | :-----------: | -----------: |
-
-|       |    |           |          | 			Triples                 ||||
-| Tasks | IU | Sentences | Entities | Total | Subject | Predicate | Object |
+| Tasks | IU | Sentences | Entities | Triples Total | Subject | Predicate | Object |
 | :---: |:---:|  :---:   |   :---:  | :---: |  :---:  |   :---:   |  :---: |
 |    |    |     |     |    |     |     |     |
 
