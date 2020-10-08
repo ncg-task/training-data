@@ -22,9 +22,10 @@ The repository is organized as follows:
         │   └── ...                                    # there are between 1 to 100 articles annotated for each task, so this repeats for the remaining annotated articles
         └── ...                                        # there are 25 tasks selected overall, so this repeats 24 more times
 
-### Dataset Statistics
+### Training Data Statistics
 
+Total files: 238
 
-### Competition Evaluations
+### Note
 
-In the Practice Phase on Codalab, participants submissions will be evaluated against the [`Trial Data`](https://github.com/ncg-task/trial-data). In this regard, we advice participants to not tune their systems on the `Trial Data` as in the evaluation phases the `Test Data` will be blind.
+For system training, participants are encouraged to merge the 50 files additionally from the [`trial-data`](https://github.com/ncg-task/trial-data) release.
