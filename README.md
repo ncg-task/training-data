@@ -26,6 +26,16 @@ The repository is organized as follows:
 
 Total files: 238
 
+|             |          Grouping           ||
+First Header  | Second Header | Third Header |
+ ------------ | :-----------: | -----------: |
+
+|       |    |           |          | 			Triples                 ||||
+| Tasks | IU | Sentences | Entities | Total | Subject | Predicate | Object |
+| :---: |:---:|  :---:   |   :---:  | :---: |  :---:  |   :---:   |  :---: |
+|    |    |     |     |    |     |     |     |
+
+
 ### Note
 
 For system training, participants are encouraged to merge the 50 files additionally from the [`trial-data`](https://github.com/ncg-task/trial-data) release.
