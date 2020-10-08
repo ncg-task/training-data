@@ -26,7 +26,7 @@ The repository is organized as follows:
 
 Total files: 238
 
-| Tasks | IU | Sentences | Entities | Triples Total | Subject | Predicate | Object |
+| Tasks | Info-Units | Sentences | Entities | Triples Total | Subject | Predicate | Object |
 | :---: |:---:|  :---:   |   :---:  | :---: |  :---:  |   :---:   |  :---: |
 |    |    |     |     |    |     |     |     |
 
