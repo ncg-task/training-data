@@ -20,7 +20,7 @@ The repository is organized as follows:
         │   │   └── model.txt                          # `model` triples (one statement per line)
         │   │   └── ...                                # there are 12 information units in all and each article may be annotated by 3 or 6
         │   └── ...                                    # there are between 1 to 100 articles annotated for each task, so this repeats for the remaining annotated articles
-        └── ...                                        # there are 25 tasks selected overall, so this repeats 24 more times
+        └── ...                                        # there are 24 tasks selected overall, so this repeats 23 more times
 
 ### Data Element Counts
 
