@@ -8,5 +8,5 @@
 (RNTN||best able to identify||effect of negations)
 (effect of negations||upon||positive and negative sentiment sentences)
 (Ablation analysis||has||RNTN)
-(RNTN||has||highest reveral accuacy)
-(highest reveral accuacy||showing its ability to||structurally learn negation of positive sentences)
+(RNTN||has||highest reversal accuracy)
+(highest reversal accuracy||showing its ability to||structurally learn negation of positive sentences)

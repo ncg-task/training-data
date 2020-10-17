@@ -5,6 +5,6 @@
 (Experimental setup||use||word2 vec skip - gram model)
 (word2 vec skip - gram model||to learn||initial word representations)
 (initial word representations||on||Wikipedia)
-(Experimental setup||has||Other matrics)
-(Other matrics||initialized with||random values)
+(Experimental setup||has||Other matrices)
+(Other matrices||initialized with||random values)
 (random values||following||Gaussian distribution)

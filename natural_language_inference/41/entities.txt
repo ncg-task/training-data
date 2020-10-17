@@ -2,7 +2,7 @@
 154	15	26	large model
 154	27	31	with
 154	32	41	12 layers
-154	10	12	in
+154	42	44	in
 154	57	76	encoder and decoder
 154	85	96	hidden size
 154	50	52	of
@@ -13,6 +13,7 @@
 155	29	39	batch size
 155	40	42	of
 155	43	47	8000
+155	54	59	train
 155	64	69	model
 155	70	73	for
 155	74	86	500000 steps
@@ -22,7 +23,8 @@
 156	59	61	as
 156	62	69	GPT - 2
 157	39	42	use
-157	45	59	combination of
+157	45	56	combination
+157	57	59	of
 157	60	74	text infilling
 157	79	99	sentence permutation
 158	3	7	mask
@@ -30,14 +32,15 @@
 158	13	15	of
 158	16	22	tokens
 158	23	25	in
+158	26	39	each document
 158	46	53	permute
 158	54	67	all sentences
-160	43	51	disabled
-160	52	59	dropout
-160	60	63	for
-160	68	78	final 10 %
-160	79	81	of
-160	82	96	training steps
+160	43	52	dis abled
+160	53	60	dropout
+160	61	64	for
+160	69	79	final 10 %
+160	80	82	of
+160	83	97	training steps
 160	0	7	To help
 160	12	17	model
 160	18	28	better fit
@@ -48,15 +51,14 @@
 163	105	124	different objective
 169	8	23	experiment with
 169	24	53	several text generation tasks
-169	45	47	on
 175	78	85	present
 175	86	93	results
+175	94	96	on
 175	97	123	two summarization datasets
 175	126	141	CNN / DailyMail
 175	146	150	XSum
 178	15	19	BART
 178	20	31	outperforms
-178	32	49	all existing work
 180	21	39	best previous work
 180	48	57	leverages
 180	58	62	BERT
@@ -66,13 +68,13 @@
 180	90	107	all ROUGE metrics
 180	110	122	representing
 180	125	144	significant advance
-180	82	84	in
+180	145	147	in
 180	148	159	performance
 183	3	11	evaluate
 183	12	40	dialogue response generation
-183	25	27	on
+183	41	43	on
 183	44	51	CONVAI2
-183	25	27	on
+183	88	90	on
 184	0	4	BART
 184	5	16	outperforms
 184	17	30	previous work
@@ -85,9 +87,9 @@
 187	29	47	best previous work
 187	48	50	by
 187	51	64	1.2 ROUGE - L
+194	16	29	experiment on
 194	34	67	original WMT16 Romanian - English
 194	68	82	augmented with
-194	83	106	back - translation data
 194	83	106	back - translation data
 196	4	23	Preliminary results
 196	24	33	suggested
@@ -95,9 +97,9 @@
 196	52	55	was
 196	56	70	less effective
 196	71	78	without
+196	79	102	back - translation data
 196	109	117	prone to
 196	118	129	overfitting
-17	44	50	trains
 17	19	26	present
 17	27	31	BART
 17	40	50	pre-trains

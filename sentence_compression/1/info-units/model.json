@@ -1,7 +1,7 @@
 {
   "has" : {
     "Model" : {
-      "benefits from" : ["very recent advances in deep learning", {"from sentence" : "In particular , we will present a model which benefits from the very recent advances in deep learning and uses word embeddings and Long Short Term Memory models ( LSTMs ) to output surprisingly readable and informative compressions ."}],
+      "benefits from" : "very recent advances in deep learning",
       "uses" : {
         "word embeddings and Long Short Term Memory models ( LSTMs )" : {
           "to output" : "surprisingly readable and informative compressions"

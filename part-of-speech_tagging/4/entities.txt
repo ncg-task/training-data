@@ -2,30 +2,33 @@
 19	36	56	neural network model
 19	57	60	for
 19	61	83	output label sequences
-20	19	28	represent
-20	29	48	each possible label
-20	49	54	using
-20	58	74	embedding vector
+22	35	44	represent
 22	47	78	full - exponential search space
 22	79	93	without making
 22	94	112	Markov assumptions
+20	29	48	each possible label
+20	49	54	using
+20	58	74	embedding vector
 20	81	94	aim to encode
 20	95	104	sequences
 20	105	107	of
 20	108	127	label distributions
-20	49	54	using
+20	128	133	using
 20	136	160	recurrent neural network
 2	53	70	Sequence Labeling
 4	42	71	statistical sequence labeling
+179	0	3	WSJ
 181	0	12	BiLSTM - LAN
 181	13	18	gives
 181	19	52	significant accuracy improvements
 181	53	57	over
 181	63	75	BiLSTM - CRF
 181	80	95	BiLSTM- softmax
+186	0	35	Universal Dependencies ( UD ) v 2.2
+186	172	174	on
 188	0	9	Our model
+188	10	21	outperforms
 188	22	39	all the baselines
-188	40	42	on
 188	43	60	all the languages
 189	4	16	improvements
 189	17	20	are
@@ -34,20 +37,21 @@
 189	51	81	all the languages ( p < 0.01 )
 189	84	99	suggesting that
 189	100	112	BiLSTM - LAN
-189	25	27	is
+189	113	115	is
 189	116	135	generally effective
 189	136	142	across
-189	59	68	languages
+189	143	152	languages
+190	0	13	OntoNotes 5.0
+190	25	37	BiLSTM - CRF
 191	0	12	BiLSTM - LAN
 191	18	43	significantly outperforms
-191	44	56	BiLSTM - CRF
 191	57	59	by
 191	60	73	1.17 F1-score
 193	53	57	both
 193	58	101	BiLSTMsoftmax and BiLSTM - CRF ( p < 0.01 )
 193	104	111	showing
 193	116	125	advantage
-193	65	67	of
+193	126	128	of
 193	23	26	LAN
 198	43	50	obtains
 198	51	82	new state - of - theart results

@@ -32,7 +32,7 @@
             }
           }
         },
-        "from sentence" : "We demonstrate that directly classifying each of the competing spans , and training with global normalization overall possible spans , leads to a significant increase in performance ."
+        "from sentence" : "We demonstrate that directly classifying each of the competing spans , and training with global normalization over all possible spans , leads to a significant increase in performance ."
       }
     }
   }

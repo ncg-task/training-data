@@ -34,7 +34,8 @@ It is our proposed base model ( BiLSTM + C2A + Pas ) trained on D t for the targ
                   "tests it on" : "D t"
                 }
               },
-              "from sentence" : "Source- only ( SO ) :
+              "from sentence" : "Transfer
+Source- only ( SO ) :
 It uses a source network trained on D s to initialize a target network and then tests it on D t ."
 
             },

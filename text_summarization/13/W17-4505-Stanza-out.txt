@@ -1,7 +1,7 @@
 title
 Coarse-to-Fine Attention Models for Document Summarization
 abstract
-Sequence - to - sequence models with attention have been successful fora variety of NLP problems , but their speed does not scale well for tasks with long source sequences such as document summarization .
+Sequence - to - sequence models with attention have been successful for a variety of NLP problems , but their speed does not scale well for tasks with long source sequences such as document summarization .
 We propose a novel coarse - to - fine attention model that hierarchically reads a document , using coarse attention to select top - level chunks of text and fine attention to read the words of the chosen chunks .
 While the computation for training standard attention models scales linearly with source sequence length , our method scales with the number of top - level chunks and can handle much longer sequences .
 Empirically , we find that while coarse - tofine attention models lag behind state - of the - art baselines , our method achieves the desired behavior of sparsely attending to subsets of the document for generation .
@@ -23,12 +23,12 @@ In Section 3 , we review the encoder - decoder framework , and in Section 4 intr
 In Section 5 , we describe our experimental setup , and in Section 6 show results .
 Finally , we conclude in Section 7 .
 Related Work
-In summarization , neural attention models were first applied by to do headline generation , i.e. produce a title fora news article given only the first sentence .
+In summarization , neural attention models were first applied by to do headline generation , i.e. produce a title for a news article given only the first sentence .
 and apply attention models to summarize full documents , achieving stateof - the - art results on the CNN / Dailymail dataset .
 All of these models , however , suffer from the inherent complexity of attention over the full document .
 Indeed , report that a single model takes over 3 days to train .
 Many techniques have been proposed in the literature to efficiently handle the problem of large inputs to deep neural networks .
-One particular framework is that of " conditional computation " , as coined by - the idea is to only compute a subset of a network 's units fora given input by gating different parts of the network .
+One particular framework is that of " conditional computation " , as coined by - the idea is to only compute a subset of a network 's units for a given input by gating different parts of the network .
 Several methods , some stochastic and some deterministic , have been explored in the vein of conditional computation .
 In this work , we will focus on stochastic methods , although deterministic methods are worth considering as future work .
 On the stochastic front , demonstrate the effectiveness of " hard " attention .
@@ -89,7 +89,7 @@ R 2 d hid dctx a learned matrix .
 Going forward , we call this instantiation of the attention function STANDARD .
 Hierarchical Attention
 The attention network of STANDARD is computationally expensive for long sequences - for each hidden state of the decoder , we need to compare it to every hidden state of the encoder in order to determine whereto attend to .
-This seems unnecessary fora problem such as document summarization ; intuitively , we only need to attend to a few important chunks of text at a time .
+This seems unnecessary for a problem such as document summarization ; intuitively , we only need to attend to a few important chunks of text at a time .
 Therefore , we propose a hierarchical method of attending to the document - by segmenting the document into large top - level chunks of text , we first attend to these chunks , then to the words within the chunks .
 To accomplish this hierarchical attention , we construct encodings of the document at both levels .
 Suppose we have chunks s 1 , . . . , s m with words w i , 1 , . . . , w i , n i in chunk s i .
@@ -105,7 +105,7 @@ i , j h i , j .
 We label this attention method HIER .
 Next , we consider the hard attention version of this model to achieve sparsity in our network .
 Coarse - to - Fine Attention
-With the previous models STANDARD and HIER , we are required to compute hidden states overall words and top - level chunks in the document , so that if we have M chunks and N words per chunk , the computational complexity is O ( M N ) for each attention step .
+With the previous models STANDARD and HIER , we are required to compute hidden states over all words and top - level chunks in the document , so that if we have M chunks and N words per chunk , the computational complexity is O ( M N ) for each attention step .
 However , if we are able to perform conditional computation and only read M + of the chunks at a time , we can reduce the attention complexity to O ( M + M + N ) , where we choose the chunks to attend to in O ( M ) and read the selected chunks in O ( M + N ) .
 Note that this expression ignores the total the number of words of the document , and the bottleneck becomes the length of each chunk of text .
 In our model , we will apply stochastic sampling to the top - level attention distribution in the spirit of hard attention while keeping the lowerlevel attention as is .
@@ -119,7 +119,7 @@ s i to a one - hot encoding based on the hard sample , then writing ?
 i , j = ? s i ?
 w i , j as in HIER .
 At test time , we take the max ?
-s i fora onehot encoding instead of sampling .
+s i for a onehot encoding instead of sampling .
 We label this coarse - to - fine method C2F .
 Because the hard attention model loses the property of being end - to - end differentiable , we use reinforcement learning to train our network .
 Specifically , we use the REINFORCE algorithm , also formalized by in the stochastic computation graph framework .
@@ -168,7 +168,7 @@ With higher k mul , the hard attention model more closely approximates the soft 
 This , however , incurs a cost in computational complexity .
 Experiments
 Data
-Experiments were performed on aversion of the CNN / Dailymail dataset from Hermann et al ..
+Experiments were performed on a version of the CNN / Dailymail dataset from Hermann et al ..
 Each data point is a news document accompanied by up to 4 " highlights " , and we take the first of these as our target summary .
 Note that our dataset differs from related work which take all the highlights as the summary , as we were less interested in target side length and more in correctly locating sparse attention in the source .
 Train , validation , and test splits are provided with the original dataset along with document tokenization and sentence splitting .
@@ -195,8 +195,8 @@ Our models are implemented using Torch based on a past version of the Open NMT s
 The models take between 2 - 2.5 hours to train per epoch .
 Evaluation
 We report metrics for perplexity and ROUGE balanced F - scores on the test set .
-With multiple gold summaries in the CNN / Dailymail highlights , we take the max ROUGE score over the gold summaries fora predicted summary , as our models are trained to produce a single sentence .
-The final metric is then the average overall test data points .
+With multiple gold summaries in the CNN / Dailymail highlights , we take the max ROUGE score over the gold summaries for a predicted summary , as our models are trained to produce a single sentence .
+The final metric is then the average over all test data points .
 Note that because we are training the model to output a single highlight , our numbers are not comparable with or.
 shows summarization results .
 We see that our soft attention models comfortably beat the baselines , while hard attention lags behind .
@@ -223,7 +223,7 @@ We show predicted summaries from each model in .
 We note that the ILP system , which extracts sentences first , produces long summaries .
 In contrast , the generated summaries tend to be quite succint , and most are the result of copying or paraphrasing specific sentences .
 Source : isis supporters have vowed to murder twitter staff because they believe the site 's policy of shutting down their extremist pages is a ' virtual war ' . </ s >
-a mocked - up image of the site 's founder jack dorsey in < unk > was posted yesterday alongside a diatribe written in arabic , which claimed twitter employees ' necks are ' a target for the soldiers of the caliphate ' . </ s > addressing mr dorsey personally , it claimed twitter was taking sides in a ' media war ' which allowed ' slaughter ' , adding : ' your virtual war onus will cause areal war on you . </ s >
+a mocked - up image of the site 's founder jack dorsey in < unk > was posted yesterday alongside a diatribe written in arabic , which claimed twitter employees ' necks are ' a target for the soldiers of the caliphate ' . </ s > addressing mr dorsey personally , it claimed twitter was taking sides in a ' media war ' which allowed ' slaughter ' , adding : ' your virtual war onus will cause are al war on you . </ s >
 diatribe :
 an image of twitter founder jack dorsey in < unk > was posted alongside a rant in arabic </ s > ... GOLD : diatribe in arabic posted anonymously yesterday and shared online FIRST : isis supporters have vowed to murder twitter staff because they believe the site 's policy of shutting down their extremist pages is a ' virtual war ' .
 ILP : ISIS supporters have vowed to murder Twitter staff because they believe the site 's policy of shutting down their extremist pages is a ' virtual war ' .
@@ -234,9 +234,9 @@ Analysis
 Sharpness of Attention
 We are interested in measuring the ability of our models to focus on a single top - level chunk using attention .
 Quantitatively , we measure the entropy of the coarse attention on the validation set in itively , higher entropy means the attention is more spread out , while lower entropy means the attention is concentrated .
-We compute the entropy numbers by averaging overall generated words in the validation set .
+We compute the entropy numbers by averaging over all generated words in the validation set .
 Because each document has been split into 10 chunks , perfectly uniform entropy would be ? 2.30 .
-We note that the entropy of C2F is very low ( before taking the argmax attest time ) .
+We note that the entropy of C2F is very low ( before taking the argmax at test time ) .
 This is exactly what we had hoped for - we will see that the model in fact learns to focus on only a few top - level chunks of the document over the course of generation .
 If we have multiple samples with + MULTI2 , the model is allowed to use 2 chunks at a time , which relaxes the entropy slightly .
 We also observe that the HIER entropy is very high and almost uniform .

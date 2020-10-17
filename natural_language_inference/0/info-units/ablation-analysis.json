@@ -13,7 +13,7 @@
                     "parts of the query" : {
                       "relevant to" : {
                         "token" : {
-                          "rather than" : "overall query representation"
+                          "rather than" : "over all query representation"
                         }
                       }
                     }
@@ -22,7 +22,7 @@
               }
             }
           },
-          "from sentence" : "Next , we observe a substantial drop when removing tokenspecific attentions over the query in the GA module , which allow gating individual tokens in the document only by parts of the query relevant to that token rather than the overall query representation ."
+          "from sentence" : "Next , we observe a substantial drop when removing tokenspecific attentions over the query in the GA module , which allow gating individual tokens in the document only by parts of the query relevant to that token rather than the over all query representation ."
         }
       },
       "removing" : {

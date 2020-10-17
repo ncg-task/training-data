@@ -10,11 +10,11 @@
 217	73	87	Qtype features
 217	93	107	much more than
 217	112	126	other features
-219	11	28	final ablation of
+219	11	25	final ablation
+219	26	28	of
 219	29	40	POS and NER
 219	46	53	can see
-219	58	69	performance
-219	70	76	decays
+219	58	76	performance decays
 219	77	81	over
 219	82	91	3 % point
 221	9	16	replace
@@ -24,16 +24,16 @@
 221	95	106	performance
 221	107	112	drops
 221	113	125	nearly 2.3 %
-221	67	69	on
+221	126	128	on
 221	133	141	EM score
 223	43	52	employing
 223	53	71	question influence
-223	37	39	on
+223	72	74	on
 223	79	95	passage encoding
 223	100	105	boost
 223	4	10	result
 223	117	128	up to 1.3 %
-223	37	39	on
+223	129	131	on
 223	136	144	EM score
 190	3	13	preprocess
 190	14	39	each passage and question
@@ -77,11 +77,11 @@
 196	8	27	multi-hop reasoning
 196	33	36	set
 196	41	55	number of hops
-196	20	22	as
+196	56	58	as
 196	59	60	2
 196	70	79	imitating
 196	80	103	human reading procedure
-196	22	24	on
+196	104	106	on
 196	107	128	skimming and scanning
 197	0	6	During
 197	7	15	training
@@ -91,7 +91,7 @@
 197	48	59	all weights
 197	60	62	as
 197	67	89	exponential decay rate
-197	45	47	of
+197	90	92	of
 197	93	98	0.999
 28	19	26	propose
 28	31	46	novel framework
@@ -125,20 +125,20 @@
 209	73	75	of
 209	76	84	71.415 %
 209	91	99	F1 score
-209	73	75	of
+209	100	102	of
 209	103	111	80.160 %
 209	120	134	ensemble model
 209	135	143	improves
 209	144	146	to
-209	64	66	EM
+209	147	149	EM
 209	150	158	75.989 %
-209	91	93	F1
+209	163	165	F1
 209	166	175	83. 475 %
 211	27	29	on
 211	111	119	test set
 211	120	122	of
-211	60	69	Trivia QA
-211	27	29	on
+211	123	132	Trivia QA
+211	101	103	on
 212	3	10	can see
 212	11	28	our Smarnet model
 212	29	40	outperforms

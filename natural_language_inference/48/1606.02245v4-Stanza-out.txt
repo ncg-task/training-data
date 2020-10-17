@@ -10,7 +10,7 @@ The first is the advent of deep learning techniques , which allow manipulation o
 The second factor is the formulation of standard machine comprehension benchmarks based on Cloze - style queries , which permit fast integration loops between model conception and experimental evaluation .
 Cloze - style queries are created by deleting a particular word in a natural - language statement .
 The task is to guess which word was deleted .
-Ina pragmatic approach , recent work formed such questions by extracting a sentence from a larger document .
+In a pragmatic approach , recent work formed such questions by extracting a sentence from a larger document .
 In contrast to considering a stand - alone statement , the system is now required to handle a larger amount of information that may possibly influence the prediction of the missing word .
 Such contextual dependencies may also be injected by removing a word from a short human - crafted summary of a larger body of text .
 The abstractive nature of the summary is likely to demand a higher level of comprehension of the original text .
@@ -26,7 +26,7 @@ After a fixed number of iterations , the model uses a summary of its inference p
 This paper makes the following contributions .
 We present a novel iterative , alternating attention mechanism that , unlike existing models , does not compress the query to a single representation , but instead alternates its attention between the query and the document to obtain a fine - grained query representation within a fixed computation time .
 Our architecture tightly integrates previous ideas related to bidirectional readers and iterative attention processes .
-It obtains state - of - theart results on two machine comprehension datasets and shows promise for application to abroad range of natural language processing tasks .
+It obtains state - of - theart results on two machine comprehension datasets and shows promise for application to a broad range of natural language processing tasks .
 Task Description
 One of the advantages of using Cloze - style questions to evaluate machine comprehension systems is that a sufficient amount of training and test data can be obtained without human intervention .
 The CBT and corpora are two such datasets .
@@ -75,7 +75,7 @@ Iterative Alternating Attention
 This phase can be considered a means to uncover a possible inference chain that starts at the query and the document and leads to the answer .
 The inference is modelled by an additional recurrent GRU network .
 The recurrent network iteratively performs an alternating search step to gather information that maybe useful to predict the answer .
-In particular , at each time step : ( 1 ) it performs an attentive read on the query encodings , resulting in a query glimpse , qt , and ( 2 ) given the current query glimpse , it extracts a conditional document glimpse , d t , representing the parts of the document that are relevant to the current query glimpse .
+In particular , at each time step : ( 1 ) it performs an attentive read on the query encodings , resulting in a query glimpse , qt , and ( 2 ) given the current query glimpse , it extracts a conditional document glimpse , d t , representing the parts of the document thatare relevant to the current query glimpse .
 In turn , both attentive reads are conditioned on the previous hidden state of the inference GRU s t ?1 , summarizing the information that has been gathered from the query and the document up to time t.
 The inference GRU uses both glimpses to update its recurrent state and thus decides which information needs to be gathered to complete the inference process .
 Query Attentive Read
@@ -124,7 +124,7 @@ the inputs to both the query and the document attention mechanisms .
 We found that setting embedding regularization to 0.0001 , T = 8 , d = 384 , h = 128 , s = 512 worked robustly across the datasets .
 Our model is implemented in Theano , using the Keras library .
 Computational Complexity Similar to previous state - of - the - art models which use a bidirectional encoder , the major bottleneck of our method is computing the document and query encodings .
-The alternating attention mechanism runs only fora fixed number of steps ( T = 8 in our tests ) , which is orders of magnitude smaller than atypical document or query in our datasets ( see ) .
+The alternating attention mechanism runs only for a fixed number of steps ( T = 8 in our tests ) , which is orders of magnitude smaller than a typical document or query in our datasets ( see ) .
 The repeated attentions each require a softmax over ? 1000 locations which is typically fast on recent GPU architectures .
 Thus , our computation cost is comparable to , but we outperform the latter models on the datasets tested .
 Results
@@ -132,7 +132,7 @@ We report the results of our model on the CBT - CN , CBT - NE and CNN datasets ,
 The Humans , LSTMs and Memory Networks ( Mem NNs ) results are taken from and the Attention - Sum Reader ( AS Reader ) is a state - of - the - art result recently obtained by .
 CBT
 Main result
-Our model ( line 7 ) sets anew stateof - the - art on the common noun category by gaining 3.6 and 5.6 points in validation and test over the best baseline AS Reader ( line 5 ) .
+Our model ( line 7 ) sets a new stateof - the - art on the common noun category by gaining 3.6 and 5.6 points in validation and test over the best baseline AS Reader ( line 5 ) .
 This performance gap is only partially reflected on the CBT - NE dataset .
 We observe that the 1.4 accuracy points on the validation set do not reflect better performance on the test set , which sits on par with the best baseline .
 In CBT - NE , the missing word is a named entity appearing in the story which is likely to be less frequent than a common noun .
@@ -200,7 +200,7 @@ Our model is closely related to , which were also applied to question answering 
 The pointer - style attention mechanism that we use to perform the final answer prediction has been proposed by , which in turn was based on the earlier Pointer Networks of .
 However , differently from our work , perform only one attention step and embed the query into a single vector representation , corresponding to the concatenation of the last state of the forward and backward GRU networks .
 To our knowledge , embedding the query into a single vector representation is a choice that is shared by most machine reading comprehension models .
-In our model , the repeated , tight integration between query attention and document attention allows the model to explore dynamically which parts of the query are most important to predict the answer , and then to focus on the parts of the document that are most salient to the currently - attended query components .
+In our model , the repeated , tight integration between query attention and document attention allows the model to explore dynamically which parts of the query are most important to predict the answer , and then to focus on the parts of the document thatare most salient to the currently - attended query components .
 A similar attempt in attending different components of the query maybe found in .
 In that model , the document is processed once for each query word .
 This can be computationally intractable for large documents , since it involves unrolling a bidirectional recurrent neural network over the entire document multiple times .

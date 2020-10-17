@@ -3,7 +3,7 @@
     "Experimental setup" : {
       "has" : {
         "word embeddings" : {
-          "initialize with" : "128 - d vectors",
+          "initialize" : "128 - d vectors",
           "fine - tune" : "during training",
           "from sentence" : "We initialize word embeddings with 128 - d vectors and fine - tune them during training ."
         },

@@ -33,14 +33,13 @@
           },
           "from sentence" : "We initialize the learning rate to 0.1 for the top - level encoder and 1 for the rest of the model , and begin decaying it by a factor of 0.5 each epoch after the validation perplexity stops decreasing ."
         },
-        "word embeddings" : {
-          "with" : "300 dimensional word2vec embeddings",
-          "from sentence" : "We use 2 layer LSTMs with 500 hidden units , and we initialize word embeddings with 300 dimensional word2vec embeddings ."          
-        },
         "all other parameters" : {
           "as uniform in" : "interval [ ? 0.1 , 0.1 ]",
           "from sentence" : "We initialize all other parameters as uniform in the interval [ ? 0.1 , 0.1 ] ."
-        }        
+        },
+        "word embeddings" : {
+          "with" : "300 dimensional word2vec embeddings"
+        }		
       },
       "use" : {
         "2 layer LSTMs" : {

@@ -26,7 +26,8 @@
 12	85	98	better models
 12	99	102	for
 12	103	123	sentence compression
-12	99	102	for
+12	124	127	for
+12	128	147	text simplification
 13	18	33	show how to use
 13	34	68	existing eye - tracking recordings
 13	69	79	to improve
@@ -59,7 +60,7 @@
 15	59	72	Dundee Corpus
 15	73	83	to improve
 15	84	112	sentence compression results
-15	102	104	on
+15	113	115	on
 15	116	132	several datasets
 2	10	30	sentence compression
 93	16	22	across

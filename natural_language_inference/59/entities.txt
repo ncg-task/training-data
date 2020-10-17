@@ -11,19 +11,19 @@
 16	78	106	decomposable attention model
 16	107	113	to use
 16	114	118	sums
-16	71	73	of
+16	119	121	of
 16	122	149	character n-gram embeddings
 16	150	160	instead of
 16	161	176	word embeddings
 18	61	69	pretrain
 18	70	94	all our model parameters
-18	3	5	on
+18	95	97	on
 18	102	162	noisy , automatically collected question - paraphrase corpus
 18	163	170	Paralex
 18	173	184	followed by
 18	185	198	fine - tuning
-18	84	94	parameters
-18	3	5	on
+18	203	213	parameters
+18	214	216	on
 18	221	234	Quora dataset
 99	39	41	by
 99	42	53	grid search
@@ -45,58 +45,60 @@
 99	316	338	pretraining and tuning
 99	343	353	batch size
 99	356	359	256
-99	88	91	for
-99	316	327	pretraining
+99	307	310	for
+99	364	375	pretraining
 99	380	382	64
-99	88	91	for
-99	332	338	tuning
+99	360	363	for
+99	387	393	tuning
 99	398	411	dropout ratio
-99	303	306	0.1
-99	88	91	for
-99	332	338	tuning
+99	414	417	0.1
+99	383	386	for
+99	422	428	tuning
 99	435	455	prediction threshold
 99	458	477	positive paraphrase
-99	88	91	for
+99	418	421	for
+99	484	495	score ? 0.3
 2	0	45	Neural Paraphrase Identification of Questions
 4	40	78	paraphrase identification of questions
 8	0	34	Question paraphrase identification
-116	3	10	observe
-116	20	41	simple FFNN baselines
-116	42	53	work better
-116	54	58	than
-116	59	122	more complex Siamese and Multi - Perspective CNN or LSTM models
-117	0	50	Our basic decomposable attention model DECATT word
-117	51	58	without
-117	59	81	pre-trained embeddings
-117	82	84	is
-117	85	91	better
-117	92	96	than
-117	97	115	most of the models
-117	131	135	used
-117	136	152	GloVe embeddings
-118	35	52	DECATT char model
-118	53	60	without
-118	61	86	any pretrained embeddings
-118	87	98	outperforms
-118	99	114	DE - CATT glove
-118	115	124	that uses
-118	125	157	task - agnostic GloVe embeddings
-119	14	18	when
-119	19	46	character n-gram embeddings
-119	47	50	are
-119	51	62	pre-trained
-119	42	44	in
-119	68	90	task - specific manner
-119	42	44	in
-119	42	44	in
-120	16	23	observe
-120	26	43	significant boost
-120	47	58	performance
-124	13	17	note
-124	23	48	our best performing model
-124	49	51	is
-124	52	68	pt - DECATT char
-124	77	86	leverages
-124	91	101	full power
-124	102	104	of
-124	105	125	character embeddings
+115	3	10	observe
+115	20	41	simple FFNN baselines
+115	42	53	work better
+115	54	58	than
+115	59	122	more complex Siamese and Multi - Perspective CNN or LSTM models
+116	0	50	Our basic decomposable attention model DECATT word
+116	51	58	without
+116	59	81	pre-trained embeddings
+116	82	84	is
+116	85	91	better
+116	92	96	than
+116	97	115	most of the models
+116	131	135	used
+116	136	152	GloVe embeddings
+117	35	52	DECATT char model
+117	53	60	without
+117	61	86	any pretrained embeddings
+117	87	98	outperforms
+117	99	114	DE - CATT glove
+117	115	124	that uses
+117	125	157	task - agnostic GloVe embeddings
+118	14	18	when
+118	19	46	character n-gram embeddings
+118	47	50	are
+118	51	62	pre-trained
+118	63	65	in
+118	68	90	task - specific manner
+118	91	93	in
+118	94	121	DECATT paralex ? char model
+118	127	134	observe
+118	137	154	significant boost
+118	155	157	in
+118	158	169	performance
+122	13	17	note
+122	23	48	our best performing model
+122	49	51	is
+122	52	68	pt - DECATT char
+122	77	86	leverages
+122	91	101	full power
+122	102	104	of
+122	105	125	character embeddings

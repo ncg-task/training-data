@@ -4,7 +4,7 @@ abstract
 Aspect - level sentiment classification ( ASC ) aims at identifying sentiment polarities towards aspects in a sentence , where the aspect can behave as a general Aspect Category ( AC ) or a specific Aspect Term ( AT ) .
 However , due to the especially expensive and labor - intensive labeling , existing public corpora in AT - level are all relatively small .
 Meanwhile , most of the previous methods rely on complicated structures with given scarce data , which largely limits the efficacy of the neural models .
-In this paper , we exploit anew direction named coarse - to - fine task transfer , which aims to leverage knowledge learned from a rich - resource source domain of the coarse - grained AC task , which is more easily accessible , to improve the learning in a low - resource target domain of the fine - grained AT task .
+In this paper , we exploit a new direction named coarse - to - fine task transfer , which aims to leverage knowledge learned from a rich - resource source domain of the coarse - grained AC task , which is more easily accessible , to improve the learning in a low - resource target domain of the fine - grained AT task .
 To resolve both the aspect granularity inconsistency and feature mismatch between domains , we propose a Multi - Granularity Alignment Network ( MGAN ) .
 In MGAN , a novel Coarse 2 Fine attention guided by an auxiliary task can help the AC task modeling at the same finegrained level with the AT task .
 To alleviate the feature false alignment , a contrastive feature alignment method is adopted to align aspect - specific feature representations semantically .
@@ -29,7 +29,7 @@ Nonetheless , we observe that plentiful AC - level corpora are more easily acces
 This is because that aspect categories are usually in a small set of general aspects that can be pre-defined .
 For example , commercial services such as review sites or social media can define a set of valuable aspect categories towards products or events in a particular domain ( e.g. , " food " , " service " , " speed " , and " price " in the Restaurant domain ) .
 As a result , the mass collections of user preferences towards different aspect categories become practicable .
-Motivated by this observation , we propose anew problem named coarse - to - fine task transfer across both domain and granularity , with the aim of borrowing knowledge from an abundant source domain of the coarse - grained AC task to a small - scale target domain of the fine - grained AT task .
+Motivated by this observation , we propose a new problem named coarse - to - fine task transfer across both domain and granularity , with the aim of borrowing knowledge from an abundant source domain of the coarse - grained AC task to a small - scale target domain of the fine - grained AT task .
 The challenges in fulfillment of this setting are two - fold : ( 1 ) task discrepancy : the two tasks concern with the aspects with different granularity .
 Source aspects are coarse - grained aspect categories , which lack a priori position information in the context .
 However , target aspects are fine - grained aspect terms , which have accurate position information .
@@ -46,7 +46,7 @@ To prevent false alignment , we adopt the Contrastive Feature Alignment ( CFA ) 
 The CFA considers both semantic alignment by maximally ensuring the equivalent distributions from different domains but the same class , and semantic separation by guaranteeing distributions from both different classes and domains to be as dissimilar as possible .
 Moreover , we build a large - scale multidomain dataset named YelpAspect with 100K samples for each domain to serve as highly beneficial source domains .
 Empirically , extensive experiments demonstrate that the proposed MGAN model can achieve superior performances on two AT - level datasets from SemEval ' 14 ABSA challenge and an ungrammatical AT - level twitter dataset .
-Our contributions of this paper are four - fold : ( 1 ) to the best of our knowledge , a novel transfer setting cross both domain and granularity is first proposed for aspect - level sentiment analysis ; ( 2 ) anew large - scale , multi-domain AC - level dataset is constructed ; ( 3 ) the novel Coarse 2 Fine attention is proposed to effectively reduce the aspect granularity gap between tasks ; ( 4 ) empirical studies verify the effectiveness of the proposed model on three AT - level benchmarks .
+Our contributions of this paper are four - fold : ( 1 ) to the best of our knowledge , a novel transfer setting cross both domain and granularity is first proposed for aspect - level sentiment analysis ; ( 2 ) a new large - scale , multi-domain AC - level dataset is constructed ; ( 3 ) the novel Coarse 2 Fine attention is proposed to effectively reduce the aspect granularity gap between tasks ; ( 4 ) empirical studies verify the effectiveness of the proposed model on three AT - level benchmarks .
 Related Work
 Traditional supervised learning algorithms highly depend on extensive handcrafted features to solve aspect - level sentiment classification .
 These models fail to capture semantic relatedness between the aspect and its context .
@@ -114,7 +114,7 @@ Based on this observation , we can capture more specific semantics of the source
 Motivated by autoencoders ) , we introduce an auxiliary pseudo - label prediction task for the source task .
 In this task , a source aspect a sis not only regarded as a sequence of aspect words , but also as a pseudo - label ( category of the aspect ) y c , where c ?
 C and C is a set of aspect categories .
-We utilize the obtained aspect representation ha s fora s to attend the context and then the induced attention scores aggregate the context information to conversely predict the pseudo category label of a s itself .
+We utilize the obtained aspect representation ha s for a s to attend the context and then the induced attention scores aggregate the context information to conversely predict the pseudo category label of a s itself .
 If the context contains the aspect term correlated closely to the source aspect , then the attention mechanism can emphasize it for better prediction .
 We denote this mechanism as Coarse 2 Fine attention , which is calculated as :
 where W f ?
@@ -156,7 +156,7 @@ where ? ( , ) is a contrastive function that performs semantic alignment or sepa
 Formally , ? ( , ) is defined as :
 where Dis a parameter dictating the degree of separation and is set to 1 in our experiments .
 Alternating Training
-Combining the losses we introduced before together with a 2 regularization , we constitute the overall losses for the source and target networks as :
+Combining the losses we introduced before together with a 2 regularization , we constitute the over all losses for the source and target networks as :
 L tar = Lt sen + ? L cf a + ?L t reg ,
 where ? , ?
 balance the effect of the CFA loss and the 2 regularization loss , respectively .

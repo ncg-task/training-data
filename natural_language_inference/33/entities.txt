@@ -51,13 +51,13 @@
 143	58	86	decomposable attention model
 139	3	14	demonstrate
 139	15	32	substantial gains
-139	6	8	on
+139	33	35	on
 139	36	40	TREC
 139	43	46	6 %
 139	47	51	over
 139	52	61	Infersent
 139	66	77	roughly 2 %
-139	47	51	over
+139	78	82	over
 139	87	97	CNN - LSTM
 139	102	115	outperforming
 139	123	154	competitive supervised baseline
@@ -68,7 +68,7 @@
 140	34	68	paraphrase identification ( MPRC )
 140	71	78	closing
 140	83	86	gap
-140	31	33	on
+140	87	89	on
 140	90	111	supervised approaches
 140	112	124	trained from
 140	125	132	scratch
@@ -76,7 +76,7 @@
 141	16	36	constituency parsing
 141	37	45	improves
 141	46	57	performance
-141	10	12	on
+141	58	60	on
 141	61	94	sentence relatedness ( SICK - R )
 141	99	122	entailment ( SICK - E )
 142	8	17	show that
@@ -95,17 +95,16 @@
 144	101	108	able to
 144	109	119	outperform
 144	124	159	Siamese and Multi - Perspective CNN
-144	5	10	using
+144	160	165	using
 144	166	177	roughly 6 %
-144	33	35	of
+144	178	180	of
 144	185	207	available training set
 145	8	18	outperform
 145	23	39	Deconv LVM model
 150	0	15	Representations
 150	16	35	learned solely from
 150	36	39	NLI
-150	43	52	appear to
-150	53	59	encode
+150	43	59	appear to encode
 150	60	66	syntax
 150	71	89	incorporation into
 150	90	114	our multi-task framework

@@ -6,13 +6,13 @@ This work proposes a simple technique for addressing this issue : use a data- ef
 We use this selector as a bottom - up attention step to constrain the model to likely phrases .
 We show that this approach improves the ability to compress text , while still generating fluent summaries .
 This two - step process is both simpler and higher performing than other end - toend content selection models , leading to significant improvements on ROUGE for both the CNN - DM and NYT corpus .
-Furthermore , the content selector can be trained with as little as 1,000 sentences , making it easy to transfer a trained summarizer to anew domain .
+Furthermore , the content selector can be trained with as little as 1,000 sentences , making it easy to transfer a trained summarizer to a new domain .
 Introduction
 Text summarization systems aim to generate natural language summaries that compress the information in a longer text .
 Approaches using neural networks have shown promising results on this task with end - to - end models that encode a source document and then decode it into an abstractive summary .
 Current state - of - the - art neural abstractive summarization models combine extractive and abstractive techniques by using pointergenerator style models which can copy words from the source document .
 These end - to - end models produce fluent abstractive summaries but have had mixed success in content selection , i.e. deciding what to summarize , compared to fully extractive models .
-There is an appeal to end - to - end models from a modeling perspective ; however , there is evidence that when summarizing people follow a two - step Source Document german chancellor angela merkel [ did ] not too pleased about the weather during her easter holiday as britain in and temperatures of up to 21 c , mrs merkel and her husband [ , chemistry professor joachim sauer , ] had to settle fora measly 12 degrees .
+There is an appeal to end - to - end models from a modeling perspective ; however , there is evidence that when summarizing people follow a two - step Source Document german chancellor angela merkel [ did ] not too pleased about the weather during her easter holiday as britain in and temperatures of up to 21 c , mrs merkel and her husband [ , chemistry professor joachim sauer , ] had to settle for a measly 12 degrees .
 the chancellor and her have been spending easter on the small island of ischia , near naples in the mediterranean for over a [ not so sunny : ] angela merkel her husband are spotted on their easter trip to the island of ischia near naples [ .
 the ] couple spend their holiday at the fivestar miramare spa hotel on the south of the island [ , which comes ] with it s own private beach [ , and balconies overlooking the ] ocean ...
 Reference angela merkel and husband spotted while on italian island holiday .
@@ -60,7 +60,7 @@ approach the coverage problem with an intra-attention in which a decoder has an 
 However RL - based training can be difficult to tune and slow to train .
 Our method does not utilize RL training , although in theory this approach can be adapted to RL methods .
 Several papers also explore multi-pass extractive - abstractive summarization .
-Nallapati et al. ( 2017 ) create anew source document comprised of the important sentences from the source and then train an abstractive system .
+Nallapati et al. ( 2017 ) create a new source document comprised of the important sentences from the source and then train an abstractive system .
 describe an extractive phase that extracts full paragraphs and an abstractive one that determines their order .
 Finally introduce a mechanism that reads a source document in two passes and uses the information from the first pass to bias the second .
 Our method differs in that we utilize a completely abstractive model , biased with a powerful content selector .
@@ -76,7 +76,7 @@ Abstractive summaries are generated one word at a time .
 At every time - step , a model is aware of the previously generated words .
 The problem is to learn a function f ( x ) parametrized by ? that maximizes the probability of generating the correct sequences .
 Following previous work , we model the abstractive summarization with an attentional sequence - to - sequence model .
-The attention distribution p ( a j | x , y 1:j?1 ) fora decoding step j , calculated within the neural network , represents an embedded soft distribution overall of the source tokens and can be interpreted as the current focus of the model .
+The attention distribution p ( a j | x , y 1:j?1 ) for a decoding step j , calculated within the neural network , represents an embedded soft distribution over all of the source tokens and can be interpreted as the current focus of the model .
 The model additionally has a copy mecha -
 Source
 Masked Source Summary
@@ -109,7 +109,7 @@ The contextual embeddings are fine - tuned to learn a task - specific embedding 
 with ?
 and s 0 , 1 , 2 as trainable parameters .
 Since these embeddings only add four additional parameters to the tagger , it remains very data - efficient despite the high - dimensional embedding space .
-Both embeddings are concatenated into a single vector that is used as input to a bidirectional LSTM , which computes a representation hi fora word w i .
+Both embeddings are concatenated into a single vector that is used as input to a bidirectional LSTM , which computes a representation hi for a word w i .
 We can then calculate the probability q i that the word is selected as ?( W sh i + b s ) with trainable parameters W sand b s .
 Bottom - Up Copy Attention
 Inspired by work in bottom - up attention for images which restricts attention to predetermined bounding boxes within an image , we use these attention masks to limit the available selection of the pointer - generator model .
@@ -132,7 +132,7 @@ Method 1 : ( MASK ONLY ) :
 We first consider whether the alignment used in the bottom - up approach could help a standard summarization system .
 Inspired by , we investigate whether aligning the summary and the source during training and fixing the gold copy attention to pick the " correct " source word is beneficial .
 We can think of this approach as limiting the set of possible copies to a fixed source word .
-Here the training is changed , but no mask is used attest time .
+Here the training is changed , but no mask is used at test time .
 Method 2 ( MULTI - TASK ) :
 Next , we investigate whether the content selector can be trained alongside the abstractive system .
 We first test this hypothesis by posing summarization as a multi-task problem and training the tagger and summarization model with the same features .
@@ -142,7 +142,7 @@ Method 3 ( DIFFMASK ) :
 Finally we consider training the full system end - to - end with the mask during training .
 Here we jointly optimize both objectives , but use predicted selection probabilities to softly mask the copy attention p( i j | x , y 1:j?1 ) = p ( a
 i j | x , y 1:j?1 ) q i , which leads to a fully differentiable model .
-This model is used with the same soft mask attest time .
+This model is used with the same soft mask at test time .
 Inference
 Several authors have noted that longer - form neural generation still has significant issues with incorrect length and repeated words than in short - form problems like translation .
 Proposed solutions include modifying models with extensions such as a coverage mechanism or intra-sentence attention .
@@ -155,7 +155,7 @@ leads to longer summaries .
 We additionally set a minimum length based on the training data .
 Repeats :
 Copy models often repeatedly attend to the same source tokens , generating the same phrase multiple times .
-We introduce anew summary specific coverage penalty ,
+We introduce a new summary specific coverage penalty ,
 Intuitively , this penalty increases whenever the decoder directs more than 1.0 of total attention within a sequence towards a single encoded token .
 By selecting a sufficiently high ? , this penalty blocks summaries whenever they would lead to repetitions .
 Additionally , we follow and restrict the beam search to never repeat trigrams .
@@ -186,7 +186,7 @@ In this model , we randomly choose one of the attention - heads as the copy- dis
 All inference parameters are tuned on a 200 example subset of the validation set .
 Length penalty parameter ? and copy mask differ across models , with ? ranging from 0.6 to 1.4 , and ranging from 0.1 to 0.2 .
 The minimum length of the generated summary is set to 35 for CNN - DM and 6 for NYT .
-While the Pointer - Generator uses abeam size of 5 and does not improve with a larger beam , we found that bottom - up attention requires a larger beam size of 10 .
+While the Pointer - Generator uses a beam size of 5 and does not improve with a larger beam , we found that bottom - up attention requires a larger beam size of 10 .
 The coverage penalty parameter ? is set to 10 , and the copy attention normalization parameter ? to 2 for both approaches .
 We use AllenNLP for the content selector , and Open NMT - py for the abstractive models .
 3 . shows our main results on the CNN - DM corpus , with abstractive models shown in the top , and bottom - up attention methods at the bottom .
@@ -267,10 +267,10 @@ This further indicates that the unmodified Pointer - Generator model has already
 Results on CNN - DM when adding one inference penalty at a time .
 Conclusion
 This work presents a simple but accurate content selection model for summarization that identifies phrases within a document that are likely included in its summary .
-We showed that this content selector can be used fora bottom - up attention that restricts the ability of abstractive summarizers to copy words from the source .
+We showed that this content selector can be used for a bottom - up attention that restricts the ability of abstractive summarizers to copy words from the source .
 The combined bottom - up summarization system leads to improvements in ROUGE scores of over two points on both the CNN - DM and NYT corpora .
 A comparison to end - to - end trained methods showed that this particular problem can not be easily solved with a single model , but instead requires finetuned inference restrictions .
-Finally , we showed that this technique , due to its data - efficiency , can be used to adjust a trained model with few data points , making it easy to transfer to anew domain .
+Finally , we showed that this technique , due to its data - efficiency , can be used to adjust a trained model with few data points , making it easy to transfer to a new domain .
 Preliminary work that investigates similar bottom - up approaches in other domains that require a content selection , such as grammar correction , or data - to - text generation , have shown some promise and will be investigated in future work .
 Examples
 Generated summary

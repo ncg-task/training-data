@@ -15,8 +15,7 @@
                 }
               }
             }
-          },
-          "from sentence" : "Our final model achieves the accuracy of 88.6 % , the best result observed on SNLI , while our enhanced sequential encoding model attains an accuracy of 88.0 % , which also outperform the previous models ."
+          }
         },
         "our enhanced sequential encoding model" : {
           "attains" : {

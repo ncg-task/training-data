@@ -19,8 +19,7 @@
               "from" : "source text"
             }
           }
-        },
-        "from sentence" : "Our model uses pointer network to capture the salient information from a source text , and then employs another pointer to generalize the detailed words according to their upper level of expressions ."
+        }
       },
       "employs" : {
         "another pointer" : {

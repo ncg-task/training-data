@@ -28,13 +28,13 @@ We experiment with several different datasets on the tasks of document question 
 We find that our embedding refinement strategy is effective ( 5 ) .
 On four competitive benchmarks , we show that refinement helps .
 First , simply refining the embeddings just using the context ( and no additional background information ) can improve performance significantly , but adding background knowledge helps further .
-Our results are competitive with the best systems , achieving anew state of the art on the recent TriviaQA benchmarks .
+Our results are competitive with the best systems , achieving a new state of the art on the recent TriviaQA benchmarks .
 Our success on this task is especially noteworthy because the task - specific architecture is a simple reading architecture , in particular a single layer BiLSTM with a feed - forward neural network for span prediction .
 Finally , we provide an analysis demonstrating that our systems are able to exploit background knowledge in a semantically appropriate manner ( 5.3 ) .
 It includes , for instance , an experiment showing that our system is capable of making appropriate counterfactual inferences when provided with " alternative facts " .
 External Knowledge as Supplementary
 Text Inputs
-Knowledge resources make information that could potentially be useful for improving NLU available in a variety different formats , such as natural language text , ( subject , predicate , object ) triples , relational databases , and other structured formats .
+Knowledge resources make information that could potentially be useful for improving NLU available in a variety different formats , such as natural language text , ( subject , predicate , object ) triples , relational data bases , and other structured formats .
 Rather than tailoring our solution to a particular structured representation , we assume that all supplementary information either already exists in natural language statements ( e.g. , encyclopedias ) or can easily be recoded as natural language .
 Furthermore , while mapping from unstructured to structured representations is hard , the inverse problem is easy .
 For example , given a triple ( abdication , ISA , resignation ) we can construct the free - text assertion " Abdication is a resignation . " using simple rules .
@@ -46,13 +46,13 @@ In the next section , we turn to the question of how to leverage the retrieved s
 Refining Word Embeddings by Reading
 Virtually every NLU task - from document classification to translation to question answeringshould in theory be able to benefit from supplementary knowledge .
 While one could develop custom architectures for each task so as to read supplementary inputs , we would like ours to augment any existing NLU task architectures with the ability to read relevant information with minimal effort .
-To realize this goal , we adopt the strategy of refining word embeddings ; that is , we replace static word embeddings with embeddings that are functions of the task inputs and any supplementary inputs .
+To realize this goal , we adopt the strategy of refining word embeddings ; that is , we replace static word embeddings with embeddings thatare functions of the task inputs and any supplementary inputs .
 Word embeddings can be considered a simple form of key - value memory stores that , in our case , not only contain general - purpose knowledge ( as in typical neural NLU systems ) but also contextual information ( including background knowledge ) .
 The use of word - embeddings as memory has the advantage that it is transparent to the task - architecture which kinds of embeddings ( refined or unrefined ) are used .
 Our incremental refinement process encodes input texts followed by updates on the word embedding matrix in multiple reading steps .
 Words are first represented non-contextually ( i.e. , standard word embeddings ) , which can be conceived of as the columns in an embedding matrix E 0 .
 At each progressive reading step ?
-1 , anew embedding matrix
+1 , a new embedding matrix
 E is constructed by refining the embeddings from the previous step E ? 1 using ( userspecified ) contextual information X for reading step , which is a set of natural language sequences ( i.e. , texts ) .
 An illustration of our incremental refinement strategy can be found in .
 In the following , we define this procedure formally .
@@ -64,13 +64,13 @@ E are incrementally refined by reading the input text and textual renderings of 
 our model by n and a fully - connected layer by
 Unrefined Word Embeddings ( E 0 )
 The first representation level consists of noncontextual word representations , that is , word representations that do not depend on any input ; these can be conceived of as an embedding matrix E 0 whose columns are indexed by words in ? * .
-The non-contextual word representation e 0 w fora single word w is computed by using a gated combination of fixed , pre-trained word vectors e p w ?
+The non-contextual word representation e 0 w for a single word w is computed by using a gated combination of fixed , pre-trained word vectors e p w ?
 Rn with learned character - based embeddings e char w ?
 Rn .
 We compute e char w using a single - layer convolutional neural network with n convolutional filters of width 5 followed by a max - pooling operation overtime .
 The formal definition of this combination is given in Eq.
 1 .
-In order to compute contextually refined word embeddings E given prior representations E ? 1 we assume a given set of texts X = {x 1 , x 2 , . . .} that are to be read at refinement iteration .
+In order to compute contextually refined word embeddings E given prior representations E ? 1 we assume a given set of texts X = {x 1 , x 2 , . . .} thatare to be read at refinement iteration .
 Each text xi is a sequence of word tokens .
 We embed all tokens of every x i using the embedding matrix from the previous layer , E ?1 .
 To each word , we concatenate a one - hot vector of length L with position set to 1 , indicating which layer is currently being processed .
@@ -85,7 +85,7 @@ Finally , we combine the previous representation e ? 1 w with w to form an updat
 This lets the model determine how much to revise the previous embedding with the newly read information ( Eq. 5 ) .
 Note that we soften the matching condition for w using lemmatization , 2 lemma ( w ) , during the pooling operation of Eq. 3 because contextual information about certain words is usually independent of the current word form w they appear in .
 As a consequence , this minor linguistic preprocessing step allows for additional interaction between tokens of the same lemma .
-Pooling over lemma-occurrences effectively connects different text passages ( even across texts ) that are otherwise disconnected , mitigating the problems arising from long - distance dependencies .
+Pooling over lemma-occurrences effectively connects different text passages ( even across texts ) thatare otherwise disconnected , mitigating the problems arising from long - distance dependencies .
 This is reminiscent of the ( soft ) attention mechanism used in reading comprehension models ( e.g. , ; ) .
 However , our setup is more general as it allows for the connection of multiple passages ( via pooling ) at once and is able to deal with multiple inputs which is necessary to make use of additional input texts such as relevant background knowledge .
 Experimental Setup
@@ -118,25 +118,24 @@ Because assertions a in ConceptNet come inform of ( subject , predicate , object
 Because still too many such assertions might be retrieved for an instance , we rank all retrievals based on their respective subject and object .
 The ranking score we use is the inverse product of appearances of the subject and the object in the KB , that is score ( a ) = ( a I (s a = s a ) a I ( o a = o a ) ) ? 1 , where I denotes the indicator function .
 During training and evaluation we retain the top -k assertions , using k = 50 for DQA and k = 20 for RTE .
-Note that fewer or even no assertions might be retrieved fora particular instance during training and testing .
+Note that fewer or even no assertions might be retrieved for a particular instance during training and testing .
 Wikipedia Integration
 Here we describe the heuristic we use to obtain plausibly relevant supplementary knowledge from Wikipedia .
 We wish to use Wikipedia abstracts 5 as an addi-tional knowledge source to gather more information about the top answer predictions of our DQA model .
 To this end , we let the system first predict the top - 16 answer spans without any information from Wikipedia .
 For each answer candidate string , we collect abstracts for their 3 most frequently linked Wikipedia entries .
 6
-Using more than only the most frequently linked Wikipedia entry fora given answer string , lets us mitigate problems arising from polysemous entity names , although it does mean the refinement model needs to be selective in extracting relevant information .
+Using more than only the most frequently linked Wikipedia entry for a given answer string , lets us mitigate problems arising from polysemous entity names , although it does mean the refinement model needs to be selective in extracting relevant information .
 The refinement module additionally reads the initial 50 tokens of each retrieved Wikipedia abstract and computes the final predictions .
 Refinement Order
 When employing our embedding - refinement strategy , we first read the document ( p ) followed by the question ( q ) in case of DQA , and the premise ( p ) followed by the hypothesis ( q ) for RTE , that is , X 1 = {p} and X 2 = {q}.
 Additional knowledge in the form of a set of assertions A is integrated after reading the task - specific input for both DQA and RTE , that is , X 3 = A. Finally , for DQA we additionally add Wikipedia abstracts as background knowledge as described previously , that is , X 4 = W. In preliminary experiments we found that the final performance is not significantly sensitive to the order of presentation so we decided to fix our order as defined above .
 Results
 This section presents results .
-We provide ablations fora total of 7 task - dataset - model combinations and compare our final results to other works on the most recent benchmark datasets for each task ( Trivi aQA and MultiNLI ) , demonstrating that our results are competitive , and in some cases , state of the art , even without sophisticated task architectures .
+We provide ablations for a total of 7 task - dataset - model combinations and compare our final results to other works on the most recent benchmark datasets for each task ( Trivi aQA and MultiNLI ) , demonstrating that our results are competitive , and in some cases , state of the art , even without sophisticated task architectures .
 Model
 SQuAD T - Wiki T - Web Net ( A ) .
-Wikipedia
-( W ) yields further , significant improvements on TriviaQA , slightly outperforming the current state of the art model .
+Wikipedia ( W ) yields further , significant improvements on TriviaQA , slightly outperforming the current state of the art model .
 This is especially noteworthy given the simplicity of our QA architecture ( i.e. , a single layer BiL - STM ) compared to the previous SotA attained by .
 The development results on SQuAD 7 show the same pattern of improvement , but here the results are slightly worse than the model of Clark and Gardner , and they are way off from the current best - known results ( currently at 87 % F1 ) ; 8 however , our intention with these experiments is to show of the value that external knowledge and our refinement process can bring , not to compete with highly tuned task architectures on a single dataset .
 Controlling for computation .
@@ -184,7 +183,7 @@ but uh these guys tion about candidate answers in DQA suggest that our knowledge
 Related Work
 The role of background knowledge in natural language understanding has long been remarked on , especially in the context of classical models of AI ; however , it has only recently begun to play a role in neural network models of NLU .
 Previous efforts have focused on specific tasks or certain kinds of knowledge , whereas we take a step towards a more generalpurpose solution for the integration of heterogeneous knowledge for NLU systems by providing a simple , general - purpose reading architecture that can read background knowledge encoded in simple natural language statements , e.g. , " abdication is a type of resignation " .
-In the area of visual question answering ( 2017 ) incorporate information about word senses into their representations before solving the downstream NLU task , which is similar .
+In the are a of visual question answering ( 2017 ) incorporate information about word senses into their representations before solving the downstream NLU task , which is similar .
 We go one step further by seamlessly integrating all kinds of fine - grained assertions about concepts that might be relevant for the task at hand .
 Another important aspect of our approach is the notion of dynamically updating wordrepresentations with contextual information .
 Tracking and updating concepts , entities or sentences with dynamic memories is a very active research direction .
@@ -229,7 +228,7 @@ It relies on splitting documents and merging paragraphs up to a certain maximum 
 Paragraphs are ranked using the tfidf cosine similarity between question and paragraph .
 To speedup training only 2 paragraphs out of the top 4 / 6 for the W eb / W ikipedia datasets were sampled .
 The only architectural difference for this multi-paragraph setup is that we encode multiple p for each question q and the softmax of Eq.
-9 is taken overall tokens of all paragraphs instead of only a single paragraph .
+9 is taken over all tokens of all paragraphs instead of only a single paragraph .
 For further details , we refer the interested reader to Clark and Gardner ( 2017 ) who explain this process in more detail .
 For optimization we employed ADAM with a learning rate of 10 ?3 which was halved when performance dropped between checkpoint ( ckpt ) intervals .
 We use 300 - dimensional wordembeddings from as pre-trained word embeddings in all experiments .
@@ -253,12 +252,12 @@ It follows that by reducing the number of training data and impoverishing pre-tr
 To test this hypothesis , we gradually impoverish pre-trained word embeddings by reducing their dimensionality with PCA while reducing the number of training instances at the same time .
 11 Our joint data and dimensionality reduction results are presented in .
 They show that there is indeed a slightly larger benefit when employing background knowledge from ConcepNet ( A ) in the more impoverished settings with largest improvements when using around 10 k examples and reduced dimensionality to 10 .
-However , we observe that the biggest overall impact over the baseline ESIM model stems from our contextual refinement strategy ( i.e. , reading only the premise p and hypothesis q) which is especially pronounced for the 1 k and 3 k experiments .
+However , we observe that the biggest over all impact over the baseline ESIM model stems from our contextual refinement strategy ( i.e. , reading only the premise p and hypothesis q) which is especially pronounced for the 1 k and 3 k experiments .
 This highlights once more the usefulness of our refinement strategy even without the use of additional knowledge .
 C Further Analysis of Knowledge Utilization in RTE
 Is additional knowledge used ?
 To verify whether and how our models make use of additional knowledge , we conducted several experiments .
-First , we evaluated models trained with knowledge on our tasks while not providing any knowledge attest time .
+First , we evaluated models trained with knowledge on our tasks while not providing any knowledge at test time .
 This ablation drops performance by 3.7 - 3.9 % accuracy on MultiNLI , and by 4 % F1 on SQuAD .
 This indicates the model is refining the representations using the provided assertions in a useful way .
 What knowledge is used ?

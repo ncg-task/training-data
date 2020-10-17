@@ -40,13 +40,12 @@
             "learning rate" : {
               "of" : {
                 "0.0003/ 0.001/0.001" : {
-                  "for" : "RACE / SearchQA / Narrative QA"
+                  "for" : "RACE / SearchQA / NarrativeQA"
                 }
               }
             }
           },
-          "from sentence" : "We adopt the Adam optimizer with a learning rate of 0.0003/ 0.001/0.001 for RACE / SearchQA / Narrative
-QA respectively ."
+          "from sentence" : "We adopt the Adam optimizer with a learning rate of 0.0003/ 0.001/0.001 for RACE / SearchQA / NarrativeQA respectively ."
 
         }
       },

@@ -4,8 +4,7 @@
 19	111	170	word embeddings and Long Short Term Memory models ( LSTMs )
 19	171	180	to output
 19	181	231	surprisingly readable and informative compressions
-20	0	7	Trained
-20	8	10	on
+20	0	10	Trained on
 20	13	19	corpus
 20	20	22	of
 20	23	44	less than two million
@@ -36,7 +35,7 @@
 145	97	111	sharp contrast
 145	112	116	with
 145	121	125	20 %
-145	15	17	of
+145	126	128	of
 145	129	133	MIRA
 146	4	15	differences
 146	16	18	in

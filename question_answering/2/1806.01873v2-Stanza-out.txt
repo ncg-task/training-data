@@ -9,7 +9,7 @@ FVTA introduces an end - to - end approach that makes use of a hierarchical proc
 FVTA can not only answer the questions well but also provides the justifications which the system results are based upon to get the answers .
 FVTA achieves state - of - the - art performance on the MemexQA dataset and competitive results on the MovieQA dataset .
 Introduction
-Language and vision have emerged as a popular research area in computer vision .
+Language and vision have emerged as a popular research are a in computer vision .
 Visual question answering ( VQA ) is a successful direction utilizing both computer vision and natural language processing techniques to solve an interesting problem : given a pair of image and a question ( in natural language ) , the goal is to learn an inference model that can the answer questions according to cues discovered from the image .
 A variety of methods have been proposed to address the challenges from different aspects , with remarkable progress on answering about a single image .
 Extending from VQA on a single image , this paper considers the following problem :
@@ -28,7 +28,7 @@ To help users with a lot of photos and videos , a natural requirement is to iden
 An example question as shown in , is " when was the last time I went to a bar ? "
 From the users ' viewpoint , a good QA system should not only give a definite answer ( e.g. , January 20 , 2016 ) , but also ground evidential images or text snippets in the input sequence to justify the reasoning process .
 Given imperfect VQA models , humans often want to verify the answer .
-The inspection process maybe trivial fora single image but can take a significant amount of time to examine every image and the complete text words .
+The inspection process maybe trivial for a single image but can take a significant amount of time to examine every image and the complete text words .
 To address these two challenges , we propose a focal visual - text attention ( FVTA ) model for sequential data
 1 .
 Our model is motivated by the reasoning process of humans .
@@ -78,7 +78,7 @@ Given the visualtext sequence input X img , X txt , we obtain a good joint repre
 With FVTA attention , the model takes into account of the sequential dependency in image or text sequence , respectively , and cross-modal visual - text correlations .
 Meanwhile , the computed attention weights over input sequences can be utilized to derive meaningful justifications .
 Network Architecture
-This subsection discusses our overall neural network architecture .
+This subsection discusses our over all neural network architecture .
 As shown in , the proposed network consists of the following layers .
 Visual - Text Embedding
 Every image or video frame is encoded with a pre-trained Convolutional Neural Network .
@@ -123,7 +123,7 @@ Our visual - text attention layer is designed to let the model select related vi
 Such fine - grained attention is in general nontrivial to learn .
 Meanwhile , most answers for visual - text sequence inputs maybe constrained and restricted in a short temporal period .
 We learn such localized representation , called focal context representation , to emphasize relevant context states based on the question .
-First , we introduce a temporal correlation matrix , C ? R T T , asymmetric matrix where each entry c ij measures the correlation between context 's the i - th step and the j - th step fora question .
+First , we introduce a temporal correlation matrix , C ? R T T , asymmetric matrix where each entry c ij measures the correlation between context 's the i - th step and the j - th step for a question .
 Let hi = H :i : ?
 R 2 d 2 denote the visual / text representation for the i - th timestep in H .
 For notation convenience , : is a slicing operator to extracts all elements from a dimension .
@@ -197,7 +197,7 @@ Classic Soft Attention uses classic one dimensional question - to - context atte
 A correlation matrix between each question word and context is used to compute the attention as in .
 DMN + is the improved dynamic memory networks , which is one of the representative architectures that achieve good performance on the VQA Task .
 We implement the DMN + network with each sentence and each photo representation used in our proposed network as supporting facts input .
-Multimodal Compact Bilinear Pooling is the state - of - the - art method on VQA the single - modal attention flow model overall concatenated context representations with embeddings as in FVTA network .
+Multimodal Compact Bilinear Pooling is the state - of - the - art method on VQA the single - modal attention flow model over all concatenated context representations with embeddings as in FVTA network .
 TGIF Temporal Attention is a recently proposed spatial - temporal reasoning network on sequential animated image QA .
 Since other baseline methods do not use spatial attention , we compare the TGIF network with temporal attention only .
 TGIF temporal attention uses a simple MLP to compute the attention and only the last hidden state of the question is considered .
@@ -229,7 +229,7 @@ Comparison to the state - of - the - art
 The Memex
 QA dataset provides ground truth evidence photos for every question .
 We can compare the correlation between the photos of the highest attention weights and the ground truth photos to correctly answer a question .
-An ideal VQA model should not only enjoy a high accuracy in answering a question but also can find images that are highly correlated to the ground - truth evidence photos .
+An ideal VQA model should not only enjoy a high accuracy in answering a question but also can find images thatare highly correlated to the ground - truth evidence photos .
 lists the accuracy to examine whether a model puts focus on the correct photos .
 FVTA outperforms other attention models on finding the relevant photos for the question .
 The results show that the proposed attention can capture salient information for answering the question .

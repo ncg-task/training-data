@@ -25,7 +25,7 @@ Our proposed approach achieves highly competitive performance on this dataset ."
             }
           },
           "obtained" : {
-            "best P@1 performance overall" : {
+            "best P@1 performance over all" : {
               "has" : {
                 "outperforming" : {
                   "has" : {
@@ -39,7 +39,7 @@ Our proposed approach achieves highly competitive performance on this dataset ."
                   }
                 }
               },
-              "from sentence" : "Specifically , we have obtained the best P@1 performance overall , outperforming the state - of - the - art AI - CNN model by 3 % in terms of P@1 ."
+              "from sentence" : "Specifically , we have obtained the best P@1 performance over all , outperforming the state - of - the - art AI - CNN model by 3 % in terms of P@1 ."
             }
           }
         },
@@ -75,8 +75,7 @@ Hyper QA achieves very competitive performance on both MAP and MRR metrics ."
                 "outperforms" : {
                   "has" : ["MP - CNN", "AP - CNN", "QA - CNN"],
                   "from sentence" : "Similarly , reports the results on TrecQA ( clean ) .
-Similarly , Hyper
-QA also outperforms MP - CNN , AP - CNN and QA - CNN ."
+Similarly , Hyper QA also outperforms MP - CNN , AP - CNN and QA - CNN ."
 
                 }
               }

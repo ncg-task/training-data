@@ -20,17 +20,17 @@ Thus , our evaluation scheme is suitable for semantic parsing benchmarks in whic
 We test this model on COMPLEXQUESTIONS , a dataset designed to require more compositionality compared to earlier datasets , such as WEBQUESTIONS and SIMPLEQUESTIONS .
 We find that a simple QA model , despite having no access to the target KB , performs reasonably well on this dataset ( ? 35 F 1 compared to the state - of - the - art of 41 F 1 ) .
 Moreover , for the subset of questions for which the right answer can be found in one of the web snippets , we outperform the semantic parser ( 51.9 F 1 vs. 48.5 F 1 ) .
-We analyze results for different types of compositionality and find that superlatives and relation composition constructions are challenging fora webbased QA system , while conjunctions and events with multiple arguments are easier .
+We analyze results for different types of compositionality and find that superlatives and relation composition constructions are challenging for a webbased QA system , while conjunctions and events with multiple arguments are easier .
 An important insight is that semantic parsers must overcome the mismatch between natural language and formal language .
 Consequently , language that can be easily matched against the web may become challenging to express in logical form .
 For example , the word " wife " is anatomic binary relation in natural language , but expressed with a complex binary ?x.?y. Spouse ( x , y ) ? Gender ( x , Female ) in knowledge - bases .
 Thus , some of the complexity of understanding natural language is removed when working with a natural language representation .
 To conclude , we propose to evaluate the extent to which semantic parsing - based QA benchmarks require compositionality by comparing semantic parsing models to a baseline that extracts the answer from short web snippets .
-We obtain reasonable performance on COMPLEXQUESTIONS , and analyze the types of compositionality that are challenging fora web - based QA model .
+We obtain reasonable performance on COMPLEXQUESTIONS , and analyze the types of compositionality thatare challenging for a web - based QA model .
 To ensure reproducibility , we release our dataset , which attaches to each example from COMPLEXQUES - TIONS the top - 100 retrieved web snippets .
 1
 Problem Setting and Dataset
-Given a training set of triples {q ( i ) , R ( i ) , a ( i ) } N i = 1 , where q ( i ) is a question , R ( i ) is a web result set , and a ( i ) is the answer , our goal is to learn a model that produces an answer a fora new questionresult set pair ( q , R ) .
+Given a training set of triples {q ( i ) , R ( i ) , a ( i ) } N i = 1 , where q ( i ) is a question , R ( i ) is a web result set , and a ( i ) is the answer , our goal is to learn a model that produces an answer a for a new questionresult set pair ( q , R ) .
 A web result set R consists of K (= 100 ) web snippets , where each snippet s i 1 Data can be downloaded from https : //worksheets.codalab.org/worksheets/
 0x91d77db37e0a4 bbbaeb37b8972f4784 f / R : s1 : Billy Batts ( Character ) - Biography - IMDb Billy Batts ( Character ) on IMDb : Movies , TV , Celebs , and more ...
 ... Devino is portrayed by Frank Vincent in the film Goodfellas .
@@ -46,7 +46,7 @@ This was a touchy thing .
 Tommy had killed a made man .
 Billy was apart of the Bambino crew and untouchable .
 Before you ... q : " who played the part of billy batts in goodfellas ? " a : " Frank Vincent " has a title and a text fragment .
-An example fora training example is provided in .
+An example for a training example is provided in .
 Semantic parsing - based QA datasets contain question - answer pairs alongside a background KB .
 To convert such datasets to our setup , we run the question q against Google 's search engine and scrape the top - K web snippets .
 We use only the web snippets and ignore any boxes or other information returned ( see and the full dataset in the supplementary material ) .
@@ -78,7 +78,7 @@ In Section 4 we evaluate the performance of a simple QA model for each compositi
 Model
 Our model comprises two parts .
 First , we extract a set of answer candidates , A , from the web result set .
-Then , we train a log - linear model that outputs a distribution over the candidates in A , and is used attest time to find the most probable answers .
+Then , we train a log - linear model that outputs a distribution over the candidates in A , and is used at test time to find the most probable answers .
 Candidate Extraction
 We extract all 1 - grams , 2 - grams , 3 - grams and 4 - grams ( lowercased ) that appear in R , yielding roughly 5,000 candidates per question .
 We then discard any candidate that fully appears in the question itself , and define A to be the top - K candidates based on their tf - idf score , where term frequency is computed on all the snippets in R , and inverse document frequency is computed on a large external corpus .
@@ -90,7 +90,7 @@ Rd are learned parameters , and ?( )
 Rd is a feature function .
 We train our model by maximizing the regularized conditional log-likelihood objective N i = 1 log p ? ( a ( i ) | q ( i ) , R ( i ) ) + ? ||?|| 2 2 .
 At test time , we return the most probable answers based on p ? ( a | q , R ) ( details in Section 4 ) .
-While semantic parsers generally return a set , in COMPLEXQUESTIONS 87 % of the answers area singleton set .
+While semantic parsers generally return a set , in COMPLEXQUESTIONS 87 % of the answers are a singleton set .
 Features
 A candidate span a often has multiple mentions in the result set R. Therefore , our feature function ? ( ) computes the average of the features extracted from each mention .
 The main information sources used are the match between the candidate answer itself and the question ( top of ) and the match between the context of a candidate answer in a specific mention and the question ( bottom of ) , as well as the Google rank in which the mention appeared .
@@ -106,7 +106,7 @@ We computed POS tags and named entities with Stanford CoreNLP .
 We did not employ any co-reference resolution tool in this work .
 If after candidate extraction , we do not find the gold answer in the top - K ( = 140 ) candidates , we discard the example , resulting in a training set of 856 examples .
 We compare our model , WEBQA , to STAGG and COMPQ , which are to the best of our knowledge the highest performing semantic parsing models on both COMPLEXQUESTIONS and WEBQUES - TIONS .
-For these systems , we only report test F 1 numbers that are provided in the original papers , as we do not have access to the code or predictions .
+For these systems , we only report test F 1 numbers thatare provided in the original papers , as we do not have access to the code or predictions .
 We evaluate models by computing average F 1 , the official evaluation metric defined for COM - PLEXQUESTIONS .
 This measure computes the F 1 .
 The definition of common words and weighting by distance is in the body of the paper .
@@ -120,7 +120,7 @@ Thus , our test F 1 on examples for which candidate extraction succeeded ( WEBQA
 We were able to indirectly compare WEBQA - SUBSET to COMPQ : graciously provided us with the predictions of COMPQ when it was trained on COMPLEXQUESTIONS , WE - BQUESTIONS , and SIMPLEQUESTIONS .
 In this setup , COMPQ obtained 42.2 F 1 on the test set ( compared to 40.9 F 1 , when training on COM - PLEXQUESTIONS only , as we do ) .
 Restricting the predictions to the subset for which candidate extraction succeeded , the F 1 of COMPQ - SUBSET is 48.5 , which is 3.4 F 1 points lower than WEBQA - SUBSET , which was trained on less data .
-Not using a KB , results in a considerable disadvantage for WEBQA .
+Not using a KB , results in a considerable dis advantage for WEBQA .
 KB entities have normalized descriptions , and the answers have been annotated according to those descriptions .
 We , conversely , find answers on the web and often predict a correct answer , but get penalized due to small string differences .
 E.g. , for " what is the longest river in China ? " we answer " yangtze river " , while the gold answer is " yangtze " .
@@ -150,7 +150,6 @@ However , their focus was on examining the contributions of multitask learning a
 Conclusion
 We propose in this paper to evaluate semantic parsing - based QA systems by comparing them to a web - based QA baseline .
 We evaluate such a QA system on COMPLEXQUESTIONS and find that it obtains reasonable performance .
-We analyze performance and find that COMPOSITION and SU - PERLATIVE questions are challenging fora webbased QA system , while CONJUNCTION and N - ARY questions can often be handled by our QA model .
+We analyze performance and find that COMPOSITION and SU - PERLATIVE questions are challenging for a webbased QA system , while CONJUNCTION and N - ARY questions can often be handled by our QA model .
 Reproducibility
-Code , data , annotations , and experiments for this paper are available on the CodaLab platform at https://worksheets.
-codalab.org/worksheets / 0x91d77db37e0a4bbbaeb37b8972f4784f/.
+Code , data , annotations , and experiments for this paper are available on the CodaLab platform at https://worksheets. codalab.org/worksheets/ 0x91d77db37e0a4bbbaeb37b8972f4784f/.

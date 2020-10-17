@@ -7,7 +7,7 @@
 192	218	225	in both
 192	226	250	accuracy and F 1 measure
 192	255	272	incomparable with
-192	98	102	TNet
+192	282	286	TNet
 193	3	13	shows that
 193	18	29	integration
 193	30	32	of
@@ -22,15 +22,15 @@
 194	25	50	TNet and TNet w/o context
 194	102	109	observe
 194	119	130	performance
-194	22	24	of
-194	34	50	TNet w/o context
+194	131	133	of
+194	134	150	TNet w/o context
 194	151	156	drops
 194	157	170	significantly
-194	44	46	on
+194	171	173	on
 194	174	189	LAPTOP and REST
-194	44	46	on
+194	200	202	on
 194	203	210	TWITTER
-194	34	50	TNet w/o context
+194	213	229	TNet w/o context
 194	230	238	performs
 194	239	255	very competitive
 196	0	16	TNet w/o context
@@ -45,7 +45,7 @@
 198	70	82	improvements
 198	83	96	brought in by
 198	97	117	position information
-198	29	32	are
+198	118	121	are
 198	122	133	significant
 150	0	3	SVM
 150	9	11	is
@@ -72,7 +72,7 @@
 152	101	106	input
 152	16	27	ATAE - LSTM
 152	127	134	extends
-152	0	9	AE - LSTM
+152	30	39	AE - LSTM
 152	145	149	with
 152	150	159	attention
 153	0	3	IAN
@@ -150,7 +150,7 @@
 31	0	12	To integrate
 31	17	35	target information
 31	36	40	into
-31	162	200	target - specific word representations
+31	45	65	word representations
 32	161	164	TST
 32	173	182	generates
 32	183	208	different representations
@@ -189,7 +189,7 @@
 188	31	53	sequential information
 188	54	65	can perform
 188	66	70	well
-188	44	47	for
+188	71	74	for
 188	75	91	formal sentences
 188	92	104	by capturing
 188	105	133	more useful context features

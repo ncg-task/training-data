@@ -153,7 +153,7 @@ This is likely because the entity - matching coreference resolution we employ ca
 ABLATION STUDY
 QUALITATIVE ANALYSIS
 We examine the hierarchical attention maps produced by the CFC on examples from the Wiki - Hop development set .
-We find that coattention layers consistently focus on phrases that are similar between the document and the query , while lower level self - attention layers capture phrases that characterize the entity described by the document .
+We find that coattention layers consistently focus on phrases thatare similar between the document and the query , while lower level self - attention layers capture phrases that characterize the entity described by the document .
 Because these attention maps are very large , we do not include them in the main text and instead refer readers to A.3 of the Appendix .
 Fine- grain coattention and self - attention scores for for the query located in the administrative territorial entity hampton wick war memorial , for which the answer is " London borough of Richmond Upon Thames " .
 The coattention tends to align the relation part of the query to the context in which the mention occurs in the text .
@@ -175,7 +175,7 @@ The first type ( 42 % of errors ) results from the model aggregating the wrong r
 For example , for the query country of citizenship jamie burnett , the model correctly attends to the documents about Jamie Burnett being born in South Larnarkshire and about Lanarkshire being in Scotland .
 However it wrongly focuses on the word " england " in the latter document instead of the answer " scotland " .
 We hypothesize that ways to reduce this type of error include using more robust pretrained contextual encoders and coreference resolution .
-The second type ( 28 % of errors ) results from questions that are not answerable .
+The second type ( 28 % of errors ) results from questions thatare not answerable .
 For example , the support documents do not provide the narrative location of the play " The Beloved Vagabond " for the query narrative location the beloved vagabond .
 The third type ( 22 % of errors ) results from queries that yield multiple correct answers .
 An example is the query instance of qilakitsoq , for which the model predicts " archaeological site " , which is more specific than the answer " town " .
@@ -210,10 +210,10 @@ A APPENDIX
 A.1 COREFERENCE RESOLUTION
 In this work , we use simple lexical matching instead of using full - scale coreference resolution systems .
 The integration of the latter remains a direction for future work .
-To perform simple lexical matching fora given candidate , we first tokenize the document as well as the candidate .
+To perform simple lexical matching for a given candidate , we first tokenize the document as well as the candidate .
 Each time the candidate tokens occur consequetively in the document , we extract the corresponding token span as a coreference mention .
 A.2 EXPERIMENT SETUP
-For the best - performing model , we train the CFC using Adam ( Kingma & Ba , 2015 ) fora maximum of 50 epochs with a batch size of 80 examples .
+For the best - performing model , we train the CFC using Adam ( Kingma & Ba , 2015 ) for a maximum of 50 epochs with a batch size of 80 examples .
 We use an initial learning rate of 10 ?3 with (? 1 , ? 2 ) = ( 0.9 , 0.999 ) and employ a cosine learning rate decay Loshchilov & Hutter ( 2017 ) over the maximum budget .
 We find this approach to outperform a development set - based annealing heuristic as well as those based on piecewise - constant approximations .
 We evaluate the accuracy of the model on the development set every epoch , and evaluate the model that obtained the best accuracy on the development set on the held - out test set .
@@ -243,41 +243,41 @@ It is one of the major metropolitan centres identified in the London Plan .
 It was historically a rural village in the county of Middlesex and formed an ancient parish .
 Improvement in communications with London , culminating with the opening of the railway station in 1838 , shifted the local economy to market garden supply and eventually to suburban development .
 Paris ( French : ) is the capital and most populous city of France .
-It has an area of and a population in 2013 of 2,229,621 within its administrative limits .
-The city is both a commune and department , and forms the centre and headquarters of the le - de - France , or Paris Region , which has an area of and a population in 2014 of 12,005,077 , comprising 18.2 percent of the population of France .
+It has an are a of and a population in 2013 of 2,229,621 within its administrative limits .
+The city is both a commune and department , and forms the centre and headquarters of the le - de - France , or Paris Region , which has an are a of and a population in 2014 of 12,005,077 , comprising 18.2 percent of the population of France .
 Bordeaux ( Gascon Occitan : " " ) is a port city on the Garonne River in the Gironde department in southwestern France .
 Maurice Auguste Chevalier ( September 12 , 1888 January 1 , 1972 ) was a French actor , cabaret singer and entertainer .
 He is perhaps best known for his signature songs , including " Louise " , " Mimi " , " Valentine " , and " Thank Heaven for Little Girls " and for his films , including " The Love Parade " and " The Big Pond " .
 His trademark attire was a boater hat , which he always wore onstage with a tuxedo .
 Nice ( ; Niard , classical norm , or " " , nonstandard , ) is the fifth most populous city in France and the capital of the Alpes - Maritimes " dpartement " .
-The urban area of Nice extends beyond the administrative city limits , with a population of about 1 million on an area of .
+The urban are a of Nice extends beyond the administrative city limits , with a population of about 1 million on an are a of .
 Located in the French Riviera , on the southeast coast of France on the Mediterranean Sea , at the foot of the Alps , Nice is the second - largest French city on the Mediterranean coast and the second - largest city in the Provence - Alpes - Cte dAzur region after Marseille .
 Nice is about 13 kilometres ( 8 miles ) from the principality of Monaco , and its airport is a gateway to the principality as well .
 Ealing Studios is a television and film production company and facilities provider at Ealing Green in west London .
-Will Barker bought the White Lodge on Ealing Green in 1902 as abase for film making , and films have been made on the site ever since .
+Will Barker bought the White Lodge on Ealing Green in 1902 as a base for film making , and films have been made on the site ever since .
 It is the oldest continuously working studio facility for film production in the world , and the current stages were opened for the use of sound in 1931 .
-It is best known fora series of classic films produced in the post - WWII years , including " Kind The title refers to a line in Tennysons poem " Lady Clara Vere de Vere " : " Kind hearts are more than coronets , and simple faith than Norman blood . "
+It is best known for a series of classic films produced in the post - WWII years , including " Kind The title refers to a line in Tennysons poem " Lady Clara Vere de Vere " : " Kind hearts are more than coronets , and simple faith than Norman blood . "
 Europe is a continent that comprises the westernmost part of Eurasia .
 Europe is bordered by the Arctic Ocean to the north , the Atlantic Ocean to the west , and the Mediterranean Sea to the south .
 To the east and southeast , Europe is generally considered as separated from Asia by the watershed divides of the Ural and Caucasus Mountains , the Ural River , the Caspian and Black Seas , and the waterways of the Turkish Straits .
 Yet the non-oceanic borders of Europea concept dating back to classical antiquityare arbitrary .
 The primarily physiographic term " continent " as applied to Europe also incorporates cultural and political elements whose discontinuities are not always reflected by the continents current overland boundaries .
 France , officially the French Republic , is a country with territory in western Europe and several overseas regions and territories .
-The European , or metropolitan , area of France extends from the Mediterranean Sea to the English Channel and the North Sea , and from the Rhine to the Atlantic Ocean .
+The European , or metropolitan , are a of France extends from the Mediterranean Sea to the English Channel and the North Sea , and from the Rhine to the Atlantic Ocean .
 Overseas France include French Guiana on the South American continent and several island territories in the Atlantic , Pacific and Indian oceans .
 France spans and had a total population of almost 67 million people as of January 2017 .
 It is a unitary semi-presidential republic with the capital in Paris , the countrys largest city and main cultural and commercial centre .
 Other major urban centres include Marseille , Lyon , Lille , Nice , Toulouse and Bordeaux .
 The British Broadcasting Corporation ( BBC ) is a British public service broadcaster .
-It is headquartered at Broadcasting House in London , is the worlds oldest national broadcasting organisation , and is the largest broadcaster in the world by number of employees , with over 20,950 staff in total , of whom 16,672 are in public sector broadcasting ; including part - time , flexible as well as fixed contract staff , the total number is 35,402 .
+It is headquartered at Broadcasting House in London , is the worlds oldest national broadcasting organis ation , and is the largest broadcaster in the world by number of employees , with over 20,950 staff in total , of whom 16,672 are in public sector broadcasting ; including part - time , flexible as well as fixed contract staff , the total number is 35,402 .
 The Rhine ( , , ) is a European river that begins in the Swiss canton of Graubnden in the southeastern Swiss Alps , forms part of the Swiss - Austrian , Swiss - Liechtenstein , Swiss - German and then the Franco - German border , then flows through the Rhineland and eventually empties into the North Sea in the Netherlands .
 The largest city on the river Rhine is Cologne , Germany , with a population of more than 1,050,000 people .
 It is the second - longest river in Central and Western Europe ( after the Danube ) , at about , with an average discharge of about .
 The Beloved Vagabond is a 1936 British musical drama film directed by Curtis Bernhardt and starring Maurice Chevalier , Betty Stockfeld , Margaret Lockwood and Austin Trevor .
 In nineteenth century France an architect posing as a tramp falls in love with a woman .
 The film was made at Ealing Studios by the independent producer Ludovico Toeplitz .
-The Atlantic Ocean is the second largest of the worlds oceans with a total area of about .
-It covers approximately 20 percent of the Earths surface and about 29 percent of its water surface area .
+The Atlantic Ocean is the second largest of the worlds oceans with a total are a of about .
+It covers approximately 20 percent of the Earths surface and about 29 percent of its water surface are a .
 It separates the " Old World " from the " New World " .
 Claude Austin Trevor ( 7 October 1897 22 January 1978 ) was a Northern Irish actor who had along career in film and television .
 The English Channel ( " the Sleeve " [ hence ] " Sea of Brittany " " British Sea " ) , also called simply the Channel , is the body of water that separates southern England from northern France , and joins the southern part of the North Sea to the rest of the Atlantic Ocean .
@@ -290,7 +290,7 @@ Answer town
 Prediction archaeological site Support documents North America is a continent entirely within the Northern Hemisphere and almost all within the Western Hemisphere .
 It can also be considered a northern subcontinent of the Americas .
 It is bordered to the north by the Arctic Ocean , to the east by the Atlantic Ocean , to the west and south by the Pacific Ocean , and to the southeast by South America and the Caribbean Sea .
-Inuit ( pronounced or ; Inuktitut : , " the people " ) area group of culturally similar indigenous peoples inhabiting the Arctic regions of Greenland , Canada and Alaska .
+Inuit ( pronounced or ; Inuktitut : , " the people " ) are a group of culturally similar indigenous peoples inhabiting the Arctic regions of Greenland , Canada and Alaska .
 Inuit is a plural noun ; the singular is Inuk .
 The oral Inuit languages are classified in the Eskimo - Aleut family .
 Inuit Sign Language is a critically endangered language isolate spoken in Nunavut .
@@ -316,7 +316,7 @@ Sites may range from those with few or no remains visible above ground , to buil
 Nuussuaq Peninsula ( old spelling : " Ngssuaq " ) is a large ( 180 x 48 km ) peninsula in western Greenland .
 The archaeological record is the body of physical ( not written ) evidence about the past .
 It is one of the core concepts in archaeology , the academic discipline concerned with documenting and interpreting the archaeological record .
-Archaeological theory is used to interpret the archaeological record fora better understanding of human cultures .
+Archaeological theory is used to interpret the archaeological record for a better understanding of human cultures .
 The archaeological record can consist of the earliest ancient findings as well as contemporary artifacts .
 Human activity has had a large impact on the archaeological record .
 Destructive human processes , such as agriculture and land development , may damage or destroy potential archaeological sites .
@@ -334,9 +334,9 @@ With 1,282 inhabitants in 2013 , it is the eleventh - largest town in Greenland 
 Founded in 1763 as maak , the town is a hunting and fishing base , with a canning factory and a marble quarry .
 In 1932 the Universal Greenland - Filmexpedition with director Arnold Fanck realized the film SOS Eisberg near Uummannaq .
 The Republic of Iceland , " Lveldi sland " in Icelandic , is a Nordic island country in the North Atlantic Ocean .
-It has a population of and an area of , making it the most sparsely populated country in Europe .
+It has a population of and an are a of , making it the most sparsely populated country in Europe .
 The capital and largest city is Reykjavk .
-Reykjavk and the surrounding areas in the southwest of the country are home to over two - thirds of the population .
+Reykjavk and the surrounding are as in the southwest of the country are home to over two - thirds of the population .
 Iceland is volcanically and geologically active .
 The interior consists of a plateau characterised by sand and lava fields , mountains and glaciers , while many glacial rivers flow to the sea through the lowlands .
 Iceland is warmed by the Gulf Stream and has a temperate climate , despite a high latitude just outside the Arctic Circle .
@@ -361,28 +361,28 @@ It has attractive chemical properties for baking and a distinctive flavor that l
 Most microorganisms do not grow in honey , so sealed honey does not spoil , even after thousands of years .
 However , honey sometimes contains dormant endospores of the bacterium " Clostridium botulinum " , which can be dangerous to babies , as it may result in botulism .
 People who have a weakened immune system should not eat honey because of the risk of bacterial or fungal infection .
-Although some evidence indicates honey maybe effective in treating diseases and other medical conditions , such as wounds and burns , the overall evidence for its use in therapy is not conclusive .
-Providing 64 calories in atypical serving of one tablespoon ( 15 ml ) equivalent to 1272 kj per 100 g , honey has no significant nutritional value .
+Although some evidence indicates honey maybe effective in treating diseases and other medical conditions , such as wounds and burns , the over all evidence for its use in therapy is not conclusive .
+Providing 64 calories in a typical serving of one tablespoon ( 15 ml ) equivalent to 1272 kj per 100 g , honey has no significant nutritional value .
 Honey is generally safe , but may have various , potential adverse effects or interactions with excessive consumption , existing disease conditions , or drugs .
-Honey use and production have along and varied history as an ancient activity , depicted in Valencia , Spain by a cave painting of humans foraging for honey at least 8,000 years ago .
+Honey use and production have along and varied history as an ancient activity , depicted in Valencia , Spain by a cave painting of humans for aging for honey at least 8,000 years ago .
 Australia , officially the Commonwealth of Australia , is a country comprising the mainland of the Australian continent , the island of Tasmania and numerous smaller islands .
-It is the worlds sixthlargest country by total area .
+It is the worlds sixthlargest country by total are a .
 The neighbouring countries are Papua New Guinea , Indonesia and East Timor to the north ; the Solomon Islands and Vanuatu to the north - east ; and New Zealand to the south - east .
-Australias capital is Canberra , and its largest urban area is Sydney .
+Australias capital is Canberra , and its largest urban are a is Sydney .
 Bees are flying insects closely related to wasps and ants , known for their role in pollination and , in the case of the best - known bee species , the European honeybee , for producing honey and beeswax .
-Bees area monophyletic lineage within the superfamily Apoidea , presently considered as a clade Anthophila .
+Bees are a monophyletic lineage within the superfamily Apoidea , presently considered as a clade Anthophila .
 There are nearly 20,000 known species of bees in seven to nine recognized families , though many are undescribed and the actual number is probably higher .
 They are found on every continent except Antarctica , in every habitat on the planet that contains insect -pollinated flowering plants .
-Solomon Islands is a sovereign country consisting of six major islands and over 900 smaller islands in Oceania lying to the east of Papua New Guinea and northwest of Vanuatu and covering a land area of .
+Solomon Islands is a sovereign country consisting of six major islands and over 900 smaller islands in Oceania lying to the east of Papua New Guinea and northwest of Vanuatu and covering a land are a of .
 The countrys capital , Honiara , is located on the island of Guadalcanal .
 The country takes its name from the Solomon Islands archipelago , which is a collection of Melanesian islands that also includes the North Solomon Islands ( part of Papua New Guinea ) , but excludes outlying islands , such as Rennell and Bellona , and the Santa Cruz Islands .
-The Colletidae area family of bees , and are often referred to collectively as plasterer bees or polyester bees , due to the method of smoothing the walls of their nest cells with secretions applied with their mouthparts ; these secretions dry into a cellophane - like lining .
+The Colletidae are a family of bees , and are often referred to collectively as plasterer bees or polyester bees , due to the method of smoothing the walls of their nest cells with secretions applied with their mouthparts ; these secretions dry into a cellophane - like lining .
 The five subfamilies , 54 genera , and over 2000 species are all evidently solitary , though many nest in aggregations .
 Two of the subfamilies , Euryglossinae and Hylaeinae , lack the external pollen - carrying apparatus ( the scopa ) that otherwise characterizes most bees , and instead carry the pollen in their crops .
 These groups , and most genera in this family , have liquid or semiliquid pollen masses on which the larvae develop .
 Indonesia ( or ; Indonesian : ) , officially the Republic of Indonesia , is a unitary sovereign state and transcontinental country located mainly in Southeast Asia with some territories in Oceania .
 Situated between the Indian and Pacific oceans , it is the worlds largest island country , with more than seventeen thousand islands .
-At , Indonesia is the worlds 14th - largest country in terms of land area and worlds 7 th - largest country in terms of combined sea and land area .
+At , Indonesia is the worlds 14th - largest country in terms of land are a and worlds 7 th - largest country in terms of combined sea and land are a .
 It has an estimated population of over 260 million people and is the worlds fourth most populous country , the most populous Austronesian nation , as well as the most populous Muslim - majority country .
 The worlds most populous island of Java contains more than half of the countrys population .
 Ants are eusocial insects of the family Formicidae and , along with the related wasps and bees , belong to the order Hymenoptera .
@@ -392,10 +392,10 @@ They are easily identified by their elbowed antennae and the distinctive node - 
 Tasmania ( abbreviated as Tas and known colloquially as " Tassie " ) is an island state of the Commonwealth of Australia .
 It is located to the south of the Australian mainland , separated by Bass Strait .
 The state encompasses the main island of Tasmania , the 26th - largest island in the world , and the surrounding 334 islands .
-The state has a population of around 518,500 , just over forty percent of which resides in the Greater Hobart precinct , which forms the metropolitan area of the state capital and largest city , Hobart .
+The state has a population of around 518,500 , just over forty percent of which resides in the Greater Hobart precinct , which forms the metropolitan are a of the state capital and largest city , Hobart .
 New Zealand is an island nation in the southwestern Pacific Ocean .
 The country geographically comprises two main landmassesthat of the North Island , or Te Ika - a - Mui , and the South Island , or Te Waipounamuand numerous smaller islands .
-New Zealand is situated some east of Australia across the Tasman Sea and roughly south of the Pacific island areas of New Caledonia , Fiji , and Tonga .
+New Zealand is situated some east of Australia across the Tasman Sea and roughly south of the Pacific island are as of New Caledonia , Fiji , and Tonga .
 Because of its remoteness , it was one of the last lands to be settled by humans .
 During its long period of isolation , New Zealand developed a distinct biodiversity of animal , fungal and plant life .
 The countrys varied topography and its sharp mountain peaks , such as the Southern Alps , owe much to the tectonic uplift of land and volcanic eruptions .
@@ -408,7 +408,7 @@ The term " angiosperm " comes from the Greek composite word ( " angeion " , " ca
 Pollination is the process by which pollen is transferred to the female reproductive organs of a plant , thereby enabling fertilization to take place .
 Like all living organisms , seed plants have a single major goal : to pass their genetic information onto the next generation .
 The reproductive unit is the seed , and pollination is an essential step in the production of seeds in all spermatophytes ( seed plants ) .
-Insects ( from Latin , a calque of Greek [ ] , " cut into sections " ) area class of invertebrates within the arthropod phylum that have a chitinous exoskeleton , a three - part body ( head , thorax and abdomen ) , three pairs of jointed legs , compound eyes and one pair of antennae .
+Insects ( from Latin , a calque of Greek [ ] , " cut into sections " ) are a class of invertebrates within the arthropod phylum that have a chitinous exoskeleton , a three - part body ( head , thorax and abdomen ) , three pairs of jointed legs , compound eyes and one pair of antennae .
 They are the most diverse group of animals on the planet , including more than a million described species and representing more than half of all known living organisms .
 The number of extant species is estimated at between six and ten million , and potentially represent over 90
 The Stenotritidae are the smallest of all formally recognized bee families , with only 21 species in two genera , all of them restricted to Australia .

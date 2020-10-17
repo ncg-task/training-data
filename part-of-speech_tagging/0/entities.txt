@@ -36,7 +36,6 @@
 2	20	46	Part - of - Speech Tagging
 6	41	59	neural POS tagging
 139	0	17	PTB - WSJ dataset
-141	80	82	on
 141	18	49	baseline ( BiLSTM - CRF ) model
 141	71	79	performs
 141	80	86	on par

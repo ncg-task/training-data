@@ -12,8 +12,7 @@
           "from sentence" : "The results show that our method significantly outperforms all state - of - the - art methods in all conditions and all datasets ."
         },
         "3rd level" : {
-          "dominates" : "selection",
-          "from sentence" : "It shows that the 3rd level dominates the selection while the 4th level is also important for several categories such as scene and animals ."
+          "dominates" : "selection"
         },
         "4th level" : {
           "important for" : {
@@ -64,8 +63,7 @@ The model based on PNASNet consistently outperforms the state - of - the - art o
       },
       "has" : {
         "full sentence selection" : {
-          "relies mostly on" : "3rd level",
-          "from sentence" : "The full sentence selection relies mostly on the 3rd level as well , while for some sentences the 4th model has been selected ."
+          "relies mostly on" : "3rd level"
         }
       },
       "for" : {

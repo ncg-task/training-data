@@ -3,7 +3,7 @@ A Multi-sentiment - resource Enhanced Attention Network for Sentiment Classifica
 abstract
 Deep learning approaches for sentiment classification do not fully exploit sentiment linguistic knowledge .
 In this paper , we propose a Multi-sentiment - resource Enhanced Attention Network ( MEAN ) to alleviate the problem by integrating three kinds of sentiment linguistic knowledge ( e.g. , sentiment lexicon , negation words , intensity words ) into the deep neural network via attention mechanisms .
-By using various types of sentiment resources , MEAN utilizes sentiment - relevant information from different representation subspaces , which makes it more effective to capture the overall semantics of the sentiment , negation and intensity words for sentiment prediction .
+By using various types of sentiment resources , MEAN utilizes sentiment - relevant information from different representation subspaces , which makes it more effective to capture the over all semantics of the sentiment , negation and intensity words for sentiment prediction .
 The experimental results demonstrate that MEAN has robust superiority over strong competitors .
 Introduction
 Sentiment classification is an important task of natural language processing ( NLP ) , aiming to classify the sentiment polarity of a given text as positive , negative , or more fine - grained classes .
@@ -11,12 +11,12 @@ It has obtained considerable attention due to its broad applications in natural 
 Most existing studies setup sentiment classifiers using supervised machine learning approaches , such as support vector machine ( SVM ) , convolutional neural network ( CNN ) , long short - term memory ( LSTM ) , Tree - LSTM , and attention - based methods .
 Despite the remarkable progress made by the previous work , we argue that sentiment analysis still remains a challenge .
 Sentiment resources including sentiment lexicon , negation words , intensity words play a crucial role in traditional sentiment classification approaches .
-Despite its usefulness , to date , the sentiment linguistic knowledge has been underutilized inmost recent deep neural network models ( e.g. , CNNs and LSTMs ) .
+Despite its usefulness , to date , the sentiment linguistic knowledge has been underutilized in most recent deep neural network models ( e.g. , CNNs and LSTMs ) .
 In this work , we propose a Multi- sentimentresource Enhanced Attention Network ( MEAN ) for sentence - level sentiment classification to integrate many kinds of sentiment linguistic knowledge into deep neural networks via multi -path attention mechanism .
 Specifically , we first design a coupled word embedding module to model the word representation from character - level and word - level semantics .
 This can help to capture the morphological information such as prefixes and suffixes of words .
 Then , we propose a multisentiment - resource attention module to learn more comprehensive and meaningful sentiment - specific sentence representation by using the three types of sentiment resource words as attention sources attending to the context words respectively .
-In this way , we can attend to different sentimentrelevant information from different representation subspaces implied by different types of sentiment sources and capture the overall semantics of the sentiment , negation and intensity words for sentiment prediction .
+In this way , we can attend to different sentimentrelevant information from different representation subspaces implied by different types of sentiment sources and capture the over all semantics of the sentiment , negation and intensity words for sentiment prediction .
 The main contributions of this paper are summarized as follows .
 First , we design a coupled word embedding obtained from character - level embedding and word - level embedding to capture both the character - level morphological information and word - level semantics .
 Second , we propose a multi-sentiment - resource attention module to learn more comprehensive sentiment - specific sentence representation from multiply subspaces implied by three kinds of sentiment resources including sentiment lexicon , intensity words , negation words .
@@ -24,7 +24,7 @@ Finally , the experimental results show that MEAN consistently outperforms compe
 Model
 Our proposed MEAN model consists of three key components : coupled word embedding module , multi-sentiment - resource attention module , sentence classifier module .
 In the rest of this section , we will elaborate these three parts in details .
-The overall framework is shown in .
+The over all framework is shown in .
 Coupled Word Embedding
 To exploit the sentiment - related morphological information implied by some prefixes and suffixes of words ( such as " Non - " , " In - " , " Im - " ) , we design a coupled word embedding learned from characterlevel embedding and word - level embedding .
 We first design a character - level convolution neural network ( Char - CNN ) to obtain character - level embedding .
@@ -33,7 +33,7 @@ Specifically , we first input onehot - encoding character sequences to a 1 1 con
 For word - level embedding , we use pretrained word vectors , GloVe , to map each word to a low - dimensional vector space .
 Finally , each word is represented as a concatenation of the character - level embedding and word - level embedding .
 This is performed on the context words and the three types of sentiment resource words 1 , resulting in four final coupled word embedding matrices :
-Here , t , m , k , pare the length of the corresponding items respectively , and dis the embedding dimension .
+Here , t , m , k , pare the length of the corresponding items respectively , and d is the embedding dimension .
 Each
 Wis normalized to better calculate the following word correlation .
 Multi-sentiment - resource

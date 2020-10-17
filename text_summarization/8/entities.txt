@@ -26,7 +26,7 @@
 36	87	94	masking
 36	95	107	to constrain
 36	108	121	copying words
-36	18	20	to
+36	122	124	to
 36	129	143	selected parts
 36	144	146	of
 36	151	155	text
@@ -39,13 +39,13 @@
 187	71	83	ranging from
 187	84	94	0.6 to 1.4
 187	31	40	copy mask
-187	71	83	ranging from
+187	101	113	ranging from
 187	114	124	0.1 to 0.2
 190	4	30	coverage penalty parameter
 190	36	42	set to
 190	43	45	10
 190	56	94	copy attention normalization parameter
-190	40	42	to
+190	97	99	to
 190	100	101	2
 188	4	21	minimum length of
 188	26	43	generated summary
@@ -54,14 +54,14 @@
 188	57	60	for
 188	61	69	CNN - DM
 188	74	75	6
-188	57	60	for
+188	76	79	for
 188	80	83	NYT
 191	3	6	use
 191	7	15	AllenNLP
 191	16	19	for
 191	24	40	content selector
 191	47	60	Open NMT - py
-191	16	19	for
+191	61	64	for
 191	69	87	abstractive models
 2	12	37	Abstractive Summarization
 11	0	18	Text summarization

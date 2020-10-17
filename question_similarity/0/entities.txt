@@ -26,10 +26,12 @@
 100	66	81	ON - LSTM cells
 100	84	88	with
 100	89	101	chunk size 8
-100	37	40	are
+100	104	107	are
 100	112	126	most effective
 100	129	140	in terms of
 100	141	164	all considered measures
+101	0	27	Effect of Data Augmentation
+106	11	15	show
 106	21	43	each augmentation step
 106	44	51	affects
 106	56	75	model 's efficiency
@@ -48,7 +50,7 @@
 116	87	95	F1-score
 114	14	19	using
 114	20	51	pre-trained FastText embeddings
-114	33	35	as
+114	52	54	as
 114	58	63	input
 114	64	66	to
 114	67	76	our model
@@ -78,5 +80,5 @@
 117	221	231	much worse
 117	232	236	with
 117	237	266	88.868 and 87.504 F1 - scores
-117	76	78	on
+117	267	269	on
 117	270	301	public and private leaderboards

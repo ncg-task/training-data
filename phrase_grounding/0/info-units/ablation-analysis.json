@@ -15,8 +15,7 @@
       "see that" : {
         "non-linear mapping" : {
           "in" : "model",
-          "is" : "really important",
-          "from sentence" : "By comparing rows 2 , 4 , 5 , 7 , we see that non-linear mapping in our model is really important , and replacing any mapping with a linear one significantly degrades the performance ."          
+          "is" : "really important"
         }
       },
       "replacing" : {

@@ -12,7 +12,7 @@ We present substantial improvements in the context of transfer learning and low 
 1
 INTRODUCTION
 Transfer learning has driven a number of recent successes in computer vision and NLP .
-Computer vision tasks like image captioning and visual question answering typically use CNNs pretrained on ImageNet to extract representations of the image , while several natural language tasks such as reading comprehension and sequence labeling have benefited from pretrained word embeddings that are either fine - tuned fora specific task or held fixed .
+Computer vision tasks like image captioning and visual question answering typically use CNNs pretrained on ImageNet to extract representations of the image , while several natural language tasks such as reading comprehension and sequence labeling have benefited from pretrained word embeddings thatare either fine - tuned for a specific task or held fixed .
 Many neural NLP systems are initialized with pretrained word embeddings but learn their representations of words in context from scratch , in a task - specific manner from supervised learning signals .
 However , learning these representations reliably from scratch is not always feasible , especially in low - resource settings , where we believe that using general purpose sentence representations will be beneficial .
 Some recent work has addressed this by learning general - purpose sentence representations .
@@ -50,14 +50,14 @@ As a result , they present a bi-attentive classification network that composes i
 and demonstrate that discourse - based objectives can also be leveraged to learn good sentence representations .
 Our work is most similar to that of , who train a many - to - many sequenceto - sequence model on a diverse set of weakly related tasks that includes machine translation , constituency parsing , image captioning , sequence autoencoding , and intra-sentence skip - thoughts .
 There are two key differences between that work and our own .
-First , like , their use of an attention mechanism prevents learning a fixed - length vector representation fora sentence .
+First , like , their use of an attention mechanism prevents learning a fixed - length vector representation for a sentence .
 Second , their work aims for improvements on the same tasks on which the model is trained , as opposed to learning re-usable sentence representations that transfer elsewhere .
 We further present a fine - grained analysis of how different tasks contribute to the encoding of different information signals in our representations following work by and .
 similarly present a multi-task framework for textual entailment with task supervision at different levels of learning .
 " Universal " multi-task models have also been successfully explored in the context of computer vision problems .
 SEQUENCE - TO - SEQUENCE LEARNING
 Five out of the six tasks that we consider for multi-task learning are formulated as sequence - tosequence problems .
-Briefly , sequence - to - sequence models area specific case of encoder - decoder models where the inputs and outputs are sequential .
+Briefly , sequence - to - sequence models are a specific case of encoder - decoder models where the inputs and outputs are sequential .
 They directly model the conditional distribution of outputs given inputs P ( y|x ) .
 The input x and output y are sequences x 1 , x 2 , . . . , x m and y 1 , y 2 . . . , y n .
 The encoder produces a fixed length vector representation h x of the input , which the decoder then conditions onto generate an output .
@@ -76,7 +76,7 @@ In this work , we consider a one - to - many model since it lends itself natural
 The same bidirectional GRU encodes the input sentences from different tasks into a compressed summary h x which is then used to condition a task - specific GRU to produce the output sentence .
 TRAINING OBJECTIVES & EVALUATION
 Our motivation for multi-task training stems from theoretical insights presented in .
-We refer readers to that work fora detailed discussion of results , but the conclusions most relevant to this discussion are ( i ) that learning multiple related tasks jointly results in good generalization as measured by the number of training examples required per task ; and ( ii ) that inductive biases learned on sufficiently many training tasks are likely to be good for learning novel tasks drawn from the same environment .
+We refer readers to that work for a detailed discussion of results , but the conclusions most relevant to this discussion are ( i ) that learning multiple related tasks jointly results in good generalization as measured by the number of training examples required per task ; and ( ii ) that inductive biases learned on sufficiently many training tasks are likely to be good for learning novel tasks drawn from the same environment .
 We select the following training objectives to learn general - purpose sentence embeddings .
 Our desiderata for the task collection were : sufficient diversity , existence of fairly large datasets for training , and success as standalone training objectives for sentence representations .
 Skip - thought vectors
@@ -102,10 +102,10 @@ This is the same classification strategy adopted by .
 We train on a collection of about 1 million sentence pairs from the SNLI and MultiNLI corpora .
 use periodic task alternations with equal training ratios for every task .
 In contrast , alter the training ratios for each task based on the size of their respective training sets .
-Specifically , the training ratio fora particular task , ? i , is the fraction of the number of training examples in that task to the total number of training samples across all tasks .
+Specifically , the training ratio for a particular task , ? i , is the fraction of the number of training examples in that task to the total number of training samples across all tasks .
 The authors then perform ?
-i * N parameter updates on task i before selecting anew task at random proportional to the training ratios , where N is a predetermined constant .
-We take a simpler approach and pick anew sequence - to - sequence task to train on after every parameter update sampled uniformly .
+i * N parameter updates on task i before selecting a new task at random proportional to the training ratios , where N is a predetermined constant .
+We take a simpler approach and pick a new sequence - to - sequence task to train on after every parameter update sampled uniformly .
 An NLI minibatch is interspersed after every ten parameter updates on sequence - to - sequence tasks ( this was chosen so as to complete roughly 6 epochs of the dataset after 7 days of training ) .
 Our approach is described formally in the Algorithm below .
 Model details can be found in section 7 in the Appendix .
@@ -123,11 +123,11 @@ Dataset details are presented in the Appendix .
 EVALUATION STRATEGIES , EXPERIMENTAL RESULTS & DISCUSSION
 In this section , we describe our approach to evaluate the quality of our learned representations , present the results of our evaluation and discuss our findings .
 EVALUATION STRATEGY
-We follow a similar evaluation protocol to those presented in ; ; which is to use our learned representations as features fora low complexity classifier ( typically linear ) on a novel supervised task / domain unseen during training without updating the parameters of our sentence representation model .
+We follow a similar evaluation protocol to those presented in ; ; which is to use our learned representations as features for a low complexity classifier ( typically linear ) on a novel supervised task / domain unseen during training without updating the parameters of our sentence representation model .
 We also consider such a transfer learning evaluation in an artificially constructed low - resource setting .
 In addition , we also evaluate the quality of our learned individual word representations using standard benchmarks .
 The choice of transfer tasks and evaluation framework 3 are borrowed largely from .
-We provide a condensed summary of the tasks in section 10 in the Appendix but refer readers to their paper fora more detailed description .
+We provide a condensed summary of the tasks in section 10 in the Appendix but refer readers to their paper for a more detailed description .
 presents the results of training logistic regression on 10 different supervised transfer tasks using different fixed - length sentence representation .
 Supervised approaches trained from scratch on some of these tasks are also presented for comparison .
 We present performance ablations when adding more tasks and increasing the number of hidden units in our GRU ( + L ) .
@@ -208,8 +208,8 @@ The sentence representation h x is the concatenation of the final hidden vectors
 + STN + Fr + De + NLI +L + STP + Par :
 The sentence representation h x is the concatenation of the final hidden vectors from a bidirectional GRU with 2048 - dimensional hidden vectors and another bidirectional GRU with 2048 - dimensional hidden vectors trained without Par.
 In tables 3 and 5 we do not concatenate the representations of multiple models .
-and provide a detailed description of tasks that are typically used to evaluate sentence representations .
-We provide a condensed summary and refer readers to their work fora more thorough description .
+and provide a detailed description of tasks thatare typically used to evaluate sentence representations .
+We provide a condensed summary and refer readers to their work for a more thorough description .
 DESCRIPTION OF EVALUATION TASKS
 TEXT CLASSIFICATION
 We evaluate on text classification benchmarks - sentiment classification on movie reviews ( MR ) , product reviews ( CR ) and Stanford sentiment ( SST ) , question type classification ( TREC ) , subjectivity / objectivity classification ( SUBJ ) and opinion polarity ( MPQA ) .
@@ -235,7 +235,7 @@ Image features are extracted using a pre-trained 110 layer ResNet .
 The evaluation criterion is Recall@K and the median K across 5 different splits of the data .
 QUORA DUPLICATE QUESTION CLASSIFICATION
 In addition to the above tasks which were considered by , we also evaluate on the recently published Quora duplicate question dataset 6 since it is an order of magnitude larger than the others ( approximately 400,000 question pairs ) .
-The task is to correctly identify question pairs that are duplicates of one another , which we formulate as a binary classification problem .
+The task is to correctly identify question pairs thatare duplicates of one another , which we formulate as a binary classification problem .
 We use the same data splits as in .
 Given the size of this data , we consider a more expressive classifier on top of the representations of both questions .
 Specifically , we train a 4 layer MLP with 1024 hidden units , with a dropout rate of 0.5 after every hidden layer .

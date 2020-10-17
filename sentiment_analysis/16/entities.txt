@@ -47,7 +47,7 @@
 250	21	27	set to
 250	28	32	0.01
 250	41	53	dropout rate
-250	21	27	set to
+250	57	63	set to
 250	64	67	0.1
 251	0	27	Stochastic gradient descent
 251	31	38	used as

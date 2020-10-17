@@ -3,17 +3,19 @@
 186	47	52	makes
 186	55	73	great contribution
 186	74	76	to
-186	81	100	overall improvement
-186	109	117	confirms
-186	118	132	our hypothesis
-186	18	22	that
-186	138	173	cross - passage answer verification
-186	177	183	useful
-186	184	187	for
-186	192	209	multi-passage MRC
-187	8	19	ablation of
+186	81	101	over all improvement
+186	110	118	confirms
+186	119	133	our hypothesis
+186	134	138	that
+186	139	174	cross - passage answer verification
+186	178	184	useful
+186	185	188	for
+186	193	210	multi-passage MRC
+187	0	3	For
+187	8	16	ablation
+187	17	19	of
 187	24	37	content model
-187	43	55	analyze that
+187	43	50	analyze
 187	64	79	not only affect
 187	84	104	content score itself
 187	116	123	violate
@@ -31,7 +33,7 @@
 188	165	175	each other
 188	176	180	with
 188	181	203	shared representations
-188	23	25	at
+188	204	206	at
 188	207	220	bottom layers
 189	54	61	achieve
 189	65	76	improvement
@@ -59,9 +61,9 @@
 147	59	68	dimension
 147	69	71	as
 147	72	74	30
-51	62	73	consists of
-51	74	87	three modules
-51	22	24	of
+51	63	74	consists of
+51	75	88	three modules
+51	23	25	of
 52	11	17	follow
 52	22	49	boundary - based MRC models
 52	50	57	to find
@@ -70,7 +72,7 @@
 52	82	94	each passage
 52	95	109	by identifying
 52	114	136	start and end position
-52	61	67	answer
+52	144	150	answer
 53	12	17	model
 53	22	30	meanings
 53	31	33	of
@@ -81,8 +83,8 @@
 53	98	112	content scores
 53	113	123	to measure
 53	128	135	quality
-53	31	33	of
-53	45	55	candidates
+53	136	138	of
+53	143	153	candidates
 54	11	18	conduct
 54	23	42	answer verification
 54	43	54	by enabling
@@ -101,7 +103,7 @@
 57	34	51	different modules
 57	60	66	can be
 57	67	82	jointly trained
-57	30	32	in
+57	83	85	in
 57	86	114	our end - to - end framework
 2	0	45	Multi - Passage Machine Reading Comprehension
 4	0	37	Machine reading comprehension ( MRC )

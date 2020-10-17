@@ -15,8 +15,7 @@
           "from sentence" : "Both the baseline and our systems are three - layer bi - LSTM models trained for 30 iterations with pretrained ( SENNA ) embeddings ."
         },
         "input and hidden layers" : {
-          "are" : "50 dimensions",
-          "from sentence" : "The input and hidden layers are 50 dimensions , and at the output layer we predict sequences of two labels , indicating whether to delete the labeled word or not ."
+          "are" : "50 dimensions"
         },
         "output layer" : {
           "predict" : {

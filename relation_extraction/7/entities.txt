@@ -21,7 +21,7 @@
 39	18	41	entity - wise attention
 39	53	65	to alleviate
 39	70	94	influence of noisy words
-39	70	72	in
+39	95	97	in
 39	102	109	subtree
 39	114	123	emphasize
 39	128	152	task - relevant features
@@ -33,27 +33,27 @@
 40	109	140	entity type classification task
 40	141	143	by
 40	144	161	transfer learning
-234	0	5	Mintz
-234	6	14	proposes
-234	19	46	humandesigned feature model
-235	0	6	MultiR
-235	7	19	puts forward
-235	22	37	graphical model
-236	0	4	MIML
-236	5	13	proposes
-236	16	49	multi -instance multi-label model
-237	0	4	PCNN
-237	5	17	puts forward
-237	20	57	piecewise CNN for relation extraction
-238	0	10	PCNN + ATT
-238	11	19	proposes
-238	24	53	selective attention mechanism
-238	54	58	with
-238	0	4	PCNN
-239	5	13	proposes
-239	0	4	BGRU
-239	21	25	with
-239	30	62	word - level attention mechanism
+233	0	5	Mintz
+233	6	14	proposes
+233	19	46	humandesigned feature model
+234	0	6	MultiR
+234	7	19	puts forward
+234	22	37	graphical model
+235	0	4	MIML
+235	5	13	proposes
+235	16	49	multi -instance multi-label model
+236	0	4	PCNN
+236	5	17	puts forward
+236	20	57	piecewise CNN for relation extraction
+237	0	10	PCNN + ATT
+237	11	19	proposes
+237	24	53	selective attention mechanism
+237	54	58	with
+237	59	63	PCNN
+238	5	13	proposes
+238	0	4	BGRU
+238	21	25	with
+238	30	62	word - level attention mechanism
 191	23	30	utilize
 191	31	39	word2vec
 191	42	50	to train
@@ -76,79 +76,80 @@
 196	0	26	Word embedding dimension k
 196	27	29	50
 196	30	55	POS embedding dimension l
-196	27	28	5
+196	56	57	5
 196	58	70	Batch size n
-196	27	29	50
+196	71	73	50
 196	74	95	Entity - Task weights
 197	16	19	0.5
-199	0	3	0.3
-199	4	20	Learning rate lr
-199	21	26	0.001
-199	27	48	Dropout probability p
-199	49	52	0.5
-199	53	64	l 2 penalty
-200	0	6	0.0001
+197	24	53	Entity - Relation Task weight
+198	0	3	0.3
+198	4	20	Learning rate lr
+198	21	26	0.001
+198	27	48	Dropout probability p
+198	49	52	0.5
+198	53	64	l 2 penalty
+199	0	6	0.0001
 2	0	26	Neural Relation Extraction
 13	0	19	Relation extraction
 36	61	99	distant supervised relation extraction
-206	14	21	observe
-206	31	36	model
-206	37	41	with
-206	46	49	STP
-206	50	58	performs
-206	59	63	best
-206	74	83	SDP model
-206	84	91	obtains
-206	95	112	even worse result
-206	113	117	than
-206	122	130	pure one
-207	4	18	PR curve areas
-207	19	21	of
-207	22	41	BGRU + SDP and BGRU
-207	42	51	are about
-207	52	67	0.332 and 0.337
-207	89	99	BGRU + STP
-207	100	115	increases it to
-207	116	121	0.366
-208	29	36	Our STP
-208	41	51	get rid of
-208	52	68	irrelevant words
-208	11	13	in
-208	72	85	each instance
-208	90	96	obtain
-208	97	133	more precise sentence representation
-210	10	20	SDP method
-210	24	49	not appropriate to handle
-210	50	73	low - quality sentences
-210	74	79	where
-210	80	98	key relation words
-210	103	109	not in
-210	10	13	SDP
-215	76	102	BGRU - WLA ( + STP ) + EWA
-215	103	114	outperforms
-215	115	128	BGRU (+ STP )
-216	26	39	PR curve area
-216	46	66	relative improvement
-216	67	69	of
-216	70	80	over 2.3 %
-218	0	3	EWA
-218	4	12	achieves
-218	13	33	further improvements
-218	38	49	outperforms
-218	54	62	baseline
-218	63	70	by over
-218	71	76	4.6 %
-228	46	60	models with TL
-228	61	68	achieve
-228	69	87	better performance
-228	96	103	improve
-228	108	121	PR curve area
-228	122	124	by
-228	125	135	over 4.7 %
-230	6	21	BGRU + STP + TL
-230	22	30	achieves
-230	35	51	best performance
-230	56	65	increases
-230	70	74	area
-230	75	77	to
-230	78	83	0.383
+205	14	21	observe
+205	31	36	model
+205	37	41	with
+205	46	49	STP
+205	50	58	performs
+205	59	63	best
+205	74	83	SDP model
+205	84	91	obtains
+205	95	112	even worse result
+205	113	117	than
+205	122	130	pure one
+206	4	18	PR curve areas
+206	19	21	of
+206	22	41	BGRU + SDP and BGRU
+206	42	51	are about
+206	52	67	0.332 and 0.337
+206	89	99	BGRU + STP
+206	100	115	increases it to
+206	116	121	0.366
+207	29	36	Our STP
+207	41	51	get rid of
+207	52	68	irrelevant words
+207	69	71	in
+207	72	85	each instance
+207	90	96	obtain
+207	97	133	more precise sentence representation
+209	10	20	SDP method
+209	24	49	not appropriate to handle
+209	50	73	low - quality sentences
+209	74	79	where
+209	80	98	key relation words
+209	103	109	not in
+209	114	117	SDP
+214	76	102	BGRU - WLA ( + STP ) + EWA
+214	103	114	outperforms
+214	115	128	BGRU (+ STP )
+215	26	39	PR curve area
+215	46	66	relative improvement
+215	67	69	of
+215	70	80	over 2.3 %
+217	0	3	EWA
+217	4	12	achieves
+217	13	33	further improvements
+217	38	49	outperforms
+217	54	62	baseline
+217	63	70	by over
+217	71	76	4.6 %
+227	46	60	models with TL
+227	61	68	achieve
+227	69	87	better performance
+227	96	103	improve
+227	108	121	PR curve area
+227	122	124	by
+227	125	135	over 4.7 %
+229	6	21	BGRU + STP + TL
+229	22	30	achieves
+229	35	51	best performance
+229	56	65	increases
+229	70	74	area
+229	75	77	to
+229	78	83	0.383

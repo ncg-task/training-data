@@ -3,8 +3,7 @@
     "Hyperparameters" : {
       "has" : {
         "learned character embeddings" : {
-          "of size" : "8",
-          "from sentence" : "The learned character embeddings are of size 8 . 1 - dimensional convolutions of window size 3 , 4,5 are applied per-token with 50 filters of each window size ."   
+          "of size" : "8"
         },
         "1 - dimensional convolutions" : {
           "of window size" : "3",
@@ -77,8 +76,7 @@
       "consider" : {
         "spans" : {
           "entirely within" : "sentence"
-        },
-        "from sentence" : "We only consider spans that are entirely within a sentence and limit spans to a max length of L = 10 ."
+        }
       },
       "limit" : {
         "spans" : {

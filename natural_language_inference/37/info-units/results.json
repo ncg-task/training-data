@@ -6,7 +6,9 @@
           "find" : {
             "effective" : {
               "to be" : ["TF - IDF ranking", "sum objective"],
-              "from sentence" : "We find both TF - IDF ranking and the sum objective to be effective ; even without changing the model we achieve state - of - the - art results ."
+              "from sentence" : "Trivia QA Web
+We find both TF - IDF ranking and the sum objective to be effective ; even without changing the model we achieve state - of - the - art results ."
+
             }
           },
           "Using" : {
@@ -71,15 +73,16 @@
                   }
                 }
               },
-              "from sentence" : "Note the base model starts to lose performance as more paragraphs are used , showing that errors are being caused by the model being overly confident in incorrect extractions . :"
+              "from sentence" : "Trivia QA Unfiltered
+Note the base model starts to lose performance as more paragraphs are used , showing that errors are being caused by the model being overly confident in incorrect extractions . :"
+
             }
           }
         },
-        "SquAD" : {
+        "SQuAD" : {
           "has" : {
             "all our approaches" : {
-              "has" : "some benefit",
-              "from sentence" : "While all our approaches had some benefit , the shared - norm model is the strongest , and is the only one to not lose performance as large numbers of paragraphs are used ."
+              "has" : "some benefit"
             },
             "shared - norm model" : {
               "is" : "strongest",
@@ -96,11 +99,11 @@
                   }
                 }
               },
-              "from sentence" : "While all our approaches had some benefit , the shared - norm model is the strongest , and is the only one to not lose performance as large numbers of paragraphs are used ."
+              "from sentence" : "SQuAD
+While all our approaches had some benefit , the shared - norm model is the strongest , and is the only one to not lose performance as large numbers of paragraphs are used ."
             },
             "Our paragraph - level model" : {
-              "is" : "competitive",
-              "from sentence" : "Our paragraph - level model is competitive on this task , and our variations to handle the multi-paragraph setting only cause a minor loss of performance ."
+              "is" : "competitive"
             },
             "our variations" : {
               "to handle" : {

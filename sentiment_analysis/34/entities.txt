@@ -1,5 +1,5 @@
 113	4	26	best performing system
-113	16	18	in
+113	27	29	in
 113	34	51	SemEval 2017 task
 114	0	3	For
 114	8	12	ASTD
@@ -29,7 +29,7 @@
 118	100	125	SemEval and ASTD datasets
 119	17	25	achieved
 119	28	44	high performance
-119	9	11	on
+119	45	47	on
 119	52	65	ArSAS dataset
 120	4	19	reported scores
 120	24	35	higher than
@@ -42,5 +42,5 @@
 121	48	56	our tool
 121	57	67	represents
 121	72	102	current state - of - the - art
-121	44	47	for
+121	103	106	for
 121	107	116	Arabic SA

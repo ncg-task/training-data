@@ -22,7 +22,7 @@
 (Effect of Data Augmentation||not||each increment step)
 (each increment step||has||positive effect)
 (positive effect||on||model 's effectiveness)
-(Effect of Data Augmentation||shows||each augmentation step)
+(Effect of Data Augmentation||show||each augmentation step)
 (each augmentation step||affects||model 's efficiency)
 (model 's efficiency||has||negatively)
 (Results||has||sequence weighted attention)

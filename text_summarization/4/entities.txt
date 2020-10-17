@@ -1,9 +1,6 @@
 189	0	3	For
 189	8	24	Gigaword dataset
 189	30	53	compare our models with
-189	49	53	with
-189	64	66	in
-189	49	53	with
 190	0	5	ABS +
 190	6	10	is a
 190	11	36	fine tuned version of ABS
@@ -13,42 +10,45 @@
 190	95	101	Feat2s
 190	130	135	is an
 190	136	170	RNN sequence - to - sequence model
+190	171	175	with
 190	176	208	lexical and statistical features
-190	65	72	encoder
+190	209	211	in
+190	216	223	encoder
 190	226	237	Luong - NMT
-190	6	10	is a
+190	238	242	is a
 190	243	283	two - layer LSTM encoder - decoder model
 190	286	297	RAS - Elman
-190	43	47	uses
-190	51	72	attentive CNN encoder
+190	298	302	uses
+190	306	327	attentive CNN encoder
 190	335	352	Elman RNN decoder
 190	359	364	SEASS
-190	43	47	uses
+190	365	369	uses
 190	370	384	BiGRU encoders
 190	389	401	GRU decoders
+190	402	406	with
 190	407	425	selective encoding
 191	8	19	CNN dataset
 191	25	48	compare our models with
-191	15	17	as
-191	44	48	with
 192	0	8	Lead - 3
 192	35	43	extracts
 192	48	85	first three sentences of the document
+192	86	88	as
 192	89	96	summary
 192	99	106	LexRank
-192	35	43	extracts
+192	107	115	extracts
 192	116	121	texts
 192	122	127	using
-192	99	106	LexRank
+192	128	135	LexRank
 192	138	146	Bi - GRU
 192	9	13	is a
 192	152	226	non-hierarchical one - layer sequence - to - sequence abstractive baseline
 192	229	245	Distraction - M3
 192	246	250	uses
 192	253	295	sequence - to - sequence abstractive model
+192	296	300	with
 192	301	329	distraction - based networks
 192	336	339	GBA
-192	9	13	is a
+192	147	151	is a
 192	345	395	graph - based attentional neural abstractive model
 177	31	37	reduce
 177	42	94	size of the input , output , and entity vocabularies
@@ -56,7 +56,7 @@
 177	98	110	at most 50 K
 177	131	138	replace
 177	139	158	less frequent words
-177	95	97	to
+177	159	161	to
 177	164	171	< unk >
 178	64	74	initialize
 178	79	102	word and entity vectors
@@ -118,7 +118,7 @@
 186	34	73	subset of the given development dataset
 31	27	33	method
 31	37	70	effectively apply linked entities
-31	56	58	in
+31	71	73	in
 31	74	102	sequence - tosequence models
 31	105	111	called
 31	112	132	Entity2Topic ( E2T )
@@ -144,7 +144,7 @@
 35	50	74	selective disambiguation
 35	82	94	constructing
 35	95	108	topic vectors
-35	23	28	using
+35	109	114	using
 35	115	129	firm attention
 2	45	70	Abstractive Summarization
 13	0	18	Text summarization
@@ -171,11 +171,11 @@
 201	80	84	with
 201	85	101	at least 2 ROUGE
 201	104	121	1 points increase
-201	63	65	in
+201	122	124	in
 201	129	145	Gigaword dataset
 201	150	157	6 ROUGE
-201	104	121	1 points increase
-201	63	65	in
+201	160	177	1 points increase
+201	178	180	in
 201	185	196	CNN dataset
 203	0	5	Among
 203	10	24	model variants

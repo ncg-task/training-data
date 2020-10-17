@@ -34,8 +34,7 @@ Each sequence as the sum of the embeddings of the words it contains , then they 
                   "to" : "MLP"
                 }
               },
-              "from sentence" : "Parallel
-LSTMs : Two sequences are encoded by two LSTMs separately , then they are concatenated and fed to a MLP ."
+              "from sentence" : "Parallel LSTMs : Two sequences are encoded by two LSTMs separately , then they are concatenated and fed to a MLP ."
 
             }
           }

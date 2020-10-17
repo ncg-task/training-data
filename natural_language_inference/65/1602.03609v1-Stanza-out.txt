@@ -2,21 +2,21 @@ title
 Attentive Pooling Networks
 abstract
 In this work , we propose Attentive Pooling ( AP ) , a two - way attention mechanism for discriminative model training .
-In the context of pair - wise ranking or classification with neural networks , AP enables the pooling layer to be aware of the current input pair , in away that information from the two input items can directly influence the computation of each other 's representations .
+In the context of pair - wise ranking or classification with neural networks , AP enables the pooling layer to be aware of the current input pair , in a way that information from the two input items can directly influence the computation of each other 's representations .
 Along with such representations of the paired inputs , AP jointly learns a similarity measure over projected segments ( e.g. trigrams ) of the pair , and subsequently , derives the corresponding attention vector for each input to guide the pooling .
 Our two - way attention mechanism is a general framework independent of the underlying representation learning , and it has been applied to both convolutional neural networks ( CNNs ) and recurrent neural networks ( RNNs ) in our studies .
 The empirical results , from three very different benchmark tasks of question answering / answer selection , demonstrate that our proposed models outperform a variety of strong baselines and achieve state - of - the - art performance in all the benchmarks .
 Introduction
 Neural networks ( NN ) with attention mechanisms have recently proven to be successful at different computer vision ( CV ) and natural language processing ( NLP ) tasks such as image captioning , machine translation and factoid question answering .
 However , most recent work on neural attention models have focused on one - way attention mechanisms based on recurrent neural networks designed . for generation tasks .
-Another important family of machine learning tasks are centered around pair - wise ranking or classification , which have abroad set of applications , including but not limited to , question answering , entailment , paraphrasing and any other pair - wise matching problems .
+Another important family of machine learning tasks are centered around pair - wise ranking or classification , which have a broad set of applications , including but not limited to , question answering , entailment , paraphrasing and any other pair - wise matching problems .
 The current state - of the - art models usually include NN - based representation for the input pair , followed by a discriminative ranking or classification models .
 For example , a convolution ( or a RNN ) and a max - pooling is used to independently construct distributed vector representations of the input pair , followed by a large - margin training .
 The key contribution of this work is that we propose Attentive Pooling ( AP ) , a two - way attention mechanism , that significantly improves such discriminative models ' performance on pair - wise ranking or classification , by enabling a joint learning of the representations of both inputs as well as their similarity measurement .
 Specifically , AP enables the pooling layer to be aware of the current input pair , in a way that information from the two input items can directly influence the computation of each other 's representations .
 The main idea in AP consists of learning a similarity measure over projected segments ( e.g. trigrams ) of the two items in the input pair , and using the similarity scores between the segments to compute attention vectors in both directions .
 Next , the attention vectors are used to perform pooling .
-There area few key benefits of our model .
+There are a few key benefits of our model .
 Thanks to the two - way attention , our model projects the paired inputs , even though they may not be always semantically comparable for some applications ( e.g. , questions and answers in question answering ) , into a common representation space that they can be compared in a more plausible way .
 Our model is effective in matching pairs of inputs with significant length variations .
 The two - way attention mechanism is independent of the underlying representation learning .
@@ -47,7 +47,7 @@ In we present a joint illustration of these two neural networks .
 The first layer in both QA - CNN and QA - biLSTM transforms each input word w into a fixed - size real - valued word embedding r w ?
 Rd .
 Word embeddings ( WEs ) are encoded by column vectors in an embedding matrix W 0 ?
-R d|V | , where V is a fixed - sized vocabulary and dis the dimention of the word embeddings .
+R d|V | , where V is a fixed - sized vocabulary and d is the dimention of the word embeddings .
 Given the input pair ( q , a ) , where the question q contains M tokens and the candidate answer a contains L tokens , the output of the first layer consists of two sequences of word embeddings q emb = {r w1 , ... , r w M } and a emb = {r w1 , ... , r w L }.
 Next , QA - CNN and QA - biLSTM use different approaches to process these sequences .
 While QA - CNN process both q emb and a emb using a convolution , QA - bi LSTM uses a Bidirectional Long Short - Term Memory RNN to process these sequences .
@@ -59,7 +59,7 @@ where each column min Q ?
 R cM contains features extracted in a context window around the m - th word of q .
 The matrix W 1 and the vector b 1 are parameters to be learned .
 The number of convolutional filters c , and the size of the word context window k are hyper - parameters to be chosen by the user .
-Ina similar manner , and using the same NN parameters W 1 and b 1 , we compute A ?
+In a similar manner , and using the same NN parameters W 1 and b 1 , we compute A ?
 R cL , the output of the convolution over the candidate answer a .
 Our LSTM implementation is similar to the one in with minor modification .
 Given the sequence q emb = {r w1 , ... , r w M } , the hidden vector h( t ) ( with size H ) at the time step t is updated as follows :
@@ -94,7 +94,7 @@ During training , for each question we randomly sample 50 negative answers from 
 We use stochastic gradient descent ( SGD ) to minimize the loss function with respect to ?.
 The backpropagation algorithm is used to compute the gradients of the network .
 Attentive Pooling Networks for Answer Selection
-Attentive pooling is an approach that enables the pooling layer to be aware of the current input pair , in away that information from the question q can directly influence the computation of the answer representation r a , and vice versa .
+Attentive pooling is an approach that enables the pooling layer to be aware of the current input pair , in a way that information from the question q can directly influence the computation of the answer representation r a , and vice versa .
 The main idea consists of learning a similarity measure over the projected segments in the input pairs , and uses the similarity scores between the segments to compute attention vectors .
 When AP is applied to CNN , which we call AP - CNN , the network learns the similarity measure over the convolved input sequences .
 When AP is applied to biLSTM , which we call AP - bi LSTM , the network learns the similarity measure over the hidden states produced by the biLSTM when processing the two input sequences .
@@ -157,7 +157,7 @@ We follow the exact approach of train / dev / test questions selection in , in w
 Finally , we have 1162 training questions , 65 development questions and 68 test questions .
 WikiQA
 4 is an open domain question - answering dataset .
-We use the subtask that assumes that there is at least one correct answer fora question .
+We use the subtask that assumes that there is at least one correct answer for a question .
 The corresponding dataset consists of 20,360 question / candidate pairs in train , 1,130 pairs in dev and 2,352 pairs in test .
 We adopt the standard setup of only considering questions that have correct answers for evaluation .
 Word Embeddings

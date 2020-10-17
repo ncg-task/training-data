@@ -12,7 +12,7 @@ Emotions play an important role in our daily life .
 A long - standing goal of AI has been to create affective agents that can detect and comprehend emotions .
 Research in affective computing has mainly focused on understanding affect ( emotions and sentiment ) in monologues .
 However , with increasing interactions of humans with machines , researchers now aim at building agents that can seamlessly analyze affective content in conversations .
-This can help in creating empathetic dialogue systems , thus improving the overall human - computer interaction experience .
+This can help in creating empathetic dialogue systems , thus improving the over all human - computer interaction experience .
 Analyzing emotional dynamics in conversations , however , poses complex challenges .
 This is due to the presence of intricate dependencies between the affective states of speakers participating in the dialogue .
 In this paper , we address the problem of emotion recognition in conversational videos .
@@ -62,7 +62,7 @@ The remainder of the paper is organized as follows :
 Section 2 presents related works ; Section 3 formalizes the problem statement and Section 4 describes our proposed approach ; Section 5 provides details on experimental setup ; Section 6 reports the results and related analysis ; finally , Section 7 concludes the paper .
 Related Works
 Emotion recognition is an interdisciplinary field of research with contributions from psychology , cognitive science , machine learning , natural language processing , and others .
-Initial research in this area primarily involved visual and audio processing .
+Initial research in this are a primarily involved visual and audio processing .
 The role of text in emotional analysis became evident with later research such as ; .
 Current research in this domain is mainly performed from a multimodal learning perspective .
 Numerous previous approaches have relied on fusion techniques that leverage multiple modalities for affect recognition .
@@ -75,7 +75,7 @@ use contextual information from neighboring utterances of the same speaker to pr
 However , there is no provision to model interactive influences .
 Work by stresses the study of patterns for emotion transitions .
 In contrast , we posit the use of utterance content to model context with multimodal features .
-In the literature , memory networks have been successfully applied in many areas , including question - answering , machine translation , speech recognition , and others .
+In the literature , memory networks have been successfully applied in many are as , including question - answering , machine translation , speech recognition , and others .
 In emotional analysis , propose a memory - based sequential learning for multi-view signals .
 Although we utilize memory networks , our work is different as we use memories to encode whole utterances .
 Also , each memory cell in our network is processed using GRUs to capture temporal dependencies .
@@ -107,7 +107,7 @@ Methodology
 ICON has been designed as a generic framework for affective modeling of conversations .
 It s computations can be categorized as a sequence of four successive modules :
 Multimodal Feature Extraction , Self - Influence Module , Dynamic Global - Influence Module , and Multi-hop Memory .
-illustrates the overall model .
+illustrates the over all model .
 Multimodal Feature Extraction
 ICON adopts a multimodal framework and performs feature extraction from three modalities , i.e. , language ( transcripts ) , audio and visual .
 These features are extracted for each utterance in the conversation and their concatenated vectors serve as the utterance representations .
@@ -134,7 +134,7 @@ R da of dimensions d a .
 Visual Features
 Visual indicators such as facial expressions are key to understand emotions .
 In our work , we use a deep 3D - CNN to model spatiotemporal features of each utterance video .
-3D - CNN helps to understand emotional concepts such as smiling or frowning that are often spread across multiple frames of a video with no predefined spatial location .
+3D - CNN helps to understand emotional concepts such as smiling or frowning thatare often spread across multiple frames of a video with no predefined spatial location .
 The input to this network is a video with dimensions ( c , h , w , f ) , where c is the number of channels , h , ware the height and width of each frame , with a total off frames per video .
 The network contains three blocks of convolution where each block contains two convolutional layers followed by max - pooling .
 For the convolution , 3D filters are employed having dimensions
@@ -172,11 +172,11 @@ Formally , DGIM consists of a GRU network , GRU g , where the k th global state 
 R hops
 Contextual History
 Multi-hop Memory
-The overall operation of the GRU g produces a sequence of memories M = [ s 1 , ... , s K ] ?
+The over all operation of the GRU g produces a sequence of memories M = [ s 1 , ... , s K ] ?
 R dem K .
 These memories incorporate dynamic influences from each of the K utterances spoken in the history .
 They serve as a contextual memory bank from which selective person - specific information can be incorporated into test utterance u t to get discriminative features .
-To achieve this , a series of R memory read / write cycles are performed that are coupled with soft attention for refinement of u t into a context - aware representation .
+To achieve this , a series of R memory read / write cycles are performed thatare coupled with soft attention for refinement of u t into a context - aware representation .
 The need for multiple hops is inspired by recent works on memory networks , which suggests the importance of multiple read / write iterations for performing transitive inference .
 Multiple hops also help in improving the focus of attention heads which might miss essential memories in a single hop .
 At the r th hop , the computations are as follows :
@@ -204,12 +204,12 @@ For regression , o is a scalar ( without softmax normalization ) whose scores ar
 Experiments
 Datasets
 We perform experiments on two benchmark datasets in dialogue - based emotion detection :
-IEMOCAP is a database consisting of videos of dyadic conversations between pairs of 10 speakers .
+IEMOCAP is a data base consisting of videos of dyadic conversations between pairs of 10 speakers .
 Grouped into five sessions , each pair is assigned with diverse scenarios for dialogues .
 Videos are segmented into utterances with annotations of finegrained emotion categories .
 We consider six such categories for the classification task : anger , happiness , sadness , neutral , excitement , and frustration .
 The training set is curated using the first 8 speakers from session 1 - 4 while session 5 is used for testing .
-SEMAINE is a video database of human - agent interactions .
+SEMAINE is a video data base of human - agent interactions .
 Here , users interact with characters whose responses are based on users ' emotional state .
 Specifically , we utilize the AVEC 2012's fully continuous sub - challenge that requires predictions of four continuous affective dimensions : arousal , expectancy , power , and valence .
 The gold annotations are available for every 0.2 seconds in each video .
@@ -263,7 +263,7 @@ We investigate the importance of multimodal features for our task .
 presents the results for different combinations of modes used by ICON on IEMOCAP .
 As seen , the trimodal network provides the best performance which is preceded by the bimodal variants .
 Among unimodals , language modality performs the best , reaffirming its significance in multimodal systems .
-Interestingly , the audio and visual modality , on their own , do not provide good performance , but when used with text , complementary data is shared to improve overall performance .
+Interestingly , the audio and visual modality , on their own , do not provide good performance , but when used with text , complementary data is shared to improve over all performance .
 Ablation Study
 To check the importance of the modules present in ICON , we perform an ablation study where we remove constituent components and evaluate the model 's performance .
 provides the results on this study .
@@ -297,7 +297,7 @@ Influence : Case studies for emotional influence .
 Dynamic Modeling of Global Memories :
 ICON holds the capability to model dynamic interactions between speakers .
 The memories by its DGIM ( 4.3 ) are used to create summaries conditioned on the test utterance .
-Consequently , these summaries contain characteristics that are specific to the affective state of the current speaker ( of the test utterance ) .
+Consequently , these summaries contain characteristics thatare specific to the affective state of the current speaker ( of the test utterance ) .
 presents a sample slice of conversation from the dataset .
 As seen , summary selection for Person A varies from Person B. Such differences arise due to person - specific characteristics and unique affective interpretations of the conversation .
 Apart from the inter-speaker variance , the emotional state of a speaker also varies across turns .
@@ -314,7 +314,7 @@ It should be noted that emotion of Pa here also depends on the utterances of Pb 
 presents another scenario where a couple argue over an alleged affair .
 A man ( P b ) is angry over this fact and questions his partner ( P a ) asking for details .
 The woman tries to behave unperturbed by providing neutral responses ( u 12 , u 16 ) but is eventually affected by Pb 's continuous anger and expresses a frustrated response ( u 18 ) .
-These characteristics are captured by the attention mechanism applied on the global memories ( generated by DGIM ) , which finds contextual information from histories that are relevant to the test utterance u 18 .
+These characteristics are captured by the attention mechanism applied on the global memories ( generated by DGIM ) , which finds contextual information from histories thatare relevant to the test utterance u 18 .
 This example displays the role of inter-speaker influences and how ICON processes such dependencies .
 Conclusion
 In this paper , we presented ICON , a multimodal framework for emotion detection in conversations .

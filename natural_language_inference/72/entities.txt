@@ -31,11 +31,6 @@
 35	65	75	key pieces
 35	76	78	of
 35	79	90	information
-39	73	94	long support passages
-39	134	142	includes
-39	143	150	answers
-39	151	160	which are
-39	161	199	single - or multiword medical entities
 37	3	6	use
 37	13	28	learning points
 37	29	38	to create
@@ -44,9 +39,13 @@
 37	65	79	medical entity
 39	12	20	contains
 39	21	43	around 100,000 queries
-39	13	15	on
+39	44	46	on
 39	47	66	12,000 case reports
-2	10	17	Dataset
+39	73	94	long support passages
+39	134	142	includes
+39	143	150	answers
+39	151	160	which are
+39	161	199	single - or multiword medical entities
 2	47	76	Machine Reading Comprehension
 4	29	50	machine comprehension
 208	3	11	see that
@@ -77,6 +76,7 @@
 223	16	25	SA reader
 223	26	29	are
 223	30	39	far below
+223	44	56	per-formance
 223	57	59	of
 223	60	69	GA reader
 224	20	28	performs

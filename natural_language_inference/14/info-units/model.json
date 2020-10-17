@@ -37,7 +37,7 @@
                         "correct sentence completion" : {
                           "before and after" : {
                             "fine - tuning" : {
-                              "on" : "ample of the submitted questions"
+                              "on" : "sample of the submitted questions"
                             }
                           }
                         }

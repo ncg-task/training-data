@@ -5,7 +5,7 @@ We introduce an architecture to learn joint multilingual sentence representation
 Our system uses a single BiLSTM encoder with a shared BPE vocabulary for all languages , which is coupled with an auxiliary decoder and trained on publicly available parallel corpora .
 This enables us to learn a classifier on top of the resulting embeddings using English annotated data only , and transfer it to any of the 93 languages without any modification .
 Our experiments in cross-lingual natural language inference ( XNLI dataset ) , cross - lingual document classification ( ML - Doc dataset ) and parallel corpus mining ( BUCC dataset ) show the effectiveness of our approach .
-We also introduce anew test set of aligned sentences in 112 languages , and show that our sentence embeddings obtain strong results in multilingual similarity search even for low - resource languages .
+We also introduce a new test set of aligned sentences in 112 languages , and show that our sentence embeddings obtain strong results in multilingual similarity search even for low - resource languages .
 Our implementation , the pretrained encoder and the multilingual test set are available at https://github.com / facebookresearch/LASER . . 2018 .
 Achieving human parity on automatic Chinese to English news translation .
 CoRR , abs / 1803.05567 .
@@ -22,7 +22,7 @@ In this work , we are interested in universal language agnostic sentence embeddi
 The motivations for such representations are multiple : the hope that languages with limited resources benefit from joint training over many languages , the desire to perform zero - shot transfer of an NLP model from one language ( typically English ) to another , and the possibility to handle code-switching .
 To that end , we train a single encoder to handle multiple languages , so that semantically similar sentences in different languages are close in the embedding space .
 While previous work in multilingual NLP has been limited to either a few languages or specific applications like typology prediction or machine translation , we learn general purpose sentence representations for 93 languages ( see ) .
-Using a single pre-trained BiLSTM encoder for all the 93 languages , we obtain very strong results in various scenarios without any fine - tuning , including crosslingual natural language inference ( XNLI dataset ) , cross - lingual classification ( MLDoc dataset ) , bitext mining ( BUCC dataset ) and anew multilingual similarity search dataset we introduce covering 112 languages .
+Using a single pre-trained BiLSTM encoder for all the 93 languages , we obtain very strong results in various scenarios without any fine - tuning , including crosslingual natural language inference ( XNLI dataset ) , cross - lingual classification ( MLDoc dataset ) , bitext mining ( BUCC dataset ) and a new multilingual similarity search dataset we introduce covering 112 languages .
 To the best of our knowledge , this is the first exploration of general purpose massively multilingual sentence representations across a large variety of tasks .
 ar Xiv: 1812.10464v2 [ cs. CL ] 25 Sep 2019
 2 Related work
@@ -41,7 +41,7 @@ The full system is trained end - to - end on parallel corpora akin to multilingu
 This decoder is then discarded , and the encoder is kept to embed sentences in any of the training languages .
 While some proposals use a separate encoder for each language ( Schwenk and Douze , 2017 ) , sharing a single encoder for all languages also gives strong results .
 Nevertheless , most existing work is either limited to few , rather close languages or , more commonly , consider pairwise joint embeddings with English and one foreign language .
-To the best of our knowledge , existing work on learning multilingual representations fora large number of languages is limited to word embeddings or specific applications like typology prediction or machine translation , ours being the first paper exploring general purpose massively multilingual sentence representations .
+To the best of our knowledge , existing work on learning multilingual representations for a large number of languages is limited to word embeddings or specific applications like typology prediction or machine translation , ours being the first paper exploring general purpose massively multilingual sentence representations .
 All the previous approaches learn a fixed - length representation for each sentence .
 A recent research line has obtained very strong results using variable - length representations instead , consisting of contextualized embeddings of the words in the sentence .
 For that purpose , these methods train either an RNN or self - attentional encoder over unnanotated corpora using some form of language modeling .
@@ -75,11 +75,11 @@ Second , it has a quadratic cost with respect to the number of languages , makin
 In our preliminary experiments , we observed that similar results can be obtained using only two target languages .
 2
 At the same time , we relax the requirement for N- way parallel corpora by considering separate alignments for each language combination .
-Training minimizes the cross - entropy loss on the training corpus , alternating overall combinations of the languages involved .
-For that purpose , we use Adam with a constant learning rate of 0.001 and dropout set to 0.1 , and train fora fixed number of epochs .
+Training minimizes the cross - entropy loss on the training corpus , alternating over all combinations of the languages involved .
+For that purpose , we use Adam with a constant learning rate of 0.001 and dropout set to 0.1 , and train for a fixed number of epochs .
 Our implementation is based on fairseq , 3 and we make use of its multi - GPU support to train on 16 NVIDIA V100 GPUs with a total batch size of 128,000 tokens .
 Unless otherwise specified , we train our model for 17 epochs , which takes about 5 days .
-Stopping training earlier decreases the overall performance only slightly . :
+Stopping training earlier decreases the over all performance only slightly . :
 List of the 93 languages along with their training size , the resulting similarity error rate on Tatoeba , and the number of sentences in it .
 Dashes denote language pairs excluded for containing less than 100 test sentences .
 Training data and pre-processing
@@ -90,10 +90,9 @@ We collect training corpora for 93 input languages by combining the Europarl , U
 Appendix
 A provides a more detailed description of this training data , while .
 So as to obtain a more complete picture , we also evaluate our embeddings in cross - lingual document classification ( MLDoc , Section 4.2 ) , and bitext mining ( BUCC , Section 4.3 ) .
-However , all these datasets only cover a subset of our 93 languages , so we also introduce anew test set for multilingual similarity search in 112 languages , including several languages for which we have no training data but whose language family is covered ( Section 4.4 ) .
+However , all these datasets only cover a subset of our 93 languages , so we also introduce a new test set for multilingual similarity search in 112 languages , including several languages for which we have no training data but whose language family is covered ( Section 4.4 ) .
 We remark that we use the same pre-trained BiLSTM encoder for all tasks and languages without any fine - tuning .
-XNLI : cross - lingual
-NLI
+XNLI : cross - lingual NLI
 NLI has become a widely used task to evaluate sentence representations .
 Given two sentences , a premise and a hypothesis , the task consists in deciding whether there is an entailment , contradiction or neutral relationship between them .
 XNLI is a recent effort to create a dataset similar to the English MultiNLI for several languages .
@@ -148,7 +147,7 @@ We also outperform Artetxe and Schwenk ( 2018 ) themselves , who use two separat
 Not only are our results better , but our model also covers many more languages , so it can potentially be used to mine bitext for any combination of the 93 languages supported .
 Tatoeba : similarity search
 While XNLI , MLDoc and BUCC are well established benchmarks with comparative results available , they only cover a small subset of our 93 languages .
-So as to better assess the performance of our model in all these languages , we introduce anew test set of similarity search for 112 languages based on the Tatoeba corpus .
+So as to better assess the performance of our model in all these languages , we introduce a new test set of similarity search for 112 languages based on the Tatoeba corpus .
 The dataset consists of up to 1,000 English - aligned sentence pairs for each language .
 Appendix
 C describes how the dataset was constructed in more details .
@@ -175,13 +174,13 @@ As shown in , the NLI objective leads to a better performance on the English NLI
 The effect in BUCC is negligible .
 Czech , French , German and Spanish , so results between both models are directly comparable .
 As shown in , the full model equals or outperforms the one covering the evaluation languages only for all tasks but MLDoc .
-This suggests that the joint training also yields to overall better representations .
+This suggests that the joint training also yields to over all better representations .
 Number of training languages
 Conclusions
 In this paper , we propose an architecture to learn multilingual fixed - length sentence embeddings for 93 languages .
 We use a single language - agnostic BiLSTM encoder for all languages , which is trained on publicly available parallel corpora and applied to different downstream tasks without any fine - tuning .
 Our experiments on cross -lingual natural language inference ( XNLI ) , cross - lingual document classification ( MLDoc ) , and bitext mining ( BUCC ) confirm the effectiveness of our approach .
-We also introduce anew test set of multilingual similarity search in 112 languages , and show that our approach is competitive even for low - resource languages .
+We also introduce a new test set of multilingual similarity search in 112 languages , and show that our approach is competitive even for low - resource languages .
 To the best of our knowledge , this is the first successful exploration of general purpose massively multilingual sentence representations .
 In the future , we would like to explore alternative encoder architectures like self - attention .
 We would also like to explore strategies to exploit monolingual data , such as using pre-trained word embeddings , backtranslation , or other ideas from unsupervised .
@@ -198,7 +197,7 @@ The corpus size varies from a few thousand sentences to more than 50 million .
 We keep at most 2 million entries for each language pair .
 Global Voices :
 News stories from the Global Voices website ( 38 languages ) .
-This is a rather small corpus with less than 100 k sentence inmost of the languages .
+This is a rather small corpus with less than 100 k sentence in most of the languages .
 Tanzil : Quran translations in 42 languages , average size of 135 k sentences .
 The style and vocabulary is very different from news texts .
 Tatoeba :
@@ -235,7 +234,7 @@ We have 48 languages with an error rate below 10 % and 55 with less than 20 % , 
 The languages with less than 20 % error belong to 20 different families and use 12 different scripts , and include 6 languages for which we have only small amounts of bitexts ( less than 400 k ) , namely Esperanto , Galician , Hindi , Interlingua , Malayam and Marathi , which presumably benefit from the joint training with other related languages .
 Overall , we observe low similarity error rates on the Indo - Aryan languages , namely Hindi , Bengali , Marathi and Urdu .
 The performance on Berber languages ( " ber " and " kab " ) is remarkable , although we have less than 100 k sentences to train them .
-This is atypical example of languages which are spoken by several millions of people , but for which the amount of written resources is very limited .
+This is a typical example of languages which are spoken by several millions of people , but for which the amount of written resources is very limited .
 It is quite unlikely that we would be able to train a good sentence embedding with language specific corpora only , showing the benefit of joint training on many languages .
 Only 15 languages have similarity error rates above 50 % .
 Four of them are low - resource languages with their own script and which are alone in their family ( Amharic , Armenian , Khmer and Georgian ) , making it difficult to benefit from joint training .

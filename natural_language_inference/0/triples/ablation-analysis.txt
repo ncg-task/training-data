@@ -6,7 +6,7 @@
 (individual tokens||in||document)
 (individual tokens||by||parts of the query)
 (parts of the query||relevant to||token)
-(token||rather than||overall query representation)
+(token||rather than||over all query representation)
 (Ablation analysis||removing||character embeddings)
 (character embeddings||leads to||reduction)
 (reduction||of||about 1 % in the performance)

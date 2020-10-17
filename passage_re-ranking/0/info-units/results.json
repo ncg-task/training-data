@@ -141,7 +141,7 @@ Nevertheless , the model also produces words not present in the input document (
           "from sentence" : "As a contrastive condition , we find that query expansion with RM3 hurts in both datasets , whether applied to the unexpanded corpus ( BM25 + RM3 ) or the expanded version ( BM25 + Doc2query + RM3 ) ."
         }
       },
-      "show that" : {
+      "shows that" : {
         "document expansion" : {
           "more effective than" : "query expansion"
         },

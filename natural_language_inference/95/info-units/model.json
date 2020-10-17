@@ -15,7 +15,7 @@
                   }
                 }
               },
-              "from sentence" : "The overall framework of our model is demonstrated in , which consists of three modules .
+              "from sentence" : "The over all framework of our model is demonstrated in , which consists of three modules .
 First , we follow the boundary - based MRC models to find an answer candidate for each passage by identifying the start and end position of the answer ( ."
 
             }
@@ -27,8 +27,7 @@ First , we follow the boundary - based MRC models to find an answer candidate fo
                   "extracted from" : "those passages"
                 }
               }
-            },
-            "from sentence" : "Second , we model the meanings of the answer candidates extracted from those passages and use the content scores to measure the quality of the candidates from a second perspective ."
+            }
           },
           "use" : {
             "content scores" : {

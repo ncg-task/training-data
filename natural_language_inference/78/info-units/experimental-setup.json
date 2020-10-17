@@ -4,8 +4,7 @@
       "implement" : {
         "our model" : {
           "in" : "TensorFlow"
-        },
-        "from sentence" : "We implement our model in TensorFlow and train them on Nvidia P100 GPUs ."
+        }
       },
       "train them on" : ["Nvidia P100 GPUs", {"from sentence" : "We implement our model in TensorFlow and train them on Nvidia P100 GPUs ."}],
       "use" : {

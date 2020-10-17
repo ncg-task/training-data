@@ -1,17 +1,12 @@
-92	0	4	Code
-92	50	90	https://github.com/tanthongtan/dv-cosine
 94	0	11	Grid search
 94	16	31	performed using
 94	32	57	20 % of the training data
-94	13	15	as
+94	58	60	as
 94	63	77	validation set
 94	87	99	to determine
-94	103	127	 optimal hyperparameters
+94	104	127	optimal hyperparameters
 94	147	153	to use
 94	156	205	constant learning rate or learning rate annealing
-97	52	65	learning rate
-97	45	49	from
-97	71	104	[ 0.25 , 0.025 , 0.0025 , 0.001 ]
 101	4	25	optimal learning rate
 101	26	40	in the case of
 101	41	58	cosine similarity
@@ -26,10 +21,13 @@
 105	33	44	initialized
 105	45	49	from
 105	52	72	uniform distribution
-105	33	35	in
+105	73	75	in
 105	80	85	range
-105	12	14	of
+105	86	88	of
 105	89	108	[ - 0.001 , 0.001 ]
+97	52	65	learning rate
+97	45	49	from
+97	71	104	[ 0.25 , 0.025 , 0.0025 , 0.001 ]
 97	15	19	tune
 97	24	44	number of iterations
 100	15	20	using
@@ -60,7 +58,7 @@
 14	62	70	document
 14	77	94	words / n - grams
 14	14	16	in
-14	62	70	document
+14	102	110	document
 14	134	142	maximize
 14	295	312	cosine similarity
 2	0	24	Sentiment Classification

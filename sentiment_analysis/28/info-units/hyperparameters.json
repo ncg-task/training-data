@@ -68,8 +68,7 @@
             }
           }
         },
-        "from sentence" : "During training , we set label smoothing parameter to 0.2 , the coefficient ?
-of L 2 regularization item is 10 ? 5 and dropout rate is 0.1 ."
+        "from sentence" : "During training , we set label smoothing parameter to 0.2 , the coefficient ? of L 2 regularization item is 10 ? 5 and dropout rate is 0.1 ."
 
       }
     }

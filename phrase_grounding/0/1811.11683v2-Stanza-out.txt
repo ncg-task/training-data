@@ -6,7 +6,7 @@ We exploit multiple levels of feature maps of a Deep Convolutional Neural Networ
 Following dedicated non-linear mappings for visual features at each level , word , and sentence embeddings , we obtain multiple instantiations of our common semantic space in which comparisons between any target text and the visual content is performed with cosine similarity .
 We guide the model by a multi - level multimodal attention mechanism which outputs attended visual features at each level .
 The best level is chosen to be compared with text content for maximizing the pertinence scores of image - sentence pairs of the ground truth .
-Experiments conducted on three publicly available datasets show significant performance gains ( 20 % - 60 % relative ) over the state - of - the - art in phrase localization and set anew performance record on those datasets .
+Experiments conducted on three publicly available datasets show significant performance gains ( 20 % - 60 % relative ) over the state - of - the - art in phrase localization and set a new performance record on those datasets .
 We provide a detailed ablation study to show the contribution of each element of our approach and release our code on GitHub 1 .
 Introduction
 Phrase grounding is the task of localizing within an image a given natural language input phrase , as illustrated in .
@@ -24,7 +24,7 @@ We argue that approaches in the literature have not fully leveraged the potentia
 In this work , we propose to explicitly learn a non-linear mapping of the visual and textual modalities into a common space , and do so at different granularity for each domain .
 Indeed , different layers of a deep network encode each region of the image with gradually increasing levels of discriminativeness and context awareness , similarly single words and whole sentences contain increasing levels of semantic meaning and context .
 This common space mapping is trained with weak supervision and exploited at test - time with a multi - level multimodal attention mechanism , where a natural formalism for computing attention heatmaps at each level , attended features and pertinence scoring , enables us to solve the phrase grounding task elegantly and effectively .
-We evaluate our model on three commonly used datasets in the literature of textual grounding and show that it sets anew state - of - the - art performance by a large margin .
+We evaluate our model on three commonly used datasets in the literature of textual grounding and show that it sets a new state - of - the - art performance by a large margin .
 Our contributions in this paper are as follows :
 We learn , with weak - supervision , a non-linear mapping of visual and textual features to a common regionword - sentence semantic space , where comparison between any two semantic representations can be performed with a simple cosine similarity ;
 We propose a multi - level multimodal attention mechanism , producing either word - level or sentence - level attention maps at different semantic levels , enabling us to choose the most representative attended visual feature among different semantic levels ;
@@ -70,7 +70,7 @@ the multimodal loss .
 Since we map the visual features to a multi - level visual representation , we give the model the freedom to choose any location at any level for either sentence or word .
 In other words , each word or sentence can choose which level of representation ( and which region in that representation ) to attend to .
 We directly calculate the attention map by cosine similarity in our common semantic space .
-We show that this approach significantly outperforms all the state of the art approaches on three commonly used datasets and set anew state of the art performance .
+We show that this approach significantly outperforms all the state of the art approaches on three commonly used datasets and set a new state of the art performance .
 Method
 In this section , we describe our method ( illustrated in ) for addressing the textual grounding task and elaborate on each part with details .
 In Section 3.1 , we explain how we extract multi-level visual features from an image and word / sentence embeddings from the text , and then describe how we map them to a common space .
@@ -82,7 +82,7 @@ Visual Feature Extraction :
 In contrast to many vision tasks where the last layer of a pre-trained CNN is being used as visual representation of an image , we use feature maps from different layers and map them separately to a common space to obtain a multi - level set of feature maps to be compared with text .
 Intuitively , using different levels of visual representations would be necessary for covering a wide range of visual concepts and patterns .
 Thus , we extract L = 4 sets of feature maps from L different levels of a visual network , upsample them by a bi-linear interpolation 2 to a fixed resolution M M for all the L levels , and then apply 3 layers of 1x1 convolution ( with LeakyRelu ) with D filters to map them into equalsized feature maps .
-Finally , we stack these feature maps and space - flatten them to have an overall image representation tensor V ? RN LD , with N = M M .
+Finally , we stack these feature maps and space - flatten them to have an over all image representation tensor V ? RN LD , with N = M M .
 This tensor is finally normalized by the l 2 - norm of its last dimension .
 An overview of the feature extraction and common space mapping for image can be seen in the left part of .
 In this work , we use VGG as a baseline for fair comparison with other works , and the state of the art CNN , PNASNet - 5 , to study the ability of our model to exploit this more powerful visual model .
@@ -91,7 +91,7 @@ Some use pre-trained LSTM or BiLSTMs on big datasets ( e.g. Google 1 Billion ) b
 Some train BiLSTM solely on image - caption datasets ( mostly MSCOCO ) and argue it is necessary to train them from scratch to distinguish between visual concepts which may not be distinguishable in language ( e.g. red and green are different in vision but similar in language as they are both colors ) .
 These works either use the recurrent network outputs at each state as wordlevel representations or their last output ( on each direction for BiLSTM ) as sentence - level or a combination of both .
 In this paper , however we use ELMo , a 3 - layer network pre-trained on 5.5 B tokens which calculates word representations on the fly ( based on CNN on characters , similar to ) and then feed them to 2 layers of BiLSTMs which produce contextualized representations .
-Thus , fora given sentence the model outputs three representations for each token ( splitted by white space ) .
+Thus , for a given sentence the model outputs three representations for each token ( splitted by white space ) .
 We take a linear combination of the three representations and feed them to 2 fully connected layers ( with shared weights among words ) , each with D nodes with LeakyRelu as non-linearity between each layer , to obtain each word representation st ( green pathway in the right part of ) .
 The resulting word - based text representation for an entire sentence would be a tensor S ?
 R T D built from the stacking of each word representation st .
@@ -115,7 +115,7 @@ RN T L represents a multi - level multi-modal attention map which could be simpl
 We apply ReLU to the attention map to zero - out dissimilar wordvisual region pairs , and simply avoid applying softmax on any dimension of the heatmap tensor .
 Note that this choice is very different in spirit from the commonly used approach of applying softmax to attention maps .
 Indeed for irrelevant image - sentence pairs , the attention maps would be almost all zeros while the softmax process would always force attention to be a distribution over the image / words summing to 1 .
-Furthermore , a group of words shaping a phrase could have the same attention area which is again hard to achieve considering the competition among regions / words in the case of applying softmax on the heatmap .
+Furthermore , a group of words shaping a phrase could have the same attention are a which is again hard to achieve considering the competition among regions / words in the case of applying softmax on the heatmap .
 We will analyze the influence of this choice experimentally in our ablation study .
 Given the heatmap tensor , we calculate the attended visual feature for the l - th level and t- th word as
 which is basically a weighted average over the visual representations of the l - th level with the attention heatmap values as weights .
@@ -133,7 +133,7 @@ from different levels and choosing the one that maximizes this projection .
 Intuitively , that chosen hyperplane can be a better representation for visual feature space attended byword t.
 This can be seen in the top central part of , where selecting the maximum pertinence score over levels is equivalent to selecting the hyperplane with the smallest angle with the t- th word representation ( or the highest similarity between attended visual feature and textual feature ) .
 Thus , selecting the most representative hyperplane ( or visual feature level ) .
-Once we find the best word - image pertinence score , similar to and inspired by the minimum classification error , we find the overall ( word - based ) sentence - image pertinence score as follows :
+Once we find the best word - image pertinence score , similar to and inspired by the minimum classification error , we find the over all ( word - based ) sentence - image pertinence score as follows :
 Similarly , for the sentence we can repeat the same procedure ( except that we no more need Eq. ( 5 ) ) for finding the attention map , attended visual feature and sentence - image pertinence score as follows , respectively :
 Multimodal Loss
 In this paper , we only use a weak supervision in the form of binary image - caption relevance .
@@ -215,11 +215,11 @@ We give in , 6 , and 7 some examples of heat maps generated for some queries of 
 Specifically , we upsample the heatmaps from their original size of 18 18 ( as we use the VGG backbone for these visualizations ) by bilinear interpolation to the original image size .
 We can observe that the max ( pointing ) location in heatmaps point to correct location in the image and the heatmaps often capture relevant part of the image for each query .
 It can deal with persons , context and objects even if they are described with some very specific words ( e.g. " bronco " ) , which shows the power of using a character - based contextualized text embedding .
-Finally , shows some localization failures involving concepts that are semantically close , and in challenging capture conditions .
+Finally , shows some localization failures involving concepts thatare semantically close , and in challenging capture conditions .
 For example , the frames are mistakenly pointed for the query " window " which is overexposed .
 Conclusion
 In this paper , we present a weakly supervised method for phrase localization which relies on multi-level attention mechanism on top of multi -level visual semantic features and contextualized text embeddings .
 We non-linearly map both contextualized text embeddings and multi-level visual semantic features to a common space and calculate a multilevel attention map for choosing the best representative visual semantic level for the text and each word in it .
-We show that such combination sets anew state of the art performance and provide quantitative numbers to show the importance of 1 . using correct common space mapping , 2 . strong contextualized text embeddings ,
+We show that such combination sets a new state of the art performance and provide quantitative numbers to show the importance of 1 . using correct common space mapping , 2 . strong contextualized text embeddings ,
 3 . freedom of each word to choose correct visual semantic level .
 Future works lies in studying other applications such as Visual Question Answering , Image Captioning , etc .

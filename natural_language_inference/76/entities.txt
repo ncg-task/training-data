@@ -4,9 +4,9 @@
 25	78	87	reasoning
 25	88	92	over
 25	93	104	entailments
-25	75	77	of
+25	105	107	of
 25	108	113	pairs
-25	75	77	of
+25	114	116	of
 25	117	134	words and phrases
 25	135	148	by processing
 25	153	163	hypothesis
@@ -28,7 +28,7 @@
 26	331	342	entailments
 26	343	345	of
 26	346	351	pairs
-26	343	345	of
+26	352	354	of
 26	355	372	words and phrases
 16	0	38	Recognizing textual entailment ( RTE )
 17	253	256	RTE
@@ -40,7 +40,7 @@
 99	124	135	improvement
 99	75	77	of
 99	139	160	3.3 percentage points
-99	21	23	in
+99	161	163	in
 99	164	172	accuracy
 99	173	177	over
 99	178	199	Bowman et al. 's LSTM
@@ -58,7 +58,7 @@
 108	91	102	single LSTM
 108	137	157	1.4 percentage point
 108	158	166	increase
-108	84	88	over
+108	167	171	over
 108	174	189	benchmark model
 108	195	199	uses
 108	200	209	two LSTMs
@@ -72,7 +72,7 @@
 114	56	63	premise
 114	64	67	for
 114	68	78	every word
-114	5	7	in
+114	79	81	in
 114	86	96	hypothesis
 114	97	103	yields
 114	104	132	another 1.2 percentage point
@@ -81,8 +81,8 @@
 114	157	166	attending
 114	167	180	based only on
 114	185	203	last output vector
-114	49	51	of
-114	56	63	premise
+114	204	206	of
+114	211	218	premise
 117	0	8	Allowing
 117	13	18	model
 117	27	33	attend
@@ -92,5 +92,5 @@
 117	80	83	not
 117	92	99	improve
 117	100	111	performance
-117	103	106	for
+117	112	115	for
 117	116	119	RTE

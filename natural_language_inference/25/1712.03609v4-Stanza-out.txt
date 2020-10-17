@@ -23,7 +23,7 @@ We consider the task of extractive reading comprehension : given a paragraph of 
 n into pare to be predicted .
 When encoding a word token in its encompassing sequence ( question or passage ) , we are interested in allowing extra computation over the sequence and evaluating the extent to which context is utilized in the resultant representation .
 To that end , we employ a re-embedding component in which a contextual and a non-contextual representation are explicitly combined per token .
-Specifically , fora sequence of word - embeddings w 1 , . . . , wk with wt ?
+Specifically , for a sequence of word - embeddings w 1 , . . . , wk with wt ?
 R dw , the re-embedding of the t- th token wt is the result of a Highway layer and is defined as :
 where x t is a function strictly of the word - type of the t- th token , u t is a function of the enclosing sequence , W g , W z , U g , U z are parameter matrices , and the element - wise product operator .
 We set
@@ -35,7 +35,7 @@ R 2 d h .
 LM - augmented token re-embedding ( TR + LM )
 The simple module specified above allows better exploitation of the context that a token appears in , if such exploitation is needed and is not learned by the rest of the network , which operates over w 1 , . . . , wk .
 Our findings in Section 4 indicate that context is crucial but that in our setting it maybe utilized to a limited extent .
-We hypothesize that the main determining factor in this behavior is the relatively small size of the data and its distribution , which does not require using long - range context inmost examples .
+We hypothesize that the main determining factor in this behavior is the relatively small size of the data and its distribution , which does not require using long - range context in most examples .
 Therefore , we leverage a strong language model that was pre-trained on large corpora as a fixed encoder which supplies additional contextualized token representations .
 We denote these representations as {o 1 , . . . , o k } and set u t = [u t ; o t ] for {u 1 , . . . , u k } = BiLSTM ( x 1 , . . . , x k ) .
 The LM we use is from , 2 trained on the One Billion Words Benchmark dataset .
@@ -48,14 +48,14 @@ We build upon , who proposed the RaSoR model .
 For word - embedding inputs q 1 , . . . , q m and p 1 , . . . , p n of dimension d w , RaSoR consists of the following components :
 Passage - independent question representation
 The question is encoded via a BiLSTM {v 1 , . . . , v m } = BiLSTM ( q 1 , . . . , q m ) and the resulting hidden states are summarized via attention :
-fora parameter vector w q ?
+for a parameter vector w q ?
 Rd f and FF ( ) a single layer feed - forward network .
 Span representations A candidate answer span a = ( l , r) with l ?
 r is represented as the concatenation of the corresponding augmented passage representations : h * a = [ h l ; hr ] .
 In order to avoid quadratic runtime , only spans up to length 30 are considered .
 Passage - aligned question representations
 Prediction layer
-Finally , each span representation h * a is transformed to a logit s a = w Tc  FF ( h * a ) fora parameter vector w c ?
+Finally , each span representation h * a is transformed to a logit s a = w Tc  FF ( h * a ) for a parameter vector w c ?
 Rd f , and these logits are normalized to produce a distribution over spans .
 Learning is performed by maximizing the log - likelihood of the correct answer span .
 Evaluation and Analysis
@@ -84,7 +84,7 @@ Overall , we observe a significant improvement with all three configurations , e
 Besides a crosscutting boost in results , we note that the performance due to utilizing the LM hidden states of the first LSTM layer significantly surpasses the other two variants .
 This maybe due to context being most strongly represented in those hidden states as the representations of LM ( emb ) are non-contextual by definition and those of LM ( L2 ) were optimized ( during LM training ) to be similar to parameter vectors that correspond to word - types and not to word - tokens .
 In we list the top - scoring single - model published results on SQuAD 's test set , where we observe RaSoR + TR + LM ( L1 ) ranks second in EM , despite having only minimal questionpassage interaction which is a core component of other works .
-An additional evaluation we carryout is following , which demonstrated the proneness of current QA models to be fooled by distracting sentences added to the paragraph .
+An additional evaluation we carry out is following , which demonstrated the proneness of current QA models to be fooled by distracting sentences added to the paragraph .
 In we list the single - model results reported thus far and observe that the utilization of LM - based representations carried out by RaSoR + TR + LM ( L1 ) results in improved robustness to adversarial examples . [ 4 ] [ 5 ] [ 6 ] [ 7 ]
 Experimental setup
 We use pre-trained GloVe embeddings of dimension d w = 300 and produce character - based word representations via dc = 100 convolutional filters over character embeddings as in .
@@ -97,7 +97,7 @@ Pre-training a LM in order to initialize the weights of an encoder has been repo
 Similar to our work , utilize the same pre-trained LM from for sequence tagging tasks , keeping encoder weights fixed during training .
 Their formulation includes a backward LM and uses the hidden states from the top - most stacked LSTM layer of the LMs , whereas we also consider reading the hidden states of the bottom one , which substantially improves performance .
 In parallel to our work , have successfully leveraged pre-trained LMs for several tasks , including RC , by utilizing representations from all layers of the pre-trained LM .
-Ina transfer - learning setting , pre-train an attentional encoder - decoder model for machine translation and show improvements across a range of tasks when incorporating the hidden states of the encoder as additional fixed inputs for downstream task training .
+In a transfer - learning setting , pre-train an attentional encoder - decoder model for machine translation and show improvements across a range of tasks when incorporating the hidden states of the encoder as additional fixed inputs for downstream task training .
 Conclusion
 In this work we examine the importance of context for the task of reading comprehension .
 We present a neural module that gates contextual and non-contextual representations and observe gains due to context utilization .

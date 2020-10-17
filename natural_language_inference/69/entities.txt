@@ -7,11 +7,11 @@
 215	49	51	in
 215	56	73	support documents
 217	0	39	Majority - candidate - per-query - type
-217	11	20	candidate
 218	0	8	Predicts
+218	13	22	candidate
 219	4	12	that was
 219	13	37	most frequently observed
-219	10	12	as
+219	38	40	as
 219	45	56	true answer
 221	0	8	TF - IDF
 222	0	24	Retrieval - based models
@@ -38,7 +38,7 @@
 29	71	78	queries
 29	79	84	about
 29	85	104	specific properties
-29	32	34	of
+29	105	107	of
 29	111	117	entity
 29	118	139	can not be located in
 29	144	161	entity 's article
@@ -55,7 +55,6 @@
 31	21	30	draw upon
 31	31	63	existing Knowledge Bases ( KBs )
 31	66	90	WIKIDATA and DRUG - BANK
-2	13	20	Dataset
 2	26	57	Multi-hop Reading Comprehension
 4	5	26	Reading Comprehension
 17	28	56	Reading Comprehension ( RC )
@@ -87,7 +86,7 @@
 269	44	46	of
 269	47	54	WIKIHOP
 269	59	68	reduction
-269	44	46	of
+269	69	71	of
 269	76	93	answer vocabulary
 269	94	96	to
 269	97	139	100 random single - token mask expressions
@@ -97,5 +96,5 @@
 269	179	193	candidate span
 269	196	207	compared to
 269	212	245	multi-token candidate expressions
-269	33	35	in
+269	246	248	in
 269	253	269	unmasked setting

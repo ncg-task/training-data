@@ -10,7 +10,9 @@
                   "use" : {
                     "uncased version" : {
                       "of" : "BERT base",
-                      "from sentence" : "We use uncased version of BERT base ."
+                      "from sentence" : "Multi-mention Reading Comprehension
+We use uncased version of BERT base ."
+
                     },
                     "batch size" : {
                       "of" : {
@@ -67,8 +69,7 @@ is a hyperparameter ."
                         "comparable result" : {
                           "to" : "First - Only baseline"
                         }
-                      },
-                      "from sentence" : "Second , while MML achieves comparable result to the First - Only baseline , our learning method outperforms others by 2 + F1 / ROUGE - L / EM consistently on all datasets ."
+                      }
                     },
                     "our learning method" : {
                       "has" : {

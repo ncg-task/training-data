@@ -15,6 +15,7 @@
 43	5	7	is
 43	10	27	series of modules
 43	33	37	uses
+43	38	62	all the sentence vectors
 43	105	107	as
 43	108	115	context
 43	116	122	to fix
@@ -64,13 +65,6 @@
 151	71	107	all ten languages at once ( N = 10 )
 153	0	3	For
 153	4	11	our CNN
-153	17	20	use
-153	21	43	rectified linear units
-153	48	61	three filters
-153	62	66	with
-153	67	103	different window sizes h = 3 , 4 , 5
-153	62	66	with
-153	109	130	100 feature maps each
 154	8	29	final sentence vector
 154	35	46	concatenate
 154	51	63	feature maps
@@ -113,7 +107,7 @@
 169	65	92	three of the four data sets
 169	97	105	performs
 169	106	119	competitively
-169	62	64	on
+169	120	122	on
 169	123	135	one data set
 170	0	4	When
 170	5	10	N = 1
@@ -134,12 +128,12 @@
 171	14	18	MCFA
 171	19	37	additionally beats
 171	42	58	state of the art
-171	25	27	on
+171	59	61	on
 171	66	79	TREC data set
 172	10	33	our ensemble classifier
 172	34	58	additionally outperforms
 172	59	79	all competing models
-172	40	42	on
+172	80	82	on
 172	87	98	MR data set
 186	0	2	On
 186	3	16	all data sets
@@ -151,9 +145,9 @@
 186	56	70	decreases from
 186	75	92	base CNN accuracy
 188	82	94	translations
-188	12	15	are
 188	60	66	topics
 189	13	26	conclude that
+189	40	43	are
 189	44	70	better additional contexts
 189	71	75	than
 190	5	10	using
@@ -166,7 +160,8 @@
 191	13	15	as
 191	16	34	additional context
 191	40	48	decrease
-191	54	68	performance of
+191	54	65	performance
+191	66	68	of
 191	73	87	CNN classifier
-191	22	24	on
+191	88	90	on
 191	91	105	most data sets

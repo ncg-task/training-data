@@ -10,7 +10,7 @@ Since a scheme in this approach can be interpreted as a conditional language mod
 However , one potential weakness is that it sometimes repeatedly generates the same phrase ( or word ) .
 This issue has been discussed in the neural MT ( NMT ) literature as apart of a coverage problem .
 Such repeating generation behavior can become more severe in some NLG tasks than in MT .
-The very short ABS task in is atypical example because it requires the generation of a summary in a pre-defined limited output space , such as ten words or 75 bytes .
+The very short ABS task in is a typical example because it requires the generation of a summary in a pre-defined limited output space , such as ten words or 75 bytes .
 Thus , the repeated output consumes precious limited output space .
 Unfortunately , the coverage approach can not be directly applied to ABS tasks since they require us to optimally find salient ideas from the input in a lossy compression manner , and thus the summary ( output ) length hardly depends on the input length ; an MT task is mainly loss - less generation and nearly one - to - one correspondence between input and output .
 From this background , this paper tackles this issue and proposes a method to overcome it in ABS tasks .
@@ -30,15 +30,15 @@ Let
 Vt denote the vocabulary ( set of words ) of output .
 For simplification , this paper uses the following four notation rules : ( 1 ) ( x i ) I i= 1 is a short notation for representing a list of ( column ) vectors , i.e. , ( x 1 , . . . ,
 ( 2 ) v ( a , D ) represents a D-dimensional ( column ) vector whose elements are all a , i.e. , v ( 1 , 3 ) = ( 1 , 1 , 1 ) .
-Encoder : Let ? s ( ) denote the overall process of our 2 - layer bidirectional LSTM encoder .
+Encoder : Let ? s ( ) denote the over all process of our 2 - layer bidirectional LSTM encoder .
 The encoder receives input X and returns a list of final hidden states H s = ( h s i ) I i = 1 :
 Decoder :
 We employ a K - best beam - search decoder to find the ( approximated ) best output ?
-given input X. shows atypical Kbest beam search algorithm used in the decoder of EncDec approach .
+given input X. shows a typical Kbest beam search algorithm used in the decoder of EncDec approach .
 We define the ( minimal ) required information h shown in for the jth decoding process is the following triplet , h = ( s j?1 , ? j?1 , H t j?1 ) , where s j ?1 is the cumulative log - likelihood from step 0 to j ? 1 , ?
 j?1 is a ( candidate of ) output word sequence generated so far from step 0 to j ? 1 , that is , ? j?1 = ( y 0 , . . . , y j?1 ) and H t j ?1 is the all the hidden states for calculating the j - th decoding process .
 Then , the function calcLL in Line 8 can be written as follows :
-where Softmax ( ) is the softmax function fora given vector and ? t ( ) represents the overall process of a single decoding step .
+where Softmax ( ) is the softmax function for a given vector and ? t ( ) represents the over all process of a single decoding step .
 , that is calculated using the k - th candidate in Q w at the ( j ? 1 ) - th step .
 In Line 12 , the function makeTriplet constructs a set of triplets based on the information of index ( m , k ) .
 Then , in Line 13 , the function select TopK selects the top - K candidates from union of a set of generated triplets at current step {h z } K?C z=1 and a set of triplets of complete sentences in Q c  .
@@ -96,7 +96,7 @@ PM be a vector representation of the true frequency of the target words given th
 Clearly a * can be obtained by counting the words in the corresponding output .
 We define loss function ?
 wfe for estimating our WFE sub - model as follows :
-where W represents the overall parameters .
+where W represents the over all parameters .
 The form of ? wfe ( ) is closely related to that used in support vector regression ( SVR ) of a * are an integer .
 The remaining 0.25 for both the positive and negative sides denotes the margin between every integer .
 We select b = 2 to penalize larger for more distant error , and c 1 < c 2 , i.e. , c 1 = 0.2 , c 2 = 1 , since we aim to obtain upper-bound estimation and to penalize the underestimation below the true frequency a * .
@@ -106,7 +106,7 @@ We investigated the effectiveness of our method on ABS experiments , which were 
 The data consist of approximately 3.8 million training , 400,000 validation and 400,000 test data , respectively 2 .
 Generally , 1951 test data , randomly extracted from the test data section , are used for evaluation 3 .
 Additionally , DUC - 2004 evaluation data were also evaluated by the identical models trained on the above Gigaword data .
-We strictly followed the instructions of the evaluation setting used in previous studies fora fair comparison .
+We strictly followed the instructions of the evaluation setting used in previous studies for a fair comparison .
 Table 1 summarizes the model configuration and the parameter estimation setting in our experiments .
 shows the results of the baseline EncDec and our proposed EncDec + WFE .
 Note that the 2 The data can be created by the data construction scripts in the author 's code : https://github.com/facebook/NAMAS .
@@ -142,8 +142,8 @@ To evaluate the WFE sub - model alone , shows the confusion matrix of the freque
 We quantized by [ m ]+ 0.5 for all m , where 0.5 was derived from the margin in ? wfe .
 Unfortunately , the result looks not so well .
 There seems to exist an enough room to improve the estimation .
-However , we emphasize that it already has an enough power to improve the overall quality as shown in and .
-We can expect to further gain the overall performance by improving the performance of the WFE sub-model .
+However , we emphasize that it already has an enough power to improve the over all quality as shown in and .
+We can expect to further gain the over all performance by improving the performance of the WFE sub-model .
 Conclusion
 This paper discussed the behavior of redundant repeating generation often observed in neural EncDec approaches .
 We proposed a method for reducing such redundancy by incorporating a submodel that directly estimates and manages the frequency of each target vocabulary in the output .

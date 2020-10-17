@@ -4,7 +4,7 @@ abstract
 Reading comprehension ( RC ) - in contrast to information retrieval - requires integrating information and reasoning about events , entities , and their relations across a full document .
 Question answering is conventionally used to assess RC ability , in both artificial agents and children learning to read .
 However , existing RC datasets and tasks are dominated by questions that can be solved by selecting answers using superficial information ( e.g. , local context similarity or global term frequency ) ; they thus fail to test for the essential integrative aspect of RC .
-To encourage progress on deeper comprehension of language , we present anew dataset and set of tasks in which the reader must answer questions about stories by reading entire books or movie scripts .
+To encourage progress on deeper comprehension of language , we present a new dataset and set of tasks in which the reader must answer questions about stories by reading entire books or movie scripts .
 These tasks are designed so that successfully answering their questions requires understanding the underlying narrative rather than relying on shallow pattern matching or salience .
 We show that although humans solve the tasks easily , standard RC models struggle on the tasks presented here .
 We provide an analysis of the dataset and the challenges it presents .
@@ -27,7 +27,7 @@ FRANK ( to Dana )
 That 's a good - looking kid you got there , Ms. Barrett .
 Figure 1 :
 Example question - answer pair .
-The snippets here were extracted by humans from summaries and the full text of movie scripts or books , respectively , and are not provided to the model as supervision or attest time .
+The snippets here were extracted by humans from summaries and the full text of movie scripts or books , respectively , and are not provided to the model as supervision or at test time .
 Instead , the model will need to read the full text and locate salient snippets based solely on the question and its reading of the document in order to generate the answer .
 the entire text from memory , but often can answer questions about underlying narrative elements of the document : the salient entities , events , places , and the relations between them .
 Thus , testing understanding requires creation of questions that examine high - level abstractions instead of just facts occurring in one sentence at a time .
@@ -46,7 +46,7 @@ First , they are largely self - contained : beyond the basic fundamental vocabul
 We make the dataset available online .
 2
 Review of Reading Comprehension Datasets and Models
-There area large number of datasets and associated tasks available for the training and evaluation of read - 1 For example , new names and words maybe coined by the author ( e.g. " muggle " in Harry Potter novels ) but the reader need only appeal to the book itself to understand the meaning of these concepts , and their place in the narrative .
+There are a large number of datasets and associated tasks available for the training and evaluation of read - 1 For example , new names and words maybe coined by the author ( e.g. " muggle " in Harry Potter novels ) but the reader need only appeal to the book itself to understand the meaning of these concepts , and their place in the narrative .
 This ability to form new concepts based on the contexts of a text is a crucial aspect of reading comprehension , and is in part tested as part of the question answering tasks we present .
 2
 http://deepmind.com/publications ing comprehension models .
@@ -62,10 +62,10 @@ Questions are Cloze - form ( predict the missing word ) and are produced from ei
 The tasks associated with these datasets are all selecting an answer from a set of options , which is explicitly provided for CBT and BookTest , and is implicit for CNN / Daily Mail , as the answers are always entities from the document .
 This significantly favors models that operate by pointing to a particular token ( or type ) .
 Indeed , the most successful models on these datasets , such as the Attention Sum Reader ( AS Reader ) , exploit precisely this bias in the data .
-However , these models are inappropriate for answers requiring synthesis of anew answer .
-This bias towards answers that are shallowly salient is a more serious limitation of the CNN / Daily Mail dataset , since its context documents are news stories which usually contain a small number of salient entities and focus on a single event .
+However , these models are inappropriate for answers requiring synthesis of a new answer .
+This bias towards answers thatare shallowly salient is a more serious limitation of the CNN / Daily Mail dataset , since its context documents are news stories which usually contain a small number of salient entities and focus on a single event .
 SQuAD and News QA ) offer a different challenge .
-A large number of a questions and answers are provided fora set of documents , where the answers are spans of the context document , i.e. contiguous sequences of words from the document .
+A large number of a questions and answers are provided for a set of documents , where the answers are spans of the context document , i.e. contiguous sequences of words from the document .
 Although the answers are not just single word / entity answers , many plausible questions for assessing RC can not be asked because no document span would contain its answer .
 While they provide a large number of questions , these are from a relatively small number of documents , which are themselves fairly short , thereby limiting the lexical and topical diversity models trained on this data can cope with .
 While the answers are multiword phrases , the spans are generally short and rarely cross sentence boundaries .
@@ -110,11 +110,11 @@ This provides with a smaller set of documents , compared to the other datasets ,
 The bottleneck for obtaining a larger number of publicly available stories was finding corresponding summaries .
 Annotators on Amazon Mechanical
 Turk were instructed to write 10 question - answer pairs each based solely on a given summary .
-Reading and annotating summaries is tractable unlike writing questions and answers based on the full stories , and moreover , as the annotators never seethe full stories we are much less likely to get questions and answers which are extracted from a localized context .
+Reading and annotating summaries is tractable unlike writing questions and answers based on the full stories , and moreover , as the annotators never see the full stories we are much less likely to get questions and answers which are extracted from a localized context .
 Annotators were instructed to imagine that they are writing questions to test students who have read the full stories but not the summaries .
-We required questions that are specific enough , given the length and complexity of the narratives , and to provide a diverse set of questions about characters , events , why this happened , and soon .
+We required questions thatare specific enough , given the length and complexity of the narratives , and to provide a diverse set of questions about characters , events , why this happened , and soon .
 Annotators were encouraged to use their own words and we prevented them from copying .
-We asked for answers that are grammatical , complete sentences , and explicitly allowed short answers ( one word , or a few - word phrase , or a short sentence ) as we think that answering with a full sentence is frequently perceived as artificial when asking about factual information .
+We asked for answers thatare grammatical , complete sentences , and explicitly allowed short answers ( one word , or a few - word phrase , or a short sentence ) as we think that answering with a full sentence is frequently perceived as artificial when asking about factual information .
 Annotators were asked to avoid extra , unnecessary information in the question or the answer , and to avoid yes / no questions or questions about the author or the actors .
 About 30 question - answer pairs per summary were obtained .
 The result is a collection of human written natural questions and answers .
@@ -193,8 +193,7 @@ Inspired by Hermann et al. , we replace such entities with markers , such as @en
 These markers are permuted during training and testing so that none of their embeddings learn a specific entity 's representation .
 This allows us to build representations for entities from stories that were never seen in training , since they are given a specific identifier ( to differentiate them from other entities in the document ) from a set of generic identifiers re-used across documents .
 Entities are replaced according to a simple heuristic based on capital first character and the respective word not appearing in lowercase .
-Reading Summaries
-Only
+Reading Summaries Only
 Reading comprehension of summaries is similar to a number of previous reading comprehension tasks where questions were constructed based on the context document .
 However , plot summaries tend to contain more intricate event time lines and a larger number of characters , and in this sense , are more complex to follow than news articles or paragraphs from Wikipedia .
 See for the results .
@@ -262,7 +261,7 @@ These include high level plot understanding through clustering of novels or summ
 In computer vision , the MovieQA dataset ) fulfills a similar role as Nar-rative QA .
 It seeks to test the ability of models to comprehend movies via question answering , and part of the dataset includes full length scripts .
 Conclusion
-We have introduced anew dataset and a set of tasks for training and evaluating reading comprehension systems , born from an analysis of the limitations of existing datasets and tasks .
+We have introduced a new dataset and a set of tasks for training and evaluating reading comprehension systems , born from an analysis of the limitations of existing datasets and tasks .
 While our QA task resembles tasks provided by existing datasets , it exposes new challenges because of its domain : fiction .
 Fictional stories - in contrast to news stories - are selfcontained and describe richer set of entities , events , and the relations between them .
 We have a range of tasks , from simple ( which requires models to read summaries of books and movie scripts , and generate or rank fluent English answers to human - generated questions ) to more complex ( which requires models to read the full stories to answer the questions , with no access to the summaries ) .
@@ -273,7 +272,7 @@ Answer : A bayonete stabbing to his gut .
 Summary snippet :
 A terrified Jacob flees into the jungle , only to be bayoneted in the gut by an unseen assailant .
 [ . . . ]
-Ina wartime triage tent in 1971 , military doctors fruitlessly treating Jacob reluctantly declare him dead Story snippet :
+In a wartime triage tent in 1971 , military doctors fruitlessly treating Jacob reluctantly declare him dead Story snippet :
 Ashe spins around one of the attackers jams all eight inches of his bayonet blade into Jacob 's stomach .
 Jacob screams .
 It is aloud and piercing wail .
@@ -295,4 +294,4 @@ End - to - end mechanisms for both searching for information , such as attention
 Likewise , neural models for mapping documents to answers , or determining entailment between supporting evidence and a hypothesis , typically operate on the scale of sentences rather than sets of paragraphs .
 We have provided baseline and benchmark results for both sets of tasks , demonstrating that while existing models give sensible results out of the box on summaries , they do not get any traction on the book - scale tasks .
 Having given a quantitative and qualitative analysis of the difficulty of the more complex tasks , we suggest research directions that may help bridge the gap between existing models and hu-man performance .
-Our hope is that this dataset will serve not only as a challenge for the machine reading community , but as a driver for the development of anew class of neural models which will take a significant step beyond the level of complexity which existing datasets and tasks permit .
+Our hope is that this dataset will serve not only as a challenge for the machine reading community , but as a driver for the development of a new class of neural models which will take a significant step beyond the level of complexity which existing datasets and tasks permit .

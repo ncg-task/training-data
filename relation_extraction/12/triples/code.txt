@@ -1,1 +1,1 @@
-(Contribution||Code||https://github.com/ Cartus / AGGCN_TACRED)
+(Contribution||Code||https://github.com/Cartus / AGGCN_TACRED)

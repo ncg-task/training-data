@@ -13,6 +13,7 @@
 194	119	128	p < 0.001
 194	18	20	in
 194	132	143	all metrics
+203	0	39	Quantitative Improvements in Entailment
 208	3	8	found
 208	14	35	our 2 - way MTL model
 208	36	40	with
@@ -21,15 +22,17 @@
 208	76	92	extraneous count
 208	93	95	by
 208	96	122	17.2 % w.r.t. the baseline
+210	0	47	Quantitative Improvements in Saliency Detection
 213	4	15	results are
 213	46	97	2 - way - QG MTL model ( with question generation )
 213	98	104	versus
 213	105	125	baseline improvement
 213	126	128	is
 213	129	159	stat. significant ( p < 0.01 )
+215	0	60	Qualitative Examples on Entailment and Saliency Improvements
+215	91	100	summaries
 218	12	36	3 - way multi-task model
 218	37	46	generates
-218	47	56	summaries
 218	62	80	are both better at
 218	81	99	logical entailment
 218	104	136	contain more salient information
@@ -65,10 +68,10 @@
 154	72	97	statistically significant
 154	175	178	for
 154	179	194	CNN / DailyMail
-154	20	22	in
+154	98	100	in
 154	101	123	ROUGE - 1 ( p < 0.01 )
 154	126	148	ROUGE - L ( p < 0.05 )
 154	155	174	METEOR ( p < 0.01 )
 154	231	239	Gigaword
-154	20	22	in
+154	199	201	in
 154	202	226	all metrics ( p < 0.01 )

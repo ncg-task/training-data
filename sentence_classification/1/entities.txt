@@ -8,7 +8,7 @@
 132	103	113	our system
 132	123	138	further improve
 132	143	148	model
-132	78	80	in
+132	149	151	in
 132	154	168	limited extent
 130	0	4	When
 130	9	32	context enriching layer
@@ -43,7 +43,7 @@
 121	4	16	window sizes
 121	17	19	of
 121	24	35	CNN encoder
-121	5	7	in
+121	36	38	in
 121	43	66	sentence encoding layer
 121	67	70	are
 121	71	86	2 , 3 , 4 and 5
@@ -82,7 +82,7 @@
 22	67	90	sentence representation
 22	91	95	from
 22	100	127	sequence of word embeddings
-22	16	20	uses
+22	135	139	uses
 22	140	163	another bi - LSTM layer
 22	167	180	take as input
 22	185	219	individual sentence representation
@@ -91,8 +91,8 @@
 22	276	293	subsequently uses
 22	296	342	single - hidden - layer feed - forward network
 22	343	355	to transform
-22	67	90	sentence representation
-22	40	42	to
+22	360	383	sentence representation
+22	164	166	to
 22	391	409	probability vector
 22	424	433	optimizes
 22	438	470	predicted label sequence jointly

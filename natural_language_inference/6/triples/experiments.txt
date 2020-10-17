@@ -12,7 +12,7 @@
 (Experiments||has||XNLI : cross - lingual NLI)
 (XNLI : cross - lingual NLI||outperform||all baselines)
 (all baselines||by||substantial margin)
-(XNLI : cross - lingual NLI||achieves||remarkable good results)
+(XNLI : cross - lingual NLI||achieve||remarkable good results)
 (remarkable good results||on||low - resource languages)
 (low - resource languages||like||Swahili)
 (XNLI : cross - lingual NLI||has||Our proposed method)

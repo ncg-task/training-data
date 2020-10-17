@@ -10,7 +10,9 @@
                   "in" : "all datasets"
                 }
               },
-              "from sentence" : "The proposed model achieved about 4.0 MOS in all datasets , with the VCTK model obtaining a MOS about 0.2 points higher than the LibriSpeech model when evaluated on seen speakers ."
+              "from sentence" : "Speech naturalness
+The proposed model achieved about 4.0 MOS in all datasets , with the VCTK model obtaining a MOS about 0.2 points higher than the LibriSpeech model when evaluated on seen speakers ."
+
             },
             "audio generated" : {
               "for" : {
@@ -43,7 +45,9 @@
                 }
               }
             },
-            "from sentence" : "The scores for the VCTK model tend to be higher than those for LibriSpeech , reflecting the cleaner nature of the dataset ."
+            "from sentence" : "Speaker similarity
+The scores for the VCTK model tend to be higher than those for LibriSpeech , reflecting the cleaner nature of the dataset ."
+
           },
           "for" : {
             "seen speakers on VCTK" : {
@@ -69,9 +73,11 @@
                 }
               }
             },
-            "from sentence" : "As shown in , as long as the synthesizer was trained on a sufficiently large set of speakers , i.e. on LibriSpeech , the synthesized speech is typically most similar to the ground truth voices ."
+            "from sentence" : "Speaker verification
+As shown in , as long as the synthesizer was trained on a sufficiently large set of speakers , i.e. on LibriSpeech , the synthesized speech is typically most similar to the ground truth voices ."
+
           },
-          "on" : {
+          "On" : {
             "20 voice discrimination task" : {
               "obtain" : "EER of 2.86 %"
             },
@@ -90,7 +96,9 @@
                   }
                 }
               },
-              "from sentence" : "The PCA visualization ( left ) shows that synthesized utterances tend to lie very close to real speech from the same speaker in the embedding space ."
+              "from sentence" : "Speaker embedding space
+The PCA visualization ( left ) shows that synthesized utterances tend to lie very close to real speech from the same speaker in the embedding space ."
+
             },
             "t - SNE visualization" : {
               "demonstrated" : {
@@ -129,7 +137,9 @@
               }
             }
           },
-          "from sentence" : "As the number of training speakers increases , both naturalness and similarity improve significantly ."
+          "from sentence" : "Number of speaker encoder training speakers
+As the number of training speakers increases , both naturalness and similarity improve significantly ."
+
         },
         "Fictitious speakers" : {
           "Bypassing" : "speaker encoder network",
@@ -141,7 +151,9 @@
                 }
               }
             },
-            "from sentence" : "Bypassing the speaker encoder network and conditioning the synthesizer on random points in the speaker embedding space results in speech from fictitious speakers which are not present in the train or test sets of either the synthesizer or the speaker encoder ."            
+            "from sentence" : "Fictitious speakers
+Bypassing the speaker encoder network and conditioning the synthesizer on random points in the speaker embedding space results in speech from fictitious speakers which are not present in the train or test sets of either the synthesizer or the speaker encoder ."
+
           }
         }
       }

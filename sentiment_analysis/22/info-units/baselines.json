@@ -129,9 +129,7 @@
           "employs" : {
             "three Bi- LSTMs" : {
               "to model" : ["left context", "target", "right context"],
-              "from sentence" : "LCR - Rot
-employs three
-Bi- LSTMs to model the left context , the target and the right context ."
+              "from sentence" : "LCR - Rot employs three Bi- LSTMs to model the left context , the target and the right context ."
 
             }
           }

@@ -44,5 +44,5 @@
 (Speaker verification||trained on||LibriSpeech)
 (LibriSpeech||has||synthesized speech)
 (synthesized speech||most similar to||ground truth voices)
-(Speaker verification||on||20 voice discrimination task)
+(Speaker verification||On||20 voice discrimination task)
 (20 voice discrimination task||obtain||EER of 2.86 %)

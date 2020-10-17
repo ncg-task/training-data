@@ -13,8 +13,7 @@
               }
             }
           },
-          "from sentence" : "Overall , we observe that COARSE2FINE outperforms ONESTAGE , which suggests that disentangling high - level from low - level information dur - 62.3 SNM + COPY 71 and .
-ing decoding is beneficial ."
+          "from sentence" : "Overall , we observe that COARSE2FINE outperforms ONESTAGE , which suggests that disentangling high - level from low - level information dur - 62.3 SNM + COPY 71 and ."
 
         },
         "sketch encoder" : {
@@ -31,12 +30,12 @@ ing decoding is beneficial ."
         "our method" : {
           "performs" : {
             "competitively" : {
-              "despite use of" : "relatively simple decoders"
+              "despite the use of" : "relatively simple decoders"
             }
           },
           "from sentence" : "Compared with previous neural models that utilize syntax or grammatical information ( SEQ2 TREE , ASN ; the second block in ) , our method performs competitively despite the use of relatively simple decoders ."
         },
-        "our model" : {
+        "Our model" : {
           "superior to" : ["ONESTAGE", "previous best performing systems"],
           "from sentence" : "Our model is superior to ONESTAGE as well as to previous best performing systems ."
         },

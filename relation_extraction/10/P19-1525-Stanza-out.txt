@@ -5,13 +5,13 @@ Relation Extraction is the task of identifying entity mention spans in raw text 
 Recent approaches for this spanlevel task have been token - level models which have inherent limitations .
 They can not easily define and implement span - level features , can not model overlapping entity mentions and have cascading errors due to the use of sequential decoding .
 To address these concerns , we present a model which directly models all possible spans and performs joint entity mention detection and relation extraction .
-We report anew state - of - the - art performance of 62.83 F 1 ( prev best was 60.49 ) on the ACE2005 dataset .
+We report a new state - of - the - art performance of 62.83 F 1 ( prev best was 60.49 ) on the ACE2005 dataset .
 Introduction
 Many NLP tasks follow the pattern of taking raw text as input and then : detecting relevant spans and classifying the relations between those spans .
 Examples of this include Relation Extraction , Coreference Resolution and Semantic Role Labeling .
 This class of NLP problems are inherently span - level tasks .
 This paper focuses on Relation Extraction ( RE ) , which is the task of entity mention detection and classifying the relations between each pair of those mentions .
-We report anew state - of - the - art performance of 62.83 F 1 ( prev best was 60.49 ) on the ACE2005 dataset .
+We report a new state - of - the - art performance of 62.83 F 1 ( prev best was 60.49 ) on the ACE2005 dataset .
 Here is a simple example of Relation Extraction for the sentence , " Washington , D.C. is the capital of the USA " .
 Step 1 , Entity Mention Detection will detect the spans " Washington , D.C. " and " USA " as LOCATIONS .
 Step 2 , Relation Extraction will classify all directed pairs of detected entity mentions .
@@ -36,7 +36,7 @@ In this paper , we present such a span - level model for Relation Extraction .
 We propose a simple bi - LSTM based model which generates span representations for each possible span .
 The span representations are used to perform entity mention detection on all spans in parallel .
 The same span representations are then used to perform relation extraction on all pairs of detected entity mentions .
-We evaluated the performance of our model on the ACE2005 dataset and report anew startof - the - art F 1 score of 62.83 for Relation Extraction .
+We evaluated the performance of our model on the ACE2005 dataset and report a new startof - the - art F 1 score of 62.83 for Relation Extraction .
 Related Work
 Given text input , Relation Extraction involves two steps : span detection and classification of the relation between pairs of detected spans .
 In the RE literature , these are more commonly called Entity Mention Detection and Relation Extraction respectively .
@@ -133,7 +133,7 @@ We use ?
 ner i to represent the correct entity type for span i and y re i , j to represent the correct relation type for the ordered pair of spans , ( span i , span j ) .
 S represents the set of all spans and S represents the set of all selected spans ( Section 3.2 ) .
 Then the final training loss is ,
-where the first term is a sum overall spans of the entity mention detection loss ( eqn 1 ) and the second term is a sum overall ordered pairs of selected spans of the relation extraction loss ( eqn 2 ) .
+where the first term is a sum over all spans of the entity mention detection loss ( eqn 1 ) and the second term is a sum over all ordered pairs of selected spans of the relation extraction loss ( eqn 2 ) .
 Experiments
 Dataset
 We use the ACE2005 dataset .
@@ -150,7 +150,7 @@ Each span gets a span width feature which is a learned 20 - dimensional vector r
 Span Pruning
 A high number of spans under consideration can lead to memory and speed issues .
 We only consider spans that are entirely within a sentence and limit spans to a max length of L = 10 .
-This choice was based on our Train Set , see Section 5 ) fora discussion about it .
+This choice was based on our Train Set , see Section 5 ) for a discussion about it .
 Performance is not affected significantly as very few entity mentions have more than 10 tokens .
 Regularization Dropout is applied with dropout rate 0.2 to all hidden layers of all MLPs and feature encodings , with dropout rate 0.5 to all word and character embeddings and with dropout rate 0.4 to all LSTM layer outputs .
 Learning Learning is done with Adam ( Kingma and Ba , 2015 ) with default parameters .
@@ -163,7 +163,7 @@ The algorithmic span pruning process limits our model spans which are entirely w
 While our model creates representations for spans ( instead of just tokens ) , it achieves the dual goals of being memory efficient and capturing most ( more than 99.95 % ) entities and relations in the space of the spans considered .
 shows the model complexity and entity / relation coverage for different policies of span generation on the Train Set of ACE2005 .
 It shows numbers for policies ranging from one which considers all spans across the doc , to a policy that considers only single token spans .
-It shows that our chosen span generation policy ( in bold ) is far more memory efficient than a naive search overall possible spans in the input document .
+It shows that our chosen span generation policy ( in bold ) is far more memory efficient than a naive search over all possible spans in the input document .
 Yet our policy still considers more than 99.95 % of all entities and relations .
 Our policy is linear in the document 's ( sentence ) length , not quadratic ; because we limit our model to spans that are wholly in a single sentence and have a max length of L = 10 tokens .
 Entity Mention Detection
@@ -188,5 +188,5 @@ Thus , our large gains in RE Recall ( and F 1 ) showcase the effectiveness of ou
 Conclusions
 We present a neural span - level end - to - end model for joint entity mention detection and relation extraction .
 In contrast with existing token - level models : our model is able to use span - specific features , allows for overlapping entity mentions and does not use sequential decoding .
-Our proposed model achieves anew state - of - the - art RE performance on the ACE2005 dataset .
+Our proposed model achieves a new state - of - the - art RE performance on the ACE2005 dataset .
 The gains are driven by improvements in Recall for both tasks .

@@ -3,10 +3,10 @@
     "Baselines" : {
       "has" : {
         "SVM - ensemble" : {
-          "is" : {
+          "has" : {
             "strong context - free benchmark model" : {
               "which uses" : {
-                "similar multimodel approach" : {
+                "similar multimodal approach" : {
                   "on" : "ensemble of trees"
                 }
               }
@@ -52,8 +52,7 @@ A bi-directional LSTM equipped with hierarchical fusion , proposed by ."
               }
             }
           },
-          "from sentence" : "[ 1 , K ] } for ? ? {a , b}. CMN
-Self :
+          "from sentence" : "[ 1 , K ] } for ? ? {a , b}. CMN Self :
 In this baseline , we use only self history for classifying emotion of utterance u i ."
 
         },

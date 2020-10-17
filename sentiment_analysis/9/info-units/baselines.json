@@ -33,7 +33,7 @@
   is a baseline model of the ATSM variations for Chinese language - oriented ABSA task ."
   
         },
-        "GANNA" : {
+        "GANN" : {
           "is" : {
             "novel neural network model" : {
               "for" : "APC task",

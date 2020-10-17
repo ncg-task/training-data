@@ -8,14 +8,13 @@
         "from sentence" : "To this question , we investigate a neural network model for output label sequences ."
       },
       "represent" : {
-        "each possible label" : {
-          "using" : "embedding vector",
-          "from sentence" : "In particular , we represent each possible label using an embedding vector , and aim to encode sequences of label distributions using a recurrent neural network ."
-        },
         "full - exponential search space" : {
           "without making" : "Markov assumptions",
           "from sentence" : "This makes our task essentially to represent a full - exponential search space without making Markov assumptions ."
-        }        
+        },
+        "each possible label" : {
+          "using" : "embedding vector"
+        }		
       },
       "aim to encode" : {
         "sequences" : {

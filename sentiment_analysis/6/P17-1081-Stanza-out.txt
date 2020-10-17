@@ -10,7 +10,7 @@ Sentiment analysis is a ' suitcase ' research problem that requires tackling man
 Sentiment analysis can be performed at different granularity levels , e.g. , subjectivity detection simply classifies data as either subjective ( opinionated ) or objective ( neutral ) , while polarity detection focuses on determining whether subjective data indicate positive or negative sentiment .
 Emotion recognition further breaks down the inferred polarity into a set of emotions conveyed by the subjective data , e.g. , positive sentiment can be caused by joy or anticipation , while negative sentiment can be caused by fear or disgust .
 Even though the primary focus of this paper is to classify sentiment in videos , we also show the performance of the proposed method for the finergrained task of emotion recognition .
-Emotion recognition and sentiment analysis have become anew trend in social media , helping users and companies to automatically extract the opinions expressed in user - generated content , especially videos .
+Emotion recognition and sentiment analysis have become a new trend in social media , helping users and companies to automatically extract the opinions expressed in user - generated content , especially videos .
 Thanks to the high availability of computers and smartphones , and the rapid rise of social media , consumers tend to record their reviews and opinions about products or films and upload them on social media platforms , such as YouTube and Facebook .
 Such videos often contain comparisons , which can aid prospective buyers make an informed decision .
 The primary advantage of analyzing videos over text is the surplus of behavioral cues present in vocal and visual modalities .
@@ -22,7 +22,7 @@ In particular , utterance - level sentiment analysis is useful to understand the
 Recently , a number of approaches to multimodal sentiment analysis , producing interesting results , have been proposed .
 However , there are major issues that remain unaddressed .
 Not considering the relation and dependencies among the utterances is one of such issues .
-State - of - the - art approaches in this area treat utterances independently and ignore the order of utterances in a video .
+State - of - the - art approaches in this are a treat utterances independently and ignore the order of utterances in a video .
 Every utterance in a video is spoken at a distinct time and in a particular order .
 Thus , a video can be treated as a sequence of utterances .
 Like any other sequence classification problem , sequential utterances of a video may largely be contextually correlated and , hence , influence each other 's sentiment distribution .
@@ -31,7 +31,7 @@ We treat surrounding utterances as the context of the utterance that is aimed to
 For example , the MOSI dataset contains a video , in which a girl reviews the movie ' Green Hornet ' .
 At one point , she says " The Green Hornet did something similar " .
 Normally , doing something similar , i.e. , monotonous or repetitive might be perceived as negative .
-However , the nearby utterances " It engages the audience more " , " they took anew spin on it " , " and I just loved it " indicate a positive context .
+However , the nearby utterances " It engages the audience more " , " they took a new spin on it " , " and I just loved it " indicate a positive context .
 The hypothesis of the independence of tokens is quite popular in information retrieval and data mining , e.g. , bag - of - words model , but it has a lot limitations .
 In this paper , we discard such an oversimplifying hypothesis and develop a framework based on long shortterm memory ( LSTM ) that takes a sequence of utterances as input and extracts contextual utterancelevel features .
 The other uncovered major issues in the literature are the role of speaker - dependent versus speaker - independent models , the impact of each modality across the dataset , and generalization ability of a multimodal sentiment classifier .
@@ -111,7 +111,7 @@ In sequence classification , the classification of each member is dependent on t
 Utterances in a video maintain a sequence .
 We hypothesize that , within a video , there is a high probability of inter-utterance dependency with respect to their sentimental clues .
 In particular , we claim that , when classifying one utterance , other utterances can provide important contextual information .
-This calls fora model which takes into account such inter-dependencies and the effect these might have on the target utterance .
+This calls for a model which takes into account such inter-dependencies and the effect these might have on the target utterance .
 To capture this flow of informational triggers across utterances , we use a LSTM - based recurrent neural network ( RNN ) scheme .
 Long Short - Term Memory
 LSTM ) is a kind of RNN , an extension of conventional feedforward neural network .
@@ -173,7 +173,7 @@ Level - 2
 This level consists of a contextual LSTM network similar to Level - 1 but independent in training and computation .
 Output from each LSTM network in Level - 1 are concatenated and fed into this LSTM network , thus providing an inherent fusion scheme ( see ) .
 The performance of the second level banks on the quality of the features from the previous level , with better features aiding the fusion process .
-Algorithm 1 describes the overall computation for utterance classification .
+Algorithm 1 describes the over all computation for utterance classification .
 For the hierarchical framework , we train Level - 1 and Level - 2 successively but separately , i.e. , the training is not performed " end - to - end " .
 Weight
 Bias x " i , j ? AudioF eatures ( ui , j ) 8:
@@ -217,7 +217,7 @@ Multimodal Emotion Recognition Datasets
 IEMOCAP
 The IEMOCAP contains the acts of 10 speakers in a twoway conversation segmented into utterances .
 The medium of the conversations in all the videos is English .
-The database contains the following categorical labels : anger , happiness , sadness , neutral , excitement , frustration , fear , surprise , and other , but we take only the first four so as to compare with the state of the art .
+The data base contains the following categorical labels : anger , happiness , sadness , neutral , excitement , frustration , fear , surprise , and other , but we take only the first four so as to compare with the state of the art .
 Videos by the first 8 speakers are considered in the training set .
 The train / test split details are provided in , which provides information regarding train / test split of all the datasets .
 also provides cross - dataset split details where the datasets MOSI and MOUD are used for training and testing , respectively .
@@ -268,14 +268,14 @@ Generalization of the Models
 To test the generalizability of the models , we have trained our framework on complete MOSI dataset and tested on MOUD dataset ( ) .
 The performance was poor for audio and textual modality as the MOUD dataset is in Spanish while the model is trained on MOSI dataset , which is in English language .
 However , notably the visual modality performs better than the other two modalities in this experiment , which means that in cross-lingual scenarios facial expressions carry more generalized , robust information than audio and textual modalities .
-We could not carryout a similar experiment for emotion recognition as no other utterance - level dataset apart from the IEMO - CAP was available at the time of our experiments .
+We could not carry out a similar experiment for emotion recognition as no other utterance - level dataset apart from the IEMO - CAP was available at the time of our experiments .
 Qualitative Analysis
 The need for considering context dependency ( see Section 1 ) is of prime importance for utterancelevel sentiment classification .
 For example , in the utterance " What would have been a better name for the movie " , the speaker is attempting to comment the quality of the movie by giving an appropriate name .
 However , the sentiment is expressed implicitly and requires the contextual knowledge about the mood of the speaker and his / her general opinion about the film .
 The baseline unimodal - SVM and state of the art fail to classify this utterance correctly 4 . , 2 by However , information from neighboring utterances , e.g. , " And I really enjoyed it " and " The countryside which they showed while going through Ireland was astoundingly beautiful " indicate its positive context and help our contextual model to classify the target utterance correctly .
 Such contextual relationships are prevalent throughout the dataset .
-In order to have a better understanding of the roles of each modality for the overall classification , we have also done some qualitative analysis .
+In order to have a better understanding of the roles of each modality for the over all classification , we have also done some qualitative analysis .
 For example , the utterance " who does n't have any presence or greatness at all " was classified as positive by the audio classifier ( as " presence and greatness at all " was spoken with enthusiasm ) .
 However , the textual modality caught the negation induced by " does n't " and classified it correctly .
 The same happened to the utterance " amazing special effects " , which presented no jest of enthusiasm in the speaker 's voice nor face , but was correctly classified by the textual classifier .

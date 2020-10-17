@@ -3,8 +3,7 @@
     "Hyperparameters" : {
       "use" : {
         "pre-trained GloVe embeddings" : {
-          "of dimension d" : "w = 300",
-          "from sentence" : "We use pre-trained GloVe embeddings of dimension d w = 300 and produce character - based word representations via dc = 100 convolutional filters over character embeddings as in ."
+          "of dimension d" : "w = 300"
         }
       },
       "produce" : {

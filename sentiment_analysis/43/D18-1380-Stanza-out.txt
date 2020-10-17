@@ -58,7 +58,7 @@ Task Definition
 Given a sentence s = {w 1 , w 2 , , w N } consisting of N words , and an aspect list A = {a 1 , , a k } , where the aspect list size is k and each aspect a i = {w i 1 , , w i M } is a subsequence of sentence s , which contains M ?
 [ 1 , N ) words .
 Aspect - level sentiment classification evaluates sentiment polarity of the sentence s with respect to each aspect a i .
-We present the overall architecture of the proposed Multi - grained Attention Network ( MGAN ) model in .
+We present the over all architecture of the proposed Multi - grained Attention Network ( MGAN ) model in .
 It consists of the Input Embedding layer , the Contextual Layer , the Multigrained Attention Layer and the Output Layer .
 Input Embedding Layer
 Input Embedding Layer maps each word to a high dimensional vector space .
@@ -70,13 +70,13 @@ We employ a bidirectional Long Short - Term Memory Network ( BiLSTM ) on top of 
 Specifically , at time step t , given the input word embedding x , the update process of forward LSTM network can be formalized as follows :
 Where ?
 is the sigmoid activation function , it , ft , o tare the input gate , forget gate and output gate ,
-, and dis the hidden dimension size .
+, and d is the hidden dimension size .
 The backward LSTM does the similar process and we can get the concatenated output
 Given the word embeddings of a context sentence sand a corresponding aspect a j , we will employ the BiLSTM separately and get the sentence contextual output H ?
 R 2 d * N and aspect contextual output Q ?
 R 2 d * M .
 In addition , considering that the context words with closer distance to an aspect may have higher influence to the aspect , we utilize the position encoding mechanism to simulate the observation .
-Formally , the weight fora context word w j , which has l word - level distance from the aspect ( here we treat the aspect phrase as a single unit ) , is defined as follows :
+Formally , the weight for a context word w j , which has l word - level distance from the aspect ( here we treat the aspect phrase as a single unit ) , is defined as follows :
 Specifically , we treat the weights of words within the aspect as 0 in order to focus on the context words in the sentence .
 Then we can obtain the final contextual outputs of context words
 Multi - grained Attention Layer

@@ -32,7 +32,7 @@
 (Bi - GRU - PW||is||0.72 %)
 (0.72 %||as well as||1.41 %)
 (1.41 %||lower than||Bi - GRU)
-(Bi - GRU||on|| Restaurant and Laptop dataset)
+(Bi - GRU||on||Restaurant and Laptop dataset)
 (Results||has||Bi - GRU - PW)
 (Bi - GRU - PW||performs||even worse)
 (even worse||than||Bi - GRU)

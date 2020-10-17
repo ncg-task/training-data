@@ -9,8 +9,7 @@
       },
       "On average" : {
         "our algorithm" : {
-          "better than" : "baseline methods",
-          "from sentence" : "On average , our algorithm is better than these baseline methods and our best trained model outperforms them in a large margin ."
+          "better than" : "baseline methods"
         },
         "our best trained model" : {
           "outperforms them in" : "large margin",

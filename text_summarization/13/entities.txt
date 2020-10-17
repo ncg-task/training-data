@@ -1,9 +1,10 @@
+234	0	22	Sharpness of Attention
 237	3	10	compute
 237	15	30	entropy numbers
 237	31	43	by averaging
-237	44	67	overall generated words
-237	40	42	in
-237	75	89	validation set
+237	44	68	over all generated words
+237	69	71	in
+237	76	90	validation set
 239	3	7	note
 239	17	31	entropy of C2F
 239	32	34	is
@@ -15,6 +16,7 @@
 240	131	139	document
 240	140	144	over
 240	149	169	course of generation
+245	0	18	Attention Heatmaps
 250	0	2	In
 250	3	7	HIER
 250	13	20	observe
@@ -24,7 +26,7 @@
 255	3	7	C2 F
 255	25	28	get
 255	29	49	very sharp attention
-255	47	49	on
+255	50	52	on
 255	53	62	some rows
 16	21	29	to scale
 16	30	46	attention models
@@ -34,7 +36,7 @@
 17	95	129	two - layer hierarchical attention
 17	0	10	Instead of
 17	11	45	naively attending to all the words
-17	8	10	of
+17	46	48	of
 17	53	59	source
 18	0	3	For
 18	4	26	document summarization
@@ -54,7 +56,7 @@
 18	238	266	coarse - to - fine attention
 185	3	13	train with
 185	14	59	minibatch stochastic gradient descent ( SGD )
-185	9	13	with
+185	60	64	with
 185	65	78	batch size 20
 185	79	82	for
 185	83	92	20 epochs
@@ -66,8 +68,8 @@
 186	35	38	0.1
 186	39	42	for
 186	47	66	top - level encoder
-186	37	38	1
-186	39	42	for
+186	71	72	1
+186	73	76	for
 186	81	98	rest of the model
 186	105	125	begin decaying it by
 186	126	141	a factor of 0.5
@@ -75,15 +77,15 @@
 186	163	184	validation perplexity
 186	185	190	stops
 186	191	201	decreasing
-187	63	78	word embeddings
-187	21	25	with
-187	84	119	300 dimensional word2vec embeddings
 188	14	34	all other parameters
 188	35	48	as uniform in
 188	53	77	interval [ ? 0.1 , 0.1 ]
+187	63	78	word embeddings
+187	21	25	with
+187	84	119	300 dimensional word2vec embeddings
 187	3	6	use
 187	7	20	2 layer LSTMs
-187	21	25	with
+187	79	83	with
 187	26	42	500 hidden units
 191	7	14	dropout
 191	15	22	between

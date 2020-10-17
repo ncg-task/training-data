@@ -4,7 +4,7 @@ abstract
 In document - level sentiment classification , each document must be mapped to a fixed length vector .
 Document embedding models map each document to a dense , lowdimensional vector in continuous vector space .
 This paper proposes training document embeddings using cosine similarity instead of dot product .
-Experiments on the IMDB dataset show that accuracy is improved when using cosine similarity compared to using dot product , while using feature combination with Nave Bayes weighted bag of n-grams achieves anew state of the art accuracy of 97.42 % .
+Experiments on the IMDB dataset show that accuracy is improved when using cosine similarity compared to using dot product , while using feature combination with Nave Bayes weighted bag of n-grams achieves a new state of the art accuracy of 97.42 % .
 Code to reproduce all experiments is available at https://github.com/tanthongtan/dv-cosine.
 Introduction
 In document classification tasks such as sentiment classification ( in this paper we focus on binary sentiment classification of long movie reviews , i.e. determining whether each review is positive or negative ) , the choice of document representation is usually more important than the choice of classifier .
@@ -14,7 +14,7 @@ This paper aims to improve existing document embedding models by training docume
 For example , in the basic model of trying to predict given a document - the words / n - grams in the document , instead of trying to maximize the dot product between a document vector and vectors of the words / n - grams in the document over the training set , we 'll be trying to maximize the cosine similarity instead .
 The motivation behind this is twofold .
 Firstly , cosine similarity serves as a regularization mechanism ; by ignoring vector magnitudes , there is less incentive to increase the magnitudes of the input and output vectors , whereas in the case of dot product , vectors of frequent document - n - gram pairs can be made to have a high dot product simply by increasing the magnitudes of each vector .
-The weights learned should be smaller overall .
+The weights learned should be smaller over all .
 Secondly , as cosine similarity is widely used to measure document similarity , we believe our method should more directly maximize the cosine similarity between similar document vectors .
 The angle between similar documents should be lower , and that may encode useful information for distinguishing between different types of documents .
 We 'll compare the performance of our model on the IMDB dataset with dot product and to determine if our model serves anything beyond simple regularization , we 'll also compare it to dot product using L2 regularization .
@@ -23,9 +23,9 @@ Here we review methods of text representation , in which there are two main cate
 The bag of words model ( Joachims , 1998 ) represents text as a fixed length vector of length equal to the number of distinct n-grams in the vocabulary .
 Naive Bayes - Support Vector Machine ( NB - SVM ) utilizes nave bayes weighted bag of n-grams vectors for representing texts , feeding these vectors into a logistic regression or support vector machine classifier .
 The first example of a neural embedding model is word embeddings which was proposed by , while objective functions utilizing the negative sampling technique for efficient training of word embeddings were proposed in 2013 by .
-The aim of word embeddings is to map each word to areal vector , whereby the dot product between two vectors represents the amount of similarity in meaning between the words they represent .
+The aim of word embeddings is to map each word to are al vector , whereby the dot product between two vectors represents the amount of similarity in meaning between the words they represent .
 There are two versions of word2vec : continuous bag of words ( CBOW ) , in which a neural network is trained to predict the next word in apiece of text given the word 's context , and skip - gram , where it will try to predict a word 's context given the word itself .
-Ina 2017 paper Arora et al .
+In a 2017 paper Arora et al .
 produce Sentence Embeddings by computing the weighted average of word vectors , where each word is weighted using smooth inverse frequency , and removing the first principle component .
 Paragraph Vector
 ( Le and Mikolov , 2014 ) maybe seen as a modification to word embeddings in order to embed as vectors paragraphs as opposed to words .
@@ -53,7 +53,7 @@ Architecture
 A neural network is trained to be useful in predicting , given a document , the words and n-grams in the document , in the process of doing so learning useful document embeddings .
 Formally , the objective function to be minimized is defined as follows :
 where dis a document ,
-Dis the set of all documents in the dataset , w o is an n-gram and W dis the set of all n-grams in the document d. p ( w o | d ) is defined using softmax :
+Dis the set of all documents in the dataset , w o is an n-gram and W d is the set of all n-grams in the document d. p ( w o | d ) is defined using softmax :
 We have cos ?
 w defined as follows :
 where v d and v ware vector representations of the document d and the word / n - gram w respectively and are parameters to be learned .
@@ -109,7 +109,7 @@ This is to account for random factors such as shuffling document and word ids , 
 From here we see that using cosine similarity instead of dot product improves accuracy across the board .
 The results are most apparent in the case of unigrams + bigrams .
 However it is not to suggest that switching from dot product to cosine similarity alone improves accuracy as other minor ad - justments and hyperparameter tuning as explained was done .
-However it may imply that using cosine similarity allows fora higher potential accuracy as was achieved in these experiments .
+However it may imply that using cosine similarity allows for a higher potential accuracy as was achieved in these experiments .
 Regardless , we believe the comparisons are fair since each model is using its own set of optimal hyperparameters , but for the full sake of comparison , leaving everything the same and only switching out dot product for cosine similarity (? = 1 ) as well as switching it out and using a sensible value of ? at ? = 6 both achieve an accuracy of around 50 % .
 This is because our model fails whenever the learning rate is too large .
 As seen during grid search , whenever the initial learning rate was 0.25 , accuracy was always poor .
@@ -131,7 +131,7 @@ Conclusion and Future Work
 Our proposed model trains document embeddings using cosine similarity as the similarity measure and we show that sentiment classification performance on the IMDB dataset is improved when utilizing these embeddings as opposed to those trained using dot-product .
 Cosine similarity may help reduce overfitting to the embedding task , and this regularization in turn produces more useful embeddings .
 We also show that concatenating these embeddings with Nave bayes weighed bag of n-grams results in high accuracy on the IMDB dataset .
-An important future development is to carryout experiments on other datasets .
+An important future development is to carry out experiments on other datasets .
 It is essential that we benchmark on more than one dataset , to prevent superficially good results by overfitting hyperparameters or the cosine similarity model itself to the IMDB dataset .
 Other tasks and datasets include : ( 1 ) sentiment analysis - the Stanford sentiment treebank dataset , the polarity dataset v2.0 , ( 2 ) topic classification - AthR , XGraph , BbCrypt , and ( 3 ) semantic relatedness tasks - datasets from the SemEval semantic textual similarity ( STS ) tasks .
 A Obtaining the weight update equations in the case of cosine similarity

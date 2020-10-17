@@ -3,8 +3,7 @@
     "Results" : {
       "has" : {
         "BERT - single" : {
-          "achieved" : "better results",
-          "from sentence" : "We find that BERT - single has achieved better results on these two subtasks , and BERT - pair has achieved further improvements over BERT - single ."
+          "achieved" : "better results"
         },
         "BERT - pair" : {
           "achieved" : {

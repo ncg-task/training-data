@@ -1,11 +1,11 @@
 title
 Document Expansion by Query Prediction
 abstract
-One technique to improve the retrieval effectiveness of a search engine is to expand documents with terms that are related or representative of the documents ' content .
+One technique to improve the retrieval effectiveness of a search engine is to expand documents with terms thatare related or representative of the documents ' content .
 From the perspective of a question answering system , this might comprise questions the document can potentially answer .
-Following this observation , we propose a simple method that predicts which queries will be issued fora given document and then expands it with those predictions with a vanilla sequence - to - sequence model , trained using datasets consisting of pairs of query and relevant documents .
+Following this observation , we propose a simple method that predicts which queries will be issued for a given document and then expands it with those predictions with a vanilla sequence - to - sequence model , trained using datasets consisting of pairs of query and relevant documents .
 By combining our method with a highly - effective re-ranking component , we achieve the state of the art in two retrieval tasks .
-Ina latencycritical regime , retrieval results alone ( without re-ranking ) approach the effectiveness of more computationally expensive neural re-rankers but are much faster .
+In a latencycritical regime , retrieval results alone ( without re-ranking ) approach the effectiveness of more computationally expensive neural re-rankers but are much faster .
 Code to reproduce experiments and trained models can be found at https://github.
 com/nyu-dl/dl4ir-doc2query .
 Introduction
@@ -105,7 +105,7 @@ Expanding with copied words gives an MRR@10 of 19.7 .
 We achieve a higher MRR@10 of 21.5 when documents are expanded with both types of words , showing that they are complementary .
 Further analyses show that one source of improvement comes from having more relevant documents for the re-ranker to consider .
 We find that the Recall@1000 of the MS MARCO development set increased from 85.3 ( BM25 ) to 89.3 ( BM25 + Doc2query ) .
-Results show that BERT is indeed able to identify these correct answers from the improved candidate pool and bring them to the top of the ranked list , thus improving the overall MRR .
+Results show that BERT is indeed able to identify these correct answers from the improved candidate pool and bring them to the top of the ranked list , thus improving the over all MRR .
 As a contrastive condition , we find that query expansion with RM3 hurts in both datasets , whether applied to the unexpanded corpus ( BM25 + RM3 ) or the expanded version ( BM25 + Doc2query + RM3 ) .
 This is a somewhat surprising result because query expansion usually improves effectiveness in document retrieval , but this can likely be explained by the fact that both MS MARCO and CAR are precision oriented .
 This result shows that document expansion can be more effective than query expansion , most likely because there are more signals to exploit as documents are much longer .
@@ -119,4 +119,4 @@ Furthermore , the general approach allows developers to shift the computational 
 Our implementation is based on integrating three open - source toolkits : Open NMT , Anserini , and Tensor Flow BERT .
 The relative simplicity of our approach aids in the reproducibility of our results and paves the way for further improvements in document expansion . :
 Retrieval effectiveness on the development set of MS MARCO when using different decoding methods to produce queries .
-On the x - axis , we vary the number of predicted queries that are appended to the original documents .
+On the x - axis , we vary the number of predicted queries thatare appended to the original documents .

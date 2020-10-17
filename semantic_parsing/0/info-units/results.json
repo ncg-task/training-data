@@ -24,13 +24,13 @@
           "struggle with" : "WHERE clause prediction",
           "from sentence" : "As Component Matching results in shows , all models struggle with WHERE clause prediction the most ."
         },
-        "overall performances" : {
+        "over all performances" : {
           "of" : {
             "all models" : {
               "are" : "low"
             }
           },
-          "from sentence" : "In general , the overall performances of all models are low , indicating that our task is challenging and there is still a large room for improvement ."
+          "from sentence" : "In general , the over all performances of all models are low , indicating that our task is challenging and there is still a large room for improvement ."
         } 
       }      
     }

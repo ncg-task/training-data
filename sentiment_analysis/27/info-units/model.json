@@ -29,8 +29,7 @@
           }
         },
         "aspect" : {
-          "treated as" : "node",
-          "from sentence" : "In our case , an aspect is treated as a node , and an edge represents the sentiment dependency relation of two nodes ."
+          "treated as" : "node"
         },
         "edge" : {
           "represents" : {

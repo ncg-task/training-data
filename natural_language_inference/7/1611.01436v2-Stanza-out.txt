@@ -22,7 +22,7 @@ In contrast , here we argue that it is beneficial to simplify the decoding proce
 By explicitly representing each answer span , our model can be globally normalized during training and decoded exactly during evaluation .
 A naive approach to building the O ( N 2 ) spans of up to length N would require a network that is cubic in size with respect to the passage length , and such a network would be untrainable .
 To overcome this , we present a novel neural architecture called RASOR that builds fixed - length span representations , reusing recurrent computations for shared substructures .
-We demonstrate that directly classifying each of the competing spans , and training with global normalization overall possible spans , leads to a significant increase in performance .
+We demonstrate that directly classifying each of the competing spans , and training with global normalization over all possible spans , leads to a significant increase in performance .
 In our experiments , we show an increase in performance over of 5 % in terms of exact match to a reference answer , and 3.6 % in terms of predicted answer F1 with respect to the reference .
 On both of these metrics , we close the gap between Rajpurkar et al. 's baseline and the human - performance upper-bound by > 50 %.
 EXTRACTIVE QUESTION ANSWERING
@@ -63,7 +63,7 @@ We model this by augmenting the passage word embeddings with additional embeddin
 In this section , we motivate and describe the architecture for RASOR in a top - down manner .
 SCORING ANSWER SPANS
 The goal of our extractive question answering system is to predict the single best answer span among all candidates from the passage p , denoted as A ( p ) .
-Therefore , we define a probability distribution overall possible answer spans given the question q and passage p , and the predictor function finds the answer span with the maximum likelihood :
+Therefore , we define a probability distribution over all possible answer spans given the question q and passage p , and the predictor function finds the answer span with the maximum likelihood :
 One might be tempted to introduce independence assumptions that would enable cheaper decoding .
 For example , this distribution can be modeled as ( 1 ) a product of conditionally independent distributions ( binary ) for every word or ( 2 ) a product of conditionally independent distributions ( over words ) for the start and end indices of the answer span .
 However , we show in Section 5.2 that such independence assumptions hurt the accuracy of the model , and instead we only assume a fixed - length representation ha of each candidate span that is scored and normalized with a softmax layer ( Span score and Softmax in ) :
@@ -97,7 +97,7 @@ Similar to the previous question representation , an attention score is computed
 Additionally , we incorporate contextual information with a BiLSTM before aggregating the outputs using this attention mechanism .
 The goal is to generate a coarse - grained summary of the question that depends on word order .
 Formally , the passage - independent question representation q indep is computed as follows :
-This representation is a bidirectional generalization of the question representation recently proposed by fora different question - answering task .
+This representation is a bidirectional generalization of the question representation recently proposed by for a different question - answering task .
 Given the above three components , the complete question - focused passage word embedding for pi is their concatenation :
 LEARNING
 Given the above model specification , learning is straightforward .
@@ -140,7 +140,7 @@ Membership prediction 57.9 69.7 BIO sequence prediction 63.9 73.0 Endpoints pred
 Learning objectives
 Given a fixed architecture that is capable of encoding the input questionpassage pairs , there are many ways of setting up a learning objective to encourage the model to predict the correct span .
 In , we provide comparisons of some alternatives ( learned end - toend ) given only the passage - level BiLSTM from RASOR .
-In order to provide clean comparisons , we restrict the alternatives to objectives that are trained and evaluated with exact decoding .
+In order to provide clean comparisons , we restrict the alternatives to objectives thatare trained and evaluated with exact decoding .
 The simplest alternative is to consider this task as binary classification for every word ( Membership prediction in ) .
 In this baseline , we optimize the logistic loss for binary labels indicating whether passage words belong to the correct answer span .
 At prediction time , a valid span can be recovered in linear time by finding the maximum contiguous sum of scores .

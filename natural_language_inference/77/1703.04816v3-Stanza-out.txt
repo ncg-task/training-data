@@ -17,7 +17,7 @@ A typical neural architecture consists of an embedding - , encoding - , interact
 Most such systems describe several innovations for the different layers of the architecture with a special focus on developing powerful interaction layer that aims at modeling word - by - word interaction between question and context .
 Although a variety of extractive QA systems have been proposed , there is no competitive neural baseline .
 Most systems were builtin what we calla top - down process that proposes a complex architecture and validates design decisions by an ablation study .
-Most ablation studies , however , remove only a single part of an overall complex architecture and therefore lack comparison to a reasonable neural baseline .
+Most ablation studies , however , remove only a single part of an over all complex architecture and therefore lack comparison to a reasonable neural baseline .
 This gap raises the question whether the complexity of current systems is justified solely by their empirical results .
 Another important observation is the fact that seemingly complex questions might be answerable by simple heuristics .
 Let 's consider the following example :
@@ -99,10 +99,10 @@ Answer Layer
 After encoding context X to H = [ h 1 , ... , h L X ] and the question Q to Z = [ z 1 , ... , z L Q ] , we first compute a weighted , n-dimensional question representationz of Q ( Eq. 7 ) .
 Note that this representation is context - independent and as such only computed once , i.e. , there is no additional wordby - word interaction between context and question .
 The probability distribution p s for the start location of the answer is computed by a 2 - layer feedforward neural network with a rectified - linear ( ReLU ) activated , hidden layer s j as follows : The conditional probability distribution p e for the end location conditioned on the start location sis computed similarly by a feed - forward neural network with hidden layer e j as follows :
-The overall probability p of predicting an answer span ( s , e ) is p ( s , e ) = p s ( s ) p e ( e |s ) .
+The over all probability p of predicting an answer span ( s , e ) is p ( s , e ) = p s ( s ) p e ( e |s ) .
 The model is trained to minimize the cross - entropy loss of the predicted span probability p ( s , e ) .
 Beam- search During prediction time , we compute the answer span with the highest probability by employing beam - search using a beam - size of k .
-This means that ends for the top -k starts are predicted and the span with the highest overall probability is predicted as final answer .
+This means that ends for the top -k starts are predicted and the span with the highest over all probability is predicted as final answer .
 Comparison to Prior Architectures
 Many neural architectures for extractive QA have been conceived very recently .
 Most of these systems can be broken down into four basic layers for which individual innovations were proposed .
@@ -162,12 +162,12 @@ We see that the most crucial performance boost stems from the introduction of ei
 However , all other extensions also achieve notable improvements typically between 1 and 2 % F1 .
 Beam - search slightly improves results which shows that the most probable start is not necessarily the start of the best answer span .
 In general , these results are interesting in many ways .
-For instance , it is surprising that a simple binary feature like wiq b can have such a dramatic effect on the overall performance .
+For instance , it is surprising that a simple binary feature like wiq b can have such a dramatic effect on the over all performance .
 We believe that the reason for this is the fact that an encoder without any knowledge of the actual question has to account for every possible question that might be asked , i.e. , it has to keep track of the entire context around each token in its recurrent state .
 An informed encoder , on the other hand , can selectively keep track of question related information .
 It can further abstract over concrete entities to their respective types because it is rarely the case that many entities of the same type occur in the question .
 For example , if a person is mentioned in the question the context encoder only needs to remember that the " question - person " was mentioned but not the concrete name of the person .
-Another interesting finding is the fact that additional character based embeddings have a notable effect on the overall performance which was already observed by ; .
+Another interesting finding is the fact that additional character based embeddings have a notable effect on the over all performance which was already observed by ; .
 We see further improvements when employing representation fusion to allow for more interaction .
 This shows that a more sophisticated interaction layer can help .
 However , the differences are not substantial , indicating that this extension does not offer any systematic advantage .
@@ -269,5 +269,5 @@ The official scoring measure of MsMARCO for generative models is ROUGE - L and B
 Even though our model is extractive we use our extracted answers as if they were generated .
 The results are shown in .
 The strong performance of our purely extractive system on the generative MsMARCO dataset is notable .
-It shows that answers to Bing queries can mostly be extracted directly from web documents without the need fora more complex generative approach .
+It shows that answers to Bing queries can mostly be extracted directly from web documents without the need for a more complex generative approach .
 Since this was only an initial experiment on generative QA using extractive QA and the methodology used for training , pre-and post-processing on this dataset for the other models , especially for , is unclear , the comparability to the other QA systems is limited .

@@ -16,7 +16,7 @@
 199	34	73	our proposed dependent reading strategy
 199	80	88	leads to
 199	89	112	significant improvement
-199	61	63	in
+199	128	130	in
 199	135	149	encoding stage
 203	0	12	demonstrates
 203	33	49	best performance
@@ -72,7 +72,7 @@
 31	8	36	premise u and a hypothesis v
 31	68	79	considering
 31	80	90	dependency
-31	69	71	on
+31	91	93	on
 31	94	104	each other
 32	17	24	employs
 32	27	51	soft attention mechanism
@@ -85,7 +85,7 @@
 33	62	77	inference stage
 33	86	90	uses
 33	93	127	similar dependent reading strategy
-33	62	64	in
+33	128	130	in
 33	131	146	both directions
 34	12	20	decision
 34	24	36	made through
@@ -112,8 +112,8 @@
 177	191	219	previous non-ensemble models
 177	0	24	DR - BiLSTM ( Ensemble )
 177	25	33	achieves
-177	38	46	accuracy
-177	47	49	of
+177	135	143	accuracy
+177	144	146	of
 177	50	56	89.3 %
 177	63	74	best result
 177	75	86	observed on

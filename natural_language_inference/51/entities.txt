@@ -3,14 +3,14 @@
 159	50	54	NUTM
 159	55	60	using
 159	61	84	direct attention ( DA )
-159	50	54	NUTM
-159	55	60	using
+159	87	91	NUTM
+159	92	97	using
 159	98	139	key - value without regularization ( KV )
-159	50	54	NUTM
-159	55	60	using
+159	142	146	NUTM
+159	147	152	using
 159	153	196	fixed , uniform program distribution ( UP )
 159	203	214	vanilla NTM
-159	16	20	with
+159	215	219	with
 159	220	244	2 memory heads ( h = 2 )
 163	12	23	demonstrate
 163	29	31	DA
@@ -26,10 +26,10 @@
 165	27	40	NUTM converge
 165	52	56	with
 165	57	73	fewer iterations
-165	52	56	with
 166	4	15	performance
 166	16	18	is
 166	19	35	further improved
+166	36	40	with
 166	45	73	proposed regularization loss
 167	0	2	UP
 167	3	16	underperforms
@@ -43,10 +43,10 @@
 168	21	26	shows
 168	27	54	slightly better convergence
 168	55	66	compared to
-168	4	7	NTM
+168	71	74	NTM
 168	91	104	underperforms
 168	105	119	NUTM ( p = 2 )
-168	8	12	with
+168	120	124	with
 168	125	152	1 head and fewer parameters
 21	25	45	step further towards
 21	46	49	UTM
@@ -62,9 +62,6 @@
 22	124	132	learning
 22	133	150	complicated tasks
 22	64	73	providing
-22	79	90	flexibility
-22	93	105	reuseability
-22	110	120	modularity
 23	19	25	stores
 23	30	37	weights
 23	38	40	of
@@ -77,14 +74,14 @@
 23	147	156	timesteps
 23	161	168	updated
 23	169	175	slowly
-23	102	105	via
+23	176	179	via
 23	180	195	backpropagation
 24	104	115	referred to
 24	119	157	Neural Stored - program Memory ( NSM )
 24	164	172	learn to
 24	173	179	switch
 24	184	202	programs / weights
-24	3	5	in
+24	203	205	in
 24	210	228	controller network
 24	229	242	appropriately
 24	245	256	adapting to
@@ -94,7 +91,7 @@
 24	57	59	of
 24	318	333	sequential task
 24	339	354	different tasks
-24	3	5	in
+24	355	357	in
 24	358	391	continual and few - shot learning
 2	0	30	Neural Stored - program Memory
 6	97	120	stored - program memory
@@ -120,7 +117,7 @@
 149	40	48	converge
 149	56	67	generalizes
 149	68	74	better
-149	37	39	to
+149	75	77	to
 149	78	94	unseen sequences
 149	95	103	that are
 149	104	110	longer

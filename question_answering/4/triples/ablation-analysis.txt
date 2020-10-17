@@ -4,7 +4,7 @@
 (all model components||are crucial to||DECAPROP)
 (Ablation analysis||has||DECAENC)
 (DECAENC||seems to contribute||most)
-(most||to||overall performance)
+(most||to||over all performance)
 (Ablation analysis||observe||superiority)
 (superiority||of||DECAPROP)
 (DECAPROP||over||R - NET)

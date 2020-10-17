@@ -33,7 +33,7 @@
 29	129	137	question
 29	142	150	passages
 32	19	38	pointer - generator
-32	35	37	to
+32	39	41	to
 32	44	63	conditional decoder
 32	67	78	introducing
 32	82	98	artificial token
@@ -53,7 +53,6 @@
 181	5	14	our model
 181	15	22	achieve
 181	23	57	state - of - the - art performance
-182	59	61	on
 182	0	5	shows
 182	11	27	our single model
 182	30	42	trained with
@@ -71,6 +70,7 @@
 183	55	64	NLG style
 183	65	69	were
 183	70	73	low
+184	61	63	on
 184	7	16	our model
 184	17	24	without
 184	25	45	multi-style learning

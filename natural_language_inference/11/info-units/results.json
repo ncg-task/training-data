@@ -13,8 +13,7 @@
               }
             }
           },
-          "from sentence" : "Wikipedia
-( W ) yields further , significant improvements on TriviaQA , slightly outperforming the current state of the art model ."
+          "from sentence" : "Wikipedia ( W ) yields further , significant improvements on TriviaQA , slightly outperforming the current state of the art model ."
 
         },
         "RTE experiments" : {

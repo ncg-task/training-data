@@ -30,7 +30,7 @@ Our model therefore learns to recognize important source words and source depend
 Our research contributions include the following :
 we introduce novel neural architectures that encourage salient source words / relations to be preserved in summaries .
 The framework naturally combines the dependency parse tree structure with the copy mechanism of an abstractive summarization system .
-To the best of our knowledge , this is the first attempt at comparing various neural architectures for this purpose ; we study the effectiveness of several important components , including the vocabulary size , a coveragebased regularizer , and abeam search with reference mechanism ; through extensive experiments we demonstrate that incorporating syntactic information in neural sentence summarization is effective .
+To the best of our knowledge , this is the first attempt at comparing various neural architectures for this purpose ; we study the effectiveness of several important components , including the vocabulary size , a coveragebased regularizer , and a beam search with reference mechanism ; through extensive experiments we demonstrate that incorporating syntactic information in neural sentence summarization is effective .
 Our approach surpasses state - of - the - art published systems on the benchmark dataset .
 1
 Related Work
@@ -44,7 +44,7 @@ The resulting summary sentences can contain misleading information ( e.g. , " mo
 Natural language generation ( NLG ) - based abstractive summarization also makes extensive use of structural information , including syntactic / semantic parse trees , discourse structures , and domainspecific templates built using a text planner or an OpenIE system .
 In particular , leverage OpenIE and dependency parsing to extract fact tuples from the source text and use those to improve the faithfulness of summaries .
 Different from the above approaches , this paper seeks to directly incorporate source - side syntactic structure in the copy mechanism of an abstractive sentence summarization system .
-It learns to recognize important source words and relations during training , while striving to preserve them in the summaries attest time to aid reproduction of factual details .
+It learns to recognize important source words and relations during training , while striving to preserve them in the summaries at test time to aid reproduction of factual details .
 Our intent of incorporating source syntax in summarization is different from that of neural machine translation ( NMT ) , in part because NMT does not handle the information loss from source to target .
 In contrast , a summarization system must selectively preserve source content to render concise and grammatical summaries .
 We specifically focus on sentence summarization , where the goal is to reduce the first sentence of an article to a title - like summary .
@@ -61,17 +61,17 @@ We build an encoder - decoder architecture for this work .
 An encoder condenses the entire source text to a continuous vector ; it also learns a vector representation for each unit of the source text ( e.g. , words as units ) .
 In this work we use a two - layer stacked bi-directional Long Short - Term Memory networks as the encoder , where the input to the second layer is the concatenation of hidden states from the forward and backward passes of the first layer .
 We obtain the hidden states of the second layer ; they are denoted by he i .
-The source text vector is constructed by averaging overall he i and passing the vector through a feedforward layer with tanh activation to convert from the encoder hidden states to an initial decoder hidden state ( h d 0 ) .
+The source text vector is constructed by averaging over all he i and passing the vector through a feedforward layer with tanh activation to convert from the encoder hidden states to an initial decoder hidden state ( h d 0 ) .
 This process is illustrated in Eq.
 ( 2 ) .
 A decoder unrolls the summary by predicting one word at a time .
-During training , the decoder takes as input the embeddings of ground truth summary words , denoted by y t , while attest time y tare embeddings of system predicted summary words ( i.e. , teacher forcing ) .
+During training , the decoder takes as input the embeddings of ground truth summary words , denoted by y t , while at test time y tare embeddings of system predicted summary words ( i.e. , teacher forcing ) .
 We implement an LSTM decoder with the attention mechanism .
 A context vector ct is used to encode the source words that the system attends to for generating the next summary word .
 It is defined in Eqs ( 3 - 5 ) , where [ || ] denotes the concatenation of two vectors .
 The ?
 matrix measures the strength of interaction between the decoder hidden states {h d t } and encoder hidden states {h e i }.
-To predict the next word , the context vector ct and h d tare concatenated and used as input to build anew vector h d t ( Eq. ) .
+To predict the next word , the context vector ct and h d tare concatenated and used as input to build a new vector h d t ( Eq. ) .
 h d t is a surrogate for semantic meanings carried at time step t of the decoder .
 It is subsequently used to compute a probability distribution over the output vocabulary ( Eq. ) .
 The copy mechanism allows words in the source sequence to be selectively copied to the target sequence .
@@ -82,12 +82,12 @@ The basic model is similar to that of the pointer - generator networks .
 The switch is a feedforward layer with sigmoid activation ( Eq. ) .
 At time step t , it s input is a concatenation of the decoder hidden state h d t , context vector ct , and the embedding of the previously generated wordy t?1 .
 For predicting the next word , we combine the generation and copy probabilities , shown in Eq. ( 9 ) .
-If a word w appears once or more in the input text , it s copy probability ( i:w i =w ? t , i ) is the sum of the attention weights overall its occurrences .
+If a word w appears once or more in the input text , it s copy probability ( i:w i =w ? t , i ) is the sum of the attention weights over all its occurrences .
 If w appears in both the vocabulary and source text , P ( w ) is a weighted sum of the two probabilities .
 Structure - Infused Copy Mechanisms
 The aforementioned copy mechanism attends to source words based on their " semantic " importance encoded in {? t , i } , which measures the semantic relatedness of the encoder hidden state he i and the decoder hidden state h d t ( Eq. ( 4 ) ) .
 However , the source syntactic structure is ignored .
-This is problematic , because it hurts the system 's ability to effectively identify summary - worthy source words that are syntactically important .
+This is problematic , because it hurts the system 's ability to effectively identify summary - worthy source words thatare syntactically important .
 We next propose three strategies to inject source syntactic structure to the copy mechanism .
 Shallow Combination
 Structural info
@@ -97,7 +97,7 @@ Each structural label is mapped to a fixed - length , trainable structural embed
 However , a critical question remains as to where the structural embeddings should be injected in the existing neural architecture .
 This problem has not yet been systematically investigated .
 In this work , we compare two settings :
-Struct + Input concatenates structural embeddings of position i ( flattened into one vector s e i ) with the source word embedding xi and uses them as anew form of input to the encoder : .
+Struct + Input concatenates structural embeddings of position i ( flattened into one vector s e i ) with the source word embedding xi and uses them as a new form of input to the encoder : .
 Structural embeddings are important complements to existing neural architectures .
 However , it is unclear whether they should be supplied as input to the encoder or be left out of the encoding process and directly concatenated with the encoder hidden states .
 This is a critical question we seek to answer by comparing the two settings .
@@ -107,7 +107,7 @@ Intuitively , a source word is copied to the summary for two reasons : it contai
 Without explicitly modeling the two factors , ' semantics ' can outweigh ' structure , ' resulting in summaries that fail to keep the original meaning intact .
 In the following we propose a two - way mechanism to separately model the " semantic " and " structural " importance of source words .
 2 - Way Combination ( + Word )
-Our new architecture involves two attention matrices that are parallel to each other , denoted by ? and ?. ?
+Our new architecture involves two attention matrices thatare parallel to each other , denoted by ? and ?. ?
 t , i is defined as previously in Eq. ( 3 - 4 ) .
 It represents the " semantic " aspect , calculated as the strength of interaction between the encoder hidden state he i and the decoder hidden state h d t .
 In contrast , ?
@@ -142,7 +142,7 @@ Assume there is a dependency edge w j ? w i ( j < i ) whose salience score is de
 At time step t , we calculate ? t , j ? t , i ( or ? t , j ?
 t , j for edge w j ?
 w i ) as the probability of w i being selected to the summary , given that one of it s prior words w j ( j< i ) is included in the summary and there is a dependency edge connecting the two .
-By summing the impact overall its previous words , we obtain the likelihood of the i - th source word being included to the summary at time step tin order to preserve salient source relations ; this is denoted by ? t , i ( Eq. ( 15 ) ) .
+By summing the impact over all its previous words , we obtain the likelihood of the i - th source word being included to the summary at time step tin order to preserve salient source relations ; this is denoted by ? t , i ( Eq. ( 15 ) ) .
 Next , we define ? t , i ? ? t , i + ?
 t , i as a weighted combination of semantic and structural salience ( Eq. ( 16 ) ) .
 ?
@@ -150,7 +150,7 @@ t , i replace ?
 t , i to become the new attention values used to estimate the context vector c t ) .
 Finally , the calculation of generation probabilities P vocab ( w ) , switch value p gen , and probabilities for predicting the next word P ( w ) remains the same as previously ( Eq. ( 6 - 9 ) ) .
 Learning Objective and Beam Search
-We next describe our learning objective , including a coverage - based regularizer , and abeam search with reference mechanism .
+We next describe our learning objective , including a coverage - based regularizer , and a beam search with reference mechanism .
 We want to investigate the effectiveness of these techniques on sentence summarization , which has not been explored in previous work .
 Learning objective .
 Our training proceeds by minimizing a per-target - word cross - entropy loss function .
@@ -174,7 +174,7 @@ Beam search with reference .
 During testing , we employ greedy search to generate system summary sequences .
 For the task of summarization , the ground truth summary sequences are usually close to the source texts .
 This property can be leveraged in beam search .
-describe abeam search with reference mechanism that rewards system summaries that have a high degree of bigram overlap with the source texts .
+describe a beam search with reference mechanism that rewards system summaries that have a high degree of bigram overlap with the source texts .
 We describe it in Eq. ( 18 ) , where where S ( w ) denotes the score of word w.
 B ( y <t , x ) measures the number of bigrams shared by the system summary ( up to time step t- 1 ) and the source text ; {y <t , w} add s a word w to the end of the system summary .
 The shorter the source text ( measured by length S ) , the more weight a shared bigram will add to the score of the current word w .
@@ -189,7 +189,7 @@ The task is to reduce the first sentence of an article to a title - like summary
 We obtain dependency parse trees for source sentences using the Stanford neural network parser .
 We also use the standard train / valid / test data splits .
 Following , the train and valid splits are pruned 2 to improve the data quality .
-Spurious pairs that are repetitive , overly long / short , and pairs whose source and summary sequences have little word overlap are removed .
+Spurious pairs thatare repetitive , overly long / short , and pairs whose source and summary sequences have little word overlap are removed .
 No pruning is performed for instances in the test set .
 The processed corpus contains 4,018 K training instances .
 We construct two ( non -overlapped ) validation sets : " valid - 4096 " contains 4,096 randomly sampled instances from the valid split ; it is used for hyperparameter tuning and early stopping .
@@ -225,7 +225,7 @@ ROUGE results on test set .
 We compare our proposed approach with a range of state - of - the - art neural summarization systems .
 Results on the standard Gigaword test set are presented in .
 Details about these systems are provided in .
-Overall , our proposed approach with structureinfused pointer networks perform strongly , yielding ROUGE scores that are on - par with or surpassing state - of - the - art published systems .
+Overall , our proposed approach with structureinfused pointer networks perform strongly , yielding ROUGE scores thatare on - par with or surpassing state - of - the - art published systems .
 Notice that the scores on the valid - 2000 dataset are generally higher than those of test - 1951 .
 This is because the ( source , summary ) pairs in the Gigaword test set are not pruned ( see 4.1 ) .
 In some cases , none ( or very few ) of the summary words appear in the source .
@@ -260,7 +260,7 @@ Dependency relations .
 We investigate the source dependency relations preserved in the summaries in .
 A source relation is considered preserved if both its words appear in the summary .
 We observe that the models implementing structure - infused copy mechanisms ( e.g. , " Struct + 2 Way + Word " ) are more likely to preserve important dependency relations in the summaries , including nsubj , dobj , amod , nmod , and nmod : poss .
-Dependency relations that are less important are less likely to be preserved .
+Dependency relations thatare less important are less likely to be preserved .
 These results show that our structure - infused copy mechanisms can learn to recognize the importance of dependency relations and selectively preserve them in the summaries .
 Coverage and reference beam .
 In , we investigate the effect of applying the coverage regularizer ( " coverage " ) and reference - based beam search ( " ref beam " ) ( 3.3 ) to our models .

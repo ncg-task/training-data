@@ -18,7 +18,7 @@ Our experiments also show that seq2seq models tend to " lose control " sometimes
 For example , 3 % of summaries contain less than 3 words , while there are 4 summaries repeating a word for even 99 times .
 These results largely reduce the informativeness and readability of the generated summaries .
 In addition , we find seq2seq models usually focus on copying source words in order , without any actual " summarization " .
-Therefore , we argue that , the free generation based on the source sentence is not enough fora seq2seq model .
+Therefore , we argue that , the free generation based on the source sentence is not enough for a seq2seq model .
 Template based summarization ( e.g. , ) is a traditional approach to abstractive summarization .
 In general , a template is an incomplete sentence which can be filled with the input text using the manually defined rules .
 For instance , a concise template to conclude the stock market quotation is : shares [ open / close ] [ NUMBER ] percent [ lower / higher ] , e.g. , " hong kong shares close # . # percent lower " .

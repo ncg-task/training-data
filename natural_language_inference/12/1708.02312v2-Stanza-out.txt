@@ -3,7 +3,7 @@ Shortcut - Stacked Sentence Encoders for Multi- Domain Inference
 abstract
 We present a simple sequential sentence encoder for multi-domain natural language inference .
 Our encoder is based on stacked bidirectional LSTM - RNNs with shortcut connections and fine - tuning of word embeddings .
-The overall supervised model uses the above encoder to encode two input sentences into two vectors , and then uses a classifier over the vector combination to label the relationship between these two sentences as that of entailment , contradiction , or neural .
+The over all supervised model uses the above encoder to encode two input sentences into two vectors , and then uses a classifier over the vector combination to label the relationship between these two sentences as that of entailment , contradiction , or neural .
 Our Shortcut - Stacked sentence encoders achieve strong improvements over existing encoders on matched and mismatched multi-domain natural language inference ( top non-ensemble single - model result in the EMNLP RepEval 2017 Shared Task ( Nangia et al. , 2017 ) ) .
 Moreover , they achieve the new state - of - theart encoding result on the original SNLI dataset ( Bowman et al. , 2015 ) .
 Introduction and Background
@@ -16,7 +16,7 @@ In this paper , we follow the former approach of encoding - based models , and p
 Our encoder does not require any syntactic information of the sentence .
 It also does not contain any attention or memory structure .
 It is basically a stacked ( multi-layered ) bidirectional LSTM - RNN with shortcut connections ( feeding all previous layers ' outputs and word embeddings to each layer ) and word embedding fine - tuning .
-The overall supervised model uses these shortcutstacked encoders to encode two input sentences into two vectors , and then we use a classifier over the vector combination to label the relationship between these two sentences as that of entailment , contradiction , or neural ( similar to the classifier setup of and ) .
+The over all supervised model uses these shortcutstacked encoders to encode two input sentences into two vectors , and then we use a classifier over the vector combination to label the relationship between these two sentences as that of entailment , contradiction , or neural ( similar to the classifier setup of and ) .
 Our simple shortcut - stacked encoders achieve strong improvements over existing encoders due to its multi-layered and shortcutconnected properties , on both matched and mis- matched evaluation settings for multi-domain natural language inference , as well as on the original SNLI dataset .
 It is the top single - model ( nonensemble ) result in the EMNLP RepEval 2017 Multi - NLI Shared Task , and the new state - of - the - art for encoding - based results on the SNLI dataset .
 Github Code Link : https://github.com/ easonnie/multiNLI_encoder
@@ -31,7 +31,7 @@ Sentence Encoder
 Our sentence encoder is simply composed of multiple stacked bidirectional LSTM ( biLSTM ) layers with shortcut connections followed by a max pooling layer .
 Let bilstm i represent the ith biLSTM layer , which is defined as :
 where hi t is the output of the ith biLSTM at time t over input sequence ( x i 1 , x i 2 , ... , xi n ) .
-Ina typical stacked biLSTM structure , the input of the next LSTM - RNN layer is simply the output sequence of the previous LSTM - RNN layer .
+In a typical stacked biLSTM structure , the input of the next LSTM - RNN layer is simply the output sequence of the previous LSTM - RNN layer .
 In our settings , the input sequences for the ith biLSTM layer are the concatenated outputs of all the previous layers , plus the original word embedding sequence .
 This gives a shortcut connection style setup , related to the widely used idea of residual connections in CNNs for computer vision , highway networks for RNNs in speech processing , and shortcut connections in hierarchical multitasking learning ; but in our case we feed in all the previous layers ' output se-quences as well as the word embedding sequence to every layer .
 Let W = ( w 1 , w 2 , ... , w n ) represent words in the source sentence .
@@ -57,7 +57,7 @@ We used pre-trained 300D Glove 840B vectors to initialize the word embeddings .
 Tuning decisions for word embedding training strategy , the hyperparameters of dimension and number of layers for biLSTM , and the activation type and number of layers for MLP , are all explained in Section 4 .
 Results and Analysis
 Ablation Analysis Results
-We now investigate the effectiveness of each of the enhancement components in our overall model .
+We now investigate the effectiveness of each of the enhancement components in our over all model .
 These ablation results are shown in and 4 , all based on the Multi - NLI development sets .
 Finally , shows results for different encoders on SNLI and Multi - NLI test sets .
 First , shows the performance changes for different number of biLSTM layers and their varying dimension size .

@@ -2,7 +2,7 @@ title
 TANDA : Transfer and Adapt Pre-Trained Transformer Models for Answer Sentence Selection
 abstract
 We propose TANDA , an effective technique for fine - tuning pre-trained Transformer models for natural language tasks .
-Specifically , we first transfer a pre-trained model into a model fora general task by fine - tuning it with a large and highquality dataset .
+Specifically , we first transfer a pre-trained model into a model for a general task by fine - tuning it with a large and highquality dataset .
 We then perform a second fine - tuning step to adapt the transferred model to the target domain .
 We demonstrate the benefits of our approach for answer sentence selection , which is a well - known inference task in Question Answering .
 We built a large scale dataset to enable the transfer step , exploiting the Natural Questions dataset .
@@ -60,7 +60,7 @@ More recent papers also propose a technique of inter - weighted alignment networ
 While others ) use a compare aggregate architecture , which also exploits an attention mechanism over the question and answer sentence embeddings .
 Tayyar Madabushi , Lee , and Barnden ( 2018 ) propose a method that integrates fine - grained Question Classification with a Deep Learning model designed for AS2 .
 Previous work was carried out on relatively small datasets compared to other NLP tasks , such as machine translation , e.g. , the WMT15 English - Czech dataset ( Luong and Manning 2016 ) contains 15.8 million sentence pairs .
-This further motivates our work of creating anew large scale AS2 dataset , ASNQ , which is two orders of magnitudes larger than datasets such as TREC - QA .
+This further motivates our work of creating a new large scale AS2 dataset , ASNQ , which is two orders of magnitudes larger than datasets such as TREC - QA .
 ASNQ is based on the NQ dataset , which is a corpus designed to ( i ) study MR tasks , and ( ii ) solve several problems of previous corpora such as SQuAD ) .
 MR models , e.g. , , are different from those used for AS2 and beyond the purpose of our paper .
 It is still worthwhile to mention that explored transfer learning for the BiDAF model for MR .
@@ -78,7 +78,7 @@ AS2 can be defined as follows : given a question q and a set of answer sentence 
 We can model the task as a
 Transformers for AS2
 Transformer - based models are neural networks designed to capture dependencies between words , i.e. , their interdependent contexts .
-shows the standard architecture fora text pair classification task .
+shows the standard architecture for a text pair classification task .
 The input consists of two pieces of text , Tok 1 1 , ... , Tok 1 N and Tok 2 1 , ... , Tok 2 M delimited by three tags , , and [ EOS ] ( beginning , separator and end of sentence ) .
 The input is encoded as embeddings based on tokens , segments and their positions .
 These are fed as input to several blocks ( up to 24 ) containing layers for multi-head attention , normalization and feed forward processing .
@@ -116,19 +116,19 @@ In this paper , we highlight the role of the transfer step , which ( i ) greatly
 We empirically demonstrate both claims in our experiments .
 Answer - Sentence Natural Questions
 We needed an accurate , general and large AS2 corpus to validate the benefits of TANDA .
-Since existing AS2 datasets are small in size , we built anew AS2 dataset called Answer Sentence Natural Questions ( ASNQ ) derived from the recently released Google Natural Questions ( NQ ) dataset .
+Since existing AS2 datasets are small in size , we built a new AS2 dataset called Answer Sentence Natural Questions ( ASNQ ) derived from the recently released Google Natural Questions ( NQ ) dataset .
 NQ is a large scale dataset intended for the MR task , where each question is associated with a Wikipedia page .
 For each question , along paragraph ( long answer ) that contains the answer is extracted from the reference page .
 Each long answer may contain phrases annotated as short answer .
 A long answer can contain multiple sentences , thus NQ is not directly applicable for AS2 .
 For each question in ASNQ , the positive candidate answers are those sentences that occur in the long answer paragraphs in NQ and contain annotated short answers .
 The remaining sentences from the document are labeled as negative for the target question .
-The negative examples can be of the following types : 1 . Sentences from the document that are in the long answer but do not contain the annotated short answers .
+The negative examples can be of the following types : 1 . Sentences from the document thatare in the long answer but do not contain the annotated short answers .
 It is possible that these sentences might contain the short answer .
 2 .
-Sentences from the document that are not in the long answer but contain the short answer string , that is , such occurrence is purely accidental .
+Sentences from the document thatare not in the long answer but contain the short answer string , that is , such occurrence is purely accidental .
 3 .
-Sentences from the document that are neither in the long answer nor contain the short answer .
+Sentences from the document thatare neither in the long answer nor contain the short answer .
 The generation of negative examples is particularly impactful to the robustness of the model in identifying the best answer out of the similar but incorrect ones .
 ASNQ has four labels that describe possible confusing levels of a sentence candidate .
 We apply the same processing both to training and development sets of NQ .
@@ -141,7 +141,7 @@ Wiki
 QA is an AS2 dataset constituted by questions from Bing query logs and candidate answer sentences extracted from Wikipedia , which are then manually labeled .
 Some questions have no correct answer sentence ( all - ) or have only correct answer sentences ( all + ) .
 by converting question - paragraph pairs into sentence pairs , resulting in dataset with 105 k question - answer pairs for training and 5.4 k pairs in the dev. data .
-We carryout experiments of using QNLI for the transfer step in TANDA and compare it with previous methods , which are based on QNLI for sequential fine - tuning of non-Transformer models for AS2 .
+We carry out experiments of using QNLI for the transfer step in TANDA and compare it with previous methods , which are based on QNLI for sequential fine - tuning of non-Transformer models for AS2 .
 Training and testing details
 Metrics
 We measure system accuracy with Mean Average Precision ( MAP ) and Mean Reciprocal Recall ( MRR ) evaluated on the test set , using the entire set of candidates for each questions ( this varies according to the different datasets ) .
@@ -186,7 +186,7 @@ Stability of TANDA Systematic and effective fine - tuning of Transformer models 
 There is no theory or even a well - assessed best practice suggesting the optimal number of epochs to be used for fine - tuning .
 We claim that TANDA can robustly transfer language models to the target task and this produces more stable models .
 For stability , we mean a low variance of the model accuracy ( i ) between two consecutive training epochs , and ( ii ) between two pairs of models that have close accuracy on the development set .
-For example , BERT FT has a high variance inaccuracy with the number of epochs , leading to some extreme cases of an on - off behavior , i.e , the classifier may only predict negative labels for target task ( due to unbalanced datasets ) .
+For example , BERT FT has a high variance in accuracy with the number of epochs , leading to some extreme cases of an on - off behavior , i.e , the classifier may only predict negative labels for target task ( due to unbalanced datasets ) .
 To test our hypothesis , we compared TANDA with standard FT by varying the number of training epochs for the adaptation step ( here we do not use early stopping for TANDA ) .
 shows the plots of MAP and MRR scores with BERT - Base on Wiki QA test set with different number of training epochs on the train set .
 As expected FT has a high variance while TANDA shows a small variance .
@@ -195,7 +195,7 @@ Robustness to Noise in WikiQA and TREC - QA Better model stability also means ro
 We empirically studied this conjecture by artificially injecting noise in the training sets of WikiQA and TREC - QA , by randomly sampling questions - answer pairs from the training set and switching their label values .
 We chose random samples of 10 % and 20 % of the training data , generating 867 and 1734 noisy labels , on WikiQA , respectively , and 5341 and 10683 noisy labels , on TREC - QA , respectively .
 We used the same Clean data setting to directly compare with the original performance .
-shows the MAP and MRR of BERT - Base using FT and TANDA , also indicating the drop percentage ( % ) inaccuracy due to the injection of noise .
+shows the MAP and MRR of BERT - Base using FT and TANDA , also indicating the drop percentage ( % ) in accuracy due to the injection of noise .
 We note that standard FT is highly affected by noisy data , e.g. , on Wiki QA the accuracy decreases by 22. 63 % , when 20 % of noise is injected .
 Very interestingly , the models using TANDA are affected an order of magnitude less , i.e. , just 2.57 % .
 A similar trend can be observed aslo for the results on TREC - QA . :
@@ -208,7 +208,7 @@ shows the results :
 Label 3 is the most effective negative type of the three , i.e. , the models only using Label 3 as negative class are just subject to a marginal drop in performance with respect to the model using all labels .
 Labels 2 and 3 provide the same accuracy than the three labels as the negative class .
 ASNQ vs. QNLI
-Another way to empirically evaluate the impact of ASNQ is to compare it with other similar datasets , e.g. , QNLI , observing the performance of the latter when used fora simple FT or in TANDA .
+Another way to empirically evaluate the impact of ASNQ is to compare it with other similar datasets , e.g. , QNLI , observing the performance of the latter when used for a simple FT or in TANDA .
 shows that both FT and TANDA using ASNQ provide significantly better performance than QNLI on the WikiQA dataset .
 On TREC - QA dataset the results show that ( i ) FT on QNLI performs better than ASNQ but ( ii ) when TANDA uses ASNQ as transfer step , the models can better adapt to TREC - QA data than when using QNLI for the same transfer type .
 On one hand , this confirms the claim about the high : Comparison of TANDA with ASNQ and QNLI quality of ASNQ .

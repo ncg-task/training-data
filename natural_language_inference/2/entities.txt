@@ -20,7 +20,7 @@
 182	45	47	of
 182	48	53	0.001
 182	58	66	clipnorm
-182	45	47	of
+182	67	69	of
 182	70	71	5
 176	4	31	out - of - vocabulary words
 176	36	52	initialized with
@@ -53,7 +53,7 @@
 33	239	263	important question words
 33	264	271	to help
 33	272	279	extract
-33	124	130	answer
+33	284	290	answer
 34	14	20	AMANDA
 34	21	29	extracts
 34	34	40	answer
@@ -81,13 +81,13 @@
 186	10	17	results
 186	18	20	on
 186	25	41	TriviaQA dataset
-186	0	5	shows
-186	18	20	on
+191	0	5	shows
 191	11	17	AMANDA
 191	18	26	achieves
 191	27	55	state - of the - art results
 191	56	58	in
 191	64	88	Wikipedia and Web domain
+191	89	91	on
 191	92	130	distantly supervised and verified data
 193	8	10	on
 193	15	32	Search QA dataset
@@ -104,7 +104,7 @@
 202	39	64	any of the ablated models
 202	71	78	include
 202	83	91	ablation
-202	43	45	of
+202	92	94	of
 202	95	125	multifactor attentive encoding
 202	128	175	max - attentional question aggregation ( q ma )
 202	182	218	question type representation ( q f )

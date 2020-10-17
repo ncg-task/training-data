@@ -1,10 +1,8 @@
 {
   "has research problem" : [
     ["Aspect - Based Sentiment Analysis", {"from sentence" : "Utilizing BERT for Aspect - Based Sentiment Analysis via Constructing Auxiliary Sentence"}],
-    ["Aspect - based sentiment analysis ( ABSA )", {"from sentence" : "Aspect - based sentiment analysis ( ABSA ) , which aims to identify fine - grained opinion polarity towards a specific aspect , is a challenging subtask of sentiment analysis ( SA ) ."}],
-    ["sentiment analysis ( SA )", {"from sentence" : "Aspect - based sentiment analysis ( ABSA ) , which aims to identify fine - grained opinion polarity towards a specific aspect , is a challenging subtask of sentiment analysis ( SA ) ."}],
-    ["SA", {"from sentence" : "Both SA and ABSA are sentence - level or document - level tasks , but one comment may refer to more than one object , and sentence - level tasks can not handle sentences with multiple targets ."}],
-    ["ABSA", {"from sentence" : "Both SA and ABSA are sentence - level or document - level tasks , but one comment may refer to more than one object , and sentence - level tasks can not handle sentences with multiple targets ."}],
+    ["Aspect - based sentiment analysis ( ABSA )", "sentiment analysis ( SA )", {"from sentence" : "Aspect - based sentiment analysis ( ABSA ) , which aims to identify fine - grained opinion polarity towards a specific aspect , is a challenging subtask of sentiment analysis ( SA ) ."}],
+    ["SA", "ABSA", {"from sentence" : "Both SA and ABSA are sentence - level or document - level tasks , but one comment may refer to more than one object , and sentence - level tasks can not handle sentences with multiple targets ."}],
     ["targeted aspect - based sentiment analysis ( TABSA )", {"from sentence" : "Therefore , introduce the task of targeted aspect - based sentiment analysis ( TABSA ) , which aims to identify fine - grained opinion polarity towards a specific aspect associated with a given target ."}]
   ]
 }

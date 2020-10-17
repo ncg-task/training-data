@@ -49,7 +49,7 @@ propose ATAE - LSTM which concatenates target embeddings with word representatio
 propose RAM which adopts multiple - attention mechanism on the memory built with bidirectional LSTM and nonlinearly combines the attention results with gated recurrent units ( GRU s ) .
 propose IAN which learns the representations of the target and context with two attention networks interactively .
 Proposed Methodology
-The goal of this model is to predict the sentiment polarity of the sentence w cover the target wt . illustrates the overall architecture of the proposed Attentional Encoder Network ( AEN ) , which mainly consists of an embedding layer , an attentional encoder layer , a target - specific attention layer , and an output layer .
+The goal of this model is to predict the sentiment polarity of the sentence w cover the target wt . illustrates the over all architecture of the proposed Attentional Encoder Network ( AEN ) , which mainly consists of an embedding layer , an attentional encoder layer , a target - specific attention layer , and an output layer .
 Embedding layer has two types :
 Glo Ve embedding and BERT embedding .
 Accordingly , the models are named AEN - GloVe and AEN - BERT .
@@ -108,7 +108,7 @@ Regularization and Model Training
 Since neutral sentiment is a very fuzzy sentimental state , training samples which labeled neutral are unreliable .
 We employ a Label Smoothing Regularization ( LSR ) term in the loss function .
 which penalizes low entropy output distributions .
-LSR can reduce overfitting by preventing a network from assigning the full probability to each training example during training , replaces the 0 and 1 targets fora classifier with smoothed values like 0.1 or 0.9 .
+LSR can reduce overfitting by preventing a network from assigning the full probability to each training example during training , replaces the 0 and 1 targets for a classifier with smoothed values like 0.1 or 0.9 .
 For a training sample x with the original ground - truth label distribution q ( k | x ) , we replace q ( k| x ) with
 where u ( k ) is the prior distribution over labels , and is the smoothing parameter .
 In this paper , we set the prior label distribution to be uniform u ( k ) = 1/C. LSR is equivalent to the KL divergence between the prior label distribution u ( k ) and the network 's predicted distribution p ? .
@@ -128,8 +128,7 @@ Word embeddings in AEN - Glo Ve do not get updated in the learning process , but
 Embedding dimension d dim is 300 for GloVe and is 768 for pretrained BERT .
 Dimension of hidden states d hid is set to 300 .
 The weights of our model are initialized with Glorot initialization .
-During training , we set label smoothing parameter to 0.2 , the coefficient ?
-of L 2 regularization item is 10 ? 5 and dropout rate is 0.1 .
+During training , we set label smoothing parameter to 0.2 , the coefficient ? of L 2 regularization item is 10 ? 5 and dropout rate is 0.1 .
 Adam optimizer ( Kingma and Ba , 2014 ) is applied to update all the parameters .
 We adopt the Accuracy and Macro - F1 metrics to evaluate the performance of the model .
 Model Comparisons
@@ -155,21 +154,21 @@ Basic BERT - based model :
 BERT - SPC feeds sequence " [ CLS ] + context + [ SEP ] + target + [ SEP ] " into the basic BERT model for sentence pair classification task .
 shows the performance comparison of AEN with other models .
 BERT - SPC and AEN - BERT obtain substantial accuracy improvements , which shows the power of pre-trained BERT on small - data task .
-The overall performance of AEN - BERT is better than BERT - SPC , which suggests that it is important to design a downstream network customized to a specific task .
+The over all performance of AEN - BERT is better than BERT - SPC , which suggests that it is important to design a downstream network customized to a specific task .
 As the prior knowledge in the pre-trained BERT is not specific to any particular domain , further fine - tuning on the specific task is necessary for releasing the true power of BERT .
 Main Results
-The overall performance of TD - LSTM is not good since it only makes a rough treatment of the target words .
+The over all performance of TD - LSTM is not good since it only makes a rough treatment of the target words .
 ATAE - LSTM , IAN and RAM are attention based models , they stably exceed the TD - LSTM method on Restaurant and Laptop datasets .
 RAM is better than other RNN based models , but it does not perform well on Twitter dataset , which might because bidirectional LSTM is not good at modeling small and ungrammatical text .
 Feature - based SVM is still a competitive baseline , but relying on manually - designed features .
 Rec - NN gets the worst performances among all neural network baselines as dependency parsing is not guaranteed to work well on ungrammatical short texts such as tweets and comments .
-Like AEN , Mem Net also eschews recurrence , but its overall performance is not good since it does not model the hidden semantic of embeddings , and the result of the last attention is essentially a linear combination of word embeddings .
+Like AEN , Mem Net also eschews recurrence , but its over all performance is not good since it does not model the hidden semantic of embeddings , and the result of the last attention is essentially a linear combination of word embeddings .
 Model Analysis
 As shown in , the performances of AEN - Glo Ve ablations are incomparable with AEN - Glo Ve in both accuracy and macro - F1 measure .
-This result shows that all of these discarded components are crucial fora good performance .
+This result shows that all of these discarded components are crucial for a good performance .
 Comparing the results of AEN - GloVe and AEN - Glo Ve w / o LSR , we observe that the accuracy of AEN - Glo Ve w / o LSR drops significantly on all three datasets .
 We could attribute this phenomenon to the unreliability of the training samples with neutral sentiment .
-The overall performance of AEN - GloVe and AEN - Glo Ve - BiLSTM is relatively close , AEN - Glo Ve performs better on the Restaurant dataset .
+The over all performance of AEN - GloVe and AEN - Glo Ve - BiLSTM is relatively close , AEN - Glo Ve performs better on the Restaurant dataset .
 More importantly , AEN - Glo Ve has fewer parameters and is easier to parallelize .
 To figure out whether the proposed AEN - Glo Ve is a lightweight alternative of recurrent models , we study the model size of each model on the Restaurant dataset .
 Statistical results are reported in .

@@ -14,7 +14,9 @@
                   },
                   "with" : "13 ties"
                 },
-                "from sentence" : "Our model outperforms in 32 of the 54 treebanks with 13 ties ."            
+                "from sentence" : "Part - of - Speech Tagging Results
+Our model outperforms in 32 of the 54 treebanks with 13 ties ."
+      
               },
               "produce" : {
                 "better results" : {
@@ -33,7 +35,9 @@
                   "than" : "winners of the CoNLL 2017 Shared Task"
                 }
               },
-              "from sentence" : "Our models tend to produce significantly better results than the winners of the CoNLL 2017 Shared Task ( i.e. , 1.8 % absolute improvement on average , corresponding to a RRIE of 21.20 % ) ."
+              "from sentence" : "Morphological Tagging Results
+Our models tend to produce significantly better results than the winners of the CoNLL 2017 Shared Task ( i.e. , 1.8 % absolute improvement on average , corresponding to a RRIE of 21.20 % ) ."
+
             }
           }
         }

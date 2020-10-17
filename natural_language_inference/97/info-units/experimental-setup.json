@@ -28,8 +28,7 @@
           "from sentence" : "We found dropout to be particularly effective at improving generalization from the training to the test set , and used 0.5 as the dropout probability ."
         },
         "Adam optimizer" : {
-          "with" : "standard settings",
-          "from sentence" : "We used the Adam optimizer with the standard settings ( Kingma and Ba , 2014 ) and a learning rate of 0.003 ."
+          "with" : "standard settings"
         },
         "learning rate" : {
           "of" : "0.003",

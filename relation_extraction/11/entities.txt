@@ -33,7 +33,7 @@
 199	39	42	for
 199	43	66	multi instance learning
 199	70	76	MIMLRE
-199	23	38	graphical model
+200	2	17	graphical model
 200	24	38	jointly models
 200	39	77	multiple instances and multiple labels
 201	18	22	PCNN
@@ -57,7 +57,6 @@
 45	70	110	http://github.com / malllabiisc / RESIDE
 39	19	26	propose
 39	27	33	RESIDE
-39	5	7	is
 39	38	89	novel distant supervised relation extraction method
 39	96	104	utilizes
 39	105	127	additional supervision
@@ -75,7 +74,7 @@
 40	85	94	to impose
 40	95	111	soft constraints
 40	112	128	while predicting
-40	47	55	relation
+40	133	141	relation
 41	3	7	uses
 41	8	37	encoded syntactic information
 41	38	51	obtained from
@@ -94,7 +93,7 @@
 219	39	55	higher precision
 219	56	60	over
 219	65	84	entire recall range
-219	53	55	on
+219	85	87	on
 219	88	105	both the datasets
 220	8	28	non-neural baselines
 220	29	46	could not perform
@@ -106,7 +105,7 @@
 222	23	25	of
 222	26	45	BGWA and PCNN + ATT
 222	46	50	over
-222	35	39	PCNN
+222	51	55	PCNN
 222	56	66	shows that
 222	67	76	attention
 222	77	85	helps in

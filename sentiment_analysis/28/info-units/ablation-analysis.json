@@ -17,7 +17,7 @@
         "from sentence" : "Comparing the results of AEN - GloVe and AEN - Glo Ve w / o LSR , we observe that the accuracy of AEN - Glo Ve w / o LSR drops significantly on all three datasets ."
       },
       "has" : {
-        "overall performance" : {
+        "over all performance" : {
           "of" : {
             "AEN - GloVe and AEN - Glo Ve - BiLSTM" : {
               "is" : "relatively close"
@@ -30,7 +30,7 @@
               }
             }
           },
-          "from sentence" : "The overall performance of AEN - GloVe and AEN - Glo Ve - BiLSTM is relatively close , AEN - Glo Ve performs better on the Restaurant dataset ."
+          "from sentence" : "The over all performance of AEN - GloVe and AEN - Glo Ve - BiLSTM is relatively close , AEN - Glo Ve performs better on the Restaurant dataset ."
         },
         "AEN - Glo Ve" : {
           "has" : "fewer parameters",

@@ -1,6 +1,6 @@
 (Contribution||has||Baselines)
 (Baselines||applied||BiDAF ++)
-(BiDAF ++||is||strong extractive QA model)
+(BiDAF ++||has||strong extractive QA model)
 (strong extractive QA model||to||QuAC dataset)
 (Baselines||has||- QHIER - RNN)
 (- QHIER - RNN||removes||hierarchical LSTM layers)

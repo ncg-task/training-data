@@ -3,17 +3,14 @@
     "Hyperparameters" : {
       "has" : {
         "default learning rate" : {
-          "has" : "0.1",
-          "from sentence" : "epochs , default learning rate ( 0.1 ) , 128 dimensions for word embeddings , 100 for character and byte embeddings , 100 hidden states and Gaussian noise with ?= 0.2 ."
+          "has" : "0.1"
         },
         "128 dimensions" : {
-          "for" : "word embeddings",
-          "from sentence" : "epochs , default learning rate ( 0.1 ) , 128 dimensions for word embeddings , 100 for character and byte embeddings , 100 hidden states and Gaussian noise with ?= 0.2 ."
+          "for" : "word embeddings"
         },
         "100" : {
           "for" : "character and byte embeddings",
-          "has" : "hidden states",
-          "from sentence" : "epochs , default learning rate ( 0.1 ) , 128 dimensions for word embeddings , 100 for character and byte embeddings , 100 hidden states and Gaussian noise with ?= 0.2 ."
+          "has" : "hidden states"
         },
         "Gaussian noise" : {
           "with" : "0.2",

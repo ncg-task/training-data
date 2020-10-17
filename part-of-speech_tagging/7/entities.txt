@@ -5,7 +5,7 @@
 52	56	59	for
 52	60	75	word embeddings
 52	78	81	100
-52	56	59	for
+52	82	85	for
 52	86	115	character and byte embeddings
 52	122	135	hidden states
 52	140	154	Gaussian noise
@@ -28,7 +28,7 @@
 79	33	41	compared
 79	42	69	Tnt , HunPos and TreeTagger
 79	74	79	found
-79	42	45	Tnt
+79	80	83	Tnt
 79	84	89	to be
 79	90	109	consistently better
 79	110	114	than
@@ -38,16 +38,16 @@
 80	58	77	best representation
 80	80	93	outperforming
 80	98	106	baseline
-80	42	44	on
+80	107	109	on
 80	110	148	all except one language ( Indonesian )
 81	21	28	reaches
 81	33	52	biggest improvement
 81	82	84	on
 81	85	103	Hebrew and Slovene
 81	55	79	more than + 2 % accuracy
-85	4	23	overall best system
-85	24	26	is
-85	31	59	multi-task bi - LSTM FREQBIN
+85	4	24	over all best system
+85	25	27	is
+85	32	60	multi-task bi - LSTM FREQBIN
 82	0	12	Initializing
 82	17	47	word embeddings ( + POLYGLOT )
 82	48	52	with

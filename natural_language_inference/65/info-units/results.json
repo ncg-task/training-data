@@ -21,14 +21,6 @@ On the bottom part of this table , we can see that AP - CNN outperforms QA - CNN
             }
           },
           "has" : {
-            "AP - biLSTM" : {
-              "has" : {
-                "outperforms" : {
-                  "has" : "QA - biLSTM"
-                }
-              },
-              "from sentence" : "AP - biLSTM also outperforms the QA - biLSTM in all the three sets ."
-            },
             "AP - CNN and AP - biLSTM" : {
               "have" : ["similar performance", {"from sentence" : "AP - CNN and AP - biLSTM have similar performance ."}],
               "has" : {
@@ -52,7 +44,8 @@ On the bottom part of this table , we can see that AP - CNN outperforms QA - CNN
                           "in" : "both metrics"
                         },
                         "from sentence" : "In , we present the experimental results of the four NNs for the TREC - QA dataset .
-We use the official trec eval that AP - CNN outperforms QA - CNN by a large margin in both metrics ."                        
+We use the official trec eval that AP - CNN outperforms QA - CNN by a large margin in both metrics ."
+
                       }
                     },
                     "state - of - the - art systems" : {
@@ -96,17 +89,16 @@ We use the official trec eval that AP - CNN outperforms QA - CNN by a large marg
                 "outperforms" : {
                   "has" : "QA - CNN"
                 }
-              },
-              "from sentence" : "shows the experimental results of the four NNs for the WikiQA dataset .
-Like in the other two datasets , AP - CNN outperforms QA - CNN , and AP - biLSTM outperforms the QA - biLSTM ."
-
+              }
             },
             "AP - biLSTM" : {
               "has" : {
                 "outperforms" : {
                   "has" : "QA - biLSTM"
                 },
-                "from sentence" : "Like in the other two datasets , AP - CNN outperforms QA - CNN , and AP - biLSTM outperforms the QA - biLSTM ."
+				  "from sentence" : "shows the experimental results of the four NNs for the WikiQA dataset .
+Like in the other two datasets , AP - CNN outperforms QA - CNN , and AP - biLSTM outperforms the QA - biLSTM ."
+	
               }
             },
             "difference of performance" : {

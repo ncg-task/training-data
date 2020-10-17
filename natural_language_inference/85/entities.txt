@@ -7,7 +7,7 @@
 205	60	66	88.2 %
 207	6	12	remove
 207	17	30	pooling layer
-207	21	23	in
+207	31	33	in
 207	34	55	inference composition
 207	60	75	replace it with
 207	76	85	summation
@@ -29,11 +29,11 @@
 213	81	86	drops
 213	87	89	to
 213	90	96	87.2 %
-213	40	42	on
+213	97	99	on
 213	104	112	test set
 209	43	52	replacing
 209	53	72	bidirectional LSTMs
-209	49	51	in
+209	73	75	in
 209	76	97	inference composition
 209	107	121	input encoding
 209	36	40	with
@@ -71,7 +71,7 @@
 169	26	28	is
 169	29	35	0.0004
 169	44	54	batch size
-169	26	28	is
+169	55	57	is
 169	58	60	32
 170	4	17	hidden states
 170	18	20	of
@@ -93,7 +93,7 @@
 30	36	55	parsing information
 30	56	60	with
 30	61	79	recursive networks
-30	32	34	in
+30	80	82	in
 30	88	112	local inference modeling
 30	117	138	inference composition
 2	18	44	Natural Language Inference
@@ -110,8 +110,8 @@
 185	78	82	SNLI
 185	91	129	our enhanced sequential encoding model
 185	130	137	attains
-185	29	37	accuracy
-185	38	40	of
+185	141	149	accuracy
+185	150	152	of
 185	153	159	88.0 %
 185	173	183	outperform
 185	188	203	previous models

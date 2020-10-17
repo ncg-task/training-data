@@ -6,7 +6,7 @@
           "boost" : {
             "accuracy" : {
               "by" : "nearly 1 % WER",
-              "demonstrating effectiveness by" : {
+              "demonstrating the effectiveness by" : {
                 "introducing abundant unlabeled data" : {
                   "into" : "knowledge distillation"
                 }

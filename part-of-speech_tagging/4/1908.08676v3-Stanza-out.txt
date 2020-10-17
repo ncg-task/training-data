@@ -5,7 +5,7 @@ CRF has been used as a powerful model for statistical sequence labeling .
 For neural sequence labeling , however , BiLSTM - CRF does not always lead to better results compared with BiLSTM - softmax local classification .
 This can be because the simple Markov label transition model of CRF does not give much information gain over strong neural encoding .
 For better representing label sequences , we investigate a hierarchically - refined label attention network , which explicitly leverages label embeddings and captures potential long - term label dependency by giving each word incrementally refined label distributions with hierarchical attention .
-Results on POS tagging , NER and CCG supertagging show that the proposed model not only improves the overall tagging accuracy with similar number of parameters , but also significantly speeds up the training and testing compared to BiLSTM - CRF .
+Results on POS tagging , NER and CCG supertagging show that the proposed model not only improves the over all tagging accuracy with similar number of parameters , but also significantly speeds up the training and testing compared to BiLSTM - CRF .
 Introduction
 Conditional random fields ( CRF ) ) is a state - of - the - art model for statistical sequence labeling .
 Recently , CRF has been integrated with neural encoders as an output layer to capture label transition patterns .
@@ -73,7 +73,7 @@ Sequence Representation Layer
 For sequence encoding , the input is a sentence x = {x 1 , , x n }.
 Word representations are fed into a BiLSTM layer , yielding a sequence of for -
 h w n } , respectively .
-Finally , the two hidden states are concatenated fora final representation
+Finally , the two hidden states are concatenated for a final representation
 Inference Layer
 CRF .
 A CRF layer is used on top of the hidden vectors H w .
@@ -132,7 +132,7 @@ Compared with BiLSTM - CRF , BiLSTM - LAN can significantly increase the speed f
 BiLSTM- LAN and BiLSTM-softmax
 As mentioned in the introduction , a singlelayer BiLSTM - LAN is identical to a single - layer BiLSTM - softmax sequence labeling model .
 In particular , the BiLSTM - softmax model is given by Eq 1 .
-Ina BiLSTM - LAN model , we arrange the set of label embeddings into a matrix as follows :
+In a BiLSTM - LAN model , we arrange the set of label embeddings into a matrix as follows :
 A naive attention model over X has :
 It is thus straightforward to see that the label embedding matrix x l corresponds to the weight matrix Wis Eq 1 , and the distribution ?
 corresponds toy in Eq 1 .

@@ -14,7 +14,7 @@
 20	36	66	two orders of magnitude larger
 20	67	71	than
 20	76	91	other resources
-20	47	49	of
+20	92	94	of
 20	95	103	its type
 21	54	74	sentences and labels
 21	80	90	written by
@@ -27,13 +27,13 @@
 22	46	71	four additional judgments
 22	72	75	for
 22	76	86	each label
-22	72	75	for
+22	87	90	for
 22	91	97	56,941
 22	98	100	of
 22	105	113	examples
-22	98	100	of
 23	0	8	Of these
 23	11	15	98 %
+23	16	18	of
 23	19	24	cases
 23	25	36	emerge with
 23	39	63	threeannotator consensus
@@ -58,7 +58,7 @@
 165	133	136	for
 165	137	168	all three neural network models
 168	127	149	somewhat steeper slope
-168	72	75	for
+168	150	153	for
 168	25	29	LSTM
 168	163	173	hints that
 168	178	194	ability to learn
@@ -69,7 +69,7 @@
 168	269	278	advantage
 168	279	283	over
 168	288	322	more constrained lexicalized model
-168	9	11	on
+168	94	96	on
 168	332	347	larger datasets
 164	0	2	Of
 164	7	21	two RNN models
@@ -83,7 +83,7 @@
 164	179	190	performance
 164	191	198	that is
 164	199	221	essentially equivalent
-164	56	58	to
+164	222	224	to
 164	229	251	lexicalized classifier
-164	66	68	on
+164	252	254	on
 164	259	267	test set

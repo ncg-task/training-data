@@ -5,7 +5,7 @@ We herein present a language - modelbased evaluator for deletion - based sentenc
 More specifically , the evaluator is a syntactic neural language model that is first built by learning the syntactic and structural collocation among words .
 Subsequently , a series of trial - and - error deletion operations are conducted on the source sentences via a reinforcement learning framework to obtain the best target compression .
 An empirical study shows that the proposed model can effectively generate more readable compression , comparable or superior to several strong baselines .
-Furthermore , we introduce a 200 - sentence test set fora largescale dataset , setting anew baseline for the future research .
+Furthermore , we introduce a 200 - sentence test set for a largescale dataset , setting a new baseline for the future research .
 Introduction
 Deletion - based sentence compression aims to delete unnecessary words from source sentence to form a short sentence ( compression ) while retaining grammatical and faithful to the underlying meaning of the source sentence .
 Previous works used either machine - learning - based approach or syntactic - tree - based approaches to yield most readable and informative compression .
@@ -82,7 +82,7 @@ It is noteworthy that the method is unsupervised .
 The second method is the long short - term memory networks ( LSTMs ) which showed strong promise in sentence compression by .
 The labels were obtained using the dependency tree pruning method and the LSTMs were applied in a supervised manner .
 Following their works , we also consider the labels yielded by our dependencytree - based method as pseudo labels and employ LSTMs as a baseline .
-Furthermore , fora comprehensive comparison , we applied the sequence - to - sequence with attention method widely used in abstractive text summarization for sentence compression .
+Furthermore , for a comprehensive comparison , we applied the sequence - to - sequence with attention method widely used in abstractive text summarization for sentence compression .
 Previous works such as have shown promising results with this framework , although the focus was generationbased summarization rather than extractive summarization .
 More specifically , the source sequence of this framework is the original sentence , while the target sequence is a series of zeros and ones ( zeros represents REMOVE and ones represents RETAIN ) .
 Further , we incorporated dependency labels and part - of - speech tag features in the source side of the sequence - to - sequence method .
@@ -114,7 +114,7 @@ For Gigaword dataset with 1.02 million instances , the perplexity of the languag
 The results shows that small improvements are observed on two datasets ( # 4 vs # 5 ; & 4 vs & 5 ) , suggesting that incorporating syntactic knowledge may help evaluator to encourage more unseen but reasonable word collocations .
 Evaluator Analysis
 To further analyze the Evaluator - SLM performance , we used an example sentence , " The Dalian shipyard has built two new huge ships " to observe how a language model scores different word deletion operations .
-We converted the reward function R SLM toe ? logR SLM fora better observation ( sim - ilar to " sentence perplexity " , the higher the score is , the worse is the sentence ) .
+We converted the reward function R SLM toe ? logR SLM for a better observation ( sim - ilar to " sentence perplexity " , the higher the score is , the worse is the sentence ) .
 As shown in , deleting the object ( # 2 ) , verb ( # 3 ) , or subject ( # 4 ) results in a significant increase in " sentence perplexity " , implying that the syntax - based language model is highly sensitive to the lack of such syntactic components .
 Interestingly , when deleting words such as new or / and huge , the score becomes lower , suggesting that the model may prefer short sentences , with unnecessary parts such as amod being removed .
 This property makes it quite suitable for the sentence compression task aiming to shorten sentences by removing unnecessary words .

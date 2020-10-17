@@ -7,18 +7,34 @@
             "Natural Language Inference" : {
               "has" : {
                 "Results" : {
+                  "Compared to" : {
+                    "methods from official leaderboard" : {
+                      "has" : {
+                        "ReSAN" : {
+                          "achieves" : "best test accuracy",
+                          "has" : {
+                            "outperforms" : {
+                              "has" : "all the sentence encoding based methods",
+                              "from sentence" : "Natural Language Inference
+Compared to the methods from official leaderboard , ReSAN outperforms all the sentence encoding based methods and achieves the best test accuracy ."
+
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
                   "has" : {
                     "ReSAN" : {
                       "has" : {
                         "outperforms" : {
-                          "has" : [["all the sentence encoding based methods",
-                          {"from sentence" : "Natural Language Inference
-Compared to the methods from official leaderboard , ReSAN outperforms all the sentence encoding based methods and achieves the best test accuracy ."
-                          
-                          }], [{"300D SPINN - PI encoders" : {"by" : "3.1 %"}}, {"from sentence" : "Furthermore , ReSAN even outperforms the 300D SPINN - PI encoders by 3.1 %. , which is a recursive model and uses the result of an external semantic parsing tree as an extra input ."}]]
+                          "has" : {
+                            "300D SPINN - PI encoders" : {
+                              "by" : "3.1 %" 
+                            }}, 
+                            "from sentence" : "Furthermore , ReSAN even outperforms the 300D SPINN - PI encoders by 3.1 %. , which is a recursive model and uses the result of an external semantic parsing tree as an extra input ."
                         }
-                      },
-                      "achieves" : ["best test accuracy", {"from sentence" : "Compared to the methods from official leaderboard , ReSAN outperforms all the sentence encoding based methods and achieves the best test accuracy ."}]
+                      }
                     }
                   },
                   "compared to" : {

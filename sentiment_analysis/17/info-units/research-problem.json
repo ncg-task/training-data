@@ -1,7 +1,6 @@
 {
   "has research problem" : [
     ["Improved Semantic Representations", {"from sentence" : "Improved Semantic Representations From Tree - Structured Long Short - Term Memory Networks"}],
-    ["predicting the semantic relatedness of two sentences", {"from sentence" : "Tree - LSTMs outperform all existing systems and strong LSTM baselines on two tasks : predicting the semantic relatedness of two sentences ( Sem Eval 2014 , Task 1 ) and sentiment classification ( Stanford Sentiment Treebank ) ."}],
-    ["sentiment classification", {"from sentence" : "Tree - LSTMs outperform all existing systems and strong LSTM baselines on two tasks : predicting the semantic relatedness of two sentences ( Sem Eval 2014 , Task 1 ) and sentiment classification ( Stanford Sentiment Treebank ) ."}]
+    ["predicting the semantic relatedness of two sentences", "sentiment classification", {"from sentence" : "Tree - LSTMs outperform all existing systems and strong LSTM baselines on two tasks : predicting the semantic relatedness of two sentences ( Sem Eval 2014 , Task 1 ) and sentiment classification ( Stanford Sentiment Treebank ) ."}]
   ]
 }

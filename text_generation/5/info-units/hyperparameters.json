@@ -1,7 +1,20 @@
 {
   "has" : {
     "Hyperparameters" : {
+      "explore" : {
+        "LSTMs and CNNs" : {
+          "as" : "decoders"
+        }
+      },	
       "use" : {
+        "LSTM" : {
+          "as" : {
+            "encoder" : {
+              "for" : "VAE"
+            }
+          },
+          "from sentence" : "We use an LSTM as an encoder for VAE and explore LSTMs and CNNs as decoders ."          
+        },	  
         "KL cost annealing strategy" : {
           "set" : {
             "initial weight" : {
@@ -25,54 +38,37 @@ We set the initial weight of KL cost term to be 0.01 and increase it linearly un
           "of" : "32",
           "from sentence" : "We use batch size of 32 and all model are trained for 40 epochs ."
         },
-        "LSTM" : {
-          "as" : {
-            "encoder" : {
-              "for" : "VAE"
-            }
-          },
-          "from sentence" : "We use an LSTM as an encoder for VAE and explore LSTMs and CNNs as decoders ."          
-        },
         "Gumbel - softmax" : {
           "to sample" : "y from q ( y|x )",
           "from sentence" : "We use Gumbel - softmax to sample y from q ( y|x ) ."
         },
-        "vocabulary size" : {
-          "of" : {
-            "20 k" : {
-              "for" : "both data sets"
-            }
-          },
-          "from sentence" : "We use a vocabulary size of 20 k for both data sets and set the word embedding dimension to be 512 ."
-        },
         "Adam" : {
-          "to optimize" : "all models",
-          "from sentence" : "We use Adam to optimize all models and the learning rate is selected from [ 2e - 3 , 1 e - 3 , 7.5 e - 4 ] and ?"
+          "to optimize" : "all models"
         },
         "learning rate" : {
           "selected from" : "[ 2e - 3 , 1 e - 3 , 7.5 e - 4 ]",
           "from sentence" : "We use Adam to optimize all models and the learning rate is selected from [ 2e - 3 , 1 e - 3 , 7.5 e - 4 ] and ?"
         },
         "drop word" : {
-          "for" : "LSTM decoder",
-          "from sentence" : "Following , we also use drop word for the LSTM decoder , the drop word ratio is selected from [ 0 , 0.3 , 0.5 , 0.7 ] ."
+          "for" : "LSTM decoder"
         },
         "drop word ratio" : {
           "selected from" : "0 , 0.3 , 0.5 , 0.7",
           "from sentence" : "Following , we also use drop word for the LSTM decoder , the drop word ratio is selected from [ 0 , 0.3 , 0.5 , 0.7 ] ."          
-        }
+        },
+        "vocabulary size" : {
+          "of" : {
+            "20 k" : {
+              "for" : "both data sets"
+            }
+          }
+        }		
       },
       "set" : {
         "word embedding dimension" : {
           "to be" : "512",
           "from sentence" : "We use a vocabulary size of 20 k for both data sets and set the word embedding dimension to be 512 ."
         }  
-      },
-      "explore" : {
-        "LSTMs and CNNs" : {
-          "as" : "decoders"
-        },
-        "from sentence" : "We use an LSTM as an encoder for VAE and explore LSTMs and CNNs as decoders ."
       },
       "For" : {
         "CNNs" : {

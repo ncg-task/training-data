@@ -34,7 +34,7 @@
 35	48	66	candidate template
 35	67	79	according to
 35	84	106	hidden state relevance
-35	77	79	to
+35	107	109	to
 35	114	128	input sentence
 36	23	27	with
 36	32	65	highest predicted informativeness
@@ -60,11 +60,10 @@
 156	70	74	both
 156	79	91	faithfulness
 156	96	111	informativeness
-157	100	104	name
-157	100	104	name
-157	100	104	name
 157	108	116	PIPELINE
-43	0	4	Code
+159	13	19	trains
+159	24	37	Rerank module
+159	42	56	Rewrite module
 43	33	71	http://www4.comp.polyu.edu.hk/cszqcao/
 139	3	6	use
 139	11	36	popular seq2seq framework
@@ -80,7 +79,7 @@
 141	57	65	are both
 141	66	69	500
 141	80	110	encoder and decoder structures
-141	57	60	are
+141	111	114	are
 141	115	182	two - layer bidirectional Long Short Term Memory Networks ( LSTMs )
 144	0	2	On
 144	3	15	our computer
@@ -126,7 +125,6 @@
 176	33	39	Random
 176	40	42	is
 176	43	51	terrible
-177	75	88	Rerank module
 177	0	6	Rerank
 177	7	26	largely outperforms
 177	27	32	First
@@ -139,7 +137,7 @@
 179	57	75	improving capacity
 179	76	78	of
 179	83	98	Retrieve module
-179	5	7	is
+179	99	101	is
 179	102	106	high
 183	8	15	measure
 183	20	38	linguistic quality

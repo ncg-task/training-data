@@ -19,7 +19,7 @@
           "applied" : {
             "layer - wise" : {
               "as" : {
-                "information layers" : {
+                "information filters" : {
                   "during" : "multi-hop representation learning process"
                 }
               }

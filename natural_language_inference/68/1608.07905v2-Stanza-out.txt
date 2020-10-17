@@ -35,7 +35,7 @@ attend school at the Higher Real Gymnasium :
 A paragraph from Wikipedia and three associated questions together with their answers , taken from the SQuAD dataset .
 The tokens in bold in the paragraph are our predicted answers while the texts next to the questions are the ground truth answers .
 answer is a single token , which make these methods unsuitable for the SQuAD dataset .
-In this paper , we propose anew end - to - end neural architecture to address the machine comprehension problem as defined in the SQuAD dataset .
+In this paper , we propose a new end - to - end neural architecture to address the machine comprehension problem as defined in the SQuAD dataset .
 Specifically , observing that in the SQuAD dataset many questions are paraphrases of sentences from the original text , we adopt a match - LSTM model that we developed earlier for textual entailment .
 We further adopt the Pointer Net ( Ptr - Net ) model developed by , which enables the predictions of tokens from the input sequence only rather than from a larger fixed vocabulary and thus allows us to generate answers that consist of multiple tokens from the original text .
 We propose two ways to apply the Ptr - Net model for our task : a sequence model and a boundary model .
@@ -73,7 +73,7 @@ OUR METHOD
 Formally , the problem we are trying to solve can be formulated as follows .
 We are given apiece of text , which we refer to as a passage , and a question related to the passage .
 The passage is represented by matrix P ?
-R dP , where P is the length ( number of tokens ) of the passage and dis the dimensionality of word embeddings .
+R dP , where P is the length ( number of tokens ) of the passage and d is the dimensionality of word embeddings .
 Similarly , the question is represented by matrix Q ?
 R d Q where Q is the length of the question .
 Our goal is to identify a subsequence from the passage as the answer to the question .
@@ -157,7 +157,7 @@ and p ( a k = j|a 1 , a 2 , . . . , a k?1 , H r ) = ? k , j .
 To train the model , we minimize the following loss function based on the training examples :
 log p ( a n | P n , Q n ) .
 The Boundary Model :
-The boundary model works in away very similar to the sequence model above , except that instead of predicting a sequence of indices a 1 , a 2 , . . . , we only need to predict two indices a sand a e .
+The boundary model works in a way very similar to the sequence model above , except that instead of predicting a sequence of indices a 1 , a 2 , . . . , we only need to predict two indices a sand a e .
 So the main difference from the sequence model above is that in the boundary model we do not need to add the zero padding to H r , and the probability of generating an answer is simply modeled as p ( a| H r ) = p ( a s | H r ) p ( a e | a s , H r ) . Here " Search " refers to globally searching the spans with no more than 15 tokens , " b " refers to using bi-directional pre-processing LSTM , and " en " refers to ensemble method .
 We further extend the boundary model by incorporating a search mechanism .
 Specifically , during prediction , we try to limit the length of the span and globally search the span with the highest probability computed by p ( a s ) p ( a e ) .
@@ -177,8 +177,7 @@ We use word embeddings from GloVe to initialize the model .
 Words not found in Glo Ve are initialized as zero vectors .
 The word embeddings are not updated during the training of the model .
 The dimensionality l of the hidden layers is set to be 150 or 300 .
-We use ADAMAX with the coefficients ? 1 = 0.9 and ?
-2 = 0.999 to optimize the model .
+We use ADAMAX with the coefficients ? 1 = 0.9 and ? 2 = 0.999 to optimize the model .
 Each update is computed through a minibatch of 30 instances .
 We do not use L2-regularization .
 The performance is measured by two metrics : percentage of exact match with the ground truth answers , and word - level F 1 score when comparing the tokens in the predicted answers with the tokens in the ground truth answers .

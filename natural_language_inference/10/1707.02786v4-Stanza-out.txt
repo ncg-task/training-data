@@ -35,7 +35,7 @@ We also observed that our model converges faster than others .
 Specifically , we saw that our model significantly outperforms previous RvNN works trained on parse trees in all conducted experiments , from which we hypothesize that syntactic parse tree may not be the best structure for every task and the optimal structure could differ per task .
 In the next section , we briefly introduce previous works which have similar objectives to that of our work .
 Then we describe the proposed model in detail and present findings from experiments .
-Lastly we summarize the overall content and discuss future work .
+Lastly we summarize the over all content and discuss future work .
 Related Work
 There have been several works that aim to learn hierarchical latent structure of text by recursively composing words into sentence representation .
 Some of them carry unsupervised learning on structures by making composition operations soft .
@@ -52,7 +52,7 @@ In their work , rather than directly optimized on classification loss , a compos
 introduce reinforcement learning to achieve the desired effect of discretization .
 They show that REINFORCE algorithm can be used in estimating gradients to learn a tree composition function minimizing classification error .
 However , slow convergence due to the reinforcement learning setting is one of its drawbacks , according to the authors .
-In the research area outside the RvNN , compositionality in vector space also has been a longstanding subject Dell' Arciprete 2012 , to name a few ) .
+In the research are a outside the RvNN , compositionality in vector space also has been a longstanding subject Dell' Arciprete 2012 , to name a few ) .
 And more recently , there exist works aiming to learn hierarchical latent structure from unstructured data ) .
 Model Description
 Our proposed architecture is built based on the treestructured long short - term memory network architecture .
@@ -108,7 +108,7 @@ Node representations which are not selected are copied to the corresponding posi
 In other words , the ( t + 1 ) - th layer is composed of
 This procedure is repeated until the model reaches N - th layer and only a single node is left .
 It is notable that the property of selecting the best node pair at each stage resembles that of easy - first parsing .
-For implementation - wise details , please seethe supplementary material . .
+For implementation - wise details , please see the supplementary material . .
 Then the validity score of each candidate is computed using the query vector q ( denoted as v 1 , v 2 , v 3 ) .
 In the training time , the model samples a parent node among candidates weighted on v 1 , v 2 , v 3 , using ST Gumbel - Softmax estimator , and in the testing time the model selects the candidate with the highest validity .
 At layer t + 1 ( the top layer ) , the representation of the selected candidate ( ' the cat ' ) is used as a parent , and the rest are copied from those of layer t ( 'sat ' , ' on ' ) .
@@ -168,7 +168,7 @@ To evaluate the performance of our model in single - sentence classification , w
 In the SST dataset , each sentence is represented as a binary parse tree , and each subtree of a parse tree is annotated with the corresponding sentiment score .
 Following the experimental setting of previous works , we use all subtrees and their labels for training , and only the root labels are used for evaluation .
 The classifier has a similar architecture to SNLI experiments .
-Specifically , fora sentence embedding h , the probability for the sentence to be predicted as label s ?
+Specifically , for a sentence embedding h , the probability for the sentence to be predicted as label s ?
 { 0 , 1 } ( in the binary setting , SST - 2 ) or s ? { 1 , 2 , 3 , 4 , 5 } ( in the fine - grained setting , SST - 5 ) is computed as follows :
 where W s clf ?
 R 1 Dc , b s clf ? R 1 , and ?
@@ -230,7 +230,7 @@ SST
 The composition query vector is initialized by sampling from Gaussian distribution N ( 0 , 0.01 2 ) .
 The last linear transformation that outputs the unnormalized log probability for each class is initialized by sampling from uniform distribution U ( ? 0.002 , 0.002 ) .
 All other parameters are initialized following the scheme proposed by .
-We used Adadelta optimizer with default hyperparameters and halved learning rate if there is no improvement inaccuracy for two epochs .
+We used Adadelta optimizer with default hyperparameters and halved learning rate if there is no improvement in accuracy for two epochs .
 In both SST - 2 and SST - 5 experiments , we set D x = D h = 300 , used GloVe ( 840B , 300D ) pretrained vectors with fine - tuning , and single - hidden layer MLP is used as classifier .
 Dropout is applied to word embeddings and the input and the output of the MLP classifier with probability 0.5 .
 In the SST - 2 experiment , we set D c to 300 and set batch size to 32 .

@@ -7,8 +7,7 @@
           "from sentence" : "We use a batch size of B = 32 , where for a batch of image - caption pairs each image ( caption ) is only related to one caption ( image ) ."
         },
         "D = 1024" : {
-          "for" : "common space mapping dimension",
-          "from sentence" : "We use D = 1024 for common space mapping dimension and ? = 0.25 for Leaky ReLU in the non-linear mappings ."
+          "for" : "common space mapping dimension"
         },
         "? = 0.25" : {
           "for" : {
@@ -29,8 +28,7 @@
           "from sentence" : "Image - caption pairs are sampled randomly with a uniform distribution ."
         },
         "Both visual and textual networks weights" : {
-          "fixed during" : "training",
-          "from sentence" : "Both visual and textual networks weights are fixed during training and only common space mapping weights are trainable ."
+          "fixed during" : "training"
         },
         "common space mapping weights" : {
           "are" : "trainable",
@@ -39,7 +37,7 @@
       },
       "train" : {
         "network" : {
-          "for" : "20 epcohs",
+          "for" : "20 epochs",
           "with" : {
             "Adam optimizer" : {
               "with" : {
@@ -83,8 +81,7 @@
                 }
               }
             }
-          },
-          "from sentence" : "For VGG , we take outputs from { conv 4 1 , conv 4 3 , conv5 1 , conv5 3 } and map to semantic feature maps with dimension 18181024 , and for PNAS - Net we take outputs from { Cell 5 , Cell 7 , Cell 9 , Cell 11 } pointing game accuracy attention correctness Ours Ours Ours Ours Class"
+          }
         }
       },
       "for" : {

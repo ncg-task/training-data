@@ -54,7 +54,7 @@ Even though CNNs are designed for computer vision , the fact that they are fast 
 However CNNs have no notion of order , thus when applying them to NLP tasks the crucial information of the word order is lost .
 Recurrent Neural Networks
 A more natural choice is to use Recurrent Neural Networks ( RNN ) .
-An RNN processes an input sequentially , in away that resembles how humans do it .
+An RNN processes an input sequentially , in a way that resembles how humans do it .
 It performs the same operation ,
 The * new * season of # TwinPeaks is coming on May 21 , 2017 .
 CANT WAIT \o / !!!
@@ -88,7 +88,7 @@ We use bidirectional LSTM ( BiLSTM ) in order to get word annotations that summa
 A bidirectional LSTM consists of a forward LSTM ? ?
 f that reads the sentence from x 1 to x T and a backward LSTM ? ?
 f that reads the sentence from x T to x 1 .
-We obtain the final annotation fora given word x i , by concatenating the annotations from both directions :
+We obtain the final annotation for a given word x i , by concatenating the annotations from both directions :
 where denotes the concatenation operation and L the size of each LSTM .
 We stack two layers of BiLSTMs in order to learn more abstract features .
 Attention Layer .
@@ -99,7 +99,7 @@ We compute the fixed representation r of the whole message as the weighted sum o
 Formally :
 where W hand b hare the attention layer 's weights , optimized during training to assign bigger weights to the most important words of a sentence .
 Output Layer .
-We use the representation r as feature vector for classification and we feed it to a final fully - connected softmax layer which outputs a probability distribution overall classes .
+We use the representation r as feature vector for classification and we feed it to a final fully - connected softmax layer which outputs a probability distribution over all classes .
 TSA Model ( topic - based )
 For the topic - based sentiment analysis tasks , we propose a Siamese 2 bidirectional LSTM network with a different attention mechanism than in MSA .
 Our model is comparable to the work of .
@@ -124,7 +124,7 @@ Maxout Layer .
 We pass the representation r to a Maxout layer to make the final comparison between the tweet aspects and the topic aspects .
 We selected Maxout as it amplifies the effects of dropout ( Section 3.3 ) .
 Output Layer .
-We pass the output of the Maxout layer to a final fully - connected softmax layer which outputs a probability distribution overall classes .
+We pass the output of the Maxout layer to a final fully - connected softmax layer which outputs a probability distribution over all classes .
 Regularization
 In both of our models we add Gaussian noise at the embedding layer , which can be interpreted as a random data augmentation technique , making our models more robust to overfitting .
 In addition to that , we use dropout to randomly turn - off neurons in our network .
@@ -182,5 +182,5 @@ In this paper , we present two deep - learning systems for short text sentiment 
 We use RNNs , utilizing well established methods in the literature .
 Additionally , we empower our networks with two different kinds of attention mechanisms in order to amplify the contribution of the most important words .
 Our models achieved excellent results in the classification tasks , but mixed results in the quantification tasks .
-We would like to work more in this area and explore more quantification techniques in the future .
+We would like to work more in this are a and explore more quantification techniques in the future .
 Another interesting approach would be to design models operating on the character - level .

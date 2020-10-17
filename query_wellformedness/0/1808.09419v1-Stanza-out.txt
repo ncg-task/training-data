@@ -21,8 +21,7 @@ We construct and publicly release a dataset of 25,100 queries annotated with the
 We then train a feed - forward neural network classifier that uses the lexical and syntactic features extracted from the query on this data ( 2.2 ) .
 On a test set of 3,850 queries , we report an accuracy of 70.1 % on the binary classification task .
 We also demonstrate that such a query well - formedness classifier can be used to improve the quality of a sequence - to - sequence question generation model by showing an improvement of 0.2 BLEU score in its performance ( 3 ) .
-Our dataset ise available for download at http://goo.
-gl/language/ query-wellformedness .
+Our dataset ise available for download at http://goo.gl/language/ query-wellformedness .
 2 Well - formed Natural Language Question Classifier
 In this section we describe the data annotation , and the models used for question well - formedness classification .
 Dataset Construction
@@ -38,7 +37,7 @@ Query is grammatical .
 shows some examples that were shown to the annotators to illustrate each of the above conditions .
 Every query was labeled by five different crowdworkers with a binary label indicating whether a query is well - formed or not .
 We average the ratings of the five annotators to get the probability of a query being well - formed .. 1 shows some queries with obtained human annotation .
-Humans are pretty good at identifying an implicit query ( " Population of owls ... " ) or a simple well - formed question ( " What is released ... " ) , but may miss out on subtle spelling mistakes like " disscovered " or disagree on whether the determiner " the " is needed before the word " genocide " ( " What countries have genocide happened in ? " ) .
+Humans are pretty good at identifying an implicit query ( " Population of owls ... " ) or a simple well - formed question ( " What is released ... " ) , but may miss out on subtle spelling mistakes like " disscovered " or dis agree on whether the determiner " the " is needed before the word " genocide " ( " What countries have genocide happened in ? " ) .
 Similar to other NLP tasks like entailment ( Dagan Query ( q ) p wf ( q ) population of owls just in north america ?
 what is released when anion is formed ?
 1.0 , paraphrasing etc. we rely on the wisdom of the crowd to get such annotations in order to make the data collection scalable and languageindependent .
@@ -93,5 +92,5 @@ Grammatical error correction ( GEC ) is the task of correcting the grammatical e
 As GEC includes not just identification of ungrammatical text but also correcting the text to produce grammatical text , it s a more complex task .
 However , grammatical error prediction is the task of classifying whether or not a sentence is grammatical , which is more closely related to our task as classifying a question as well - formed requires making judgement on both the style and grammar of the text .
 Conclusion
-We proposed anew task of well - formed natural language question identification and established a strong baseline on anew dataset that can be downloaded at : http://goo.gl/language/ query-wellformedness .
+We proposed a new task of well - formed natural language question identification and established a strong baseline on a new dataset that can be downloaded at : http://goo.gl/language/ query-wellformedness .
 We also showed that question well - formedness information can be a helpful signal in improving state - of - the - art question generation systems .

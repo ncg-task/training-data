@@ -36,7 +36,7 @@
                 },
                 "Results" : {
                   "experiment on" : ["\" Quora Question Pairs \" dataset", {"from sentence" : "In this Sub-section , we compare our model with state - of - theart models on the paraphrase identification task .
-        We still experiment on the \" Quora Question Pairs \" dataset , and use the same dataset partition as Sub-section 4.2 ."
+We still experiment on the \" Quora Question Pairs \" dataset , and use the same dataset partition as Sub-section 4.2 ."
 		
 					}],
         
@@ -86,9 +86,7 @@
                               }
                             },
                             "from sentence" : "In this Sub-section , we evaluate our model on the natural language inference task over the SNLI dataset .
-First , we can see that \" Only P ?
-Q \" works significantly better than \" Only P ?
-Q \" , which tells us that , for natural language inference , matching the hypothesis against the premise is more effective than the other way around ."
+First , we can see that \" Only P ? Q \" works significantly better than \" Only P ? Q \" , which tells us that , for natural language inference , matching the hypothesis against the premise is more effective than the other way around ."
 
                           }
                         }
@@ -100,8 +98,7 @@ Q \" , which tells us that , for natural language inference , matching the hypot
                               "than" : "Only P ? Q"
                             }
                           },
-                          "from sentence" : "Second , our \" BiMPM \" model works much better than \" Only P ?
-Q \" , which reveals that matching premise against the hypothesis can also bring some benefits ."
+                          "from sentence" : "Second , our \" BiMPM \" model works much better than \" Only P ? Q \" , which reveals that matching premise against the hypothesis can also bring some benefits ."
                         },
                         "our models" : {
                           "achieve" : {

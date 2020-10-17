@@ -30,7 +30,7 @@
                 "greatest impact" : {
                   "on" : {
                     "sentiment prediction" : {
-                      "of" : "input service"
+                      "of" : "input sentence"
                     }
                   }
                 }

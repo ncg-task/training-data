@@ -1,7 +1,7 @@
 {
   "has" : {
     "Results" : {
-      "on" : {
+      "has" : {
         "MULTINLI" : {
           "has" : {
             "Our approach" : {
@@ -42,7 +42,9 @@ Our approach , without using any recurrent structure , achieves the new state - 
                 "state - of - the - art performance" : {
                   "on" : "competitive leaderboard"
                 },
-                "from sentence" : "We show our model , DIIN , achieves state - of - the - art performance on the competitive leaderboard ."
+                "from sentence" : "EXPERIMENT ON SNLI
+We show our model , DIIN , achieves state - of - the - art performance on the competitive leaderboard ."
+
               }
             }
           }

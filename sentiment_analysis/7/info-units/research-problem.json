@@ -1,6 +1,6 @@
 {
   "has research problem" : [
     ["MULTI - MODAL EMOTION RECOGNITION", {"from sentence" : "MULTI - MODAL EMOTION RECOGNITION ON IEMOCAP WITH NEURAL NETWORKS"}],
-    ["Emotion recognition", {"from sentence" : "Emotion recognition has become an important field of research inhuman computer interactions and there is a growing need for automatic emotion recognition systems ."}]
+    ["Emotion recognition", {"from sentence" : "Emotion recognition has become an important field of research in human computer interactions and there is a growing need for automatic emotion recognition systems ."}]
   ]
 }

@@ -1,118 +1,120 @@
-181	20	24	show
-181	34	53	two ruminate layers
-181	54	57	are
-181	63	84	important and helpful
-181	85	100	in contributing
-181	101	112	performance
-182	6	18	worth noting
-182	28	34	BiLSTM
-182	15	17	in
-182	42	64	context ruminate layer
-182	65	76	contributes
-182	77	90	substantially
-182	91	93	to
-182	94	111	model performance
-149	0	2	In
-149	7	31	character encoding layer
-149	37	40	use
-149	41	52	100 filters
-149	53	55	of
-149	56	63	width 5
-150	35	38	set
-150	43	71	hidden layer dimension ( d )
-150	72	74	to
-150	75	78	100
-151	3	6	use
-151	7	60	pretrained 100D Glo Ve vectors ( 6B - token version )
-151	61	63	as
-151	64	79	word embeddings
-154	11	29	AdaDelta optimizer
-154	48	51	for
-154	52	64	optimization
-152	0	28	Out - of - vocobulary tokens
-152	33	47	represented by
-152	51	61	UNK symbol
-152	62	64	in
-152	69	89	word embedding layer
-152	96	103	treated
-152	104	112	normally
-152	45	47	by
-152	120	145	character embedding layer
-156	0	10	Batch size
-156	11	13	is
-156	14	16	30
-157	0	13	Learning rate
-157	14	23	starts at
-157	24	27	0.5
-157	34	46	decreases to
-157	47	50	0.2
-157	66	81	stops improving
-157	60	65	model
-158	4	28	L2-regularization weight
-158	29	31	is
-158	32	39	1 e - 4
-158	42	53	AQSL weight
-158	29	31	is
-158	32	33	1
-158	63	70	dropout
-158	71	75	with
-158	78	87	drop rate
-158	91	94	0.2
-158	100	117	typical model run
-158	118	127	converges
-158	128	136	in about
-158	137	147	40 k steps
-155	3	11	selected
-155	12	33	hyperparameter values
-155	34	41	through
-155	42	55	random search
-159	20	25	using
-159	26	36	Tensorflow
-159	43	64	single NVIDIA K80 GPU
-24	3	10	propose
-24	14	23	extension
-24	24	26	of
-24	27	32	BIDAF
-24	35	41	called
-24	42	59	Ruminating Reader
-24	68	72	uses
-24	75	86	second pass
-24	24	26	of
-24	90	111	reading and reasoning
-24	133	141	to avoid
-24	142	150	mistakes
-24	155	164	to ensure
-24	184	199	effectively use
-24	204	216	full context
-24	217	231	when selecting
-24	235	241	answer
-25	46	55	introduce
-25	56	77	two novel layer types
-25	84	99	ruminate layers
-25	108	111	use
-25	112	129	gating mechanisms
-25	130	137	to fuse
-25	160	183	first and second passes
-27	30	61	answer-question similarity loss
-27	62	73	to penalize
-27	74	81	overlap
-27	82	89	between
-27	90	119	question and predicted answer
+180	20	24	show
+180	34	53	two ruminate layers
+180	54	57	are
+180	63	84	important and helpful
+180	85	100	in contributing
+180	101	112	performance
+181	6	18	worth noting
+181	28	34	BiLSTM
+181	35	37	in
+181	42	64	context ruminate layer
+181	65	76	contributes
+181	77	90	substantially
+181	91	93	to
+181	94	111	model performance
+10	35	79	https://rajpurkar.github.io/SQuAD -explorer/
+148	0	2	In
+148	7	31	character encoding layer
+148	37	40	use
+148	41	52	100 filters
+148	53	55	of
+148	56	63	width 5
+149	35	38	set
+149	43	71	hidden layer dimension ( d )
+149	72	74	to
+149	75	78	100
+150	3	6	use
+150	7	60	pretrained 100D Glo Ve vectors ( 6B - token version )
+150	61	63	as
+150	64	79	word embeddings
+153	11	29	AdaDelta optimizer
+153	48	51	for
+153	52	64	optimization
+151	0	28	Out - of - vocobulary tokens
+151	33	47	represented by
+151	51	61	UNK symbol
+151	62	64	in
+151	69	89	word embedding layer
+151	96	103	treated
+151	104	112	normally
+151	113	115	by
+151	120	145	character embedding layer
+155	0	10	Batch size
+155	11	13	is
+155	14	16	30
+156	0	13	Learning rate
+156	14	23	starts at
+156	24	27	0.5
+156	34	46	decreases to
+156	47	50	0.2
+156	66	81	stops improving
+156	60	65	model
+157	4	28	L2-regularization weight
+157	29	31	is
+157	32	39	1 e - 4
+157	42	53	AQSL weight
+157	54	56	is
+157	57	58	1
+157	63	70	dropout
+157	71	75	with
+157	78	87	drop rate
+157	88	90	of
+157	91	94	0.2
+157	100	117	typical model run
+157	118	127	converges
+157	128	136	in about
+157	137	147	40 k steps
+154	3	11	selected
+154	12	33	hyperparameter values
+154	34	41	through
+154	42	55	random search
+158	20	25	using
+158	26	36	Tensorflow
+158	43	64	single NVIDIA K80 GPU
+23	3	10	propose
+23	14	23	extension
+23	24	26	of
+23	27	32	BIDAF
+23	35	41	called
+23	42	59	Ruminating Reader
+23	68	72	uses
+23	75	86	second pass
+23	87	89	of
+23	90	111	reading and reasoning
+23	133	141	to avoid
+23	142	150	mistakes
+23	155	164	to ensure
+23	184	199	effectively use
+23	204	216	full context
+23	217	231	when selecting
+23	235	241	answer
+24	46	55	introduce
+24	56	77	two novel layer types
+24	84	99	ruminate layers
+24	108	111	use
+24	112	129	gating mechanisms
+24	130	137	to fuse
+24	160	183	first and second passes
+26	30	61	answer-question similarity loss
+26	62	73	to penalize
+26	74	81	overlap
+26	82	89	between
+26	90	119	question and predicted answer
 4	26	54	machine comprehension ( MC )
-15	57	82	question answering ( QA )
-170	32	37	model
-170	19	21	is
-170	41	45	tied
-170	46	48	in
-170	49	57	accuracy
-170	23	25	on
-170	65	80	hidden test set
-170	81	85	with
-170	90	127	bestperforming published single model
-171	3	10	achieve
-171	14	23	F 1 score
-171	24	26	of
-171	27	31	79.5
-171	36	44	EM score
-171	24	26	of
-171	48	52	70.6
+14	57	82	question answering ( QA )
+169	32	37	model
+169	38	40	is
+169	41	45	tied
+169	46	48	in
+169	49	57	accuracy
+169	58	60	on
+169	65	80	hidden test set
+169	81	85	with
+169	90	127	bestperforming published single model
+170	3	10	achieve
+170	14	23	F 1 score
+170	24	26	of
+170	27	31	79.5
+170	36	44	EM score
+170	45	47	of
+170	48	52	70.6

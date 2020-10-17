@@ -1,5 +1,5 @@
 176	0	4	LSTM
-176	9	11	is
+176	12	14	is
 176	19	53	basic LSTM - based deletion method
 178	0	6	LSTM +
 178	79	91	incorporated
@@ -8,17 +8,17 @@
 178	140	150	LSTM model
 178	155	159	used
 178	164	174	prediction
-178	31	33	on
+178	175	177	on
 178	182	195	previous word
 178	196	203	to help
-178	164	174	prediction
-178	31	33	on
+178	208	218	prediction
+178	219	221	on
 178	226	238	current word
 179	0	15	Traditional ILP
-180	2	4	is
+180	5	7	is
 180	12	30	ILP - based method
 183	0	19	Abstractive seq2seq
-184	2	4	is
+184	5	7	is
 184	11	53	abstractive sequence - to - sequence model
 184	54	64	trained on
 184	65	107	3.8 million Gigaword title - article pairs
@@ -32,7 +32,7 @@
 166	4	13	dimension
 166	14	16	of
 166	21	34	hidden layers
-166	14	16	of
+166	35	37	of
 166	38	47	bi - LSTM
 166	48	50	is
 166	51	54	100
@@ -90,7 +90,7 @@
 197	28	46	abstractive method
 197	47	56	performed
 197	57	63	poorly
-197	16	18	in
+197	64	66	in
 197	67	90	cross - domain settings
 198	6	8	In
 198	13	32	in - domain setting
@@ -151,6 +151,7 @@
 217	106	114	performs
 217	115	121	better
 217	122	126	than
+217	127	133	LSTM +
 217	134	138	when
 217	143	166	amount of training data
 217	167	169	is

@@ -11,14 +11,14 @@
 152	99	105	decays
 152	106	108	by
 152	111	117	factor
-152	83	85	of
+152	118	120	of
 152	121	125	0.85
 152	126	129	per
 152	130	135	epoch
 153	3	14	renormalize
 153	19	27	gradient
 153	28	30	if
-153	5	9	norm
+153	35	39	norm
 153	43	55	greater than
 153	56	57	5
 154	4	21	mini - batch size
@@ -42,7 +42,7 @@
 160	60	73	hidden states
 160	74	80	across
 160	81	100	multiple time steps
-160	27	29	as
+160	101	103	as
 160	107	123	adaptive control
 160	124	126	of
 160	131	147	information flow
@@ -58,6 +58,7 @@
 172	37	56	three - layer LSTMN
 172	62	70	performs
 172	71	75	best
+179	0	18	Sentiment Analysis
 200	40	43	are
 200	44	57	LSTM variants
 203	25	31	report
@@ -82,7 +83,7 @@
 194	28	44	Glove embeddings
 194	51	60	scaled by
 194	61	65	0.35
-194	40	42	in
+194	66	68	in
 194	73	84	first epoch
 194	85	90	after
 194	97	116	all word embeddings
@@ -95,7 +96,7 @@
 197	28	31	was
 197	32	38	1E - 4
 197	47	62	mini-batch size
-197	28	31	was
+197	63	66	was
 197	67	68	5
 198	2	14	dropout rate
 198	15	17	of
@@ -131,7 +132,7 @@
 224	88	94	set to
 224	95	108	0.9 and 0.999
 224	132	153	initial learning rate
-224	88	94	set to
+224	154	160	set to
 224	161	167	1E - 3
 225	4	20	mini- batch size
 225	25	31	set to
@@ -142,7 +143,7 @@
 222	35	46	first epoch
 222	49	54	after
 222	61	80	all word embeddings
-222	8	15	updated
+222	86	93	updated
 222	94	102	normally
 223	4	16	dropout rate
 223	21	34	selected from
@@ -189,7 +190,7 @@
 43	51	68	recurrent network
 43	69	73	with
 43	74	106	stronger memorization capability
-43	99	106	ability
+43	132	139	ability
 43	140	151	to discover
 43	152	161	relations
 43	162	167	among
@@ -197,7 +198,7 @@
 44	8	19	realized by
 44	20	29	inserting
 44	32	53	memory network module
-44	20	22	in
+44	54	56	in
 44	61	67	update
 44	68	70	of
 44	73	90	recurrent network
@@ -217,8 +218,8 @@
 49	39	44	while
 49	45	53	learning
 49	60	71	past tokens
-49	25	27	in
-49	79	85	memory
+49	72	85	in the memory
+49	90	104	to what extent
 49	110	119	relate to
 49	124	137	current token
 49	138	143	being

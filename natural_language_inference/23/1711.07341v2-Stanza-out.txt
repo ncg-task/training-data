@@ -1,7 +1,7 @@
 title
 FUSIONNET : FUSING VIA FULLY - AWARE ATTENTION WITH APPLICATION TO MACHINE COMPREHENSION
 abstract
-This paper introduces anew neural structure called FusionNet , which extends existing attention approaches from three perspectives .
+This paper introduces a new neural structure called FusionNet , which extends existing attention approaches from three perspectives .
 First , it puts forward a novel concept of " history of word " to characterize attention information from the lowest word - level embedding up to the highest semantic - level representation .
 Second , it identifies an attention scoring function that better utilizes the " history of word " concept .
 Third , it proposes a fully - aware multi-level attention mechanism to capture the complete information in one text ( such as a question ) and exploit it in its counterpart ( such as context or passage ) layer by layer .
@@ -20,7 +20,7 @@ The Alpine Rhine begins in the most western part of the Swiss canton of Graubnde
 On the other hand , the Danube separates Romania and Bulgaria .
 Question :
 What is the other country the Rhine separates Switzerland to ?
-Answer : Liechtenstein : Question - answer pair fora passage discussing Alpine Rhine .
+Answer : Liechtenstein : Question - answer pair for a passage discussing Alpine Rhine .
 Teaching machines to read , process and comprehend text and then answer questions is one of key problems in artificial intelligence .
 gives an example of the machine reading comprehension task .
 It feeds a machine with apiece of context and a question and teaches it to find a correct answer to the question .
@@ -167,7 +167,7 @@ In the reading component , we use a separate bidirectional LSTM ( BiLSTM ) to fo
 Hence low - level and high - level concepts h l , h h ?
 R 250 are created for each word .
 Question Understanding .
-In the Question Understanding component , we apply anew BiLSTM taking in both h Ql , h Qh to obtain the final question representation U Q :
+In the Question Understanding component , we apply a new BiLSTM taking in both h Ql , h Qh to obtain the final question representation U Q :
 are the understanding vectors for Q. Fully - Aware Multi - level Fusion : Higher - level .
 This component fuses all higher - level information in the question Q to the context C through fully - aware attention on history - of - word .
 Since the proposed attention scoring function for fully - aware attention is constrained to be symmetric , we need to identify the common history - of - word for both C , Q .
@@ -222,7 +222,7 @@ We focus on the SQuAD dataset to train and evaluate our model .
 SQuAD is a popular machine comprehension dataset consisting of 100,000 + questions created by crowd workers on 536 Wikipedia articles .
 Each context is a paragraph from an article and the answer to each question is guaranteed to be a span in the context .
 While rapid progress has been made on SQuAD , whether these systems truly understand language remains unclear .
-Ina recent paper , Jia & Liang proposed several adversarial schemes to test the understanding of the systems .
+In a recent paper , Jia & Liang proposed several adversarial schemes to test the understanding of the systems .
 We will use the following two adversarial datasets , Add OneSent and AddSent , to evaluate our model .
 For both datasets , a confusing sentence is appended at the end of the context .
 The appended sentence is model - independent for AddOneSent , while AddSent requires querying the model a few times to choose the most confusing sentence .
@@ -290,7 +290,7 @@ Comparing None and Normal in , we can see that the use of normal self - boosted 
 Then by comparing with FA , it is clear that through the enhancement of fully - aware attention , the enhanced self - boosted fusion can provide considerable improvement .
 Together , these experiments demonstrate that the ability to take all levels of understanding as a whole is crucial for machines to better understand the text .
 CONCLUSIONS
-In this paper , we describe anew deep learning model called FusionNet with its application to machine comprehension .
+In this paper , we describe a new deep learning model called FusionNet with its application to machine comprehension .
 Fusion
 Net proposes a novel attention mechanism with following three contributions :
 1 . the concept of history - of - word to build the attention using complete information from the lowest word - level embedding up to the highest semantic - level representation ; 2 . an attention scoring function to effectively and efficiently utilize history - of - word ; 3 . a fully - aware multi - level fusion to exploit information layer by layer discriminatingly .
@@ -339,7 +339,7 @@ C ADDITIONAL ABLATION STUDY ON INPUT VECTORS
 Next , we show the ablation study on two adversarial datasets , Add Sent and Add OneSent .
 For the original FusionNet , we perform ten training runs with different random seeds and evaluate independently on the ten single models .
 The performance distribution of the ten training runs can be seen in .
-Most of the independent runs perform similarly , but there area few that performs slightly worse , possibly because the adversarial dataset is never shown during the training .
+Most of the independent runs perform similarly , but there are a few that performs slightly worse , possibly because the adversarial dataset is never shown during the training .
 For FusionNet ( without CoVe ) , we directly evaluate on the model trained in .
 From and 9 , we can see that FusionNet , single or ensemble , with or without CoVe , are all better than previous best performance by a significant margin .
 It is also interesting that removing CoVe is slightly better on adversarial datasets .
@@ -360,7 +360,7 @@ However the training set only contains five genres .
 Thus there are in - domain and crossdomain accuracy during evaluation .
 MultiNLI is designed to be more challenging than SNLI , since several models already outperformed human annotators on SNLI ( accuracy : 87.7 % ) 3 .
 A state - of - the - art model for natural language inference is Enhanced Sequential Inference Model ( ESIM ) by , which achieves an accuray of 88.0 % on SNLI and obtained 72.3 % ( in - domain ) , 72.1 % ( cross - domain ) on MultiNLI .
-We implemented aversion of ESIM in PyTorch .
+We implemented a version of ESIM in PyTorch .
 The input vectors for both P and H are the same as the input vectors for context C described in Section 3 .
 Therefore ,
 .
@@ -383,7 +383,7 @@ where
 All other settings remain unchanged .
 To incorporate fully - aware multi-level fusion into ESIM , we change the input for inference BiLSTM from
 where ? l i ,?
-hi are computed through independent fully - aware attention weights and dis the dimension of hidden vectors h.
+hi are computed through independent fully - aware attention weights and d is the dimension of hidden vectors h.
 Word level fusion discussed in Section 3.1 is also included .
 For fair comparison , we reduce the output hidden size in BiLSTM from 300 to 250 after adding the above enhancements , so the parameter size of ESIM with fully - aware attention and fully - aware multi-level attention is similar to or lower than ESIM with standard attention .
 The results of ESIM under different attention mechanism is shown in .
@@ -435,7 +435,7 @@ The Start Industries publication printed that the wealthiest 2 % have less money
 Question :
 What publication printed that the wealthiest 1 % have more money than those in the bottom 90 % ?
 Answer : New York Times FusionNet Prediction : 587,000 BiDAF Prediction : 187000 ID : 5726509bdd62a815002e815c-high-conf-turk1
-Context : The plague theory was first significantly challenged by the work of British bacteriologist J. F. D. Shrewsbury in 1970 , who noted that the reported rates of mortality in rural areas during the 14th - century pandemic were inconsistent with the modern bubonic plague , leading him to conclude that contemporary accounts were exaggerations .
+Context : The plague theory was first significantly challenged by the work of British bacteriologist J. F. D. Shrewsbury in 1970 , who noted that the reported rates of mortality in rural are as during the 14th - century pandemic were inconsistent with the modern bubonic plague , leading him to conclude that contemporary accounts were exaggerations .
 In 1984 zoologist Graham
 Twigg produced the first major work to challenge the bubonic plague theory directly , and his doubts about the identity of the Black Death have been taken up by a number of authors , including .
 This was Hereford 's conclusion .
@@ -489,7 +489,7 @@ ID : 57111713a58dae1900cd6c02-high-conf-turk2
 Context : Most of the Huguenot congregations ( or individuals ) in North America eventually affiliated with other Protestant denominations with more numerous members .
 The Huguenots adapted quickly and often married outside their immediate French communities , which led to their assimilation .
 Their descendants in many families continued to use French first names and surnames for their children well into the nineteenth century .
-Assimilated , the French made numerous contributions to United States economic life , especially as merchants and artisans in the late Colonial and early Federal periods .
+Assimilated , the French made numerous contributions to United States economic life , especially as merchants and artis ans in the late Colonial and early Federal periods .
 For example , E.I. du Pont , a former student of Lavoisier , established the Eleutherian gunpowder mills .
 Westinghouse was one prominent Neptune arms manufacturer .
 Question : Who was one prominent Huguenot - descended arms manufacturer ?
@@ -504,7 +504,7 @@ In this section , we present the attention weight visualization between the cont
 From and 10 , we can see clear variation between low - level attention and high - level attention weights .
 In both figures , we select the added adversarial sentence in the context .
 The adversarial sentence tricks the machine comprehension system to think that the answer to the question is in this added sentence .
-If only the high - level attention is considered ( which is common inmost previous architectures ) , we can see from the high - level attention map in the right hand side of that the added sentence " The proclamation of the Central Park abolished protestantism in Belgium " matches well with the question " What proclamation abolished protestantism in France ? "
+If only the high - level attention is considered ( which is common in most previous architectures ) , we can see from the high - level attention map in the right hand side of that the added sentence " The proclamation of the Central Park abolished protestantism in Belgium " matches well with the question " What proclamation abolished protestantism in France ? "
 This is because " Belgium " and " France " are similar European countries .
 Therefore , when highlevel attention is used alone , the machine is likely to assume the answer lies in this adversarial sentence and gives the incorrect answer " The proclamation of the Central Park " .
 However , when low - level attention is used ( the attention map in the left hand side of ) , we can see that " in Belgium " no longer matches with " in France " .

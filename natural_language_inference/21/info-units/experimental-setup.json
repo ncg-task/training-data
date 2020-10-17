@@ -29,8 +29,7 @@ We minimize it by Adadelta ) ( an optimizer of mini - batch SGD ) with batch siz
           "from sentence" : "Initial learning rate is set to 0.5 ."
         },
         "weight matrices" : {
-          "initialized by" : "Glorot Initialization",
-          "from sentence" : "All weight matrices are initialized by Glorot Initialization , and the biases are initialized with 0 ."
+          "initialized by" : "Glorot Initialization"
         },
         "biases" : {
           "initialized with" : "0",
@@ -94,9 +93,8 @@ We minimize it by Adadelta ) ( an optimizer of mini - batch SGD ) with batch siz
           "from sentence" : "We use Dropout ) with keep probability 0.75 for language inference and 0.8 for sentiment analysis ."
         }
       },
-      "implemented with" : ["TensorFlow 2", {"from sentence" : "All models are implemented with TensorFlow 2 and run on sin - 3.0 m 83.9 80.6 1024D GRU encoders 15 m 98.8 81.4 300D Tree - based CNN encoders 3.5 m 83.3 82.1 300D SPINN - PI encoders 3.7 m 89.2 83.2 600D Bi- LSTM encoders 2.0 m 86.4 83.3 300D NTI - SLSTM - LSTM encoders 4.0 m 82.5 83.4 600D Bi-LSTM encoders+intra-attention 2.8 m 84.5 84.2 300D NSE encoders 3 gle Nvidia GTX 1080"}],
-      "run on" : ["Nvidia GTX 1080 Ti graphic card", {"from sentence" : "All models are implemented with TensorFlow 2 and run on sin - 3.0 m 83.9 80.6 1024D GRU encoders 15 m 98.8 81.4 300D Tree - based CNN encoders 3.5 m 83.3 82.1 300D SPINN - PI encoders 3.7 m 89.2 83.2 600D Bi- LSTM encoders 2.0 m 86.4 83.3 300D NTI - SLSTM - LSTM encoders 4.0 m 82.5 83.4 600D Bi-LSTM encoders+intra-attention 2.8 m 84.5 84.2 300D NSE encoders 3 gle Nvidia GTX 1080
-Ti graphic card ."
+      "implemented with" : "TensorFlow 2",
+      "run on" : ["Nvidia GTX 1080 Ti graphic card", {"from sentence" : "All models are implemented with TensorFlow 2 and run on sin - 3.0 m 83.9 80.6 1024D GRU encoders 15 m 98.8 81.4 300D Tree - based CNN encoders 3.5 m 83.3 82.1 300D SPINN - PI encoders 3.7 m 89.2 83.2 600D Bi- LSTM encoders 2.0 m 86.4 83.3 300D NTI - SLSTM - LSTM encoders 4.0 m 82.5 83.4 600D Bi-LSTM encoders+intra-attention 2.8 m 84.5 84.2 300D NSE encoders 3 gle Nvidia GTX 1080 Ti graphic card ."
 
       }]
     }

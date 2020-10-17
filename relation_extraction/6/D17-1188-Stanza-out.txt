@@ -32,7 +32,7 @@ Most of the methods focus on predicting a single relation type based on the comb
 and assign multiple relation types to each entity pair , such that the predictions are tied to particular occurrences of the entity pair .
 We regard the relation extraction task similarly and predict relation types on the sentence level .
 We use a distant supervision approach to construct the dataset .
-and have applied it to create relation extraction datasets fora large - scale KB .
+and have applied it to create relation extraction datasets for a large - scale KB .
 In contrast to our dataset , their data contains a single relation instance per sentence .
 That makes it incompatible with our method .
 All of the aforementioned approaches consider just the relation between the target entities and disregard other relations that might be present in the same sentence .
@@ -52,7 +52,7 @@ From each sentence in a complete article we extract link annotations and retriev
 There is an unambiguous one - to - one mapping between Wikidata entities and Wikipedia articles .
 Columbia University ? Q49088
 For further processing , we filter out sentences that contain fewer than 3 annotated entities , since we need to have multiple relations per sentence for training ( see Section 4 ) .
-We extract named entities and noun chunks from the input sentences with the Stanford CoreNLP toolkit to identify entities that are not covered by the Wikipedia annotations ( e.g. Obama in the sentence above ) .
+We extract named entities and noun chunks from the input sentences with the Stanford CoreNLP toolkit to identify entities thatare not covered by the Wikipedia annotations ( e.g. Obama in the sentence above ) .
 We retrieve IDs for those entities by searching through entity labels in Wikidata .
 We use HeidelTime to extract dates .
 For each pair of entities , we query Wikidata for relation types that connect them .
@@ -83,7 +83,7 @@ As the first model variant , we feed the output vector o s of the relation encod
 ( 1 )
 where y i is a weight vector and bi is a bias .
 ContextSum
-We argue that for predicting a relation type fora target entity pair other context relations in the same sentence are relevant .
+We argue that for predicting a relation type for a target entity pair other context relations in the same sentence are relevant .
 Some relation types may tend to co-occur , such as DI - RECTED BY and PRODUCED BY , whereas others maybe restrictive ( e. g. one can only have a single PLACE OF BIRTH ) .
 Therefore , in addition to the target entity pair , we take other entities from the same sentence that were extracted at the data generation step .
 We construct a set of context relations by taking each possible pair of entities .
@@ -92,7 +92,7 @@ We construct a set of context relations by taking each possible pair of entities
 That ensures that representation for target and context relations are learned jointly .
 We sum the context relation representations : ContextAtt
 In this variant , we use a weighted sum of the context relation representation at the penultimate step :
-where g i computes an attention score fora context relation with respect to the target relation : g ( o i , o s ) = oi
+where g i computes an attention score for a context relation with respect to the target relation : g ( o i , o s ) = oi
 Ao s , and A is a weight matrix that is learned .
 Experiments
 Training the models

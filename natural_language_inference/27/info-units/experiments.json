@@ -93,12 +93,10 @@
               },
               "has" : {
                 "hidden size and the convolution filter number" : {
-                  "are" : "128",
-                  "from sentence" : "The hidden size and the convolution filter number are all 128 , the batch size is 32 , training steps are 150 K for original data , 250 K for \" data augmentation 2 \" , and 340 K for \" data augmentation 3 \" ."
+                  "are" : "128"
                 },
                 "batch size" : {
-                  "is" : "32",
-                  "from sentence" : "The hidden size and the convolution filter number are all 128 , the batch size is 32 , training steps are 150 K for original data , 250 K for \" data augmentation 2 \" , and 340 K for \" data augmentation 3 \" ."
+                  "is" : "32"
                 },
                 "training steps" : {
                   "are" : {
@@ -119,12 +117,10 @@
                     "embedding and modeling encoder" : {
                       "are" : "4 and 2"
                     }
-                  },
-                  "from sentence" : "The numbers of convolution layers in the embedding and modeling encoder are 4 and 2 , kernel sizes are 7 and 5 , and the block numbers for the encoders are 1 and 7 , respectively ."
+                  }
                 },
                 "kernel sizes" : {
-                  "are" : "7 and 5",
-                  "from sentence" : "The numbers of convolution layers in the embedding and modeling encoder are 4 and 2 , kernel sizes are 7 and 5 , and the block numbers for the encoders are 1 and 7 , respectively ."
+                  "are" : "7 and 5"
                 },
                 "block numbers" : {
                   "for" : {
@@ -147,14 +143,13 @@
                 "our model" : {
                   "in" : "Python",
                   "using" : "Tensorflow"
-                },
-                "from sentence" : "Finally , we implement our model in Python using Tensorflow and carryout our experiments on an NVIDIA p 100 GPU ."
+                }
               },
-              "carryout" : {
+              "carry out" : {
                 "our experiments" : {
                   "on" : "NVIDIA p 100 GPU"
                 },
-                "from sentence" : "Finally , we implement our model in Python using Tensorflow and carryout our experiments on an NVIDIA p 100 GPU ."
+                "from sentence" : "Finally , we implement our model in Python using Tensorflow and carry out our experiments on an NVIDIA p 100 GPU ."
               }
             },
             "Results" : {

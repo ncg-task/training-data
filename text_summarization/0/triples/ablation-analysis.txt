@@ -14,5 +14,5 @@
 (RASG w / o GTD to RASG w / o GT||in terms of||ROUGE - L)
 (discriminator||provides||scalar training signal L g c)
 (scalar training signal L g c||for||generator training)
-(discriminator||provides|| feature vector F ( m t ))
-( feature vector F ( m t )||for||goal tracker)
+(discriminator||provides||feature vector F ( m t ))
+(feature vector F ( m t )||for||goal tracker)

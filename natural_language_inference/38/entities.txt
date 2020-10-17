@@ -1,6 +1,6 @@
 156	26	28	of
 156	33	45	single model
-156	22	24	on
+156	46	48	on
 156	49	64	SQ u AD dev set
 157	61	71	contribute
 157	72	78	toward
@@ -20,10 +20,10 @@
 160	89	99	shows that
 160	104	124	integral information
 160	125	127	of
-160	22	27	query
-160	115	118	for
+160	128	133	query
+160	134	137	for
 160	138	147	each word
-160	9	11	in
+160	148	150	in
 160	151	158	passage
 160	159	161	is
 160	162	169	crucial
@@ -35,7 +35,7 @@
 161	119	121	of
 161	122	145	alignment context words
 161	146	153	against
-161	4	9	query
+161	154	159	query
 162	0	3	For
 162	4	39	context - based similarity matching
 162	52	60	took out
@@ -44,7 +44,7 @@
 162	78	93	linear function
 162	104	116	proved to be
 162	117	129	contributory
-162	52	54	to
+162	130	132	to
 162	137	148	performance
 162	149	151	of
 162	152	179	full - orientation matching
@@ -73,7 +73,7 @@
 112	103	113	Tensorflow
 112	120	131	skip window
 112	135	141	set as
-112	56	57	2
+112	142	143	2
 118	8	23	memory networks
 118	29	32	set
 118	37	52	number of layer
@@ -98,7 +98,7 @@
 115	83	88	width
 115	89	91	of
 115	92	93	5
-115	35	38	for
+115	94	97	for
 115	98	106	each one
 117	11	47	AdaDelta ( Zeiler , 2012 ) optimizer
 117	48	52	with
@@ -114,10 +114,10 @@
 116	66	71	apply
 116	72	79	dropout
 116	80	87	between
-116	55	61	layers
+116	88	94	layers
 116	95	99	with
 116	102	115	dropout ratio
-116	23	25	as
+116	116	118	as
 116	119	122	0.2
 27	19	28	introduce
 27	33	87	Multi - layer Embedding with Memory Networks ( MEMEN )
@@ -126,27 +126,27 @@
 27	127	153	machine comprehension task
 28	10	21	consists of
 28	22	33	three parts
-28	19	21	of
-28	19	21	of
-28	19	21	of
-28	19	21	of
 29	8	16	encoding
+29	17	19	of
 29	20	37	context and query
 29	40	48	in which
 29	52	55	add
 29	56	97	useful syntactic and semantic information
-29	13	15	in
+29	98	100	in
 29	105	114	embedding
+29	115	117	of
 29	118	128	every word
 29	139	182	high - efficiency multilayer memory network
+29	183	185	of
 29	186	213	full - orientation matching
 29	214	222	to match
 29	227	247	question and context
 29	258	314	pointer - network based answer boundary prediction layer
 29	315	321	to get
 29	326	334	location
-29	282	288	answer
-29	13	15	in
+29	335	337	of
+29	342	348	answer
+29	349	351	in
 29	356	363	passage
 2	55	76	Machine Comprehension
 4	0	53	Machine comprehension ( MC ) style question answering
@@ -163,7 +163,7 @@
 132	16	67	Stanford Question Answering Dataset ( SQuAD ) v 1.1
 132	68	70	to
 138	114	123	our model
-138	17	19	is
+138	202	204	is
 138	205	216	competitive
 138	220	249	state - of - the - art method
 138	124	132	achieves
@@ -171,5 +171,5 @@
 138	12	14	of
 138	157	164	75.37 %
 138	172	180	F1 score
-138	12	14	of
+138	154	156	of
 138	184	193	82 . 66 %

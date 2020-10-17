@@ -1,3 +1,4 @@
+79	0	9	MSA Model
 156	4	11	size of
 156	16	31	embedding layer
 156	32	34	is
@@ -13,18 +14,19 @@
 157	54	56	at
 157	61	76	embedding layer
 157	90	93	0.5
-157	54	56	at
+157	94	96	at
 157	101	112	LSTM layers
 157	128	132	0.25
-157	54	56	at
+157	133	135	at
 157	140	161	recurrent connections
-157	47	49	of
-157	101	105	LSTM
+157	87	89	of
+157	169	173	LSTM
 158	17	35	L 2 regularization
 158	36	38	of
 158	39	45	0.0001
-158	30	32	at
+158	46	48	at
 158	53	66	loss function
+103	0	9	TSA Model
 160	4	11	size of
 160	16	31	embedding layer
 160	32	34	is
@@ -40,32 +42,33 @@
 161	61	63	of
 161	64	75	both inputs
 161	80	87	dropout
-161	61	63	of
+161	88	90	of
 161	91	94	0.3
-161	38	40	at
-161	45	60	embedding layer
-161	61	63	of
+161	95	97	at
+161	102	117	embedding layer
+161	118	120	of
 161	125	132	message
-161	34	37	0.2
-161	38	40	at
+161	146	149	0.2
+161	150	152	at
 161	157	167	LSTM layer
 161	176	196	recurrent connection
-161	61	63	of
-161	157	167	LSTM layer
-161	91	94	0.3
-161	38	40	at
+161	143	145	of
+161	204	214	LSTM layer
+161	230	233	0.3
+161	234	236	at
 161	241	277	attention layer and the Maxout layer
 162	13	16	add
 162	17	35	L 2 regularization
 162	36	38	of
 162	39	44	0.001
-162	30	32	at
+162	45	47	at
 162	52	65	loss function
 17	19	26	present
 17	27	54	two deep - learning systems
 17	60	71	competed at
 17	72	93	SemEval - 2017 Task 4
 18	4	15	first model
+18	19	42	designed for addressing
 18	47	89	problem of messagelevel sentiment analysis
 19	3	9	employ
 19	12	40	2 - layer Bidirectional LSTM
@@ -83,15 +86,15 @@
 165	0	20	Our official ranking
 165	21	23	is
 165	24	36	1/38 ( tie )
-165	17	19	in
+165	37	39	in
 165	40	49	Subtask A
 165	52	56	2/24
-165	17	19	in
+165	57	59	in
 165	60	69	Subtask B
 165	72	76	2/16
-165	17	19	in
+165	77	79	in
 165	80	89	Subtask C
 165	100	109	Subtask D
 165	114	119	11/12
-165	17	19	in
+165	97	99	in
 165	123	132	Subtask E

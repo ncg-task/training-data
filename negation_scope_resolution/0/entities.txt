@@ -3,7 +3,6 @@
 34	62	64	to
 34	65	104	negation detection and scope resolution
 35	3	10	explore
-35	15	21	set of
 35	22	36	design choices
 35	52	65	experiment on
 35	70	97	3 public datasets available
@@ -39,7 +38,7 @@
 193	47	49	as
 193	50	59	tolerance
 193	64	73	F 1 score
-193	47	49	as
+193	74	76	as
 193	81	102	early stopping metric
 193	113	127	Adam optimizer
 193	128	132	with
@@ -49,7 +48,7 @@
 193	179	209	Categorical Cross Entropy Loss
 193	248	256	to avoid
 193	257	265	training
-193	22	24	on
+193	266	268	on
 193	273	293	padded label outputs
 197	34	60	default 70 - 15 - 15 split
 197	61	64	for
@@ -58,7 +57,7 @@
 190	17	27	BERT model
 190	28	30	is
 190	33	73	sequence of tokenized and encoded tokens
-190	42	44	of
+190	74	76	of
 190	79	87	sentence
 192	0	4	BERT
 192	5	12	outputs
@@ -67,16 +66,16 @@
 192	25	56	size R H per token of the input
 192	68	75	feed to
 192	78	105	common classification layer
-192	22	24	of
+192	106	108	of
 192	109	125	dimen-sion R Hx5
 192	126	129	for
 192	130	143	cue detection
 192	148	153	R Hx2
-192	126	129	for
+192	154	157	for
 192	158	174	scope resolution
 194	3	10	perform
 194	11	45	cue detection and scope resolution
-194	6	9	for
+194	46	49	for
 194	50	64	all 3 datasets
 194	71	79	train on
 194	80	81	1
@@ -91,7 +90,7 @@
 2	43	82	Negation Detection and Scope Resolution
 201	0	3	For
 201	4	17	cue detection
-201	15	17	on
+201	20	22	on
 201	27	53	Sherlock dataset test data
 201	59	67	see that
 201	71	81	outperform
@@ -159,5 +158,5 @@
 217	56	76	BioScope Full Papers
 217	95	103	observed
 217	106	132	stateof - the - art result
-217	111	113	of
+217	133	135	of
 217	136	141	91.24

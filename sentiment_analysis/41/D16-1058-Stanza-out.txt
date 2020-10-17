@@ -89,7 +89,7 @@ The standard LSTM can not detect which is the important part for aspect - level 
 In order to address this issue , we propose to design an attention mechanism that can capture the key part of sentence in response to a given aspect .
 represents the architecture of an Attentionbased LSTM ( AT - LSTM ) .
 Let H ?
-R d N be a matrix consisting of hidden vectors [ h 1 , . . . , h N ] that the LSTM produced , where dis the size of hidden layers and N is the length of the given sentence .
+R d N be a matrix consisting of hidden vectors [ h 1 , . . . , h N ] that the LSTM produced , where d is the size of hidden layers and N is the length of the given sentence .
 Furthermore , v a represents the embedding of aspect and e N ?
 RN is a vector of 1s .
 The attention mechanism will produce an attention weight vector ?
@@ -175,7 +175,7 @@ Comparison with baseline methods
 We compare our model with several baselines , including LSTM , TD - LSTM , and TC - LSTM .
 LSTM : Standard LSTM can not capture any aspect information in sentence , so it must get the same ( a ) the aspect of this sentence : service ( b ) the aspect of this sentence : food : Attention Visualizations .
 The aspects of ( a ) and ( b ) are service and food respectively .
-The color depth expresses the importance degree of the weight in attention vector ?. From ( a ) , attention can detect the important words from the whole sentence dynamically even though multi-semantic phrase such as " fastest delivery times " which can be used in other areas .
+The color depth expresses the importance degree of the weight in attention vector ?. From ( a ) , attention can detect the important words from the whole sentence dynamically even though multi-semantic phrase such as " fastest delivery times " which can be used in other are as .
 From ( b ) , attention can know multi-keypoints if more than one keypoint existing .
 Models
 Three sentiment polarity although given different aspects .

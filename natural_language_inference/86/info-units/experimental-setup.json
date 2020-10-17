@@ -35,22 +35,20 @@
       "set" : {
         "hidden size" : {
           "as" : "100",
-          "for" : "all the LSTM layers",
-          "from sentence" : "We set the hidden size as 100 for all the LSTM layers , and set the number of perspectives l of our multiperspective matching function ( Equation ( 5 ) ) as 50 ."
+          "for" : "all the LSTM layers"
         },
         "number of perspectives l" : {
           "of" : "our multiperspective matching function",
           "as" : "50",
           "from sentence" : "We set the hidden size as 100 for all the LSTM layers , and set the number of perspectives l of our multiperspective matching function ( Equation ( 5 ) ) as 50 ."
         },
-        "dropout ratio" : {
-          "as" : "0.2",
-          "from sentence" : "We apply dropout to every layers in , and set the dropout ratio as 0.2 ."
-        },
         "learning rate" : {
           "as" : "0.0001",
           "from sentence" : "We set the learning rate as 0.0001 ."
-        }
+        },
+        "dropout ratio" : {
+          "as" : "0.2"
+        }		
       },
       "apply" : {
         "dropout" : {
@@ -60,8 +58,7 @@
       },
       "minimize" : {
         "cross entropy" : {
-          "of" : "be - ginning and end points",
-          "from sentence" : "To train the model , we minimize the cross entropy of the be - ginning and end points , and use the ADAM optimizer to update parameters ."
+          "of" : "be - ginning and end points"
         }
       },
       "use" : {

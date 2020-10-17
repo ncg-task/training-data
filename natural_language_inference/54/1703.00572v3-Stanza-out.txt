@@ -4,7 +4,7 @@ abstract
 Deep neural networks for machine comprehension typically utilizes only word or character embeddings without explicitly taking advantage of structured linguistic information such as constituency trees and dependency trees .
 In this paper , we propose structural embedding of syntactic trees ( SEST ) , an algorithm framework to utilize structured information and encode them into vector representations that can boost the performance of algorithms for the machine comprehension .
 We evaluate our approach using a state - of - the - art neural attention model on the SQuAD dataset .
-Experimental results demonstrate that our model can accurately identify the syntactic boundaries of the sentences and extract answers that are syntactically coherent over the baseline methods .
+Experimental results demonstrate that our model can accurately identify the syntactic boundaries of the sentences and extract answers thatare syntactically coherent over the baseline methods .
 Introduction
 Reading comprehension such as SQuAD or News QA requires identifying a span from a given context , which is an extension to the traditional question answering task , aiming at responding questions posed by human with natural language .
 Many works have been proposed to leverage deep neural networks for such question answering tasks , most of which involve learning the query - aware context representations .
@@ -24,14 +24,14 @@ The Annual Conference , roughly the equivalent of a diocese in the Anglican Comm
 " The Annual Conference " being the subject of " the basic unit of organization within the UMC " provides a critical clue for the model to skip over a large chunk of the text when answering the question " What is the basic unit of organization within the UMC " .
 As we show in the analysis section , adding dependency information dramatically helps identify dependency structures within the sentence , which is otherwise difficult to learn .
 In this paper , we propose Structural Embedding of Syntactic Trees ( SEST ) that encode syntactic information structured by constituency tree and dependency tree into neural attention models for the question answering task .
-Experimental results on SQuAD dataset illustrates that the syntactic information helps the model to choose the answers that are both succinct and grammatically coherent , which boosted the performance on both qualitative studies and numerical results .
+Experimental results on SQuAD dataset illustrates that the syntactic information helps the model to choose the answers thatare both succinct and grammatically coherent , which boosted the performance on both qualitative studies and numerical results .
 Our focus is to show adding structural embedding can improve baseline models , rather than directly compare to published SQuAD results .
 Although the methods proposed in the paper are demonstrated using syntactic trees , we note that similar approaches can be used to encode other types of tree structured information such as knowledge graphs and ontology relations .
 Methodology
 The general framework of our model is illustrated in .
 Here the input of the model is the embedding of the context and question while the output is two indices begin and end which indicate the begin and end indices of the answer in the context space .
 The input of the model contains two parts : the word / character model and the syntactic model .
-The shaded portion of our model in represents the encoded syntactic information of both context and question that are fed into the model .
+The shaded portion of our model in represents the encoded syntactic information of both context and question thatare fed into the model .
 To gain an insight of how the encoding works , consider a sentence which syntactic tree consists of four nodes ( o1 , o 2 , o3 , o 4 ) .
 A specific word is represented to be a sequence of nodes from it s leave all the way to the root .
 We cover how this process work in detail in Section 3.1.1 and 3.1.2 .
@@ -67,7 +67,7 @@ Non-terminal nodes summarize the grammatical function of the sub-tree .
 shows an example of the constituency tree with " the architect or engineer " being annotated as a noun phrase ( NP ) .
 A path originating from the leaf node to the root node captures the syntactic information in the constituency tree in a hierarchical way .
 The higher the node is , the longer span of words the sub -tree of this node covers .
-Hence , to extract the syntactic sequence S ( p ) fora leaf node p , it is reasonable to define the processing order A ( p ) from the leaf pall the way to its root .
+Hence , to extract the syntactic sequence S ( p ) for a leaf node p , it is reasonable to define the processing order A ( p ) from the leaf pall the way to its root .
 For example , the syntactic sequence for the phrase " the project coordinator " in is detected as ( NP , PP , VP , S ) .
 In practice , we usually take the last hidden units of Bi-directional encoding mechanisms such as Bidirectional LSTM to represent the sequence state , as is indicated in ( a ) .
 We set a window size to limit the amount of information that is used in our models .
@@ -76,9 +76,9 @@ This process is introduced for both performance and memory utilization considera
 In addition , a non-terminal node at a particular position in the syntactic sequence defines the begin and end indices of a phrase in the context .
 By measuring the similarity between syntactic se - : Model Framework .
 The neural network for training and testing is built by components with solid lines , which includes the embedding layer , attention layer , and output layer .
-The shaded area highlights the part of the framework that involves syntactic information .
+The shaded are a highlights the part of the framework that involves syntactic information .
 Components with dashed lines is an example to illustrate how syntactic information is decoded .
-Here a sentence is decomposed into a syntactic tree with four nodes and the syntactic information fora specific word is recorded as the path from it s position in the syntactic tree to the root , i.e. ( o 1 , o 2 , o 3 ) in this case .
+Here a sentence is decomposed into a syntactic tree with four nodes and the syntactic information for a specific word is recorded as the path from it s position in the syntactic tree to the root , i.e. ( o 1 , o 2 , o 3 ) in this case .
 quences S ( p ) extracted for each word p of both the question and the context , we are able to locate the boundaries of the answer span .
 This is done in the attention layer shown in .
 Structural Embedding of Dependency Trees ( SEDT )
@@ -138,7 +138,7 @@ We apply the same sets of parameters when we experiment them with the two models
 We report the results on the SQuAD development set and the blind test set .
 Predictive Performance
 We first compared the performance of single models between the baseline approach BiDAF and the proposed SEST approaches , including SE - POS , SECT - LSTM , SECT - CNN , SEDT - LSTM , and SEDT - CNN , on the development dataset of SQuAD .
-For each model , we conducted 5 different single experiments and evaluated them using two metrics : " Exact match " ( EM ) , which calculates the ratio of questions that are answered correctly by strict string comparison , and the F1 score , which calculates the harmonic mean of the precision and recall between predicted answers and ground true answers at the character level .
+For each model , we conducted 5 different single experiments and evaluated them using two metrics : " Exact match " ( EM ) , which calculates the ratio of questions thatare answered correctly by strict string comparison , and the F1 score , which calculates the harmonic mean of the precision and recall between predicted answers and ground true answers at the character level .
 As shown in , we reported the maximum , the mean , and the standard deviation of EM and F1 scores across all single runs for each approach , and highlighted the best model using bold font .
 SECT - LSTM is the second best method , which confirms the predictive powers of different types of syntactic information .
 We could see that SEDT - LSTM model outperforms the baseline method and other proposed methods in terms of both EM and F1 .
@@ -176,14 +176,14 @@ Because of that , allowing the syntactic sequence to extend beyond the certain h
 Similar conclusion holds for the SEDT model , which has an improved performance and decreased variance with the window size is set to 10 .
 We did not perform experiments with window size beyond 10 for SEDT since it will consume VRAM that exceeds the capacity of our computing device .
 Overlapping Analysis
-To further understand the performance benefits of incorporating syntactic information into the question answering problem , we can take a look at the questions on which models disagree .
+To further understand the performance benefits of incorporating syntactic information into the question answering problem , we can take a look at the questions on which models dis agree .
 is the Venn Diagram on the questions that have been corrected identified by SECT , SEDT and the baseline BiDAF model .
 Here we see that the vast Question BiDAF SECT
 Whose role is to design the works , prepare the specifications and produce construction drawings , administer the contract , tender the works , and manage the works from inception to completion ?
 These advances led to the development of a layered model of the Earth , with a crust and lithosphere on top , the mantle below ( separated within itself by seismic discontinuities at 410 and 660 kilometers ) , and the outer core and inner core below that .
 seismic discontinuities at 410 and 660 kilometers ) , and the outer core and inner core the outer core and inner core
 What percentage of farmland grows wheat ?
-More than 50 % of this area is sown for wheat , 33 % for barley and 7 % for oats .
+More than 50 % of this are a is sown for wheat , 33 % for barley and 7 % for oats .
 33 % 50 %
 What is the basic unit of organization within the UMC ?
 The Annual Conference , roughly the equivalent of a diocese in the Anglican Communion and the Roman Catholic Church or a synod in some Lutheran denominations such as the Evangelical Lutheran Church in America , is the basic unit of organization within the UMC .
@@ -192,9 +192,9 @@ The Annual Conference To understand the types of the questions that syntactic mo
 In , all of the three questions are " Wh-questions " and expect the answer of a noun phrase ( NP ) .
 Without knowing the syntactic information , BiDAF answered questions with unnecessary structures such as verb phrases ( vp ) ( e.g. " acts as " , " represented " ) or prepositional phrases ( pp ) ( e.g. " in " ) in addition to NPs ( e.g. " the architect engineer " , " uncertainty " and " powerful high frequency currents " ) that normal human would answer .
 For that reason , answers provided by BiDAF failed the exact match although its answers are semantically equivalent to the ones provided by SECT .
-Having incorporated constituency information provided an huge advantage in inferring the answers that are most natural fora human .
+Having incorporated constituency information provided an huge advantage in inferring the answers thatare most natural for a human .
 The advantages of using the dependency tree in our model can be illustrated using the questions in .
-Here again we listed the ones that are correctly identified by SEDT but not BiDAF .
+Here again we listed the ones thatare correctly identified by SEDT but not BiDAF .
 As we can see that the answer provided by BiDAF for first question broke the parenthesis incorrectly , this problem that can be easily solved by utilizing dependency information .
 In the second example , BiDAF failed to identify the dependency structures between " 50 % " and the keyword being asked " wheat " , which resulted in an incorrect answer that has nothing to do with the question .
 SEDT , on the other hand , answered the question correctly .

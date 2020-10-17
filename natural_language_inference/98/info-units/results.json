@@ -19,7 +19,7 @@
           "from sentence" : "In addition , we also use our implementation of ESIM , which achieves an accuracy of 76.8 % in the in - domain test set , and 75.8 % in the cross - domain test set , which presents the state - of - the - art results ."
         }
       },
-      "achieves" : {
+      "achieve" : {
         "accuracies" : {
           "of" : {
             "73.5 % and 73.6 %" : {

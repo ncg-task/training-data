@@ -7,11 +7,11 @@
 34	34	52	richer information
 34	53	57	from
 34	62	75	discriminator
-34	72	74	to
+34	76	78	to
 34	83	92	generator
 34	93	105	by borrowing
 34	110	125	recent advances
-34	30	32	in
+34	126	128	in
 34	129	164	hierarchical reinforcement learning
 36	4	11	MANAGER
 36	15	20	along
@@ -22,7 +22,7 @@
 37	27	77	generator D 's high - level feature representation
 37	131	135	form
 37	140	152	guiding goal
-37	131	134	for
+37	153	156	for
 37	161	174	WORKER module
 35	36	45	introduce
 35	48	72	hierarchical generator G
@@ -44,8 +44,9 @@
 40	158	189	the LSTM and the goal embedding
 40	190	197	to take
 40	200	212	final action
-40	99	101	at
+40	213	215	at
 40	216	229	current state
+163	0	11	GAN Setting
 164	27	33	choose
 164	38	54	CNN architecture
 164	55	57	as
@@ -67,7 +68,7 @@
 167	29	36	between
 167	37	48	100 and 200
 168	19	34	feature of text
-168	5	7	is
+168	35	37	is
 168	40	64	1,720 dimensional vector
 169	0	7	Dropout
 169	58	76	performed to avoid
@@ -91,6 +92,7 @@
 172	60	88	some preliminary experiments
 2	5	20	Text Generation
 4	0	66	Automatically generating coherent and semantically meaningful text
+178	0	26	Synthetic Data Experiments
 182	6	8	In
 182	13	31	pre-training stage
 182	34	41	LeakGAN
@@ -108,6 +110,7 @@
 183	127	147	significantly better
 183	148	152	than
 183	153	169	previous results
+185	0	41	Long Text Generation : EMNLP2017 WMT News
 196	0	2	In
 196	3	23	all measured metrics
 196	26	33	LeakGAN
@@ -115,6 +118,7 @@
 196	40	68	significant performance gain
 196	69	80	compared to
 196	81	96	baseline models
+198	0	44	Middle Text Generation : COCO Image Captions
 208	12	14	of
 208	19	30	BLEU scores
 208	31	33	on
@@ -125,12 +129,14 @@
 208	83	103	significantly better
 208	104	108	than
 208	109	124	baseline models
-208	51	53	in
+208	125	127	in
 208	128	159	mid-length text generation task
+209	0	37	Short Text Generation : Chinese Poems
 214	29	37	indicate
 214	43	50	LeakGAN
 214	51	71	successfully handles
 214	76	103	short text generation tasks
+223	0	33	Turing Test and Generated Samples
 231	4	15	performance
 231	16	18	on
 231	19	31	two datasets
@@ -140,6 +146,6 @@
 231	74	82	Leak GAN
 231	139	152	than those of
 231	153	159	SeqGAN
-231	71	73	of
+231	87	89	of
 231	90	115	higher global consistency
 231	120	138	better readability

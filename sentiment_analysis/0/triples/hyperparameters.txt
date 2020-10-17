@@ -28,6 +28,6 @@
 (" UNK " token||represents||unknown words)
 (Hyperparameters||has||weights)
 (weights||of||hidden units)
-(hidden units||initialized using||orthogonal weights)
+(hidden units||initialized using||orthogonal)
 (Hyperparameters||has||text embedding layer)
 (text embedding layer||initialized from||pretrained word - embedding vectors)

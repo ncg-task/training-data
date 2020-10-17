@@ -1,7 +1,7 @@
 {
   "has research problem" : [
     ["OPEN - DOMAIN QUESTION ANSWERING", {"from sentence" : "EVIDENCE AGGREGATION FOR ANSWER RE - RANKING IN OPEN - DOMAIN QUESTION ANSWERING"}],
-    ["Open-domain question answering ( QA )", {"from sentence" : "Open-domain question answering ( QA ) aims to answer questions from abroad range of domains by effectively marshalling evidence from large open - domain knowledge sources ."}],
+    ["Open-domain question answering ( QA )", {"from sentence" : "Open-domain question answering ( QA ) aims to answer questions from a broad range of domains by effectively marshalling evidence from large open - domain knowledge sources ."}],
     ["open - domain QA", {"from sentence" : "Recent work on open - domain QA has focused on using unstructured text retrieved from the web to build machine comprehension models ."}]
   ]
 }

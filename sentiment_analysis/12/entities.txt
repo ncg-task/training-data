@@ -7,19 +7,20 @@
 31	93	97	from
 31	100	115	training corpus
 31	131	149	exploited to guide
-31	100	108	training
+31	154	162	training
 31	163	165	of
 31	166	186	attention mechanisms
-31	40	42	in
+31	187	189	in
 31	190	200	ASC models
 32	35	43	roots in
 32	69	81	context word
 32	82	86	with
 32	91	115	maximum attention weight
 32	124	139	greatest impact
-32	70	72	on
+32	140	142	on
 32	147	167	sentiment prediction
 32	168	170	of
+32	174	188	input sentence
 150	3	7	used
 150	8	34	pre-trained Glo Ve vectors
 150	35	48	to initialize
@@ -37,7 +38,7 @@
 153	13	24	overfitting
 153	30	38	employed
 153	39	80	dropout strategy ( Hinton et al. , 2012 )
-153	62	64	on
+153	81	83	on
 153	88	109	input word embeddings
 153	110	112	of
 153	117	121	LSTM
@@ -57,13 +58,13 @@
 155	83	85	as
 155	86	87	5
 155	109	112	0.1
-155	71	73	on
+155	113	115	on
 155	116	131	LAPTOP data set
 155	134	137	0.5
-155	71	73	on
+155	138	140	on
 155	141	154	REST data set
-155	109	112	0.1
-155	71	73	on
+155	159	162	0.1
+155	163	165	on
 155	166	182	TWITTER data set
 2	53	86	Aspect - Level Sentiment Analysis
 4	3	50	aspect - level sentiment classification ( ASC )
@@ -82,12 +83,12 @@
 176	32	36	with
 176	40	59	attention mechanism
 176	76	96	slightly inferior to
-176	27	31	TNet
+176	97	101	TNet
 177	19	26	perform
 177	27	53	additional K+1 - iteration
 177	54	56	of
 177	57	65	training
-177	33	35	on
+177	66	68	on
 177	221	238	neural ASC models
 177	90	101	performance
 177	106	131	not changed significantly
@@ -95,6 +96,6 @@
 183	22	69	both kinds of attention supervision information
 183	101	112	MN ( + AS )
 183	113	135	remarkably outperforms
-183	101	103	MN
-183	43	45	on
+183	136	138	MN
+183	139	141	on
 183	142	155	all test sets

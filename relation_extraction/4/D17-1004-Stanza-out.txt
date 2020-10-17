@@ -10,9 +10,9 @@ The combination of better supervised data and a more appropriate high - capacity
 When the model trained on this new dataset replaces the previous relation extraction component of the best TAC KBP 2015 slot filling system , its F 1 score increases markedly from 22.2 % to 26.7 % .
 Introduction
 A basic but highly important challenge in natural language understanding is being able to populate a knowledge base with relational facts contained in a piece of text .
-For the text shown in , the system should extract triples , or equivalently , knowledge graph edges , such as hPenner , per : spouse , Lisa Dillmani .
+For the text shown in , the system should extract triples , or equivalently , knowledge graph edges , such as hPenner , per : spouse , Lis a Dillmani .
 Combining such extractions , a system can produce a knowledge graph of relational facts between persons , organizations , and locations in the text .
-This task involves entity recognition , mention coreference and / or entity linking , and relation extraction ; we focus on the Penner is survived by his brother , John , a copy editor at the Times , and his former wife , Times sportswriter Lisa Dillman .
+This task involves entity recognition , mention coreference and / or entity linking , and relation extraction ; we focus on the Penner is survived by his brother , John , a copy editor at the Times , and his former wife , Times sportswriter Lis a Dillman .
 most challenging " slot filling " task of filling in the relations between entities in the text .
 Organized relational knowledge in the form of " knowledge graphs " has become an important knowledge resource .
 These graphs are now extensively used by search engine companies , both to provide information to end-users and internally to the system , as away to understand relationships .
@@ -22,7 +22,7 @@ Existing work on relation extraction ( e.g. , has been unable to achieve suffici
 Supervised training data has been scarce and , while techniques like distant supervision appear to be a promising way to extend knowledge bases at low cost , in practice the training data has often been too noisy for reliable training of relation extraction systems .
 As a result most systems fail to make correct extractions even in apparently straightforward cases like ,
 Example Entity Types & Label
-Carey will succeed Cathleen P. Black , who held the position for 15 years and will take on anew role as chairwoman of Hearst Magazines , the company said .
+Carey will succeed Cathleen P. Black , who held the position for 15 years and will take on a new role as chairwoman of Hearst Magazines , the company said .
 where the best system at the NIST TAC Knowledge Base Population ( TAC KBP ) 2015 evaluation failed to recognize the relation between Penner and Dillman .
 1 Consequently most automatic systems continue to make heavy use of hand - written rules or patterns because it has been hard for machine learning systems to achieve adequate precision or to generalize as well across text types .
 We believe machine learning approaches have suffered from two key problems : ( 1 ) the models used have been insufficiently tailored to relation extraction , and ( 2 ) there has been insufficient annotated data available to satisfy the training of data - hungry models , such as deep learning models .
@@ -34,7 +34,7 @@ Secondly , we markedly improve the availability of supervised training data by u
 We name this dataset the TAC Relation Extraction Dataset ( TACRED ) , and will make it available through the Linguistic Data Consortium ( LDC ) in order to respect copyrights on the underlying text .
 Combining these two gives a system with markedly better slot filling performance .
 This is 1 Note : former spouses count as spouses in the ontology .
-shown not only fora relation classification task on the crowd - annotated data but also for the incorporation of the resulting classifiers into a complete cold start knowledge base population system .
+shown not only for a relation classification task on the crowd - annotated data but also for the incorporation of the resulting classifiers into a complete cold start knowledge base population system .
 On TACRED , our system achieves a relation classification F 1 score that is 7.9 % higher than that of a strong feature - based classifier , and 3.5 % higher than that of the best previous neural architecture that we re-implemented .
 When this model is used in concert with a pattern - based system on the TAC KBP 2015 Cold Start Slot Filling evaluation data , the system achieves an F 1 score of 26.7 % , which exceeds the previous state - of - the - art by 4.5 % absolute .
 While this performance certainly does not solve the knowledge base population problemachieving sufficient recall remains a formidable challenge - this is nevertheless notable progress .
@@ -43,7 +43,7 @@ Existing work on neural relation extraction ( e.g. , has focused on convolutiona
 While these models generally work well on the datasets they are tested on , as we will show , they often fail to generalize to the longer sentences that are common in real - world text ( such as in TAC KBP ) .
 We believe that existing model architectures suffer from two problems :
 ( 1 ) Although modern sequence models such as Long Short - Term Memory ( LSTM ) networks have gating mechanisms to control the relative influence of each individual word to the final sentence representation ( Hochreiter and Schmidhuber , 1997 ) , these controls are not explicitly conditioned on the entire sentence being classified ; ( 2 ) Most existing work either does not explicitly model the positions of entities ( i.e. , subject and object ) in the sequence , or models the positions only within a local region .
-Here , we propose anew neural sequence model with a position - aware attention mechanism over an LSTM network to tackle these challenges .
+Here , we propose a new neural sequence model with a position - aware attention mechanism over an LSTM network to tackle these challenges .
 This model can ( 1 ) evaluate the relative contribution of each word after seeing the entire sequence , and ( 2 ) base this evaluation not only on the semantic information of the sequence , but also on the global positions of the entities within the sequence .
 We formalize the relation extraction task as follows :
 Let X = [ x 1 , ... , x n ] denote a sentence , where xi is the i - th token .
@@ -58,7 +58,7 @@ Next , as shown in , we obtain hidden state representations of the sentence by f
 We define a summary vector q = h n ( i.e. , the output state of the LSTM ) .
 This summary vector encodes information about the entire sentence .
 Then for each hidden state hi , we calculate an attention weight a i as :
-Here W h , W q 2 R da ?d , W s , W o 2 R da ? dp and v 2 R da are learnable parameters of the network , where dis the dimension of hidden states , d p is the dimension of position embeddings , and d a is the size of attention layer .
+Here W h , W q 2 R da ?d , W s , W o 2 R da ? dp and v 2 R da are learnable parameters of the network , where d is the dimension of hidden states , d p is the dimension of position embeddings , and d a is the size of attention layer .
 Additional parameters of the network include embedding matrices E 2 R | V |?d and P 2 R ( 2L 1 ) ? d p , where V is the vocabulary and L is the maximum sentence length .
 We regard attention weight a i as the relative contribution of the specific word to the sentence representation .
 The final sentence representation z is computed as :

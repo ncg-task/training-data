@@ -11,7 +11,9 @@
                     "twelve methods" : {
                       "including" : ["linear support vector machine ( SVM )", "random forest ( RF )", "canonical correlation analysis ( CCA )", "group sparse canonical correlation analysis ( GSCCA )", "deep believe network ( DBN )", "graph regularization sparse linear regression ( GRSLR )", "graph convolutional neural network ( GCNN )", "dynamical graph convolutional neural network ( DGCNN )", "domain adversarial neural networks ( DANN )", "bi-hemisphere domain adversarial neural network ( BiDANN )", "EmotionMeter", "attention - long short - term memory ( A - LSTM )"]
                     },
-                    "from sentence" : "To validate the superiority of BiHDM , we also conduct the same experiments using twelve methods , including linear support vector machine ( SVM ) , random forest ( RF ) , canonical correlation analysis ( CCA ) , group sparse canonical correlation analysis ( GSCCA ) , deep believe network ( DBN ) , graph regularization sparse linear regression ( GRSLR ) , graph convolutional neural network ( GCNN ) , dynamical graph convolutional neural network ( DGCNN ) , domain adversarial neural networks ( DANN ) , bi-hemisphere domain adversarial neural network ( BiDANN ) , EmotionMeter , and attention - long short - term memory ( A - LSTM ) ."
+                    "from sentence" : "1 ) The subject - dependent experiment :
+To validate the superiority of BiHDM , we also conduct the same experiments using twelve methods , including linear support vector machine ( SVM ) , random forest ( RF ) , canonical correlation analysis ( CCA ) , group sparse canonical correlation analysis ( GSCCA ) , deep believe network ( DBN ) , graph regularization sparse linear regression ( GRSLR ) , graph convolutional neural network ( GCNN ) , dynamical graph convolutional neural network ( DGCNN ) , domain adversarial neural networks ( DANN ) , bi-hemisphere domain adversarial neural network ( BiDANN ) , EmotionMeter , and attention - long short - term memory ( A - LSTM ) ."
+
                   }
                 },
                 "Results" : {
@@ -67,10 +69,12 @@
             "subject - independent experiment" : {
               "has" : {
                 "Baselines" : {
-                  "using" : {
+                  "use" : {
                     "twelve methods" : {
                       "including" : ["Kullback - Leibler importance estimation procedure ( KLIEP )", "unconstrained least - squares importance fitting ( ULSIF )", "selective transfer machine ( STM )", "linear SVM , transfer component analysis ( TCA )", "transfer component analysis ( TCA )", "geodesic flow kernel ( GFK )", "DANN", "DGCNN", "deep adaptation network ( DAN )", "BiDANN", "A - LSTM"],
-                      "from sentence" : "In addition , for comparison purpose , we use twelve methods including Kullback - Leibler importance estimation procedure ( KLIEP ) , unconstrained least - squares importance fitting ( ULSIF ) , selective transfer machine ( STM ) , linear SVM , transfer component analysis ( TCA ) , transfer component analysis ( TCA ) , geodesic flow kernel ( GFK ) , DANN , DGCNN , deep adaptation network ( DAN ) , BiDANN , and A - LSTM , to conduct the same experiments ."
+                      "from sentence" : "2 ) The subject - independent experiment :
+In addition , for comparison purpose , we use twelve methods including Kullback - Leibler importance estimation procedure ( KLIEP ) , unconstrained least - squares importance fitting ( ULSIF ) , selective transfer machine ( STM ) , linear SVM , transfer component analysis ( TCA ) , transfer component analysis ( TCA ) , geodesic flow kernel ( GFK ) , DANN , DGCNN , deep adaptation network ( DAN ) , BiDANN , and A - LSTM , to conduct the same experiments ."
+
                     }
                   }
                 },

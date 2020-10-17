@@ -1,7 +1,7 @@
 {
   "has" : {
     "Model" : {
-      "relies on" : ["alignment", {"from sentence" : "In contrast to existing approaches , our approach only relies on alignment and is fully computationally decomposable with respect to the input text ."}],
+      "relies on" : "alignment",
       "has" : {
         "fully computationally decomposable" : {
           "with respect to" : "input text",
@@ -11,10 +11,6 @@
       "Given" : {
         "two sentences" : {
           "has" : {
-            "each word" : {
-              "repre-sented by" : "embedding vector",
-              "from sentence" : "Given two sentences , where each word is repre-sented by an embedding vector , we first create a soft alignment matrix using neural attention ."
-            },
             "results" : {
               "of" : "subproblems",
               "has" : {
@@ -23,6 +19,9 @@
                 }
               },
               "from sentence" : "Finally , the results of these subproblems are merged to produce the final classification ."
+            },		  
+            "each word" : {
+              "repre-sented by" : "embedding vector"
             }
           },
           "create" : {

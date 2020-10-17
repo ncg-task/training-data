@@ -10,23 +10,6 @@
           },
           "from sentence" : "Our implementation is based on the PyTorch implementation of BERT 6 ."
         },
-        "all the layers" : {
-          "tuned with" : {
-            "moderate model size" : {
-              "has" : "increasing",
-              "as" : {
-                "extra SRL embedding volume" : {
-                  "is" : {
-                    "less than 15 %" : {
-                      "of" : "original encoder size"
-                    }
-                  }
-                }
-              }
-            },
-            "from sentence" : "We use the pre-trained weights of BERT and follow the same fine - tuning procedure as BERT without any modification , and all the layers are tuned with moderate model size increasing , as the extra SRL embedding volume is less than 15 % of the original encoder size ."
-          }
-        },
         "batch size" : {
           "selected in" : "{ 16 , 24 , 32 }",
           "from sentence" : "The batch size is selected in { 16 , 24 , 32 } ."
@@ -71,14 +54,33 @@
       },
       "use" : {
         "pre-trained weights" : {
-          "of" : "BERT",
-          "from sentence" : "We use the pre-trained weights of BERT and follow the same fine - tuning procedure as BERT without any modification , and all the layers are tuned with moderate model size increasing , as the extra SRL embedding volume is less than 15 % of the original encoder size ."
+          "of" : "BERT"
         }
       },
       "follow" : {
         "same fine - tuning procedure" : {
-          "as" : "BERT",
-          "without" : "any modification",
+          "as" : {
+            "BERT" : {
+              "has" : {
+                "all the layers" : {
+                  "tuned with" : {
+                    "moderate model size" : {
+                      "has" : "increasing",
+                      "as" : {
+                        "extra SRL embedding volume" : {
+                          "is" : {
+                            "less than 15 %" : {
+                              "of" : "original encoder size"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }                
+              }              
+            }
+          },
           "from sentence" : "We use the pre-trained weights of BERT and follow the same fine - tuning procedure as BERT without any modification , and all the layers are tuned with moderate model size increasing , as the extra SRL embedding volume is less than 15 % of the original encoder size ."
         }
       },

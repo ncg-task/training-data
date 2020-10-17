@@ -17,7 +17,7 @@
 (Results||has||Each scaffold task)
 (Each scaffold task||improves||model performance)
 (Results||has||both scaffolds)
-(both scaffolds||used simulataneously in||BiLSTM - Attn + both scaffolds)
+(both scaffolds||used simultaneously in||BiLSTM - Attn + both scaffolds)
 (both scaffolds||has||F1 score)
 (F1 score||improves to||63.1 ( ?= 11.3 ))
 (Results||has||best results)

@@ -57,7 +57,7 @@
                     "1.41 %" : {
                       "lower than" : {
                         "Bi - GRU" : {
-                          "on" : " Restaurant and Laptop dataset"
+                          "on" : "Restaurant and Laptop dataset"
                         }
                       }
                     }

@@ -4,11 +4,11 @@
 141	30	92	well - known CNN - non-static architecture and hyperparameters
 141	107	111	with
 141	114	127	learning rate
-141	23	25	of
+141	128	130	of
 141	131	137	0.0006
 141	140	151	obtained by
 141	152	158	tuning
-141	50	52	on
+141	159	161	on
 141	166	181	validation data
 142	8	24	DM - MCNN models
 142	31	44	configuration
@@ -37,10 +37,11 @@
 145	161	169	enabling
 145	170	197	uniform and fast processing
 145	198	200	of
-145	60	75	each mini-batch
+145	201	216	each mini-batch
 146	4	32	neural network architectures
 146	37	54	implemented using
 146	59	66	PyTorch
+125	0	10	Embeddings
 126	4	37	standard pre-trained word vectors
 126	43	46	for
 126	47	54	English
@@ -53,9 +54,9 @@
 126	139	154	other languages
 126	160	167	rely on
 126	172	210	Facebook fastText Wikipedia embeddings
-126	182	184	as
+126	211	213	as
 126	214	235	input representations
-126	55	58	are
+127	13	16	are
 127	17	34	300 - dimensional
 128	4	11	vectors
 128	23	29	fed to
@@ -94,7 +95,7 @@
 132	42	56	scikit - learn
 132	57	67	to extract
 132	68	85	word coefficients
-132	21	23	in
+132	86	88	in
 132	89	100	each domain
 132	105	113	also for
 132	118	138	union of all domains
@@ -118,7 +119,6 @@
 139	32	46	set to include
 139	51	60	languages
 139	66	72	mining
-139	148	152	from
 139	153	163	Wiktionary
 139	73	86	corresponding
 139	87	98	translation
@@ -156,8 +156,8 @@
 152	64	70	Glo Ve
 152	74	82	used for
 152	83	90	English
-152	36	44	fastText
-152	74	82	used for
+152	97	105	fastText
+152	109	117	used for
 152	118	137	all other languages
 152	143	150	observe
 152	151	175	substantial improvements
@@ -199,5 +199,5 @@
 171	158	167	our model
 171	168	205	succeeds in exploiting them to obtain
 171	206	223	substantial gains
-171	46	48	in
+171	224	226	in
 171	227	266	several different languages and domains

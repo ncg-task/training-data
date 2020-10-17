@@ -10,25 +10,38 @@
 229	51	63	chosen among
 229	64	115	{ 64 , 128 , 256 } and { 1 , 0.1 , ... , 1.0e ? 4 }
 229	139	145	margin
-229	93	96	0.1
 230	4	10	set to
+230	11	14	0.1
 24	34	41	present
 24	45	72	embedding - based QA system
 24	73	88	developed under
 24	93	133	framework of Memory Networks ( Mem NNs )
-26	8	10	in
+25	0	15	Memory Networks
+25	16	19	are
+25	20	36	learning systems
+25	37	52	centered around
+25	55	71	memory component
+25	77	83	can be
+25	84	103	read and written to
+25	124	144	focus on cases where
+25	149	161	relationship
+25	287	299	performed by
+25	300	309	embedding
+25	162	169	between
+25	174	228	input and response languages ( here natural language )
+25	237	283	storage language ( here , the facts from KBs )
+25	322	324	in
+25	329	346	same vector space
 26	4	14	setting of
 26	19	28	simple QA
 26	29	43	corresponds to
 26	48	68	elementary operation
 26	69	82	of performing
 26	85	98	single lookup
-26	8	10	in
+26	99	101	in
 26	106	112	memory
-2	45	60	Memory Networks
 2	0	39	Large - scale Simple Question Answering
 4	9	41	large - scale question answering
-5	240	246	can be
 5	69	94	simple question answering
 12	267	292	Simple Question Answering
 254	0	2	On
@@ -48,7 +61,7 @@
 255	44	55	performance
 255	56	58	on
 255	59	74	SimpleQuestions
-259	17	20	are
+256	0	27	Transfer learning on Reverb
 259	4	16	best results
 259	17	20	are
 259	21	34	67 % accuracy
@@ -61,12 +74,13 @@
 262	41	58	single QA dataset
 262	59	66	perform
 262	67	73	poorly
-262	36	38	on
+262	74	76	on
 262	81	95	other datasets
 263	20	31	training on
 263	32	45	both datasets
 263	51	59	improves
 263	60	71	performance
+264	0	26	Importance of data sources
 266	6	17	paraphrases
 266	21	32	not seem to
 266	33	42	help much
@@ -78,7 +92,7 @@
 266	112	131	synthetic questions
 266	139	143	have
 266	146	161	dramatic impact
-266	43	45	on
+266	162	164	on
 266	169	180	performance
-266	43	45	on
+266	181	183	on
 266	184	190	Reverb

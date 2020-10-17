@@ -17,11 +17,13 @@
                   }
                 }
               },
-              "from sentence" : "For the test set of , the average entailment score for the reference is 0.72 , while for the basic seq2seq model , the entailment score is only 0.46 ."
+              "from sentence" : "Does our summarization model learn entailment knowledge ?
+For the test set of , the average entailment score for the reference is 0.72 , while for the basic seq2seq model , the entailment score is only 0.46 ."
+
             }
           },
           "adopt" : {
-            "entailment-based strategies" : {
+            "entailmentbased strategies" : {
               "has" : {
                 "entailment score" : {
                   "rises to" : {
@@ -45,8 +47,7 @@
                   }
                 }
               }
-            },
-            "from sentence" : "Note that the entailment score is 0.57 for seq2seq model with selective encoding , and we believe that the selective mechanism can filter out secondary information in the input , which will reduce the possibility to generate irrelevant information ."
+            }
           },
           "has" : {
             "selective mechanism" : {
@@ -86,7 +87,9 @@
                 }
               }
             },
-            "from sentence" : "shows that the seq2seq model produces more novel words ( i.e. , words that do not appear in the article ) than our model , indicating a lower degree of abstraction for our model ."            
+            "from sentence" : "Is it less abstractive for our model ?
+shows that the seq2seq model produces more novel words ( i.e. , words that do not appear in the article ) than our model , indicating a lower degree of abstraction for our model ."
+
           },
           "exclude" : {
             "all the words not in the reference" : {
@@ -120,7 +123,9 @@
                 }
               }
             },
-            "from sentence" : "shows that our summarization model with MTL outperforms basic seq2seq model ."
+            "from sentence" : "6.6.3 Could the entailment recognition also be improved ?
+shows that our summarization model with MTL outperforms basic seq2seq model ."
+
           },
           "has" : {
             "accuracy" : {

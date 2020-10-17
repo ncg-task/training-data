@@ -27,10 +27,6 @@ BERT - base uncased 3 - layer 600D Bidirectional Long Short - Term Memory ( BiLS
           "using" : "uncased alternative",
           "from sentence" : "For our experiments we use the smaller BERT - base model using the uncased alternative ."
         },
-        "batch size" : {
-          "of" : "32",
-          "from sentence" : "We use a batch size of 32 and fine - tune the model for 2 epochs ."
-        },
         "dropout" : {
           "of" : {
             "0.2" : {
@@ -38,8 +34,17 @@ BERT - base uncased 3 - layer 600D Bidirectional Long Short - Term Memory ( BiLS
             }
           },
           "from sentence" : "We use a dropout of 0.2 between the layers of the BiLSTM ."
-        }
+        },
+        "batch size" : {
+          "of" : "32"
+        }		
       },
+      "fine - tune" : {
+        "model" : {
+          "for" : "2 epochs"
+        },
+        "from sentence" : "We use a batch size of 32 and fine - tune the model for 2 epochs ."
+      },	  
       "take" : {
         "last hidden layer" : {
           "of" : "BERT",
@@ -59,12 +64,6 @@ BERT - base uncased 3 - layer 600D Bidirectional Long Short - Term Memory ( BiLS
           },
           "from sentence" : "We take the last hidden layer of BERT and train a single fully - connected classifier layer on top of it , mapping the representation of each word to the labels ."
         }
-      },
-      "fine - tune" : {
-        "model" : {
-          "for" : "2 epcohs"
-        },
-        "from sentence" : "We use a batch size of 32 and fine - tune the model for 2 epochs ."
       },
       "For" : {
         "BiLSTM" : {

@@ -6,7 +6,7 @@ To enable traditional , single - turn models to encode the history comprehensive
 Compared to approaches that concatenate previous questions / answers as input , FLOW integrates the latent semantics of the conversation history more deeply .
 Our model , FLOWQA , shows superior performance on two recently proposed conversational challenges ( + 7.2 % F 1 on CoQA and + 4.0 % on QuAC ) .
 The effectiveness of FLOW also shows in other tasks .
-By reducing sequential instruction understanding to conversational machine comprehension , FLOWQA outperforms the best models on all three domains in SCONE , with + 1.8 % to + 4.4 % improvement inaccuracy .
+By reducing sequential instruction understanding to conversational machine comprehension , FLOWQA outperforms the best models on all three domains in SCONE , with + 1.8 % to + 4.4 % improvement in accuracy .
 *
 Work done during internship at Allen Institute for Artificial Intelligence .
 1 We use " reasoning " to refer to the model process of finding the answer .
@@ -137,11 +137,11 @@ Data and Evaluation Metric
 We experiment with the QuAC and
 CoQA datasets .
 While both datasets follow the conversational setting ( Section 2.1 ) , QuAC asked crowdworkers to highlight answer spans from the context and CoQA asked for free text as an answer to encourage natural dialog .
-While this may call fora generation approach , shows that the an extractive approach which can handle Yes / No answers has a high upper-bound - 97.8 % F 1 .
+While this may call for a generation approach , shows that the an extractive approach which can handle Yes / No answers has a high upper-bound - 97.8 % F 1 .
 Following this observation , we apply the extractive approach to CoQA .
 We handle the Yes / No questions by computing P Y i , P Ni , the probability for answering yes and no , using the same equation as P ? i ( Eq. 17 ) , and find a span in the context for other questions .
 The main evaluation metric is F 1 , the harmonic mean of precision and recall at the word level .
-5 In CoQA , we report the performance for each context domain ( children 's story , literature from Project Gutenberg , middle and high school English exams , news articles from CNN , Wikipedia , AI2 Science Questions , Reddit articles ) and the overall performance .
+5 In CoQA , we report the performance for each context domain ( children 's story , literature from Project Gutenberg , middle and high school English exams , news articles from CNN , Wikipedia , AI2 Science Questions , Reddit articles ) and the over all performance .
 For QuAC , we use its original evaluation metrics : F 1 and Human Equivalence Score ( HEQ ) .
 HEQ - Q is the accuracy of each question , where the answer is considered correct when the model 's F 1 score is higher than the average human F 1 score .
 Similarly , HEQ - D is the accuracy of each dialog - it is considered correct if all the questions in the dialog satisfy HEQ .
@@ -164,7 +164,7 @@ Without both components , our model performs comparably to the BiDAF ++ model ( 
 8
 Our model exploits the entire conversation history while prior models could leverage up to three previous turns .
 By comparing 0 - Ans and 1 - Ans on two datasets , we can see that providing gold answers is more crucial for QuAC .
-We hypothesize that QuAC contains more open - ended questions with multiple valid answer spans because the questioner can not seethe text .
+We hypothesize that QuAC contains more open - ended questions with multiple valid answer spans because the questioner can not see the text .
 The semantics of follow - up questions may change based on the answer span selected by the teacher among many valid answer spans .
 Knowing the selected answer span is thus important .
 We also measure the speedup of our proposed alternating parallel processing structure ) over the naive implementation of FLOW , where each question is processed in sequence .
@@ -205,7 +205,7 @@ RELATED WORK
 Sequential question answering has been studied in the knowledge base setting , often framed as a semantic parsing problem .
 Recent datasets enabled studying it in the textual setting , where the information source used to answer questions is a given article .
 Existing approaches attempted on these datasets are often extensions of strong single - turn models , such as BiDAF and DrQA , with some manipulation of the input .
-In contrast , we propose anew architecture suitable for multi-turn MC tasks by passing the hidden model representations of preceding questions using the FLOW design .
+In contrast , we propose a new architecture suitable for multi-turn MC tasks by passing the hidden model representations of preceding questions using the FLOW design .
 Dialog response generation requires reasoning about the conversation history as in conversational MC .
 This has been studied in social chit - chats ( e.g. , and goal - oriented dialogs ( e.g. , .
 Prior work also modeled hierarchical representation of the conversation history .
@@ -218,7 +218,7 @@ While our approach provides a substantial performance gain , there is still room
 In the future , we would like to investigate more efficient and fine - grained ways to model the conversation flow , as well as methods that enable machines to engage more active and natural conversational behaviors , such as asking clarification questions .
 A VISUALIZATION OF THE FLOW OPERATION
 Recall that the FLOW operation takes in the hidden representation generated for answering the current question , fuses into its memory , and passes it to the next question .
-Because the answer finding ( or reasoning ) process operates on top of a context / passage , this FLOW operation is a big memory operation on an md matrix , where m is the length of the context and dis the hidden size .
+Because the answer finding ( or reasoning ) process operates on top of a context / passage , this FLOW operation is a big memory operation on an md matrix , where m is the length of the context and d is the hidden size .
 We visualize this by computing the cosine similarity of the FLOW memory vector on the same context words for consecutive questions , and then highlight the words that have small cosine similarity scores , i.e. , the memory that changes more significantly .
 The highlighted part of the context indicates the QA model 's guess on the current conversation topic and relevant information .
 Notice that this is not attention ; it is instead a visualization on how the hidden memory is changing overtime .

@@ -3,6 +3,7 @@
 (model training||set||learning rate)
 (learning rate||to||0.001)
 (model training||set||batch size)
+(batch size||to||64)
 (model training||set||dropout rate)
 (dropout rate||to||0.5)
 (Hyperparameters||use||300 - dimension word vectors)

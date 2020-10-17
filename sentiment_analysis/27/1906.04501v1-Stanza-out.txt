@@ -83,7 +83,7 @@ The dependencies can be inferred by some knowledge in the sentence , e.g. , conj
 The evidence of the usefulness of the sentiment dependencies is that we can easily guess the true sentiment of food even if we mask the word horrible .
 words .
 It is required to construct a sentiment classifier that predicts the sentiment polarities of the multiple aspect teams .
-We present the overall architecture of the proposed SDGCN in .
+We present the over all architecture of the proposed SDGCN in .
 It consists of the input embedding layer , the Bi - LSTM , the position encoding , the bidirectional attention mechanism , the GCN and the output layer .
 Next , we introduce all components sequentially from input to output .
 Input embedding layer
@@ -121,7 +121,7 @@ R 2 d hid 1 in one aspect , the attention weight ?
 a it is computed as follows :
 where W ca ?
 R 2 d hid 2 d hid is the attention weight matrix .
-After computing the word attention weights , we can get the weighted combination of the aspect hidden representation as anew aspect representation :
+After computing the word attention weights , we can get the weighted combination of the aspect hidden representation as a new aspect representation :
 3.4.2 . Aspect to context attention Aspect to context attention learns to capture the aspectspecific context representation , which is similar to context to aspect attention .
 Specifically , the attention scores is calculated by the new aspect representation ma i and the position - aware representation pa it .
 The process can be formulated as follows :
@@ -139,7 +139,7 @@ If two nodes are connected by an edge , it means that the two nodes are neighbor
 Formally , given anode v , we use N ( v ) to denote all neighbors of v. u ?
 N ( v ) means that u and v are connected with an edge .
 Sentiment graph based GCN
-GCN encodes relevant information about its neighborhood as anew representation vector , where each node in the graph indicates a representation of aspect .
+GCN encodes relevant information about its neighborhood as a new representation vector , where each node in the graph indicates a representation of aspect .
 In addition , as Kipf et al .
 do , we assume all nodes contain self - loops .
 Then , the new node representation is computed as follows :
@@ -176,7 +176,7 @@ Each review ( one sentence ) contains one or more aspects and their correspondin
 To be specific , the number in table means the number of aspects in each sentiment category .
 To demonstrate the necessity of considering the sentiment dependencies between the aspects , we further calculate the number of aspects in each sentence , which is presented in .
 From the histogram in , we can see that each sentence contains one to thirteen aspects .
-The number of aspects inmost reviews is 1 to 4 .
+The number of aspects in most reviews is 1 to 4 .
 The pie chart shows the proportion of only one aspect and more than one aspect in one sentence .
 It can be seen that more than half of the aspects do not appear alone in a review .
 According to these statistics , we can conclude that it is common to have multi-aspects within one sentence .
@@ -221,7 +221,7 @@ After taking the importance of the aspect into account with attention mechanism 
 RAM achieves a better performance than other basic attention - based models , because it combines multiple attentions with a recurrent neural network to capture aspect - specific representations .
 PBAN achieves a similar performance as RAM by employing a position embedding .
 To be specific , PBAN is better than RAM on Restaurant dataset , but worse than RAN on Laptop dataset .
-Compared with RAM and PBAN , the overall performance of TSN is not perform well on both Restaurant dataset and Laptop dataset , which might because the framework of TSN is too simple to model the representations of context and aspect effectively .
+Compared with RAM and PBAN , the over all performance of TSN is not perform well on both Restaurant dataset and Laptop dataset , which might because the framework of TSN is too simple to model the representations of context and aspect effectively .
 AEN is slightly better than TSN , but still worse than RAM and PBAN .
 It indicates that the discard of the recurrent neural networks can reduce the size of model while lead to the loss of performance .
 Comparing the results of SDGCN - A w/o position and SDGCN - G w/o position , SDGCN - A and SDGCN - G , respectively , we observe that the GCN built with global - relation is slightly higher than built with adjacent - relation in both accuracy and Macro - F1 measure .

@@ -13,12 +13,12 @@
 230	72	100	standard attention mechanism
 230	119	130	performance
 230	131	138	dropped
-230	65	67	by
+230	139	141	by
 230	142	147	2.4 %
 230	110	112	in
 230	151	153	F1
 230	158	163	2.5 %
-230	110	112	in
+230	148	150	in
 230	167	169	EM
 232	26	34	indicate
 232	44	59	reduction layer
@@ -31,7 +31,8 @@
 233	42	68	standard feedforward layer
 233	69	73	with
 233	78	98	same reduction ratio
-233	113	120	drop of
+233	113	117	drop
+233	118	120	of
 233	121	136	2.1 % and 2.5 %
 233	137	139	in
 233	144	160	F1 and EM scores
@@ -43,11 +44,11 @@
 217	56	66	batch size
 217	67	69	of
 217	70	72	75
-217	11	13	in
+217	73	75	in
 217	78	96	GPU NVidia Titan X
-217	49	53	with
+217	97	101	with
 217	102	107	12 GB
-217	67	69	of
+217	108	110	of
 217	111	114	RAM
 218	3	12	developed
 218	13	22	our model
@@ -66,7 +67,7 @@
 221	70	72	in
 221	73	90	processing layers
 221	98	101	0.8
-221	70	72	in
+221	102	104	in
 221	109	124	reduction layer
 222	0	2	In
 222	7	42	character - level embedding process
@@ -89,17 +90,17 @@
 224	46	49	100
 224	56	71	number of heads
 224	72	79	n heads
-224	14	16	in
+224	80	82	in
 224	83	106	each attention sublayer
-224	43	45	to
+224	107	109	to
 224	110	111	4
 224	118	144	feed - forward hidden size
-224	43	45	to
+224	145	147	to
 224	148	151	200
-224	14	16	in
-224	7	24	processing layers
+224	152	154	in
+224	155	172	processing layers
 224	177	180	400
-224	14	16	in
+224	181	183	in
 224	188	203	reduction layer
 20	176	181	named
 20	182	237	Fully Attention - Based Information Retriever ( FABIR )
@@ -143,15 +144,16 @@
 255	31	42	performance
 255	43	45	of
 255	46	61	FABIR and BiDAF
-255	34	37	for
 256	0	5	shows
 256	11	26	shorter answers
 256	27	30	are
 256	31	37	easier
+256	38	41	for
 256	42	53	both models
 262	33	49	best performance
 262	50	54	with
-262	63	73	 questions
+262	55	73	" when " questions
+264	35	64	" how long " and " how many "
 264	70	76	proved
 264	77	83	easier
 264	84	86	to
@@ -160,13 +162,14 @@
 264	117	130	same property
 264	131	140	of having
 264	143	159	smaller universe
-264	131	133	of
+264	160	162	of
 264	163	179	possible answers
-265	42	52	 questions
+265	23	52	" how " and " why " questions
 265	53	64	resulted in
 265	65	100	considerably lower F1 and EM scores
 270	0	9	Questions
 270	16	22	expect
+270	25	44	" yes " or a " no "
 270	45	47	as
 270	51	57	answer
 270	58	61	are
@@ -174,5 +177,5 @@
 272	19	35	shorter passages
 272	36	42	showed
 272	47	64	worst performance
-272	56	59	for
+272	65	68	for
 272	69	80	both models

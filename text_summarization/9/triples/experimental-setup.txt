@@ -8,7 +8,7 @@
 (Experimental setup||For||decoder)
 (decoder||experimented with||Elman RNN)
 (decoder||experimented with||Long - Short Term Memory ( LSTM ) architecture)
-(Experimental setup||choose||hyper - parameters)
+(Experimental setup||chose||hyper - parameters)
 (hyper - parameters||based on||grid search)
 (hyper - parameters||picked the one which gave||best perplexity)
 (best perplexity||on||validation set)

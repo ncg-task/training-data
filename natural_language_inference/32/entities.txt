@@ -9,16 +9,15 @@
 156	85	89	from
 156	90	98	IF layer
 156	128	141	- QHIER - RNN
-156	58	65	removes
+156	144	151	removes
 156	156	180	hierarchical LSTM layers
-156	79	81	on
+156	181	183	on
 156	184	206	final question vectors
 37	25	60	https://github.com/momohuang/FlowQA
 13	3	10	present
 13	11	17	FLOWQA
 13	28	40	designed for
 13	41	77	conversational machine comprehension
-14	11	13	is
 14	0	6	FLOWQA
 14	7	18	consists of
 14	19	38	two main components
@@ -29,7 +28,7 @@
 14	108	115	encodes
 14	120	140	conversation history
 17	5	19	FLOW mechanism
-17	2	4	is
+17	20	22	is
 17	28	48	remarkably effective
 17	49	60	at tracking
 17	65	77	world states
@@ -43,14 +42,14 @@
 18	79	97	dialog progression
 18	132	140	building
 18	141	157	information flow
-18	69	74	along
-18	79	85	dialog
+18	158	163	along
+18	168	174	dialog
 19	5	25	information transfer
 19	26	37	happens for
 19	38	55	each context word
 19	58	66	allowing
 19	67	83	rich information
-19	5	7	in
+19	84	86	in
 19	91	108	reasoning process
 19	109	111	to
 19	112	116	flow
@@ -82,10 +81,10 @@
 158	59	61	on
 158	62	75	both datasets
 158	78	89	+ 7.2 % F 1
-158	59	61	on
+158	90	92	on
 158	93	97	CoQA
 158	100	111	+ 4.0 % F 1
-158	59	61	on
+158	112	114	on
 158	115	119	QuAC
 161	3	12	find that
 161	13	17	FLOW
@@ -104,10 +103,10 @@
 162	133	154	with or without using
 162	155	163	QHierRNN
 162	166	173	2 - 3 %
-162	48	50	on
+162	174	176	on
 162	177	181	QuAC
 162	184	189	4.1 %
-162	48	50	on
+162	190	192	on
 162	193	197	CoQA
 166	3	12	comparing
 166	13	32	0 - Ans and 1 - Ans
@@ -126,8 +125,8 @@
 171	107	114	speedup
 171	115	117	is
 171	118	122	8.1x
-171	6	8	on
+171	94	96	on
 171	126	130	CoQA
 171	135	140	4.2 x
-171	6	8	on
+171	123	125	on
 171	144	148	QuAC

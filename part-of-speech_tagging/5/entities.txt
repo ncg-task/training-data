@@ -10,22 +10,22 @@
 168	0	21	Separate optimization
 168	22	30	leads to
 168	31	46	better accuracy
-168	47	50	for
+168	74	77	for
 168	51	73	34 out of 40 treebanks
-168	47	50	for
+168	114	117	for
 168	82	109	morphological features task
 168	118	140	30 out of 39 treebanks
-168	47	50	for
+168	141	144	for
 168	145	157	xpos tagging
 169	22	34	outperformed
 169	35	53	joint optimization
 169	54	56	by
 169	57	83	up to 2.1 percent absolute
-169	35	40	joint
+169	92	97	joint
 169	98	103	never
 169	104	119	out - performed
 169	120	128	separate
-169	54	56	by
+169	129	131	by
 169	132	156	more than 0.5 % absolute
 179	27	41	combined model
 179	46	75	significantly higher accuracy
@@ -75,6 +75,7 @@
 25	111	119	used for
 25	120	137	syntactic tagging
 2	0	23	Morphosyntactic Tagging
+135	0	34	Part - of - Speech Tagging Results
 141	0	9	Our model
 141	10	21	outperforms
 141	22	24	in
@@ -87,6 +88,7 @@
 143	27	41	better results
 143	44	58	especially for
 143	59	89	morphologically rich languages
+150	0	29	Morphological Tagging Results
 155	0	10	Our models
 155	19	26	produce
 155	27	55	significantly better results

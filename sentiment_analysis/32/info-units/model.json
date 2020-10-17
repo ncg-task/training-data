@@ -17,8 +17,7 @@
                   "from" : "context"
                 }              
               }
-            },
-            "from sentence" : "IAN utilizes the attention mechanism associated with a target to get important information from the context and compute context representation for sentiment classification ."            
+            }
           },
           "compute" : {
             "context representation" : {

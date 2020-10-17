@@ -19,7 +19,7 @@
           "to learn" : {
             "semantic matching" : {
               "between" : "question and answer pairs",
-              "Assuming set of" : "pre-trained semantic word embeddings"
+              "Assuming a set of" : "pre-trained semantic word embeddings"
             }
           },
           "from sentence" : "Assuming a set of pre-trained semantic word embeddings , we train a supervised model to learn a semantic matching between question and answer pairs ."

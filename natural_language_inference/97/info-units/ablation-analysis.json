@@ -10,10 +10,10 @@
         "top N function" : {
           "contributes" : {
             "very little" : {
-              "to" : "overall performance"
+              "to" : "over all performance"
             }
           },
-          "from sentence" : "The top N function contributes very little to the overall performance , suggesting that most multi questions have their evidence distributed across contiguous sentences ."
+          "from sentence" : "The top N function contributes very little to the over all performance , suggesting that most multi questions have their evidence distributed across contiguous sentences ."
         },
         "Simple word - by - word matching" : {
           "has" : {

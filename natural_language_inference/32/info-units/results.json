@@ -33,8 +33,7 @@
               "has" : "0.1 %",
               "on" : "both datasets"
             }
-          },
-          "from sentence" : "Removing QHier - RNN has a minor impact ( 0.1 % on both datasets ) , while removing FLOW results in a substantial performance drop , with or without using QHierRNN ( 2 - 3 % on QuAC , 4.1 % on CoQA ) ."
+          }
         }
       },
       "removing" : {

@@ -8,7 +8,7 @@
 202	148	190	single visual - textual feature comparison
 204	37	45	see that
 204	46	64	non-linear mapping
-204	9	11	in
+204	65	67	in
 204	72	77	model
 204	78	80	is
 204	81	97	really important
@@ -22,7 +22,7 @@
 205	21	39	non-linear mapping
 205	40	45	seems
 205	46	60	more important
-205	22	24	on
+205	61	63	on
 205	68	79	visual side
 208	36	40	show
 208	45	55	importance
@@ -45,9 +45,9 @@
 171	16	19	for
 171	20	50	common space mapping dimension
 171	55	63	? = 0.25
-171	16	19	for
+171	64	67	for
 171	68	78	Leaky ReLU
-171	37	39	in
+171	79	81	in
 171	86	105	non-linear mappings
 169	0	21	Image - caption pairs
 169	26	33	sampled
@@ -63,14 +63,15 @@
 170	3	8	train
 170	13	20	network
 170	21	24	for
+170	25	34	20 epochs
 170	35	39	with
 170	44	58	Adam optimizer
-170	35	39	with
+170	59	63	with
 170	64	74	lr = 0.001
 170	75	80	where
 170	85	98	learning rate
 170	102	112	divided by
-170	25	26	2
+170	113	114	2
 170	115	122	once at
 170	127	140	10 - th epoch
 170	145	153	again at
@@ -81,7 +82,7 @@
 172	29	37	mappings
 172	38	42	with
 172	43	61	l 2 regularization
-172	38	42	with
+172	62	66	with
 172	67	85	reg value = 0.0005
 173	0	3	For
 173	4	7	VGG
@@ -95,9 +96,9 @@
 173	123	131	18181024
 173	138	141	for
 173	142	152	PNAS - Net
-173	13	17	take
-173	18	25	outputs
-173	26	30	from
+173	156	160	take
+173	161	168	outputs
+173	169	173	from
 173	174	212	{ Cell 5 , Cell 7 , Cell 9 , Cell 11 }
 24	29	45	explicitly learn
 24	48	66	non-linear mapping
@@ -114,13 +115,13 @@
 26	42	58	weak supervision
 26	63	75	exploited at
 26	76	87	test - time
-26	37	41	with
+26	88	92	with
 26	95	139	multi - level multimodal attention mechanism
 26	142	147	where
 26	150	167	natural formalism
 26	168	181	for computing
 26	182	200	attention heatmaps
-26	73	75	at
+26	201	203	at
 26	204	214	each level
 26	217	234	attended features
 26	239	257	pertinence scoring
@@ -146,21 +147,21 @@
 193	4	13	1st level
 193	17	37	exploited mostly for
 193	42	71	animals and people categories
-188	17	19	on
+188	278	280	on
 188	281	291	Flickr30 k
-188	17	19	on
 188	62	67	model
 188	248	270	state - of - the - art
-188	17	19	on
 189	3	15	observe that
 189	16	26	our method
 189	27	34	obtains
 189	37	55	higher performance
+189	56	58	on
 189	59	80	almost all categories
-189	66	80	all categories
 190	10	18	based on
 190	19	26	PNASNet
 190	27	51	consistently outperforms
+190	79	81	on
+190	82	96	all categories
 190	100	112	both metrics
 194	4	27	full sentence selection
 194	28	44	relies mostly on

@@ -7,11 +7,12 @@
 80	29	40	hidden size
 80	41	43	of
 80	44	47	600
+80	48	51	for
 80	52	66	both direction
 80	161	200	3 - layer multilayer perceptron ( MLP )
-80	24	28	have
-80	36	40	size
-80	41	43	of
+80	201	205	have
+80	210	214	size
+80	215	217	of
 80	218	232	600 dimensions
 73	25	29	used
 73	32	71	gradient descent optimization algorithm
@@ -55,7 +56,7 @@
 21	91	114	hierarchylike structure
 21	25	27	of
 21	118	154	bidirectional LSTM ( BiLSTM ) layers
-21	84	88	with
+21	155	159	with
 21	160	171	max pooling
 2	0	19	Sentence Embeddings
 4	0	32	Sentence - level representations
@@ -73,7 +74,7 @@
 125	73	77	SNLI
 125	99	108	strong on
 125	120	152	matched and mismatched test sets
-125	59	61	of
+125	153	155	of
 125	156	164	MultiNLI
 126	10	12	on
 126	13	20	SciTail
@@ -81,7 +82,7 @@
 126	38	58	new state of the art
 126	59	63	with
 126	67	75	accuracy
-126	48	50	of
+126	76	78	of
 126	79	85	86.0 %
 130	0	3	For
 130	8	20	SNLI dataset
@@ -92,7 +93,7 @@
 130	63	69	86.6 %
 130	70	75	after
 130	76	84	4 epochs
-130	60	62	of
+130	85	87	of
 130	88	96	training
 133	8	50	MultiNLI matched test set ( MultiNLI - m )
 133	51	60	our model
@@ -102,7 +103,7 @@
 133	89	95	73.7 %
 133	96	101	after
 133	102	110	3 epochs
-133	86	88	of
+133	111	113	of
 133	114	122	training
 133	125	133	which is
 133	134	152	0.8 % points lower
@@ -116,7 +117,7 @@
 134	84	90	73.0 %
 134	91	96	after
 134	97	105	3 epochs
-134	81	83	of
+134	106	108	of
 134	109	117	training
 134	120	128	which is
 134	129	147	0.6 % points lower
@@ -134,7 +135,7 @@
 139	21	27	86.0 %
 139	28	33	after
 139	34	42	4 epochs
-139	18	20	of
+139	43	45	of
 139	46	54	training
 139	63	65	is
 139	68	101	2.7 % points absolute improvement
@@ -146,7 +147,6 @@
 140	41	46	which
 140	47	55	achieves
 140	59	67	accuracy
-140	68	70	of
 140	71	77	85.1 %
 142	4	11	results
 142	12	23	achieved by

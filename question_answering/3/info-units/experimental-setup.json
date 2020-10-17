@@ -49,9 +49,7 @@
               }
             }
           },
-          "from sentence" : "We adopt the Adam optimizer ( Kingma and Ba , 2014 ) with a learning rate of 0.0003/ 0.001/0.001 for RACE / SearchQA / Narrative
-QA respectively ."
-
+          "from sentence" : "We adopt the Adam optimizer ( Kingma and Ba , 2014 ) with a learning rate of 0.0003/ 0.001/0.001 for RACE / SearchQA / Narrative QA respectively ."
         }
       },
       "For" : {

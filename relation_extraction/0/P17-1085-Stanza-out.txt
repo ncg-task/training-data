@@ -76,7 +76,7 @@ Entity detection
 We formulate entity detection as a sequence labeling task using BILOU scheme similar to and .
 We assign each token in the entity with the tag B appended with the entity type if it is the beginning of the entity , I for inside of an entity , L for the end of the entity or U if there is only one token in the entity .
 shows an example of the entity tag sequence assigned to the sentence .
-For each token in the sequence , we perform a softmax overall candidate tags to output the most likely tag :
+For each token in the sequence , we perform a softmax over all candidate tags to output the most likely tag :
 Our network structure as shown in also contains connections from the output y t?1 of the previous time step to the current top hidden layer .
 Thus our outputs are not conditionally independent from each other .
 In order to add connections from y t?1 , we transform this output k into a label embedding bk t?1 1 .
@@ -93,7 +93,7 @@ We use attention model for relation extraction .
 Attention models , over an encoder sequence of representations z , can compute a soft probability distribution p over these learned representations , where d i is the i th token in decoder sequence .
 These probabilities are an indication of the importance of different tokens in the encoder sequence :
 v is a weight matrix for attention which transforms the hidden representations into attention scores .
-We use pointer networks in our approach , which area variation of these attention models .
+We use pointer networks in our approach , which are a variation of these attention models .
 Pointer networks interpret these pi t as the probability distribution over the input encoding sequence and use u it as pointers to the input elements .
 We can use these pointers to encode relation between the current token and the previous predicted tokens , making it fit for relation extraction as explained in Section 3.4 .
 Relation detection
@@ -129,7 +129,7 @@ Thus , we can decompose our objective into the sum of log-probabilities over ent
 We use the gold entity tags while training .
 As shown in , we input the label embedding from the previous time step to the top hidden layer at the current time step along with the other recurrent inputs .
 During training , we pass the gold label embedding to the next time step which enables better training of our model .
-However , attest time when the gold label is not available we use the predicted label at previous time step as input to the current step .
+However , at test time when the gold label is not available we use the predicted label at previous time step as input to the current step .
 At inference time , we can greedily decode the sequence to find the most likely entity E and relation R tag sequences :
 Since , we add another top layer to encode tag sequences in the reverse order as explained in Section 3.5 , there maybe conflicts in the output .
 We select the positive and more confident label similar to .
@@ -194,7 +194,7 @@ We also compare the performance of various encoding schemes in .
 We compare the benefits of introducing multiple relations in our objective and bi-directional encoding compared to leftto - right encoding .
 Results
 Multiple Relations
-We find that modifying our objective to include multiple relations improves the recall of our system on relations , leading to slight improvement on the overall performance on relations .
+We find that modifying our objective to include multiple relations improves the recall of our system on relations , leading to slight improvement on the over all performance on relations .
 However , careful tuning of the threshold may further improve precision .
 Bi-directional
 Encoding
@@ -252,5 +252,5 @@ However , this presents the challenge of combining predictions from the two dire
 We use heuristics in this paper to combine the predictions .
 We think that using probabilistic methods to combine model predictions from both directions may further improve the performance .
 We also plan to use Sparsemax ( Martins and Astudillo , 2016 ) instead of Softmax for multiple relations , as the former is more suitable for multi-label classification for sparse labels .
-It would also be interesting to seethe effect of reranking ) on our joint model .
+It would also be interesting to see the effect of reranking ) on our joint model .
 We also plan to extend the identification of entities to full entity mention span instead of only the head phrase as in .

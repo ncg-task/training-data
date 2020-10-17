@@ -20,7 +20,7 @@
 274	28	39	chosen from
 274	40	65	K = { 100 , . . . , 800 }
 274	72	93	regularization weight
-274	35	39	from
+274	94	98	from
 274	99	128	? = { 0.0001 , . . . , 10.0 }
 38	19	26	present
 38	27	79	Bayesian subspace multinomial model ( Bayesian SMM )
@@ -42,14 +42,13 @@
 40	89	116	topic identification ( ID )
 41	33	41	extended
 41	4	25	proposed VB framework
-41	55	58	for
+41	67	70	for
 41	71	92	subspace n-gram model
 41	100	109	can model
 41	110	151	n-gram distribution of words in sentences
 2	0	28	Learning document embeddings
-18	60	80	topic identification
+8	60	80	topic identification
 24	0	38	L EARNING word and document embeddings
-362	25	27	on
 362	39	60	Fisher speech corpora
 362	61	65	with
 362	66	101	manual and automatic transcriptions
@@ -62,7 +61,7 @@
 367	112	146	uncertainty in document embeddings
 367	151	177	much lower cross - entropy
 367	178	182	than
-367	88	91	GLC
+367	201	204	GLC
 370	35	56	20 Newsgroups dataset
 376	3	11	see that
 376	16	78	topic ID systems based on Bayesian SMM and logistic regression
@@ -70,6 +69,6 @@
 376	94	114	all the other models
 376	117	127	except for
 376	132	163	purely discriminative CNN model
-376	16	54	topic ID systems based on Bayesian SMM
+377	29	67	topic ID systems based on Bayesian SMM
 377	72	96	consistently better than
 377	97	162	variational auto encoder inspired NVDM , and ( non-Bayesian ) SMM

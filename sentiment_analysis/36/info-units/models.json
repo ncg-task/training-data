@@ -1,6 +1,6 @@
 {
   "has" : {
-    "Models" : {
+    "Model" : {
       "propose" : {
         "new architecture" : {
           "named" : "Target - Specific Transformation Networks ( TNet )"
@@ -12,8 +12,7 @@
           "firstly encodes" : {
             "context information" : {
               "into" : "word embeddings"
-            },
-            "from sentence" : "TNet firstly encodes the context information into word embeddings and generates the contextualized word representations with LSTMs ."
+            }
           },
           "generates" : {
             "contextualized word representations" : {
@@ -26,7 +25,7 @@
               "for generating" : "target - specific word representations",
               "To integrate" : {
                 "target information" : {
-                  "into" : "target - specific word representations"
+                  "into" : "word representations"
                 }
               }
             },

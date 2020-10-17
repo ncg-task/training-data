@@ -27,7 +27,7 @@
 94	17	60	Neural Context - Sensitive Lexicon ( NSCL )
 94	61	70	to obtain
 94	71	102	prior sentiment scores of words
-94	68	70	in
+94	103	105	in
 94	110	118	sentence
 95	0	12	LR - Bi-LSTM
 95	15	22	imposes
@@ -36,7 +36,7 @@
 95	45	60	neural networks
 95	61	72	by applying
 95	73	98	linguistic regularization
-95	96	98	on
+95	99	101	on
 95	102	122	intermediate outputs
 95	123	127	with
 95	128	141	KL divergence
@@ -50,7 +50,7 @@
 97	17	39	reinforcement learning
 97	40	48	to learn
 97	49	83	structured sentence representation
-97	21	24	for
+97	84	87	for
 97	88	112	sentiment classification
 99	25	35	dimensions
 99	36	38	of
@@ -64,9 +64,6 @@
 100	43	53	Char - CNN
 100	58	64	set to
 100	65	70	2 , 3
-101	8	23	weight matrices
-101	28	42	initialized as
-101	43	69	random orthogonal matrices
 103	4	8	size
 103	9	11	of
 103	12	22	mini-batch
@@ -80,9 +77,12 @@
 105	3	20	L 2 normalization
 105	24	30	set to
 105	31	36	10 ?5
+101	8	23	weight matrices
+101	28	42	initialized as
+101	43	69	random orthogonal matrices
 101	79	82	set
 101	83	103	all the bias vectors
-101	40	42	as
+101	104	106	as
 101	107	119	zero vectors
 102	3	11	optimize
 102	16	30	proposed model
@@ -116,11 +116,11 @@
 19	111	121	implied by
 19	122	158	different types of sentiment sources
 19	163	170	capture
-19	175	192	overall semantics
-19	138	140	of
-19	200	240	sentiment , negation and intensity words
-19	61	64	for
-19	245	265	sentiment prediction
+19	175	193	over all semantics
+19	194	196	of
+19	201	241	sentiment , negation and intensity words
+19	242	245	for
+19	246	266	sentiment prediction
 16	24	30	design
 16	33	62	coupled word embedding module
 16	63	71	to model
@@ -150,6 +150,6 @@
 115	52	56	over
 115	61	71	MR dataset
 115	76	94	0.8 % improvements
-115	52	56	over
+115	95	99	over
 115	104	115	SST dataset
 115	116	142	compared to LR - Bi - LSTM

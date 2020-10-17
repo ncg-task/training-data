@@ -9,7 +9,7 @@
       },
       "treat" : {
         "SRL" : {
-          "as" : ["BIO tagging problem", {"from sentence" : "Fol - lowing , we treat SRL as a BIO tagging problem and use deep bidirectional LSTMs ."}]
+          "as" : "BIO tagging problem"
         }
       },
       "use" : {

@@ -27,7 +27,7 @@
 76	5	10	model
 76	15	26	trained for
 76	27	36	50 epochs
-76	18	20	in
+76	37	39	in
 76	44	59	model selection
 65	24	32	apply to
 65	37	45	momentum
@@ -39,6 +39,7 @@
 71	59	68	CUDA code
 71	72	83	executed on
 71	86	96	Tesla K40c
+73	0	8	contains
 73	13	28	four parameters
 73	29	34	to be
 73	35	44	optimized
@@ -56,12 +57,12 @@
 57	35	52	more convolutions
 57	53	62	to become
 57	73	87	more invariant
-57	53	55	to
+57	88	90	to
 57	91	102	distortions
-57	78	80	in
+57	103	105	in
 57	110	115	input
 60	4	11	novelty
-60	17	19	is
+60	29	31	is
 60	41	121	exact number of convolutions , number of hidden layers and size of hidden layers
 60	122	125	are
 60	126	135	not fixed
@@ -75,7 +76,7 @@
 58	81	96	to discriminate
 58	101	109	features
 58	110	120	learned by
-58	59	71	convolutions
+58	125	137	convolutions
 59	4	16	output layer
 59	17	28	consists of
 59	29	38	two units

@@ -10,7 +10,7 @@
 (tokenisation||using||case folding)
 (Hyperparameters||use||following hyper - parameters)
 (following hyper - parameters||for||weight matrices)
-(weight matrices||in||weight matrices)
+(weight matrices||in||both directions)
 (following hyper - parameters||for||hidden size)
 (hidden size||of||GRU)
 (GRU||is||300)

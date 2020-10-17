@@ -34,7 +34,7 @@
 129	4	27	out of vocabulary words
 129	33	36	set
 129	41	71	embeddings and context vectors
-129	67	69	to
+129	72	74	to
 129	75	79	zero
 130	3	10	perform
 130	11	23	word dropout
@@ -52,7 +52,7 @@
 131	82	93	DCN decoder
 131	94	98	with
 131	101	115	sparse mixture
-131	45	47	of
+131	116	118	of
 131	119	132	experts layer
 18	29	36	propose
 18	39	54	mixed objective
@@ -84,8 +84,8 @@
 135	14	36	baseline DCN with CoVe
 135	38	43	DCN +
 135	44	55	outperforms
-135	14	22	baseline
-135	8	10	on
+135	60	68	baseline
+135	112	114	on
 135	119	140	SQuAD development set
 135	69	71	by
 135	72	98	3.2 % exact match accuracy

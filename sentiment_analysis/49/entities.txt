@@ -33,7 +33,7 @@
 153	35	37	in
 153	42	54	dense layers
 153	61	79	softmax activation
-153	35	37	in
+153	80	82	in
 153	87	113	final classification layer
 154	0	3	For
 154	4	24	training the network
@@ -104,7 +104,7 @@
 162	61	81	improved performance
 162	82	84	of
 162	85	115	79. 80 % , 79.76 % and 79.63 %
-162	73	76	for
+162	116	119	for
 162	120	164	MMMU - BA , MMUU - SA and MU - SA frameworks
 164	4	27	performance improvement
 164	37	48	found to be

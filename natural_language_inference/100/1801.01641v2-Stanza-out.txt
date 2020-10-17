@@ -6,7 +6,7 @@ To achieve good results , however , these models have been combined with additio
 Without this combination , these models perform significantly worse than methods based on linguistic feature engineering .
 In this paper , we propose an attention based neural matching model for ranking short answer text .
 We adopt value - shared weighting scheme instead of position - shared weighting scheme for combining different matching signals and incorporate question term importance learning using question attention network .
-Using the popular benchmark TREC QA data , we show that the relatively simple a NMM model can significantly outperform other neural network models that have been used for the question answering task , and is competitive with models that are combined with additional features .
+Using the popular benchmark TREC QA data , we show that the relatively simple a NMM model can significantly outperform other neural network models that have been used for the question answering task , and is competitive with models thatare combined with additional features .
 When a NMM is combined with additional features , it outperforms all baselines .
 INTRODUCTION
 Question answering ( QA ) , which returns exact answers as either short facts or long passages to natural language questions issued by users , is a challenging task and plays a central role in the next generation of advanced web search .
@@ -16,7 +16,7 @@ Permission to make digital or hard copies of all or part of this work for person
 Copyrights for components of this work owned by others than ACM must be honored .
 Abstracting with credit is permitted .
 To copy otherwise , or republish , to post on servers or to redistribute to lists , requires prior specific permission and / or a fee .
-Request permissions from permissions@acm.org . 23 ] investigated a wide range of feature types including similarity features , translation features , density / frequency features and web correlation features for learning to rank answers and show improvements inaccuracy .
+Request permissions from permissions@acm.org . 23 ] investigated a wide range of feature types including similarity features , translation features , density / frequency features and web correlation features for learning to rank answers and show improvements in accuracy .
 However , such methods rely on manual feature engineering , which is often time - consuming and requires domain dependent expertise and experience .
 Moreover , they may need additional NLP parsers or external knowledge sources that may not be available for some languages .
 Recently , researchers have been studying deep learning approaches to automatically learn semantic match between questions and answers .
@@ -63,7 +63,7 @@ Two different architectures will be presented and analyzed .
 Section 4 is a systematic experimental analysis using the TREC QA benchmark dataset .
 Finally , we conclude our paper and discuss future work in Section 5 .
 RELATED WORK
-Our work is related to several research areas , including deep learning models for text matching , factoid question answering , answer ranking in CQA and answer passage / sentence retrieval .
+Our work is related to several research are as , including deep learning models for text matching , factoid question answering , answer ranking in CQA and answer passage / sentence retrieval .
 Deep Learning Models for Text Matching .
 Recently there have been many deep learning models proposed for text matching and ranking .
 Such deep learning models include DSSM , CDSSM , ARC - I / ARC - II , DCNN , DeepMatch , MultiGranCNN and MatchPyramid .
@@ -141,7 +141,7 @@ In the following sections , we will explain in detail the two major designs of a
 Value - shared Weighting
 We first train word embeddings with the Word2 Vec tool by Mikolov et al. with the English Wikipedia dump to construct QA matching matrices .
 Given a question sentence and an answer sentence , we compute the dot product of the normalized word embeddings of all term pairs to construct the QA matching matrix P as defined in Section 3.1 .
-A major problem with the QA matching matrix is the variable size due to the different lengths of answers fora given question .
+A major problem with the QA matching matrix is the variable size due to the different lengths of answers for a given question .
 To solve this problem , one can use CNN with :
 The comparison of position - shared weight in CNN and value - shared weight in a NMM .
 In CNN , the weight associated with anode only depends on its position or relative location as specified by the filters .
@@ -170,7 +170,7 @@ where j is the index of question words in q .
 We use the sigmoid function as the activation function , which is commonly adopted in many neural network architectures .
 Question Attention Network
 In addition to value - shared weighting , another model component of a NMM - 1 is the question attention network .
-Ina committee of neural networks which consists of multiple networks , we need to combine the output of these networks to output a final decision vector .
+In a committee of neural networks which consists of multiple networks , we need to combine the output of these networks to output a final decision vector .
 The question attention network uses the gating function to control the output of each network in this process .
 Specifically , in a NMM - 1 we use the softmax gate function to combine the output of multiple networks where each network corresponds to a question term as shown in .
 We feed the dot product of query word embedding and model parameter to the softmax function to represent the query term importance .
@@ -216,7 +216,7 @@ The formula for the forward propagation prediction is as follows :
 where ? ( v qj ) = exp ( vq j ) L l=1 exp ( vq l ) and ?
 denote the softmax gate function .
 T is the number of nodes in hidden layer 1 . rt is the model parameter from hidden layer 1 to hidden layer 2 , where we feed the linear combination of outputs of nodes in hidden layer 1 to an extra activation function comparing with Equation 2 .
-Then from hidden layer 2 to output layer , we sum overall outputs of nodes in hidden layer 2 weighted by the outputs of softmax gate functions , which also form the question attention network .
+Then from hidden layer 2 to output layer , we sum over all outputs of nodes in hidden layer 2 weighted by the outputs of softmax gate functions , which also form the question attention network .
 Back Propagation for Model Training
 For a NMM - 2 , we have three sets of model parameters :
 1 ) w kt from input layer to hidden layer 1 ; 2 ) rt from hidden layer 1 to hidden layer 2 ; 3 ) vp from hidden layer 2 to output layer .
@@ -329,7 +329,7 @@ The results were either similar or worse than combining a NMM score with QL .
 For a NMM , the gains after combining additional features are not as large as neural network models like CNN in and LSTM in .
 We think the reasons for this are two - fold :
 ( 1 ) The QA matching matrix in a NMM model can capture exact match information by assigning 1 to matrix elements if the corresponding answer term and question term are the same .
-This exact match information includes match between numbers and proper nouns , which are highlighted in previous research work as especially important for factoid questions answering , where most of the questions are of type what , when , who that are looking for answers containing numbers or proper nouns .
+This exact match information includes match between numbers and proper nouns , which are highlighted in previous research work as especially important for factoid questions answering , where most of the questions are of type what , when , who thatare looking for answers containing numbers or proper nouns .
 Within a NMM architecture , this problem has already been handled with QA matching matrix .
 Thus incorporating word overlap features will not help much for improving the performance of a NMM .
 ( 2 ) In addition to exact match information , a NMM could also learn question term importance like IDF information through question attention network .

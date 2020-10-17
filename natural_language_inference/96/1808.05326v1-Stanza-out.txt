@@ -103,21 +103,21 @@ while convergence not reached do
 Split the dataset D randomly up into training and testing portions D tr and D te .
 . end for end while finally , the models used for filtering .
 Formal definition
-In this section , we formalize what it means fora dataset to be adversarial .
-Intuitively , we say that an adversarial dataset fora model f is one on which f will not generalize , even if evaluated on test data from the same distribution .
+In this section , we formalize what it means for a dataset to be adversarial .
+Intuitively , we say that an adversarial dataset for a model f is one on which f will not generalize , even if evaluated on test data from the same distribution .
 More formally , let our input space be X and the label space be Y .
 Our trainable classifier f , taking parameters ?
 is defined as f ? :
 X ? R | Y | .
 Let our dataset of size N be defined as D = { ( x i , y i ) } 1?i? N , and let the loss function over the dataset be L ( f ? , D ) .
-We say that a dataset is adversarial with respect to f if we expect high empirical error I overall leave - one - out train / test splits :
+We say that a dataset is adversarial with respect to f if we expect high empirical error I over all leave - one - out train / test splits :
 where
 with regularization terms omitted for simplicity .
 Adversarial filtering ( AF ) algorithm
 In this section , we outline an approach for generating an adversarial dataset D , effectively maximizing empirical error I with respect to a family of trainable classifiers f .
 Without loss of generality , we consider the situation where we have N contexts , each associated with a single positive example ( x + i , 1 ) ?
 X Y , and a large population of context - specific negative examples
-For instance , the negative examples could be incorrect relations in knowledge - base completion , or all words in a dictionary fora single - word cloze task .
+For instance , the negative examples could be incorrect relations in knowledge - base completion , or all words in a dictionary for a single - word cloze task .
 Our goal will be to filter the population of negative examples for each instance i to a size of k N ? .
 This will be captured by returning a set of assignments A , where for each instance the assignment will be a k-subset
 The filtered dataset will then be :
@@ -127,14 +127,14 @@ To address this , we present Algorithm
 We train a model f on the training portion and obtain parameters ? , then use the remaining test portion to reassign the indices of A .
 For each context , we replace some number of ' easy ' negatives in A that f ?
 classifies correctly with ' adversarial ' negatives outside of A that f ? misclassifies .
-This process can bethought of as increasing the overall entropy of the dataset : given a strong model f ?
+This process can bethought of as increasing the over all entropy of the dataset : given a strong model f ?
 that is compatible with a random subset of the data , we aim to ensure it can not generalize to the held - out set .
 We repeat this for several iterations to reduce the generalization ability of the model family f over arbitrary train / test splits .
 Generating candidate endings
 To generate counterfactuals for Swag , we use an LSTM ) language model ( LM ) , conditioned on contexts from video captions .
 We first pretrain on BookCorpus , then finetune on the video caption datasets .
 The architecture uses standard best practices and was validated on held - out perplexity of the video caption datasets ; details are in the appendix .
-We use the LM to sample N ? = 1023 unique endings fora partial caption .
+We use the LM to sample N ? = 1023 unique endings for a partial caption .
 Importantly , we greedily sample the endings , since beam search decoding biases the generated endings to be of lower perplexity ( and thus easily distinguishable from found endings ) .
 We find this process gives good counterfactuals : the generated endings tend to use topical words , but often make little sense physically , making them perfect for our task .
 Further , the generated endings are marked as " gibberish " by humans only 9.1 % of the time ( Sec 3.5 ) ; in that case the ending is filtered out .
@@ -195,7 +195,7 @@ a. fast
 Text :
 This library models a single span of text as a bag of n-grams , and tries to predict the probability of an ending being corrector incorrect independently .
 7 b. Pretrained sentence encoders
-We consider two types of pretrained RNN sentence encoders , SkipThoughts and Infer Sent 7 The fastText model is trained using binary cross - entropy ; attest time we extract the prediction by selecting the ending with the highest positive likelihood under the model ..
+We consider two types of pretrained RNN sentence encoders , SkipThoughts and Infer Sent 7 The fastText model is trained using binary cross - entropy ; at test time we extract the prediction by selecting the ending with the highest positive likelihood under the model ..
 SkipThoughts was trained by predicting adjacent sentences in book data , whereas InferSent was trained on supervised NLI data .
 For each second sentence ( or just the ending ) , we feed the encoding into an MLP .
 c. LSTM sentence encoder Given an arbitrary span of text , we run a two - layer BiLSTM over it .
@@ -221,7 +221,7 @@ We also considered the following models : h. Length :
 Although length was used by the adversarial classifier , we want to verify that human validation did n't reintroduce a length bias .
 For this baseline , we always choose the shortest ending .
 i. ConceptNet
-As our task requires world knowledge , we tried a rule - based system on top of the : Performance of all models inaccuracy ( % ) .
+As our task requires world knowledge , we tried a rule - based system on top of the : Performance of all models in accuracy ( % ) .
 All models substantially underperform humans , although performance increases as more context is provided ( left to right ) .
 We optionally train on found endings only , or found and human - validated generated endings ( found + gen ) .
 ConceptNet knowledge base .
@@ -289,7 +289,7 @@ Qualitative examples
 Last , we show several qualitative examples in Table 5 .
 Though models can do decently well by identifying complex alignment patterns between the two sentences ( e.g. being " up a tree " implies that " tree " is the end phrase ) , the incorrect model predictions suggest this strategy is insuffi - cient .
 For instance , answering " An old man rides a small bumper car " requires knowledge about bumper cars and how they differ from regular cars : bumper cars are tiny , do n't drive on roads , and do n't work in parking lots , eliminating the alternatives .
-However , this knowledge is difficult to extract from existing corpora : for instance , the Con-cept Net entry for Bumper Car has only a single relation : bumper cars area type of vehicle .
+However , this knowledge is difficult to extract from existing corpora : for instance , the Con-cept Net entry for Bumper Car has only a single relation : bumper cars are a type of vehicle .
 Other questions require intuitive physical reasoning : e.g , for " he pours the raw egg batter into the pan , " about what happens next in making an omelet .
 Where to go next ?
 Our results suggest that Swag is a challenging testbed for NLI models .
@@ -340,7 +340,7 @@ A Appendix
 A.1 More detail about video datasets
 As mentioned in the main paper , we obtained contexts and found endings from video data .
 The videos in the ActivityNet dataset are already broken up into into clips .
-However , the LSMDC dataset contains captions for the entire movie , so it is possible that temporally adjacent captions describe events that are far apart in time .
+However , the LSMDC dataset contains captions for the entire movie , so it is possible that temporally adjacent captions describe events thatare far apart in time .
 Thus , we do n't include any pair of captions that have a timedifference of more than 25 seconds .
 In addition to the datasets we used , we also considered the DiDeMo dataset , which consists of ( often several ) referring expressions in a video .
 However , many of the referring expressions are themselves sentence fragments , ( e.g. " first time we see people " so we ultimately did not use this dataset . )
@@ -384,7 +384,7 @@ Comparing the distribution of verbs with MultiNLI
 We also produced an extension to of the main paper , that involves verbs from MultiNLI , in .
 We ended up not including it in the paper because we wanted to focus our comparison between SNLI and Swag ( as they are both grounded datasets ) .
 Interestingly , we find that Swag has a less skewed cumulative distribution of verbs up to around 120 , when afterwards MultiNLI has a slightly less skewed distribution .
-This is possibly due to the broader set of domains considered by MultiNLI , whereas we consider videos ( which is also abroad domain !
+This is possibly due to the broader set of domains considered by MultiNLI , whereas we consider videos ( which is also a broad domain !
 but still underrepresents words highly used in newswire text , for instance . )
 A.9 More examples
 We have more qualitative examples in .

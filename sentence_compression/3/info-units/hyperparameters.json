@@ -32,7 +32,7 @@
       "employed" : {
         "vanilla RNN" : {
           "with" : {
-            "hidden state" : {
+            "hidden size" : {
               "of" : "512",
               "for" : ["policy network", "neural language model"]
             }

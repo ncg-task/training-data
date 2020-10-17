@@ -48,7 +48,7 @@ rect answers could occur more frequently in those passages and usually share som
 The example in demonstrates this phenomenon .
 We can see that the answer candidates extracted from the last four passages are all valid answers to the question and they are semantically similar to each other , while the answer candidates from the other two passages are incorrect and there is no supportive information from other passages .
 As human beings usually compare the answer candidates from different sources to deduce the final answer , we hope that MRC model can also benefit from the cross - passage answer verification process .
-The overall framework of our model is demonstrated in , which consists of three modules .
+The over all framework of our model is demonstrated in , which consists of three modules .
 First , we follow the boundary - based MRC models to find an answer candidate for each passage by identifying the start and end position of the answer ( .
 Second , we model the meanings of the answer candidates extracted from those passages and use the content scores to measure the quality of the candidates from a second perspective .
 Third , we conduct the answer verification by enabling each answer candidate to attend to the other candidates based on their representations .
@@ -111,7 +111,7 @@ Therefore , we propose a method to enable the answer candidates to exchange info
 Given the representation of the answer candidates from all passages {r A i } , each answer candidate then attends to other candidates to collect supportive information via attention mechanism :
 Herer A i is the collected verification information from other passages based on the attention weights .
 Then we pass it together with the original representation r A i to a fully connected layer :
-We further normalize these scores overall passages to get the verification score for answer candidate A i :
+We further normalize these scores over all passages to get the verification score for answer candidate A i :
 In order to train this verification model , we take the answer from the gold passage as the gold answer .
 And the loss function can be formulated as the negative log probability of the correct answer :
 where y vi is the index of the correct answer in all the answer candidates of the i th instance .
@@ -161,7 +161,7 @@ Results on MS - MARCO
 Results on DuReader
 The results of our model and several baseline systems on the test set of DuReader are shown in .
 The BiDAF and Match - LSTM models are provided as two baseline systems .
-Based on BiDAF , as is described in Section 3.2 , we tried anew paragraph selection strategy by employing a paragraph ranking ( PR ) model .
+Based on BiDAF , as is described in Section 3.2 , we tried a new paragraph selection strategy by employing a paragraph ranking ( PR ) model .
 We can see that this paragraph ranking can boost the BiDAF baseline significantly .
 Finally , we implement our system based on this new strategy , and our system ( single model ) achieves further improvement by a large margin .
 Question :
@@ -183,7 +183,7 @@ Then we remove the content model in order to test the necessity of modeling the 
 Since we do n't have the content scores , we use the boundary probabilities instead to compute the answer representation for verification .
 Next , to show the benefits of joint training , we train the boundary model separately from the other two models .
 Finally , we remove the yes / no classification in order to show the real improvement of our end - toend model compared with the baseline method that predicts the answer with only the boundary model .
-From , we can see that the answer verification makes a great contribution to the overall improvement , which confirms our hypothesis that cross - passage answer verification is useful for the multi-passage MRC .
+From , we can see that the answer verification makes a great contribution to the over all improvement , which confirms our hypothesis that cross - passage answer verification is useful for the multi-passage MRC .
 For the ablation of the content model , we analyze that it will not only affect the content score itself , but also violate the verification model since the content probabilities are necessary for the answer representation , which will be further analyzed in Section 4.3 .
 Another discovery is that jointly training the three models can provide great benefits , which shows that the three tasks are actually closely related and can boost each other with shared representations at bottom layers .
 At last , comparing our method with the baseline , we achieve an improvement of nearly 3 points without the yes / no classification .
@@ -201,7 +201,7 @@ Necessity of the Content Model
 In our model , we compute the answer representation based on the content probabilities predicted by a separate content model instead of directly using the boundary probabilities .
 We argue that this content model is necessary for our answer verification process .
 plots the predicted content probabilities as well as the boundary probabilities start probability end probability content probability :
-The boundary probabilities and content probabilities for the words in a passage fora passage .
+The boundary probabilities and content probabilities for the words in a passage for a passage .
 We can see that the boundary and content probabilities capture different aspects of the answer .
 Since answer candidates usually have similar boundary words , if we compute the answer representation based on the boundary probabilities , it 's difficult to model the real difference among different answer candidates .
 On the contrary , with the content probabilities , we pay more attention to the content part of the answer , which can provide more distinguishable information for verifying the correct answer .
@@ -213,7 +213,7 @@ Mainstream studies treat reading comprehension as extracting answer span from th
 We implement our boundary model similarly by employing the boundary - based pointer network .
 Another inspiring work is from , where the authors propose to match the passage against itself so that the representation can aggregate evidence from the whole passage .
 Our verification model adopts a similar idea .
-However , we collect information across passages and our attention is based on the answer representation , which is much more efficient than attention overall passages .
+However , we collect information across passages and our attention is based on the answer representation , which is much more efficient than attention over all passages .
 For the model training , argues that the boundary loss encourages exact answers at the cost of penalizing overlapping answers .
 Therefore they propose a mixed objective that incorporates rewards derived from word overlap .
 Our joint training approach has a similar function .

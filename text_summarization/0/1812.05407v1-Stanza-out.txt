@@ -37,7 +37,7 @@ Some comments may mention the main aspect of the document for several times .
 Take the casein as an example , the focused aspect of the reader is " investment of Toyota " which is also the main aspect of this document .
 To be specific , we define " reader focused aspect " to denote the focused aspect by a reader through the comments .
 Intuitively , these reader comments may help the summary generator capture the main aspect of document , thereby improving the quality of the generated summary .
-Therefore , in this paper , we investigate anew problem setting of the task of abstractive text summarization .
+Therefore , in this paper , we investigate a new problem setting of the task of abstractive text summarization .
 We name such paradigm of extension as reader - aware abstractive text summarization .
 The effect of comments or social contexts in document summarization have been explored by several previous works .
 Unlike these approaches that directly extract sentences from the original document , we aim to generate a natural - sounding summary from scratch instead of extracting words from the document .
@@ -87,7 +87,7 @@ Following previous work , there are some models ) using variational auto - encod
 Different from our abstractive summarization task , these related works are all based on extractive or compressive approaches .
 Problem Formulation
 Before presenting our approach for the reader - aware summarization , we first introduce our notations and key concepts .
-To begin with , fora document
+To begin with , for a document
 denotes the i - th word in document X d , and x c i , j denotes the j - th word in i -th comment sentence c i .
 Given the document X d , the summary generator reads the comments X c , then generates a summary ? = {? 1 ,? 2 , . . . , ?
 T ? }.
@@ -122,7 +122,7 @@ In order to handle the out - of - vocabulary ( OOV ) problem , we equip the poin
 The design of the pointer network is the same as the model used in , thus we omit this procedure in our paper due to the limited space .
 We use the negative log-likelihood as the loss function :
 Denoising module
-Due to the fact that reader comments area kind of informal text , they may consist of many noisy information , and not all the comments are helpful for generating better summaries .
+Due to the fact that reader comments are a kind of informal text , they may consist of many noisy information , and not all the comments are helpful for generating better summaries .
 Consequently , we employ a denoising module to distinguish which comments are helpful .
 First , we employ an Bi - RNN c to model the comment word embeddings :
 where h c i ,t denotes the hidden state of t- th word in i - th comment c i .
@@ -293,7 +293,7 @@ shows an example and its corresponding generated summaries by different methods 
 We observe that S2S only generates fluent summary , but are contradictory to the focus of reader and ground truth summary .
 However , RASG overcomes this shortcoming by using goal vector and gap content given by supervisor and goal tracker at training stage , and produce the summary not only fluent but also consistent with the focus of readers .
 Conclusion
-In this paper , we propose anew framework named readeraware summary generator ( RASG ) which aims to generate summaries for document from social media incorporating the reader comments .
+In this paper , we propose a new framework named readeraware summary generator ( RASG ) which aims to generate summaries for document from social media incorporating the reader comments .
 In order to capture the reader focused aspect , we design a reader attention component with a denoising module to capture the alignment between comments and document .
 We employ a supervisor to measure the semantic gap between generated summary and reader focused aspect .
 A goal tracker uses the information of semantic gap and the feature extracted by the discriminator to produce a goal vector to guide the summary generator .

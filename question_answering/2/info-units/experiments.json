@@ -1,8 +1,8 @@
 {
   "has" : {
     "Experiments" : {
-      "In" : {
-        "Memex QA dataset" : {
+      "has" : {
+        "Memex QA" : {
           "has" : {
             "Baselines" : {
               "has" : {
@@ -12,7 +12,9 @@
                       "with" : "concatenated image , question and metadata features"
                     }
                   },
-                  "from sentence" : "We implement the following methods as baselines : Logistic Regression predicts the answer with concatenated image , question and metadata features as reported in ."
+                  "from sentence" : "Memex QA provides 4 answer choices and only one correct answer for each question .
+We implement the following methods as baselines : Logistic Regression predicts the answer with concatenated image , question and metadata features as reported in ."
+
                 },
                 "Embedding + LSTM" : {
                   "utilizes" : {
@@ -168,8 +170,8 @@
                     }
                   },
                   "from sentence" : "Given a hidden state size of d , which is set to 50 , we concatenate the output of both directions of the LSTM and get a question matrix Q ?
-        R 2 d M and context tensor H ?
-        R 2dV KN 6 for all media documents ."
+R 2 d M and context tensor H ?
+R 2dV KN 6 for all media documents ."
         
                 }
               },
@@ -180,7 +182,7 @@
                 }
               },
               "To select" : {
-                "best hyperparameters" : {
+                "best hyperparmeters" : {
                   "randomly select" : {
                     "20 %" : {
                       "of" : {
@@ -328,7 +330,9 @@
                       "of" : "2 ( video & text )"
                     }
                   },
-                  "from sentence" : "We implement FVTA network for Movie QA task with modality number of 2 ( video & text ) ."
+                  "from sentence" : "In the MovieQA dataset , each QA is given a set of N movie clips of the same movie , and each clip comes with subtitles .
+We implement FVTA network for Movie QA task with modality number of 2 ( video & text ) ."
+
                 }
               },
               "set" : {

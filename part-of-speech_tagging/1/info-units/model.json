@@ -38,7 +38,7 @@
           "with" : {
             "LSTM - CRF" : {
               "captures" : ["word shape", "context information"],
-              "jointly decodes" : {
+              "jointly decode" : {
                 "tags" : {
                   "for" : "sequence labeling"
                 }

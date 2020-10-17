@@ -67,7 +67,7 @@
                   }
                 }
               },
-              "from sentence" : "Then , a multi-dimensional attention computes a vector representation of the entire sequence , which can be passed into a classification / regression module to compute the final prediction fora particular task ."
+              "from sentence" : "Then , a multi-dimensional attention computes a vector representation of the entire sequence , which can be passed into a classification / regression module to compute the final prediction for a particular task ."
             }
           }
         }

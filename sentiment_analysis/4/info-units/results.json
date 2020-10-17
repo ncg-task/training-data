@@ -37,12 +37,12 @@
             "text" : {
               "shared" : {
                 "complementary data" : {
-                  "to improve" : "overall performance"
+                  "to improve" : "over all performance"
                 }
               }
             }
           },
-          "from sentence" : "Interestingly , the audio and visual modality , on their own , do not provide good performance , but when used with text , complementary data is shared to improve overall performance ."
+          "from sentence" : "Interestingly , the audio and visual modality , on their own , do not provide good performance , but when used with text , complementary data is shared to improve over all performance ."
         }
       },
       "For" : {

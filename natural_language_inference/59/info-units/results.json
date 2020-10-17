@@ -51,8 +51,7 @@
               }
             }
           },
-          "from sentence" : "Furthermore , when character n-gram embeddings are pre-trained in a task - specific manner in DECATT paralex ?
-char model , we observe a significant boost in performance ."
+          "from sentence" : "Furthermore , when character n-gram embeddings are pre-trained in a task - specific manner in DECATT paralex ? char model , we observe a significant boost in performance ."
 
         }
       },

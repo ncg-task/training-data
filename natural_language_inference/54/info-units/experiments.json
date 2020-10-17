@@ -15,7 +15,9 @@
                         }
                       }
                       "has" : ["baseline approach BiDAF", {"proposed SEST approaches" : {"including" : ["SE - POS", "SECT - LSTM", "SECT - CNN", "SEDT - LSTM", "SEDT - CNN"]}}],
-                      "from sentence" : "We first compared the performance of single models between the baseline approach BiDAF and the proposed SEST approaches , including SE - POS , SECT - LSTM , SECT - CNN , SEDT - LSTM , and SEDT - CNN , on the development dataset of SQuAD ."
+                      "from sentence" : "Predictive Performance
+                      We first compared the performance of single models between the baseline approach BiDAF and the proposed SEST approaches , including SE - POS , SECT - LSTM , SECT - CNN , SEDT - LSTM , and SEDT - CNN , on the development dataset of SQuAD ."
+                      
                     }
                   }
                 },
@@ -58,10 +60,7 @@
                           "to work" : "properly"
                         }
                       },
-                      "both" : ["ordering", {"contents" : {"of" : "syntactic tree"}}],
-                      "from sentence" : "Contribution of Syntactic Sequence
-    From the table we see that both the ordering and the contents of the syntactic tree are important for the models to work properly : constituency and dependency trees achieved over 20 % boost on performance compared to the randomly generated ones and our proposed ordering also out - performed the random ordering ."
-    
+                      "both" : ["ordering", {"contents" : {"of" : "syntactic tree"}}]    
                     }
                   },
                   "has" : {

@@ -14,8 +14,7 @@
       },
       "has" : {
         "Standard 1 - step model" : {
-          "achieves" : "75.139 EM",
-          "from sentence" : "Standard 1 - step model only achieves 75.139 EM and dynamic steps ( via ReasoNet ) achieves only 75.355 EM ."
+          "achieves" : "75.139 EM"
         },
         "dynamic steps ( via ReasoNet )" : {
           "achieves" : "only 75.355 EM",

@@ -7,7 +7,7 @@
         },
         "from sentence" : "Motivated by the success of transfer learning , we apply BERT to negation detection and scope resolution ."
       },
-      "explore" : ["design choices", {"from sentence" : "We explore the set of design choices involved , and experiment on all 3 public datasets available : the BioScope Corpus ( Abstracts and Full Papers ) , the Sherlock Dataset and the SFU Review Corpus ."}],
+      "explore" : "design choices",
       "experiment on" : {
         "3 public datasets available" : {
           "name" : ["BioScope Corpus ( Abstracts and Full Papers )", "Sherlock Dataset", "SFU Review Corpus"]

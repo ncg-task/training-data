@@ -1,13 +1,13 @@
 257	0	14	SVM - ensemble
 258	2	39	strong context - free benchmark model
 258	40	50	which uses
-258	5	7	on
+258	51	78	similar multimodal approach
+258	79	81	on
 258	85	102	ensemble of trees
 260	0	9	bc - LSTM
 261	2	21	bi-directional LSTM
 261	22	35	equipped with
 261	36	55	hierarchical fusion
-266	130	132	is
 266	0	6	Memn2n
 266	83	92	generates
 266	97	119	memory representations
@@ -17,18 +17,19 @@
 266	159	177	embedding matrix B
 266	202	209	without
 266	210	229	sequential modeling
-273	22	25	use
-273	26	43	only self history
-273	44	59	for classifying
-273	60	67	emotion
-273	68	70	of
-273	71	84	utterance u i
-276	0	7	CMN N A
-276	10	30	Single layer variant
-276	31	33	of
-276	0	3	CMN
-276	42	46	with
-276	47	66	no attention module
+271	29	37	CMN Self
+272	22	25	use
+272	26	43	only self history
+272	44	59	for classifying
+272	60	67	emotion
+272	68	70	of
+272	71	84	utterance u i
+275	0	7	CMN N A
+275	10	30	Single layer variant
+275	31	33	of
+275	38	41	CMN
+275	42	46	with
+275	47	66	no attention module
 245	3	6	use
 245	7	11	10 %
 245	12	14	of
@@ -86,7 +87,7 @@
 19	90	107	emotion detection
 19	108	110	in
 19	111	170	utterances ( a unit of speech bound by breathes or pauses )
-19	131	133	of
+19	171	173	of
 19	179	200	conversational videos
 28	4	16	proposed CMN
 28	44	52	by using
@@ -127,23 +128,23 @@
 4	0	36	Emotion recognition in conversations
 17	27	78	emotion detection in videos of dyadic conversations
 16	0	17	Emotion detection
-290	5	13	suggests
-290	19	48	gathering contexts temporally
-290	49	56	through
-290	57	78	sequential processing
-290	2	4	is
-290	91	106	superior method
-290	107	111	over
-290	112	147	non-temporal memory representations
-291	0	8	CMN self
-291	15	24	uses only
-291	25	47	single history channel
-291	53	61	provides
-291	62	80	lesser performance
-291	86	97	compared to
-291	0	3	CMN
-293	10	21	predictions
-293	18	20	on
-293	25	51	valence and arousal levels
-293	57	61	show
-293	62	77	similar results
+289	5	13	suggests
+289	19	48	gathering contexts temporally
+289	49	56	through
+289	57	78	sequential processing
+289	79	81	is
+289	91	106	superior method
+289	107	111	over
+289	112	147	non-temporal memory representations
+290	0	8	CMN self
+290	15	24	uses only
+290	25	47	single history channel
+290	53	61	provides
+290	62	80	lesser performance
+290	86	97	compared to
+290	98	101	CMN
+292	10	21	predictions
+292	22	24	on
+292	25	51	valence and arousal levels
+292	57	61	show
+292	62	77	similar results

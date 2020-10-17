@@ -15,12 +15,10 @@
                 "learning rate" : {
                   "of" : "0.0008"
                 }
-              },
-              "from sentence" : "As for answer verifiers , we use the original configuration from for Model - I. For Model - II , the Adam optimizer ( Kingma and Ba 2014 ) with a learning rate of 0.0008 is used , the hidden size is set as 300 , and a dropout ) of 0.3 is applied for preventing overfitting ."
+              }
             },
             "hidden size" : {
-              "set as" : "300",
-              "from sentence" : "As for answer verifiers , we use the original configuration from for Model - I. For Model - II , the Adam optimizer ( Kingma and Ba 2014 ) with a learning rate of 0.0008 is used , the hidden size is set as 300 , and a dropout ) of 0.3 is applied for preventing overfitting ."
+              "set as" : "300"
             },
             "dropout" : {
               "of" : {
@@ -51,8 +49,7 @@
       },
       "use" : {
         "Glo Ve 100D embeddings" : {
-          "for" : "reader",
-          "from sentence" : "We use the Glo Ve 100D embeddings for the reader , and 300D embeddings for Model - II and Model - III ."
+          "for" : "reader"
         },
         "300D embeddings" : {
           "for" : ["Model - II", "Model - III"],

@@ -2,7 +2,7 @@
 (Baselines||use||same Glove word vectors)
 (same Glove word vectors||for||fair comparison)
 (Baselines||implement||ContextAVG)
-(ContextAVG||is||simplistic version)
+(ContextAVG||has||simplistic version)
 (simplistic version||of||our approach)
 (Baselines||has||three LSTM models)
 (three LSTM models||In||LSTM)

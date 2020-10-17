@@ -12,12 +12,12 @@
 162	47	81	interactions between the endpoints
 162	82	87	using
 162	92	106	spanlevel FFNN
-162	43	45	in
 163	0	5	RASOR
 163	6	17	outperforms
 163	22	47	endpoint prediction model
 163	48	50	by
 163	51	54	1.1
+163	55	57	in
 163	58	69	exact match
 106	3	12	represent
 106	25	30	words
@@ -29,7 +29,7 @@
 106	112	118	corpus
 106	18	20	of
 106	122	134	840 bn words
-106	18	20	of
+106	119	121	of
 107	17	22	cover
 107	23	34	200 k words
 107	39	74	all out of vocabulary ( OOV ) words
@@ -38,12 +38,12 @@
 107	101	141	1 m randomly initialized 300d embeddings
 108	3	9	couple
 108	14	36	input and forget gates
-108	14	16	in
+108	37	39	in
 108	40	49	our LSTMs
 108	77	80	use
 108	83	102	single dropout mask
 108	103	111	to apply
-108	90	97	dropout
+108	112	119	dropout
 108	120	126	across
 108	127	148	all LSTM time - steps
 109	0	13	Hidden layers
@@ -67,14 +67,14 @@
 112	143	145	of
 112	146	149	0.1
 112	169	188	learning rate decay
-112	143	145	of
+112	189	191	of
 112	192	212	5 % every 10 k steps
 113	4	10	models
 113	15	32	implemented using
 113	33	43	TensorFlow
 113	50	60	trained on
 113	65	83	SQUAD training set
-113	27	32	using
+113	84	89	using
 113	94	108	ADAM optimizer
 113	109	113	with
 113	116	131	mini-batch size
@@ -82,7 +82,7 @@
 113	135	136	4
 113	141	154	trained using
 113	155	187	10 asynchronous training threads
-113	58	60	on
+113	188	190	on
 113	193	207	single machine
 111	0	9	To choose
 111	14	39	final model configuration
@@ -93,13 +93,13 @@
 111	89	91	of
 111	96	114	LSTM hidden states
 111	121	136	width and depth
-111	89	91	of
+111	137	139	of
 111	144	172	feed forward neural networks
 111	175	182	dropout
-111	149	152	for
+111	183	186	for
 111	191	196	LSTMs
 111	203	209	number
-111	89	91	of
+111	210	212	of
 111	213	232	stacked LSTM layers
 111	243	280	decay multiplier [ 0.9 , 0.95 , 1.0 ]
 111	295	303	multiply
@@ -116,15 +116,17 @@
 24	156	176	shared substructures
 25	3	14	demonstrate
 25	20	40	directly classifying
-25	41	68	each of the competing spans
-25	75	88	training with
+25	41	48	each of
+25	53	68	competing spans
+25	75	83	training
+25	84	88	with
 25	89	109	global normalization
 25	110	114	over
-25	114	132	all possible spans
-25	135	143	leads to
-25	146	166	significant increase
-25	37	39	in
-25	170	181	performance
+25	115	133	all possible spans
+25	136	144	leads to
+25	147	167	significant increase
+25	168	170	in
+25	171	182	performance
 2	44	73	EXTRACTIVE QUESTION ANSWERING
 7	33	50	answer extraction
 121	83	88	RASOR

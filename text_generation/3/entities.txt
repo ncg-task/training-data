@@ -36,7 +36,7 @@
 25	62	86	semantic representations
 25	87	89	of
 25	90	110	inputs and responses
-25	90	92	in
+25	111	113	in
 25	117	135	unsupervised style
 26	9	14	given
 26	19	52	utterance - level representations
@@ -84,10 +84,10 @@
 122	4	38	Pearson 's correlation coefficient
 122	39	41	is
 122	42	46	0.69
-122	9	11	on
+122	47	49	on
 122	50	59	coherence
 122	64	68	0.57
-122	9	11	on
+122	69	71	on
 122	72	79	fluency
 123	14	24	clear that
 123	29	38	AEM model

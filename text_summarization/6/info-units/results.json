@@ -10,7 +10,8 @@
                   "achieves" : "best performance"
                 }
               },
-              "from sentence" : "The results on the Chinese dataset LCSTS are shown in .
+              "from sentence" : "ROUGE Evaluation
+The results on the Chinese dataset LCSTS are shown in .
 Our model DRGD also achieves the best performance ."
 
             }

@@ -31,7 +31,9 @@ The good results on the 10 fold cross validations are confirmed on the official 
                           "among" : "11 systems"
                         }
                       },
-                      "from sentence" : "On the official test set , our primary submission achieved the third position w.r.t. MAP among 11 systems ."
+                      "from sentence" : "Subtask B
+On the official test set , our primary submission achieved the third position w.r.t. MAP among 11 systems ."
+
                     },
                     "primary system" : {
                       "achieves" : {
@@ -51,7 +53,8 @@ The good results on the 10 fold cross validations are confirmed on the official 
                   "has" : {
                     "primary submission" : {
                       "achieved" : "second highest MAP",
-                      "from sentence" : "Our primary submission achieved the second highest MAP , while our Contrastive 2 is the best result ."
+                      "from sentence" : "Subtask C Model :
+Our primary submission achieved the second highest MAP , while our Contrastive 2 is the best result ."
                     }
                   },
                   "noted that" : {

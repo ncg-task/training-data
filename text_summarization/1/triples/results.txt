@@ -12,7 +12,7 @@
 (SQuAD and ROUGE||in||abstractive summarization in CNN - DM)
 (Results||has||Diversity vs. Number of Mixtures)
 (Diversity vs. Number of Mixtures||compare||effect of number of mixtures)
-(effect of number of mixtures||in|| SELECTOR and Mixture Decoder)
+(effect of number of mixtures||in||SELECTOR and Mixture Decoder)
 (Diversity vs. Number of Mixtures||for||Mixture Decoder)
 (Mixture Decoder||show||pairwise similarity increases ( diversity ?))
 (pairwise similarity increases ( diversity ?)||when||number of mixtures increases)

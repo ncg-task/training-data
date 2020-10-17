@@ -6,8 +6,7 @@
           "reach over" : {
             "80 %" : {
               "in" : "2 - way classification task"
-            },
-            "from sentence" : "All models reach over 80 % in the 2 - way classification task while 3 - way classification accuracy stays below 70 % for all of them ."            
+            }
           },
           "has" : {
             "3 - way classification accuracy" : {

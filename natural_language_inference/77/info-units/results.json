@@ -11,16 +11,14 @@
             "feature rich logistic - regression baseline" : {
               "on" : "SQuAD development set"
             }
-          },
-          "from sentence" : "For instance , it outperforms a feature rich logistic - regression baseline on the SQuAD development set and nearly reaches the BiLSTM baseline system ( i.e. , FastQA without character embeddings and features ) ."
+          }
         },
         "nearly reaches" : {
           "has" : "BiLSTM baseline system", 
           "from sentence" : "For instance , it outperforms a feature rich logistic - regression baseline on the SQuAD development set and nearly reaches the BiLSTM baseline system ( i.e. , FastQA without character embeddings and features ) ."
         },
         "very competitive" : {
-          "to" : "previously established stateof - the - art results",
-          "from sentence" : "It is very competitive to previously established stateof - the - art results on the two datasets and even improves those for News QA ."
+          "to" : "previously established stateof - the - art results"
         },
         "improves" : {
           "for" : "News QA",

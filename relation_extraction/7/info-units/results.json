@@ -5,8 +5,7 @@
         "model" : {
           "with" : "STP",
           "performs" : "best"
-        },
-        "from sentence" : "From , we can observe that the model with the STP performs best , and the SDP model obtains an even worse result than the pure one ."        
+        }
       },
       "has" : {
         "SDP model" : {

@@ -23,7 +23,7 @@
                   "of" : "8000"
                 }
               },
-              "trains" : {
+              "train" : {
                 "model" : {
                   "for" : "500000 steps"
                 }
@@ -50,14 +50,13 @@
             "30 %" : {
               "of" : {
                 "tokens" : {
-                  "in" : "each documents"
+                  "in" : "each document"
                 }
               }
-            },
-            "from sentence" : "We mask 30 % of tokens in each document , and permute all sentences ."
+            }
           },
           "permute" : ["all sentences", {"from sentence" : "We mask 30 % of tokens in each document , and permute all sentences ."}],
-          "disabled" : {
+          "dis abled" : {
             "dropout" : {
               "for" : {
                 "final 10 %" : {
@@ -67,7 +66,7 @@
                       "better fit" : "data"
                     }
                   },
-                  "from sentence" : "To help the model better fit the data , we disabled dropout for the final 10 % of training steps ."
+                  "from sentence" : "To help the model better fit the data , we dis abled dropout for the final 10 % of training steps ."
                 }
               }
             }
@@ -143,7 +142,7 @@ We find BART outperforms the best previous work by 1.2 ROUGE - L , but the datas
 
                 }
               },
-              "experimented on" : {
+              "experiment on" : {
                 "original WMT16 Romanian - English" : {
                   "augmented with" : "back - translation data",
                   "has" : {

@@ -50,14 +50,6 @@
               "from sentence" : "In addition , the models with dense connections rather than residual connections , have higher performance in general ."
             }
           }
-        },
-        "dense connection" : {
-          "is" : {
-            "more effective" : {
-              "than" : "residual connection"
-            }
-          },
-          "from sentence" : "shows that the connection between layers is essential , especially in deep models , endowing more representational power , and the dense connection is more effective than the residual connection ."
         }
       },
       "removed" : {
@@ -113,6 +105,15 @@
           "between" : "layers",
           "is" : "essential",
           "endowing" : "more representational power",
+		  "has" : {
+			"dense connection" : {
+			  "is" : {
+				"more effective" : {
+				  "than" : "residual connection"
+				}
+			  }
+			}
+		  },			
           "from sentence" : "shows that the connection between layers is essential , especially in deep models , endowing more representational power , and the dense connection is more effective than the residual connection ."
         }
       }

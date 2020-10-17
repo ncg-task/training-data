@@ -33,7 +33,7 @@
 (Baselines||has||TD - LSTM)
 (TD - LSTM||employs||two LSTMs)
 (TD - LSTM||has||last hidden states)
-(last hidden states||of||two LSTMS)
+(last hidden states||of||two LSTMs)
 (last hidden states||has||finally concatenated)
 (finally concatenated||for predicting||sentiment polarity)
 (sentiment polarity||of||aspect)

@@ -24,18 +24,18 @@
 18	38	42	each
 18	43	51	modality
 18	61	83	perform feature fusion
-18	71	73	at
+18	84	86	at
 18	91	102	final stage
 64	8	23	text transcript
 64	24	26	of
 64	27	48	each of the utterance
 64	52	55	use
 64	56	83	pretrained Glove embeddings
-64	24	26	of
+64	84	86	of
 64	87	100	dimension 300
 64	103	113	along with
 64	118	141	maximum sequence length
-64	24	26	of
+64	142	144	of
 64	145	148	500
 64	149	158	to obtain
 64	161	179	( 500,300 ) vector
@@ -59,7 +59,7 @@
 66	49	110	columns ( 165 for faces , 18 for hands , and 6 for rotation )
 66	125	158	concatenate all of them to obtain
 66	159	187	( 200,189 ) dimension vector
-66	63	66	for
+66	188	191	for
 66	197	206	utterance
 2	0	33	MULTI - MODAL EMOTION RECOGNITION
 4	0	19	Emotion recognition

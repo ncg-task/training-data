@@ -22,6 +22,6 @@
 (modifying our objective||to include||multiple relations)
 (multiple relations||improves||recall)
 (recall||leading to||slight improvement)
-(slight improvement||on||overall performance on relations)
+(slight improvement||on||over all performance on relations)
 (recall||of||our system)
 (recall||on||relations)

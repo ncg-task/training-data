@@ -96,7 +96,7 @@ It also allows the attention at each time step to be unaffected from incorrect a
             "both directions" : {
               "name" : ["query - to - context", "context - to - query"],
               "which provide" : {
-                "complementary information" : {
+                "complimentary information" : {
                   "to" : "each other"
                 }
               }

@@ -18,11 +18,11 @@
 41	53	85	multi -level attention mechanism
 41	86	99	to understand
 41	104	115	information
-41	104	106	in
+41	116	118	in
 41	123	131	question
 41	138	148	exploit it
 41	149	163	layer by layer
-41	31	33	on
+41	164	166	on
 41	171	183	context side
 42	13	24	innovations
 42	29	44	integrated into
@@ -32,28 +32,28 @@
 2	67	88	MACHINE COMPREHENSION
 24	0	81	Teaching machines to read , process and comprehend text and then answer questions
 29	108	145	machine reading comprehension ( MRC )
-35	71	74	MRC
 35	44	66	language understanding
+35	71	74	MRC
 238	26	34	see that
 238	35	45	our models
 238	46	62	not only perform
 238	63	67	well
-238	50	52	on
+238	68	70	on
 238	75	97	original SQuAD dataset
 238	104	108	also
 238	109	119	outperform
 238	120	139	all previous models
 238	140	142	by
 238	143	156	more than 5 %
-238	79	81	in
+238	157	159	in
 238	160	168	EM score
-238	50	52	on
+238	169	171	on
 238	176	196	adversarial datasets
 239	5	10	shows
 239	16	25	FusionNet
-239	2	4	is
+239	26	28	is
 239	29	35	better
-239	13	15	at
+239	36	38	at
 239	39	61	language understanding
 239	62	69	of both
 239	74	94	context and question

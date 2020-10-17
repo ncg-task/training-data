@@ -23,8 +23,7 @@
                       "has" : "previous non-ensemble models"
                     }
                   }
-                },
-                "from sentence" : "DR - BiLSTM ( Ensemble ) achieves the accuracy of 89.3 % , the best result observed on SNLI , while DR - BiLSTM ( Single ) obtains the accuracy of 88.5 % , which considerably outperforms the previous non-ensemble models ."                
+                }
               }
             }
           }

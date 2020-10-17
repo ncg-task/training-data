@@ -7,8 +7,7 @@
           "from sentence" : "We conduct experiments on two SRL tasks : and the predicate indicator embedding size is 10 ."
         },
         "learning rate" : {
-          "has" : "5 10 ?5",
-          "from sentence" : "The learning rate is 5 10 ?5 . BERT base - cased and large - cased models are used in our experiments ."          
+          "has" : "5 10 ?5"
         },
         "BERT base - cased and large - cased models" : {
           "used in" : "our experiments",

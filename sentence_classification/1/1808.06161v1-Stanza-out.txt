@@ -2,31 +2,31 @@ title
 Hierarchical Neural Networks for Sequential Sentence Classification in Medical Scientific Abstracts
 abstract
 Prevalent models based on artificial neural network ( ANN ) for sentence classification often classify sentences in isolation without considering the context in which sentences appear .
-This hampers the traditional sentence classification approaches to the problem of sequential sentence classification , where structured prediction is needed for better overall classification performance .
+This hampers the traditional sentence classification approaches to the problem of sequential sentence classification , where structured prediction is needed for better over all classification performance .
 In this work , we present a hierarchical sequential labeling network to make use of the contextual information within surrounding sentences to help classify the current sentence .
 Our model outperforms the state - of - the - art results by 2 % - 3 % on two benchmarking datasets for sequential sentence classification in medical scientific abstracts .
 Introduction
 Since 1665 , over 50 million scholarly research articles have been published , with approximately 2.5 million new scientific papers coming out each year .
 While this enormous corpus provides us with the ability to conclusively accept or reject hypotheses and yields insight into promising research directions , it is getting harder and harder to extract useful information from the literature in an efficient and timely manner due to its sheer amount .
 Therefore , an automatic and intelligent tool to help users locate the information of interest quickly and comprehensively is highly desired .
-When searching for relevant literature fora certain field , investigators first check the abstracts of scientific papers to see whether they match the criterion of interest .
+When searching for relevant literature for a certain field , investigators first check the abstracts of scientific papers to see whether they match the criterion of interest .
 This process can be expedited if the abstracts are structured ; that is , if the rhetorical structural elements of scientific abstracts such as purpose , methods , results , and conclusions ) are explicitly stated .
 However , even today , a significant portion of scientific abstracts is still unstructured , which causes great difficulty in information retrieval .
 In this paper , we develop a machine - learning based approach to automatically categorize sentences in scientific abstracts into rhetorical sections so that the desired information can be efficiently retrieved .
-Ina scientific abstract , each sentence can be assigned to a rhetorical structural element sequentially .
+In a scientific abstract , each sentence can be assigned to a rhetorical structural element sequentially .
 This rhetorical structure profiling process can be formulated as a sequential sentence classification task , as the element assignment of any single sentence is greatly associated with the assignments of the surrounding sentences .
 This is in contrast to the general sentence classification problem , where each sentence is classified individually and no contextual information can be used .
 Previous state - of - the - art methods relied on Conditional Random Fields ( CRFs ) to take into account the inter-dependence between subsequent labels , which improved joint sentence classification performance by considering the label sequence information .
 In this work , we add a bi-directional long short - term memory ( bi - LSTM ) layer over the representations of individual sentences so that it can encode the contextual content and semantics from preceding and succeeding sentences for better categorical inference of the current one .
 In this work , we present a hierarchical neural network model for the sequential sentence classification task , which we call a hierarchical sequential labeling network ( HSLN ) .
 Our model first uses a RNN or CNN layer to individually encode the sentence representation from the sequence of word embeddings , then uses another bi - LSTM layer to take as input the individual sentence representation and output the contextualized sentence representation , subsequently uses a single - hidden - layer feed - forward network to transform the sentence representation to the probability vector , and finally optimizes the predicted label sequence jointly via a CRF layer .
-We evaluate our model on two benchmarking datasets , PubMed RCT ( Dernoncourt and and NICTA - PIBOSO , which were both generated from the PubMed database 1 .
+We evaluate our model on two benchmarking datasets , PubMed RCT ( Dernoncourt and and NICTA - PIBOSO , which were both generated from the PubMed data base 1 .
 Our key contributions are summarized as follows :
 1 .
 Based on the previous best performing architecture for sequential sentence classification , we add one more layer to extract contextual information from surrounding sentences for more accurate prediction of the current one .
 Together with the CRF algorithm , this allows us to make use of not only the preceding labels ' information but also the content and semantics of adjacent sentences to infer the label of the target sentence .
 2 .
-We remove the need fora character - based word embedding component without sacrificing performance .
+We remove the need for a character - based word embedding component without sacrificing performance .
 For individual sentence encoding , we propose the use of a CNN module as an alternative to RNN for small datasets , suffering less from over-fitting as evidenced by our experiments .
 Moreover , we incorporate attention - based pooling in both RNN and CNN models to further improve the performance .
 3 .
@@ -63,7 +63,7 @@ Sentence Encoding Layer
 This layer takes as input the embedding vector of each token in a sentence from the word embedding layer and produces a vector s to encode this sentence .
 The sequence of embedding vectors is first processed by a bi-directional RNN ( bi - RNN ) or CNN layer , similar to the ones used in the text classification before .
 This layer outputs a sequence of hidden states h 1:N ( h ?
-Rd hs ) fora sentence of N words with each hidden state corresponding to a word .
+Rd hs ) for a sentence of N words with each hidden state corresponding to a word .
 To form the final representation vector s of this sentence , attention - based pooling is used , which can be described using the following equations :
 where H = h 1 h 2 h N ?
 Rd hs N , W s ?
@@ -73,12 +73,12 @@ R rd a is the token level context matrix used to measure the relevance or import
 R rN is the attention matrix .
 Here each row of U sis a context vector u s ?
 Rd a and it is expected to reflect an aspect or component of the semantics of a sentence .
-To represent the overall semantics of the sentence , we use multiple context vectors to focus on different parts of this sentence .
+To represent the over all semantics of the sentence , we use multiple context vectors to focus on different parts of this sentence .
 Finally , the sentence encoding vector s ?
 R rd hs is obtained by reshaping the matrix S into a vector .
 Context Enriching Layer
 This layer takes as input the sequence of individual sentence encoding vectors in a given abstract of n sentences obtained from the last sentence encoding layer , with each vector corresponding to a sentence .
-It outputs anew sequence of contextualized sentence encoding vectors , which are enriched with the contextual information from surrounding sentences .
+It outputs a new sequence of contextualized sentence encoding vectors , which are enriched with the contextual information from surrounding sentences .
 Specifically , the sequence of individual sentence encoding vectors is input into a bi - LSTM layer , which produces a sequence of hidden state vectors h 1:n ( h ?
 Rd hd ) with each corresponding to a sentence .
 Each of these vectors is subsequently input to a feed - forward neural network with only one hidden layer to get the corresponding probability vector r ?
@@ -91,7 +91,7 @@ Given the sequence of probability vectors r 1:n from the last context enriching 
 In the CRF algorithm , in order to model dependencies between subsequent labels , we incorporate a matrix T that contains the transition probabilities between two subsequent labels ; we define T [ i , j ] as the probability that a token with label i is followed by a token with the label j.
 The score of a label sequence y 1:n is defined as the sum of the probabilities of individual labels and the transition probabilities :
 ( 3 )
-The score in the above equation can be transformed into the probability of a certain label sequence by taking a softmax operation overall possible label sequences :
+The score in the above equation can be transformed into the probability of a certain label sequence by taking a softmax operation over all possible label sequences :
 where Y denotes the set of all possible label sequences .
 During the training phase , the objective is to maximize the probability of the gold label sequence .
 In the testing phase , given an input sequence , the corresponding sequence of predicted labels is chosen as the one that maximizes the score , computed via the Viterbi algorithm .
@@ -103,7 +103,7 @@ NICTA-PIBOSO
 This dataset 2 was shared from the ALTA 2012 Shared Task , the goal of which is to build automatic sentence classifiers that can map the sentences from biomedical abstracts into a set of pre-defined categories for Evidence - Based Medicine ( EBM ) .
 PubMed RCT
 This new dataset was curated by 3 and is currently the largest dataset for sequential sentence classification .
-It is based on the PubMed database of biomedical literature and each sentence of each abstract is labeled with its role in the abstract using one of the following classes : background , objective , method , result , and conclusion .
+It is based on the PubMed data base of biomedical literature and each sentence of each abstract is labeled with its role in the abstract using one of the following classes : background , objective , method , result , and conclusion .
 presents an example abstract comprising structured sentences with their annotated labels .
 Training Settings
 For both datasets , test performance is assessed on the training epoch with best validation performance and F1 scores ( weighted average by support ( the number of true instances for each label ) ) are reported as the results .
@@ -159,15 +159,15 @@ According to , the training methods that create the word embeddings do not have 
 The combination of Wikipedia and PubMed abstracts as the corpus for unsupervised word embedding training yields the best result , and the individual use of either the Wikipedia corpus or the PubMed abstracts performs much worse .
 Although the dataset we : Examples of prediction errors of our HSLN - RNN model trained on the PubMed 20 k dataset .
 Each sentence is followed by the PMID of the abstract that this sentence belongs to , which is enclosed in middle brackets .
-The " Predicted " column indicates the label predicted by our model fora given sentence .
+The " Predicted " column indicates the label predicted by our model for a given sentence .
 The " Gold " column indicates the gold label of the sentence .
 are using for evaluation is also from PubMed abstracts , using only the PubMed abstracts together with MIMIC notes without the Wikipedia corpus does not guarantee better result ( see the " FastText - P.M. + MIMIC " embeddings in ) , which maybe because the corpus size of PubMed abstracts plus MIMIC notes ( about 12.8 million abstracts and 1 million notes ) is not large enough for good embedding training compared with the corpus consisting of at least billion tokens such as the Wikipedia .
 Embedding
 Conclusion
 In this work , we have presented an ANN based hierarchical sequential labeling network to classify sentences that appear sequentially in text .
-We demonstrate that incorporating the contextual information from surrounding sentences to help classify the current one by using an LSTM layer to sequentially process the encoded sentence representations can improve the overall quality of predictions .
+We demonstrate that incorporating the contextual information from surrounding sentences to help classify the current one by using an LSTM layer to sequentially process the encoded sentence representations can improve the over all quality of predictions .
 Our model outperforms the state - of - theart results by 2 % - 3 % on two datasets for sequential sentence classification in medical abstracts .
 We expect that our proposed model can be generalized to any problem that is related to sequential sentence classification , such as the paragraph - level sequential sentence categorization in full - text articles for better text mining and document retrieval .
 Future Work
-Although the whole PubMed database contains over 2 million abstracts with part of them accompanied by full - text articles , only a small fraction of them are structured and contain the label information utilized in this work .
+Although the whole PubMed data base contains over 2 million abstracts with part of them accompanied by full - text articles , only a small fraction of them are structured and contain the label information utilized in this work .
 We plan to make use of the rest unannotated abstracts or full texts to pre-train our model and then fine tune it to the target annotated datasets inspired by the work from so that the performance can be further boosted .

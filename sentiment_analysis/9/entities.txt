@@ -16,6 +16,7 @@
 196	27	42	ATSM variations
 196	43	46	for
 196	47	84	Chinese language - oriented ABSA task
+198	0	4	GANN
 198	5	7	is
 198	8	34	novel neural network model
 198	35	38	for
@@ -37,7 +38,6 @@
 203	0	11	BERT - BASE
 203	12	14	is
 203	19	46	basic pretrained BERT model
-203	20	22	as
 204	3	14	adapt it to
 204	15	39	ABSA multi-task learning
 204	48	54	equips
@@ -46,6 +46,7 @@
 204	97	109	aspect terms
 204	114	122	classify
 204	123	139	aspects polarity
+204	140	142	as
 204	143	160	LCF - ATEPC model
 207	0	10	BERT - ADA
 209	0	2	is
@@ -79,7 +80,7 @@
 32	177	180	for
 32	181	214	aspect - based sentiment analysis
 34	4	23	LCF - ATEPC 3 model
-34	38	40	is
+34	47	49	is
 34	52	102	novel multilingual and multi-task - oriented model
 36	22	30	based on
 36	31	67	multi-head self - attention ( MHSA )
@@ -111,11 +112,11 @@
 244	78	110	joint model based on BERT - BASE
 244	111	119	achieved
 244	120	139	hopeful performance
-244	96	98	on
+244	140	142	on
 244	143	161	all three datasets
 244	166	180	even surpassed
 244	181	222	other proposed BERT based improved models
-244	96	98	on
+244	223	225	on
 244	226	239	some datasets
 248	0	14	ATEPC - Fusion
 248	15	17	is
@@ -144,7 +145,7 @@
 247	64	73	F 1 score
 247	74	76	of
 247	77	88	ATE subtask
-247	9	11	on
+247	89	91	on
 247	92	106	three datasets
 247	107	112	up to
 247	113	117	99 %

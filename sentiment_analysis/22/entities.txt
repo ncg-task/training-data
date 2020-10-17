@@ -7,7 +7,7 @@
 137	78	90	training set
 137	91	93	to
 137	94	105	each sample
-137	71	73	in
+137	106	108	in
 137	109	117	test set
 139	0	22	Bi - LSTM and Bi - GRU
 139	23	28	adopt
@@ -28,13 +28,13 @@
 141	53	57	with
 141	58	64	target
 141	73	86	right context
-141	53	57	with
-141	58	64	target
+141	87	91	with
+141	92	98	target
 141	117	122	takes
 141	127	140	hidden states
 141	141	143	of
-141	5	9	LSTM
-141	136	138	at
+141	144	148	LSTM
+141	149	151	at
 141	152	168	last time - step
 141	169	181	to represent
 141	186	194	sentence
@@ -44,7 +44,7 @@
 143	7	14	applies
 143	15	24	attention
 143	25	39	multiple times
-143	22	24	on
+143	40	42	on
 143	47	62	word embeddings
 143	73	79	output
 143	80	82	of
@@ -56,7 +56,7 @@
 145	0	3	IAN
 145	18	24	learns
 145	25	35	attentions
-145	4	6	in
+145	36	38	in
 145	43	63	contexts and targets
 145	70	79	generates
 145	84	99	representations
@@ -69,29 +69,29 @@
 147	41	51	each layer
 147	52	63	consists of
 147	64	93	attention - based aggregation
-147	61	63	of
+147	94	96	of
 147	97	110	word features
 147	117	125	GRU cell
 147	126	134	to learn
 147	139	162	sentence representation
 149	0	9	LCR - Rot
-150	0	7	employs
-151	10	18	to model
-151	23	35	left context
-151	42	48	target
-151	57	70	right context
-154	0	10	AOA - LSTM
-154	11	21	introduces
-154	25	74	attention - over- attention ( AOA ) based network
-154	75	83	to model
-154	84	105	aspects and sentences
-154	11	13	in
-154	111	120	joint way
-154	125	143	explicitly capture
-154	148	159	interaction
-154	160	167	between
-154	168	197	aspects and context sentences
-43	34	90	https://github.com/DUT-LiuYang/Aspect-Sentiment-Analysis
+149	10	17	employs
+149	18	33	three Bi- LSTMs
+149	34	42	to model
+149	47	59	left context
+149	66	72	target
+149	81	94	right context
+152	0	10	AOA - LSTM
+152	11	21	introduces
+152	25	74	attention - over- attention ( AOA ) based network
+152	75	83	to model
+152	84	105	aspects and sentences
+152	106	108	in
+152	111	120	joint way
+152	125	143	explicitly capture
+152	148	159	interaction
+152	160	167	between
+152	168	197	aspects and context sentences
 128	3	6	use
 128	7	35	300 - dimension word vectors
 128	36	50	pre-trained by
@@ -101,7 +101,7 @@
 129	51	63	zero vectors
 129	70	80	all biases
 129	85	91	set to
-129	51	55	zero
+129	92	96	zero
 130	4	14	dimensions
 130	57	63	set to
 130	64	67	300
@@ -125,9 +125,10 @@
 133	45	47	to
 133	48	53	0.001
 133	60	70	batch size
-133	45	47	to
+133	71	73	to
+133	74	76	64
 133	83	95	dropout rate
-133	45	47	to
+133	96	98	to
 133	99	102	0.5
 37	49	56	propose
 37	59	118	hierarchical attention based positionaware network ( HAPN )
@@ -143,8 +144,7 @@
 39	18	43	succinct fusion mechanism
 39	55	66	proposed to
 39	67	71	fuse
-39	76	87	information
-39	88	90	of
+39	76	90	information of
 39	91	115	aspects and the contexts
 39	118	127	achieving
 39	132	161	final sentence representation
@@ -156,79 +156,79 @@
 40	91	109	sentiment polarity
 2	56	87	Aspect-level Sentiment Analysis
 12	15	33	sentiment analysis
-157	10	25	TD - LSTM model
-157	43	66	shown to be better than
-157	15	19	LSTM
-157	74	78	gets
-157	83	100	worst performance
-157	101	103	of
-157	104	124	all RNN based models
-157	133	141	accuracy
-157	142	153	achieved by
-157	10	19	TD - LSTM
-157	164	166	is
-157	167	183	2.94 % and 2.4 %
-157	184	194	lower than
-157	204	213	Bi - LSTM
-162	0	10	Our method
-162	11	19	achieves
-162	20	30	accuracies
-162	31	33	of
-162	34	41	82.23 %
-162	42	52	as well as
-162	53	62	77 . 27 %
-162	63	65	on
-162	70	99	Restaurant and Laptop dataset
-174	42	55	Bi - GRU - PW
-174	56	64	performs
-174	65	75	even worse
-174	76	80	than
-174	42	50	Bi - GRU
-175	4	12	accuracy
-175	13	24	achieved by
-175	25	38	Bi - GRU - PW
-175	39	41	is
-175	42	48	0.72 %
-175	49	59	as well as
-175	60	66	1.41 %
-175	67	77	lower than
-175	25	33	Bi - GRU
-175	95	97	on
-175	101	131	 Restaurant and Laptop dataset
-182	0	4	HAPN
-182	5	13	achieves
-182	14	25	improvement
-182	26	28	of
-182	29	46	0.35 % and 0.78 %
-182	47	49	on
-182	50	58	accuracy
-194	10	38	information fusion operation
-194	47	54	used to
-194	55	64	calculate
-194	69	99	Source2context attention value
-195	4	10	output
-195	11	13	of
-195	14	37	Source2aspect attention
-195	46	54	used for
-195	55	73	information fusion
-197	28	41	Bi - GRU - PE
-197	62	71	achieving
-197	76	86	accuracies
-197	87	89	of
-197	90	109	80.89 % and 76.02 %
-197	110	112	on
-197	117	129	two datasets
-161	6	19	Compared with
-161	24	54	state - of - the - art methods
-161	57	66	our model
-161	67	75	achieves
-161	80	96	best performance
-172	6	17	introducing
-172	22	41	position embeddings
-172	48	56	accuracy
-172	57	63	has an
-172	64	72	increase
-172	73	75	of
-172	76	93	0.62 % and 2.67 %
-172	28	30	on
-172	97	109	two datasets
+155	10	25	TD - LSTM model
+155	43	66	shown to be better than
+155	67	71	LSTM
+155	74	78	gets
+155	83	100	worst performance
+155	101	103	of
+155	104	124	all RNN based models
+155	133	141	accuracy
+155	142	153	achieved by
+155	154	163	TD - LSTM
+155	164	166	is
+155	167	183	2.94 % and 2.4 %
+155	184	194	lower than
+155	204	213	Bi - LSTM
+160	0	10	Our method
+160	11	19	achieves
+160	20	30	accuracies
+160	31	33	of
+160	34	41	82.23 %
+160	42	52	as well as
+160	53	62	77 . 27 %
+160	63	65	on
+160	70	99	Restaurant and Laptop dataset
+172	42	55	Bi - GRU - PW
+172	56	64	performs
+172	65	75	even worse
+172	76	80	than
+172	81	89	Bi - GRU
+173	4	12	accuracy
+173	13	24	achieved by
+173	25	38	Bi - GRU - PW
+173	39	41	is
+173	42	48	0.72 %
+173	49	59	as well as
+173	60	66	1.41 %
+173	67	77	lower than
+173	86	94	Bi - GRU
+173	95	97	on
+173	102	131	Restaurant and Laptop dataset
+180	0	4	HAPN
+180	5	13	achieves
+180	14	25	improvement
+180	26	28	of
+180	29	46	0.35 % and 0.78 %
+180	47	49	on
+180	50	58	accuracy
+192	10	38	information fusion operation
+192	47	54	used to
+192	55	64	calculate
+192	69	99	Source2context attention value
+193	4	10	output
+193	11	13	of
+193	14	37	Source2aspect attention
+193	46	54	used for
+193	55	73	information fusion
+195	28	41	Bi - GRU - PE
+195	62	71	achieving
+195	76	86	accuracies
+195	87	89	of
+195	90	109	80.89 % and 76.02 %
+195	110	112	on
+195	117	129	two datasets
+159	6	19	Compared with
+159	24	54	state - of - the - art methods
+159	57	66	our model
+159	67	75	achieves
+159	80	96	best performance
+170	6	17	introducing
+170	22	41	position embeddings
+170	48	56	accuracy
+170	57	63	has an
+170	64	72	increase
+170	73	75	of
+170	76	93	0.62 % and 2.67 %
+170	94	96	on
+170	97	109	two datasets

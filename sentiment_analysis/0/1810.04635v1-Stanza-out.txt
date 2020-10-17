@@ -8,7 +8,7 @@ This architecture analyzes speech data from the signal level to the language lev
 Extensive experiments are conducted to investigate the efficacy and properties of the proposed model .
 Our proposed model outperforms previous state - of - the - art methods in assigning data to one of four emotion categories ( i.e. , angry , happy , sad and neutral ) when the model is applied to the IEMOCAP dataset , as reflected by accuracies ranging from 68.8 % to 71.8 % .
 INTRODUCTION
-Recently , deep learning algorithms have successfully addressed problems in various fields , such as image classification , machine translation , speech recognition , text - to - speech generation and other machine learning related areas .
+Recently , deep learning algorithms have successfully addressed problems in various fields , such as image classification , machine translation , speech recognition , text - to - speech generation and other machine learning related are as .
 Similarly , substantial improvements in performance have been obtained when deep learning algorithms have been applied to statistical speech processing .
 These fundamental improvements have led researchers to investigate additional topics related to human nature , which have long been objects of study .
 One such topic involves understanding human emotions and reflecting it through machine intelligence , such as emotional dialogue models .
@@ -40,7 +40,7 @@ Another researcher investigated transfer learning methods , leveraging external 
 As emotional dialogue is composed of sound and spoken content , researchers have also investigated the combination of acoustic features and language information , built belief network - based methods of identifying emotional key phrases , and assessed the emotional salience of verbal cues from both phoneme sequences and words .
 However , none of these studies have utilized information from speech signals and text sequences simultaneously in an end - to - end learning neural network - based model to classify emotions .
 MODEL
-This section describes the methodologies that are applied to the speech emotion recognition task .
+This section describes the methodologies thatare applied to the speech emotion recognition task .
 We start by introducing the recurrent encoder model for the audio and text modalities individually .
 We then propose a multimodal approach that encodes both audio and textual information simultaneously via a dual recurrent encoder .
 Audio Recurrent Encoder ( ARE )
@@ -124,7 +124,7 @@ Among the variants of the RNN function , we use GRUs as they yield comparable pe
 We use a max encoder step of 750 for the audio input , based on the implementation choices presented in and 128 for the text input because it covers the maximum length of the transcripts .
 The vocabulary size of the dataset is 3,747 , including the " UNK " token , which represents unknown words , and the " PAD " token , which is used to indicate padding information added while preparing mini-batch data .
 The number of hidden units and the number of layers in the RNN for each model ( ARE , TRE , MDRE and MDREA ) are selected based on extensive hyperparameter search experiments .
-The weights of the hidden units are initialized using orthogonal
+The weights of the hidden units are initialized using orthogonal 
 Model WAP
 ACNN 0.561 LLD RNN-attn 0.635 RNN ( prop. )- ELM 0.628 3CNN - LSTM10H
 0 . Model performance comparisons .
@@ -136,7 +136,7 @@ To investigate the practical performance , we then process all of the IEMOCAP au
 The performance of the Google ASR system is reflected by its word error rate ( WER ) of 5.53 % .
 EMPIRICAL RESULTS
 Performance evaluation
-As the dataset is not explicitly split beforehand into training , development , and testing sets , we perform 5 - fold cross validation to determine the overall performance of the model .
+As the dataset is not explicitly split beforehand into training , development , and testing sets , we perform 5 - fold cross validation to determine the over all performance of the model .
 The data in each fold are split into training , development , and testing datasets ( 8:0.5:1.5 , respectively ) .
 After training the model , we measure the weighted average precision ( WAP ) over the 5 - fold dataset .
 We train and evaluate the model 10 times per fold , and the model performance is assessed in terms of the mean score and standard deviation .

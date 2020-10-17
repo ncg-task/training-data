@@ -5,7 +5,7 @@
 (sequential encoder - decoder||is||further trained)
 (further trained||using||pairwise discriminator)
 (Model||provides||' global ' loss)
-(' global ' loss||ensures that||sentence embedding)
+(' global ' loss||ensures||sentence embedding)
 (sentence embedding||close to||other semantically related sentence embeddings)
 (Model||To ensure||whole sentence)
 (whole sentence||is||correctly encoded)

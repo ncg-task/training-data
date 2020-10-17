@@ -49,7 +49,7 @@ Attend .
 First , soft - align the elements of ?
 andb using a variant of neural attention and decompose the problem into the comparison of aligned subphrases .
 Compare .
-Second , separately compare each aligned subphrase to produce a set of vectors {v 1 , i } a i =1 fora and {v 2 , j } b j=1 for b.
+Second , separately compare each aligned subphrase to produce a set of vectors {v 1 , i } a i =1 for a and {v 2 , j } b j=1 for b.
 Each v 1 , i is a nonlinear combination of a i and its ( softly ) aligned subphrase in b ( and analogously for v 2 , j ) .
 Aggregate .
 Finally , aggregate the sets {v 1 , i } a i =1 and {v 2 , j } b j=1 from the previous step and use the result to predict the label ?.
@@ -104,7 +104,7 @@ This assumption allows us to bound the complexity of computing the 2 attention w
 100D LSTM with attention 85.3 83.5 252K 300D mLSTM 92.0 86.1 1.9M 450D LSTMN with deep attention fusion 88.5 86.3 3.4 M
 Our approach ( vanilla ) 89.5 86.3 382K Our approach with intra-sentence attention 90.5 86.8 582 K Thus the total complexity of the model is O ( d 2 + 2 d ) , which is equal to that of an LSTM with attention .
 However , note that with the assumption that < d , this becomes O ( d 2 ) which is the same complexity as a regular LSTM .
-Moreover , unlike the LSTM , our approach has the advantage of being parallelizable over , which can be useful attest time .
+Moreover , unlike the LSTM , our approach has the advantage of being parallelizable over , which can be useful at test time .
 Experiments
 We evaluate our approach on the Stanford Natural Language Inference ( SNLI ) dataset .
 Given a sentences pair ( a , b ) , the task is to predict whether b is entailed by a , b contradicts a , or whether their relationship is neutral .
@@ -134,7 +134,7 @@ shows some wins and losses .
 Examples A - C are cases where both variants of our approach are correct while both and the mLSTM are incorrect .
 In the first two cases , both sentences contain phrases that are either identical or highly lexically related ( e.g. " Two kids " and " ocean / beach " ) and our approach correctly favors neutral in these cases .
 In Example C , it is possible that relying on word - order may confuse SPINN - PI and the m LSTM due to how " fountain " is the object of a preposition in the first sentence but the subject of the second .
-The second set of examples ( D - F ) are cases where 1 16 or 32 also work well and area bit more stable .
+The second set of examples ( D - F ) are cases where 1 16 or 32 also work well and are a bit more stable .
 our vanilla approach is incorrect but mLSTM and SPINN - PI are correct .
 Example
 F requires sequential information and neither variant of our approach can predict the correct class .

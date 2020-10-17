@@ -45,18 +45,18 @@ The architecture is extensible to multi-speaker conversations in formats such as
 When applied to videos , we adopt a multimodal approach to extract diverse features from utterances .
 It also makes our model robust to missing information .
 3 .
-CMN provides a significant increase inaccuracy of 3 ?
+CMN provides a significant increase in accuracy of 3 ?
 4 % over previous state - of - the - art networks .
 One variant called CMN self which does not consider the inter-speaker relation in emotion detection also outperforms the state of the art by a significant margin .
 The remainder of the paper is organized as follows :
 Section 2 provides a brief literature review ; Section 3 formalizes the problem statement ; Section 4 describes the proposed method in detail ; ex- :
 An abridged dialogue from the dataset .
-Person A ( wife ) is leaving B ( husband ) fora work assignment .
+Person A ( wife ) is leaving B ( husband ) for a work assignment .
 Initially both A and B are emotionally driven by their own emotional inertia .
 In the end , emotional influence can be seen when B , despite being sad , reacts angrily to A 's angry statement .
 perimental results are covered in Section 5 ; finally , Section 6 provides concluding remarks .
 Related Works
-Over the years , emotion recognition as an area of research has seen contributions from researchers across varied fields like signal processing , machine learning , cognitive and social psychology , natural language processing , etc. .
+Over the years , emotion recognition as an are a of research has seen contributions from researchers across varied fields like signal processing , machine learning , cognitive and social psychology , natural language processing , etc. .
 Ekman , 1993 , provided initial findings that related facial expressions as universal indicators of emotions . , showed the importance of acoustic cues in affect modeling .
 A large section of researchers approaches emotion recognition from a multimodal learning perspective .
 Hence , many works used visual and audio features together for detecting affect .
@@ -160,7 +160,7 @@ Single Layer
 Here , we explain the representation scheme of the memories for both histories and the input / output operations on them along with attention mechanism .
 The memory representation for each history is generated using a GRU for modeling emotion transitions .
 First , we define the GRU cell .
-Gated Recurrent Unit : GRUs area gating mechanism in recurrent neural networks introduced by .
+Gated Recurrent Unit : GRUs are a gating mechanism in recurrent neural networks introduced by .
 Similar to an LSTM ( Hochreiter and Schmidhuber , 1997 ) , GRU provides a simpler computation with similar performance .
 At any timestep t , it utilizes two gates rt ( reset gate ) and z t ( update gate ) to control the combination criteria with current input utterance u t and previous hidden state s t?1 .
 The new state st is computed as : ? for all R hops .
@@ -206,7 +206,7 @@ This is done by stacking the single hop layers ( Section 4.2.1 ) as follows :
 At a particular hop r , the output memory of the previous hop M ? .
 This constraint of sharing parameters adjacently between layers is added for reduction in total parameters and ease of training .
 At every hop , the query utterance u i 's representation q i is updated as : We perform experiments on the IEMOCAP dataset
-2 . It is a multimodal database of 10 speakers ( 5 male and 5 female ) involved in two - way dyadic conversations .
+2 . It is a multimodal data base of 10 speakers ( 5 male and 5 female ) involved in two - way dyadic conversations .
 A pair 2 http://sail.usc.edu/iemocap / of speakers is given multiple conversation scenarios which are grouped in a single session .
 All the conversations are segmented into utterances .
 Each utterance is annotated using the following emotion categories : anger , happiness , sadness , neutral , excitement , frustration , fear , surprise , and other .
@@ -233,11 +233,11 @@ Cases represent scenarios when the emotion of current utterance is influenced by
 In case 3 , the utterance has relevant content in the histories that do not precede immediately .
 An effective attention mechanism provides the capability to capture this pattern .
 Finally case 4 presents the situation when the utterance is independent of the history .
-Such situations are indicative from the content of the utterance which often deviates from the previous topic of discussion or introduces anew information .
+Such situations are indicative from the content of the utterance which often deviates from the previous topic of discussion or introduces a new information .
 presents a statistical summary of these cases present in the dataset .
 From the table it can be seen that a large section of the dataset demonstrate these influence patterns .
 This provides motivation to explicitly model these patterns .
-We thus hypothesize that models that are able to capture these cases would have superior emotion inference capabilities .
+We thus hypothesize that models thatare able to capture these cases would have superior emotion inference capabilities .
 This passive exploration is a label - based analysis which is performed as a sanity check .
 Needless to say , existence of some false positive patterns at the label level is imminent .
 On the other hand , our model CMN is content - based which enables it to mine intricate patterns from the utterance histories .
@@ -268,8 +268,7 @@ Thus for utterance u i , both memories are created as M ?
 using {m t ? =
 B.u t u t ? hist ?
 and t ?
-[ 1 , K ] } for ? ? {a , b}. CMN
-Self :
+[ 1 , K ] } for ? ? {a , b}. CMN Self :
 In this baseline , we use only self history for classifying emotion of utterance u i .
 Thus , if u i is spoken by person Pa , then only hist a is considered .
 Clearly , this variant is also incapable of modeling inter-speaker dependencies .
@@ -300,7 +299,7 @@ The second graph shows that multiple hops on the histories indeed lead to an imp
 The attention - based filtering in each hop provides a refined context representation of the histories .
 Models with hops in the range of 3 ?
 10 outperform the single layer variant .
-However , each added hop contributes anew set of parameters for memory representation , leading to an increase in total parameters of the model and making it susceptible to overfitting .
+However , each added hop contributes a new set of parameters for memory representation , leading to an increase in total parameters of the model and making it susceptible to overfitting .
 This effect is evidenced in the figure where higher hops lead to a dip in performance .
 Multimodality :
 1 .
@@ -311,7 +310,7 @@ Thanks that helps .
 I feel much better now .
 7 .
 ( b ) Correct label : anger :
-Average attention vectors across 3 hops for both memories fora given test utterance .
+Average attention vectors across 3 hops for both memories for a given test utterance .
 this shift is the improved representational scheme of the textual modality .
 Text tends to have lesser noisy signals as opposed to audio- visual sources , thus providing better features in the joint representation .
 Overall , multimodal systems outperform the unimodal variants justifying the design of CMN as a multimodal system .

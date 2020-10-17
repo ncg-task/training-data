@@ -1,5 +1,5 @@
 (Contribution||has||Experimental setup)
-(Experimental setup||conatins||four parameters)
+(Experimental setup||contains||four parameters)
 (four parameters||name||number of convolutions)
 (four parameters||name||number of hidden layers)
 (four parameters||name||number of units per hidden layer)

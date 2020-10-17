@@ -2,10 +2,10 @@
 149	0	10	Vocab Size
 149	44	48	keep
 149	53	86	most frequent | V | = 101 k words
-149	20	22	in
+149	143	145	in
 149	150	161	CNN dataset
 149	168	187	| V | = 151 k words
-149	20	22	in
+149	194	196	in
 149	251	269	Daily Mail dataset
 150	0	15	Embedding Layer
 151	3	9	choose
@@ -51,22 +51,22 @@
 197	50	72	signi cant improvement
 197	73	85	by capturing
 197	97	106	reasoning
-197	6	8	in
+197	107	109	in
 197	114	123	paragraph
 198	0	52	Iterative Attention Reader , EpiReader and GA Reader
 198	53	56	are
 198	61	94	three multi-turn reasoning models
 198	95	99	with
 198	100	119	xed reasoning steps
-198	84	86	in
-198	88	93	model
 199	14	25	outperforms
 199	0	8	ReasoNet
 199	38	52	by integrating
 199	53	69	termination gate
+199	70	72	in
+199	77	82	model
 199	89	95	allows
 199	96	120	di erent reasoning steps
-199	20	23	for
+199	121	124	for
 199	125	144	di erent test cases
 201	0	8	ReasoNet
 201	9	16	obtains
@@ -83,7 +83,7 @@
 218	49	71	passages and questions
 218	78	90	obtain about
 218	91	101	100K words
-218	82	84	in
+218	102	104	in
 218	109	119	vocabulary
 219	0	15	Embedding Layer
 219	21	24	use
@@ -116,15 +116,15 @@
 257	125	140	second position
 257	141	143	in
 257	144	172	all the competing approaches
-257	141	143	in
+257	173	175	in
 257	180	197	SQuAD leaderboard
 258	0	18	Graph Reachability
 283	0	15	Embedding Layer
-283	6	8	in
 284	3	6	use
 284	9	43	100 - dimensional embedding vector
 284	44	47	for
 284	48	59	each symbol
+284	60	62	in
 284	67	94	query and graph description
 300	4	32	maximum reasoning step T max
 300	36	42	set to
@@ -140,12 +140,13 @@
 301	83	85	of
 301	86	89	0.5
 301	96	106	batch size
-301	83	85	of
+301	107	109	of
 301	110	112	32
-308	7	15	achieves
-308	16	44	90.92 % and 71.55 % accuracy
-308	45	47	in
-308	52	81	small and large graph dataset
+307	0	16	Deep LSTM Reader
+307	17	25	achieves
+307	26	54	90.92 % and 71.55 % accuracy
+307	55	57	in
+307	62	91	small and large graph dataset
 33	26	33	propose
 33	36	69	novel neural network architecture
 33	70	76	called
@@ -161,14 +162,14 @@
 35	75	86	focusing on
 35	87	101	di erent parts
 35	102	104	of
-35	43	51	document
+35	109	117	document
 35	118	123	until
 35	126	143	satisfying answer
-35	129	131	is
+35	144	146	is
 35	147	162	found or formed
 37	89	98	introduce
 37	101	118	termination state
-37	40	42	in
+37	119	121	in
 37	126	135	inference
 42	43	52	proposing
 42	55	86	reinforcement learning approach

@@ -33,7 +33,7 @@
           "from sentence" : "Minibatch size is 64 and 32 for question generation and abstractive summarization ."
         }
       },
-      "implemented in" : ["PyTorch", {"from sentence" : "All models are implemented in PyTorch and trained on single Tesla P40 GPU , based on NAVER Smart Machine Learning ( NSML ) platform ."}],
+      "implemented in" : "PyTorch",
       "trained on" : {
         "single Tesla P40 GPU" : {
           "based on" : "NAVER Smart Machine Learning ( NSML ) platform"

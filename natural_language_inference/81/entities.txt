@@ -9,7 +9,7 @@
 149	97	123	almost all length measures
 151	40	62	matches or outperforms
 151	67	94	coarse - grain - only model
-151	29	31	on
+151	95	97	on
 151	98	106	examples
 151	107	111	with
 151	114	126	large number
@@ -23,7 +23,7 @@
 146	31	35	with
 146	36	50	mean - pooling
 146	59	77	bidirectional GRUs
-146	31	35	with
+146	78	82	with
 146	83	102	unidirectional GRUs
 147	0	9	Replacing
 147	14	21	encoder
@@ -34,7 +34,7 @@
 147	61	70	result in
 147	71	99	significant performance drop
 111	0	35	MULTI - EVIDENCE QUESTION ANSWERING
-111	23	25	ON
+111	36	38	ON
 111	39	46	WIKIHOP
 121	3	11	tokenize
 121	21	26	using
@@ -54,7 +54,7 @@
 127	17	47	state - of - the - art results
 127	48	50	on
 127	60	88	masked and unmasked versions
-127	25	27	of
+127	89	91	of
 127	92	99	WikiHop
 128	16	18	on
 128	23	58	blind , held - out WikiHop test set
@@ -64,7 +64,7 @@
 128	98	100	of
 128	101	107	70.6 %
 134	0	39	RERANKING EXTRACTIVE QUESTION ANSWERING
-134	27	29	ON
+134	40	42	ON
 134	43	51	TRIVIAQA
 141	0	24	Our experimental results
 141	28	32	show
@@ -96,8 +96,8 @@
 46	112	114	of
 46	115	132	candidate answers
 46	133	138	given
-46	108	111	set
-46	112	114	of
+46	141	144	set
+46	145	147	of
 46	148	165	support documents
 46	172	177	query
 47	4	7	CFC

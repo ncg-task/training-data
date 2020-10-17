@@ -3,7 +3,7 @@
     "Model" : {
       "introduces" : {
         "composite function" : {
-          "name" : ["recurrent relational network", {"from sentence" : "Toward generally realizing the ability to methodically reason about objects and their interactions over many steps , this paper introduces a composite function , the recurrent relational network ."}],
+          "name" : "recurrent relational network",
           "Toward generally realizing" : {
             "ability" : {
               "to methodically reason about" : ["objects", {"interactions" : {"over" : "many steps"}}]
@@ -24,10 +24,10 @@
             "inductive biases" : {
               "that" : {
                 "objects" : {
-                  "exist in" : "world",
+                  "exists in" : "world",
                   "described by" : {
                     "properties" : {
-                      "change over" : "time"
+                      "changeover" : "time"
                     }
                   },
                   "affect" : {
@@ -54,7 +54,7 @@
                       "in" : "raw input"
                     }
                   }, 
-                  "represent as" : "vectors"
+                  "represent them as" : "vectors"
                   }}, 
                   {"relational reasoning module" : {
                     "uses" : {

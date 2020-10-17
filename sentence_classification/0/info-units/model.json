@@ -34,7 +34,7 @@
                   }
                 }
               },
-              "from sentence" : "Our contributions are : ( i ) we propose a neural scaffold framework for citation intent classification to incorporate into citations knowledge from structure of scientific papers ; ( ii ) we achieve anew state - of - the - art of 67.9 % F1 on the ACL - ARC citations benchmark , an absolute 13.3 % increase over the previous state - of - the - art ; and ( iii ) we introduce SciCite , anew dataset of citation intents which is at least five times as large as existing datasets and covers a variety of scientific domains ."
+              "from sentence" : "Our contributions are : ( i ) we propose a neural scaffold framework for citation intent classification to incorporate into citations knowledge from structure of scientific papers ; ( ii ) we achieve a new state - of - the - art of 67.9 % F1 on the ACL - ARC citations benchmark , an absolute 13.3 % increase over the previous state - of - the - art ; and ( iii ) we introduce SciCite , a new dataset of citation intents which is at least five times as large as existing datasets and covers a variety of scientific domains ."
             }
           }
         }

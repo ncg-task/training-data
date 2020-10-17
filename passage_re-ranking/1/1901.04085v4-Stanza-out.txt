@@ -58,7 +58,7 @@ Training
 We follow the same procedure described for the MS MARCO dataset to fine - tune our models on TREC - CAR .
 However , there is an important difference .
 The official pre-trained BERT 21.8 19.8 - Conv-KNRM
-29 . models 2 were pre-trained on the full Wikipedia , and therefore they have seen , although in an unsupervised way , Wikipedia documents that are used in the test set of TREC - CAR .
+29 . models 2 were pre-trained on the full Wikipedia , and therefore they have seen , although in an unsupervised way , Wikipedia documents thatare used in the test set of TREC - CAR .
 Thus , to avoid this leak of test data into training , we pre-trained the BERT re-ranker only on the half of Wikipedia used by TREC - CAR 's training set .
 For the fine - tuning data , we generate our query - passage pairs by retrieving the top ten passages from the entire TREC - CAR corpus using BM25 .
 3

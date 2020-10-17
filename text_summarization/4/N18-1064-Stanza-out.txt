@@ -7,7 +7,7 @@ Moreover , they hold commonsense information once they are linked to a knowledge
 Based on these observations , this paper investigates the usage of linked entities to guide the decoder of a neural text summarizer to generate concise and better summaries .
 To this end , we leverage on an off - the - shelf entity linking system ( ELS ) to extract linked entities and propose Entity2Topic ( E2T ) , a module easily attachable to a sequence - to - sequence model that transforms a list of entities into a vector representation of the topic of the summary .
 Current available ELS's are still not sufficiently effective , possibly introducing unresolved ambiguities and irrelevant entities .
-We resolve the imperfections of the ELS by ( a ) encoding entities with selective disambiguation , and ( b ) pooling entity vectors using firm attention .
+We resolve the imperfections of the ELS by ( a ) encoding entities with selective dis ambiguation , and ( b ) pooling entity vectors using firm attention .
 By applying E2T to a simple sequenceto - sequence model with attention mechanism as base model , we see significant improvements of the performance in the Gigaword ( sentence to title ) and CNN ( long document to multi-sentence highlights ) summarization datasets by at least 2 ROUGE points .
 Introduction
 Text summarization is a task to generate a shorter and concise version of a text while preserving the meaning of the original text .
@@ -19,7 +19,7 @@ the available words from the original text .
 Due to the limitations of extractive summarization on incoherent texts and unnatural methodology , the research trend has shifted towards abstractive summarization .
 Sequence - to - sequence models with attention mechanism have found great success in generating abstractive summaries , both from a single sentence and from along document with multiple sentences .
 However , when generating summaries , it is necessary to determine the main topic and to sift out unnecessary information that can be omitted .
-Sequenceto - sequence models have the tendency to include all the information , relevant or not , that are found in the original text .
+Sequenceto - sequence models have the tendency to include all the information , relevant or not , thatare found in the original text .
 This may result to unconcise summaries that concentrates wrongly on irrelevant topics .
 The problem is especially severe when summarizing longer texts .
 In this paper , we propose to use entities found in the original text to infer the summary topic , miti-gating the aforementioned problem .
@@ -59,8 +59,8 @@ These issues can be summarized into two parts : ambiguity and coarseness .
 First , the extracted entities maybe ambiguous .
 In the example , the entity " South Korean " is ambiguous because it can refer to both the South Korean person and the South Korean language , among others
 2 .
-In our experimental data , we extract ( 1 ) the top 100 entities based on frequency , and ( 2 ) the entities extracted from 100 randomly selected texts , and check whether they have disambiguation pages in Wikipedia or not .
-We discover that 71.0 % of the top 100 entities and 53.6 % of the entities picked at random have disambiguation pages , which shows that most entities are prone to ambiguity problems .
+In our experimental data , we extract ( 1 ) the top 100 entities based on frequency , and ( 2 ) the entities extracted from 100 randomly selected texts , and check whether they have dis ambiguation pages in Wikipedia or not .
+We discover that 71.0 % of the top 100 entities and 53.6 % of the entities picked at random have dis ambiguation pages , which shows that most entities are prone to ambiguity problems .
 Second , the linked entities may also be too common to be considered an entity .
 This may introduce errors and irrelevance to the summary .
 In the example , " Wednesday " is erroneous because it is wrongly linked to the entity " Wednesday Night Baseball " .
@@ -72,12 +72,12 @@ Our model
 To solve the issues described above , we present Entity2Topic ( E2T ) , a module that can be easily attached to any sequence - to - sequence based abstractive summarization model .
 E2T encodes the linked entities extracted from the text and transforms them into a single topic vector .
 This vector is ultimately concatenated to the decoder hidden state vectors .
-The module contains two submodules specifically for the issues presented by the en-tity linking systems : the entity encoding submodule with selective disambiguation and the pooling submodule with firm attention .
+The module contains two submodules specifically for the issues presented by the en-tity linking systems : the entity encoding submodule with selective dis ambiguation and the pooling submodule with firm attention .
 Overall , our full architecture can be illustrated as in , which consists of an entity linking system ( ELS ) , a sequence - to - sequence with attention mechanism model , and the E2T module .
-We note that our proposed module can be easily attached to more sophisticated abstractive summarization models that are based on the traditional encoderdecoder framework and consequently can produce better results .
+We note that our proposed module can be easily attached to more sophisticated abstractive summarization models thatare based on the traditional encoderdecoder framework and consequently can produce better results .
 The code of the base model and the E2T are available online 3 .
 Base model
-As our base model , we employ a basic encoderdecoder RNN used inmost neural machine translation and text summarization tasks .
+As our base model , we employ a basic encoderdecoder RNN used in most neural machine translation and text summarization tasks .
 We employ a two - layer bidirectional GRU ( BiGRU ) as the recurrent unit of the encoder .
 The BiGRU consists of a forward and backward GRU , which results to sequences of forward and backward hidden states
 The forward and backward hidden states are concatenated to get the hidden state vectors of the tokens ( i.e.
@@ -95,35 +95,35 @@ After performing entity linking to the input text using the ELS , we receive a s
 We embed these entities to d-dimensional vectors E = {e 1 , e 2 , ... , em } where e i ?
 Rd .
 Since these entities may still contain ambiguity , it is necessary to resolve them before applying them to the base model .
-Based on the idea that an ambiguous entity can be disambiguated using its neighboring entities , we introduce two kinds of disambiguating encoders below .
-Globally disambiguating encoder
-One way to disambiguate an entity is by using all the other entities , putting more importance to entities that are nearer .
-For this purpose , we employ an RNNbased model to globally disambiguate the entities .
+Based on the idea that an ambiguous entity can be dis ambiguated using its neighboring entities , we introduce two kinds of dis ambiguating encoders below .
+Globally dis ambiguating encoder
+One way to dis ambiguate an entity is by using all the other entities , putting more importance to entities thatare nearer .
+For this purpose , we employ an RNNbased model to globally dis ambiguate the entities .
 Specifically , we use BiGRU and concatenate the forward and backward hidden state vectors as the new entity vector :
-Locally disambiguating encoder
-Another way to disambiguate an entity is by using only the direct neighbors of the entity , putting no importance value to entities that are far .
-To do this , we employ a CNN - based model to locally disambiguate the entities .
+Locally dis ambiguating encoder
+Another way to dis ambiguate an entity is by using only the direct neighbors of the entity , putting no importance value to entities thatare far .
+To do this , we employ a CNN - based model to locally dis ambiguate the entities .
 Specifically , we do the convolution operation using filter matrices W f ?
 R hd with filter size h to a window of h words .
 We do this for different sizes of h .
 This produces new feature vectors c i , h as shown below , where f ( . ) is a non-linear function :
 The convolution operation reduces the number of entities differently depending on the filter size h.
 To prevent loss of information and to produce the same amount of feature vectors c i , h , we pad the entity list dynamically such that when the filter size is h , the number of paddings on each side is ( h ? 1 ) / 2 .
-The filter size h therefore refers to the number of entities used to disambiguate a middle entity .
+The filter size h therefore refers to the number of entities used to dis ambiguate a middle entity .
 Finally , we concatenate all feature vectors
-The question on which disambiguating encoder is better has been a debate ; some argued that using only the local context is appropriate while some claimed that additionally using global context also helps .
-The RNN - based encoder is good as it smartly makes use of all entities , however it may perform bad when there are many entities as it introduces noise when using afar entity during disambiguation .
-The CNN - based encoder is good as it minimizes the noise by totally ignoring far entities when disambiguating , however determining the appropriate filter sizes h needs engineering .
+The question on which dis ambiguating encoder is better has been a debate ; some argued that using only the local context is appropriate while some claimed that additionally using global context also helps .
+The RNN - based encoder is good as it smartly makes use of all entities , however it may perform bad when there are many entities as it introduces noise when using afar entity during dis ambiguation .
+The CNN - based encoder is good as it minimizes the noise by totally ignoring far entities when dis ambiguating , however determining the appropriate filter sizes h needs engineering .
 Overall , we argue that when the input text is short ( e.g. a sentence ) , both encoders perform comparably , otherwise when the input text is long ( e.g. a document ) , the CNN - based encoder performs better .
-Selective disambiguation
-It is obvious that not all entities need to be disambiguated .
-When a correctly linked and already adequately disambiguated entity is disambiguated again , it would make the entity very context - specific and might not be suitable for the summarization task .
-Our entity encoding submodule therefore uses a selective mechanism that decides whether to use the disambiguating encoder or not .
-This is done by introducing a selective disambiguation gate d.
+Selective dis ambiguation
+It is obvious that not all entities need to be dis ambiguated .
+When a correctly linked and already adequately dis ambiguated entity is dis ambiguated again , it would make the entity very context - specific and might not be suitable for the summarization task .
+Our entity encoding submodule therefore uses a selective mechanism that decides whether to use the dis ambiguating encoder or not .
+This is done by introducing a selective dis ambiguation gate d.
 The final entity vector ?
 i is calculated as the linear transfor - mation of e i and e i :
 The full entity encoding submodule is illustrated in .
-Ultimately , the submodule outputs the disambiguated entity vectors ? = {? 1 ,? 2 , ... , ? m }.
+Ultimately , the submodule outputs the dis ambiguated entity vectors ? = {? 1 ,? 2 , ... , ? m }.
 Pooling submodule
 The entity vectors ?
 are pooled to create a single topic vector t that represents the topic of the summary .
@@ -137,7 +137,7 @@ Our pooling submodule instead uses firm attention mechanism to consider only top
 This is done in a differentiable way as follows :
 where the functions K = top k ( G ) gets the indices of the top k vectors in G and P = sparse vector ( K , 0 , ?? ) creates a sparse vector where the values of K is 0 and ??
 otherwise 4 .
-The sparse vector P is added to the original importance score vector G to create anew importance score vector .
+The sparse vector P is added to the original importance score vector G to create a new importance score vector .
 In this new vector , important scores of non -top k entities are ??.
 When softmax is applied , this gives very small , negligible , and closeto - zero values to non -top k entities .
 The value k depends on the lengths of the input text and summary .
@@ -156,7 +156,7 @@ The current state - of - the - art performance is achieved by selectively encodi
 Neural abstractive summarization models have also been explored to summarize longer documents .
 Word extraction models have been previously explored , performing worse than sentence extraction models .
 Hierarchical attention - based recurrent neural networks have also been applied to the task , owing to the idea that there are multiple sentences in a document .
-Finally , distractionbased models were proposed to enable models to traverse the text content and grasp the overall meaning .
+Finally , distractionbased models were proposed to enable models to traverse the text content and grasp the over all meaning .
 The current state - of the - art performance is achieved by a graph - based attentional neural model , considering the key factors of document summarization such as saliency , fluency and novelty .
 Previous studies on the summarization tasks have only used entities in the preprocessing stage to anonymize the dataset and to mitigate out - of - vocabulary problems .
 Linked entities for summarization are still not properly explored and we are the first to use linked entities to improve the performance of the summarizer .
@@ -191,7 +191,7 @@ ABS + is a fine tuned version of ABS which uses an attentive CNN encoder and an 
 For the CNN dataset , we compare our models with the following extractive and abstractive baselines :
 Lead - 3 is a strong baseline that extracts the first three sentences of the document as summary , LexRank extracts texts using LexRank , Bi - GRU is a non-hierarchical one - layer sequence - to - sequence abstractive baseline , Distraction - M3 uses a sequence - to - sequence abstractive model with distraction - based networks , and GBA is a graph - based attentional neural abstractive model .
 All baseline results used beam search and are gathered from previous papers .
-Also , 6 https://nlp.stanford.edu/projects/ glove / 7 https://github.com/idio/wiki2vec we compare our final model BASE + E2T with the base model BASE and some variants of our model ( without selective disambiguation , using soft attention ) .
+Also , 6 https://nlp.stanford.edu/projects/ glove / 7 https://github.com/idio/wiki2vec we compare our final model BASE + E2T with the base model BASE and some variants of our model ( without selective dis ambiguation , using soft attention ) .
 Results
 We report the ROUGE F1 scores for both datasets of all the competing models using ROUGE F1 scores .
 We report the results on the Gigaword and the CNN dataset in and Table 3 , respectively .
@@ -211,8 +211,8 @@ We also perform ANOVA and post - hoc Tukey tests to show that the CNN variant is
 The RNN variant does not perform as well as the CNN variant , contrary to the automatic ROUGE evaluation above .
 Interestingly , the CNN variant produces better ( but with no significant difference ) summaries than the gold summaries .
 We posit that this is due to the fact that the article title does not correspond to the summary of the first sentence .
-Selective disambiguation of entities
-We show the effectiveness of the selective disambiguation gate din selecting which entities to disambiguate or not .
+Selective dis ambiguation of entities
+We show the effectiveness of the selective dis ambiguation gate din selecting which entities to dis ambiguate or not .
 shows a total of four different examples of two entities with the highest / lowest d values .
 In the first example , sentence E1.1 contains the entity " United States " and is linked with the country entity of the same name , however the correct linked entity should be " United States Davis Cup team " , and therefore is given a high d value .
 On the other hand , sentence E1.2 is linked correctly to the country " United States " , and thus is given a low d value ..
@@ -226,7 +226,7 @@ In the Gigaword example , we find three observations .
 First , the base model generated a less informative summary , not mentioning " mexico state " and " first edition " .
 Second , the soft model produced a factually wrong summary , saying that " guadalajara " is a mexican state , while actually it is a city .
 Third , the firm model is able to solve the problem by focusing only on the five most important entities , eliminating possible noise such as " Unk " and less crucial entities such as " Country club " .
-We can also seethe effectiveness of the selective disambiguation in this example , where the entity " U.S. state " is corrected to mean the entity " Mexican state " which becomes relevant and is therefore selected .
+We can also see the effectiveness of the selective dis ambiguation in this example , where the entity " U.S. state " is corrected to mean the entity " Mexican state " which becomes relevant and is therefore selected .
 In the CNN example , we also find that the baseline model generated a very erroneous summary .
 We argue that this is because the length of the input text is long and the decoder is not guided as to which topics it should focus on .
 The soft model generated a much better summary , however it focuses on the wrong topics , specifically on " Iran 's nuclear program " , making the summary less general .
@@ -246,7 +246,7 @@ E1.1 : andy roddick got the better of dmitry tursunov in straight sets on friday
 0.086
 Linked entity : https://en.wikipedia.org/wiki/Gold
 E2.1 : following is the medal standing at the ##th olympic winter games - lrb - tabulated under team , @gold , silver and bronze
-- rrb- : UNK 0.862 E2.2 : @gold opened lower hereon monday at # ## . ## -### .## us dollars an ounce , against friday 's closing rate of # # # . ## - ### . ## . 0.130 : Examples with highest / lowest disambiguation gate d values of two example entities ( United States and gold ) .
+- rrb- : UNK 0.862 E2.2 : @gold opened lower hereon monday at # ## . ## -### .## us dollars an ounce , against friday 's closing rate of # # # . ## - ### . ## . 0.130 : Examples with highest / lowest dis ambiguation gate d values of two example entities ( United States and gold ) .
 The tagged part of text is marked bold and preceded with at sign ( @ ) .
 litical entities ( e.g. " republicans " , " democrats " ) .
 This is due to the fact that only the k = 10 most important elements are attended to create the summary topic vector .
@@ -254,5 +254,5 @@ Conclusion
 We proposed to leverage on linked entities to improve the performance of sequence - to - sequence models on neural abstractive summarization task .
 Linked entities are used to guide the decoding process based on the summary topic and commonsense learned from a knowledge base .
 We introduced Entity2Topic ( E2T ) , a module that is easily attachable to any model using an encoder - decoder framework .
-E2T applies linked entities into the summarizer by encoding the entities with selective disambiguation and pooling them into one summary topic vector with firm attention mechanism .
+E2T applies linked entities into the summarizer by encoding the entities with selective dis ambiguation and pooling them into one summary topic vector with firm attention mechanism .
 We showed that by applying E2T to a basic sequence - to - sequence model , we achieve significant improvements over the base model and consequently achieve a comparable performance with more complex summarization models .

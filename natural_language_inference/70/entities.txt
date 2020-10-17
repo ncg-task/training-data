@@ -5,6 +5,7 @@
 140	156	166	12 systems
 140	169	173	with
 140	178	186	best MAP
+143	0	9	Subtask B
 155	27	49	our primary submission
 155	50	58	achieved
 155	63	77	third position
@@ -17,6 +18,7 @@
 157	32	56	highest F 1 and accuracy
 157	57	59	on
 157	60	87	both tuning and test stages
+159	0	9	Subtask C
 171	4	22	primary submission
 171	23	31	achieved
 171	36	54	second highest MAP
@@ -47,7 +49,6 @@
 22	177	182	pairs
 22	183	185	of
 22	186	208	linked syntactic trees
-25	61	70	Subtask B
 25	11	18	propose
 25	21	36	stacking schema
 25	45	56	classifiers

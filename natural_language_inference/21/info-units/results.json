@@ -22,7 +22,9 @@
                       }
                     }
                   },
-                  "from sentence" : "Compared to the results from the official leaderboard of SNLI in , DiSAN outperforms previous works and improves the best latest test accuracy ( achieved by a memory - based NSE encoder network ) by a remarkable margin of 1.02 % ."
+                  "from sentence" : "Natural Language Inference
+Compared to the results from the official leaderboard of SNLI in , DiSAN outperforms previous works and improves the best latest test accuracy ( achieved by a memory - based NSE encoder network ) by a remarkable margin of 1.02 % ."
+
                 }
               }
             }
@@ -122,7 +124,9 @@
                   "given by" : "CNN - Tensor",
                   "by" : "0.52 %"
                 },
-                "from sentence" : "To the best of our knowledge , DiSAN improves the last best accuracy ( given by CNN - Tensor ) by 0.52 % ."                
+                "from sentence" : "Sentiment Analysis
+To the best of our knowledge , DiSAN improves the last best accuracy ( given by CNN - Tensor ) by 0.52 % ."
+
               },
               "achieves" : {
                 "better performance" : {

@@ -1,5 +1,5 @@
 (Contribution||has||Results)
-(Results||on||PTB - WSJ dataset)
+(Results||has||PTB - WSJ dataset)
 (PTB - WSJ dataset||has||baseline ( BiLSTM - CRF ) model)
 (baseline ( BiLSTM - CRF ) model||performs||on par)
 (on par||with||other state - of - the - art systems)

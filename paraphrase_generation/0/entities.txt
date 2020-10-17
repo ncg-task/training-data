@@ -7,30 +7,30 @@
 155	115	138	BLEU and METEOR metrics
 155	142	151	achieving
 155	155	166	improvement
-155	112	114	of
+155	167	169	of
 155	170	181	8 % and 6 %
-155	103	105	in
+155	182	184	in
 155	189	195	scores
 155	234	237	for
 155	238	250	50 K dataset
 155	273	285	10 % and 7 %
-155	103	105	in
-155	189	195	scores
-155	234	237	for
+155	223	225	in
+155	293	299	scores
+155	313	316	for
 155	317	330	100 K dataset
 148	3	13	start with
 148	14	28	baseline model
 148	38	45	take as
 148	48	82	simple encoder and decoder network
-148	9	13	with
+148	83	87	with
 148	88	122	only the local loss ( ED - Local )
 149	16	33	experimented with
 149	34	79	encoder - decoder and a discriminator network
-149	29	33	with
+149	80	84	with
 149	85	118	only global loss ( EDD - Global )
 149	119	133	to distinguish
 149	138	161	ground truth paraphrase
-149	29	33	with
+149	162	166	with
 149	171	184	predicted one
 150	8	30	variation of our model
 150	34	38	used
@@ -43,11 +43,11 @@
 152	59	66	encoder
 152	71	76	train
 152	82	89	network
-152	50	54	with
+152	90	94	with
 152	95	134	both the losses ( EDD - LG ( shared ) )
 22	10	21	consists of
 22	24	52	sequential encoder - decoder
-22	14	16	is
+22	58	60	is
 22	61	76	further trained
 22	77	82	using
 22	85	107	pairwise discriminator
@@ -66,7 +66,7 @@
 27	60	79	make further use of
 27	82	107	pair - wise discriminator
 27	108	120	that encodes
-27	19	33	whole sentence
+27	125	139	whole sentence
 27	144	151	obtains
 27	155	164	embedding
 28	3	22	further ensure that
@@ -78,6 +78,7 @@
 28	99	143	other ( sentences in the corpus ) embeddings
 29	16	24	provides
 29	27	42	' global ' loss
+29	48	55	ensures
 29	60	78	sentence embedding
 29	93	101	close to
 29	102	148	other semantically related sentence embeddings

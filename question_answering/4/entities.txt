@@ -1,8 +1,8 @@
-213	4	6	on
+213	29	31	on
 213	36	60	New s QA development set
 221	108	115	observe
 221	118	133	significant gap
-221	1	3	in
+221	10	12	in
 221	137	148	performance
 221	149	156	between
 221	157	177	DECAPROP and R - NET
@@ -21,8 +21,9 @@
 224	14	21	DECAENC
 224	22	41	seems to contribute
 224	46	50	most
-224	28	30	to
-224	58	77	overall performance
+224	51	53	to
+224	58	78	over all performance
+152	0	6	NewsQA
 156	22	37	key competitors
 156	38	41	are
 156	42	47	BiDAF
@@ -30,10 +31,12 @@
 156	65	87	FastQA / Fast QA - Ext
 156	90	99	R2-BiLSTM
 156	102	108	AMANDA
+157	0	9	Quasar -T
 159	4	19	key competitors
 159	36	39	are
 159	40	45	BiDAF
 159	54	88	Reinforced Ranker - Reader ( R 3 )
+161	0	8	SearchQA
 165	4	24	competitor baselines
 165	41	44	are
 165	45	73	Attention Sum Reader ( ASR )
@@ -42,6 +45,7 @@
 165	126	131	BiDAF
 165	134	137	AQA
 165	146	180	Reinforced Ranker - Reader ( R 3 )
+166	0	12	Narrative QA
 168	3	15	compare with
 168	20	29	baselines
 168	54	60	namely
@@ -52,7 +56,6 @@
 178	4	9	model
 178	13	27	implemented in
 178	28	38	Tensorflow
-179	94	106	Narrative QA
 179	4	20	sequence lengths
 179	25	34	capped at
 179	35	52	800/700/1500/1100
@@ -72,7 +75,7 @@
 187	40	46	set to
 187	47	48	8
 187	57	70	character RNN
-187	40	46	set to
+187	74	80	set to
 187	97	122	word - level RNN encoders
 188	4	31	maximum characters per word
 188	35	41	set to
@@ -83,9 +86,9 @@
 189	35	41	set to
 189	42	43	3
 189	52	69	number of factors
-189	21	23	in
+189	70	72	in
 189	77	97	factorization kernel
-189	35	41	set to
+189	101	107	set to
 189	108	110	64
 180	3	6	use
 180	7	15	Adadelta
@@ -94,9 +97,9 @@
 180	29	32	for
 180	33	40	News QA
 180	43	47	Adam
-180	16	20	with
+180	48	52	with
 180	53	62	? = 0.001
-180	29	32	for
+180	63	66	for
 180	67	76	Search QA
 180	79	89	Quasar - T
 180	94	106	Narrative QA
@@ -107,7 +110,7 @@
 190	36	38	of
 190	39	40	2
 190	45	53	patience
-190	36	38	of
+190	54	56	of
 190	57	65	3 epochs
 181	4	13	choice of
 181	18	29	RNN encoder
@@ -134,7 +137,7 @@
 39	53	70	prediction layers
 39	79	98	effectively connect
 39	99	113	shallow layers
-39	50	52	to
+39	114	116	to
 39	117	130	deeper layers
 37	17	24	propose
 37	25	77	efficient Bidirectional Attention Connectors ( BAC )
@@ -156,7 +159,7 @@
 38	16	18	to
 38	86	95	propagate
 2	44	65	Reading Comprehension
-4	113	141	reading comprehension ( RC )
+4	114	142	reading comprehension ( RC )
 9	53	55	RC
 192	82	90	DECAPROP
 192	91	99	achieves
@@ -185,17 +188,17 @@
 198	90	145	state - of - the - art R 3 ( Reinforced Ranker Reader )
 198	146	148	by
 198	151	170	considerable margin
-198	27	29	of
+198	171	173	of
 198	174	195	+ 4.4 % EM / + 6 % F1
 202	26	35	our model
 202	36	47	outperforms
 202	48	54	AMANDA
 202	55	57	by
 202	58	103	+ 15.4 % EM and + 14.2 % in terms of F1 score
-203	52	55	AQA
-203	58	81	+ 18.1 % EM / + 18 % F1
-203	88	112	Reinforced Reader Ranker
-203	115	138	+ 7.8 % EM / + 8.3 % F1
+203	53	56	AQA
+203	59	82	+ 18.1 % EM / + 18 % F1
+203	89	113	Reinforced Reader Ranker
+203	116	139	+ 7.8 % EM / + 8.3 % F1
 209	85	108	popular SQuAD benchmark
 209	30	39	our model
 210	16	32	does not achieve

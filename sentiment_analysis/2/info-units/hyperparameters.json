@@ -2,7 +2,7 @@
   "has" : {
     "Hyperparameters" : {
       "has" : {
-        "word embeddings" : {
+        "word embedding" : {
           "initialized by" : "pre-trained Glove vector",
           "from sentence" : "In our experiments , all word embedding are initialized by the pre-trained Glove vector 2 ."
         },
@@ -15,8 +15,7 @@
                 }
               }
             }
-          },
-          "from sentence" : "All the weight matrices are given the initial value by sampling from the uniform distribution U ( ?0.1 , 0.1 ) , and all the biases are set to zero ."
+          }
         },
         "biases" : {
           "are set to" : "zero",
@@ -24,10 +23,6 @@
         },
         "dimension" : {
           "of" : {
-            "word embedding and aspect term embedding" : {
-              "set to" : "300",
-              "from sentence" : "The dimension of the word embedding and aspect term embedding are set to 300 , and the number of the hidden units are set to 200 ."              
-            },
             "position embedding" : {
               "set to" : {
                 "100" : {
@@ -39,10 +34,13 @@
                 }
               },
               "from sentence" : "The dimension of position embedding is set to 100 , which is randomly initialized and updated during the training process ."
-            }
+            },
+            "word embedding and aspect term embedding" : {
+              "set to" : "300"
+            }			
           }
         },
-        "hidden states" : {
+        "hidden units" : {
           "set to" : "200",
           "from sentence" : "The dimension of the word embedding and aspect term embedding are set to 300 , and the number of the hidden units are set to 200 ."
         }

@@ -2,13 +2,13 @@
 164	13	18	model
 164	19	23	with
 164	28	64	Adadelta optimizer ( Zeiler , 2012 )
-164	19	23	with
+164	65	69	with
 164	72	82	batch size
 164	83	85	60
 164	86	89	for
 164	90	102	Triv - ia QA
 164	107	109	45
-164	86	89	for
+164	110	113	for
 164	114	119	SQuAD
 168	4	39	Glo Ve 300 dimensional word vectors
 168	56	64	used for
@@ -22,7 +22,7 @@
 169	47	50	for
 169	55	59	GRUs
 169	72	75	200
-169	47	50	for
+169	76	79	for
 169	84	97	linear layers
 169	98	112	employed after
 169	113	137	each attention mechanism
@@ -32,10 +32,10 @@
 170	67	88	larger dimensionality
 170	89	91	of
 170	92	95	140
-170	8	11	for
+170	96	99	for
 170	100	108	each GRU
 170	113	116	280
-170	8	11	for
+170	117	120	for
 170	125	138	linear layers
 170	44	46	is
 170	142	152	beneficial
@@ -47,7 +47,7 @@
 171	67	74	weights
 171	75	79	with
 171	82	92	decay rate
-171	60	62	of
+171	93	95	of
 171	96	101	0.999
 21	26	35	proposing
 21	39	64	improved pipelined method
@@ -61,7 +61,7 @@
 24	13	31	TF - IDF heuristic
 24	32	41	to select
 24	48	58	paragraphs
-24	32	34	to
+24	59	61	to
 24	62	79	train and test on
 26	38	41	use
 26	44	69	summed objective function
@@ -90,7 +90,7 @@
 31	49	53	from
 31	58	75	context documents
 31	78	87	including
-31	38	48	paragraphs
+31	88	98	paragraphs
 31	104	118	do not contain
 31	122	128	answer
 31	131	133	to
@@ -98,6 +98,7 @@
 2	21	60	Multi - Paragraph Reading Comprehension
 4	36	79	neural paragraph - level question answering
 14	39	84	answering questions given a related paragraph
+174	0	13	Trivia QA Web
 180	3	7	find
 180	58	67	effective
 180	52	57	to be
@@ -122,18 +123,21 @@
 186	174	180	others
 186	181	183	on
 186	188	200	verified set
-186	205	214	tied with
+186	205	209	tied
+186	210	214	with
 186	219	233	merge approach
-186	181	183	on
+186	234	236	on
 186	241	252	general set
+187	0	20	Trivia QA Unfiltered
 192	9	19	base model
 192	20	29	starts to
 192	30	34	lose
 192	35	46	performance
-192	10	12	as
+192	47	49	as
 192	50	65	more paragraphs
 192	66	69	are
 192	70	74	used
+196	0	5	SQuAD
 210	6	24	all our approaches
 210	29	41	some benefit
 210	48	67	shared - norm model
@@ -143,7 +147,7 @@
 210	119	130	performance
 210	131	133	as
 210	134	161	large numbers of paragraphs
-210	50	53	are
+210	162	165	are
 210	166	170	used
 216	0	27	Our paragraph - level model
 216	28	30	is

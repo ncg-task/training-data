@@ -19,10 +19,6 @@
           "set to" : "2 , 3",
           "from sentence" : "Kernel sizes of multi-gram convolution for Char - CNN are set to 2 , 3 , respectively ."
         },
-        "weight matrices" : {
-          "initialized as" : "random orthogonal matrices",
-          "from sentence" : "All the weight matrices are initialized as random orthogonal matrices , and we set all the bias vectors as zero vectors ."
-        },
         "size" : {
           "of" : {
             "mini-batch" : {
@@ -32,8 +28,7 @@
           "from sentence" : "The size of mini-batch is 60 ."
         },
         "dropout rate" : {
-          "is" : "0.5",
-          "from sentence" : "The dropout rate is 0.5 , and the coefficient ?"
+          "is" : "0.5"
         },
         "coefficient" : {
           "of" : {
@@ -44,7 +39,10 @@
           "from sentence" : "The dropout rate is 0.5 , and the coefficient ?
 of L 2 normalization is set to 10 ?5 . is set to 10 ? 4 . ?"
 
-        }
+        },
+        "weight matrices" : {
+          "initialized as" : "random orthogonal matrices"
+        }		
       },
       "set" : {
         "all the bias vectors" : {

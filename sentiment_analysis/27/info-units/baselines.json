@@ -13,13 +13,12 @@
                   "with" : "aspect"
                 }
               }
-            },
-            "from sentence" : "TD - LSTM constructs aspect-specific representation by the left context with aspect and the right context with aspect , then employs two LSTMs to model them respectively ."            
+            }
           },
           "employs" : ["two LSTMs", {"from sentence" : "TD - LSTM constructs aspect-specific representation by the left context with aspect and the right context with aspect , then employs two LSTMs to model them respectively ."}],
           "has" : {
             "last hidden states" : {
-              "of" : "two LSTMS",
+              "of" : "two LSTMs",
               "has" : {
                 "finally concatenated" : {
                   "for predicting" : {

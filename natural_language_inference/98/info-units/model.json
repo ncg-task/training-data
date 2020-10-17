@@ -76,11 +76,11 @@ To transform sentences into fixed - length vector representations and reason usi
               "feeds" : {
                 "resulting vectors" : {
                   "to" : "final classifier",
-                  "to determine" : "overall inference relationship"
+                  "to determine" : "over all inference relationship"
                 }
               },
               "from sentence" : "Top - layer Classifier
-Our inference model feeds the resulting vectors obtained above to the final classifier to determine the overall inference relationship ."
+Our inference model feeds the resulting vectors obtained above to the final classifier to determine the over all inference relationship ."
 
             }
           }

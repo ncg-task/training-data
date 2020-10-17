@@ -23,7 +23,7 @@ It was parsed with the Stanford parser and includes a total of 215,154 unique ph
 This new dataset allows us to analyze the intricacies of sentiment and to capture complex linguistic phenomena .
 shows one of the many examples with clear compositional structure .
 The granularity and size of this dataset will enable the community to train compositional models that are based on supervised and structured machine learning techniques .
-While there are several datasets with document and chunk labels available , there is a need to better capture sentiment from short comments , such as Twitter data , which provide less overall signal per document .
+While there are several datasets with document and chunk labels available , there is a need to better capture sentiment from short comments , such as Twitter data , which provide less over all signal per document .
 In order to capture the compositional effects with higher accuracy , we propose a new model called the Recursive Neural Tensor Network ( RNTN ) .
 Recursive Neural Tensor Networks take as input phrases of any length .
 They represent a phrase through word vectors and a parse tree and then compute vectors for higher nodes in the tree using the same tensor - based composition function .
@@ -33,7 +33,7 @@ Lastly , we use a test set of positive and negative sentences and their respecti
 RNTNs also learn that sentiment of phrases following the contrastive conjunction ' but ' dominates .
 The complete training and testing code , a live demo and the Stanford Sentiment Treebank dataset are available at http://nlp.stanford.edu/ sentiment .
 Related Work
-This work is connected to five different areas of NLP research , each with their own large amount of related work to which we can not do full justice given space constraints .
+This work is connected to five different are as of NLP research , each with their own large amount of related work to which we can not do full justice given space constraints .
 Semantic Vector Spaces .
 The dominant approach in semantic vector spaces uses distributional similarities of single words .
 Often , co-occurrence statistics of a word and its context are used to describe each word , such as tf- idf .
@@ -69,7 +69,7 @@ Correctly predicting these hard cases is necessary to further improve performanc
 In this section we will introduce and provide some analyses for the new Sentiment Treebank which includes labels for every syntactically plausible phrase in thousands of sentences , allowing us to train and evaluate compositional models .
 We consider the corpus of movie review excerpts from the rottentomatoes.com website originally collected and published by .
 The original dataset includes 10,662 sen - tences , half of which were considered positive and the other half negative .
-Each label is extracted from a longer movie review and reflects the writer 's overall intention for this review .
+Each label is extracted from a longer movie review and reflects the writer 's over all intention for this review .
 The normalized , lowercased text is first used to recover , from the original website , the text with capitalization .
 Remaining HTML tags and sentences that are not in English are deleted .
 The Stanford Parser ) is used to parses all 10,662 sentences .
@@ -145,7 +145,7 @@ However , in the standard RNN , the input vectors only implicitly interact throu
 A more direct , possibly multiplicative , interaction would allow the model to have greater interactions between the input vectors .
 Motivated by these ideas we ask the question :
 Can a single , more powerful composition function perform better and compose aggregate meaning from smaller constituents more accurately than many input specific ones ?
-In order to answer this question , we propose anew model called the Recursive Neural Tensor Network ( RNTN ) .
+In order to answer this question , we propose a new model called the Recursive Neural Tensor Network ( RNTN ) .
 The main idea is to use the same , tensor - based composition function for all nodes .
 shows a single tensor layer .
 We define the output of a tensor product h ?
@@ -171,7 +171,7 @@ We want to maximize the probability of the correct prediction , or minimize the 
 R C1 at node i and the target distribution ti ?
 R C1 at that node .
 This is equivalent ( up to a constant ) to minimizing the KL - divergence between the two distributions .
-The error as a function of the RNTN parameters ? = ( V , W , W s , L ) fora sentence is :
+The error as a function of the RNTN parameters ? = ( V , W , W s , L ) for a sentence is :
 The derivative for the weights of the softmax classifier are standard and simply sum up from each node 's error .
 We define xi to be the vector at node i ( in the example trigram , the xi ?
 R d 1 's are ( a , b , c , p 1 , p 2 ) ) .
@@ -182,7 +182,7 @@ where ?
 is the Hadamard product between the two vectors and f is the element - wise derivative off which in the standard case of using f = tanh can be computed using only f ( x i ) .
 The remaining derivatives can only be computed in a top - down fashion from the top node through the tree and into the leaf nodes .
 The full derivative for V and Wis the sum of the derivatives at each of the nodes .
-We define the complete incoming error messages fora node i as ? i , com .
+We define the complete incoming error messages for a node i as ? i , com .
 The top node , in our case p 2 , only received errors from the top node 's softmax .
 Hence , ? p 2 , com = ? p 2 , s which we can use to obtain the standard backprop derivative for W .
 For the derivative of each slice k = 1 , . . . , d , we get :
@@ -190,7 +190,7 @@ where ? p 2 , com k is just the k'th element of this vector .
 Now , we can compute the error message for the two children of p 2 :
 The children of p 2 , will then each take half of this vector and add their own softmax error message for the complete ?.
 In particular , we have
-where ? p 2 , down [ d + 1 : 2 d ] indicates that p 1 is the right child of p 2 and hence takes the 2nd half of the error , for the final word vector derivative fora , it will be ? p 2 , down [ 1 : d].
+where ? p 2 , down [ d + 1 : 2 d ] indicates that p 1 is the right child of p 2 and hence takes the 2nd half of the error , for the final word vector derivative for a , it will be ? p 2 , down [ 1 : d].
 The full derivative for slice V for this trigram tree then is the sum at each node :
 and similarly for W .
 For this nonconvex optimization we use AdaGrad which converges in less than 3 hours to a local optimum .
@@ -219,7 +219,7 @@ shows the result on this new corpus .
 The RNTN gets the highest performance , followed by the MV - RNN and RNN .
 The recursive models work very well on shorter phrases , where negation and composition are important , while bag of features baselines perform well only with longer sentences .
 The RNTN accuracy upper bounds other models at most n-gram lengths .
-Table 1 ( left ) shows the overall accuracy numbers for fine grained prediction at all phrase lengths and full sentences .
+Table 1 ( left ) shows the over all accuracy numbers for fine grained prediction at all phrase lengths and full sentences .
 Full Sentence Binary Sentiment
 This setup is comparable to previous work on the original rotten tomatoes dataset which only used full sentence labels and binary classification of positive / negative .
 Hence , these experiments show the improvement even baseline methods can achieve with the sentiment treebank .
@@ -240,7 +240,7 @@ We investigate two types of negation .
 For each type , we use a separate dataset for evaluation .
 Set 1 : Negating Positive Sentences .
 The first set contains positive sentences and their negation .
-In this set , the negation changes the overall sentiment of a sentence from positive to negative .
+In this set , the negation changes the over all sentiment of a sentence from positive to negative .
 Hence , we compute accuracy in terms of correct sentiment reversal from positive to negative .
 shows two examples of positive negation the RNTN correctly classified , even if negation is less obvious in the case of ' least ' .
 Table 2 ( left ) gives the accuracies over 21 positive sentences and their negation for all models .
@@ -249,7 +249,7 @@ But what if the model simply makes phrases very negative when negation is in the
 The next experiments show that the model captures more than such a simplistic negation rule .
 Set 2 : Negating Negative Sentences .
 The second set contains negative sentences and their negation .
-When negative sentences are negated , the sentiment treebank shows that overall sentiment should become less negative , but not necessarily positive .
+When negative sentences are negated , the sentiment treebank shows that over all sentiment should become less negative , but not necessarily positive .
 For instance , ' The movie was terrible ' is negative but the ' The movie was not terrible ' says only that it was less bad than a terrible one , not that it was good .
 Hence , we evaluate ac - In over 81 % of cases , the RNTN correctly increases the positive activations .
 shows a typical case in which sentiment was made more positive by switching the main class from negative to neutral even though both not and dull were negative .

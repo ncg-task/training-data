@@ -5,7 +5,7 @@
 158	82	84	in
 158	85	103	SEED and SEED - IV
 158	114	153	Short - Time Fourier Transform ( STFT )
-158	82	84	in
+158	154	156	in
 158	157	161	MPED
 158	177	184	to feed
 158	189	194	model
@@ -33,14 +33,14 @@
 160	110	112	to
 160	113	115	32
 160	122	142	parameters d g and K
-160	69	71	of
+160	143	145	of
 160	150	177	global high - level feature
-160	110	112	to
+160	178	180	to
 160	181	189	32 and 6
 160	200	212	dimension do
-160	69	71	of
+160	213	215	of
 160	220	234	output feature
-160	110	112	to
+160	235	237	to
 160	238	240	16
 160	241	248	without
 160	249	268	elaborate traversal
@@ -56,6 +56,7 @@
 164	46	64	pairwise operation
 164	65	67	of
 164	72	83	BiHDM model
+167	8	38	subject - dependent experiment
 171	76	81	using
 171	82	96	twelve methods
 171	99	108	including
@@ -92,21 +93,23 @@
 177	80	104	bi-hemispheric asymmetry
 177	107	115	achieves
 177	118	140	comparable performance
-200	0	5	shows
-200	10	46	t- test statistical analysis results
-200	67	70	see
-200	71	76	BiHDM
-200	22	24	is
-200	80	100	significantly better
-200	101	105	than
-200	110	125	baseline method
+183	0	5	shows
+183	10	46	t- test statistical analysis results
+183	67	70	see
+183	71	76	BiHDM
+183	77	79	is
+183	80	100	significantly better
+183	101	105	than
+183	110	125	baseline method
+188	8	40	subject - independent experiment
+193	42	45	use
 193	46	60	twelve methods
 193	61	70	including
 193	71	131	Kullback - Leibler importance estimation procedure ( KLIEP )
 193	134	192	unconstrained least - squares importance fitting ( ULSIF )
 193	195	229	selective transfer machine ( STM )
 193	232	280	linear SVM , transfer component analysis ( TCA )
-193	245	280	transfer component analysis ( TCA )
+193	283	318	transfer component analysis ( TCA )
 193	321	349	geodesic flow kernel ( GFK )
 193	352	356	DANN
 193	359	364	DGCNN
@@ -134,7 +137,7 @@
 200	10	46	t- test statistical analysis results
 200	67	70	see
 200	71	76	BiHDM
-200	22	24	is
+200	77	79	is
 200	80	100	significantly better
 200	101	105	than
 200	110	125	baseline method
@@ -153,7 +156,6 @@
 44	120	151	more discriminative information
 44	152	164	to recognize
 44	169	188	EEG emotion signals
-47	138	143	using
 47	89	97	simplify
 47	102	134	graph structure learning process
 47	8	23	to avoid losing
@@ -166,7 +168,7 @@
 47	213	240	complete relationship graph
 47	245	253	generate
 47	254	282	discriminative deep features
-47	58	61	for
+47	283	286	for
 47	287	309	all the EEG electrodes
 48	0	15	After obtaining
 48	22	35	deep features
@@ -178,7 +180,7 @@
 48	119	134	two hemispheres
 48	135	148	by performing
 48	149	177	specific pairwise operations
-48	101	104	for
+48	178	181	for
 48	182	213	any paired symmetric electrodes
 2	45	68	EEG Emotion Recognition
 5	167	216	electroencephalograph ( EEG ) emotion recognition

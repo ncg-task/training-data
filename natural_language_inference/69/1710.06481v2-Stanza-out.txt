@@ -58,7 +58,7 @@ For a given ( q , a * ) pair , the candidates C q and support documents
 Sq ?
 Dare identified by traversing the bipartite graph using breadth - first search ; the documents visited will become the support documents
 Sq . As the traversal starting point , we use the node belonging to the subject entity s of the query q .
-As traversal end points , we use the set of all entity nodes that are type - consistent answers to q.
+As traversal end points , we use the set of all entity nodes thatare type - consistent answers to q.
 2 Note that whenever there is another fact ( s , r , o ) in the KB , i.e. a fact producing the same q but with a different a * , we will not include o into the set of end points for this sample .
 This ensures that precisely one of the end points corresponds to a correct answer to q .
 When traversing the graph starting at s , several end points will be visited , though generally not all ; those visited define the candidate set C q .
@@ -69,12 +69,12 @@ With this methodology , relevant textual evidence for ( q , a * ) will be spread
 Note that including other type - consistent candidates alongside a * as end points in the graph traversal - and thus into the support documents - renders the task considerably more challenging .
 Models could otherwise identify a * in the documents by simply relying on type - consistency heuristics .
 It is worth pointing out that by introducing alternative candidates we counterbalance a type - consistency bias , in contrast to and who instead rely on entity masking .
-To determine entities which are type - consistent fora query q , we consider all entities which are observed as object in a fact with r as relation type - including the correct answer .
+To determine entities which are type - consistent for a query q , we consider all entities which are observed as object in a fact with r as relation type - including the correct answer .
 Here we rely on a closed - world assumption ; that is , we assume that the facts in the KB state all true facts .
 Documents
 WIKIHOP
 WIKIPEDIA contains an abundance of humancurated , multi-domain information and has several structured resources such as infoboxes and WIKIDATA associated with it .
-WIKIPEDIA has thus been used fora wealth of research to build datasets posing queries about a single sentence or article .
+WIKIPEDIA has thus been used for a wealth of research to build datasets posing queries about a single sentence or article .
 However , no attempt has been made to construct a cross - document multi-step RC dataset based on WIKIPEDIA .
 A recently proposed RC dataset is WIKIREAD - ING , where WIKIDATA tuples are aligned with the WIKIPEDIA articles regarding their item .
 The tuples define a slot filling task with the goal of predicting the answer , given an article and property .
@@ -98,7 +98,7 @@ As possible end points , we consider any other drug , apart from drug1 and those
 Similar to WIKIHOP , we exclude samples with more than 64 support documents and impose a maximum document length of 300 tokens plus title .
 Document Sub - sampling
 The bipartite graph for MEDHOP is orders of magnitude more densely con-nected than for WIKIHOP .
-This can lead to potentially large support document sets Sq , to a degree where it becomes computationally infeasible fora majority of existing RC models .
+This can lead to potentially large support document sets Sq , to a degree where it becomes computationally infeasible for a majority of existing RC models .
 After the traversal has finished , we subsample documents by first adding a set of documents that connects the drug in the query with its answer .
 We then iteratively add documents to connect alternative candidates until we reach the limit of 64 documents - while ensuring that all candidates have the same number of paths through the bipartite graph .
 Mitigating Candidate Frequency Imbalance
@@ -132,17 +132,17 @@ Appendix
 C contains a list with several additional examples .
 We designed a statistic to measure this effect and then used it to sub - sample the dataset .
 The statistic counts how often a candidate c is observed as the correct answer when a certain document is present in Sq across training set samples .
-More formally , fora given document d and answer candidate c , let cooccurrence ( d , c ) denote the total count of how often d co-occurs with c in a sample where c is also the correct answer .
+More formally , for a given document d and answer candidate c , let cooccurrence ( d , c ) denote the total count of how often d co-occurs with c in a sample where c is also the correct answer .
 We use this statistic to filter the dataset , by discarding samples with at least one document - candidate pair ( d , c ) for which cooccurrence ( d , c ) > 20 .
 MEDHOP
 Following the same general methodology , we next construct a second dataset for the domain of molecular biology - a field that has been undergoing exponential growth in the number of publications .
 The promise of applying NLP methods to cope with this increase has led to research efforts in IE and QA for biomedical text .
-There area plethora of manually curated structured resources which can either serve as ground truth or to induce training data using distant supervision .
+There are a plethora of manually curated structured resources which can either serve as ground truth or to induce training data using distant supervision .
 Existing RC datasets are either severely limited in size or cover a very diverse set of query types , complicating the application of neural models that have seen successes for other domains .
 A task that has received significant attention is detecting Drug - Drug Interactions ( DDIs ) .
 Existing DDI efforts have focused on explicit mentions of interactions in single sentences .
 However , as shown by , cross - sentence relation extraction increases the number of available relations .
-It is thus likely that cross - document interactions would further improve recall , which is of particular importance considering interactions that are never stated explicitly - but rather need to be inferred from separate pieces of evidence .
+It is thus likely that cross - document interactions would further improve recall , which is of particular importance considering interactions thatare never stated explicitly - but rather need to be inferred from separate pieces of evidence .
 The promise of multi-hop methods is finding and combining individual observations that can suggest previously unobserved DDIs , aiding the process of making scientific discoveries , yet not directly from experiments , but by inferring them from established public knowledge .
 DDIs are caused by Protein - Protein Interaction ( PPI ) chains , forming biomedical pathways .
 If we consider PPI chains across documents , we find examples like in .
@@ -172,7 +172,7 @@ Answer does not follow .
 8 % : Qualitiative analysis of WIKIHOP samples .
 king Louis XIV is mentioned within the same document as Louis Auguste .
 Finally , although our task is significantly more complex than most previous tasks where distant supervision has been applied , the distant supervision assumption is only violated for 20 % of the samples - a proportion similar to previous work .
-These cases can either be due to conflicting information between WIKIDATA and WIKIPEDIA ( 8 % ) , e.g. when the date of birth fora person differs between WIKI - DATA and what is stated in the WIKIPEDIA article , or because the answer is consistent but can not be inferred from the support documents ( 12 % ) .
+These cases can either be due to conflicting information between WIKIDATA and WIKIPEDIA ( 8 % ) , e.g. when the date of birth for a person differs between WIKI - DATA and what is stated in the WIKIPEDIA article , or because the answer is consistent but can not be inferred from the support documents ( 12 % ) .
 When answering 100 questions , the annotator knew the answer prior to reading the documents for 9 % , and produced the correct answer after reading the document sets for 74 % of the cases .
 On 100 questions of a validated portion of the Dev set ( see Section 5.3 ) , 85 % accuracy was reached .
 MEDHOP
@@ -188,14 +188,14 @@ They were then instructed to answer ( 1 ) whether they knew the fact before ;
 ( 2 ) whether the fact follows from the texts ( with options " fact follows " , " fact is likely " , and " fact does not follow " ) ; and ; whether a single or several of the documents are required .
 Each sample was shown to three annotators and a majority vote was used to aggregate the annotations .
 Annotators were familiar with the fact 4.6 % of the time ; prior knowledge of the fact is thus not likely to be a confounding effect on the other judgments .
-Inter-annotator agreement as measured by Fleiss ' kappa is 0.253 in , and 0.281 in ( 3 ) - indicating a fair overall agreement , according to .
+Inter-annotator agreement as measured by Fleiss ' kappa is 0.253 in , and 0.281 in ( 3 ) - indicating a fair over all agreement , according to .
 Overall , 9.5 % of samples have no clear majority in .
 Among samples with a majority judgment , 59.8 % are cases where the fact " follows " , for 14.2 % the fact is judged as " likely " , and as " not follow " for 25.9 % .
 This again provides good justification for the distant supervision strategy .
 Among the samples with a majority vote for ( 2 ) of either " follows " or " likely " , 55.9 % were marked with a majority vote as requiring multiple documents to infer the fact , and 44.1 % as requiring only a single document .
 The latter number is larger than initially expected , given the construction of samples through graph traversal .
 However , when inspecting cases judged as " single " more closely , we observed that many indeed provide a clear hint about the correct answer within one document , but without stating it explicitly .
-For example , for the fact ( witold cichy , country of citizenship , poland ) with documents d 1 : Witold Cichy in Wodzisaw lski ) is a Polish footballer [... ] and d 2 : Wodzisaw lski [... ] is a town in Silesian Voivodeship , southern Poland [... ] , the information provided ind 1 suffices fora human given the background knowledge that Polish is an attribute related to Poland , removing the need ford 2 to infer the answer .
+For example , for the fact ( witold cichy , country of citizenship , poland ) with documents d 1 : Witold Cichy in Wodzis aw lski ) is a Polish footballer [... ] and d 2 : Wodzis aw lski [... ] is a town in Silesian Voivodeship , southern Poland [... ] , the information provided ind 1 suffices for a human given the background knowledge that Polish is an attribute related to Poland , removing the need ford 2 to infer the answer .
 Validated Test Sets
 While training models on distantly supervised data is useful , one should ideally evaluate methods on a manually validated test set .
 We thus identified subsets of the respective test sets for which the correct answer can be inferred from the text .
@@ -208,7 +208,7 @@ We thus manually annotated 20 % of the MEDHOP test set and identified the sample
 Experiments
 This section describes experiments on WIKIHOP and MEDHOP with the goal of establishing the performance of several baseline models , including recent neural RC models .
 We empirically demonstrate the importance of mitigating dataset biases , probe whether multi-step behavior is beneficial for solving the task , and investigate if RC models can learn to perform lexical abstraction .
-Training will be conducted on the respective training sets , and evaluation on both the full test set and validated portion ( Section 5.3 ) allowing fora comparison between the two .
+Training will be conducted on the respective training sets , and evaluation on both the full test set and validated portion ( Section 5.3 ) allowing for a comparison between the two .
 Models
 Random Selects a random candidate ; note that the number of candidates differs between samples .
 Max- mention
@@ -227,10 +227,10 @@ For each candidate c , the concatenation of the query q with c is fed as an OR q
 5
 It then predicts the candidate with the highest TF - IDF similarity score :
 ( 1 ) Document - cue During dataset construction we observed that certain document - answer pairs appear more frequently than others , to the effect that the correct candidate is often indicated solely by the presence of certain documents in Sq .
-This baseline captures how easy it is fora model to exploit these informative document - answer co-occurrences .
+This baseline captures how easy it is for a model to exploit these informative document - answer co-occurrences .
 It predicts the candidate with highest score across C q : the prediction and answer , both lowercased , after removing articles , trailing white spaces and punctuation , in the same way as .
 To rule out any signal stemming from the order of documents in the superdocument , this order is randomized both at training and test time .
-Ina preliminary experiment we also trained models using different random document order permutations , but found that performance did not change significantly .
+In a preliminary experiment we also trained models using different random document order permutations , but found that performance did not change significantly .
 For BiDAF , the default hyperparameters from the implementation of are used , with pretrained GloVe embeddings .
 However , we restrict the maximum document length to 8,192 tokens and hidden size to 20 , and train for 5,000 iterations with batchsize 16 in order to fit the model into memory .
 7 For Fast
@@ -252,14 +252,14 @@ Models consequently can not base their prediction on intrinsic properties of the
 shows the experimental outcomes for WIK - IHOP and MEDHOP , together with results for the masked setting ; we will first discuss the former .
 A first observation is that candidate mention frequency does not produce better predictions than a random guess .
 Predicting the answer most frequently observed at training time achieves strong results : as much as 38.8 % / 44.2 % and 58.4 % / 67.3 % on the two datasets , for the full and validated test sets respectively .
-That is , a simple frequency statistic together with answer type constraints alone is a relatively strong predictor , and the strongest overall for the " unmasked " version of MEDHOP .
-The TF - IDF retrieval baseline clearly performs better than random for WIKIHOP , but is not very strong overall .
+That is , a simple frequency statistic together with answer type constraints alone is a relatively strong predictor , and the strongest over all for the " unmasked " version of MEDHOP .
+The TF - IDF retrieval baseline clearly performs better than random for WIKIHOP , but is not very strong over all .
 That is , the question tokens are helpful to detect relevant documents , but exploiting only this information compares poorly to the other baselines .
 On the other hand , as no co-mention of an interacting drug pair occurs within any single document in MEDHOP , the TF - IDF baseline performs worse than random .
 We conclude that lexical matching with a single support document is not enough to build a strong predictive model for both datasets .
 Results and Discussion
 The Document - cue baseline can predict more than a third of the samples correctly , for both datasets , even after sub - sampling frequent document - answer pairs for WIKIHOP .
-The relative strength of this and other baselines proves to bean important issue when designing multi-hop datasets , which we addressed through the measures described in Sec - Among the two neural models , BiDAF is overall strongest across both datasets - this is in contrast to the reported results for SQuAD where their performance is nearly indistinguishable .
+The relative strength of this and other baselines proves to bean important issue when designing multi-hop datasets , which we addressed through the measures described in Sec - Among the two neural models , BiDAF is over all strongest across both datasets - this is in contrast to the reported results for SQuAD where their performance is nearly indistinguishable .
 This is possibly due to the iterative latent interactions in the BiDAF architecture : we hypothesize that these are of increased importance for our task , where information is distributed across documents .
 It is worth emphasizing that unlike the other baselines , both FastQA and BiDAF predict the answer by extracting a span from the support documents without relying on the candidate options C q .
 In the masked setup all baseline models reliant on lexical cues fail in the face of the randomized answer expressions , since the same answer option has different placeholders in different samples .
@@ -269,7 +269,7 @@ To understand differences in model behavior between WIK - IHOP and MEDHOP , it i
 In contrast , for the open - domain setting of WIKIHOP , a reduction of the answer vocabulary to 100 random single - token mask expressions clearly helps the model in selecting a candidate span , compared to the multi-token candidate expressions in the unmasked setting .
 Overall , although both neural RC models clearly outperform the other baselines , they still have large room for improvement compared to human performance at 74 % / 85 % for WIKIHOP .
 Comparing results on the full and validated test sets , we observe that the results consistently improve on the validated sets .
-This suggests that the training set contains the signal necessary to make inference on valid samples attest time , and that noisy samples are harder to predict .
+This suggests that the training set contains the signal necessary to make inference on valid samples at test time , and that noisy samples are harder to predict .
 Using only relevant documents
 We conducted further experiments to examine the RC models when presented with only the relevant documents in Sq , i.e. , the chain of documents leading to the correct answer .
 This allows us to investigate the hypothetical performance of the models if they were able to select and read only relevant documents : summarizes these results .
@@ -312,13 +312,13 @@ Beyond , a rich collection of neural models tailored towards multi-step RC has b
 Memory networks define a model class that iteratively attends over textual memory items , and they show promising performance on synthetic tasks requiring multi-step reasoning .
 One common characteristic of neural multi-hop models is their rich structure that enables matching and interaction between question , context , answer candidates and combinations thereof , which is often iterated over several times and may contain trainable stopping mechanisms .
 All these methods show promise for single - document RC , and by design should be capable of integrating multiple facts across documents .
-However , thus far they have not been evaluated fora cross - document multi - step RC task - as in this work .
+However , thus far they have not been evaluated for a cross - document multi - step RC task - as in this work .
 Text - Based Multi - Step Reading Comprehension
 Learning Search Expansion
 Other research addresses expanding the document set available to a QA system , either in the form of web navigation , or via query reformulation techniques , which often use neural reinforcement learning .
 While related , this work ultimately aims at reformulating queries to better acquire evidence documents , and not at answering queries through combining facts .
 Conclusions and Future Work
-We have introduced anew cross - document multihop RC task , devised a generic dataset derivation strategy and applied it to two separate domains .
+We have introduced a new cross - document multihop RC task , devised a generic dataset derivation strategy and applied it to two separate domains .
 The resulting datasets test RC methods in their ability to perform composite reasoning - something thus far limited to models operating on structured knowledge resources .
 In our experiments we found that contemporary RC models can leverage cross - document in - formation , but a sizeable gap to human performance remains .
 Finally , we identified the selection of relevant document sets as the most promising direction for future research .

@@ -10,7 +10,9 @@
                   "initialize" : {
                     "word embedding matrix" : {
                       "with" : "GloVe 300D pretrained vectors",
-                      "from sentence" : "Similar to 100D experiments , we initialize the word embedding matrix with GloVe 300D pretrained vectors 4 , however we do not update the word representations during training ."
+                      "from sentence" : "Natural Language Inference
+Similar to 100D experiments , we initialize the word embedding matrix with GloVe 300D pretrained vectors 4 , however we do not update the word representations during training ."
+
                     }
                   },
                   "has" : {
@@ -92,7 +94,9 @@
                   "is" : {
                     "single - hidden layer MLP" : {
                       "with" : "ReLU activation function",
-                      "from sentence" : "is a single - hidden layer MLP with the ReLU activation function ."
+                      "from sentence" : "Sentiment Analysis
+is a single - hidden layer MLP with the ReLU activation function ."
+                      
                     }
                   },
                   "trained" : {
@@ -115,8 +119,7 @@
                             "mini-batches" : {
                               "set to" : "32"
                             }
-                          },
-                          "from sentence" : "The size of mini-batches is set to 32 and Adadelta optimizer is used for optimization ."
+                          }
                         },
                         "Adadelta optimizer" : {
                           "used for" : "optimization",

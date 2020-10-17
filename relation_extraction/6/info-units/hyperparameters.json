@@ -23,8 +23,7 @@
       },
       "has" : {
         "learning rate" : {
-          "fixed to" : "0.01",
-          "from sentence" : "The learning rate is fixed to 0.01 and the rest of the optimization parameters are set as recommended in : ? 1 = 0.9 , ? 2 = 0.999 , ? = 1e ? 08 . The training is performed in batches of 128 instances ."
+          "fixed to" : "0.01"
         },
         "training" : {
           "performed in" : {

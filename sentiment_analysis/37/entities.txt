@@ -14,12 +14,12 @@
 167	120	139	two different LSTMs
 172	52	63	ATAE - LSTM
 172	67	79	identical to
-172	54	63	AE - LSTM
+172	80	89	AE - LSTM
 172	92	98	except
-172	59	63	LSTM
+172	103	107	LSTM
 172	111	119	fed with
 172	124	137	concatenation
-172	31	33	of
+172	138	140	of
 172	141	193	aspect - term representation and word representation
 33	52	74	independently generate
 33	75	114	aspect - aware sentence representations
@@ -37,7 +37,7 @@
 34	109	120	to generate
 34	121	149	more accurate representation
 34	150	152	of
-34	57	70	target aspect
+34	157	170	target aspect
 35	5	27	refined representation
 35	31	37	fed to
 35	40	58	softmax classifier
@@ -57,11 +57,11 @@
 196	137	144	domains
 197	3	11	obtained
 197	12	30	bigger improvement
-197	7	9	in
+197	31	33	in
 197	34	47	laptop domain
 197	50	52	of
 197	53	58	1.7 %
 197	61	72	compared to
 197	73	90	restaurant domain
-197	50	52	of
+197	93	95	of
 197	96	101	1.4 %

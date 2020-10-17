@@ -39,7 +39,7 @@
         }
       },
       "heuristically choose" : {
-        "dp" : {
+        "d p" : {
           "=" : "5"
         },
         "from sentence" : "Because the position dimension has little effect on the result , we heuristically choose d p = 5 ."

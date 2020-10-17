@@ -8,7 +8,7 @@
 17	143	159	encoding process
 17	190	197	control
 17	202	214	output words
-17	37	39	in
+17	215	217	in
 17	218	236	each decoding step
 18	16	36	additional component
 18	42	84	wordfrequency estimation ( WFE ) sub-model

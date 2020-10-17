@@ -6,8 +6,8 @@ However , prior work has shown that gold syntax trees can dramatically improve S
 In this work , we present linguistically - informed self - attention ( LISA ) : a neural network model that combines multi-head self - attention with multi-task learning across dependency parsing , part - ofspeech tagging , predicate detection and SRL .
 Unlike previous models which require significant pre-processing to prepare linguistic features , LISA can incorporate syntax using merely raw tokens as input , encoding the sequence only once to simultaneously perform parsing , predicate detection and role labeling for all predicates .
 Syntax is incorporated by training one attention head to attend to syntactic parents for each token .
-Moreover , if a high - quality syntactic parse is already available , it can be beneficially injected attest time without re-training our SRL model .
-In experiments on CoNLL - 2005 SRL , LISA achieves new state - of - the - art performance fora model using predicted predicates and standard word embeddings , attaining 2.5 F1 absolute higher than the previous state - of - the - art on newswire and more than 3.5 F1 on outof - domain data , nearly 10 % reduction in error .
+Moreover , if a high - quality syntactic parse is already available , it can be beneficially injected at test time without re-training our SRL model .
+In experiments on CoNLL - 2005 SRL , LISA achieves new state - of - the - art performance for a model using predicted predicates and standard word embeddings , attaining 2.5 F1 absolute higher than the previous state - of - the - art on newswire and more than 3.5 F1 on outof - domain data , nearly 10 % reduction in error .
 On ConLL- 2012 English SRL we also show an improvement of more than 2.5 F1 .
 LISA also out - performs the state - of - the - art with contextually - encoded ( ELMo ) word representations , by nearly 1.0 F1 on news and more than 2.0 F1 on out - of - domain text .
 Introduction
@@ -21,7 +21,7 @@ These works suggest that though syntax has the potential to improve neural netwo
 In response , we propose linguistically - informed self - attention ( LISA ) : a model that combines multi-task learning with stacked layers of multi-head self - attention ; the model is trained to : ( 1 ) jointly predict parts of speech and predicates ; ( 2 ) perform parsing ; and ( 3 ) attend to syntactic parse parents , while ( 4 ) assigning semantic role labels .
 Whereas prior work typically requires separate models to provide linguistic analysis , including most syntaxfree neural models which still rely on external predicate detection , our model is truly end - to - end : earlier layers are trained to predict prerequisite parts - of - speech and predicates , the latter of which are supplied to later layers for scoring .
 Though prior work re-encodes each sentence to predict each desired task and again with respect to each predicate to perform SRL , we more efficiently encode each sentence only once , predict its predicates , part - of - speech tags and labeled syntactic parse , then predict the semantic roles for all predicates in the sentence in parallel .
-The model is trained such that , as syntactic parsing models improve , providing high - quality parses attest time will improve its performance , allowing the model to leverage updated parsing models without requiring re-training .
+The model is trained such that , as syntactic parsing models improve , providing high - quality parses at test time will improve its performance , allowing the model to leverage updated parsing models without requiring re-training .
 In experiments on the CoNLL - 2005 and CoNLL - 2012 datasets we show that our linguistically - informed models out - perform the syntax - free state - of - the - art .
 On CoNLL - 2005 with predicted predicates and standard word embeddings , our single model out - performs the previous state - of - the - art model on the WSJ test set by 2.5 F1 points absolute .
 On the challenging out - of - domain Brown test set , our model improves substantially over the previous state - of - the - art by more than 3.5 F1 , a nearly 10 % reduction in error .
@@ -29,13 +29,13 @@ On CoNLL - 2012 , our model gains more than 2.5 F1 absolute over the previous st
 Our models also show improvements when using contextually - encoded word representations , obtaining nearly 1.0 F1 higher than the state - of - the - art on CoNLL - 2005 news and more than 2.0 F1 improvement on out - of - domain text .
 1
 1 Our implementation in Tensor Flow is available at : http://github.com/strubell/ LISA ) .
-Layer r is input fora joint predicate / POS classifier .
+Layer r is input for a joint predicate / POS classifier .
 Representations from layer r corresponding to predicted predicates are passed to a bilinear operation scoring distinct predicate and role representations to produce per-token SRL predictions with respect to each predicted predicate .
 Model
 Our goal is to design an efficient neural network model which makes use of linguistic information as effectively as possible in order to perform endto - end SRL .
 LISA achieves this by combining :
 ( 1 ) A new technique of supervising neural attention to predict syntactic dependencies with ( 2 ) multi-task learning across four related tasks .
-depicts the overall architecture of our model .
+depicts the over all architecture of our model .
 The basis for our model is the Transformer encoder introduced by : we transform word embeddings into contextually - encoded token representations using stacked multi-head self - attention and feedforward layers ( 2.1 ) .
 To incorporate syntax , one self - attention head is trained to attend to each token 's syntactic parent , allowing the model to use this attention head as an oracle for syntactic dependencies .
 We introduce this syntactically - informed self - attention ( ) in more detail in 2.2 .
@@ -70,7 +70,7 @@ Specifically , consider the matrix S ( j?1 ) of T token representations at layer
 h of dimensions T d k , T d q , and T d v , respectively .
 We can then multiply Q between each pair of tokens in the sentence .
 Following we perform scaled dot -product attention :
-We scale the weights by the inverse square root of their embedding dimension and normalize with the softmax function to produce a distinct distribution for each token overall the tokens in the sentence :
+We scale the weights by the inverse square root of their embedding dimension and normalize with the softmax function to produce a distinct distribution for each token over all the tokens in the sentence :
 ( 2 )
 These attention weights are then multiplied by
 h for each token to obtain the self - attended token representations M
@@ -96,7 +96,7 @@ This attention head thus emits a directed graph 3 where each token 's parent is 
 We also predict dependency labels using perclass bi-affine operations between parent and dependent representations Q parse and K parse to produce per-label scores , with locally normalized probabilities over dependency labels y dep t given by the softmax function .
 We refer the reader to Dozat and Manning ( 2017 ) for more details .
 This attention head now becomes an oracle for syntax , denoted P , providing a dependency parse to downstream layers .
-This model not only predicts its own dependency arcs , but allows for the injection of auxiliary parse information attest time by simply setting A parse to the parse parents produced by e.g. a state - of - the - art parser .
+This model not only predicts its own dependency arcs , but allows for the injection of auxiliary parse information at test time by simply setting A parse to the parse parents produced by e.g. a state - of - the - art parser .
 In this way , our model can benefit from improved , external parsing models without re-training .
 Unlike typical multi-task models , ours maintains the ability to leverage external syntactic information .
 Multi - task learning
@@ -122,7 +122,7 @@ At test time , we perform constrained decoding using the Viterbi algorithm to em
 Training
 We maximize the sum of the likelihoods of the individual tasks .
 In order to maximize our model 's ability to leverage syntax , during training we clamp P to the gold parse ( P G ) and V to gold predicates VG when passing parse and predicate representations to later layers , whereas syntactic head prediction and joint predicate / POS prediction are conditioned only on the input sequence X .
-The overall objective is thus :
+The over all objective is thus :
 where ? 1 and ?
 2 are penalties on the syntactic attention loss .
 We train the model using Nadam ( Dozat , 2016 ) SGD combined with the learning rate schedule in .
@@ -150,15 +150,15 @@ We leave exploration of more advanced scheduled sampling techniques to future wo
 Experimental results
 We present results on the CoNLL - 2005 shared task and the CoNLL - 2012 English subset of OntoNotes 5.0 , achieving state - of - the - art results for a single model with predicted predicates on both corpora .
 We experiment with both standard pre-trained Glo Ve word embeddings and pre-trained ELMo representations with fine - tuned task - specific parameters in order to best compare to prior work .
-Hyperparameters that resulted in the best performance on the validation set were selected via a small grid search , and models were trained fora maximum of 4 days on one TitanX GPU using early stopping on the validation set .
+Hyperparameters that resulted in the best performance on the validation set were selected via a small grid search , and models were trained for a maximum of 4 days on one TitanX GPU using early stopping on the validation set .
 We convert constituencies to dependencies using the Stanford head rules v 3.5 .
 A detailed description of hyperparameter settings and data pre-processing can be found in Appendix A.
 We compare our LISA models to four strong baselines :
-For experiments using predicted predicates , we compare to To compare to more prior work , we present additional results on CoNLL - 2005 with models given gold predicates attest time .
+For experiments using predicted predicates , we compare to To compare to more prior work , we present additional results on CoNLL - 2005 with models given gold predicates at test time .
 In these experiments we also compare to , the previous state - of - the art SRL model using gold predicates and standard embeddings .
 We demonstrate that our models benefit from injecting state - of - the - art predicted parses at test time ( + D&M ) by fixing the attention to parses predicted by Dozat and Manning ( 2017 ) , the winner of the 2017 CoNLL shared task which we re-train using ELMo embeddings .
-In all cases , using these parses attest time improves performance .
-We also evaluate our model using the gold syntactic parse attest time ( + Gold ) , to provide an upper bound for the benefit that syntax could have for SRL using LISA .
+In all cases , using these parses at test time improves performance .
+We also evaluate our model using the gold syntactic parse at test time ( + Gold ) , to provide an upper bound for the benefit that syntax could have for SRL using LISA .
 These experiments show that despite LISA 's strong performance , there remains substantial room for improvement .
 In 4.3 we perform further analysis comparing SRL models using gold and predicted parses .
 lists precision , recall and F1 on the CoNLL - 2005 development and test sets using predicted predicates .
@@ -169,7 +169,7 @@ Incorporating ELMo em-beddings improves all scores .
 The gap in SRL F1 between models using LISA and D&M parses is smaller due to LISA 's improved parsing accuracy ( see 4.2 ) , but LISA with D&M parses still achieves the highest F1 : nearly 1.0 absolute F1 higher than the previous state - of - the art on WSJ , and more than 2.0 F1 higher on Brown .
 Semantic role labeling
 In both settings LISA leverages domain - agnostic syntactic information rather than over-fitting to the newswire training data which leads to high performance even on out - of - domain text .
-To compare to more prior work we also evaluate our models in the artificial setting where gold predicates are provided attest time .
+To compare to more prior work we also evaluate our models in the artificial setting where gold predicates are provided at test time .
 For fair comparison we use GloVe embeddings , provide predicate indicator embeddings on the input and reencode the sequence relative to each gold predicate .
 Here LISA still excels : with D&M parses , LISA out - performs the previous state - of - the - art by more than 2 F1 on both WSJ and Brown .
 reports precision , recall and F1 on the CoNLL - 2012 test set .
@@ -191,14 +191,14 @@ Analysis
 First we assess SRL F1 on sentences divided by parse accuracy .
 Here there is little difference between any of the models , with LISA models tending to perform slightly better than SA .
 Both parsers make mistakes on the majority of sentences ( 57 % ) , difficult sentences where SA also performs the worst .
-These examples are likely where gold and D&M parses improve the most over other models in overall F1 :
+These examples are likely where gold and D&M parses improve the most over other models in over all F1 :
 Though both parsers fail to correctly parse the entire sentence , the D&M parser is less wrong ( 87.5 vs. 85.7 average LAS ) , leading to higher SRL F1 by about 1.5 average F1 . Following
 He et al. , we next apply a series of corrections to model predictions in order to understand which error types the gold parse resolves :
 e.g.
 Fix Labels fixes labels on spans matching gold boundaries , and Merge Spans merges adjacent predicted spans into a gold span .
 In we see that much of the performance gap between the gold and predicted parses is due to span boundary errors ( Merge Spans , Split Spans and that these errors are due mainly to prepositional phrase ( PP ) attachment mistakes .
 We also find this to be the case : shows a breakdown of split / merge corrections by phrase type .
-Though the number of corrections decreases substantially across phrase types , the proportion of corrections attributed to PPs remains the same ( approx. 50 % ) even after providing the correct PP attachment to the model , indicating that PP span boundary mistakes area fundamental difficulty for SRL .
+Though the number of corrections decreases substantially across phrase types , the proportion of corrections attributed to PPs remains the same ( approx. 50 % ) even after providing the correct PP attachment to the model , indicating that PP span boundary mistakes are a fundamental difficulty for SRL .
 Conclusion
 We present linguistically - informed self - attention : a multi- task neural network model that effectively incorporates rich linguistic information for semantic role labeling .
 LISA out - performs the state - of the - art on two benchmark SRL datasets , including out - of - domain .

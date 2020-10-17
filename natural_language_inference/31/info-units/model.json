@@ -32,7 +32,7 @@
           "from sentence" : "An embedding layer first embeds discrete tokens ."
         },
         "same - structured blocks" : {
-          "consisting of" : ["encoding", "alignment", "fusion layers", {"from sentence" : "Several same - structured blocks consisting of encoding , alignment and fusion layers then process the sequences consecutively ."}],
+          "consisting of" : ["encoding", "alignment", "fusion layers"],
           "process" : {
             "sequences" : {
               "has" : "consecutively"

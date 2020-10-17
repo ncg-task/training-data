@@ -9,12 +9,12 @@ One way to ensure this is by adding constraints for true paraphrase embeddings t
 This is ensured by using a sequential pair - wise discriminator that shares weights with the encoder that is trained with a suitable loss function .
 Our loss function penalizes paraphrase sentence embedding distances from being too large .
 This loss is used in combination with a sequential encoder - decoder network .
-We also validated our method by evaluating the obtained embeddings fora sentiment analysis task .
+We also validated our method by evaluating the obtained embeddings for a sentiment analysis task .
 The proposed method results in semantic embeddings and outperforms the state - of - the - art on the paraphrase generation and sentiment analysis task on standard datasets .
 These results are also shown to be statistically significant .
 Introduction
-The problem of obtaining a semantic embedding fora sentence that ensures that the related sentences are closer and unrelated sentences are farther lies at the core of understanding languages .
-This would be relevant fora wide variety of machine reading comprehension and related tasks such as sentiment analysis .
+The problem of obtaining a semantic embedding for a sentence that ensures that the related sentences are closer and unrelated sentences are farther lies at the core of understanding languages .
+This would be relevant for a wide variety of machine reading comprehension and related tasks such as sentiment analysis .
 Towards this problem , we propose a supervised method that uses a sequential encoder - decoder framework for paraphrase generation .
 The task of generating paraphrases is closely related to the task of obtaining semantic sentence embeddings .
 In our approach , we aim to ensure that the generated paraphrase embedding should be close to the true corresponding sentence and far from unrelated sentences .
@@ -72,7 +72,7 @@ These are shown respectively in part 1 , 2 , 3 of .
 Our network with all three parts is trained end - to - end .
 The weight parameters of encoder and discriminator modules are shared .
 Instead of taking a separate discriminator , we shared it with the encoder so that it learns the embedding based on the ' global ' as well as ' local ' loss .
-After training , attest time we used encoder to generate feature maps and pass it to the decoder for generating paraphrases .
+After training , at test time we used encoder to generate feature maps and pass it to the decoder for generating paraphrases .
 These text embeddings can be further used for other NLP tasks such as sentiment analysis . :
 This is an overview of our model .
 It consists of 3 parts :
@@ -87,7 +87,7 @@ When the network reaches the last word ( L th word ) , the hidden state h L of t
 Question sentence encoding feature f i is obtained after passing through an LSTM which is parameterized using the function F ( C i , W l ) where W l are the weights of the LSTM .
 This is illustrated in part 1 of .
 Decoder - LSTM
-The role of decoder is to predict the probability fora whole sentence , given the embedding of input sentence ( f i ) .
+The role of decoder is to predict the probability for a whole sentence , given the embedding of input sentence ( f i ) .
 RNN provides a nice way to condition on previous state value using a fixed length hidden vector .
 The conditional probability of a sentence token at a particular time step is modeled using an LSTM as used in machine translation .
 At time step t , the conditional probability is denoted by P
@@ -117,7 +117,7 @@ The objective of global loss is to maximize the similarity between predicted sen
 The loss is defined as
 Gradient of this loss function is given by
 Cost function
-Our objective is to minimize the total loss , that is the sum of local loss and global loss overall training examples .
+Our objective is to minimize the total loss , that is the sum of local loss and global loss over all training examples .
 The total loss is :
 Where M is the total number of examples , L local is the cross entropy loss , L global is the global loss .
 Dataset
@@ -227,7 +227,7 @@ We have also uploaded our models to the online competition on Rotten Tomatoes da
 We provide 5 examples for each sentiment in table 5 .
 We can see clearly that our proposed embeddings are able to get the complete meaning of smaller as well as larger sentences .
 For example , our model classifies ' Although it bangs a very cliched drum at times ' as Negative and ' Although it bangs a very cliched drum at times , this crowd - pleaser 's fresh dialogue , energetic music , and good - natured spunk are often infectious . ' as positive showing that it is able to understand the finer details of language .
-More results and visualisations showing the part of the phrase to which the model attends while classifying are present in the appendix .
+More results and visualis ations showing the part of the phrase to which the model attends while classifying are present in the appendix .
 The link for the project website and code is provided here 3 .
 Conclusion
 In this paper we have proposed a sentence embedding using a sequential encoder - decoder with a pairwise discriminator .

@@ -85,6 +85,6 @@ Using the Tesla K40c GPU has allowed to speedup the training time by factor ten 
 This clearly demonstrates the importance of training on a GPU to do a comprehensive model selection in a feasible amount of time .
 Conclusions and future work
 Deep learning is an umbrella term for training neural networks with potentially many hidden layers using new training methods allowing to learn complex feature hierarchies from data .
-Applied to action unit recognition and smile recognition in particular , a deep convolutional neural network model with an overall accuracy of 99. 45 % significantly outperforms existing approaches .
+Applied to action unit recognition and smile recognition in particular , a deep convolutional neural network model with an over all accuracy of 99. 45 % significantly outperforms existing approaches .
 The underlying extensive model selection allows to find for each action unit an appropriate architecture in order to maximize test accuracies .
 In the future , we will extend the model to images from multiple databases and to make predictions in image sequences .

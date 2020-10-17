@@ -159,7 +159,8 @@ In our experiment , the total input length is set to 200 ."
                     "hidden size" : {
                       "has" : "128"
                     },
-                    "from sentence" : "We used batch size 50 and hidden size 128 for all models ."
+                    "from sentence" : "Algorithmic Task
+We used batch size 50 and hidden size 128 for all models ."
                   },
                   "has" : {
                     "RNNs" : {

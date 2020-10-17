@@ -1,7 +1,7 @@
 104	4	29	answer position indicator
 104	46	51	plays
 104	54	66	crucial role
-104	20	22	in
+104	67	69	in
 104	70	104	answer focused question generation
 109	6	15	show that
 109	16	52	word case , POS and NER tag features
@@ -26,21 +26,21 @@
 78	64	82	rare words problem
 79	0	14	NQG + Pretrain
 79	15	23	Based on
-79	0	5	NQG +
+79	24	29	NQG +
 79	35	45	initialize
 79	50	71	word embedding matrix
 79	72	76	with
 79	77	102	pre-trained GloVe vectors
 80	0	13	NQG + STshare
 80	14	22	Based on
-80	0	5	NQG +
+80	23	28	NQG +
 80	34	38	make
 80	43	62	encoder and decoder
-80	8	13	share
+80	63	68	share
 80	73	94	same embedding matrix
 81	0	6	NQG ++
-81	0	5	NQG +
 82	0	8	Based on
+82	9	14	NQG +
 82	20	23	use
 82	29	73	pre-train word embedding and STshare methods
 82	76	94	to further improve
@@ -96,7 +96,7 @@
 92	23	29	NQG ++
 92	36	56	1.11 BLEU score gain
 92	57	61	over
-92	23	28	NQG +
+92	62	67	NQG +
 91	0	16	With the help of
 91	17	31	copy mechanism
 91	34	39	NQG +

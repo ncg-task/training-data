@@ -14,7 +14,9 @@
                   }
                 }
               },
-              "from sentence" : "We can see that UT - Time is about 3 % better than AP - 1 in the absolute value of F 1 , which is expected since UTTime included more advanced features derived from syntactic parse trees ."
+              "from sentence" : "TE3 Task C - Relation Only
+We can see that UT - Time is about 3 % better than AP - 1 in the absolute value of F 1 , which is expected since UTTime included more advanced features derived from syntactic parse trees ."
+
             }
           },
           "On top of" : {
@@ -59,13 +61,14 @@
                   "was" : "small"
                 }
               }
-            },
-            "from sentence" : "The improvement of SP + ILP ( line 4 ) over AP ( line 2 ) was small and AP + ILP ( line 3 ) was even worse than AP , which necessitates the use of a better approach towards vague TLINKs ."
+            }
           },
           "has" : {
             "AP + ILP" : {
               "even worse than" : "AP",
-              "from sentence" : "The improvement of SP + ILP ( line 4 ) over AP ( line 2 ) was small and AP + ILP ( line 3 ) was even worse than AP , which necessitates the use of a better approach towards vague TLINKs ."
+              "from sentence" : "TE3 Task C
+The improvement of SP + ILP ( line 4 ) over AP ( line 2 ) was small and AP + ILP ( line 3 ) was even worse than AP , which necessitates the use of a better approach towards vague TLINKs ."
+
             }
           },
           "applying" : {
@@ -83,7 +86,9 @@
           "has" : {
             "SP + ILP" : {
               "outperformed" : "CAEVO",
-              "from sentence" : "SP + ILP outperformed CAEVO and if additional unlabeled dataset TE3 - SV was used , CoDL + ILP achieved the best score with a relative improvement in F 1 score being 6.3 % ."
+              "from sentence" : "Comparison with CAEVO
+SP + ILP outperformed CAEVO and if additional unlabeled dataset TE3 - SV was used , CoDL + ILP achieved the best score with a relative improvement in F 1 score being 6.3 % ."
+
             }            
           }
         }

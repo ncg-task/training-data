@@ -1,3 +1,4 @@
+146	0	19	COPYING MEMORY TASK
 151	4	7	RUM
 151	8	16	utilizes
 151	19	53	different representation of memory
@@ -8,6 +9,7 @@
 151	103	109	solves
 151	114	118	task
 151	119	129	completely
+165	0	23	ASSOCIATIVE RECALL TASK
 175	15	19	have
 175	24	50	same hidden state N h = 50
 175	51	54	for
@@ -30,6 +32,7 @@
 179	0	25	NTM and Fast - weight RNN
 179	26	30	fail
 179	31	43	longer tasks
+180	0	18	QUESTION ANSWERING
 187	48	59	simple LSTM
 187	65	94	End - to - end Memory Network
 187	103	107	GORU
@@ -42,6 +45,8 @@
 188	89	93	with
 188	94	109	those of MemN2N
 188	125	144	attention mechanism
+193	0	33	CHARACTER LEVEL LANGUAGE MODELING
+196	0	29	PENN TREEBANK CORPUS DATA SET
 215	0	12	FS - RUM - 2
 215	13	31	generalizes better
 215	32	36	than

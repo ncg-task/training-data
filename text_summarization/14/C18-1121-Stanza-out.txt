@@ -187,7 +187,7 @@ Test set of DUC 2004 test set Model RG - 1 RG - 2 RG- L RG- 1 RG- 2 RG- L ABS 29
 Further Analysis
 To further investigate the effectiveness of our model , we perform analysis on the entailment score improvement , the abstraction degree of our model and the impact for entailment recognition task .
 Does our summarization model learn entailment knowledge ?
-The motivation of our work is to encourage summarization model to generate summaries that are entailed by the source sentences .
+The motivation of our work is to encourage summarization model to generate summaries thatare entailed by the source sentences .
 To verify this goal , we investigate the entailment score for source - summary pairs for different models .
 For the test set of , the average entailment score for the reference is 0.72 , while for the basic seq2seq model , the entailment score is only 0.46 .
 When we adopt entailmentbased strategies , the entailment score rises to 0.63 for seq2seq model .
@@ -209,7 +209,7 @@ shows that our summarization model with MTL outperforms basic seq2seq model .
 As ? increases , the accuracy of entailment recognition improves and finally exceeds that of the model without MTL , which reveals the advantage of MTL framework .
 Case Study
 We illustrate the examples of outputs in .
-As shown in the table , seq2seq model generates summaries that are not relevant to the source sentence , while the output of our model obtains higher entailment scores than those of seq2seq model .
+As shown in the table , seq2seq model generates summaries thatare not relevant to the source sentence , while the output of our model obtains higher entailment scores than those of seq2seq model .
 For the first example , seq2seq model regards the reason for " brazil stocks rise " as " consumer credit concerns " , while in fact , " consumer " is not worried because " government said it would n't impose restraints on consumer credit " .
 By contrast , since our model incorporates entailment knowledge , the true reason is captured and the output of our model is related to the source sentence .
 A similar problem happens in example 2 , and seq2seq model generates a summary that is contradictory to the source .

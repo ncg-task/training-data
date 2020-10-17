@@ -1,3 +1,4 @@
+99	0	18	QUESTION ANSWERING
 129	40	46	adding
 129	47	71	any external information
 129	72	82	results in
@@ -20,24 +21,25 @@
 135	4	37	model with GLoVe embeddings ( G )
 135	38	40	is
 135	41	52	still ahead
-135	10	14	with
+135	53	57	with
 135	60	76	1.1 point margin
 134	25	29	uses
 134	37	39	SD
 134	48	67	1.1 point advantage
 134	68	72	over
 134	14	19	model
-134	25	29	uses
+134	88	92	uses
 134	93	110	just the spelling
 155	0	21	ENTAILMENT PREDICTION
 172	64	72	spelling
 172	73	76	was
+172	77	90	not as useful
 172	91	93	on
 172	94	111	SNLI and MultiNLI
 178	27	54	dictionary - enabled models
 178	55	79	significantly outperform
 178	80	95	baseline models
-178	75	78	for
+178	96	99	for
 178	100	109	sentences
 178	110	120	containing
 178	121	131	rare words
@@ -48,6 +50,7 @@
 173	109	146	did not bring a significant advantage
 173	147	151	over
 173	156	164	baseline
+179	0	18	LANGUAGE MODELLING
 199	37	42	using
 199	43	63	external information
 199	64	74	to compute
@@ -55,7 +58,7 @@
 199	86	88	of
 199	89	102	unknown words
 199	103	108	helps
-199	39	41	in
+199	109	111	in
 199	112	121	all cases
 201	3	12	note that
 201	13	30	lemma + lowercase
@@ -82,12 +85,13 @@
 20	17	24	propose
 20	27	37	new method
 20	38	51	for computing
+20	52	77	embeddings " on the fly "
 20	86	103	jointly addresses
 20	108	132	large vocabulary problem
 20	141	156	paucity of data
 20	157	169	for learning
 20	170	185	representations
-20	48	50	in
+20	186	188	in
 20	193	230	long tail of the Zipfian distribution
 21	181	186	train
 21	189	196	network
@@ -121,9 +125,9 @@
 27	96	108	preservation
 27	109	111	of
 27	112	130	semantic alignment
-27	62	66	with
+27	131	135	with
 27	136	151	representations
-27	109	111	of
+27	152	154	of
 27	155	180	within - vocabulary words
 12	0	39	Learning representations for rare words
 2	12	46	COMPUTE WORD EMBEDDINGS ON THE FLY

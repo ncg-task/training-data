@@ -5,6 +5,6 @@
 (Model||has||first model)
 (first model||employ||2 - layer Bidirectional LSTM)
 (2 - layer Bidirectional LSTM||equipped with||attention mechanism)
-(first model||desgined for addressing||problem of messagelevel sentiment analysis)
+(first model||designed for addressing||problem of messagelevel sentiment analysis)
 (Model||present||two deep - learning systems)
 (two deep - learning systems||competed at||SemEval - 2017 Task 4)

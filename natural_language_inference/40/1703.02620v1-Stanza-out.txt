@@ -20,7 +20,7 @@ Both LSTMs and GRUs have been hugely popular for modeling sequence data .
 Despite these extensions , empirical studies have shown that it is still difficult to train RNNs with long - range dependencies ( see for example , ) .
 One suggested explanation for this is that the network must propagate all the information in a single fixed - size vector , which maybe infeasible .
 This led to the introduction of the attention mechanism which adapts the sequence model with a more explicit form of long term memory .
-At each time step t , the model can perform a " soft " lookup overall previous outputs through a weighted average t?1 i=1 ?
+At each time step t , the model can perform a " soft " lookup over all previous outputs through a weighted average t?1 i=1 ?
 i hi .
 The weights ?
 i are the outputs of another network whose parameters are learned from data .
@@ -51,12 +51,12 @@ Related Work
 Augmenting the sequence with these extra links converts it from a chain to a more general graph structure .
 Models such as the Graph Neural Networks and Gated Graph Sequence Neural Networks can be used to handle such data .
 The basic idea in these architectures is to update the representation of every single node at every time - step , based on the incoming representations of their neighbours .
-Depending on the optimization procedure , the updates are either performed till the representations converge , or fora fixed number of time - steps .
+Depending on the optimization procedure , the updates are either performed till the representations converge , or for a fixed number of time - steps .
 The resulting complexity is O ( N T ) , where N is the number of nodes , and T is the number of time - steps .
-To fully propagate information in the graph , T should beat least the width of the graph .
+To fully propagate information in the graph , T should be at least the width of the graph .
 Though in practice it is possible to obtain an approximation with a smaller T , training graph - based neural networks is computationally expensive compared to RNNs , which have complexity only O ( N ) .
 Trees are another commonly encountered graph structure , and proposed Tree - Structured LSTMs for handling such data .
-However , that work focused solely on dependency parses of textual data and ignored its inherent sequential ordering , whereas here we argue fora more general approach which can incorporate many types of edges between tokens , including sequential ones .
+However , that work focused solely on dependency parses of textual data and ignored its inherent sequential ordering , whereas here we argue for a more general approach which can incorporate many types of edges between tokens , including sequential ones .
 The resulting MAGE - RNN formulation can be viewed as an extension of Tree - Structured LSTMs .
 proposed a similar idea to ours , which employs RNNs on DAGs of image pixels .
 However , their model focuses on images and does not handle typed edges .
@@ -184,7 +184,7 @@ Moreover , we observe that the proposed MAGE architecture can substantially impr
 Adding the same information as one - hot features fails to improve the performance , which indicates that the inductive bias we employ on MAGE is useful .
 The DAG - RNN baseline from and the shared version of MAGE ( where edge representations are tied ) also perform worse , showing that our proposed architecture is superior .
 Our motivation in incorporating the DAG structure in text comprehension models is to help the reader model long term dependencies in the input sequences .
-To test how well it is able to do that , we constructed anew version of the bAbi tasks , called b Abi - Mix , where each story is a mixed version of two independent stories in two different worlds .
+To test how well it is able to do that , we constructed a new version of the bAbi tasks , called b Abi - Mix , where each story is a mixed version of two independent stories in two different worlds .
 This was done by first replacing all entity mentions in one of the stories with alternates , so " Daniel " becomes " David " , " milk " becomes " juice " and soon .
 Then we mixed the sentences in the two stories , in random order , and asked a question about one of the stories .
 As a result , the stories become longer , and relevant information about entities has to be tracked over longer distances .
@@ -219,7 +219,7 @@ Human performance was estimated from 100 randomly sampled instances .
 to answer multiple questions about a story .
 Broad Context Language Modeling :
 For our second benchmark we pick the LAMBADA dataset from , where the task is to predict the last word in a given passage .
-The passages are filtered such that human subjects were able to predict the last word when given abroad context of 4 - 5 sentences , but not when only given the immediately preceding sentence .
+The passages are filtered such that human subjects were able to predict the last word when given a broad context of 4 - 5 sentences , but not when only given the immediately preceding sentence .
 This filtering process makes the task a challenging one - any model must understand the broader discourse to predict the correct word .
 The passages here are selected from fiction books , and hence language comprehension is challenging , unlike the bAbi tasks .
 Standard language models only achieve about 7.3 % accuracy on this dataset , but improved this to 49 % by reformulating the task as a reading comprehension one , and training on a large corpus of automatically extracted passages .
@@ -266,12 +266,12 @@ Our model , MAGE - RNN , parameterizes each edge type separately , and also main
 It can be interpreted as a memory - augmented RNN where the memory access is dictated by the graph structure .
 We apply the MAGE - RNN framework to model coreference for text comprehension tasks by preprocessing to extract coreference relations and replacing recurrent units in comprehension models with MAGE - RNN .
 We observe consistent improvements across three widely studied benchmarks , for both simple and sophisticated architectures .
-Our best results set anew state of the art on all three tasks .
+Our best results set a new state of the art on all three tasks .
 The ultimate goal in machine learning is , of course , to be able to learn purely from data , without relying on external tools .
 However , in practice this is only feasible when the training dataset size is large , which is often not the casein NLP applications .
 We hypothesize , however , that the biggest benefit of explicit linguistic knowledge will be in cases where the data is scarce , for example as we observe in the bAbi tasks .
 Moreover , since coreference and entitylinking tools are widely available , models which exploit them are valuable .
 Hence , an interesting future direction of this work is to incorporate an attention mechanism over the edge types into MAGE - RNN and study its distribution over various sources as the dataset size varies .
 Coreference is one important type of linguistic knowledge that machine comprehension models can benefit from .
-Our encouraging results motivate us to explore other potentially useful sources of knowledge , which may include - dependency parses , semantic role labels , semantic frames , ontologies such as Wordnet , and databases such as Freebase .
+Our encouraging results motivate us to explore other potentially useful sources of knowledge , which may include - dependency parses , semantic role labels , semantic frames , ontologies such as Wordnet , and data bases such as Freebase .
 MAGE - RNN is a general framework capable of integrating all these sources into a single neural model , and we plan to investigate this research in future work .

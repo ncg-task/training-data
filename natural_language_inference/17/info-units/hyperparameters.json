@@ -24,12 +24,10 @@
             "character embedding and corresponding LSTMs" : {
               "is" : "50"
             }
-          },
-          "from sentence" : "The size of character embedding and corresponding LSTMs is 50 , the main hidden size is 100 , and the hyperparameter ? is 3 ."
+          }
         },
         "main hidden size" : {
-          "is" : "100",
-          "from sentence" : "The size of character embedding and corresponding LSTMs is 50 , the main hidden size is 100 , and the hyperparameter ? is 3 ."
+          "is" : "100"
         },
         "hyperparameter" : {
           "is" : "3",

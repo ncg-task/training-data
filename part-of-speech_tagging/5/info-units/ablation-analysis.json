@@ -33,8 +33,7 @@
                 "joint optimization" : {
                   "by" : "up to 2.1 percent absolute"
                 }
-              },
-              "from sentence" : "Separate optimization outperformed joint optimization by up to 2.1 percent absolute , while joint never out - performed separate by more than 0.5 % absolute ."
+              }
             }
           }
         }

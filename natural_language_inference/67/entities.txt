@@ -18,8 +18,8 @@
 162	75	81	yields
 162	84	89	score
 162	90	100	similar to
-162	24	33	DCR model
-162	34	38	with
+162	128	137	DCR model
+162	138	142	with
 162	143	169	all possible n-gram chunks
 136	3	16	pre-processed
 136	21	34	SQuAD dataset
@@ -44,36 +44,36 @@
 138	61	68	between
 138	69	86	( - 0.01 , 0.01 )
 139	4	21	hidden state size
-139	6	7	d
+139	24	25	d
 139	32	38	set to
 139	39	42	300
 139	43	46	for
 139	47	55	all GRUs
-142	8	15	applied
-142	16	23	dropout
-142	24	31	of rate
-142	32	35	0.2
-142	36	38	to
-142	43	58	embedding layer
-142	24	26	of
-142	62	84	input bi - GRU encoder
-142	91	108	gradient clipping
-142	109	113	when
-142	118	122	norm
-142	24	26	of
-142	126	135	gradients
-142	136	144	exceeded
-142	145	147	10
-143	72	86	zero - padding
-143	87	89	to
-143	94	121	passage and question inputs
-143	6	8	in
-143	125	135	each batch
 143	3	13	trained in
 143	14	30	mini-batch style
 143	33	50	mini - batch size
 143	51	53	is
 143	54	57	180
+143	64	71	applied
+143	72	86	zero - padding
+143	87	89	to
+143	94	121	passage and question inputs
+143	122	124	in
+143	125	135	each batch
+142	16	23	dropout
+142	24	31	of rate
+142	32	35	0.2
+142	36	38	to
+142	43	58	embedding layer
+142	59	61	of
+142	62	84	input bi - GRU encoder
+142	91	108	gradient clipping
+142	109	113	when
+142	118	122	norm
+142	123	125	of
+142	126	135	gradients
+142	136	144	exceeded
+142	145	147	10
 144	8	11	set
 144	16	38	maximum passage length
 144	39	44	to be
@@ -92,8 +92,8 @@
 148	8	38	feature ranking - based system
 148	44	48	used
 148	49	63	jforest ranker
-148	107	111	with
-148	111	151	 Lambda MART - Regression Tree algorithm
+148	108	112	with
+148	113	152	Lambda MART - Regression Tree algorithm
 25	21	27	called
 25	28	56	dynamic chunk reader ( DCR )
 26	18	22	uses
@@ -115,21 +115,21 @@
 27	142	150	aware of
 27	155	173	subtle differences
 27	174	179	among
-27	30	40	candidates
+27	180	190	candidates
 2	55	76	Reading Comprehension
 4	66	101	neural reading comprehension ( RC )
 9	0	57	Reading comprehension - based question answering ( RCQA )
 12	45	49	RCQA
 150	31	33	on
 150	38	51	SQuAD dataset
-150	31	33	on
-150	31	33	on
-151	4	7	are
+151	119	122	are
 151	123	129	better
 151	37	66	our exact match ( EM ) and F1
+151	67	69	on
 151	74	89	development set
 151	158	168	comparable
-151	64	66	F1
+151	136	138	F1
+151	103	105	on
 151	110	118	test set
 154	28	47	our baseline system
 154	48	56	improves

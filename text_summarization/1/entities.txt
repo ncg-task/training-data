@@ -6,13 +6,13 @@
 162	69	71	at
 162	72	90	each decoding step
 163	0	18	Truncated Sampling
-163	5	7	at
 164	14	30	randomly samples
 164	31	36	words
 164	37	41	from
 164	42	61	top - 10 candidates
 164	62	64	of
 164	69	81	distribution
+164	82	84	at
 164	89	102	decoding step
 165	0	15	Mixture Decoder
 166	14	24	constructs
@@ -74,21 +74,22 @@
 37	35	43	SELECTOR
 37	52	67	specialized for
 37	68	83	diversification
-37	64	67	for
 38	19	26	used as
 38	29	46	plug - and - play
 38	47	49	to
 38	53	86	arbitrary encoder - decoder model
+38	87	90	for
 38	91	129	generation without architecture change
 2	30	57	Diverse Sequence Generation
 4	0	28	Generating diverse sequences
 12	0	51	Generating target sequences given a source sequence
 30	45	64	sequence generation
+208	0	34	Diversity vs. Accuracy Trade - off
+208	99	101	in
 209	11	15	show
 209	25	48	mixture SELECTOR method
 209	49	60	outperforms
 209	61	74	all baselines
-209	70	72	in
 209	78	104	Top - 1 and oracle metrics
 209	109	117	achieves
 209	122	138	best trade - off
@@ -99,15 +100,15 @@
 213	28	55	state - of - the - art BLEU
 213	60	62	in
 213	63	82	question generation
-213	69	71	on
+213	83	85	on
 213	86	101	SQuAD and ROUGE
-213	60	62	in
+213	147	149	in
 213	150	187	abstractive summarization in CNN - DM
 214	0	32	Diversity vs. Number of Mixtures
 215	8	15	compare
 215	20	48	effect of number of mixtures
 215	49	51	in
-215	55	84	 SELECTOR and Mixture Decoder
+215	56	84	SELECTOR and Mixture Decoder
 216	93	96	for
 216	97	112	Mixture Decoder
 216	0	4	show

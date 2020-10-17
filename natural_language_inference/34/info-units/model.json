@@ -119,8 +119,7 @@ This process iterates in multiple rounds to achieve multihop reasoning ."
               "to" : "entity graph",
               "name" : "doc2 graph"
             }
-          },
-          "from sentence" : "We not only aggregate information from documents to the entity graph ( doc2 graph ) , but also propagate the information of the entity graph back to document representations ( graph2doc ) ."
+          }
         }
       },
       "propagate" : {

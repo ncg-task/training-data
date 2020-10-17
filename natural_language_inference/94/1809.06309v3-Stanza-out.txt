@@ -53,13 +53,13 @@ It has been shown that models designed for previous tasks have limited success o
 In our work , we expand upon Gated Attention to create a baseline model better suited for complex MRC datasets such as Narrative QA by improving its attention and gating mechanisms , expanding its generation capabilities , and allowing access to external commonsense for connecting implicit relations .
 Commonsense/ Background
 Knowledge : Commonsense or background knowledge has been used for several tasks including opinion mining , sentiment analysis , handwritten text recognition , and more recently , dialogue .
-These approaches add commonsense knowledge as relation triples or features from external databases .
-Recently , largescale graphical commonsense databases such as ConceptNet ( Speer and Havasi , 2012 ) use graphical structure to express intricate relations between concepts , but effective goal - oriented graph traversal has not been extensively used in previous commonsense incorporation efforts .
+These approaches add commonsense knowledge as relation triples or features from external data bases .
+Recently , largescale graphical commonsense data bases such as ConceptNet ( Speer and Havasi , 2012 ) use graphical structure to express intricate relations between concepts , but effective goal - oriented graph traversal has not been extensively used in previous commonsense incorporation efforts .
 Knowledgebase QA is a task in which systems are asked to find answers to questions by traversing knowledge graphs .
 Knowledge path extraction has been shown to be effective at the task .
-We apply these techniques to MRC - QA by using them to extract useful commonsense knowledge paths that fully utilize the graphical nature of databases such as ConceptNet .
+We apply these techniques to MRC - QA by using them to extract useful commonsense knowledge paths that fully utilize the graphical nature of data bases such as ConceptNet .
 Incorporation of External Knowledge :
-There have been several attempts at using external knowledge to boost model performance on a variety of tasks : showed that adding lexical information from semantic databases such as WordNet improves performance on NLI ; Xu et al. ( 2017 ) used a gated recall - LSTM mechanism to incorporate commonsense information into token representations in dialogue .
+There have been several attempts at using external knowledge to boost model performance on a variety of tasks : showed that adding lexical information from semantic data bases such as WordNet improves performance on NLI ; Xu et al. ( 2017 ) used a gated recall - LSTM mechanism to incorporate commonsense information into token representations in dialogue .
 In integrated external background knowledge into an NLU model by using contextually - refined word embeddings which integrated information from Con-ceptNet ( single - hop relations mapped to unstructured text ) via a single layer bidirectional LSTM .
 Concurrently to our work , showed improvements on a cloze - style task by incorporating commonsense knowledge via a context - to - commonsense attention , where commonsense relations were extracted as triples .
 This work represented commonsense relations as keyvalue pairs and combined context representation and commonsense via a static gate .
@@ -78,7 +78,7 @@ The embedded context is then passed through k reasoning cells , each of which it
 Self - Attention Layer : The context representation is passed through a layer of self - attention to resolve long - term dependencies and co-reference within the context .
 Pointer - Generator Decoding Layer :
 A attention - pointer - generator decoder that attends on and potentially copies from the context is used to create the answer .
-The overall model is illustrated in , and the layers are described in further detail below .
+The over all model is illustrated in , and the layers are described in further detail below .
 Embedding layer :
 We embed each word from the context and question with a learned embedding space of dimension d .
 We also obtain contextaware embeddings for each word via the pretrained embedding from language models ( ELMo ) ( 1024 dimensions ) .
@@ -159,7 +159,7 @@ cottage ?
 country " using our tree building method , which is not relevant to our question .
 Therefore , to improve the precision of useful concepts , we rank these knowledge paths by their relevance and filter out noise using the following 3 - step scoring method :
 Initial Node Scoring :
-We want to select paths with nodes that are important to the context , in order to provide the most useful commonsense relations .
+We want to select paths with nodes thatare important to the context , in order to provide the most useful commonsense relations .
 We approximate importance and saliency for concepts in the context by their termfrequency , under the heuristic that important concepts occur more frequently .
 Thus we score c ? {c 2 , c 3 , c 5 } by : score ( c ) = count ( c ) / | C| , where | C| is the context length and count ( ) is the number of times a concept appears in the context .
 In , this ensures that concepts like daughter are scored highly due to their frequency in the context .
@@ -243,7 +243,7 @@ Model Performance :
 We also conduct human evaluation to verify that our commonsense incorporated model was indeed better than MHPGM .
 The improvement in Rouge - L and METEOR for all three ablation approaches have p ? 0.15 with the bootstrap test .
 We randomly selected 100 examples from the Nar-rative QA test set , along with both models ' predicted answers , and for each datapoint , we asked 3 external human evaluators ( fluent English speakers ) to decide ( without knowing which model produced each response ) if one is strictly better than the other , or that they were similar in quality ( bothgood or both - bad ) .
-As shown in , we see that the human evaluation results are in agreement with that of the automatic evaluation metrics : our commonsense incorporation has a reasonable impact on the overall correctness of the model .
+As shown in , we see that the human evaluation results are in agreement with that of the automatic evaluation metrics : our commonsense incorporation has a reasonable impact on the over all correctness of the model .
 The inter-annotator agreement had a Fleiss ? = 0.831 , indicating ' almost - perfect ' agreement between the annotators ( Landis and Koch , 1977 ) .
 Conclusion
 We present an effective reasoning - generative QA architecture that is a novel combination of previous work , which uses multiple hops of bidirectional attention and a pointer - generator decoder to effectively perform multi-hop reasoning and synthesize a coherent and correct answer .
@@ -271,7 +271,7 @@ For both Narrative QA and WikiHop , we reached these parameters via tuning on th
 A.2 Commonsense Extraction Examples
 In , and 10 ( see next page ) , we demonstrate extracted commonsense examples for questions that require commonsense to reach an answer .
 We bold words in the question and in the extracted commonsense in cases where the commonsense knowledge explicitly bridges gaps between implicitly connected words in the context or question .
-The relevant context is also displayed , with context words that are key to answering the question ( via commonsense ) marked in bold .
+The relevant context is also displayed , with context words thatare key to answering the question ( via commonsense ) marked in bold .
 These are then followed by a context visualization described in the next section .
 A.3 Commonsense Integration Visualization
 We also visualize how much commonsense information is integrated into each part of the context by providing a visualization of the z i value ( see end of Sec. 3.3 of main file ) for i ?
@@ -298,7 +298,7 @@ maurya predicts that by nightfall she will have no living sons , and her daughte
 maury a goes after bartley to bless his voyage , and nora and cathleen receive clothing from the drowned corpse that confirms it is their brother .
 maury a returns home claiming to have seen the ghost of michael riding behind bartley and begins lamenting the loss of the men in her family to the sea , after which some villagers bring in the corpse of bartley , who has fallen off his horse into the sea and drowned .
 this speech of maurya sis famous in irish drama :
-( raising her head and speaking as if she did not seethe people around her ) they re all gone now , and there is n't anything more the sea can do tome ... .
+( raising her head and speaking as if she did not see the people around her ) they re all gone now , and there is n't anything more the sea can do tome ... .
 i ll have no call now to be up crying and praying when the wind breaks from the south , and you can hear the surf is in the east , and the surf is in the west , making a great stir with the two noises , and they hitting one on the other .
 i ll have no call now to be going down and getting holy water in the dark nights after samhain , and i wo n't care what way the sea is when the other women will be keening .
 ( to nora ) give me the holy water , nora ; there s a small sup still on the dresser .
@@ -310,13 +310,13 @@ Context " .. ruth anvoy , a young american woman with a wealthy father , comes t
 having failed to find such a person , lady coxon tells anvoy that upon her death the money will be left to her , and she must carry on the quest .. " " .. anvoy , having lost nearly all her wealth , has only the 13,000 pounds from lady coxon , with amoral but not legal obligation to give it away .. " " .. she awards the coxon fund to saltram , who lives off it exactly as he lived off his friends , producing nothing of intellectual value .. "
 Answers she must giveaway the 13,000 pounds to an appropriate recipient .
 / bestow 13000 to the appropriate person frank saltram is a man who apparently has a towering intellect , but one that manifests itself only in sparkling table - talk .
-he has areal and power gift to delight with his conversation , particularly when intoxicated , but other than conversation he produces nothing .
+he has are al and power gift to delight with his conversation , particularly when intoxicated , but other than conversation he produces nothing .
 saltram also recognises no obligations or duties , is ungrateful and utterly unreliable , and is apparently prone to immoral acts .
 he lives off others , particularly the mulvilles , who , convinced of saltram s genius and genuinely enjoying his talk , host him for months at a time .
 in the opinion of the unnamed narrator , saltram is not a deliberate conman ; he simply suffers from a want of dignity .
 the story revolves around saltram and a group of people who are fascinated by him .
 ruth anvoy , a young american woman with a wealthy father , comes to britain to visit her widowed aunt lady coxon .
-there she meets george gravener , a man with areal intellect and a future in politics , and the two become engaged .
+there she meets george gravener , a man with are al intellect and a future in politics , and the two become engaged .
 she also meets saltram , and is fascinated and impressed by his talk and intellect , though aware that he has shortcomings of character .
 having made a promise to her nowdeceased husband , lady coxon has for years been seeking to bestow a sum of 13,000 pounds upon a talented intellectual whose potential has been hampered by lack of money .
 having failed to find such a person , lady coxon tells anvoy that upon her death the money will be left to her , and she must carry on the quest .
@@ -334,13 +334,13 @@ eventually he does offer the letter to anvoy , but anvoy declines to read it .
 she awards the coxon fund to saltram , who lives off it exactly as he lived off his friends , producing nothing of intellectual value .
 thus the only result of the award is the mulvilles and others lose the pleasure of saltram s conversation .
 frank saltram is a man who apparently has a towering intellect , but one that manifests itself only in sparkling table - talk .
-he has areal and power gift to delight with his conversation , particularly when intoxicated , but other than conversation he produces nothing .
+he has are al and power gift to delight with his conversation , particularly when intoxicated , but other than conversation he produces nothing .
 saltram also recognises no obligations or duties , is ungrateful and utterly unreliable , and is apparently prone to immoral acts .
 he lives off others , particularly the mulvilles , who , convinced of saltram s genius and genuinely enjoying his talk , host him for months at a time .
 in the opinion of the unnamed narrator , saltram is not a deliberate conman ; he simply suffers from a want of dignity .
 the story revolves around saltram and a group of people who are fascinated by him .
 ruth anvoy , a young american woman with a wealthy father , comes to britain to visit her widowed aunt lady coxon .
-there she meets george gravener , a man with areal intellect and a future in politics , and the two become engaged .
+there she meets george gravener , a man with are al intellect and a future in politics , and the two become engaged .
 she also meets saltram , and is fascinated and impressed by his talk and intellect , though aware that he has shortcomings of character .
 having made a promise to her nowdeceased husband , lady coxon has for years been seeking to bestow a sum of 13,000 pounds upon a talented intellectual whose potential has been hampered by lack of money .
 having failed to find such a person , lady coxon tells anvoy that upon her death the money will be left to her , and she must carry on the quest .
@@ -358,13 +358,13 @@ eventually he does offer the letter to anvoy , but anvoy declines to read it .
 she awards the coxon fund to saltram , who lives off it exactly as he lived off his friends , producing nothing of intellectual value .
 thus the only result of the award is the mulvilles and others lose the pleasure of saltram s conversation .
 frank saltram is a man who apparently has a towering intellect , but one that manifests itself only in sparkling table - talk .
-he has areal and power gift to delight with his conversation , particularly when intoxicated , but other than conversation he produces nothing .
+he has are al and power gift to delight with his conversation , particularly when intoxicated , but other than conversation he produces nothing .
 saltram also recognises no obligations or duties , is ungrateful and utterly unreliable , and is apparently prone to immoral acts .
 he lives off others , particularly the mulvilles , who , convinced of saltram s genius and genuinely enjoying his talk , host him for months at a time .
 in the opinion of the unnamed narrator , saltram is not a deliberate conman ; he simply suffers from a want of dignity .
 the story revolves around saltram and a group of people who are fascinated by him .
 ruth anvoy , a young american woman with a wealthy father , comes to britain to visit her widowed aunt lady coxon .
-there she meets george gravener , a man with areal intellect and a future in politics , and the two become engaged .
+there she meets george gravener , a man with are al intellect and a future in politics , and the two become engaged .
 she also meets saltram , and is fascinated and impressed by his talk and intellect , though aware that he has shortcomings of character .
 having made a promise to her nowdeceased husband , lady coxon has for years been seeking to bestow a sum of 13,000 pounds upon a talented intellectual whose potential has been hampered by lack of money .
 having failed to find such a person , lady coxon tells anvoy that upon her death the money will be left to her , and she must carry on the quest .

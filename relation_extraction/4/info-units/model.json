@@ -9,7 +9,7 @@
       },
       "has" : {
         "architecture" : {
-          "better customized for" : ["slot filling task", {"from sentence" : "Its architecture is better customized for the slot filling task : the word representations are augmented by extra distributed representations of word position relative to the subject and object of the putative relation ."}],
+          "better customized for" : "slot filling task",
           "has" : {
             "word representations" : {
               "augmented by" : {

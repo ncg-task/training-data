@@ -20,7 +20,7 @@ They employ a segment - based decoder instead of token - based decoding ."
                 "sequence layer" : {
                   "for" : "entity identification"
                 },
-                "entity identification" : {
+                "tree - based dependency layer" : {
                   "which identifies" : "relations between pairs of candidate entities"
                 }
               }

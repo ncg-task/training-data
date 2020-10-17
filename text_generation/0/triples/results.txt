@@ -12,7 +12,7 @@
 (generated sequences||from||compared models)
 (compared models||demonstrates||significant improvement)
 (significant improvement||of||SeqGAN)
-(SeqGAN||overall||compared models)
+(SeqGAN||over all||compared models)
 (Results||After about||150 training epochs)
 (150 training epochs||both||maximum likelihood estimation and the schedule sampling methods)
 (maximum likelihood estimation and the schedule sampling methods||converge to||relatively high NLL oracle score)

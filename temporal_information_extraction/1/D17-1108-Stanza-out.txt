@@ -5,7 +5,7 @@ Identifying temporal relations between events is an essential step towards natur
 However , the temporal relation between two events in a story depends on , and is often dictated by , relations among other events .
 Consequently , effectively identifying temporal relations between events is a challenging problem even for human annotators .
 This paper suggests that it is important to take these dependencies into account while learning to identify these relations and proposes a structured learning approach to address this challenge .
-As a byproduct , this provides anew perspective on handling missing relations , a known issue that hurts existing methods .
+As a byproduct , this provides a new perspective on handling missing relations , a known issue that hurts existing methods .
 As we show , the proposed approach results in significant improvements on the two commonly used data sets for this problem .
 Introduction
 Understanding temporal information described in natural language text is a key component of natural language understanding and , following a series of TempEval ( TE ) workshops , it has drawn increased attention .
@@ -13,7 +13,7 @@ Time - slot filling , storyline construction , clinical narratives processing , 
 The fundamental tasks in temporal processing , as identified in the TE workshops , are 1 ) time expression ( the so - called " timex " ) extraction and normalization and 2 ) temporal relation ( also known as TLINKs ) extraction .
 While the first task has now been well handled by the state - of - the - art systems ( Heidel - Time , SUTime , IllinoisTime , NavyTime , UWTime , etc. ) with end - to - end F 1 scores being around 80 % , the second task has long been a challenging one ; even the top systems only achieved F 1 scores of around 35 % in the TE workshops .
 The goal of the temporal relation task is to generate a directed temporal graph whose nodes represent temporal entities ( i.e. , events or timexes ) and edges represent the TLINKs between them .
-The task is challenging because it often requires global considerations - considering the entire graph , the TLINK annotation is quadratic in the number of nodes and thus very expensive , and an overwhelming fraction of the temporal relations are missing inhuman annotation .
+The task is challenging because it often requires global considerations - considering the entire graph , the TLINK annotation is quadratic in the number of nodes and thus very expensive , and an overwhelming fraction of the temporal relations are missing in human annotation .
 In this paper , we propose a structured learning approach to temporal relation extraction , where local models are updated based on feedback from global inferences .
 The structured approach also gives rise to a semisupervised method , making it possible to take advantage of the readily available unlabeled data .
 As a byproduct , this approach further provides a new , effective perspective on handling those missing relations .
@@ -39,7 +39,7 @@ State - of - the - art local methods , including ClearTK , UTTime ( , and NavyTi
 However , the decisions made by these ( local ) models are often globally inconsistent ( i.e. , the symmetry and / or transitivity constraints are not satisfied for the entire temporal graph ) .
 Integer linear programming ( ILP ) methods were used in this domain to enforce global consistency by several authors including ; ; , which formulated TLINK extraction as an ILP and showed that it improves over local methods for densely connected graphs .
 Since these methods perform inference ( " I " ) on top of pre-trained local classifiers ( " L " ) , they are often referred to as L+I .
-Ina state - of - the - art method , CAEVO , many hand - crafted rules and machine learned classifiers ( called sieves therein ) form a pipeline .
+In a state - of - the - art method , CAEVO , many hand - crafted rules and machine learned classifiers ( called sieves therein ) form a pipeline .
 The global consistency is enforced by inferring all possible relations before passing the graph to the next sieve .
 This best - first architecture is conceptually similar to L+ I but the inference is greedy , similar to ; .
 Although L+I methods impose global constraints in the inference phase , this paper argues that global considerations are necessary in the learning phase as well ( i.e. , structured learning ) .
@@ -81,7 +81,7 @@ Following the insights from , we propose to use a structured learning approach (
 Unlike the current L+I approach , where local classifiers are trained independently beforehand without knowledge of the predictions on neighboring pairs , we train local classifiers with feedback that accounts for other relations , by performing global inference in each round of the learning process .
 In order to introduce the structured learning algorithm , we first explain its most important component , the global inference step .
 Inference
-Ina document with n pairs of events , let ?
+In a document with n pairs of events , let ?
 i ?
 X ?
 Rd be the extracted d-dimensional feature and y i ?
@@ -93,7 +93,7 @@ Given the weight vector w r of a linear classifier trained for relation r ?
 Y ( i.e. , using the one - vs - all scheme ) , the global inference step is to solve the following constrained optimization problem : ?
 where C ( Y n ) ?
 Y n constrains the temporal graph to be symmetrically and transitively consistent , and f ( x , y) is the scoring function :
-is simply the sum of these probabilities overall the event pairs in a document , which we think of as the confidence of assigning y = {y 1 , ... , y n } to this document and therefore , it needs to be maximized in Eq .
+is simply the sum of these probabilities over all the event pairs in a document , which we think of as the confidence of assigning y = {y 1 , ... , y n } to this document and therefore , it needs to be maximized in Eq .
 ( 1 ) .
 ( 1 ) can be solved for each ?
 i independently , which is what the so - called local methods do , but the resultin ?
@@ -109,7 +109,7 @@ for all distinct events i , j , and k , where E = { ij | sentence dist ( i , j )
 Our formulation in Eq.
 ( 2 ) is different from previous work in two aspects :
 1 ) We restrict our event pairs ij to a smaller set E = { ij | sentence dist ( i , j ) ?
-1 } where pairs that are more than one sentence away are deleted for computational efficiency and ( usually ) for better performance .
+1 } where pairs thatare more than one sentence away are deleted for computational efficiency and ( usually ) for better performance .
 In fact , to make better use of global constraints , we should have allowed more event pairs in Eq..
 However , fr ( ij ) is usually more reliable when i and j are closer in text .
 Many participating systems in have used this pre-filtering strategy to balance the trade - off between confidence inf r ( ij ) and global constraints .
@@ -153,7 +153,7 @@ Missing Annotations
 Since even human annotators find it difficult to annotate temporal graphs , many of the TLINKs are left unspecified by annotators ( compare to ) .
 While some of these missing TLINKs can be inferred from existing ones , the vast majority still remain unknown as shown in .
 De-spite the existence of denser annotation schemes ( e.g. , ) , the TLINK annotation task is quadratic in the number of nodes , and it is practically infeasible to annotate complete graphs .
-Therefore , the problem of identifying these unknown relations in training and testis a major issue that dramatically hurts existing methods .
+Therefore , the problem of identifying these unknown relations in training and test is a major issue that dramatically hurts existing methods .
 We could simply use these unknown pairs ( or some filtered version of them ) to design rules or train classifiers to identify whether a TLINK is vague or not .
 However , we propose to exclude both the unknown pairs and the vague classifier from the training process - by changing the structured loss function to ignore the inference feedback on vague TLINK s ( see Line 9 in Algorithm 1 and Line 9 in Algorithm 2 ) .
 The reasons are discussed below .
@@ -168,7 +168,7 @@ Fourth , without the vague classifier , the predicted temporal graph tends to be
 However , excluding the local classifier for vague TLINKs would undesirably assign nonvague TLINKs to every pair of events .
 To handle this , we take a closer look at the vague TLINKs .
 We note that a vague TLINK could arise in two situations if the annotators did not fail to look at it .
-One is that an annotator looks at this pair of events and decides that multiple relations can exist , and the other one is that two annotators disagree on the relation ( similar arguments were also made in ) .
+One is that an annotator looks at this pair of events and decides that multiple relations can exist , and the other one is that two annotators dis agree on the relation ( similar arguments were also made in ) .
 In both situations , the annotators first try to assign all possible relations to a TLINK , and then change the relation to vague if more than one can be assigned .
 This human annotation process for vague is different from many existing methods , which either identify the existence of a TLINK first ( using rules or machinelearned classifiers ) and then classify , or directly include vague as a classification label along with other non-vague relations .
 In this work , however , we propose to mimic this mental process by a post - filtering method 2 .
@@ -195,7 +195,7 @@ The TLINK annotations in TE3 - SV is not used in this paper and it s number is t
 Dataset
 Doc
 Baseline Methods
-In addition to the state - of - the - art systems , another two baseline methods were also implemented fora better understanding of the proposed ones .
+In addition to the state - of - the - art systems , another two baseline methods were also implemented for a better understanding of the proposed ones .
 The first is the regularized averaged perceptron ( AP ) implemented in the LBJava package and is a local method .
 On top of the first baseline , we performed global inference in Eq .
 ( 2 ) , referred to as the L+I baseline ( AP + ILP ) .
@@ -216,7 +216,7 @@ By adding the VC and TD datasets into the training set , we retrained our local 
 The fourth column indicates the annotation sources used , with additional unlabeled dataset in the parentheses .
 The " Filters " column shows if the pre-filtering method ( Sec. 3.1 ) or the proposed post - filtering method ( Sec. 4 ) were used .
 The last column is the relative improvement in F1 score compared to baseline systems online 1 , 7 , and 11 , respectively .
-Systems that are significantly better than the " * " - ed systems are underlined UTTime ( " AP - 2 " in ) .
+Systems thatare significantly better than the " * " - ed systems are underlined UTTime ( " AP - 2 " in ) .
 On top of AP - 2 , a global inference step enforcing symmetry and transitivity constraints ( " AP + ILP " ) can further improve the F 1 score by 9.3 % , which is consistent with previous observations .
 SP + ILP further improved the performance in precision , recall , and F 1 significantly ( per the McNemar 's test with p < 0.0005 ) , reaching an F 1 score of 67.2 % .
 This meets our expectation that structured learning can be better when the local problem is difficult .

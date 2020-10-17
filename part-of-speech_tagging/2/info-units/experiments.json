@@ -36,7 +36,9 @@
                 "initial learning rate" : {
                   "at" : "0.01"
                 },
-                "from sentence" : "We fix the hyperparameters for all the results reported in this section : we set the character embedding dimension at 25 , the word embedding dimension at 50 for English and 64 for Spanish , the dimension of hidden states of the character - level GRUs at 80 , the dimension of hidden states of the word - level GRUs at 300 , and the initial learning rate at 0.01 ."
+                "from sentence" : "TRANSFER LEARNING PERFORMANCE
+We fix the hyperparameters for all the results reported in this section : we set the character embedding dimension at 25 , the word embedding dimension at 50 for English and 64 for Spanish , the dimension of hidden states of the character - level GRUs at 80 , the dimension of hidden states of the word - level GRUs at 300 , and the initial learning rate at 0.01 ."
+
               }
             },
             "Results" : {
@@ -110,7 +112,9 @@
               "use" : {
                 "publicly available pretrained word embeddings" : {
                   "as" : "initialization",
-                  "from sentence" : "We use publicly available pretrained word embeddings as initialization ."
+                  "from sentence" : "COMPARISON WITH STATE - OF - THE - ART RESULTS
+We use publicly available pretrained word embeddings as initialization ."
+
                 }
               },
               "On" : {

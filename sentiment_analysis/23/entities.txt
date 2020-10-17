@@ -6,13 +6,8 @@
 193	50	53	for
 193	54	65	convolution
 193	70	73	200
-193	50	53	for
+193	74	77	for
 193	82	99	last hidden layer
-194	0	15	Word embeddings
-194	16	19	are
-194	20	35	300 dimensional
-194	38	64	pretrained ourselves using
-194	65	73	word2vec
 197	0	7	Dropout
 197	19	29	applied to
 197	30	57	both weights and embeddings
@@ -21,6 +16,11 @@
 198	37	41	50 %
 198	48	58	embeddings
 198	59	63	40 %
+194	0	15	Word embeddings
+194	16	19	are
+194	20	35	300 dimensional
+194	38	64	pretrained ourselves using
+194	65	73	word2vec
 194	74	82	To train
 194	83	92	our model
 194	98	105	compute
@@ -68,7 +68,7 @@
 29	152	194	aggregates these extracted feature vectors
 29	198	204	taking
 29	209	222	maximum value
-29	90	92	in
+29	223	225	in
 29	226	240	each dimension
 2	0	39	Discriminative Neural Sentence Modeling
 208	18	31	d-TBCNN model
@@ -84,7 +84,7 @@
 210	192	196	RNNs
 210	197	199	to
 210	202	246	large extent ( 50.4 - 51.4 % versus 43.2 % )
-210	291	296	 CNNs
+210	283	296	" flat " CNNs
 210	297	309	by more than
 210	310	314	10 %
 212	8	15	observe

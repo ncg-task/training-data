@@ -11,7 +11,7 @@
 152	8	25	variant attention
 152	37	47	applied to
 152	52	67	c - LSTM output
-152	16	18	at
+152	68	70	at
 152	71	85	each timestamp
 154	0	3	TFN
 155	8	19	specific to
@@ -26,6 +26,11 @@
 158	62	81	multi-view learning
 158	82	93	by modeling
 158	94	139	view - specific and cross - view interactions
+160	0	3	CNN
+160	14	26	identical to
+160	27	64	our textual feature extractor network
+160	88	100	does not use
+160	101	123	contextual information
 161	0	6	Memnet
 161	31	48	current utterance
 161	52	58	fed to
@@ -34,16 +39,14 @@
 161	88	96	memories
 161	97	110	correspond to
 161	111	131	preceding utterances
-161	61	75	memory network
-162	11	15	from
 162	4	10	output
 162	11	15	from
+162	20	34	memory network
 162	38	45	used as
 162	50	80	final utterance representation
 162	81	84	for
 162	85	107	emotion classification
 163	0	3	CMN
-163	8	10	is
 163	11	40	state - of - the - art method
 163	41	47	models
 163	48	65	utterance context
@@ -72,7 +75,7 @@
 23	80	104	all preceding utterances
 23	105	107	by
 23	108	125	different parties
-23	6	8	in
+23	126	128	in
 23	133	145	conversation
 24	4	17	speaker state
 24	18	28	depends on
@@ -118,8 +121,9 @@
 182	5	16	DialogueRNN
 182	17	28	outperforms
 182	29	32	CMN
-182	23	26	for
+182	33	36	for
 182	37	90	valence , arousal , expectancy , and power attributes
+185	0	36	DialogueRNN vs. DialogueRNN Variants
 187	0	13	DialogueRNN l
 188	12	17	using
 188	18	48	explicit listener state update
@@ -128,7 +132,7 @@
 188	83	87	than
 188	88	107	regular DialogueRNN
 193	0	13	BiDialogueRNN
-193	46	48	on
 194	43	54	outperforms
 194	55	67	Dialogue RNN
+194	68	70	on
 194	82	95	both datasets

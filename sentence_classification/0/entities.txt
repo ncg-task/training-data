@@ -1,17 +1,17 @@
-175	14	18	uses
-175	21	41	similar architecture
-175	42	44	to
-175	49	93	proposed neural multitask learning framework
-175	116	125	optimizes
-175	130	137	network
-175	138	141	for
-175	146	155	main loss
-175	156	165	regarding
-175	170	208	citation intent classification ( L 1 )
+173	0	42	BiLSTM Attention ( with and without ELMo )
+174	14	18	uses
+174	21	41	similar architecture
+174	42	44	to
+174	49	93	proposed neural multitask learning framework
+174	116	125	optimizes
+174	130	137	network
+174	138	141	for
+174	146	155	main loss
+174	156	165	regarding
+174	170	208	citation intent classification ( L 1 )
 8	37	72	https://github.com/ allenai/scicite
 121	34	43	introduce
 121	44	54	Sci - Cite
-121	96	98	is
 121	59	70	new dataset
 121	71	73	of
 121	74	90	citation intents
@@ -75,7 +75,7 @@
 157	95	100	1,024
 157	117	127	trained on
 157	130	137	dataset
-157	92	94	of
+157	138	140	of
 157	141	153	5.5 B tokens
 159	4	26	each of scaffold tasks
 159	32	35	use
@@ -86,7 +86,7 @@
 159	62	77	20 hidden nodes
 159	80	95	ReLU activation
 159	102	114	Dropout rate
-159	9	11	of
+159	115	117	of
 159	118	121	0.2
 158	3	6	use
 158	9	30	single - layer BiLSTM
@@ -103,7 +103,7 @@
 164	16	19	for
 164	20	37	ACL - ARC dataset
 164	42	44	32
-164	16	19	for
+164	45	48	for
 164	49	64	SciCite dataset
 23	17	24	propose
 23	27	62	neural multitask learning framework
@@ -114,7 +114,7 @@
 23	103	107	from
 23	112	142	structure of scientific papers
 24	27	46	two auxiliary tasks
-24	42	44	as
+24	47	49	as
 24	50	70	structural scaffolds
 24	71	81	to improve
 24	82	108	citation intent prediction
@@ -137,103 +137,104 @@
 2	25	82	Citation Intent Classification in Scientific Publications
 4	0	57	Identifying the intent of a citation in scientific papers
 19	42	72	citation intent classification
-182	3	10	observe
-182	20	46	scaffold - enhanced models
-182	47	54	achieve
-182	55	73	clear improvements
-182	74	78	over
-182	83	114	state - of - the - art approach
-198	26	33	results
-198	34	36	on
-198	37	47	categories
-198	48	52	with
-198	53	77	more number of instances
-198	78	81	are
-198	82	88	higher
-183	0	13	Starting with
-183	20	33	BiLSTM - Attn
-183	9	13	with
-183	52	66	macro F1 score
-183	67	69	of
-183	70	74	51.8
-183	77	83	adding
-183	88	153	first scaffold task in ' BiLSTM - Attn + section title scaffold '
-183	154	162	improves
-183	58	66	F1 score
-183	176	178	to
-183	179	193	56.9 (?= 5.1 )
-184	0	6	Adding
-184	11	26	second scaffold
-184	3	5	in
-184	32	76	BiLSTM - Attn + citation worthiness scaffold
-184	84	94	results in
-184	95	115	similar improvements
-184	118	132	56.3 (?= 4.5 )
-193	7	21	both scaffolds
-193	22	32	results in
-193	33	53	further improvements
-185	5	19	both scaffolds
-185	49	79	BiLSTM - Attn + both scaffolds
-185	88	96	F1 score
-185	105	116	improves to
-185	117	133	63.1 ( ?= 11.3 )
-186	41	44	add
-186	45	57	ELMo vectors
-186	53	55	to
-186	65	86	input representations
-186	65	67	in
-186	92	131	BiLSTM - Attn w / ELMo + both scaffolds
-186	136	145	achieving
-186	149	151	F1
-186	152	154	of
-186	155	159	67.9
-186	164	181	major improvement
-186	182	186	from
-186	191	230	previous state - of - the - art results
-186	152	154	of
-186	234	250	54.6 ( ?= 13.3 )
-194	8	20	best results
-194	34	42	by using
-194	43	62	ELMo representation
-194	63	77	in addition to
-194	78	92	both scaffolds
-192	0	18	Each scaffold task
-192	19	27	improves
-192	28	45	model performance
-187	3	7	note
-187	17	31	scaffold tasks
-187	32	39	provide
-187	40	59	major contributions
-187	60	69	on top of
-187	74	109	ELMo - enabled baseline ( ?= 13.6 )
-189	8	25	experimented with
-189	26	41	adding features
-189	42	49	used in
-189	53	67	our best model
-189	122	130	observed
-189	131	153	at least 1.7 % decline
-189	29	31	in
-189	157	168	performance
-199	12	14	on
-199	15	24	ACL - ARC
-199	31	38	results
-199	12	14	on
-199	46	65	BACKGROUND category
-199	66	69	are
-199	74	81	highest
-199	82	84	as
-199	57	65	category
-199	87	89	is
-199	106	117	most common
-200	32	51	FUTUREWORK category
-200	52	55	are
-200	60	66	lowest
-201	22	40	fewest data points
-201	87	91	thus
-201	98	104	harder
-201	105	108	for
-201	113	118	model
-201	119	127	to learn
-201	132	150	optimal parameters
-201	105	108	for
-201	155	177	correct classification
+181	3	10	observe
+181	20	46	scaffold - enhanced models
+181	47	54	achieve
+181	55	73	clear improvements
+181	74	78	over
+181	83	114	state - of - the - art approach
+197	26	33	results
+197	34	36	on
+197	37	47	categories
+197	48	52	with
+197	53	77	more number of instances
+197	78	81	are
+197	82	88	higher
+182	0	13	Starting with
+182	20	33	BiLSTM - Attn
+182	45	49	with
+182	52	66	macro F1 score
+182	67	69	of
+182	70	74	51.8
+182	77	83	adding
+182	88	153	first scaffold task in ' BiLSTM - Attn + section title scaffold '
+182	154	162	improves
+182	167	175	F1 score
+182	176	178	to
+182	179	193	56.9 (?= 5.1 )
+183	0	6	Adding
+183	11	26	second scaffold
+183	27	29	in
+183	32	76	BiLSTM - Attn + citation worthiness scaffold
+183	84	94	results in
+183	95	115	similar improvements
+183	118	132	56.3 (?= 4.5 )
+192	7	21	both scaffolds
+192	22	32	results in
+192	33	53	further improvements
+184	5	19	both scaffolds
+184	24	46	used simultaneously in
+184	49	79	BiLSTM - Attn + both scaffolds
+184	88	96	F1 score
+184	105	116	improves to
+184	117	133	63.1 ( ?= 11.3 )
+185	41	44	add
+185	45	57	ELMo vectors
+185	58	60	to
+185	65	86	input representations
+185	87	89	in
+185	92	131	BiLSTM - Attn w / ELMo + both scaffolds
+185	136	145	achieving
+185	149	151	F1
+185	152	154	of
+185	155	159	67.9
+185	164	181	major improvement
+185	182	186	from
+185	191	230	previous state - of - the - art results
+185	231	233	of
+185	234	250	54.6 ( ?= 13.3 )
+193	8	20	best results
+193	34	42	by using
+193	43	62	ELMo representation
+193	63	77	in addition to
+193	78	92	both scaffolds
+191	0	18	Each scaffold task
+191	19	27	improves
+191	28	45	model performance
+186	3	7	note
+186	17	31	scaffold tasks
+186	32	39	provide
+186	40	59	major contributions
+186	60	69	on top of
+186	74	109	ELMo - enabled baseline ( ?= 13.6 )
+188	8	25	experimented with
+188	26	41	adding features
+188	42	49	used in
+188	53	67	our best model
+188	122	130	observed
+188	131	153	at least 1.7 % decline
+188	154	156	in
+188	157	168	performance
+198	12	14	on
+198	15	24	ACL - ARC
+198	31	38	results
+198	39	41	on
+198	46	65	BACKGROUND category
+198	66	69	are
+198	74	81	highest
+198	82	84	as
+198	90	98	category
+198	99	101	is
+198	106	117	most common
+199	32	51	FUTUREWORK category
+199	52	55	are
+199	60	66	lowest
+200	22	40	fewest data points
+200	87	91	thus
+200	98	104	harder
+200	105	108	for
+200	113	118	model
+200	119	127	to learn
+200	132	150	optimal parameters
+200	151	154	for
+200	155	177	correct classification

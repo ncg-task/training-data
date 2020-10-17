@@ -8,7 +8,7 @@
 130	96	98	of
 130	99	102	0.1
 130	107	122	L2 weight decay
-130	96	98	of
+130	123	125	of
 130	126	130	0.01
 131	4	14	batch size
 131	18	29	selected in
@@ -37,7 +37,7 @@
 27	62	88	syntax - guided constraint
 27	91	101	to capture
 27	102	122	syntax related parts
-27	57	61	with
+27	123	127	with
 27	128	147	each concerned word
 28	18	23	adopt
 28	24	77	pre-trained dependency syntactic parse tree structure
@@ -45,14 +45,15 @@
 28	93	106	related nodes
 28	107	110	for
 28	111	120	each word
-28	31	33	in
+28	121	123	in
 28	126	134	sentence
 28	191	200	regarding
-28	111	120	each word
+28	201	210	each word
 28	211	213	as
 28	216	226	child node
 28	137	143	namely
 28	144	185	syntactic dependency of interest ( SDOI )
+30	15	26	accommodate
 30	32	48	SDOI information
 30	54	61	propose
 30	64	106	novel syntax - guided network ( SG - Net )
@@ -60,7 +61,7 @@
 30	125	152	original SAN and SDOI - SAN
 30	155	165	to provide
 30	166	209	more linguistically inspired representation
-30	39	42	for
+30	210	213	for
 30	226	253	reading comprehension tasks
 2	27	56	Machine Reading Comprehension
 13	130	167	machine reading comprehension ( MRC )

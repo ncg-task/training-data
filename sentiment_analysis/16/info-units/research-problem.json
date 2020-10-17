@@ -1,8 +1,7 @@
 {
   "has research problem" : [
     ["Aspect Sentiment Classification", {"from sentence" : "Target - Sensitive Memory Networks for Aspect Sentiment Classification"}],
-    ["Aspect sentiment classification ( ASC )", {"from sentence" : "Aspect sentiment classification ( ASC ) is a fundamental task in sentiment analysis ."}],
-    ["sentiment analysis", {"from sentence" : "Aspect sentiment classification ( ASC ) is a fundamental task in sentiment analysis ."}],
+    ["Aspect sentiment classification ( ASC )", "sentiment analysis", {"from sentence" : "Aspect sentiment classification ( ASC ) is a fundamental task in sentiment analysis ."}],
     ["ASC", {"from sentence" : "However , we found an important problem with the current MNs in performing the ASC task ."}]
   ]
 }

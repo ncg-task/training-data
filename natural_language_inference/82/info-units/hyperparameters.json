@@ -3,9 +3,11 @@
     "Hyperparameters" : {
       "For" : {
         "preprocessing" : {
-          "segment at" : ["sentences", {
+          "segment" : ["sentences", {
             "punctuation marks" : {
-              "has" : [".", "!", "?"]}}],
+              "has" : [".", "!", "?"]
+			}
+		  }],
           "from sentence" : "For preprocessing , we segment sentences at punctuation marks \" . \" , \" ! \" , and \" ? \" ."
         }
       },

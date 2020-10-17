@@ -24,13 +24,13 @@
 136	23	38	input sequences
 136	44	58	passed through
 136	61	105	1 - dimensional convolutional neural network
-136	45	47	as
+136	106	108	as
 136	109	127	feature extractors
 22	19	22	use
 22	27	48	pretrained BERT model
 22	53	68	finetune it for
 22	73	117	fine - grained sentiment classification task
-22	110	112	on
+22	118	120	on
 22	125	168	Stanford Sentiment Treebank ( SST ) dataset
 2	0	39	Fine - grained Sentiment Classification
 4	0	24	Sentiment classification

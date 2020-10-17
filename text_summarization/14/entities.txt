@@ -1,3 +1,4 @@
+189	0	57	Does our summarization model learn entailment knowledge ?
 192	0	3	For
 192	8	16	test set
 192	26	50	average entailment score
@@ -9,6 +10,7 @@
 192	119	138	entailment score is
 192	144	148	0.46
 193	8	13	adopt
+193	14	40	entailmentbased strategies
 193	47	63	entailment score
 193	64	72	rises to
 193	73	77	0.63
@@ -25,7 +27,7 @@
 194	107	126	selective mechanism
 194	131	141	filter out
 194	142	163	secondary information
-194	77	79	in
+194	164	166	in
 194	171	176	input
 195	0	34	Entailment - aware selective model
 195	35	43	achieves
@@ -36,6 +38,7 @@
 196	40	49	our model
 196	54	74	successfully learned
 196	75	95	entailment knowledge
+198	0	38	Is it less abstractive for our model ?
 202	0	10	shows that
 202	15	28	seq2seq model
 202	29	37	produces
@@ -50,11 +53,12 @@
 203	119	128	generates
 203	129	145	more novel words
 203	148	163	suggesting that
-203	109	118	our model
+203	164	173	our model
 203	174	182	provides
 203	185	204	compromise solution
-203	95	98	for
+203	205	208	for
 203	209	240	informativeness and correctness
+205	6	57	Could the entailment recognition also be improved ?
 208	0	5	shows
 208	11	34	our summarization model
 208	35	39	with
@@ -89,15 +93,16 @@
 157	115	117	to
 157	118	131	seq2seq model
 158	0	31	Seq2seq + MTL ( Share decoder )
-158	22	29	decoder
 159	0	7	propose
 159	10	49	multi - task learning ( MTL ) framework
 159	50	58	in which
+159	63	70	decoder
 159	71	84	is shared for
 159	85	140	summarization generation and entailment generation task
 160	0	15	Seq2seq + ERAML
 161	27	31	with
 161	32	58	entailment - aware decoder
+161	67	75	conducts
 161	79	154	Entailment Reward Augmented Maximum Likelihood ( ERAML ) training framework
 162	0	23	Seq2seq + ROUGE -2 RAML
 163	3	8	apply
@@ -112,12 +117,12 @@
 165	90	92	of
 165	93	117	Entailment and ROUGE - 2
 166	0	19	Seq2seq + selective
-167	0	6	employ
-167	9	33	selective encoding model
-167	34	44	to control
-167	49	65	information flow
-167	66	70	from
-167	71	89	encoder to decoder
+125	0	6	employ
+125	9	33	selective encoding model
+125	34	44	to control
+125	49	65	information flow
+125	66	70	from
+125	71	89	encoder to decoder
 27	79	86	propose
 27	103	129	entailment - aware encoder
 27	137	163	entailment - aware decoder

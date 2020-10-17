@@ -102,7 +102,7 @@ We obtain a difference score between has - answer score and the no -answer score
 A threshold ?
 is set to determine whether the question is answerable , which is heuristically computed in linear time with dynamic programming according to the development set .
 The model predicts the answer span that gives the has - answer score if the final score is above the threshold , and null string otherwise. , the pooled representation explicitly includes classification information during the pre-training stage of BERT .
-We expect the pooled to be overall representation of the input .
+We expect the pooled to be over all representation of the input .
 Thus , the first token representationh 0 in H is picked out and is passed to a feedforward layer to give the prediction p.
 For each instance with n choice candidates , we update model parameters according to cross -entropy loss during training and choose the one with highest probability as the prediction when testing .
 The training objectives of our RACE model is defined as , L ( ? ) = ?
@@ -114,7 +114,7 @@ Experiments
 Dataset and Setup
 Our experiments and analysis are carried on two data sets , involving span - based and multi - choice MRC and we use the fine - tuned cased BERT ( whole word masking ) as the baseline .
 Span - based MRC
-As a widely used MRC benchmark dataset , SQuAD 2.0 combines the 100,000 questions in SQuAD 1.1 with over 50,000 new , unanswerable questions that are written adversarially by crowdworkers to look similar to answerable ones .
+As a widely used MRC benchmark dataset , SQuAD 2.0 combines the 100,000 questions in SQuAD 1.1 with over 50,000 new , unanswerable questions thatare written adversarially by crowdworkers to look similar to answerable ones .
 For the SQuAD 2.0 challenge , systems must not only answer questions when possible , but also abstain from answering when no answer is supported by the paragraph .
 Two official metrics are selected to evaluate the model performance : Exact Match ( EM ) and a softer metric F1 score , which measure the weighted average of the precision and recall rate at a character level .
 Multi-choice

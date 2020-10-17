@@ -2,7 +2,6 @@
   "has research problem" : [
     ["Sentiment Classification", {"from sentence" : "Sentiment Classification using Document Embeddings trained with Cosine Similarity"}],
     ["document - level sentiment classification", {"from sentence" : "In document - level sentiment classification , each document must be mapped to a fixed length vector ."}],
-    ["sentiment classification", {"from sentence" : "In document classification tasks such as sentiment classification ( in this paper we focus on binary sentiment classification of long movie reviews , i.e. determining whether each review is positive or negative ) , the choice of document representation is usually more important than the choice of classifier ."}],
-    ["binary sentiment classification of long movie reviews", {"from sentence" : "In document classification tasks such as sentiment classification ( in this paper we focus on binary sentiment classification of long movie reviews , i.e. determining whether each review is positive or negative ) , the choice of document representation is usually more important than the choice of classifier ."}]
+    ["sentiment classification", "binary sentiment classification of long movie reviews", {"from sentence" : "In document classification tasks such as sentiment classification ( in this paper we focus on binary sentiment classification of long movie reviews , i.e. determining whether each review is positive or negative ) , the choice of document representation is usually more important than the choice of classifier ."}]
   ]
 }

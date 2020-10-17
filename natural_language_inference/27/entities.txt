@@ -40,9 +40,9 @@
 255	54	76	En - Fr - En data only
 255	197	203	yields
 255	207	215	increase
-255	3	5	in
+255	216	218	in
 255	223	225	F1
-255	40	42	by
+255	154	156	by
 255	229	240	0.5 percent
 259	70	82	observe that
 259	85	104	good sampling ratio
@@ -78,7 +78,7 @@
 202	64	78	with parameter
 202	79	90	? = 3 10 ?7
 203	20	27	dropout
-203	9	11	on
+203	28	30	on
 203	31	35	word
 203	38	58	character embeddings
 203	63	77	between layers
@@ -86,11 +86,11 @@
 203	90	122	word and character dropout rates
 203	123	126	are
 203	127	139	0.1 and 0.05
-203	109	121	dropout rate
-203	63	70	between
+203	163	175	dropout rate
+203	176	183	between
 203	184	200	every two layers
 203	201	203	is
-203	127	130	0.1
+203	204	207	0.1
 207	11	25	ADAM optimizer
 207	49	53	with
 207	54	87	? 1 = 0.8 , ? 2 = 0.999 , = 10 ?7
@@ -102,7 +102,7 @@
 208	82	85	0.0
 208	86	88	to
 208	89	94	0.001
-208	14	16	in
+208	95	97	in
 208	102	118	first 1000 steps
 208	125	129	then
 208	130	138	maintain
@@ -116,12 +116,12 @@
 204	107	112	where
 204	113	123	sublayer l
 204	128	173	survival probability pl = 1 ? l L ( 1 ? p L )
-204	107	112	where
-204	160	161	L
+204	174	179	where
+204	180	181	L
 204	182	184	is
 204	189	199	last layer
-204	168	171	p L
-204	152	153	=
+204	204	207	p L
+204	208	209	=
 204	210	213	0.9
 205	4	49	hidden size and the convolution filter number
 205	50	53	are
@@ -130,15 +130,15 @@
 205	79	81	is
 205	82	84	32
 205	87	101	training steps
-205	50	53	are
+205	102	105	are
 205	106	111	150 K
 205	112	115	for
 205	116	129	original data
 205	132	137	250 K
-205	112	115	for
+205	138	141	for
 205	144	163	data augmentation 2
 205	172	177	340 K
-205	112	115	for
+205	178	181	for
 205	184	203	data augmentation 3
 206	4	33	numbers of convolution layers
 206	34	36	in
@@ -146,12 +146,12 @@
 206	72	75	are
 206	76	83	4 and 2
 206	86	98	kernel sizes
-206	72	75	are
+206	99	102	are
 206	103	110	7 and 5
 206	121	134	block numbers
 206	135	138	for
 206	143	151	encoders
-206	72	75	are
+206	152	155	are
 206	156	163	1 and 7
 209	0	26	Exponential moving average
 209	30	40	applied on
@@ -160,14 +160,14 @@
 209	72	89	decay rate 0.9999
 210	13	22	implement
 210	23	32	our model
-210	1	3	in
+210	33	35	in
 210	36	42	Python
 210	43	48	using
 210	49	59	Tensorflow
-210	64	72	carryout
-210	73	88	our experiments
-210	40	42	on
-210	95	111	NVIDIA p 100 GPU
+210	64	73	carry out
+210	74	89	our experiments
+210	90	92	on
+210	96	112	NVIDIA p 100 GPU
 219	36	68	accuracy ( EM / F1 ) performance
 219	69	71	of
 219	72	81	our model
@@ -184,7 +184,7 @@
 220	134	150	EM and F1 scores
 221	5	17	trained with
 221	22	36	augmented data
-221	13	17	with
+221	37	41	with
 221	42	64	proper sampling scheme
 221	67	76	our model
 221	77	84	can get
@@ -230,7 +230,7 @@
 24	127	140	each position
 24	141	146	being
 24	151	163	start or end
-24	124	126	of
+24	164	166	of
 24	171	182	answer span
 25	3	7	call
 25	13	31	architecture QANet

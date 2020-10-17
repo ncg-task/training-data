@@ -43,7 +43,7 @@ Therefore the model is robust against noise present in the precomputed syntactic
 The system was implemented based on the description by with two changes which were necessary due to the large size of the training data set used for model fitting .
 The first change was related to the learning procedure and the second one to the family of features used .
 Regarding the learning procedure , the original model uses a large - margin learning framework , namely MIRA , but with some minor changes as presented by .
-In this set - up , online learning is performed , and at each step an optimization procedure is made where K constraints are included , which correspond to the top - K solutions fora given training observation .
+In this set - up , online learning is performed , and at each step an optimization procedure is made where K constraints are included , which correspond to the top - K solutions for a given training observation .
 This optimization step is equivalent to a Quadratic Programming problem if K > 1 , which is time - costly to solve , and therefore not adequate for the large amount of data we used for training the model .
 Furthermore , in his publication McDonald states clearly that different values of K did not actually have a major impact on the final performance of the model .
 Consequently , and for the sake of being able to successfully train the model with largescale data , the learning procedure is implemented as a distributed structured perceptron with iterative parameter mixing , where each shard is processed with MIRA and K is set to 1 .
@@ -69,7 +69,7 @@ The model is fitted over ten epochs on the whole training data , and for model s
 Our approach is largely based on the sequence to sequence paradigm proposed in .
 We train a model that maximizes the probability of the correct output given the input sentence .
 Concretely , for each training pair ( X , Y ) , we will learn a parametric model ( with parameters ? ) , by solving the following optimization problem :
-where the sum is assumed to be overall training examples .
+where the sum is assumed to be over all training examples .
 To model the probability p , we use the same architecture described by .
 In particular , we use a RNN based on the Long Short Term Memory ( LSTM ) unit , designed to avoid vanishing gradients and to remember some long - distance dependences from the input sequence .
 shows a basic LSTM architecture .
@@ -178,7 +178,7 @@ State Sen. Stewart Greenleaf discusses his proposed human trafficking bill at Ca
 Stewart Greenleaf discusses his human trafficking bill .
 Alan Turing , known as the father of computer science , the codebreaker that helped win World War 2 , and the man tortured by the state for being gay , is to receive a pardon nearly 60 years after his death .
 Alan Turing is to receive a pardon .
-Robert Levinson , an American who disappeared in Iran in 2007 , was in the country working for the CIA , according to a report from the Associated Press 's Matt Apuzzo and Adam Goldman .
+Robert Levinson , an American who dis appeared in Iran in 2007 , was in the country working for the CIA , according to a report from the Associated Press 's Matt Apuzzo and Adam Goldman .
 Robert Levinson was working for the CIA .
 the amount of parallel data we had at our disposal .
 The simple LSTM model which only uses token embeddings to generate a sequence of deletion decisions significantly outperforms the baseline which was given not only embeddings but also syntactic and other features .
@@ -196,10 +196,10 @@ Arguably , such cases would also be difficult for other systems .
 In particular , recognizing when the context is crucial is a problem that can be solved only by including deep semantic and discourse features which has not been attempted yet .
 And sentences with quotes ( direct speech , a song or a book title , etc. ) are challenging for parsers which in turn provide important signals for most compression systems .
 The bottom of contains examples of good compressions .
-Even though fora significant number of input sentences the compression was a continuous subsequence of tokens , there are many discontinuous compressions .
+Even though for a significant number of input sentences the compression was a continuous subsequence of tokens , there are many discontinuous compressions .
 In particular , the LSTM model learned to drop appositions , no matter how long they are , temporal expressions , optional modifiers , introductory clauses , etc .
 Our understanding of why the extended model ( LSTM + PAR + PRES ) performed worse in the human evlauation than the base model is that , in the absence of syntactic features , the basic LSTM learned a model of syntax useful for compression , while LSTM ++ , which was given syntactic information , learned to optimize for the particular way the " golden " set was created ( tree pruning ) .
-While the automatic evaluation penalized all deviations from the single golden variant , inhuman evals there was no penalty for readable alternatives .
+While the automatic evaluation penalized all deviations from the single golden variant , in human evals there was no penalty for readable alternatives .
 Conclusions
 We presented , to our knowledge , a first attempt at building a competitive compression system which is given no linguistic features from the input .
 The two important components of the system are ( 1 ) word embeddings , which can be obtained by anyone either pre-trained , or by running word2vec on a large corpus , and ( 2 ) an LSTM model which draws on the very recent advances in research on RNNs .

@@ -12,7 +12,7 @@
 173	57	71	sequence layer
 173	72	75	for
 173	76	97	entity identification
-173	76	97	entity identification
+173	106	135	tree - based dependency layer
 173	136	152	which identifies
 173	153	198	relations between pairs of candidate entities
 174	8	16	employed
@@ -57,7 +57,7 @@
 188	37	58	ACE05 development set
 188	63	75	use them for
 188	76	84	training
-188	34	36	on
+188	85	87	on
 188	88	101	ACE04 dataset
 24	19	26	propose
 24	29	52	novel RNN - based model
@@ -80,7 +80,7 @@
 28	3	17	each time step
 28	23	26	use
 28	30	52	attention - like model
-28	37	39	on
+28	53	55	on
 28	60	89	previously decoded time steps
 28	92	103	to identify
 28	108	114	tokens
@@ -99,9 +99,7 @@
 2	22	71	Joint Extraction of Entity Mentions and Relations
 10	0	52	Extraction of entities and their relations from text
 12	39	98	entity mention and relation extraction at the sentencelevel
-196	0	18	Multiple Relations
-196	15	17	on
-196	15	17	on
+136	0	18	Multiple Relations
 197	3	12	find that
 197	13	36	modifying our objective
 197	37	47	to include
@@ -110,10 +108,12 @@
 197	80	86	recall
 197	87	89	of
 197	90	100	our system
-197	57	66	relations
+197	101	103	on
+197	104	113	relations
 197	116	126	leading to
 197	127	145	slight improvement
-197	153	185	overall performance on relations
+197	146	148	on
+197	153	186	over all performance on relations
 204	0	13	PHYS relation
 204	14	16	is
 204	17	34	easier identified
@@ -129,7 +129,7 @@
 201	69	90	significantly improve
 201	95	106	performance
 201	107	109	of
-201	36	46	our system
+201	110	120	our system
 201	121	132	compared to
 201	133	159	left - to - right encoding
 202	8	16	improves
@@ -145,5 +145,5 @@
 203	45	54	to detect
 203	60	75	with respect to
 203	76	95	one of the entities
-203	4	6	in
+203	96	98	in
 203	103	114	entity pair

@@ -27,20 +27,19 @@
               "on" : {
                 "shorter phrases" : {
                   "where" : {
-                    "negation and compostion" : {
+                    "negation and composition" : {
                       "are" : "important"
                     }
                   }
                 }
               }
             }
-          },
-          "from sentence" : "The recursive models work very well on shorter phrases , where negation and composition are important , while bag of features baselines perform well only with longer sentences ."
+          }
         },
         "bag of features baselines" : {
           "perform" : {
             "well" : {
-              "with" : "only sentences"
+              "with" : "longer sentences"
             }
           },
           "from sentence" : "The recursive models work very well on shorter phrases , where negation and composition are important , while bag of features baselines perform well only with longer sentences ."

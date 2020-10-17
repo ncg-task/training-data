@@ -1,13 +1,13 @@
 title
 MULTI - MODAL EMOTION RECOGNITION ON IEMOCAP WITH NEURAL NETWORKS
 abstract
-Emotion recognition has become an important field of research inhuman computer interactions and there is a growing need for automatic emotion recognition systems .
+Emotion recognition has become an important field of research in human computer interactions and there is a growing need for automatic emotion recognition systems .
 One of the directions the research is heading is the use of neural networks which are adept at estimating complex functions that depend on a large number and diverse source of input data .
 In this paper we attempt to exploit this effectiveness of neural networks to enable us to perform multimodal emotion recognition on IEMOCAP dataset using data from speech , text , and motions captured from face expressions , rotation and hand movements .
-Our approach first identifies best individual architectures for classification on each modality and performs fusion only at the final layer which allows fora more robust and accurate emotion detection .
+Our approach first identifies best individual architectures for classification on each modality and performs fusion only at the final layer which allows for a more robust and accurate emotion detection .
 INTRODUCTION
 Emotion is a psycho-physiological process that can be triggered by conscious and / or unconscious perception of objects and situations , associated with multitude of factors such as mood , temperament , personality , disposition , and motivation .
-Emotions are very important inhuman decision handling , interaction and cognitive process .
+Emotions are very important in human decision handling , interaction and cognitive process .
 With the advancement of technology and as our understanding of emotions is advancing , there is a growing need for automatic emotion recognition systems .
 Emotion recognition has been studied widely using speech [ 4 ] , text , facial cues , and EEG based brain waves individually .
 One of the biggest opensourced multimodal resources available in emotion detection is IEMOCAP dataset which consists of approximately 12 hours of audio - visual data , including facial recordings , speech and text transcriptions .
@@ -56,7 +56,7 @@ As this Mocap data is very extensive we use it instead of the video recording in
 These three modes ( Speech , Text , Mocap ) of data form the basis of our multi-modal emotion detection pipeline .
 Next we preprocess the IEMOCAP data for these modes .
 For the speech data our preprocessing follows the work of .
-We use the Fourier frequencies and energy - based features Mel- frequency Cepstral Coefficients ( MFCC ) fora total of 34 features .
+We use the Fourier frequencies and energy - based features Mel- frequency Cepstral Coefficients ( MFCC ) for a total of 34 features .
 They include 13 MFCC , 13 chromagram - based and 8 Time Spectral Features like zero crossing rate , short - term energy , short - term entropy of energy , spectral centroid and spread , spectral entropy , spectral flux , spectral rolloff .
 We calculate features in 0.2 second window and moving it with 0.1 second step and with 16 k Hz sample rate .
 We keep a maximum of 100 frames or approximately for 10 seconds of the input , and zero pad the extra signal and end up with ( 100 , 34 ) feature vector for each utterance .
@@ -78,8 +78,8 @@ MODELS
 Speech Based Emotion Detection
 Our first model - Speech Model1 consists of three layered fully connected MLP layers with 1024 , 512 , 256 hidden neural units with Relu as activation and 4 output neurons with We also try many variations of the speech data including using MelSpectrogram , smaller window ( 0.08 s ) with longer context ( 200 timestamps ) but do not achieve improvements .
 To compare our results with prior research we use our best model ( Speech Model4 ) and evaluate it in the manner similar to various conditions of the previous researches .
-Like we use only the improvisation session for both training and testing and achieve similar results .
-To compare with [ 5 ] who use the both scripted and improvisation sessions we again achieve similar results .
+Like we use only the improvis ation session for both training and testing and achieve similar results .
+To compare with [ 5 ] who use the both scripted and improvis ation sessions we again achieve similar results .
 One important insight of our results is with minimal preprocessing and no complex loss functions or noise injection into the training , we can easily match prior research 's performance using Attention based Bidirectional LSTMs .
 Text based Emotion Recognition
 Our task of performing emotion detection using only the text transcripts of our data resembles that of sentiment analysis , a Poria 71.59 %
@@ -98,7 +98,7 @@ Our performance matches the prior state of the art , however the comparison is n
 use 10 fold cross validation , while we useless training data in a 77 % - 22 % split .
 CONCLUSION
 In this paper we perform multimodal emotion recognition on IEMOCAP dataset using data from speech , text , and motions capture and identify best individual architectures for classification on each modality .
-We perform fusion only at the final layer which allows fora more robust and accurate emotion detection .
+We perform fusion only at the final layer which allows for a more robust and accurate emotion detection .
 Our approach has certain advantages .
 Firstly , since we only perform fusion at the final stage , lack of a modality would only require retraining the final fully connected layer .
 Also since we optimize individual modalities our combined model has a modular approach .

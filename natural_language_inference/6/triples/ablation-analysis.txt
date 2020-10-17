@@ -1,7 +1,7 @@
 (Contribution||has||Ablation analysis)
 (Ablation analysis||seen that||all tasks)
 (all tasks||benefit from||deeper models)
-(Ablation analysis||achieves||good convergence)
+(Ablation analysis||achieve||good convergence)
 (good convergence||with||deeper models)
 (Ablation analysis||has||Multitask learning)
 (Multitask learning||has||NLI objective)

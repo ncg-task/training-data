@@ -16,7 +16,9 @@
                   "for" : "400 k iterations",
                   "takes" : "approximately 70 hours"
                 },
-                "from sentence" : "We fine - tune the model using TPUs 1 with a batch size of 32 ( 32 sequences * 512 tokens = 16,384 tokens / batch ) for 400 k iterations , which takes approximately 70 hours ."
+                "from sentence" : "MS MARCO
+We fine - tune the model using TPUs 1 with a batch size of 32 ( 32 sequences * 512 tokens = 16,384 tokens / batch ) for 400 k iterations , which takes approximately 70 hours ."
+
               },
               "use" : { 
                 "ADAM ( Kingma & Ba , 2014 )" : {

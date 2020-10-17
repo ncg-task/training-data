@@ -28,4 +28,4 @@
 (graph models||outperform||all other models)
 (all other models||across||precision , recall and F-score)
 (graph models||has||GGNN)
-(GGNN||showing||best overall result)
+(GGNN||showing||best over all result)

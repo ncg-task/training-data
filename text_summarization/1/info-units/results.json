@@ -15,7 +15,9 @@
                   "between" : "diversity and accuracy"
                 }
               },
-              "from sentence" : "The tables show that our mixture SELECTOR method outperforms all baselines in Top - 1 and oracle metrics and achieves the best trade - off between diversity and accuracy ."
+              "from sentence" : "Diversity vs. Accuracy Trade - off compare our method with different diversitypromoting techniques in question generation and abstractive summarization .
+The tables show that our mixture SELECTOR method outperforms all baselines in Top - 1 and oracle metrics and achieves the best trade - off between diversity and accuracy ."
+
             }
           },
           "has" : {
@@ -40,7 +42,7 @@
         "Diversity vs. Number of Mixtures" : {
           "compare" : {
             "effect of number of mixtures" : {
-              "in" : " SELECTOR and Mixture Decoder"
+              "in" : "SELECTOR and Mixture Decoder"
             },
             "from sentence" : "Diversity vs. Number of Mixtures
 Here we compare the effect of number of mixtures in our SELECTOR and Mixture Decoder ."

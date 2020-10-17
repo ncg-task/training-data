@@ -42,7 +42,7 @@
           "from sentence" : "The proposed DRCN can utilize the increased representational power of deeper recurrent networks and attentive information ."
         }
       },
-      "adopted" : ["autoencoder", {"from sentence" : "Furthermore , to alleviate the problem of an ever- increasing feature vector size due to concatenation operations , we adopted an autoencoder and forwarded a fixed length vector to the higher layer recurrent module as shown in the figure ."}],
+      "adopted" : "autoencoder",
       "forwarded" : {
         "fixed length vector" : {
           "to" : "higher layer recurrent module"

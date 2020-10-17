@@ -19,7 +19,7 @@ The The FBI FBI is is chasing chasing a a criminal criminal on on the the run .
 The The FBI FBI is is chasing chasing a a criminal criminal on on the the run run .
 Introduction
 How can a sequence - level network induce relations which are presumed latent during text processing ?
-How can a recurrent network attentively memorize longer sequences in away that humans do ?
+How can a recurrent network attentively memorize longer sequences in a way that humans do ?
 In this paper we design a machine reader that automatically learns to understand text .
 The term machine reading is related to a wide range of tasks from answering reading comprehension questions , to fact and relation extraction , ontology learning , and textual entailment .
 Rather than focusing on a specific task , we develop a general - purpose reading simula - tor , drawing inspiration from human language processing and the fact language comprehension is incremental with readers continuously extracting the meaning of utterances on a word - by - word basis .
@@ -227,7 +227,7 @@ For a fair comparison against previous work , we report results with different h
 We compared variants of our model against different types of LSTMs ( see the second block in ) .
 Specifically , these include a model which encodes the premise and hypothesis independently with two LSTMs , a shared LSTM ( Rocktschel et al. , 2016 ) , a word - by - word attention model , and a matching LSTM ( m LSTM ; ) .
 This model sequentially processes the hypothesis , and at each position tries to match the current word with an attention - weighted representation of the premise ( rather than basing its predictions on whole sentence embeddings ) .
-We also compared our models with a bag - of - words baseline which averages the pre-trained embeddings for the words in each sentence and concatenates them to create features fora logistic regression classifier ( first block in ) .
+We also compared our models with a bag - of - words baseline which averages the pre-trained embeddings for the words in each sentence and concatenates them to create features for a logistic regression classifier ( first block in ) .
 LSTMNs achieve better performance compared Models
 h |? | M Test BOW concatenation -- 59.8 LSTM 100 221 k 77.6 LSTM - att 100 252 k 83.5 m LSTM 300 1 . to LSTMs ( with and without attention ; 2nd block in ) .
 We also observe that fusion is generally beneficial , and that deep fusion slightly improves over shallow fusion .

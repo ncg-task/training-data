@@ -1,7 +1,5 @@
 {
   "has research problem" : [
-    ["Semantic Parsing and Code Generation", {"from sentence" : "TRANX : A Transition - based Neural Abstract Syntax Parser for Semantic Parsing and Code Generation"}],
-    ["Semantic Parsing", {"from sentence" : "TRANX : A Transition - based Neural Abstract Syntax Parser for Semantic Parsing and Code Generation"}],
-    ["Code Generation", {"from sentence" : "TRANX : A Transition - based Neural Abstract Syntax Parser for Semantic Parsing and Code Generation"}]
+    ["Semantic Parsing and Code Generation", {"from sentence" : "TRANX : A Transition - based Neural Abstract Syntax Parser for Semantic Parsing and Code Generation"}]
   ]
 }

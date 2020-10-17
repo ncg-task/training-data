@@ -1,3 +1,4 @@
+87	0	20	Pre-training Emo2Vec
 88	0	43	Emo2 Vec embedding matrix and the CNN model
 88	48	65	pre-trained using
 88	66	80	hashtag corpus
@@ -14,12 +15,13 @@
 91	43	45	of
 91	46	48	16
 91	51	65	embedding size
-91	43	45	of
+91	66	68	of
 91	69	72	100
 91	75	87	1024 filters
 91	92	104	filter sizes
 91	105	108	are
 91	109	123	1 , 3 ,5 and 7
+94	0	21	Multi - task training
 95	3	7	tune
 95	8	22	our parameters
 95	23	25	of
@@ -29,7 +31,7 @@
 96	14	23	our model
 96	24	28	when
 96	33	54	averaged dev accuracy
-96	9	13	stop
+96	55	59	stop
 96	60	70	increasing
 97	4	14	best model
 97	15	19	uses
@@ -37,10 +39,11 @@
 97	34	36	of
 97	37	42	0.001
 97	45	62	L2 regularization
-97	34	36	of
+97	63	65	of
 97	66	69	1.0
 97	72	82	batch size
-97	34	36	of
+97	83	85	of
+97	86	88	32
 98	3	7	save
 98	12	22	best model
 98	27	31	take
@@ -51,9 +54,9 @@
 14	27	40	effectiveness
 14	41	57	of incorporating
 14	58	74	sentiment labels
-14	44	46	in
+14	75	77	in
 14	80	101	wordlevel information
-14	92	95	for
+14	102	105	for
 14	106	131	sentiment - related tasks
 14	132	143	compared to
 14	144	165	other word embeddings
@@ -82,14 +85,15 @@
 115	136	139	for
 115	144	158	sentiment task
 115	163	197	1.6 % absolute f1score improvement
-115	71	73	on
+115	198	200	on
 115	205	216	other tasks
-117	30	47	works much better
+117	30	35	works
+117	36	47	much better
 117	48	50	on
 117	51	63	all datasets
 117	64	70	except
 117	71	86	SS - T datasets
-117	48	50	on
+117	173	175	on
 117	176	201	sentiment and other tasks
 117	95	100	gives
 117	101	127	3.3 % accuracy improvement
@@ -100,17 +104,18 @@
 124	69	73	weak
 124	74	86	on capturing
 124	87	117	synthetic and semantic meaning
-134	4	12	achieves
-134	13	32	better performances
-134	33	35	on
-134	36	48	SOTA results
-134	33	35	on
-134	52	102	three datasets ( SE0714 , stress and tube tablet )
-134	107	124	comparable result
-134	125	127	to
-134	36	40	SOTA
-134	33	35	on
-134	58	65	dataset
+132	0	16	GloVe + Emo2 Vec
+132	17	25	achieves
+132	26	45	better performances
+132	46	48	on
+132	49	61	SOTA results
+132	62	64	on
+132	65	115	three datasets ( SE0714 , stress and tube tablet )
+132	120	137	comparable result
+132	138	140	to
+132	141	145	SOTA
+132	146	148	on
+132	149	156	dataset
 116	3	8	shows
 116	9	28	multi-task training
 116	29	44	helps to create
@@ -135,13 +140,14 @@
 128	96	107	can achieve
 128	108	125	promising results
 131	0	13	Compared with
-132	4	12	achieves
-132	13	35	same or better results
-132	36	38	on
-132	39	55	11 / 14 datasets
-132	64	80	on average gives
-132	81	98	1.0 % improvement
-138	7	16	to detect
-138	21	42	corresponding emotion
-138	45	79	more attention needs to be paid to
-138	80	85	words
+131	14	48	GloVe+ DeepMoji , GloVe + Emo2 Vec
+131	49	57	achieves
+131	58	80	same or better results
+131	81	83	on
+131	84	100	11 / 14 datasets
+131	109	125	on average gives
+131	126	143	1.0 % improvement
+136	7	16	to detect
+136	21	42	corresponding emotion
+136	45	79	more attention needs to be paid to
+136	80	85	words

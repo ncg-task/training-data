@@ -3,7 +3,7 @@ Large - scale Simple Question Answering with Memory Networks
 abstract
 Training large - scale question answering systems is complicated because training sources usually cover a small portion of the range of possible questions .
 This paper studies the impact of multitask and transfer learning for simple question answering ; a setting for which the reasoning required to answer is quite easy , as long as one can retrieve the correct evidence given a question , which can be difficult in large - scale conditions .
-To this end , we introduce anew dataset of 100 k questions that we use in conjunction with existing benchmarks .
+To this end , we introduce a new dataset of 100 k questions that we use in conjunction with existing benchmarks .
 We conduct our study within the framework of Memory Networks ( Weston et al. , 2015 ) because this perspective allows us to eventually scale up to more complex reasoning , and show that Memory Networks can be successfully trained to achieve excellent performance .
 Introduction
 Open-domain Question Answering ( QA ) systems aim at providing the exact answer ( s ) to questions formulated in natural language , without restriction of domain .
@@ -45,7 +45,7 @@ Knowledge Bases
 We use the KB Freebase 1 as the basis of our QA system , our source of facts and answers .
 All Freebase entities and relationships are typed and the lexicon for types and relationships is closed .
 Freebase data is collaboratively collected and curated , to ensure a high reliability of the facts .
-Each entity has an internal identifier and a set of strings that are usually used to refer to that entity in text , termed aliases .
+Each entity has an internal identifier and a set of strings thatare usually used to refer to that entity in text , termed aliases .
 We consider two extracts of Freebase , whose statistics are given in .
 FB2M , which was used in , contains about 2 M entities and 5 k relationships .
 FB5M , is much larger with about 5 M entities and more than 7.5 k relationships .
@@ -57,7 +57,7 @@ This leads to many more relationships , but entities with multiple references ar
 We used the full extraction from , which contains 2 M entities and 600 k relationships .
 The SimpleQuestions dataset
 Existing resources for QA such as WebQuestions are rather small ( few thousands questions ) and hence do not provide a very thorough coverage of the variety of questions that could be answered using a KB like Freebase , even in the context of simple QA .
-Hence , in this paper , we introduce anew dataset of much larger scale for the task of simple QA called SimpleQuestions .
+Hence , in this paper , we introduce a new dataset of much larger scale for the task of simple QA called SimpleQuestions .
 2
 This dataset consists of a total of 108,442 questions written in natural language by human English - speaking annotators each paired with a corresponding fact from FB2M that provides the answer and explains it .
 We randomly shuffle these questions and use 70 % of them ( 75910 ) as training set , 10 % as validation set , and the remaining 20 % as test set .
@@ -94,8 +94,8 @@ It uses the Input module to preprocess Reverb facts and the Generalization modul
 After these three stages , the MemNN is ready to answer any question by running the I , O and R modules in turn .
 We now detail the implementation of the four modules .
 Input module
-This module preprocesses the three types of data that are input to the network :
-Freebase facts that are used to populate the memory , questions that the system need to answer , and Reverb facts that we use , in a second phase , to extend the memory .
+This module preprocesses the three types of data thatare input to the network :
+Freebase facts thatare used to populate the memory , questions that the system need to answer , and Reverb facts that we use , in a second phase , to extend the memory .
 Preprocessing Freebase
 The Freebase data is initially stored as atomic facts involving single entities as subject and object , plus a relationship between them .
 However , this storage needs to be adapted to the QA task in two aspects .
@@ -143,7 +143,7 @@ Candidate generation
 To generate candidate facts , we match n-grams of words of the question to aliases of Freebase entities and select a few matching entities .
 All facts having one of these entities as subject are scored in a second step .
 We first generate all possible n-grams from the question , removing those that contain an interrogative pronoun or 1 - grams that belong to a list of stopwords .
-We only keep the n-grams which are an alias of an entity , and then discard all n-grams that area subsequence of another n-gram , except if the longer n-gram only differs by in , of , for or the at the beginning .
+We only keep the n-grams which are an alias of an entity , and then discard all n-grams thatare a subsequence of another n-gram , except if the longer n-gram only differs by in , of , for or the at the beginning .
 We finally keep the two entities with the most links in Freebase retrieved for each of the five longest matched n-grams .
 Scoring Scoring is performed using an embedding model .
 Given two embedding matrices WV ?
@@ -216,7 +216,7 @@ Experiments
 This section provides an extensive evaluation of our MemNNs implementation against state - of the - art QA methods as well as an empirical study of the impact of using multiple training sources on the prediction performance .
 details the dimensions of the test sets of WebQuestions , SimpleQuestions and Reverb which we used for evaluation .
 Evaluation and baselines
-On WebQuestions , we evaluate against previous results on this benchmark in terms of F1 - score as defined in , which is the average , overall test questions , of the F1 - score of the sets of predicted answers .
+On WebQuestions , we evaluate against previous results on this benchmark in terms of F1 - score as defined in , which is the average , over all test questions , of the F1 - score of the sets of predicted answers .
 Since no previous result was published on SimpleQuestions , we only compare different versions of MemNNs .
 SimpleQuestions questions are labeled with their entire Freebase fact , so we evaluate in terms of path - level accuracy , in which a prediction is correct if the subject and the relationship were correctly retrieved by the system .
 The Reverb test set , based on the KB of the same name and introduced in is used for evaluation only .
@@ -249,7 +249,7 @@ They use FB2M , and so their result ( 35.3 % F1 - score on WebQuestions ) should
 The models are slightly different in that they replace the entity string with the subject entity in the question representation and that we use the cosine similarity instead of the dot product , which gave consistent improvements .
 Still , the major differences come from how we use Freebase .
 First , the removal of the mediator nodes allows us to restrict ourselves to single supporting facts , while they search in paths of length 2 with a heuristic to select the paths to follow ( otherwise , inference is too costly ) , which makes our inference simpler and more efficient .
-Second , using grouped facts , we integrate multiple answers during learning ( through the distant supervision ) , while they use a grouping heuristic attest time .
+Second , using grouped facts , we integrate multiple answers during learning ( through the distant supervision ) , while they use a grouping heuristic at test time .
 Grouping facts also allows us to scale much better and to train on FB5M .
 On WebQuestions , not specifically designed as a simple QA dataset , 86 % of the questions can now be answered with a single supporting fact , and performance increases significantly ( from 36.2 % to 41.0 % F1-score ) .
 Using the bigger FB5M as KB does not change performance on SimpleQuestions because it was based on FB2M , but the results show that our model is robust to the addition of more entities than necessary .

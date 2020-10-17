@@ -9,7 +9,7 @@
       },
       "has" : {
         "first model" : {
-          "desgined for addressing" : ["problem of messagelevel sentiment analysis", {"from sentence" : "Our first model is designed for addressing the problem of messagelevel sentiment analysis ."}],
+          "designed for addressing" : ["problem of messagelevel sentiment analysis", {"from sentence" : "Our first model is designed for addressing the problem of messagelevel sentiment analysis ."}],
           "employ" : {
             "2 - layer Bidirectional LSTM" : {
               "equipped with" : "attention mechanism",

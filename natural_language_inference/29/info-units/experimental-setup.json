@@ -60,8 +60,7 @@
       },
       "implement" : {
         "our model" : {
-          "using" : "TensorFlow framework",
-          "from sentence" : "We implement our model using TensorFlow framework and train our model and all baseline models on NVIDIA Tesla P40 GPU ."
+          "using" : "TensorFlow framework"
         }
       },
       "train" : {

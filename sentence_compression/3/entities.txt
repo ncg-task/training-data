@@ -1,7 +1,7 @@
 72	58	90	dependency - tree - based method
 72	96	105	considers
 72	110	135	sentence compression task
-72	26	28	as
+72	136	138	as
 72	142	162	optimization problem
 72	163	171	by using
 72	172	198	integer linear programming
@@ -30,11 +30,12 @@
 94	44	46	is
 94	47	56	2.5 e - 4
 94	63	70	1e - 05
-94	18	21	for
+94	71	74	for
 94	79	93	policy network
 91	3	11	employed
 91	16	27	vanilla RNN
 91	28	32	with
+91	35	46	hidden size
 91	47	49	of
 91	50	53	512
 91	54	57	for
@@ -49,13 +50,13 @@
 95	79	81	of
 95	86	100	policy network
 95	105	109	find
-95	4	10	policy
+95	113	119	policy
 95	125	134	maximizes
 95	139	145	reward
 19	34	70	syntax - based neural language model
 19	74	84	trained on
 19	85	107	large - scale datasets
-19	44	46	as
+19	108	110	as
 19	113	134	readability evaluator
 20	4	25	neural language model
 20	38	46	to learn
@@ -72,7 +73,7 @@
 22	87	95	receives
 22	98	133	reward ( e.g. , readability score )
 22	134	143	to update
-22	11	18	network
+22	148	155	network
 21	18	27	formulate
 21	32	66	deletionbased sentence compression
 21	72	81	series of
@@ -91,6 +92,7 @@
 109	35	59	LSTMs ( LSTM + pos+dep )
 109	68	70	is
 109	73	99	relatively strong baseline
+109	118	131	incorporating
 109	132	152	dependency relations
 109	157	180	part - of - speech tags
 112	55	65	perplexity
@@ -98,19 +100,19 @@
 112	179	183	76.5
 112	21	25	with
 112	137	158	0.2 million instances
+112	0	3	For
+112	4	20	Gigaword dataset
+112	132	136	with
+112	26	48	1.02 million instances
+112	165	175	perplexity
+112	66	68	of
+112	73	87	language model
+112	176	178	is
+112	91	95	20.3
 110	13	21	applying
 110	22	37	Evaluator - SLM
 110	67	75	observed
 110	40	63	only a tiny improvement
-112	0	3	For
-112	4	20	Gigaword dataset
-112	21	25	with
-112	26	48	1.02 million instances
-112	55	65	perplexity
-112	66	68	of
-112	73	87	language model
-112	88	90	is
-112	91	95	20.3
 114	12	22	shows that
 114	23	41	small improvements
 114	46	57	observed on

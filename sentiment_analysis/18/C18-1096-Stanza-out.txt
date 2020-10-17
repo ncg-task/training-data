@@ -69,7 +69,7 @@ We propose two approaches to improve the effectiveness of the attention mechanis
 The approaches maybe applied more generally but we use them on attention - based LSTM as it has been widely used in previous works for sentiment analysis .
 We first give the task definition in ( 3.1 ) .
 Then , we briefly describe the architecture of attention - based LSTM ( 3.2 ) and introduce the two proposed approaches ( 3.3 & 3.4 ) .
-Finally , we describe the overall architecture of our model for aspect - level sentiment classification and the training objective ( 3.5 ) .
+Finally , we describe the over all architecture of our model for aspect - level sentiment classification and the training objective ( 3.5 ) .
 Task Definition and Notation
 Given a review sentence s = ( w 1 , w 2 , ... , w n ) consisting of n words , and an opinion target occurring in the sentence a = ( a 1 , a 2 , ... , am ) consisting of a subsequence of m continuous words from s , aspect - level sentiment classification aims to determine the sentiment polarity of sentence s towards the opinion target a .
 When dealing with a text corpus , we begin by associating each word w with a continuous feature vector e w ?
@@ -159,7 +159,7 @@ rare set to 1 and 0.1 respectively , the attention window size ws is set to 5 an
 We use RMSProp with base learning rate set to 0.001 and decay rate set to 0.9 for network training .
 The minibatch size is set to 32 .
 As a regularizer , we apply dropout with probability 0.5 to the LSTM layer and the output layer .
-We train the network fora fix number of epochs and select the best model according to the performance on the development set , and evaluate it on the test set .
+We train the network for a fix number of epochs and select the best model according to the performance on the development set , and evaluate it on the test set .
 Model Comparisons
 We compare our model with the following baselines :
 ( 1 ) Feature - based SVM :
@@ -180,7 +180,7 @@ We make the following observations :
 2 ) Compared with all other neural baselines , our full model achieves statistically significant improvements ( p < 0.05 ) on both accuracies and macro - F1 scores for D1 , D3 , D4 .
 3 ) Compared with LSTM + ATT , all three settings of our model are able to achieve statistically significant improvements ( p < 0.05 ) on all datasets .
 This demonstrates that both proposed approaches are effective .
-4 ) The integrated full model overall achieves the best performance compared to using only one of the two proposed approaches .
+4 ) The integrated full model over all achieves the best performance compared to using only one of the two proposed approaches .
 This indicates that the two proposed approaches are complementary , thus further improvements could be obtained when combining them .
 5 ) The proposed target representation is more helpful on restaurant domain ( D1 , D3 , and D4 ) than laptop domain ( D2 ) .
 A plausible reason is that restaurant domain has clearer aspects for opinion targets , while it is much harder to determine the aspects for many opinion targets in the laptop domain .
@@ -193,7 +193,7 @@ To verify this , we compare LSTM + Syn ATT with LSTM and LSTM + ATT on sentences
 shows the accuracies on the test sets of Restaurant14 ( D1 ) and Laptop14 ( D2 ) .
 LSTM + SynATT performs the best on all groups .
 In particular , it performs substantially better on groups with two or three targets .
-By analyzing a number of examples from these groups , we find that the proposed syntax - based attention is more effective in capturing the relevant opinion context fora given target when there are multiple targets in the sentence .
+By analyzing a number of examples from these groups , we find that the proposed syntax - based attention is more effective in capturing the relevant opinion context for a given target when there are multiple targets in the sentence .
 Two examples are given in , where our syntax - based attention successfully captures the correct opinion word towards the target of interest , whereas since conventional attention only relies on semantic association between words and the target , it fails by mis-attending to the opinion word towards other target which has similar aspect semantics .
 In addition , we observe that all models perform poorly on the group with more than three targets .
 By analyzing the errors , we find two main causes .
@@ -229,7 +229,7 @@ Although the proposed attention mechanism aims to address this type of errors , 
 Since there are many more positive training examples , the predictions on such neutral examples are often biased towards positive sentiment .
 The second most common error category is Complex , which includes examples with implicit opinion expressions ( example 3 ) or those that require deep comprehension to be understood ( example 4 ) .
 This type of errors is difficult to handle with current techniques , especially when trying to build an end -toend neural network .
-The diversity and low frequency of those expressions make it hard fora statistical approach to capture their patterns .
+The diversity and low frequency of those expressions make it hard for a statistical approach to capture their patterns .
 For errors made on examples with negation words , we believe this is due to the insufficient training data such that LSTM can not effectively capture certain sequential patterns .
 Conclusion
 We propose two novel approaches to improve the effectiveness of attention mechanism for aspect - level sentiment classification .

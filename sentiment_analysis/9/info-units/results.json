@@ -4,7 +4,7 @@
       "has" : {
         "CDM layer" : {
           "works better on" : "twitter dataset",
-          "from sentence" : "The CDM layer works better on twitter dataset because there area lot of non-standard grammar usage and language abbreviations within it , and the local context focus techniques can promote to infer the polarity of terms ."
+          "from sentence" : "The CDM layer works better on twitter dataset because there are a lot of non-standard grammar usage and language abbreviations within it , and the local context focus techniques can promote to infer the polarity of terms ."
         },
         "joint model based on BERT - BASE" : {
           "achieved" : {

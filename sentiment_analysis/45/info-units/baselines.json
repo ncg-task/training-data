@@ -11,7 +11,7 @@
           }
         },
         "LSTM - Final" : {
-          "is" : {
+          "has" : {
             "biLSTM model" : {
               "with" : "final state as a representation"
             }
@@ -19,7 +19,7 @@
           "from sentence" : "LSTM - Final ) : a biLSTM model with the final state as a representation ."
         },
         "LSTM - Loc" : {
-          "is" : {
+          "has" : {
             "biLSTM model" : {
               "with" : {
                 "state" : {
@@ -31,7 +31,7 @@
           "from sentence" : "LSTM - Loc ) : a biLSTM model with the state associated with the target position as a representation ."
         },
         "LSTM + TA + SA" : {
-          "is" : {
+          "has" : {
             "biLSTM model" : {
               "introduces" : "complex target - level and sentence - level attention mechanisms"
             }
@@ -39,7 +39,7 @@
           "from sentence" : "LSTM + TA + SA ) : a biLSTM model which introduces complex target - level and sentence - level attention mechanisms ."
         },
         "SenticLSTM" : {
-          "is" : {
+          "has" : {
             "upgraded version" : {
               "of" : {
                 "LSTM + TA + SA model" : {
@@ -51,7 +51,7 @@
           "from sentence" : "SenticLSTM : an upgraded version of the LSTM + TA + SA model which introduces external information from Sentic - Net ."
         },
         "Dmu - Entnet" : {
-          "is" : {
+          "has" : {
             "bidirectional EntNet" : {
               "with" : {
                 "external \" memory chains \"" : {

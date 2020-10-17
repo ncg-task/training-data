@@ -14,7 +14,7 @@
 (Hyperparameters||has||Grid search)
 (Grid search||performed using||20 % of the training data)
 (20 % of the training data||as||validation set)
-(validation set||to determine|| optimal hyperparameters)
+(validation set||to determine||optimal hyperparameters)
 (validation set||to use||constant learning rate or learning rate annealing)
 (Hyperparameters||has||weights)
 (weights||of||networks)

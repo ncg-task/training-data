@@ -58,7 +58,9 @@
                   }
                 }
               },
-              "from sentence" : "A strength - based re-ranker , which ranks the answer candidates according to how often their evidence occurs in different passages ."
+              "from sentence" : "The re-rankers are :
+A strength - based re-ranker , which ranks the answer candidates according to how often their evidence occurs in different passages ."
+
             },
             "coverage - based re-ranker" : {
               "aims to rank" : {

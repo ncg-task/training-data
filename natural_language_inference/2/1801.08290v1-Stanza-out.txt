@@ -10,7 +10,7 @@ To implicitly infer the answer type , we also propose a max-attentional question
 During prediction , we incorporate sequence - level encoding of the first wh-word and its immediately following word as an additional source of question type information .
 Our proposed model achieves significant improvements over the best prior state - of - the - art results on three large - scale challenging QA datasets , namely NewsQA , TriviaQA , and Search QA .
 Introduction
-In machine comprehension - based ( MC ) question answering ( QA ) , a machine is expected to provide an answer fora given question by understanding texts .
+In machine comprehension - based ( MC ) question answering ( QA ) , a machine is expected to provide an answer for a given question by understanding texts .
 In recent years , several MC datasets have been released .
 released a multiple - choice question answering dataset .
 created a large cloze - style dataset using CNN and Daily Mail news articles .
@@ -62,10 +62,10 @@ At every time step , the hidden unit representation of the BiLSTMs is obtained b
 For the passage , at time step t , the forward and backward LSTM hidden unit representations can be written as :
 The tth row of P is represented as
 where || represents the concatenation of two vectors .
-Similarly , the sequence level encoding fora question is
+Similarly , the sequence level encoding for a question is
 where qt is the tth row of Q .
 Cartesian Similarity - based Attention Layer
-The attention matrix is calculated by taking dot products between all possible combinations of sequence - level encoding vectors fora passage and a question .
+The attention matrix is calculated by taking dot products between all possible combinations of sequence - level encoding vectors for a passage and a question .
 Note that for calculating the attention matrix , we do not introduce any additional learnable parameters .
 The attention matrix A ? R T U can be expressed as :
 Intuitively , A i , j is a measure of the similarity between the sequence - level encoding vectors of the ith passage word and the jth question word .
@@ -99,7 +99,7 @@ R m is a vector where each element f m i , j ,k is a result of the bilinear form
 ? i , j ? [ 1 , T ] , the multi-factor attention tensor can be given as F [ 1 :m ]
 ?
 R mT T .
-For every vector f m i , j of F [ 1 : m ] , we perform a max pooling operation overall the elements to obtain the resulting attention value :
+For every vector f m i , j of F [ 1 : m ] , we perform a max pooling operation over all the elements to obtain the resulting attention value :
 where F i , j represents the element in the ith row and jth column of F ? R T T .
 Each row of F measures how relevant every passage word is with respect to a given questiondependent passage encoding of a word .
 We apply a row - wise softmax function on F to normalize the attention weights , obtaining F ? R T T .
@@ -140,10 +140,10 @@ If no wh-word is present in a question , we use the first two sequence - level q
 We measure the similarity betweenq and the contextual encoding vectors in B and E to determine the beginning and ending answer pointers .
 Corresponding similarity vectors s b ?
 R T and s e ?
-R T are computed as : The probability distributions for the beginning pointer band the ending pointer e fora given passage P and a question Q can be given as :
+R T are computed as : The probability distributions for the beginning pointer band the ending pointer e for a given passage P and a question Q can be given as :
 The joint probability distribution for obtaining the answer a is given as :
 To train our model , we minimize the cross entropy loss :
-summing overall training instances .
+summing over all training instances .
 During prediction , we select the locations in the passage for which the product of Pr ( b ) and Pr ( e ) is maximum keeping the constraint 1 ? b ? e ? T .
 Visualization
 To understand how the proposed model works , for the example given in , we visualize the normalized multifactor attention weights

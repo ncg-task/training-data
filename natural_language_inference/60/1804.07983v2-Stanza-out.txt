@@ -16,7 +16,7 @@ An alternative is to try to combine the strengths of different word embeddings .
 Recent work in socalled " meta- embeddings " , which ensembles embedding sets , has been gaining traction .
 Metaembeddings are usually created in a separate preprocessing step , rather than in a process that is dynamically adapted to the task .
 In this work , we explore the supervised learning of task - specific , dynamic meta-embeddings , and apply the technique to sentence representations .
-The proposed approach turns out to be highly effective , leading to state - of - the - art performance within the same model class on a variety of tasks , opening up new areas for exploration and yielding insights into the usage of word embeddings .
+The proposed approach turns out to be highly effective , leading to state - of - the - art performance within the same model class on a variety of tasks , opening up new are as for exploration and yielding insights into the usage of word embeddings .
 Why Is This a Good Idea ?
 Our technique brings several important benefits to NLP applications .
 First , it is embedding - agnostic , meaning that one of the main ( and perhaps most important ) hyperparameters in NLP pipelines is made obsolete .
@@ -42,7 +42,7 @@ Related Work
 Thanks to their widespread popularity in NLP , a sprawling literature has emerged about learning and applying word embeddings - much too large to fully cover here , so we focus on previous work that combines multiple embeddings for downstream tasks .
 combine unsupervised embeddings with supervised ones for sentiment classification .
 and learn to combine word - level and character - level embeddings .
-Contextual representations have been used in neural machine translation as well , e.g. for learning contextual word vectors and applying them in other tasks or for learning context - dependent representations to solve disambiguation problems in machine translation .
+Contextual representations have been used in neural machine translation as well , e.g. for learning contextual word vectors and applying them in other tasks or for learning context - dependent representations to solve dis ambiguation problems in machine translation .
 Neural tensor skip - gram models learn to combine word , topic and context embeddings ; context2vec learns a more sophisticated context representation separately from target embeddings ; and learn word representations with distributed word representation with multi-contextual mixed embedding .
 Recent work in " meta-embeddings " , which ensembles embedding sets , has been gaining traction ) - here , we show that the idea can be applied in context , and to sentence representations .
 Furthermore , these works obtain metaembeddings as a preprocessing step , rather than learning them dynamically in a supervised setting , as we do here .
@@ -120,17 +120,17 @@ Image - Caption Retrieval
 An advantage of the proposed approach is that it is inherently capable of dealing with multi-modal information .
 Multi-modal semantics often combines linguistic and visual representations via concatenation with a global weight ? , i.e. , v = [?v ling , ( 1 ? ? ) v vis ] .
 In DME we instead learn to combine embeddings dynamically , optionally based on context .
-The representation fora word then becomes grounded in the visual modality , and we encode on the word - level what things look like .
+The representation for a word then becomes grounded in the visual modality , and we encode on the word - level what things look like .
 We evaluate this idea on the Flickr30 k imagecaption retrieval task : given an image , retrieve the correct caption ; and vice versa .
 The intuition is that knowing what something looks like makes it easier to retrieve the correct image / caption .
 While this work was under review , a related method was published by , which takes a similar approach but evaluates its effectiveness on COCO and uses Google images .
-We obtain wordlevel visual embeddings by retrieving relevant images fora given label from ImageNet in the same manner as , taking the images ' ResNet - 152 features and subsequently averaging those .
+We obtain wordlevel visual embeddings by retrieving relevant images for a given label from ImageNet in the same manner as , taking the images ' ResNet - 152 features and subsequently averaging those .
 We then learn to combine textual ( FastText ) and visual ( ImageNet ) word representations in the caption encoder used for retrieving relevant images .
 Discussion & Analysis
 Aside from improved performance , an additional benefit of learning dynamic meta-embeddings is that they enable inspection of the weights that the network has learned to assign to the respective embeddings .
 In this section , we perform a variety of smaller experiments in order to highlight the usefulness of the technique for studying linguistic phenomena , determining appropriate training domains and evaluating word embeddings .
 We compute the contribution of each word embedding type as follows :
-1 Visualizing Attention shows the attention weights fora CDME model trained on SNLI , using the aforementioned six embedding sets .
+1 Visualizing Attention shows the attention weights for a CDME model trained on SNLI , using the aforementioned six embedding sets .
 The sentence is from the SNLI validation set .
 We observe that different embeddings are preferred for different words .
 The figure is meant to illustrate possibilities for analysis , which we turn to in the next section .
@@ -146,13 +146,13 @@ We can further examine the attention weights by analyzing them in terms of frequ
 We use Norvig 's Google N- grams corpus frequency counts 3 to divide the words into fre - shows the average attention weights per frequency bin , ranging from low to high .
 We observe a clear preference for GloVe , in particular for low - frequency words .
 For concreteness , we use the concreteness ratings from .
-shows the average weights per concreteness bin fora model trained on Flickr30 k .
+shows the average weights per concreteness bin for a model trained on Flickr30 k .
 We can clearly see that visual embeddings get higher weights as the words become more and more concrete .
 There are of course intricate relationships between concreteness , frequency , POS tags and open / closed class words : closed class words are often frequent and abstract , while open class words could be more concrete , etc .
 It is beyond the scope of the current work to explore these further , but we hope that others will pursue this direction in future work .
 Multi-domain Embeddings
 The MultiNLI dataset consists of various genres .
-This allows us to inspect the applicability of source domain data fora specific genre .
+This allows us to inspect the applicability of source domain data for a specific genre .
 We train embeddings on three kinds of data : Wikipedia , the Toronto Books Corpus and the English OpenSubtitles 4 .
 We examine the atten -
 Model

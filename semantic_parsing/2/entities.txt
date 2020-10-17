@@ -27,22 +27,23 @@
 246	22	35	selected from
 246	36	53	{ 0.002 , 0.005 }
 247	4	14	batch size
+247	15	18	was
 247	19	22	200
 247	23	26	for
 247	27	34	WIKISQL
 247	45	47	64
-247	23	26	for
+247	48	51	for
 247	52	66	other datasets
 248	0	14	Early stopping
 248	24	36	to determine
 248	41	57	number of epochs
 243	3	11	appended
 243	12	59	10 - dimensional part - of - speech tag vectors
-243	55	57	to
+243	60	62	to
 243	63	73	embeddings
-243	36	38	of
+243	74	76	of
 243	81	95	question words
-243	69	71	in
+243	96	98	in
 243	99	106	WIKISQL
 245	3	7	used
 245	12	29	RMSProp optimizer
@@ -78,7 +79,7 @@
 20	112	120	decoders
 20	121	129	to model
 20	130	137	meaning
-20	86	88	at
+20	138	140	at
 20	141	172	different levels of granularity
 22	25	41	explicitly share
 22	42	51	knowledge
@@ -93,11 +94,11 @@
 23	67	97	basic meaning of the utterance
 23	129	135	use it
 23	119	124	model
-23	68	70	as
+23	136	138	as
 23	139	153	global context
 23	154	164	to improve
 23	169	179	prediction
-23	81	83	of
+23	180	182	of
 23	187	200	final details
 2	32	55	Neural Semantic Parsing
 4	0	16	Semantic parsing
@@ -120,7 +121,9 @@
 260	128	138	our method
 260	139	147	performs
 260	148	161	competitively
+260	162	180	despite the use of
 260	181	207	relatively simple decoders
+269	0	9	Our model
 269	13	24	superior to
 269	25	33	ONESTAGE
 269	48	80	previous best performing systems

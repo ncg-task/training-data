@@ -100,8 +100,7 @@ On the Sherlock dataset , we achieve an F1 of 92.36 , outperforming the previous
           "observe" : {
             "significant gap" : {
               "between" : "our model , NegBERT , and the current state - of the - art systems"
-            },
-            "from sentence" : "For negation cue detection , we observe a significant gap between our model , NegBERT , and the current state - of the - art systems , while we outperform the baseline systems ."
+            }
           },
           "outperform" : ["baseline systems", {"from sentence" : "For negation cue detection , we observe a significant gap between our model , NegBERT , and the current state - of the - art systems , while we outperform the baseline systems ."}],
           "trained on" : {

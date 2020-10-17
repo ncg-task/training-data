@@ -7,7 +7,7 @@
 (Model||has||Top - layer Classifier)
 (Top - layer Classifier||has||Our inference model)
 (Our inference model||feeds||resulting vectors)
-(resulting vectors||to determine||overall inference relationship)
+(resulting vectors||to determine||over all inference relationship)
 (resulting vectors||to||final classifier)
 (Model||has||Sequence Encoder)
 (Sequence Encoder||use||stacked bidirectional LSTMs ( BiL - STM ))

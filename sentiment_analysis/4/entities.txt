@@ -1,3 +1,4 @@
+272	0	20	Self vs Dual History
 274	0	11	Compared to
 274	16	66	dual - history variants ( variants 3 , 5 , and 7 )
 274	69	81	these models
@@ -12,18 +13,19 @@
 277	73	93	historical time step
 277	98	106	leads to
 277	107	132	performance deterioration
+278	0	23	Multi - hop vs No - hop
+278	65	74	multi-hop
+278	135	139	than
 279	7	17	removal of
-279	18	27	multi-hop
 279	28	36	leads to
 279	37	54	worse performance
-279	55	59	than
 279	64	79	removal of DGIM
 281	10	26	best performance
 281	30	41	achieved by
 281	42	51	variant 6
 281	52	66	which contains
 281	67	91	all the proposed modules
-281	63	65	in
+281	92	94	in
 281	95	107	its pipeline
 233	0	6	memnet
 233	7	9	is
@@ -33,7 +35,7 @@
 235	19	29	utterances
 235	30	35	using
 235	36	78	neighboring utterances ( of same speaker )
-235	10	12	as
+235	79	81	as
 235	82	89	context
 237	0	3	TFN
 237	6	12	models
@@ -67,16 +69,16 @@
 221	50	66	early - stopping
 221	67	71	with
 221	74	82	patience
-221	12	14	of
+221	83	85	of
 221	86	135	10 d = 100 dv = 512 dem = 100 K = 40 R = 3 epochs
 222	4	11	network
 222	15	27	subjected to
 222	28	42	regularization
 222	43	57	in the form of
 222	58	89	Dropout and Gradient - clipping
-222	50	53	for
+222	90	93	for
 222	96	100	norm
-222	55	57	of
+222	101	103	of
 222	104	106	40
 223	14	37	best hyper - parameters
 223	42	55	decided using
@@ -114,7 +116,7 @@
 20	66	84	multimodal network
 20	85	100	for identifying
 20	101	109	emotions
-20	97	99	in
+20	110	112	in
 20	113	131	utterance - videos
 28	11	19	extracts
 28	20	39	multimodal features
@@ -148,7 +150,7 @@
 30	133	143	local GRUs
 31	0	3	For
 31	4	17	each instance
-31	9	11	in
+31	18	20	in
 31	25	41	context - window
 31	48	54	output
 31	55	57	of
@@ -179,7 +181,7 @@
 246	30	45	compared models
 246	46	50	with
 246	51	83	significant performance increase
-246	75	77	in
+246	84	86	in
 246	87	112	emotions ( ? 2.1 % acc. )
 249	12	22	manages to
 249	33	41	identify
@@ -198,7 +200,7 @@
 266	145	151	shared
 266	123	141	complementary data
 266	152	162	to improve
-266	163	182	overall performance
+266	163	183	over all performance
 247	0	3	For
 247	4	16	each emotion
 247	19	23	ICON
@@ -222,7 +224,7 @@
 263	25	56	different combinations of modes
 263	57	64	used by
 263	65	69	ICON
-263	44	46	on
+263	70	72	on
 263	73	80	IEMOCAP
 265	0	5	Among
 265	6	15	unimodals

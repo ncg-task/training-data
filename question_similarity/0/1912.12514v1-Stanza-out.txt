@@ -61,7 +61,7 @@ This component takes the ELMo embeddings related to each word in the question as
 Then , it applies sequence weighted attention 6 proposed by on the outputs of the second ON - LSTM layer to get the final question representation .
 This component uses the same weights to compute representations for each question in the pair .
 The details of this component are as follows .
-Since NLP data are structured in a hierarchical manner , the authors of ON - LSTM proposed anew form of update and activation functions ( in order to enforce a bias towards structuring a hierarchy of the data ) to the standard LSTM model reported below :
+Since NLP data are structured in a hierarchical manner , the authors of ON - LSTM proposed a new form of update and activation functions ( in order to enforce a bias towards structuring a hierarchy of the data ) to the standard LSTM model reported below :
 The newly proposed activation function is cumax = cumsum ( sof tmax ( x ) ) , where cumsum denotes the cumulative sum function .
 Among the desired properties of this function is to control the updates on the memory cell such that the higher ranking neurons get updated less frequently ( storing long - term and global information ) compared to the lower ranking neurons , which are updated more frequently ( storing short - term and local information ) .
 This makes the neurons updates dependent on each other in contrast to the updates on the standard LSTM neurons .
@@ -70,7 +70,7 @@ The attention mechanism ( inspired by ) allows the model to learn to decide the 
 With a single parameter , w a , the attention mechanism can be described as follows :
 The weight matrix w a is the only new trainable parameter which learns the attention mechanism over the outputs of the second ON - LSTM layer .
 To calculate the importance scores , at , for each time step , it first multiplies each time step output , ht , by the weight matrix , w a , and normalizes the results using a Softmax function .
-Finally , the final sequence representation , v , is the weighted sum overall ON - LSTM outputs using the importance scores calculated earlier as weights .
+Finally , the final sequence representation , v , is the weighted sum over all ON - LSTM outputs using the importance scores calculated earlier as weights .
 Merging Technique
 After extracting the representations related to each question , we merge them using pairwise squared distance function applied to the representation vectors of the two questions in each question pair .
 More formally , if V 1 and V 2 are these representation vectors , then , the merged representation vector V m can be expressed as follows :
@@ -122,8 +122,8 @@ With the sequence weighted attention layer , the model reduces all the informati
 By extracting these vectors from our best model and plotting them on a 2D plane using t- SNE ( Maaten and Hinton , 2008 ) dimensionality reduction algorithm , we notice some very useful observations .
 For example , the model learns to map questions that ask about the same thing to have nearby representations in the vector space such as the questions in with the form : " How to prepare ' something ' ? " .
 The same thing goes for the questions in with the form : " What is the definition of ' something ' ? " .
-Ina similar manner , in , the questions ask about different types of languages like " What is the formal language in Portugal ? " and " What is PHP language ? " are close , as well as , the questions in that ask about places like " Where is Sweden ? " ,
-" Where is the Karak area in Jordan ? " , and " Where is the Kremlin Castle ? " .
+In a similar manner , in , the questions ask about different types of languages like " What is the formal language in Portugal ? " and " What is PHP language ? " are close , as well as , the questions in that ask about places like " Where is Sweden ? " ,
+" Where is the Karak are a in Jordan ? " , and " Where is the Kremlin Castle ? " .
 To further illustrate the usefulness of the sequence weighted attention layer , shows that the attention layer learns to focus more on the key words in the questions that would determine what the question is actually asking about .
 This allows the model to make better decisions for whether the the questions are similar or not , even if the questions have similar words but ask about different things .
 The first and second questions ask about " What is the general manager ? " .

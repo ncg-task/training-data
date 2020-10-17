@@ -33,10 +33,9 @@
           "of" : {
             "four directions" : {
               "of" : "coupled - LSTMs"
-            },
-            "from sentence" : "To utilize all the information of four directions of coupled - LSTMs , we aggregate them and adopt a dynamic pooling strategy to automatically select the most informative interaction signals ."            
+            }
           },
-          "has" : ["aggregate", {"from sentence" : "To utilize all the information of four directions of coupled - LSTMs , we aggregate them and adopt a dynamic pooling strategy to automatically select the most informative interaction signals ."}],
+          "has" : "aggregate",
           "adopt" : {
             "dynamic pooling strategy" : {
               "to automatically select" : "most informative interaction signals"

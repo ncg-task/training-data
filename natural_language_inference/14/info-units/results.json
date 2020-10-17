@@ -28,8 +28,7 @@
           "on" : {
             "sample" : {
               "of" : "2,241 SWAG questions"
-            },
-            "from sentence" : "To adjust for the difference in size between our dataset and SWAG , we also train the models on a sample of 2,241 SWAG questions ( the size of the training set in each of CODAH 's crossvalidation folds ) and evaluate them on the full SWAG validation set ."            
+            }
           },
           "has" : {
             "evaluate" : {

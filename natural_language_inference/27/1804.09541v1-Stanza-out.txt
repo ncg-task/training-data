@@ -4,7 +4,7 @@ COMBINING LOCAL CONVOLUTION WITH GLOBAL SELF - ATTENTION FOR READING COMPRE - HE
 abstract
 Current end - to - end machine reading and question answering ( Q&A ) models are primarily based on recurrent neural networks ( RNNs ) with attention .
 Despite their success , these models are often slow for both training and inference due to the sequential nature of RNNs .
-We propose anew Q&A architecture called QANet , which does not require recurrent networks :
+We propose a new Q&A architecture called QANet , which does not require recurrent networks :
 Its encoder consists exclusively of convolution and self - attention , where convolution models local interactions and self - attention models global interactions .
 On the SQuAD dataset , our model is 3x to 13x faster in training and 4x to 9 x faster in inference , while achieving equivalent accuracy to recurrent models .
 The speed - up gain allows us to train the model with much more data .
@@ -117,7 +117,7 @@ We adopt the strategy of to predict the probability of each position in the cont
 More specifically , the probabilities of the starting and ending position are modeled as
 , where W 1 and W 2 are two trainable variables and M 0 , M 1 , M 2 are respectively the outputs of the three model encoders , from bottom to top .
 The score of a span is the product of its start position and end position probabilities .
-Finally , the objective function is defined as the negative sum of the log probabilities of the predicted distributions indexed by true start and end indices , averaged overall the training examples :
+Finally , the objective function is defined as the negative sum of the log probabilities of the predicted distributions indexed by true start and end indices , averaged over all the training examples :
 where y 1 i and y 2 i are respectively the groundtruth starting and ending position of example i , and ?
 contains all the trainable variables .
 The proposed model can be customized to other comprehension tasks , e.g. selecting from the candidate answers , by changing the output layers accordingly .
@@ -207,7 +207,7 @@ The numbers of convolution layers in the embedding and modeling encoder are 4 an
 We use the ADAM optimizer ( Kingma & Ba , 2014 ) with ? 1 = 0.8 , ? 2 = 0.999 , = 10 ?7 .
 We use a learning rate warm - up scheme with an inverse exponential increase from 0.0 to 0.001 in the first 1000 steps , and then maintain a constant learning rate for the remainder of training .
 Exponential moving average is applied on all trainable variables with a decay rate 0.9999 .
-Finally , we implement our model in Python using Tensorflow and carryout our experiments on an NVIDIA p 100 GPU .
+Finally , we implement our model in Python using Tensorflow and carry out our experiments on an NVIDIA p 100 GPU .
 11
 RESULTS
 Accuracy .
@@ -229,7 +229,7 @@ Flow implementation :
 https://www.tensorflow.org/
 12 The scores are collected from the latest version of the documented related work on Oct 27 , 2017 .
 The scores are collected from the leaderboard on Oct 27 , 2017 .
-Published 12 LeaderBoard 13 Single Model EM / F1 EM / F1 LR Baseline 40.4 / 51.0 40.4 / 51.0 Dynamic Chunk Reader 62.5 / 71.0 62.5 / 71.0 Match- LSTM with Ans - Ptr 64.7 / 73.7 64.7 / 73.7 Multi- Perspective Matching 65.5 / 75.1 70.4 / 78.8 Dynamic Coattention Networks 66.2 / 75.9 66.2 / 75.9 FastQA 68.4 / 77.1 68.4 / 77.1 BiDAF 68.0 / 77.3 68.0 / 77.3 SEDT 68.1 / 77.5 68.5 / 78.0 RaSoR 70.8 / 78.7 69.6 / 77.7 FastQAExt 70.8 / 78.9 70.8 / 78.9 Reaso Net 69.1 / 78.9 70.6 / 79.4 Document Reader 70.0 / 79.0 70.7 / 79.4 Ruminating Reader 70.6 / 79.5 70.6 / 79.5 j Net 70 . LSTMs as is used inmost existing models .
+Published 12 LeaderBoard 13 Single Model EM / F1 EM / F1 LR Baseline 40.4 / 51.0 40.4 / 51.0 Dynamic Chunk Reader 62.5 / 71.0 62.5 / 71.0 Match- LSTM with Ans - Ptr 64.7 / 73.7 64.7 / 73.7 Multi- Perspective Matching 65.5 / 75.1 70.4 / 78.8 Dynamic Coattention Networks 66.2 / 75.9 66.2 / 75.9 FastQA 68.4 / 77.1 68.4 / 77.1 BiDAF 68.0 / 77.3 68.0 / 77.3 SEDT 68.1 / 77.5 68.5 / 78.0 RaSoR 70.8 / 78.7 69.6 / 77.7 FastQAExt 70.8 / 78.9 70.8 / 78.9 Reaso Net 69.1 / 78.9 70.6 / 79.4 Document Reader 70.0 / 79.0 70.7 / 79.4 Ruminating Reader 70.6 / 79.5 70.6 / 79.5 j Net 70 . LSTMs as is used in most existing models .
 Specifically , each ( embedding and model ) encoder block is replaced with a 1 , 2 , or 3 layer Bidirectional LSTMs respectively , as such layer numbers fall into the usual range of the reading comprehension models .
 All of these LSTMs have hidden size 128 .
 The results of the speedup comparison are shown in .
@@ -269,7 +269,7 @@ In this dataset , one or more sentences are appended to the original SQuAD conte
 However , the model is agnostic to those adversarial examples during training .
 We focus on two types of misleading sentences , namely , Add Sent and Add OneSent .
 Add
-Sent generates sentences that are similar to the question , but not contradictory to the correct answer , while Add OneSent adds a random human - approved sentence that is not necessarily related to the context .
+Sent generates sentences thatare similar to the question , but not contradictory to the correct answer , while Add OneSent adds a random human - approved sentence that is not necessarily related to the context .
 The model in use is exactly the one trained with the original SQuAD data ( the one getting 84.6 F1 on test set ) , but now it is submitted to the adversarial server for evaluation .
 The results are shown in , where the F 1 scores of other models are all extracted from .
 Again , we only compare the performance of single models .
@@ -334,5 +334,5 @@ In this paper , we propose a fast and accurate end - to - end model , QANet , fo
 Our core innovation is to completely remove the recurrent networks in the encoder .
 The resulting model is fully feedforward , composed entirely of separable convolutions , attention , linear layers , and layer normalization , which is suitable for parallel computation .
 The resulting model is both fast and accurate :
-It surpasses the best published results on SQuAD dataset while up to 13 / 9 times faster than a competitive recurrent models fora training / inference iteration .
+It surpasses the best published results on SQuAD dataset while up to 13 / 9 times faster than a competitive recurrent models for a training / inference iteration .
 Additionally , we find that we are able to achieve significant gains by utilizing data augmentation consisting of translating context and passage pairs to and from another language as away of paraphrasing the questions and contexts .

@@ -16,16 +16,16 @@ Email : liuzy@tsinghua.edu.cn relation classification has attracted considerable
 In the example given above , the verb corresponds quite closely to the desired target relation .
 However , in the wild , we encounter a multitude of different ways of expressing the same kind of relationship .
 This challenging variability can be lexical , syntactic , or even pragmatic in nature .
-An effective solution needs to be able to account for useful semantic and syntactic features not only for the meanings of the target entities at the lexical level , but also for their immediate context and for the overall sentence structure .
+An effective solution needs to be able to account for useful semantic and syntactic features not only for the meanings of the target entities at the lexical level , but also for their immediate context and for the over all sentence structure .
 Thus , it is not surprising that numerous featureand kernel - based approaches have been proposed , many of which rely on a full - fledged NLP stack , including POS tagging , morphological analysis , dependency parsing , and occasionally semantic analysis , as well as on knowledge resources to capture lexical and semantic features .
-In recent years , we have seen a move towards deep architectures that are capable of learning relevant representations and features without extensive manual feature engineering or use of external resources .
+In recent years , we have seen a move towards deep architectures thatare capable of learning relevant representations and features without extensive manual feature engineering or use of external resources .
 A number of convolutional neural network ( CNN ) , recurrent neural network ( RNN ) , and other neural architectures have been proposed for relation classification .
 Still , these models often fail to identify critical cues , and many of them still require an external dependency parser .
 We propose a novel CNN architecture that addresses some of the shortcomings of previous approaches .
 Our key contributions are as follows :
 1 .
 Our CNN architecture relies on a novel multi-level attention mechanism to capture both entity - specific attention ( primary attention at the input level , with respect to the target entities ) and relation - specific pooling attention ( secondary attention with respect to the target relations ) .
-This allows it to detect more subtle cues despite the heterogeneous structure of the input sentences , enabling it to automatically learn which parts are relevant fora given classification .
+This allows it to detect more subtle cues despite the heterogeneous structure of the input sentences , enabling it to automatically learn which parts are relevant for a given classification .
 2 . We introduce a novel pair - wise margin - based objective function that proves superior to standard loss functions .
 3 . We obtain the new state - of - the - art results for relation classification with an F1 score of 88.0 % on the SemEval 2010 Task 8 dataset , outperforming methods relying on significantly richer prior knowledge .
 Related Work
@@ -56,7 +56,7 @@ To the resulting output matrix , one then applies a convolution operation in ord
 A secondary attention pooling layer is used to determine the most useful convolved features for relation classification from the output based on an attention pooling matrix .
 The remainder of this section will provide further details about this architecture .
 provides an overview of the notation we will use for this .
-The final output is given by anew objective function , described below .
+The final output is given by a new objective function , described below .
 Classification Objective
 We begin with top - down design considerations for the relation classification architecture .
 For a given sentence S , our network will ultimately output some w O .
@@ -84,13 +84,13 @@ To additionally capture information about the relationship to the target entitie
 For the given sentence in , the relative distances of word " and " to entity e 1 " drinks " and e 2 " diabetes " are ? 1 and 6 , respectively .
 Every relative distance is mapped to a randomly initialized position vector in R dp , where d p is a hyper - parameter .
 For a given word i , we obtain two position vectors w p i , 1 and w p i , 2 , with regard to entities e 1 and e 2 , respectively .
-The overall word embedding for the i - th word is
+The over all word embedding for the i - th word is
 .
 Using a sliding window of size k centered around the i - th word , we encode k successive
 An extra padding token is repeated multiple times for well - definedness at the beginning and end of the input .
 Input Attention Mechanism
 While position - based encodings are useful , we conjecture that they do not suffice to fully capture the relationships of specific words with the target entities and the influence that they may bear on the target relations of interest .
-We design our model so as to automatically identify the parts of the input sentence that are relevant for relation classification .
+We design our model so as to automatically identify the parts of the input sentence thatare relevant for relation classification .
 Attention mechanisms have successfully been applied to sequence - to - sequence learning tasks such as machine translation and abstractive sentence summarization , as well as to tasks such as modeling sentence pairs and question answering .
 To date , these mechanisms have generally been used to allow for an alignment of the input and output sequence , e.g. the source and target sentence in machine translation , or for an alignment between two input sentences as in sentence similarity scoring and question answering .
 Figure 2 : Input and Primary Attention
@@ -125,12 +125,12 @@ Then we add a linear bias B f , followed by a non-linear hyperbolic tangent tran
 Attention - Based Pooling .
 Instead of regular pooling , we rely on an attention - based pooling strategy to determine the importance of individual windows in R * , as encoded by the convolutional kernel .
 Some of these windows could represent meaningful n-grams in the input .
-The goal here is to select those parts of R * that are relevant with respect to our objective from Section 3.1 , which essentially calls fora relation encoding process , while neglecting sentence parts that are irrelevant for this process .
+The goal here is to select those parts of R * thatare relevant with respect to our objective from Section 3.1 , which essentially calls for a relation encoding process , while neglecting sentence parts thatare irrelevant for this process .
 We proceed by first creating a correlation modeling matrix G that captures pertinent connections between the convolved context windows from the sentence and the relation class embedding W L introduced earlier in Section 3.1:
 where U is a weighting matrix learnt by the network .
 Then we adopt a softmax function to deal with this correlation modeling matrix G to obtain an attention pooling matrix A p as
 where G i , j is the ( i , j ) - th entry of G and A p i , j is the ( i , j ) - th entry of A p .
-Finally , we multiply this attention pooling matrix with the convolved output R * to highlight important individual phrase - level components , and apply a max operation to select the most salient one fora given dimension of the output .
+Finally , we multiply this attention pooling matrix with the convolved output R * to highlight important individual phrase - level components , and apply a max operation to select the most salient one for a given dimension of the output .
 More precisely , we obtain the output representation w O as follows in Eq. ( 12 ) :
 where w O i is the i - th entry of w O and ( R * A p ) i , j is the ( i , j ) - th entry of R * A p .
 Training Procedure
@@ -189,7 +189,7 @@ For example , the top trigram for Cause - Effect ( e 2 ,e 1 ) is " are caused by
 Similarly , the top trigram for Entity - Origin ( e 1 ,e 2 ) is " from thee 2 " , which suggests that e 2 could bean original location , at which entity e 1 may have been located .
 Error Analysis .
 Further , we examined some of the misclassifications produced by our model .
-The following is atypical example of a wrongly classified sentence : Relation ( e 1 , e 2 ) ( e 2 , e 1 ) e 1 caused a , caused a e 2 , e 2 caused by , e 2 from e 1 , Cause - Effect e 1 resulted in , the cause of , is caused by , are caused by , had caused the , poverty cause e 2 was caused by , been caused by Component - Whole e 1 of the , of a e 2 , of the e 2 , with it s e 2 , e 1 consists of , in the e 2 , part of the e 1 has a , e 1 comprises e 2 Content - Container in a e2 , was hidden in , e 1 with e2 , filled with e2 , inside a e 2 , was contained in e 1 contained a , full of e2 , Entity - Destination e 1 into the , e 1 into a , had thrown into was put inside , in a e 2 Entity - Origin from this e 2 , is derived from , e 1 e 2 is , the e 1 e 2 , from the e 2 , away from the for e 1 e 2 , the source of Instrument - Agency for the e 2 , is used by , by a e 2 , e 1 use e 2 , with a e 2 , with the e2 , a e 1 e 2 by using e 2 Member - Collection of the e 2 , in the e2 , a e 1 of , e 1 of various , a member of , from the e 2 e 1 of e 2 , the e1 of Message - Topic on the e 2 , e 1 asserts the , the e 1 of , described in the , e 1 points out , e 1 is the the topic for , in the e 2 Product - Producer e 1 made by , made by e 2 , has constructed a , came up with , from the e 2 , by the e 2 has drawn up , e 1 who created
+The following is a typical example of a wrongly classified sentence : Relation ( e 1 , e 2 ) ( e 2 , e 1 ) e 1 caused a , caused a e 2 , e 2 caused by , e 2 from e 1 , Cause - Effect e 1 resulted in , the cause of , is caused by , are caused by , had caused the , poverty cause e 2 was caused by , been caused by Component - Whole e 1 of the , of a e 2 , of the e 2 , with it s e 2 , e 1 consists of , in the e 2 , part of the e 1 has a , e 1 comprises e 2 Content - Container in a e2 , was hidden in , e 1 with e2 , filled with e2 , inside a e 2 , was contained in e 1 contained a , full of e2 , Entity - Destination e 1 into the , e 1 into a , had thrown into was put inside , in a e 2 Entity - Origin from this e 2 , is derived from , e 1 e 2 is , the e 1 e 2 , from the e 2 , away from the for e 1 e 2 , the source of Instrument - Agency for the e 2 , is used by , by a e 2 , e 1 use e 2 , with a e 2 , with the e2 , a e 1 e 2 by using e 2 Member - Collection of the e 2 , in the e2 , a e 1 of , e 1 of various , a member of , from the e 2 e 1 of e 2 , the e1 of Message - Topic on the e 2 , e 1 asserts the , the e 1 of , described in the , e 1 points out , e 1 is the the topic for , in the e 2 Product - Producer e 1 made by , made by e 2 , has constructed a , came up with , from the e 2 , by the e 2 has drawn up , e 1 who created
 This sentence is wrongly classified as belonging to the " Other " category , while the ground - truth label is Message - Topic ( e 1 ,e 2 ) .
 The phrase " revolves around " does not appear in the training data , and moreover is used metaphorically , rather than in its original sense of turning around , making it difficult for the model to recognize the semantic connection .
 Another common issue stems from sentences of the form " . . . e 1 e 2 . . . " , such as the following ones :
@@ -204,6 +204,6 @@ We plot the performance of each iteration in the Att -Input - CNN and Att - Pool
 It can be seen that Att-Input - CNN quite smoothly converges to its final F 1 score , while for the Att-Pooling - CNN model , which includes an additional attention layer , the joint effect of these two attention layer induces stronger back - propagation effects .
 On the one hand , this leads to a seesaw phenomenon in the result curve , but on the other hand it enables us to obtain better - suited models with slightly higher F 1 scores .
 Conclusion
-We have presented a CNN architecture with a novel objective and anew form of attention mechanism that is applied at two different levels .
+We have presented a CNN architecture with a novel objective and a new form of attention mechanism that is applied at two different levels .
 Our results show that this simple but effective model is able to outperform previous work relying on substantially richer prior knowledge in the form of structured models and NLP resources .
 We expect this sort of architecture to be of interest also beyond the specific task of relation classification , which we intend to explore in future work .

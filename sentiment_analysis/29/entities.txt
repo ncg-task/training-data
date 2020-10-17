@@ -29,11 +29,11 @@
 134	14	35	basic baseline method
 134	44	51	assigns
 134	56	82	largest sentiment polarity
-134	25	27	in
+134	83	85	in
 134	90	102	training set
 134	103	105	to
 134	106	117	each sample
-134	25	27	in
+134	118	120	in
 134	125	133	test set
 135	0	4	LSTM
 135	5	9	uses
@@ -77,6 +77,7 @@
 120	67	81	validation set
 120	82	89	to tune
 120	94	109	hyperparameters
+121	4	19	weight matrices
 121	24	49	randomly initialized from
 121	50	91	uniform distribution U ( ?10 ?4 , 10 ?4 )
 121	100	110	bias terms
@@ -86,7 +87,7 @@
 122	38	44	set to
 122	45	51	10 ? 4
 122	60	77	dropout keep rate
-122	38	44	set to
+122	81	87	set to
 122	88	91	0.2
 123	4	19	word embeddings
 123	24	40	initialized with
@@ -127,10 +128,10 @@
 150	42	64	performance fluctuates
 150	65	69	with
 150	70	101	different random initialization
-152	8	24	baseline methods
 153	0	10	On average
 153	13	26	our algorithm
 153	30	41	better than
+153	48	64	baseline methods
 153	69	91	our best trained model
 153	92	111	outperforms them in
 153	114	126	large margin

@@ -1,5 +1,4 @@
 (Contribution||has research problem||Aspect - term Sentiment Analysis)
-(Contribution||has research problem||Aspect - term sentiment analysis ( ATSA ))
 (Contribution||has research problem||aspect - term sentiment analysis ( ATSA ))
 (Contribution||has research problem||aspect - category sentiment analysis ( ACSA ))
 (Contribution||has research problem||ACSA)

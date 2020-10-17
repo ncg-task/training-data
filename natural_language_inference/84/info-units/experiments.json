@@ -15,7 +15,9 @@
                           "has" : "3.7 - 10.5 points"
                         }
                       },
-                      "from sentence" : "Looking at the results one can see that adding any external information results in a significant improvement over the baseline model ( B ) ( 3.7 - 10.5 points ) ."
+                      "from sentence" : "QUESTION ANSWERING
+Looking at the results one can see that adding any external information results in a significant improvement over the baseline model ( B ) ( 3.7 - 10.5 points ) ."
+
                     },
                     "spelling" : {
                       "has" : {
@@ -76,7 +78,7 @@
                   "has" : {
                     "spelling" : {
                       "was" : {
-                        "not useful" : {
+                        "not as useful" : {
                           "on" : "SNLI and MultiNLI"
                         }
                       },
@@ -127,7 +129,8 @@
                           "in" : "all cases"
                         }
                       },
-                      "from sentence" : "Similarly to our other experiments , using external information to compute embeddings of unknown words helps in all cases ."
+                      "from sentence" : "LANGUAGE MODELLING
+Similarly to our other experiments , using external information to compute embeddings of unknown words helps in all cases ."
                     }
                   },
                   "note that" : {

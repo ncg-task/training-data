@@ -24,10 +24,10 @@ Bottom :
 A tree - structured LSTM network with arbitrary branching factor .
 Order-insensitive models are insufficient to fully capture the semantics of natural language due to their inability to account for differences in meaning as a result of differences in word order or syntactic structure ( e.g. , " cats climb trees " vs. " trees climb cats " ) .
 We therefore turn to ordersensitive sequential or tree - structured models .
-In particular , tree - structured models area linguistically attractive option due to their relation to syntactic interpretations of sentence structure .
+In particular , tree - structured models are a linguistically attractive option due to their relation to syntactic interpretations of sentence structure .
 A natural question , then , is the following : to what extent ( if at all ) can we do better with tree - structured models as opposed to sequential models for sentence representation ?
 In this paper , we work towards addressing this question by directly comparing a type of sequential model that has recently been used to achieve state - of - the - art results in several NLP tasks against its tree - structured generalization .
-Due to their capability for processing arbitrarylength sequences , recurrent neural networks ( RNNs ) area natural choice for sequence modeling tasks .
+Due to their capability for processing arbitrarylength sequences , recurrent neural networks ( RNNs ) are a natural choice for sequence modeling tasks .
 Recently , RNNs with Long Short - Term Memory ( LSTM ) units ) have re-emerged as a popular architecture due to their representational power and effectiveness at capturing long - term dependencies .
 LSTM networks , which we review in Sec. 2 , have been successfully applied to a variety of sequence modeling and prediction tasks , notably machine translation , speech recognition , image caption generation , and program execution .
 In this paper , we introduce a generalization of the standard LSTM architecture to tree - structured network topologies and show its superiority for representing sentence meaning over a sequential LSTM .
@@ -62,7 +62,7 @@ Since the value of the gating variables vary for each vector element , the model
 Variants
 Two commonly - used variants of the basic LSTM architecture are the Bidirectional LSTM and the Multilayer LSTM ( also known as the stacked or deep LSTM ) .
 Bidirectional LSTM .
-A Bidirectional LSTM consists of two LSTMs that are run in parallel : one on the input sequence and the other on the reverse of the input sequence .
+A Bidirectional LSTM consists of two LSTMs thatare run in parallel : one on the input sequence and the other on the reverse of the input sequence .
 At each time step , the hidden state of the Bidirectional LSTM is the concatenation of the forward and backward hidden states .
 This setup allows the hidden state to capture both past and future information .
 Multilayer LSTM .
@@ -121,7 +121,7 @@ Tree-LSTM
 Classification
 In this setting , we wish to predict labels ?
 from a discrete set of classes Y for some subset of nodes in a tree .
-For example , the label fora node in a parse tree could correspond to some property of the phrase spanned by that node .
+For example , the label for a node in a parse tree could correspond to some property of the phrase spanned by that node .
 At each node j , we use a softmax classifier to predict the label ?
 j given the inputs {x } j observed at nodes in the subtree rooted at j .
 The classifier takes the hidden state h j at the node as input :
@@ -131,7 +131,7 @@ is an L2 regularization hyperparameter .
 Semantic Relatedness of Sentence Pairs
 Given a sentence pair , we wish to predict a real - valued similarity score in some range [ 1 , K ] , where K >
 1 is an integer .
-The sequence { 1 , 2 , . . . , K} is some ordinal scale of similarity , where higher scores indicate greater degrees of similarity , and we allow real - valued scores to account for ground - truth ratings that are an average over the evaluations of several human annotators .
+The sequence { 1 , 2 , . . . , K} is some ordinal scale of similarity , where higher scores indicate greater degrees of similarity , and we allow real - valued scores to account for ground - truth ratings thatare an average over the evaluations of several human annotators .
 We first produce sentence representations h Land h R for each sentence in the pair using a Tree - LSTM model over each sentence 's parse tree .
 Given these sentence representations , we predict the similarity score ?
 using a neural network that considers both the distance and angle between the pair ( h L , h R ):
@@ -168,7 +168,7 @@ The mean vector baseline computes sentence representations as a mean of the repr
 The DT - RNN and SDT - RNN models both compose vector representations for the nodes in a dependency tree as a sum over affinetransformed child vectors , followed by a nonlinearity .
 The SDT - RNN is an extension of the DT - RNN that uses a separate transformation for each dependency relation .
 For each of our baselines , including the LSTM models , we use the similarity model described in We also compare against four of the topperforming systems 6 submitted to the SemEval 2014 semantic relatedness shared task : ECNU , The Meaning Factory , UNAL - NLP , and Illinois - LH .
-These systems are heavily feature engineered , generally using a combination of surface form overlap features and lexical distance features derived from WordNet or the Paraphrase Database .
+These systems are heavily feature engineered , generally using a combination of surface form overlap features and lexical distance features derived from WordNet or the Paraphrase Data base .
 Our LSTM models outperform all these sys - tems without any additional feature engineering , with the best results achieved by the Dependency Tree - LSTM .
 Recall that in this task , both Tree - LSTM models only receive supervision at the root of the tree , in contrast to the sentiment classification task where supervision was also provided at the intermediate nodes .
 We conjecture that in this setting , the Dependency Tree - LSTM benefits from its more compact structure relative to the Constituency Tree - LSTM , in the sense that paths from input word vectors to the root of the tree are shorter on aggregate for the Dependency Tree - LSTM .
@@ -198,7 +198,7 @@ Additionally , the Tree - LSTM model shows greater ro- bustness to differences i
 Given the query " two men are playing guitar " , the Tree - LSTM associates the phrase " playing guitar " with the longer , related phrase " dancing and singing in front of a crowd " ( note as well that there is zero token overlap between the two phrases ) .
 Effect of Sentence Length
 One hypothesis to explain the empirical strength of Tree - LSTMs is that tree structures help mitigate the problem of preserving state overlong sequences of words .
-If this were true , we would expect to seethe greatest improvement over sequential LSTMs on longer sentences .
+If this were true , we would expect to see the greatest improvement over sequential LSTMs on longer sentences .
 In , we show the relationship between sentence length and performance as measured by the relevant taskspecific metric .
 Each data point is a mean score over 5 runs , and error bars have been omitted for clarity .
 We observe that while the Dependency Tree - LSTM does significantly outperform its sequential counterparts on the relatedness task for longer sentences of length 13 to 15 , it also achieves consistently strong performance on shorter sentences .
@@ -212,7 +212,7 @@ Score a woman is slicing potatoes a woman is cutting potatoes 4.82 potatoes are 
 Most similar sentences from a 1000 - sentence sample drawn from the SICK test set .
 The Tree - LSTM model is able to pickup on more subtle relationships , such as that between " beach " and " ocean " in the second example .
 have found wide applicability in a variety of NLP tasks .
-Following this success , there has been substantial interest in the area of learning distributed phrase and sentence representations , as well as distributed representations of longer bodies of text such as paragraphs and documents .
+Following this success , there has been substantial interest in the are a of learning distributed phrase and sentence representations , as well as distributed representations of longer bodies of text such as paragraphs and documents .
 Our approach builds on recursive neural networks , which we abbreviate as Tree - RNNs in order to avoid confusion with recurrent neural networks .
 Under the Tree - RNN framework , the vector representation associated with each node of a tree is composed as a function of the vectors corresponding to the children of the node .
 The choice of composition function gives rise to numerous variants of this basic framework .

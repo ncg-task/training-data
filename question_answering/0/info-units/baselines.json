@@ -35,8 +35,7 @@ To judge the effect of the gated graph neural architecture , we also include a m
         },
         "Gated Graph Neural Network ( GGNN )" : {
           "to process" : "semantic parses",
-          "from sentence" : "Gated
-Graph Neural Network ( GGNN ) - We use the GGNN to process semantic parses , as described in Section 3.2 ."
+          "from sentence" : "Gated Graph Neural Network ( GGNN ) - We use the GGNN to process semantic parses , as described in Section 3.2 ."
 
         }
       }

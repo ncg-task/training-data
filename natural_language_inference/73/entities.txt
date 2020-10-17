@@ -2,7 +2,7 @@
 204	12	30	prediction quality
 204	63	85	unselected head tokens
 204	89	102	contribute to
-204	12	22	prediction
+204	107	117	prediction
 204	120	128	bringing
 204	129	146	0.2 % improvement
 204	153	158	using
@@ -14,9 +14,9 @@
 204	238	240	by
 204	241	246	0.5 %
 204	257	305	hard attention and soft self - attention modules
-204	135	142	improve
-204	229	237	accuracy
-204	238	240	by
+204	306	313	improve
+204	318	326	accuracy
+204	327	329	by
 204	330	345	0.3 % and 2.9 %
 44	42	96	https://github.com/ taoshen58/DiSAN /tree/master/ReSAN
 177	4	15	experiments
@@ -38,14 +38,18 @@
 178	71	76	ReSAN
 180	7	41	300D Glo Ve 6B pre-trained vectors
 185	0	26	Natural Language Inference
+193	0	11	Compared to
+193	16	49	methods from official leaderboard
 193	52	57	ReSAN
+193	114	122	achieves
+193	127	145	best test accuracy
 193	58	69	outperforms
 193	70	109	all the sentence encoding based methods
+196	14	19	ReSAN
+196	25	36	outperforms
 196	41	65	300D SPINN - PI encoders
 196	66	68	by
 196	69	74	3.1 %
-193	114	122	achieves
-193	127	145	best test accuracy
 194	15	26	compared to
 194	31	47	last best models
 194	50	54	i.e.
@@ -92,9 +96,9 @@
 36	130	136	tokens
 36	137	141	from
 36	145	159	input sequence
-36	77	79	in
+36	160	162	in
 36	163	171	parallel
-36	5	7	is
+36	216	218	is
 36	219	240	highly parallelizable
 36	241	248	without
 36	249	272	any recurrent structure
@@ -122,7 +126,7 @@
 40	22	47	sentence - encoding model
 40	52	97	reinforced self - attention network ( ReSAN )
 40	102	110	based on
-40	90	94	ReSA
+40	111	115	ReSA
 40	116	123	without
 40	124	147	any CNN / RNN structure
 14	44	64	attention mechanisms

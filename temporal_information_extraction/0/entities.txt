@@ -10,7 +10,7 @@
 161	73	91	slight improvement
 161	92	105	compared with
 161	106	147	enabling only the machine - learned sieve
-161	4	6	in
+161	148	150	in
 161	155	168	system ( ML )
 162	0	11	Introducing
 162	16	40	temporal reasoner module
@@ -64,7 +64,7 @@
 150	26	32	CATENA
 150	33	35	is
 150	40	62	best performing system
-150	52	54	in
+150	63	65	in
 150	66	76	both tasks
 156	51	67	performs best on
 156	68	109	timex - timex and event - timex relations
@@ -72,5 +72,5 @@
 156	118	123	CAEVO
 156	130	138	achieves
 156	143	155	best results
-156	7	9	on
+156	156	158	on
 156	159	194	event - DCT and event - event pairs

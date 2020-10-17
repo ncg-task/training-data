@@ -1,3 +1,4 @@
+161	0	19	Logistic Regression
 162	126	134	based on
 162	135	154	linguistic features
 162	89	96	such as
@@ -9,6 +10,7 @@
 165	0	26	Mask target entity n-grams
 168	0	21	Left - right n- grams
 170	0	18	Left right pooling
+177	0	33	Long Short - Term Memory ( LSTM )
 178	87	90	use
 178	93	111	bidirectional LSTM
 178	112	120	to learn
@@ -32,9 +34,9 @@
 129	57	67	containing
 129	70	85	single location
 129	90	104	1353 sentences
-129	57	67	containing
+129	105	115	containing
 129	116	142	multiple ( two ) locations
-131	12	22	 sentiment
+131	0	22	" Positive " sentiment
 131	26	38	dominant for
 131	39	46	aspects
 131	47	54	such as
@@ -48,21 +50,19 @@
 133	98	109	occurred in
 133	110	133	less than 100 sentences
 134	71	104	total number of opinions ( 5920 )
-134	13	15	in
+134	105	107	in
 134	112	119	dataset
 134	123	134	higher than
 134	139	158	number of sentences
 134	12	17	since
 134	18	31	each sentence
+134	32	43	can contain
 134	44	64	one or more opinions
-135	16	20	name
-135	16	20	name
 135	0	21	Location entity names
 135	26	35	masked by
 135	36	60	location1 and location 2
 135	61	63	in
 135	68	81	whole dataset
-2	53	60	Dataset
 2	12	52	Targeted Aspect Based Sentiment Analysis
 4	41	83	targeted aspect - based sentiment analysis
 16	0	18	Sentiment analysis
@@ -80,7 +80,7 @@
 213	17	32	POS information
 213	38	42	gain
 213	46	54	increase
-213	13	15	in
+213	55	57	in
 213	62	73	performance
 215	0	10	Separating
 215	15	63	left and the right context ( LR - Left - Right )
@@ -96,7 +96,7 @@
 217	75	79	does
 217	80	95	slightly better
 217	96	100	than
-217	41	46	model
+217	105	110	model
 217	120	123	use
 217	128	160	embeddings at the location index
 218	6	25	interesting to note
@@ -111,10 +111,10 @@
 221	91	118	n-grams and POS information
 221	8	39	interesting observation is that
 221	44	55	F 1 measure
-221	32	34	is
+221	119	121	is
 221	122	130	very low
 221	151	162	performance
-221	32	34	is
+221	139	141	is
 221	166	174	superior
 221	175	177	to
 221	178	190	other models

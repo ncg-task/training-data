@@ -84,7 +84,7 @@ Let H 0 p and H q denote the vector representations computed by f for tokens in 
 In Section 3.2 , we will discuss the " word - character " fine - grained gating used to define the function f .
 Suppose that we have a network of K layers .
 At the k -th layer , we apply RNNs on H k?1 p and H q to obtain hidden states P k and Q k , where P k is a M d matrix and Q k is a N d matrix with d being the number of hidden units in the RNNs .
-Then we use a function r to compute anew representation for the document H k p = r( P k , Q k ) .
+Then we use a function r to compute a new representation for the document H k p = r( P k , Q k ) .
 In Section 3.3 , we will introduce the " document - query " finegrained gating used to define the function r.
 After going through K layers , we predict the answer index a using a softmax layer over hidden states H k p .
 For datasets where the answer is a span of text , we use two softmax layers for the start and end indices respectively .
@@ -128,7 +128,7 @@ where q j can be viewed as agate to filter the information in pi .
 We then use an attention mechanism over I ij to output hidden states hi as follows
 where uh is ad v - dimensional model parameter , b h 1 and b h2 are scalar model parameters , w i and w j are one - hot encodings for pi and q j respectively .
 We additionally use one - hot encodings in the attention mechanism to reinforce the matching between the same tokens since such information is not fully preserved in I ij when k is large .
-The softmax nonlinearity is applied overall j's .
+The softmax nonlinearity is applied over all j's .
 The final hidden states H are formed by concatenating the hi 's for each token pi .
 EXPERIMENTS
 We first present experimental results on the Twitter dataset where we can rule out the effects of different choices of network architectures , to demonstrate the effectiveness of our word - character fine - grained gating approach .
@@ -143,7 +143,7 @@ The dataset contains 2 million tweets for training , 10 K for validation and 50 
 The task is to predict the hashtags of each tweet .
 We compare several different methods as follows .
 Word char concat uses the concatenation of word - level and character - level representations as in ; word char feat concat concatenates the word - level and character - level representations along with the features described in but is conditioned on the features ; fine - grained gate is our method described in Section 3.2 .
-We include word char feat concat fora fair comparison because our fine - grained gating approach also uses the token features .
+We include word char feat concat for a fair comparison because our fine - grained gating approach also uses the token features .
 The results are shown in .
 We report three evaluation metrics including precision@1 , re-call@10 , and mean rank .
 Our method outperforms character - level models used in by 2.29 % , 2.69 % , and 2.5 points in terms of precision , recall and mean rank respectively .
@@ -157,7 +157,7 @@ CLOZE - STYLE QUESTIONS
 We evaluate our model on cloze - style question answering benchmarks . 0.712 ( 0.710 ) 0.625 ( 0.625 ) 0.700 ( 0.703 ) 0.591 ( 0.595 )
 The Children 's Book Test ( CBT ) dataset is built from children 's books .
 The whole dataset has 669,343 questions for training , 8,000 for validation and 10,000 for testing .
-We closely follow the setting in and incrementally add different components to seethe changes in performance .
+We closely follow the setting in and incrementally add different components to see the changes in performance .
 For the fine - grained gating approach , we use the same hyper - parameters as in except that we use a character - level GRU with 100 units to be of the same size as the word lookup table .
 The word embeddings are updated during training .
 In addition to different ways of combining word - level and character - level representations , we also compare two different ways of integrating documents and queries : GA refers to the gated attention reader and FG refers to our fine - grained gating described in Section 3.3 .
@@ -173,12 +173,12 @@ We fix the word embeddings during training .
 SQUAD
 The Stanford Question Answering Dataset ( SQuAD ) is a reading comprehension dataset collected recently .
 It contains 23,215 paragraphs come from 536 Wikipedia articles .
-Unlike other reading comprehension datasets such as CBT , the answers area span of text rather than a single word .
+Unlike other reading comprehension datasets such as CBT , the answers are a span of text rather than a single word .
 The dataset is partitioned into a training set ( 80 % , 87,636 question - answer pairs ) , a development set ( 10 % , 10,600 question - answer pairs ) and a test set which is not released .
 We report our results in .
-" Exact match " computes the ratio of questions that are answered correctly by strict string comparison , and the F 1 score is computed on the token level .
+" Exact match " computes the ratio of questions thatare answered correctly by strict string comparison , and the F 1 score is computed on the token level .
 We can observe that both word - character fine - grained gating and document - query fine - grained gating can substantially improve the performance , leading to state - of - the - art results among published papers .
-Note that at the time of submission , the best score on the leaderboard is 0.716 inexact match and 0.804 in F1 without published papers .
+Note that at the time of submission , the best score on the leaderboard is 0.716 in exact match and 0.804 in F1 without published papers .
 A gap exists because our architecture described in Section 3.1 does not specifically model the answer span structure that is unique to SQuAD .
 In this work , we focus on this general architecture to study the effectiveness of fine - grained gating mechanisms .
 VISUALIZATION AND ANALYSIS

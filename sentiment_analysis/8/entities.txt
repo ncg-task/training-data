@@ -31,9 +31,9 @@
 172	12	20	training
 172	21	25	when
 172	29	55	do not see any improvement
-172	15	17	in
+172	56	58	in
 172	59	81	validation performance
-172	73	76	for
+172	82	85	for
 172	86	97	> 10 epochs
 18	18	25	explore
 18	30	68	implication of hand - crafted features
@@ -41,7 +41,7 @@
 18	73	76	SER
 18	81	88	compare
 18	93	104	performance
-18	42	44	of
+18	105	107	of
 18	108	139	lighter machine learning models
 18	140	144	with
 18	149	192	heavily data - reliant deep learning models
@@ -102,7 +102,7 @@
 207	0	19	Text - only results
 208	3	10	observe
 208	20	49	performance of all the models
-208	56	58	is
+208	67	69	is
 208	70	77	similar
 212	3	23	Audio + Text results
 213	12	21	combining

@@ -37,7 +37,7 @@
 30	102	118	gradient descent
 30	121	126	where
 30	131	144	loss function
-30	19	21	is
+30	145	147	is
 30	152	173	cross - entropy error
 30	174	176	of
 30	177	201	sentiment classification
@@ -46,11 +46,11 @@
 158	20	41	basic baseline method
 158	50	57	assigns
 158	62	86	majority sentiment label
-158	31	33	in
+158	87	89	in
 158	90	102	training set
 158	103	110	to each
 158	111	119	instance
-158	31	33	in
+158	120	122	in
 158	127	135	test set
 159	6	25	Feature - based SVM
 159	26	34	performs
@@ -58,9 +58,8 @@
 159	58	60	on
 159	61	98	aspect level sentiment classification
 161	22	39	three LSTM models
-161	28	32	LSTM
-161	28	32	LSTM
 162	0	2	In
+162	3	7	LSTM
 162	12	38	LSTM based recurrent model
 162	42	54	applied from
 162	59	64	start
@@ -73,16 +72,17 @@
 162	134	157	sentence representation
 163	0	6	TDLSTM
 163	7	14	extends
+163	15	19	LSTM
 163	20	42	by taking into account
 163	50	56	aspect
 163	63	67	uses
 163	68	85	two LSTM networks
 163	90	120	forward one and a backward one
 163	123	130	towards
-163	50	56	aspect
-163	7	14	extends
-163	0	6	TDLSTM
+163	135	141	aspect
 164	0	12	TDLSTM + ATT
+164	13	20	extends
+164	21	27	TDLSTM
 164	28	44	by incorporating
 164	48	67	attention mechanism
 164	95	99	over
@@ -93,7 +93,6 @@
 165	39	54	fair comparison
 166	14	23	implement
 166	24	34	ContextAVG
-166	44	46	is
 166	39	57	simplistic version
 166	58	60	of
 166	61	73	our approach
@@ -113,7 +112,7 @@
 202	23	52	multiple computational layers
 202	59	79	consistently improve
 202	84	107	classification accuracy
-202	8	10	in
+202	108	110	in
 202	111	127	all these models
 172	0	5	Among
 172	6	28	three recurrent models
@@ -121,8 +120,9 @@
 172	38	46	performs
 172	47	53	better
 172	54	58	than
-172	33	37	LSTM
-179	59	77	observe that using
+172	59	63	LSTM
+179	59	71	observe that
+179	72	77	using
 179	78	103	more computational layers
 179	120	127	lead to
 179	128	146	better performance
@@ -136,7 +136,7 @@
 175	39	45	TDLSTM
 175	46	53	encodes
 175	58	67	semantics
-175	36	38	of
+175	68	70	of
 175	71	84	word sequence
 175	85	90	until
 175	95	111	current position

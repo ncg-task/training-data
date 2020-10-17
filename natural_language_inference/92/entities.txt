@@ -1,3 +1,4 @@
+155	0	35	Multi-mention Reading Comprehension
 164	3	6	use
 164	7	22	uncased version
 164	23	25	of
@@ -8,7 +9,7 @@
 166	24	27	for
 166	28	59	two reading comprehension tasks
 166	64	67	192
-166	24	27	for
+166	68	71	for
 166	72	98	two open - domain QA tasks
 168	0	3	For
 168	4	23	opendomain QA tasks
@@ -41,7 +42,7 @@
 178	97	108	outperforms
 178	116	118	by
 178	119	142	2 + F1 / ROUGE - L / EM
-178	3	5	on
+178	156	158	on
 178	159	171	all datasets
 179	9	19	our method
 179	20	28	achieves
@@ -53,11 +54,11 @@
 179	128	138	comparable
 179	139	141	to
 179	146	168	state - of - the - art
-179	58	60	on
-179	75	83	TRIVIAQA
+179	169	171	on
+179	172	180	TRIVIAQA
 20	42	51	formulate
 20	54	94	wide range of weakly supervised QA tasks
-20	90	92	as
+20	95	97	as
 20	98	142	discrete latent - variable learning problems
 25	3	14	demonstrate
 25	20	23	for
@@ -68,12 +69,13 @@
 25	130	143	to precompute
 25	146	198	discrete , task - specific set of possible solutions
 25	199	212	that contains
+25	217	233	correct solution
 25	234	244	along with
 25	247	280	modest number of spurious options
 26	4	22	learning challenge
 26	31	43	to determine
 26	44	58	which solution
-26	9	11	in
+26	59	61	in
 26	66	69	set
 26	23	25	is
 26	77	88	correct one

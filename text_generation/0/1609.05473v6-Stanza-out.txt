@@ -4,7 +4,7 @@ abstract
 As a new way of training generative models , Generative Adversarial Net ( GAN ) that uses a discriminative model to guide the training of the generative model has enjoyed considerable success in generating real - valued data .
 However , it has limitations when the goal is for generating sequences of discrete tokens .
 A major reason lies in that the discrete outputs from the generative model make it difficult to pass the gradient update from the discriminative model to the generative model .
-Also , the discriminative model can only assess a complete sequence , while fora partially generated sequence , it is nontrivial to balance its current score and the future one once the entire sequence has been generated .
+Also , the discriminative model can only assess a complete sequence , while for a partially generated sequence , it is nontrivial to balance its current score and the future one once the entire sequence has been generated .
 In this paper , we propose a sequence generation framework , called SeqGAN , to solve the problems .
 Modeling the data generator as a stochastic policy in reinforcement learning ( RL ) , SeqGAN bypasses the generator differentiation problem by directly performing gradient policy update .
 The RL reward signal comes from the GAN discriminator judged on a complete sequence , and is passed back to the intermediate state - action steps using Monte Carlo search .
@@ -28,7 +28,7 @@ Firstly , GAN is designed for generating real - valued , continuous data but has
 The reason is that in GANs , the generator starts with random sampling first and then a determistic transform , govermented by the model parameters .
 As such , the gradient of the loss from D w.r.t. the outputs by G is used to guide the generative model G ( paramters ) to slightly change the generated value to make it more realistic .
 If the generated data is based on discrete tokens , the " slight change " guidance from the discriminative net makes little sense because there is probably no corresponding token for such slight change in the limited dictionary space .
-Secondly , GAN can only give the score / loss for an entire sequence when it has been generated ; fora partially generated sequence , it is non-trivial to balance how good as it is now and the future score as the entire sequence .
+Secondly , GAN can only give the score / loss for an entire sequence when it has been generated ; for a partially generated sequence , it is non-trivial to balance how good as it is now and the future score as the entire sequence .
 In this paper , to address the above two issues , we follow ) and consider the sequence generation procedure as a sequential decision making process .
 The generative model is treated as an agent of reinforcement learning ( RL ) ; the state is the generated tokens so far and the action is the next token to be generated .
 Unlike the work in ) that requires a task - specific sequence score , such as BLEU in machine translation , to give the reward , we employ a discriminator to evaluate the sequence and feedback the evaluation to guide the learning of the generative model .
@@ -59,7 +59,7 @@ As pointed out by , the sequence data generation can be formulated as a sequenti
 Modeling the sequence generator as a policy of picking the next token , policy gradient methods can be adopted to optimize the generator once there is an ( implicit ) reward function to guide the policy .
 For most practical sequence generation tasks , e.g. machine translation , the reward signal is meaningful only for the entire sequence , for instance in the game of Go , the reward signal is only set at the end of the game .
 In those cases , state - action evaluation methods such as Monte Carlo ( tree ) search have been adopted .
-By contract , our proposed SeqGAN extends GANs with the RL - based generator to solve the sequence generation problem , where a reward signal is provided by the discriminator at the end of each episode via Monte Carlo approach , and the generator picks the action and learns the policy using estimated overall rewards .
+By contract , our proposed SeqGAN extends GANs with the RL - based generator to solve the sequence generation problem , where a reward signal is provided by the discriminator at the end of each episode via Monte Carlo approach , and the generator picks the action and learns the policy using estimated over all rewards .
 Sequence Generative Adversarial Nets
 The sequence generation problem is denoted as follows .
 Given a dataset of real - world structured sequences , train a ?-parameterized generative model G ? to produce a sequence Y 1:T = ( y 1 , . . . , y t , . . . , y T ) , y t ?
@@ -77,14 +77,14 @@ The reward is estimated by the likelihood that it would fool the discriminative 
 The specific formulation is given in the next subsection .
 SeqGAN via Policy Gradient
 Following , when there is no intermediate reward , the objective of the generator model ( policy ) G ? ( y t | Y 1:t?1 ) is to generate a sequence from the start state s 0 to maximize it s expected end reward :
-where R T is the reward fora complete sequence .
+where R T is the reward for a complete sequence .
 Note that the reward is from the discriminator D ? , which we will discuss later .
 Q G ? D ? ( s , a ) is the action - value function of a sequence , i.e. the expected accumulative reward starting from state s , taking action a , and then following policy G ? .
-The rational of the objective function fora sequence is that starting from a given initial state , the goal of the generator is to generate a sequence which would make the discriminator consider it is real .
+The rational of the objective function for a sequence is that starting from a given initial state , the goal of the generator is to generate a sequence which would make the discriminator consider it is real .
 The next question is how to estimate the action - value function .
 In this paper , we use the REINFORCE algorithm ) and consider the estimated probability of being real by the discriminator D ? ( Y n 1:T ) as the reward .
 Formally , we have :
-However , the discriminator only provides a reward value fora finished sequence .
+However , the discriminator only provides a reward value for a finished sequence .
 Since we actually care about the longterm reward , at every timestep , we should not only consider the fitness of previous tokens ( prefix ) but also the resulted future outcome .
 This is similar to playing the games such as Go or Chess where players sometimes would give up the immediate interests for the long - term victory .
 Thus , to evaluate the action - value for an intermediate state , we apply Monte Carlo search with a roll - out policy G ? to sample the unknown last T ?
@@ -100,7 +100,7 @@ where , we see that when no intermediate reward , the function is iteratively de
 A benefit of using the discriminator D ?
 as a reward function is that it can be dynamically updated to further improve the generative model iteratively .
 Once we have a set of more realistic generated sequences , we shall re-train the discriminator model as follows :
-Each time when anew discriminator model has been obtained , we are ready to update the generator .
+Each time when a new discriminator model has been obtained , we are ready to update the generator .
 The proposed policy based method relies upon optimizing a parametrized policy to directly maximize the long - term reward .
 Following , the gradient of the objective function J ( ? )
 w.r.t. the generator 's parameters ?
@@ -143,7 +143,7 @@ The Generative Model for Sequences
 We use recurrent neural networks ( RNNs ) ) as the generative model .
 An RNN maps the input embedding representations x 1 , . . . , x T of the sequence x 1 , . . . , x T into a sequence of hidden states h 1 , . . . , h T by using the update function g recursively .
 Moreover , a softmax output layer z maps the hidden states into the output token distribution
-where the parameters area bias vector c and a weight matrix V .
+where the parameters are a bias vector c and a weight matrix V .
 To deal with the common vanishing and exploding gradient problem of the backpropagation through time , we leverage the Long Short - Term Memory ( LSTM ) cells to implement the update function gin Eq. ( 9 ) .
 It is worth noticing that most of the RNN variants , such as the gated recurrent unit ( GRU ) ) and soft attention mechanism , can be used as a generator in SeqGAN .
 The Discriminative Model for Sequences
@@ -157,7 +157,7 @@ R k is the k-dimensional token embedding and ?
 is the concatenation operator to build the matrix E 1:T ?
 R T k .
 Then a kernel w ?
-R lk applies a convolutional operation to a window size of l words to produce anew feature map :
+R lk applies a convolutional operation to a window size of l words to produce a new feature map :
 where ?
 operator is the summation of elementwise production , b is a bias term and ?
 is a non-linear function .
@@ -200,7 +200,7 @@ In the PG - BLEU algorithm , we use BLEU , a metric measuring the similarity bet
 Results
 The NLL oracle performance of generating sequences from the compared policies is provided in .
 Since the evaluation metric is fundamentally instructive , we can see the impact of SeqGAN , which outperforms other baselines significantly .
-A significance T - test on the NLL oracle score distribution of the generated sequences from the compared models is also performed , which demonstrates the significant improvement of SeqGAN overall compared models .
+A significance T - test on the NLL oracle score distribution of the generated sequences from the compared models is also performed , which demonstrates the significant improvement of SeqGAN over all compared models .
 The learning curves shown in illustrate the superiority of SeqGAN explicitly .
 After about 150 training epochs , both the maximum likelihood estimation and the schedule sampling methods converge to a relatively high NLL oracle score , whereas SeqGAN can improve the limit of the generator with the same structure as the baselines significantly .
 This indicates the prospect of applying adversarial training strategies to discrete sequence generative models to breakthrough the limitations of MLE .
@@ -217,7 +217,7 @@ In such a case , SeqGAN learns stably .
 The d-steps in all three training strategies described above is set to 1 , which means we only generate one set of negative examples with the same number as the given dataset , and then train the discriminator on it for various k epochs .
 But actually we can utilize the potentially unlimited number of negative examples to improve the discriminator .
 This trick can be considered as a type of bootstrapping , where we combine the fixed positive examples with different negative examples to obtain multiple training sets .
-shows this technique can improve the overall performance with good stability , since the discriminator is shown more negative examples and each time the positive examples are emphasized , which will lead to a more comprehensive guidance for training generator .
+shows this technique can improve the over all performance with good stability , since the discriminator is shown more negative examples and each time the positive examples are emphasized , which will lead to a more comprehensive guidance for training generator .
 This is inline with the theorem in .
 When analyzing the convergence of generative adversarial nets , an important assumption is that the discriminator is allowed to reach its optimum given G. Only if the discriminator is capable of differentiating real data from unnatural data consistently , the supervised signal from it can be meaningful and the whole adversarial training process can be stable and effective .
 Real - world Scenarios
@@ -238,7 +238,7 @@ Specifically , we mix the 20 real poems and 20 each generated from SeqGAN and ML
 Then 70 experts on Chinese poems are invited to judge whether each of the 60 poem is created by human or machines .
 Once regarded to be real , it gets + 1 score , otherwise 0 .
 Finally , the average score for each algorithm is calculated .
-The experiment results are shown in , from which we can seethe significant advantage of SeqGAN over the MLE in text generation .
+The experiment results are shown in , from which we can see the significant advantage of SeqGAN over the MLE in text generation .
 Particularly , for poem composition , SeqGAN performs comparably to real human data .
 Music Generation
 For music composition , we use Nottingham 6 dataset as our training data , which is a collection of 695 music of folk tunes in midi file format .
@@ -273,7 +273,7 @@ The Generative Model for Sequences
 We use recurrent neural networks ( RNNs ) as the generative model .
 An RNN maps the input embedding representations x 1 , . . . , x T of the sequence x 1 , . . . , x T into a sequence of hidden states h 1 , . . . , h T by using the update function g recursively .
 Moreover , a softmax output layer z maps the hidden states into the output token distribution
-where the parameters area bias vector c and a weight matrix V .
+where the parameters are a bias vector c and a weight matrix V .
 The vanishing and exploding gradient problem in backpropagation through time ( BPTT ) issues a challenge of learning longterm dependencies to recurrent neural network .
 To address such problems , gated RNNs have been designed based on the basic idea of creating paths through time that have derivatives that neither vanish nor explode .
 Among various gated RNNs , we choose the Long Short - Term Memory ( LSTM ) to be our generative networks with the update equations :
@@ -281,11 +281,11 @@ where [ h , x ] is the vector concatenation and is the elementwise product .
 For simplicity , we use the standard LSTM as the generator , while it is worth noticing that most of the RNN variants , such as the gated recurrent unit ( GRU ) ) and soft attention mechanism , can be used as a generator in SeqGAN .
 The standard way of training an RNN G ?
 is the maximum likelihood estimation ( MLE ) , which involves minimizing the negative log - likelihood ?
-T t=1 log G ? ( y t = x t | {x 1 , . . . , x t?1 }) fora generated sequence ( y 1 , . . . , y T ) given input ( x 1 , . . . , x T ) .
+T t=1 log G ? ( y t = x t | {x 1 , . . . , x t?1 }) for a generated sequence ( y 1 , . . . , y T ) given input ( x 1 , . . . , x T ) .
 However , when applying MLE to generative models , there is a discrepancy between training and generating , which motivates our work .
 The Discriminative Model for Sequences Deep discriminative models such as deep neural network ( DNN ) , convolutional neural network ( CNN ) ) and recurrent convolutional neural network ( RCNN ) have shown a high performance in complicated sequence classification tasks .
 In this paper , we choose the CNN as our discriminator as CNN has recently been shown of great effectiveness in text ( token sequence ) classification .
-As far as we know , except for some specific tasks , most discriminative models can only perform classification well fora whole sequence rather than the unfinished one .
+As far as we know , except for some specific tasks , most discriminative models can only perform classification well for a whole sequence rather than the unfinished one .
 In case of some specific tasks , one may design a classifier to provide intermediate reward signal to enhance the performance of our framework .
 But to make it more general , we focus on the situation where discriminator can only provide final reward , i.e. , the probability that a finished sequence was real .
 We first represent an input sequence x 1 , . . . , x T as :
@@ -294,7 +294,7 @@ R k is the k-dimensional token embedding and ?
 is the vertical concatenation operator to build the matrix E 1:T ?
 R T k .
 Then a kernel w ?
-R lk applies a convolutional operation to a window size of l words to produce anew feature map :
+R lk applies a convolutional operation to a window size of l words to produce a new feature map :
 where ?
 operator is the summation of elementwise production , b is a bias term and ?
 is a non-linear function .

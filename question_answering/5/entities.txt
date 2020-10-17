@@ -5,7 +5,7 @@
 160	86	103	gated - attention
 160	106	111	BiDAF
 160	118	126	RC model
-160	81	85	with
+160	127	131	with
 160	132	160	bidirectional attention flow
 160	163	166	AQA
 160	173	199	reinforced system learning
@@ -20,13 +20,13 @@
 160	315	328	for selecting
 160	329	337	passages
 160	338	346	to train
-160	118	126	RC model
+160	351	359	RC model
 184	32	68	https://github.com/shuohangwang/mprc
 167	9	12	use
 167	15	36	pre-trained R 3 model
 167	132	143	to generate
 167	148	170	top 50 candidate spans
-167	80	83	for
+167	171	174	for
 167	179	219	training , development and test datasets
 167	229	241	use them for
 167	242	257	further ranking
@@ -46,10 +46,10 @@
 172	9	11	to
 172	12	15	300
 172	18	28	batch size
-172	9	11	to
-172	12	14	30
+172	29	31	to
+172	32	34	30
 172	37	50	learning rate
-172	9	11	to
+172	51	53	to
 172	54	59	0.002
 173	3	7	tune
 173	12	31	dropout probability
@@ -58,7 +58,7 @@
 173	54	81	number of candidate answers
 173	82	85	for
 173	86	102	re-ranking ( K )
-173	93	95	in
+173	103	105	in
 173	106	120	[ 3 , 5 , 10 ]
 23	19	26	propose
 23	29	35	method
@@ -83,10 +83,12 @@
 37	154	161	without
 37	162	186	significantly increasing
 37	191	201	complexity
-37	23	25	of
+37	134	136	of
 37	209	219	prediction
-37	23	25	of
+37	202	204	of
 37	227	235	RC model
+39	4	14	re-rankers
+39	15	18	are
 40	2	28	strength - based re-ranker
 40	37	42	ranks
 40	47	64	answer candidates
@@ -118,11 +120,10 @@
 181	55	57	on
 181	58	69	Wiki domain
 181	74	91	F1 68.5 , EM 63.0
-181	55	57	on
+181	92	94	on
 181	95	105	Web domain
 181	117	131	competitive to
 181	136	159	state - of - the - arts
-190	93	103	re-rankers
 190	34	42	see that
 190	47	61	full re-ranker
 190	68	82	combination of
@@ -137,7 +138,7 @@
 192	26	56	our coverage - based re-ranker
 192	57	65	achieves
 192	66	95	consistently good performance
-192	9	11	on
+192	96	98	on
 192	103	117	three datasets
 191	11	20	our model
 191	21	23	is

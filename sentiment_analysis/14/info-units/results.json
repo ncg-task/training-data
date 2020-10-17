@@ -60,8 +60,7 @@
               }
             } 
           },
-          "from sentence" : "GloVe + Emo2
-Vec achieves better performances on SOTA results on three datasets ( SE0714 , stress and tube tablet ) and comparable result to SOTA on dataset Previous SOTA results"
+          "from sentence" : "GloVe + Emo2 Vec achieves better performances on SOTA results on three datasets ( SE0714 , stress and tube tablet ) and comparable result to SOTA on dataset Previous SOTA results"
 
         }
       },
@@ -103,15 +102,14 @@ Vec achieves better performances on SOTA results on three datasets ( SE0714 , st
         "from sentence" : "Here , we want to highlight that solely using a simple classifier with good word representation can achieve promising results ."
       },
       "Compared with" : {
-        " GloVe+ DeepMoji , GloVe + Emo2 Vec" : {
+        "GloVe+ DeepMoji , GloVe + Emo2 Vec" : {
           "achieves" : {
             "same or better results" : {
               "on" : "11 / 14 datasets",
               "on average gives" : "1.0 % improvement"
             }
           },
-          "from sentence" : "Compared with GloVe+ DeepMoji , GloVe + Emo2
-Vec achieves same or better results on 11 / 14 datasets , which on average gives 1.0 % improvement ."
+          "from sentence" : "Compared with GloVe+ DeepMoji , GloVe + Emo2 Vec achieves same or better results on 11 / 14 datasets , which on average gives 1.0 % improvement ."
 
         }
       },

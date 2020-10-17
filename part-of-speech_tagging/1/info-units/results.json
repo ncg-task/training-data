@@ -14,7 +14,9 @@
                   }
                 }
               },
-              "from sentence" : "The result shows that for most of the datasets , the F1 score does not improve much when we directly add more layers ."
+              "from sentence" : "5 Results and Analysis 5.1 Character - to - word Models presents the performance of different character - to - word models on six benchmark datasets .
+The result shows that for most of the datasets , the F1 score does not improve much when we directly add more layers ."
+
             },
             "proposed character - to - word model , char - IntNet - 5 and char - IntNet - 9" : {
               "improves" : {
@@ -118,7 +120,9 @@
                   "across" : "different models and datasets"
                 }
               },
-              "from sentence" : "These experiments show that our char - IntNet generally improves results across different models and datasets ."
+              "from sentence" : "Table 2 presents our proposed model in comparison with state - of - the - art results .
+These experiments show that our char - IntNet generally improves results across different models and datasets ."
+
             }
           }
         }

@@ -33,8 +33,7 @@ in the dual context aggregation is 0.5 ."
         "texts" : {
           "are" : {
             "tokenized" : {
-              "using" : "wordpieces",
-              "from sentence" : "All the texts are tokenized using wordpieces , and the maximum input length is set to 384 for both of SQuAD and RACE ."
+              "using" : "wordpieces"
             }
           }
         },

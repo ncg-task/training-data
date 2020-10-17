@@ -34,12 +34,13 @@
 37	98	110	bigram model
 37	111	119	based on
 37	122	150	convolutional neural network
-38	22	27	train
+38	60	65	train
 38	68	84	supervised model
 38	85	93	to learn
 38	96	113	semantic matching
 38	114	121	between
 38	122	147	question and answer pairs
+38	0	17	Assuming a set of
 38	18	54	pre-trained semantic word embeddings
 40	8	15	present
 40	19	35	enhanced version
@@ -59,7 +60,7 @@
 161	97	131	IDF - weighted word count features
 161	132	153	significantly improve
 161	154	165	performance
-161	37	40	for
+161	166	169	for
 161	170	181	both models
 161	182	184	by
 161	185	196	10 % - 15 %

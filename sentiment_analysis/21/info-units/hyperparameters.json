@@ -7,17 +7,13 @@
             "20 % of the training data" : {
               "as" : {
                 "validation set" : {
-                  "to determine" : " optimal hyperparameters",
+                  "to determine" : "optimal hyperparameters",
                   "to use" : "constant learning rate or learning rate annealing"
                 }
               }
             }
           },
           "from sentence" : "Grid search was performed using 20 % of the training data as a validation set in order to determine the optimal hyperparameters as well as whether to use a constant learning rate or learning rate annealing ."
-        },
-        "learning rate" : {
-          "from" : "[ 0.25 , 0.025 , 0.0025 , 0.001 ]",
-          "from sentence" : "We did however tune the number of iterations from , learning rate from [ 0.25 , 0.025 , 0.0025 , 0.001 ] and ? from ."
         },
         "optimal learning rate" : {
           "in the case of" : {
@@ -50,7 +46,10 @@
             },
             "from sentence" : "The weights of the networks were initialized from a uniform distribution in the range of [ - 0.001 , 0.001 ] ."
           }
-        }
+        },
+        "learning rate" : {
+          "from" : "[ 0.25 , 0.025 , 0.0025 , 0.001 ]",
+        }		
       },
       "tune" : ["number of iterations", {"from sentence" : "We did however tune the number of iterations from , learning rate from [ 0.25 , 0.025 , 0.0025 , 0.001 ] and ? from ."}],
       "using" : {

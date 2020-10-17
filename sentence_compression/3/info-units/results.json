@@ -17,24 +17,17 @@
             "LSTMs ( LSTM + pos+dep )" : {
               "is" : {
                 "relatively strong baseline" : {
-                  "incoporating" : ["dependency relations", "part - of - speech tags"]
+                  "incorporating" : ["dependency relations", "part - of - speech tags"]
                 }
               },
               "from sentence" : "( 3 ) As for Google news dataset , LSTMs ( LSTM + pos+dep ) ( & 3 ) is a relatively strong baseline , suggesting that incorporating dependency relations and part - of - speech tags may help model learn the syntactic relations and thus make a better prediction ."              
             },
             "perplexity" : {
-              "is" : "76.5",
-              "from sentence" : "For Gigaword dataset with 1.02 million instances , the perplexity of the language model is 20.3 , while for the Google news dataset with 0.2 million instances , the perplexity is 76.5 ."              
+              "is" : "76.5"
             }          
           },
-          "with" : ["0.2 million instances", {"from sentence" : "For Gigaword dataset with 1.02 million instances , the perplexity of the language model is 20.3 , while for the Google news dataset with 0.2 million instances , the perplexity is 76.5 ."}]
+          "with" : "0.2 million instances"
         }
-      },
-      "applying" : {
-        "Evaluator - SLM" : {
-          "observed" : "only a tiny improvement"
-        },
-        "from sentence" : "When further applying Evaluator - SLM , only a tiny improvement is observed ( &3 vs & 4 ) , not comparable to the improvement between # 3 and # 5 ."
       },
       "For" : {
         "Gigaword dataset" : {
@@ -50,6 +43,12 @@
           },
           "from sentence" : "For Gigaword dataset with 1.02 million instances , the perplexity of the language model is 20.3 , while for the Google news dataset with 0.2 million instances , the perplexity is 76.5 ."
         }
+      },	  
+      "applying" : {
+        "Evaluator - SLM" : {
+          "observed" : "only a tiny improvement"
+        },
+        "from sentence" : "When further applying Evaluator - SLM , only a tiny improvement is observed ( &3 vs & 4 ) , not comparable to the improvement between # 3 and # 5 ."
       },
       "shows that" : {
         "small improvements" : {

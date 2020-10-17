@@ -15,7 +15,7 @@ We have witnessed significant progress since the release of large - scale datase
 The essential problem of machine comprehension is to predict the correct answer referring to a given passage with relevant question .
 If a machine can obtain a good score from predicting the right answer , we can say the machine is capable of understanding the given context .
 Many previous approaches ) ( Gong and Bowman 2017 ) ) adopt attention mechanisms along with deep neural network tactics and pointer network to establish interactions between the question and the passage .
-The superiority of these frameworks are to enable questions focus on more relevant targeted areas within passages .
+The superiority of these frameworks are to enable questions focus on more relevant targeted are as within passages .
 Although these works have achieved promising performance for MC task , most of them still suffer from the The majority of the work was done while the first author was interning at the Eigen Technologies .
 For all the time through , we consider a philosophy question :
 What will people do when they are having a reading comprehension test ?
@@ -32,7 +32,7 @@ We then develop the interactive attention with memory network to mimic human rea
 We also add a checking layer on the answer refining in order to ensure the accuracy .
 The main contributions of this paper are as follows : :
 Fine - grained gating on lexical attributions of words and characters .
-" POS , NER , TF , EM , Surprisal , QType " refer to part - of - speech tags , named entity tags , term frequency , exact match , surprisal extent , question type .
+" POS , NER , TF , EM , Surpris al , QType " refer to part - of - speech tags , named entity tags , term frequency , exact match , surpris al extent , question type .
 We enrich the word representation with detailed lexical properties .
 We adopt a fine - grained gating mechanism to dynamically control the amount of word level and character level representations based on the properties of words .
 We guide the machine to read by imitating human 's behavior in the reading procedure .
@@ -55,13 +55,13 @@ We try to enrich the lexical factors to enhance the word representation .
 Inspired by Yang et al. ) and ) , we adopt a more finegrained dynamic gating mechanism to model the lexical properties related to the question and the passage .
 Here we indicate our embedding method in .
 We design two gates adopted as valves to dynamically control the flowing amount of word - level and character - level representations .
-For the passage word E vp , we use the concatenation of part - of - speech tag , named entity tag , term frequency tag , exact match tag and the surprisal tag .
+For the passage word E vp , we use the concatenation of part - of - speech tag , named entity tag , term frequency tag , exact match tag and the surpris al tag .
 The exact match denote as fem ( p i ) = I ( p i ? q ) in three binary forms : original , lower - case and lemma forms , which indicates whether token pi in the passage can be exactly matched to a question word in q .
-The surprisal tag measures the amount of information conveyed by a particular word from Surprisal ( w t ) = ? log ( P ( w t |w 1 , w 2 , ... , w t?1 ) ) .
+The surpris al tag measures the amount of information conveyed by a particular word from Surpris al ( w t ) = ? log ( P ( w t |w 1 , w 2 , ... , w t?1 ) ) .
 The less occurrence of a word , the more information it carries .
 For the question word E vq , we take the question type in place of the exact match information and remain the other features .
 The type of a question provides significant clue for the answer selection process .
-For example , the answer fora " when " type question prefers tokens about time or dates while a " why " type question requires longer inference .
+For example , the answer for a " when " type question prefers tokens about time or dates while a " why " type question requires longer inference .
 Here we select the top 11 common question types as illustrated in the diagram .
 If the model recognize a question 's type , then all the words in this question will be assigned with the same QType feature .
 The gates of the passage and the question are computed as follows :
@@ -169,7 +169,7 @@ Here we employ the weighted sum of twice answer prediction indices to make the f
 where ? ?
 1 is a weighted scalar controlling the proportion of the two predicted answers .
 We set the ? ?
-1 as inmost cases the latter predicted answer is more accurate comparing to the former one .
+1 as in most cases the latter predicted answer is more accurate comparing to the former one .
 The final sand e is then judged by the max value through the argmax operator .
 Training and Optimization
 We choose the training loss as the sum of the negative log probabilities of the true start and end position by the predicted distributions to train our model :

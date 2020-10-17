@@ -17,8 +17,7 @@
               }
             }
           },
-          "from sentence" : "BiLSTM
-Attention ( with and without ELMo ) .
+          "from sentence" : "BiLSTM Attention ( with and without ELMo ) .
 This baseline uses a similar architecture to our proposed neural multitask learning framework , except that it only optimizes the network for the main loss regarding the citation intent classification ( L 1 ) and does not include the structural scaffolds ."
 
         }      

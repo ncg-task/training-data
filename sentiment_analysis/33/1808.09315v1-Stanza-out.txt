@@ -3,14 +3,14 @@ Convolutional Neural Networks with Recurrent Neural Filters
 abstract
 We introduce a class of convolutional neural networks ( CNNs ) that utilize recurrent neural networks ( RNNs ) as convolution filters .
 A convolution filter is typically implemented as a linear affine transformation followed by a nonlinear function , which fails to account for language compositionality .
-As a result , it limits the use of high - order filters that are often warranted for natural language processing tasks .
+As a result , it limits the use of high - order filters thatare often warranted for natural language processing tasks .
 In this work , we model convolution filters with RNNs that naturally capture compositionality and long - term dependencies in language .
-We show that simple CNN architectures equipped with recurrent neural filters ( RNFs ) achieve results that are on par with the best published ones on the Stanford Sentiment Treebank and two answer sentence selection datasets .
+We show that simple CNN architectures equipped with recurrent neural filters ( RNFs ) achieve results thatare on par with the best published ones on the Stanford Sentiment Treebank and two answer sentence selection datasets .
 1
 Introduction
 Convolutional neural networks ( CNNs ) have been shown to achieve state - of - the - art results on various natural language processing ( NLP ) tasks , such as sentence classification , question answering , and machine translation .
 In an NLP system , a convolution operation is typically a sliding window function that applies a convolution filter to every possible window of words in a sentence .
-Hence , the key components of CNNs area set of convolution filters that compose low - level word features into higher - level representations .
+Hence , the key components of CNNs are a set of convolution filters that compose low - level word features into higher - level representations .
 Convolution filters are usually realized as linear systems , as their outputs are affine transformations of the inputs followed by some non-linear activation functions .
 Prior work directly adopts a linear convolution filter to NLP problems by utilizing a concatenation of embeddings of a window of words as the input , which leverages word order information in a shallow additive way .
 As early CNN architectures have mainly drawn inspiration from models of the primate visual system , the necessity of coping with language compositionality is largely overlooked in these systems .
@@ -24,7 +24,7 @@ We present two RNF - based CNN architectures for sentence classification and ans
 Experimental results on the Stanford Sentiment Treebank and the QASent and WikiQA datasets demonstrate that RNFs significantly improve CNN performance over linear filters by 4 - 5 % accuracies and 3 - 6 % MAP scores respectively .
 Analysis results suggest that RNFs perform much better than linear filters in detecting longer key phrases , which provide stronger cues for categorizing the sentences .
 Approach
-The aim of a convolution filter is to produce a local feature fora window of words .
+The aim of a convolution filter is to produce a local feature for a window of words .
 We describe a novel approach to learning filters using RNNs , which is especially suitable for NLP problems .
 arXiv:1808.09315v1 [ cs.CL ] 28 Aug 2018
 We then present two CNN architectures equipped with RNFs for sentence classification and sentence matching tasks respectively .
@@ -98,7 +98,7 @@ Longer phrases are more likely to convey the same sentiments as the original sen
 Therefore , the ability to model long phrases is crucial to convolution filters .
 Key phrase hit rate
 We examine linear filters and RNFs on the ability to detect a key phrase in a sentence .
-Specifically , we define the key phrases fora sentence to be the set of phrases that are labeled with the same sentiment as the original sentence .
+Specifically , we define the key phrases for a sentence to be the set of phrases thatare labeled with the same sentiment as the original sentence .
 The key phrase hit rate is then defined as the ratio of filter - detected m-grams that fall into the corresponding key phrase sets .
 The filter - detected m-gram of a sentence is the one whose convolution feature vector has the shortest Euclidean distance to the max - pooled vector .
 The hit rate results computed on SST dev set are presented in .
@@ -115,9 +115,9 @@ present a deep neural network for answer sentence selection , in which a convolu
 propose to compose character representations of a word using a CNN , whose output is then fed into a BiLSTM for sequence tagging .
 Kalchbrenner and Blunsom ( 2013 ) introduce a neural architecture that uses a sentence model based on CNNs and a discourse model based on RNNs .
 Their system achieves state - of - the - art results on the task of dialogue act classification .
-Instead of treating an RNN and a CNN as isolated components , our work directly marries RNNs with the convolution operation , which illustrates anew direction in mixing RNNs with CNNs .
+Instead of treating an RNN and a CNN as isolated components , our work directly marries RNNs with the convolution operation , which illustrates a new direction in mixing RNNs with CNNs .
 Conclusion and future work
-We present RNFs , anew class of convolution filters based on recurrent neural networks .
+We present RNFs , a new class of convolution filters based on recurrent neural networks .
 RNFs sequentially apply the same recurrent unit to words of a phrase , which naturally capture language compositionality and implicitly model long - term dependencies .
 Experiments on sentiment classification and answer sentence selection tasks demonstrate that RNFs give a significant boost in performance compared to linear convolution filters .
 RNF - based CNNs also outperform a variety of RNN - based models , as they focus on extracting local information that could be more relevant to particular problems .

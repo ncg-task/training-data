@@ -4,11 +4,11 @@ abstract
 Extracting relations is critical for knowledge base completion and construction in which distant supervised methods are widely used to extract relational facts automatically with the existing knowledge bases .
 However , the automatically constructed datasets comprise amounts of low - quality sentences containing noisy words , which is neglected by current distant supervised methods resulting in unacceptable precisions .
 To mitigate this problem , we propose a novel word - level distant supervised approach for relation extraction .
-We first build Sub - Tree Parse ( STP ) to remove noisy words that are irrelevant to relations .
+We first build Sub - Tree Parse ( STP ) to remove noisy words thatare irrelevant to relations .
 Then we construct a neural network inputting the subtree while applying the entity - wise attention to identify the important semantic features of relational words in each instance .
 To make our model more robust against noisy words , we initialize our network with a priori knowledge learned from the relevant task of entity classification by transfer learning .
 We conduct extensive experiments using the corpora of New York Times ( NYT ) and Freebase .
-Experiments show that our approach is effective and improves the area of Precision / Recall ( PR ) from 0.35 to 0.39 over the state - of - the - art work .
+Experiments show that our approach is effective and improves the are a of Precision / Recall ( PR ) from 0.35 to 0.39 over the state - of - the - art work .
 Introduction
 Relation extraction aims to extract relations between pairs of marked entities in raw texts .
 Traditional supervised methods are time - consuming for the requirement of large - scale manually labeled data .
@@ -42,7 +42,7 @@ The experimental results show that our model can achieve satisfactory performanc
 Our contributions are summarized as follows :
 To handle the problem of low - quality sentences , we propose the STP to remove noisy words of sentences and the entity - wise attention mechanism to enhance semantic features of relational words .
 We first propose to initialize the neural relation extractor with a priori knowledge learned from entity type classification , which strengthens its robustness against low - quality corpus .
-Our model achieves significant results for distant supervised relation extraction , which improves the Precision / Recall ( PR ) curve area from 0.35 to 0.39 and increases top 100 predictions by 6.3 % over the state - of - the - art work .
+Our model achieves significant results for distant supervised relation extraction , which improves the Precision / Recall ( PR ) curve are a from 0.35 to 0.39 and increases top 100 predictions by 6.3 % over the state - of - the - art work .
 Related Work
 The distant supervised method plays an increasingly essential role in relation extraction due to its less requirement of human labor ) .
 However , an evident drawback of the method is the wrong labeling problem .
@@ -57,11 +57,11 @@ Recently , reinforcement learning and adversarial learning are widely used to se
 However , above methods ignore inner-sentence noise .
 To better remove irrelevant words , the SDP between entities is proved to be effective ( De. Nevertheless , in our observation , the SDP deals with informal texts difficultly ( See Section 3.1 for details ) .
 Furthermore , word - level attention is adopted to focus on relational words for relation extraction , but it hinders the effect of entity words .
-Transfer learning proposed by Pratt ( 1993 ) provides anew approach to leverage knoweldge extracted by related tasks to enhance the performance of the target task .
+Transfer learning proposed by Pratt ( 1993 ) provides a new approach to leverage knoweldge extracted by related tasks to enhance the performance of the target task .
 Furthermore , parameter transfer learning is proved to be effective to improve the stability of models by initializing model parameters reasonably ( Pan and ) .
 Methodology
 In this section , we present our methodology for distant supervised relation extraction .
-shows the overall architecture of our model .
+shows the over all architecture of our model .
 Our model is divided into three parts :
 Sub - Tree Parser .
 Input instances are parsed to dependency parse trees by the Stanford parser 1 at first .
@@ -194,8 +194,7 @@ The grid search approach is used to select optimal learning rate lr for Adam opt
 We follow experienced settings for other parameters because they make little influence to our model performance .
 GRU size m 230
 Word embedding dimension k 50 POS embedding dimension l 5 Batch size n 50 Entity - Task weights ( ?
-head , ? tail ) 0.5,0.5 Entity - Relation
-Task weight ?
+head , ? tail ) 0.5,0.5 Entity - Relation Task weight ?
 0.3 Learning rate lr 0.001 Dropout probability p 0.5 l 2 penalty ?
 0.0001
 Effect of Various Model Parts
@@ -237,7 +236,7 @@ MIML proposes a multi -instance multi-label model .
 PCNN puts forward a piecewise CNN for relation extraction .
 PCNN + ATT proposes the selective attention mechanism with PCNN .
 BGRU proposes a BGRU with the word - level attention mechanism .
-As shows , we can observe : ( 1 ) BGRU + STP + EWA achieves the best PR curve over baselines , which improves the area to 0.38 over 0.33 of PCNN , 0.34 of BGRU and 0.35 of PCNN + ATT .
+As shows , we can observe : ( 1 ) BGRU + STP + EWA achieves the best PR curve over baselines , which improves the are a to 0.38 over 0.33 of PCNN , 0.34 of BGRU and 0.35 of PCNN + ATT .
 At the recall rate of 0.25 , our model can still achieve a precision rate above 0.6 .
 It demonstrates that BGRU + STP + EWA is effective because the STP and entity - wise attention combined with word - level attention can reduce inner-sentence noise at a fine - grained level .
 ( 2 ) Integrated with transfer learning , BGRU + STP + EWA + TL performs much better and increases the PR curve area to 0.392 .

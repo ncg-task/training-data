@@ -15,8 +15,7 @@
             "Probabilistic graphical model" : {
               "for" : "multi instance learning"
             }
-          },
-          "from sentence" : "MultiR : Probabilistic graphical model for multi instance learning by MIMLRE :"
+          }
         },
         "MIMLRE" : {
           "has" : {

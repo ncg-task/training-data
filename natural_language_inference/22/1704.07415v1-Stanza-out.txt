@@ -7,8 +7,7 @@ Ruminating Reader adds a second pass of attention and a novel information fusion
 We propose novel layer structures that construct an query - aware context vector representation and fuse encoding representation with intermediate representation on top of BIDAF model .
 We show that a multi-hop attention mechanism can be applied to a bi-directional attention structure .
 In experiments on SQuAD , we find that the Reader outperforms the BIDAF baseline by a substantial margin , and matches or surpasses the performance of all other published systems .
-1 The latest results are listed at https://rajpurkar.
-github.io/SQuAD -explorer/
+1 The latest results are listed at https://rajpurkar.github.io/SQuAD -explorer/
 Introduction
 The majority of recorded human knowledge is circulated in unstructured natural language .
 It is tremendously valuable to allow machines to read and comprehend the text knowledge .
@@ -101,7 +100,7 @@ To incorporate the positional information into this relatively long tiled sequen
 This approach , while somewhat inefficient , proves to bean valuable addition to the model and allows it to better track position information , loosely following the positional encoding strategy of .
 Hence we obtain S C ? R 2 d C , which is fused with context encoding C via a gate :
 Context : The Broncos took an early lead in Super Bowl 50 and never trailed .
-Newton was limited by Denver 's defense , which sacked him seven times and forced him into three turnovers , including a fumble which they recovered fora touchdown .
+Newton was limited by Denver 's defense , which sacked him seven times and forced him into three turnovers , including a fumble which they recovered for a touchdown .
 Denver linebacker Von Miller was named Super Bowl MVP , recording five solo tackles , 2 sacks , and two forced fumbles .
 Question : Which Newton turnover resulted in seven points for Denver ?
 Ground Truth : { a fumble , a fumble , Fumble } Prediction : three turnovers :
@@ -122,7 +121,7 @@ We obtain the probability distribution of the end index of the answer span by
 Training Loss
 We define the training loss as the sum of three components : negative log likelihood loss , L2 regularization loss , and a novel answerquestion similarity loss .
 Answer - Question Similarity Loss
-We observe that aversion of our model trained only on the two standard loss terms often selects answers that overlap substantially in content with their corresponding questions , and that this nearly always results in an error .
+We observe that a version of our model trained only on the two standard loss terms often selects answers that overlap substantially in content with their corresponding questions , and that this nearly always results in an error .
 A sample error of this kind is shown in .
 This motivates an additional loss term at training time :
 We penalize the similarity between the question and the selected answer .
@@ -193,10 +192,10 @@ We also provide a sample of visualization for the L2 sum of gate value in contex
 From we see that though the structures of two hops of attention flow layer are the same , they function quite differently in typical cases .
 The first hop attention appears to be primarily concerned with identifying the key informative word ( or words , as here ) in the query .
 Though in four key words are signified , one or two words are attended to in the first hop in the common case .
-The second hop is then responsible for finding candidate answers that are relevant to those key words and generating a query - aware context representation .
+The second hop is then responsible for finding candidate answers thatare relevant to those key words and generating a query - aware context representation .
 We observe the first hop attention shows a consistent attention pattern across context words , suggesting that there maybe room to make the first hop component more efficient in future work .
-From , we seethe gate value on both query ruminate layer and context ruminate layer shows that the gates are working to fuse information to original query encoding and context encoding .
-We observe that inmost of the case the gates in ruminate layers uses more information from encoding than from summarization representation .
+From , we see the gate value on both query ruminate layer and context ruminate layer shows that the gates are working to fuse information to original query encoding and context encoding .
+We observe that in most of the case the gates in ruminate layers uses more information from encoding than from summarization representation .
 The observation matches our expectation that the gates modify and improve on the encoding representation .
 We also provide a comparison of F1 score between BIDAF and Ruminating Reader on question with different ground truth answer length and different types of questions in .
 Exact match score is highly correlated with F 1 score so we omit it for clarity .

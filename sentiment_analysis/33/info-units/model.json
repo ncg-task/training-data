@@ -34,7 +34,7 @@
           "alleviates" : {
             "some well - known drawbacks" : {
               "of" : "RNNs",
-              "inlcuding" : {
+              "including" : {
                 "vulnerability" : {
                   "to" : "gradient vanishing and exploding problems"
                 }

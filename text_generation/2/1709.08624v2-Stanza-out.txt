@@ -5,7 +5,7 @@ Automatically generating coherent and semantically meaningful text has many appl
 Recently , by combining with policy gradient , Generative Adversarial Nets ( GAN ) that use a discriminative model to guide the training of the generative model as a reinforcement learning policy has shown promising results in text generation .
 However , the scalar guiding signal is only available after the entire text has been generated and lacks intermediate information about text structure during the generative process .
 As such , it limits its success when the length of the generated text samples is long ( more than 20 words ) .
-In this paper , we propose anew framework , called LeakGAN , to address the problem for long text generation .
+In this paper , we propose a new framework , called LeakGAN , to address the problem for long text generation .
 We allow the discriminative net to leak its own high - level extracted features to the generative net to further help the guidance .
 The generator incorporates such informative signals into all generation steps through an additional MANAGER module , which takes the extracted features of current generated words and outputs a latent vector to guide the WORKER module for next - word generation .
 Our extensive experiments on synthetic data and various realworld tasks with Turing test demonstrate that LeakGAN is highly effective in long text generation and also improves the performance in short text generation scenarios .
@@ -24,7 +24,7 @@ After the whole text generation is done , the generated text samples are then fe
 Since then , various methods have been proposed in text generation via GAN .
 Nonetheless , the reported results are limited to the cases that the generated text samples are short ( say , fewer than 20 words ) while more challenging long text generation is hardly studied , which is necessary for practical tasks such as auto-generation of news articles or product descriptions .
 A main drawback of existing methods to long text generation is that the binary guiding signal from Dis sparse as it is only available when the whole text sample is generated .
-Also , the scalar guiding signal fora whole text is non-informative as it does not necessarily preserve the picture about the intermediate syntactic structure and semantics of the text that is being generated for G to sufficiently learn .
+Also , the scalar guiding signal for a whole text is non-informative as it does not necessarily preserve the picture about the intermediate syntactic structure and semantics of the text that is being generated for G to sufficiently learn .
 On one hand , to make the guiding signals more informative , discriminator D could potentially provide more guidance beside the final reward value , since Dis a trained model , e.g. a convolutional neural network ( CNN ) , rather than an unknown black box .
 With that idea , proposed to train generator G via forcing learned feature representations of real and generated text by D to be matched , instead of directly training G to maximize the reward from D. Such a method can be effective in short text generation , but the guiding signals are still absent until the end of the text ) .
 On the other hand , to alleviate the sparsity problem of the guiding signal , the idea of hierarchy naturally arises in text generation , since the real text samples are generated following some kinds of hierarchy such as the semantic structure and the part - of - speech .
@@ -85,7 +85,7 @@ as a learned reward function .
 Typically , D ? is a neural network and can be decomposed into a feature extractor F ( ; ? f ) and a final sigmoid classification layer with weight vector ? l .
 Mathematically , given input s , we have
 is the feature vector of sin the last layer of D ? , which is to be leaked to generator G ? .
-As is shown in Eq. ( 1 ) , fora given D ? , the reward value for each state s mainly depends on the extracted features f .
+As is shown in Eq. ( 1 ) , for a given D ? , the reward value for each state s mainly depends on the extracted features f .
 As such , the objective of getting a higher reward from D ?
 is equivalent to finding a higher reward region in this extracted feature ; thus F ( s ; ? f ) outputs the CNN feature map vector as f after its convolution - pooling - activation layer .
 Other neural network models such as LSTM ( Hochreiter and Schmidhuber 1997 ) can also be used to implement D ? .
@@ -140,7 +140,7 @@ is a hyperparameter that controls the smoothness of the rescale activation . ? (
 In our experiment , for example , the model adopts hyperparameter ? = 12.0 and the sigmoid function as ? ( ) .
 There are two main advantages of the bootstrapped rescaled activation .
 First , after this transformation , the expectation and variance of the reward in each mini -batch are constant .
-In this case , the rescale activation serves as a value stabilizer that is helpful for algorithms that are sensitive in numerical variance .
+In this case , the rescale activation serves as a value stabilizer that is helpful for algorithms thatare sensitive in numerical variance .
 Second , as all ranking methods do , it prevents the gradient vanishing problem , which accelerates the model convergence .
 Interleaved Training .
 In traditional generative adversarial models , mode collapse is a common problem .
@@ -177,7 +177,7 @@ For real - world data experiments , BLEU statistics ) and human rating scores in
 We further perform a t-test for the improvement of Leak GAN over the second highest performance and report the p-value .
 Synthetic Data Experiments
 We run the synthetic data experiment with the text - length set as 20 and 40 respectively .
-The training curves are depicted in and the overall NLL performance is presented in Table 1 .
+The training curves are depicted in and the over all NLL performance is presented in Table 1 .
 One could have two observations from the results .
 ( i ) In the pre-training stage , LeakGAN has already shown observable performance superiority compared to other models , which indicates that the proposed hierarchical architecture itself brings improvement over the previous ones .
 ( ii ) In the adversarial training stage , Leak GAN shows a better speed of convergence , and the local minimum it explores is significantly better than previous results .
@@ -222,7 +222,7 @@ The curves clearly show that Leak GAN yields larger performance gain over the ba
 This fact supports our claim that LeakGAN is a robust framework for long text .
 Turing Test and Generated Samples
 Since BLEU score is a metric focusing on the local text statistics , which may not be sufficient for evaluating text generation quality , we also conduct a Turing test based on questionnaires on the Internet .
-In the questionnaire , each ( machine generated or real ) sentence gets + 1 score when it is regarded as areal one , and 0 score otherwise .
+In the questionnaire , each ( machine generated or real ) sentence gets + 1 score when it is regarded as are al one , and 0 score otherwise .
 We conduct the test with text generated by the models trained on WMT News and COCO Image Captions .
 The average score for each algorithm is calculated .
 In practice , we sample 20 sentences from every method and invite 62 people to participate the test , where everyone should judge the quality of 30 sentences from the compared three methods and thus each sentence is judged by 31 people .
@@ -259,7 +259,7 @@ A frequently occurring example is the formal subject .
 For example , when the start or the end of a subsentence occurs , there is an observable fluctuation in the 7th dimension .
 This indicates that the token is most likely to be a punctuation or a conjuction .
 Conclusion and Future work
-In this paper , we proposed anew algorithmic framework called Leak GAN for generating long text via adversarial training .
+In this paper , we proposed a new algorithmic framework called Leak GAN for generating long text via adversarial training .
 By leaking the feature extracted by the discriminator as the step - by - step guiding signal to guide the generator better generating long text , LeakGAN addresses the non-informativeness and sparsity problems of the scalar reward signal in previous GAN solutions .
 In the extensive experiments with synthetic data and real world data including long , mid-length and short text , LeakGAN achieved significant performance improvement over previous solutions , on both BLEU scores and human ratings .
 Moreover , the analysis of the results shows that Leak GAN yields larger performance gain when the longer sentences are generated .
@@ -308,14 +308,14 @@ The 55 to 43 vote was largely split down party lines and fell short of the 60 vo
 We got to a bus station in the evening , but our connection did n't leave until the following morning .
 It 's actually something that I had to add , because I was getting really frustrated losing to my hitting partner all the time .
 Taiwan 's Defence Ministry said it was " aware of the information , " and declined further immediate comment , Reuters reported .
-Her response to the international refugee crisis gave a million refugees hope that they maybe able to begin anew life .
+Her response to the international refugee crisis gave a million refugees hope that they maybe able to begin a new life .
 I 'm racing against a guy who I lost a medal to - but am I ever going to get that medal back ?
 LeakGAN
 A man has been arrested at age 28 , a resident in Seattle , which was widely reported in 2007 .
 I also think that ' s a good place for us , I ' m sure that this would be a good opportunity for me to get in touch .
 What is the biggest problem for Clinton is that Donald Trump will be in the race and he ' s unlikely to be the nominee . "
 We ' re going to do and we ' re going to put it out and get the ball , " he said . "
-I would be afraid to blame the girls to go back but I was just disappointed with the race , " he said .
+I would be afraid to blame the girls to go back but I was just dis appointed with the race , " he said .
 "
 I 'm not going to work together with a different role and we can win the game , " he added .
 The couple 's lives are still missing and they have been killed in the city 's way to play against them , and because I came out there .
@@ -339,7 +339,7 @@ It can say become up with nothing sales have reached the charge for the other an
 Three times before the start of the season is much early on 2015 we are in the third training every year .
 That 's the idea of strength that decision they said , we have n't already lost four or seven , or Liverpool 's team .
 That is not the time for the cost of changing the system and it was pushing for $ 20 million .
-We had to take it a good day fora military , but nearly 6 , 000 ] and prepare for them through .
+We had to take it a good day for a military , but nearly 6 , 000 ] and prepare for them through .
 I actually did n't tell the background check the difference after my hour was to be recalled ... and it was great .
 We are thinking about 40 , 000 and jobs in what is wrong in the coming and you know .
 That is out how working you ca n't set out some pretty tight ... or what I 'm going through . "

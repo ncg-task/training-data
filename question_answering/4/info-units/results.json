@@ -54,12 +54,11 @@ Our model achieves state - of - the - art performance on this dataset , outperfo
                   "from sentence" : "On the original setting , our model outperforms AMANDA by + 15.4 % EM and + 14.2 % in terms of F1 score ."                  
                 },
                 "AQA" : {
-                  "has" : "+ 18.1 % EM / + 18 % F1",
-                  "from sentence" : "On the overall setting , our model outperforms both AQA ( + 18.1 % EM / + 18 % F1 ) and Reinforced Reader Ranker ( + 7.8 % EM / + 8.3 % F1 ) ."
+                  "has" : "+ 18.1 % EM / + 18 % F1"
                 },
                 "Reinforced Reader Ranker" : {
                   "has" : "+ 7.8 % EM / + 8.3 % F1",
-                  "from sentence" : "On the overall setting , our model outperforms both AQA ( + 18.1 % EM / + 18 % F1 ) and Reinforced Reader Ranker ( + 7.8 % EM / + 8.3 % F1 ) ."
+                  "from sentence" : "On the over all setting , our model outperforms both AQA ( + 18.1 % EM / + 18 % F1 ) and Reinforced Reader Ranker ( + 7.8 % EM / + 8.3 % F1 ) ."
                 }
               }
             }

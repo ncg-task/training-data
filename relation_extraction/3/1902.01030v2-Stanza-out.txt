@@ -2,7 +2,7 @@ title
 Extracting Multiple - Relations in One - Pass with Pre-Trained Transformers
 abstract
 The state - of - the - art solutions for extracting multiple entity - relations from an input paragraph always require a multiple - pass encoding on the input .
-This paper proposes a new solution that can complete the multiple entityrelations extraction task with only one - pass encoding on the input corpus , and achieve anew state - of - the - art accuracy performance , as demonstrated in the ACE 2005 benchmark .
+This paper proposes a new solution that can complete the multiple entityrelations extraction task with only one - pass encoding on the input corpus , and achieve a new state - of - the - art accuracy performance , as demonstrated in the ACE 2005 benchmark .
 Our solution is built on top of the pre-trained self - attentive models ( Transformer ) .
 Since our method uses a single - pass to compute all relations at once , it scales to larger datasets easily ; which makes it more usable in real - world applications .
 1
@@ -17,7 +17,7 @@ This work presents a solution that can resolve the inefficient multiple - passes
 Specifically , the proposed solution is built on top of the existing transformer - based , pretrained general - purposed language encoders .
 In this paper we use Bidirectional Encoder Representations from Transformers ( BERT ) as the transformer - based encoder , but this solution is not limited to using BERT alone .
 The two novel modifications to the original BERT architecture are : ( 1 ) we introduce a structured prediction layer for predicting multiple relations for different entity pairs ; and ( 2 ) we make the selfattention layers aware of the positions of all en-tities in the input paragraph .
-To the best of our knowledge , this work is the first promising solution that can solve MRE tasks with such high efficiency ( encoding the input in one - pass ) and effectiveness ( achieve anew state - of - the - art performance ) , as proved on the ACE 2005 benchmark .
+To the best of our knowledge , this work is the first promising solution that can solve MRE tasks with such high efficiency ( encoding the input in one - pass ) and effectiveness ( achieve a new state - of - the - art performance ) , as proved on the ACE 2005 benchmark .
 Background
 MRE is an important task as it is an essential prior step for many downstream tasks such as automatic knowledge - base completion and questionanswering .
 Popular MRE benchmarks include ACE and ERE .
@@ -35,7 +35,7 @@ The BERT model has been successfully applied to various NLP tasks .
 However , the final prediction layers used in the original model is not applicable to MRE tasks .
 The MRE task essentially requires to perform edge predictions over a graph with entities as nodes .
 Inspired by , we propose that we can first encode the input paragraph using BERT .
-Thus , the representation fora pair of entity mentions ( e i , e j ) can be denoted as oi and o j respectively .
+Thus , the representation for a pair of entity mentions ( e i , e j ) can be denoted as oi and o j respectively .
 In the case of a mention e i consist of multiple hidden states ( due to the byte pair encoding ) , oi is aggregated via average - pooling over the hidden states of the corresponding tokens in the last BERT layer .
 We then concatenate oi and o j denoted as [ o i : o j ] , and pass it to a linear classifier 2 to predict the relation
 where W L ?
@@ -71,7 +71,7 @@ Task 7 , we evaluate on its sub-task 1.1 .
 We use the same data split in the shared task .
 The passages in this task is usually much longer compared to ACE .
 Therefore we adopt the following pre-processing step - for the entity pair in each relation , we assume the tokens related to their relation labeling are always within a range from the fifth token ahead of the pair to the fifth token after it .
-Therefore , the tokens in the original passage that are not covered by the range of ANY input relations , will be removed from the input .
+Therefore , the tokens in the original passage thatare not covered by the range of ANY input relations , will be removed from the input .
 Methods
 We compare our solution with previous works that predict a single relation per pass , our model that predicts single relation per pass for MRE , and with the following naive modifications of BERT that could achieve MRE in one - pass .
 BERT SP : BERT with structured prediction only , which includes proposed improvement in 3.1 .
@@ -82,7 +82,7 @@ In this method , the BERT model encode the paragraph to the last attention - lay
 Then , for each entity pair , it takes the hidden states , adds the relative position embeddings corresponding to the target entities , and finally makes the relation prediction for this pair .
 BERT SP with entity indicators on input layer : it replaces our structured attention layer , and adds indicators of entities ( transformed to embeddings )
 Results on ACE 2005
-Main Results gives the overall results on ACE 2005 .
+Main Results gives the over all results on ACE 2005 .
 The first observation is that our model architecture achieves much better results compared to the previous state - of - the - art methods .
 Note that our method was not designed for domain adaptation , it still outperforms those methods with domain adaptation .
 This result further demonstrates its effectiveness .
@@ -132,6 +132,6 @@ However , the gap between BERT SP method with and without entity - aware attenti
 This is likely because of the bias of data distribution : the assumption that only two target entities exist , makes the two techniques have similar effects .
 Conclusion
 In summary , we propose a first - of - its - kind solution that can simultaneously extract multiple relations with one - pass encoding of an input paragraph for MRE tasks .
-With the proposed structured prediction and entity - aware self - attention layers on top of BERT , we achieve anew state - of - the - art results with high efficiency on the ACE 2005 benchmark .
+With the proposed structured prediction and entity - aware self - attention layers on top of BERT , we achieve a new state - of - the - art results with high efficiency on the ACE 2005 benchmark .
 Our idea of encoding a passage regarding multiple entities has potentially broader applications beyond relation extraction , e.g. , entity - centric passage encoding in question answering .
 In the future work , we will explore the usage of this method with other applications .

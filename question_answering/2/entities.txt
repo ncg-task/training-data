@@ -1,6 +1,7 @@
+183	0	8	Memex QA
+183	20	26	answer
 191	50	69	Logistic Regression
 191	70	78	predicts
-191	83	89	answer
 191	90	94	with
 191	95	146	concatenated image , question and metadata features
 192	0	16	Embedding + LSTM
@@ -21,7 +22,7 @@
 196	23	27	uses
 196	28	85	classic one dimensional question - to - context attention
 196	86	98	to summarize
-196	68	75	context
+196	99	106	context
 196	107	110	for
 196	111	129	question answering
 198	0	5	DMN +
@@ -31,12 +32,12 @@
 198	68	96	representative architectures
 198	97	109	that achieve
 198	110	126	good performance
-198	57	59	on
+198	127	129	on
 198	134	142	VQA Task
 201	0	23	TGIF Temporal Attention
 201	24	26	is
 201	47	83	spatial - temporal reasoning network
-201	21	23	on
+201	84	86	on
 201	87	115	sequential animated image QA
 211	3	9	encode
 211	10	23	GPS locations
@@ -69,9 +70,8 @@
 223	79	89	200 epochs
 223	90	94	with
 223	97	109	dropout rate
-223	59	61	of
+223	110	112	of
 223	113	116	0.3
-215	97	99	In
 215	0	3	For
 215	4	27	image / video embedding
 215	33	40	extract
@@ -87,14 +87,14 @@
 218	73	79	output
 218	26	28	of
 218	83	98	both directions
-218	26	28	of
+218	80	82	of
 218	106	110	LSTM
 218	115	118	get
 218	121	138	question matrix Q
 218	0	5	Given
 218	8	25	hidden state size
-218	26	28	of
-218	10	11	d
+218	99	101	of
+218	29	30	d
 218	42	48	set to
 218	49	51	50
 219	0	7	R 2 d M
@@ -107,6 +107,7 @@
 221	30	34	into
 221	35	48	H ? R 2 d T 6
 222	0	9	To select
+222	14	33	best hyperparmeters
 222	39	54	randomly select
 222	55	59	20 %
 222	60	62	of
@@ -118,7 +119,7 @@
 234	17	39	other attention models
 234	40	50	on finding
 234	55	70	relevant photos
-234	11	14	for
+234	71	74	for
 234	79	87	question
 242	3	11	evaluate
 242	16	40	FVTA attention mechanism
@@ -146,7 +147,7 @@
 245	115	121	to get
 245	126	146	final context vector
 246	0	27	Both aspects of correlation
-246	13	15	of
+246	28	30	of
 246	35	56	FVTA attention tensor
 246	57	75	contribute towards
 246	80	100	model 's performance
@@ -159,17 +160,17 @@
 247	29	31	of
 247	32	66	context - aware question attention
 247	67	78	by removing
-247	48	66	question attention
+247	83	101	question attention
 247	106	109	use
 247	114	127	last timestep
-247	29	31	of
+247	128	130	of
 247	135	146	LSTM output
 247	147	151	from
-247	48	56	question
-247	115	117	as
+247	156	164	question
+247	165	167	as
 247	172	195	question representation
-247	48	66	question attention
 248	3	8	shows
+248	13	31	question attention
 248	32	40	provides
 248	41	59	slight improvement
 249	13	18	train
@@ -178,29 +179,30 @@
 249	50	62	contribution
 249	63	65	of
 249	66	84	visual information
-249	67	69	is
 250	4	10	result
+250	11	13	is
 250	14	24	quite good
+257	7	22	MovieQA dataset
+257	105	109	with
+257	48	50	of
 258	3	12	implement
 258	13	25	FVTA network
 258	26	29	for
 258	30	43	Movie QA task
-258	44	48	with
 258	49	64	modality number
-258	65	67	of
 258	68	86	2 ( video & text )
 259	3	6	set
 259	11	53	maximum number of movie clips per question
 259	54	56	to
 259	57	63	N = 20
 259	70	106	maximum number of frames to consider
-259	54	56	to
+259	107	109	to
 259	110	116	F = 10
 259	123	169	maximum number of subtitle sentences in a clip
-259	54	56	to
+259	170	172	to
 259	173	180	K = 100
 259	189	202	maximum words
-259	54	56	to
+259	203	205	to
 259	206	212	V = 10
 261	3	6	use
 261	11	29	AdaDelta optimizer
@@ -209,7 +211,7 @@
 261	47	49	of
 261	50	52	16
 261	60	81	initial learning rate
-261	47	49	of
+261	82	84	of
 261	85	88	0.5
 261	92	103	trained for
 261	104	114	300 epochs
@@ -232,9 +234,9 @@
 266	43	45	on
 266	50	64	validation set
 266	69	74	0.373
-266	24	26	vs
+266	77	79	vs
 266	80	85	0.363
-266	43	45	on
+266	88	90	on
 266	95	103	test set
 267	40	44	FVTA
 267	45	69	consistently outperforms
@@ -250,7 +252,7 @@
 44	13	35	novel attention kernel
 44	36	39	for
 44	40	43	VQA
-44	26	28	on
+44	44	46	on
 44	47	65	visual - text data
 37	27	31	FVTA
 37	38	47	learns to
@@ -272,10 +274,10 @@
 38	44	60	attention tensor
 38	66	80	jointly models
 38	85	103	latent information
-38	68	70	in
+38	104	106	in
 38	107	120	three sources
-38	68	70	in
 39	4	28	answer - signaling words
+39	29	31	in
 39	36	44	question
 39	51	71	temporal correlation
 39	72	78	within

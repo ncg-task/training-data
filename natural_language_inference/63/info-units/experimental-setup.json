@@ -10,7 +10,7 @@
       "For" : {
         "word - level embedding" : {
           "tokenize" : "documents",
-          "using" : "using NLTK toolkit",
+          "using" : "NLTK toolkit",
           "substitute" : {
             "words" : {
               "with" : "GloVe 6B"
@@ -49,8 +49,7 @@
           "from sentence" : "The optimizer is AdaDelta ( Zeiler , 2012 ) with an initial learning rate of 0.5 ."
         },
         "batch size" : {
-          "set to" : "30",
-          "from sentence" : "We train our model for 12 epochs , and batch size is set to 30 ."
+          "set to" : "30"
         }
       },
       "train" : {
@@ -65,7 +64,11 @@
             "exponential moving average" : {
               "of" : "weights",
               "with" : "0.001 decay",
-              "use at" : "test time",
+			  "use" : {
+				"averages" : {
+					"at" : "test time"
+				}
+			  },
               "from sentence" : "During the training , we keep the exponential moving average of weights with 0.001 decay and use these averages at test time ."
             }
           }

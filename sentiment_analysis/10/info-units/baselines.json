@@ -55,7 +55,7 @@ This model does not capture context from surrounding utterances ."
           "identical to" : "our textual feature extractor network",
           "does not use" : {
             "contextual information" : {
-              "from" : "CNN : This is identical to our textual feature extractor network ( Section 3.2 ) and it does not use contextual information from the surrounding utterances ."
+              "from sentence" : "CNN : This is identical to our textual feature extractor network ( Section 3.2 ) and it does not use contextual information from the surrounding utterances ."
             }
           }
         },
@@ -89,7 +89,7 @@ The output from the memory network is used as the final utterance representation
 
         },
         "CMN" : {
-          "is" : {
+          "has" : {
             "state - of - the - art method" : {
               "models" : {
                 "utterance context" : {

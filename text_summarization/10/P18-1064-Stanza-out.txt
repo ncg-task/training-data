@@ -55,7 +55,7 @@ Let the decoder hidden state be st at time step t and let ct be the context vect
 We concatenate the decoder 's ( last ) RNN layer hidden state st and context vector ct and apply a linear transformation , and then project to the vocabulary space by another linear transformation .
 Finally , the conditional vocabulary distribution at each time step t of the decoder is defined as :
 and sfm ( ) is the softmax function .
-Pointer - Generator Networks Pointer mechanism helps in directly copying the words from the source sequence during target sequence generation , which is a good fit fora task like summarization .
+Pointer - Generator Networks Pointer mechanism helps in directly copying the words from the source sequence during target sequence generation , which is a good fit for a task like summarization .
 Our pointer mechanism approach is similar to , who use a soft switch based on the generation probability pg = ? (
 W g ct +U g st +V g e w t?1 +b g ) , where ? ( ) is a sigmoid function , W g , U g , V g and b g are parameters learned during training .
 e w t?1 is the previous time step output word embedding .
@@ -63,7 +63,7 @@ The final word distribution is P f ( y ) = pg P v ( y ) + ( 1 ? p g ) P c ( y ) 
 Coverage Mechanism
 Following previous work , coverage helps alleviate the issue of word repetition while generating long summaries .
 We maintain a coverage vector ct = t?1 t=0 ?
-t that sums overall of the previous time steps attention distributions ? t , and this is added as input to the attention mechanism .
+t that sums over all of the previous time steps attention distributions ? t , and this is added as input to the attention mechanism .
 Coverage loss is L cov ( ? ) = ti min (? t , i ,? t , i ) . Finally , the total loss is a weighted combination of cross - entropy loss and coverage loss :
 where ?
 is a tunable hyperparameter .
@@ -77,15 +77,15 @@ A good summary should also be able to find and extract all the salient informati
 For setting up the question generation task , we follow and use the SQuAD dataset to extract sentencequestion pairs .
 Next , we use the same sequenceto - sequence model architecture as our summarization model .
 Note that even though our question generation task is generating one question at a time 2 , our multi-task framework ( see Sec. 4 ) is setup in such away that the sentence - level knowledge from this auxiliary task can help the documentlevel primary ( summarization ) task to generate multiple salient facts - by sharing high - level semantic layer representations .
-See Sec. 7 and Table 10 fora quantitative evaluation showing that the multi-task model can find multiple ( and more ) salient phrases in the source document .
+See Sec. 7 and Table 10 for a quantitative evaluation showing that the multi-task model can find multiple ( and more ) salient phrases in the source document .
 Also see Sec. 7 ( and supp ) for challenging qualitative examples where baseline and SotA models only recover a small subset of salient information but our multi-task model with question generation is able to detect more of the important information .
 Entailment Generation
 The task of entailment generation is to generate a hypothesis which is entailed by ( or logically follows from ) the given premise as input .
 In summarization , the generation decoder also needs to generate a summary that is entailed by the source document , i.e. , does not contain any contradictory or unrelated / extraneous information as compared to the input document .
 We again incorporate such inference capabilities into the summarization model via multi-task learning , sharing some common representations / parameters between our summarization and entailment generation model ( more details in Sec. 4 ) .
 For this task , we use the entailmentlabeled pairs from the SNLI dataset and set it up as a generation task ( using the same strong model architecture as our abstractive summarization model ) .
-See Sec. 7 and fora quantitative evaluation showing that the multi-task model is better entailed by the source document and has fewer extraneous facts .
-Also see Sec. 7 and supplementary for qualitative examples of how our multi-task model with the entailment auxiliary task is able to generate more logically - entailed summaries than the baseline and We also tried to generate all the questions at once from the full document , but we obtained low accuracy because of this task 's challenging nature and overall less training data . :
+See Sec. 7 and for a quantitative evaluation showing that the multi-task model is better entailed by the source document and has fewer extraneous facts .
+Also see Sec. 7 and supplementary for qualitative examples of how our multi-task model with the entailment auxiliary task is able to generate more logically - entailed summaries than the baseline and We also tried to generate all the questions at once from the full document , but we obtained low accuracy because of this task 's challenging nature and over all less training data . :
 Overview of our multi-task model with parallel training of three tasks : abstractive summary generation ( SG ) , question generation ( QG ) , and entailment generation ( EG ) .
 We share the ' blue ' color representations across all the three tasks , i.e. , second layer of encoder , attention parameters , and first layer of decoder .
 SotA models , which instead produce extraneous , unrelated words not present ( in any paraphrased form ) in the source document .
@@ -222,7 +222,7 @@ As suggested in , we also compute the abstractiveness score as the number of nov
 We consider the fill - in - the - blank highlights annotated by human on CNN / DailyMail dataset as salient information .
 Input Document : celtic have written to the scottish football association in order to gain an ' understandingf the refereeing decisions during their scottish cup semi-final defeat by inverness on sunday .
 the hoops were left outraged by referee steven mclean ?
-failure to award a penalty or red card fora clear handball in the box by josh meekings to deny leigh griffith ?
+failure to award a penalty or red card for a clear handball in the box by josh meekings to deny leigh griffith ?
 goal - bound shot during the first - half .
 caley thistle went onto win the game 3 - 2 after extra - time and denied rory delia ?
 men the chance to secure a domestic treble this season .
@@ -231,7 +231,7 @@ adam matthews - lrb - right - rrb-slides in with a strong challenge on nick ross
 ' given the level of reaction from our supporters and across football , we are duty bound to seek an understanding of what actually happened , ? eltic said in a statement .
 they added , ' we have not been given any other specific explanation so far and this is simply to understand the circumstances of what went on and why such an obvious error was made . however , the parkhead outfit made a point of congratulating their opponents , who have reached the first - ever scottish cup final in their history , describing caley as a ' fantastic club and saying ' reaching the final is a great achievement .? eltic had taken the lead in the semi-final through defender virgil van dijk ?
 curling free - kick on 18 minutes , but were unable to double that lead thanks to the meekings controversy .
-it allowed inverness a route back into the game and celtic had goalkeeper craig gordon sent off after the restart for scything down marley watkins in the area .
+it allowed inverness a route back into the game and celtic had goalkeeper craig gordon sent off after the restart for scything down marley watkins in the are a .
 greg tansey duly converted the resulting penalty .
 edward ofere then put caley thistle ahead , only for john guidetti to draw level for the bhoys . with the game seemingly heading for penalties , david raven scored the winner on 117 minutes , breaking thousands of celtic hearts .
 celtic captain scott brown - lrb - left - rrb-protests to referee steven mclean but the handball goes unpunished .
@@ -242,12 +242,12 @@ leigh griffiths had a goal - bound shot blocked by a clear handball .
 however , no action was taken against offender josh meekings .
 the hoops have written the sfa for an ' understanding ' of the decision .: john hartson was once on the end of a major hampden injustice while playing for celtic .
 but he can not see any point in his old club writing to the scottish football association over the latest controversy at the national stadium .
-hartson had a goal wrongly disallowed for offside while celtic were leading 1 - 0 at the time but went onto lose 3 - 2 .
+hartson had a goal wrongly dis allowed for offside while celtic were leading 1 - 0 at the time but went onto lose 3 - 2 .
 Our Baseline : john hartson scored the late winner in 3 - 2 win against celtic .
 celtic were leading 1 - 0 at the time but went onto lose 3 - 2 .
 some fans have questioned how referee steven mclean and additional assistant alan muir could have missed the infringement .
 Multi- task : celtic have written to the scottish football association in order to gain an ' understanding ' of the refereeing decisions .
-the hoops were left outraged by referee steven mclean 's failure to award a penalty or red card fora clear handball in the box by josh meekings . celtic striker leigh griffiths has a goal - bound shot blocked by the outstretched arm of josh meekings . , our baseline , and 3 - way multi-task model with summarization and both entailment generation and question generation .
+the hoops were left outraged by referee steven mclean 's failure to award a penalty or red card for a clear handball in the box by josh meekings . celtic striker leigh griffiths has a goal - bound shot blocked by the outstretched arm of josh meekings . , our baseline , and 3 - way multi-task model with summarization and both entailment generation and question generation .
 The boxed - red highlighted words / phrases are not present in the input source document in any paraphrasing form .
 All the unboxedgreen highlighted words / phrases correspond to the salient information .
 See detailed discussion in above .

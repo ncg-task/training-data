@@ -18,7 +18,7 @@ Nevertheless , this method requires human - labeled lexicons and can not scale t
 achieves good results on affect tasks by training a two - layer bidirectional Long Short - Term Memory ( bi - LSTM ) model , named DeepMoji , to predict emoji of the input document using a huge dataset of 1.2 billions of tweets .
 However , collecting billions of tweets is expensive and time consuming for researchers .
 Furthermore , most works in sentiment and emotion analysis have focused solely on a single task .
-Nevertheless , as emotion is a complex concept , we believe that all emotion involving situations such as stress , hate speech , sarcasm , and insult , should be included fora deeper understanding of emotion .
+Nevertheless , as emotion is a complex concept , we believe that all emotion involving situations such as stress , hate speech , sarcasm , and insult , should be included for a deeper understanding of emotion .
 Thus , one way to achieve this is through a multi-task training framework , as we present here .
 Contributions :
 1 ) We propose Emo2Vec 1 which are word - level representations that encode emotional semantics into fixed - sized , real - valued vectors .
@@ -104,7 +104,7 @@ Evaluation method :
 To make a fair comparison with other baseline representations , we first take one dataset d i out from n small datasets as the test set .
 The remaining n ? 1 small datasets and the larger dataset are used to train Emo2 Vec through multi -task learning .
 We take the trained Emo2 Vec as the feature ford i and train a logistic regression on d i to compare the performance with other baseline representations .
-The procedure is repeated n times to seethe generalization ability on different datasets .
+The procedure is repeated n times to see the generalization ability on different datasets .
 We release Emo2 Vec trained on all datasets .
 For sentiment tasks , accuracy score is reported .
 For other tasks , if it is binary task , we report f 1 score for the positive class .
@@ -128,10 +128,8 @@ Note that SOTA results require complex bi - LSTM model while all these represent
 Here , we want to highlight that solely using a simple classifier with good word representation can achieve promising results .
 shows that GloVe + Emo2 Vec outperforms
 Glo Ve on 13 / 14 datasets .
-Compared with GloVe+ DeepMoji , GloVe + Emo2
-Vec achieves same or better results on 11 / 14 datasets , which on average gives 1.0 % improvement .
-GloVe + Emo2
-Vec achieves better performances on SOTA results on three datasets ( SE0714 , stress and tube tablet ) and comparable result to SOTA on dataset Previous SOTA results
+Compared with GloVe+ DeepMoji , GloVe + Emo2 Vec achieves same or better results on 11 / 14 datasets , which on average gives 1.0 % improvement .
+GloVe + Emo2 Vec achieves better performances on SOTA results on three datasets ( SE0714 , stress and tube tablet ) and comparable result to SOTA on dataset Previous SOTA results
 GloVe GloVe+DeepMoji
 GloVe+ Emo2 Vec SS - Twitter bi-LSTM 0.88 0.78 0.81 0.81 SS - Youtube bi-LSTM 0.93 0.84 0.86 0.87 SS - binary bi-LSTM 0.886 0.795 0.809 0.823 SS - fine bi-LSTM 0.69 0.69 0.68 0.68 SCv2-GEN bi -LSTM 0.75 0.73 0.74 0.74 Average 0.642 0.657 0.667 another four datasets ( tube auto , SemEval , SCv1- GEN and SCv2 - GEN ) .
 We believe the reason why we achieve a much better performance than SOTA on the SE0714 is that headlines are usually short and emotional words exist more commonly in headlines .

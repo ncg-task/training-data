@@ -10,8 +10,7 @@
               "not updated during" : "training"
             }
           }
-        },
-        "from sentence" : "We initialise our model with GloVe ( 300 - D , trained on 42B tokens , 1.9 M vocab , not updated during training : ) 4 and pre-process the corpus with tokenisation using NLTK ) and case folding ."
+        }
       },
       "pre-process" : {
         "corpus" : {
@@ -26,12 +25,10 @@
       "has" : {
         "Training" : {
           "carried out over" : "800 epochs",
-          "with" : "FTRL optimiser",
-          "from sentence" : "Training is carried out over 800 epochs with the FTRL optimiser and a batch size of 128 and learning rate of 0.05 ."
+          "with" : "FTRL optimiser"
         },
         "batch size" : {
-          "of" : "128",
-          "from sentence" : "Training is carried out over 800 epochs with the FTRL optimiser and a batch size of 128 and learning rate of 0.05 ."
+          "of" : "128"
         },
         "learning rate" : {
           "of" : "0.05",
@@ -55,7 +52,7 @@
         "following hyper - parameters" : {
           "for" : {
             "weight matrices" : {
-              "in" : "weight matrices"
+              "in" : "both directions"
             },
             "hidden size" : {
               "of" : {

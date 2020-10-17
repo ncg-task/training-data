@@ -33,8 +33,7 @@
             "word embeddings and predicate mask embeddings" : {
               "set to" : "100"
             }
-          },
-          "from sentence" : "The dimension of word embeddings and predicate mask embeddings is set to 100 and the number of hidden layers is set to 10 ."
+          }
         },
         "number of hidden layers" : {
           "set to" : "10",

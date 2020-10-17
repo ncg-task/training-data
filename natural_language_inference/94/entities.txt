@@ -1,7 +1,7 @@
 224	105	121	self - attention
 224	125	143	able to contribute
 224	144	157	significantly
-224	130	132	to
+224	158	160	to
 224	84	95	performance
 224	173	182	on top of
 224	183	212	other components of the model
@@ -51,7 +51,7 @@
 40	50	76	selected commonsense paths
 40	77	84	between
 40	89	93	hops
-40	31	33	of
+40	94	96	of
 40	97	125	document - context reasoning
 40	126	132	within
 40	133	142	our model
@@ -64,7 +64,7 @@
 40	295	317	to effectively fill in
 40	318	335	gaps of inference
 2	16	57	Generative Multi - Hop Question Answering
-14	0	24	Reading comprehension QA
+4	0	24	Reading comprehension QA
 24	39	85	machine reading comprehension ( MRC ) based QA
 28	31	57	reasoning - based MRC - QA
 214	3	23	see empirically that
@@ -83,13 +83,13 @@
 215	86	97	performance
 215	131	143	establishing
 215	146	172	new state - of - the - art
-215	89	92	for
+215	173	176	for
 215	181	185	task
 216	8	16	see that
 216	17	26	our model
 216	27	35	performs
 216	36	51	reasonably well
-216	40	42	on
+216	52	54	on
 216	55	62	WikiHop
 216	77	85	achieves
 216	86	116	promising initial improvements
@@ -99,7 +99,7 @@
 216	137	148	commonsense
 216	151	161	hinting at
 216	166	182	generalizability
-216	134	136	of
+216	183	185	of
 216	186	200	our approaches
 217	3	12	speculate
 217	22	33	improvement

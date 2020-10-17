@@ -4,20 +4,17 @@
       "has" : {
         "number of units" : {
           "in" : "encoder and the decoder",
-          "is" : "100",
-          "from sentence" : "The number of units in the encoder and the decoder is 100 and the latent variable is of size 50 and the number of layers of both Transformer blocks is 2 , the number of selfattention heads is 8 ."          
+          "is" : "100"
         },
         "latent variable" : {
-          "of" : "size 50",
-          "from sentence" : "The number of units in the encoder and the decoder is 100 and the latent variable is of size 50 and the number of layers of both Transformer blocks is 2 , the number of selfattention heads is 8 ."          
+          "of" : "size 50"
         },
         "number of layers" : {
           "of both" : {
             "Transformer blocks" : {
               "is" : "2"
             }
-          },
-          "from sentence" : "The number of units in the encoder and the decoder is 100 and the latent variable is of size 50 and the number of layers of both Transformer blocks is 2 , the number of selfattention heads is 8 ."          
+          }
         },
         "number of selfattention heads" : {
           "is" : "8",

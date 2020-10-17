@@ -1,5 +1,4 @@
 (Contribution||has research problem||Complex and Cross - Domain Semantic Parsing)
 (Contribution||has research problem||Text - to - SQL)
-(Contribution||has research problem||Complex and Cross - Domain Semantic Parsing and Text - to - SQL)
 (Contribution||has research problem||Semantic parsing ( SP ))
 (Contribution||has research problem||SP)

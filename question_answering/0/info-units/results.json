@@ -12,13 +12,13 @@
               },
               "has" : {
                 "GGNN" : {
-                  "showing" : "best overall result"
+                  "showing" : "best over all result"
                 }
               }
             }
           },
           "from sentence" : "We compare the results on the WebQSP - WD data set in .
-As can be seen , the graph models outperform all other models across precision , recall and F-score , with GGNN showing the best overall result ."
+As can be seen , the graph models outperform all other models across precision , recall and F-score , with GGNN showing the best over all result ."
 
         }
       },

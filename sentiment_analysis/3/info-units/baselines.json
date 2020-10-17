@@ -3,7 +3,7 @@
     "Baselines" : {
       "has" : {
         "c LSTM" : {
-          "is" : ["contextual LSTM model", {"from sentence" : "c LSTM : A contextual LSTM model ."}],
+          "has" : ["contextual LSTM model", {"from sentence" : "c LSTM : A contextual LSTM model ."}],
           "has" : {
             "utterance - level bidirectional LSTM" : {
               "to encode" : "each utterance",
@@ -53,7 +53,7 @@ We limit the document length to the last 100 tokens to allow larger batch size .
 
         },
         "DialogueRNN" : {
-          "is" : {
+          "has" : {
             "stateof - the - art model" : {
               "for" : {
                 "emotion detection" : {

@@ -113,7 +113,7 @@ As in , the selfattention sub - layer uses a sub-sequent mask to prevent positio
 The second and third sub-layers perform the multi-head attention over M q and M pall , respectively .
 The M pall is the concatenated outputs of the encoder stack for the passages ,
 Here , the [ , ] operator denotes vector concatenation across the columns .
-This attention for the concatenated passages produces attention weights that are comparable between passages .
+This attention for the concatenated passages produces attention weights thatare comparable between passages .
 Multi-source Pointer - Generator
 Our extended mechanism allows both words to be generated from a vocabulary and words to be copied from both the question and multiple passages ( ) .
 We expect that the capability of copying words will be shared among answer styles .
@@ -161,7 +161,7 @@ rank and ?
 cls are balancing parameters .
 The loss of the decoder , L dec , is the negative log likelihood of the whole target answer sentence averaged over N able answerable examples :
 where Dis the training dataset .
-The losses of the passage ranker , L rank , and the answer possibility classifier , L cls , are the binary cross entropy between the true and predicted values averaged overall N examples :
+The losses of the passage ranker , L rank , and the answer possibility classifier , L cls , are the binary cross entropy between the true and predicted values averaged over all N examples :
 .
 Setup
 We only describe the settings specific to this experiment .
@@ -237,7 +237,7 @@ In particular , the capability of copying words from the question and passages c
 Our future work will involve exploring the potential of our multi-style learning towards natural language understanding .
 A.2 Experimental Setup for NarrativeQA
 Model configurations .
-Our best model was jointly trained with the NarrativeQA and MS MARCO NLG datasets fora total of seven epochs with a batch size of 64 , where each batch consisted of multi-style answers that were randomly sampled .
+Our best model was jointly trained with the NarrativeQA and MS MARCO NLG datasets for a total of seven epochs with a batch size of 64 , where each batch consisted of multi-style answers that were randomly sampled .
 For efficient multi-style learning , each summary in the Narrative QA dataset was divided into ten passages ( size of 130 words ) with sentencelevel overlaps such that each sentence in the summary was entirely contained in a passage .
 Each passage from MS MARCO was also truncated to 130 words .
 The rest of the configuration was the same as in the MS MARCO experiments .

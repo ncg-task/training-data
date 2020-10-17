@@ -18,7 +18,7 @@
 (Model||processes||text)
 (text||has||incrementally)
 (text||while||learning)
-(learning||past tokens||in memory)
+(learning||past tokens||in the memory)
 (learning||past tokens||to what extent)
 (to what extent||relate to||current token)
 (current token||being||processed)

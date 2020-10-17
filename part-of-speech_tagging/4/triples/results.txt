@@ -11,7 +11,7 @@
 (advantage||of||LAN)
 (Results||has||Universal Dependencies ( UD ) v 2.2)
 (Universal Dependencies ( UD ) v 2.2||has||Our model)
-(Our model||ourperforms||all the baselines)
+(Our model||outperforms||all the baselines)
 (all the baselines||on||all the languages)
 (Universal Dependencies ( UD ) v 2.2||has||improvements)
 (improvements||are||statistically significant)

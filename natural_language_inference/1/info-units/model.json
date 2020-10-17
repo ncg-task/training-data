@@ -20,14 +20,15 @@
                 "relationship" : {
                   "performed by" : {
                     "embedding" : {
-                      "in" : "same vector space",
-                      "between" : ["input and response languages ( here natural language )", "storage language ( here , the facts from KBs )"]
+                      "between" : ["input and response languages ( here natural language )", "storage language ( here , the facts from KBs )"],
+                      "in" : "same vector space"                      
                     }
                   }
                 }
               }
             }
-          }
+          },
+          "from sentence" : "Memory Networks are learning systems centered around a memory component that can be read and written to , with a particular focus on cases where the relationship between the input and response languages ( here natural language ) and the storage language ( here , the facts from KBs ) is performed by embedding all of them in the same vector space ."
         }
       },
       "setting of" : {

@@ -6,7 +6,7 @@
 21	70	102	pretrained language model ( LM )
 21	103	113	to compute
 21	118	139	vector representation
-21	30	32	of
+21	140	142	of
 21	147	157	input text
 29	32	61	different objective functions
 29	64	95	listwise and pointwise learning
@@ -32,18 +32,18 @@
 26	4	13	LC method
 26	14	22	computes
 26	23	49	latent cluster information
-26	40	43	for
+26	50	53	for
 26	54	68	target samples
 26	69	80	by creating
 26	83	102	latent memory space
 26	107	118	calculating
 26	123	133	similarity
 26	134	141	between
-26	61	67	sample
-26	90	96	memory
+26	146	152	sample
+26	161	167	memory
 27	82	89	assigns
 27	90	126	true - label question - answer pairs
-27	9	11	to
+27	127	129	to
 27	130	146	similar clusters
 27	0	2	By
 27	6	34	endto - end learning process
@@ -83,7 +83,7 @@
 120	71	80	dimension
 120	81	83	of
 120	88	120	context projection weight matrix
-120	46	52	set to
+120	124	130	set to
 120	131	134	300
 121	3	6	use
 121	11	25	Adam optimizer
@@ -119,7 +119,7 @@
 128	23	54	base model ( Comp - Clip + LM )
 128	59	66	observe
 128	69	92	significant improvement
-128	7	9	in
+128	93	95	in
 128	96	107	performance
 128	108	119	in terms of
 128	120	151	MAP ( 0.714 to 0.746 absolute )

@@ -23,9 +23,9 @@
 187	109	116	label 0
 187	125	134	instances
 187	135	139	from
-187	3	4	S
-187	100	104	with
-187	109	114	label
+187	140	141	S
+187	142	146	with
+187	151	156	label
 196	7	25	scheduled sampling
 196	32	48	training process
 196	49	66	gradually changes
@@ -42,9 +42,10 @@
 189	131	142	kernel size
 189	146	150	from
 189	151	157	1 to T
-189	166	175	number of
+189	166	172	number
+189	173	175	of
 189	176	192	each kernel size
-189	193	203	is between
+189	196	203	between
 189	204	214	100 to 200
 190	0	31	Dropout ) and L2 regularization
 190	41	49	to avoid
@@ -67,7 +68,7 @@
 33	21	23	is
 33	96	119	generated tokens so far
 33	128	134	action
-33	21	23	is
+33	89	91	is
 33	142	168	next token to be generated
 34	132	138	employ
 34	141	154	discriminator
@@ -115,10 +116,10 @@
 203	97	112	compared models
 203	139	151	demonstrates
 203	156	179	significant improvement
-203	61	63	of
+203	180	182	of
 203	183	189	SeqGAN
-203	190	197	overall
-203	97	112	compared models
+203	190	198	over all
+203	199	214	compared models
 207	15	21	SeqGAN
 207	22	33	outperforms
 207	34	43	PG - BLEU
@@ -133,7 +134,7 @@
 205	200	209	generator
 205	210	214	with
 205	219	233	same structure
-205	161	163	as
+205	234	236	as
 205	241	250	baselines
 206	5	14	indicates
 206	19	71	prospect of applying adversarial training strategies

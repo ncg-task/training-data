@@ -26,9 +26,9 @@ These embeddings elicit the latent semantic relations present among the co-occur
 Majority of the techniques for learning these embeddings are based on two complementary ideologies , ( i ) topic modelling , and ( ii ) word prediction .
 The former methods are primarily built on top of bag - of - words model and tend to capture higher level semantics such as topics .
 The latter techniques capture lower level semantics by exploiting the contextual information of words in a sequence -.
-On the other hand , there is a growing interest towards developing pre-trained language models , , that are then finetuned for specific tasks such as document classification , question answering , named entity recognition , etc .
+On the other hand , there is a growing interest towards developing pre-trained language models , , thatare then finetuned for specific tasks such as document classification , question answering , named entity recognition , etc .
 Although these models achieve state - of - the - art results in several NLP tasks ; they require enormous computational resources to train .
-Latent variable models area popular choice in unsupervised learning ; where the observed data is assumed to be S. generated through the latent variables according to a stochastic process .
+Latent variable models are a popular choice in unsupervised learning ; where the observed data is assumed to be S. generated through the latent variables according to a stochastic process .
 The goal is then to estimate the model parameters , and also the latent variables .
 In probabilistic topic models ( PTMs ) the latent variables are attributed to topics , and the generative process assumes that every topic is a sample from a distribution over words in the vocabulary and documents are generated from the distribution of ( latent ) topics .
 Recent works showed that auto - encoders can also be seen as generative models for images and text , .
@@ -76,7 +76,7 @@ In such cases , one can resort to variational inference and find an approximatio
 This approximation to the true posterior is referred as variational distribution q ( w ) , and is obtained by minimizing the Kullback - Leibler ( KL ) divergence , D KL ( q || p ) between the approximate and true posterior .
 We can express log marginal ( evidence ) of the data as :
 Here H [ q ] represents the entropy of q ( w ) .
-Given the data x , log p ( x ) is a constant with respect tow , and D KL ( q || p ) can be minimized by maximizing L ( q ) , which is known as Evidence Lower BOund ( ELBO ) fora document .
+Given the data x , log p ( x ) is a constant with respect tow , and D KL ( q || p ) can be minimized by maximizing L ( q ) , which is known as Evidence Lower BOund ( ELBO ) for a document .
 This is the standard formulation of variational Bayes , where the problem of finding an approximate posterior is transformed into optimization of the functional L ( q ) .
 III .
 VARIATIONAL BAYES
@@ -104,7 +104,7 @@ Using this reparametrization of w , we obtain the following approximation :
 where R denotes the total number of samples r from p( ) .
 Combining , and , we get the approximation to L ( q ) .
 We will introduce the document suffix d , to make the notation explicit :
-For the entire training data X , the complete ELBO will be simply the summation overall the documents , i.e. , d L ( q d ) .
+For the entire training data X , the complete ELBO will be simply the summation over all the documents , i.e. , d L ( q d ) .
 A. Training
 The variational Bayes ( VB ) training procedure for Bayesian SMM is stochastic because of the sampling involved in the re-parametrization trick .
 Like the standard VB approach , we optimize ELBO alternately with respect to q ( w ) and {m , T }.
@@ -210,7 +210,7 @@ were obtained using maximum likelihood approach .
 The choice of Dirichlet distribution for q ( ? ) simplifies the inference process because of the Dirichlet - Multinomial conjugacy .
 However , the assumption of Dirichlet distribution causes limitations to the model , and q ( ? ) can not capture correlations between topics in each document .
 This was the motivation for Blei to model documents with Gaussian distributions , and the resulting model is called correlated topic model ( CTM ) .
-The generative process fora document in CTM is same as in LDA , except for document vectors are now drawn from Gaussian , i.e. ,
+The generative process for a document in CTM is same as in LDA , except for document vectors are now drawn from Gaussian , i.e. ,
 In this formulation , the document embeddings ?
 are no longer in the ( K ?
 1 ) simplex , rather they are dependent through the logistic normal .
@@ -230,7 +230,7 @@ SMM is a log - linear model ; originally proposed for modelling discrete prosodi
 Later , it was used for phonotatic language recognition and eventually for topic identification and document clustering , .
 Similar model was proposed by Maas for unsupervised learning of word representations .
 One of the major differences among these works is the type of regularization used for matrix T .
-Another major difference is in obtaining embeddings w d fora given test document .
+Another major difference is in obtaining embeddings w d for a given test document .
 Maas obtained them by projecting the vector of word counts x d onto the matrix T , i.e. , w d = T x d , whereas , extracted the embeddings by maximizing regularized log - likelihood function .
 The embeddings extracted using SMM are prone to over-fitting .
 Our Bayesian SMM overcomes this problem by capturing the uncertainty of document embeddings in the posterior distribution .
@@ -394,7 +394,7 @@ The proposed Bayesian SMM can be extended to have topic - specific priors for do
 There exists other scoring mechanisms that exploit the uncertainty in embeddings , which we plan to explore in our future works .
 APPENDIX A GRADIENTS OF LOWER BOUND
 The variational distribution is diagonal with the following parametrization :
-The lower bound fora single document is :
+The lower bound for a single document is :
 where g( ) = ? + diag ( exp{ ?} )
 .
 It is convenient to have the following derivatives :

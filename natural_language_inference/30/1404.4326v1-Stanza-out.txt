@@ -2,24 +2,24 @@ title
 Open Question Answering with Weakly Supervised Embedding Models
 abstract
 Building computers able to answer questions on any subject is along standing goal of artificial intelligence .
-Promising progress has recently been achieved by methods that learn to map questions to logical forms or database queries .
+Promising progress has recently been achieved by methods that learn to map questions to logical forms or data base queries .
 Such approaches can be effective but at the cost of either large amounts of human - labeled data or by defining lexicons and grammars tailored by practitioners .
 In this paper , we instead take the radical approach of learning to map questions to vectorial feature representations .
 By mapping answers into the same space one can query any knowledge base independent of its schema , without requiring any grammar or lexicon .
-Our method is trained with anew optimization procedure combining stochastic gradient descent followed by a fine - tuning step using the weak supervision provided by blending automatically and collaboratively generated resources .
+Our method is trained with a new optimization procedure combining stochastic gradient descent followed by a fine - tuning step using the weak supervision provided by blending automatically and collaboratively generated resources .
 We empirically demonstrate that our model can capture meaningful signals from its noisy supervision leading to major improvements over paralex , the only existing method able to be trained on similar weakly labeled data .
 Introduction
 This paper addresses the challenging problem of open - domain question answering , which consists of building systems able to answer questions from any domain .
 Any advance on this difficult topic would bring a huge leap forward in building new ways of accessing knowledge .
-An important development in this area has been the creation of large - scale Knowledge Bases ( KBs ) , such as Freebase and DBpedia which store huge amounts of general - purpose information .
-They are organized as databases of triples connecting pairs of entities by various relationships and of the form ( left entity , relationship , right entity ) .
+An important development in this are a has been the creation of large - scale Knowledge Bases ( KBs ) , such as Freebase and DBpedia which store huge amounts of general - purpose information .
+They are organized as data bases of triples connecting pairs of entities by various relationships and of the form ( left entity , relationship , right entity ) .
 Question answering is then defined as the task of retrieving the correct entity or set of entities from a KB given a query expressed as a question in natural language .
 The use of KBs simplifies the problem by separating the issue of collecting and organizing information ( i.e. information extraction ) from the one of searching through it ( i.e. question answering or natural language interfacing ) .
 However , open question answering remains challenging because of the scale of these KBs ( billions of triples , millions of entities and relationships ) and of the difficulty for machines to interpret natural language .
 Recent progress has been made by tackling this problem with semantic parsers .
-These methods convert questions into logical forms or database queries ( e.g. in SPARQL ) which are then subsequently used to query KBs for answers .
+These methods convert questions into logical forms or data base queries ( e.g. in SPARQL ) which are then subsequently used to query KBs for answers .
 Even if such systems have shown the ability to handle large - scale KBs , they require practitioners to hand - craft lexicons , grammars , and KB schema for the parsing to be effective .
-This nonnegligible human intervention might not be generic enough to conveniently scale up to new databases with other schema , broader vocabularies or other languages than English .
+This nonnegligible human intervention might not be generic enough to conveniently scale up to new data bases with other schema , broader vocabularies or other languages than English .
 In this paper , we instead take the approach of converting questions to ( uninterpretable ) vectorial representations which require no pre-defined grammars or lexicons and can query any KB independent of its schema .
 Following , we focus on answering simple factual questions on a broad range of topics , more specifically , those for which single KB triples stand for both the question and an answer ( of which there maybe many ) .
 For example , ( parrotfish.e , live - in.r , southern - water .e ) stands for
@@ -56,7 +56,7 @@ It is trained using automatically and collaboratively generated data and using t
 In this work , we follow this trend by proposing an embedding - based model for question answering that is also trained under weak and cheap supervision .
 Embedding - based models are getting more and more popular in natural language processing .
 Starting from the neural network language model of , these methods have now reached near state - of - the - art performance on many standard tasks while usually requiring less hand - crafted features .
-Recently , some embedding models have been proposed to perform a connection between natural language and KBs for word - sense disambiguation and for information extraction .
+Recently , some embedding models have been proposed to perform a connection between natural language and KBs for word - sense dis ambiguation and for information extraction .
 Our work builds on these approaches to instead learn to perform open question answering under weak supervision , which to our knowledge has not been attempted before .
 Open-domain Question Answering
 In this paper , we follow the question answering framework of and use the same data .
@@ -76,12 +76,12 @@ Training Data
 Our training data consists of two sources : an automatically created KB , Re - Verb , from which we generate questions and a set of pairs of questions collaboratively labeled as paraphrases from the website WikiAnswers .
 Knowledge Base
 The set of potential answers K is given by the KB ReVerb .
-ReVerb is an open - source database composed of more than 14M triples , made of more than 2 M entities and 600 k relationships , which have been automatically extracted from the ClueWeb09 corpus .
+ReVerb is an open - source data base composed of more than 14M triples , made of more than 2 M entities and 600 k relationships , which have been automatically extracted from the ClueWeb09 corpus .
 In the following , entities are denoted with a .e suffix and relationships with a .r suffix .
 ReVerb contains broad and general knowledge harvested with very little human intervention , which suits the realistically supervised setting .
 But , as a result , ReVerb is ambiguous and noisy with many useless triples and entities as well as numerous duplicates .
 For instance , winston - churchill.e , churchill.e and even roosevelt - and - churchill.e are all distinct entities .. 2 presents some examples of triples : some make sense , some others are completely unclear or useless .
-In contrast to highly curated databases such Freebase , ReVerb has more noise but also many more relation types ( Freebase has around 20 k ) .
+In contrast to highly curated data bases such Freebase , ReVerb has more noise but also many more relation types ( Freebase has around 20 k ) .
 So for some types of triple it has much better coverage , despite the larger size of Freebase ; for example Freebase does not cover verbs like afraid - of or suffer - from .
 Questions Generation
 We have no available data of questions q labeled with their answers , i.e. with the corresponding triples t ?
@@ -96,7 +96,7 @@ The generated questions are imperfect and noisy and create a weak training signa
 Firstly , their syntactic structure is rather simplistic , and real questions as posed by humans ( such as in our actual test ) can look quite different to them .
 Secondly , many generated questions do not correspond to semantically valid English sentences .
 For instance , since the type of entities in ReVerb is unknown , a pattern like who does er ?
-can be chosen fora triple where the type of ? in ( ? , r , e ) is not a person , and similar for other types ( e.g. when ) .
+can be chosen for a triple where the type of ? in ( ? , r , e ) is not a person , and similar for other types ( e.g. when ) .
 Besides , for the strings representing entities and relationships in the questions , we simply used their names in ReVerb , replacingby spaces and stripping off .
 Patterns for generating questions from ReVerb triples following .
 their suffixes , i.e. the string representing winston - churchill.e is simply winston churchill .
@@ -105,7 +105,7 @@ Generating questions with a richer KB than ReVerb , such as Freebase or DBpedia 
 However , this would contradict one of our motivations which is to train a system with as little human intervention as possible ( and hence choosing ReVerb over hand - curated KBs ) .
 Paraphrases
 The automatically generated examples are useful to connect KB triples and natural language .
-However , they do not allow fora satisfactory modeling of English language because of their poor wording .
+However , they do not allow for a satisfactory modeling of English language because of their poor wording .
 To overcome this issue , we again follow and supplement our training data with an indirect supervision signal made of pairs of question paraphrases collected from the WikiAnswers website .
 On WikiAnswers , users can tag pairs of questions as rephrasing of each other .
 harvested a set of 18 M of these question - paraphrase pairs , with 2.4 M distinct questions in the corpus .
@@ -124,7 +124,7 @@ Intuitively , it consists of projecting questions , treated as a bag of words ( 
 The scoring function is then :
 with f ( ) a function mapping words from questions into Contrary to previous work modeling KBs with embeddings ( e.g. ) , in our model , an entity does not have the same embedding when appearing in the lefthand or in the right - hand side of a triple .
 Since , g ( ) sums embeddings of all constituents of a triple , we need to use 2 embeddings per entity to encode for the fact that relationships in the KB are not symmetric and so that appearing as a left - hand or right - hand entity is different .
-This approach can be easily applied attest time to score any ( question , triple ) pairs .
+This approach can be easily applied at test time to score any ( question , triple ) pairs .
 Given a question q , one can predict the corresponding answer ( a triple ) t ( q ) wit h:t ( q ) = arg max
 Training by Ranking Previous work has shown that this kind of model can be conveniently trained using a ranking loss .
 Hence , given our data set D = { ( q i , ti ) , i = 1 , . . . , | D |} consisting of ( question , answer triple ) training pairs , one could learn the embeddings using constraints of the form :
@@ -176,9 +176,9 @@ where X F is the Frobenius norm of X .
 We solve this problem in a few minutes using L - BFGS on a subset of m = 10 M examples from D .
 We first use 4 M examples to train and 6M as validation set to determine the value of the regularization parameter ?.
 We then retrain the model on the whole 10M examples using the selected value , which happened to be ? = 1.7 10 ?5 .
-This fine - tuning is related to learning anew metric in the embedding space , but since the resulting M is not symmetric , it does not define a dot-product .
+This fine - tuning is related to learning a new metric in the embedding space , but since the resulting M is not symmetric , it does not define a dot-product .
 Still , M is close to a constant factor times identity ( as in the original score S ( ) ) .
-The fine - tuning does not deeply alter the ranking , but , as expected , allows fora slight change in the triples ranking , which ends in consistent improvement in performance , as we show in the experiments .
+The fine - tuning does not deeply alter the ranking , but , as expected , allows for a slight change in the triples ranking , which ends in consistent improvement in performance , as we show in the experiments .
 Experiments
 Evaluation Protocols
 We first detail the data and metrics which were chosen to assess the quality of our embedding model .
@@ -188,7 +188,7 @@ We used the test set which has been created by in the following way : ( 1 ) they
 Reranking
 We first evaluated different versions of our model against the paralex system in a reranking setting .
 For each question q from the WikiAn - swers + ReVerb test set , we take the provided candidate triples t and rerank them by sorting by the score S ( q , t ) or S ft ( q , t ) of our model , depending whether we use fine - tuning or not .
-As in , we then compute the precision , recall and F1 -score of the highest ranked answer as well as the mean average precision ( MAP ) of the whole output , which measures the average precision overall levels of recall .
+As in , we then compute the precision , recall and F1 -score of the highest ranked answer as well as the mean average precision ( MAP ) of the whole output , which measures the average precision over all levels of recall .
 Full Ranking
 We hence decided to filter out some candidates before ranking by using a simple string matching strategy : after pos-tagging the question , we construct a set of candidate strings containing ( i ) all noun phrases that appear less than 1,000 .
 Examples of nearest neighboring entities and relationships from REVERB for some words from our vocabulary .
@@ -207,7 +207,7 @@ We actually conducted experiments with several variants of our model , which tri
 Fine - tuning the embedding model is very beneficial to optimize the top of the list and grants a bump of 5 points of F1 : carefully tuning the similarity makes a clear difference .
 All versions of our system greatly outperform paralex : the fine - tuned model improves the F1 - score by almost 20 points and , according to , is better in precision for all levels of recall .
 paralex works by starting with an initial lexicon mapping from the KB to language and then gradually increasing its coverage by iterating on the WikiAnswers + ReVerb data .
-Most of its predictions come from automatically acquired templates and rules : this allows fora good precision but it is not flexible enough across language variations to grant a satisfying recall .
+Most of its predictions come from automatically acquired templates and rules : this allows for a good precision but it is not flexible enough across language variations to grant a satisfying recall .
 Most of our improvement comes from a much better recall .
 However , as we said earlier , this reranking setting is detrimental for paralex because paralex was evaluated on the task of reranking some of its own predictions .
 The results provided for paralex , while not corresponding to those of a full ranking among all triples from ReVerb ( it is still reranking among a subset of candidates ) , concerns an evaluation setting more complicated than for our model .
@@ -246,13 +246,13 @@ For each test question , we record the rank of the first ReVerb triple containin
 Top - 1 and Top - 10 are computed on questions for which the system returned at least one answer ( around 1,000 questions using string matching ) , while F1 is computed for all questions .
 Of course , performance is not great and can not be directly compared with that of the best system reported in ( more than 0.30 of F1 ) .
 One of the main reasons is that most questions of WebQuestions , such as Who was vice - president after Kennedy died ? , should be represented by multiple triples , a setting for which our system has not been designed .
-Still , fora system trained with almost no manual annotation nor prior information on another dataset , with another - very noisy - KB , the results can be seen as particularly promising .
+Still , for a system trained with almost no manual annotation nor prior information on another dataset , with another - very noisy - KB , the results can be seen as particularly promising .
 Besides , evaluation is broad since , in ReVerb , most entities actually appear many times under different names as explained in Section 3 .
 Hence , there might be higher ranked answers but they are missed by our evaluation script .
 Conclusion
-This paper introduces anew framework for learning to perform open question answering with very little supervision .
+This paper introduces a new framework for learning to perform open question answering with very little supervision .
 Using embeddings as its core , our approach can be successfully trained on imperfect labeled data and indirect supervision and significantly outperforms previous work for answering simple factual questions .
-Besides , we introduce anew way to fine - tune embedding models for cases where their optimization problem can not be completely solved .
+Besides , we introduce a new way to fine - tune embedding models for cases where their optimization problem can not be completely solved .
 In spite of these promising results , some exciting challenges remain , especially in order to scale up this model to questions with more complex semantics .
 Due to the very low supervision signal , our work can only answer satisfactorily simple factual questions , and does not even take into account the word ordering when modeling them .
 Further , much more work has to be carried out to encode the semantics of more complex questions into the embedding space .

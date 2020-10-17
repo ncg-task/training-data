@@ -19,7 +19,7 @@
                         "significant improvement" : {
                           "of" : {
                             "SeqGAN" : {
-                              "overall" : "compared models"
+                              "over all" : "compared models"
                             }
                           }
                         }
@@ -30,7 +30,7 @@
               }
             }
           },
-          "from sentence" : "A significance T - test on the NLL oracle score distribution of the generated sequences from the compared models is also performed , which demonstrates the significant improvement of SeqGAN overall compared models ."
+          "from sentence" : "A significance T - test on the NLL oracle score distribution of the generated sequences from the compared models is also performed , which demonstrates the significant improvement of SeqGAN over all compared models ."
         },
         "SeqGAN" : {
           "outperforms" : "PG - BLEU",

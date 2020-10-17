@@ -6,7 +6,7 @@ We explore what is sufficient to build a fast and well - performed text matching
 We conduct experiments on four well - studied benchmark datasets across tasks of natural language inference , paraphrase identification and answer selection .
 The performance of our model is on par with the state - of - the - art on all datasets with much fewer parameters and the inference speed is at least 6 times faster compared with similarly performed ones .
 Introduction
-Text matching is a core research area in natural language processing with along history .
+Text matching is a core research are a in natural language processing with along history .
 In text matching tasks , a model takes two text sequences as input and predicts a category or a scala value indicating their relationship .
 A wide range of tasks , including natural language inference ( also known as recognizing textual entailment ) , paraphrase identification , answer selection , and soon , can be seen as specific forms of text matching problems .
 Research on general purpose text matching algorithm is beneficial to a large number of relevant applications .
@@ -36,7 +36,7 @@ We also conduct an ablation study to compare with alternative implementations of
 We release the source code 1 of our experiments for reproducibility and hope to facilitate future researches .
 Our Approach
 In this section , we introduce our proposed approach RE2 for text matching .
-gives an illustration of the overall architecture .
+gives an illustration of the over all architecture .
 Two text sequences are processed symmetrically before the prediction layer , and all parameters except those in the prediction layer are shared between the two sequences .
 For conciseness , we omit the part for the other sequence in the figure .
 In RE2 , tokens in each sequence are first embedded by the embedding layer and then processed consecutively by N same - structured blocks with independent parameters ( dashed boxes in : An overview of RE2 .
@@ -88,11 +88,11 @@ Formulations forb are similar and omitted here .
 Prediction Layer
 The prediction layer takes the vector representations of the two sequences v 1 and v 2 from the pooling layers as input and predicts the final target following :
 H is a multi - layer feed - forward neural network .
-Ina classification task , ? ?
+In a classification task , ? ?
 RC represents the unnormalized predicted scores for all classes where C is the number of classes .
 The predicted class is ?
 = argmax i?i .
-Ina regression task , ?
+In a regression task , ?
 is the predicted scala value .
 In symmetric tasks like paraphrase identification , asymmetric version of the prediction layer is used for better generalization :
 We also provide a simplified version of the prediction layer .
@@ -137,8 +137,7 @@ The prediction layer is a two - layer feed - forward network .
 The hidden size is set to 150 in all experiments .
 Activations in all feed - forward networks are GeLU activations , and we use ?
 2 as an approximation of the variance balancing parameter for GeLU activations in He initialization .
-We scale the summation in augmented residual connections by 1 / ? 2 when n ?
-3 to preserve the variance under the assumption that the two addends have the same variance .
+We scale the summation in augmented residual connections by 1 / ? 2 when n ? 3 to preserve the variance under the assumption that the two addends have the same variance .
 The number of blocks is tuned in a range from 1 to 3 .
 The number of layers of the convolutional encoder is tuned from 1 to 3 .
 Although in robustness checks we validate with up to 5 blocks and layers , in all other experiments we deliberately limit the maximum number of blocks and number of layers to 3 to control the size of the model .
@@ -158,8 +157,7 @@ Results on Paraphrase Identification
 Results on Quora dataset are listed in .
 Since paraphrase identification is asymmetric task where two input sequences can be swapped with no effect to the label of the text pair , in hyperparameter tuning we validate between two symmet -
 Results on Answer Selection
-Results on Wiki
-QA dataset are listed in .
+Results on WikiQA dataset are listed in .
 Note that some of the previous methods round their reported results to three decimal points , but we choose to align with the original paper and round our results to four decimal points .
 In hyperparameter tuning , we choose the best hyperparameters including early stopping according to MRR on WikiQA development set .
 We obtain a result on par with the state - of - the - art reported on this dataset .
@@ -175,7 +173,7 @@ BiMPM 0.05 0.00 CAFE 0.07 0.01 DIIN 0.85 0.11 DIIN with EM feature 1.79 0.22 CSR
 0.05 0.00 coder layers is set to 3 , the largest possible number in all previously reported experiments .
 Besides , since all the reported results of our proposed method are obtained with no more than 3 blocks , we only measure the inference time of RE2 with 1 - 3 blocks .
 We train all the compared models using the official training code and commands released by the authors on Nvidia P100 GPUs and save model checkpoints to disk .
-After training , all the models are required to make predictions fora batch of 8 pairs of sentences on a MacBook Pro with Intel Core i7 CPUs .
+After training , all the models are required to make predictions for a batch of 8 pairs of sentences on a MacBook Pro with Intel Core i7 CPUs .
 The lengths of these sentences are 20 and the maximum number of characters in a word is 12 .
 The reported statistics are the average and the standard deviation of processing 100 batches .
 The comparison results in show that our method has very high CPU inference speed , even with multiple stacked blocks .
@@ -185,7 +183,7 @@ Compared with models of similar inference speed , BiMPM and CAFE , ours obtains 
 In summary , our proposed method achieves performance on par with the state - of - the - art on all four well - studied datasets across three different tasks with only a few parameters and fast inference speed .
 Analysis
 Ablation study .
-We present an ablation study of our model , comparing the original model with 6 ablation baselines : ( 1 ) " w / o enc -in " : use directly the output of the encoder as the input of the alignment and fusion layers like inmost previous approaches without concatenating the encoder input ;
+We present an ablation study of our model , comparing the original model with 6 ablation baselines : ( 1 ) " w / o enc -in " : use directly the output of the encoder as the input of the alignment and fusion layers like in most previous approaches without concatenating the encoder input ;
 ( 2 ) " residual conn . " : use vanilla residual connections ( x
 ) in place of the augmented version ; ( 3 ) " simple fusion " : use simpl ?
 as the fusion layer ; ( 4 ) " alignment alt. " :
@@ -214,7 +212,7 @@ QA dataset a neural matching model trained with different random seeds can resul
 We leave the further investigation of the high variance on the WikiQA dataset for further work .
 Occlusion sensitivity .
 To better understand what roles the three alignment features play , we perform an analysis of occlusion sensitivity similar to those in computer vision .
-We use a three - block RE2 model to predict on SNLI dev set , mask one feature in one block to zeros at a time and report changes inaccuracy of the three categories : entailment , neutral and contradiction .
+We use a three - block RE2 model to predict on SNLI dev set , mask one feature in one block to zeros at a time and report changes in accuracy of the three categories : entailment , neutral and contradiction .
 Occlusion sensitivity can help to reveal how much the model depends on each part when deciding on a specific category and we can make some speculations about how the model works based on the observations .
 shows the result of occlusion sensitivity .
 Previous aligned features are absent in the first block and thus left blank .
@@ -245,7 +243,7 @@ Our model keeps the lower - level alignment results as intermediate states and g
 A case study of the natural language inference task .
 The premise is " A green bike is parked next to a door " , and the hypothesis is " The bike is chained to the door " .
 Related Work
-Deep neural networks are dominant in the text matching area .
+Deep neural networks are dominant in the text matching are a .
 Semantic alignment and comparison between two text sequences lie in the core of text matching .
 Early works explore encoding each sequence individually into a vector and then building a neural network classifier upon the two vectors .
 In this paradigm , recurrent , recursive and convolutional networks are used as the sequence encoder .
@@ -270,9 +268,9 @@ CSRAN performs multi-level attention refinement with dense connections among mul
 DRCN stacks encoding and alignment layers .
 It concatenates all previously aligned results and has to use an autoencoder to deal with exploding feature spaces .
 SAN utilizes recurrent networks to combine multiple alignment results .
-This paper also proposes a deep architecture based on anew way to connect consecutive blocks named augmented residual connections , to distill previous aligned information which serves as an important feature for text matching .
+This paper also proposes a deep architecture based on a new way to connect consecutive blocks named augmented residual connections , to distill previous aligned information which serves as an important feature for text matching .
 Conclusion
 We propose a highly efficient approach , RE2 , for general purpose text matching .
 It achieves the performance on par with the state - of - the - art on four well - studied datasets across three different text matching tasks with only a small number of parameters and very high inference speed .
 It highlights three key features , namely previous aligned features , original point - wise features , and contextual features for inter-sequence alignment and simplifies most of the other components .
-Due to its fast speed and strong performance , the model is quite suitable fora wide range of related applications .
+Due to its fast speed and strong performance , the model is quite suitable for a wide range of related applications .

@@ -4,8 +4,7 @@
       "implement" : {
         "model" : {
           "with" : "TensorFlow"
-        },
-        "from sentence" : "We implement our model with TensorFlow and train on Nvidia P100 GPUs ."
+        }
       },
       "train on" : ["Nvidia P100 GPUs", {"from sentence" : "We implement our model with TensorFlow and train on Nvidia P100 GPUs ."}],
       "tokenize" : {
@@ -126,8 +125,7 @@
               }
             }
           },
-          "from sentence" : "We scale the summation in augmented residual connections by 1 / ? 2 when n ?
-3 to preserve the variance under the assumption that the two addends have the same variance ."
+          "from sentence" : "We scale the summation in augmented residual connections by 1 / ? 2 when n ? 3 to preserve the variance under the assumption that the two addends have the same variance ."
 
         }
       },

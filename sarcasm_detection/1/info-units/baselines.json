@@ -6,7 +6,7 @@
           "uses" : {
             "comment 's" : {
               "has" : {
-                "word counts" : {
+                "word - counts" : {
                   "as" : {
                     "features" : {
                       "in" : "vector"
@@ -14,7 +14,9 @@
                   }
                 }
               },
-              "from sentence" : "This model uses a comment 's word - counts as features in a vector ."
+              "from sentence" : "Bag - of - Words :
+This model uses a comment 's word - counts as features in a vector ."
+
             }
           }
         },

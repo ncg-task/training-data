@@ -29,12 +29,10 @@
           "from sentence" : "We set all the words beyond Glove as zero vectors ."
         },
         "l" : {
-          "to" : "300",
-          "from sentence" : "We set l to 300 , batch size to 30 , learning rate to 0.002 ."
+          "to" : "300"
         },
         "batch size" : {
-          "to" : "30",
-          "from sentence" : "We set l to 300 , batch size to 30 , learning rate to 0.002 ."
+          "to" : "30"
         },
         "learning rate" : {
           "to" : "0.002",

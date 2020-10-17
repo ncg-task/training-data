@@ -6,7 +6,8 @@
           "based on" : {
             "linguistic features" : {
               "such as" : ["n-grams", "POS information", "more hand - engineered features"],
-              "from sentence" : "Many existing works in the aspect - based sentiment analysis task , 3 use a classifier , such as logistic regression or SVM , based on linguistic features such as n-grams , POS information or more hand - engineered features ."
+              "from sentence" : "Logistic Regression
+Many existing works in the aspect - based sentiment analysis task , 3 use a classifier , such as logistic regression or SVM , based on linguistic features such as n-grams , POS information or more hand - engineered features ."
             }
           },
           "define" : {
@@ -28,7 +29,8 @@ Left right pooling :"
                   "for" : "each of the aspects"
                 }
               },
-              "from sentence" : "Inspired by the recent success of applying deep neural networks on language tasks , we use a bidirectional LSTM to learn a classifier for each of the aspects ."
+              "from sentence" : "Long Short - Term Memory ( LSTM )
+Inspired by the recent success of applying deep neural networks on language tasks , we use a bidirectional LSTM to learn a classifier for each of the aspects ."
             }
           },
           "has" : {

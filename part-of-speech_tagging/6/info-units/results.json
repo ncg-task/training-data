@@ -46,8 +46,7 @@
             "4.4 %" : {
               "on" : "average"
             }
-          },
-          "from sentence" : "The last row in shows an absolute LAS improvement of 4.4 % on average when comparing our jPTDP with its simplified version of not using characterbased representations : specifically , morphologically rich languages get an averaged improvement of 9.3 % , vice versa 2.6 % for others ."
+          }
         }
       },
       "has" : {

@@ -63,8 +63,7 @@
           "from sentence" : "Dropout regularization was used for all ReLU layers , but not for the final linear layer ."
         },
         "dropout ratio" : {
-          "has" : "0.2",
-          "from sentence" : "We additionally tuned the following hyperparameters and present their chosen values in , 1 dropout ratio ( 0.2 ) and learning rate ( 0.05 - vanilla , 0.025 - intra-attention ) ."
+          "has" : "0.2"
         },
         "learning rate" : {
           "has" : {

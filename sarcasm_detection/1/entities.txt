@@ -1,6 +1,6 @@
 286	11	15	test
 286	16	27	performance
-286	19	22	for
+286	28	31	for
 286	36	60	content - based CNN only
 287	13	21	provides
 287	26	52	worst relative performance
@@ -8,6 +8,8 @@
 287	58	85	almost 10 % lesser accuracy
 287	86	90	than
 287	91	98	optimal
+288	10	17	include
+288	18	37	contextual features
 289	11	17	effect
 289	18	20	of
 289	21	39	discourse features
@@ -15,7 +17,7 @@
 289	65	76	Pol dataset
 289	77	84	getting
 289	88	96	increase
-289	18	20	of
+289	97	99	of
 289	100	109	3 % in F1
 290	95	105	introduced
 290	75	90	user embeddings
@@ -30,22 +32,24 @@
 292	41	90	user embeddings and contextual discourse features
 292	91	98	provide
 292	103	119	best performance
-292	25	27	in
+292	120	122	in
 292	123	141	all three datasets
 293	17	23	use of
 293	24	27	CCA
 293	28	31	for
 293	36	46	generation
-293	21	23	of
+293	47	49	of
 293	50	65	user embeddings
 293	75	90	replace it with
 293	91	111	simple concatenation
-293	61	63	in
 294	13	19	causes
 294	22	38	significant drop
+294	39	41	in
 294	42	53	performance
+258	0	16	Bag - of - Words
 259	11	15	uses
 259	18	28	comment 's
+259	29	42	word - counts
 259	43	45	as
 259	46	54	features
 259	55	57	in
@@ -53,8 +57,8 @@
 261	0	3	CNN
 261	37	59	individual CNN version
 264	0	9	CNN - SVM
-264	0	3	CNN
 265	23	34	consists of
+265	37	40	CNN
 265	41	44	for
 265	45	61	content modeling
 265	66	88	other pre-trained CNNs
@@ -91,7 +95,7 @@
 252	8	26	batched - modeling
 252	27	29	of
 252	30	38	comments
-252	23	25	in
+252	39	41	in
 252	42	46	CNNs
 252	49	61	each comment
 252	62	64	is
@@ -114,7 +118,7 @@
 27	45	60	user embeddings
 27	61	73	that capture
 27	74	102	indicative behavioral traits
-27	14	17	for
+27	103	106	for
 27	107	114	sarcasm
 34	12	30	content - modeling
 34	31	36	using
@@ -136,7 +140,7 @@
 30	53	62	discourse
 30	63	65	of
 30	66	74	comments
-30	32	34	in
+30	75	77	in
 30	82	99	discussion forums
 31	8	15	done by
 31	16	33	document modeling
@@ -163,6 +167,7 @@
 6	149	166	sarcasm detection
 273	0	7	CASCADE
 273	19	26	achieve
+273	27	44	major improvement
 273	45	51	across
 273	52	64	all datasets
 273	65	69	with
@@ -183,7 +188,6 @@
 277	93	108	class imbalance
 277	113	130	establishes it as
 277	133	164	real - world deployable network
-279	147	154	include
 279	6	15	CUE - CNN
 279	16	25	generates
 279	30	45	user embeddings

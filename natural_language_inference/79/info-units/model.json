@@ -43,8 +43,7 @@
             "unique" : {
               "among" : "paragraphs"
             }
-          },
-          "from sentence" : "While paragraph vectors are unique among paragraphs , the word vectors are shared ."
+          }
         },
         "word vectors" : {
           "are" : "shared",

@@ -26,19 +26,19 @@
 213	0	12	Dropout rate
 213	16	29	tuned amongst
 213	30	49	{ 0.1 , 0.2 , 0.3 }
-213	24	26	on
+213	50	52	on
 213	53	63	all layers
 213	64	73	including
 213	78	93	embedding layer
-218	4	14	batch size
-218	18	24	set to
-218	25	34	64/256/32
-219	4	28	maximum sequence lengths
-219	29	32	are
-219	33	45	500/200/1100
-221	31	49	runtime benchmarks
-221	54	62	based on
-221	65	76	TitanXP GPU
+217	4	14	batch size
+217	18	24	set to
+217	25	34	64/256/32
+218	4	28	maximum sequence lengths
+218	29	32	are
+218	33	45	500/200/1100
+220	31	49	runtime benchmarks
+220	54	62	based on
+220	65	76	TitanXP GPU
 216	3	8	adopt
 216	13	27	Adam optimizer
 216	53	57	with
@@ -46,16 +46,17 @@
 216	74	76	of
 216	77	96	0.0003/ 0.001/0.001
 216	97	100	for
-220	0	3	For
-220	4	16	Narrative QA
-220	22	25	use
-220	30	45	Rouge - L score
-220	46	53	to find
-220	58	81	best approximate answer
-220	82	93	relative to
-220	98	118	human written answer
-220	119	131	for training
-220	136	146	span model
+216	101	131	RACE / SearchQA / Narrative QA
+219	0	3	For
+219	4	16	Narrative QA
+219	22	25	use
+219	30	45	Rouge - L score
+219	46	53	to find
+219	58	81	best approximate answer
+219	82	93	relative to
+219	98	118	human written answer
+219	119	131	for training
+219	136	146	span model
 22	17	24	propose
 22	27	52	new compositional encoder
 22	69	76	be used
@@ -80,7 +81,7 @@
 26	56	72	gating functions
 26	90	103	used to learn
 26	104	133	compositional representations
-26	11	13	of
+26	134	136	of
 26	141	155	input sequence
 24	10	13	for
 24	16	26	given word
@@ -90,67 +91,68 @@
 24	64	72	exploits
 24	78	135	long - term ( far ) and short - term ( near ) information
 24	136	145	to decide
-24	124	135	information
-24	136	138	to
+24	155	166	information
+24	167	169	to
 24	170	176	retain
 2	71	92	Reading Comprehension
-5	51	79	reading comprehension ( RC )
+5	52	80	reading comprehension ( RC )
 9	32	34	RC
-222	20	22	on
-222	27	49	RACE benchmark dataset
-223	0	22	Our proposed DCU model
-223	23	31	achieves
-223	48	51	for
-223	57	70	single models
-223	75	90	ensemble models
-226	4	27	best single model score
-226	28	32	from
-226	33	41	RACE - H
-226	46	54	RACE - M
-226	55	73	alternates between
-226	74	83	Sim - DCU
-226	80	83	DCU
-224	3	13	outperform
-224	14	35	highly complex models
-224	36	43	such as
-224	44	47	DFN
-225	8	21	pull ahead of
-225	22	44	other recent baselines
-225	69	71	by
-225	72	84	at least 5 %
-225	45	52	such as
-225	53	61	ElimiNet
-225	66	68	GA
-244	35	52	Search QA dataset
-244	48	50	as
-246	3	10	achieve
-246	15	28	same accuracy
-246	32	38	AMANDA
-246	39	52	without using
-246	57	76	LSTM or GRU encoder
-249	14	45	hybrid combination , DCU - LSTM
-249	46	71	significantly outperforms
-249	72	78	AMANDA
-249	79	81	by
-249	82	85	3 %
-250	76	97	NarrativeQA benchmark
-251	11	23	observe that
-251	24	32	300d DCU
-251	37	44	achieve
-251	45	67	comparable performance
-251	68	72	with
-251	73	78	BiDAF
-257	10	20	DCU - LSTM
-257	21	46	significantly outperforms
-257	47	57	all models
-257	58	69	in terms of
-257	70	79	ROUGE - L
-257	82	91	including
-257	92	97	BiDAF
-258	0	23	Performance improvement
-258	24	28	over
-258	33	53	vanilla BiLSTM model
-258	54	65	ranges from
-258	66	75	1 % ? 3 %
-258	76	82	across
-258	83	94	all metrics
+221	20	22	on
+221	27	49	RACE benchmark dataset
+222	0	22	Our proposed DCU model
+222	23	31	achieves
+222	36	47	best result
+222	48	51	for
+222	57	70	single models
+222	75	90	ensemble models
+225	4	27	best single model score
+225	28	32	from
+225	33	41	RACE - H
+225	46	54	RACE - M
+225	55	73	alternates between
+225	74	83	Sim - DCU
+225	88	91	DCU
+223	3	13	outperform
+223	14	35	highly complex models
+223	36	43	such as
+223	44	47	DFN
+224	8	21	pull ahead of
+224	22	44	other recent baselines
+224	69	71	by
+224	72	84	at least 5 %
+224	45	52	such as
+224	53	61	ElimiNet
+224	66	68	GA
+243	35	52	Search QA dataset
+245	3	10	achieve
+245	15	28	same accuracy
+245	29	31	as
+245	32	38	AMANDA
+245	39	52	without using
+245	57	76	LSTM or GRU encoder
+248	14	45	hybrid combination , DCU - LSTM
+248	46	71	significantly outperforms
+248	72	78	AMANDA
+248	79	81	by
+248	82	85	3 %
+249	76	97	NarrativeQA benchmark
+250	11	23	observe that
+250	24	32	300d DCU
+250	37	44	achieve
+250	45	67	comparable performance
+250	68	72	with
+250	73	78	BiDAF
+256	10	20	DCU - LSTM
+256	21	46	significantly outperforms
+256	47	57	all models
+256	58	69	in terms of
+256	70	79	ROUGE - L
+256	82	91	including
+256	92	97	BiDAF
+257	0	23	Performance improvement
+257	24	28	over
+257	33	53	vanilla BiLSTM model
+257	54	65	ranges from
+257	66	75	1 % ? 3 %
+257	76	82	across
+257	83	94	all metrics

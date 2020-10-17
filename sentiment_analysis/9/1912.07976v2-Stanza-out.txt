@@ -22,7 +22,7 @@ However , most of the proposed models for aspect - based sentiment analysis task
 Therefore , when conducting transfer learning on aspect - based sentiment analysis , those proposed models often fall into the dilemma of lacking aspect extraction method on targeted tasks because there is not enough research support .
 The APC task is a kind of classification problem .
 The researches concerning APC tasks is more abundant than the ATE task , and a large number of deep learning - based models have been proposed to solve APC problems , such as the models ; ; ; based on long short - term memory ( LSTM ) and the methodologies based on transformer .
-The purpose of the APC task is to predict the exact sentiment polarity of different aspects in their context , rather than to fuzzily analyze the overall sentiment polarity on the sentence - level or document - level .
+The purpose of the APC task is to predict the exact sentiment polarity of different aspects in their context , rather than to fuzzily analyze the over all sentiment polarity on the sentence - level or document - level .
 In the APC task , the polarities are most usually classified into three categories : positive , negative , and neutral .
 It is obvious that the sentiment polarity classified based on aspects can better mine the fine - grained emotional tendency in reviews or tweets , thus providing a more accurate reference for decision - makers .
 Similar to the named entity recognition ( NER ) task , the ATE task is a sequence labeling task , which aims to extract aspects from the reviews or tweet .
@@ -39,7 +39,7 @@ In this way , the model can discover the unknown aspects and avoids the tedious 
 It is of great significance for the field - specific aspect - based sentiment analysis .
 The main contributions of this article are as follows :
 1 .
-For the first time , this paper studies the multi -task model of APC subtask and ATE subtask for multilingual reviews , which provides anew idea for the research of Chinese aspect extraction .
+For the first time , this paper studies the multi -task model of APC subtask and ATE subtask for multilingual reviews , which provides a new idea for the research of Chinese aspect extraction .
 2 . This paper firstly applies self - attention and local context focus techniques to aspect word extraction task , and fully explore their potential in aspect term extraction task .
 3 . The LCF - ATEPC model proposed in this paper integrates the pre-trained BERT model , significantly improves both the performance of ATE task and APC subtask , and achieves new state - of - the - art performance especially the F 1 score of ATE task .
 Besides , we adopted the domain - adapted BERT model trained on the domain - related
@@ -56,7 +56,7 @@ Accordingly , this section will introduce the related works of ATE and APC in tw
 Aspect Term Extraction
 Similar to name entity recognition ( NER ) task , the ATE task is a kind of sequence labeling task , and prepare the input based on IOB labels .
 We design the IOB labels as , , , and the labels indicate the beginning , inside and outside of the aspect terms , respectively .
-For ATE task , the input of the example review " The price is reasonable although the service is poor . " will be prepared as = { 1 , 2 ? } , and stands fora token after tokenization , = 10 is the total number of tokens .
+For ATE task , the input of the example review " The price is reasonable although the service is poor . " will be prepared as = { 1 , 2 ? } , and stands for a token after tokenization , = 10 is the total number of tokens .
 The example will be labeled in = { , , , , , , , , , }.
 Aspect Polarity Classification
 Aspect polarity classification is a multi -grained sub - task of sentiment analysis , aiming at predicting the aspect polarity for targeted aspects .
@@ -81,7 +81,7 @@ The GCFG unit deploys only one MHSA encoder to learn the global context feature 
 The feature interactive learning ( FIL ) layer combines the learning of the interaction between local context features and global context features and predicts the sentiment polarity of aspects .
 The extraction of aspects based on the features of the global context .
 BERT - Shared Layer
-The pre-trained BERT model is designed to improve performance for most NLP tasks , and The LCF - ATEPC model deploys two independent BERT - Shared layers that are aimed to extract local and global context features .
+The pre-trained BERT model is designed to improve performance for most NLP tasks , and The LCF - ATEPC model deploys two independent BERT - Shared layers thatare aimed to extract local and global context features .
 For pre-trained BERT , the fine - tuning learning process is indispensable .
 Both BERT - Shared layers are regarded as embed - ded layers , and the fine - tuning process is conducted independently according to the joint loss function of multi-task learning .
 and are used to represent the tokenized inputs of LCFG and GCFG respectively , and we can obtain the preliminary outputs of local and global context features .
@@ -104,7 +104,7 @@ Additionally , we apply a tanh activation function for the MHSA learning process
 Local Context Focus
 Semantic - Relative Distance
 The determination of local context depends on semantic - relative distance ( SRD ) , which is proposed to determine whether the context word belongs to the local context of a targeted aspect to help the model capture the local context .
-Local context is anew concept that can be adapted to most fine - grained NLP tasks .
+Local context is a new concept that can be adapted to most fine - grained NLP tasks .
 In the ABSA field , existing models generally segment input sequences into aspect sequences and context sequences , treat aspects and context as independent segments and model their characteristics separately .
 Instead of leaving the aspect alone as part of the input , this paper mines the aspect and its local context , because the empirical result shows the local context of the target aspect contains more important information .
 SRD is a concept based on token - aspect pairs , describing how far a token is from the aspect .
@@ -235,10 +235,10 @@ Besides , the experimental results on the laptop dataset also validate the effec
 Overall Performance Analysis
 Many models for ABSA tasks do not take into account the ATE subtask , but there are still some joint models based on the traditional neural network architecture to conduct the APC and ATE tasks simultaneously .
 Benefit from the joint training process , the two ABSA subtasks of APC and ATE can promote each other and improve the performance .
-The CDM layer works better on twitter dataset because there area lot of non-standard grammar usage and language abbreviations within it , and the local context focus techniques can promote to infer the polarity of terms .
+The CDM layer works better on twitter dataset because there are a lot of non-standard grammar usage and language abbreviations within it , and the local context focus techniques can promote to infer the polarity of terms .
 Surprisingly , for the Laptop and Restaurant datasets , guests occasionally have a unified " global " view in a specific review .
 That is , if the customer is not satisfied with one aspect , it is likely to criticize the other .
-Things will be the same if a customer prefers a restaurant he would be tolerant of some small disamenity , so the CDW mechanism performs better because it does not completely mask the local context of the other aspect .
+Things will be the same if a customer prefers a restaurant he would be tolerant of some small dis amenity , so the CDW mechanism performs better because it does not completely mask the local context of the other aspect .
 In the multi-task learning process , the convergence rate of APC and ATE tasks is different , so the model does not achieve the optimal effect at the same time .
 We build a joint model for the multi-task of ATE and APC based on the BERT - BASE model .
 After optimizing the model parameters according to the empirical result , the joint model based on BERT - BASE achieved hopeful performance on all three datasets and even surpassed other proposed BERT based improved models on some datasets , such as BERT - PT , AEN - BERT , SDGCN - BERT , and soon .
@@ -248,7 +248,7 @@ In addition , for the first time , BERT - SPC has increased the F 1 score of ATE
 ATEPC - Fusion is a supplementary scheme of LCF mechanism , and it adopts a moderate approach to generate local context features .
 The experimental results show that its performance is also better than the existing BERT - based models .
 Effectiveness of Multi-task Learning
-Keeping the main architecture of the LCF - ATEPC model unchanged , we tried to only optimize parameters fora single task in the multi-task model to explore the difference between the optimal performance of a single task and the multi -task learning model 6 .
+Keeping the main architecture of the LCF - ATEPC model unchanged , we tried to only optimize parameters for a single task in the multi-task model to explore the difference between the optimal performance of a single task and the multi -task learning model 6 .
 The depicts the performance of the LCF - ATEPC model when performing an single APC or ATE task .
 Experimental results show that on some datasets the LCF - ATEPC model performs better concerning APC or ATE single task than conducting ABSA multi-task on some datasets .
 In general , the proposed model LCF - ATEPC proposed in this paper is still superior to other ABSA - oriented multi-task models and even the single - task models aim to APC or ATE .

@@ -81,7 +81,7 @@ TDLSTM + ATT extends TDLSTM by incorporating an attention mechanism ( Bahdanau e
       },
       "implement" : {
         "ContextAVG" : {
-          "is" : {
+          "has" : {
             "simplistic version" : {
               "of" : "our approach"
             }

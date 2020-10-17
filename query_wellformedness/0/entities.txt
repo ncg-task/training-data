@@ -1,13 +1,13 @@
-72	4	27	majority class baseline
-72	28	30	is
-72	31	37	61.5 %
-72	44	58	corresponds to
-72	59	102	all queries being classified non-wellformed
-73	4	26	question word baseline
-73	32	42	classifies
-73	43	52	any query
-73	53	66	starting with
-73	4	17	question word
+71	4	27	majority class baseline
+71	28	30	is
+71	31	37	61.5 %
+71	44	58	corresponds to
+71	59	102	all queries being classified non-wellformed
+72	4	26	question word baseline
+72	32	42	classifies
+72	43	52	any query
+72	53	66	starting with
+72	69	82	question word
 20	3	33	construct and publicly release
 20	36	61	dataset of 25,100 queries
 20	62	76	annotated with
@@ -15,9 +15,10 @@
 20	93	101	of being
 20	104	143	well - formed natural language question
 24	16	41	available for download at
+24	42	86	http://goo.gl/language/ query-wellformedness
 19	40	50	to predict
 19	61	72	given query
-19	12	14	is
+19	73	75	is
 19	78	117	well - formed natural language question
 21	8	13	train
 21	16	56	feed - forward neural network classifier
@@ -28,27 +29,27 @@
 21	127	129	on
 21	135	139	data
 2	0	52	Identifying Well - formed Natural Language Questions
-59	4	20	best performance
-59	21	29	obtained
-59	33	39	70.7 %
-59	40	51	while using
-59	52	72	word - 1 , 2 - grams
-59	77	100	POS - 1 , 2 , 3 - grams
-61	9	32	character - 3 , 4 grams
-61	33	54	gave improvement over
-61	55	80	word unigrams and bigrams
-61	115	119	when
-61	120	128	combined
-61	129	133	with
-61	134	142	POS tags
-61	87	98	performance
-61	103	106	not
-61	107	114	sustain
-60	0	5	Using
-60	6	17	POS n-grams
-60	18	22	gave
-60	25	37	strong boost
-60	38	40	of
-60	41	51	5.2 points
-60	52	56	over
-60	57	82	word unigrams and bigrams
+58	4	20	best performance
+58	21	29	obtained
+58	33	39	70.7 %
+58	40	51	while using
+58	52	72	word - 1 , 2 - grams
+58	77	100	POS - 1 , 2 , 3 - grams
+60	9	32	character - 3 , 4 grams
+60	33	54	gave improvement over
+60	55	80	word unigrams and bigrams
+60	115	119	when
+60	120	128	combined
+60	129	133	with
+60	134	142	POS tags
+60	87	98	performance
+60	103	106	not
+60	107	114	sustain
+59	0	5	Using
+59	6	17	POS n-grams
+59	18	22	gave
+59	25	37	strong boost
+59	38	40	of
+59	41	51	5.2 points
+59	52	56	over
+59	57	82	word unigrams and bigrams

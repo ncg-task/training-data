@@ -3,8 +3,7 @@
     ["Aspect - Level Sentiment Analysis", {"from sentence" : "Progressive Self - Supervised Attention Learning for Aspect - Level Sentiment Analysis"}],
     ["aspect - level sentiment classification ( ASC )", {"from sentence" : "In aspect - level sentiment classification ( ASC ) , it is prevalent to equip dominant neural models with attention mechanisms , for the sake of acquiring the importance of each context word on the given aspect ."}],
     ["neural ASC", {"from sentence" : "In this paper , we propose a progressive self - supervised attention learning approach for neural ASC models , which automatically mines useful attention supervision information from a training corpus to refine attention mechanisms ."}],
-    ["Aspect - level sentiment classification ( ASC )", {"from sentence" : "Aspect - level sentiment classification ( ASC ) , as an indispensable task in sentiment analysis , aims at inferring the sentiment polarity of an input sentence in a certain aspect ."}],
-    ["sentiment analysis", {"from sentence" : "Aspect - level sentiment classification ( ASC ) , as an indispensable task in sentiment analysis , aims at inferring the sentiment polarity of an input sentence in a certain aspect ."}],
+    ["Aspect - level sentiment classification ( ASC )", "sentiment analysis", {"from sentence" : "Aspect - level sentiment classification ( ASC ) , as an indispensable task in sentiment analysis , aims at inferring the sentiment polarity of an input sentence in a certain aspect ."}],
     ["ASC", {"from sentence" : "However , the existing attention mechanism in ASC suffers from a major drawback ."}]
   ]
 }

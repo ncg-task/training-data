@@ -29,7 +29,7 @@
           "from sentence" : "LeakGAN is a new way of providing richer information from the discriminator to the generator by borrowing the recent advances in hierarchical reinforcement learning ."
         },
         "MANAGER" : {
-          "along" : ["shortterm memory network ( LSTM )", {"from sentence" : "The MANAGER is along shortterm memory network ( LSTM ) and serves as a mediator ."}],
+          "along" : "shortterm memory network ( LSTM )",
           "serves as" : ["mediator", {"from sentence" : "The MANAGER is along shortterm memory network ( LSTM ) and serves as a mediator ."}],
           "receives" : {
             "generator D 's high - level feature representation" : {

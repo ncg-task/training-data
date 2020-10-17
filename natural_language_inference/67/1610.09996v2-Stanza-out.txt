@@ -37,7 +37,7 @@ shows an example of our RC setting where the goal is to answer a question Q i , 
 P i as answer .
 Q i , P i , and A i are all word sequences , where each word is drawn from a vocabulary , V .
 The i - th instance in the training set is a triple in the form of ( P i , Q i , A i ) , where P i = ( p i 1 , . . . , p i| Pi| ) , Q i = ( q i 1 , . . . , q i| Qi| ) , and A i = ( a i 1 , . . . , a i | Ai | ) ( p i , q i , a i ? V ) .
-Owing to the disagreement among annotators , there could be more than one correct answer for the same question ; and the k - th answer to Q i is denoted by
+Owing to the dis agreement among annotators , there could be more than one correct answer for the same question ; and the k - th answer to Q i is denoted by
 Problem Definition
 An answer candidate for the i - th training example is defined as c m , n i , a sub-sequence in P i , that spans from position m ton ( 1 ? m ? n ? | P i | ) .
 The ground truth answer A i could be included in the set of all candidates Ci = { c m ,n i |? m , n ? N + , subj ( m , n , P i ) and 1 ? m ? n ? | P i |} , where subj ( m , n , P i ) is the constraint put on the candidate chunk for P i , such as , " c m , n i can have at most 10 tokens " , or " c m , n i must have a pre-defined POS pattern " .
@@ -62,7 +62,7 @@ Ci whose POS patterns can be matched to the POS pattern trie .
 This is equivalent to putting an constraint subj ( m , n , P i ) to candidate answer chunk generation process that only choose the chunk with a POS pattern seen for answers in the training data .
 Then the sub-sequences
 Ci are used as answer candidates for P i .
-Note that overlapping chunks could be generated fora passage , and we rely on the ranker to choose the best candidate based on features from the cloze - style RC system .
+Note that overlapping chunks could be generated for a passage , and we rely on the ranker to choose the best candidate based on features from the cloze - style RC system .
 Experiments showed that for > 90 % of the questions on the development set , the ground truth answer is included in the candidate set constructed in such manner .
 Dynamic Chunk Reader
 The dynamic chunk reader ( DCR ) model is presented in .
@@ -145,11 +145,11 @@ We also set the maximum passage length to be 300 tokens , and pruned all the tok
 This step reduced the training set size by about 1.6 % .
 During test , we test on the full length of passage , so that we do n't prune out the potential candidates .
 We trained the model for at most 30 epochs , and in case the accuracy did not improve for 10 epochs , we stopped training .
-For the feature ranking - based system , we used jforest ranker ( Ganjisaffar , Caruana , and Lopes 2011 ) with Lambda MART - Regression Tree algorithm and the ranking metric was NDCG @ 10 .
+For the feature ranking - based system , we used jforest ranker ( Ganjis affar , Caruana , and Lopes 2011 ) with Lambda MART - Regression Tree algorithm and the ranking metric was NDCG @ 10 .
 For the Gated Attention Reader in baseline system , we replicated the method and use the same configurations as in .
 Results shows our main results on the SQuAD dataset .
 Compared to the scores reported in , our exact match ( EM ) and F1 on the development set and EM score on the test set are better , and F1 on the test set is comparable .
-We also studied how each component in our model contributes to the overall performance .
+We also studied how each component in our model contributes to the over all performance .
 shows the details as well as the results of the baseline ranker .
 As the first row of shows , our baseline system improves 10 % ( EM ) over , row 1 ) , the feature - based ranking system .
 However when compared to our DCR model , row 2 ) , the baseline ( row 1 ) is more than 12 % ( EM ) behind even though it is based on the state - of - the - art model for cloze - style RC tasks .
@@ -176,7 +176,7 @@ The gap between F1 and exact match also widens as answer length increases .
 However , the model still yields a decent accuracy when the answer is longer than a single word .
 Additionally , shows that the system is better at " when " and " who " questions , but performs poorly on " why " questions .
 The large gap between exact match and F1 on " why " questions means that perfectly identifying the span is harder than locating the core of the answer span .
-Since " what " , " which " , and " how " questions contain abroad range of question types , we split them further based on the bigram a question starts with , and shows the breakdown for " what " questions .
+Since " what " , " which " , and " how " questions contain a broad range of question types , we split them further based on the bigram a question starts with , and shows the breakdown for " what " questions .
 We can see that " what " questions asking for explanations such as " what happens " and " what happened " have lower EM and F1 scores .
 In contrast , " what " questions asking for year and numbers have much higher scores and , for these questions , exact match scores are close to F 1 scores , which means chunking for these questions are easier for DCR .
 Related Work
@@ -199,6 +199,6 @@ In contrast , our approach explicitly constructs the chunk representations and s
 Conclusion
 In this paper we proposed a novel neural reading comprehension model for question answering .
 Different from the previously proposed models for factoid RCQA , the proposed model , dynamic chunk reader , is not restricted to predicting a single named entity as an answer or selecting an answer from a small , pre-defined candidate list .
-Instead , it is capable of answering both factoid and non-factoid questions as it learns to select answer chunks that are suitable for an input question .
+Instead , it is capable of answering both factoid and non-factoid questions as it learns to select answer chunks thatare suitable for an input question .
 DCR achieves this goal with a joint deep learning model enhanced with a novel attention mechanism and five simple yet effective features .
 Error analysis shows that the DCR model achieves good performance , but still needs to improve on predicting longer answers , which are usually non-factoid in nature .

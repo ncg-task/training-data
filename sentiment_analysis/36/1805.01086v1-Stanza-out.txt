@@ -4,17 +4,17 @@ Transformation Networks for Target - Oriented Sentiment Classification
 abstract
 Target - oriented sentiment classification aims at classifying sentiment polarities over individual opinion targets in a sentence .
 RNN with attention seems a good fit for the characteristics of this task , and indeed it achieves the state - of - the - art performance .
-After re-examining the drawbacks of attention mechanism and the obstacles that block CNN to perform well in this classification task , we propose anew model to overcome these issues .
+After re-examining the drawbacks of attention mechanism and the obstacles that block CNN to perform well in this classification task , we propose a new model to overcome these issues .
 Instead of attention , our model employs a CNN layer to extract salient features from the transformed word representations originated from a bi-directional RNN layer .
 Between the two layers , we propose a component to generate target - specific representations of words in the sentence , meanwhile incorporate a mechanism for preserving the original contextual information from the RNN layer .
-Experiments show that our model achieves anew state - of - the - art performance on a few benchmarks .
+Experiments show that our model achieves a new state - of - the - art performance on a few benchmarks .
 1
 Introduction
 Target - oriented ( also mentioned as " target - level " or " aspect - level " in some works ) sentiment classification aims to determine sentiment polarities over " opinion targets " that explicitly appear in the sentences .
 For example , in the sentence " I am pleased with the fast logon , and the long battery life " , the user mentions two targets * The work was done when Xin Li was an intern at Tencent AI Lab .
 This project is substantially supported by a grant from the Research Grant Council of the Hong Kong Special Administrative Region , China ( Project Code : 14203414 ) .
 Our code is open - source and available at https :// github.com/lixin4ever/TNet " log on " and " better life " , and expresses positive sentiments over them .
-The task is usually formulated as predicting a sentiment category fora ( target , sentence ) pair .
+The task is usually formulated as predicting a sentiment category for a ( target , sentence ) pair .
 Recurrent Neural Networks ( RNNs ) with attention mechanism , firstly proposed in machine translation , is the most commonly - used technique for this task .
 For example , ; ; ;; and employ attention to measure the semantic relatedness between each context word and the target , and then use the induced attention scores to aggregate contextual features for prediction .
 In these works , the attention weight based combination of word - level features for classification may introduce noise and downgrade the prediction accuracy .
@@ -25,7 +25,7 @@ By this token , Convolutional Neural Networks ( CNNs ) - whose capability for ex
 However , CNN likely fails in cases where a sentence expresses different sentiments over multiple targets , such as " great food but the service was dreadful ! " .
 One reason is that CNN can not fully explore the target information as done by RNN - based meth-ods .
 2 Moreover , it is hard for vanilla CNN to differentiate opinion words of multiple targets .
-Precisely , multiple active local features holding different sentiments ( e.g. , " great food " and " service was dreadful " ) maybe captured fora single target , thus it will hinder the prediction .
+Precisely , multiple active local features holding different sentiments ( e.g. , " great food " and " service was dreadful " ) maybe captured for a single target , thus it will hinder the prediction .
 We propose a new architecture , named Target - Specific Transformation Networks ( TNet ) , to solve the above issues in the task of target sentiment classification .
 TNet firstly encodes the context information into word embeddings and generates the contextualized word representations with LSTMs .
 To integrate the target information into the word representations , TNet introduces a novel Target - Specific Transformation ( TST ) component for generating the target - specific word representations .

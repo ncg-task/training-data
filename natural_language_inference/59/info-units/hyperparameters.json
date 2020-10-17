@@ -53,8 +53,7 @@
               }
             }
           },
-          "from sentence" : "We tuned the following hyperparameters by grid search on the development set ( settings for our best model are in parenthesis ) : embedding dimension ( 300 ) , shape of all feedforward networks ( two layers with 400 and 200 width ) , character n -gram sizes ( 5 ) , context size ( 1 ) , learning rate ( 0.1 for both pretraining and tuning ) , batch size ( 256 for pretraining and 64 for tuning ) , dropout ratio ( 0.1 for tuning ) and prediction threshold ( positive paraphrase for a score ?
-0.3 ) ."
+          "from sentence" : "We tuned the following hyperparameters by grid search on the development set ( settings for our best model are in parenthesis ) : embedding dimension ( 300 ) , shape of all feedforward networks ( two layers with 400 and 200 width ) , character n -gram sizes ( 5 ) , context size ( 1 ) , learning rate ( 0.1 for both pretraining and tuning ) , batch size ( 256 for pretraining and 64 for tuning ) , dropout ratio ( 0.1 for tuning ) and prediction threshold ( positive paraphrase for a score ? 0.3 ) ."
 
         }
       }

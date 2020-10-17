@@ -19,16 +19,16 @@ For MRC , questions are usually formed with who , what , how , when and why , wh
 Be - sides , explicit semantics has been proved to be beneficial to a wide range of NLP tasks , including discourse relation sense classification , machine translation and question answering .
 All the previous successful work indicates that explicit contextual semantics may hopefully help into reading comprehension and inference tasks .
 Some work studied question answering ( QA ) driven SRL , like QA - SRL parsing .
-They focus on detecting argument spans fora predicate and generating questions to annotate the semantic relationship .
+They focus on detecting argument spans for a predicate and generating questions to annotate the semantic relationship .
 However , our task is quite different .
-In QA - SRL , the focus is commonly simple and short factoid questions that are less related to the context , let alone making inference .
+In QA - SRL , the focus is commonly simple and short factoid questions thatare less related to the context , let alone making inference .
 Actually , text comprehension and inference are quite challenging tasks in NLP , requiring to dig the deep semantics between the document and comprehensive question which are usually raised or re-written by humans , instead of shallow argument alignment around the same predicate in QA - SRL .
 In this work , to alleviate such an obvious shortcoming about semantics , we make attempt to explore integrative models for finer - grained text comprehension and inference .
 In this work , we propose a semantics enhancement framework for TC tasks , which boosts the strong baselines effectively .
 We implement an easy and feasible scheme to integrate semantic signals in downstream neural models in end - to - end manner to boost strong baselines effectively .
 An example about how contextual semantics helps MRC is illustrated in .
 A series of detailed case studies are employed to analyze the robustness of the semantic role labeler .
-To our best knowledge , our work is the first attempt to apply explicit contextual semantics for text comprehension tasks , which have been ignored in previous works fora longtime .
+To our best knowledge , our work is the first attempt to apply explicit contextual semantics for text comprehension tasks , which have been ignored in previous works for a longtime .
 The rest of this paper is organized as follows .
 The next section reviews the related work .
 Section 3 will demonstrate our semantic learning framework and implementation .
@@ -38,7 +38,7 @@ Text Comprehension
 As a challenging task in NLP , text comprehension is one of the key problems in artificial intelligence , which aims to read and comprehend a given text , and then answer questions or make inference based on it .
 These tasks require a comprehensive understanding of natural languages and the ability to do further inference and reasoning .
 We focus on two types of text comprehension , document - based questionanswering ) and textual entailment ( .
-Textual entailment aims fora deep understanding of text and reasoning , which shares the similar genre of machine reading comprehension , though the task formations are slightly different .
+Textual entailment aims for a deep understanding of text and reasoning , which shares the similar genre of machine reading comprehension , though the task formations are slightly different .
 In the last decade , the MRC tasks have evolved from the early cloze - style test to spanbased answer extraction from passage .
 The former has restrictions that each answer should be a single word in the document and the original sentence without the answer part is taken as the query .
 For the span - based one , the query is formed as questions in natural language whose answers are spans of texts .
@@ -49,7 +49,7 @@ When a rock crystallizes from melt ( magma and / or lava ) , it is an igneous ro
 This rock can be weathered and eroded , and then redeposited and lithified into a sedimentary rock , or be turned into a metamorphic rock due to heat and pressure that change the mineral content of the rock which gives it a characteristic fabric .
 The sedimentary rock can then be subsequently turned into a metamorphic rock due to heat and pressure and is then weathered , eroded , deposited , and lithified , ultimately becoming a sedimentary rock .
 Sedimentary rock may also be re-eroded and redeposited , and metamorphic rock may also undergo additional metamorphism .
-All three types of rocks maybe re-melted ; when this happens , anew magma is formed , from which an igneous rock may once again crystallize .
+All three types of rocks maybe re-melted ; when this happens , a new magma is formed , from which an igneous rock may once again crystallize .
 Question
 What changes the mineral content of a rock ?
 Answer heat and pressure .
@@ -66,7 +66,7 @@ For the other type of text comprehension , natural language inference ( NLI ) is
 In this task , a model is presented with a pair of sentences and asked to judge the relationship between their meanings , including entailment , neutral and contradiction .
 Bowman et al. released Stanford Natural language Inference ( SNLI ) dataset , which is a high - quality and largescale benchmark , thus inspiring various significant work .
 Most of existing NLI models apply attention mechanism to jointly interpret and align the premise and hypothesis , while transfer learning from external knowledge is popular recently .
-Notably , proposed an enhanced sequential inference model ( ESIM ) , which employed recursive architectures in both local inference modeling and inference composition , as well as syntactic parsing information , fora sequential inference model .
+Notably , proposed an enhanced sequential inference model ( ESIM ) , which employed recursive architectures in both local inference modeling and inference composition , as well as syntactic parsing information , for a sequential inference model .
 ESIM is simple with satisfactory performance , and thus is widely chosen as the baseline model .
 proposed to transfer the LSTM encoder from the neural machine translation ( NMT ) to the NLI task to contextualize word vectors .
 transferred the knowledge learned from the discourse marker prediction task to the NLI task to augment the semantic representation .
@@ -77,7 +77,7 @@ where ARG0 represents the seller ( agent ) , ARG1 represents the thing sold ( th
 TM
 P is an adjunct indicating the timing of the action and V represents the predicate .
 Recently , SRL has aroused much attention from researchers and has been applied in many NLP tasks .
-SRL task is generally formulated as multi-step classification subtasks in pipeline systems , consisting of predicate identification , predicate disambiguation , argument identification and argument classification .
+SRL task is generally formulated as multi-step classification subtasks in pipeline systems , consisting of predicate identification , predicate dis ambiguation , argument identification and argument classification .
 Most previous SRL approaches adopt a pipeline framework to handle these subtasks one after another .
 Notably , devised the first automatic semantic role labeling system based on Frame Net .
 Traditional systems relied on sophisticated handcraft features or some declarative constraints , which suffer from poor efficiency and generalization ability .
@@ -100,7 +100,7 @@ In this work , we focus on the textual entailment and machine reading comprehens
 Semantic Role Labeler
 Downstream Model
 Word embedding SRL embedding
-While the CoNLL - 2005 shared task assumes gold predicates as input , this information is not available in many applications , which requires us to identify the predicates fora input sentence at the very beginning .
+While the CoNLL - 2005 shared task assumes gold predicates as input , this information is not available in many applications , which requires us to identify the predicates for a input sentence at the very beginning .
 Thus , our SRL module has to be end -toend , predicting all predicates and corresponding arguments in one shot .
 For predicate identification , we use spa
 Cy 1 to tokenize the input sentence with part - of - speech ( POS ) tags and the verbs are marked as the binary predicate indicator for whether the word is the verb for the sentence .
@@ -127,7 +127,7 @@ As commonly used to model the sequential input , BiLSTM is adopted for our sente
 By incorporating a stack of distinct LSTMs , BiLSTM processes an input sequence in both forward and backward directions .
 In this way , the BiL - STM encoder provides the ability to incorporate the contextual information for each word .
 Given a sequence of word representation S = {e 1 , e 2 , , en } as input , the hidden state h = {h 1 , h 2 , , h n } is encoded by BiLSTMs layer where each LSTM uses highway connections between layers and variational recurrent dropout .
-The encoded representation is then projected using a final dense layer followed by a softmax activation to form a distribution overall possible tags .
+The encoded representation is then projected using a final dense layer followed by a softmax activation to form a distribution over all possible tags .
 The predicted semantic role Labels are defined in PropBank augmented with B - I - O tag set to represent argument spans .
 Model Implementation
 The training objective is to maximize the logarithm of the likelihood of the tag sequence , and we expect the correct output sequence matches with ,
@@ -137,7 +137,7 @@ At test time , we perform Viterbi decoding to enforce valid spans using BIO cons
 For the following evaluation , the default dimension of SRL embeddings is 5 and the case study concerning the dimension is shown in the subsection dimension of SRL Embedding .
 The model is run forward for every verb in the sentence .
 In some cases there is more than one predicate in a sentence , resulting in various semantic role sets whose number is equal to the number of predicates .
-For convenient downstream model input , we need to ensure the word and the corresponding label are matched one - by - one , that is , only one set fora sentence .
+For convenient downstream model input , we need to ensure the word and the corresponding label are matched one - by - one , that is , only one set for a sentence .
 To this end , we select the corresponding BIO sets with the most non -O labels as the semantic role labels .
 For sentences with no predicate , we directly assign O labels to each word in those sentences .
 Text Comprehension Model
@@ -154,7 +154,7 @@ Our semantics enhanced model takes input of concatenating the token embedding wi
 The embeddings of document and question are passed through a shared bi-directional GRU , followed by a BiDAF attention .
 The contextual document and question representations are then passed to a residual self - attention layer .
 The above model is denoted as ELMo. shows the results on SQ u AD MRC task 6 .
-The SRL embeddings give substantial performance gains overall the strong baselines , showing it is also quite effective for more complex document and question encoding .
+The SRL embeddings give substantial performance gains over all the strong baselines , showing it is also quite effective for more complex document and question encoding .
 Model
 Accuracy
 Evaluation
@@ -174,7 +174,7 @@ With the semantic cues , the simple sequential encoding model yields substantial
 This would be owing to more accurate and fine - grained information from effective explicit semantic cues .
 To evaluate the contributions of key factors in our method , a series of ablation studies are performed on the SNLI dev and test set .
 The results are in .
-We observe both SRL and ELMo embeddings contribute to the overall performance .
+We observe both SRL and ELMo embeddings contribute to the over all performance .
 Note that ELMo is obtained by deep bidirectional language with 4,096 hidden units on a large - scale corpus , which requires long training time with 93.6 million parameters .
 The output dimension of ELMo is 512 .
 Compared with the massive computation and high dimension , SRL embedding is much more convenient for training and much easier for model integration , giving the same level of performance gains .

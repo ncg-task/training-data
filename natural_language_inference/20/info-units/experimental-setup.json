@@ -14,8 +14,7 @@
                   "for" : "both direction"
                 }
               }
-            },
-            "from sentence" : "The sentence embeddings have hidden size of 600 for both direction ( except for SentEval test , where we test models with 600D and 1200D per direction ) and the 3 - layer multilayer perceptron ( MLP ) have the size of 600 dimensions ."
+            }
           }
         },
         "3 - layer multilayer perceptron ( MLP )" : {

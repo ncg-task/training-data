@@ -120,7 +120,7 @@ Single model EM / F1 EM / F1 LR Baseline 40.0 / 51.0 40.4 / 51.0 Dynamic Chunk R
 Main Results
 Two metrics are utilized to evaluate model performance : Exact Match ( EM ) and F1 score .
 EM measures the percentage of the prediction that matches one of the ground truth answers exactly .
-F1 measures the overlap between the prediction and ground truth answers which takes the maximum F 1 overall of the ground truth answers .
+F1 measures the overlap between the prediction and ground truth answers which takes the maximum F 1 over all of the ground truth answers .
 The scores on dev set are evaluated by the official script 3 .
 Since the test set is hidden , we are required to submit the model to Stanford NLP group to obtain the test scores .
 Ablation Study
@@ -141,7 +141,7 @@ Encoding Evidence from Passage
 To show the ability of the model for encoding evidence from the passage , we draw the align - ment of the passage against itself in self - matching .
 The attention weights are shown in , in which the darker the color is the higher the weight is .
 We can see that key evidence aggregated from the whole passage is more encoded into the answer candidates .
-For example , the answer " Egg of Columbus " pays more attention to the key information " Tesla " , " device " and the lexical variation word " known " that are relevant to the question - passage tuple .
+For example , the answer " Egg of Columbus " pays more attention to the key information " Tesla " , " device " and the lexical variation word " known " thatare relevant to the question - passage tuple .
 The answer " world classic of epoch- making oratory " mainly focuses on the evidence " Michael Mullet " , " speech " and lexical variation word " considers " .
 For other words , the attention weights are more evenly distributed between evidence and some irrelevant parts .
 Selfmatching do adaptively aggregate evidence for words in passage .
@@ -158,8 +158,8 @@ Our model is largely agnostic to long passages and focuses on important part of 
 Related Work
 Reading Comprehension and Question Answering Dataset Benchmark datasets play an important role in recent progress in reading comprehension and question answering research .
 Exist- ing datasets can be classified into two categories according to whether they are manually labeled .
-Those that are labeled by humans are always in high quality , but are too small for training modern data - intensive models .
-Those that are automatically generated from natural occurring data can be very large , which allow the training of more expressive models .
+Those thatare labeled by humans are always in high quality , but are too small for training modern data - intensive models .
+Those thatare automatically generated from natural occurring data can be very large , which allow the training of more expressive models .
 However , they are in cloze style , in which the goal is to predict the missing word ( often a named entity ) in a passage .
 Moreover , have shown that the CNN / Daily
 News dataset requires less reasoning than previously thought , and conclude that performance is almost saturated .

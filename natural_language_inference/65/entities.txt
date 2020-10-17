@@ -6,13 +6,13 @@
 171	34	37	for
 171	38	50	Insurance QA
 171	84	85	4
-171	34	37	for
+171	86	89	for
 171	90	99	TREC - QA
 171	104	111	Wiki QA
 173	57	79	learning rate schedule
 173	80	84	that
 173	85	94	decreases
-173	57	70	learning rate
+173	99	112	learning rate
 173	0	3	For
 173	4	12	AP - CNN
 173	15	26	AP - biLSTM
@@ -33,13 +33,13 @@
 15	37	41	that
 15	119	141	significantly improves
 15	147	182	discriminative models ' performance
-15	9	11	on
+15	183	185	on
 15	186	223	pair - wise ranking or classification
 15	226	237	by enabling
 15	240	254	joint learning
 15	21	23	of
 15	262	277	representations
-15	21	23	of
+15	255	257	of
 15	286	292	inputs
 15	293	303	as well as
 15	304	332	their similarity measurement
@@ -54,24 +54,24 @@
 16	119	134	two input items
 16	139	157	directly influence
 16	162	173	computation
-16	56	58	of
+16	174	176	of
 16	177	206	each other 's representations
 17	20	31	consists of
 17	32	40	learning
 17	43	61	similarity measure
 17	62	66	over
 17	67	103	projected segments ( e.g. trigrams )
-17	29	31	of
+17	104	106	of
 17	111	120	two items
-17	6	8	in
+17	14	16	in
 17	128	138	input pair
 17	145	150	using
 17	155	172	similarity scores
 17	173	180	between
-17	77	85	segments
+17	185	193	segments
 17	194	204	to compute
 17	205	222	attention vectors
-17	6	8	in
+17	121	123	in
 17	226	241	both directions
 18	11	28	attention vectors
 18	38	48	to perform
@@ -86,12 +86,9 @@
 183	72	80	QA - CNN
 183	81	83	by
 183	86	98	large margin
-183	96	98	in
+183	99	101	in
 183	102	116	both test sets
 183	137	144	dev set
-184	0	11	AP - biLSTM
-184	17	28	outperforms
-184	33	44	QA - biLSTM
 185	0	24	AP - CNN and AP - biLSTM
 185	25	29	have
 185	30	49	similar performance
@@ -103,7 +100,7 @@
 203	56	64	QA - CNN
 203	65	67	by
 203	70	82	large margin
-203	80	82	in
+203	83	85	in
 203	86	98	both metrics
 210	25	55	state - of - the - art systems
 210	56	58	in
@@ -114,14 +111,14 @@
 204	28	39	QA - biLSTM
 204	50	61	performance
 204	65	76	not as good
-204	69	71	as
+204	77	79	as
 204	87	95	AP - CNN
 211	55	69	WikiQA dataset
 212	33	41	AP - CNN
 212	42	53	outperforms
 212	54	62	QA - CNN
 212	69	80	AP - biLSTM
-212	42	53	outperforms
+212	81	92	outperforms
 212	97	108	QA - biLSTM
 213	4	29	difference of performance
 213	30	37	between

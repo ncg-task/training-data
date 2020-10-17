@@ -33,10 +33,10 @@
 24	151	171	span representations
 24	172	184	induced from
 24	185	200	neural networks
-25	0	2	At
-25	3	16	decoding time
-25	22	37	greedily select
-25	38	66	higher scoring labeled spans
+6	0	2	At
+6	3	16	decoding time
+6	22	37	greedily select
+6	38	66	higher scoring labeled spans
 26	4	20	model parameters
 26	25	35	learned by
 26	36	60	optimizing loglikelihood
@@ -63,6 +63,7 @@
 183	42	50	achieved
 183	55	70	best F 1 scores
 183	71	73	on
+183	74	91	all the test sets
 183	92	98	except
 183	103	117	Brown test set
 180	0	18	In comparison with

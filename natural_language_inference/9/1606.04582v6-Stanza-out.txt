@@ -4,7 +4,7 @@ abstract
 In this paper , we study the problem of question answering when reasoning over multiple facts is required .
 We propose Query - Reduction Network ( QRN ) , a variant of Recurrent Neural Network ( RNN ) that effectively handles both short - term ( local ) and long - term ( global ) sequential dependencies to reason over multiple facts .
 QRN considers the context sentences as a sequence of state - changing triggers , and reduces the original query to a more informed query as it observes each trigger ( context sentence ) through time .
-Our experiments show that QRN produces the state - of - the - art results in bAbI QA and dialog tasks , and in areal goal - oriented dialog dataset .
+Our experiments show that QRN produces the state - of - the - art results in bAbI QA and dialog tasks , and in are al goal - oriented dialog dataset .
 In addition , QRN formulation allows parallelization on RNN 's time axis , saving an order of magnitude in time complexity for training and inference .
 INTRODUCTION
 In this paper , we address the problem of question answering ( QA ) when reasoning over multiple facts is required .
@@ -73,11 +73,11 @@ Rd , which is similar to the hidden state in RNN , and the sentence vector x t f
 The local query vector is not necessarily identical to the original query ( question ) vector q .
 In order to compute the outputs , we use update gate function ? :
 Intuitively , the update gate function measures the relevance between the sentence and the local query and is used to update the hidden state .
-The reduce function transforms the local query input to a candidate state which is anew reduced ( easier ) query given the sentence .
+The reduce function transforms the local query input to a candidate state which is a new reduced ( easier ) query given the sentence .
 The outputs are calculated with the following equations :
 where z t is the scalar update gate , h t is the candidate reduced query , and ht is the final reduced query at time step t , ? ( ) is sigmoid activation , tanh ( ) is hyperboolic tangent activation ( applied element - wise ) ,
 is element - wise vector multiplication , and [ ; ] is vector concatenation along the row .
-As abase case , h 0 = 0 .
+As a base case , h 0 = 0 .
 Here we have explicitly defined ?
 and ? , but they can be any reasonable differentiable functions .
 The update gate is similar to the global attention mechanism in that it measures the similarity between the sentence ( a memory slot ) and the query .
@@ -147,7 +147,7 @@ Second , QRN is an RNN that is natively compatible with context - based QA tasks
 This is distinct from STRNN which has only one input .
 Third , we show that QRN is timewise - parallelizable on GPUs .
 Our parallelization algorithm is also applicable to STRNN .
-End - to - end Memory Network ( N2N ) uses external memory with multi - layer attention mechanism to focus on sentences that are relevant to the question .
+End - to - end Memory Network ( N2N ) uses external memory with multi - layer attention mechanism to focus on sentences thatare relevant to the question .
 There are two key differences between N2N and our QRN .
 First , N2N summarizes the entire memory in each layer to control the attention in the next layer ( circle nodes in ) .
 Instead , QRN does not have any controller node ) and is able to focus on relevant sentences through the update gate that is internally embodied within its unit .
@@ -174,7 +174,7 @@ Each dialog is as long as 96 utterances and comes with external knowledge base (
 The authors also provide Out - Of - Vocabulary ( OOV ) version of the dataset , where many of the words and KB keywords in test data are not seen during training .
 A system is evaluated on the accuracy of its response to each utterance of the user , choosing from up to 2500 possible candidate responses .
 A system is required not only to understand the user 's request but also refer to previous conversations in order to obtain the context information of the current conversation .
-DSTC2 ( Task 6 ) dialog dataset transformed the Second Dialog State Tracking Challenge ( DSTC2 ) dataset into the same format as the bAbI dialog dataset , for the measurement of performance on areal dataset .
+DSTC2 ( Task 6 ) dialog dataset transformed the Second Dialog State Tracking Challenge ( DSTC2 ) dataset into the same format as the bAbI dialog dataset , for the measurement of performance on are al dataset .
 Each dialog can be as long as 800 + utterances , and a system needs to choose from 2407 possible candidate responses for each utterance of the user .
 Note that the evaluation metric of the original DSTC2 is different from that of the transformed DSTC2 , so previous work on the original DSTC2 should not be directly compared to our work .
 We will refer to this transformed DSTC2 dataset by " Task 6 " of dialog dataset .
@@ -258,7 +258,7 @@ We also observe that the forward reset gate at t = 2 in the first layer ( ? ? r 
 In dialog Task 3 ( bottom left ) , the model is able to infer that three restaurants are already recommended so that it can recommend another one .
 In dialog Task 6 ( bottom ) , the model focuses on the sentences containing Spanish , and does not concentrate much on other facts such as I do n't care .
 CONCLUSION
-In this paper , we introduce Query - Reduction Network ( QRN ) to answer context - based questions and carryout conversations with users that require multi-hop reasoning .
+In this paper , we introduce Query - Reduction Network ( QRN ) to answer context - based questions and carry out conversations with users that require multi-hop reasoning .
 We show the state - of - theart results in the three datasets of story - based QA and dialog .
 We model a story or a dialog as a sequence of state - changing triggers and compute the final answer to the question or the system 's next utterance by recurrently updating ( or reducing ) the query .
 QRN is situated between the attention mechanism and RNN , effectively handling time dependency and long - term dependency problems of each technique , respectively .

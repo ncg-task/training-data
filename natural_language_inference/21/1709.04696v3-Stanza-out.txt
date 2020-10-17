@@ -15,7 +15,7 @@ It allows RNN / CNN to maintain a variable - length memory , so that elements fr
 In contrast to RNN and CNN , the attention mechanism is trained to capture the dependencies that make significant contributions to the task , regardless of the distance between the elements in the sequence .
 It can thus provide complementary information to the distance - aware dependencies modeled by RNN / CNN .
 In addition , computing attention only requires matrix multiplication , which is highly parallelizable compared to the sequential computation of RNN .
-Ina very recent work , an attention mechanism is solely used to construct a sequence to sequence ( seq2seq ) model that achieves a state - of - the - art quality score on the neural machine translation ( NMT ) task .
+In a very recent work , an attention mechanism is solely used to construct a sequence to sequence ( seq2seq ) model that achieves a state - of - the - art quality score on the neural machine translation ( NMT ) task .
 The seq2seq model , " Transformer " , has an encoder - decoder structure that is only composed of stacked attention networks , without using either recurrence or convolution .
 The proposed attention , " multi- head attention " , projects the input sequence to multiple subspaces , then applies scaled dotproduct attention to its representation in each subspace , and lastly concatenates their output .
 By doing this , it can combine different attentions from multiple subspaces .
@@ -23,7 +23,7 @@ This mechanism is used in Transformer to compute both the context - aware featur
 The attention mechanism has more flexibility in sequence length than RNN / CNN , and is more task / data - driven when modeling dependencies .
 Unlike sequential models , its computation can be easily and significantly accelerated by existing distributed / parallel computing schemes .
 However , to the best of our knowledge , a neural net entirely based on attention has not been designed for other NLP tasks except NMT , especially those that can not be cast into a seq2seq problem .
-Compared to RNN , a disadvantage of most attention mechanisms is that the temporal order information is lost , which however might be important to the task .
+Compared to RNN , a dis advantage of most attention mechanisms is that the temporal order information is lost , which however might be important to the task .
 This explains why positional encoding is applied to the sequence before being processed by the attention in Transformer .
 How to model order information within an attention is still an open problem .
 The goal of this paper is to develop a unified and RNN / CNN - free attention network that can be generally utilized to learn the sentence encoding model for different NLP tasks , such as natural language inference , sentiment analysis , sentence classification and semantic relatedness .
@@ -35,7 +35,7 @@ This design mitigates the weakness of attention in modeling order information , 
 We then build a light - weight and RNN / CNN - free neural network , " Directional Self - Attention Network ( DiSAN ) " , for sentence encoding .
 This network relies entirely on the proposed attentions and does not use any RNN / CNN structure .
 In DiSAN , the input sequence is processed by directional ( forward and backward ) self - attentions to model context dependency and produce context - aware representations for all tokens .
-Then , a multi-dimensional attention computes a vector representation of the entire sequence , which can be passed into a classification / regression module to compute the final prediction fora particular task .
+Then , a multi-dimensional attention computes a vector representation of the entire sequence , which can be passed into a classification / regression module to compute the final prediction for a particular task .
 Unlike Transformer , neither stacking of attention blocks nor an encoderdecoder structure is required .
 The simple architecture of DiSAN leads to fewer parameters , less computation and easier parallelization .
 In experiments 1 , we compare DiSAN with the currently popular methods on various NLP tasks , e.g. , natural language inference , sentiment analysis , sentence classification , etc .
@@ -58,7 +58,7 @@ Rd , which is used as a compact encoding of the entire sentence in NLP problems 
 Attention
 The attention is proposed to compute an alignment score between elements from two sources .
 In particular , given the token embeddings of a source sequence x = [ x 1 , x 2 , . . . , x n ] and the vector representation of a query q , attention computes the alignment score between x i and q by a compatibility function f ( x i , q ) , which measures the dependency between x i and q , or the attention of q to xi .
-A softmax function then transforms the scores [f ( x i , q ) ] n i=1 to a probability distribution p ( z|x , q ) by normalizing overall then tokens of x .
+A softmax function then transforms the scores [f ( x i , q ) ] n i=1 to a probability distribution p ( z|x , q ) by normalizing over all then tokens of x .
 Here z is an indicator of which token in x is important to q on a specific task .
 That is , large p ( z = i |x , q ) means x i contributes important information to q .
 The above process can be summarized by the following equations .
@@ -95,7 +95,7 @@ where f ( x i , q ) ?
 R de is a vector with the same length as x i , and all the weight matrices W , W ( 1 ) , W ( 2 ) ?
 R dede .
 We further add two bias terms to the parts in and out activation ? ( ) , i.e. ,
-We then compute a categorical distribution p ( z k | x , q ) overall then tokens for each feature k ?
+We then compute a categorical distribution p ( z k | x , q ) over all then tokens for each feature k ?
 [ d e ] .
 A large p ( z k = i |x , q ) means that feature k of token i is important to q .
 We apply the same procedure Eq.
@@ -144,8 +144,8 @@ This means that there is no attention of x j to xi on feature k.
 On the contrary , we have p ( z k = j|x , xi ) > 0 , which means that attention of xi to x j exists on feature k.
 Therefore , prior structure knowledge such as temporal order and dependency parsing can be easily encoded by the mask , and explored in generating sentence encoding .
 This is an important feature of DiSA that previous attention mechanisms do not have .
-For self - attention , we usually need to disable the attention of each token to itself .
-This is the same as applying a diagonal - disabled ( i.e. , diag - disabled ) mask such that
+For self - attention , we usually need to dis able the attention of each token to itself .
+This is the same as applying a diagonal - dis abled ( i.e. , diag - dis abled ) mask such that
 Moreover , we can use masks to encode temporal order information into attention output .
 In this paper , we use two masks , i.e. , forward mask M f wand backward mask M bw ,
 In forward mask M f w , there is the only attention of later token j to early token i , and vice versa in backward mask .
@@ -165,7 +165,7 @@ The feed - forward procedure is given in Eq. ( 14 ) - ( 15 ) and Eq. ( 19 ) - ( 
 Their outputs are denoted by u f w , u bw ?
 Rd h n .
 We concatenate them vertically as [ u f w ; u bw ] ?
-R 2d h n , and use this concatenated output as input to a multidimensional source2token self - attention block , whose output s disan ?
+R 2d h n , and use this concatenated output as input to a multidimensional source2token self - attention block , whose output s dis an ?
 R 2 d h computed by Eq. ( 12 ) - ( 13 ) is the final sentence encoding result of DiSAN .
 Remark : In DiSAN , forward / backward DiSA blocks work as context fusion layers .
 And the multi-dimensional source2token self - attention compresses the sequence into a , in which forward and backward LSTMs are used to encode long - range dependency from different directions .
@@ -191,8 +191,7 @@ Note that the dropout keep probability and ?
 varies with the scale of corresponding dataset .
 Hidden units number d h is set to 300 .
 Activation functions ? ( ) are ELU ( exponential linear unit ) ( Clevert , Unterthiner , and Hochreiter 2016 ) if not specified .
-All models are implemented with TensorFlow 2 and run on sin - 3.0 m 83.9 80.6 1024D GRU encoders 15 m 98.8 81.4 300D Tree - based CNN encoders 3.5 m 83.3 82.1 300D SPINN - PI encoders 3.7 m 89.2 83.2 600D Bi- LSTM encoders 2.0 m 86.4 83.3 300D NTI - SLSTM - LSTM encoders 4.0 m 82.5 83.4 600D Bi-LSTM encoders+intra-attention 2.8 m 84.5 84.2 300D NSE encoders 3 gle Nvidia GTX 1080
-Ti graphic card .
+All models are implemented with TensorFlow 2 and run on sin - 3.0 m 83.9 80.6 1024D GRU encoders 15 m 98.8 81.4 300D Tree - based CNN encoders 3.5 m 83.3 82.1 300D SPINN - PI encoders 3.7 m 89.2 83.2 600D Bi- LSTM encoders 2.0 m 86.4 83.3 300D NTI - SLSTM - LSTM encoders 4.0 m 82.5 83.4 600D Bi-LSTM encoders+intra-attention 2.8 m 84.5 84.2 300D NSE encoders 3 gle Nvidia GTX 1080 Ti graphic card .
 Natural Language Inference
 The goal of Natural Language Inference ( NLI ) is to reason the semantic relationship between a premise sentence and a corresponding hypothesis sentence .
 The possible relationship could be entailment , neutral or contradiction .
@@ -212,7 +211,7 @@ method used in is applied to the input sequence to encode temporal information .
 We find our experiments show that multi-head attention is sensitive to hyperparameters , so we adjust keep probability of dropout from 0.7 to 0.9 with step 0.05 and report the best result .
 Bi - LSTM with s 2t self - attention : a multi-dimensional source2token self - attention block is applied to the output of Bi - LSTM ( 300D forward + 300D backward LSTMs ) .
 DiSAN without directions :
-DiSAN with the forward / backward masks M f wand M bw replaced with two diag - disabled masks M diag , i.e. , DiSAN without forward / backward order information .
+DiSAN with the forward / backward masks M f wand M bw replaced with two diag - dis abled masks M diag , i.e. , DiSAN without forward / backward order information .
 Compared to the results from the official leaderboard of SNLI in , DiSAN outperforms previous works and improves the best latest test accuracy ( achieved by a memory - based NSE encoder network ) by a remarkable margin of 1.02 % .
 DiSAN surpasses the RNN / CNN based models with more complicated architecture and more parameters by large margins , e.g. , + 2.32 % to Bi - LSTM , + 1.42 % to Bi - LSTM with additive attention .
 It even outperforms models with the assistance of a semantic parsing tree , e.g. , + 3.52 % to Tree - based CNN , + 2.42 % to SPINN - PI .
@@ -241,7 +240,7 @@ More recent works tend to focus on lexicon - based sentiment analysis , by explo
 Nonetheless , DiSAN still outperforms these fancy models , such as NCSL ( + 0.62 % ) and LR- Bi- LSTM ( + 1.12 % ) . :
 Fine - grained sentiment analysis accuracy vs. sentence length .
 The results of LSTM , Bi - LSTM and Tree - LSTM are from and the result of DiSAN is the average over five random trials .
-It is also interesting to seethe performance of different models on the sentences with different lengths .
+It is also interesting to see the performance of different models on the sentences with different lengths .
 In , we compare LSTM , Bi - LSTM , Tree - LSTM and DiSAN on different sentence lengths .
 In the range of ( 5 , 12 ) , the length range for most movie review sentences , DiSAN significantly outperforms others .
 Meanwhile , DiSAN also shows impressive performance for slightly longer sentences or paragraphs in the range of ( 25 , 38 ) .
@@ -285,7 +284,7 @@ This indicates that the multi-dimensional attention vector is not redundant beca
 Additionally , it can also alleviate the weakness of the attention overlong sequence , which can avoid normalization over entire sequence in traditional attention only once .
 Conclusion
 In this paper , we propose two novel attention mechanisms , multi-dimensional attention and directional self - attention .
-The multi-dimensional attention performs a feature - wise selection over the input sequence fora specific task , and the directional self - attention uses the positional masks to produce the context - aware representations with temporal information encoded .
+The multi-dimensional attention performs a feature - wise selection over the input sequence for a specific task , and the directional self - attention uses the positional masks to produce the context - aware representations with temporal information encoded .
 Based on these attentions , Directional Self - Attention Network ( DiSAN ) is proposed for sentenceencoding without any recurrent or convolutional structure .
 The experiment results show that DiSAN can achieve stateof - the - art inference quality and outperform existing works ( LSTM , etc. ) on a wide range of NLP tasks with fewer parameters and higher time efficiency .
 In future work , we will explore the approaches to using the proposed attention mechanisms on more sophisticated tasks , e.g. question answering and reading comprehension , to achieve better performance on various benchmarks .

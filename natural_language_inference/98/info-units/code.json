@@ -1,6 +1,4 @@
 {
-  "Code" : ["https : //github.com/lukecq1231/enc_nli", {"from sentence" : "To help replicate our results , we publish our code at https : //github.com/lukecq1231/enc_nli
-( the core code is also used or adapted fora summarization ) and a question - answering task ) ."
-
+  "Code" : ["https : //github.com/lukecq1231/enc_nli", {"from sentence" : "To help replicate our results , we publish our code at https : //github.com/lukecq1231/enc_nli"
   }]
 }

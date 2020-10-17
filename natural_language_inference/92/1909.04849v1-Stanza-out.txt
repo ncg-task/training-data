@@ -58,7 +58,7 @@ Let x be the input of a QA system ( e.g. a question and a document ) and y be th
 We define a solution as a particular derivation that a model is supposed to produce for the answer prediction ( e.g. a span in the document or an equation to compute the answer , see ) .
 Let f denote a task - specific , deterministic function which maps a solution to the textual form of the answer ( e.g. by simply returning the string associated with a particular selected mention or solving an equation to get the final number , see ) .
 Our goal is to learn a model ( with parameters ?) which takes an input x and outputs a solution z such that f ( z ) = y.
-Ina fully supervised scenario , a true solution z is given , and ?
+In a fully supervised scenario , a true solution z is given , and ?
 is estimated based on a collection of ( x , z ) pairs .
 In this work , we focus on a weakly supervised setting in whichz is not given and we define Z tot as a finite set of all the possible solutions .
 In the case that the search space is very large or infinite , we usually can approximate Z tot with a high coverage in practice .
@@ -74,7 +74,7 @@ and predicts the final answer as f ( z ) .
 Note that we can not compute Z at inference time because the groundtruth y is not given .
 2
 Learning Method
-Ina fully - supervised setting wherez is given , we can learn ?
+In a fully - supervised setting wherez is given , we can learn ?
 by optimizing the negative log likelihood ofz given the input x with respect to ?. J Sup ( ?|x , z ) = ? log P ( z |x ; ?)
 In our weak supervision scenario , the model has access to x and Z = {z 1 , z 2 , . . . , z n } , and the selection of the best solution in Z can be modeled as a latent variable .
 We can compute the maximum marginal likelihood ( MML ) estimate , which marginalizes the likelihood of each z i ?
@@ -131,7 +131,7 @@ Examples of the input , answer text ( y ) , f , Z tot and Z. First , in multi-me
 Second , in reading comprehension with discrete reasoning , many equations yield to the answer 4 , but only ' 40 - 37 ' answers the question .
 Lastly , in SQL query generation , five SQL queries lead to the answer but only the first one is the correct query .
 See Section 4 for more details .
-where ND and N Q are all numeric values appearing in D and Q , respectively , and S area set of predefined special numbers .
+where ND and N Q are all numeric values appearing in D and Q , respectively , and S are a set of predefined special numbers .
 Then
 where f is an execution function of equations .
 shows an example Z given a question and a document .
@@ -181,7 +181,7 @@ Analysis
 In this section , we will conduct thorough analyses and ablation studies , to better understand how our model learns to find a solution from a precomputed set of possible solutions .
 We also provide more examples and analyses in Appendix C.
 Varying the size of solution set at inference time .
-shows a breakdown of the model accuracy with respect to the size of a solution set ( | Z | ) attest time .
+shows a breakdown of the model accuracy with respect to the size of a solution set ( | Z | ) at test time .
 We observe that the model with our training method outperforms the model with MML objective consistently across different values of | Z | .
 The gap between MML and our method is marginal when | Z | = 0 or 1 , and gradually increases as | Z | grows .
 Varying the size of solution set at training .
@@ -217,7 +217,7 @@ In this paper , we demonstrated that , for many QA tasks which only provide the 
 Then , we introduced a discrete latent variable learning algorithm which iterates a procedure of predicting the most likely solution in the precomputed set and further increasing the likelihood of that solution .
 We showed that this approach significantly outperforms previous approaches on six QA tasks including reading comprehension , opendomain QA , discrete reasoning task and semantic parsing , achieving absolute gains of 2 - 10 % and setting the new state - of - the - art on five wellstudied datasets .
 A Model details
-We describe the detailed model architecture used as abase model .
+We describe the detailed model architecture used as a base model .
 In other words , we describe how we obtain P ( z |x ; ?) .
 The following paragraphs describe ( i ) BERT extractive model used for multi-mention RC ( Section 5.1 ) and ( ii ) BERT sequence tagging model for discrete reasoning task ( Section 5.2 ) , respectively .
 For QANET for discrete reasoning and the model for SQL generation ( Section 5 .
@@ -242,7 +242,7 @@ i , exit is computed and P ( z |Q , P k ) is only considered to output a span .
 Sequence Tagging model for discrete reasoning
 The basic idea of the model is closed to that of .
 The input is a question Q and a paragraph P .
-Our goal is to compute a probability of an equation , z = ( o 1 , n 1 , o 2 , n 2 ) , where o 1 , o 2 ? {+ , ? , * 0.01 } and n 1 , n 2 ? NP ?N Q ?S , NP and N Q are all numeric values appearing in P and Q , and S area set of predefined special numbers .
+Our goal is to compute a probability of an equation , z = ( o 1 , n 1 , o 2 , n 2 ) , where o 1 , o 2 ? {+ , ? , * 0.01 } and n 1 , n 2 ? NP ?N Q ?S , NP and N Q are all numeric values appearing in P and Q , and S are a set of predefined special numbers .
 11 .
 First , BERT encodings of the question and the paragraph is obtained vi ?
 where : indicates a concatenation , [ SEP ] is a special token , m is the length of Q , n is the length of P , and h is the hidden dimension of BERT .

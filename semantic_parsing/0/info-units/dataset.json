@@ -12,7 +12,7 @@
               }
             }
           },
-          "from sentence" : "To address the need for a large and high - quality dataset fora new complex and cross-domain semantic parsing task , we introduce Spider , which consists of 200 databases with multiple tables , 10,181 questions , and 5,693 corresponding complex SQL queries , all written by 11 college students spending a total of 1,000 man-hours ."
+          "from sentence" : "To address the need for a large and high - quality dataset for a new complex and cross-domain semantic parsing task , we introduce Spider , which consists of 200 databases with multiple tables , 10,181 questions , and 5,693 corresponding complex SQL queries , all written by 11 college students spending a total of 1,000 man-hours ."
         }
       },
       "creates and annotates" : ["questions", {"SQL queries" : {

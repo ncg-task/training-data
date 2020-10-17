@@ -1,13 +1,13 @@
 260	23	43	n-gram functionality
-260	9	11	is
+260	44	46	is
 260	47	56	important
 260	59	71	contributing
 260	72	103	almost 5 % accuracy improvement
 263	4	18	top N function
 263	19	30	contributes
 263	31	42	very little
-263	4	6	to
-263	50	69	overall performance
+263	43	45	to
+263	50	70	over all performance
 265	0	32	Simple word - by - word matching
 265	46	52	useful
 265	53	55	on
@@ -68,7 +68,7 @@
 21	49	70	machine comprehension
 21	71	82	designed to
 21	83	92	work well
-21	53	55	in
+21	93	95	in
 21	98	120	data - limited setting
 26	10	19	learns to
 26	20	30	comprehend
@@ -104,7 +104,7 @@
 30	71	87	individual words
 30	88	92	from
 30	93	112	hypothesis and text
-30	56	58	at
+30	115	117	at
 30	118	132	various scales
 31	36	44	consider
 31	45	52	matches
@@ -126,13 +126,13 @@
 247	93	119	single questions ( > 2 % )
 247	124	144	slightly outperforms
 247	149	159	latter two
-247	90	92	on
+247	160	162	on
 247	163	190	multi questions ( ? 0.3 % )
 249	4	10	method
 249	14	22	achieves
-249	27	46	best overall result
-249	47	49	on
-249	50	62	MCTest - 160
+249	27	47	best over all result
+249	48	50	on
+249	51	63	MCTest - 160
 253	12	21	our model
 253	22	35	outperforming
 253	40	52	alternatives

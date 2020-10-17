@@ -28,8 +28,7 @@ We first observe that using a coverage inference penalty scores the same as a fu
               "across" : "all three scores"
             }
           }
-        },
-        "from sentence" : "The results with the CopyTransformer and coverage penalty indicate a slight improvement across all three scores , but we observe no significant difference between Pointer - Generator and CopyTransformer with bottom - up attention ."
+        }
       },
       "observe" : {
         "no significant difference" : {

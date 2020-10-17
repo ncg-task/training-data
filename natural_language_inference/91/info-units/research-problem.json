@@ -1,6 +1,5 @@
 {
   "has research problem" : [
-    ["Parsing", {"from sentence" : "A Fast Unified Model for Parsing and Sentence Understanding"}],
-    ["Sentence Understanding", {"from sentence" : "A Fast Unified Model for Parsing and Sentence Understanding"}]
+    ["Parsing", "Sentence Understanding", {"from sentence" : "A Fast Unified Model for Parsing and Sentence Understanding"}]
   ]
 }

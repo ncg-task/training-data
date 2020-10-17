@@ -3,7 +3,7 @@
     "Baselines" : {
       "applied" : {
         "BiDAF ++" : {
-          "is" : {
+          "has" : {
             "strong extractive QA model" : {
               "to" : "QuAC dataset"
             }
@@ -17,8 +17,7 @@
             "flow component" : {
               "from" : "IF layer"
             }
-          },
-          "from sentence" : "Here we briefly describe the ablated systems : \" - FLOW \" removes the flow component from IF layer ( Eq. 2 in Section 3.2 ) , \" - QHIER - RNN \" removes the hierarchical LSTM layers on final question vectors ( Eq. 7 in Section 3.3 ) ."
+          }
         },
         "- QHIER - RNN" : {
           "removes" : {

@@ -7,12 +7,12 @@
 97	0	22	Parameter optimization
 97	26	40	performed with
 97	41	86	minibatch stochastic gradient descent ( SGD )
-97	36	40	with
+97	87	91	with
 97	92	102	batch size
 97	103	105	10
 97	110	118	momentum
 97	119	122	0.9
-104	12	23	 parameters
+104	4	23	" best " parameters
 104	24	33	appear at
 104	34	50	around 50 epochs
 98	3	9	choose
@@ -22,11 +22,11 @@
 98	55	58	for
 98	59	70	POS tagging
 98	77	82	0.015
-98	55	58	for
+98	83	86	for
 98	87	90	NER
 98	140	150	updated on
 98	151	161	each epoch
-98	35	37	of
+98	162	164	of
 98	165	173	training
 100	3	9	reduce
 100	14	21	effects
@@ -34,13 +34,13 @@
 100	27	45	gradient exploding
 100	53	56	use
 100	59	76	gradient clipping
-100	22	24	of
+100	77	79	of
 100	80	83	5.0
 103	3	6	use
 103	7	21	early stopping
 103	22	30	based on
 103	31	42	performance
-103	28	30	on
+103	43	45	on
 103	46	61	validation sets
 106	0	11	For each of
 106	16	26	embeddings
@@ -48,7 +48,7 @@
 106	44	62	initial embeddings
 106	65	86	modifying them during
 106	87	103	gradient updates
-106	9	11	of
+106	104	106	of
 106	111	131	neural network model
 106	132	134	by
 106	135	163	back - propagating gradients
@@ -69,7 +69,7 @@
 110	131	136	BLSTM
 111	3	6	fix
 111	7	19	dropout rate
-111	16	18	at
+111	20	22	at
 111	23	26	0.5
 111	27	30	for
 111	31	49	all dropout layers
@@ -85,7 +85,7 @@
 22	98	117	data pre-processing
 22	118	124	beyond
 22	125	152	pre-trained word embeddings
-22	121	123	on
+22	153	155	on
 22	156	173	unlabeled corpora
 23	24	41	easily applied to
 23	44	54	wide range
@@ -119,7 +119,6 @@
 26	75	89	whole sentence
 2	0	32	End - to - end Sequence Labeling
 4	23	40	sequence labeling
-10	75	79	name
 10	0	28	Linguistic sequence labeling
 123	13	19	adding
 123	20	29	CRF layer
@@ -129,7 +128,7 @@
 123	60	84	significant improvements
 123	85	89	over
 123	90	108	BLSTM - CNN models
-123	30	33	for
+123	109	112	for
 123	118	137	POS tagging and NER
 127	0	14	Comparing with
 127	15	45	traditional statistical models

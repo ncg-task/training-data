@@ -10,7 +10,7 @@
                 "about 1.5 % F 1" : {
                   "where" : {
                     "position - aware term" : {
-                      "contributed" : "about 1 % F 1 score"
+                      "contributes" : "about 1 % F 1 score"
                     }
                   }
                 },
@@ -91,7 +91,7 @@ F 1 score keeps increasing ."
           "has" : {
             "position - aware attention model" : {
               "achieves" : {
-                "improved F1 scores" : {
+                "improved F 1 scores" : {
                   "on" : "30 out of the 41 slot types",
                   "with" : {
                     "top 5 slot types" : {

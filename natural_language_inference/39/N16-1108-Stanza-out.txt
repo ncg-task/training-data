@@ -23,7 +23,7 @@ We conducted thorough evaluations on ten test sets from three SemEval STS compet
 We outperform the recent multiperspective convolutional neural networks of and demonstrate state - of - the - art accuracy on all five tasks .
 In addition , we conducted ablation studies and visualized our models to show the clear benefits of modeling pairwise word interactions for similarity measurement .
 Related Work
-Feature engineering was the dominant approach inmost previous work ; different types of sparse features were explored and found useful .
+Feature engineering was the dominant approach in most previous work ; different types of sparse features were explored and found useful .
 For example , n- gram overlap features at the word and character levels , syntax features , knowledge - based features using Word - Net and word - alignment features .
 The recent shift from sparse feature engineering to neural network model engineering has significantly improved accuracy on STS datasets .
 Most previous work use sentence modeling with a " Siamese " structure .
@@ -115,7 +115,7 @@ Convolutional Neural Networks
 The f ocus Cube contains focus - weighted finegrained similarity information .
 In the final model component we use the f ocusCube to compute the final similarity score .
 If we treat the f ocusCube as an " image " with 13 channels , then semantic similarity measurement can be converted into a pattern recognition ( image processing ) problem , where we are looking for patterns of strong pairwise word interactions in the " image " .
-The stronger the overall pairwise word interactions are , the higher similarity the sentence pair will have .
+The stronger the over all pairwise word interactions are , the higher similarity the sentence pair will have .
 Recent advances from successful systems at ImageNet competitions show that the depth of a neural network is a critical component for achieving competitive performance .
 We therefore use a deep homogeneous architecture which has repetitive convolution and pooling layers .
 Our network architecture is composed of spatial max pooling layers , spatial convolutional layers ( Conv ) with a small filter size of 3 3 plus stride 1 and padding 1 .
@@ -197,7 +197,7 @@ Compared to that previous work , shows that our model is 3.4 faster in training 
 Visualization .
 visualizes the cosine value channel of the f ocusCube for pairwise word interactions given two sentence pairs in the SICK test set .
 Note for easier visualization , the values are multiplied by 10 .
-Darker red areas indicate stronger pairwise word interactions .
+Darker red are as indicate stronger pairwise word interactions .
 From these visualizations , we see that our model is able to identify important word pairs ( in dark red ) and tag them with proper similarity values , which are significantly higher than the ones of their neighboring unimportant pairs .
 This shows that our model is able to recognize important fine - grained word - level information for better similarity measurement , suggesting the reason why our model performs well .
 Conclusion

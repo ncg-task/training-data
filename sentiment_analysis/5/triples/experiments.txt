@@ -47,7 +47,7 @@
 (BiHDM||is||significantly better)
 (significantly better||than||baseline method)
 (subject - independent experiment||has||Baselines)
-(Baselines||using||twelve methods)
+(Baselines||use||twelve methods)
 (twelve methods||including||Kullback - Leibler importance estimation procedure ( KLIEP ))
 (twelve methods||including||unconstrained least - squares importance fitting ( ULSIF ))
 (twelve methods||including||selective transfer machine ( STM ))

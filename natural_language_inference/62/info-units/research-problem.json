@@ -1,7 +1,6 @@
 {
   "has research problem" : [
     ["Machine Reading Comprehension", {"from sentence" : "Explicit Utilization of General Knowledge in Machine Reading Comprehension"}],
-    ["Machine Reading Comprehension ( MRC )", {"from sentence" : "To bridge the gap between Machine Reading Comprehension ( MRC ) models and human beings , which is mainly reflected in the hunger for data and the robustness to noise , in this paper , we explore how to integrate the neural networks of MRC models with the general knowledge of human beings ."}],
-    ["MRC", {"from sentence" : "To bridge the gap between Machine Reading Comprehension ( MRC ) models and human beings , which is mainly reflected in the hunger for data and the robustness to noise , in this paper , we explore how to integrate the neural networks of MRC models with the general knowledge of human beings ."}]
+    ["Machine Reading Comprehension ( MRC )", "MRC", {"from sentence" : "To bridge the gap between Machine Reading Comprehension ( MRC ) models and human beings , which is mainly reflected in the hunger for data and the robustness to noise , in this paper , we explore how to integrate the neural networks of MRC models with the general knowledge of human beings ."}]
   ]
 }

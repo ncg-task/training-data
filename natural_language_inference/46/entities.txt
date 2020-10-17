@@ -14,38 +14,41 @@
 41	44	49	using
 41	59	68	summaries
 41	76	91	full story text
-202	35	63	neural span prediction model
-202	64	91	significantly outperforming
-202	92	118	all other proposed methods
-204	0	59	Both the plain sequence to sequence model and the AS Reader
-204	140	147	perform
-204	148	152	well
-206	3	28	additional inductive bias
-206	29	39	results in
-206	40	58	higher performance
-206	50	53	for
-206	67	88	span prediction model
-209	23	25	on
-209	30	55	full Narra - tive QA task
-209	58	63	where
-209	68	85	context documents
-209	86	89	are
-209	90	102	full stories
-210	33	40	observe
-210	43	50	decline
-210	47	49	in
-210	54	65	performance
-210	66	68	of
-210	73	104	span- selection oracle IR model
-225	4	13	AS Reader
-225	80	93	underperforms
-225	98	133	simple no -context Seq2Seq baseline
-225	147	158	in terms of
-225	159	162	MRR
-230	27	35	observed
-230	36	62	no significant differences
-230	63	74	for varying
-230	75	91	number of chunks
+196	0	22	Reading Summaries Only
+201	35	63	neural span prediction model
+201	64	91	significantly outperforming
+201	92	118	all other proposed methods
+203	0	59	Both the plain sequence to sequence model and the AS Reader
+203	140	147	perform
+203	148	152	well
+205	3	28	additional inductive bias
+205	29	39	results in
+205	40	58	higher performance
+205	59	62	for
+205	67	88	span prediction model
+208	23	25	on
+208	30	55	full Narra - tive QA task
+208	58	63	where
+208	68	85	context documents
+208	86	89	are
+208	90	102	full stories
+209	33	40	observe
+209	43	50	decline
+209	51	53	in
+209	54	65	performance
+209	66	68	of
+209	73	104	span- selection oracle IR model
+215	0	25	Reading Full Stories Only
+224	4	13	AS Reader
+224	80	93	underperforms
+224	98	133	simple no -context Seq2Seq baseline
+224	147	158	in terms of
+224	159	162	MRR
+229	27	35	observed
+229	36	62	no significant differences
+229	63	66	for
+229	67	74	varying
+229	75	91	number of chunks
 2	16	37	Reading Comprehension
 4	0	28	Reading comprehension ( RC )
 5	52	54	RC

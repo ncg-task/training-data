@@ -9,7 +9,7 @@ Our approach does not require any feature engineering nor does it involve specia
 Experimental results on a standard benchmark dataset from TREC demonstrate that - despite its simplicity - our model matches state of the art performance on the answer sentence selection task .
 Introduction
 Question answering can broadly be divided into two categories .
-One approach focuses on semantic parsing , where answers are retrieved by turning a question into a database query and subsequently applying that query to an existing knowledge base .
+One approach focuses on semantic parsing , where answers are retrieved by turning a question into a data base query and subsequently applying that query to an existing knowledge base .
 The other category is open domain question answering , which is more closely related to the field of information retrieval .
 Open domain question answering requires a number of intermediate steps .
 For instance , to answer a question such as " Who wrote the book Harry Potter ? " , a system would first identify the question type and retrieve relevant documents .
@@ -50,7 +50,7 @@ Compositional distributional semantics .
 Compared with words in string form or logical form , distributed representations of words can capture latent semantic information and thereby exploit similarities between words .
 This enables distributed representations to overcome sparsity problems encountered in atomic representations and further provides information about how words are semantically related to each other .
 These properties have caused distributed representations to become increasingly popular in natural language processing .
-They have been proved to be successful in applications such as relation extraction and word sense disambiguation .
+They have been proved to be successful in applications such as relation extraction and word sense dis ambiguation .
 Vector representations for words can be obtained in a number of ways , with many approaches exploiting distributional information from large corpora , for instance by counting the frequencies of contextual words around a given token .
 An alternative method for learning distributed representations comes in the form of neural language models , where the link to distributional data is somewhat more obscure .
 A nice side - effect of the way in which neural language models learn word embeddings is that these vectors implicitly contain both syntactic and semantic information .
@@ -58,7 +58,7 @@ For a number of tasks , vector representations of single words are not sufficien
 Instead , distributed representations of phrases and sentences are required in order to provide a deeper language understanding that allows addressing more complex tasks in NLP such as translation , sentiment analysis or information extraction .
 As sparsity prevents us from directly learning distributional representa -tions at the phrase level , various models of vector composition have been proposed that circumvent this problem by learning higher level representations based on low - level ( e.g. word - level ) representations .
 Popular ideas for this include exploiting category theory , using parse trees in conjunction with recursive autoencoders , and convolutional neural networks .
-More recently , sentence models constructed from parallel corpora point to anew trend in compositional distributional semantics , where word - and sentence - level representations are learned given a joint semantic objective function .
+More recently , sentence models constructed from parallel corpora point to a new trend in compositional distributional semantics , where word - and sentence - level representations are learned given a joint semantic objective function .
 Answer sentence selection .
 Answer sentence selection denotes the task of selecting a sentence that contains the information required to answer a given question from a set of candidates obtained via some information extraction system .
 Clearly , answer sentence selection requires both semantic and syntactic information in order to establish both what information the question seeks to answer , as well as whether a given candidate contains the required information , with current state - of - the - art approaches mostly focusing on syntactic matching between questions and answers .
@@ -185,7 +185,7 @@ As we only use two non-distributional features - question - answer pair word mat
 In the context of these results , it is also worth noting that - unlike the model of Yih et al . - our models can directly be applied across languages , as we are not relying on any external resources beyond some large corpus on which to train our initial word embeddings .
 Earlier in this paper we argued that methods based purely on vector representations may not be sufficient for solving complex problems such as paraphrase detection and question answering because of their weakness in dealing with certain aspects of language such as numbers and - to a lesser extent - proper nouns .
 For example , the mismatching of numbers are crucial for rejecting a pair of ' paraphrases ' or an answer .
-Surface - form matching is particularly important in our experiment because we did not learn word embeddings from the answer selection dataset and the given word dictionaries may not coverall the words in the dataset 1 .
+Surface - form matching is particularly important in our experiment because we did not learn word embeddings from the answer selection dataset and the given word dictionaries may not cover all the words in the dataset 1 .
 Most of the non-covered words are proper nouns , which are then assigned the UNKNOWN token .
 While these are likely to be crucial for judging the relevance of an answer candidate , they can not be incorporated into the distributional aspect of our model .
 However , it is also important to then establish the opposite fact , namely that distributional semantics improve over purely word counting model .

@@ -10,7 +10,9 @@
                   "with" : "other lexical features"
                 }
               },
-              "from sentence" : "( 1 ) A logistic regression ( LR ) classifier which combines dependencybased features with other lexical features ."
+              "from sentence" : "Dependency - based models .
+( 1 ) A logistic regression ( LR ) classifier which combines dependencybased features with other lexical features ."
+
             },
             "Shortest Dependency Path LSTM ( SDP - LSTM )" : {
               "applies" : {
@@ -52,7 +54,9 @@
               }
             }
           },
-          "from sentence" : "Our group presented a competitive sequence model that employs a position - aware attention mechanism over LSTM outputs ( PA - LSTM ) , and showed that it outperforms several CNN and dependency - based models by a substantial margin ."
+          "from sentence" : "Neural sequence model .
+Our group presented a competitive sequence model that employs a position - aware attention mechanism over LSTM outputs ( PA - LSTM ) , and showed that it outperforms several CNN and dependency - based models by a substantial margin ."
+
         }
       }
     }

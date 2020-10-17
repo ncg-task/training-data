@@ -36,7 +36,7 @@
           "from sentence" : "Replacing DCRL with SCST also causes a marginal decline of performance on both metrics ."
         }
       },
-      "replace" : {
+      "relace" : {
         "default attention function" : {
           "with" : "dot product : f ( u , v ) = u v ( 5 )",
           "has" : {
@@ -82,8 +82,7 @@
       },
       "using" : {
         "2 blocks" : {
-          "causes" : "slight performance drop",
-          "from sentence" : "We notice that using 2 blocks causes a slight performance drop , while increasing to 4 blocks barely affects the SoTA result ."
+          "causes" : "slight performance drop"
         }
       },
       "increasing to" : {

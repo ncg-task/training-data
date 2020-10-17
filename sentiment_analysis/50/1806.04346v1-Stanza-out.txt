@@ -21,11 +21,10 @@ In this paper , we hypothesize that aspect - level sentiment classification can 
 Specifically , we explore two transfer methods to incorporate this sort of knowledge - pretraining and multi-task learning .
 In our experiments , we find that both methods are helpful and combining them achieves significant improvements over attentionbased LSTM models trained only on aspect - level data .
 We also illustrate by examples that additional knowledge from document - level data is beneficial in multiple ways .
-Our source code can be obtained from https://github.com/
-ruidan/Aspect-level-sentiment.
+Our source code can be obtained from https://github.com/ruidan/Aspect-level-sentiment.
 Related Work
 Various neural models have been proposed for aspect - level sentiment classification .
-The main idea behind these works is to develop neural architectures that are able to learn continuous features and capture the intricate relation between a target and context words .
+The main idea behind these works is to develop neural architectures thatare able to learn continuous features and capture the intricate relation between a target and context words .
 However , to sufficiently train these models , substantial aspect - level annotated data is required , which is expensive to obtain in practice .
 We explore both pretraining and multi-task learning for transferring knowledge from document level to aspect level .
 Both methods are widely studied in the literature .
@@ -38,9 +37,9 @@ Models
 Attention - based LSTM
 We first describe a conventional implementation of an attention - based LSTM model for this task .
 We use it as a baseline model and extend it with pretraining and multi-task learning approaches for incorporating document - level knowledge .
-The inputs area sentence s = ( w 1 , w 2 , ... , w n ) consisting of n words , and an opinion target x = ( x 1 , x 2 , ... , x m ) occurring in the sentence consisting of a subsequence of m words from s .
+The inputs are a sentence s = ( w 1 , w 2 , ... , w n ) consisting of n words , and an opinion target x = ( x 1 , x 2 , ... , x m ) occurring in the sentence consisting of a subsequence of m words from s .
 Each word is associated with a continuous word embedding e w from an embedding matrix E ?
-RV d , where V is the vocabulary size and dis the embedding dimension .
+RV d , where V is the vocabulary size and d is the embedding dimension .
 LSTM is used to capture sequential information , and outputs a sequence of hidden vectors :
 [h 1 , ... , h n ] = LSTM ( [e w 1 , ... , e wn ] , ? lstm )
 ( 1 ) An attention layer assigns a weight ?
@@ -54,7 +53,7 @@ R dd .
 The sentence representation z is fed into an output layer to predict the probability distribution p over sentiment labels on the target :
 We refer to this baseline model as LSTM + ATT .
 It is trained via cross entropy minimization :
-where D denotes the overall training corpus , c i denotes the true label for sample i , and pi ( c i ) denotes the probability of the true label .
+where D denotes the over all training corpus , c i denotes the true label for sample i , and pi ( c i ) denotes the probability of the true label .
 Transfer Approaches
 LSTM + ATT is used as our aspect - level model with parameter set ?
 aspect
@@ -68,7 +67,7 @@ We initialize the relevant Multi-task Learning ( MULT ) :
 This approach simultaneously trains two tasks - document - level and aspect - level classification .
 In this setting , the embedding layer ( E ) and the LSTM layer (? lstm ) are shared by both tasks , and a document is represented as the mean vector over LSTM outputs .
 The other parameters are task - specific .
-The overall loss function is then given by :
+The over all loss function is then given by :
 where U is the loss function of document - level classification . ? ?
 ( 0 , 1 ) is a hyperparameter that controls the weight of U .
 Combined ( PRET + MULT ) :
@@ -101,7 +100,7 @@ Model Comparison
 We observe that PRET is very helpful , and consistently gives a 1 - 3 % increase in accuracy over LSTM + ATT across all datasets .
 The improvements in macro - F1 scores are even more , especially on D3 and D4 where the labels are extremely unbalanced .
 MULT gives similar performance as LSTM + ATT on D1 and D2 , but improvements can be clearly observed for D3 and D4 .
-The combination ( PRET + MULT ) overall yields better results .
+The combination ( PRET + MULT ) over all yields better results .
 There are two main reasons why the improvements of macro - F1 scores are more significant on D3 and D4 than on D1 : without any external knowledge might still be able to learn some neutral - related features on D1 but it is very hard to learn from D3 and D4 .
 ( 2 ) The numbers of neutral examples in the test sets of D3 and D4 are very small .
 Thus , the precision and recall on neutral class will be largely affected by even a small prediction difference ( e.g. , with 5 more neutral examples correctly identified , recall is increased by more than 10 % on both datasets ) .
@@ -127,17 +126,17 @@ The improvements on accuracies with increasing number of document examples are s
 For macro - F1 scores , the improvements on D1 and D2 are stable .
 We observe sharp increases in the macro - F1 scores of D3 and D4 when changing the percentage from 0 to 0.4 .
 This maybe related to their extremely
-To better understand in which conditions the proposed method is helpful , we analyze a subset of test examples that are correctly classified by PRET + MULT but are misclassified by LSTM + ATT .
+To better understand in which conditions the proposed method is helpful , we analyze a subset of test examples thatare correctly classified by PRET + MULT but are misclassified by LSTM + ATT .
 We find that the benefits brought by document - level knowledge are typically shown in four ways .
 First of all , to our surprise , LSTM + ATT made obvious mistakes on some instances with common opinion words .
 Below are two examples where the target is enclosed in [ ] with it s true sentiment indicated in the subscript :
 1 .
-" I was highly disappointed in the [ food ] neg ."
+" I was highly dis appointed in the [ food ] neg ."
 2 . " This particular location certainly uses substandard [ meats ] neg ."
 In the above examples , LSTM + ATT does attend to the right opinion words , but makes the wrong predictions .
 One possible reason is that the word embeddings from GloVe without PRET do not effectively capture sentiment information , while the aspect - level training samples are not sufficient to capture that for certain words .
 PRET + MULT eliminates this kind of errors .
-Another finding is that our method helps to better capture domain - specific opinion words due to additional knowledge from documents that are from a similar domain :
+Another finding is that our method helps to better capture domain - specific opinion words due to additional knowledge from documents thatare from a similar domain :
 1 .
 " The smaller [ size ] pos was a bonus because of space restrictions . "
 2 .
@@ -155,7 +154,7 @@ Pretraining the network on larger document - level corpus addresses this problem
 Lastly , PRET + MULT makes fewer errors on recognizing neutral instances .
 This can also be observed from the macro - F1 scores in .
 The lack of training examples makes the prediction of neutral instances very difficult for all previous methods .
-Knowledge from document - level examples with balanced labels compensates for this disadvantage .
+Knowledge from document - level examples with balanced labels compensates for this dis advantage .
 Conclusion
 The effectiveness of existing aspect - level neural models is limited due to the difficulties in obtaining training data in practice .
 Our work is the first attempt to incorporate knowledge from documentlevel corpus for training aspect - level sentiment classifiers .

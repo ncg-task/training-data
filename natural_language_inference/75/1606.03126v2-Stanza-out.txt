@@ -10,14 +10,14 @@ Our method reduces the gap between all three settings .
 It also achieves state - of - the - art results on the existing WIKIQA benchmark .
 Introduction
 Question answering ( QA ) has been along standing research problem in natural language processing , with the first systems attempting to answer questions by directly reading documents .
-The development of large - scale Knowledge Bases ( KBs ) such as Freebase helped organize information into structured forms , prompting recent progress to focus on answering questions by converting them into logical forms that can be used to query such databases .
+The development of large - scale Knowledge Bases ( KBs ) such as Freebase helped organize information into structured forms , prompting recent progress to focus on answering questions by converting them into logical forms that can be used to query such data bases .
 Unfortunately , KBs have intrinsic limitations such as their inevitable incompleteness and fixed schemas that can not support all varieties of answers .
 Since information extraction ( IE ) , intended to fill in missing information in KBs , is neither accurate nor reliable enough , collections of raw textual resources and documents such as Wikipedia will always contain more information .
 As a result , even if KBs can be satisfactory for closed - domain problems , they are unlikely to scale up to answer general questions on any topic .
 Starting from this observation , in this work we study the problem of answering by directly reading documents .
 Retrieving answers directly from text is harder than from KBs because information is far less structured , is indirectly and ambiguously expressed , and is usually scattered across multiple documents .
 This explains why using a satisfactory KB - typically only available in closed domains - is preferred over raw text .
-We postulate that before trying to provide answers that are not in KBs , document - based QA systems should first reach KB - based systems ' performance in such closed domains , where clear comparison and evaluation is possible .
+We postulate that before trying to provide answers thatare not in KBs , document - based QA systems should first reach KB - based systems ' performance in such closed domains , where clear comparison and evaluation is possible .
 To this end , this paper introduces WIKIMOVIES , a new analysis tool that allows for measuring the performance of QA systems when the knowledge source is switched from a KB to unstructured documents .
 WIKIMOVIES contains ?
 100 k questions in the movie domain , and was designed to be answerable by using either a perfect KB ( based on OMDb 1 ) , Wikipedia pages or an imper- fect KB obtained through running an engineered IE pipeline on those pages .
@@ -41,8 +41,8 @@ In this work , we introduce KV - MemNNs , a Memory Network model that operates a
 Such structured memory is not employed in any existing attention - based neural network architecture for QA .
 As we will show , it gives the model greater flexibility for encoding knowledge sources and helps shrink the gap between directly reading documents and answering from a KB .
 Key - Value Memory Networks
-The Key - Value Memory Network model is based on the Memory Network ( Mem NNs ) model which has proven useful fora variety of document reading and question answering tasks : for reading children 's books and answering questions about them , for complex reasoning over sim - ulated stories and for utilizing KBs to answer questions .
-Key - value paired memories area generalization of the way context ( e.g. knowledge bases or documents to be read ) are stored in memory .
+The Key - Value Memory Network model is based on the Memory Network ( Mem NNs ) model which has proven useful for a variety of document reading and question answering tasks : for reading children 's books and answering questions about them , for complex reasoning over sim - ulated stories and for utilizing KBs to answer questions .
+Key - value paired memories are a generalization of the way context ( e.g. knowledge bases or documents to be read ) are stored in memory .
 The lookup ( addressing ) stage is based on the key memory while the reading stage ( giving the returned result ) uses the value memory .
 This gives both ( i ) greater flexibility for the practitioner to encode prior knowledge about their task ; and ( ii ) more effective power in the model via nontrivial transforms between key and value .
 The key should be designed with features to help match it to the question , while the value should be designed with features to help match it to the response ( answer ) .
@@ -77,7 +77,7 @@ To obtain the standard End - To - End Memory Network of one can simply set the k
 Hashing was not used in that paper , but is important for computational efficiency for large memory sizes , as already shown in .
 We will now goon to describe specific applications of key - value memories for the task of reading KBs or documents .
 Key - Value Memories
-There area variety of ways to employ key - value memories that can have important effects on overall performance .
+There are a variety of ways to employ key - value memories that can have important effects on over all performance .
 The ability to encode prior knowledge in this way is an important component of KV - MemNNs , and we are free to define ?
 X , ?
 Y , ?
@@ -122,9 +122,9 @@ The WIKIMOVIES benchmark consists of questionanswer pairs in the domain of movie
 It was built with the following goals in mind : ( i ) machine learning techniques should have ample training examples for learning ; and ( ii ) one can analyze easily the performance of different representations of knowledge and breakdown the results by question type .
 The dataset can be downloaded from http://fb.ai/babi.
 Knowledge Representations
-We construct three forms of knowledge representation : ( i ) Doc : raw Wikipedia documents consisting of the pages of the movies mentioned ; ( ii ) KB : a classical graph - based KB consisting of entities and relations created from the Open Movie Database ( OMDb ) and MovieLens ; and ( iii ) IE : information extraction performed on the Wikipedia pages to build a KB in a similar form as ( ii ) .
+We construct three forms of knowledge representation : ( i ) Doc : raw Wikipedia documents consisting of the pages of the movies mentioned ; ( ii ) KB : a classical graph - based KB consisting of entities and relations created from the Open Movie Data base ( OMDb ) and MovieLens ; and ( iii ) IE : information extraction performed on the Wikipedia pages to build a KB in a similar form as ( ii ) .
 We take care to construct QA pairs such that they are all potentially answerable from either the KB from ( ii ) or the original Wikipedia documents from ( i ) to eliminate data sparsity issues .
-However , it should be noted that the advantage of working from raw documents in real applications is that data sparsity is less of a concern than fora KB , while on the other hand the KB has the information already parsed in a form amenable to manipulation by machines .
+However , it should be noted that the advantage of working from raw documents in real applications is that data sparsity is less of a concern than for a KB , while on the other hand the KB has the information already parsed in a form amenable to manipulation by machines .
 This dataset can help analyze what methods we need to close the gap between all three settings , and in particular what are the best methods for reading documents when a KB is not available .
 A sample of the dataset is shown in .
 Doc
@@ -145,7 +145,7 @@ This can come at the cost of lower recall due to malformed or completely missing
 For IE we use standard open - source software followed by some task - specific engineering to improve the results .
 We first employ coreference resolution via the Stanford NLP Toolkit to reduce ambiguity by replacing pronominal ( " he " , " it " ) and nominal ( " the film " ) references with their representative entities .
 Next we use the SENNA semantic role labeling tool to uncover the grammatical structure of each sentence and pair verbs with their arguments .
-Each triplet is cleaned of words that are not recognized entities , and lemmatization is done to collapse different inflections of important task - specific verbs to one form ( e.g. stars , starring , star ? starred ) .
+Each triplet is cleaned of words thatare not recognized entities , and lemmatization is done to collapse different inflections of important task - specific verbs to one form ( e.g. stars , starring , star ? starred ) .
 Finally , we append the movie title to each triple similar to the " Window + Title " representation of Sec. 3.2 , which improved results .
 Question - Answer Pairs
 Within the dataset 's more than 100,000 questionanswer pairs , we distinguish 13 classes of question corresponding to different kinds of edges in our KB .
@@ -162,14 +162,14 @@ WikiMovies
 We conducted experiments on the WIKI - MOVIES dataset described in Sec .
 4 . Our main goal is to compare the performance of KB , IE and Wikipedia ( Doc ) sources when trying varying learning methods .
 We compare four approaches : ( i ) the QA system of that performs well on existing datasets WebQuestions and SimpleQuestions that use KBs only ; ( ii ) supervised embeddings that do not make use of a KB at all but learn question - to - answer embeddings directly and hence act as a sanity check ; ( iii ) Memory Networks ; and ( iv ) Key - Value Memory Networks .
-Performance is reported using the accuracy of the top hit ( single answer ) overall possible answers ( all entities ) , i.e. the hits @ 1 metric measured in percent .
+Performance is reported using the accuracy of the top hit ( single answer ) over all possible answers ( all entities ) , i.e. the hits @ 1 metric measured in percent .
 In all cases hyperparameters are optimized on the development set , including the memory representations of Sec. 3.2 for MemNNs and KV - MemNNs .
 As MemNNs do not support key - value pairs , we concatenate key and value together when they differ instead .
 The main results are given in .
 The QA system of outperforms Supervised Embeddings and Memory Networks for KB and IE - based KB representations , but is designed to work with a KB , not with documents ( hence the N / A in that column ) .
 However , Key - Value Memory Networks outperform all other methods on all three data source types .
 Reading from Wikipedia documents directly ( Doc ) outperforms an IE - based KB ( IE ) , which is an encouraging result towards automated machine reading though a gap to a humanannotated KB still remains ( 93.9 vs. 76.2 ) .
-The best memory representation for directly reading documents uses " Window - level + Center Encoding + Title " ( W = 7 and H = 2 ) ; see fora comparison of results for different representation types .
+The best memory representation for directly reading documents uses " Window - level + Center Encoding + Title " ( W = 7 and H = 2 ) ; see for a comparison of results for different representation types .
 Both center encoding and title features help the windowlevel representation , while sentence - level is inferior .
 QA Breakdown
 A breakdown by question type comparing the different data sources for KV - Mem NNs is given in 0.6520 0.6652 AP- CNN 0.6886 0.6957 Attentive LSTM 0.6886 0.7069 Attentive CNN 0.6921 0.7108 L.D.C. 0.7058 0.7226 Memory Network 0.5170 0.5236

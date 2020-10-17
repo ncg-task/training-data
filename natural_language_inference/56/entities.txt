@@ -1,4 +1,5 @@
 81	50	105	github.com/rasmusbergpalm/recurrent-relationalnetworks.
+90	0	31	bAbI question - answering tasks
 104	36	40	need
 104	43	78	single step of relational reasoning
 104	79	87	to solve
@@ -9,9 +10,12 @@
 108	71	80	important
 108	81	84	for
 108	89	101	bAbI dataset
+109	0	14	Pretty - CLEVR
 140	65	68	MLP
 140	69	85	perfectly solves
 140	90	114	non-relational questions
+140	121	129	struggle
+140	130	134	with
 140	140	161	single jump questions
 141	4	22	relational network
 141	23	29	solves
@@ -39,19 +43,20 @@
 172	56	84	parallel and random messages
 172	85	92	passing
 172	93	100	updates
-173	22	57	version of loopy belief propagation
-173	58	83	modified specifically for
-173	84	91	solving
+173	22	29	version
+173	30	32	of
+173	33	57	loopy belief propagation
+173	58	79	modified specifically
+173	80	91	for solving
 173	92	99	Sudokus
 173	100	109	that uses
 173	110	119	250 steps
 176	11	21	outperform
 176	22	26	Park
-176	27	39	which treats
+176	33	39	treats
 176	44	50	Sudoku
 176	51	53	as
 176	56	65	9x9 image
-176	68	72	uses
 176	73	96	10 convolutional layers
 159	22	30	see that
 159	31	50	even simple Sudokus
@@ -59,7 +64,7 @@
 159	56	65	33 givens
 159	66	73	require
 159	74	93	upwards of 10 steps
-159	82	84	of
+159	94	96	of
 159	97	117	relational reasoning
 159	132	138	harder
 159	139	148	17 givens
@@ -89,20 +94,22 @@
 26	15	32	modular component
 26	33	36	for
 26	37	69	many - step relational reasoning
-26	66	68	in
+26	70	72	in
 26	73	119	end - to - end differentiable learning systems
 27	3	10	encodes
 27	15	31	inductive biases
 27	32	36	that
 27	41	48	objects
+27	49	58	exists in
 27	63	68	world
 27	98	110	described by
 27	111	121	properties
+27	141	151	changeover
 27	152	156	time
 27	173	179	affect
 27	180	190	each other
 27	263	275	invariant to
-27	152	156	time
+27	276	280	time
 28	44	53	decompose
 28	56	64	function
 28	65	68	for
@@ -110,12 +117,17 @@
 28	90	94	into
 28	95	109	two components
 28	13	15	in
-28	82	84	as
+29	2	24	perceptual front - end
+29	43	55	to recognize
+29	56	63	objects
+29	71	80	raw input
+29	85	102	represent them as
+29	103	110	vectors
+29	119	146	relational reasoning module
+29	155	159	uses
+29	164	178	representation
 30	17	24	trained
 30	25	47	jointly end - to - end
-31	162	171	represent
-31	189	196	vectors
-31	35	62	relational reasoning module
 31	35	62	relational reasoning module
 31	63	73	implements
 31	77	86	interface
@@ -124,12 +136,10 @@
 31	112	114	of
 31	115	139	nodes and directed edges
 31	142	147	where
-31	115	120	nodes
+31	152	157	nodes
 31	162	176	represented by
 31	177	196	real valued vectors
 31	203	205	is
 31	206	220	differentiable
-42	0	29	Recurrent Relational Networks
-5	116	123	objects
-5	98	112	representation
+2	0	29	Recurrent Relational Networks
 5	17	45	recurrent relational network

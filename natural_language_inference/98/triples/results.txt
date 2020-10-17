@@ -4,7 +4,7 @@
 (obtain||accuracies||has)
 (has||74.9 % and 74.9 %||ranks)
 (ranks||first in||both test sets)
-(Results||achieves||accuracies)
+(Results||achieve||accuracies)
 (accuracies||of||73.5 % and 73.6 %)
 (73.5 % and 73.6 %||among||single models)
 (single models||ranks||first)

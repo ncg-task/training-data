@@ -10,7 +10,8 @@
                   "need" : {
                     "single step of relational reasoning" : {
                       "to solve" : "all the bAbI tasks",
-                      "from sentence" : "Surprisingly , we find that we only need a single step of relational reasoning to solve all the bAbI tasks ."
+                      "from sentence" : "bAbI question - answering tasks
+Surprisingly , we find that we only need a single step of relational reasoning to solve all the bAbI tasks ."
                     }
                   },
                   "appears" : {
@@ -35,11 +36,12 @@
                         "perfectly solves" : {
                           "has" : "non-relational questions"
                         },
-                        "struggles" : {
+                        "struggle" : {
                           "with" : "single jump questions"
                         }
                       },
-                      "from sentence" : "Mirroring the results from the \" Sort - of - CLEVR \" dataset the MLP perfectly solves the non-relational questions , but struggle with even single jump questions and seem to lower bound the performance of the relational networks ."
+                      "from sentence" : "Pretty - CLEVR
+Mirroring the results from the \" Sort - of - CLEVR \" dataset the MLP perfectly solves the non-relational questions , but struggle with even single jump questions and seem to lower bound the performance of the relational networks ."
                     },
                     "relational network" : {
                       "solves" : "non-relational questions",

@@ -55,7 +55,9 @@
                   "for" : "ROUGE 1 , 2 and L recall"
                 }
               },
-              "from sentence" : "As summarized in , our SEASS outperforms all the baseline methods and achieves 29.21 , 9.56 and 25.51 for ROUGE 1 , 2 and L recall ."
+              "from sentence" : "DUC 2004
+As summarized in , our SEASS outperforms all the baseline methods and achieves 29.21 , 9.56 and 25.51 for ROUGE 1 , 2 and L recall ."
+
             }
           },
           "Compared to" : {

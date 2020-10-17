@@ -4,7 +4,7 @@ abstract
 We present a simple and accurate span - based model for semantic role labeling ( SRL ) .
 Our model directly takes into account all possible argument spans and scores them for each label .
 At decoding time , we greedily select higher scoring labeled spans .
-One advantage of our model is to allow us to design and use spanlevel features , that are difficult to use in tokenbased BIO tagging approaches .
+One advantage of our model is to allow us to design and use spanlevel features , thatare difficult to use in tokenbased BIO tagging approaches .
 Experimental results demonstrate that our ensemble model achieves the state - of - the - art results , 87.4 F1 and 87.0 F1 on the CoNLL - 2005 and 2012 datasets , respectively .
 Introduction
 Semantic Role Labeling ( SRL ) is a shallow semantic parsing task whose goal is to recognize the predicate - argument structure of each predicate .
@@ -18,7 +18,7 @@ Words at the beginning and inside of argument spans have the " B " and " I " tag
 While yielding high accuracies , this approach reconstructs argument spans from the predicted BIO tags instead of directly predicting the spans .
 Another approach is based on labeled span prediction .
 This approach scores each span with its label .
-One advantage of this approach is to allow us to design and use span - level features , that are difficult to use in BIO tagging approaches .
+One advantage of this approach is to allow us to design and use span - level features , thatare difficult to use in BIO tagging approaches .
 However , the performance has lagged behind that of the state - of - the - art BIO - based neural models .
 To fill this gap , this paper presents a simple and accurate span - based model .
 Inspired by recent span - based models in syntactic parsing and coreference resolution , our model directly scores all possible labeled spans based on span representations induced from neural networks .
@@ -40,7 +40,7 @@ Input : X = {w 1:T , p},
 Each labeled span i , j , r consists of word indices i and j in the sentence ( 1 ? i ? j ? T ) and a semantic role label r ?
 R.
 One simple method to predict Y is to select the highest scoring span ( i , j ) from all possible spans S for each label r ,
-( 1 ) Function SCORE r ( i , j ) returns areal value for each span ( i , j ) ?
+( 1 ) Function SCORE r ( i , j ) returns are al value for each span ( i , j ) ?
 S ( described in Section 2.2 in more detail ) .
 The number of possible spans S in the input sentence w 1:T is T ( T +1 )
 2
@@ -58,15 +58,15 @@ All the possible spans in this sentence are as follows , S w 1:4 = { ( 1 , 1 ) ,
 Among these candidates , we select the highest scoring span for each label .
 As a result , we can obtain correct labeled spans Y .
 Scoring Function
-As the scoring function for each span in Eq. 1 , we model normalized distribution overall possible spans S for each label r ,
-where function F ? returns areal value .
+As the scoring function for each span in Eq. 1 , we model normalized distribution over all possible spans S for each label r ,
+where function F ? returns are al value .
 We train the parameters ? of F ? on a training set ,
 To train the parameters ? of F ? , we minimize the cross - entropy loss function ,
 where function ?
 ( X , Y ) is a loss for each sample .
 Function F ?
 Function F ? in Eq. 2 consists of three types of functions ; the base feature function f base , the span feature function f span and the labeling function f label as follows ,
-Firstly , f base calculates abase feature vector ht for each word wt ? w 1:T . Then , from a sequence of the base feature vectors h 1:T , f span calculates a span feature vector h s fora span s = ( i , j ) .
+Firstly , f base calculates a base feature vector ht for each word wt ? w 1:T . Then , from a sequence of the base feature vectors h 1:T , f span calculates a span feature vector h s for a span s = ( i , j ) .
 Finally , using h s , f label calculates the score for the span s = ( i , j ) with a label r. Each function in Eqs. 4 , 5 and 6 can arbitrarily be defined .
 In Section 3 , we describe our functions used in this paper .
 Inference
@@ -89,8 +89,8 @@ As a precise description of this algorithm , we describe the pseudo code and its
 Network Architecture
 To compute the score for each span , we have introduced three functions ( f base , f span , f label ) in Section 2.3 .
 As an instantiation of each function , we use neural networks .
-This section describes our neural networks for each function and the overall network architecture .
-illustrates the overall architecture of our model .
+This section describes our neural networks for each function and the over all network architecture .
+illustrates the over all architecture of our model .
 The first component f base uses bidirectional LSTMs ( BiLSTMs ) to calculate the base features .
 From the base features , the second component f span extracts span features .
 Based on them , the final component f label calculates the score for each labeled span .
@@ -114,7 +114,7 @@ Each vector ht ?
 h 1:T has d hidden dimensions .
 We provide a detailed description of the stacked BiLSTMs in Appendix B.
 Span Feature Function
-From the base features induced by the BiLSTMs , we create the span feature representations , where the addition and subtraction features of the i - th and j- th hidden states are concatenated and used as the feature fora span s = ( i , j ) .
+From the base features induced by the BiLSTMs , we create the span feature representations , where the addition and subtraction features of the i - th and j- th hidden states are concatenated and used as the feature for a span s = ( i , j ) .
 The resulting vector h sis a 2d hidden dimensional vector .
 The middle part of shows an example of this process .
 For the span ( 3 , 5 ) , the span feature function f span receives the 3rd and 5th features ( h 3 and h 5 ) .
@@ -127,7 +127,7 @@ Taking a span representation h s as input , the labeling function f label return
 Specifically , we use the following labeling function ,
 where W ?
 R | R|2 d hidden has a row vector associated with each label r , and W [ r ] denotes the r-th row vector .
-As the result of the inner product of W [r ] and h s , we obtain the score fora span ( i , j ) with a label r.
+As the result of the inner product of W [r ] and h s , we obtain the score for a span ( i , j ) with a label r.
 The upper part of shows an example of this process .
 The span representation h s for the span s = ( 3 , 5 ) is created from addition and subtraction of h 3 and h 5 .
 Then , we calculate the inner product of h sand W. The score for the label A0 is 2.1 , and the score for the label A1 is 3.7 .
@@ -190,7 +190,7 @@ We evaluate F 1 scores only for the span boundary match , shown by .
 We regard a predicted boundary i , j , * as correct if it matches the gold annotation regardless of its label .
 On both datasets , the CRF - based models achieved better F1 than that of the span - based models .
 Also , compared with SENNA , ELMO yielded much better F1 by over 3.0 .
-This suggests that a factor of the overall SRL performance gain by ELMO is the improvement of the model ability to identify span boundaries .
+This suggests that a factor of the over all SRL performance gain by ELMO is the improvement of the model ability to identify span boundaries .
 Performance for Label Prediction
 We analyze labels of the predicted results .
 For labeled spans whose boundaries match the gold annotation , we evaluate the label accuracies .
@@ -279,7 +279,7 @@ A main difference is that while they model P ( r|i , j ) , we model P (i , j|r )
 In other words , while their model seeks to select an appropriate label for each span ( label selection ) , our model seeks to select appropriate spans for each label ( span selection ) .
 This point distinguishes between their model and ours .
 Frame Net span - based model For FrameNetstyle SRL , used a segmental RNN , combining bidirectional RNNs with semi-Markov CRFs .
-Their model computes span representations using BiLSTMs and learns a conditional distribution overall possible labeled spans of an input sequence .
+Their model computes span representations using BiLSTMs and learns a conditional distribution over all possible labeled spans of an input sequence .
 Although we can not compare our results with theirs , we can regard that our model is simpler and effective for PropBank - style SRL .
 Span - based Models in Other NLP Tasks
 In syntactic parsing , proposed an LSTM - based sentence segment embedding method named LSTM - Minus. ; incorporated the LSTM Minus into their parsing model and achieved the best results in constituency parsing .

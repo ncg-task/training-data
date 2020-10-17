@@ -41,8 +41,7 @@
                 }
               }
             }
-          },
-          "from sentence" : "The differences in F- score between the three versions of LSTM are not significant , all scores are close to 0.81 ."
+          }
         },
         "scores" : {
           "close to" : "0.81",

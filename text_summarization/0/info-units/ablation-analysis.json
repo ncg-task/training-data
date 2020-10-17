@@ -7,7 +7,7 @@
             "scalar training signal L g c" : {
               "for" : "generator training"
             },
-            " feature vector F ( m t )" : {
+            "feature vector F ( m t )" : {
               "for" : "goal tracker"
             }
           },

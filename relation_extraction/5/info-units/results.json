@@ -11,7 +11,9 @@
                 }  
               }
             },
-            "from sentence" : "We observe that our GCN model Our Model ( C - GCN ) 84.8 * 76.5 * outperforms all dependency - based models by at least 1.6 F 1 ."
+            "from sentence" : "Results on the TACRED Dataset
+We observe that our GCN model Our Model ( C - GCN ) 84.8 * 76.5 * outperforms all dependency - based models by at least 1.6 F 1 ."
+
           },
           "using" : {
             "contextualized word representations" : {
@@ -100,7 +102,9 @@
                   "outperforms" : "all existing dependency - based neural models"
                 }
               },
-              "from sentence" : "We find that under the conventional with- entity evaluation , our C - GCN model outperforms all existing dependency - based neural models on this sep - arate dataset ."
+              "from sentence" : "Results on the SemEval Dataset
+We find that under the conventional with- entity evaluation , our C - GCN model outperforms all existing dependency - based neural models on this sep - arate dataset ."
+
             }
           },
           "by properly incorporating" : {

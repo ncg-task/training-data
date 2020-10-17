@@ -23,8 +23,8 @@
 172	127	139	performances
 172	155	162	tend to
 172	163	170	degrade
-172	89	91	as
-172	52	58	layers
+172	171	173	as
+172	174	180	layers
 172	181	184	get
 172	185	191	deeper
 173	25	29	with
@@ -33,11 +33,6 @@
 173	60	80	residual connections
 173	83	87	have
 173	88	106	higher performance
-174	131	147	dense connection
-174	41	43	is
-174	151	165	more effective
-174	166	170	than
-174	175	194	residual connection
 163	8	15	removed
 163	16	33	dense connections
 163	34	38	over
@@ -68,7 +63,7 @@
 170	81	97	soft - alignment
 170	98	100	is
 170	101	124	significantly effective
-170	52	54	in
+170	125	127	in
 170	128	154	semantic sentence matching
 174	15	25	connection
 174	26	33	between
@@ -77,6 +72,11 @@
 174	44	53	essential
 174	84	92	endowing
 174	93	120	more representational power
+174	131	147	dense connection
+174	148	150	is
+174	151	165	more effective
+174	166	170	than
+174	175	194	residual connection
 113	3	14	initialized
 113	15	29	word embedding
 113	30	34	with
@@ -84,7 +84,7 @@
 113	156	171	word embeddings
 113	172	175	for
 113	180	207	out - of - vocabulary words
-113	3	14	initialized
+113	213	224	initialized
 113	225	233	randomly
 117	4	11	dropout
 117	16	29	applied after
@@ -115,6 +115,7 @@
 122	44	46	of
 122	47	51	0.85
 122	52	56	when
+122	61	73	dev accuracy
 122	74	90	does not improve
 123	4	11	weights
 123	12	18	except
@@ -131,16 +132,16 @@
 124	55	58	for
 124	59	71	each dataset
 124	74	76	35
-124	55	58	for
+124	77	80	for
 124	81	85	SNLI
 124	88	90	55
-124	55	58	for
+124	91	94	for
 124	95	103	MultiNLI
 124	106	108	25
-124	55	58	for
+124	109	112	for
 124	113	132	Quora question pair
 124	137	139	50
-124	55	58	for
+124	140	143	for
 124	144	150	TrecQA
 114	8	28	randomly initialized
 114	29	48	character embedding
@@ -148,7 +149,7 @@
 114	56	66	16d vector
 114	71	80	extracted
 114	81	109	32d character representation
-114	49	53	with
+114	110	114	with
 114	117	138	convolutional network
 115	0	3	For
 115	8	44	densely - connected recurrent layers
@@ -165,7 +166,7 @@
 119	82	93	autoencoder
 119	94	98	with
 119	101	113	dropout rate
-119	75	77	of
+119	114	116	of
 119	117	120	0.2
 116	3	6	set
 116	7	24	1000 hidden units
@@ -231,7 +232,7 @@
 136	29	52	encoding - based method
 136	58	64	obtain
 136	69	85	best performance
-136	22	24	of
+136	86	88	of
 136	89	95	86.5 %
 136	96	103	without
 136	108	141	co-attention and exact match flag
@@ -250,21 +251,21 @@
 139	126	142	LM - Transformer
 139	143	152	which has
 139	153	168	85 m parameters
-139	24	28	with
+139	169	173	with
 139	174	190	fewer parameters
 139	44	46	of
 139	194	198	61 m
-144	12	14	on
+145	23	25	on
 145	30	57	Quora question pair dataset
 147	3	11	obtained
 147	12	22	accuracies
 147	23	25	of
 147	26	45	90.15 % and 91.30 %
-147	7	9	in
+147	46	48	in
 147	49	76	single and ensemble methods
 147	94	104	surpassing
 147	109	146	previous state - of - the - art model
-147	23	25	of
+147	147	149	of
 147	150	154	DIIN
 148	62	87	TrecQA and SelQA datasets
 150	14	27	proposed DRCN

@@ -8,15 +8,15 @@
 151	57	63	before
 151	68	74	target
 151	96	101	after
-151	68	74	target
-151	16	21	named
-151	22	24	AC
-151	31	39	averages
-151	44	56	word vectors
+151	106	112	target
+151	83	95	word vectors
 152	4	14	second one
+152	17	22	named
+152	23	25	AC
+152	28	36	averages
 152	61	73	full context
 153	0	3	SVM
-153	17	19	on
+153	63	65	on
 153	66	122	surface features , lexicon features and parsing features
 154	0	8	Rec - NN
 154	14	26	firstly uses
@@ -31,7 +31,7 @@
 154	125	145	semantic composition
 154	146	150	with
 154	151	164	Recursive NNs
-154	41	44	for
+154	165	168	for
 154	169	189	sentiment prediction
 155	0	8	TD- LSTM
 155	14	18	uses
@@ -42,16 +42,16 @@
 155	103	109	target
 158	0	13	TD - LSTM - A
 158	19	28	developed
-158	0	9	TD - LSTM
+158	29	38	TD - LSTM
 158	50	54	have
 158	55	68	one attention
-158	55	57	on
+158	69	71	on
 158	76	83	outputs
 160	0	6	MemNet
 160	12	19	applies
 160	20	29	attention
 160	30	44	multiple times
-160	27	29	on
+160	45	47	on
 160	52	67	word embeddings
 160	78	102	last attention 's output
 160	106	112	fed to
@@ -74,7 +74,7 @@
 32	4	17	memory slices
 32	27	48	weighted according to
 32	55	73	relative positions
-32	46	48	to
+32	74	76	to
 32	81	87	target
 35	0	13	Our framework
 35	14	24	introduces
@@ -83,11 +83,11 @@
 35	49	79	multiple - attention mechanism
 35	80	93	to synthesize
 35	94	112	important features
-35	14	16	in
+35	113	115	in
 35	116	145	difficult sentence structures
 33	16	19	pay
 33	20	39	multiple attentions
-33	36	38	on
+33	40	42	on
 33	47	73	position - weighted memory
 33	78	97	nonlinearly combine
 33	102	119	attention results
@@ -97,11 +97,11 @@
 34	19	26	softmax
 34	27	29	on
 34	34	40	output
-34	20	22	of
+34	41	43	of
 34	48	59	GRU network
 34	60	70	to predict
 34	75	84	sentiment
-34	27	29	on
+34	85	87	on
 34	92	98	target
 2	42	67	Aspect Sentiment Analysis
 167	29	36	our RAM

@@ -82,16 +82,14 @@
         "weights" : {
           "of" : {
             "hidden units" : {
-              "initialized using" : "orthogonal weights"  
+              "initialized using" : "orthogonal",
+			  "from sentence" : "The weights of the hidden units are initialized using orthogonal"
             }
-          },
-          "from sentence" : "The weights of the hidden units are initialized using orthogonal
-weights ] , and the text embedding layer is initialized from pretrained word - embedding vectors ."
-
+          }
         },
         "text embedding layer" : {
           "initialized from" : "pretrained word - embedding vectors",
-          "from sentence" : "weights ] , and the text embedding layer is initialized from pretrained word - embedding vectors ."
+		  "from sentence" : "weights ] , and the text embedding layer is initialized from pretrained word - embedding vectors ."
         }
       }
     }

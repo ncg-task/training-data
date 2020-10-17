@@ -105,7 +105,7 @@ play + ##ing .
 Finally , we add the [ CLS ] and [ SEP ] tokens at the appropriate positions .
 C. Proposed Architecture
 We build a simple architecture with just a dropout regularization and a softmax classifier layers on top of pretrained BERT layer to demonstrate that BERT can produce great results even without any sophisticated task - specific architecture .
-the overall architecture of our model .
+the over all architecture of our model .
 There are four main stages .
 The first is the proprocessing step as described earlier .
 Then we compute the sequence embedding from BERT .

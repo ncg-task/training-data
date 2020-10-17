@@ -10,4 +10,4 @@
 (context word||with||maximum attention weight)
 (maximum attention weight||has||greatest impact)
 (greatest impact||on||sentiment prediction)
-(sentiment prediction||of||input service)
+(sentiment prediction||of||input sentence)

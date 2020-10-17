@@ -4,14 +4,12 @@
       "tokenize" : {
         "MRC dataset" : {
           "with" : "spa Cy 2.0.13"
-        },
-        "from sentence" : "We tokenize the MRC dataset with spa Cy 2.0.13 , manipulate WordNet 3.0 with NLTK 3.3 , and implement KAR with TensorFlow 1.11.0 ."
+        }
       },
       "manipulate" : {
         "WordNet 3.0" : {
           "with" : "NLTK 3.3"
-        },
-        "from sentence" : "We tokenize the MRC dataset with spa Cy 2.0.13 , manipulate WordNet 3.0 with NLTK 3.3 , and implement KAR with TensorFlow 1.11.0 ."
+        }
       },
       "implement" : {
         "KAR" : {

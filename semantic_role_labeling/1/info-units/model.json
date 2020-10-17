@@ -1,15 +1,16 @@
 {
   "has" : {
     "Model" : {
-      "propose" : ["linguistically - informed self - attention ( LISA )", {"from sentence" : "In response , we propose linguistically - informed self - attention ( LISA ) : a model that combines multi-task learning with stacked layers of multi-head self - attention ; the model is trained to : ( 1 ) jointly predict parts of speech and predicates ; ( 2 ) perform parsing ; and ( 3 ) attend to syntactic parse parents , while ( 4 ) assigning semantic role labels ."}],
+      "propose" : "linguistically - informed self - attention ( LISA )",
       "trained to" : [
         {"jointly predict" : {
           "has" : "parts of speech and predicates"}}, 
-          "perform parsing", {"attend" : {"to" : "syntactic parse parents"}}, {"assigning" : {"has" : "semantic role labels"}}, {"from sentence" : "In response , we propose linguistically - informed self - attention ( LISA ) : a model that combines multi-task learning with stacked layers of multi-head self - attention ; the model is trained to : ( 1 ) jointly predict parts of speech and predicates ; ( 2 ) perform parsing ; and ( 3 ) attend to syntactic parse parents , while ( 4 ) assigning semantic role labels ."}],
-      "trained" : {
+          "perform parsing", {"attend" : {"to" : "syntactic parse parents"}}, {"assigning" : {"has" : "semantic role labels"}}, 
+		  {"from sentence" : "In response , we propose linguistically - informed self - attention ( LISA ) : a model that combines multi-task learning with stacked layers of multi-head self - attention ; the model is trained to : ( 1 ) jointly predict parts of speech and predicates ; ( 2 ) perform parsing ; and ( 3 ) attend to syntactic parse parents , while ( 4 ) assigning semantic role labels ."}],
+      "has" : {
         "end - to - end" : {
           "has" : {
-            "ealier layers" : {
+            "earlier layers" : {
               "trained to predict" : "prerequisite parts - of - speech and predicates"
             },
             "latter" : {

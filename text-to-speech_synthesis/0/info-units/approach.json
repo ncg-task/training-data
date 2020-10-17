@@ -35,8 +35,7 @@ Specifically , we train a teacher model to generate the phoneme sequence as well
               "to get" : "higher accuracy"
             }
           }
-        },
-        "from sentence" : "Second , we train a variety of models ( CNN , RNN and Transformer ) for ensemble to get higher accuracy , and transfer the knowledge of the ensemble models to a light - weight model that is suitable for online deployment , again by knowledge distillation ."
+        }
       },
       "transfer" : {
         "knowledge of the ensemble models" : {

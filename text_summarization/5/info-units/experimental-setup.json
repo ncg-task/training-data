@@ -20,8 +20,7 @@
       "dimensions" : {
         "word embeddings and RNN" : {
           "are both" : "500"
-        },
-        "from sentence" : "Specifically , the dimensions of word embeddings and RNN are both 500 , and the encoder and decoder structures are two - layer bidirectional Long Short Term Memory Networks ( LSTMs ) ."
+        }
       },
       "has" : {
         "encoder and decoder structures" : {

@@ -9,7 +9,7 @@ The model uses a hidden variable to weigh the semantic aspects in the context of
 Our experiments demonstrate the potential of our approach to characterize these semantic aspects , and the strength of the hidden variable based approach .
 The model outperforms the stateof - the - art approaches and achieves best results on a publicly available dataset .
 Introduction
-Narratives area fundamental part of human language and culture .
+Narratives are a fundamental part of human language and culture .
 They serve as vehicles to share experiences , information and goals .
 For these reasons , automatically understanding stories is an interesting but challenging task for Computational Linguists .
 Story comprehension involves not only an array of NLP capabilities , but also some commonsense knowledge and an understanding of normative social behavior .
@@ -70,7 +70,7 @@ Wesley was scolded describes a more coherent sequence of events , as compared to
 Wesley bit her hand ?
 Wesley got a cookie Prior work in script - learning attempts to model such prototypical sequence of events ( usually captured through verbs ) .
 For this task , we wanted to model events at an abstraction level that would be generalizable and yet semantically meaningful .
-recently proposed a neural SemLM approach , to model such sequence of events using a language model of FrameNet frames that are evoked in the given text .
+recently proposed a neural SemLM approach , to model such sequence of events using a language model of FrameNet frames thatare evoked in the given text .
 It represents an event using the corresponding predicate frame and its sense , obtained using a Sematic Role Labeler .
 It also extends the frame definition to include explicit discourse markers ( such as but , and ) since they model relationships between frames .
 For example , inure 1 , the SemLM representation for the last sentence of the context is ' Get.01 - and - bit.01 ' .
@@ -96,12 +96,12 @@ The sentiment polarity of a word was determined by a look - up from pre-trained 
 Thus , the L length context can now be viewed as a sequence of its segment 's sentiments .
 Lastly , we learn sentiment trajectories inform of N- gram language models from an unannotated corpus of short stories ( Sec. 3.1 ) that learn : ( i ) P ( S( ending ) | S( climax ) , S( body ) , S( beginning ) ) ; ( ii ) P ( S( ending ) | S( climax ) , S( body ) ) ; and ( iii ) P ( S( ending ) | S ( climax ) ) .
 The process described above learns typical sentiment trajectories over narrative - segments .
-However , it does not model a story 's overall sentiment ( i.e. whether it is a happy or a sad story , in general ) .
+However , it does not model a story 's over all sentiment ( i.e. whether it is a happy or a sad story , in general ) .
 To capture this notion , we train another language model to learn P ( S( ending ) | S( context ) ) , where S( context ) is the sentiment of the full context ( without segmentation ) .
 Finally , for each ending option , we extract features whose values are the four conditional probabilities described above .
 As before we also consider four comparative binary features .
 Topical Consistency :
-This aspect is motivated by the idea that stories are topically cohesive , and in atypical story , new topics ( concepts , entities or ideas ) are not introduced towards the end because it does not allow the story - writer enough narrative space and time to develop and describe them .
+This aspect is motivated by the idea that stories are topically cohesive , and in a typical story , new topics ( concepts , entities or ideas ) are not introduced towards the end because it does not allow the story - writer enough narrative space and time to develop and describe them .
 We capture the notion of topic of a sentence using topic - words ( the nouns and verbs appearing in it ) .
 For each option , we first align each of its topic - words with the most similar topic - word in one of the context - sentences , while defining the alignment score as this similarity value .
 We measure similarity between two words using the cosine similarity of their vector space representations ( using pretrained GloVe .
@@ -209,9 +209,9 @@ Also , we can see that the topic of both the options is consistent with the stor
 Similarly , the second row describes the story of Pam being proud of her yard work .
 There is a striking sentimental contrast between the two options ( upset versus satisfied ) , and the model relies primarily on sentiments ( dark grey ) .
 The last row , describes the story of Maria making candy apples .
-The incorrect ending introduces anew entity / idea , apple pie , resulting in topical incoherence of this option with the rest of the story .
+The incorrect ending introduces a new entity / idea , apple pie , resulting in topical incoherence of this option with the rest of the story .
 The model relies primarily on topic ( black ) and events ( light grey ) .
-Reliance on events makes sense because it is likely fora person to enjoy what they fondly cook .
+Reliance on events makes sense because it is likely for a person to enjoy what they fondly cook .
 The model gave a weight of 40 % to the topical aspect , which is high as compared to its average weight across the dataset .
 Qualitative Results
 Context
@@ -231,13 +231,13 @@ Johnny did not ask Anita out again .
 Johnny wanted to ask Anita out again . :
 Examples of stories incorrectly predicted by our model .
 than making hard assumptions .
-For instance , our language model of overall narrative sentiments indicates that while happy stories mostly have happy endings ( with a conditional probability of 74 % ) , the reverse is not true .
-In particular , sad stories ( with overall negative sentiments ) end with a negative sentiment in only 52 % of the cases .
+For instance , our language model of over all narrative sentiments indicates that while happy stories mostly have happy endings ( with a conditional probability of 74 % ) , the reverse is not true .
+In particular , sad stories ( with over all negative sentiments ) end with a negative sentiment in only 52 % of the cases .
 We made similar observations regarding sentimental conformity between endings and climaxes .
-Our features ' superior performance can also be attributed to their deeper understanding of not just overall sentiments but also their trajectories .
+Our features ' superior performance can also be attributed to their deeper understanding of not just over all sentiments but also their trajectories .
 Our language models indicate that stories that exhibit a positive sentiment in all three narrative segments ( beginning , body , and climax ) have very high chance of happy endings ( 83 % ) .
 Similarly , stories with negative sentiments in the three segments also have a fair chance of having sad endings ( 60 % ) .
-This is different from stories with an overall negative sentiment , in which case the sentiment maybe exhibited in only certain narrative segments .
+This is different from stories with an over all negative sentiment , in which case the sentiment maybe exhibited in only certain narrative segments .
 The language models also identify a pattern of hopeful stories , in which the sentiment begins as negative but moves towards positive in the body and climax , resulting in mostly happy endings ( ? 70 % ) .
 This was not true for the reverse case : pessimistic stories with positive beginning but negative body ( and / or climax ) were equally likely to have positive or negative endings ( 52 % ) .
 Supplementary material contains sample stories for each of the above observations . , using graphs or neural approaches .
@@ -295,12 +295,12 @@ Textual Coherence :
 Our work is also related to the study of coherence in discourse .
 A significant amount of prior work is primarily based on the Centering Theory Framework and focus on entities and their syntactic roles .
 Other approaches measure coherence using topic drift within a domain , co- occurrence of words , syntactic patterns and discourse relations .
-The nature of the tasks addressed by these works ( such as determining the correct arrangement order fora set of sentences ) makes them focus on learning sequential order of the various discourse components ( entities , ideas , etc . ) .
+The nature of the tasks addressed by these works ( such as determining the correct arrangement order for a set of sentences ) makes them focus on learning sequential order of the various discourse components ( entities , ideas , etc . ) .
 Our goal , instead , is to choose between alternatives of discourse components themselves ( and not just their order ) to produce a consistent story .
 Conclusion
 Story comprehension is a complex Natural Language Understanding task involving linguistic intelligence as well as a semantic and social knowledge of the real world .
 This paper studies story comprehension from the perspective of learning what is likely to happen next in a story .
 We present a model that given a short story , predicts its correct ending .
-It incorporates three aspects of storyunderstanding , that are based on an analysis of the events , sentiments and topics described in the story .
+It incorporates three aspects of storyunderstanding , thatare based on an analysis of the events , sentiments and topics described in the story .
 While this is the best - performing model till date on this task , our analysis indicates a need for even deeper analysis of human behavior and societal norms to further improve our understanding .
 This work emphasizes that there are multiple aspects to story understanding , which future research can build upon .

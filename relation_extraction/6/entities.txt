@@ -6,7 +6,7 @@
 99	86	99	loss function
 100	3	6	use
 100	10	34	early stopping criterion
-100	32	34	on
+100	35	37	on
 100	42	57	validation data
 100	58	70	to determine
 100	75	100	number of training epochs
@@ -48,22 +48,20 @@
 20	111	116	label
 20	117	119	of
 20	124	139	target relation
-22	4	16	architecture
-22	17	21	uses
-22	25	45	LSTM - based encoder
-22	46	62	to jointly learn
-22	63	78	representations
-22	79	82	for
-22	83	96	all relations
-22	51	53	in
-22	102	117	single sentence
+5	4	16	architecture
+5	17	21	uses
+5	25	45	LSTM - based encoder
+5	46	62	to jointly learn
+5	63	78	representations
+5	79	82	for
+5	83	96	all relations
+5	97	99	in
+5	102	117	single sentence
 23	87	90	are
 23	91	99	combined
-23	4	18	representation
-23	19	21	of
+23	4	21	representation of
 23	26	41	target relation
-23	46	61	representations
-23	19	21	of
+23	46	64	representations of
 23	69	86	context relations
 23	100	107	to make
 23	112	128	final prediction
@@ -78,14 +76,14 @@
 113	38	45	account
 113	46	53	perform
 113	54	61	similar
-113	35	37	to
+113	62	64	to
 113	69	78	baselines
-113	13	15	at
+113	79	81	at
 113	86	109	smallest recall numbers
 113	116	121	start
-113	35	37	to
+113	122	124	to
 113	125	143	positively deviate
-113	13	15	at
+113	154	156	at
 113	157	176	higher recall rates
 114	20	36	ContextAtt model
 114	37	45	performs
@@ -121,6 +119,7 @@
 121	55	78	context - enabled model
 121	79	91	demonstrates
 121	96	112	most improvement
-121	13	15	on
+121	113	115	on
+121	116	125	precision
 121	153	163	useful for
 121	164	182	taxonomy relations

@@ -4,18 +4,19 @@
 196	52	54	by
 196	59	71	left context
 196	72	76	with
-196	21	27	aspect
+196	77	83	aspect
 196	92	105	right context
-196	72	76	with
-196	21	27	aspect
+196	106	110	with
+196	111	117	aspect
 196	125	132	employs
 196	133	142	two LSTMs
 197	4	22	last hidden states
 197	23	25	of
+197	30	39	two LSTMs
 197	44	64	finally concatenated
 197	65	79	for predicting
 197	84	102	sentiment polarity
-197	23	25	of
+197	103	105	of
 197	110	116	aspect
 198	0	11	ATAE - LSTM
 198	18	26	attaches
@@ -28,7 +29,7 @@
 198	132	151	attention mechanism
 198	152	158	to get
 198	163	186	sentence representation
-198	103	106	for
+198	187	190	for
 198	191	211	final classification
 199	0	7	Mem Net
 199	8	12	uses
@@ -75,7 +76,7 @@
 210	121	133	output layer
 212	0	10	AEN - BERT
 212	11	13	is
-212	0	3	AEN
+212	14	17	AEN
 212	18	22	with
 212	23	37	BERT embedding
 184	130	143	to initialize
@@ -91,7 +92,7 @@
 185	41	44	for
 185	45	50	GloVe
 185	55	58	768
-185	41	44	for
+185	59	62	for
 185	63	67	BERT
 186	4	10	number
 186	11	13	of
@@ -99,9 +100,9 @@
 186	35	41	set to
 186	42	45	300
 186	56	72	output dimension
-186	11	13	of
+186	73	75	of
 186	76	85	GCN layer
-186	35	41	set to
+186	89	95	set to
 186	96	99	600
 187	4	17	weight matrix
 187	18	20	of
@@ -113,7 +114,7 @@
 188	12	36	last fully connect layer
 188	67	90	randomly initialized by
 188	93	133	uniform distribution U ( ? 0.01 , 0.01 )
-189	3	6	add
+189	17	20	add
 189	21	38	L2-regularization
 189	39	41	to
 189	46	70	last fully connect layer
@@ -232,7 +233,7 @@
 223	44	62	Restaurant dataset
 223	69	79	worse than
 223	80	83	RAN
-223	41	43	on
+223	84	86	on
 223	87	101	Laptop dataset
 225	0	3	AEN
 225	7	27	slightly better than
@@ -245,24 +246,24 @@
 229	80	84	gain
 229	87	110	significant improvement
 229	111	122	compared to
-229	15	25	two models
+229	127	137	two models
 229	138	145	without
-229	59	79	position information
+229	146	166	position information
 224	0	13	Compared with
 224	14	26	RAM and PBAN
-224	33	52	overall performance
-224	53	55	of
-224	56	59	TSN
-224	63	79	not perform well
-224	80	87	on both
-224	88	125	Restaurant dataset and Laptop dataset
+224	33	53	over all performance
+224	54	56	of
+224	57	60	TSN
+224	64	80	not perform well
+224	81	88	on both
+224	89	126	Restaurant dataset and Laptop dataset
 227	0	9	Comparing
 227	14	21	results
 227	22	24	of
 227	25	74	SDGCN - A w/o position and SDGCN - G w/o position
 227	77	100	SDGCN - A and SDGCN - G
 227	121	128	observe
-227	27	30	GCN
+227	138	141	GCN
 227	142	152	built with
 227	153	170	global - relation
 227	174	194	slightly higher than
@@ -287,13 +288,13 @@
 232	91	109	absolute increases
 232	110	112	of
 232	113	130	1.09 % and 1.86 %
-232	100	102	in
+232	131	133	in
 232	134	165	accuracy and Macro - F1 measure
 232	185	190	gains
-232	91	109	absolute increases
-232	110	112	of
+232	191	209	absolute increases
+232	210	212	of
 232	213	230	1.42 % and 2.03 %
-232	100	102	in
-232	134	165	accuracy and Macro - F1 measure
-232	41	43	on
+232	231	233	in
+232	234	265	accuracy and Macro - F1 measure
+232	279	281	on
 232	286	300	Laptop dataset

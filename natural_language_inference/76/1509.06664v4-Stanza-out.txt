@@ -25,21 +25,21 @@ Bowman et al. 's LSTM encodes the premise and hypothesis as dense fixed - length
 In contrast , we are proposing an attentive neural network that is capable of reasoning over entailments of pairs of words and phrases by processing the hypothesis conditioned on the premise .
 Our contributions are threefold : ( i ) We present a neural model based on LSTMs that reads two sentences in one go to determine entailment , as opposed to mapping each sentence independently into a semantic space ( 2.2 ) , ( ii ) We extend this model with a neural word - by - word attention mechanism to encourage reasoning over entailments of pairs of words and phrases ( 2.4 ) , and ( iii ) We provide a detailed qualitative analysis of neural attention for RTE ( 4.1 ) .
 Our benchmark LSTM achieves an accuracy of 80.9 % on SNLI , outperforming a simple lexicalized classifier tailored to RTE by 2.7 percentage points .
-An extension with word - by - word neural attention surpasses this strong benchmark LSTM result by 2.6 percentage points , setting anew state - of - the - art accuracy of 83.5 % for recognizing entailment on SNLI .
+An extension with word - by - word neural attention surpasses this strong benchmark LSTM result by 2.6 percentage points , setting a new state - of - the - art accuracy of 83.5 % for recognizing entailment on SNLI .
 METHODS
 In this section we discuss LSTMs ( 2.1 ) and describe how they can be applied to RTE ( 2.2 ) .
 We introduce an extension of an LSTM for RTE with neural attention ( 2.3 ) and word - by - word attention ( 2.4 ) .
 Finally , we show how such attentive models can easily be used for attending both ways : over the premise conditioned on the hypothesis and over the hypothesis conditioned on the premise ( 2.5 ) .
 LSTMS
 Recurrent neural networks ( RNNs ) with long short - term memory ( LSTM ) units have been successfully applied to a wide range of NLP tasks , such as machine translation , constituency parsing , language modeling and recently .
-LSTMs encompass memory cells that can store information fora long period of time , as well as three types of gates that control the flow of information into and out of these cells : input gates ( Eq. 2 ) , forget gates ( Eq. 3 ) and output gates ( Eq. 4 ) .
+LSTMs encompass memory cells that can store information for a long period of time , as well as three types of gates that control the flow of information into and out of these cells : input gates ( Eq. 2 ) , forget gates ( Eq. 3 ) and output gates ( Eq. 4 ) .
 Given an input vector x tat time step t , the previous output h t?1 and cell state c t ?1 , an LSTM with hidden size k computes the next output ht and cell state ct as
 where
 biases that parameterize the gates and transformations of the input , ?
 denotes the element - wise application of the sigmoid function and the element - wise multiplication of two vectors .
 RECOGNIZING TEXTUAL ENTAILMENT WITH LSTMS
 LSTMs can readily be used for RTE by independently encoding the premise and hypothesis as dense vectors and taking their concatenation as input to an MLP classifier .
-This demonstrates that LSTMs can learn semantically rich sentence representations that are suitable for determining textual entailment .
+This demonstrates that LSTMs can learn semantically rich sentence representations thatare suitable for determining textual entailment .
 CONDITIONAL ENCODING
 In contrast to learning sentence representations , we are interested in neural models that read both sentences to determine entailment , thereby reasoning over entailments of pairs of words and phrases .
 shows the high - level structure of this model .
@@ -75,7 +75,7 @@ For determining whether one sentence entails another it can be a good strategy t
 To encourage such behavior we employ neural word - by - word attention similar to , Hermann et al. and .
 The difference is that we do not use attention to generate words , but to obtain a sentence - pair encoding from fine - grained reasoning via soft - alignment of words and phrases in the premise and hypothesis .
 In our case , this amounts to attending over the first LSTM 's output vectors of the premise while the second LSTM processes the hypothesis one word at a time , thus generating attention weight - vectors ?
-t overall output vectors of the premise for every word x t with t ? ( L + 1 , N ) in the hypothesis .
+t over all output vectors of the premise for every word x t with t ? ( L + 1 , N ) in the hypothesis .
 This can be modeled as follows :
 Note that rt is dependent on the previous attention representation r t?1 to inform the model about what was attended over in the previous step ( see .
 As in the previous section , the final sentence - pair representation is obtained from a non-linear combination of the last attention - weighted representation of the premise ( here based on the last word of the hypothesis ) r N and the last output vector using
@@ -124,7 +124,7 @@ Note that interpretations based on attention weights have to betaken with care s
 In the following we visualize and discuss the attention patterns of the presented attentive models .
 For each attentive model we hand - picked examples from ten randomly drawn samples of the validation set .
 Attention shows to what extent the attentive model focuses on contextual representations of the premise after both LSTMs processed the premise and hypothesis respectively .
-Note how the model pays attention to output vectors of words that are semantically coherent with the premise ( " riding " and " rides " , " animal " and " camel " , 2 a ) or in contradiction , as caused by a single word ( " blue " vs. " pink " , 2 b ) or multiple words ( " swim " and " lake " vs. " frolicking " and " grass " , 2 c ) .
+Note how the model pays attention to output vectors of words thatare semantically coherent with the premise ( " riding " and " rides " , " animal " and " camel " , 2 a ) or in contradiction , as caused by a single word ( " blue " vs. " pink " , 2 b ) or multiple words ( " swim " and " lake " vs. " frolicking " and " grass " , 2 c ) .
 Interestingly , the model shows contextual understanding by not attending over " yellow " , the color of the toy , but " pink " , the color of the coat .
 However , for more involved examples with longer premises we found that attention is more uniformly distributed ( 2 d ) .
 This suggests that conditioning attention only on the last output has limitations when multiple words need to be considered for deciding the RTE class .
@@ -139,7 +139,7 @@ In such cases , the model seems to backup to attending over function words , and
 CONCLUSION
 In this paper , we show how the state - of - the - art in recognizing textual entailment on a large , humancurated and annotated corpus , can be improved with general end - to - end differentiable models .
 Our results demonstrate that LSTM recurrent neural networks that read pairs of sequences to produce a final representation from which a simple classifier predicts entailment , outperform both a neural baseline as well as a classifier with hand - engineered features .
-Extending these models with attention over the premise provides further improvements to the predictive abilities of the system , resulting in anew state - of - the - art accuracy for recognizing entailment on the Stanford Natural Language Inference corpus .
+Extending these models with attention over the premise provides further improvements to the predictive abilities of the system , resulting in a new state - of - the - art accuracy for recognizing entailment on the Stanford Natural Language Inference corpus .
 The models presented here are general sequence models , requiring no appeal to Natural Languagespecific processing beyond tokenization , and are therefore a suitable target for transfer learning through pre-training the recurrent systems on other corpora , and conversely , applying the models trained on this corpus to other entailment tasks .
 Future work will focus on such transfer learning tasks , as well as scaling the methods presented hereto larger units of text ( e.g. paragraphs and entire documents ) using hierarchical attention mechanisms .
 Additionally , it would be worthwhile exploring how other , more structured forms of attention ( e.g. , or other forms of differentiable memory ( e.g. could help improve performance on RTE over the neural models presented in this paper .

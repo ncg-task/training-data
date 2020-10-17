@@ -12,7 +12,7 @@ It aims at identifying the sentiment polarity ( e.g. positive , negative , neutr
 For example , given a sentence " great food but the service was dreadful " the sentiment polarity for aspects " food " and " service " are positive and negative respectively .
 Aspect sentiment classification overcomes one limitation of document level sentiment classification when multiple aspects appear in one sentence .
 In our previous example , there are two aspects and the general sentiment of the whole sentence is mixed with positive and negative polarity .
-If we ignore the aspect information , it is hard to determine the polarity fora specified target .
+If we ignore the aspect information , it is hard to determine the polarity for a specified target .
 Such error commonly exists in the general sentiment classification tasks .
 In one recent work , Jiang et al. manually evaluated a Twitter sentiment classifier and showed that 40 % of sentiment classification errors are because of not considering targets .
 Many methods have been proposed to deal with aspect level sentiment classification .
@@ -64,7 +64,7 @@ Problem Definition
 In this aspect level sentiment classification problem , we are given a sentence s = [ w 1 , w 2 , ... , w i , .. , w j , ... , w n ] and an aspect target t = [ w i , w i + 1 , ... , w i +m ?1 ] .
 The aspect target could be a single word or along phrase .
 The goal is to classify the sentiment polarity of the aspect target in the sentence .
-The overall architecture of our neural model is shown in .
+The over all architecture of our neural model is shown in .
 It is mainly composed of four components : word embedding , Bidirectional - Long short - term memory ( Bi - LSTM ) , Attention - over - Attention module and the final prediction .
 Word Embedding Given a sentence s = [ w 1 , w 2 , ... , w i , .. , w j , ... , w n ] with length n and a target t = [ w i , w i + 1 , ... , w i +m ?1 ] with length m , we first map each word into a low - dimensional real - value vector , called word embedding .
 For each word w i , we can get a vector vi ?

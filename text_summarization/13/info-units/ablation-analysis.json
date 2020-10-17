@@ -6,18 +6,20 @@
           "compute" : {
             "entropy numbers" : {
               "by averaging" : {
-                "overall generated words" : {
+                "over all generated words" : {
                   "in" : "validation set"
                 }
               }
             },
-            "from sentence" : "We compute the entropy numbers by averaging overall generated words in the validation set ."
+            "from sentence" : "Sharpness of Attention
+We compute the entropy numbers by averaging over all generated words in the validation set ."
+
           },
           "note" : {
             "entropy of C2F" : {
               "is" : "very low"
             },
-            "from sentence" : "We note that the entropy of C2F is very low ( before taking the argmax attest time ) ."
+            "from sentence" : "We note that the entropy of C2F is very low ( before taking the argmax at test time ) ."
           },
           "has" : {
             "model" : {
@@ -42,7 +44,9 @@
                   "averaging" : "all of the encoder hidden states"
                 }
               },
-              "from sentence" : "In HIER , we observe that the attention becomes washed out ( in accord with its high entropy ) and is essentially averaging all of the encoder hidden states ."
+              "from sentence" : "Attention Heatmaps
+In HIER , we observe that the attention becomes washed out ( in accord with its high entropy ) and is essentially averaging all of the encoder hidden states ."
+
             },
             "C2 F" : {
               "get" : {

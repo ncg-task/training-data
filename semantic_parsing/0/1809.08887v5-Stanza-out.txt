@@ -2,11 +2,11 @@ title
 Spider : A Large - Scale Human - Labeled Dataset for Complex and Cross - Domain Semantic Parsing and Text - to - SQL Task
 abstract
 We present Spider , a large - scale , complex and cross-domain semantic parsing and textto - SQL dataset annotated by 11 college students .
-It consists of 10,181 questions and 5,693 unique complex SQL queries on 200 databases with multiple tables , covering 138 different domains .
-We define anew complex and cross-domain semantic parsing and textto - SQL task where different complex SQL queries and databases appear in train and test sets .
-In this way , the task requires the model to generalize well to both new SQL queries and new database schemas .
-Spider is distinct from most of the previous semantic parsing tasks because they all use a single database and the exact same programs in the train set and the test set .
-We experiment with various state - of - the - art models and the best model achieves only 12.4 % exact matching accuracy on a database split setting .
+It consists of 10,181 questions and 5,693 unique complex SQL queries on 200 data bases with multiple tables , covering 138 different domains .
+We define a new complex and cross-domain semantic parsing and textto - SQL task where different complex SQL queries and data bases appear in train and test sets .
+In this way , the task requires the model to generalize well to both new SQL queries and new data base schemas .
+Spider is distinct from most of the previous semantic parsing tasks because they all use a single data base and the exact same programs in the train set and the test set .
+We experiment with various state - of - the - art models and the best model achieves only 12.4 % exact matching accuracy on a data base split setting .
 This shows that Spider presents a strong challenge for future research .
 Our dataset and task are publicly available at https://yale-lily. github.io/ spider .
 Introduction
@@ -14,32 +14,32 @@ Semantic parsing ( SP ) is one of the most important tasks in natural language p
 It requires both understanding the meaning of natural language sentences and mapping them to meaningful executable queries such as logical forms , SQL queries , and Python code .
 Recently , some state - of - the - art methods with Seq2Seq architectures are able to achieve over 80 % exact matching accuracy even on some complex benchmarks such as ATIS and GeoQuery .
 These models seem to have already solved most problems in this field .
-However , previous tasks in this field have a simple but problematic task definition because most of these results are predicted by semantic " matching " department Annotators check database schema ( e.g. , database : college )
+However , previous tasks in this field have a simple but problematic task definition because most of these results are predicted by semantic " matching " department Annotators check data base schema ( e.g. , data base : college )
 ...... rather than semantic parsing .
 Existing datasets for SP have two shortcomings .
-First , those that have complex programs are too small in terms of the number of programs for training modern data - intensive models and have only a single dataset , meaning that the same database is used for both training and testing the model .
+First , those that have complex programs are too small in terms of the number of programs for training modern data - intensive models and have only a single dataset , meaning that the same data base is used for both training and testing the model .
 More importantly , the number of logic forms or SQL labels is small and each program has about 4 - 10 paraphrases of natural language problem to expand the size of the dataset .
 Therefore , the exact same target programs appear in both the train and test sets .
 The models can achieve decent performances even on very complex programs by memorizing the patterns of question and program pairs during training and decoding the programs exactly the same way as it saw in the training set during testing .
 split the dataset by programs so that no two identical programs would be in both the train and test sets .
 They show that the models built on this question - splitting data setting fail to generalize to unseen programs .
-Second , existing datasets that are large in terms of the number of programs and databases such as WikiSQL contain only simple SQL queries and single tables .
-In order to test a model 's real semantic parsing performance on unseen complex programs and its ability to generalize to new domains , an SP dataset that includes a large amount of complex programs and databases with multiple tables is a must .
+Second , existing datasets thatare large in terms of the number of programs and data bases such as WikiSQL contain only simple SQL queries and single tables .
+In order to test a model 's real semantic parsing performance on unseen complex programs and its ability to generalize to new domains , an SP dataset that includes a large amount of complex programs and data bases with multiple tables is a must .
 However , compared to other large , realistic datasets such as ImageNet for object recognition and SQuAD for reading comprehension , creating such SP dataset is even more time - consuming and challenging in some aspects due to the following reasons .
-First , it is hard to find many databases with multiple tables online .
-Second , given a database , annotators have to understand the complex database schema to create a set of questions such that their corresponding SQL queries coverall SQL patterns .
+First , it is hard to find many data bases with multiple tables online .
+Second , given a data base , annotators have to understand the complex data base schema to create a set of questions such that their corresponding SQL queries cover all SQL patterns .
 Moreover , it is even more challenging to write different complex SQL queries .
 Additionally , reviewing and quality - checking of question and SQL pairs takes a significant amount of time .
-All of these processes require very specific knowledge in databases .
-To address the need for a large and high - quality dataset fora new complex and cross-domain semantic parsing task , we introduce Spider , which consists of 200 databases with multiple tables , 10,181 questions , and 5,693 corresponding complex SQL queries , all written by 11 college students spending a total of 1,000 man-hours .
+All of these processes require very specific knowledge in data bases .
+To address the need for a large and high - quality dataset for a new complex and cross-domain semantic parsing task , we introduce Spider , which consists of 200 databases with multiple tables , 10,181 questions , and 5,693 corresponding complex SQL queries , all written by 11 college students spending a total of 1,000 man-hours .
 As illustrates , given a database with multiple tables including foreign keys , our corpus creates and annotates complex questions and SQL queries including different SQL clauses such as joining and nested query .
-In order to generate the SQL query given the input question , models need to understand both the natural language question and relationships between tables and columns in the database schema .
-In addition , we also propose anew task for the text - to - SQL problem .
-Since Spider contains 200 databases with foreign keys , we can split the dataset with complex SQL queries in away that no database overlaps in train and test , which overcomes the two shortcomings of prior datasets , and defines anew semantic parsing task in which the model needs to generalize not only to new programs but also to new databases .
-Models have to take questions and database schemas as inputs and predict unseen queries on new databases .
+In order to generate the SQL query given the input question , models need to understand both the natural language question and relationships between tables and columns in the data base schema .
+In addition , we also propose a new task for the text - to - SQL problem .
+Since Spider contains 200 data bases with foreign keys , we can split the dataset with complex SQL queries in a way that no data base overlaps in train and test , which overcomes the two shortcomings of prior datasets , and defines a new semantic parsing task in which the model needs to generalize not only to new programs but also to new data bases .
+Models have to take questions and data base schemas as inputs and predict unseen queries on new data bases .
 To assess the task difficulty , we experiment with several state - of - the - art semantic parsing models .
 All of them struggle with this task .
-The best model achieves only 12.4 % exact matching accuracy in the database split setting .
+The best model achieves only 12.4 % exact matching accuracy in the data base split setting .
 This suggests that there is a large room for improvement .
 Related Work and Existing Datasets
 Several semantic parsing datasets with different queries have been created .
@@ -50,28 +50,28 @@ However , they are domain specific and there is no standard label guidance for m
 Recently , more semantic parsing datasets using SQL as programs have been created .
 and labeled SQL queries for ATIS and GeoQuery datasets .
 Other existing text - to - SQL datasets also include , Scholar , Academic , , Advising , and WikiSQL .
-These datasets have been studied for decades in both the NLP community and the Database community .
+These datasets have been studied for decades in both the NLP community and the Data base community .
 We provide detailed statistics on these datasets in Table 1 .
-Most of the previous work train their models without schemas as inputs because they use a single database for both training and testing .
+Most of the previous work train their models without schemas as inputs because they use a single data base for both training and testing .
 Thus , they do not need to generalize to new domains .
 Most importantly , these datasets have a limited number of labeled logic forms or SQL queries .
 In order to expand the size of these datasets and apply neural network approaches , each logic form or SQL query has about 4 - 10 paraphrases for the natural language input .
 Most previous studies follow the standard question - based train and test split .
 This way , the exact same target queries ( with similar paraphrases ) in the test appear in training set as well .
-Utilizing this assumption , existing models can achieve decent performances even on complex programs by memorizing database - specific SQL templates .
+Utilizing this assumption , existing models can achieve decent performances even on complex programs by memorizing data base - specific SQL templates .
 However , this accuracy is artificially inflated because the model merely needs to decide which template to use during testing .
 show that template - based approaches can get even higher results .
-To avoid getting this inflated result , Finegan - Dollak et al. propose anew , program - based splitting evaluation , where the exact same queries do not appear in both training and testing .
-They show that under this framework , the performance of all the current state - of - the - art semantic parsing systems drops dramatically even on the same database , indicating that these models fail to generalize to unseen queries .
+To avoid getting this inflated result , Finegan - Dollak et al. propose a new , program - based splitting evaluation , where the exact same queries do not appear in both training and testing .
+They show that under this framework , the performance of all the current state - of - the - art semantic parsing systems drops dramatically even on the same data base , indicating that these models fail to generalize to unseen queries .
 This indicates that current studies in semantic parsing have limitations .
-We also want the model to generalize not only to unseen queries but also to unseen databases .
+We also want the model to generalize not only to unseen queries but also to unseen data bases .
 published the WikiSQL dataset .
-In their problem definition , the databases in the test set do not appear in the train or development sets .
+In their problem definition , the data bases in the test set do not appear in the train or development sets .
 Also , the task needs to take different table schemas as inputs .
-Therefore , the model has to generalize to new databases .
-However , in order to generate 80654 questions and SQL pairs for 24241 databases , made simplified assumptions about the SQL queries and databases .
+Therefore , the model has to generalize to new data bases .
+However , in order to generate 80654 questions and SQL pairs for 24241 data bases , made simplified assumptions about the SQL queries and data bases .
 Their SQL labels only cover single SELECT column and aggregation , and WHERE conditions .
-Moreover , all the databases only contain single tables .
+Moreover , all the data bases only contain single tables .
 No JOIN , GROUP BY , and ORDER BY , etc. are included .
 Recently , researchers have constructed some datasets for code generation including IFTTT , DJANGO , HEARTHSTONE , and CoNaLa .
 These tasks parse natural language descriptions into a more general - purpose programming language such as Python .
@@ -79,64 +79,64 @@ Corpus Construction
 All questions and SQL queries were written and reviewed by 11 computer science students .
 Some of them were native English speakers .
 As illustrated in , we develop our dataset in five steps , spending around 1,000 hours of human labor in total :
-3.1 Database Collection and Creation , 3.2 Question and SQL Annotation , 3.3 SQL Review , 3.4 Question Review and Paraphrase , 3.5 Final Question and SQL Review .
-Database Collection and Creation
-Collecting databases with complex schemas is hard .
-Although relational databases are widely used in industry and academia , most of them are not publicly available .
-Only a few databases with multiple tables are easily accessible online .
-Our 200 databases covering 138 different domains are collected from three resources .
-First , we collected about 70 complex databases from different college database courses , SQL tutorial websites , online csv files , and textbook examples .
-Second , we collected about 40 databases from the DatabaseAnswers 1 where contains over 1,000 data models across different domains .
-These data models contain only database schemas .
-We converted them into SQLite , populated them using an online database population tool 2 , and then manually corrected some important fields so that the table contents looked natural .
-Finally , we created the remaining 90 databases based on WikiSQL .
-To ensure the domain diversity , we select about 500 tables in about 90 different domains to create these 90 databases .
-To create each database , we chose several related tables from WikiSQL dev or test splits , and then created a relational database schema with foreign keys based on the tables we selected .
+3.1 Data base Collection and Creation , 3.2 Question and SQL Annotation , 3.3 SQL Review , 3.4 Question Review and Paraphrase , 3.5 Final Question and SQL Review .
+Data base Collection and Creation
+Collecting data bases with complex schemas is hard .
+Although relational data bases are widely used in industry and academia , most of them are not publicly available .
+Only a few data bases with multiple tables are easily accessible online .
+Our 200 data bases covering 138 different domains are collected from three resources .
+First , we collected about 70 complex data bases from different college data base courses , SQL tutorial websites , online csv files , and textbook examples .
+Second , we collected about 40 data bases from the Data baseAnswers 1 where contains over 1,000 data models across different domains .
+These data models contain only data base schemas .
+We converted them into SQLite , populated them using an online data base population tool 2 , and then manually corrected some important fields so that the table contents looked natural .
+Finally , we created the remaining 90 data bases based on WikiSQL .
+To ensure the domain diversity , we select about 500 tables in about 90 different domains to create these 90 data bases .
+To create each data base , we chose several related tables from WikiSQL dev or test splits , and then created a relational data base schema with foreign keys based on the tables we selected .
 We had to create some intersection tables in order to link several tables together .
-For most other cases , we did not need to populate these databases since tables in WikiSQL are from Wikipedia , which already had real world data stored .
-We manually corrected some database schemas if they had some column names that did not make sense or missed some foreign keys .
-For table and column names , it is common to use abbreviations in databases .
+For most other cases , we did not need to populate these data bases since tables in WikiSQL are from Wikipedia , which already had real world data stored .
+We manually corrected some data base schemas if they had some column names that did not make sense or missed some foreign keys .
+For table and column names , it is common to use abbreviations in data bases .
 For example , ' student id ' might be represented by ' stu id ' .
 For our task definition , we manually changed each column name back to regular words so that the system only handled semantic parsing issues .
 Question and SQL Annotation
-For each database , we ask eight computer science students proficient in SQL to create 20 - 50 natural questions and their SQL labels .
-To make our questions diverse , natural , and reflective of how humans actually use databases , we did not use any template or script to generate question and SQL queries .
+For each data base , we ask eight computer science students proficient in SQL to create 20 - 50 natural questions and their SQL labels .
+To make our questions diverse , natural , and reflective of how humans actually use data bases , we did not use any template or script to generate question and SQL queries .
 Our annotation procedure ensures the following three aspects .
 A ) SQL pattern coverage .
 We ensure that our corpus contains enough examples for all common SQL patterns .
-For each database , we ask annotators to write SQL queries that coverall the following SQL components : SELECT with multiple columns and aggregations , WHERE , GROUP BY , HAVING , ORDER BY , LIMIT , JOIN , INTERSECT , EXCEPT , UNION , NOT IN , OR , AND , EXISTS , LIKE as well as nested queries .
-The annotators made sure that each table in the database appears in at least one query .
+For each data base , we ask annotators to write SQL queries that cover all the following SQL components : SELECT with multiple columns and aggregations , WHERE , GROUP BY , HAVING , ORDER BY , LIMIT , JOIN , INTERSECT , EXCEPT , UNION , NOT IN , OR , AND , EXISTS , LIKE as well as nested queries .
+The annotators made sure that each table in the data base appears in at least one query .
 B ) SQL consistency .
 Some questions have multiple acceptable SQL queries with the same result .
 However , giving totally different SQL labels to similar questions can hinder the training of semantic parsing models .
 To avoid this issue , we designed the annotation protocol so that all annotators choose the same SQL query pattern if multiple equivalent queries are possible .
 C ) Question clarity .
-We did not create questions that are ( 1 ) vague or too ambiguous , or ( 2 ) require knowledge outside the database to answer .
+We did not create questions thatare ( 1 ) vague or too ambiguous , or ( 2 ) require knowledge outside the data base to answer .
 First , ambiguous questions refer to the questions that do not have enough clues to infer which columns to return and which conditions to consider .
 For example , we would not ask " What is the most popular class at University X ? " because the definition of " popular " is not clear : it could mean the rating of the class or the number of students taking the course .
 Instead , we choose to ask " What is the name of the class which the largest number of students are taking at University X ? " .
 Here , " popular " refers to the size of student enrollment .
 Thus , the " student enrollment " column can be used in condition to answer this question .
-We recognize that ambiguous questions appear in real - world natural language database interfaces .
+We recognize that ambiguous questions appear in real - world natural language data base interfaces .
 We agree that future work needs to address this issue by having multi-turn interactions between the system and users for clarification .
-However , our main aim here is to develop a corpus to tackle the problem of handling complex queries and generalizing across databases without multi-turn interactions required , which no existing semantic parsing datasets could do .
+However , our main aim here is to develop a corpus to tackle the problem of handling complex queries and generalizing across data bases without multi-turn interactions required , which no existing semantic parsing datasets could do .
 Moreover , the low performances of current state - of - the - art models already show that our task is challenging enough , without ambiguous questions .
 In addition , questions are required to contain the specific information to return .
 Otherwise , we do n't know if class id is also acceptable in the previous case .
 Most of the questions in the existing semantic parsing datasets are ambiguous .
 This is not a serious problem if we use one single dataset because we have enough data domain specific examples to know which columns are the default .
 However , it would be a serious problem in cross domain tasks since the default return values differ cross domain and people .
-Second , humans sometimes ask questions that require commonsense knowledge outside the given database .
+Second , humans sometimes ask questions that require commonsense knowledge outside the given data base .
 For instance , when people ask " Display the employee id for the employees who report to John " , the correct SQL is SELECT employee id FROM employees WHERE manager id = ( SELECT employee id FROM employees WHERE first name = which requires the common knowledge that " X reports to Y " corresponds to an " employee - manager " relation .
 we do not include such questions and leave them as a future research direction .
 Annotation tools
-We open each database on a web - based interface powered by the sqlite web 3 tool .
-It allows the annotators to seethe schema and content of each table , execute SQL queries , and check the returned results .
+We open each data base on a web - based interface powered by the sqlite web 3 tool .
+It allows the annotators to see the schema and content of each table , execute SQL queries , and check the returned results .
 This tool was extremely helpful for the annotators to write executable SQL queries that reflect the true meaning of the given questions and return correct answers .
 SQL Review
-Once the database is labeled with question - query pairs , we ask a different annotator to check if the questions are clear and contain enough information to answer the query .
+Once the data base is labeled with question - query pairs , we ask a different annotator to check if the questions are clear and contain enough information to answer the query .
 For a question with multiple possible SQL translations , the reviewers double check whether the SQL label is correctly chosen under our protocol .
-Finally , the reviewers check if all the SQL labels in the current database coverall the common SQL clauses .
+Finally , the reviewers check if all the SQL labels in the current data base cover all the common SQL clauses .
 Question Review and Paraphrase
 After SQL labels are reviewed , native English speakers review and correct each question .
 They first check if the question is grammatically correct and natural .
@@ -148,23 +148,23 @@ This annotator makes the final decision if multiple reviewers are not sure about
 Also , we run a script to execute and parse all SQL labels to make sure they are correct .
 Dataset Statistics and Comparison
 We summarize the statistics of Spider and other text - to - SQL datasets in .
-Compared with other datasets , Spider contains databases with multiple tables and contains SQL queries including many complex SQL components .
+Compared with other datasets , Spider contains data bases with multiple tables and contains SQL queries including many complex SQL components .
 For example , Spider contains about twice more nested queries and 10 times more ORDER BY ( LIMIT ) and GROUP BY ( HAVING ) components than the total of previous text - to - SQL datasets .
-Spider has 200 distinct databases covering 138 different domains such as college , club , TV show , government , etc .
-Most domains have one database , thus containing 20 - 50 questions , and a few domains such as flight information have multiple databases with more than 100 questions in total .
-On average , each database in Spider has 27.6 columns and 8.8 foreign keys .
+Spider has 200 distinct data bases covering 138 different domains such as college , club , TV show , government , etc .
+Most domains have one data base , thus containing 20 - 50 questions , and a few domains such as flight information have multiple data bases with more than 100 questions in total .
+On average , each data base in Spider has 27.6 columns and 8.8 foreign keys .
 The average question length and SQL length are about 13 and 21 respectively .
-Our task uses different databases for training and testing , evaluating the cross - domain performance .
-Therefore , Spider is the only one text - to - SQL dataset that contains both databases with multiple tables in different domains and complex SQL queries
-It tests the ability of a system to generalize to not only new SQL queries and database schemas but also new domains .
+Our task uses different data bases for training and testing , evaluating the cross - domain performance .
+Therefore , Spider is the only one text - to - SQL dataset that contains both data bases with multiple tables in different domains and complex SQL queries
+It tests the ability of a system to generalize to not only new SQL queries and data base schemas but also new domains .
 Task Definition
 On top of the proposed dataset , we define a textto - SQL task that is more realistic than prior work .
-Unlike most of the previous semantic parsing or text - to - SQL tasks , models will be tested on both different complex SQL queries and different complex databases in different domains in our task .
+Unlike most of the previous semantic parsing or text - to - SQL tasks , models will be tested on both different complex SQL queries and different complex data bases in different domains in our task .
 It aims to ensure that models can only make the correct prediction when they truly understand the semantic meaning of the questions , rather than just memorization .
-Also , because our databases contain different domains , our corpus tests model 's ability to generalize to new databases .
+Also , because our data bases contain different domains , our corpus tests model 's ability to generalize to new data bases .
 In this way , model performance on this task can reflect the real semantic parsing ability .
 In order to make the task feasible and to focus on the more fundamental part of semantic parsing , we make the following assumptions : values , then ask more specific questions .
-Also , other previous work with value prediction uses one single database in both train and test which makes it vulnerable to overfitting .
+Also , other previous work with value prediction uses one single data base in both train and test which makes it vulnerable to overfitting .
 However , SQL queries must include values in order to execute them .
 For value prediction in our task , a list of gold values for each question is given .
 Models need to fill them into the right slots in their predicted SQL .
@@ -172,8 +172,8 @@ As mentioned in the previous sections , we exclude some queries that require out
 For example , imagine a table with birth and death year columns .
 To answer the questions like " How long is X 's life length ? " , we use SELECT death year - birth year .
 Even though this example is easy for humans , it requires some common knowledge of the life length definition and the use of a math operation , which is not the focus of our dataset .
-We assume all table and column names in the database are clear and self - contained .
-For example , some databases use database specific short - cut names for table and column names such as " stu id " , which we manually converted to " student id " in our corpus .
+We assume all table and column names in the data base are clear and self - contained .
+For example , some data bases use data base specific short - cut names for table and column names such as " stu id " , which we manually converted to " student id " in our corpus .
 Evaluation Metrics
 Our evaluation metrics include Component Matching , Exact Matching , and Execution Accuracy .
 In addition , we measure the system 's accuracy as a function of the difficulty of a query .
@@ -187,7 +187,7 @@ To evaluate each SELECT component , for example , consider SELECT avg ( col1 ) ,
 Previous work directly compared decoded SQL with gold SQL .
 However , some SQL components do not have order constraints .
 In our evaluation , we treat each component as a set so that for example , SELECT avg ( col1 ) , min ( col1 ) , max ( col2 ) and SELECT avg ( col1 ) , max ( col2 ) , min ( col1 ) would be treated as the same query .
-To report a model 's overall performance on each component , we compute F 1 score on exact set matching .
+To report a model 's over all performance on each component , we compute F 1 score on exact set matching .
 Exact Matching
 We measure whether the predicted query as a whole is equivalent to the gold query .
 We first evaluate the SQL clauses as described in the last section .
@@ -212,7 +212,7 @@ shows examples of SQL queries in 4 hardness levels .
 Methods
 In order to analyze the difficulty and demonstrate the purpose of our corpus , we experiment with several state - of - the - art semantic parsing models .
 As our dataset is fundamentally different from the prior datasets such as Geoquery and WikiSQL , we adapted these models to our task as follows .
-We created a ' big ' column list by concatenating columns in all tables of the database together as 4 Please check our website for the latest updates on the task at https://yale-lily.github.io/spider
+We created a ' big ' column list by concatenating columns in all tables of the data base together as 4 Please check our website for the latest updates on the task at https://yale-lily.github.io/spider
 What is the number of cars with more than 4 cylinders ?
 SELECT COUNT ( *)
 FROM cars_data
@@ -220,20 +220,20 @@ WHERE cylinders >
 4
 For each stadium , how many concerts are there ?
 an input to all models .
-Also , for each model , we limit the column selection space for each question example to all column of the database which the question is asking instead of all column names in the whole corpus .
+Also , for each model , we limit the column selection space for each question example to all column of the data base which the question is asking instead of all column names in the whole corpus .
 Seq2 Seq
 Inspired by neural machine translation , we first apply a basic sequence - to - sequence model , Seq2 Seq .
 Then , we also explore Seq2Seq + Attention from by adding an attention mechanism .
-In addition , we include Seq2Seq + Copying by adding an attention - based 34.1 19.6 11.7 3.3 18.3 18.4 TypeSQL 47.5 38.4 24.1 14.4 33.0 34.4 Database Split Seq2 Seq 11.9 1.9 1.3 0.5 3.7 1.9 Seq2Seq+ Attention 26.2 12.6 6.6 1.3 12.4 10.9 TypeSQL 19.6 7.6 3.8 0.8 8.2 8.0 copying operation similar to ) .
+In addition , we include Seq2Seq + Copying by adding an attention - based 34.1 19.6 11.7 3.3 18.3 18.4 TypeSQL 47.5 38.4 24.1 14.4 33.0 34.4 Data base Split Seq2 Seq 11.9 1.9 1.3 0.5 3.7 1.9 Seq2Seq+ Attention 26.2 12.6 6.6 1.3 12.4 10.9 TypeSQL 19.6 7.6 3.8 0.8 8.2 8.0 copying operation similar to ) .
 The original model does not take the schema into account because it has the same schema in both train and test .
-We modify the model so that it considers the table schema information by passing a vocabulary mask that limits the model to decode the words from SQL keywords , table and column names in the current database .
+We modify the model so that it considers the table schema information by passing a vocabulary mask that limits the model to decode the words from SQL keywords , table and column names in the current data base .
 SQLNet introduced by uses column attention and employs a sketch - based method and generates SQL as a slot - filling task .
 This fundamentally avoids the sequence - tosequence structure when ordering does not matter in SQL query conditions .
 Because it is originally designed for WikiSQL , we extend its SELECT and WHERE modules to ORDER BY and GROUP BY components .
 TypeSQL proposed by improves upon SQLNet by proposing a different training procedure and utilizing types extracted from either knowledge graph or table content to help model better understand entities and numbers in the question .
-In our experiment , we use the question type info extracted from database content .
+In our experiment , we use the question type info extracted from data base content .
 Also , we extend their modules to ORDER BY and GROUP BY components as well .
-It is the only model that uses database content .
+It is the only model that uses data base content .
 Experimental Results and Discussion
 We summarize the performance of all models on our test set including accuracy of exact matching in and F 1 scores of component matching in .
 Data Splits
@@ -241,9 +241,9 @@ For the final training dataset , we also select and include 752 queries and 1659
 Restaurants , GeoQuery , Scholar , Academic , IMDB , and Yelp .
 We report results on two different settings for all models :
 ( 1 ) Example split where examples are randomly split into 8659 train , 1034 dev , 2147 test .
-Questions for the same database can appear in both train and test .
-( 2 ) Database split where 206 databases are split into 146 train , 20 dev , and 40 test .
-All questions for the same database are in the same split .
+Questions for the same data base can appear in both train and test .
+( 2 ) Data base split where 206 data bases are split into 146 train , 20 dev , and 40 test .
+All questions for the same data base are in the same split .
 Overall Performance
 The performances of the Seq2Seq - based basic models including Seq2Seq , Seq2Seq + Attention , and Seq2Seq + Copying are very low .
 However , they are able to generate nested and complex queries because of their general decoding process .
@@ -255,24 +255,24 @@ While they can produce valid queries , however , they are unable to generate nes
 As Component Matching results in shows , all models struggle with WHERE clause prediction the most .
 WHERE clause is more likely to have multiple columns and operations , which makes its prediction the most challenging .
 The most number of prediction errors for each component is from column prediction .
-In general , the overall performances of all models are low , indicating that our task is challenging and there is still a large room for improvement .
-Example Split vs Database Split
-As discussed in Section 5 , another challenge of the dataset is to generalize to new databases .
+In general , the over all performances of all models are low , indicating that our task is challenging and there is still a large room for improvement .
+Example Split vs Data base Split
+As discussed in Section 5 , another challenge of the dataset is to generalize to new data bases .
 To study this , in we compare model performances under the two settings .
-For all models , the performance under database split is much lower than that under example split .
+For all models , the performance under data base split is much lower than that under example split .
 Especially , TypeSQL utilizes column names as question types , and it outperforms other models with a large margin under the example split .
-However , its performance drops the most on the database split data set .
-This indicates that the model does well on complex SQL prediction but fails to generalize to new databases .
-In addition , we observe that all models perform much poorer on column selection under database split than example split .
-Overall , the result shows that our dataset presents a challenge for the model to generalize to new databases .
-Complexity of Database Schema
-In order to show how the complexity of the database schema affects model performance , plots the exact matching accuracy as a function of the number of foreign keys in a database .
-The performance decreases as the database has more foreign keys .
-The first reason is that the model has to choose column and table names from many candidates in a complex database schema .
-Second , a complex database schema presents a great challenge for the model to capture the relationship between different tables with foreign keys .
-SQL answers to questions on the database with more number of foreign keys are more likely to join more tables .
+However , its performance drops the most on the data base split data set .
+This indicates that the model does well on complex SQL prediction but fails to generalize to new data bases .
+In addition , we observe that all models perform much poorer on column selection under data base split than example split .
+Overall , the result shows that our dataset presents a challenge for the model to generalize to new data bases .
+Complexity of Data base Schema
+In order to show how the complexity of the data base schema affects model performance , plots the exact matching accuracy as a function of the number of foreign keys in a data base .
+The performance decreases as the data base has more foreign keys .
+The first reason is that the model has to choose column and table names from many candidates in a complex data base schema .
+Second , a complex data base schema presents a great challenge for the model to capture the relationship between different tables with foreign keys .
+SQL answers to questions on the data base with more number of foreign keys are more likely to join more tables .
 It indicates that this task requires more effective methods to encode the relation of tables with foreign keys .
 Conclusion
 In this paper we introduce Spider , a large , complex and cross-domain semantic parsing and textto - SQL dataset , which directly benefits both NLP and DB communities .
-Based on Spider , we define anew challenging and realistic semantic parsing task .
+Based on Spider , we define a new challenging and realistic semantic parsing task .
 Experimental results on several state - of - theart models on this task suggest plenty space for improvement .

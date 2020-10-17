@@ -37,8 +37,7 @@
             "multiple relations" : {
               "for" : "different entity pairs"
             }
-          },
-          "from sentence" : "The two novel modifications to the original BERT architecture are : ( 1 ) we introduce a structured prediction layer for predicting multiple relations for different entity pairs ; and ( 2 ) we make the selfattention layers aware of the positions of all en-tities in the input paragraph ."
+          }
         }
       },
       "make" : {

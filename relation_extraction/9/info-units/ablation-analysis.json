@@ -13,8 +13,7 @@
               }
             },
             "second" : {
-              "removes" : "both attention mechanisms",
-              "from sentence" : "The second removes both attention mechanisms ."
+              "removes" : "both attention mechanisms"
             },
             "third" : {
               "removes" : "both forms of attention",

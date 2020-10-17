@@ -3,7 +3,7 @@ Multi-range Reasoning for Machine Comprehension
 abstract
 We propose MRU ( Multi - Range Reasoning Units ) , a new fast compositional encoder for machine comprehension ( MC ) .
 Our proposed MRU encoders are characterized by multi-ranged gating , executing a series of parameterized contractand - expand layers for learning gating vectors that benefit from long and short - term dependencies .
-The aims of our approach are as follows : ( 1 ) learning representations that are concurrently aware of long and short - term context , ( 2 ) modeling relationships between intra-document blocks and ( 3 ) fast and efficient sequence encoding .
+The aims of our approach are as follows : ( 1 ) learning representations thatare concurrently aware of long and short - term context , ( 2 ) modeling relationships between intra-document blocks and ( 3 ) fast and efficient sequence encoding .
 We show that our proposed encoder demonstrates promising results both as a standalone encoder and as well as a complementary building block .
 We conduct extensive experiments on three challenging MC datasets , namely RACE , Search QA and Narrative QA , achieving highly competitive performance on all .
 On the RACE benchmark , our model outperforms DFN ( Dynamic Fusion Networks ) by 1.5 % ?
@@ -13,7 +13,7 @@ Finally , incorporating MRU encoders with standard BiLSTM architectures further 
 Introduction
 Teaching machines to read , comprehend and reason lives at the heart of machine comprehension ( MC ) tasks .
 In these tasks , the goal is to answer questions based on a given passage , effectively testing the learner 's capability to understand natural language .
-This has been an extremely productive area of research in the recent years , giving rise to many highly advanced neural network architectures .
+This has been an extremely productive are a of research in the recent years , giving rise to many highly advanced neural network architectures .
 A common denominator in many of these models is the compositional encoder , i.e. , usually a bidirectional recurrent - based ( LSTM or GRU ) encoder that sequentially parses the text sequence word - by - word .
 This helps to model compositionality of words , capturing rich and complex linguistic and syntactic structure in language .
 While the usage of recurrent encoder is often regarded as indispensable in highly complex MC tasks , there are still several challenges and problems pertaining to it 's usage in modern MC tasks .
@@ -36,9 +36,9 @@ Secondly , modeling at along range ( e.g. , 25 or 50 ) enables our model to look
 As such , the learned gastes possess not only information about nearby words but also a larger overview of the context .
 This is in similar spirit to self - attention , albeit executing within the encoder .
 Thirdly , the final gates are formed by modeling relationships between multi-range projections ( n - gram blocks ) , allowing for fine - grained intra-document relationships to be captured .
-The overall contributions of our work is as follows :
+The over all contributions of our work is as follows :
 We propose MRU ( Multi-range Reasoning Units ) , a new compositional encoder which construct gates from a novel contract - and - expand operation .
-We propose an overall architecture that utilizes MRU within a bi-attentive framework for both multiple choice and span prediction MC tasks .
+We propose an over all architecture that utilizes MRU within a bi-attentive framework for both multiple choice and span prediction MC tasks .
 MRU can be used as a standalone ( without RNNs ) for fast reading and / or together with RNN models ( i.e. , MRU - LSTM ) for more expressive reading .
 We conduct extensive experiments on three large - scale and challenging machine comprehension datasets - RACE , Search QA and Narrative QA .
 Our model is lightweight , fast and efficient , achieving state - of - the - art or highly competitive performance on all benchmarked datasets .
@@ -48,12 +48,12 @@ Our Proposed MRU Encoder
 In this section , we describe our proposed MRU encoder .
 The inputs to the MRU encoder is an input document {w 1 , w 2 w } , and list of ranges {r 1 , r 2 r k } where k is the number of times the contract and expand operation is executed .
 The final output of the encoder is a sequence of vectors which retain the same dimensionality as its inputs .
-( left most block ) provides an illustration of the overall encoder architecture .
+( left most block ) provides an illustration of the over all encoder architecture .
 Contract - and - Expand Operation
 This section describes the operation for each r j .
 For the sake of brevity , we drop the superscripts j.
 For each r j and the input document , the contract operation performs takes the summation of every r j words .
-This reduces the overall document length to /r j where each item in the sequence is the sum of every r j words .
+This reduces the over all document length to /r j where each item in the sequence is the sum of every r j words .
 Given the new sequence of /r i tokens , we then pass each token into a single layered feed - forward neural network :
 w
 where W a ?
@@ -88,13 +88,13 @@ where ct , ht are the cell and hidden states at time step t.
 gt are the gates learned from out multi -range reasoning step .
 o t is an additional output gate learned via applying an affine transform on the input vector wt , i.e. , o t = W o ( w t ) + b o .
 Similar to RNNs , the Recurrent MRU parses the input sequence word - by - word .
-However , the cost is significantly reduced because we do not have expensive matrix operations that are executed in a non-parallel fashion .
-Finally , the outputs of the MRU encoder area series of hidden vectors {h 1 , h 2 h } for each word in the sequence .
+However , the cost is significantly reduced because we do not have expensive matrix operations thatare executed in a non-parallel fashion .
+Finally , the outputs of the MRU encoder are a series of hidden vectors {h 1 , h 2 h } for each word in the sequence .
 Overall Model Architectures
-This section describes the overall model architecture that utilizes MRU encoders .
+This section describes the over all model architecture that utilizes MRU encoders .
 In our experiments , we focus on both multiple - choice based ( RACE ) and span prediction MC tasks ( SearchQA , Narra - tive QA ) .
 Since the core focus of this paper is our encoder , we briefly provide the high - level details of our vanilla Bi - Attentive model .
-The Bi- Attentive models that are used in our experiments act as baselines , often being less complex than current competitive models such as BiDAF , AMANDA or DFN .
+The Bi- Attentive models thatare used in our experiments act as baselines , often being less complex than current competitive models such as BiDAF , AMANDA or DFN .
 Multiple Choice Models
 In MCQ models , there are three types of input sequences , namely Passage ( P ) , Question ( Q ) and Answers ( A j ) .
 The output of the model ( for each answer ) , is a score s ( P , Q , A j ) ?
@@ -182,8 +182,7 @@ Acc F1 Acc F1 Time TF- IDF max 13.0 N/ A 12.7 N/ A N/A ASR 43 . : Experimental R
 All models with use the same encoder in the answer pointer layer .
 * are estimates running a replicated model with same batch size ( b = 256 ) as our models .
 MRU encoders are only applied on the passage and not the query .
-We adopt the Adam optimizer with a learning rate of 0.0003/ 0.001/0.001 for RACE / SearchQA / Narrative
-QA respectively .
+We adopt the Adam optimizer with a learning rate of 0.0003/ 0.001/0.001 for RACE / SearchQA / NarrativeQA respectively .
 The batch size is set to 64/256/32 accordingly .
 The maximum sequence lengths are 500/200/1100 respectively .
 For Narrative QA , we use the Rouge - L score to find the best approximate answer relative to the human written answer for training the span model .
@@ -193,9 +192,8 @@ Our Sim .
 MRU model also runs at 4 min per iteration , which is dramatically faster and simpler than DFN or other recurrent models .
 We believe that this finding highlights the importance of designing strong and fast baselines for the task at hand .
 Experimental Results on RACE
-In general , we also found that the usage of a recurrent cell is not really crucial on this dataset since ( 1 ) Sim .
-MRU and MRU can achieve comparable performance to each other , ( 2 ) GRU and LSTM models do not have a competitive edge and ( 3 ) Using no encoder already achieves comparable 1 performance to DFN .
-Finally , an ensemble of Sim . MRU models achieve state - of - the - art performance on the RACE dataset , achieving and overall score of 53.3 % . :
+In general , we also found that the usage of a recurrent cell is not really crucial on this dataset since ( 1 ) Sim . MRU and MRU can achieve comparable performance to each other , ( 2 ) GRU and LSTM models do not have a competitive edge and ( 3 ) Using no encoder already achieves comparable 1 performance to DFN .
+Finally , an ensemble of Sim . MRU models achieve state - of - the - art performance on the RACE dataset , achieving and over all score of 53.3 % . :
 Experimental Results on the Narrative QA reading comprehension challenge using summaries .
 are baselines reported by . reports our results on the Narrative QA benchmark .
 First , we observe that 300d MRU can achieve comparable performance with BiDAF .
@@ -223,7 +221,7 @@ In these models , gates are pre-learned and then applied .
 However , different from existing models such as QRNNs that convolution layers as gates , we use a block - based contract - and - expand layers for learning gates .
 Finally , our model also draws inspiration from dilation , in particular dilated RNNs and dilated convolutions , that intuitively help to model long - range dependencies .
 Conclusion and Future Work
-We proposed a novel neural architecture , the MRU encoder and an overall bi-attentive model for both MCQ - based and span prediction MC tasks .
+We proposed a novel neural architecture , the MRU encoder and an over all bi-attentive model for both MCQ - based and span prediction MC tasks .
 We apply it to three MC datasets and achieve competitive performance on all without the use of recurrent layers .
 Our proposed method outperforms DFN , an extremely complex model , without using any LSTM or GRU layer .
 We also remain competitive to AMANDA and BiDAF without any LSTM / GRU .

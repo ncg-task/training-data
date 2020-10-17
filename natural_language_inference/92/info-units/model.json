@@ -17,7 +17,7 @@
                   "to precompute" : {
                     "discrete , task - specific set of possible solutions" : {
                       "that contains" : {
-                        "correct solutions" : {
+                        "correct solution" : {
                           "along with" : "modest number of spurious options"
                         }
                       }
@@ -59,8 +59,7 @@
       },
       "model" : {
         "set of possible solutions" : {
-          "as" : "discrete latent variable",
-          "from sentence" : "We model the set of possible solutions as a discrete latent variable , and develop a learning strategy that uses hard - EM - style parameter updates ."
+          "as" : "discrete latent variable"
         }
       },
       "develop" : {
@@ -75,8 +74,7 @@
             "current model" : {
               "from" : "precomputed set"
             }
-          },
-          "from sentence" : "This algorithm repeatedly ( i ) predicts the most likely solution according to the current model from the precomputed set , and ( ii ) updates the model parameters to further encourage its own prediction ."
+          }
         }
       },
       "updates" : {

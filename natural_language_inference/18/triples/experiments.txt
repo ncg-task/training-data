@@ -10,7 +10,7 @@
 (LSTMs||with||50 hidden units)
 (LSTMs||apply||40 % dropout)
 (40 % dropout||after||embedding layer)
-(Hyperparameters||For construction of||inference network)
+(Hyperparameters||For the construction of||inference network)
 (inference network||use||MLP)
 (MLP||with||2 layers)
 (inference network||use||tanh units)

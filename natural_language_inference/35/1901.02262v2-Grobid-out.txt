@@ -16,7 +16,7 @@ This paper considers the following task:
 In short, given a 3-tuple (x q , {x pk }, s), the system predicts P (y). The training data is a set of 6-tuples: (x q , {x pk }, s, y, a, {r pk }), where a and {r pk } are optional. Here, a is 1 if the question is answerable with the provided passages and 0 otherwise, and r pk is 1 if the k-th passage is required to formulate the answer and 0 otherwise.
 
 Proposed Model
-We propose a Multi-style Abstractive Summarization model for QUEstion answering, called Masque. Masque directly models the conditional probability p(y|x q , {x pk }, s). As shown in   4. The answer sentence decoder ( §3.4) outputs an answer sentence conditioned on the target style.
+We propose a Multi-style Abstractive Summarization model for QUEstion answering, called Masque. Masque directly models the conditional probability p(y|x q , {x pk }, s). As shown in   4. The answer sentence decoder ( ?3.4) outputs an answer sentence conditioned on the target style.
 Our model is based on multi-source abstractive summarization: the answer that it generates can be viewed as a summary from the question and passages. The model also learns multi-style answers together. With these two characteristics, we aim to acquire the style-independent NLG ability and transfer it to the target style. In addition, to improve natural language understanding in the reader module, our model considers RC, passage ranking, and answer possibility classification together as multi-task learning.
 
 Question-Passages Reader
@@ -26,17 +26,17 @@ Word Embedding Layer
 Let y represent one-hot vectors of the words in the answer. This layer has the same components as the word embedding layer of the reader module, except that it uses a unidirectional ELMo to ensure that the predictions for position t depend only on the known outputs at positions previous tot. Artificial tokens. To be able to use multiple answer styles within a single system, our model introduces an artificial token corresponding to the style at the beginning of the answer (y 1 ), as done in. At test time, the user can specify the first token to control the style. This modification does not require any changes to the model architecture. Note that introducing the token at the decoder prevents the reader module from depending on the answer style.
 
 Shared Encoder Layer
-This layer uses a stack of Transformer blocks, which are shared by the question and passages, on top of the embeddings provided by the word embedding layer. The input of the first block is immediately mapped to a d-dimensional vector by a linear transformation. The outputs of this layer are E pk ? R d×L for each k-th passage, and E q ? R d×J for the question.
+This layer uses a stack of Transformer blocks, which are shared by the question and passages, on top of the embeddings provided by the word embedding layer. The input of the first block is immediately mapped to a d-dimensional vector by a linear transformation. The outputs of this layer are E pk ? R d?L for each k-th passage, and E q ? R d?J for the question.
 Transformer encoder block. The block consists of two sub-layers: a self-attention layer and a position-wise feed-forward network. For the self-attention layer, we adopt the multi-head attention mechanism. Following GPT, the feed-forward network consists of two linear transformations with a GELU activation function in between. Each sub-layer is placed inside a residual block. For an input x and a given sub-layer function f , the output is LN(f (x) + x), where LN indicates the layer normalization. To facilitate these residual connections, all sub-layers produce a sequence of d-dimensional vectors. Note that our model does not use any position embeddings in this block because ELMo gives the positional information of the words in each sequence.
 
 Dual Attention Layer
 This layer uses a dual attention mechanism to fuse information from the question to the passages as well as from the passages to the question.
-It first computes a similarity matrix U pk ? R L×J between the question and the k-th passage, as done in , where
-indicates the similarity between the l-th word of the k-th passage and the j-th question word. The w a ? R 3d are learnable parameters. The ? operator denotes the Hadamard product, and the [; ] operator denotes vector concatenation across the rows. Next, the layer obtains the row and column normalized similarity matrices A pk = softmax j (U pk ? ) and B pk = softmax l (U pk ). It then uses DCN to obtain dual attention representations, G q?p k ? R 5d×L and G p?q ? R 5d×J :
+It first computes a similarity matrix U pk ? R L?J between the question and the k-th passage, as done in , where
+indicates the similarity between the l-th word of the k-th passage and the j-th question word. The w a ? R 3d are learnable parameters. The ? operator denotes the Hadamard product, and the [; ] operator denotes vector concatenation across the rows. Next, the layer obtains the row and column normalized similarity matrices A pk = softmax j (U pk ? ) and B pk = softmax l (U pk ). It then uses DCN to obtain dual attention representations, G q?p k ? R 5d?L and G p?q ? R 5d?J :
 Here,
 
 Modeling Encoder Layer
-This layer uses a stack of the Transformer encoder blocks for question representations and obtains M q ? R d×J from G p?q . It also uses another stack for passage representations and obtains M pk ? R d×L from G q?p k for each k-th passage. The outputs of this layer, M q and {M pk }, are passed onto the answer sentence decoder; the {M pk } are also passed onto the passage ranker and the answer possibility classifier.
+This layer uses a stack of the Transformer encoder blocks for question representations and obtains M q ? R d?J from G p?q . It also uses another stack for passage representations and obtains M pk ? R d?L from G q?p k for each k-th passage. The outputs of this layer, M q and {M pk }, are passed onto the answer sentence decoder; the {M pk } are also passed onto the passage ranker and the answer possibility classifier.
 
 Passage Ranker
 The ranker maps the output of the modeling layer, {M pk }, to the relevance score of each passage. It takes the output for the first word, M pk 1 , which corresponds to the beginning-of-sentence token, to obtain the aggregate representation of each passage sequence. Given w r ? Rd as learnable parameters, it calculates the relevance of each k-th passage to the question as
@@ -50,7 +50,7 @@ Given the outputs provided by the reader module, the decoder generates a sequenc
 Attentional Decoder Layer
 This layer uses a stack of Transformer decoder blocks on top of the embeddings provided by the word embedding layer. The input is immediately mapped to a d-dimensional vector by a linear transformation, and the output is a sequence of d-dimensional vectors: {s 1 , . . . , s T }.
 Transformer decoder block. In addition to the encoder block, this block consists of the second and third sub-layers after the self-attention block and before the feed-forward network, as shown in. As in, the selfattention sub-layer uses a sub-sequent mask to prevent positions from attending to subsequent positions. The second and third sub-layers perform the multi-head attention over M q and M pall , respectively. The M pall is the concatenated outputs of the encoder stack for the passages,
-Here, the [, ] operator denotes vector concatenation across the columns. This attention for the concatenated passages produces attention weights that are comparable between passages.
+Here, the [, ] operator denotes vector concatenation across the columns. This attention for the concatenated passages produces attention weights thatare comparable between passages.
 
 Multi-source Pointer-Generator
 Our extended mechanism allows both words to be generated from a vocabulary and words to be copied from both the question and multiple passages (). We expect that the capability of copying words will be shared among answer styles.
@@ -58,13 +58,13 @@ Our extended mechanism allows both words to be generated from a vocabulary and w
 Additive Attention
 Additive Attention  For each decoding step t, mixture weights ? v , ? q , ? p for the probability of generating words from the vocabulary and copying words from the question and the passages are calculated. The three distributions are weighted and summed to obtain the final distribution.
 Extended vocabulary distribution. Let the extended vocabulary, V ext , be the union of the common words (a small subset of the full vocabulary, V , defined by the input-side word embedding matrix) and all words appearing in the input question and passages. P v then denotes the probability distribution of the t-th answer word, y t , over the extended vocabulary. It is defined as:
-where the output embedding W 2 ? Rd word ×Vext is tied with the corresponding part of the input embedding, and W 1 ? Rd word ×d and b 1 ? Rd word are learnable parameters. P v (y t ) is zero if y t is an out-of-vocabulary word for V .
+where the output embedding W 2 ? Rd word ?Vext is tied with the corresponding part of the input embedding, and W 1 ? Rd word ?d and b 1 ? Rd word are learnable parameters. P v (y t ) is zero if y t is an out-of-vocabulary word for V .
 Copy distributions. A recent Transformerbased pointer-generator randomly chooses one of the attention-heads to form a copy distribution; that approach gave no significant improvements in text summarization.
 In contrast, our model uses an additional attention layer for each copy distribution on top of the decoder stack. For the passages, the layer takes st as the query and outputs ? pt ? R KL as the attention weights and c pt ? Rd as the context vectors:
-where w p , b p ? Rd and W pm , W ps ? R d×d are learnable parameters. For the question, our model uses another identical layer and obtains ? qt ? R J and c qt ? Rd . As a result, P q and P pare the copy distributions over the extended vocabulary:
+where w p , b p ? Rd and W pm , W ps ? R d?d are learnable parameters. For the question, our model uses another identical layer and obtains ? qt ? R J and c qt ? Rd . As a result, P q and P pare the copy distributions over the extended vocabulary:
 where k(l) means the passage index corresponding to the l-th word in the concatenated passages.
 Final distribution. The final distribution of y t is defined as a mixture of the three distributions:
-where Wm ? R 3×3d and b m ? R 3 are learnable parameters.
+where Wm ? R 3?3d and b m ? R 3 are learnable parameters.
 
 Combined Attention
 In order not to attend words in irrelevant passages, our model introduces a combined attention. While the original technique combined word and sentence level attentions, our model combines the word and passage level attentions. The word attention, Eq. 1, is re-defined as
@@ -72,7 +72,7 @@ In order not to attend words in irrelevant passages, our model introduces a comb
 Loss Function
 We define the training loss as the sum of losses via L(?) = L dec + ? rank L rank + ? cls L cls where ? is the set of all learnable parameters, and ? rank and ? cls are balancing parameters.
 The loss of the decoder, L dec , is the negative log likelihood of the whole target answer sentence averaged over N able answerable examples:
-where Dis the training dataset. The losses of the passage ranker, L rank , and the answer possibility classifier, L cls , are the binary cross entropy between the true and predicted values averaged overall N examples:
+where Dis the training dataset. The losses of the passage ranker, L rank , and the answer possibility classifier, L cls , are the binary cross entropy between the true and predicted values averaged over all N examples:
 .
 
 Setup
@@ -101,7 +101,7 @@ Query-based summarization has rarely been studied because of alack of datasets. 
 
 Conclusion
 This study sheds light on multi-style generative RC. Our proposed model, Masque, is based on multi-source abstractive summarization and learns multi-style answers together. It achieved stateof-the-art performance on the Q&A task and the Q&A + NLG task of MS MARCO 2.1 and the summary task of NarrativeQA. The key to its success is transferring the style-independent NLG capability to the target style by use of the question-passages reader and the conditional pointer-generator decoder. In particular, the capability of copying words from the question and passages can be shared among the styles, while the capability of controlling the mixture weights for the generative and copy distributions can be acquired for each style. Our future work will involve exploring the potential of our multi-style learning towards natural language understanding.
-A.2 Experimental Setup for NarrativeQA Model configurations. Our best model was jointly trained with the NarrativeQA and MS MARCO NLG datasets fora total of seven epochs with a batch size of 64, where each batch consisted of multi-style answers that were randomly sampled. For efficient multi-style learning, each summary in the NarrativeQA dataset was divided into ten passages (size of 130 words) with sentencelevel overlaps such that each sentence in the summary was entirely contained in a passage. Each passage from MS MARCO was also truncated to 130 words. The rest of the configuration was the same as in the MS MARCO experiments.
+A.2 Experimental Setup for NarrativeQA Model configurations. Our best model was jointly trained with the NarrativeQA and MS MARCO NLG datasets for a total of seven epochs with a batch size of 64, where each batch consisted of multi-style answers that were randomly sampled. For efficient multi-style learning, each summary in the NarrativeQA dataset was divided into ten passages (size of 130 words) with sentencelevel overlaps such that each sentence in the summary was entirely contained in a passage. Each passage from MS MARCO was also truncated to 130 words. The rest of the configuration was the same as in the MS MARCO experiments.
 Evaluation settings. An official evaluation script is not provided, so we used the evaluation script created by . The answers were normalized by making words lowercase and removing punctuation marks.
 
 A.3 Output Examples Generated by Masque

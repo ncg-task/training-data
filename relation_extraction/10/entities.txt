@@ -23,15 +23,15 @@
 155	77	79	of
 155	80	110	all MLPs and feature encodings
 155	118	134	dropout rate 0.5
-155	56	58	to
+155	135	137	to
 155	138	171	all word and character embeddings
 155	181	197	dropout rate 0.4
-155	56	58	to
+155	198	200	to
 155	201	223	all LSTM layer outputs
 156	0	8	Learning
 156	21	30	done with
 156	31	60	Adam ( Kingma and Ba , 2015 )
-156	26	30	with
+156	61	65	with
 156	66	84	default parameters
 157	4	17	learning rate
 157	21	32	annealed by
@@ -44,14 +44,14 @@
 159	0	14	Early Stopping
 159	15	17	of
 159	18	32	20 evaluations
-159	29	31	on
+159	33	35	on
 159	40	47	dev set
 152	8	16	consider
 152	17	22	spans
 152	32	47	entirely within
 152	50	58	sentence
 152	63	68	limit
-152	17	22	spans
+152	69	74	spans
 152	75	77	to
 152	80	90	max length
 152	91	93	of
@@ -65,12 +65,12 @@
 37	4	24	span representations
 37	34	44	to perform
 37	45	69	entity mention detection
-37	21	23	on
+37	70	72	on
 37	73	82	all spans
 37	83	85	in
 37	86	94	parallel
 38	55	74	relation extraction
-38	26	28	on
+38	75	77	on
 38	78	87	all pairs
 38	88	90	of
 38	91	115	detected entity mentions
@@ -102,7 +102,7 @@
 184	73	76	EMD
 184	79	98	0.6 absolute points
 187	7	22	our large gains
-187	19	21	in
+187	23	25	in
 187	26	47	RE Recall ( and F 1 )
 187	48	56	showcase
 187	61	74	effectiveness

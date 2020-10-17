@@ -7,16 +7,14 @@
           "from sentence" : "All inference parameters are tuned on a 200 example subset of the validation set ."
         },
         "Length penalty parameter" : {
-          "ranging from" : "0.6 to 1.4",
-          "from sentence" : "Length penalty parameter ? and copy mask differ across models , with ? ranging from 0.6 to 1.4 , and ranging from 0.1 to 0.2 ."
+          "ranging from" : "0.6 to 1.4"
         },
         "copy mask" : {
           "ranging from" : "0.1 to 0.2",
           "from sentence" : "Length penalty parameter ? and copy mask differ across models , with ? ranging from 0.6 to 1.4 , and ranging from 0.1 to 0.2 ."
         },
         "coverage penalty parameter" : {
-          "set to" : "10",
-          "from sentence" : "The coverage penalty parameter ? is set to 10 , and the copy attention normalization parameter ? to 2 for both approaches ."
+          "set to" : "10"
         },
         "copy attention normalization parameter" : {
           "to" : "2",

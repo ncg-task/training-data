@@ -29,7 +29,7 @@ However , if we consider the other metrics also adopted in the challenge ( e.g. 
 In the remaining , Section 2 introduces the system , Sections 3 and 4 describe the feature and kernel modeling , while Section 5 reports official results .
 The KeLP system : an overview
 In the three subtasks , the underlying problem is to understand if two texts are related .
-Thus , in subtasks A and C , each pair , ( question , comment ) , generates a training instance fora binary Support Vector Machine ( SVM ) , where the positive label is associated with a good comment and the negative label includes the potential and bad comments .
+Thus , in subtasks A and C , each pair , ( question , comment ) , generates a training instance for a binary Support Vector Machine ( SVM ) , where the positive label is associated with a good comment and the negative label includes the potential and bad comments .
 In Subtask B , we evaluated the similarity between two questions .
 Each pair generates a training instance for SVM , where the positive label is associated with the perfect match or relevant classes and the negative label is associated with the irrelevant ; the resulting classification score is used to rank the question pairs .
 In KeLP , the SVM learning algorithm operates on a linear combination of kernel functions , each one applied over a specific representation of the targeted examples : ( i ) feature vectors containing linguistic similarities between the texts in a pair ; ( ii ) shallow syntactic trees that encode the lexical and morphosyntactic information shared between text pairs ; ( iii ) feature vectors capturing task - specific information ; ( iv ) in subtasks B and C , feature vectors encoding stacked information derived by applying the classifiers obtained in the previous subtasks .
@@ -106,7 +106,7 @@ One extra feature counts the total number of comments written by u i .
 Moreover , it can be empirically observed that the likelihood of a comment being good decreases with its position in the thread .
 Therefore , another real - valued feature was included : i / 10 , where i represents the position of the comment in the thread .
 Stacking classifiers across subtasks
-The three subtasks are interconnected : the predictions from a subtask can provide useful information to carryout the other subtasks .
+The three subtasks are interconnected : the predictions from a subtask can provide useful information to carry out the other subtasks .
 This suggests the use of a stacking strategy .
 Stacking classifiers in Subtask B .
 If the comments in the question thread of q are good answers for an original question o , we can suppose that o and q are strongly related .
@@ -114,7 +114,7 @@ In Subtask B , we thus exploit the model trained on Subtask A .
 In particular , given the original question o , and the related question q with its comments , c 1 . . . c n , we use the model from Subtask A to classify the question / comment pairs , q , c i and o , c i , obtaining respectively the scores p q , c i and p o , c i .
 We consider these scores as distributions and derive the following features : ( i ) mean squared error ( MSE ) = i ( p q , c i ? p o , c i ) 2 ; ( ii ) Pearson correlation coefficient between the p q , c 1 , . . . , p q , cn and the p o , c 1 , . . . , p o , cn ; ( iii ) ten features corresponding to the sorted differences between p q , c i and p o , c i ; ( iv ) agreement percentage , i.e. , percentage of times sign ( p q , c i ) = sign ( p o , c i ) ; ( v ) max score = maxi ( p o , c i ) ; ( vi ) mean score = 1 n i p o , c i ; ( vii ) positive percentage , i.e. , percentage of times p o , c i > 0 ; ( viii ) normalized positive percentage , i.e. , percentage of times p o , c i > 0 when p q , c i >
 0 . Stacking classifiers in Subtask C .
-A good comment fora question q should be also good for an original question o if q and o are strongly related , i.e. , q is relevant or a perfect match too .
+A good comment for a question q should be also good for an original question o if q and o are strongly related , i.e. , q is relevant or a perfect match too .
 We thus developed a stacking strategy for Subtask C that uses the following scores in the classification step , w.r.t. an original question o and the comment c i from the thread of q:
 p q , c i , which is the score of the pair q , c i provided by the model trained on Subtask A ;
 p o , c i , which is the score of the pair o , c i provided by the model trained on Subtask A ;
@@ -155,7 +155,7 @@ Results : shows the results on Subtask B .
 On the official test set , our primary submission achieved the third position w.r.t. MAP among 11 systems .
 Differently from what observed in the tuning stage , on the official test set the contrastive systems achieve a higher MAP and would have ranked second .
 The primary system achieves the highest F 1 and accuracy on both tuning and test stages .
-Considering these two metrics , our primary submission is overall the best model .
+Considering these two metrics , our primary submission is over all the best model .
 Subtask C Model :
 The learning model operates on the triplet , o , q , c , using the kernel , PTK + ( p a , p b ) + LK C ( t a , tb ) , where PTK + ( p a , p b ) = PTK ( o 1 , o 2 ) + PTK ( c 1 , c 2 ) ( see Section 3.2 ) and LK C is a linear kernel operating on feature vectors , which include : ( i ) the similarity metrics between o and c , between o and q , and between o and the entire thread of q , as described in Section 3.1 ; ( ii ) the heuristic features introduced in Section 4.2 ; ( iii ) the thread - based features discussed in 4.3 ; ( iv ) the ranking features ( see Section 4.1 ) ; ( v ) the features derived from the scores of subtasks A and B , described in Section 4.4 . :
 Results on Subtask C on the official development set , and on the official test set .
@@ -171,5 +171,5 @@ Therefore , we decided to perform parameter tuning applying cv to the developmen
 Our primary submission achieved the second highest MAP , while our Contrastive 2 is the best result .
 It should be also noted that the F 1 our system is the best among 10 primary submissions .
 In this subtask , accuracy is not a reliable measure , as the data is significantly imbalanced .
-Ina future work we would like to change the learning paradigm from classification , e.g. , demonstrated in for several NLP applications , to a learning to rank problem .
+In a future work we would like to change the learning paradigm from classification , e.g. , demonstrated in for several NLP applications , to a learning to rank problem .
 This can be enabled by the preference kernel and should have a positive impact on the MAP metric since the SVM classification algorithm we used optimizes accuracy .

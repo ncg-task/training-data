@@ -7,13 +7,12 @@
 144	65	68	300
 144	11	28	model dimension D
 144	37	61	word embedding dimension
-145	3	6	run
 145	11	31	CPU performance test
 145	32	34	on
 145	37	82	2.20 GHz 16 core Intel Xeon E5-2660 processor
 145	83	87	with
 145	88	102	hyperthreading
-146	37	39	on
+146	58	60	on
 146	64	82	NVIDIA Titan X GPU
 146	3	7	test
 146	12	39	thin - stack implementation
@@ -34,7 +33,6 @@
 22	150	174	required parse structure
 23	12	25	improves upon
 23	30	50	TreeRNN architecture
-23	23	25	on
 24	0	2	At
 24	3	12	test time
 24	18	36	can simultaneously
@@ -43,6 +41,7 @@
 24	57	75	unparsed sentences
 24	78	86	removing
 24	91	101	dependence
+24	102	104	on
 24	108	123	external parser
 25	14	22	supports
 25	23	42	batched computation
@@ -55,7 +54,7 @@
 26	24	65	novel tree - sequence hybrid architecture
 26	66	78	for handling
 26	79	99	local linear context
-26	1	3	in
+26	100	102	in
 26	103	126	sentence interpretation
 2	25	32	Parsing
 2	37	59	Sentence Understanding
@@ -65,10 +64,10 @@
 189	53	66	little better
 189	67	71	than
 189	76	88	RNN baseline
-189	22	32	SPINN - PI
+189	100	110	SPINN - PI
 189	111	115	with
 189	120	139	added tracking LSTM
-189	44	52	performs
+189	140	148	performs
 189	149	153	well
 191	4	20	full SPINN model
 191	21	25	with
@@ -86,7 +85,7 @@
 193	43	59	tree - based CNN
 193	76	80	uses
 193	81	110	tree - structured composition
-193	34	37	for
+193	111	114	for
 193	115	139	local feature extraction
 193	151	177	simpler pooling techniques
 193	178	186	to build
@@ -98,11 +97,11 @@
 195	60	85	Stanford Parser 's parses
 195	86	88	of
 195	93	102	SNLI data
-195	30	32	at
+195	103	105	at
 195	108	142	transition - by - transition level
 195	145	149	with
 195	150	165	92.4 % accuracy
-195	30	32	at
+195	166	168	at
 195	169	178	test time
 194	12	21	show that
 194	24	29	model
@@ -111,4 +110,6 @@
 194	86	100	outper - forms
 194	119	154	only partially ( tree - based CNN )
 194	171	182	outperforms
+194	101	104	one
+194	105	110	which
 194	198	223	not use it at all ( RNN )

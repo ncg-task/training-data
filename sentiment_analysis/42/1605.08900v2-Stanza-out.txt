@@ -39,7 +39,7 @@ We describe the background on memory network in this part .
 Memory network is a general machine learning framework introduced by Weston et al ..
 Its central idea is inference with a long - term memory component , which could be read , written to , and jointly learned with the goal of using it for prediction .
 Formally , a memory network consists of a memory m and four components I , G , O and R , where m is an array of objects such as an array of vectors .
-Among these four components , I converts input to internal feature representation , G updates old memories with new input , O generates an out - put representation given anew input and the current memory state , R outputs a response based on the output representation .
+Among these four components , I converts input to internal feature representation , G updates old memories with new input , O generates an out - put representation given a new input and the current memory state , R outputs a response based on the output representation .
 Let us take question answering as an example to explain the workflow of memory network .
 Given a list of sentences and a question , the task aims to find evidences from these sentences and generate an answer , e.g. a word .
 During inference , I component reads one sentence s i at a time and encodes it into a vector representation .
@@ -60,7 +60,7 @@ Given a sentence s = {w 1 , w 2 , ... , w i , ...w n } consisting of n words and
 For example , the sentiment polarity of sentence " great food but the service was dreadful ! " towards aspect " food " is positive , while the polarity towards aspect " service " is negative .
 When dealing with a text corpus , we map each word into a low dimensional , continuous and real - valued vector , also known as word embedding .
 All the word vectors are stacked in a word embedding matrix L ?
-R d|V | , where dis the dimension of word vector and | V | is vocabulary size .
+R d|V | , where d is the dimension of word vector and | V | is vocabulary size .
 The word embedding of w i is notated as e i ?
 R d 1 , which is a column in the embedding matrix L.
 An Overview of the Approach
@@ -76,7 +76,7 @@ An illustration of our approach is given in , which is inspired by the use of me
 Our approach consists of multiple computational layers ( hops ) , each of which contains an attention layer and a linear layer .
 In the first computational layer ( hop 1 ) , we regard aspect vector as the input to adaptively select important evidences from memory m through attention layer .
 The output of attention layer and the linear transformation of aspect vector 2 are summed and the result is considered as the input of next layer ( hop 2 ) .
-Ina similar way , we stack multiple hops and run these steps multiple times , so that more abstractive evidences could be selected from the external memory m .
+In a similar way , we stack multiple hops and run these steps multiple times , so that more abstractive evidences could be selected from the external memory m .
 The output vector in last hop is considered as the representation of sentence with regard to the aspect , and is further used as the feature for aspect level sentiment classification .
 It is helpful to note that the parameters of attention and linear layers are shared in different hops .
 Therefore , the model with one layer and the model with nine layers have the same number of parameters .
@@ -129,7 +129,7 @@ Model
 Different from Model 3 , location representations are regarded as neural gates to control how many percent of word semantics is written into the memory .
 We feed location vector vi to a sigmoid function ? , and calculate mi with element - wise multiplication :
 The Need for Multiple Hops
-It is widely accepted that computational models that are composed of multiple processing layers have the ability to learn representations of data with multiple levels of abstraction .
+It is widely accepted that computational models thatare composed of multiple processing layers have the ability to learn representations of data with multiple levels of abstraction .
 In this work , the attention layer in one layer is essentially a weighted average compositional function , which is not powerful enough to handle the sophisticated computationality like negation , intensification and contrary in language .
 Multiple computational layers allow the deep memory network to learn representations of text with multiple levels of abstraction .
 Each layer / hop retrieves important context words , and transforms the representation at previous level into a representation at a higher , slightly more abstract level .
@@ -171,7 +171,7 @@ Our approach using only content attention is abbreviated to MemNet ( k ) , where
 We can find that feature - based SVM is an extremely strong performer and substantially outperforms other baseline methods , which demonstrates the importance of a powerful feature representation for aspect level sentiment classification .
 Among three recurrent models , TDLSTM performs better than LSTM , which indicates that taking into account of the aspect information is helpful .
 This is reason - able as the sentiment polarity of a sentence towards different aspects ( e.g. " food " and " service " ) might be different .
-It is somewhat disappointing that incorporating attention model over TDLSTM does not bring any improvement .
+It is somewhat dis appointing that incorporating attention model over TDLSTM does not bring any improvement .
 We consider that each hidden vector of TDLSTM encodes the semantics of word sequence until the current position .
 Therefore , the model of TDLSTM + ATT actually selects such mixed semantics of word sequence , which is weird and not an intuitive way to selectively focus on parts of contexts .
 Different from TDLSTM + ATT , the proposed memory network approach removes the recurrent calculator over word sequence and directly apply attention mechanism on context word representations .
@@ -218,7 +218,7 @@ Accordingly , Model 2 predicts the correct sentiment label towards " food " .
 We believe that location - enhanced model captures both content and location information .
 For instance , in ( a ) the closest context words of the aspect " service " are " the " and " was " , while " dreadful " has the largest weight .
 Error Analysis
-We carryout an error analysis of our location enhanced model ( Model 2 ) on the restaurant dataset , and find that most of the errors could be summarized as follows .
+We carry out an error analysis of our location enhanced model ( Model 2 ) on the restaurant dataset , and find that most of the errors could be summarized as follows .
 The first factor is noncompositional sentiment expression .
 This model regards single context word as the basic computational unit and can not handle this situation .
 An example is " dessert was also to die for ! " , where the aspect is underlined .
@@ -226,12 +226,12 @@ The sentiment expression is " die for " , whose meaning could not be composed fr
 The second factor is complex aspect expression consisting of many words , such as " ask for the round corner table next to the large window . "
 This model represents an aspect expression by averaging its constituting word vectors , which could not well handle this situation .
 The third factor is sentimental relation between context words such as negation , comparison and condition .
-An example is " but dinner here is never disappointing , even if the prices area bit over the top " .
+An example is " but dinner here is never dis appointing , even if the prices are a bit over the top " .
 We believe that this is caused by the weakness of weighted average compositional function in each hop .
 There are also cases when comparative opinions are expressed such as " i 've had better japanese food at a mall food court " .
 Related Work
-This work is connected to three research areas in natural language processing .
-We briefly describe related studies in each area .
+This work is connected to three research are as in natural language processing .
+We briefly describe related studies in each are a .
 Compositionality in Vector Space
 In NLP community , compositionality means that the meaning of a composed expression ( e.g. a phrase / sentence / document ) comes from the meanings of its constituents ( Frege , 1892 ) .
 exploits a variety of addition and multiplication functions to calculate phrase vector .

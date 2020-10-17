@@ -3,14 +3,14 @@ Modeling Semantics with Gated Graph Neural Networks for Knowledge Base Question 
 abstract
 The most approaches to Knowledge Base Question Answering are based on semantic parsing .
 In this paper , we address the problem of learning vector representations for complex semantic parses that consist of multiple entities and relations .
-Previous work largely focused on selecting the correct semantic relations fora question and disregarded the structure of the semantic parse : the connections between entities and the directions of the relations .
+Previous work largely focused on selecting the correct semantic relations for a question and disregarded the structure of the semantic parse : the connections between entities and the directions of the relations .
 We propose to use Gated Graph Neural Networks to encode the graph structure of the semantic parse .
 We show on two data sets that the graph networks outperform all baseline models that do not explicitly model the structure .
 The error analysis confirms that our approach can successfully process complex semantic parses .
 Introduction
 Knowledge base question answering ( QA ) is an important natural language processing problem .
 Given a natural language question , the task is to find a set of entities in a knowledge base ( KB ) that constitutes the answer .
-For example , fora question " What is Princess Leia 's home planet ? " the answer , " Alderaan " , could be retrieved from a general - purpose KB , such as Wikidata 1 .
+For example , for a question " What is Princess Leia 's home planet ? " the answer , " Alderaan " , could be retrieved from a general - purpose KB , such as Wikidata 1 .
 A successful KB QA system would ultimately provide a universally accessible natural language interface to factual knowledge .
 QA requires precise modeling of the question semantics through the entities and relations available in the KB in order to retrieve the correct answer .
 shows how the above example question could be modeled using Wikidata .
@@ -43,10 +43,9 @@ To the best of our knowledge , we are the first to use GGNNs for semantic parsin
 ( iii ) Our Gated Graph Neural Network implementation for semantic parsing improves performance on complex questions in comparison to strong baselines .
 The results show a 27.4 % improvement of the F - score against the best non -graph model .
 Code and data sets
-Our system can be used with a pre-trained model to answer factual questions with Wikidata or trained anew on any data set that has question - answer pairs .
+Our system can be used with a pre-trained model to answer factual questions with Wikidata or trained a new on any data set that has question - answer pairs .
 The complete code , the scripts that produce the evaluation data and the installation instructions can be found here :
-https://github.
-com/UKPLab/coling2018-graph-neural-networks-question-answering.
+https://github.com/UKPLab/coling2018-graph-neural-networks-question-answering.
 2 Semantic parsing
 Semantic graphs
 We employ structural semantic representations in the form of graphs to encode the meaning of a question .
@@ -66,7 +65,7 @@ The graphs are also isomorphic to SPARQL queries that can be used to evaluate a 
 Our semantic graphs were inspired by the query graphs of Yih et al .
 and their extension in , the key difference being that we do not differentiate between the core relation and modifiers , but rather allow graphs that have multiple independent relations .
 We also allow relations to attach to other nodes rather than the q-node , enabling longer relation paths between a known entity and the q-node .
-Thus , the semantic graphs defined here area superset of the query graphs in and allow us to model more complex meanings .
+Thus , the semantic graphs defined here are a superset of the query graphs in and allow us to model more complex meanings .
 Consequently , they also correspond to the formalized representations used by and the simple ?- DCS , since those were the foundation for the query graphs .
 Semantic graph construction
 Yih et al .
@@ -83,19 +82,19 @@ The action a e ( add entity ) pops a free entity e from the set F at the current
 Then it queries the KB and retrieves the set of available relation types
 Re for the entity e.
 For each relation type r ?
-Re , it creates anew copy of the graph and adds anew directed edge between the q -node and e with the relation type r: a e ( E , F ) = { E ? r ( q , e ) , F ? e | e ? F , r ? Re }. Contrary to and , we allow two - step paths between the q -node and the entity e: r ( q , d ) ? r ( d , e ) .
-The action ac ( add constraint ) pops a free entity e and follows the same procedure as a e , but instead of adding anew edge , it add s a modifier to the last added edge of the graph , thus creating a ternary edge : ac ( E , F ) = { E ? r 2 ( r 1 ( q , e 1 ) , e 2 ) , F ? e 2 | e 2 ? F , r 2 ? Re 2 , r 1 ( q , e 1 ) ?
+Re , it creates a new copy of the graph and adds a new directed edge between the q -node and e with the relation type r: a e ( E , F ) = { E ? r ( q , e ) , F ? e | e ? F , r ? Re }. Contrary to and , we allow two - step paths between the q -node and the entity e: r ( q , d ) ? r ( d , e ) .
+The action ac ( add constraint ) pops a free entity e and follows the same procedure as a e , but instead of adding a new edge , it add s a modifier to the last added edge of the graph , thus creating a ternary edge : ac ( E , F ) = { E ? r 2 ( r 1 ( q , e 1 ) , e 2 ) , F ? e 2 | e 2 ? F , r 2 ? Re 2 , r 1 ( q , e 1 ) ?
 E}.
 Finally , the action a m : Encoding a graph into initial hidden states
 relation types that allow dates as values .
-Our semantic graph construction process allows to effectively search the space of possible graphs fora given question through an iterative application of the defined actions A on the last state St ( see , for example , ) .
+Our semantic graph construction process allows to effectively search the space of possible graphs for a given question through an iterative application of the defined actions A on the last state St ( see , for example , ) .
 Representation learning
 We follow the state - of - the - art approaches for QA and learn representations for the question and every possible semantic graph .
 Then we use a simple reward function ?
 to judge if a semantic graph is a correct semantic parse of the input question .
 Below we describe the architectures that we use to learn the representations for questions and graphs .
 Deep Convolutional Networks
-We use Deep Convolutional Neural Networks ( DCNN ) to learn a representation fora question .
+We use Deep Convolutional Neural Networks ( DCNN ) to learn a representation for a question .
 DCNNs have been proven effective for constructing sentence - level representations on a variety of NLP tasks , including named entity recognition and .
 The DCNN architecture is depicted in , where it is used to map an input question to a fixed - size vector representation .
 The input question is first tokenized and the special start and end tokens are added to the sequence : x = { s , x 1 , x 2 . . . x n , f }.
@@ -123,8 +122,8 @@ h
 ( 1 ) v = h le .
 We further transform the relation label vectors to get directional embeddings for relations types :
 Using the same word embeddings as an input to construct the question and relation representations has been shown successful in previous work .
-Propagation Model GGNNs area type of recurrent neural networks .
-The recurrence is unrolled fora fixed number of steps T and the gating mechanism works akin to Gated Recurrent Units .
+Propagation Model GGNNs are a type of recurrent neural networks .
+The recurrence is unrolled for a fixed number of steps T and the gating mechanism works akin to Gated Recurrent Units .
 The propagation model for GGNN is defined as follows :
 where ?
 is the logistic sigmoid function and is the element - wise multiplication .
@@ -158,7 +157,7 @@ QALD - 7
 Next , we examine the out - of - domain results on the QALD - 7 data set for the five models ( see ) .
 The difference in performance is less prominent on this data set , but we can observe the same trends .
 The Single Edge model outperforms both the STAGG and Pooled Edges baselines .
-The GGNN delivers the best performance , although overall the best result is worse than on the WebQSP - WD data set .
+The GGNN delivers the best performance , although over all the best result is worse than on the WebQSP - WD data set .
 QALD - 7 is much smaller , but also more complex on average ( cf. the average number of edges needed to find the correct answer in ) .
 Overall , we can conclude that the explicit modeling of the structure of semantic graphs with GGNN results in a better performance both in - domain on We bQSP - WD and out - of - domain on QALD - 7 that was only used for evaluation .
 Models
@@ -168,14 +167,13 @@ First , DCNN is used to produce a representation for the input question , as des
 Then , we replace the entity tokens in the input question with a special entity symbol e and apply DCNN on it again to get a second representation for the question .
 For each semantic graph , we take the label of the relation in the first edge ( core edge ) , tokenize it and likewise apply DCNN on it to get a representation .
 We produce two representations for the core relation : one that includes the label of the attached entity and one that includes the entity symbol .
-The manual features include binary indicators for modifiers and constraints in the semantic graphs , as well as features for certain keywords in the question ( see fora detailed description ) .
+The manual features include binary indicators for modifiers and constraints in the semantic graphs , as well as features for certain keywords in the question ( see for a detailed description ) .
 3 . Pooled Edges model - We use the DCNN to encode the question and the label of each edge in the semantic graph .
 To get a fixed - vector representation of the graph , we apply a pooling operation over the representation of the individual edges .
 This model encodes all information about the semantic graphs , but disregards their structure .
 Graph Neural Network ( GNN ) -
 To judge the effect of the gated graph neural architecture , we also include a model variant that does not use the gating mechanism and directly computes the hidden state as a combination of the activations ( Eq 1 ) and the previous state .
-Gated
-Graph Neural Network ( GGNN ) - We use the GGNN to process semantic parses , as described in Section 3.2 .
+Gated Graph Neural Network ( GGNN ) - We use the GGNN to process semantic parses , as described in Section 3.2 .
 This model encodes all information from semantic graphs , including their structure , into a vector representation .
 To encode the question we use the same DCNN model ( see Section 3.1 ) .
 The defined baselines use either manual features to capture the structure of the semantic graph ( STAGG ) , a simple pooling mechanism ( Pooled Edges ) or disregard the structure completely ( Single Edge ) .
@@ -203,7 +201,7 @@ The learning rate is fixed to 0.001 and the other optimization parameters are se
 We determine the hyper - parameters , such as the size of the hidden layer , with the random search on the development set ( see ) .
 On the 1945 training questions , the GGNN model has usually finished training in under two hours on a single GPU .
 Inference
-We take the steps described in Section 2.2 to construct possible semantic graphs fora question at inference time .
+We take the steps described in Section 2.2 to construct possible semantic graphs for a question at inference time .
 For We bQSP - WD , we use the entities produced by S - MART to start the graph construction .
 On QALD - 7 , we use the annotated entities provided by the Shared Task organizers .
 Each question and semantic graph are encoded into fixed - size vector representations and the reward function ?
@@ -219,7 +217,7 @@ We compare the graph models to the baselines including the previous state - of -
 7
 WebQSP-WD
 We compare the results on the WebQSP - WD data set in .
-As can be seen , the graph models outperform all other models across precision , recall and F-score , with GGNN showing the best overall result .
+As can be seen , the graph models outperform all other models across precision , recall and F-score , with GGNN showing the best over all result .
 We confirm thereby that the architecture that encodes the structure of a semantic parse has an advantage over other approaches .
 To validate the results , we have re-trained the model with different random seeds and observed little variance in the results ( F-score , ? = 0.0205 ) .
 The STAGG architecture delivers the worst results in our experiments , the main reason being supposedly that the model had to rely on manually defined features that are less flexible .
@@ -238,7 +236,7 @@ The performance of the model drops for the most complex questions ( # of edges ?
 That does not happen for the GNN model variant without the gating mechanism .
 We conjecture that this happens because GGNN has more parameters than GNN and therefore needs more data to learn .
 By looking at the model errors on the most complex questions , we could see that GGNN tends to incorrectly predict one of the relations in the graph , which results in a wrong answer .
-GNN , on the other hand , more often predicts less relations that are needed and therefore gets a non -zero score fora partially correct answer .
+GNN , on the other hand , more often predicts less relations that are needed and therefore gets a non -zero score for a partially correct answer .
 For example for the question " Who is the prime minister of Spain 2011 ? " , GNN predicts a graph of two relations INSTANCE OF ( human ) and HEAD OF GOVERNMENT which returns a list of all Spanish prime ministers .
 The complete correct graph would also include temporal constraints .
 Notably , GGNN also has the best performance on the most simple semantic parses that only have one edge .
@@ -254,14 +252,14 @@ GGNN makes less mistakes in general , the error propagation from the entity link
 In 18 % of the cases , it was impossible to find the answer in Wikidata since there were no path between entities in the question and the answer .
 For example , for the question " Where did Harper Lee attend high school ? " , the correct answer " Monroe County High School " is a valid entity in Wikidata , but it is not connected to " Harper Lee " via the EDUCATED AT relation .
 14 % of the time , the data set contained an inconsistent answer and even though the model has predicted the correct semantic graph , the answers did not match .
-For example , a correct answer fora question about someone 's place of birth is usually a city or a town , yet fora smaller set of questions a city borough ( e.g. Manhattan ) or a country are listed in the data set .
+For example , a correct answer for a question about someone 's place of birth is usually a city or a town , yet for a smaller set of questions a city borough ( e.g. Manhattan ) or a country are listed in the data set .
 Overall , in 32 % of the cases the error was caused by the gap between the KB and the data set .
 This lets us put the current results into a perspective with the previously reported numbers for the Freebase KB .
 If we approximately adjust our results for this kind of errors , we achieve between 0.469 and 0.51 F-score .
 report results for various approaches ranging from 0.404 to 0.503 F - score on the original WebQuestions data set that is a superset of We bQSP - WD ( see Section 4.1 ) .
 The majority of errors for both models are caused by wrong predictions ( row 6 in ) .
 GGNN selects significantly less wrong semantic graphs and more often successfully handles graphs with multiple edges .
-For example , fora question " What language do people speak in Brazil ? " , the GGNN model correctly predicts the graph with two edges HOME COUNTRY and NATIVE LANGUAGE to get a list of all languages that are spoken in Brazil .
+For example , for a question " What language do people speak in Brazil ? " , the GGNN model correctly predicts the graph with two edges HOME COUNTRY and NATIVE LANGUAGE to get a list of all languages that are spoken in Brazil .
 Whereas the other models either select the relation OFFICIAL LANGUAGE that returns only the official language of the country or choose a wrong interpretation altogether .
 We also look at the hit@10 measure that shows how often the correct semantic graph was in the top 10 scored graphs by the model ( row 7 in ) .
 Notably , in 44 % of the cases the correct semantic graph was still among the top scored graphs for the GGNN model .
@@ -291,7 +289,7 @@ In this work , we have used Gated Graph Neural Networks to encode the structure 
 We have shown that disregarding the semantic structure leads to a falling performance on questions that require complex semantic parses to get the correct answers .
 Our GGNN architecture was able to successfully model the structure of semantic parses .
 We have compared the performance of GGNNs against the previous work and non-graph models on two data sets and have broken down the results by question complexity .
-The analysis has shown that the suggested graph architectures do not have the same drop in performance on complex questions and produce better overall results .
+The analysis has shown that the suggested graph architectures do not have the same drop in performance on complex questions and produce better over all results .
 Recently , and have attempted to incorporate entity linking into a feature based QA model .
 In the future , we plan to follow their work and integrate GGNNs with entity linking into a single model .
 We also see possible applications for GGNNs on other semantic parsing tasks , such as text comprehension .

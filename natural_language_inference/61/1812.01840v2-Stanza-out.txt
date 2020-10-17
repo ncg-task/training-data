@@ -18,7 +18,7 @@ Request permissions from permissions@acm.org .
 DAPA '19 , Melbourne , Australia 2019
 Copyright held by the owner / author ( s ) .
 Publication rights licensed to ACM .
-. and a hypothesis in a large training set , then predicts the relation between anew pair of premise and hypothesis .
+. and a hypothesis in a large training set , then predicts the relation between a new pair of premise and hypothesis .
 e existing methods of NLI can be roughly partitioned into two categories : feature - based models and neural network - based models .
 Feature - based models represent a premise and a hypothesis by their unlexicalized and lexicalized features , such as n-gram length and the real - valued feature of length di erence , then train a classi er to perform relation classi cation .
 Recently , end - to - end neural network - based models have drawn worldwide a ention since they have demonstrated excellent performance on quite a few NLP tasks including machine translation , natural language inference , etc .
@@ -72,7 +72,7 @@ m q = [ q ; q ; q ? q ; q q] ( 7 ) A er the enhancement of local inference , ano
 Instead of summation adopted by Parikh et al. , ESIM proposes to compute both max and average pooling and feeds the concatenate xed length vector to the nal classi er : a fully connected multi - layer perceptron .
 shows a high - level view of the ESIM architecture , where the boom LSTM1 layer of is the input encoding layer , the middle part with LSTM2 layer is the local inference layer , the upper part is the inference composition layer .
 aESIM model
-e overall architecture of our newly proposed a ention boosted sequential inference model ( named aESIM ) based on ESIM is similar to ESIM .
+e over all architecture of our newly proposed a ention boosted sequential inference model ( named aESIM ) based on ESIM is similar to ESIM .
 In detail , a ESIM also consists of four main parts : encoding layer , local inference modeling layer , decoding layer and classi cation layer .
 e only difference between ESIM and a ESIM is that we substitute the two Bi - LSTM layers ( LSTM1 and LSTM2 ) in ESIM with two Bi - a LSTM layers in a ESIM .
 erefore , as illustrated in , the layers with red - do ed circles in ESIM will be replaced by the Bi - a LSTM layers shown in the right upper corner of the and the details of Bi - aLSTM can be found in .
@@ -92,7 +92,7 @@ In traditional Bi - LSTM model , the forward and the backward vectors of a word 
 e model simply connects the forward and backward vectors head and tail without weighing their importance .
 For a word in di erent direction or orientation , the former and the la er words are reversed .
 us , di erent direction vectors of a word make di erent contribution to the representation , especially the words in along sentence .
-erefore , we propose anew adaptive direction layer to learn the contribution of di erent directions fora single word .
+erefore , we propose a new adaptive direction layer to learn the contribution of di erent directions for a single word .
 Formally , given two direction word vectors ? ?
 s il and ? ?
 s il , the whole word vector can be expressed as :
@@ -129,7 +129,7 @@ Out - of - vocabulary ( OOV ) words are initialized randomly with Gaussian sampl
 All vectors are updated during training .
 Experiment results
 Except for comparing our method a ESIM with ESIM , we listed the experimental results of methods with their references in on SNIL .
-In , the method in the rst block is a traditional feature engineering method , those in the second are the sentence vector - based models , those in the third area ention - based models , and ESIM and our aESIM are shown in the fourth block .
+In , the method in the rst block is a traditional feature engineering method , those in the second are the sentence vector - based models , those in the third are a ention - based models , and ESIM and our aESIM are shown in the fourth block .
 Where the results of ESIM and aESIM are implemented by ourselves on Keras , the results of the others are taken from their original publications .
 We then compare the baseline models , CBOW , Bi - LSTM with ESIM and our a ESIM on MultiNLI corpus shown
 In , where the results of the baselines are taken from .

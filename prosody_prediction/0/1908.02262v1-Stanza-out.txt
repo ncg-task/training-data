@@ -22,14 +22,14 @@ In Section 4 we explain the experiments and the experimental results using a num
 Although BERT has been previously applied in various sequence labeling tasks , like named entity recognition , to the best of our knowledge , this is the first application of BERT in the task of predicting prosodic prominence .
 We analyse the results in Section 5 , comparing BERT to a bidirectional long shortterm memory ( BiLSTM ) model and looking at the types of errors made by these selected models .
 We find that BERT outperforms the BiLSTM model across all the labels .
-Finally in Section 6 we discuss the methods in light of the experimental results and highlight areas that are known to negatively impact the results .
+Finally in Section 6 we discuss the methods in light of the experimental results and highlight are as thatare known to negatively impact the results .
 We also discuss the relevance of pre-training for the task of predicting prosodic prominence .
 We conclude by pointing to future research both in developing better methods for predicting prosodic prominence but also to further improve the quality of the dataset .
 The dataset and the PyTorch code for the models are available on GitHub : https://github.com/
 Helsinki - NLP / prosody .
 Background
 Prosodic Prominence
-Every word and utterance in speech encompasses phonetic and phonological properties that are not resulting from the choice of the underlying lexical items and that encode meaning in addition to that of the individual lexemes .
+Every word and utterance in speech encompasses phonetic and phonological properties thatare not resulting from the choice of the underlying lexical items and that encode meaning in addition to that of the individual lexemes .
 These properties are referred to as prosody and they depend on a variety of factors such as the semantic and syntactic relations between these items , and their rhythmic grouping .
 Prosodic variation in speech contributes to a large extend to the perception of natural sounding speech .
 Prosodic prominence represents one type of prosodic phenomenon that manifests through the subjective impression of emphasis in speech where certain words are interpreted as more salient within their lexical surrounding context .
@@ -41,11 +41,11 @@ Throughout the literature a number of methods have been proposed for the labelin
 These methods can be roughly categorized on the basis of the need for training data ( manual prosodic annotations ) into supervised and unsupervised , but crucially , on the basis of the information they utilize from speech and language to generate their predictions ( prominence labels ) .
 As prominence perception has been found to correlate with acoustic - phonetic features , with the constituent syntactic structure of an utterance , with the frequency of occurrence of individual lexical items , and with the probabilities of contiguous lexical sequences , automatic methods have been developed utilizing these features either in combination or independently .
 Overall , these features can be largely divided into two categories : ( i ) acoustic ( derived from the sound pressure waveform of the speech signal ) and ( ii ) language ( extracted by studying the form of the language ; for instance , semantic or syntactic factors in the language ) .
-Both acoustic and language - based features have been shown to provide good overall performance in detecting prominence ( in both supervised and unsupervised cases ) , where , however , the methods utilizing acoustic features seem to provide better performance for the unsupervised detection of prominences in speech , with state - of - the - art results reaching high level of accuracy , close to that of the inter-annotator agreement for the data .
+Both acoustic and language - based features have been shown to provide good over all performance in detecting prominence ( in both supervised and unsupervised cases ) , where , however , the methods utilizing acoustic features seem to provide better performance for the unsupervised detection of prominences in speech , with state - of - the - art results reaching high level of accuracy , close to that of the inter-annotator agreement for the data .
 While the top - down linguistic information is known to correlate with perceptual prominence , in this paper we want to make a clear distinction between data labelling and textbased prediction .
 Thus , in this work , we utilize purely acoustic prominence annotations of the speech data using the method developed by as the prosodic reference .
 Predicting Prosodic Prominence from Text
-To what extent prosodic prominence can be predicted from textual input only has been a topic of inquiry in linguistics fora longtime .
+To what extent prosodic prominence can be predicted from textual input only has been a topic of inquiry in linguistics for a longtime .
 In traditional generative phonology , accent placement was considered to be fully determined by linguistic structure , whereas a seminal work by emphasized the importance and relevance of the lexical semantic context as well as the speakers ' intention , positing that , in general , a mind reading ability maybe necessary to determine prominent words in a sentence .
 As longstanding inquiries hold , the goal of reliably predicting the placement of prominent entities from information automatically derived from textual resources is still ongoing .
 Several efforts have been made towards this direction , especially in text - to - speech ( TTS ) synthesis research , where generation of appropriate prosody would increase both intelligibility and quality of synthetic speech .
@@ -96,10 +96,9 @@ We use a dropout of 0.2 between the layers of the BiLSTM .
 We use a batch size of 64 and train the model for 5 epochs .
 For the SVM we use Minitagger 4 implementation by using each dimension of the pre-trained 300D Glo Ve 840B word embeddings as features , with context - size 1 , i.e. including the previous and the next word in the context .
 For the conditional random field ( CRF ) model we use MarMot 5 by with the default configuration .
-The model applies standard feature templates that are used for part - ofspeech tagging such as surrounding words as well as suffix and prefix features .
+The model applies standard feature templates thatare used for part - ofspeech tagging such as surrounding words as well as suffix and prefix features .
 We did not optimize the feature model nor any of the other hyperparameters .
-All systems except the Minitagger and CRF are our implementations using PyTorch and are made available on GitHub : https://github.com/
-Helsinki - NLP / prosody .
+All systems except the Minitagger and CRF are our implementations using PyTorch and are made available on GitHub : https://github.com/Helsinki - NLP / prosody .
 For the experiments we used the larger train - 360 training set .
 We report both 2 - way and 3 - way classification results .
 In the 2 - way classification task we take the three prominence labels and merge labels 1 and 2 into a single prominent class .
@@ -176,11 +175,11 @@ As we noticed , already with as little as 10 % of the training data , BERT outpe
 This suggests that BERT has implicitly learned syntactic or semantic information relevant for the prosody prediction task .
 Our results are inline with the earlier results by and who showed that pre-trained word embeddings improve model performance in the prominence prediction task .
 Table 5 lists five randomly selected examples from the test set and shows the prominence predictions by BERT compared to the reference annotation .
-These examples indicate that even if the overall accuracy of the model is not high , the predictions still look plausible in isolation .
+These examples indicate that even if the over all accuracy of the model is not high , the predictions still look plausible in isolation .
 Finally , the classifiers in this paper are trained on single sentences , losing any discourse - level information and relations to surrounding context .
 Increasing the context to contain , e.g. , also previous sentences could improve the results .
 Conclusion
-In this paper we have introduced anew NLP dataset and benchmark for predicting prosodic prominence from text , which to our knowledge is the largest publicly available dataset with prosodic labels .
+In this paper we have introduced a new NLP dataset and benchmark for predicting prosodic prominence from text , which to our knowledge is the largest publicly available dataset with prosodic labels .
 We described the dataset creation and the resulting benchmark and showed that various sequence labeling methods can be applied to the task of predicting prosodic prominence using the dataset .
 Our experimental results show that BERT outperforms the other models with just up to 10 % of the training data , highlighting the effectiveness of pre-training for the task .
 It also highlights that the implicit syntactic or semantic features BERT has learned during pre-training are relevant for the specific task of predicting prosodic prominence .
@@ -188,6 +187,6 @@ We also discussed a number of limitations of the automatic annotation system , a
 Based on this discussion , and more broadly , on the findings of this paper , we want to focus our future research activities in two fronts .
 Firstly , we will further develop the dataset annotation pipeline , improving the quality of prominence annotation and adding prosodic boundary labels .
 Secondly , we will further de-velop methods and models for improved prediction of prosodic prominence .
-In particular , as our results have shown that pre-training helps in the task , fine - tuning BERT with data involving features that are known to impact prosodic prominence ( like part - of - speech tagged data ) before training on the prosody dataset could help to improve the model performance .
+In particular , as our results have shown that pre-training helps in the task , fine - tuning BERT with data involving features thatare known to impact prosodic prominence ( like part - of - speech tagged data ) before training on the prosody dataset could help to improve the model performance .
 Furthermore , we will look at speaker - aware models , genre adaptation , and models for increased context .
 And , finally , our ultimate goal is to incorporate these methods into the development of a state - of - the - art text - to - speech synthesizer .

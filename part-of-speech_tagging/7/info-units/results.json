@@ -39,9 +39,9 @@
             }
           }
         },
-        "overall best system" : {
+        "over all best system" : {
           "is" : "multi-task bi - LSTM FREQBIN",
-          "from sentence" : "The overall best system is the multi-task bi - LSTM FREQBIN ( it uses w + c and POLYGLOT initialization for w ) ."
+          "from sentence" : "The over all best system is the multi-task bi - LSTM FREQBIN ( it uses w + c and POLYGLOT initialization for w ) ."
         }
       },
       "Initializing" : {

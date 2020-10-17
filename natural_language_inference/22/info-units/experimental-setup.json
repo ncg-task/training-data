@@ -59,20 +59,17 @@
           "from sentence" : "Learning rate starts at 0.5 , and decreases to 0.2 once the model stops improving ."
         },
         "L2-regularization weight" : {
-          "is" : "1 e - 4",
-          "from sentence" : "The L2-regularization weight is 1 e - 4 , AQSL weight is 1 and dropout with a drop rate of 0.2 is A typical model run converges in about 40 k steps ."
+          "is" : "1 e - 4"
         },
         "AQSL weight" : {
-          "is" : "1",
-          "from sentence" : "The L2-regularization weight is 1 e - 4 , AQSL weight is 1 and dropout with a drop rate of 0.2 is A typical model run converges in about 40 k steps ."
+          "is" : "1"
         },
         "dropout" : {
           "with" : {
             "drop rate" : {
               "of" : "0.2"
             }
-          },
-          "from sentence" : "The L2-regularization weight is 1 e - 4 , AQSL weight is 1 and dropout with a drop rate of 0.2 is A typical model run converges in about 40 k steps ."
+          }
         },
         "typical model run" : {
           "has" : {

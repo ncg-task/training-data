@@ -3,8 +3,7 @@
     "Results" : {
       "has" : {
         "GRU cells" : {
-          "are" : "most efficient",
-          "from sentence" : "The tables show that while GRU cells are the most efficient , the ON - LSTM cells ( with chunk size 8 ) are the most effective ( in terms of all considered measures ) ."
+          "are" : "most efficient"
         },
         "ON - LSTM cells" : {
           "with" : "chunk size 8",
@@ -16,14 +15,16 @@
           "from sentence" : "The tables show that while GRU cells are the most efficient , the ON - LSTM cells ( with chunk size 8 ) are the most effective ( in terms of all considered measures ) ."
         },
         "Effect of Data Augmentation" : {
-          "shows" : {
+          "show" : {
             "each augmentation step" : {
               "affects" : {
                 "model 's efficiency" : {
                   "has" : "negatively"
                 }
               },
-              "from sentence" : "The tables show that each augmentation step affects the model 's efficiency negatively ."
+              "from sentence" : "Effect of Data Augmentation
+The tables show that each augmentation step affects the model 's efficiency negatively ."
+
             }
           },
           "not" : {

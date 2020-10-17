@@ -2,6 +2,6 @@
   "has research problem" : [
     ["Neural Semantic Role Labeling", {"from sentence" : "Jointly Predicting Predicates and Arguments in Neural Semantic Role Labeling"}],
     ["Semantic role labeling ( SRL )", {"from sentence" : "Semantic role labeling ( SRL ) captures predicateargument relations , such as \" who did what to whom . \""}],
-    ["SRL", {"from sentence" : "Recent high - performing SRL models are BIO - taggers , labeling argument spans fora single predicate at a time ( as shown in ."}]
+    ["SRL", {"from sentence" : "Recent high - performing SRL models are BIO - taggers , labeling argument spans for a single predicate at a time ( as shown in ."}]
   ]  
 }

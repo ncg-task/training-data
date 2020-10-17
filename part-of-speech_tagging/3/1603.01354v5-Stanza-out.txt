@@ -42,7 +42,7 @@ Bi-directional
 LSTM
 LSTM
 Unit
-Recurrent neural networks ( RNNs ) area powerful family of connectionist models that capture time dynamics via cycles in the graph .
+Recurrent neural networks ( RNNs ) are a powerful family of connectionist models that capture time dynamics via cycles in the graph .
 Though , in theory , RNNs are capable to capturing long - distance dependencies , in practice , they fail due to the gradient vanishing / exploding problems .
 LSTMs ( Hochreiter and Schmidhuber , 1997 ) are variants of RNNs designed to cope with these gradient vanishing problems .
 Basically , a LSTM unit is composed of three multiplicative gates which control the proportions of information to forget and to pass onto the next time step .
@@ -58,13 +58,13 @@ An elegant solution whose effectiveness has been proven by previous work is bi-d
 The basic idea is to present each sequence forwards and backwards to two separate hidden states to capture past and future information , respectively .
 Then the two hidden states are concatenated to form the final output .
 CRF
-For sequence labeling ( or general structured prediction ) tasks , it is beneficial to consider the correlations between labels in neighborhoods and jointly decode the best chain of labels fora given input sentence .
+For sequence labeling ( or general structured prediction ) tasks , it is beneficial to consider the correlations between labels in neighborhoods and jointly decode the best chain of labels for a given input sentence .
 For example , in POS tagging an adjective is more likely to be followed by a noun than a verb , and in NER with standard BIO2 annotation ( Tjong Kim Sang and Veenstra , 1999 ) I - ORG can not follow I - PER .
 Therefore , we model label sequence jointly using a conditional random field ( CRF ) , instead of decoding each label independently .
 Formally , we use z = {z 1 , , z n } to represent a generic input sequence where z i is the input vector of the ith word .
 y = {y 1 , , y n } represents a generic sequence of labels for z .
 Y ( z ) denotes the set of possible label sequences for z .
-The probabilistic model for sequence CRF defines a family of conditional probability p ( y | z ; W , b ) overall possible label sequences y given z with the following form :
+The probabilistic model for sequence CRF defines a family of conditional probability p ( y | z ; W , b ) over all possible label sequences y given z with the following form :
 where ? i ( y , y , z ) = exp ( W
 Ty ,y z i + by , y ) are potential functions , and W Ty ,y and by , y are the weight vector and bias corresponding to label pair ( y , y ) , respectively .
 For CRF training , we use the maximum conditional likelihood estimation .
@@ -81,7 +81,7 @@ As shown in improve the performance of our model ( see Section 4.5 for details )
 Network Training
 In this section , we provide details about training the neural network .
 We implement the neural network using the Theano library .
-The computations fora single model are run on a GeForce GTX TITAN X GPU .
+The computations for a single model are run on a GeForce GTX TITAN X GPU .
 Using the settings discussed in this section , the model training requires about 12 hours for POS tagging and 8 hours for NER .
 Parameter Initialization
 Word Embeddings .
@@ -174,7 +174,7 @@ For NER , an entity is considered as OOBV if there exists at lease one word not 
 informs the statistics of the partition on each corpus .
 The embedding we used is Stanford 's Glo Ve with dimension 100 , the same as Section 4.2 . illustrates the performance of our model on different subsets of words , together with the baseline LSTM - CNN model for comparison .
 The largest improvements appear on the OOBV subsets of both the two corpora .
-This demonstrates that by adding CRF for joint decoding , our model is more powerful on words that are out of both the training and embedding sets .
+This demonstrates that by adding CRF for joint decoding , our model is more powerful on words thatare out of both the training and embedding sets .
 Related Work
 In recent years , several different neural network architectures have been proposed and successfully applied to linguistic sequence labeling such as POS tagging , chunking and NER .
 Among these neural architectures , the three approaches most similar to our model are the BLSTM - CRF model proposed by , the LSTM - CNNs model by and the BLSTM - CRF by .

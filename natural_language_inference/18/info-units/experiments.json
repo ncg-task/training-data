@@ -79,7 +79,7 @@ The word embeddings ( K = 50 ) are obtained by running the word2vec tool on the 
                   "from sentence" : "We use LSTMs with 3 layers and 50 hidden units , and apply 40 % dropout after the embedding layer ."                  
                 }
               },
-              "For construction of" : {
+              "For the construction of" : {
                 "inference network" : {
                   "use" : {
                     "MLP" : {
@@ -88,8 +88,7 @@ The word embeddings ( K = 50 ) are obtained by running the word2vec tool on the 
                     "tanh units" : {
                       "of" : "50 dimension"
                     }
-                  },
-                  "from sentence" : "For the construction of the inference network , we use an MLP ( Eq. 10 ) with 2 layers and tanh units of 50 dimension , and an MLP ( Eq. 17 ) with 2 layers and tanh units of 150 dimension for modelling the joint representation ."
+                  }
                 }
               },
               "for modelling" : {
@@ -114,8 +113,7 @@ The word embeddings ( K = 50 ) are obtained by running the word2vec tool on the 
                           "for computing" : "gradients"
                         }
                       }
-                    },
-                    "from sentence" : "During training we carry out stochastic estimation by taking one sample for computing the gradients , while in prediction we use 20 samples to calculate the expectation of the lower bound ."
+                    }
                   }
                 }
               },

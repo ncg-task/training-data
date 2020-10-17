@@ -1,6 +1,3 @@
-161	4	10	second
-161	11	18	removes
-161	19	44	both attention mechanisms
 159	113	123	evaluating
 159	124	149	several simplified models
 159	71	76	model
@@ -8,16 +5,19 @@
 160	28	34	to use
 160	45	52	without
 160	57	82	input attention mechanism
-160	45	49	with
+160	87	91	with
 160	96	119	pooling attention layer
+161	4	10	second
 161	11	18	removes
+161	19	44	both attention mechanisms
 162	4	9	third
+162	10	17	removes
 162	18	41	both forms of attention
 162	59	63	uses
 162	66	92	regular objective function
 162	93	101	based on
 162	106	127	inner product s = r w
-162	23	26	for
+162	128	131	for
 162	134	159	sentence representation r
 162	164	190	relation class embedding w
 163	3	15	observe that
@@ -30,15 +30,16 @@
 149	11	38	word2 vec skip - gram model
 149	39	47	to learn
 149	48	76	initial word representations
-149	73	75	on
+149	77	79	on
 149	80	89	Wikipedia
+150	0	14	Other matrices
 150	19	35	initialized with
 150	36	49	random values
 150	50	59	following
 150	62	83	Gaussian distribution
 151	3	8	apply
 151	11	37	cross-validation procedure
-151	25	27	on
+151	38	40	on
 151	45	58	training data
 151	59	68	to select
 151	69	93	suitable hyperparameters
@@ -49,16 +50,14 @@
 27	33	70	novel multi-level attention mechanism
 27	71	81	to capture
 27	87	114	entity - specific attention
-27	67	69	is
 27	117	134	primary attention
-27	51	53	at
+27	135	137	at
 27	142	153	input level
 27	156	171	with respect to
 27	176	191	target entities
 27	198	235	relation - specific pooling attention
-27	67	69	is
 27	238	257	secondary attention
-27	156	171	with respect to
+27	258	273	with respect to
 27	278	294	target relations
 29	7	16	introduce
 29	19	70	novel pair - wise margin - based objective function
@@ -74,7 +73,7 @@
 154	0	17	Att - Input - CNN
 154	18	32	relies only on
 154	37	53	primal attention
-154	44	46	at
+154	54	56	at
 154	61	72	input level
 154	75	85	performing
 154	86	108	standard max - pooling

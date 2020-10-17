@@ -1,13 +1,14 @@
 166	0	8	presents
 166	13	40	results of an ablation test
-166	21	23	of
+166	41	43	of
 166	44	80	our position - aware attention model
-166	33	35	on
+166	81	83	on
 166	88	113	development set of TACRED
 167	31	42	contributes
 167	43	58	about 1.5 % F 1
 167	61	66	where
 167	71	92	position - aware term
+168	12	23	contributes
 168	24	43	about 1 % F 1 score
 170	0	9	shows how
 170	14	44	slot filling evaluation scores
@@ -18,8 +19,8 @@
 170	137	155	our proposed model
 171	21	23	At
 171	24	37	hop - 0 level
-171	66	73	provide
-171	74	96	more negative examples
+171	66	78	provide more
+171	79	96	negative examples
 171	40	49	precision
 171	50	59	increases
 171	99	104	while
@@ -27,13 +28,13 @@
 171	112	117	stays
 171	118	134	almost unchanged
 172	0	9	F 1 score
+172	10	15	keeps
 172	16	26	increasing
 173	9	24	hop - all level
 173	27	36	F 1 score
-173	37	46	increases
-173	47	49	by
+173	37	49	increases by
 173	50	61	Performance
-173	47	49	by
+173	62	64	by
 173	65	80	sentence length
 175	3	12	find that
 175	21	32	Performance
@@ -49,9 +50,10 @@
 178	23	37	CNN - PE model
 178	44	76	position - aware attention model
 178	77	85	achieves
-178	50	52	on
+178	86	105	improved F 1 scores
+178	106	108	on
 178	109	136	30 out of the 41 slot types
-178	14	18	with
+178	139	143	with
 178	148	164	top 5 slot types
 178	165	170	being
 178	171	184	org : members
@@ -83,7 +85,7 @@
 183	17	22	model
 183	30	36	to pay
 183	37	51	more attention
-183	30	32	to
+183	52	54	to
 183	55	60	words
 183	70	85	informative for
 183	90	98	relation
@@ -105,14 +107,12 @@
 33	209	245	people , organizations and locations
 33	256	263	used in
 33	268	287	TAC KBP evaluations
-34	49	56	Dataset
-34	3	7	name
 34	25	67	TAC Relation Extraction Dataset ( TACRED )
 34	79	104	make it available through
 34	109	143	Linguistic Data Consortium ( LDC )
 34	153	163	to respect
 34	164	174	copyrights
-34	35	37	on
+34	175	177	on
 34	182	197	underlying text
 120	3	6	map
 120	7	12	words
@@ -152,7 +152,7 @@
 125	59	73	very effective
 125	79	91	randomly set
 125	94	99	token
-125	53	58	to be
+125	100	105	to be
 125	106	113	< UNK >
 125	114	118	with
 125	121	134	probability p
@@ -163,7 +163,7 @@
 126	20	23	for
 126	28	44	SDP - LSTM model
 126	49	53	0.04
-126	20	23	for
+126	54	57	for
 126	58	74	all other models
 30	3	10	propose
 30	13	58	new , effective neural network sequence model
@@ -177,7 +177,7 @@
 31	108	158	extra distributed representations of word position
 31	159	170	relative to
 31	175	193	subject and object
-31	142	144	of
+31	194	196	of
 31	201	218	putative relation
 32	5	15	means that
 32	20	42	neural attention model
@@ -195,7 +195,7 @@
 141	118	130	demonstrates
 141	135	148	effectiveness
 141	149	151	of
-141	20	33	neural models
+141	152	165	neural models
 141	166	169	for
 141	170	189	relation extraction
 142	9	30	positional embeddings
@@ -206,7 +206,7 @@
 142	67	71	over
 142	76	91	plain CNN model
 143	13	48	proposed position - aware mechanism
-143	45	47	is
+143	49	51	is
 143	52	66	very effective
 143	71	79	achieves
 143	83	92	F 1 score
@@ -214,18 +214,18 @@
 143	96	102	65.4 %
 143	105	109	with
 143	113	130	absolute increase
-143	93	95	of
+143	131	133	of
 143	134	139	3.9 %
 143	140	144	over
 143	149	184	best baseline neural model ( LSTM )
 143	189	194	7.9 %
-143	140	144	over
+143	195	199	over
 143	204	239	baseline logistic regression system
 146	0	18	CNN - based models
 146	19	31	tend to have
 146	32	48	higher precision
 146	51	69	RNN - based models
-146	27	31	have
+146	70	74	have
 146	75	88	better recall
 156	99	121	Endto - end cold start
 156	122	141	slot filling scores
@@ -255,7 +255,7 @@
 163	3	7	find
 163	29	37	training
 163	38	67	our logistic regression model
-163	24	26	on
+163	68	70	on
 163	71	77	TACRED
 163	102	133	2 million bootstrapped examples
 163	134	141	used in

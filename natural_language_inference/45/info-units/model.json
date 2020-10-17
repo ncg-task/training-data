@@ -41,7 +41,7 @@
               "multiple levels" : {
                 "structure" : {
                   "in" : "language",
-                  "inlcuding" : ["words", "characters", "phrases", "sentences", "paragraphs"]
+                  "including" : ["words", "characters", "phrases", "sentences", "paragraphs"]
                 }
               }
             },

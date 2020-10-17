@@ -25,7 +25,7 @@
           "is" : {
             "series of modules" : {
               "uses" : {
-                "all sentence vectors" : {
+                "all the sentence vectors" : {
                   "as" : "context",
                   "to fix" : "a sentence vector"
                 }

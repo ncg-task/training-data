@@ -24,7 +24,7 @@
 67	60	73	biLSTM layers
 67	74	76	is
 67	85	106	important contributor
-67	103	105	to
+67	107	109	to
 67	110	130	accuracy improvement
 67	133	139	around
 67	140	145	1.5 %
@@ -37,7 +37,6 @@
 69	73	80	results
 69	89	97	for both
 69	102	143	in - domain task and cross - domain tasks
-22	7	11	Code
 22	19	64	https://github.com/ easonnie/multiNLI_encoder
 52	3	6	use
 52	7	27	cross - entropy loss
@@ -45,7 +44,7 @@
 52	35	53	training objective
 52	54	58	with
 52	59	63	Adam
-52	54	58	with
+52	310	314	with
 52	315	328	32 batch size
 53	4	26	starting learning rate
 53	27	29	is
@@ -80,31 +79,31 @@
 15	49	72	encoding - based models
 15	79	86	propose
 15	89	133	novel yet simple sequential sentence encoder
-15	30	33	for
+15	134	137	for
 15	142	161	Multi - NLI problem
 18	18	68	stacked ( multi-layered ) bidirectional LSTM - RNN
 18	69	73	with
 18	74	94	shortcut connections
 18	175	203	word embedding fine - tuning
-19	4	28	overall supervised model
-19	29	33	uses
-19	40	64	shortcutstacked encoders
-19	65	74	to encode
-19	75	94	two input sentences
-19	95	99	into
-19	100	111	two vectors
-19	29	32	use
-19	132	142	classifier
-19	4	8	over
-19	152	170	vector combination
-19	171	179	to label
-19	184	196	relationship
-19	197	204	between
-19	211	224	two sentences
-19	134	136	as
-19	236	246	entailment
-19	249	262	contradiction
-19	268	274	neural
+19	4	29	over all supervised model
+19	30	34	uses
+19	41	65	shortcutstacked encoders
+19	66	75	to encode
+19	76	95	two input sentences
+19	96	100	into
+19	101	112	two vectors
+19	127	130	use
+19	133	143	classifier
+19	144	148	over
+19	153	171	vector combination
+19	172	180	to label
+19	185	197	relationship
+19	198	205	between
+19	212	225	two sentences
+19	226	228	as
+19	237	247	entailment
+19	250	263	contradiction
+19	269	275	neural
 2	41	64	Multi- Domain Inference
 4	52	91	multi-domain natural language inference
 10	0	34	Natural language inference ( NLI )
@@ -125,7 +124,7 @@
 77	4	22	shortcut - encoder
 77	23	26	was
 77	36	77	top singe - model ( non-ensemble ) result
-77	57	59	on
+77	78	80	on
 77	85	122	EMNLP RepEval Shared Task leaderboard
 78	11	15	SNLI
 78	21	28	compare

@@ -14,7 +14,9 @@
                   }
                 }
               },
-              "from sentence" : "( i ) In the pre-training stage , LeakGAN has already shown observable performance superiority compared to other models , which indicates that the proposed hierarchical architecture itself brings improvement over the previous ones ."
+              "from sentence" : "Synthetic Data Experiments
+( i ) In the pre-training stage , LeakGAN has already shown observable performance superiority compared to other models , which indicates that the proposed hierarchical architecture itself brings improvement over the previous ones ."
+
             },
             "adversarial training stage" : {
               "has" : {
@@ -47,7 +49,9 @@
                   }
                 }
               },
-              "from sentence" : "In all measured metrics , LeakGAN shows significant performance gain compared to baseline models ."
+              "from sentence" : "Long Text Generation : EMNLP2017 WMT News
+In all measured metrics , LeakGAN shows significant performance gain compared to baseline models ."
+
             }
           }
         },
@@ -71,7 +75,9 @@
                   }
                 }
               },
-              "from sentence" : "The results of the BLEU scores on the COCO dataset indicate that Leak GAN performs significantly better than baseline models in mid-length text generation task ."
+              "from sentence" : "Middle Text Generation : COCO Image Captions
+The results of the BLEU scores on the COCO dataset indicate that Leak GAN performs significantly better than baseline models in mid-length text generation task ."
+
             }
           }
         },
@@ -80,7 +86,9 @@
             "LeakGAN" : {
               "successfully handles" : "short text generation tasks"
             },
-            "from sentence" : "The results on Chinese Poems indicate that LeakGAN successfully handles the short text generation tasks ."
+            "from sentence" : "Short Text Generation : Chinese Poems
+The results on Chinese Poems indicate that LeakGAN successfully handles the short text generation tasks ."
+
           }
         },
         "Turing Test and Generated Samples" : {
@@ -103,7 +111,9 @@
                   }
                 }
               },
-              "from sentence" : "The performance on two datasets indicates that the generated sentences of Leak GAN are of higher global consistency and better readability than those of SeqGAN ."
+              "from sentence" : "Turing Test and Generated Samples
+The performance on two datasets indicates that the generated sentences of Leak GAN are of higher global consistency and better readability than those of SeqGAN ."
+
             }
           }        
         }

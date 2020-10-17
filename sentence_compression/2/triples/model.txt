@@ -7,7 +7,7 @@
 (Model||suggesting that||eye - tracking recordings)
 (eye - tracking recordings||to induce||better models)
 (better models||for||sentence compression)
-(sentence compression||for||text simplication)
+(sentence compression||for||text simplification)
 (Model||has||Our proposed model)
 (Our proposed model||does not require||gaze data and the compression data)
 (gaze data and the compression data||come from||same source)

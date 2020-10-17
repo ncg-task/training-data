@@ -31,20 +31,17 @@
                 }
               }
             }
-          },
-          "from sentence" : "We use early stopping on dev data for 6 epochs as tolerance and F 1 score as the early stopping metric , use the Adam optimizer with an initial learning rate of 3 e - 5 , and the Categorical Cross Entropy Loss with class weights as described above to avoid training on the padded label outputs ."
+          }
         },
         "F 1 score" : {
-          "as" : "early stopping metric",
-          "from sentence" : "We use early stopping on dev data for 6 epochs as tolerance and F 1 score as the early stopping metric , use the Adam optimizer with an initial learning rate of 3 e - 5 , and the Categorical Cross Entropy Loss with class weights as described above to avoid training on the padded label outputs ."
+          "as" : "early stopping metric"
         },
         "Adam optimizer" : {
           "with" : {
             "initial learning rate" : {
               "of" : "3 e - 5"
             }
-          },
-          "from sentence" : "We use early stopping on dev data for 6 epochs as tolerance and F 1 score as the early stopping metric , use the Adam optimizer with an initial learning rate of 3 e - 5 , and the Categorical Cross Entropy Loss with class weights as described above to avoid training on the padded label outputs ."
+          }
         },
         "Categorical Cross Entropy Loss" : {
           "to avoid" : {

@@ -10,7 +10,9 @@
                   "without and with" : "attention mechanism"
                 }
               },
-              "from sentence" : "RNN and RNN - context are the RNNbased seq2seq models , without and with attention mechanism respectively ."
+              "from sentence" : "Baselines for LCSTS are introduced in the following .
+RNN and RNN - context are the RNNbased seq2seq models , without and with attention mechanism respectively ."
+
             },
             "Copy - Net" : {
               "is" : {

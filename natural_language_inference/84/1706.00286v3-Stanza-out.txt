@@ -16,7 +16,7 @@ This forces model designers to rely on overly large vocabularies , as observed b
 In both cases , we face the issue that words in the tail of the Zipfian distribution will typically still be too rare to learn good representations for through standard embedding methods .
 Some models , such as in the work of , have sought to deal with the open vocabulary problem by obtaining representations of words from characters .
 This is successful at capturing the semantics of morphological derivations ( e.g. " running " from " run " ) but puts significant pressure on the encoder to capture semantic distinctions amongst syntactically similar but semantically unrelated words ( e.g. " run " vs. " rung " ) .
-Additionally , nothing about the spelling of named entities , e.g. " The Beatles " , tells you anything about their semantics ( namely that they area rock band ) .
+Additionally , nothing about the spelling of named entities , e.g. " The Beatles " , tells you anything about their semantics ( namely that they are a rock band ) .
 In this paper we propose a new method for computing embeddings " on the fly " , which jointly addresses the large vocabulary problem and the paucity of data for learning representations in the long tail of the Zipfian distribution .
 This method , which we illustrate in , can be summarized as follows : instead of directly learning separate representations for all words in a potentially unbounded vocabulary , we train a network to predict the representations of words based on auxiliary data .
 Such auxiliary data need only satisfy the general requirement that it describe some aspect of the semantics of the word for which a representation is needed .
@@ -38,9 +38,9 @@ Qualitative evaluation indicates our method allows models to draw and exploit co
 RELATED WORK
 Arguably , the most popular approach for representing rare words is by using word embeddings trained on very large corpora of raw text ..
 Such embeddings are typically explicitly or implicitly based on word co-occurence statistics .
-Being a big step forward from the models that are trained from scratch only on the task at hand , the approach can be criticized for being extremely data- hungry 1 .
+Being a big step forward from the models thatare trained from scratch only on the task at hand , the approach can be criticized for being extremely data- hungry 1 .
 Obtaining the necessary amounts of data maybe difficult , e.g. in technical domains .
-Besides , auxiliary training criteria used in the pretraining approaches are not guaranteed to yield representations that are useful for the task at hand .
+Besides , auxiliary training criteria used in the pretraining approaches are not guaranteed to yield representations thatare useful for the task at hand .
 proposed to represent OOV words by fixed random vectors .
 While this has shown to be effective for machine comprehension , this method does not account for word semantics at all , and therefore , does not cover the same ground as the method that we propose .
 There have been a number of attempts to achieve out - of - vocabulary generalization by relying on the spelling .
@@ -52,12 +52,12 @@ source of auxiliary data .
 In this respect , the approach presented here subsumes theirs , and can be seen as a generalization to other types of definitions .
 The closest to our work is the study by , in which a network is trained to produce an embedding of a dictionary definition that is close to the embedding of the headword .
 The network is shown to bean effective reverse dictionary and a crossword solver .
-Our approach is different in that we train a dictionary reader in an end - to - end fashion fora specific task , side - stepping the potentially suboptimal auxiliary ranking cost that was used in that earlier work .
+Our approach is different in that we train a dictionary reader in an end - to - end fashion for a specific task , side - stepping the potentially suboptimal auxiliary ranking cost that was used in that earlier work .
 Their method also relies on the availability of high - quality pretrained embeddings which might not always be feasible .
-Another related work by uses dictionary definitions to provide initialization to a database embedding method , which is different from directly learning to use the definitions like we do .
+Another related work by uses dictionary definitions to provide initialization to a data base embedding method , which is different from directly learning to use the definitions like we do .
 Concurrently with this work studied dynamic integration of background knowledge from a commonsense knowledge base .
 In another concurrent work build a new dataset for named entity prediction and show that external knowledge can be very useful for this task .
-At a higher level our approach belongs to the abroad family of methods for conditioning neural networks on external knowledge .
+At a higher level our approach belongs to the a broad family of methods for conditioning neural networks on external knowledge .
 For example , propose to add classes to a classifier by representing them using their " descriptions " .
 By description they meant , for example , a canonical picture of a printed character , that would represent all its possible handwritten versions .
 Their idea to rely on descriptions is similar to our idea to rely on definitions , however we focus on understanding complex inputs instead of adding new output classes .
@@ -89,7 +89,7 @@ To simplify the notation , the rest of the paper assumes that there is only one 
 While the primary purpose of definition embeddings ed ( w ) is to inform the network about the rare words , they might also contain useful information for the words in V train .
 When we use both , we combine the information coming from the embeddings e ( w ) and the definition embeddings ed ( w ) by computing e c ( w ) = e (w ) + W ed ( w ) , where Wis a trainable matrix , or just by simply summing the two , e c ( w ) = e (w ) + ed ( w ) .
 Alternatively it is possible to just use e c ( w ) = e ( w ) for w from V train and e c ( w ) = ed ( w ) otherwise .
-When no definition is available fora word w , we posit that ed ( w ) is a zero vector .
+When no definition is available for a word w , we posit that ed ( w ) is a zero vector .
 A important observation that makes an implementation of the proposed approach feasible is that the definitions d ( x i ) of all words x i from the input can be processed in parallel 3 .
 To keep things simple , we limited the scope and complexity of this first incarnation of our approach as follows .
 First , we do not consider definitions of word combinations , such as phrasal verbs like " give up " and geographical entities like " San Francisco " .
@@ -141,7 +141,7 @@ To understand how our model successfully uses the dictionary and what prevents i
 Namely , we considered examples on which SD selected the correct answer span and S did not , and from them we chose the ones with the largest difference of log -likelihoods that Sand SD assigned to the correct answer .
 shows the attention maps AC for both models for one of the examples .
 We can see that S has no clue that " overseas " maybe an answer to an question about location , whereas SD is aware of that , presumably thanks to the definition " overseas -> in a foreign country " .
-Ina similar manner we observed SD being able to match " direction " and " eastwards " , " where " and " outdoors " .
+In a similar manner we observed SD being able to match " direction " and " eastwards " , " where " and " outdoors " .
 Another pattern that we saw is that the model with the dictionary was able to answer questions of the form " which scientist " or " which actress " better .
 Both words " scientist " and " actress " were not frequent enough to make it to V train , but the definitions " actress -> a female actor " " scientist -> a person with advanced knowledge of one or more sciences " apparently provided enough information about these words that the model could start matching them with named entities in the passage .
 Furthermore , we compared the models G and SD in a similar way .
@@ -187,7 +187,7 @@ This covers around 90 . 24 % of all word occurrences .
 We consider computing embeddings of the less frequent input words from their dictionary definitions , GloVe vectors and spellings .
 These sources of auxiliary information were available for 63.35 % , 97.43 % and 100 % of the rest of occurrences respectively .
 In order to compare how helpful these sources are when they are available , we run additional set of experiments with " restricted " inputs .
-Specifically , we only use auxiliary information fora word if it has both a Glo Ve embedding and a dictionary definition .
+Specifically , we only use auxiliary information for a word if it has both a Glo Ve embedding and a dictionary definition .
 When the word does not have any of these , we replace it with " UNK " .
 We report results for three variants of dictionary - enabled models .
 The first variant ( dict1 ) uses the same LSTM for reading the text and the definitions .

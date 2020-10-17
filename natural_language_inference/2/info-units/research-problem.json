@@ -3,6 +3,6 @@
     ["Question Answering", {"from sentence" : "A Question - Focused Multi- Factor Attention Network for Question Answering"}],
     ["question answering ( QA )", {"from sentence" : "Neural network models recently proposed for question answering ( QA ) primarily focus on capturing the passagequestion relation ."}],
     ["QA", {"from sentence" : "They also do not explicitly focus on the question and answer type which often plays a critical role in QA ."}],
-    ["machine comprehension - based ( MC ) question answering ( QA )", {"from sentence" : "In machine comprehension - based ( MC ) question answering ( QA ) , a machine is expected to provide an answer fora given question by understanding texts ."}]
+    ["machine comprehension - based ( MC ) question answering ( QA )", {"from sentence" : "In machine comprehension - based ( MC ) question answering ( QA ) , a machine is expected to provide an answer for a given question by understanding texts ."}]
   ]
 }

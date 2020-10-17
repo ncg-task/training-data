@@ -12,7 +12,7 @@
 (highway network||and||representation)
 (representation||after||self - attention)
 (Ablation analysis||After removing||exact match binary feature)
-(exact match binary feature||find that||performance)
+(exact match binary feature||find||performance)
 (performance||has||degrade)
 (degrade||to||78.0)
 (78.0||on||mismatched score)

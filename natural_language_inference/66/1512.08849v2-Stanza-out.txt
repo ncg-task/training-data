@@ -7,7 +7,7 @@ In this paper , we propose a special long short - term memory ( LSTM ) architect
 Our model builds on top of a recently proposed neural attention model for NLI but is based on a significantly different idea .
 Instead of deriving sentence embeddings for the premise and the hypothesis to be used for classification , our solution uses a match - LSTM to perform wordby - word matching of the hypothesis with the premise .
 This LSTM is able to place more emphasis on important word - level matching results .
-In particular , we observe that this LSTM remembers important mismatches that are critical for predicting the contradiction or the neutral relationship label .
+In particular , we observe that this LSTM remembers important mismatches thatare critical for predicting the contradiction or the neutral relationship label .
 On the SNLI corpus , our model achieves an accuracy of 86.1 % , outperforming the state of the art .
 A more recent work by Rocktschel et al. ( 2016 ) improved the performance by applying a neural attention model .
 While their basic architecture is still based on sentence embeddings for the premise and the hypothesis , a key difference is that the embedding of the premise takes into consideration the alignment between the premise and the hypothesis .
@@ -28,12 +28,12 @@ achieved an accuracy of 77.6 % when long short - term memory ( LSTM ) networks w
 A limitation of the aforementioned two models is that they reduce both the premise and the hypothesis to a single embedding vector before matching them ; i.e. , in the end , they use two embedding vectors to perform sentence - level matching .
 However , not all word or phrase - level matching results are equally important .
 For example , the matching between stop words in the two sentences is not likely to contribute much to the final prediction .
-Also , fora hypothesis to contradict a premise , a single word or phrase - level mismatch ( e.g. , a mismatch of the subjects of the two sentences ) maybe sufficient and other matching results are less important , but this intuition is hard to be captured if we directly match two sentence embeddings .
+Also , for a hypothesis to contradict a premise , a single word or phrase - level mismatch ( e.g. , a mismatch of the subjects of the two sentences ) maybe sufficient and other matching results are less important , but this intuition is hard to be captured if we directly match two sentence embeddings .
 In this paper , we propose a new LSTM - based architecture for learning natural language inference .
 Different from previous models , our prediction is not based on whole sentence embeddings of the premise and the hypothesis .
 Instead , we use an LSTM to perform word - by - word matching of the hypothesis with the premise .
 Our LSTM sequentially processes the hypothesis , and at each position , it tries to match the current word in the hypothesis with an attention - weighted representation of the premise .
-Matching results that are critical for the final prediction will be " remembered " by the LSTM while less important matching results will be " forgotten . "
+Matching results thatare critical for the final prediction will be " remembered " by the LSTM while less important matching results will be " forgotten . "
 We refer to this architecture a match - LSTM , or m LSTM for short .
 Experiments show that our m LSTM model achieves an accuracy of 86.1 % on the SNLI corpus , outperforming the state of the art .
 Furthermore , through further analyses of the learned parameters , we show that the m LSTM architecture can indeed pickup the more important word - level matching results that need to be remembered for the final prediction .
@@ -67,7 +67,7 @@ The goal is to predict a label y that indicates the relationship between X sand 
 In this paper , we assume y is one of entailment , contradiction and neutral .
 first used two LSTMs to process the premise and the hypothesis , respectively , but initialized the second LSTM ( for the hy-pothesis ) with the last cell state of the first LSTM ( for the premise ) .
 Let us use h s j and ht k to denote the resulting hidden states corresponding to x s j and x t k , respectively .
-The main idea of the word - by - word attention model by is to introduce a series of attention - weighted combinations of the hidden states of the premise , where each combination is fora particular word in the hypothesis .
+The main idea of the word - by - word attention model by is to introduce a series of attention - weighted combinations of the hidden states of the premise , where each combination is for a particular word in the hypothesis .
 Let us use a k to denote such an attention vector for word x t kin the hypothesis .
 Specifically , a k is defined as follows 2 :
 where ?
@@ -94,12 +94,12 @@ Our Model
 Although the neural attention model by achieved better results than , we see two limitations .
 First , the model still uses a single vector representation of the premise , namely ha N , to match the entire hypothesis .
 We speculate that if we instead use each of the attention - weighted representations of the premise for matching , i.e. , use a k at position k to match the hidden state ht k of the hypothesis while we go through the hypothesis , we could achieve better matching results .
-This can be done using an RNN which at each position takes in both a k and ht k as its input and determines how well the overall matching of the two sentences is up to the current position .
+This can be done using an RNN which at each position takes in both a k and ht k as its input and determines how well the over all matching of the two sentences is up to the current position .
 In the end the RNN will produce a single vector representing the matching of the two entire sentences .
 The second limitation is that the model by does not explicitly allow us to place more emphasis on the more important matching results between the premise and the hypothesis and down - weight the less critical ones .
 For example , matching of stop words is presumably less important than matching of content words .
 Also , some matching results maybe particularly critical for making the final prediction and thus should be remembered .
-For example , consider the premise " A dog jumping fora Frisbee in the snow . " and the hypothesis " A cat washes his face and whiskers with his front paw . "
+For example , consider the premise " A dog jumping for a Frisbee in the snow . " and the hypothesis " A cat washes his face and whiskers with his front paw . "
 When we sequentially process the hypothesis , once we see that the subject of the hypothesis cat does not match the subject of the premise dog , we have a high probability to believe that there is a contradiction .
 So this mismatch should be remembered .
 Based on the two observations above , we propose to use an LSTM to sequentially match the two sentences .
@@ -165,7 +165,7 @@ Note that the five models in the last section were implemented by us while the o
 Note also that for the five models in the last section , we do not update word embeddings so |? | W+ M is the same as |?| M.
 The three columns on the right are the accuracies of the trained models on the training data , the development data and the test data , respectively .
 ID sentence label Premise
-A dog jumping fora Frisbee in the snow .
+A dog jumping for a Frisbee in the snow .
 Example
 1
 An animal is outside in the cold weather , playing with a plastic toy .
@@ -199,7 +199,7 @@ To conduct the analyses , we choose three examples and display the various learn
 These three sentence pairs share the same premise but have different hypotheses and different relationship labels .
 They are given in .
 The values of the alignment weights and the gate vectors are plotted in .
-Besides using the three examples , we will also give some overall statistics of the parameter values to confirm our observations with the three examples .
+Besides using the three examples , we will also give some over all statistics of the parameter values to confirm our observations with the three examples .
 Word Alignment
 First , let us look at the top - most plots of .
 These plots show the alignment weights ?
@@ -239,7 +239,7 @@ Overall , the values of the input gates confirm that the m LSTM helps differenti
 Next , let us look at the forget gates .
 Recall that a forget gate controls the importance of the previous cell state in deriving the final hidden state of the current position .
 Higher values of a forget gate indicate that we need to remember the previous cell state and pass it on whereas lower values indicate that we should probably forget the previous cell .
-From the three plots of the forget gates , we can see that overall the colors are the lightest for Example 1 , which is an entailment .
+From the three plots of the forget gates , we can see that over all the colors are the lightest for Example 1 , which is an entailment .
 This suggests that when the hypothesis is an entailment of the premise , the m LSTM tends to forget the previous matching results .
 On the other hand , for Example 2 and Example 3 , which are contradiction and neutral , we see generally darker colors .
 In particular , in Example 2 , we can see that the colors are consistently dark starting from the word " his " in the hypothesis until the end .
@@ -261,7 +261,7 @@ For example , Mehdad et al. applied syntactic - semantic tree kernels for recogn
 Because inference is essentially a logic problem , methods based on formal logic or natural logic ( MacCartney , 2009 ) have also been proposed .
 A comprehensive review on existing work can be found in the book by .
 The work most relevant to ours is the recently proposed neural attention model - based method by , which we have detailed in previous sections .
-Neural attention models have recently been applied to some natural language processing tasks including machine translation , abstractive summarization and question answering . showed that the neural attention model could help derive a bet - ter representation of the premise to be used to match the hypothesis , whereas in our work we also use it to derive representations of the premise that are used to sequentially match the words in the hypothesis .
+Neural attention models have recently been applied to some natural language processing tasks including machine translation , abstractive summarization and question answering . showed that the neural attention model could help derive a bet - ter representation of the premise to be used to match the hypothesis , whereas in our work we also use it to derive representations of the premise thatare used to sequentially match the words in the hypothesis .
 The SNLI corpus is new and so far it has only been used in a few studies .
 Besides the work by themselves and by , there are two other studies which used the SNLI corpus .
 used a Skip - Thought model proposed by to the NLI task and reported an accuracy of 81.5 % on the test data .
@@ -276,4 +276,4 @@ Moreover , closer analyses on the gate vectors revealed that our m LSTM indeed r
 With the large number of parameters to learn , an inevitable limitation of our model is that a large training data set is needed to learn good model parameters .
 Indeed some preliminary experiments applying our m LSTM to the SICK corpus , a smaller textual entailment benchmark data set , did not give very good results .
 We believe that this is because our model learns everything from scratch except using the pre-trained word embeddings .
-A future direction would be to incorporate other resources such as the paraphrase database into the learning process .
+A future direction would be to incorporate other resources such as the paraphrase data base into the learning process .

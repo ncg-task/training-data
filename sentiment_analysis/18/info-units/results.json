@@ -14,13 +14,13 @@
             "from sentence" : "1 ) Feature - based SVM is still a strong baseline , our best model achieves competitive results on D1 and D2 without relying on so many manually - designed features and external resources ."
           }
         },
-        "integrated full model overall" : {
+        "integrated full model over all" : {
           "achieves" : {
             "best performance" : {
               "compared to using" : "only one of the two proposed approaches"
             }
           },
-          "from sentence" : "4 ) The integrated full model overall achieves the best performance compared to using only one of the two proposed approaches ."
+          "from sentence" : "4 ) The integrated full model over all achieves the best performance compared to using only one of the two proposed approaches ."
         },
         "proposed target representation" : {
           "is" : {

@@ -7,12 +7,14 @@
             "HYPERNYM PREDICTION" : {
               "has" : {
                 "Hyperparameters" : {
-                  "use" : ["standard pairwise ranking objective", {"from sentence" : "To train the model , we use the standard pairwise ranking objective from Eq. ( 5 ) ."}],
+                  "use" : ["standard pairwise ranking objective", {"from sentence" : "HYPERNYM PREDICTION
+To train the model , we use the standard pairwise ranking objective from Eq. ( 5 ) ."
+
+}],
                   "sample" : {
                     "minibatches" : {
                       "of" : "128 random image - caption pairs"
-                    },
-                    "from sentence" : "We sample minibatches of 128 random image - caption pairs , and draw all contrastive terms from the minibatch , giving us 127 contrastive images for each caption and captions for each image ."
+                    }
                   },
                   "draw" : {
                     "contrastive terms" : {
@@ -90,10 +92,7 @@
                           "to be" : "300"
                         }
                       }
-                    },
-                    "from sentence" : "TEXTUAL ENTAILMENT / NATURAL LANGUAGE INFERENCE
-Just as for caption - image ranking , we set the dimensions of the embedding space and GRU hidden state to be 1024 , the dimension of the word embeddings to be 300 , and constrain the embeddings to have unit L2 norm ."
-
+                    }
                   },
                   "constrain" : {
                     "embeddings" : {

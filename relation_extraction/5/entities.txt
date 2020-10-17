@@ -19,6 +19,7 @@
 184	82	88	result
 184	89	99	by another
 184	100	107	9.7 F 1
+124	0	25	Dependency - based models
 126	6	45	A logistic regression ( LR ) classifier
 126	52	60	combines
 126	61	85	dependencybased features
@@ -37,9 +38,10 @@
 128	20	22	is
 128	25	40	recursive model
 128	46	57	generalizes
-128	7	11	LSTM
+128	62	66	LSTM
 128	67	69	to
 128	70	95	arbitrary tree structures
+132	0	21	Neural sequence model
 133	22	48	competitive sequence model
 133	54	61	employs
 133	64	100	position - aware attention mechanism
@@ -68,13 +70,14 @@
 30	108	125	maximally keeping
 30	126	142	relevant content
 2	56	75	Relation Extraction
+149	8	10	on
+149	15	29	TACRED Dataset
 151	3	10	observe
 151	20	29	GCN model
 151	66	77	outperforms
 151	78	107	all dependency - based models
 151	108	110	by
 151	111	127	at least 1.6 F 1
-152	10	12	on
 152	3	8	using
 152	9	44	contextualized word representations
 152	51	64	C - GCN model
@@ -88,7 +91,7 @@
 153	22	31	our model
 153	32	45	improves upon
 153	46	74	other dependencybased models
-153	18	20	in
+153	75	77	in
 153	78	103	both precision and recall
 156	46	60	our GCN models
 156	61	65	have
@@ -98,7 +101,7 @@
 154	0	9	Comparing
 154	14	27	C - GCN model
 154	28	32	with
-154	18	27	GCN model
+154	37	46	GCN model
 154	52	61	find that
 154	66	70	gain
 154	71	88	mainly comes from
@@ -121,6 +124,7 @@
 162	72	78	result
 162	79	81	to
 162	82	86	68.2
+163	15	30	SemEval Dataset
 165	3	18	find that under
 165	23	59	conventional with- entity evaluation
 165	62	79	our C - GCN model
@@ -164,5 +168,5 @@
 177	56	70	less sensitive
 177	71	73	to
 177	74	81	changes
-177	1	3	in
+177	82	84	in
 177	89	104	tree structures

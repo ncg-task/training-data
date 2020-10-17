@@ -9,7 +9,7 @@ When only a subset ( 20 % - 80 % ) of the training examples are available , KAR 
 Introduction
 Machine Reading Comprehension ( MRC ) , as the name suggests , requires a machine to read a passage and answer its relevant questions .
 Since the answer to each question is supposed to stem from the corresponding passage , a common MRC solution is to develop a neural - network - based MRC model that predicts an answer span ( i.e. the answer start position and the answer end position ) from the passage of each given passage - question pair .
-To facilitate the explorations and innovations in this area , many MRC datasets have been established , such as SQuAD , MS MARCO , and Trivi - a QA .
+To facilitate the explorations and innovations in this are a , many MRC datasets have been established , such as SQuAD , MS MARCO , and Trivi - a QA .
 Consequently , many pioneering MRC models have been proposed , such as BiDAF , R - NET , and QANet .
 According to the leader board of SQuAD , the state - of - the - art MRC models have achieved the same performance as human beings .
 However , does this imply that they have possessed the same reading comprehension ability as human beings ?
@@ -28,7 +28,7 @@ Passage Question
 Answer Teachers may use a lesson plan to facilitate student learning , providing a course of study which is called the curriculum .
 What can a teacher use to help students learn ?
 lesson plan
-Manufacturing accounts fora significant but declining share of employment , although the city 's garment industry is showing a resurgence in Brooklyn .
+Manufacturing accounts for a significant but declining share of employment , although the city 's garment industry is showing a resurgence in Brooklyn .
 In what borough is the garment business prominent ?
 Brooklyn :
 Two examples about the importance of inter-word semantic connections to the reading comprehension ability of human beings : in the first one , we can find the answer because we know " facilitate " is a synonym of " help " ; in the second one , we can find the answer because we know " Brooklyn " is a hyponym of " borough " .
@@ -47,11 +47,11 @@ Method
 In this section , we elaborate a WordNet - based data enrichment method , which is aimed at extracting inter-word semantic connections from each passage - question pair in our MRC dataset .
 The extraction is performed in a controllable manner , and the extracted results are provided as general knowledge to our MRC model .
 Semantic Relation Chain
-Word Net is a lexical database of English , where words are organized into synsets according to their senses .
+Word Net is a lexical data base of English , where words are organized into synsets according to their senses .
 A synset is a set of words expressing the same sense so that a word having multiple senses belongs to multiple synsets , with each synset corresponding to a sense .
 Synsets are further related to each other through semantic relations .
 According to the WordNet interface provided by NLTK , there are totally sixteen types of semantic relations ( e.g. hypernyms , hyponyms , holonyms , meronyms , attributes , etc. ) .
-Based on synset and semantic relation , we define anew concept : semantic relation chain .
+Based on synset and semantic relation , we define a new concept : semantic relation chain .
 A semantic relation chain is a concatenated sequence of semantic relations , which links a synset to another synset .
 For example , the synset " keratin .n.01 " is related to the synset " feather .n.01 " through the semantic relation " substance holonym " , the synset " feather .n.01 " is related to the synset " bird .n.01 " through the semantic relation " part holonym " , and the synset " bird .n.01 " is related to the synset " parrot .n.01 " through the semantic relation " hyponym " , thus " substance holonym ?
 part holonym ?
@@ -62,8 +62,8 @@ Inter-word Semantic Connection
 The key problem in the data enrichment method is determining whether a word is semantically connected to another word .
 If so , we say that there exists an inter-word semantic connection between them .
 To solve this problem , we define another new concept : the extended synsets of a word .
-Given a word w , whose synsets are represented as a set S w , we use another set S * w to represent its extended synsets , which includes all the synsets that are in S w or that can be linked to from S w through semantic relation chains .
-Theoretically , if there is no limitation on semantic relation chains , S * w will include all the synsets in WordNet , which is meaningless inmost situations .
+Given a word w , whose synsets are represented as a set S w , we use another set S * w to represent its extended synsets , which includes all the synsets thatare in S w or that can be linked to from S w through semantic relation chains .
+Theoretically , if there is no limitation on semantic relation chains , S * w will include all the synsets in WordNet , which is meaningless in most situations .
 Therefore , we use a hyper - parameter ? ?
 N to represent the permitted maximum hop count of semantic relation chains .
 That is to say , only the chains having no more than ?
@@ -176,7 +176,7 @@ MRC Dataset .
 The MRC dataset used in this paper is SQuAD 1.1 , which contains over 100 , 000 passage - question pairs and has been randomly partitioned into three parts : a training set ( 80 % ) , a development set ( 10 % ) , and a test set ( 10 % ) .
 Besides , we also use two of its adversarial sets , namely AddSent and Add OneSent , to evaluate the robustness to noise of MRC models .
 The passages in the adversarial sets contain misleading sentences , which are aimed at distracting MRC models .
-Specifically , each passage in AddSent contains several sentences that are similar to the question but not contradictory to the answer , while each passage in AddOneSent contains a human - approved random sentence that maybe unrelated to the passage .
+Specifically , each passage in AddSent contains several sentences thatare similar to the question but not contradictory to the answer , while each passage in AddOneSent contains a human - approved random sentence that maybe unrelated to the passage .
 Implementation Details .
 We tokenize the MRC dataset with spa Cy 2.0.13 , manipulate WordNet 3.0 with NLTK 3.3 , and implement KAR with TensorFlow 1.11.0 .
 For the data enrichment method , we set the hyper - parameter ? to 3 .

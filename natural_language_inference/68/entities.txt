@@ -9,8 +9,9 @@
 180	7	13	ADAMAX
 180	14	18	with
 180	23	35	coefficients
-181	10	21	to optimize
-181	26	31	model
+180	36	61	? 1 = 0.9 and ? 2 = 0.999
+180	62	73	to optimize
+180	78	83	model
 177	0	5	Words
 177	6	18	not found in
 177	19	25	Glo Ve
@@ -21,15 +22,6 @@
 179	28	41	hidden layers
 179	45	54	set to be
 179	55	65	150 or 300
-39	123	128	adopt
-39	131	149	match - LSTM model
-40	21	52	Pointer Net ( Ptr - Net ) model
-40	74	81	enables
-40	86	97	predictions
-40	98	100	of
-40	101	107	tokens
-40	108	112	from
-40	117	136	input sequence only
 41	3	10	propose
 41	11	19	two ways
 41	20	28	to apply
@@ -44,27 +36,27 @@
 42	49	65	search mechanism
 2	0	21	MACHINE COMPREHENSION
 4	0	29	Machine comprehension of text
-193	14	32	our boundary model
-193	37	49	outperformed
-193	54	68	sequence model
-193	71	80	achieving
-193	84	101	exact match score
-193	102	104	of
-193	105	111	61.1 %
-193	119	127	F1 score
-193	102	104	of
-193	131	137	71.2 %
-194	16	27	in terms of
-194	32	49	exact match score
-194	56	70	boundary model
-194	77	92	clear advantage
-194	93	97	over
-194	102	116	sequence model
-201	9	15	adding
-201	16	30	Bi - Ans - Ptr
-201	31	35	with
-201	36	70	bi-directional pre-processing LSTM
-201	80	83	get
-201	84	101	1.2 % improvement
-201	12	14	in
-201	105	107	F1
+192	14	32	our boundary model
+192	37	49	outperformed
+192	54	68	sequence model
+192	71	80	achieving
+192	84	101	exact match score
+192	102	104	of
+192	105	111	61.1 %
+192	119	127	F1 score
+192	128	130	of
+192	131	137	71.2 %
+193	16	27	in terms of
+193	32	49	exact match score
+193	56	70	boundary model
+193	77	92	clear advantage
+193	93	97	over
+193	102	116	sequence model
+200	9	15	adding
+200	16	30	Bi - Ans - Ptr
+200	31	35	with
+200	36	70	bi-directional pre-processing LSTM
+200	80	83	get
+200	84	101	1.2 % improvement
+200	102	104	in
+200	105	107	F1

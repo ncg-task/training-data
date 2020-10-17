@@ -13,7 +13,7 @@
           "from sentence" : "The LCF - ATEPC 3 model proposed in this paper is a novel multilingual and multi-task - oriented model ."
         }
       },
-      "based on" : ["multi-head self - attention ( MHSA )", {"from sentence" : "The proposed model is based on multi-head self - attention ( MHSA ) and integrates the pre-trained and the local context focus mechanism , namely LCF - ATEPC ."}],
+      "based on" : "multi-head self - attention ( MHSA )",
       "integrates" : {
         "pre-trained and the local context focus mechanism" : {
           "namely" : "LCF - ATEPC"

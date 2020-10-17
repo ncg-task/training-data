@@ -9,7 +9,7 @@
             }
           }
         },
-        "from sentence" : "As expected , running a transitive closure module after the temporal rule - based sieve ( RB + TR ) results in improving recall , but the overall performance is still lacking ( less than .30 F1-score ) ."
+        "from sentence" : "As expected , running a transitive closure module after the temporal rule - based sieve ( RB + TR ) results in improving recall , but the over all performance is still lacking ( less than .30 F1-score ) ."
       },
       "Combining" : {
         "rule - based and machine - learned sieves ( RB + ML )" : {

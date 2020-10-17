@@ -51,7 +51,7 @@
 (250 different Reddit communities||result in||250 - dimensional embeddings)
 (Embeddings||restrict||vocabulary link)
 (vocabulary link||set to include||languages)
-(vocabulary link||mining from||Wiktionary)
+(vocabulary link||mining||Wiktionary)
 (Wiktionary||corresponding||translation)
 (Wiktionary||corresponding||synonymy)
 (Wiktionary||corresponding||derivation)

@@ -15,7 +15,7 @@ Text classification and clustering play an important role in many applications ,
 At the heart of these applications is machine learning algorithms such as logistic regression or Kmeans .
 These algorithms typically require the text input to be represented as a fixed - length vector .
 Perhaps the most common fixed - length vector representation for texts is the bag - of - words or bag - of - n- grams due to its simplicity , efficiency and often surprising accuracy .
-However , the bag - of - words ( BOW ) has many disadvan - tages .
+However , the bag - of - words ( BOW ) has many dis advan - tages .
 The word order is lost , and thus different sentences can have exactly the same representation , as long as the same words are used .
 Even though bag - of - n- grams considers the word order in short context , it suffers from data sparsity and high dimensionality .
 Bag - of - words and bagof - n- grams have very little sense about the semantics of the words or more formally the distances between the words .
@@ -97,7 +97,7 @@ The word vector matrix W , however , is shared across paragraphs .
 I.e. , the vector for " powerful " is the same for all paragraphs .
 The paragraph vectors and word vectors are trained using stochastic gradient descent and the gradient is obtained via backpropagation .
 At every step of stochastic gradient descent , one can sample a fixed - length context from a random paragraph , compute the error gradient from the network in and use the gradient to update the parameters in our model .
-At prediction time , one needs to perform an inference step to compute the paragraph vector fora new paragraph .
+At prediction time , one needs to perform an inference step to compute the paragraph vector for a new paragraph .
 This is also obtained by gradient descent .
 In this step , the parameters for the rest of the model , the word vectors W and the softmax weights , are fixed .
 Suppose that there are N paragraphs in the corpus , M words in the vocabulary , and we want to learn paragraph vectors such that each paragraph is mapped top dimensions and each word is mapped to q dimensions , then the model has the total of N p + M q parameters ( excluding the softmax parameters ) .
@@ -190,7 +190,7 @@ Beyond One Sentence : Sentiment Analysis with IMDB dataset
 Some of the previous techniques only work on sentences , but not paragraphs / documents with several sentences .
 For instance , Recursive Neural Tensor Network is based on the parsing over each sentence and it is unclear how to combine the representations over many sentences .
 Such techniques therefore are restricted to work on sentences but not paragraphs or documents .
-Our method does not require parsing , thus it can produce a representation fora long document consisting of many sentences .
+Our method does not require parsing , thus it can produce a representation for a long document consisting of many sentences .
 This advantage makes our method more general than some of the other approaches .
 The following experiment on IMDB dataset demonstrates this advantage .
 Dataset :
@@ -207,7 +207,7 @@ Information Retrieval with Paragraph Vectors
 We turn our attention to an information retrieval task which requires fixed - length representations of paragraphs .
 Here , we have a dataset of paragraphs in the first 10 results returned by a search engine given each of 1,000,000 most popular queries .
 Each of these paragraphs is also known as a " snippet " which summarizes the content of a web page and how a web page matches the query .
-From such collection , we derive anew dataset to test vector representations of paragraphs .
+From such collection , we derive a new dataset to test vector representations of paragraphs .
 For each query , we create a triplet of paragraphs : the two paragraphs are results of the same query , whereas the third paragraph is a randomly sampled paragraph from the rest of the collection ( returned as the result of a different query ) .
 Our goal is to identify which of the three paragraphs are results of the same query .
 To achieve this , we will use paragraph vectors and compute the distances the paragraphs .
@@ -244,11 +244,11 @@ Perhaps , this is because the model loses the ordering information .
 It 's better to cross validate the window size .
 A good guess of window size in many applications is between 5 and 12 .
 In IMDB , varying the window sizes between 5 and 12 causes the error rate to fluctuate 0.7 % .
-Paragraph Vector can be expensive , but it can be done in parallel attest time .
+Paragraph Vector can be expensive , but it can be done in parallel at test time .
 On average , our implementation takes 30 minutes to compute the paragraph vectors of the IMDB test set , using a 16 core machine ( 25,000 documents , each document on average has 230 words ) .
 Related Work
 Distributed representations for words were first proposed in and have become a successful paradigm , especially for statistical language modeling .
-Word vectors have been used in NLP applications such as word representation , named entity recognition , word sense disambiguation , parsing , tagging and machine translation .
+Word vectors have been used in NLP applications such as word representation , named entity recognition , word sense dis ambiguation , parsing , tagging and machine translation .
 Representing phrases is a recent trend and received much attention .
 In this direction , autoencoder - style models have also been used to model paragraphs .
 Distributed representations of phrases and sentences are also the focus of Socher et al ..

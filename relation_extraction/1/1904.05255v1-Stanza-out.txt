@@ -10,7 +10,7 @@ Introduction
 Relation extraction and semantic role labeling ( SRL ) are two fundamental tasks in natural language understanding .
 The task of relation extraction is to discern whether a relation exists between two entities in a sentence .
 For example , in the sentence " Obama was born in Honolulu " , " Obama " is the subject entity and " Honolulu " is the object entity .
-The task of a relation extraction model is to identify the relation between the entities , which is per:city of birth ( birth city fora person ) .
+The task of a relation extraction model is to identify the relation between the entities , which is per:city of birth ( birth city for a person ) .
 For SRL , the task is to extract the predicate - argument structure of a sentence , determining " who did what to whom " , " when " , " where " , etc .
 Both capabilities are useful in several downstream tasks such as question answering and open information extraction .
 State - of - the - art neural models for both tasks typically rely on lexical and syntactic features , such as part - of - speech tags , syntactic trees , and global decoding constraints .
@@ -25,14 +25,14 @@ We show that simple neural architectures built on top of BERT yields state - of 
 The remainder of this paper describes our models and experimental results for relation extraction and semantic role labeling in turn .
 BERT for Relation Extraction
 Model
-The standard formulation of semantic role labeling decomposes into four subtasks : predicate detection , predicate sense disambiguation , argument identification , and argument classification .
+The standard formulation of semantic role labeling decomposes into four subtasks : predicate detection , predicate sense dis ambiguation , argument identification , and argument classification .
 There are two representations for argument annotation : span - based and dependency - based .
 Semantic banks such as PropBank usually represent arguments as syntactic constituents ( spans ) , whereas the CoNLL 2008 and 2009 shared tasks propose dependency - based SRL , where the goal is to identify the syntactic heads of arguments rather than the entire span .
 Here , we follow to unify these two annotation schemes into one framework , without any declarative constraints for decoding .
 For several SRL benchmarks , such as , and 2012 , the predicate is given during both training and testing .
-Thus , in this paper , we only discuss predicate disambiguation and argument identification and classification .
-Predicate sense disambiguation .
-The predicate disambiguation task is to identify the correct meaning of a predicate in a given context .
+Thus , in this paper , we only discuss predicate dis ambiguation and argument identification and classification .
+Predicate sense dis ambiguation .
+The predicate dis ambiguation task is to identify the correct meaning of a predicate in a given context .
 As an example , for the sentence " Barack Obama went to Paris " , the predicate went has sense " motion " and has sense label 01 .
 We formulate this task as sequence labeling .
 The input sentence is fed into the WordPiece tokenizer , which splits some words into sub-tokens .
@@ -65,13 +65,13 @@ We conduct experiments on two SRL tasks : and the predicate indicator embedding 
 The learning rate is 5 10 ?5 . BERT base - cased and large - cased models are used in our experiments .
 The position embeddings are randomly initialized and fine - tuned during the training process .
 Dependency - Based SRL Results
-Predicate sense disambiguation .
-The predicate sense disambiguation subtask applies only to the CoNLL 2009 benchmark .
-In this line of research on dependency - based SRL , previous papers seldom report the accuracy of predicate disambiguation separately ( results are often mixed with argument identification and classification ) , causing difficulty in determining the source of gains .
-Here , we report predicate disambiguation accuracy in .
+Predicate sense dis ambiguation .
+The predicate sense dis ambiguation subtask applies only to the CoNLL 2009 benchmark .
+In this line of research on dependency - based SRL , previous papers seldom report the accuracy of predicate dis ambiguation separately ( results are often mixed with argument identification and classification ) , causing difficulty in determining the source of gains .
+Here , we report predicate dis ambiguation accuracy in .
 Figures from some systems are missing because they only report end - to - end results .
 Our end - to - end results are shown in .
-We see that the BERT - LSTM - large model ( using the predicate sense disambiguation results from above ) yields large F 1 score improvements over the existing state of the art , and beats existing ensemble models as well .
+We see that the BERT - LSTM - large model ( using the predicate sense dis ambiguation results from above ) yields large F 1 score improvements over the existing state of the art , and beats existing ensemble models as well .
 This is achieved without using any linguistic features and declarative decoding constraints .
 Span - Based SRL
 Results

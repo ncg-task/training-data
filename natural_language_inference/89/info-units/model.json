@@ -112,8 +112,7 @@
                     }
                   }
                 }
-              },
-              "from sentence" : "The first one is a sequential model that takes two sentences as along sequence , while the second one attempts to capture interactions between two sentences ."
+              }
             },
             "second one" : {
               "capture" : {

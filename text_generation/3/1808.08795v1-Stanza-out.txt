@@ -28,7 +28,7 @@ The advantage is that by explicitly sep - arating representation learning and de
 Experimental results show that our model substantially outperforms baseline methods in generating highquality responses .
 Our contributions are listed as follows :
 To promote coherence in dialogue generation , we propose a novel Auto - Encoder Matching model to learn the utterance - level dependency .
-In our proposed model , we explicitly separate utterance representation learning and dependency learning fora better expressive ability .
+In our proposed model , we explicitly separate utterance representation learning and dependency learning for a better expressive ability .
 Experimental results on automatic evaluation and human evaluation show that our model can generate much more coherent text compared to baseline models .
 Approach
 In this section , we introduce our proposed model .
@@ -45,7 +45,7 @@ Encoder
 The encoder E ? is an unsupervised auto - encoder based on Long Short Term Memory Networks ( LSTM ) .
 As it is essentially a LSTM - based Seq2Seq model , we name the encoder and decoder of the autoencoder " source - encoder " and " source - decoder " .
 To be specific , the encoder E ?
-receives the source text x = {x 1 , x 2 , ... , x n } , and encodes it to an internal representation h , and then decodes h to anew sequencex = {x 1 ,x 2 , ... ,x n } for the reconstruction of the input .
+receives the source text x = {x 1 , x 2 , ... , x n } , and encodes it to an internal representation h , and then decodes h to a new sequencex = {x 1 ,x 2 , ... ,x n } for the reconstruction of the input .
 We extract the hidden state h as the semantic representation .
 The encoder E ?
 is trained to reduce the reconstruction loss , whose loss function is defined as follows :
@@ -56,14 +56,14 @@ Similar to the encoder , our decoder D ? is also a LSTM - based auto - encoder .
 However , as there is no target text provided in the testing stage , we propose the customized implementation , which is illustrated in Section 2.5 .
 Here in the introduction of the decoder , we do not provide the testing details .
 Similarly , we name the encoder and decoder of the auto - encoder " target - encoder " and " targetdecoder " .
-The target - encoder receives the target y = {y 1 , y 2 , ... , y n } and encodes it to a utterancelevel semantic representation s , and then decodes s to anew sequence to approximate the target text .
+The target - encoder receives the target y = {y 1 , y 2 , ... , y n } and encodes it to a utterancelevel semantic representation s , and then decodes s to a new sequence to approximate the target text .
 The loss function is identical to that of the encoder :
 Mapping Module
 As our model is constructed for dialogue generation , we design the mapping module to ensure that the generated response is semantically consistent with the source .
 There are many matching models that can be used to learn such dependency relations .
 For simplicity , we only use a simple feedforward network for implementation .
 The mapping module M ?
-transforms the source semantic representation h to anew representation t.
+transforms the source semantic representation h to a new representation t.
 To be specific , we implement a multi - layer perceptron ( MLP ) g ( ) for M ? and train it by minimizing the L2 - norm loss J 3 ( ? ) of the transformed representation t and the semantic representation of target response s:
 Training and Testing
 In the testing stage , given an input utterance , the encoder E ? , the decoder D ? , and the matching module M ?
@@ -89,7 +89,7 @@ The parameters are updated by the Adam algorithm ( Kingma and Ba , 2014 ) and in
 The initial learning rate is 0.002 and the model is trained in minibatches with a batch size of 256 . ? 1 and ?
 3 are set to 1 and ?
 2 is set to 0.01 in Equation .
-It is important to note that fora fair comparison , we reimplement the baseline models with the best settings on the validation set .
+It is important to note that for a fair comparison , we reimplement the baseline models with the best settings on the validation set .
 After fixing the hyperparameters , we combine the training and validation sets together as a larger training set to produce the final model .
 Results
 We use BLEU , to compare the performance of different models , and use the widely - used BLEU - 4 as our main BLEU score .
@@ -116,7 +116,7 @@ They are asked to score the generated responses in terms of fluency and coherenc
 Fluency rep - resents whether each sentence is incorrect grammar .
 Coherence evaluates whether the generated response is relevant to the input .
 The score ranges from 1 to 10 ( 1 is very bad and 10 is very good ) .
-To evaluate the overall performance , we use the geometric mean of fluency and coherence as the final evaluation metric .
+To evaluate the over all performance , we use the geometric mean of fluency and coherence as the final evaluation metric .
 shows the results of human evaluation .
 The inter-annotator agreement is satisfactory considering the difficulty of human evaluation .
 The Pearson 's correlation coefficient is 0.69 on coherence and 0.57 on fluency , with p < 0.0001 .

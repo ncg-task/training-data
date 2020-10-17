@@ -40,7 +40,7 @@ The number of turns in the inference is dynamically modeled by both the document
 One of the signi cant challenges ReasoNets face is how to design an e cient training method , since the termination state is discrete and not connected to the nal output .
 This prohibits canonical back - propagation method being directly applied to train ReasoNets .
 Motivated by , we tackle this challenge by proposing a reinforcement learning approach , which utilizes an instance - dependent reward baseline , to successfully train ReasoNets .
-Finally , by accounting fora dynamic termination state during inference and applying proposed deep reinforcement learning optimization method , ReasoNets achieve the state - of - the - art results in machine comprehension datasets , including unstructured CNN and Daily Mail datasets , and the proposed structured Graph Reachability dataset , when the paper is rst publicly available on arXiv .
+Finally , by accounting for a dynamic termination state during inference and applying proposed deep reinforcement learning optimization method , ReasoNets achieve the state - of - the - art results in machine comprehension datasets , including unstructured CNN and Daily Mail datasets , and the proposed structured Graph Reachability dataset , when the paper is rst publicly available on arXiv .
 At the time of the paper submission , we apply ReasoNet to the competitive Stanford Question Answering Dataset ( SQuAD ) , ReasoNets outperform all existing published approaches and rank at second place on the test set leaderboard .
 This paper is organized as follows .
 In Section 2 , we review and compare recent work on machine reading comprehension tasks .
@@ -70,7 +70,7 @@ Several recent studies try to simulate this revisit by combining the information
 Hill et al .
 use multiple hops memory network to augment the query with new information from the previous hop .
 Gated Attention reader is an extension of the attention - sum reader with multiple iterations by pushing the query encoding into an attention - based gate in each iteration .
-Iterative Alternative ( IA ) reader produces anew query glimpse and document glimpse in each iteration and utilizes them alternatively in the next iteration .
+Iterative Alternative ( IA ) reader produces a new query glimpse and document glimpse in each iteration and utilizes them alternatively in the next iteration .
 Cui et al .
 further propose to extend the query - speci c attention to both query - to - document attention and document - to - query attention , which is built from the intermediate results in the query - speci c attention .
 By reading documents and enriching the query in an iterative fashion , multi-turn reasoning has demonstrated their superior performance consistently .
@@ -304,8 +304,7 @@ To study thee ectiveness of the termination gate in ReasoNets , we remove the te
 To study thee ectiveness of multi-turn reasoning , we choose " ReasoNet - T max = 2 " , which only has single - turn reasoning .
 We compare ReasoNets with a two layer deep LSTM model with 128 hidden units , denoted as " Deep LSTM Reader " , as a baseline .
 shows the performance of these models on the graph reachability dataset .
-Deep LSTM
-Reader achieves 90.92 % and 71.55 % accuracy in the small and large graph dataset , respectively , which indicates the graph reachibility task is not trivial .
+Deep LSTM Reader achieves 90.92 % and 71.55 % accuracy in the small and large graph dataset , respectively , which indicates the graph reachibility task is not trivial .
 Step 1
 Step 2
 Step 2

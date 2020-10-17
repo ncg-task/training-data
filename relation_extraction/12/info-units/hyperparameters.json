@@ -19,8 +19,7 @@
             }
           }
         },
-        "from sentence" : "We choose the number of heads N for attention guided layer from { 1 , 2 , 3 , 4 } , the block number M from { 1 , 2 , 3 } , the number of sub - layers
-L in each densely connected layer from { 2 , 3 , 4 }."
+        "from sentence" : "We choose the number of heads N for attention guided layer from { 1 , 2 , 3 , 4 } , the block number M from { 1 , 2 , 3 } , the number of sub - layers L in each densely connected layer from { 2 , 3 , 4 }."
 
       },
       "has" : {

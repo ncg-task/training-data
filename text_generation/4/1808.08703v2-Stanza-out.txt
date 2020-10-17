@@ -12,7 +12,7 @@ Numerous efforts have been made in the field of natural language text generation
 Early techniques for generating text conditioned on some input information were template or rule - based engines , or probabilistic models such as n-gram .
 In recent times , state - of - the - art results on these tasks have been achieved by recurrent and convolutional neural network models trained for likelihood maximization .
 This work pro-Code available at : https://github.com/enigmaeth/skip-thought-gan poses an approach for text generation using Generative Adversarial Networks with Skip - Thought vectors .
-GANs area class of neural networks that explicitly train a generator to produce high - quality samples by pitting against an adversarial discriminative model .
+GANs are a class of neural networks that explicitly train a generator to produce high - quality samples by pitting against an adversarial discriminative model .
 GANs output differentiable values and hence the task of discrete text generation has to use vectors as differentiable inputs .
 This is achieved by training the GAN with sentence embedding vectors produced by Skip - Thought , a neural network model for learning fixed length representations of sentences .
 Related Works
@@ -43,7 +43,7 @@ The Skip - Thought model uses an RNN encoder with GRU activations and an RNN dec
 Skip - Thought Architecture
 For a given sentence tuple ( s i?1 , s i , s i + 1 ) , let wt i denote the t- th word for sentence s i , and let x ti denote it s word embedding .
 The model has three components : Encoder .
-Encoded vectors fora sentence s i with N words w i , w i + 1 ,... , w n are computed by iterating over the following sequence of equations :
+Encoded vectors for a sentence s i with N words w i , w i + 1 ,... , w n are computed by iterating over the following sequence of equations :
 where ht i is a hidden state at each time step and interpreted as a sequence of words w 1 i , ... , w n i , t is the proposed state update at time t , z t is the update gate and rt is the reset gate .
 Both update gates take values between zero and one .
 Decoder .
@@ -64,7 +64,7 @@ The discriminator D 's objective is to differentiate between real and generated 
 The two networks - generator and discriminator compete against each other in a zero - sum game .
 The minimax strategy dictates that each network plays optimally with the assumption that the other network is optimal .
 This leads to Nash equilibrium which is the point of convergence for GAN model .
-Objective . have formulated the minimax game fora generator G , discriminator D adversarial network with value function V ( G , D ) as :
+Objective . have formulated the minimax game for a generator G , discriminator D adversarial network with value function V ( G , D ) as :
 Model Architecture
 The STGAN model uses a deep convolutional generative adversarial network , similar to the one used in .
 The generator network is updated twice for each discriminator network update to prevent fast convergence of the discriminator network .

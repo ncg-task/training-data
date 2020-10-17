@@ -1,7 +1,7 @@
 162	4	13	ARE model
 162	18	40	incorrectly classifies
 162	41	64	most instances of happy
-162	32	34	as
+162	65	67	as
 162	68	87	neutral ( 43.51 % )
 163	22	37	emotion classes
 163	42	66	frequently confused with
@@ -24,8 +24,8 @@
 168	130	147	surprising degree
 170	18	28	occurrence
 170	29	31	of
-170	66	72	 cases
-170	36	38	in
+170	36	72	incorrect " sad - to - happy " cases
+170	73	75	in
 170	80	89	TRE model
 170	93	105	reduced from
 170	106	125	16 . 20 % to 9.15 %
@@ -45,11 +45,11 @@
 124	33	36	for
 124	41	52	audio input
 124	108	111	128
-124	33	36	for
+124	112	115	for
 124	120	130	text input
 124	142	148	covers
 124	153	167	maximum length
-124	26	28	of
+124	168	170	of
 124	175	186	transcripts
 134	52	72	released transcripts
 134	73	75	of
@@ -62,10 +62,10 @@
 125	35	37	is
 125	38	43	3,747
 125	46	55	including
-125	67	73	 token
+125	60	73	" UNK " token
 125	82	92	represents
 125	93	106	unknown words
-125	67	73	 token
+125	117	130	" PAD " token
 125	142	158	used to indicate
 125	159	178	padding information
 125	179	200	added while preparing
@@ -81,6 +81,7 @@
 127	12	14	of
 127	19	31	hidden units
 127	36	53	initialized using
+127	54	64	orthogonal
 133	20	40	text embedding layer
 133	44	60	initialized from
 133	61	96	pretrained word - embedding vectors
@@ -104,7 +105,7 @@
 144	12	21	ARE model
 144	22	27	shows
 144	32	52	baseline performance
-144	57	60	use
+144	64	67	use
 144	68	90	minimal audio features
 144	93	100	such as
 144	105	131	MFCC and prosodic features
@@ -122,7 +123,7 @@
 148	21	55	state - of - the - art performance
 148	56	60	with
 148	63	72	WAP value
-148	29	31	of
+148	73	75	of
 148	76	81	0.718
 150	31	36	MDREA
 150	44	55	outperforms
@@ -141,10 +142,10 @@
 146	32	44	textual data
 146	45	48	are
 146	49	60	informative
-146	49	51	in
+146	61	63	in
 146	64	88	emotion prediction tasks
 146	99	122	recurrent encoder model
-146	7	9	is
+146	123	125	is
 146	126	135	effective
 146	136	152	in understanding
 146	159	183	types of sequential data

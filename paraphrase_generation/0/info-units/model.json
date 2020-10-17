@@ -49,7 +49,7 @@
       },
       "provides" : {
         "' global ' loss" : {
-          "ensures that" : {
+          "ensures" : {
             "sentence embedding" : {
               "close to" : "other semantically related sentence embeddings"
             }

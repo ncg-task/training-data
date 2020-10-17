@@ -37,7 +37,7 @@ if length of bits is lesser than integer 3 or second element of bits is not equa
 STRING : WIKISQL 17.9 13.3 13.0 2.7
 Related Work
 Various models have been proposed over the years to learn semantic parsers from natural language expressions paired with their meaning representations .
-These systems typically learn lexicalized mapping rules and scoring models to construct a meaning representation fora given input .
+These systems typically learn lexicalized mapping rules and scoring models to construct a meaning representation for a given input .
 More recently , neural sequence - to - sequence models have been applied to semantic parsing with promising results , eschewing the need for extensive feature engineering .
 Several ideas have been explored to enhance the performance of these models such as data augmentation , transfer learning , sharing parameters for multiple languages or meaning representations , and utilizing user feedback signals .
 There are also efforts to develop structured decoders that make use of the syntax of meaning representations .
@@ -112,12 +112,12 @@ The model 's training objective is to maximize the log likelihood of the generat
 where D represents training pairs .
 At test time , the prediction for input x is obtained via = arg max a p ( a | x ) and ?
 = arg max y p ( y | x , ) , where a and y represent coarse - and fine - grained meaning candidates .
-Because probabilities p ( a|x ) and p ( y|x , a ) are factorized as shown in Equations , we can obtain best results approximately by using greedy search to generate tokens one by one , rather than iterating overall candidates .
+Because probabilities p ( a|x ) and p ( y|x , a ) are factorized as shown in Equations , we can obtain best results approximately by using greedy search to generate tokens one by one , rather than iterating over all candidates .
 Semantic Parsing Tasks
 In order to show that our framework applies across domains and meaning representations , we developed models for three tasks , namely parsing natural language to logical form , to Python source code , and to SQL query .
 For each of these tasks we describe the datasets we used , how sketches were extracted , and specify model details over and above the architecture presented in Section 3 .
 Natural Language to Logical Form
-For our first task we used two benchmark datasets , namely GEO ( 880 language queries to a database of U.S. geography ) and ATIS ( 5 , 410 queries to a flight booking system ) .
+For our first task we used two benchmark datasets , namely GEO ( 880 language queries to a data base of U.S. geography ) and ATIS ( 5 , 410 queries to a flight booking system ) .
 Examples are shown in ( see the first and second block ) .
 We used standard splits for both datasets : 600 training and 280 test instances for GEO ; 4 , 480 training , 480 development , and 450 test examples for ATIS .
 Meaning representations in these datasets are based on ?- calculus .
@@ -157,7 +157,7 @@ The original split has 16 , 000 training , 1 , 000 development , and 1 , 805 tes
 We used the built - in lexical scanner of Python 1 to tokenize the code and obtain token types .
 Sketches were extracted by substituting the original tokens with their token types , except delimiters ( e.g. , " [ " , and " : " ) , operators ( e.g. , " + " , and " * " ) , and built - in keywords ( e.g. , " True " , and " while " ) .
 For instance , the expression " if s [: 4 ] . lower ( ) == ' http ' : " becomes " if NAME [ : NUMBER ] . NAME ( ) == STRING : " , with details about names , values , and strings being omitted .
-DJANGO is a diverse dataset , spanning various real - world use cases and as a result models are often faced with out - of - vocabulary ( OOV ) tokens ( e.g. , variable names , and numbers ) that are unseen during training .
+DJANGO is a diverse dataset , spanning various real - world use cases and as a result models are often faced with out - of - vocabulary ( OOV ) tokens ( e.g. , variable names , and numbers ) thatare unseen during training .
 We handle OOV tokens with a copying mechanism , which allows the fine meaning decoder ( Section 3.2 ) to directly copy tokens from the natural language input .
 Copying Mechanism
 Recall that we use a softmax classifier to predict the probability distribution p ( y t |y <t , x , a ) over the pre-defined vocabulary .
@@ -170,7 +170,7 @@ Rn and b g ?
 R are parameters , and the indicator function 1 [ yt / ? Vy ] is 1 only if y t is not in the target vocabulary V y ; the attention score s t , k ( see Equation ) measures how likely it is to copy y t from the input word x k .
 Natural Language to SQL
 The WIKISQL dataset contains 80 , 654 examples of questions and SQL queries distributed across 24 , 241 tables from Wikipedia .
-The goal is to generate the correct SQL query fora natural language question and table schema ( i.e. , table column names ) , without using the content values of tables ( see the last block in for an example ) .
+The goal is to generate the correct SQL query for a natural language question and table schema ( i.e. , table column names ) , without using the content values of tables ( see the last block in for an example ) .
 The dataset is partitioned into a training set ( 70 % ) , a development set ( 10 % ) , and a test set ( 20 % ) .
 Each table is present in one split to ensure generalization to unseen tables .
 WIKISQL queries follow the format " SELECT agg op agg col WHERE ( cond col cond op cond ) AND ... " , which is a subset of the SQL syntax .
@@ -247,7 +247,7 @@ The learning rate was selected from { 0.002 , 0.005 } .
 The batch size was 200 for WIKISQL , and was 64 for other datasets .
 Early stopping was used to determine the number of epochs .
 Evaluation
-We use accuracy as the evaluation metric , i.e. , the percentage of the examples that are correctly parsed to their gold standard meaning representations .
+We use accuracy as the evaluation metric , i.e. , the percentage of the examples thatare correctly parsed to their gold standard meaning representations .
 For WIKISQL , we also execute generated SQL queries on their corresponding tables , and report the execution accuracy which is defined as the proportion of correct answers .
 Results and Analysis
 We compare our model ( COARSE2FINE ) against several previously published systems as well as various baselines .
@@ -263,7 +263,7 @@ As can be seen , predicting the sketch correctly boosts performance .
 The oracle results also indicate the accuracy of the fine meaning decoder .
 reports results on DJANGO where we observe similar tendencies .
 COARSE2FINE outperforms ONESTAGE by a wide margin .
-It is also superior to the best reported result in the literature ( SNM + COPY ; seethe second block in the table ) .
+It is also superior to the best reported result in the literature ( SNM + COPY ; see the second block in the table ) .
 Again we observe that the sketch encoder is beneficial and that there is an 8.9 point difference in accuracy between COARSE2FINE and the oracle .
 Results on WIKISQL are shown in .
 Our model is superior to ONESTAGE as well as to previous best performing systems .

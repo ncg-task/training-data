@@ -8,7 +8,7 @@ Partly because of its limited size , prior work on MCTest has focused mainly on 
 We tackle the dataset with a neural approach , harnessing simple neural networks arranged in a parallel hierarchy .
 The parallel hierarchy enables our model to compare the passage , question , and answer from a variety of trainable perspectives , as opposed to using a manually designed , rigid feature set .
 Perspectives range from the word level to sentence fragments to sequences of sentences ; the networks operate only on word - embedding representations of text .
-When trained with a methodology designed to help cope with limited training data , our Parallel - Hierarchical model sets anew state of the art for MCTest , outperforming previous feature - engineered approaches slightly and previous neural approaches by a significant margin ( over 15 % absolute ) .
+When trained with a methodology designed to help cope with limited training data , our Parallel - Hierarchical model sets a new state of the art for MCTest , outperforming previous feature - engineered approaches slightly and previous neural approaches by a significant margin ( over 15 % absolute ) .
 Introduction
 Humans learn in a variety of ways - by communication with each other , and by study , the reading of text .
 Comprehension of unstructured text by machines , at a near- human level , is a major goal for natural language processing .
@@ -65,11 +65,11 @@ Manually engineered features often require significant effort on the part of a d
 On the other hand , neural models can be trained end - to - end and typically harness only a single feature : vectorrepresentations of words .
 Word embeddings are fed into a complex and possibly deep neural network which processes and compares text to question and answer .
 Among deep models , mechanisms of attention and working memory are common , as in and .
-3.1 Feature - engineering models treated MCTest as a structured prediction problem , searching fora latent answerentailing structure connecting question , answer , and text .
+3.1 Feature - engineering models treated MCTest as a structured prediction problem , searching for a latent answerentailing structure connecting question , answer , and text .
 This structure corresponds to the best latent alignment of a hypothesis with appropriate snippets of the text .
 The process of ( latently ) selecting text snippets is related to the attention mechanisms typically used in deep networks designed for MC and machine translation .
 The model uses event and entity coreference links across sentences along with a host of other features .
-These include specifically trained word vectors for synonymy ; antonymy and class - inclusion relations from external database sources ; dependencies and semantic role labels .
+These include specifically trained word vectors for synonymy ; antonymy and class - inclusion relations from external data base sources ; dependencies and semantic role labels .
 The model is trained using a latent structural SVM extended to a multitask setting , so that questions are first classified using a pretrained top - level classifier .
 This enables the system to use different processing strategies for different question categories .
 The model also combines question and answer into a well - formed statement using the rules of Cucerzan and Agichtein ( 2005 ) .
@@ -187,7 +187,7 @@ We can not model the joint probability as a product of individual terms ( score 
 Combining Perspectives
 We use a multilayer perceptron to combine M sem , M word , M swd , and M sws as a final matching score M i for each answer candidate .
 This network also pools and combines the separate n-gram scores , and uses a linear activation function .
-Our overall training objective is to minimize the ranking loss
+Our over all training objective is to minimize the ranking loss
 where is a constant margin , i * indexes the correct answer , and we take the maximum over i so that we are ranking the correct answer over the best - ranked incorrect answer ( of which there are three ) .
 This approach worked better than comparing the correct answer to the incorrect answers individually as in .
 Our implementation of the Parallel - Hierarchical model , using the Keras framework , is available on Github .
@@ -199,7 +199,7 @@ Empirically , we found that we could achieve above 50 % accuracy on MCTest using
 Therefore , we initialized the network for the semantic perspective to perform this sum , by initializing A x as the identity matrix and bx A as the zero vector , x ? {t , h} .
 Recall that the activation function is a ReLU so that positive outputs are unchanged .
 We also found basic word - matching scores to be helpful , so we initialized the word - by - word networks likewise .
-The network for perspectivecombination was initialized to perform a sum of individual scores , using a zero bias - vector and a weight matrix of ones , since we found that each perspective contributed positively to the overall result .
+The network for perspectivecombination was initialized to perform a sum of individual scores , using a zero bias - vector and a weight matrix of ones , since we found that each perspective contributed positively to the over all result .
 This training wheels approach is related to other techniques from the literature .
 For instance , proposed the identity - matrix initialization in the context of recurrent neural networks in order to preserve the error signal through backpropagation .
 In residual networks , shortcut connections bypass certain layers in the network so that a simpler function can be trained in conjunction with the full model .
@@ -244,9 +244,9 @@ The first three rows represent featureengineered methods .
 RTE is the best - performing variant of the original baseline published along with MCTest .
 It uses a lexical sliding window and distance - based measure , augmented with rules for recognizing textual entailment .
 We described the methods of and in Section 3 .
-On MCTest - 500 , the Parallel Hierarchical model significantly outperforms these methods on single questions ( > 2 % ) and slightly outperforms the latter two on multi questions ( ? 0.3 % ) and overall ( ?
+On MCTest - 500 , the Parallel Hierarchical model significantly outperforms these methods on single questions ( > 2 % ) and slightly outperforms the latter two on multi questions ( ? 0.3 % ) and over all ( ?
 1 % ) .
-The method of achieves the best overall result on MCTest - 160 .
+The method of achieves the best over all result on MCTest - 160 .
 We suspect this is because our neural method suffered from the relative lack of training data .
 The last four rows in are neural methods that we discussed in Section 3 .
 Performance measures are taken from .
@@ -260,7 +260,7 @@ Results are given in .
 Not surprisingly , the n-gram functionality is important , contributing almost 5 % accuracy improvement .
 Without this , the model has almost no Method MCTest - 160 accuracy ( % )
 MCTest - 500 accuracy ( % ) Single means for synthesizing distributed evidence .
-The top N function contributes very little to the overall performance , suggesting that most multi questions have their evidence distributed across contiguous sentences .
+The top N function contributes very little to the over all performance , suggesting that most multi questions have their evidence distributed across contiguous sentences .
 Ablating the sentential component made the most significant difference , reducing performance by more than 5 % .
 Simple word - by - word matching is obviously useful on MCTest .
 The sequential sliding window makes a 3 % contribution , highlighting the importance of word - distance measures .

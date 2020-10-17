@@ -19,12 +19,12 @@ It plays a significant role in a variety of natural language processing applicat
 shows an example about expressing a relation sensitivity among three entities L858E , EGFR and gefitinib in two sentences .
 Most existing relation extraction models can be categorized into two classes : sequence - based and dependency - based .
 Sequence - based models operate only on the word sequences 2014 ; , whereas dependencybased models incorporate dependency trees into the models .
-Compared to sequence - based models , dependency - based models are able to capture non-local syntactic relations that are obscure from the surface form alone .
+Compared to sequence - based models , dependency - based models are able to capture non-local syntactic relations thatare obscure from the surface form alone .
 Various pruning strategies are also proposed to distill the dependency information in order to further improve the performance .
 apply neural networks only on the shortest dependency path between the entities in the full tree .
 reduce the full tree to the subtree below the lowest common ancestor ( LCA ) of the entities .
 apply graph convolutional networks ( GCNs ) model over a pruned tree .
-This tree includes tokens that are up to distance K away from the dependency path in the LCA subtree .
+This tree includes tokens thatare up to distance K away from the dependency path in the LCA subtree .
 However , rule - based pruning strategies might eliminate some important information in the full tree .
 shows an example in cross - sentence n- ary relation extraction that the key tokens partial response would be excluded if the model only takes the pruned tree into consideration .
 1
@@ -46,8 +46,7 @@ With the help of dense connections , we are able to train the AGGCN model with a
 Experiments show that our model is able to achieve better performance for various tasks .
 For the cross - sentence relation extraction task , our model surpasses the current state - of - the - art models on multi-class ternary and binary relation extraction by 8 % and 6 % in terms of accuracy respectively .
 For the large - scale sentence - level extraction task ( TACRED dataset ) , our model is also consistently better than others , showing the effectiveness of the model on a large training set .
-Our code is available at https://github.com/
-Cartus / AGGCN_TACRED
+Our code is available at https://github.com/Cartus / AGGCN_TACRED
 2 Our contributions are summarized as follows :
 We propose the novel AGGCNs that learn a " soft pruning " strategy in an end - to - end fashion , which learns how to select and discard information .
 Combining with dense connections , our AGGCN model is able to learn a better graph representation .
@@ -68,7 +67,7 @@ where W ( l ) is the weight matrix , b ( l ) is the bias vector , and ?
 is an activation function ( e.g. , RELU ) .
 h
 i is the initial input x i , where xi ?
-Rd and dis the input feature dimension . :
+Rd and d is the input feature dimension . :
 The AGGCN model is shown with an example sentence and its dependency tree .
 It is composed of M identical blocks and each block has three types of layers as shown on the right .
 Every block takes node embeddings and adjacency matrix that represents the graph as inputs .
@@ -144,13 +143,13 @@ Following , we concatenate the sentence representation and entity representation
 First we need to obtain the sentence representation h sent .
 It can be computed as :
 where h mask represents the masked collective hidden representations .
-Masked here means we only select representations of tokens that are not entity tokens in the sentence . f :
+Masked here means we only select representations of tokens thatare not entity tokens in the sentence . f :
 R dn ?
 R d 1 is a max pooling function that maps from n output vectors to 1 sentence vector .
 Similarly , we can obtain the entity representations .
 For the i - th entity , it s representation he i can be computed as :
 where he i indicates the hidden representation corresponding to the i - th entity .
-4 Entity representations will be concatenated with sentence representation to form anew representation .
+4 Entity representations will be concatenated with sentence representation to form a new representation .
 Following , we apply a feed - forward neural network ( FFNN ) over the concatenated representations inspired by relational reasoning works :
 where hf inal will betaken as inputs to a logistic regression classifier to make a prediction .
 3 Experiments
@@ -172,8 +171,7 @@ freesunshine0316/nary-grn
 Setup
 We tune the hyper - parameters according to results on the development sets .
 For the cross - sentence nary relation extraction task , we use the same data split used in , while for the sentence - level relation extraction task , we use the same development set from
-We choose the number of heads N for attention guided layer from { 1 , 2 , 3 , 4 } , the block number M from { 1 , 2 , 3 } , the number of sub - layers
-L in each densely connected layer from { 2 , 3 , 4 }.
+We choose the number of heads N for attention guided layer from { 1 , 2 , 3 , 4 } , the block number M from { 1 , 2 , 3 } , the number of sub - layers L in each densely connected layer from { 2 , 3 , 4 }.
 7 Through preliminary experiments on the development sets , we find that the combinations ( N = 2 , M = 2 , L 1 = 2 , L 2 = 4 , d hidden = 340 ) 8 and ( N = 3 , M = 2 , L 1 = 2 , L 2 = 4 , d hidden = 300 ) give the best results on cross - sentence n-ary relation extraction and sentence - level relation extraction , respectively .
 Glo Ve vectors are used as the initialization for word embeddings .
 Models are evaluated using the same metrics as previous work .
@@ -223,7 +221,7 @@ Model F1
 C- AGGCN
 ( Full tree ) 68.2 C - AGGCN ( K=2 ) 67.5 C - AGGCN ( K=1 ) 67.9 C - AGGCN ( K=0 ) 67.0 model with them .
 We can observe that AGGCN outperforms GCN by 1.1 F1 points .
-We speculate that the limited improvement is due to the lack of contextual information about word order or disambiguation .
+We speculate that the limited improvement is due to the lack of contextual information about word order or dis ambiguation .
 Similar to C - GCN , we extend our AGGCN model with a bidirectional LSTM network to capture the contextual representations which are subsequently fed into AGGCN layers .
 We term the modified model as C - AGGCN .
 Our C - AGGCN model achieves an F1 score of 68.2 , which outperforms the state - ofart C - GCN model by 1.8 points .
@@ -242,7 +240,7 @@ This suggests that both layers can assist GCNs to learn better information aggre
 We also notice that the feed - forward layer is effective in our model .
 Without the feed - forward layer , the result drops to an F1 score of 67.8 .
 Performance with Pruned Trees .
-shows the performance of the C - AGGCN model with pruned trees , where K means that the pruned trees include tokens that are up to distance K away from the dependency path in the LCA subtree .
+shows the performance of the C - AGGCN model with pruned trees , where K means that the pruned trees include tokens thatare up to distance K away from the dependency path in the LCA subtree .
 We can observe that all the C - AGGCN models with varied values of K are able to outperform the state - of - the - art C - GCN model ( reported in ) .
 Specifically , with the same setting as K =1 , C - AGGCN surpasses C - GCN by 1.5 points of F1 score .
 This demonstrates that , with the combination of densely connected layer and attention guided layer , C - AGGCN can learn better representations of graphs than C - GCN for downstream tasks .
@@ -252,7 +250,7 @@ Performance against Sentence Length .
 shows the F 1 scores of three models under different sentence lengths .
 We partition the sentence length into five classes , [ 40 , 50 ) , ? 50 ) .
 In general , C - AGGCN with full trees outperforms C - AGGCN with pruned trees and C - GCN against various sentence lengths .
-We also notice that C - AGGCN with pruned trees performs better than C - GCN inmost cases .
+We also notice that C - AGGCN with pruned trees performs better than C - GCN in most cases .
 Moreover , the improvement achieved by C - AGGCN with pruned trees decays when the sentence length increases .
 Such a performance degradation can be avoided by using full trees , which provide more information of the underlying graph structures .
 Intuitively , with the increase of the sentence length , the dependency graph becomes larger as more nodes are included .

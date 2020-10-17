@@ -1,4 +1,4 @@
-168	0	18	Textual Entailment
+144	0	18	Textual Entailment
 172	11	15	show
 172	21	34	SRL embedding
 172	39	44	boost
@@ -15,9 +15,9 @@
 173	137	160	new stateof - the - art
 173	168	179	outperforms
 173	180	203	all the ensemble models
-173	52	54	in
+173	204	206	in
 173	211	222	leaderboard
-181	0	29	Machine Reading Comprehension
+149	0	29	Machine Reading Comprehension
 186	13	21	includes
 186	22	26	MQAN
 186	27	30	for
@@ -34,7 +34,7 @@
 188	63	87	all the strong baselines
 188	90	97	showing
 188	109	124	quite effective
-188	43	46	for
+188	125	128	for
 188	129	172	more complex document and question encoding
 26	93	100	explore
 26	101	119	integrative models
@@ -48,9 +48,9 @@
 28	16	40	easy and feasible scheme
 28	41	53	to integrate
 28	54	70	semantic signals
-28	44	46	in
+28	71	73	in
 28	74	98	downstream neural models
-28	44	46	in
+28	99	101	in
 28	102	123	end - to - end manner
 28	124	132	to boost
 28	150	161	effectively

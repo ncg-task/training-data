@@ -1,5 +1,7 @@
+100	10	13	for
+100	14	19	LCSTS
+100	20	23	are
 101	0	21	RNN and RNN - context
-101	22	25	are
 101	30	53	RNNbased seq2seq models
 101	56	72	without and with
 101	73	92	attention mechanism
@@ -18,7 +20,6 @@
 104	12	32	conventional seq2seq
 104	33	37	with
 104	40	73	deep recurrent generative decoder
-105	20	23	for
 105	24	32	Gigaword
 105	35	48	ABS and ABS +
 105	49	52	are
@@ -74,20 +75,19 @@
 24	9	33	convolutional gated unit
 24	34	44	to perform
 24	45	60	global encoding
-24	10	12	on
+24	61	63	on
 24	68	82	source context
 25	4	8	gate
 25	9	17	based on
 25	18	54	convolutional neural network ( CNN )
 25	55	62	filters
 25	63	82	each encoder output
-25	9	17	based on
+25	83	91	based on
 25	96	110	global context
 25	111	117	due to
 25	122	139	parameter sharing
 2	20	45	Abstractive Summarization
 10	64	96	neural abstractive summarization
-115	148	153	LCSTS
 115	19	21	on
 115	26	38	two datasets
 115	41	50	our model
@@ -97,7 +97,7 @@
 115	74	85	ROUGE score
 115	86	90	over
 115	95	104	baselines
-115	19	21	on
+115	141	143	on
 115	148	153	LCSTS
 115	154	157	are
 115	158	169	significant
@@ -107,5 +107,5 @@
 118	47	56	our model
 118	75	77	of
 118	78	105	ROUGE - 2 score 3.7 and 1.5
-118	19	21	on
+118	106	108	on
 118	113	131	LCSTS and Gigaword

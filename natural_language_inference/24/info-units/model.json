@@ -38,7 +38,7 @@
           }
         }
       },
-      "call" : ["stochastic answer network ( SAN )", {"from sentence" : "We call this a stochastic answer network ( SAN ) because the stochastic dropout is applied to the answer module ; albeit simple , this technique significantly improves the robustness and overall accuracy of the model ."}]
+      "call" : ["stochastic answer network ( SAN )", {"from sentence" : "We call this a stochastic answer network ( SAN ) because the stochastic dropout is applied to the answer module ; albeit simple , this technique significantly improves the robustness and over all accuracy of the model ."}]
     }
   }
 }

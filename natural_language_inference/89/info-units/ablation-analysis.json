@@ -27,7 +27,7 @@
         },
         "two auxiliary losses" : {
           "leads to" : {
-            "overall degradation" : {
+            "over all degradation" : {
               "on" : "curve"
             },
             "outperforms" : {
@@ -35,7 +35,7 @@
               "by" : "large margin"
             }
           },
-          "from sentence" : "Ablating two auxiliary losses , however , leads to an overall degradation on the curve , but it still outperforms the baseline by a large margin ."
+          "from sentence" : "Ablating two auxiliary losses , however , leads to an over all degradation on the curve , but it still outperforms the baseline by a large margin ."
         }
       },
       "deleting" : {
@@ -45,7 +45,7 @@
               "of" : {
                 "more than 1.5 points" : {
                   "on" : {
-                    "overall performance" : {
+                    "over all performance" : {
                       "in terms of" : "F1",
                       "with or without" : "ELMo embeddings"
                     }
@@ -54,7 +54,7 @@
               }
             }
           },
-          "from sentence" : "Finally , deleting both of two losses causes a degradation of more than 1.5 points on the overall performance in terms of F1 , with or without ELMo embeddings ."
+          "from sentence" : "Finally , deleting both of two losses causes a degradation of more than 1.5 points on the over all performance in terms of F1 , with or without ELMo embeddings ."
         }
       },
       "Adding" : {
@@ -68,7 +68,7 @@
         }
       },
       "find that" : {
-        "improvment" : {
+        "improvement" : {
           "on" : "noanswer accuracy",
           "is" : "significant",
           "from sentence" : "We find that the improvement on noanswer accuracy is significant ."

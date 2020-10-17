@@ -8,7 +8,7 @@ In this paper , we present a novel approach of incorporating the neighboring asp
 Our method outperforms the state of the art by 1.6 % on average in two distinct domains .
 Introduction
 Sentiment analysis plays a huge role in userfeedback extraction from different popular ecommerce websites like Amazon , eBay , etc .
-Large enterprises are not only interested in the overall user sentiment about a given product , but the sentiment behind the finer aspects of a product is also very important to them .
+Large enterprises are not only interested in the over all user sentiment about a given product , but the sentiment behind the finer aspects of a product is also very important to them .
 Companies allocate their resources to research , development , and marketing based on these factors .
 Aspect - based sentiment analysis ( ABSA ) caters to these needs .
 Users tend to express their opinion on different aspects of a given product .
@@ -45,7 +45,7 @@ In recent days , thanks to the increasing progress of deep neural network resear
 The common way of doing ABSA is feeding the aspect - aware sentence representation to the neural network for classification .
 This was first proposed by where they appended aspect embeddings with the each word embeddings of the sentence to generate aspect - aware sentence representation .
 This representation was further fed to an attention layer followed by softmax for final classification .
-More recently , proposed a model where both context and aspect representations interact with each other 's attention mechanism to generate the overall representation .
+More recently , proposed a model where both context and aspect representations interact with each other 's attention mechanism to generate the over all representation .
 proposed word - aspect associations using circular correlation as an improvement over 's work .
 Also , used transformer networks for target - oriented sentiment classification .
 ABSA has also been researched from a question - answering perspective where deep memory networks have played a major role .
@@ -192,10 +192,10 @@ For IAN , we ran our own experiments for this scenario .
 Results and Discussion
 We discuss the results of different experiments below :
 Overall Comparison
-We present the overall performance of our model against the baseline methods in .
+We present the over all performance of our model against the baseline methods in .
 It is evident from the results that our IARM model outperforms all the baseline models , including the state of the art , in both of the domains .
 We obtained bigger improvement in laptop domain , of 1.7 % , compared to restaurant domain , of 1.4 % .
-This shows that the inclusion of the neighboring aspect information and memory network has an overall positive impact on the classification process .
+This shows that the inclusion of the neighboring aspect information and memory network has an over all positive impact on the classification process .
 Single Aspect and Multi- Aspect Scenarios Following
 Case Study
 We analyze and compare IARM and IAN with single aspect and multi-aspect samples from the Se -mEval 2014 dataset .
@@ -214,7 +214,7 @@ However , IAN fails to make this association for the aspect " cosi sandwiches " 
 This leads to imperfect aspectaware sentence representation generation , resulting misclassification of the target aspect to be positive .
 However , IARM resolves this issue with the combination of word - level aspect aware attention ( ? ) and the memory network .
 Since , the memory network compares the target - aspect - aware sentence representation with the sentence representations for the other aspects repeatedly , eventually the correct representation for the target aspect emerges from the memory network .
-Also , the consideration of surrounding aspects forces the network to better distinguish the sentiment - bearing words fora particular aspect .
+Also , the consideration of surrounding aspects forces the network to better distinguish the sentiment - bearing words for a particular aspect .
 These points are reflected in the ?
 attention weights of the aspects " coffee " and " cosi sand - ( c ) Attention weights for aspect " coffee " for IARM . :
 Attention weights for IAN and IARM for the sentence " Coffee is a better deal than overpriced cosi sandwiches " .
@@ -246,7 +246,7 @@ Also , the plot for restaurant domain shows a downward trend over the increasing
 This suggests a irregular cyclic nature of the memory network where those certain hop counts yields higher quality representations than their neighbor .
 The same can not be said for laptop domain as the plot presents a zig -zag pattern .
 Conclusion
-In this paper , we presented anew framework , termed IARM , for aspect - based sentiment analysis .
+In this paper , we presented a new framework , termed IARM , for aspect - based sentiment analysis .
 IARM leverages recurrent memory networks with multihop attention mechanism .
 We empirically illustrate that an aspect in a sentence is influenced by its neighboring aspects .
 We exploit this property to obtain state - of - the - art performance in aspect - based sentiment analysis in two distinct domains : restaurant and laptop .

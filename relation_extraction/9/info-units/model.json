@@ -6,7 +6,7 @@
         "CNN architecture" : {
           "relies on" : {
             "novel multi-level attention mechanism" : {
-              "to capture" : [{"entity - specific attention" : {"is" : {"primary attention" : {"at" : {"input level" : {"with respect to" : "target entities"}}}}}}, {"relation - specific pooling attention" : {"is" : {"secondary attention" : {"with respect to" : "target relations"}}}}]
+              "to capture" : [{"entity - specific attention" : {"has" : {"primary attention" : {"at" : {"input level" : {"with respect to" : "target entities"}}}}}}, {"relation - specific pooling attention" : {"has" : {"secondary attention" : {"with respect to" : "target relations"}}}}]
             }
           },
           "from sentence" : "Our CNN architecture relies on a novel multi-level attention mechanism to capture both entity - specific attention ( primary attention at the input level , with respect to the target entities ) and relation - specific pooling attention ( secondary attention with respect to the target relations ) ."

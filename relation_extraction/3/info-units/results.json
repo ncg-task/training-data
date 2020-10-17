@@ -96,10 +96,7 @@
           "with" : {
             "entity indicators" : {
               "on" : "inputs"
-            },
-            "from sentence" : "For BERT SP with entity indicators on inputs , it is expected to perform slightly better in the single - relation setting , because of the mixture of information from multiple pairs .
-A 2 % gap is observed as expected ."
-
+            }
           },
           "observed" : ["2 % gap", {"from sentence" : "For BERT SP with entity indicators on inputs , it is expected to perform slightly better in the single - relation setting , because of the mixture of information from multiple pairs .
 A 2 % gap is observed as expected ."

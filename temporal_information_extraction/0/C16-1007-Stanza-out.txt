@@ -75,7 +75,7 @@ Tools and Resources Several external tools and resources are used to extract fea
 MorphoPro , to get PoS tags and phrase chunk for each token .
 Mate tools to extract the dependency path between words .
 Word Net similarity module 4 to compute semantic similarity between words .
-Temporal signal lists from , further expanded using the Paraphrase Database , and manually clustered e.g. { before , prior to , in advance of }.
+Temporal signal lists from , further expanded using the Paraphrase Data base , and manually clustered e.g. { before , prior to , in advance of }.
 Feature Set
 We implemented a set of features , listed in , largely inspired by the best performing systems in TempEval - 2 and TempEval - 3 ( UzZaman et al. , 2013 ) campaigns .
 We simplified the possible values of some features as follows : dependency
@@ -93,7 +93,7 @@ For training the classification models , we only consider 10 out of the 14 relat
 Causal Relation Extraction System
 We propose the same hybrid approach combining rule - based and supervised classifiers for the identification of causal relations .
 However , while temporal order has a clear formalization in the NLP community , capturing causal relationships in natural language text is more challenging , for they can be expressed by different syntactic and semantic features and involve both situation - specific information and world knowledge .
-We adopt the notion of causality proposed in the annotation guidelines of the Causal - TimeBank , which accounts for CAUSE , ENABLE and PREVENT phenomena that are overtly expressed in text .
+We adopt the notion of causality proposed in the annotation guidelines of the Causal - TimeBank , which accounts for CAUSE , ENABLE and PREVENT phenomena thatare overtly expressed in text .
 In particular , we aim at assigning a causal link to pairs of events when : ( i ) the causal relation is expressed by affect , link and causative verbs ( CAUSE - , ENABLE - and PREVENT - type verbs ) , hereinafter simply addressed as causal verbs ; or ( ii ) the causal relation is marked by a causal signal ( see e.g. footnote 6 ) .
 The two cases require different algorithms : while causal constructions containing causal verbs are quite straightforward to identify , causal signals are very ambiguous and can appear in different syntactic constructions .
 6
@@ -107,10 +107,10 @@ Causal Rule - Based Sieve
 In the rule - based sieve , we classify causal constructions containing causal verbs .
 These show strong regularities : given a causal verb v , the first event e 1 is usually the subject of v and the second event e 2 is either the objector the predicative complement of v. Such relations between events and causal verbs are usually syntactically expressed , therefore our rules aim at identifying pairs of events being related to a causal verb in a causal construction by looking at their dependency paths .
 We take the list of 56 affect , link and causative verbs presented in as the causal verb list .
-We further expand the list using the Paraphrase Database and original verbs as seeds , resulting in a total of 97 verbs .
+We further expand the list using the Paraphrase Data base and original verbs as seeds , resulting in a total of 97 verbs .
 We then manually cluster the causal verbs sharing the same syntactic behaviour in groups and define a set of rules for each verb group , taking into account the possible existing dependency paths between v and e 1 /e 2 , as well as the causal direction sense 7 conveyed in v. Further details on the implemented rules for the causal rule - based sieve can be found in Appendix B.
 Causal Supervised Classifier
-In order to recognize and determine the causal direction of CLINKs that are signalled by a causal signal , we adopt a supervised approach .
+In order to recognize and determine the causal direction of CLINKs thatare signalled by a causal signal , we adopt a supervised approach .
 We build a classification model using LIBLINEAR L2 - loss linear SVM ( default parameters ) , and one - vs - rest strategy for multi-class classification .
 The classifier has to label an event pair ( e 1 , e 2 ) with CLINK , CLINK - R or O for others .
 We take as candidate event pairs only those in which the causal signal is connected via dependency path to either e 1 ore 2 , or both .
@@ -118,7 +118,7 @@ Besides , we exclude event pairs where the two events are directly connected thr
 Tools and Resources
 The same external tools and resources mentioned in Section 4.2.3 for building the temporal classifiers are used to extract features from each event pair .
 Additionally , we take the list of causal signals from the annotation guidelines presented in as the causal signal list .
-Again we expand the list using the Paraphrase Database , resulting in a total of 200 signals .
+Again we expand the list using the Paraphrase Data base , resulting in a total of 200 signals .
 We also manually cluster some signals together , e.g. { therefore , thereby , hence , consequently } , as we did for temporal signals .
 Feature Set
 The implemented features are listed in .
@@ -146,18 +146,18 @@ The set of labels for the TLINK classifiers ( Section 4.2.3 ) is also adjusted a
 Evaluation Results
 In , we compare the performance of CATENA with the two best - performing systems participating in the Task C of TempEval - 3 ( relation annotation given gold entities ) and Task C ' relation type only ' ( relation annotation given gold entities and related pairs ) .
 We also compare the results on the second task with the results of , who recently presented a state - of - the - art system for relation classification based on timegraphs and stacked learning .
-In CATENA , Task C ' relation type only ' is performed by disabling the module for identifying temporal links described in Section 4.1 .
+In CATENA , Task C ' relation type only ' is performed by dis abling the module for identifying temporal links described in Section 4.1 .
 The evaluation shows that CATENA is the best performing system in both tasks , even if in Task C best precision and best recall are yielded by and , respectively .
 The recall drop ( from .613 to . 595 ) in Task C is because we remove the timex - timex pairs from the final annotated documents in order to avoid a relevant decrease in precision , since only very few of such pairs are annotated in the gold standard .
 The significant drop in precision shows the difficulty in matching annotators ' decision to set TLINKs between entity pairs , although CATENA implements the instructions they had to follow in the annotation guidelines .
 We also report in the performance of CATENA in the TimeBank - Dense evaluation and compare it with CAEVO .
 We report only F1-score , since all possible links are labelled , yielding the same P and R values .
-We achieve a small improvement in the overall F1-score , i.e. , .511 vs .507 .
+We achieve a small improvement in the over all F1-score , i.e. , .511 vs .507 .
 If we consider the different entity pairs , CATENA performs best on timex - timex and event - timex relations , while CAEVO still achieves the best results on event - DCT and event - event pairs .
 One of the possible reasons for that is the lack of rules in CATENA to classify VAGUE TLINKs between E - E pairs , a relation type present only in TimeBank - Dense .
-In order to measure the contribution of each component to the overall performance of CATENA , we also evaluate the performance of each sieve both in the temporal and in the causal module .
+In order to measure the contribution of each component to the over all performance of CATENA , we also evaluate the performance of each sieve both in the temporal and in the causal module .
 Results are reported in , evaluated on both TempEval - 3 and TimeBank - Dense test data .
-As expected , running a transitive closure module after the temporal rule - based sieve ( RB + TR ) results in improving recall , but the overall performance is still lacking ( less than .30 F1-score ) .
+As expected , running a transitive closure module after the temporal rule - based sieve ( RB + TR ) results in improving recall , but the over all performance is still lacking ( less than .30 F1-score ) .
 Combining rule - based and machine - learned sieves ( RB + ML ) yields a slight improvement compared with enabling only the machine - learned sieve in the system ( ML ) .
 Introducing the temporal reasoner module between the two sieves ( RB + TR + ML ) proves to be even more beneficial .
 This is especially evident in the TimeBank - Dense evaluation .
@@ -170,7 +170,7 @@ We only analyse the results of TempEval - 3 evaluation , since there are no caus
 Without TLINK types , the F1 - score drops from . 622 to . 571 , with a significant recall drop from .538 to . 462 .
 This shows that temporal information is beneficial to the classification of causal relations between events , especially in terms of recall .
 As for the evaluation of TLINK post-editing using CLINKs , the system identifies 19 causal links in the test set , which are passed to the temporal module .
-While 15 of them are already consistent with BEFORE / AFTER labels , 3 would add new correct TLINKs that are currently not annotated in the evaluation corpus , and were wrongly labelled by the temporal module of CATENA , as shown in .
+While 15 of them are already consistent with BEFORE / AFTER labels , 3 would add new correct TLINKs thatare currently not annotated in the evaluation corpus , and were wrongly labelled by the temporal module of CATENA , as shown in .
 The fourth would add a BEFORE relation between cloaked and coughing in " A haze akin to volcanic fumes [ cloaked ] S the capital , causing convulsive [ coughing ] T ... " .
 This relation is labelled as INCLUDES in the gold standard , but we believe that BEFORE would be correct as well .
 Conclusions

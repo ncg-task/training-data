@@ -5,7 +5,6 @@
         "novel model architecture" : {
           "for" : "TABSA",
           "augmented with" : "multiple \" memory chains \"",
-          "from sentence" : "In this work , we propose a novel model architecture for TABSA , augmented with multiple \" memory chains \" , and equipped with a delayed memory update mechanism , to keep track of numerous entities independently ."
         }
       },
       "equipped with" : {

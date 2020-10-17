@@ -7,7 +7,7 @@
             "end - to - end", 
             {"jointly" : {
               "with" : "refinement module"}}, 
-            {"using dimensionality" : {
+            {"using a dimensionality" : {
               "of" : {
                 "n = 300" : {
                   "for" : {

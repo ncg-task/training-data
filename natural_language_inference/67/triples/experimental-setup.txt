@@ -25,7 +25,7 @@
 (embedding layer||of||input bi - GRU encoder)
 (Experimental setup||For||feature ranking - based system)
 (feature ranking - based system||used||jforest ranker)
-(jforest ranker||with|| Lambda MART - Regression Tree algorithm)
+(jforest ranker||with||Lambda MART - Regression Tree algorithm)
 (Experimental setup||used||stochastic gradient descent)
 (stochastic gradient descent||with||ADAM optimizer)
 (stochastic gradient descent||with||initial learning rate)

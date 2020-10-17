@@ -9,7 +9,7 @@
 120	37	44	to have
 120	45	56	2 norm of 1
 120	61	75	projected down
-120	18	20	to
+120	76	78	to
 120	79	93	200 dimensions
 121	0	35	Out - of - vocabulary ( OOV ) words
 121	40	49	hashed to
@@ -32,7 +32,7 @@
 124	111	118	Adagrad
 124	119	122	for
 124	123	135	optimization
-124	56	60	with
+124	136	140	with
 124	145	178	default initial accumulator value
 124	179	181	of
 124	182	185	0.1
@@ -53,17 +53,17 @@
 24	82	116	fully computationally decomposable
 24	117	132	with respect to
 24	137	147	input text
-26	0	5	Given
-26	6	19	two sentences
-26	28	37	each word
-26	41	56	repre-sented by
-26	60	76	embedding vector
 28	14	21	results
 28	22	24	of
 28	31	42	subproblems
 28	47	53	merged
 28	54	64	to produce
 28	69	89	final classification
+26	0	5	Given
+26	6	19	two sentences
+26	28	37	each word
+26	41	56	repre-sented by
+26	60	76	embedding vector
 26	88	94	create
 26	97	118	soft alignment matrix
 26	119	124	using

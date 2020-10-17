@@ -26,10 +26,7 @@
 111	39	44	state
 111	45	60	associated with
 111	65	100	target position as a representation
-112	111	113	is
-112	111	113	is
 112	0	14	LSTM + TA + SA
-112	111	113	is
 112	21	33	biLSTM model
 112	40	50	introduces
 112	51	115	complex target - level and sentence - level attention mechanisms
@@ -39,12 +36,11 @@
 113	40	60	LSTM + TA + SA model
 113	67	77	introduces
 113	78	116	external information from Sentic - Net
-114	105	107	is
 114	0	12	Dmu - Entnet
-114	105	107	is
 114	17	37	bidirectional EntNet
 114	38	42	with
-114	38	42	with
+114	43	69	external " memory chains "
+114	70	74	with
 114	77	108	delayed memory update mechanism
 114	109	117	to track
 114	118	126	entities
@@ -56,25 +52,25 @@
 101	33	35	is
 101	36	38	12
 101	45	62	hidden layer size
-101	33	35	is
+101	63	65	is
 101	66	69	768
 101	76	108	number of self - attention heads
-101	33	35	is
-101	36	38	12
+101	109	111	is
+101	112	114	12
 101	125	151	total number of parameters
-101	19	22	for
+101	152	155	for
 101	160	176	pretrained model
-101	33	35	is
+101	177	179	is
 101	180	184	110M
-105	4	23	dropout probability
-105	24	26	at
-105	27	30	0.1
 106	4	25	initial learning rate
 106	26	28	is
 106	29	36	2 e - 5
 106	47	57	batch size
-106	26	28	is
+106	58	60	is
 106	61	63	24
+105	4	23	dropout probability
+105	24	26	at
+105	27	30	0.1
 105	33	36	set
 105	41	57	number of epochs
 105	58	60	to
@@ -89,14 +85,14 @@
 120	31	39	achieved
 120	40	54	better results
 120	83	94	BERT - pair
-120	31	39	achieved
+120	99	107	achieved
 120	108	128	further improvements
 120	129	133	over
-120	13	26	BERT - single
+120	134	147	BERT - single
 121	4	31	BERT - pair - NLI - B model
 121	32	40	achieves
 121	45	61	best performance
-121	53	56	for
+121	62	65	for
 121	66	91	aspect category detection
 122	0	3	For
 122	4	28	aspect category polarity

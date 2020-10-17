@@ -6,7 +6,7 @@ This subtask is of considerable importance to the biomedical domain .
 Over the years , multiple approaches have been explored to address this problem : simple rule - based systems , Machine Learning classifiers , Conditional Random Field Models , CNNs and more recently BiLSTMs .
 In this paper , we look at applying Transfer Learning to this problem .
 First , we extensively review previous literature addressing Negation Detection and Scope Resolution across the 3 datasets that have gained popularity over the years : BioScope Corpus , the Sherlock dataset , and the SFU Review Corpus .
-We then explore the decision choices involved with using BERT , a popular transfer learning model , for this task , and report anew state - of - the - art for scope resolution across all 3 datasets .
+We then explore the decision choices involved with using BERT , a popular transfer learning model , for this task , and report a new state - of - the - art for scope resolution across all 3 datasets .
 Our model , referred to as NegBERT , achieves a token level F 1 score on scope resolution of 92.36 on the Sherlock dataset , 95.68 on the BioScope Abstracts , 91.24 on the BioScope Full Papers , 90.95 on the SFU dataset , outperforming the previous state - of - the - art by a significant margin .
 We also analyze the model 's generalizability to datasets on which it is not trained .
 Introduction
@@ -173,7 +173,7 @@ We use huggingface 's PyTorch implementation of BERT , and finetune the bert - b
 For negation detection , we use the following annotation schema :
 0 - Affix 1 - Normal Cue 2 - Part of a multiword cue 3 - Not a Cue
 This scheme is useful for the Sherlock dataset which has annotations for affixes , but the BioScope Corpus and SFU Review Dataset do not have annotations for affixes .
-Hence , when we test inter-dataset performance , we consider cues that are affixes as normal cues , and predictions of affixes as predictions of normal cues. ( i.e. 0 and 1 are considered as the same label for the purpose of evaluation ) .
+Hence , when we test inter-dataset performance , we consider cues thatare affixes as normal cues , and predictions of affixes as predictions of normal cues. ( i.e. 0 and 1 are considered as the same label for the purpose of evaluation ) .
 We also use a 5th label for the padded tokens and set the class weights for that token category to 0 to avoid training on it .
 For scope resolution , we use a binary labelling scheme , 0 as not a token and 1 as a token .
 We feed sentences which we know have cues to the model , and to encode that information into the input , we consider 2 methods :
@@ -181,7 +181,7 @@ We feed sentences which we know have cues to the model , and to encode that info
 We replace the token which is the cue with another special token which represents the kind of token it is according the cue detection labelling scheme . While we only have 3 labels for the sentence , BERT has to be fed 4 ( 1 label per token ) .
 Hence , we replicate the label for all tokens created from that word .
 Postprocessing is also needed for converting the tokenlevel predictions to word - level predictions .
-Hence , we consider the output for each token as a probability distribution over the classes possible and average them out for all tokens in a word , giving us a probability distribution fora word overall classes of tokens .
+Hence , we consider the output for each token as a probability distribution over the classes possible and average them out for all tokens in a word , giving us a probability distribution for a word over all classes of tokens .
 A simple argmax gives us our required token type .
 We perform the preprocessing ( split words into tokens , duplicate the labels for the word to the tokens it 's split into ) and postprocessing ( combining the outputs of multiple tokens that a word was split into to get word - level labels ) for scope resolution as well .
 This postprocessing step increased the F 1 score of NegBERT compared to considering just the first label of the first token that a word was split into as its label , indicating that it is important to consider the output for all tokens that a word has been split into .
@@ -211,7 +211,7 @@ On the BioScope Abstracts , we achieve an F1 of 95.68 , outperforming the best a
 On the Bioscope Full Papers , we outperform the best architecture by 2.64 F1 when training on the same dataset
 On the SFU Review Corpus , we outperform the best system to date by 1.02 F1 .
 For negation cue detection , we observe a significant gap between our model , NegBERT , and the current state - of the - art systems , while we outperform the baseline systems .
-We believe this is so as these datasets are fairly limited in size and scope , and fora such a task , bigger models like BERT need a lot more examples to train onto master the finer points of negation detection , while this is straightforward to handle for rule - based approaches and smaller datasets .
+We believe this is so as these datasets are fairly limited in size and scope , and for a such a task , bigger models like BERT need a lot more examples to train onto master the finer points of negation detection , while this is straightforward to handle for rule - based approaches and smaller datasets .
 This model does outperform other Deep Learning based systems applied to negation cue detection .
 NegBERT 's gain in accuracy on Scope Resolution is because it allows contextual embeddings and knowledge transfer across millions of documents to downstream tasks .
 When we trained on BioScope Abstracts and tested on the BioScope Full Papers , we surprisingly observed a stateof - the - art result of 91.24 ( a gain of 3.89 F1 points over training on BioScope Full Papers ) , which is far beyond the achievable results on training and evaluating on the Bio-Medical sub corpora .
@@ -224,7 +224,7 @@ We reviewed all existing papers and identified the research trends moving toward
 Following the general trend in the NLP community , we looked to the new generation of transfer learning models ( BERT ) to solve both tasks .
 We explored the set of design choices and reported a significant improvement in scope detection systems using BERT - base uncased model .
 We also analyzed the inter-domain generalization of the models , and noted that the use of our proposed architecture , NegBERT , as the underlying model allows for really good performance on scope resolution for unseen datasets from different domains .
-We reported anew state - of - the - art model on every publicly available dataset using the same architecture with no task - specific tuning and the same set of hyperparameters for scope resolution .
+We reported a new state - of - the - art model on every publicly available dataset using the same architecture with no task - specific tuning and the same set of hyperparameters for scope resolution .
 Thus , we clearly establish the usefulness of pretrained models and the usage of transfer learning to the task of negation scope resolution .
 We envision that the future progress in this task should focus on the use of ever - changing state - of - the - art models in the transfer learning domain which have significant potential to improve the accuracy of the system .
 We feel that a bigger dataset is needed to extract the maximum generalizability from such architectures .

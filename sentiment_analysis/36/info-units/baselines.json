@@ -36,8 +36,7 @@
                 }
               }
             }
-          },
-          "from sentence" : "AE - LSTM , and ATAE - LSTM : AE - LSTM is a simple LSTM model incorporating the target embedding as input , while ATAE - LSTM extends AE - LSTM with attention ;"
+          }
         },
         "ATAE - LSTM" : {
           "extends" : {

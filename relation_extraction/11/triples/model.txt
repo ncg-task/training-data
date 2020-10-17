@@ -10,7 +10,7 @@
 (soft constraints||while predicting||relation)
 (entity type and relation alias information||from||KBs)
 (Model||propose||RESIDE)
-(RESIDE||is||novel distant supervised relation extraction method)
+(RESIDE||has||novel distant supervised relation extraction method)
 (novel distant supervised relation extraction method||utilizes||additional supervision)
 (additional supervision||through||neural network based architecture)
 (additional supervision||from||KB)

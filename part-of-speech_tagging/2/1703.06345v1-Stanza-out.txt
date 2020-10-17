@@ -55,7 +55,7 @@ Figure 1 : Model architectures :
 BASE MODEL
 Though many different variants of neural networks have been proposed for the problem of sequence tagging , we find that most of the models can be described with the hierarchical framework illustrated in .
 A character - level layer takes a sequence of characters ( represented as embeddings ) as input , and outputs a representation that encodes the morphological information at the character level .
-A word - level layer subsequently combines the character - level feature representation and a word embedding , and further incorporates the contextual information to output anew feature representation .
+A word - level layer subsequently combines the character - level feature representation and a word embedding , and further incorporates the contextual information to output a new feature representation .
 After two levels of feature extraction ( encoding ) , the feature representation output by the word - level layer is fed to a conditional random field ( CRF ) layer that outputs the label sequence .
 Both of the word - level layer and the character - level layer can be implemented as convolutional neural networks ( CNNs ) or recurrent neural networks ( RNNs ) .
 We discuss the details of the model we use in this work in Section 3.4 .

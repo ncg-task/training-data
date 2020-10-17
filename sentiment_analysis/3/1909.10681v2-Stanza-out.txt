@@ -1,7 +1,7 @@
 title
 Knowledge - Enriched Transformer for Emotion Detection in Textual Conversations
 abstract
-Messages inhuman conversations inherently convey emotions .
+Messages in human conversations inherently convey emotions .
 The task of detecting emotions in textual conversations leads to a wide range of applications such as opinion mining in social networks .
 However , enabling machines to analyze emotions in conversations is challenging , partly because humans often rely on the context and commonsense knowledge to express emotions .
 In this paper , we address these challenges by proposing a Knowledge - Enriched Transformer ( KET ) , where contextual utterances are interpreted using hierarchical self - attention and external commonsense knowledge is dynamically leveraged using a context - aware affective graph attention mechanism .
@@ -9,7 +9,7 @@ Experiments on multiple textual conversation datasets demonstrate that both cont
 In addition , the experimental results show that our KET model outperforms the state - of - the - art models on most of the tested datasets in F1 score .
 Introduction
 Emotions are " generated states in humans that reflect evaluative judgments of the environment , the self and other social agents " .
-Messages inhuman communications inherently convey emotions .
+Messages in human communications inherently convey emotions .
 With the prevalence of social media platforms such as Facebook Messenger , as well as conversational agents such as Amazon Alexa , there is an emerging need for machines to understand human emotions in natural conversations .
 This work addresses the task of detecting emotions ( e.g. , happy , sad , angry , etc. ) in textual conversations , where the emotion of an utterance is detected in the conversational context .
 Being able to effectively detect emotions in conversations leads to a wide range of applications ranging from opinion mining in social media platforms :
@@ -18,7 +18,7 @@ By referring to the context , " it " in the third utterance is linked to " birth
 By leveraging an external knowledge base , the meaning of " friends " in the forth utterance is enriched by associated knowledge entities , namely " socialize " , " party " , and " movie " .
 Thus , the implicit " happiness " emotion in the fourth utterance can be inferred more easily via its enriched meaning .
 to building emotion - aware conversational agents .
-However , enabling machines to analyze emotions inhuman conversations is challenging , partly because humans often rely on the context and commonsense knowledge to express emotions , which is difficult to be captured by machines .
+However , enabling machines to analyze emotions in human conversations is challenging , partly because humans often rely on the context and commonsense knowledge to express emotions , which is difficult to be captured by machines .
 shows an example conversation demonstrating the importance of context and commonsense knowledge in understanding conversations and detecting implicit emotions .
 There are several recent studies that model contextual information to detect emotions in conversations .
 and leveraged recurrent neural networks ( RNN ) to model the contextual utterances in sequence , where each utterance is represented by a feature vector extracted by convolutional neural networks ( CNN ) at an earlier stage .
@@ -76,7 +76,7 @@ We limit the number of contextual utterances to M .
 Discarding early contextual utterances may cause information loss , but this loss is negligible because they only contribute the least amount of information .
 This phenomenon can be further observed in our model analysis regarding context length ( see Section 5.2 ) .
 Similar to , we clip and pad each utterance X i j to a fixed m number of tokens .
-The overall architecture of our KET model is illustrated in .
+The over all architecture of our KET model is illustrated in .
 Knowledge Retrieval
 We use a commonsense knowledge base Con-ceptNet and an emotion lexicon NRC VAD as knowledge sources in our model .
 ConceptNet is a large - scale multilingual semantic graph that describes general human knowledge in natural language .
@@ -91,12 +91,12 @@ NRC VAD is a list of English words and their VAD scores , i.e. , valence ( negat
 The VAD measure of emotion is culture - independent and widely adopted in Psychology .
 Currently NRC VAD comprises around 20K words .
 In general , for each non-stopword token tin X i j , we retrieve a connected knowledge graph g (t ) comprising its immediate neighbors from Con -cept Net .
-For each g ( t ) , we remove concepts that are stopwords or not in our vocabulary .
+For each g ( t ) , we remove concepts thatare stopwords or not in our vocabulary .
 We further remove concepts with confidence scores less than 1 to reduce annotation noises .
 For each concept , we retrieve its VAD values from NRC VAD .
 The final knowledge representation for each token t is a list of tuples :
 where ck ? g ( t ) denotes the kth connected concept , s k denotes the associated confidence score , and VAD ( c k ) denotes the VAD values of ck .
-The treatment for tokens that are not associated with any concept and concepts that are not included in NRC VAD are discussed in Section 3.4 .
+The treatment for tokens thatare not associated with any concept and concepts thatare not included in NRC VAD are discussed in Section 3.4 .
 We leave the treatment on relations as future work .
 Embedding Layer
 We use a word embedding layer to convert each token tin X i into a vector representation t ?
@@ -238,8 +238,8 @@ c LSTM performs reasonably well on short conversations ( i.e. , EC and DailyDial
 One major reason is that learning long dependencies using gated RNNs may not be effective enough because the gradients are expected to propagate back through inevitably a huge number of utterances and tokens in sequence , which easily leads to the vanishing gradient problem .
 In contrast , when the utterance - level LSTM in c LSTM is replaced by features extracted by CNN , i.e. , the CNN + c LSTM , the model performs significantly better than c LSTM on long conversations , which further validates that modelling long conversations using only RNN models may not be sufficient .
 BERT BASE achieves very competitive performance on all datasets except EC due to its strong representational power via bi-directional context modelling using the Transformer .
-Note that BERT BASE has considerably more parameters than other baselines and our model ( 110 M for BERT BASE versus 4 M for our model ) , which can be a disadvantage when deployed to devices with limited computing power and memory .
-The state - of - the - art DialogueRNN model performs the best overall among all baselines .
+Note that BERT BASE has considerably more parameters than other baselines and our model ( 110 M for BERT BASE versus 4 M for our model ) , which can be a dis advantage when deployed to devices with limited computing power and memory .
+The state - of - the - art DialogueRNN model performs the best over all among all baselines .
 In particular , DialogueRNN performs better than our model on IEMOCAP , which maybe attributed to its detailed speaker information for modelling the emotion dynamics in each speaker as the conversation flows .
 It is encouraging to see that our KET model outperforms the baselines on most of the datasets tested .
 This finding indicates that our model is robust across datasets with varying training sizes , context lengths and domains .

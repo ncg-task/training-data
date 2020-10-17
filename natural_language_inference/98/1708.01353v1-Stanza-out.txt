@@ -12,7 +12,7 @@ Introduction
 The RepEval 2017
 Shared
 Task aims to evaluate language understanding models for sentence representation with natural language inference ( NLI ) tasks , where a sentence is represented as a fixedlength vector .
-Modeling inference inhuman language is very challenging but is a basic problem in natural language understanding .
+Modeling inference in human language is very challenging but is a basic problem in natural language understanding .
 Specifically , NLI is concerned with determining whether a hypothesis sentence h can be inferred from a premise sentence p.
 Most previous top - performing neural network models on NLI use attention models between a premise and its hypothesis , while how much information can be encoded in a fixed - length vector without such cross - sentence attention deserves some further understanding .
 In this paper , we describe the model we submitted to the RepEval 2017 Shared Task , which achieves the top performance on both the indomain and cross - domain test set .
@@ -24,7 +24,7 @@ Among them , Enhanced Sequential Inference Model ( ESIM ) with cross - sentence 
 However , in this paper we principally concentrate on sentence encoder - based model .
 Many researchers have studied sentence encoder - based model for natural language inference .
 It is , however , not very clear if the potential of the sentence encoderbased model has been well exploited .
-In this paper , we demonstrate that proposed models based on gated - attention can achieve anew state - of - theart performance for natural language inference .
+In this paper , we demonstrate that proposed models based on gated - attention can achieve a new state - of - theart performance for natural language inference .
 Methods
 We present here the proposed natural language inference networks which are composed of the following major components : word embedding , sequence encoder , composition layer , and the toplayer classifier .
 shows a view of the architecture of our neural language inference network .
@@ -35,14 +35,14 @@ The character composition feeds all characters of each word into a convolutional
 In addition , we also use the pre-trained Glo Ve vectors for each word as holistic wordlevel embedding w = ( w 1 , . . . , w l ) .
 Therefore , each word is represented as a concatenation of the character - composition vector and word - level embedding e = ( [ c 1 ; w 1 ] , . . . , [ c l ; w l ] ) .
 This is performed on both the premise and hypothesis , resulting into two matrices : thee p ?
-R ndw fora premise and thee h ?
-R mdw fora hypothesis , where n and mare the length of the premise and hypothesis respectively , and d w is the embedding dimension .
+R ndw for a premise and thee h ?
+R mdw for a hypothesis , where n and mare the length of the premise and hypothesis respectively , and d w is the embedding dimension .
 Sequence Encoder
 To represent words and their context in a premise and hypothesis , sentence pairs are fed into sentence encoders to obtain hidden vectors ( h p and h h ) .
 We use stacked bidirectional LSTMs ( BiL - STM ) as the encoders .
 Shortcut connections are applied , which concatenate word embeddings and input hidden states at each layer in the stacked BiLSTM except for the bottom layer .
 ( 1 )
-where dis the dimension of hidden states of LSTMs .
+where d is the dimension of hidden states of LSTMs .
 A BiLSTM concatenate a forward and backward LSTM on a sequence
 , starting from the left and the right end , respectively .
 Hidden states of unidirectional LSTM (
@@ -65,7 +65,7 @@ Then , the final fixed - length vector representation of premise is v p = [ v pg
 As for hidden states of hypothesis h h , we can obtain v h through similar calculation procedure .
 Consequently , both the premise and hypothesis are fed into the composition layer to obtain fixed - length vector representations respectively ( v p , v h ) .
 Top - layer Classifier
-Our inference model feeds the resulting vectors obtained above to the final classifier to determine the overall inference relationship .
+Our inference model feeds the resulting vectors obtained above to the final classifier to determine the over all inference relationship .
 In our models , we compute the absolute difference and the element - wise product for the tuple [ v p , v h ].
 The absolute difference and element - wise product are then concatenated with the original vectors v p and v h .
 We then put the vector v inp into a final multilayer perceptron ( MLP ) classifier .
@@ -80,7 +80,7 @@ However , we do n't use SNLI as an additional training / development data in our
 Training
 We use the in - domain development set to select models for testing .
 To help replicate our results , we publish our code at https : //github.com/lukecq1231/enc_nli
-( the core code is also used or adapted fora summarization ) and a question - answering task ) .
+( the core code is also used or adapted for a summarization ) and a question - answering task ) .
 We use the Adam ( Kingma and Ba , 2014 ) for optimization .
 Stacked BiLSTM has 3 layers , and all hidden states of BiLSTMs and MLP have 600 dimensions .
 The character embedding has 15 dimensions , and CNN filters length is [ 1 , 3 , 5 ] , each of those is 100 dimensions .

@@ -45,7 +45,7 @@ Specifically , they used a combined word embedding and recurrent character encod
 Though , like most previous studies , these initial encodings were context insensitive and relied on subsequent layers to encode sentence - level interactions .
 Finally , showed that subword / word combination representations lead to state - of - the - art morphosyntactic tagging accuracy across a number of languages in the CoNLL 2017 shared task .
 Their word representation consisted of three parts :
-1 ) A dynamically trained word embedding ; 2 ) a fixed pretrained word embedding ; 3 ) a character LSTM encoding that summed the final state of the recurrent model with vector constructed using an attention mechanism overall character states .
+1 ) A dynamically trained word embedding ; 2 ) a fixed pretrained word embedding ; 3 ) a character LSTM encoding that summed the final state of the recurrent model with vector constructed using an attention mechanism over all character states .
 Again , the initial representations are all context insensitive .
 As this model is currently the state - of - the - art in morphosyntactic tagging , it will serve as a baseline during our discussion and experiments .
 Models
@@ -73,12 +73,12 @@ m chars i , applies a softmax function and chooses for each word the tag with hi
 Table 8 investigates the empirical impact of alternative definitions of g i that concatenate only subsets
 Word - based Character Model
 To investigate whether a sentence sensitive character model is better than a character model where the context is restricted to the characters of a word , we reimplemented the word - based character model of as shown in .
-This model uses the final state of a unidirectional LSTM over the characters of the word , combined with the attention mechanism of Cao and Rei ( 2016 ) overall characters .
+This model uses the final state of a unidirectional LSTM over the characters of the word , combined with the attention mechanism of Cao and Rei ( 2016 ) over all characters .
 We refer the reader to those works for more details .
 Critically , however , all the information fed to this representation comes from the word itself , and not a wider sentence - level context .
 Sentence - based Word Model
 We used a similar setup for our context sensitive word encodings as the character encodings .
-There area few differences .
+There are a few differences .
 Obviously , the inputs are the words of the sentence .
 For each of the words , we use pretrained word embeddings ( p word The summed embeddings in i are passed as input to one or more BiLSTM layers whose output fl w , i , bl w, i is concatenated and used as the final encoding , which is then passed to an MLP
 It should be noted , that the output of this BiL - STM is essentially the Dozat et al.
@@ -94,7 +94,7 @@ Training Schema
 As mentioned in the previous section , the character and word - based encoding models have their own tagging loss functions , which are trained independently and joined via the meta-BiLSTM .
 I.e. , the loss of each model is minimized independently by separate optimizers with their own hyperparameters .
 Thus , it is in some sense a multitask learning model and we must define a schedule in which individual models are updated .
-We opted fora simple synchronous schedule outline in Algorithm
+We opted for a simple synchronous schedule outline in Algorithm
 1 . Here , during each epoch , we update each of the models in sequence - character , word and meta-using the entire training data .
 Algorithm
 1 : Training procedure for learning initial character and word - based context sensitive encodings synchronously with meta-BiLSTM .
@@ -103,7 +103,7 @@ Accuracy is measured using the meta -BiLSTM tagging layer , which requires a for
 Though we use all three losses to update the models , only the meta-BiLSTM layer is used for model selection and test - time prediction .
 While each of the three models - character , word and meta - are trained with their own loss functions , it should be emphasized that training is synchronous in the sense that the meta - BiLSTM model is trained in tandem with the two encoding models , and not after those models have converged .
 Since accuracy from the meta-BiLSTM model on the development set determines the best parameters , training is not completely independent .
-We found this to improve accuracy overall .
+We found this to improve accuracy over all .
 Crucially , when we allowed the meta -BiLSTM to back - propagate through the whole network , per - formance degraded regardless of whether one or multiple loss functions were used .
 Each language could in theory use separate hyperparameters , optimized for highest accuracy .
 However , for our main experiments we use identical settings for each language which worked well for large corpora and simplified things .
@@ -128,7 +128,7 @@ We use the training treebank for training only and the development sets for hype
 To keep our results comparable with the Shared Task , we use the provided precomputed word embeddings .
 We excluded Gothic from our experiments as the available downloadable content did not include embeddings for this language .
 As input to our system - for both part - ofspeech tagging and morphological tagging - we use the output of the UDPipe - base baseline system which provides segmentation .
-The segmentation differs from the gold segmentation and impacts accuracy negatively fora number of languages .
+The segmentation differs from the gold segmentation and impacts accuracy negatively for a number of languages .
 Most of the top performing systems for part - of - speech tagging used as input UDPipe to obtain the segmentation for the input data .
 For morphology , the top system for most languages ( IMS ) used its own segmentation .
 For the evaluation , we used the official evaluation script .
@@ -179,7 +179,7 @@ shows , for selected languages , the results averaged over 10 runs in order to m
 The examples show that the combined model has significantly higher accuracy compared with either the character and word models individually .
 Concatenation Strategies for the Context - Sensitive Character Encodings
 The proposed model bases a token encoding on both the forward and the backward character representations of both the first and last character in the token ( see Equation 1 ) .
-reports , fora few morphological rich languages , the part - of - speech tagging performance of different strategies to gather the characters when creating initial word encodings .
+reports , for a few morphological rich languages , the part - of - speech tagging performance of different strategies to gather the characters when creating initial word encodings .
 The strategies were defined in 3.1 .
 The reimplementation of .
 We removed , for all systems , the word model in order to assess each strategy in isolation .
@@ -187,16 +187,16 @@ The performance is quite different per language .
 E.g. , for Latin , the outputs of the forward and backward LSTMs of the last character scored highest .
 Sensitivity to Hyperparameter
 Search
-We picked Vietnamese fora more in - depth analysis since it did not perform well and investigated the influence of the sizes of LSTMs for the word and character model on the accuracy of development set .
+We picked Vietnamese for a more in - depth analysis since it did not perform well and investigated the influence of the sizes of LSTMs for the word and character model on the accuracy of development set .
 With larger network sizes , the capacity of the network increases , however , on the other hand it is prune to overfitting .
 We fixed all the hyperparameters except those for the network size of the character model and the word model , and ran a grid search over dimension sizes from 200 to 500 in steps of 50 .
 The surface plot in 3 shows that the grid peaks with more moderate settings around 350 LSTM cells which might lead to a higher accuracy .
 For all of the network sizes in the grid search , we still observed during training that the accuracy reach a high value and degrades with more iterations for the character and word model .
 This suggests that future variants of this model might benefit from higher regularization .
 Discussion
-Generally , the fact that different techniques for creating word encodings from character encodings and different network sizes can lead to different accuracies per language suggests that it should be possible to increase the accuracy of our model on a per language basis via a grid search overall possibilities .
+Generally , the fact that different techniques for creating word encodings from character encodings and different network sizes can lead to different accuracies per language suggests that it should be possible to increase the accuracy of our model on a per language basis via a grid search over all possibilities .
 In fact , there are many variations on the models we presented in this work ( e.g. , how the character and word models are combined with the meta - BiLSTM ) .
 Since we are using separate losses , we could also change our training schema .
 For example , one could use methods like stack - propagation where we burn - in the character and word models and then train the meta-BiLSTM backpropagating throughout the entire network .
 Conclusions
-We presented an approach to morphosyntactic tagging that combines context - sensitive initial character and word encodings with a meta-BiLSTM layer to obtain state - of - the art accuracies fora wide variety of languages .
+We presented an approach to morphosyntactic tagging that combines context - sensitive initial character and word encodings with a meta-BiLSTM layer to obtain state - of - the art accuracies for a wide variety of languages .

@@ -18,4 +18,4 @@
 (n-gram functionality||is||important)
 (Ablation analysis||has||top N function)
 (top N function||contributes||very little)
-(very little||to||overall performance)
+(very little||to||over all performance)

@@ -15,7 +15,7 @@
 (Results||in||cross - domain setting)
 (cross - domain setting||has||our method)
 (our method||performs||better)
-(better||than||LSTM+)
+(better||than||LSTM +)
 (better||when||amount of training data)
 (amount of training data||is||relatively small)
 (our method||uses||ILP)

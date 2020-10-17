@@ -32,7 +32,7 @@
           "from sentence" : "Specifically , we adopt pre-trained dependency syntactic parse tree structure to produce the related nodes for each word in a sentence , namely syntactic dependency of interest ( SDOI ) , by regarding each word as a child node and the SDOI consists all its ancestor nodes and itself in the dependency parsing tree ."
         }
       },
-      "accommodates" : {
+      "accommodate" : {
         "SDOI information" : {
           "propose" : {
             "novel syntax - guided network ( SG - Net )" : {

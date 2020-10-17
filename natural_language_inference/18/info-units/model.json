@@ -30,7 +30,7 @@
       "has" : {
         "neural variational inference" : {
           "learns to model" : "posterior probability",
-          "from sentence" : "Instead of providing an analytic approximation , as in traditional variational Bayes , neural variational inference learns to model the posterior probability , thus endowing the model with strong generalisation abilities ."
+          "from sentence" : "Instead of providing an analytic approximation , as in traditional variational Bayes , neural variational inference learns to model the posterior probability , thus endowing the model with strong generalis ation abilities ."
         },
         "primary feature" : {
           "of" : {
@@ -91,7 +91,7 @@
         }
       },
       "using" : {
-        "reparameterisation method" : {
+        "reparameteris ation method" : {
           "has" : {
             "inference network" : {
               "trained through" : {
@@ -105,7 +105,7 @@
               }
             }
           },
-          "from sentence" : "By using the reparameterisation method , the inference network is trained through back - propagating unbiased and low variance gradients w.r.t. the latent variables ."
+          "from sentence" : "By using the reparameteris ation method , the inference network is trained through back - propagating unbiased and low variance gradients w.r.t. the latent variables ."
         }
       },
       "propose" : {

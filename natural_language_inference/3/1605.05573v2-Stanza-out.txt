@@ -45,7 +45,7 @@ Long short - term memory network ( LSTM ) ] is a type of recurrent neural networ
 LSTM maintains a memory cell that updates and exposes its content only when deemed necessary .
 While there are numerous LSTM variants , here we use the LSTM architecture used by , which is similar to the architecture of but without peep - hole connections .
 We define the LSTM units at each time step t to be a collection of vectors in Rd : an input gate it , a forget gate ft , an output gate o t , a memory cell ct and a hidden state ht .
-dis the number of the LSTM units .
+d is the number of the LSTM units .
 The elements of the gating vectors it , ft and o tare in [ 0 , 1 ] .
 The LSTM is precisely specified as follows .
 where x t is the input at the current time step ; T A ,b is an affine transformation which depends on parameters of the network A and b. ?
@@ -122,7 +122,7 @@ Stacking C - LSTMs Blocks
 To increase the capabilities of network of learning multiple granularities of interactions , we stack several blocks ( four C - LSTMs layers and one aggregation layer ) to form deep architectures .
 Pooling Layer
 The output of stacked coupled - LSTMs layers is a tensor H ?
-R nmd , where n and mare the lengths of sentences , and dis the number of hidden neurons .
+R nmd , where n and mare the lengths of sentences , and d is the number of hidden neurons .
 We apply dynamic pooling to automatically extract R pq subsampling matrix in each slice Hi ?
 R nm , similar to .
 More formally , for each slice matrix
@@ -155,8 +155,7 @@ Competitor Methods
 Neural bag - of - words ( NBOW ) :
 Each sequence as the sum of the embeddings of the words it contains , then they are concatenated and fed to a MLP .
 Single LSTM : A single LSTM to encode the two sequences , which is used in .
-Parallel
-LSTMs : Two sequences are encoded by two LSTMs separately , then they are concatenated and fed to a MLP .
+Parallel LSTMs : Two sequences are encoded by two LSTMs separately , then they are concatenated and fed to a MLP .
 Attention LSTMs : An attentive LSTM to encode two sentences into a semantic space , which used in .
 Experiment - I : Recognizing Textual Entailment
 Recognizing textual entailment ( RTE ) is a task to determine the semantic relationship between two sentences .
@@ -198,7 +197,7 @@ Besides , despite the large size of the training corpus , it 's still very diffe
 For example , given an entailment pair " a man grabs his crotch during apolitical demonstration / The man is making a crude gesture " , all models predict " neutral " .
 This analysis suggests that some architectural improvements or external world knowledge are necessary to eliminate all errors instead of simply scaling up the basic model .
 Experiment - II : Matching Question and Answer
-Matching question answering ( MQA ) is atypical task for semantic matching .
+Matching question answering ( MQA ) is a typical task for semantic matching .
 Given a question , we need select a correct answer from some candidate answers .
 In this paper , we use the dataset collected from Yahoo !
 Answers with the getByCategory function provided in Yahoo !

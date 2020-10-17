@@ -12,30 +12,30 @@ Simply fixing its value to be positive or negative generates samples with the co
 Introduction and Motivating Work
 Representation learning ) plays a critical role in many modern machine learning systems .
 Representations map raw data to more useful forms and the choice of representation is an important component of any application .
-Broadly speaking , there are two areas of research emphasizing different details of how to learn useful representations .
-The supervised training of high - capacity models on large labeled datasets is critical to the recent success of deep learning techniques fora wide range of applications such as image classification , speech recognition , and machine translation ) .
+Broadly speaking , there are two are as of research emphasizing different details of how to learn useful representations .
+The supervised training of high - capacity models on large labeled datasets is critical to the recent success of deep learning techniques for a wide range of applications such as image classification , speech recognition , and machine translation ) .
 Analysis of the task specific representations learned by these models reveals many fascinating properties .
 Image classifiers learn a broadly useful hierarchy of feature detectors rerepresenting raw pixels as edges , textures , and objects .
-In the field of computer vision , it is now commonplace to reuse these representations on abroad suite of related tasks - one of the most successful examples of transfer learning to date .
+In the field of computer vision , it is now commonplace to reuse these representations on a broad suite of related tasks - one of the most successful examples of transfer learning to date .
 There is also along history of unsupervised representation learning .
 Much of the early research into modern deep learning was developed and validated via this approach ) .
 Unsupervised learning is promising due to its ability to scale beyond only the subsets and domains of data that can be cleaned and labeled given resource , privacy , or other constraints .
 This advantage is also its difficulty .
 While supervised approaches have clear objectives that can be directly optimized , unsupervised approaches rely on proxy tasks such as reconstruction , density estimation , or generation , which do not directly encourage useful representations for specific tasks .
 As a result , much work has gone into designing objectives , priors , and architectures meant to encourage the learning of useful representations .
-We refer readers to fora detailed review .
+We refer readers to for a detailed review .
 Despite these difficulties , there are notable applications of unsupervised learning .
-Pre-trained word vectors area vital part of many modern NLP systems .
+Pre-trained word vectors are a vital part of many modern NLP systems .
 These representations , learned by modeling word co-occurrences , increase the data efficiency and generalization capability of NLP systems .
 Topic modelling can also discover factors within a corpus of text which align to human interpretable concepts such as art or education .
-How to learn representations of phrases , sentences , and documents is an open area of research .
+How to learn representations of phrases , sentences , and documents is an open are a of research .
 Inspired by the success of word vectors , propose skipthought vectors , a method of training a sentence encoder by predicting the preceding and following sentence .
-The representation learned by this objective performs competitively on abroad suite of evaluated tasks .
+The representation learned by this objective performs competitively on a broad suite of evaluated tasks .
 More advanced training techniques such as layer normalization further improve results .
 However , skip - thought vectors are still outperformed by supervised models which directly optimize the desired performance metric on a specific dataset .
 This is the case for both text classification ar Xiv:1704.01444v2LG ] 6 Apr 2017 tasks , which measure whether a specific concept is well encoded in a representation , and more general semantic similarity tasks .
 This occurs even when the datasets are relatively small by modern standards , often consisting of only a few thousand labeled examples .
-In contrast to learning a generic representation on one large dataset and then evaluating on other tasks / datasets , proposed using similar unsupervised objectives such as sequence autoencoding and language modeling to first pretrain a model on a dataset and then finetune it fora given task .
+In contrast to learning a generic representation on one large dataset and then evaluating on other tasks / datasets , proposed using similar unsupervised objectives such as sequence autoencoding and language modeling to first pretrain a model on a dataset and then finetune it for a given task .
 This approach outperformed training the same model from random initialization and achieved state of the art on several text classification datasets .
 Combining language modelling with topic modelling and fitting a small supervised feature extractor on top has also achieved strong results on in - domain document level sentiment analysis .
 Considering this , we hypothesize two effects maybe combining to result in the weaker performance of purely unsupervised approaches .
@@ -64,7 +64,7 @@ Given the size of the dataset , searching the wide space of possible configurati
 To help alleviate this , we evaluated the generative performance of smaller candidate models after a single pass through the dataset .
 The model chosen for the large scale experiment is a single layer multiplicative LSTM with 4096 units .
 We observed multiplicative LSTMs to converge faster than normal LSTMs for the hyperparam - eter settings that were explored both in terms of data and wall - clock time .
-The model was trained fora single epoch on mini-batches of 128 subsequences of length 256 fora total of 1 million weight updates .
+The model was trained for a single epoch on mini-batches of 128 subsequences of length 256 for a total of 1 million weight updates .
 States were initialized to zero at the beginning of each shard and persisted across updates to simulate full - backpropagation and allow for the forward propagation of information outside of a given subsequence .
 Adam ) was used to accelerate learning with an initial 5e - 4 learning rate that was decayed linearly to zero over the course of training .
 Weight normalization was applied to the LSTM parameters .
@@ -134,7 +134,7 @@ But these ideas are not present in reviews of products .
 Additionally , there is a notable drop in the relative performance of our approach transitioning from sentence to document datasets .
 This is likely due to our model working on the byte level which leads to it focusing on the content of the last few sentences instead of the whole document .
 Finally , as the amount of labeled data increases , the performance of the simple linear model we train on top of our static representation will eventually saturate .
-Complex models explicitly trained fora task can continue to improve and eventually outperform our approach with enough labeled data .
+Complex models explicitly trained for a task can continue to improve and eventually outperform our approach with enough labeled data .
 With this context , the observed results make a lot of sense .
 Other Tasks
 Besides classification , we also evaluate on two other standard tasks : semantic relatedness and paraphrase detection .
@@ -148,7 +148,7 @@ In we show that by simply setting the sentiment unit to be positive or negative 
 While all sampled negative reviews contain sentences with negative sentiment , they sometimes contain sentences with positive sentiment as well .
 This might be reflective of the bias of the training corpus which contains over 5 x as many five star reviews as one star reviews .
 Nevertheless , it is interesting to see that such a simple manipulation of the model 's representation has a noticeable effect on its behavior .
-The samples are also high quality fora byte level language model and often include valid sentences .
+The samples are also high quality for a byte level language model and often include valid sentences .
 Discussion and Future Work
 It is an open question why our model recovers the concept of sentiment in such a precise , disentangled , interpretable , and manipulable way .
 It is possible that sentiment as a conditioning feature has strong predictive capability for language modelling .

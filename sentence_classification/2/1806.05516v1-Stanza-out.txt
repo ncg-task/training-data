@@ -10,11 +10,11 @@ We show that our method performs competitively compared to previous models , ach
 We are the first to use translations as domainfree contexts for sentence classification .
 Introduction
 One of the primary tasks in natural language processing ( NLP ) is sentence classification , where given a sentence ( e.g. a sentence of a review ) as input , we are tasked to classify it into one of multiple classes ( e.g. into positive or negative ) .
-This task is important as it is widely used in almost all subareas of NLP such as sentiment classification for sentiment analysis and question type classification for question answering , to name a few .
+This task is important as it is widely used in almost all subare as of NLP such as sentiment classification for sentiment analysis and question type classification for question answering , to name a few .
 While past methods require feature engineering , recent methods enjoy neural - based methods to automatically encode the sentences into low - dimensional dense vectors .
 Despite the success of these methods , the major challenge in this task is that extracting features from a single sentence limits the performance .
 To overcome this limitation , recent works attempted to augment different kinds of features to the sentence , such as the neighboring sentences and the topics of the sentences .
-However , these methods used domain - dependent contexts that are only effective when the domain of the task is appropriate .
+However , these methods used domain - dependent contexts thatare only effective when the domain of the task is appropriate .
 For one thing , neighboring sentences may not be available in some tasks such as question type classification .
 Moreover , topics inferred using topic models may produce less useful topics when the data set is domain - specific such as movie review sentiment classification .
 In this paper , we propose the usage of translations as compelling and effective domain - free contexts , or contexts that are always available no matter what the task domain is .
@@ -61,7 +61,7 @@ It is a simple variation of the original CNN for texts to be used on sentences .
 Let xi ?
 Rd be the d-dimensional word vector of the i - th word in a sentence of length n .
 A convolution operation involves applying a filter matrix W ?
-R hd to a window of h words and producing anew feature vector c i using the equation
+R hd to a window of h words and producing a new feature vector c i using the equation
 bias vector and f ( . ) is a non-linear function .
 By doing this on all possible windows of words we produce a feature map c = [ c 1 , c 2 , ... ] .
 We then apply a max - over - time pooling operation over the feature map and take the maximum value as the feature vector of the filter .
@@ -75,7 +75,7 @@ A simple method in order to use the translated sentences as additional context i
 That is , we create a wide vectorv = [ v s ; v t1 ; ... ; v tn ] , and use this as the input feature vector of the sentence to the classifier .
 This method works fine if the translated sentences are translated properly .
 However , sentences translated using machine translation models usually contain incorrect translation .
-In effect , this method will have adverse effects on the overall performance of the classifier .
+In effect , this method will have adverse effects on the over all performance of the classifier .
 This will especially be very evident if the number of additional sentences increases .
 Baseline 2 : L2 Regularization .
 In order to alleviate the problems above , we can use L2 regularization to automatically select useful features by weakening the appropriate weights .

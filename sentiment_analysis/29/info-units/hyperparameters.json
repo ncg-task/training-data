@@ -13,17 +13,15 @@
         "from sentence" : "In experiments , we first randomly select 20 % of training data as validation set to tune the hyperparameters ."
       },
       "has" : {
-        "weight matrics" : {
-          "randomly initialized from" : "uniform distribution U ( ?10 ?4 , 10 ?4 )",
-          "from sentence" : "All weight matrices are randomly initialized from uniform distribution U ( ?10 ?4 , 10 ?4 ) and all bias terms are set to zero ."
+        "weight matrices" : {
+          "randomly initialized from" : "uniform distribution U ( ?10 ?4 , 10 ?4 )"
         },
         "bias terms" : {
           "set to" : "zero",
           "from sentence" : "All weight matrices are randomly initialized from uniform distribution U ( ?10 ?4 , 10 ?4 ) and all bias terms are set to zero ."
         },
         "L 2 regularization coefficient" : {
-          "set to" : "10 ? 4",
-          "from sentence" : "The L 2 regularization coefficient is set to 10 ? 4 and the dropout keep rate is set to 0.2 ."
+          "set to" : "10 ? 4"
         },
         "dropout keep rate" : {
           "set to" : "0.2",

@@ -52,8 +52,7 @@
       "pay" : {
         "multiple attentions" : {
           "on" : "position - weighted memory"
-        },
-        "from sentence" : "After that , we pay multiple attentions on the position - weighted memory and nonlinearly combine the attention results with a recurrent network , i.e. GRUs ."
+        }
       },
       "nonlinearly combine" : {
         "attention results" : {

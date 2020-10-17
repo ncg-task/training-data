@@ -79,7 +79,9 @@
                   "than" : "TD - LSTM and ATAE - LSTM"
                 }
               },
-              "from sentence" : "IAN has better performance than TD - LSTM and ATAE - LSTM , because two attention layers guides the representation learning of the context and the entity interactively ."
+              "from sentence" : "ATSA
+IAN has better performance than TD - LSTM and ATAE - LSTM , because two attention layers guides the representation learning of the context and the entity interactively ."
+
             },
             "RAM" : {
               "achieves" : {
@@ -99,7 +101,7 @@
             }
           },
           "On" : {
-            "hard test set" : {
+            "hard test dataset" : {
               "has" : {
                 "GCAE" : {
                   "has" : {

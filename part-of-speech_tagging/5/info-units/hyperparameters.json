@@ -7,8 +7,7 @@
             "initialized" : {
               "with" : "zero values"
             }
-          },
-          "from sentence" : "The word embeddings are initialized with zero values and the pre-trained embeddings are not updated during training ."
+          }
         },
         "pre-trained embeddings" : {
           "not" : {

@@ -13,7 +13,7 @@
           },
           "from sentence" : "Our network consists of 8 BiLSTM layers ( 4 forward LSTMs and 4 reversed LSTMs ) with 300 dimensional hidden units , and a softmax layer for predicting the output distribution ."
         },
-        "weight matrics" : {
+        "weight matrices" : {
           "in" : {
             "BiL - STMs" : {
               "initialized with" : "random orthonormal matrices"
@@ -64,8 +64,7 @@
       "set" : {
         "RNN - dropout probability" : {
           "to" : "0.1"
-        },
-        "from sentence" : "We set RNN - dropout probability to 0.1 and clip gradients with norm larger than 1 ."
+        }
       },
       "clip" : {
         "gradients" : {

@@ -17,7 +17,8 @@
 214	21	33	to determine
 214	38	56	optimal parameters
 214	61	77	manually specify
-214	78	88	subsets of
+214	78	85	subsets
+214	86	88	of
 214	93	109	parameter spaces
 214	112	135	w ? { 1 , 2 , 3 , , 7 }
 214	140	162	n ? { 50 , 60 , , 300}
@@ -28,9 +29,10 @@
 213	31	37	models
 213	38	43	using
 213	44	67	three - fold validation
-213	65	67	on
+213	68	70	on
 213	75	87	training set
 215	68	88	heuristically choose
+215	89	92	d p
 215	93	94	=
 215	95	96	5
 216	4	14	batch size
@@ -58,7 +60,7 @@
 52	4	35	piecewise max pooling procedure
 52	36	43	returns
 52	48	61	maximum value
-52	22	24	in
+52	62	64	in
 52	65	77	each segment
 52	78	88	instead of
 52	91	111	single maximum value
@@ -116,7 +118,8 @@
 231	40	51	PCNNs + MIL
 231	52	63	outperforms
 231	64	94	all other evaluated approaches
-235	0	31	Automatically learning features
+235	0	22	Automatically learning
+235	23	31	features
 235	32	35	via
 235	36	41	PCNNs
 235	46	55	alleviate

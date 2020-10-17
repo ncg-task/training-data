@@ -3,8 +3,7 @@
     "Results" : {
       "has" : {
         "clearly outperforms" : {
-          "has" : "non-hierarchical BiLSTM models",
-          "from sentence" : "It clearly outperforms the similar but non-hierarchical BiLSTM models reported in the literature and fares well in comparison to other state of the art architectures in the sentence encoding category ."
+          "has" : "non-hierarchical BiLSTM models"
         }
       },
       "fares" : {
@@ -19,8 +18,7 @@
       },
       "close to" : {
         "current state of the art" : {
-          "on" : "SNLI",
-          "from sentence" : "In particular , our results are close to the current state of the art on SNLI in this category and strong on both , the matched and mismatched test sets of MultiNLI ."
+          "on" : "SNLI"
         }
       },
       "strong on" : {

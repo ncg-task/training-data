@@ -1,9 +1,9 @@
 title
 DialogueRNN : An Attentive RNN for Emotion Detection in Conversations
 abstract
-Emotion detection in conversations is a necessary step fora number of applications , including opinion mining over chat history , social media threads , debates , argumentation mining , understanding consumer feedback in live conversations , and soon .
+Emotion detection in conversations is a necessary step for a number of applications , including opinion mining over chat history , social media threads , debates , argumentation mining , understanding consumer feedback in live conversations , and soon .
 Currently systems do not treat the parties in the conversation individually by adapting to the speaker of each utterance .
-In this paper , we describe anew method based on recurrent neural networks that keeps track of the individual party states throughout the conversation and uses this information for emotion classification .
+In this paper , we describe a new method based on recurrent neural networks that keeps track of the individual party states throughout the conversation and uses this information for emotion classification .
 Our model outperforms the stateof - the - art by a significant margin on two different datasets .
 Introduction
 Emotion detection in conversations has been gaining increasing attention from the research community due to its applications in many important tasks such as opinion mining over chat history and social media threads in YouTube , Facebook , Twitter , and soon .
@@ -42,7 +42,7 @@ Reproducing human interaction requires deep understanding of conversation .
 gued that emotional dynamics in a conversation is an interpersonal phenomenon .
 Hence , our model incorporates inter-personal interactions in an effective way .
 Further , since conversations have a natural temporal nature , we adopt the temporal nature through recurrent network .
-Memory networks has been successful in several NLP areas , including question answering , machine translation , speech recognition , and soon .
+Memory networks has been successful in several NLP are as , including question answering , machine translation , speech recognition , and soon .
 Thus , used memory networks for emotion recognition in dyadic conversations , where two distinct memory networks enabled inter -speaker interaction , yielding state - of - the - art performance .
 Methodology
 Problem Definition
@@ -130,11 +130,11 @@ Bidirectional DialogueRNN ( BiDialogueRNN ) : Bidirectional DialogueRNN is analo
 Outputs from the RNNs are concatenated in sequence level .
 Similarly , in BiDia - logue RNN , the final emotion representation contains information from both past and future utterances in the dialogue through forward and backward DialogueRNNs respectively , which provides better context for emotion classification .
 DialogueRNN + attention ( DialogueRNN + Att ) :
-For each emotion representation e t , attention is applied overall surrounding emotion representations in the dialogue by matching them withe t ( Eqs. and ) .
+For each emotion representation e t , attention is applied over all surrounding emotion representations in the dialogue by matching them withe t ( Eqs. and ) .
 This provides context from the relevant ( based on attention score ) future and preceding utterances .
 Bidirectional DialogueRNN
 + Emotional attention ( BiDi - alogueRNN + Att ) :
-For each emotion representation e t of BiDialogue RNN , attention is applied overall the emotion representations in the dialogue to capture context from the other utterances in dialogue :
+For each emotion representation e t of BiDialogue RNN , attention is applied over all the emotion representations in the dialogue to capture context from the other utterances in dialogue :
 where
 Further , ?
 tare fed to a two - layer perceptron for emotion classification , as in Eqs. ( 9 ) to ( 11 ) .
@@ -142,7 +142,7 @@ Experimental Setting
 Datasets Used
 We use two emotion detection datasets IEMOCAP ) and AVEC ) to evaluate Dia - logueRNN .
 We partition both datasets into train and test sets with roughly 80 20 ratio such that the partitions do not share any speaker . ) .
-The annotations are available every 0.2 seconds in the original database .
+The annotations are available every 0.2 seconds in the original data base .
 However , in order to adapt the annotations to our need of utterance - level annotation , we averaged the attributes over the span of an utterance .
 Baselines and State of the Art
 For a comprehensive evaluation of Dialogue RNN , we compare our model with the following baseline methods :
@@ -210,10 +210,10 @@ shows the ? attention vector ( Eq. ( 2 ) ) over the history of a given test utte
 The attention of our model is more focused compared with CMN : the latter gives diluted attention scores leading to misclassifications .
 We observe this trend of focused - attention across cases and posit that it can be interpreted as a confidence indicator .
 Further in this example , the test utterance by PA ( turn 44 ) comprises of a change in emotion from neutral to frustrated .
-DialogueRNN anticipates this correctly by attending to turn 41 and 42 that are spoken by PA and P B , respectively .
+DialogueRNN anticipates this correctly by attending to turn 41 and 42 thatare spoken by PA and P B , respectively .
 These two utterances provide self and inter-party influences that trigger the emotional shift .
 CMN , however , fails to capture such dependencies and wrongly predicts neutral emotion .
-Dependency on future utterances ( BiDialogueRNN + Att ) visualizes the ? ( Eq. ( 13 ) ) attention over the emotion representations e t fora segment of a conversation between a couple .
+Dependency on future utterances ( BiDialogueRNN + Att ) visualizes the ? ( Eq. ( 13 ) ) attention over the emotion representations e t for a segment of a conversation between a couple .
 In the discussion , the woman ( P A ) is initially at a neutral state , whereas the man ( P B ) is angry throughout .
 The figure reveals that the emotional attention of the woman is localized to the duration of her neutral state ( turns 1 - 16 approximately ) .
 For example , in the dialogue , turns 5 , 7 , and 8 strongly attend to turn 8 .
@@ -225,22 +225,22 @@ We analyze more of this trend in section 5.5 .
 Dependency on distant context
 For all correct predictions in the IEMOCAP test set in we summarize the distribution over the relative distance between test utterance and ( 2 nd ) highest attended utterance - either in the history or future - in the conversation .
 This reveals a decreasing trend with the highest dependence being within the local context .
-However , a significant portion of the test utterances ( ? 18 % ) , attend to utterances that are 20 to 40 turns away from themselves , which highlights the important role of long - term emotional dependencies .
+However , a significant portion of the test utterances ( ? 18 % ) , attend to utterances thatare 20 to 40 turns away from themselves , which highlights the important role of long - term emotional dependencies .
 Such cases primarily occur in conversations that maintain a specific affective tone and do not incur frequent emotional shifts .
 sion , when seen with the global context , it reveals the excitement present in the speaker .
-To disambiguate such cases , our model attends to distant utterances in the past ( turn 11 , 14 ) which serve as prototypes of the emotional tonality of the overall conversation .
+To dis ambiguate such cases , our model attends to distant utterances in the past ( turn 11 , 14 ) which serve as prototypes of the emotional tonality of the over all conversation .
 Error Analysis
 A noticeable trend in the predictions is the high level of cross-predictions amongst related emotions .
 Most of the misclassifications by the model for happy emotion are for excited class .
 Also , anger and frustrated share misclassifications amongst each other .
-We suspect this is due to subtle difference between those emotion pairs , resulting in harder disambiguation .
+We suspect this is due to subtle difference between those emotion pairs , resulting in harder dis ambiguation .
 Another class with high rate of false - positives is the neutral class .
 Primary reason for this could be its majority in the class distribution over the considered emotions .
 At the dialogue level , we observe that a significant amount of errors occur at turns having a change of emotion from the previous turn of the same party .
 Across all the occurrences of these emotional - shifts in the testing set , our model correctly predicts 47.5 % instances .
 This stands less as compared to the 69.2 % success that it achieves at regions of no emotional - shift .
 Changes in emotions in a dialogue is a complex phenomenon governed by latent dynamics .
-Further improvement of these cases remain as an open area of research .
+Further improvement of these cases remain as an open are a of research .
 Ablation Study
 The main novelty of our method is the introduction of party state and emotion GRU ( GRU E ) .
 To comprehensively study the impact of these two components , we remove them one at a time and evaluate their impact on IEMOCAP .

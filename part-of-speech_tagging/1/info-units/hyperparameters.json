@@ -18,15 +18,7 @@
               "from sentence" : "The size of the dimensions of character embeddings is 32 which are randomly initialized using a uniform distribution ."
             }
           }
-        },
-        "number of convolutional layers" : {
-          "are" : {
-            "5 and 9" : {
-              "for" : "IntNet - 5 and IntNet - 9"
-            }
-          },
-          "from sentence" : "The number of convolutional layers are 5 and 9 for IntNet - 5 and IntNet - 9 , respectively , and we have adopted the same weight initialization as that of ResNet ."
-        },
+        }
         "state size" : {
           "of" : {
             "bi-directional LSTMs" : {
@@ -36,8 +28,7 @@
           "from sentence" : "The state size of the bi-directional LSTMs is set to 256 ."
         },
         "decay ratio" : {
-          "is" : "0.05",
-          "from sentence" : "0.05 is the decay ratio , the value of gradient clipping is 5 ."
+          "is" : "0.05"
         },
         "gradient clipping" : {
           "is" : "5",
@@ -51,8 +42,21 @@
           },
           "ratio" : "0.5",
           "from sentence" : "Dropout is applied on the input of IntNet , LSTMs , and CRF , and its ratio 0.5 is fixed , but with no dropout inside of IntNet ."
+        },
+        "number of convolutional layers" : {
+          "are" : {
+            "5 and 9" : {
+              "for" : "IntNet - 5 and IntNet - 9"
+            }
+          }
+        }      
+	  },
+      "adopted" : {
+        "same weight initialization" : {
+          "as" : "ResNet",
+          "from sentence" : "The number of convolutional layers are 5 and 9 for IntNet - 5 and IntNet - 9 , respectively , and we have adopted the same weight initialization as that of ResNet ."
         }
-      },
+      },	  
       "adopt" : {
         "same initialization method" : {
           "for" : {
@@ -84,20 +88,12 @@
           "from sentence" : "For IntNet , the filter size of the initial convolution is 32 and that of other convolutions is 16 ."
         }
       },
-      "adopted" : {
-        "same weight initialization" : {
-          "as" : "ResNet",
-          "from sentence" : "The number of convolutional layers are 5 and 9 for IntNet - 5 and IntNet - 9 , respectively , and we have adopted the same weight initialization as that of ResNet ."
-        }
-      },
       "use" : {
         "pre-trained word embeddings" : {
-          "for" : "initialization",
-          "from sentence" : "We use pre-trained word embeddings for initialization , GloVe 100 - dimension word embeddings for English , and fastText 300 dimension word embeddings for Spanish , Dutch , and German ."
+          "for" : "initialization"
         },
         "GloVe 100 - dimension word embeddings" : {
-          "for" : "English",
-          "from sentence" : "We use pre-trained word embeddings for initialization , GloVe 100 - dimension word embeddings for English , and fastText 300 dimension word embeddings for Spanish , Dutch , and German ."
+          "for" : "English"
         },
         "fastText 300 dimension word embeddings" : {
           "for" : "Spanish , Dutch , and German",

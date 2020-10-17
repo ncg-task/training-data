@@ -1,6 +1,6 @@
+103	51	96	https://github.com/jingli9111/GORU-tensorflow
 29	3	10	propose
 29	13	29	new architecture
-29	139	143	name
 29	36	76	Gated Orthogonal Recurrent Unit ( GORU )
 29	85	93	combines
 29	156	163	ability
@@ -8,9 +8,9 @@
 29	175	197	long term dependencies
 29	198	206	by using
 29	207	226	orthogonal matrices
-29	164	166	to
+29	250	252	to
 29	255	261	forget
-29	198	206	by using
+29	264	272	by using
 29	275	288	GRU structure
 30	3	14	demonstrate
 30	20	24	GORU
@@ -23,102 +23,104 @@
 31	45	75	orthogonal transition matrices
 31	76	84	which is
 31	92	98	subset
-31	42	44	of
+31	99	101	of
 31	106	122	unitary matrices
 4	19	51	recurrent neural network ( RNN )
 11	0	43	Recurrent Neural Networks with gating units
 13	42	84	gating units for Recurrent Neural Networks
 14	49	53	RNNs
-106	45	64	Copying Memory Task
-113	24	27	use
-113	28	48	RMSProp optimization
-113	49	53	with
-113	56	69	learning rate
-113	70	72	of
-113	73	78	0.001
-113	85	95	decay rate
-113	70	72	of
-113	99	102	0.9
-130	4	14	batch size
-130	18	24	set to
-130	25	28	128
-132	0	18	Hidden state sizes
-132	23	29	set to
-132	30	50	128 , 100 , 90 , 512
-132	66	74	to match
-132	75	87	total number
-132	88	90	of
-132	91	118	hidden to hidden parameters
-121	4	8	GORU
-121	9	11	is
-121	16	35	only gated - system
-121	36	38	to
-121	39	57	successfully solve
-121	63	67	task
-122	0	12	Denoise Task
-129	40	43	use
-129	44	77	RM - SProp optimization algorithm
-129	78	82	with
-129	85	98	learning rate
-129	99	101	of
-129	102	106	0.01
-129	113	123	decay rate
-129	99	101	of
-129	127	130	0.9
-130	4	14	batch size
-130	18	24	set to
-130	25	28	128
-132	0	18	Hidden state sizes
-132	23	29	set to
-132	30	50	128 , 100 , 90 , 512
-132	66	74	to match
-132	75	118	total number of hidden to hidden parameters
-133	80	92	GORU and GRU
-133	93	111	successfully solve
-133	116	120	task
-137	0	16	Parenthesis Task
-143	24	42	total input length
-143	46	52	set to
-143	53	56	200
-144	3	7	used
-144	8	18	batch size
-144	19	22	128
-144	27	44	RMSProp Optimizer
-144	45	49	with
-144	52	65	learning rate
-144	66	71	0.001
-144	74	84	decay rate
-144	85	88	0.9
-147	4	8	GORU
-147	12	19	able to
-147	20	43	successfully outperform
-147	44	47	GRU
-147	50	54	LSTM
-147	59	64	EURNN
-147	65	76	in terms of
-147	82	96	learning speed
-147	101	119	final performances
-148	8	16	analyzed
-148	40	52	update gates
-148	53	56	for
-148	57	69	GORU and GRU
-157	3	7	used
-157	8	18	batch size
-157	19	21	50
-157	26	37	hidden size
-157	38	41	128
-158	4	8	RNNs
-158	13	25	trained with
-158	26	43	RMSProp optimizer
-158	21	25	with
-158	51	64	learning rate
-158	65	67	of
-158	68	73	0.001
-158	78	88	decay rate
-158	65	67	of
-158	92	95	0.9
-181	3	13	found that
-181	18	22	GORU
-181	23	48	performs averagely better
-181	49	53	than
-181	54	74	GRU / LSTM and EURNN
+105	45	64	Copying Memory Task
+112	24	27	use
+112	28	48	RMSProp optimization
+112	49	53	with
+112	56	69	learning rate
+112	70	72	of
+112	73	78	0.001
+112	85	95	decay rate
+112	96	98	of
+112	99	102	0.9
+113	4	14	batch size
+113	18	24	set to
+113	25	28	128
+115	0	18	Hidden state sizes
+115	23	29	set to
+115	30	50	128 , 100 , 90 , 512
+115	66	74	to match
+115	75	87	total number
+115	88	90	of
+115	91	118	hidden to hidden parameters
+120	4	8	GORU
+120	9	11	is
+120	16	35	only gated - system
+120	36	38	to
+120	39	57	successfully solve
+120	63	67	task
+121	0	12	Denoise Task
+128	40	43	use
+128	44	77	RM - SProp optimization algorithm
+128	78	82	with
+128	85	98	learning rate
+128	99	101	of
+128	102	106	0.01
+128	113	123	decay rate
+128	124	126	of
+128	127	130	0.9
+129	4	14	batch size
+129	18	24	set to
+129	25	28	128
+131	0	18	Hidden state sizes
+131	23	29	set to
+131	30	50	128 , 100 , 90 , 512
+131	66	74	to match
+131	75	118	total number of hidden to hidden parameters
+132	80	92	GORU and GRU
+132	93	111	successfully solve
+132	116	120	task
+136	0	16	Parenthesis Task
+142	24	42	total input length
+142	46	52	set to
+142	53	56	200
+143	3	7	used
+143	8	18	batch size
+143	19	22	128
+143	27	44	RMSProp Optimizer
+143	45	49	with
+143	52	65	learning rate
+143	66	71	0.001
+143	74	84	decay rate
+143	85	88	0.9
+146	4	8	GORU
+146	12	19	able to
+146	20	43	successfully outperform
+146	44	47	GRU
+146	50	54	LSTM
+146	59	64	EURNN
+146	65	76	in terms of
+146	82	96	learning speed
+146	101	119	final performances
+147	8	16	analyzed
+147	40	52	update gates
+147	53	56	for
+147	57	69	GORU and GRU
+152	0	16	Algorithmic Task
+156	3	7	used
+156	8	18	batch size
+156	19	21	50
+156	26	37	hidden size
+156	38	41	128
+157	4	8	RNNs
+157	13	25	trained with
+157	26	43	RMSProp optimizer
+157	44	48	with
+157	51	64	learning rate
+157	65	67	of
+157	68	73	0.001
+157	78	88	decay rate
+157	89	91	of
+157	92	95	0.9
+159	3	13	found that
+159	18	22	GORU
+159	23	31	performs
+159	32	48	averagely better
+159	49	53	than
+159	54	74	GRU / LSTM and EURNN

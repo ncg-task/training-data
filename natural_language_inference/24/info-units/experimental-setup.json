@@ -11,13 +11,11 @@
               "has" : ["lemma", "part - of - speech", "named entity tags"]
             }
           },
-          "from sentence" : "The spa
-Cy tool 2 is used to tokenize the both passages and questions , and generate lemma , part - of - speech and named entity tags ."
+          "from sentence" : "The spaCy tool 2 is used to tokenize the both passages and questions , and generate lemma , part - of - speech and named entity tags ."
 
         },
         "mini-batch size" : {
-          "set to" : "32",
-          "from sentence" : "The mini-batch size is set to 32 and Adamax is used as our optimizer ."
+          "set to" : "32"
         },
         "Adamax" : {
           "used as" : "our optimizer",

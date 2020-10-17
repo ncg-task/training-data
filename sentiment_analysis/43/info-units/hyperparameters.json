@@ -37,12 +37,9 @@ set to 300 ."
             "L 2 regularization" : {
               "is" : "10 ? 5"
             }
-          },
-          "from sentence" : "The coefficient ? of L 2 regularization item is 10 ? 5 , the parameter ?
-of aspect alignment loss and dropout rate are set to 0.5 ."
-
+          }
         },
-        "drop rate" : {
+        "dropout rate" : {
           "set to" : "0.5",
           "from sentence" : "The coefficient ? of L 2 regularization item is 10 ? 5 , the parameter ?
 of aspect alignment loss and dropout rate are set to 0.5 ."

@@ -63,7 +63,7 @@ propose a multi - task learning ( MTL ) framework in which the decoder is shared
         "Seq2seq + ERAML" : {
           "with" : {
             "entailment - aware decoder" : {
-              "constitutes" : "Entailment Reward Augmented Maximum Likelihood ( ERAML ) training framework"
+              "conducts" : "Entailment Reward Augmented Maximum Likelihood ( ERAML ) training framework"
             }
           },
           "from sentence" : "Seq2seq + ERAML .

@@ -11,7 +11,7 @@
           "from sentence" : "In this work we propose the Key - Value Memory Network ( KV - MemNN ) , a new neural network architecture that generalizes the original Memory Network and can work with either knowledge source ."
         }
       },
-      "name" : {
+      "has" : {
         "KV - MemNN" : {
           "performs" : {
             "QA" : {
@@ -23,9 +23,7 @@
             },
             "from sentence" : "The KV - MemNN performs QA by first storing facts in a key - value structured memory before reasoning on them in order to predict an answer ."
           }
-        }
-      },
-      "has" : {
+        },        
         "memory" : {
           "is" : {
             "designed" : {
@@ -43,7 +41,7 @@
           }
         }
       },
-      "encode" : ["prior knowledge", {"from sentence" : "This structure allows the model to encode prior knowledge for the considered task and to leverage possibly complex transforms between keys and values , while still being trained using standard backpropagation via stochastic gradient descent ."}],
+      "encode" : "prior knowledge",
       "to leverage" : {
         "complex transforms" : {
           "between" : "keys and values",

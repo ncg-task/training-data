@@ -31,7 +31,9 @@ This setting provides the worst relative performance with almost 10 % lesser acc
                           }
                         }
                       },
-                      "from sentence" : "Here , the effect of discourse features is primarily seen in the Pol dataset getting an increase of 3 % in F1 ( row 2 ) ."
+                      "from sentence" : "Next , we include contextual features to this network .
+Here , the effect of discourse features is primarily seen in the Pol dataset getting an increase of 3 % in F1 ( row 2 ) ."
+
                     }
                   }
                 }

@@ -46,7 +46,7 @@
         },
         "from sentence" : "For the decoder we experimented with both the Elman RNN and the Long - Short Term Memory ( LSTM ) architecture ( as discussed in 3.1 ) ."
       },
-      "choose" : {
+      "chose" : {
         "hyper - parameters" : {
           "based on" : "grid search",
           "picked the one which gave" : {

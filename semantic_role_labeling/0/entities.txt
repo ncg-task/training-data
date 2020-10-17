@@ -1,8 +1,7 @@
-16	154	158	Code
 16	172	202	https://github.com/luheng/lsgn
 13	3	10	propose
 13	14	37	end - to - end approach
-13	49	51	in
+13	97	99	in
 13	100	116	one forward pass
 13	38	52	for predicting
 13	53	71	all the predicates
@@ -36,12 +35,12 @@
 19	75	77	in
 19	78	93	BIObased models
 19	96	103	letting
-19	87	92	model
+19	108	113	model
 19	114	132	dynamically decide
 19	133	165	which spans and roles to include
 19	168	181	without using
 19	182	220	previously standard syntactic features
-20	33	35	is
+20	36	38	is
 20	43	71	first span - based SRL model
 20	72	92	that does not assume
 20	98	118	predicates are given

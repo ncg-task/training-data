@@ -18,7 +18,7 @@ Further , empirically showed that dynamic multi-step reasoning outperforms fixed
 In this work , we derive an alternative multi-step reasoning neural network for MRC .
 During training , we fix the number of reasoning steps , but perform stochastic dropout on the answer module ( final layer predictions ) .
 During decoding , we generate answers based on the average of predictions in all steps , rather than the final step .
-We call this a stochastic answer network ( SAN ) because the stochastic dropout is applied to the answer module ; albeit simple , this technique significantly improves the robustness and overall accuracy of the model .
+We call this a stochastic answer network ( SAN ) because the stochastic dropout is applied to the answer module ; albeit simple , this technique significantly improves the robustness and over all accuracy of the model .
 Intuitively this works because while the model successively refines its prediction over multiple steps , each step is still trained to generate the same answer ; we are performing a kind of stochastic ensemble over the model 's successive predic -s t - 1 st s t+1
 x : Illustration of " stochastic prediction dropout " in the answer module during training .
 At each reasoning step t , the model combines memory ( bottom row ) with hidden states s t?1 to generate a prediction ( multinomial distribution ) .
@@ -34,7 +34,7 @@ A .
 The training data is a set of the query , passage and answer tuples < Q , P , A >.
 We now describe our model from the ground up .
 The main contribution of this work is the answer module , but in order to understand what goes into this module , we will start by describing how Q and P are processed by the lower layers .
-Note the lower layers also have some novel variations that are not used in previous work .
+Note the lower layers also have some novel variations thatare not used in previous work .
 As shown in Figure 2 , our model contains four different layers to capture different concept of representations .
 The detailed description of our model is provided as follows .
 Lexicon Encoding Layer .
@@ -76,7 +76,7 @@ We concatenate a pre-trained 600 - dimensional CoVe vectors 1 ( McCann et al. , 
 To reduce the parameter size , we use a maxout layer at each BiLSTM layer to shrink its dimension .
 By a concatenation of the outputs of two BiLSTM layers , we obtain H q ?
 R 2 dm as representation of Q and H p ?
-R 2 dn as representation of P , where dis the hidden size of the BiLSTM .
+R 2 dn as representation of P , where d is the hidden size of the BiLSTM .
 generation layer ,
 We construct the working memory , a summary of information from both Q and P .
 First , a dot-product attention is adopted like in to measure the similarity between the tokens in Q and P .
@@ -124,8 +124,7 @@ The crowdsourced workers are asked to read a passage ( a paragraph ) , come up w
 All results are on the official development set , unless otherwise noted .
 Two evaluation metrics are used : Exact Match ( EM ) , which measures the percentage of span predictions that matched anyone of the ground truth answer exactly , and Macro - averaged F1 score , which measures the average overlap between the prediction and the ground truth answer .
 Implementation details :
-The spa
-Cy tool 2 is used to tokenize the both passages and questions , and generate lemma , part - of - speech and named entity tags .
+The spaCy tool 2 is used to tokenize the both passages and questions , and generate lemma , part - of - speech and named entity tags .
 We use 2 - layer BiLSTM with d = 128 hidden units for both passage and question encoding .
 The mini-batch size is set to 32 and Adamax is used as our optimizer .
 The learning rate is set to 0.002 at first and decreased by half after every 10 epochs .
@@ -171,14 +170,14 @@ shows the development set scores for T = 1 to T = 10 .
 We observe that there is a gradual improvement as we increase T = 1 to T = 5 , but after 5 steps the improvements have saturated .
 In fact , the EM / F1 scores drop slightly , but considering that the random initialization results in show a standard deviation of 0.142 and a spread of 0.426 ( for EM ) , we believe that the T = 10 result does not statistically differ from the T = 5 result .
 In summary , we think it is useful to perform some approximate hyper - parameter tuning for the number of steps , but it is not necessary to find the exact optimal value .
-Finally , we test SAN on two Adversarial SQuAD datasets , AddSent and Add OneSent , where the passages contain auto - generated adversarial distracting sentences to fool computer systems that are developed to answer questions about the passages .
+Finally , we test SAN on two Adversarial SQuAD datasets , AddSent and Add OneSent , where the passages contain auto - generated adversarial distracting sentences to fool computer systems thatare developed to answer questions about the passages .
 For example , AddSent is constructed by adding sentences that look similar to the question , but do not actually contradict the correct answer .
 Add
 OneSent is constructed by appending a random human - approved sentence to the passage .
 We evaluate the single SAN model ( i.e. , the one presented in ) on both AddSent and Ad - d OneSent .
 The results in show that SAN achieves the new state - of - the - art performance and SAN 's superior result is mainly attributed to the multi-step answer module , which leads to significant improvement in F1 score over the Standard 1 - step answer module , i.e. , + 1.2 on AddSent and + 0.7 on AddOneSent .
 Is it possible to use different numbers of steps in test vs. train ?
-For practical deployment scenarios , prediction speed attest time is an important criterion .
+For practical deployment scenarios , prediction speed at test time is an important criterion .
 Therefore , one question is whether SAN can train with , e.g.
 T = 5 steps but test with T = 1 steps.
 shows the results of a SAN trained on T = 5 steps , but tested with different number of steps .
@@ -213,14 +212,14 @@ The ranker is trained on the same MS MARCO training data , and achieves 37.1 p@1
 The results in show that SAN outperforms V - Net and becomes the new state of the art 6 .
 Related Work
 The recent big progress on MRC is largely due to the availability of the large - scale datasets , since it is possible to train large end - to - end neural network models .
-In spite of the variety of model structures and attenion types , atypical neural network MRC model first maps the symbolic representation of the documents and questions into a neural space , then search answers on top of it .
+In spite of the variety of model structures and attenion types , a typical neural network MRC model first maps the symbolic representation of the documents and questions into a neural space , then search answers on top of it .
 We categorize these models into two groups based on the difference of the answer module : singlestep and multi-step reasoning .
 The key difference between the two is what strategies are applied to search the final answers in the neural space .
 A single - step model matches the question and document only once and produce the final answers .
 It is simple yet efficient and can be trained using the classical back - propagation algorithm , thus it is adopted by most systems
-It is the same model structure as by using softmax overall candidate passages .
+It is the same model structure as by using softmax over all candidate passages .
 A simple baseline , TF - IDF , obtains 20.1 p@1 on MS MARCO development .
-The official evaluation on MS MARCO on testis closed , thus here we only report the results on the development set ..
+The official evaluation on MS MARCO on test is closed , thus here we only report the results on the development set ..
 However , since humans often solve question answering tasks by re-reading and re-digesting the document multiple times before reaching the final answers ( this maybe based on the complexity of the questions / documents ) , it is natural to devise an iterative way to find answers as multi-step reasoning .
 Pioneered by , who used a predetermined fixed number of reasoning steps , showed that multi-step reasoning outperforms single - step ones and dynamic multi-step reasoning further outperforms the fixed multi-step ones on two distinct MRC datasets ( SQ u AD and MS MARCO ) .
 But these models have to be trained using reinforcement learning methods , e.g. , policy gradient , which are tricky to implement due to the instability issue .

@@ -12,7 +12,7 @@ The ability to comprehend text and answer questions is crucial for natural langu
 Due to the creation of various large - scale datasets ) , remarkable advancements have been made in the task of machine reading comprehension .
 Nevertheless , one important hypothesis behind current approaches is that there always exists a correct answer in the context passage .
 Therefore , the models only need to choose a most plausible text span based on the question , instead of checking if there exists an answer in the first place .
-Recently , anew version of Stanford Question Answering Dataset ( SQuAD ) , namely SQuAD 2.0 ( Rajpurkar , Jia , and Liang 2018 ) , has been proposed to test the ability of answering answerable questions as well as detecting unanswerable cases .
+Recently , a new version of Stanford Question Answering Dataset ( SQuAD ) , namely SQuAD 2.0 ( Rajpurkar , Jia , and Liang 2018 ) , has been proposed to test the ability of answering answerable questions as well as detecting unanswerable cases .
 To deal with unanswerable cases , systems must learn to identify a wide range of linguistic phenomena such as negation , antonymy and entity changes between the passage and the question .
 Previous works all apply a shared - normalization :
 An overview of our approach .
@@ -154,7 +154,7 @@ Such design allows us to test whether the performance can benefit from the integ
 In practice we use a simple concatenation to merge the two sources of information .
 Experimental Setup Dataset
 We evaluate our approach on the SQuAD 2.0 dataset ( Rajpurkar , Jia , and Liang 2018 ) .
-SQuAD 2.0 is anew machine reading comprehension benchmark that aims to test the models whether they have truely understood the questions by knowing what they do n't know .
+SQuAD 2.0 is a new machine reading comprehension benchmark that aims to test the models whether they have truely understood the questions by knowing what they do n't know .
 It combines answerable questions from the previous SQuAD 1.1 dataset with 53,775 unanswerable questions about the same passages .
 Crowdsourcing workers craft these questions with a plausible answer in mind , and make sure that they are relevant to the corresponding passages .
 Training and Inference
@@ -193,7 +193,7 @@ first shows the ablation results of different auxiliary losses on the reader .
 Removing the independent span loss ( indep - I ) results in a performance drop for all answerable questions ( HasAns ) , indicating that this loss helps the model in better identifying the answer boundary .
 Ablating independent no - answer loss ( indep - II ) , on the other hand , causes little influence on HasAns , but leads to a severe decline on no - answer accuracy ( NoAns ACC ) .
 This suggests that a confliction between answer extraction and no -answer detection indeed happens .
-Finally , deleting both of two losses causes a degradation of more than 1.5 points on the overall performance in terms of F1 , with or without ELMo embeddings .
+Finally , deleting both of two losses causes a degradation of more than 1.5 points on the over all performance in terms of F1 , with or without ELMo embeddings .
 details the results of various architectures for the answer verifier .
 Model - III outperforms all of other competitors , achieving a no-answer accuracy of 76.2 .
 This illustrates that the combination of two different architectures can bring in further improvement .
@@ -204,12 +204,12 @@ The combination of base reader with any answer verifier can always result in con
 We find that the improvement on noanswer accuracy is significant .
 This metric raises from 73.1 to 77.1 after adding Model - III to RMR , increasing by 4 absolute points .
 Similar observation can be found when ELMo embeddings are used , demonstrating that the gains are consistent and stable .
-In order to investigate how the readers affect the overall performance , we fix the answer verifier as Model - III and use DocQA as the base reader instead of RMR , as shown in .
+In order to investigate how the readers affect the over all performance , we fix the answer verifier as Model - III and use DocQA as the base reader instead of RMR , as shown in .
 We find that the absolute improvements are even larger : the no-answer accuracy roughly increases by 6 points when adding Model - III to DocQA ( from 69.1 to 75.2 ) , and 5.5 points when adding Model - III to DocQA + ELMo ( from 70.6 to 76.1 ) .
 Finally , we plot the precision - recall curves of F 1 score on the development set in .
 We observe that RMR + ELMo + Verifier achieves the best precision when the recall is less than 80 .
 After the recall exceeds 80 , the precision of RMR + ELMo becomes slightly better .
-Ablating two auxiliary losses , however , leads to an overall degradation on the curve , but it still outperforms the baseline by a large margin .
+Ablating two auxiliary losses , however , leads to an over all degradation on the curve , but it still outperforms the baseline by a large margin .
 Error Analysis
 To perform error analysis , we first categorize all examples on the development set into 5 classes :
 Case1 : the question is answerable , the no-answer proba - bility is less than the threshold , and the answer is correct .

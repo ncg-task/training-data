@@ -1,6 +1,6 @@
 {
   "has research problem" : [
     ["Sequential Sentence Classification in Medical Scientific Abstracts", {"from sentence" : "Hierarchical Neural Networks for Sequential Sentence Classification in Medical Scientific Abstracts"}],
-    ["sequential sentence classification", {"from sentence" : "This hampers the traditional sentence classification approaches to the problem of sequential sentence classification , where structured prediction is needed for better overall classification performance ."}]
+    ["sequential sentence classification", {"from sentence" : "This hampers the traditional sentence classification approaches to the problem of sequential sentence classification , where structured prediction is needed for better over all classification performance ."}]
   ]
 }

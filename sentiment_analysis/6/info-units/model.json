@@ -19,8 +19,7 @@
       "preserves" : {
         "sequential order" : {
           "of" : "utterances"
-        },
-        "from sentence" : "Our model preserves the sequential order of utterances and enables consecutive utterances to share information , thus providing contextual information to the utterance - level sentiment classification process ."
+        }
       },
       "enables" : {
         "consecutive utterances" : {

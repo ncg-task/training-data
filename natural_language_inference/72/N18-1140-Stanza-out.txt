@@ -17,14 +17,14 @@ passage : [. . . ]
 A gradual improvement in clinical and laboratory status was achieved within 20 days of antituberculous treatment .
 The patient was then subjected to a thoracic CT scan that also showed significant radiological improvement .
 Thereafter , tapering of corticosteroids was initiated with no clinical relapse .
-The patient was discharged after being treated fora total of 30 days and continued receiving antituberculous therapy with no reported problems fora total of 6 months under the supervision of his hometown physicians .
+The patient was discharged after being treated for a total of 30 days and continued receiving antituberculous therapy with no reported problems for a total of 6 months under the supervision of his hometown physicians .
 query :
 If steroids are used , great caution should be exercised on their gradual tapering to avoid .
 answer : relapse ( sem type =problem , cui=C0035020 ) :
 An example from the dataset , with the passage sentence relevant for answering italicized .
 The passage has been shortened for clarity .
 the required comprehension skills poorly understood .
-With our work we hope to narrow this gap by proposing a new resource for reading comprehension in the clinical domain , and by analyzing the different types of comprehension skills that are triggered while answering .
+With our work we hope to narrow this gap by proposing a new resource for reading comprehension in the clinical domain , and by analyzing the different types of comprehension skills thatare triggered while answering .
 Machine comprehension for healthcare and medicine has received little attention so far , although it offers great potential for practical use .
 A typical application would be clinical decision support , where given a massive amount of text , a clinician asks questions about either external , medical knowledge ( reading literature ) or about particular patients ( reading electronic health records ) .
 Currently , patient - specific questions are tackled by manually browsing or searching those records .
@@ -53,7 +53,7 @@ We did not include remotely related datasets which concern a different task ( e.
 20 % F1 , which leaves ample space for further study of machine readers on our dataset .
 In brief , the contributions of our paper are :
 We propose a large dataset for reading comprehension in the medical domain , using clinical case descriptions .
-We carryout an empirical analysis of a ) system and human performance on reading comprehension , and b) comprehension skills that are required for answering the queries correctly and that allow us to position the dataset according to its difficulty on each of the skills .
+We carry out an empirical analysis of a ) system and human performance on reading comprehension , and b) comprehension skills thatare required for answering the queries correctly and that allow us to position the dataset according to its difficulty on each of the skills .
 Related datasets
 Numerous general - domain datasets have been recently created to allow machine comprehension using data - intensive methods .
 These datasets were collected from Wikipedia , web search queries , news articles , books and English exams .
@@ -98,7 +98,7 @@ This curation step reduces the dataset size by 5 % .
 More commonly , the learning points are paraphrases of crucial parts of the passage .
 Sometimes , the entity answering the query is expressed differently in the passage .
 For example , in place of " enuresis " , the passage might include its synonym " bedwetting " .
-We manage these cases in two ways , by extending the set of answers fora certain query ( 3.2 ) , and adding a semantic relatedness metric to the standard evaluation ( 6 ) .
+We manage these cases in two ways , by extending the set of answers for a certain query ( 3.2 ) , and adding a semantic relatedness metric to the standard evaluation ( 6 ) .
 Answer set
 We account for lexical variation of the ground - truth answers ( compared to mentions in the passages ) by extending each original ground - truth answer a to a set of ground - truth answers A using a knowledge base .
 Since our entity recognizer already provides the CUI labels , we can use them to obtain the list of alternative word and phrase forms ( synonyms , abbreviations and acronyms ) from UMLS R .
@@ -111,7 +111,7 @@ The reading comprehension problem in our case can be represented as a tuple ( q 
 In defining the task , it is important to consider how to take into account entity annotation and how to define the answer output space .
 We look at these more closely in the rest of this section .
 Whenever the entities are marked in the passage , the system can learn to exploit this cue to find the answers more easily .
-Although this simplifies the task , it also makes it less realistic as the entities may not be recognized attest time .
+Although this simplifies the task , it also makes it less realistic as the entities may not be recognized at test time .
 Realizing that the presence of entities makes the task easier for the machines , Hermann et al. anonymize the entities , also with a goal of discouraging language model solutions to the queries .
 In our case , it is not clear how relevant the anonymization is since we deal with medical entities , which have different properties than proper name entities .
 We explore different entity - annotation choices in the empirical part , where we refer to them as Ent ( entities marked ) and Anonym ( entities marked but anonymized ) .
@@ -167,7 +167,7 @@ At prediction time , attention should highlight that position tin the passage wh
 Note that the prediction relies on the aggregate representation o , hence the name of the reader category .
 As we see in ( 2 ) , the prediction score does not allow accounting for multi-word entities , unless they are treated as a single token .
 Returning to our different set - ups based on entity annotation ( 3.3 ) , this means that we can apply SA reader with Ent and Anonym setups , but not with NoEnt , where multi-word answers should be allowed .
-investigate neural readers with a finegrained attention mechanism that learns token representations for the passage that are also conditional on the query , but are in addition refined through multiple hops of the network .
+investigate neural readers with a finegrained attention mechanism that learns token representations for the passage thatare also conditional on the query , but are in addition refined through multiple hops of the network .
 The model predicts the answer using attention weights with explicit reference to answer positions in the passage :
 Gated - Attention ( GA ) Reader
 where R is the set of indices in passage pat which a token from the candidate i occurs .
@@ -181,7 +181,7 @@ We induce the word embeddings on a combination of the CliCR training corpus and 
 Considering the large effect of hyper - parameter selection on the quality of word embeddings , we optimize the embedding hyper - parameters also using random search .
 Evaluation
 A model f takes as input a passage - query pair and outputs an answer .
-We carryout the evaluation
+We carry out the evaluation
 We assume the candidate entities are known in advance .
 In our case , the answer is a word or a word phrase representing a medical entity .
 Alternatively , one could also take the UMLS R CUI identifier as the answering unit .
@@ -190,7 +190,7 @@ This is because entity linking with CUIs can be noisy , and only apart of a word
 In the current setup , we are able to keep both the original word phrase as well as the extended answers .
 The CUI information is still an integral part of the answer field in our dataset , so it can be used by other researchers if preferred .
 with different metrics described below .
-The final score m fora metric v is obtained by averaging over the test set :
+The final score m for a metric v is obtained by averaging over the test set :
 ( 4 ) Since there are multiple correct answers A , we take the highest scoring answer at each instance , as done in .
 Note that in the dataset we do not supply the candidate answers ; in the experiments , we constrain the candidates to the set of entities in the passage .
 The two standardly used metrics for machine comprehension evaluation are the exact match ( EM ) and the F1 score .
@@ -222,7 +222,7 @@ This may partly explain the competitive performance of NoEnt compared to Ent .
 We leave the integration of entity embeddings for the future work .
 The results for SA reader are far below the per-formance of GA reader .
 We also see that it performs much better on anonymized entities than on non-anonymized ones .
-This is inline with who find that SA reader suffers a drop of 19 points inexact match on Who-did - what dataset when anonymization is not done .
+This is inline with who find that SA reader suffers a drop of 19 points in exact match on Who-did - what dataset when anonymization is not done .
 A possible explanation is that anonymization reduces the output space to only several hundred entity candidates for which the output embedding needs to be trained .
 When we do not use anonymization , the set of output entities increases to the set of all entity types found in all passages , which is several orders of magnitude more .
 While this effect also occurs for GA reader , it is less pronounced because GA reader scores words in the passage and does not need to learn separate answer word embeddings .
@@ -256,7 +256,7 @@ Conclusion and future work
 We have introduced a new dataset for domainspecific reading comprehension in which we have constructed around 100,000 cloze queries from clinical case reports .
 We analyzed the dataset in terms of the skills required for successful comprehension , and applied various baseline methods and stateof - the - art neural readers .
 We showed that a large gap still exists between the best machine reader and the expert human reader .
-One direction for future research is improving the reading models on the queries that are currently the most challenging , i.e. those requiring world and background domain knowledge .
+One direction for future research is improving the reading models on the queries thatare currently the most challenging , i.e. those requiring world and background domain knowledge .
 Better representing background knowledge by inducing embeddings for entities or otherwise integrating ontological knowledge is in our opinion a promising avenue for future research .
 A Training details and hyper - parameter optimization
 We train the word embeddings using word2vec , and optimize the window size , the model type ( CBOW , skip - gram ) , the dimensionality and the number of negative samples using random search .
@@ -283,7 +283,7 @@ In our dataset , knowing the way the queries are constructed ( Learning points )
 12 .
 Schematic clause relation : complex sentences that include coordination or subordination 13 .
 Punctuation : understanding parentheses , dashes , quotations , colons etc .
-In the following examples , we mark the medical entities in blue , and italicize the parts in the passage that are crucial for answering .
+In the following examples , we mark the medical entities in blue , and italicize the parts in the passage thatare crucial for answering .
 Whenever we shorten apart of the passage , we use [... ].
 B.1 Bridging inference passage
 We report a case of a 72 - year - old Caucasian woman with pl - 7 positive antisynthetase syndrome .
@@ -299,7 +299,7 @@ Object tracking passage [... ]
 The patient was managed with supportive measures and the National Poisons Information Service was contacted .
 A toxicology consultant was involved in view of the unusual mode of administration .
 Although there was no precedent on how to treat a significant rectal overdose of amitriptyline , it was advised that the patient be administered a phosphate enema and if failed to adequately remove the tablets then the patient should be given whole bowel irrigation with 2 litre of Klean - Prep via a nasogastric tube .
-It was also advised that we admit the patient to a high dependency unit and manage him according to the usual protocol fora tricyclic overdose if complications arose .
+It was also advised that we admit the patient to a high dependency unit and manage him according to the usual protocol for a tricyclic overdose if complications arose .
 [... ] query
 It seems reasonable to attempt careful removal of the drug from the rectum and if that fails to consider and whole bowel irrigation .
 answer phosphate enemas explanation

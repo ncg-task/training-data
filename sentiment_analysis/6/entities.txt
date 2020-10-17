@@ -4,7 +4,7 @@
 36	95	125	long shortterm memory ( LSTM )
 36	131	136	takes
 36	139	161	sequence of utterances
-36	87	89	as
+36	162	164	as
 36	165	170	input
 36	175	183	extracts
 36	184	218	contextual utterancelevel features
@@ -18,7 +18,7 @@
 40	99	110	information
 40	118	127	providing
 40	128	150	contextual information
-40	90	92	to
+40	151	153	to
 40	158	208	utterance - level sentiment classification process
 2	0	38	Context - Dependent Sentiment Analysis
 4	84	122	identification of sentiments in videos
@@ -40,7 +40,7 @@
 243	82	100	utterance sequence
 243	106	114	performs
 243	115	134	consistently better
-243	72	74	on
+243	135	137	on
 243	138	169	all the datasets over sc - LSTM
 245	4	27	performance improvement
 245	28	30	is

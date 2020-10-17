@@ -14,14 +14,14 @@
                     }
                   }
                 },
-                "from sentence" : "The representation learned by our model achieves 91.8 % significantly outperforming the state of the art of 90.2 % by a 30 model ensemble ."
+                "from sentence" : "Review Sentiment Analysis
+The representation learned by our model achieves 91.8 % significantly outperforming the state of the art of 90.2 % by a 30 model ensemble ."
               },
               "matches" : {
                 "performance" : {
                   "of" : "baselines",
                   "using" : "dozen labeled examples"
-                },
-                "from sentence" : "It matches the performance of baselines using as few as a dozen labeled examples and outperforms all previous results with only a few hundred labeled examples ."
+                }
               },
               "outperforms" : {
                 "all previous results" : {
@@ -79,7 +79,8 @@ Fitting a threshold to this single unit achieves a test accuracy of 92.30 % whic
                   "of" : "Yelp Dataset Challenge in 2015"
                 }
               },
-              "from sentence" : "We try our approach on the binary version of the Yelp Dataset Challenge in 2015 as introduced in ."
+              "from sentence" : "Capacity Ceiling
+We try our approach on the binary version of the Yelp Dataset Challenge in 2015 as introduced in ."
             }
           },
           "Using" : {

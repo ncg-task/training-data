@@ -1,6 +1,6 @@
 (Contribution||has||Baselines)
 (Baselines||has||BERT SP with position embedding on the final attention layer)
-(BERT SP with position embedding on the final attention layer||is||more straightforward way)
+(BERT SP with position embedding on the final attention layer||has||more straightforward way)
 (more straightforward way||to achieve||MRE)
 (MRE||using||position embeddings)
 (MRE||in||one - pass)

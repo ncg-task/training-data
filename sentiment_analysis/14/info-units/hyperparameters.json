@@ -6,11 +6,12 @@
           "has" : {
             "Emo2 Vec embedding matrix and the CNN model" : {
               "pre-trained using" : "hashtag corpus",
-              "from sentence" : "Emo2 Vec embedding matrix and the CNN model are pre-trained using hashtag corpus alone ."
+              "from sentence" : "Pre-training Emo2Vec
+Emo2 Vec embedding matrix and the CNN model are pre-trained using hashtag corpus alone ."
+
             },
             "Parameters of T and CNN" : {
-              "are" : "randomly initialized",
-              "from sentence" : "Parameters of T and CNN are randomly initialized and Adam is used for optimization ."
+              "are" : "randomly initialized"
             },
             "Adam" : {
               "used for" : "optimization",
@@ -44,7 +45,9 @@
           "tune" : {
             "our parameters" : {
               "of" : ["learning rate", "L2 regularization"],
-              "from sentence" : "We tune our parameters of learning rate , L2 regularization , whether to pre-train our model and batch size with the average accuracy of the development set of all datasets ."
+              "from sentence" : "Multi - task training
+We tune our parameters of learning rate , L2 regularization , whether to pre-train our model and batch size with the average accuracy of the development set of all datasets ."
+
             }
           },
           "early stop" : {
@@ -67,7 +70,7 @@
                   "of" : "1.0"
                 },
                 "batch size" : {
-                  "of" : 32
+                  "of" : "32"
                 }
               },
               "from sentence" : "Our best model uses learning rate of 0.001 , L2 regularization of 1.0 , batch size of 32 ."

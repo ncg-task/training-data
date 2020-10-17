@@ -1,3 +1,4 @@
+77	0	19	HYPERNYM PREDICTION
 96	24	27	use
 96	32	67	standard pairwise ranking objective
 97	3	9	sample
@@ -7,13 +8,13 @@
 97	64	68	draw
 97	73	90	contrastive terms
 97	91	95	from
-97	10	19	minibatch
+97	100	109	minibatch
 97	112	118	giving
 97	122	144	127 contrastive images
 97	145	148	for
 97	149	161	each caption
 97	166	174	captions
-97	145	148	for
+97	175	178	for
 97	179	189	each image
 98	3	12	train for
 98	13	27	15 - 30 epochs
@@ -31,10 +32,10 @@
 99	71	73	to
 99	74	78	1024
 99	102	125	learned word embeddings
-99	71	73	to
+99	126	128	to
 99	129	132	300
 99	143	149	margin
-99	71	73	to
+99	152	154	to
 99	155	159	0.05
 101	54	63	constrain
 101	68	96	caption and image embeddings
@@ -53,13 +54,13 @@
 149	67	103	embedding space and GRU hidden state
 149	104	109	to be
 149	110	114	1024
-149	49	58	dimension
-149	60	62	of
+149	121	130	dimension
+149	131	133	of
 149	138	153	word embeddings
-149	104	109	to be
+149	154	159	to be
 149	160	163	300
 149	170	179	constrain
-149	143	153	embeddings
+149	184	194	embeddings
 149	195	202	to have
 149	203	215	unit L2 norm
 150	3	12	train for
@@ -91,7 +92,7 @@
 26	160	178	order - preserving
 26	179	186	between
 26	191	215	visualsemantic hierarchy
-26	40	53	partial order
+26	222	235	partial order
 26	236	240	over
 26	245	260	embedding space
 2	0	41	ORDER - EMBEDDINGS OF IMAGES AND LANGUAGE

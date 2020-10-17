@@ -166,7 +166,7 @@ R 2d 2 are linear projection parameters .
 Here the i - th row of ?
 rep-resents the proportion of information that will be assigned to the neighbors of entity i.
 Note that the information flow in our model is different from most previous GATs .
-In dynamic graph attention , each node sums over its column , which forms anew entity state containing the total information it received from the neighbors :
+In dynamic graph attention , each node sums over its column , which forms a new entity state containing the total information it received from the neighbors :
 where
 Bi is the set of neighbors of entity i .
 Then we obtain the updated entity embeddings
@@ -273,7 +273,7 @@ However , the BERT NER model still keeps comparative and even better performance
 Thus the entity graph built from the BERT NER model is better than the previous version .
 Supporting Fact 1 : " Farrukhzad Khosrau
 V was briefly king of the Sasanian Empire from March 631 to ... "
-Supporting Fact 2 : " The Sasanian Empire , which succeeded the Parthian Empire , was recognised as ... the Roman - Byzantine Empire , fora period of more than 400 years . "
+Supporting Fact 2 : " The Sasanian Empire , which succeeded the Parthian Empire , was recognised as ... the Roman - Byzantine Empire , for a period of more than 400 years . "
 Q2 : From March 631 to April 631 , Farrukhzad Khosrau
 V was the king of an empire that succeeded which empire ?
 Answer : the Parthian Empire Prediction : Parthian Empire Top 1 Reasoning Chain : n / a Supporting Fact 1 : " Barrack buster is the colloquial name given to several improvised mortars , developed in the 1990s by the engineering group of the Provisional Irish Republican Army ( IRA : Case study of three samples in the development set .

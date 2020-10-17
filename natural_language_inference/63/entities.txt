@@ -1,7 +1,6 @@
 161	11	14	add
 161	15	19	ELMo
 161	126	128	to
-161	126	128	to
 161	26	28	is
 162	5	11	helped
 162	12	38	our model ( MAMCN + ELMo )
@@ -9,6 +8,7 @@
 162	50	52	F1
 162	56	61	85.13
 162	66	68	EM
+162	53	55	to
 162	72	77	77.44
 162	89	93	best
 162	94	99	among
@@ -21,7 +21,7 @@
 168	41	56	embedding block
 168	57	63	except
 168	68	84	controller layer
-168	47	49	in
+168	85	87	in
 168	88	119	our model ( MAMCN + ELMo + DC )
 169	3	10	achieve
 169	15	43	state of the art performance
@@ -36,7 +36,7 @@
 138	36	44	tokenize
 138	49	58	documents
 138	59	64	using
-138	59	77	using NLTK toolkit
+138	65	77	NLTK toolkit
 138	82	92	substitute
 138	93	98	words
 138	99	103	with
@@ -49,7 +49,7 @@
 139	72	77	zeros
 139	80	81	4
 139	82	92	read heads
-139	34	35	1
+139	97	98	1
 139	99	109	write head
 140	4	13	optimizer
 140	14	16	is
@@ -73,6 +73,9 @@
 142	64	71	weights
 142	72	76	with
 142	77	88	0.001 decay
+142	93	96	use
+142	103	111	averages
+142	112	114	at
 142	115	124	test time
 24	18	23	build
 24	26	34	QA model
@@ -93,12 +96,12 @@
 150	88	118	our proposed memory controller
 150	119	124	gives
 150	125	153	more performance improvement
-150	133	136	for
-150	133	136	for
 151	3	10	achieve
 151	11	32	68.13 EM and 70.32 F1
+151	33	36	for
 151	37	52	short documents
 151	57	72	63.44 and 65.19
+151	73	76	for
 151	77	91	long documents
 152	0	8	TriviaQA
 156	0	9	Our model

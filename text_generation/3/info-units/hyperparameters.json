@@ -11,12 +11,10 @@
           "from sentence" : "For dialogue generation , we set the maximum length to 15 words for each generated sentence ."
         },
         "hidden size" : {
-          "has" : "512", 
-          "from sentence" : "Based on the performance on the validation set , we set the hidden size to 512 , embedding size to 64 and vocabulary size to 40 K for baseline models and the proposed model ."
+          "has" : "512"
         },
         "embedding size" : {
-          "has" : "64",
-          "from sentence" : "Based on the performance on the validation set , we set the hidden size to 512 , embedding size to 64 and vocabulary size to 40 K for baseline models and the proposed model ."
+          "has" : "64"
         },
         "vocabulary size" : {
           "has" : "40 K",
@@ -34,8 +32,7 @@
           "from sentence" : "The parameters are updated by the Adam algorithm ( Kingma and Ba , 2014 ) and initialized by sampling from the uniform distribution ( [? 0.1 , 0.1 ] ) ."
         },
         "initial learning rate" : {
-          "has" : "0.002",
-          "from sentence" : "The initial learning rate is 0.002 and the model is trained in minibatches with a batch size of 256 . ? 1 and ?"          
+          "has" : "0.002"
         },
         "model" : {
           "trained in" : {

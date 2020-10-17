@@ -1,7 +1,7 @@
 208	3	9	notice
 208	15	26	reattention
 208	31	46	more influences
-208	24	26	on
+208	47	49	on
 208	50	58	EM score
 208	65	69	DCRL
 208	70	89	contributes more to
@@ -9,7 +9,7 @@
 208	106	119	removing both
 208	128	138	results in
 208	139	149	huge drops
-208	24	26	on
+208	150	152	on
 208	153	165	both metrics
 209	0	9	Replacing
 209	10	14	DCRL
@@ -21,6 +21,7 @@
 209	59	70	performance
 209	71	73	on
 209	74	86	both metrics
+210	10	16	relace
 210	21	47	default attention function
 210	48	52	with
 210	57	94	dot product : f ( u , v ) = u v ( 5 )
@@ -32,7 +33,7 @@
 212	35	43	leads to
 212	44	69	some performance declines
 212	76	97	heuristic subtraction
-212	28	30	is
+212	98	100	is
 212	101	115	more effective
 212	116	120	than
 212	121	135	multiplication
@@ -57,11 +58,6 @@
 190	51	54	for
 190	60	80	ML and DCRL training
 191	4	26	initial learning rates
-191	27	30	are
-191	31	48	0.0008 and 0.0001
-191	72	78	halved
-191	79	95	whenever meeting
-191	98	111	bad iteration
 193	0	15	Word embeddings
 193	16	22	remain
 193	23	28	fixed
@@ -73,10 +69,10 @@
 195	56	58	is
 195	59	61	50
 195	68	84	main hidden size
-195	56	58	is
+195	85	87	is
 195	88	91	100
 195	102	116	hyperparameter
-195	56	58	is
+195	119	121	is
 195	122	123	3
 192	55	65	to prevent
 192	66	77	overfitting
@@ -99,10 +95,9 @@
 27	66	70	that
 27	71	91	temporally memorizes
 27	92	107	past attentions
-27	112	121	uses them
-27	125	131	refine
+27	122	131	to refine
 27	132	150	current attentions
-27	128	130	in
+27	151	153	in
 27	156	190	multi-round alignment architecture
 28	4	15	computation
 28	19	27	based on
@@ -113,7 +108,7 @@
 28	92	102	attentions
 28	103	108	about
 28	109	119	same texts
-28	61	64	are
+28	120	123	are
 28	124	141	highly overlapped
 28	148	150	be
 28	151	163	less similar
@@ -129,8 +124,8 @@
 29	113	139	relatively more distracted
 29	146	157	to focus on
 29	158	169	new regions
-29	53	55	if
-29	56	71	past attentions
+29	170	172	if
+29	173	188	past attentions
 29	189	192	are
 29	193	214	not overlapped at all
 30	31	37	extend
@@ -148,13 +143,13 @@
 198	30	45	hidden test set
 198	46	48	of
 198	49	54	SQuAD
-198	46	48	of
-198	46	48	of
 200	14	26	R.M - Reader
 200	27	35	achieves
 200	39	47	EM score
+200	48	50	of
 200	51	57	79.5 %
 200	62	70	F1 score
+200	71	73	of
 200	74	80	86.6 %
 204	29	52	comfortably outperforms
 204	57	72	previous models

@@ -6,9 +6,9 @@
 164	67	69	of
 164	74	80	target
 164	103	116	concatenation
-164	67	69	of
+164	117	119	of
 164	120	139	two representations
-164	26	33	used to
+164	143	150	used to
 164	151	158	predict
 164	163	168	label
 165	0	6	MemNet
@@ -16,11 +16,11 @@
 165	21	40	attention mechanism
 165	41	45	over
 165	50	64	word embedding
-165	41	45	over
+165	65	69	over
 165	70	85	multiple rounds
 165	86	98	to aggregate
 165	103	114	information
-165	61	63	in
+165	115	117	in
 165	122	130	sentence
 166	0	3	IAN
 166	10	16	adopts
@@ -50,15 +50,15 @@
 151	51	53	is
 151	54	57	100
 151	66	81	latent variable
-151	11	13	of
+151	85	87	of
 151	88	95	size 50
 151	104	120	number of layers
 151	121	128	of both
 151	129	147	Transformer blocks
-151	51	53	is
+151	82	84	is
 151	151	152	2
 151	159	188	number of selfattention heads
-151	51	53	is
+151	148	150	is
 151	192	193	8
 158	19	28	KL weight
 158	32	41	set to be
@@ -84,11 +84,11 @@
 33	17	42	aspect sentiment polarity
 33	43	45	of
 33	50	64	unlabeled data
-33	17	19	as
+33	65	67	as
 33	72	96	discrete latent variable
 33	103	108	model
 33	109	127	implicitly induces
-33	24	42	sentiment polarity
+33	132	150	sentiment polarity
 33	151	154	via
 33	159	180	variational inference
 38	14	27	by separating
@@ -98,10 +98,9 @@
 38	75	85	classifier
 38	86	93	becomes
 38	97	115	independent module
-38	24	26	in
+38	116	118	in
 38	119	132	our framework
 2	28	60	Aspect - term Sentiment Analysis
-4	0	41	Aspect - term sentiment analysis ( ATSA )
 13	70	111	aspect - term sentiment analysis ( ATSA )
 13	116	161	aspect - category sentiment analysis ( ACSA )
 14	0	4	ACSA
@@ -109,7 +108,7 @@
 197	15	21	ASVAET
 197	25	40	able to improve
 197	41	63	supervised performance
-197	55	58	for
+197	77	80	for
 197	81	96	all classifiers
 201	11	22	outperforms
 201	27	58	compared semisupervised methods
@@ -121,7 +120,7 @@
 198	21	34	test accuracy
 198	42	53	improved by
 198	54	63	about 2 %
-198	51	53	by
+198	64	66	by
 198	71	77	TSSVAE
 200	0	13	Compared with
 200	18	51	other two semi-supervised methods

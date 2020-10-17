@@ -11,5 +11,5 @@
 (distributed matching algorithm||with||two simple word matching features)
 (Model||train||supervised model)
 (supervised model||to learn||semantic matching)
-(semantic matching||Assuming set of||pre-trained semantic word embeddings)
+(semantic matching||Assuming a set of||pre-trained semantic word embeddings)
 (semantic matching||between||question and answer pairs)

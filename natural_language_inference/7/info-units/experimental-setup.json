@@ -31,8 +31,7 @@ These embeddings cover 200 k words and all out of vocabulary ( OOV ) words are p
       "couple" : {
         "input and forget gates" : {
           "in" : "our LSTMs"
-        },
-        "from sentence" : "We couple the input and forget gates in our LSTMs , as described in , and we use a single dropout mask to apply dropout across all LSTM time - steps as proposed by ."
+        }
       },
       "use" : {
         "single dropout mask" : {
@@ -59,16 +58,13 @@ These embeddings cover 200 k words and all out of vocabulary ( OOV ) words are p
           "from sentence" : "Answer candidates are limited to spans with at most 30 words ."
         },
         "best model" : {
-          "uses" : "50d LSTM states",
-          "from sentence" : "The best model uses 50d LSTM states ; two - layer BiLSTMs for the span encoder and the passage - independent question representation ; dropout of 0.1 throughout ; and a learning rate decay of 5 % every 10 k steps ."
+          "uses" : "50d LSTM states"
         },
         "two - layer BiLSTMs" : {
-          "for" : ["span encoder", "passage - independent question representation"],
-          "from sentence" : "The best model uses 50d LSTM states ; two - layer BiLSTMs for the span encoder and the passage - independent question representation ; dropout of 0.1 throughout ; and a learning rate decay of 5 % every 10 k steps ."
+          "for" : ["span encoder", "passage - independent question representation"]
         },
         "dropout" : {
-          "of" : "0.1",
-          "from sentence" : "The best model uses 50d LSTM states ; two - layer BiLSTMs for the span encoder and the passage - independent question representation ; dropout of 0.1 throughout ; and a learning rate decay of 5 % every 10 k steps ."
+          "of" : "0.1"
         },
         "learning rate decay" : {
           "of" : "5 % every 10 k steps",

@@ -8,7 +8,9 @@
               "gives" : {
                 "significant accuracy improvements" : {
                   "over" : ["BiLSTM - CRF", "BiLSTM- softmax"],
-                  "from sentence" : "BiLSTM - LAN gives significant accuracy improvements over both BiLSTM - CRF and BiLSTM- softmax ( p < 0.01 ) , which is consistent with observations on development experiments ."
+                  "from sentence" : "WSJ . shows the final POS tagging results on WSJ .
+BiLSTM - LAN gives significant accuracy improvements over both BiLSTM - CRF and BiLSTM- softmax ( p < 0.01 ) , which is consistent with observations on development experiments ."
+
                 }
               }
             }            
@@ -17,12 +19,14 @@
         "Universal Dependencies ( UD ) v 2.2" : {
           "has" : {
             "Our model" : {
-              "ourperforms" : {
+              "outperforms" : {
                 "all the baselines" : {
                   "on" : "all the languages"
                 }
               },
-              "from sentence" : "Our model outperforms all the baselines on all the languages ."
+              "from sentence" : "Universal Dependencies ( UD ) v 2.2 . We design a multilingual experiment to compare BiLSTMsoftmax , BiLSTM - CRF ( strictly following 1 , which is the state - of - theart on multi-lingual POS tagging ) and BiLSTM - LAN .
+Our model outperforms all the baselines on all the languages ."
+
             },
             "improvements" : {
               "are" : {
@@ -51,8 +55,11 @@
             "BiLSTM - LAN" : {
               "has" : {
                 "significantly outperforms" : {
-                  "has" : ["BiLSTM - CRF", {"from sentence" : "BiLSTM - LAN also significantly outperforms BiLSTM - CRF by 1.17 F1-score ( p < 0.01 ) . CCGBank ."}],
-                  "by" : ["1.17 F1-score", {"from sentence" : "BiLSTM - LAN also significantly outperforms BiLSTM - CRF by 1.17 F1-score ( p < 0.01 ) . CCGBank ."}],
+                  "has" : "BiLSTM - CRF",
+                  "by" : ["1.17 F1-score", {"from sentence" : "OntoNotes 5.0 . In NER , BiLSTM - CRF is widely used , because local dependencies between neighboring labels relatively more important that POS tagging and CCG supertagging .
+				  BiLSTM - LAN also significantly outperforms BiLSTM - CRF by 1.17 F1-score ( p < 0.01 ) . CCGBank ."
+				  }],
+				  
                   "both" : {
                     "BiLSTMsoftmax and BiLSTM - CRF ( p < 0.01 )" : {
                       "showing" : {

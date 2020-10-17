@@ -3,8 +3,8 @@ Structural Scaffolds for Citation Intent Classification in Scientific Publicatio
 abstract
 Identifying the intent of a citation in scientific papers ( e.g. , background information , use of methods , comparing results ) is critical for machine reading of individual publications and automated analysis of the scientific literature .
 We propose structural scaffolds , a multitask model to incorporate structural information of scientific papers into citations for effective classification of citation intents .
-Our model achieves anew state - of the - art on an existing ACL anthology dataset ( ACL - ARC ) with a 13.3 % absolute increase in F1 score , without relying on external linguistic resources or hand - engineered features as done in existing methods .
-In addition , we introduce anew dataset of citation intents ( Sci - Cite ) which is more than five times larger and covers multiple scientific domains compared with existing datasets .
+Our model achieves a new state - of the - art on an existing ACL anthology dataset ( ACL - ARC ) with a 13.3 % absolute increase in F1 score , without relying on external linguistic resources or hand - engineered features as done in existing methods .
+In addition , we introduce a new dataset of citation intents ( Sci - Cite ) which is more than five times larger and covers multiple scientific domains compared with existing datasets .
 Our code and data are available at : https://github.com/ allenai/scicite .
 Introduction
 Citations play a unique role in scientific discourse and are crucial for understanding and analyzing scientific work .
@@ -24,7 +24,7 @@ To this end , we propose a neural multitask learning framework to incorporate kn
 In particular , we propose two auxiliary tasks as structural scaffolds to improve citation intent prediction : 1 ( 1 ) predicting the section title in which the citation occurs and ( 2 ) predicting whether a sentence needs a citation .
 Unlike the primary task of citation intent prediction , it is easy to collect large amounts of training data for scaffold tasks since the labels naturally occur in the process of writing a paper and thus , there is no need for manual annotation .
 On two datasets , we show that the proposed neural scaffold model outperforms existing methods by large margins .
-Our contributions are : ( i ) we propose a neural scaffold framework for citation intent classification to incorporate into citations knowledge from structure of scientific papers ; ( ii ) we achieve anew state - of - the - art of 67.9 % F1 on the ACL - ARC citations benchmark , an absolute 13.3 % increase over the previous state - of - the - art ; and ( iii ) we introduce SciCite , anew dataset of citation intents which is at least five times as large as existing datasets and covers a variety of scientific domains .
+Our contributions are : ( i ) we propose a neural scaffold framework for citation intent classification to incorporate into citations knowledge from structure of scientific papers ; ( ii ) we achieve a new state - of - the - art of 67.9 % F1 on the ACL - ARC citations benchmark , an absolute 13.3 % increase over the previous state - of - the - art ; and ( iii ) we introduce SciCite , a new dataset of citation intents which is at least five times as large as existing datasets and covers a variety of scientific domains .
 Model
 We propose a neural multitask learning framework for classification of citation intents .
 In particular , we introduce and use two structural scaffolds , auxiliary tasks related to the structure of scientific papers .
@@ -62,13 +62,13 @@ The intent of a citation could be relevant to the section of the paper in which 
 For example , method - related citations are more likely to appear in the methods section .
 Therefore , we use the section title prediction as a scaffold for predicting citation intents .
 Note that this scaffold task is different than simply adding section title as an additional feature in the input .
-We are using the section titles from a larger set of data than training data for the main task as a proxy to learn linguistic patterns that are helpful for citation intents .
+We are using the section titles from a larger set of data than training data for the main task as a proxy to learn linguistic patterns thatare helpful for citation intents .
 In particular , we leverage a large number of scientific papers for which the section information is known for each citation to automatically generate large amounts of training data for this scaffold task .
 5
 Multitask formulation .
 Multitask learning as defined by is an approach to inductive transfer learning that improves generalization by using the domain information contained in the training signals of related tasks as an inductive bias .
 It requires the model to have at least some sharable parameters between the tasks .
-Ina general setting in our model , we have a main task T ask ( 1 ) and n ? 1 auxiliary tasks T ask .
+In a general setting in our model , we have a main task T ask ( 1 ) and n ? 1 auxiliary tasks T ask .
 As shown in , each scaffold task will have its task - specific parameters for effective classifica-tion and the parameters for the lower layers of the network are shared across tasks .
 We use a Multi Layer Perceptron ( MLP ) for each task and then a softmax layer to obtain prediction probabilites .
 In particular , given the vector z we pass it ton MLPs and obtain n output vectors y ( i ) :
@@ -105,7 +105,7 @@ Comparison of the paper 's results / findings with the results / findings of oth
 Weighted measurements were superior to T2 - weighted contrast imaging which was in accordance with former studies Similar results to our study were reported in the study of Lee et al ( 2010 ) .
 the task of citation intent classification .
 We use the most recent and comprehensive ( ACL - ARC citations dataset ) by as a benchmark dataset to compare the performance of our model to previous work .
-In addition , to address the limited scope and size of this dataset , we introduce SciCite , anew dataset of citation intents that addresses multiple scientific domains and is more than five times larger than ACL - ARC .
+In addition , to address the limited scope and size of this dataset , we introduce SciCite , a new dataset of citation intents that addresses multiple scientific domains and is more than five times larger than ACL - ARC .
 Below is a description of both datasets .
 ACL - ARC citations dataset
 ACL - ARC is a dataset of citation intents released by .
@@ -114,13 +114,13 @@ The data was split into three standard stratified sets of train , validation , a
 Each citation unit includes information about the immediate citation context , surrounding context , as well as information about the citing and cited paper .
 The data includes six intent categories outlined in .
 SciCite dataset
-Most existing datasets contain citation categories that are too fine - grained .
+Most existing datasets contain citation categories thatare too fine - grained .
 Some of these intent categories are very rare or not useful in meta analysis of scientific publications .
 Since some of these fine - grained categories only cover a minimal percentage of all citations , it is difficult to use them to gain insights or draw conclusions on impacts of papers .
 Furthermore , these datasets are usually domain - specific and are relatively small ( less than 2,000 annotated citations ) .
 To address these limitations , we introduce Sci - Cite , a new dataset of citation intents that is significantly larger , more coarse - grained and generaldomain compared with existing datasets .
 Through examination of citation intents , we found out many of the categories defined in previous work such as motivation , extension or future work , can be considered as background information providing more context for the current research topic .
-More interesting intent categories area direct use of a method or comparison of results .
+More interesting intent categories are a direct use of a method or comparison of results .
 Therefore , our dataset provides a concise annotation scheme that is useful for navigating research topics and machine reading of scientific papers .
 We consider three intent categories outlined in : BACK - GROUND , METHOD and RESULTCOMPARISON .
 Below we describe data collection and annotation details .
@@ -164,19 +164,18 @@ Citation worthiness saffold : ? 2 = 0.08 , ? 3 = 0 , section title scaffold : ? 
 Batch size is 8 for ACL - ARC dataset and 32 for SciCite dataset ( recall that SciCite is larger than ACL - ARC ) .
 We use Beaker 12 for running the experiments .
 On the smaller dataset , our best model takes approximately 30 minutes per epoch to train ( training time without ELMo is significantly faster ) .
-It is known that multiple runs of probabilistic deep learning models can have variance in overall scores .
-We control this by setting random - number generator seeds ; the reported overall results are average of multiple runs with different random seeds .
+It is known that multiple runs of probabilistic deep learning models can have variance in over all scores .
+We control this by setting random - number generator seeds ; the reported over all results are average of multiple runs with different random seeds .
 To facilitate reproducibility , we release our code , data , and trained models .
 14
 Baselines
 We compare our results to several baselines including the model with state - of - the - art performance on the ACL - ARC dataset .
-BiLSTM
-Attention ( with and without ELMo ) .
+BiLSTM Attention ( with and without ELMo ) .
 This baseline uses a similar architecture to our proposed neural multitask learning framework , except that it only optimizes the network for the main loss regarding the citation intent classification ( L 1 ) and does not include the structural scaffolds .
 We experiment with two variants of this model : with and without using the contextualized word vector representations ( ELMo ) of .
 This baseline is useful for evaluating the effect of adding scaffolds in controlled experiments .
 leave - one - out cross validation in our experiments since it is impractical to re-train each variant of our deep learning models thousands of times .
-Therefore , we opted fora standard setup of stratified train / validation / test data splits with 85 % data used for training and the rest equally split between validation and test .
+Therefore , we opted for a standard setup of stratified train / validation / test data splits with 85 % data used for training and the rest equally split between validation and test .
 Results
 Our main results for the ACL - ARC dataset is shown in .
 We observe that our scaffold - enhanced models achieve clear improvements over the state - of - the - art approach on this task .
@@ -235,16 +234,16 @@ And similarly in the last row the instance seems ambiguous without accessing to 
 Similarly as shown in two of FUTUREWORK labels are wrongly classified .
 One of them is illustrated in the forth row of where perhaps additional context could have helped the model in identifying the correct label .
 One possible way to prevent this type of errors , is to provide the model with an additional input , modeling the extended surrounding context .
-We experimented with encoding the extended surrounding context using a BiLSTM and concatenating it with the main citation context vector ( z ) , but it resulted in a large decline in overall performance likely due to the overall noise introduced by the additional context .
+We experimented with encoding the extended surrounding context using a BiLSTM and concatenating it with the main citation context vector ( z ) , but it resulted in a large decline in over all performance likely due to the over all noise introduced by the additional context .
 A possible future work is to investigate alternative effective approaches for incorporating the surrounding extended context .
 BACKGROUND USE
 Related Work
 There is a large body of work studying the intent of citations and devising categorization systems .
-Most of these efforts provide citation categories that are too fine - grained , some of which rarely occur in papers .
+Most of these efforts provide citation categories thatare too fine - grained , some of which rarely occur in papers .
 Therefore , they are hardly useful for automated analysis of scientific publications .
 To address these problems and to unify previous efforts , in a recent work , proposed a six category system for citation intents .
 In this work , we focus on two schemes : ( 1 ) the scheme proposed by and an additional , more coarse - grained generalpurpose category system that we propose ( details in 3 ) .
-Unlike other schemes that are domainspecific , our scheme is general and naturally fits in scientific discourse in multiple domains .
+Unlike other schemes thatare domainspecific , our scheme is general and naturally fits in scientific discourse in multiple domains .
 Early works in automated citation intent classification were based on rule - based systems ( e.g. , ) .
 Later , machine learning methods based on linguistic patterns and other hand - engineered features from citation context were found to be effective .
 For example , proposed use of " cue phrases " , a set of expressions that talk about the act of presenting research in a paper .
@@ -259,9 +258,9 @@ Conclusions and future work
 In this work , we show that structural properties related to scientific discourse can be effectively used to inform citation intent classification .
 We propose a multitask learning framework with two auxiliary tasks ( predicting section titles and citation worthiness ) as two scaffolds related to the main task of citation intent prediction .
 Our model achieves state - of - the - art result ( F1 score of 67.9 % ) on the ACL - ARC dataset with 13.3 absolute increase over the best previous results .
-We additionally introduce SciCite , anew large dataset of citation intents and also show the effectiveness of our model on this dataset .
-Our dataset , unlike existing datasets that are designed based on a specific domain , is more general and fits in scientific discourse from multiple scientific domains .
-We demonstrate that carefully chosen auxiliary tasks that are inherently relevant to a main task can be leveraged to improve the performance on the main task .
+We additionally introduce SciCite , a new large dataset of citation intents and also show the effectiveness of our model on this dataset .
+Our dataset , unlike existing datasets thatare designed based on a specific domain , is more general and fits in scientific discourse from multiple scientific domains .
+We demonstrate that carefully chosen auxiliary tasks thatare inherently relevant to a main task can be leveraged to improve the performance on the main task .
 An interesting line of future work is to explore the design of such tasks or explore the properties or similarities between the auxiliary and the main tasks .
 Another relevant line of work is adapting our model to other domains containing documents with similar linked structured such as Wikipedia articles .
 Future work may benefit from replacing ELMo with other types of contextualized representations such as BERT in our scaffold model .

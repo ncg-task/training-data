@@ -24,12 +24,10 @@ This is to train the more universally usable sentence encoder ."
           "from sentence" : "Layer normalization was applied to all linear projections of masked multihead attention , fusion gate , and multi-dimensional attention ."
         },
         "dropout probability" : {
-          "set to" : "0.1",
-          "from sentence" : "We set h = 5 , ? = 1.5 in the masked multi-head attention , and the dropout probability was set to 0.1 ."
+          "set to" : "0.1"
         },
         "Batch size" : {
-          "was" : "64",
-          "from sentence" : "Batch size was 64 , and the model was trained with Adam optimizer , with a learning rate of 0.001 ."
+          "was" : "64"
         },
         "model" : {
           "trained with" : {

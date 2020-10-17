@@ -29,12 +29,12 @@ Complicated tasks such as natural language inference could well involve both , w
 In this paper , we are interested in exploring this within the neural network frameworks , with the presence of relatively large training data .
 We show that by explicitly encoding parsing information with recursive networks in both local inference modeling and inference composition and by incorporating it into our framework , we achieve additional improvement , increasing the performance to a new state of the art with an 88.6 % accuracy .
 Related Work
-Early work on natural language inference has been performed on rather small datasets with more conventional methods ( refer to MacCartney ( 2009 ) fora good literature survey ) , which includes a large bulk of work on recognizing textual entailment , such as , among others .
+Early work on natural language inference has been performed on rather small datasets with more conventional methods ( refer to MacCartney ( 2009 ) for a good literature survey ) , which includes a large bulk of work on recognizing textual entailment , such as , among others .
 More recently , made available the SNLI dataset with 570,000 human annotated sentence pairs .
 They also experimented with simple classification models as well as simple neural networks that encode the premise and hypothesis independently .
 proposed neural attention - based models for NLI , which captured the attention information .
 In general , attention based models have been shown to be effective in a wide range of tasks , including machine translation , speech recognition , image caption , and text summarization , among others .
-For NLI , the idea allows neural models to pay attention to specific areas of the sentences .
+For NLI , the idea allows neural models to pay attention to specific are as of the sentences .
 A variety of more advanced networks have been developed since then .
 Among them , more relevant to ours are the approaches proposed by and , which are among the best performing models .
 propose a relatively simple but very effective decomposable model .
@@ -76,11 +76,11 @@ where ?
 is the sigmoid function , is the elementwise multiplication of two vectors , and all W ?
 R dl , U ?
 R dd are weight matrices to be learned .
-In the current input encoding layer , x t is used to encode a word embedding fora leaf node .
+In the current input encoding layer , x t is used to encode a word embedding for a leaf node .
 Since a non-leaf node does not correspond to a specific word , we use a special vector x t as its input , which is like an unknown word .
 However , in the inference composition layer that we discuss later , the goal of using tree - LSTM is very different ; the input x twill be very different as well - it will encode local inference information and will have values at all tree nodes .
 Local Inference Modeling
-Modeling local subsentential inference between a premise and hypothesis is the basic component for determining the overall inference between these two statements .
+Modeling local subsentential inference between a premise and hypothesis is the basic component for determining the over all inference between these two statements .
 To closely examine local inference , we explore both the sequential and syntactic tree models that have been discussed above .
 The former helps collect local inference for words and their context , and the tree LSTM helps collect local information between ( linguistic ) phrases and clauses .
 Locality of inference Modeling local inference needs to employ some forms of hard or soft alignment to associate the relevant subcomponents between a premise and a hypothesis .
@@ -90,7 +90,7 @@ decomposed this process : the word sequence of the premise ( or hypothesis ) is 
 While their basic framework is very effective , achieving one of the previous best results , using a pre-trained word embedding by itself does not automatically consider the context around a word in NLI .
 did take into account the word order and context information through an optional distance - sensitive intra-sentence attention .
 In this paper , we argue for leveraging attention over the bidirectional sequential encoding of the input , as discussed above .
-We will show that this plays an important role in achieving our best results , and the intra-sentence attention used by actually does not further improve over our model , while the overall framework they proposed is very effective .
+We will show that this plays an important role in achieving our best results , and the intra-sentence attention used by actually does not further improve over our model , while the over all framework they proposed is very effective .
 Our soft alignment layer computes the attention weights as the similarity of a hidden state tuple <?
 i , b j > between a premise and a hypothesis with Equation .
 We did study more complicated relationships between ?
@@ -125,18 +125,18 @@ This process could be regarded as a special case of modeling some high - order i
 Along this direction , we have also further modeled the interaction by feeding the tuples into feedforward neural networks and added the top layer hidden states to the above concatenation .
 We found that it does not further help the inference accuracy on the heldout dataset .
 Inference Composition
-To determine the overall inference relationship between a premise and hypothesis , we explore a composition layer to compose the enhanced local inference information ma and m b .
+To determine the over all inference relationship between a premise and hypothesis , we explore a composition layer to compose the enhanced local inference information ma and m b .
 We perform the composition sequentially or in its parse context using BiLSTM and tree - LSTM , respectively .
 The composition layer
 In our sequential inference model , we keep using BiLSTM to compose local inference information sequentially .
 The formulas for BiLSTM are similar to those in Equations and in their forms so we skip the details , but the aim is very different here - they are used to capture local inference information ma and m band their context here for inference composition .
 In the tree composition , the high - level formulas of how a tree node is updated to compose local inference is as follows :
-We propose to control model complexity in this layer , since the concatenation we described above to compute ma and m b can significantly increase the overall parameter size to potentially overfit the models .
+We propose to control model complexity in this layer , since the concatenation we described above to compute ma and m b can significantly increase the over all parameter size to potentially overfit the models .
 We propose to use a mapping F as in Equation and .
 More specifically , we use a 1 - layer feedforward neural network with the ReLU activation .
 This function is also applied to BiLSTM in our sequential inference composition .
 Pooling
-Our inference model converts the resulting vectors obtained above to a fixed - length vector with pooling and feeds it to the final classifier to determine the overall inference relationship .
+Our inference model converts the resulting vectors obtained above to a fixed - length vector with pooling and feeds it to the final classifier to determine the over all inference relationship .
 We consider that summation could be sensitive to the sequence length and hence less robust .
 We instead suggest the following strategy : compute both average and max pooling , and concatenate all these vectors to form the final fixed length vector v.
 Our experiments show that this leads to significantly better results than summation .
@@ -151,7 +151,7 @@ Overall inference models
 Our model can be based only on the sequential networks by removing all tree components and we call it Enhanced Sequential Inference Model ( ESIM ) ( see the left part of ) .
 We will show that ESIM outperforms all previous results .
 We will also encode parse information with tree LSTMs in multiple layers as described ( see the right side of .
-We train this model and incorporate it into ESIM by averaging the predicted probabilities to get the final label fora premise - hypothesis pair .
+We train this model and incorporate it into ESIM by averaging the predicted probabilities to get the final label for a premise - hypothesis pair .
 We will show that parsing information complements very well with ESIM and further improves the performance , and we call the final model Hybrid Inference Model ( HIM ) .
 Experimental Setup
 Data The Stanford Natural Language Inference ( SNLI ) corpus focuses on three basic relationships between a premise and a potential hypothesis : the premise entails the hypothesis ( entailment ) , they contradict each other ( contradiction ) , or they are not related ( neutral ) .
@@ -198,7 +198,7 @@ This shows that syntactic tree - LSTMs complement well with ESIM .
 Model
 Train Test : Ablation performance of the models .
 Ablation analysis
-We further analyze the major components that are of importance to help us achieve good performance .
+We further analyze the major components thatare of importance to help us achieve good performance .
 From the best model , we first replace the syntactic tree - LSTM with the full tree - LSTM without encoding syntactic parse information .
 More specifically , two adjacent words in a sentence are merged to form a parent node , and this process continues and results in a full binary tree , where padding nodes are inserted when there are no enough leaves to form a full tree .
 Each tree node is implemented with a tree - LSTM block same as in model .

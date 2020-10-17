@@ -5,14 +5,14 @@ Many natural language processing tasks solely rely on sparse dependencies betwee
 Soft attention mechanisms show promising performance in modeling local / global dependencies by soft probabilities between every two tokens , but they are not effective and efficient when applied to long sentences .
 By contrast , hard attention mechanisms directly select a subset of tokens but are difficult and inefficient to train due to their combinatorial nature .
 In this paper , we integrate both soft and hard attention into one context fusion model , " reinforced self - attention ( ReSA ) " , for the mutual benefit of each other .
-In ReSA , a hard attention trims a sequence fora soft self - attention to process , while the soft attention feeds reward signals back to facilitate the training of the hard one .
+In ReSA , a hard attention trims a sequence for a soft self - attention to process , while the soft attention feeds reward signals back to facilitate the training of the hard one .
 For this purpose , we develop a novel hard attention called " reinforced sequence sampling ( RSS ) " , selecting tokens in parallel and trained via policy gradient .
 Using two RSS modules , ReSA efficiently extracts the sparse dependencies between each pair of selected tokens .
 We finally propose an RNN / CNN - free sentence - encoding model , " reinforced self - attention network ( ReSAN ) " , solely based on ReSA .
 It achieves state - of - the - art performance on both Stanford Natural Language Inference ( SNLI ) and Sentences Involving Compositional Knowledge ( SICK ) datasets .
 Introduction
 Equipping deep neural networks ( DNN ) with attention mechanisms provides an effective and parallelizable approach for context fusion and sequence compression .
-It achieves compelling time efficiency and state - of - the - art performance in abroad range of natural language processing ( NLP ) tasks , such as neural machine translation , dialogue generation , machine reading / comprehension , natural language inference , sentiment classification , etc .
+It achieves compelling time efficiency and state - of - the - art performance in a broad range of natural language processing ( NLP ) tasks , such as neural machine translation , dialogue generation , machine reading / comprehension , natural language inference , sentiment classification , etc .
 Recently , some neural nets based solely on attention , especially self - attention , outperform traditional recurrent or convolutional neural networks on NLP tasks , such as machine translation and sentence embedding , which further demonstrates the power of attention mechanisms in capturing contextual dependencies .
 Soft and hard attention are the two main types of attention mechanisms .
 In soft attention , a categorical distribution is calculated over a sequence of elements .
@@ -27,8 +27,8 @@ Hard attention is well suited to these tasks , because it overcomes the weakness
 However , hard attention mechanism is time - inefficient with sequential sampling and non-differentiable by virtue of their combinatorial nature .
 Thus , it can not be optimized through back - propagation and more typically rely on policy gradient , e.g. , REINFORCE .
 As a result , training a hard attention model is usually an inefficient process - some even find convergence difficult - and combining them with other neural nets in an end - to - end manner is problematic .
-However , soft and hard attention mechanisms might be integrated into a single model to benefit each other in overcoming their inherent disadvantages , and this notion motivates our study .
-Specifically , a hard attention mechanism is used to encode rich structural information about the contextual dependencies and trims along sequence into a much shorter one fora soft attention mechanism to process .
+However , soft and hard attention mechanisms might be integrated into a single model to benefit each other in overcoming their inherent dis advantages , and this notion motivates our study .
+Specifically , a hard attention mechanism is used to encode rich structural information about the contextual dependencies and trims along sequence into a much shorter one for a soft attention mechanism to process .
 Conversely , the soft one is used to provide a stable environment and strong reward signals to help in training the hard one .
 Such method would improve both the prediction quality of the soft attention mechanism and the trainability of the hard attention mechanism , while boosting the ability to model contextual dependencies .
 To the best of our knowledge , the idea of combining hard and soft attention within a model has not yet been studied .
@@ -50,7 +50,7 @@ Given an input sequence x = [ x 1 , . . . , x n ] ?
 R den ( x i ?
 R de denotes the embedded vector of i -th element ) , and the vector representation of a query q , an vanilla attention mechanism uses a parameterized compatibility function f ( x i , q) to computes an alignment score between q and each token x i as the attention of q to xi .
 A softmax function is then applied to the alignment scores a ?
-Rn overall tokens to generate a categorical distribution p ( v|x , q ) , where v = i implies that token x i is selected according to its relevance to query q .
+Rn over all tokens to generate a categorical distribution p ( v|x , q ) , where v = i implies that token x i is selected according to its relevance to query q .
 This can be formally written as
 ( 1 ) p ( v|x , q ) = softmax ( a ) .
 ( 2 )
@@ -103,7 +103,7 @@ Therefore , we formulate learning the RSS parameter ?
 r as a reinforcement learning problem , and apply the policy gradient method .
 Further details on the model training are presented in Section 4 .
 Reinforced Self - Attention ( ReSA )
-The fundamental idea behind this paper is that the hard and soft attention mechanisms can mutually benefit each other to overcome their inherent disadvantages via interaction within an integrated model .
+The fundamental idea behind this paper is that the hard and soft attention mechanisms can mutually benefit each other to overcome their inherent dis advantages via interaction within an integrated model .
 Based on this idea , we develop a novel self - attention termed ReSA .
 On the one hand , the proposed RSS provides a sparse mask to a self - attention module that only needs to model the dependencies for the selected token pairs .
 Hence , heavy memory loads and computations associated with soft self - attention can be effectively relieved .
@@ -122,12 +122,12 @@ otherwise .
 The resulting mask is then applied as an extra mask to the masked self - attention mechanism introduced in Section 2.2 .
 Specifically , we add M rss to Eq. ( 4 ) and use
 to generate the alignment scores .
-For each head token x j , a softmax function is applied to f rss ( , x j ) , which produces a categorical distribution overall dependent tokens , i.e. ,
+For each head token x j , a softmax function is applied to f rss ( , x j ) , which produces a categorical distribution over all dependent tokens , i.e. ,
 where denotes a broadcast product in the vanilla attention or an element - wise product in the multi-dim attention .
-For a selected head token , as formulated in Eq. ( 10 ) , the attention from a token to itself is disabled in M rss , so the s j for the selected head token encodes only the context features but not the desired context - ware embedding .
+For a selected head token , as formulated in Eq. ( 10 ) , the attention from a token to itself is dis abled in M rss , so the s j for the selected head token encodes only the context features but not the desired context - ware embedding .
 For an unselected head token x j with ?
-h j = 0 , it s alignment scores overall dependent tokens are equal to ?? , which leads to the equal probabilities in P j produced by the softmax function .
-Hence , s j for each unselected token x j can be regarded as the result of mean - pooling overall dependent tokens .
+h j = 0 , it s alignment scores over all dependent tokens are equal to ?? , which leads to the equal probabilities in P j produced by the softmax function .
+Hence , s j for each unselected token x j can be regarded as the result of mean - pooling over all dependent tokens .
 To merge the word embedding with its context feature for the selected heads , and distinguish the representations from others for the unselected heads , a fusion gate is used to combine s with the input embedding x in parallel and generate the final context - aware representations for all tokens , i.e. ,
 where W ( f ) , b ( f ) are the learnable parameters .
 The contextaware representations , u = [ u 1 , . . . , u n ] , are final output .
@@ -155,7 +155,7 @@ Optimizing ?
 r is formulated as a reinforcement learning problem solved by the policy gradient method ( i.e. , .
 In particular , RSS plays as an agent and takes action of whether to select a token or not .
 After going through the entire sequence , it receives a loss value from the classification problem , which can be regarded as the negative delay reward to train the agent .
-Since the overall goal of RSS is to select a small subset of tokens for better efficiency and meanwhile retain useful information , a penalty limiting the number of selected tokens is included in the reward R , i.e. ,
+Since the over all goal of RSS is to select a small subset of tokens for better efficiency and meanwhile retain useful information , a penalty limiting the number of selected tokens is included in the reward R , i.e. ,
 where ?
 is the penalty weight and is fine - tuned with values from { 0.005 , 0.01 , 0.02 } in all experiments .
 Then , the objective of learning ?
@@ -215,7 +215,7 @@ This thoroughly demonstrates the capability of ReSAN in context fusion and sente
 Case Study
 To gain an insights into how the hard / soft attention and fusion gate work within ReSA , we visualize their resulting values in this section .
 Note that only the values at token level are illustrated .
-If the attention probabilities and the gate values are feature - level , we average the probabilities overall features .
+If the attention probabilities and the gate values are feature - level , we average the probabilities over all features .
 Two sentences from the SNLI test set serve as examples for this case study :
 1 ) " The three men sit and talk about their lives . " and 2 ) " A group of adults are waiting for an event . " .
 The head and dependent tokens selected by RSS modules are show in ( a small square with color white denotes unselection and vice versa ) .
@@ -236,10 +236,10 @@ propose a service dialog system to sell movie tickets , where the agent in RL is
 Zhang and Lapata [ 2017 ] simplify a sentence with objectives of maximum simplicity , relevance and fluency , where all three objectives are all non-differentiable w.r.t the parameters of model .
 Conclusions
 This study presents a context fusion model , reinforced selfattention ( ReSA ) , which naturally integrates a novel form of highly - parallelizable hard attention based on reinforced sequence sampling ( RSS ) and soft self - attention mechanism for the mutual benefit of overcoming the intrinsic weaknesses associated with hard and soft attention mechanisms .
-The hard attention modules could be used to trim along sequence into a much shorter one and encode rich dependencies information fora soft self - attention mechanism to process .
+The hard attention modules could be used to trim along sequence into a much shorter one and encode rich dependencies information for a soft self - attention mechanism to process .
 Conversely , the soft self - attention mechanism could be used to provide a stable environment and strong reward signals , which improves the feasibility of training the hard attention modules .
 Based solely on ReSA and a source2token self - attention mechanism , we then propose an RNN / CNN - free attention model , reinforced self - attention network ( ReSAN ) , for sentence encoding .
-Experiments on two NLP tasks - natural language inference and semantic relatedness - demonstrate that ReSAN deliver anew best test accuracy for the SNLI dataset among all sentence - encoding models and state - of - theart performance on the SICK dataset .
+Experiments on two NLP tasks - natural language inference and semantic relatedness - demonstrate that ReSAN deliver a new best test accuracy for the SNLI dataset among all sentence - encoding models and state - of - theart performance on the SICK dataset .
 Further , these results are achieved with equal or fewer parameters and in less time .
 A Comparison to a Iterative Sampling
 To verify the RSS that uses parallel discrete sampling is sufficient to trim the long sentence and model the dependencies , we implement the iteration - based sequence sampling method following and integrate it with the soft selfattention in the same way as ReSA .

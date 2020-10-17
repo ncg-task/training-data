@@ -3,12 +3,11 @@
 78	0	22	Entity - Aware BERT SP
 78	25	39	our full model
 79	0	60	BERT SP with position embedding on the final attention layer
-79	28	30	in
-80	2	4	is
-80	2	4	is
+80	5	7	is
 80	10	34	more straightforward way
 80	35	45	to achieve
 80	46	49	MRE
+80	50	52	in
 80	53	63	one - pass
 80	92	97	using
 80	98	117	position embeddings
@@ -16,7 +15,7 @@
 83	51	59	replaces
 83	60	90	our structured attention layer
 83	97	101	adds
-83	20	30	indicators
+83	102	112	indicators
 83	113	115	of
 83	116	154	entities ( transformed to embeddings )
 16	10	18	presents
@@ -40,15 +39,15 @@
 19	89	116	structured prediction layer
 19	117	131	for predicting
 19	132	150	multiple relations
-19	117	120	for
+19	151	154	for
 19	155	177	different entity pairs
 19	193	197	make
 19	202	222	selfattention layers
 19	223	231	aware of
 19	236	245	positions
-19	229	231	of
+19	246	248	of
 19	249	262	all en-tities
-19	39	41	in
+19	263	265	in
 19	270	285	input paragraph
 2	0	31	Extracting Multiple - Relations
 4	41	79	extracting multiple entity - relations
@@ -78,9 +77,9 @@
 94	54	70	attention layers
 94	73	79	brings
 94	80	99	further improvement
-94	51	53	of
+94	100	102	of
 94	103	114	about 5.5 %
-94	38	40	in
+94	117	119	in
 94	124	146	MRE one - pass setting
 94	153	161	achieves
 94	164	202	new state - of - the - art performance
@@ -103,7 +102,7 @@
 87	65	82	still outperforms
 87	89	96	methods
 87	97	101	with
-87	42	59	domain adaptation
+87	102	119	domain adaptation
 89	0	5	Among
 89	6	37	all the BERT - based approaches
 89	40	50	finetuning
@@ -126,14 +125,13 @@
 100	13	21	observed
 100	2	9	2 % gap
 103	4	36	BERT SP with position embeddings
-103	23	25	on
+103	37	39	on
 103	44	65	final attention layer
 103	71	76	train
 103	81	86	model
-103	32	34	in
+103	87	89	in
 103	94	119	single - relation setting
-103	124	128	test
-103	12	16	with
+103	124	133	test with
 103	134	156	two different settings
 103	159	161	so
 103	166	173	results
@@ -141,14 +139,14 @@
 103	182	186	same
 118	0	15	When predicting
 118	16	34	multiple relations
-118	12	14	in
+118	35	37	in
 118	38	48	one - pass
 118	54	58	have
 118	59	69	0.9 % drop
-118	31	33	on
+118	70	72	on
 118	73	83	Macro - F1
 118	92	117	further 0.8 % improvement
-118	31	33	on
+118	118	120	on
 118	121	131	Micro - F1
 120	20	31	compared to
 120	36	58	top singlemodel result

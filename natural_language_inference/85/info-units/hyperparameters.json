@@ -19,19 +19,17 @@
           "to initialize" : "our word embeddings",
           "from sentence" : "We use pre-trained 300 - D Glove 840B vectors to initialize our word embeddings ."
         }
-      }    ,
+      },
       "has" : {
         "first momentum" : {
-          "set to be" : "0.9",
-          "from sentence" : "The first momentum is set to be 0.9 and the second 0.999 ."
+          "set to be" : "0.9"
         },
         "second" : {
           "has" : "0.999",
           "from sentence" : "The first momentum is set to be 0.9 and the second 0.999 ."
         },
         "initial learning rate" : {
-          "is" : "0.0004",
-          "from sentence" : "The initial learning rate is 0.0004 and the batch size is 32 ."
+          "is" : "0.0004"
         },
         "batch size" : {
           "is" : "32",

@@ -3,8 +3,7 @@
     "Hyperparameters" : {
       "initialized" : {
         "word embedding" : {
-          "with" : "300d Glo Ve vectors",
-          "from sentence" : "We initialized word embedding with 300d Glo Ve vectors pre-trained from the 840B Common Crawl corpus ( Pennington , Socher , and Manning 2014 ) , while the word embeddings for the out - of - vocabulary words were initialized randomly ."
+          "with" : "300d Glo Ve vectors"
         }
       },
       "has" : {
@@ -53,7 +52,7 @@
             "factor" : {
               "of" : "0.85",
               "when" : {
-                "dev accuraccy" : {
+                "dev accuracy" : {
                   "has" : "does not improve"
                 }
               }
@@ -100,8 +99,7 @@
       "randomly initialized" : {
         "character embedding" : {
           "with" : "16d vector"
-        },
-        "from sentence" : "We also randomly initialized character embedding with a 16d vector and extracted 32d character representation with a convolutional network ."
+        }
       },
       "extracted" : {
         "32d character representation" : {

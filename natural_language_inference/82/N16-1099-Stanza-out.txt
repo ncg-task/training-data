@@ -4,8 +4,7 @@ abstract
 We propose a novel neural network model for machine reading , DER Network , which explicitly implements a reader building dynamic meaning representations for entities by gathering and accumulating information around the entities as it reads a document .
 Evaluated on a recent large scale dataset ( Hermann et al. , 2015 ) , our model exhibits better results than previous research , and we find that max - pooling is suited for modeling the accumulation of information on entities .
 Further analysis suggests that our model can put together multiple pieces of information encoded in different sentences to answer complicated questions .
-Our code for the model is available at https://github.
-com/soskek/der-network
+Our code for the model is available at https://github.com/soskek/der-network
 Introduction
 Machine reading systems can be tested on their ability to answer queries about contents of documents that they read , thus a central problem is how the information of documents should be organized in the system and retrieved by the queries .
 Recently , large scale datasets of document - queryanswer triples have been constructed from online newspaper articles and their summaries , by replacing named entities in the summaries with placeholders to form Cloze ) style questions ) .
@@ -93,7 +92,7 @@ Valid and * * from .
 ( @entity1 ) @entity0 maybe @entity 2 in the popular @entity 4 superhero films , but he recently dealt in some advanced bionic technology himself .! !
 @entity 7 received his robotic arm in the summer , then later had it upgraded to resemble a " @entity 26 " arm .!
 this past saturday , @entity 7 received an even more impressive gift , from " @entity 2 " himself .! !
-the actor showed the child two arms , one from @entity0 's movies and one for @entity 7 : areal , working robotic @entity 2 arm .!:
+the actor showed the child two arms , one from @entity0 's movies and one for @entity 7 : are al , working robotic @entity 2 arm .!:
 A correct answer found by max - pooling .
 Attention to each entity occurrence shown on left .
 clear effects , suggesting that the attention mechanism plays a key role in our model .

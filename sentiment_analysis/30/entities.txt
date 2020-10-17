@@ -9,7 +9,7 @@
 90	104	112	training
 90	123	134	pre-process
 90	139	145	corpus
-90	24	28	with
+90	146	150	with
 90	151	163	tokenisation
 90	164	169	using
 90	170	174	NLTK
@@ -23,7 +23,7 @@
 91	81	83	of
 91	84	87	128
 91	92	105	learning rate
-91	81	83	of
+91	106	108	of
 91	109	113	0.05
 93	0	7	Dropout
 93	11	21	applied to
@@ -38,20 +38,20 @@
 92	11	39	following hyper - parameters
 92	40	43	for
 92	44	59	weight matrices
-92	17	19	in
-92	44	59	weight matrices
+92	60	62	in
+92	63	78	both directions
 92	159	170	hidden size
 92	124	126	of
 92	178	181	GRU
 92	194	196	is
-92	87	90	300
+92	149	152	300
 95	9	16	to curb
 95	17	28	overfitting
 95	34	44	regularise
 95	49	59	last layer
 95	73	77	with
 95	81	92	L 2 penalty
-95	68	70	on
+95	93	95	on
 95	100	107	weights
 97	3	18	empirically set
 97	23	46	number of memory chains
@@ -68,6 +68,7 @@
 26	53	56	for
 26	57	62	TABSA
 26	65	79	augmented with
+26	80	106	multiple " memory chains "
 26	113	126	equipped with
 26	129	160	delayed memory update mechanism
 26	163	179	to keep track of
@@ -88,10 +89,10 @@
 115	155	173	heavily reliant on
 115	174	228	external knowledge bases and domainspecific embeddings
 116	0	21	Ent Net vs. our model
-116	12	21	our model
 117	3	6	see
 117	7	35	consistent performance gains
-117	21	24	for
+117	36	39	for
+117	40	49	our model
 117	50	57	in both
 117	58	103	aspect detection and sentiment classification
 117	106	117	compared to

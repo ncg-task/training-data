@@ -9,10 +9,10 @@ Our experimental evaluations show that our model achieves the state - of - the -
 INTRODUCTION
 The tasks of machine comprehension ( MC ) and question answering ( QA ) have gained significant popularity over the past few years within the natural language processing and computer vision communities .
 Systems trained end - to - end now achieve promising results on a variety of tasks in the text and image domains .
-One of the key factors to the advancement has been the use of neural attention mechanism , which enables the system to focus on a targeted area within a context paragraph ( for MC ) or within an image ( for Visual QA ) , that is most relevant to answer the question .
+One of the key factors to the advancement has been the use of neural attention mechanism , which enables the system to focus on a targeted are a within a context paragraph ( for MC ) or within an image ( for Visual QA ) , that is most relevant to answer the question .
 Attention mechanisms in previous works typically have one or more of the following characteristics .
 First , the computed attention weights are often used to extract the most relevant information from the context for answering the question by summarizing the context into a fixed - size vector .
-Second , in the text domain , they are often temporally dynamic , whereby the attention weights at the current time step area function of the attended vector at the previous time step .
+Second , in the text domain , they are often temporally dynamic , whereby the attention weights at the current time step are a function of the attended vector at the previous time step .
 Third , they are usually uni-directional , wherein the query attends on the context paragraph or the image .
 In this paper , we introduce the Bi- Directional Attention Flow ( BIDAF ) network , a hierarchical multi-stage architecture for modeling the representations of the context paragraph at different levels of granularity ) .
 BIDAF includes character - level , word - level , and contextual embeddings , and uses bi-directional attention flow to obtain a query - aware context representation .
@@ -100,7 +100,7 @@ For the end index of the answer phrase , we pass M to another bidirectional LSTM
 R 2 d T .
 Then we use M 2 to obtain the probability distribution of the end index in a similar manner :
 Training .
-We define the training loss ( to be minimized ) as the sum of the negative log probabilities of the true start and end indices by the predicted distributions , averaged overall examples :
+We define the training loss ( to be minimized ) as the sum of the negative log probabilities of the true start and end indices by the predicted distributions , averaged over all examples :
 where ?
 is the set of all trainable weights in the model ( the weights and biases of CNN filters and LSTM cells , w ( S ) , w ( p 1 ) and w ( p 2 ) ) , N is the number of examples in the dataset , y 1 i and y 2 i are the true start and end indices of the i - th example , respectively , and pk indicates the k - th value of the vector p.
 Test .
@@ -218,7 +218,7 @@ Discussions .
 We analyse the performance of our our model with a traditional language - featurebased baseline .
 shows a Venn diagram of the dev set questions correctly answered by the models .
 Our model is able to answer more than 86 % of the questions correctly answered by the baseline .
-The 14 % that are incorrectly answered does not have a clear pattern .
+The 14 % thatare incorrectly answered does not have a clear pattern .
 This suggests that neural architectures are able to exploit much of the information captured by the language features .
 We also break this comparison down by the first words in the questions ) .
 Our model outperforms the traditional baseline comfortably in every category .
@@ -230,7 +230,7 @@ A for the examples of the error modes .
 CLOZE TEST EXPERIMENTS
 We also evaluate our model on the task of cloze - style reading comprehension using the CNN and Daily Mail datasets .
 Dataset .
-Ina cloze test , the reader is asked to fill in words that have been removed from a passage , for measuring one 's ability to comprehend text .
+In a cloze test , the reader is asked to fill in words that have been removed from a passage , for measuring one 's ability to comprehend text .
 Hermann et al. have recently compiled a massive Cloze - style comprehension dataset , consisting of 300 k / 4 k / 3 k and 879k / 65 k / 53 k ( train / dev / test ) examples from CNN and DailyMail news articles , respectively .
 Each example has a news article and an incomplete sentence extracted from the human - written summary of the article .
 To distinguish this task from language modeling and force one to refer to the article to predict the correct missing word , the missing word is always a named entity , anonymized with a random ID .

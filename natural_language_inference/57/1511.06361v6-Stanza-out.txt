@@ -18,7 +18,7 @@ Our goal in this work is to learn representations that respect this partial orde
 Most recent approaches to modeling the hypernym , entailment , and image - caption relations involve learning distributed representations or embeddings .
 This is a very powerful and general approach which maps the objects of interest - words , phrases , images - to points in a high - dimensional vector space .
 One line of work , exemplified by and first applied to the caption - image relationship by , requires the mapping to be distance - preserving : semantically 1 ar Xiv : 1511.06361v6LG ] 1 Mar 2016
-Published as a conference paper at ICLR 2016 similar objects are mapped to points that are nearby in the embedding space .
+Published as a conference paper at ICLR 2016 similar objects are mapped to points thatare nearby in the embedding space .
 A symmetric distance measure such as Euclidean or cosine distance is typically used .
 Since the visual - semantic hierarchy is an antisymmetric relation , we expect this approach to introduce systematic model error .
 Other approaches do not have such explicit constraints , learning a more - or - less general binary relation between the objects of interest , e.g. ; ; .
@@ -110,14 +110,14 @@ We tuned the number of layers , layer dimensionality and dropout rates to optimi
 Batch normalization and PReLU units were used .
 Our best network used 2 hidden layers of 1000 units each , with dropout rate of 0.5 across both the input and hidden layers .
 We did not backpropagate through the skip - thought encoder .
-We also evaluate against EOP classifier , a 2 - class baseline introduced by , and against aversion of our model where our order-violation penalty is replaced with the symmetric cosine distance , order - embeddings ( symmetric ) .
+We also evaluate against EOP classifier , a 2 - class baseline introduced by , and against a version of our model where our order-violation penalty is replaced with the symmetric cosine distance , order - embeddings ( symmetric ) .
 The results for all models are shown in .
 We see that order- embeddings outperform the skipthought baseline despite not using external text corpora .
 While our method is almost certainly worse than the state - of - the - art method of , which uses a word - by - word attention mechanism , it is also much simpler .
 CAPTION - IMAGE RETRIEVAL
 The caption - image retrieval task has become a standard evaluation of joint models of vision and language .
-The task involves ranking a large dataset of images by relevance fora query caption ( Image Retrieval ) , and ranking captions by relevance fora query image ( Caption Retrieval ) .
-Given a set of aligned image - caption pairs as training data , the goal is then to learn a caption - image compatibility score S ( c , i ) to be used attest time .
+The task involves ranking a large dataset of images by relevance for a query caption ( Image Retrieval ) , and ranking captions by relevance for a query image ( Caption Retrieval ) .
+Given a set of aligned image - caption pairs as training data , the goal is then to learn a caption - image compatibility score S ( c , i ) to be used at test time .
 Many modern approaches model the caption - image relationship symmetrically , either by embedding into a common " visual - semantic " space with inner-product similarity , or by using Canonical Correlations Analysis between distributed representations of images and captions .
 While and model a finer - grained alignment between regions in the image and segments of the caption , the similarity they use is still symmetric .
 An alternative is to learn an unconstrained binary relation , either with a neural language model conditioned on the image or using a multimodal CNN .
@@ -127,7 +127,7 @@ IMAGE AND CAPTION EMBEDDINGS
 To learn f c and f i , we use the approach of except , since we are embedding into RN + , we constrain the embedding vectors to have nonnegative entries by taking their absolute value .
 Thus , to embed images , we use f i ( i ) = | W i CNN ( i ) | ( 6 ) where W i is a learned N 4096 matrix , N being the dimensionality of the embedding space .
 CNN ( i ) is the same image feature used by : we rescale images to have smallest side 256 pixels , we take 224 224 crops from the corners , center , and their horizontal reflections , run the 10 crops through the 19 - layer VGG network of ( weights pre-trained on ImageNet and fixed during training ) , and average their fc7 features ..
-Best results overall are in bold ; best results using 1 - crop VGG features are underlined .
+Best results over all are in bold ; best results using 1 - crop VGG features are underlined .
 To embed the captions , we use a recurrent neural net encoder with GRU activations , so f c ( c ) = | GRU ( c ) | , the absolute value of hidden state after processing the last word .
 EXPLORATION
 Why would order- embeddings do well on such a shallow partial order ?
@@ -140,7 +140,7 @@ Some particularly dramatic examples of this are shown in .
 Moreover , if we use the shorter caption as a query , and retrieve captions in order of increasing error , the mean rank of the longer caption is 34.0 for order - embeddings and 47.6 for cosine similarity , showing that order - embeddings are able to capture the relatedness of co-referring captions with very different lengths .
 This also explains why order - embeddings provide a much smaller improvement for caption retrieval than for image retrieval : all the caption retrieval metrics are based on the position of the first ground truth caption in the retrieval order , so the embeddings need only learn to retrieve one of each image 's five captions well , which symmetric similarity is well suited for .
 Captions
-Image rank cosine order - emb a sitting area with furniture and flowers makes a backdrop fora boy with headphones sitting in the foreground atone of the chairs at a dining table that holds glasses and a handbag working at a laptop
+Image rank cosine order - emb a sitting are a with furniture and flowers makes a backdrop for a boy with headphones sitting in the foreground atone of the chairs at a dining table that holds glasses and a handbag working at a laptop
 TEXTUAL ENTAILMENT / NATURAL LANGUAGE INFERENCE
 Natural language inference can be seen as a generalization of hypernymy from words to sentences .
 For example , from " woman walking her dog in a park " we can infer both " woman walking her dog " and " dog in a park " , but not " old woman " or " black dog " .

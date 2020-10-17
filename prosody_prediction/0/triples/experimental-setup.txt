@@ -24,7 +24,7 @@
 (Experimental setup||use||smaller BERT - base model)
 (smaller BERT - base model||using||uncased alternative)
 (Experimental setup||fine - tune||model)
-(model||for||2 epcohs)
+(model||for||2 epochs)
 (Experimental setup||For||conditional random field ( CRF ) model)
 (conditional random field ( CRF ) model||use||MarMot)
 (MarMot||with||default configuration)

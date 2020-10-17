@@ -1,4 +1,3 @@
-14	14	18	Code
 14	34	79	https://github.com/enigmaeth/skip-thought-gan
 71	4	26	Skip - Thought encoder
 71	41	48	encodes
@@ -9,7 +8,7 @@
 71	81	89	30 words
 71	90	95	using
 71	96	110	2400 GRU units
-71	59	63	with
+71	111	115	with
 71	116	127	word vector
 71	128	145	dimensionality of
 71	146	149	620

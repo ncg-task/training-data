@@ -2,7 +2,7 @@
 16	62	66	BERT
 16	67	69	as
 16	72	89	passage re-ranker
-43	133	135	on
+35	0	8	MS MARCO
 43	3	14	fine - tune
 43	19	24	model
 43	25	30	using
@@ -28,12 +28,12 @@
 46	156	160	over
 46	165	183	first 10,000 steps
 46	190	202	linear decay
-46	125	127	of
-46	52	65	learning rate
+46	203	205	of
+46	210	223	learning rate
+47	36	38	on
 47	9	28	dropout probability
 47	29	31	of
 47	32	35	0.1
-47	36	38	on
 47	39	49	all layers
 63	118	128	TREC - CAR
 63	0	3	For
@@ -47,10 +47,11 @@
 63	111	135	entire TREC - CAR corpus
 63	136	141	using
 63	142	146	BM25
+66	117	119	on
 66	3	8	train
 66	16	32	400 k iterations
 66	38	53	12.8 M examples
-17	0	20	PASSAGE RE - RANKING
+2	0	20	PASSAGE RE - RANKING
 5	67	99	query - based passage re-ranking
 70	0	7	Despite
 70	8	16	training

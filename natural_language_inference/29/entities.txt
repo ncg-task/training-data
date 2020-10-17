@@ -1,42 +1,42 @@
-324	11	27	slight increment
-324	28	32	from
-324	33	37	RAGF
-324	38	40	to
-324	41	46	RAGFD
-324	55	67	demonstrates
-324	72	85	effectiveness
-324	86	88	of
-324	89	102	discriminator
-325	10	19	find that
-325	20	26	RAGFWD
-325	27	35	achieves
-325	38	55	4.3 % improvement
-325	56	60	over
-325	61	66	RAGFD
-325	67	78	in terms of
-325	79	83	BLEU
-325	90	94	PAAG
-325	95	106	outperforms
-325	20	26	RAGFWD
-325	114	119	4.1 %
-325	67	78	in terms of
-325	79	83	BLEU
-326	17	30	conclude that
-326	35	46	performance
-326	47	49	of
-326	50	54	PAAG
-326	55	68	benefits from
-326	75	122	Wasserstein distance based adversarial learning
-326	123	127	with
-326	128	144	gradient penalty
-326	69	74	using
-327	14	22	can help
-327	23	32	our model
-327	33	43	to achieve
-327	46	64	better performance
-327	65	69	than
-327	27	32	model
-327	90	114	vanilla GAN architecture
+323	11	27	slight increment
+323	28	32	from
+323	33	37	RAGF
+323	38	40	to
+323	41	46	RAGFD
+323	55	67	demonstrates
+323	72	85	effectiveness
+323	86	88	of
+323	89	102	discriminator
+324	10	19	find that
+324	20	26	RAGFWD
+324	27	35	achieves
+324	38	55	4.3 % improvement
+324	56	60	over
+324	61	66	RAGFD
+324	67	78	in terms of
+324	79	83	BLEU
+324	90	94	PAAG
+324	95	106	outperforms
+324	107	113	RAGFWD
+324	114	119	4.1 %
+324	120	131	in terms of
+324	132	136	BLEU
+325	17	30	conclude that
+325	35	46	performance
+325	47	49	of
+325	50	54	PAAG
+325	55	68	benefits from
+325	75	122	Wasserstein distance based adversarial learning
+325	123	127	with
+325	128	144	gradient penalty
+325	69	74	using
+326	14	22	can help
+326	23	32	our model
+326	33	43	to achieve
+326	46	64	better performance
+326	65	69	than
+326	74	79	model
+326	90	114	vanilla GAN architecture
 269	6	10	S2SA
 269	13	47	Sequence - to - sequence framework
 269	57	69	proposed for
@@ -57,8 +57,8 @@
 274	102	128	multiple documents context
 274	133	142	synthesis
 274	147	153	answer
-274	97	101	from
-274	91	96	spans
+274	154	158	from
+274	165	170	spans
 277	6	8	QS
 277	14	23	implement
 277	28	61	query - based summarization model
@@ -72,53 +72,54 @@
 279	115	127	appearing in
 279	128	139	each review
 281	6	14	TF - IDF
-282	10	12	is
-282	15	34	numerical statistic
-282	52	62	to reflect
-282	63	76	how important
-282	79	92	question word
-282	52	54	to
-282	101	107	review
-285	42	61	randomly initialize
-285	66	84	network parameters
-285	85	87	at
-285	92	101	beginning
-285	102	104	of
-285	109	120	experiments
-285	0	13	Without using
-285	14	36	pre-trained embeddings
-286	0	20	All the RNN networks
-286	21	25	have
-286	26	42	512 hidden units
-286	51	60	dimension
-286	61	63	of
-286	64	78	word embedding
-286	79	81	is
-286	82	85	256
-289	0	7	Adagrad
-289	8	12	with
-289	13	26	learning rate
-289	27	30	0.1
-289	39	50	to optimize
-289	55	65	parameters
-289	70	80	batch size
-289	31	33	is
-289	84	86	64
-287	0	10	To produce
-287	11	25	better answers
-287	31	34	use
-287	35	46	beam search
-287	47	51	with
-287	52	61	beam size
-288	0	1	4
-290	3	12	implement
-290	13	22	our model
-290	23	28	using
-290	29	49	TensorFlow framework
-290	54	59	train
-290	60	93	our model and all baseline models
-290	94	96	on
-290	97	117	NVIDIA Tesla P40 GPU
+281	17	60	Term Frequency - Inverse Document Frequency
+281	61	63	is
+281	66	85	numerical statistic
+281	103	113	to reflect
+281	114	127	how important
+281	130	143	question word
+281	147	149	to
+281	152	158	review
+284	42	61	randomly initialize
+284	66	84	network parameters
+284	85	87	at
+284	92	101	beginning
+284	102	104	of
+284	109	120	experiments
+284	0	13	Without using
+284	14	36	pre-trained embeddings
+285	0	20	All the RNN networks
+285	21	25	have
+285	26	42	512 hidden units
+285	51	60	dimension
+285	61	63	of
+285	64	78	word embedding
+285	79	81	is
+285	82	85	256
+288	0	7	Adagrad
+288	8	12	with
+288	13	26	learning rate
+288	27	30	0.1
+288	39	50	to optimize
+288	55	65	parameters
+288	70	80	batch size
+288	31	33	is
+288	84	86	64
+286	0	10	To produce
+286	11	25	better answers
+286	31	34	use
+286	35	46	beam search
+286	47	51	with
+286	52	61	beam size
+287	0	1	4
+289	3	12	implement
+289	13	22	our model
+289	23	28	using
+289	29	49	TensorFlow framework
+289	54	59	train
+289	60	93	our model and all baseline models
+289	94	96	on
+289	97	117	NVIDIA Tesla P40 GPU
 38	19	26	propose
 38	31	72	product - aware answer generator ( PAAG )
 38	77	117	product related question answering model
@@ -148,45 +149,45 @@
 42	44	63	meaningless answers
 42	69	76	propose
 42	80	110	adversarial learning mechanism
-42	48	50	in
+42	111	113	in
 42	118	134	loss calculation
 42	135	149	for optimizing
 42	150	160	parameters
 2	0	33	Product - Aware Answer Generation
 14	46	73	question - answering ( QA )
 14	102	123	reading comprehension
-295	35	43	see that
-295	44	48	PAAG
-295	94	98	over
-295	103	136	stateof - the - art baseline SNet
-295	49	57	achieves
-295	60	65	111 %
-295	68	71	8 %
-295	76	93	62.73 % increment
-295	137	148	in terms of
-295	149	153	BLEU
-295	156	172	embedding greedy
-295	177	194	consistency score
-296	26	37	outperforms
-296	38	54	all the baseline
-296	55	68	significantly
-296	51	53	in
-296	72	89	semantic distance
-296	90	105	with respect to
-296	110	122	ground truth
-300	38	59	other baseline models
-300	49	51	in
-300	63	100	both sentence fluency and consistency
-300	101	105	with
-300	110	115	facts
-306	20	35	small increment
-306	36	38	of
-306	39	45	S2 SAR
-306	46	61	with respect to
-306	62	66	S2SA
-306	26	28	in
-306	70	81	all metrics
-306	93	97	find
-306	100	114	noticeable gap
-306	115	122	between
-306	123	137	S2SAR and PAAG
+294	35	43	see that
+294	44	48	PAAG
+294	94	98	over
+294	103	136	stateof - the - art baseline SNet
+294	49	57	achieves
+294	60	65	111 %
+294	68	71	8 %
+294	76	93	62.73 % increment
+294	137	148	in terms of
+294	149	153	BLEU
+294	156	172	embedding greedy
+294	177	194	consistency score
+295	26	37	outperforms
+295	38	54	all the baseline
+295	55	68	significantly
+295	69	71	in
+295	72	89	semantic distance
+295	90	105	with respect to
+295	110	122	ground truth
+299	38	59	other baseline models
+299	60	62	in
+299	63	100	both sentence fluency and consistency
+299	101	105	with
+299	110	115	facts
+305	20	35	small increment
+305	36	38	of
+305	39	45	S2 SAR
+305	46	61	with respect to
+305	62	66	S2SA
+305	67	69	in
+305	70	81	all metrics
+305	93	97	find
+305	100	114	noticeable gap
+305	115	122	between
+305	123	137	S2SAR and PAAG

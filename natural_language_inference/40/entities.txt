@@ -1,6 +1,6 @@
 40	13	20	utilize
 40	25	39	order inherent
-40	31	33	in
+40	40	42	in
 40	51	71	unaugmented sequence
 40	72	84	to decompose
 40	89	94	graph
@@ -42,14 +42,14 @@
 44	86	104	answers to a query
 44	105	130	have to be extracted from
 44	133	149	context document
-44	141	149	document
-44	27	47	coreference relation
-44	29	34	refer
-44	18	20	to
 45	0	6	Tokens
 45	7	9	in
+45	12	20	document
 45	25	37	connected by
+45	40	60	coreference relation
 45	61	63	if
+45	69	74	refer
+45	75	77	to
 45	82	104	same underlying entity
 2	35	60	Recurrent Neural Networks
 4	0	66	Training recurrent neural networks to model long term dependencies
@@ -72,7 +72,7 @@
 183	31	57	proposed MAGE architecture
 183	62	83	substantially improve
 183	88	99	performance
-183	91	94	for
+183	100	103	for
 183	104	126	both bi - GRUs and GAs
 184	0	6	Adding
 184	11	27	same information
@@ -103,7 +103,7 @@
 234	61	66	1.7 %
 234	67	83	by incorporating
 234	84	101	coreference edges
-234	70	72	in
+234	102	104	in
 234	109	114	graph
 236	7	36	multi - layer GA architecture
 236	43	60	coreference edges
@@ -117,7 +117,6 @@
 245	47	49	on
 245	54	65	CNN dataset
 245	88	90	of
-245	47	49	on
 257	0	10	Augmenting
 257	15	29	bi - GRU model
 257	30	34	with
@@ -125,6 +124,7 @@
 257	40	48	leads to
 257	52	63	improvement
 257	67	72	2.5 %
+257	73	75	on
 257	80	88	test set
 258	4	25	previous best results
 258	48	59	achieved by

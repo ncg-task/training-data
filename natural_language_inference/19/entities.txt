@@ -4,7 +4,7 @@
 165	52	78	pre-trained word embedding
 165	79	86	without
 165	91	101	finetuning
-165	56	61	train
+166	11	16	train
 166	21	61	more universally usable sentence encoder
 167	0	19	Layer normalization
 167	24	34	applied to
@@ -13,28 +13,28 @@
 167	61	87	masked multihead attention
 167	90	101	fusion gate
 167	108	135	multi-dimensional attention
-170	68	87	dropout probability
-170	92	98	set to
-170	99	102	0.1
 171	0	10	Batch size
 171	11	14	was
 171	15	17	64
 171	28	33	model
 171	38	50	trained with
 171	51	65	Adam optimizer
-171	46	50	with
+171	68	72	with
 171	75	88	learning rate
 171	89	91	of
 171	92	97	0.001
 168	3	10	applied
 168	11	27	residual dropout
 168	41	45	with
-168	20	27	dropout
+168	46	53	dropout
 168	54	56	to
 168	61	67	output
 168	68	70	of
 168	71	98	masked multi-head attention
 168	103	130	SF +H F +b F of fusion gate
+170	68	87	dropout probability
+170	92	98	set to
+170	99	102	0.1
 170	3	6	set
 170	7	22	h = 5 , ? = 1.5
 170	23	25	in
@@ -56,7 +56,7 @@
 33	45	58	distance mask
 33	59	83	allows us to incorporate
 33	84	124	complete positional information of words
-33	72	74	in
+33	125	127	in
 33	128	137	our model
 2	46	72	Natural Language Inference
 10	38	41	NLI

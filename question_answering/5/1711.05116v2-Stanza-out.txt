@@ -13,7 +13,7 @@ Quasar - T , Search QA and the open - domain version of TriviaQA , with about 8 
 Published as a conference paper at ICLR 2018 Question1 : What is the more popular name for the londonderry air ?
 A1 : tune from county P1 : the best known title for this melody is londonderry airlrb - sometimes also called the tune from county derry - rrb -.
 INTRODUCTION
-Open-domain question answering ( QA ) aims to answer questions from abroad range of domains by effectively marshalling evidence from large open - domain knowledge sources .
+Open-domain question answering ( QA ) aims to answer questions from a broad range of domains by effectively marshalling evidence from large open - domain knowledge sources .
 Such resources can be Wikipedia , the whole web , structured knowledge bases or combinations of the above .
 Recent work on open - domain QA has focused on using unstructured text retrieved from the web to build machine comprehension models .
 These studies adopt a two - step process : an information retrieval ( IR ) model to coarsely select passages relevant to a question , followed by a reading comprehension ( RC ) model to infer an answer from the passages .
@@ -26,14 +26,14 @@ First , compared with incorrect answers , the correct answer is often suggested 
 For example , in , the correct answer " danny boy " has more passages providing evidence relevant to the question compared to the incorrect one .
 This observation can be seen as multiple passages collaboratively enhancing the evidence for the correct answer .
 Second , sometimes the question covers multiple answer aspects , which spreads over multiple passages .
-In order to infer the correct answer , one has to find ways to aggregate those multiple passages in an effective yet sensible way to try to coverall aspects .
+In order to infer the correct answer , one has to find ways to aggregate those multiple passages in an effective yet sensible way to try to cover all aspects .
 In the correct answer " Galileo Galilei " at the bottom has passages P1 , " Galileo was a physicist ... " and P2 , " Galileo discovered the first 4 moons of Jupiter " , mentioning two pieces of evidence to match the question .
 In this case , the aggregation of these two pieces of evidence can help entail the ground - truth answer " Galileo Galilei " .
 In comparison , the incorrect answer " Isaac Newton " has passages providing partial evidence on only " physicist , mathematician and astronomer " .
 This observation illustrates the way in which multiple passages may provide complementary evidence to better infer the correct answer to a question .
 To provide more accurate answers for open - domain QA , we hope to make better use of multiple passages for the same question by aggregating both the strengthened and the complementary evidence from all the passages .
 We formulate the above evidence aggregation as an answer re-ranking problem .
-Re-ranking has been commonly used in NLP problems , such as in parsing and translation , in order to make use of high - order or global features that are too expensive for decoding algorithms .
+Re-ranking has been commonly used in NLP problems , such as in parsing and translation , in order to make use of high - order or global features thatare too expensive for decoding algorithms .
 Here we apply the idea of re-ranking ; for each answer candidate , we efficiently incorporate global information from multiple pieces of textual evidence without significantly increasing the complexity of the prediction of the RC model .
 Specifically , we first collect the top - K candidate answers based on their probabilities computed by a standard RC / QA system , and then we use two proposed re-rankers to re-score the answer candidates by aggregating each candidate 's evidence in different ways .
 The re-rankers are :
@@ -42,7 +42,7 @@ The re-ranker is based on the first observation if an answer candidate has multi
 The passage count of each candidate , and the aggregated probabilities for the candidate , reflect how strong its evidence is , and thus in turn suggest how likely the candidate is the corrected answer .
 A coverage - based re-ranker , which aims to rank an answer candidate higher if the union of all its contexts in different passages could cover more aspects included in the question .
 To achieve this , for each answer we concatenate all the passages that contain the answer together .
-The result is anew context that aggregates all the evidence necessary to entail the answer for the question .
+The result is a new context that aggregates all the evidence necessary to entail the answer for the question .
 We then treat the new context as one sequence to represent the answer , and build an attention - based match - LSTM model between the sequence and the question to measure how well the new aggregated context could entail the question .
 Overall , our contributions are as follows :
 1 ) We propose a re-ranking - based framework to make use of the evidence from multiple passages in open - domain QA , and two re-rankers , namely , a strengthbased re-ranker and a coverage - based re-ranker , to perform evidence aggregation in existing opendomain QA datasets .
@@ -72,7 +72,7 @@ Measuring Strength by Count
 This method is based on the hypothesis that the more passages that entail a particular answer , the stronger the evidence for that answer and the higher it should be ranked .
 To implement this we count the number of occurrences of each answer in the top - K answer spans generated by the baseline QA model and return the answer with the highest count .
 Measuring Strength by Probability
-Since we can get the probability of each answer span in a passages based on the RC model , we can also sum up the probabilities of the answer spans that are referring to the same answer .
+Since we can get the probability of each answer span in a passages based on the RC model , we can also sum up the probabilities of the answer spans thatare referring to the same answer .
 In this method , the answer with the highest probability is the final prediction 1 .
 In the re-ranking scenario , it is not necessary to exhaustively consider all the probabilities of all the spans in the passages , as there maybe a large number of different answer spans and most of them are irrelevant to the ground - truth answer .
 Remark : Note that neither of the above methods require any training .
@@ -135,7 +135,7 @@ Finally , we map the transformed matching representations into scalar values thr
 R land w o ? R. o ?
 R K is the normalized probability for the candidate answers to be ground - truth .
 Due to the aliases of the ground - truth answer , there maybe multiple answers in the candidates are ground - truth , we use KL distance as our objective function :
-where y k indicates whether a k the ground - truth answer or not and is normalized by K k=1 y k and o k is the ranking output of our model fora k .
+where y k indicates whether a k the ground - truth answer or not and is normalized by K k=1 y k and o k is the ranking output of our model for a k .
 COMBINATION OF DIFFERE NT TYPES OF AGGREGATIONS
 Although the coverage - based re-ranker tries to deal with more difficult cases compared to the strength - based re-ranker , the strength - based re-ranker works on more common cases according to the distributions of most open - domain QA datasets .
 We can try to get the best of both worlds by combining the two approaches .
@@ -207,7 +207,7 @@ style questions , it is more difficult to distinguish the questions types , and 
 Our results show that the coverage - based re-ranker outperforms the baseline in different lengths of answers and different types of questions .
 The strength - based re-ranker ( counting ) also gives improvement but is less stable across different datasets , while the strength - based re-ranker ( probability ) :
 The upper bound ( recall ) of the Top - K answer candidates generated by the baseline R 3 system ( on dev set ) , which indicates the potential of the coverage - based re-ranker .
-tends to have results and trends that are close to the baseline curves , which is probably because the method is dominated by the probabilities predicted by the baseline .
+tends to have results and trends thatare close to the baseline curves , which is probably because the method is dominated by the probabilities predicted by the baseline .
 The coverage - based re-ranker and the strength - based re-ranker ( counting ) have similar trends on most of the question types .
 The only exception is that the strength - based re-ranker performs significantly worse compared to the coverage - based re-ranker on the " why " questions .
 This is possibly because those questions usually have non-factoid answers , which are less likely to have exactly the same text spans predicted on different passages by the baseline .
@@ -256,7 +256,7 @@ The retrieved passages were used for extracting answer scoring features , but th
 ( 2 ) KB - QA systems sometimes use text evidence to enhance answer re-ranking , where the features are also extracted on the pair of question and a single - passage but ignored the union information among multiple passages .
 Multi - Step Approaches for Reading Comprehension
 We are the first to introduce re-ranking methods to neural open - domain QA and multi-passage RC .
-Meanwhile , our two - step approach shares some similarities to the previous multi-step approaches proposed for standard single - passage RC , in terms of the purposes of either using additional information or re-fining answer predictions that are not easily handled by the standard answer extraction models for RC .
+Meanwhile , our two - step approach shares some similarities to the previous multi-step approaches proposed for standard single - passage RC , in terms of the purposes of either using additional information or re-fining answer predictions thatare not easily handled by the standard answer extraction models for RC .
 On cloze - test tasks , Epireader relates to our work in the sense that it is a two - step extractor - reasoner model , which first extracts K most probable singletoken answer candidates and then constructs a hypothesis by combining each answer candidate to the question and compares the hypothesis with all the sentences in the passage .
 Their model differs from ours in several aspects : ( i ) Epireader matches a hypothesis to every single sentence , including all the " noisy " ones that does not contain the answer , that makes the model inappropriate for open - domain QA setting ; ( ii ) The sentence matching is based on the sentence embedding vectors computed by a convolutional neural network , which makes it hard to distinguish redundant and complementary evidence in aggregation ; ( iii ) Epireader passes the probabilities predicted by the extractor to the reasoner directly to sustain differentiability , which can not be easily adapted to our problem to handle phrases as answers or to use part of passages .
 Similarly , ) also combined answer candidates to the question to form hypotheses , and then explicitly use language models trained on documents to re-rank the hypotheses .

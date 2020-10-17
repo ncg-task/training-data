@@ -17,13 +17,13 @@
 29	34	62	relative ranking information
 29	63	70	between
 29	71	126	the machine - written and the human - written sentences
-29	47	49	in
+29	127	129	in
 29	133	154	adversarial framework
 30	29	34	relax
 30	39	47	training
 30	48	50	of
 30	55	68	discriminator
-30	65	67	to
+30	69	71	to
 30	74	115	learning - to - rank optimization problem
 31	19	27	proposed
 31	28	51	new adversarial network
@@ -52,26 +52,27 @@
 35	82	89	quality
 35	90	97	through
 35	98	114	relative ranking
-35	32	34	of
-35	40	47	samples
+35	169	171	of
+35	191	198	samples
 35	121	134	discriminator
 35	138	150	able to make
 35	151	168	better assessment
 35	215	220	helps
 35	225	234	generator
 35	235	243	to learn
-35	151	157	better
+35	244	250	better
 36	14	26	suitable for
 36	27	44	language learning
 36	45	61	in comparison to
 36	62	79	conventional GANs
 2	24	43	Language Generation
+168	11	13	on
+168	14	28	synthetic data
 189	33	40	RankGAN
 189	41	49	performs
 189	50	65	more favourably
 189	66	73	against
 189	78	94	compared methods
-191	42	44	on
 191	6	32	MLE , PG - BLEU and SeqGAN
 191	33	40	tend to
 191	41	49	converge
@@ -89,9 +90,11 @@
 193	54	72	better performance
 193	73	77	than
 193	86	95	PG - BLEU
+203	11	36	Chinese poems composition
 209	73	81	estimate
 209	86	96	similarity
 209	97	104	between
+209	109	159	human - written poem and the machine - created one
 211	10	19	seen that
 211	24	41	proposed Rank GAN
 211	42	50	performs
@@ -105,6 +108,7 @@
 238	0	7	RankGAN
 238	8	19	outperforms
 238	24	39	compared method
+240	11	30	COCO image captions
 249	0	7	RankGAN
 249	8	16	achieves
 249	17	35	better performance
@@ -129,6 +133,7 @@
 258	45	57	better score
 258	58	62	than
 258	63	69	SeqGAN
+260	11	31	Shakespeare 's plays
 266	21	36	proposed method
 266	37	45	achieves
 266	46	76	consistently higher BLEU score

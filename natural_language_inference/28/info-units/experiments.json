@@ -23,7 +23,9 @@
                   }
                 }
               },
-              "from sentence" : "1 . RUM utilizes a different representation of memory that outperforms those of LSTM and GRU ; 2 . RUM solves the task completely , despite its update gate , which does not allow all of the information encoded in the hidden stay to pass through ."
+              "from sentence" : "COPYING MEMORY TASK
+1 . RUM utilizes a different representation of memory that outperforms those of LSTM and GRU ; 2 . RUM solves the task completely , despite its update gate , which does not allow all of the information encoded in the hidden stay to pass through ."
+
             },
             "ASSOCIATIVE RECALL TASK" : {
               "has" : {
@@ -31,7 +33,9 @@
                   "have" : {
                     "same hidden state N h = 50" : {
                       "for" : "different lengths T",
-                      "from sentence" : "All the models have the same hidden state N h = 50 for different lengths T ."
+                      "from sentence" : "ASSOCIATIVE RECALL TASK
+All the models have the same hidden state N h = 50 for different lengths T ."
+
                     }
                   },
                   "use" : {
@@ -83,7 +87,9 @@
               "has" : {
                 "Baselines" : {
                   "name" : ["simple LSTM", "End - to - end Memory Network", "GORU"],
-                  "from sentence" : "We compare our model with several baselines : a simple LSTM , an End - to - end Memory Network ) and a GORU ."
+                  "from sentence" : "QUESTION ANSWERING
+We compare our model with several baselines : a simple LSTM , an End - to - end Memory Network ) and a GORU ."
+
                 },
                 "Results" : {
                   "find that" : {
@@ -124,7 +130,10 @@
                               }
                             }
                           },
-                          "from sentence" : "FS - RUM - 2 generalizes better than other gated models , such as GRU and LSTM , because it learns efficient patterns for activation in its kernels ."
+                          "from sentence" : "CHARACTER LEVEL LANGUAGE MODELING
+PENN TREEBANK CORPUS DATA SET						  
+FS - RUM - 2 generalizes better than other gated models , such as GRU and LSTM , because it learns efficient patterns for activation in its kernels ."
+
                         }
                       }
                     }

@@ -16,15 +16,13 @@
                   "has" : "all the trainable weights"
                 }
               },
-              "from sentence" : "An Adadelta optimizer ( Zeiler , 2012 ) with ? as 0.95 and as 1e ?
-8 is used to optimize all the trainable weights ."
+              "from sentence" : "An Adadelta optimizer ( Zeiler , 2012 ) with ? as 0.95 and as 1e ? 8 is used to optimize all the trainable weights ."
 
             }
           }
         },
         "initial learning rate" : {
-          "set to" : "0.5",
-          "from sentence" : "The initial learning rate is set to 0.5 and batch size to 70 ."
+          "set to" : "0.5"
         },
         "batch size" : {
           "to" : "70",
@@ -32,7 +30,7 @@
         },
         "not improve" : {
           "has" : {
-            "best indomain performance" : {
+            "best in domain performance" : {
               "for" : "30,000 steps"
             },
             "SGD optimizer" : {
@@ -51,8 +49,7 @@
               }
             }
           },
-          "from sentence" : "When the model does not improve best indomain performance for 30,000 steps , an SGD optimizer with learning rate of 3e ?
-4 is used to help model to find a better local optimum ."
+          "from sentence" : "When the model does not improve best in domain performance for 30,000 steps , an SGD optimizer with learning rate of 3e ? 4 is used to help model to find a better local optimum ."
 
         },
         "Dropout layers" : {
@@ -65,8 +62,7 @@
             "word embeddings" : {
               "with" : "pre-trained 300D Glo Ve 840B vectors"
             }
-          },
-          "from sentence" : "We initialize our word embeddings with pre-trained 300D Glo Ve 840B vectors while the out - of - vocabulary word are randomly initialized with uniform distribution ."          
+          }
         }        
         "out - of - vocabulary word" : {
           "are" : {
@@ -106,14 +102,12 @@
             "feature extraction layer" : {
               "set to" : "0.3"
             }
-          },
-          "from sentence" : "The first scale down ratio ?
-in feature extraction layer is set to 0.3 and transitional scale down ratio ?"
-
+          }
         },
         "transitional scale down ratio" : {
           "set to" : "0.5",
-          "from sentence" : "in feature extraction layer is set to 0.3 and transitional scale down ratio ?
+          "from sentence" : "The first scale down ratio ?
+in feature extraction layer is set to 0.3 and transitional scale down ratio ?
 is set to 0.5 ."
 
         },

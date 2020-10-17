@@ -31,8 +31,7 @@
             "two sentences" : {
               "in" : "one go"
             }
-          },
-          "from sentence" : "Our contributions are threefold : ( i ) We present a neural model based on LSTMs that reads two sentences in one go to determine entailment , as opposed to mapping each sentence independently into a semantic space ( 2.2 ) , ( ii ) We extend this model with a neural word - by - word attention mechanism to encourage reasoning over entailments of pairs of words and phrases ( 2.4 ) , and ( iii ) We provide a detailed qualitative analysis of neural attention for RTE ( 4.1 ) ."
+          }
         }
       },
       "extend" : {

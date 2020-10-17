@@ -18,26 +18,25 @@
 38	70	74	data
 38	75	98	to massively oversample
 38	101	112	diverse set
-38	22	24	of
+38	113	115	of
 38	116	173	possible negative sentence endings ( or counterfactuals )
-38	22	24	of
-38	75	77	to
 39	10	16	filter
 39	41	71	aggressively and adversarially
 39	72	77	using
 39	80	107	committee of trained models
 39	108	117	to obtain
 39	120	130	population
+39	131	133	of
 39	134	151	de-biased endings
 39	152	156	with
 39	157	183	similar stylistic features
+39	184	186	to
 39	191	200	real ones
 40	16	40	filtered counterfactuals
 40	45	57	validated by
 40	58	71	crowd workers
 40	72	89	to further ensure
 40	90	102	data quality
-2	35	42	Dataset
 2	47	77	Grounded Commonsense Inference
 236	4	14	best model
 236	20	29	only uses
@@ -48,15 +47,15 @@
 236	73	88	ELMo embeddings
 236	97	104	obtains
 236	105	111	43.6 %
-236	68	72	with
 237	43	59	greatly improves
+237	16	20	with
 237	65	77	more context
 237	80	82	by
 237	83	88	3.1 %
 237	94	99	given
 237	104	123	initial noun phrase
 237	136	151	ad-ditional 4 %
-237	94	99	given
+237	162	167	given
 237	172	186	first sentence
 238	0	19	Further improvement
 238	23	34	gained from

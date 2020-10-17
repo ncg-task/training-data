@@ -21,7 +21,7 @@
 102	46	61	Stanford CorNLP
 104	3	13	initialize
 104	18	33	word embeddings
-104	3	5	in
+104	34	36	in
 104	41	66	word representation layer
 104	72	75	use
 104	80	116	300 - dimensional GloVe word vectors
@@ -39,16 +39,16 @@
 106	30	33	for
 106	34	53	all the LSTM layers
 106	68	92	number of perspectives l
-106	75	77	of
+106	93	95	of
 106	96	134	our multiperspective matching function
-106	23	25	as
+106	154	156	as
 106	157	159	50
-107	50	63	dropout ratio
-107	64	66	as
-107	67	70	0.2
 109	11	24	learning rate
 109	25	27	as
 109	28	34	0.0001
+107	50	63	dropout ratio
+107	64	66	as
+107	67	70	0.2
 107	3	8	apply
 107	9	16	dropout
 107	17	19	to
@@ -73,7 +73,7 @@
 29	135	142	context
 29	143	145	of
 29	146	156	each point
-29	72	74	in
+29	157	159	in
 29	164	171	passage
 29	172	176	with
 29	181	189	question
@@ -90,4 +90,4 @@
 30	234	247	whole passage
 2	41	62	Machine Comprehension
 4	9	37	machine comprehension ( MC )
-4	33	35	MC
+4	171	173	MC

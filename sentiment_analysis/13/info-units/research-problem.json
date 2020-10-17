@@ -1,8 +1,6 @@
 {
   "has research problem" : [
     ["Aspect - based Sentiment Analysis", {"from sentence" : "BERT Post - Training for Review Reading Comprehension and Aspect - based Sentiment Analysis"}],
-    ["aspect extraction", {"from sentence" : "To show the generality of the approach , the proposed post - training is also applied to some other review - based tasks such as aspect extraction and aspect sentiment classification in aspect - based sentiment analysis ."}],
-    ["aspect sentiment classification", {"from sentence" : "To show the generality of the approach , the proposed post - training is also applied to some other review - based tasks such as aspect extraction and aspect sentiment classification in aspect - based sentiment analysis ."}],
-    ["aspect - based sentiment analysis", {"from sentence" : "To show the generality of the approach , the proposed post - training is also applied to some other review - based tasks such as aspect extraction and aspect sentiment classification in aspect - based sentiment analysis ."}]
+    ["aspect extraction", "aspect sentiment classification", "aspect - based sentiment analysis", {"from sentence" : "To show the generality of the approach , the proposed post - training is also applied to some other review - based tasks such as aspect extraction and aspect sentiment classification in aspect - based sentiment analysis ."}]
   ]
 }

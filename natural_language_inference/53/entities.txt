@@ -1,7 +1,7 @@
 15	19	24	study
 15	29	33	task
-15	37	45	learning
 15	34	36	of
+15	37	45	learning
 15	46	84	universal representations of sentences
 15	96	118	sentence encoder model
 15	127	137	trained on
@@ -30,7 +30,7 @@
 88	69	71	of
 88	72	75	0.1
 88	82	94	weight decay
-88	69	71	of
+88	95	97	of
 88	98	102	0.99
 91	8	18	classifier
 91	24	27	use
@@ -74,15 +74,15 @@
 144	27	50	max - pooling operation
 144	51	59	performs
 144	60	64	best
-144	48	50	on
+144	65	67	on
 144	73	96	SNLI and transfer tasks
-144	51	59	performs
-144	6	10	LSTM
 145	0	10	Looking at
 145	15	39	micro and macro averages
+145	57	65	performs
 145	66	86	significantly better
 145	87	91	than
 145	96	108	other models
+145	109	113	LSTM
 145	116	119	GRU
 145	122	134	BiGRU - last
 145	137	150	BiLSTM - Mean
@@ -99,17 +99,19 @@
 150	153	165	BiLSTM - max
 150	166	175	converged
 150	176	182	faster
-150	76	78	on
+150	183	185	on
 150	186	190	SNLI
 150	224	232	obtained
 150	233	246	worse results
-150	76	78	on
+150	247	249	on
 150	254	268	transfer tasks
+152	0	14	Embedding size
 153	124	149	increased embedding sizes
 153	150	157	lead to
 153	158	179	increased performance
-153	171	174	for
+153	180	183	for
 153	184	201	almost all models
+170	0	27	Comparison with SkipThought
 172	0	4	With
 172	5	55	much less data ( 570 k compared to 64M sentences )
 172	60	64	with
@@ -128,7 +130,7 @@
 174	42	53	much better
 174	54	58	than
 174	59	87	released SkipThought vectors
-174	25	27	on
+174	88	90	on
 174	91	93	MR
 174	96	98	CR
 174	101	105	MPQA
@@ -151,28 +153,29 @@
 176	34	47	STS14 results
 176	8	15	observe
 176	57	71	cosine metrics
-176	23	25	in
+176	72	74	in
 176	75	94	our embedding space
 176	95	97	is
 176	103	132	more semantically informative
 176	133	137	than
 176	141	168	SkipThought embedding space
+178	0	32	NLI as a supervised training set
 179	13	21	indicate
 179	27	36	our model
 179	37	47	trained on
 179	48	52	SNLI
 179	53	60	obtains
-179	61	88	much better overall results
-179	89	93	than
-179	94	100	models
-179	37	47	trained on
-179	112	134	other supervised tasks
-179	135	142	such as
-179	143	147	COCO
-179	150	172	dictionary definitions
-179	175	178	NMT
-179	181	185	PPDB
-179	190	193	SST
+179	61	89	much better over all results
+179	90	94	than
+179	95	101	models
+179	102	112	trained on
+179	113	135	other supervised tasks
+179	136	143	such as
+179	144	148	COCO
+179	151	173	dictionary definitions
+179	176	179	NMT
+179	182	186	PPDB
+179	191	194	SST
 183	0	31	Domain adaptation on SICK tasks
 184	0	30	Our transfer learning approach
 184	31	38	obtains
@@ -190,20 +193,21 @@
 186	152	162	trained on
 186	163	167	SNLI
 186	168	185	to fine - tune on
-186	76	80	SICK
+186	186	190	SICK
 185	3	9	obtain
 185	12	25	pearson score
 185	26	28	of
 185	29	34	0.885
-185	17	19	on
+185	35	37	on
 185	38	46	SICK - R
 185	84	104	86.3 % test accuracy
-185	17	19	on
+185	105	107	on
 185	108	116	SICK - E
 185	47	52	while
 185	123	158	previous best handengineered models
 185	53	61	obtained
 185	168	174	84.5 %
+188	0	33	Image - caption retrieval results
 191	5	17	trained with
 191	18	61	ResNet features and 30 k more training data
 191	68	87	SkipThought vectors
@@ -213,11 +217,11 @@
 191	126	142	original setting
 191	145	155	going from
 191	156	168	33.8 to 37.9
-191	91	94	for
+191	169	172	for
 191	173	194	caption retrieval R@1
-191	151	155	from
+191	201	205	from
 191	206	218	25.9 to 30.6
-191	178	180	on
+191	219	221	on
 191	222	241	image retrieval R@1
 192	0	12	Our approach
 192	13	19	pushes
@@ -230,19 +234,19 @@
 192	65	67	on
 192	68	86	cap-tion retrieval
 192	93	97	30.6
-192	57	59	to
+192	98	100	to
 192	101	105	33.2
-192	65	67	on
+192	106	108	on
 192	109	124	image retrieval
 195	0	14	MultiGenre NLI
 199	3	10	observe
 199	13	30	significant boost
 199	31	33	in
-199	34	53	performance overall
-199	54	65	compared to
-199	70	75	model
-199	76	91	trained only on
-199	92	96	SLNI
+199	34	54	performance over all
+199	55	66	compared to
+199	71	76	model
+199	77	92	trained only on
+199	93	97	SLNI
 200	0	9	Our model
 200	15	22	reaches
 200	23	42	AdaSent performance

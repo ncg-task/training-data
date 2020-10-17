@@ -7,17 +7,17 @@
 134	57	78	hidden representation
 134	79	81	of
 134	82	91	each word
-134	79	81	of
-134	31	33	as
-134	79	81	of
+134	43	45	as
 135	8	15	regards
 135	20	33	average value
+135	34	36	of
 135	41	54	hidden states
 135	62	88	representation of sentence
 135	95	107	puts it into
 135	108	121	softmax layer
 135	122	132	to predict
 135	137	148	probability
+135	149	151	of
 135	152	175	each sentiment polarity
 137	0	9	AE - LSTM
 137	28	34	models
@@ -34,13 +34,13 @@
 137	171	188	attention weights
 137	201	220	employed to produce
 137	225	245	final representation
-137	151	154	for
+137	246	249	for
 137	254	268	input sentence
 137	269	277	to judge
 137	282	300	sentiment polarity
 138	0	11	ATAE - LSTM
 138	26	34	extended
-138	2	11	AE - LSTM
+138	35	44	AE - LSTM
 138	45	57	by appending
 138	62	78	aspect embedding
 138	79	81	to
@@ -56,12 +56,13 @@
 143	16	23	applies
 143	24	33	attention
 143	34	48	multiple times
-143	31	33	on
+143	49	51	on
 143	56	70	word embedding
 143	73	80	so that
 143	81	107	more abstractive evidences
 143	108	130	could be selected from
 143	135	150	external memory
+120	25	39	word embedding
 120	44	58	initialized by
 120	63	87	pre-trained Glove vector
 121	8	23	weight matrices
@@ -74,11 +75,8 @@
 121	125	131	biases
 121	132	142	are set to
 121	143	147	zero
-122	4	13	dimension
-122	14	16	of
-122	21	61	word embedding and aspect term embedding
-122	66	72	set to
-122	73	76	300
+123	4	13	dimension
+123	14	16	of
 123	17	35	position embedding
 123	39	45	set to
 123	46	49	100
@@ -86,7 +84,11 @@
 123	61	93	randomly initialized and updated
 123	94	100	during
 123	105	121	training process
+122	21	61	word embedding and aspect term embedding
 122	66	72	set to
+122	73	76	300
+122	101	113	hidden units
+122	118	124	set to
 122	125	128	200
 124	3	6	use
 124	7	17	Tensorflow
@@ -101,7 +103,7 @@
 124	129	135	set to
 124	136	139	0.9
 124	171	192	initial learning rate
-124	129	135	set to
+124	147	153	set to
 124	203	207	0.01
 39	46	53	propose
 39	56	113	position - aware bidirectional attention network ( PBAN )
@@ -117,12 +119,12 @@
 42	4	34	Obtaining position information
 42	35	37	of
 42	38	47	each word
-42	8	10	in
+42	48	50	in
 42	51	73	corresponding sentence
 42	74	82	based on
 42	87	106	current aspect term
 42	114	124	converting
-42	14	34	position information
+42	129	149	position information
 42	150	154	into
 42	155	173	position embedding
 43	8	12	PBAN
@@ -153,9 +155,9 @@
 160	123	158	state - of - the - art performances
 160	172	189	effectively judge
 160	194	212	sentiment polarity
-160	131	133	of
+160	213	215	of
 160	216	237	different aspect term
-160	15	17	in
+160	238	240	in
 160	245	267	corresponding sentence
 160	274	284	to improve
 160	289	312	classification accuracy

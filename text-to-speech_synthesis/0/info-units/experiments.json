@@ -5,7 +5,9 @@
         "Model" : {
           "has" : {
             "Ensemble Model" : {
-              "use" : ["4 Transformer models", "3 CNN models", "3 Bi - LSTM models", {"from sentence" : "We use 4 Transformer models , 3 CNN models and 3 Bi - LSTM models with different hyperparameters for ensemble , which give the best performance on the validation set ."}],
+              "use" : ["4 Transformer models", "3 CNN models", "3 Bi - LSTM models", {"from sentence" : "Ensemble Model
+We use 4 Transformer models , 3 CNN models and 3 Bi - LSTM models with different hyperparameters for ensemble , which give the best performance on the validation set ."}],
+
               "has" : {
                 "4 Transformer models" : {
                   "share" : "same hidden size ( 256 )",

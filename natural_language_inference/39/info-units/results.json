@@ -11,7 +11,8 @@
                 }
               }
             },
-            "from sentence" : "The neural network models in the table , paragraph vector ( PV ) , CNN , and PV - Cnt / CNN - Cnt with word matching features , are mostly based on sentence modeling .
+            "from sentence" : "Wiki QA Results .
+The neural network models in the table , paragraph vector ( PV ) , CNN , and PV - Cnt / CNN - Cnt with word matching features , are mostly based on sentence modeling .
 Our model outperforms them all ."
 
           }

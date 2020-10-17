@@ -9,12 +9,13 @@
 23	172	175	can
 23	176	181	query
 23	182	188	any KB
-23	189	203	independent of
+23	189	200	independent
+23	201	203	of
 23	208	214	schema
 24	15	23	focus on
 24	24	33	answering
 24	34	58	simple factual questions
-24	21	23	on
+24	59	61	on
 24	64	85	broad range of topics
 31	16	24	based on
 31	25	33	learning
@@ -24,11 +25,11 @@
 31	86	96	KB triples
 31	97	104	so that
 31	105	120	representations
-31	70	72	of
+31	83	85	of
 31	124	159	questions and corresponding answers
 31	160	166	end up
 31	173	180	similar
-31	30	32	in
+31	181	183	in
 31	188	203	embedding space
 33	113	124	make use of
 33	125	141	weak supervision
@@ -86,9 +87,9 @@
 207	69	84	top of the list
 207	89	95	grants
 207	98	102	bump
-207	73	75	of
+207	103	105	of
 207	106	114	5 points
-207	73	75	of
+207	115	117	of
 207	118	120	F1
 208	0	26	All versions of our system
 208	27	45	greatly outperform
@@ -114,5 +115,5 @@
 232	72	78	result
 232	79	81	of
 232	82	89	paralex
-232	5	7	in
+232	90	92	in
 232	93	102	reranking

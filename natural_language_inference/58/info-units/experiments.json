@@ -271,8 +271,7 @@ We use a 100 - dimensional embedding vector for each symbol in the query and gra
                         "90.92 % and 71.55 % accuracy" : {
                           "in" : "small and large graph dataset"
                         },
-                        "from sentence" : "Deep LSTM
-Reader achieves 90.92 % and 71.55 % accuracy in the small and large graph dataset , respectively , which indicates the graph reachibility task is not trivial ."
+                        "from sentence" : "Deep LSTM Reader achieves 90.92 % and 71.55 % accuracy in the small and large graph dataset , respectively , which indicates the graph reachibility task is not trivial ."
 
                       }
                     }

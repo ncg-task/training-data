@@ -6,7 +6,7 @@ However , there is a gap of sophistication between methods for learning represen
 While most character models for learning representations of sentences are deep and complex , models for learning representations of words are shallow and simple .
 Also , in spite of considerable research on learning character embeddings , it is still not clear which kind of architecture is the best for capturing character - to - word representations .
 To address these questions , we first investigate the gaps between methods for learning word and sentence representations .
-We conduct detailed experiments and comparisons of different state - of - the - art convolutional models , and also investigate the advantages and disadvantages of their constituents .
+We conduct detailed experiments and comparisons of different state - of - the - art convolutional models , and also investigate the advantages and dis advantages of their constituents .
 Furthermore , we propose IntNet , a funnel - shaped wide convolutional neural architecture with no down - sampling for learning representations of the internal structure of words by composing their characters from limited , supervised training corpora .
 We evaluate our proposed model on six sequence labeling datasets , including named entity recognition , part - of - speech tagging , and syntactic chunking .
 Our in - depth analysis shows that IntNet significantly outperforms other character embedding models and obtains new state - of - the - art performance without relying on any external knowledge or resources .
@@ -39,13 +39,13 @@ The most straightforward idea is to add more convolutional layers which follows 
 Interestingly , we observe the accuracy does not increase much and found that accuracy drops when we increased the depth of the network .
 This observation shows that learning character representations for the internal structure of words is very different than sentences , and also might explain one of the reasons there has been a gap in character - based CNN models for representing words and sentences .
 In this paper , we present detailed experiments and comparisons across different state - of - the - art convolutional models from natural language processing and computer vision .
-We also investigate the advantages and disadvantages of some of their constituents on different convolutional architectures .
+We also investigate the advantages and dis advantages of some of their constituents on different convolutional architectures .
 Furthermore , we propose IntNet , a funnel - shaped wide convolutional neural network for learning the internal structure of words by composing their characters .
 Unlike previous CNN - based approaches , our funnel - shaped Int - Net explores deeper and wider architecture with no down - sampling for learning character - to - word representations from limited supervised training corpora .
 Lastly , we combine our IntNet model with LSTM - CRF , which captures both word shape and context information , and jointly decode tags for sequence labeling .
 The main contributions of this paper are the following :
 We conduct detailed studies on investigating the gap between learning word representations and sentence representations .
-We provide in - depth experiments and empirical comparisons of different convolutional models and explore the advantages and disadvantages of their components for learning character - to - word representations .
+We provide in - depth experiments and empirical comparisons of different convolutional models and explore the advantages and dis advantages of their components for learning character - to - word representations .
 We propose a funnel - shaped wide convolutional neural architecture with no downsampling that focuses on learning a better internal structure of words .
 Our proposed compositional character - toword model combined with LSTM - CRF achieves state - of - the - art performance for various sequence labeling tasks .
 This paper is organized as follows :
@@ -57,7 +57,7 @@ Related Work
 There exist three threads of related work regarding the topic of this paper : ( i ) different convolutional architectures from different domains ; ( ii ) character embedding models for words ; ( iii ) sequence labeling with deep neural network .
 CNN models across domains .
 Convolutional neural networks ( CNNs ) are very useful in extracting information from raw signals .
-In the area of NLP , was the first to propose shallow CNN with word embeddings for sentence classification .
+In the are a of NLP , was the first to propose shallow CNN with word embeddings for sentence classification .
 proposed CNN with 6 convolutional layers by directly extracting character level information for learning representations of semantic structure on sentences .
 Recently , proposed a VDCNN architecture with 29 convolutional layers using residual connections for text classification .
 However , one study on randomly dropping layers for training deep residual networks , , has shown that not all layers maybe needed and highlighted there is some amount of redundancy in ResNet .
@@ -133,7 +133,7 @@ where u is the number of salient features which is equal to the total number of 
 If each function F l produces p feature maps , we obtain ( p 0 + p L?1 2 ) representations , where p 0 is the number of output feature maps in the initial convolution layer .
 Bi-directional
 RNN
-Given the character - to - word representations are computed by IntNet in , we denote the input vector ( z 1 , z 2 , . . . , z n ) fora sentence .
+Given the character - to - word representations are computed by IntNet in , we denote the input vector ( z 1 , z 2 , . . . , z n ) for a sentence .
 LSTM returns the sequence ( h 1 , h 2 , . . . , h n ) that represents the sequential information at every step .
 We use the following implementation :
 where ?
@@ -146,13 +146,13 @@ ht for left and right context of the sentence , respectively .
 We concatenate two hidden states to form the output of bi-directional LSTM [ ? ? ht , ? ?
 ht ] for capturing context information from both sides .
 Scoring Function
-Instead of predicting each label independently , we consider the correlations between labels in neighborhoods and jointly decode the best chain of labels fora given input sentence by leveraging a conditional random field .
+Instead of predicting each label independently , we consider the correlations between labels in neighborhoods and jointly decode the best chain of labels for a given input sentence by leveraging a conditional random field .
 Formally , the sequence of labels is defined as : y = ( y 1 , y 2 , ... , y T ) .
 To define the scoring function f ( h , y) for each position t , we multiply the hidden state h wt with a parameter vector w yt that is indexed by the tag y t to obtain the matrix of scores output by the bidirectional LSTM network .
 Therefore , the function f can be written as :
 In Equation 8 , A is a matrix of transition scores , A i , j represents the score of a transition from the tag i to tag j , y 1 is the start tag of a sentence .
 Let Y ( h ) denote the set of possible label sequences for h .
-A probabilistic model fora sequence defines a family of conditional probabilities p ( y |h ) overall possible label sequences y given h with the following form :
+A probabilistic model for a sequence defines a family of conditional probabilities p ( y |h ) over all possible label sequences y given h with the following form :
 Objective Function and Inference
 For end - to - end network training , we use maximum conditional likelihood estimation to maximize the log probability of the correct tag sequence :
 While decoding , we predict the label sequence that obtains the highest score given by :
@@ -242,7 +242,7 @@ Therefore , the impact of training speed for sequence labeling is limited .
 The inference time of IntNet is almost the same as char - CNN .
 Conclusion
 We presented empirical comparisons of different character embedding models for learning character - to - word representations and investigated the gaps between methods for learning representations of words and sentences .
-We conducted detailed experiments of different state - of the - art convolutional models , and explored the advantages and disadvantages of their components for learning word shape information .
+We conducted detailed experiments of different state - of the - art convolutional models , and explored the advantages and dis advantages of their components for learning word shape information .
 Furthermore , we presented IntNet , a funnel - shaped wide convolutional neural architecture with no downsampling that focuses on learning better internal structure of words by composing their characters from limited supervised training corpora .
 Our in - depth analysis showed that a shallow wide architecture is better than a narrow deep architecture for learning character - to - word representations .
 Omitting down - sampling operations is useful for capturing the sequential patterns of prefixes and suffixes .

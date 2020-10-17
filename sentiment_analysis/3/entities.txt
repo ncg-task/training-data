@@ -3,26 +3,25 @@
 274	65	83	strong performance
 274	84	86	of
 274	87	90	KET
-274	23	25	on
+274	91	93	on
 274	94	106	all datasets
 275	10	18	removing
 275	19	26	context
 275	33	47	greater impact
-275	20	22	on
+275	48	50	on
 275	51	69	long conversations
 275	70	74	than
 275	75	94	short conversations
 199	0	6	c LSTM
 199	11	32	contextual LSTM model
-200	40	42	is
 200	3	39	utterance - level bidirectional LSTM
 200	48	57	to encode
 200	58	72	each utterance
 201	2	37	context - level unidirectional LSTM
 201	46	55	to encode
-201	2	9	context
+201	60	67	context
 204	0	9	CNN+cLSTM
-204	0	3	CNN
+204	15	18	CNN
 204	27	37	to extract
 204	38	56	utterance features
 205	3	9	c LSTM
@@ -80,7 +79,7 @@
 227	7	23	Glo Ve embedding
 227	24	27	for
 227	28	42	initialization
-227	20	22	in
+227	43	45	in
 227	50	83	word and concept embedding layers
 225	0	3	For
 225	4	16	each dataset
@@ -89,7 +88,7 @@
 225	34	46	fine - tuned
 225	47	55	based on
 225	62	73	performance
-225	53	55	on
+225	74	76	on
 225	81	95	validation set
 226	4	13	our model
 226	14	16	in
@@ -101,9 +100,8 @@
 226	100	102	of
 226	103	105	64
 226	110	123	learning rate
-226	100	102	of
+226	124	126	of
 226	127	133	0.0001
-228	104	106	is
 228	8	21	class weights
 228	22	24	in
 228	25	45	cross - entropy loss
@@ -113,11 +111,11 @@
 228	84	89	ratio
 228	90	92	of
 228	97	115	class distribution
-228	22	24	in
+228	116	118	in
 228	123	137	validation set
 228	138	140	to
-228	97	115	class distribution
-228	22	24	in
+228	145	163	class distribution
+228	164	166	in
 228	171	183	training set
 29	17	24	propose
 29	27	67	Knowledge - Enriched Transformer ( KET )
@@ -149,7 +147,7 @@
 35	58	82	external knowledge bases
 35	83	96	to facilitate
 35	101	127	understanding of each word
-35	111	113	in
+35	128	130	in
 35	135	145	utterances
 35	146	161	by referring to
 35	162	188	related knowledge entities
@@ -168,10 +166,10 @@
 237	0	6	c LSTM
 237	7	15	performs
 237	16	31	reasonably well
-237	20	22	on
+237	32	34	on
 237	35	84	short conversations ( i.e. , EC and DailyDialog )
 237	95	100	worst
-237	20	22	on
+237	101	103	on
 237	104	161	long conversations ( i.e. , MELD , EmoryNLP and IEMOCAP )
 240	0	9	BERT BASE
 240	10	18	achieves
@@ -208,8 +206,10 @@
 247	61	73	all datasets
 247	74	80	except
 247	81	83	EC
+248	68	76	on a par
+248	77	81	with
 248	86	95	KET model
-248	13	15	on
+248	96	98	on
 248	99	101	EC
 239	14	18	when
 239	23	45	utterance - level LSTM
@@ -223,12 +223,12 @@
 239	135	143	performs
 239	144	164	significantly better
 239	165	169	than
-239	49	55	c LSTM
-239	4	6	on
+239	116	122	c LSTM
+239	177	179	on
 239	180	198	long conversations
 245	13	27	indicates that
 245	28	37	our model
-245	2	4	is
+245	38	40	is
 245	41	47	robust
 245	48	54	across
 245	55	63	datasets

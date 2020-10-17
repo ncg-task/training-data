@@ -6,7 +6,7 @@
 (Ablation analysis||study||effect of distilling from unlabeled source words)
 (effect of distilling from unlabeled source words||boost||accuracy)
 (accuracy||by||nearly 1 % WER)
-(accuracy||demonstrating effectiveness by||introducing abundant unlabeled data)
+(accuracy||demonstrating the effectiveness by||introducing abundant unlabeled data)
 (introducing abundant unlabeled data||into||knowledge distillation)
 (Ablation analysis||compare||Transformer)
 (Transformer||with||RNN and CNN based models)

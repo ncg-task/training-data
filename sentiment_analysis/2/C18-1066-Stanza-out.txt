@@ -192,7 +192,7 @@ The color depth indicates the importance degree of the weight , the darker the m
 In , the sentence is " This is one great place to eat pizza more out but not a good place for take - out pizza . " , the polarities are positive and negative for pizza and take - out pizza respectively .
 From , we can find that our model is more inclined to consider the neighboring words of the aspect term .
 For example , when the current aspect term is pizza , obviously , its neighboring words such as " great " , " place " and " more " get more attention and play a great role for judging sentiment polarity of pizza .
-However , those words that are far from the current aspect term such as " but " , " not " and " take - out " obtain less attention , which demonstrates the effectiveness of the position information .
+However , those words thatare far from the current aspect term such as " but " , " not " and " take - out " obtain less attention , which demonstrates the effectiveness of the position information .
 For aspect term take - out pizza , it is obvious that the word " take - out " is more important to express the aspect term than the word " pizza " .
 From , it is worth noting that some words such as " good " and " place " get less attention even they are closer to the current aspect term than " but " and " not " .
 This is because different words in aspect term have different effect on a sentence , and we apply the bidirectional attention mechanism to choose more useful words .
@@ -217,7 +217,7 @@ Attention Network for Aspect - level Sentiment Analysis
 With the successful application of the attention mechanism in machine translation and reading comprehension , it is also applied to aspect - level sentiment analysis in recent years .
 examined the latent relatedness of the aspect term and sentiment polarity for aspect - level sentiment analysis .
 They designed an attention - based LSTM to learn aspect term embedding , and let the aspect term embedding participate in calculating the attention weights .
-proposed anew attention model IAN , which considered the separate modeling of aspect terms and could interactively learn attention in the contexts and aspect terms .
+proposed a new attention model IAN , which considered the separate modeling of aspect terms and could interactively learn attention in the contexts and aspect terms .
 Despite the effectiveness of these attention mechanisms , they are coarse - grained and it is still challenging to identify different sentiment polarity at a fine - grained aspect level .
 However , our PBAN model makes full use of the position information of the aspect term , and PBAN uses a fine - grained bidirectional attention mechanism to model the mutual relationship between the sentence and each word in the aspect term , identifying the importance of the word in the aspect term to obtain a more effective sentence representation as described in Section 1 .
 Conclusion

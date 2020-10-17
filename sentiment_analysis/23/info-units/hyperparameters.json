@@ -19,23 +19,21 @@
         }
       },
       "has" : {
-        "Word embeddings" : {
-          "are" : "300 dimensional",
-          "pretrained ourselves using" : "word2vec",
-          "from sentence" : "Word embeddings are 300 dimensional , pretrained ourselves using word2vec To train our model , we compute gradient by back - propagation and apply stochastic gradient descent with mini-batch 200 ."
-        },
         "Dropout" : {
           "applied to" : "both weights and embeddings",
           "from sentence" : "Dropout is further applied to both weights and embeddings ."
         },
         "All hidden layers" : {
-          "dropped out by" : "50 %",
-          "from sentence" : "All hidden layers are dropped out by 50 % , and embeddings 40 % ."
+          "dropped out by" : "50 %"
         },
         "embeddings" : {
           "has" : "40 %",
           "from sentence" : "All hidden layers are dropped out by 50 % , and embeddings 40 % ."
-        }
+        },
+        "Word embeddings" : {
+          "are" : "300 dimensional",
+          "pretrained ourselves using" : "word2vec"
+        }		
       },
       "To train" : {
         "our model" : {

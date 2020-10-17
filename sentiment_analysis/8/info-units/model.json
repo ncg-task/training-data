@@ -4,8 +4,7 @@
       "explore" : {
         "implication of hand - crafted features" : {
           "for" : "SER"
-        },
-        "from sentence" : "In this work , we explore the implication of hand - crafted features for SER and compare the performance of lighter machine learning models with the heavily data - reliant deep learning models ."
+        }
       },
       "compare" : {
         "performance" : {

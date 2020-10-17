@@ -23,12 +23,12 @@ BERT pre-trains the model parameters by using a pre-training objective: the mask
 
 Model Architecture
 For a sentence s with two target entities e 1 and e 2 , to make the BERT module capture the location information of the two entities, at both the beginning and end of the first entity, we insert a special token '$', and at both the beginning and end of the second entity, we insert a special token '#'. We also add '' to the beginning of each sentence.
-For example, after insertion of the special separate tokens, fora sentence with target entities "kitchen" and "house" will become to:
+For example, after insertion of the special separate tokens, for a sentence with target entities "kitchen" and "house" will become to:
 "[CLS] The $ kitchen $ is the last renovated part of the # house # . ": The model architecture.
 Given a sentence s with entity e 1 and e 2 , suppose its final hidden state output from BERT module is H. Suppose vectors H i to H j are the final hidden state vectors from BERT for entity e 1 , and H k to H mare the final hidden state vectors from BERT for entity e 2 . We apply the average operation to get a vector representation for each of the two target entities. Then after an activation operation (i.e. tanh), we add a fully connected layer to each of the two vectors, and the output fore 1 and e 2 are H 1 and H 2 respectively. This process can be mathematically formalized as Equation.
 We make W 1 and W 2 , b 1 and b 2 share the same parameters. In other words, we set W 1 = W 2 , b 1 = b 2 . For the final hidden state vector of the first token (i.e. '[CLS]'), we also add an activation operation and a fully connected layer, which is formally expressed as:
-Matrices W 0 , W 1 , W 2 have the same dimensions, i.e. W 0 ? R d×d , W 1 ? R d×d , W 2 ? R d×d , where dis the hidden state size from BERT. We concatenate H 0 , H 1 , H 2 and then add a fully connected layer and a softmax layer, which can be expressed as following:
-where W 3 ? R L×3d (L is the number of relation types), and p is the probability output. In Equations (1),(2),(3), b 0 , b 1 , b 2 , b 3 are bias vectors.
+Matrices W 0 , W 1 , W 2 have the same dimensions, i.e. W 0 ? R d?d , W 1 ? R d?d , W 2 ? R d?d , where d is the hidden state size from BERT. We concatenate H 0 , H 1 , H 2 and then add a fully connected layer and a softmax layer, which can be expressed as following:
+where W 3 ? R L?3d (L is the number of relation types), and p is the probability output. In Equations (1),(2),(3), b 0 , b 1 , b 2 , b 3 are bias vectors.
 We use cross entropy as the loss function. We apply dropout before each fully connected layer during training. We call our approach as R-BERT.
 
 Experiments

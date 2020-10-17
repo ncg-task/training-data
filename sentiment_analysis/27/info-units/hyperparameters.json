@@ -28,8 +28,7 @@
             "LSTM hidden units" : {
               "set to" : "300"
             }
-          },
-          "from sentence" : "The number of LSTM hidden units is set to 300 , and the output dimension of GCN layer is set to 600 ."
+          }
         },
         "output dimension" : {
           "of" : {

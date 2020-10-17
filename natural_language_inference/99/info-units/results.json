@@ -10,8 +10,7 @@
             "F1 score" : {
               "of" : "80.160 %"
             }
-          },
-          "from sentence" : "From the tables 1 and 2 we can see our single model achieves an EM score of 71.415 % and a F1 score of 80.160 % and the ensemble model improves to EM 75.989 % and F1 83. 475 % , which are both only after the r-net method at the time of submission ."
+          }
         },
         "ensemble model" : {
           "has" : {

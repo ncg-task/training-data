@@ -1,4 +1,5 @@
 247	4	8	RNTN
+247	17	42	highest reversal accuracy
 247	45	67	showing its ability to
 247	68	117	structurally learn negation of positive sentences
 255	0	5	shows
@@ -23,8 +24,8 @@
 209	45	66	bag of words features
 209	67	71	with
 209	72	92	Naive Bayes and SVMs
-209	72	83	Naive Bayes
-209	67	71	with
+209	106	117	Naive Bayes
+209	118	122	with
 209	123	145	bag of bigram features
 211	21	26	model
 211	32	40	averages
@@ -40,7 +41,7 @@
 20	101	118	complete analysis
 20	119	121	of
 20	126	147	compositional effects
-20	119	121	of
+20	148	150	of
 20	151	172	sentiment in language
 21	4	10	corpus
 21	14	22	based on
@@ -73,14 +74,14 @@
 25	106	114	based on
 25	115	168	supervised and structured machine learning techniques
 202	0	19	Optimal performance
-202	11	14	for
+202	20	23	for
 202	24	34	all models
 202	39	50	achieved at
 202	51	68	word vector sizes
 202	69	76	between
 202	77	97	25 and 35 dimensions
 202	102	113	batch sizes
-202	69	76	between
+202	114	121	between
 202	122	131	20 and 30
 206	4	8	RNTN
 206	15	30	usually achieve
@@ -101,6 +102,7 @@
 27	92	98	called
 27	103	143	Recursive Neural Tensor Network ( RNTN )
 28	0	32	Recursive Neural Tensor Networks
+28	33	46	take as input
 28	47	54	phrases
 28	55	57	of
 28	58	68	any length
@@ -109,11 +111,11 @@
 29	24	31	through
 29	32	61	word vectors and a parse tree
 29	71	78	compute
-29	37	44	vectors
+29	79	86	vectors
 29	87	90	for
 29	91	103	higher nodes
 29	104	106	in
-29	57	61	tree
+29	111	115	tree
 29	116	121	using
 29	126	166	same tensor - based composition function
 2	59	77	Sentiment Treebank
@@ -137,17 +139,19 @@
 220	36	38	on
 220	39	54	shorter phrases
 220	57	62	where
+220	63	87	negation and composition
 220	88	91	are
 220	92	101	important
 220	110	135	bag of features baselines
 220	136	143	perform
-220	31	35	well
+220	144	148	well
 220	154	158	with
+220	159	175	longer sentences
 229	4	18	combination of
 229	23	58	new sentiment treebank and the RNTN
 229	59	65	pushes
 229	70	86	state of the art
-229	13	15	on
+229	87	89	on
 229	90	103	short phrases
 229	104	109	up to
 229	110	116	85.4 %

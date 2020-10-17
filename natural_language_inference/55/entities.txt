@@ -3,7 +3,7 @@
 23	65	74	to answer
 23	75	101	more complicated questions
 24	52	90	more sophisticated inference procedure
-24	61	63	is
+24	96	98	is
 24	104	113	efficient
 24	122	130	consider
 24	131	143	longer paths
@@ -13,7 +13,7 @@
 24	277	284	encodes
 24	289	311	question - answer path
 24	316	336	surrounding subgraph
-24	25	27	of
+24	256	258	of
 24	344	346	KB
 2	0	18	Question Answering
 4	45	88	answer questions on a broad range of topics
@@ -26,7 +26,7 @@
 136	17	20	C 1
 136	21	28	induces
 136	31	41	large drop
-136	6	8	in
+136	42	44	in
 136	45	56	performance
 137	10	15	using
 137	16	40	all 2 - hops connections

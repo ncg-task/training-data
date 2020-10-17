@@ -37,8 +37,7 @@
             "most frequent aspect" : {
               "with" : "over 2000 sentences"
             }
-          },
-          "from sentence" : "The general aspect is the most frequent aspect with over 2000 sentences while aspect touristy has occurred in less than 100 sentences ."
+          }
         },
         "aspect touristy" : {
           "occurred in" : "less than 100 sentences",
@@ -50,7 +49,7 @@
             "number of sentences" : {
               "since" : {
                 "each sentence" : {
-                  "can contains" : "one or more opinions"
+                  "can contain" : "one or more opinions"
                 }
               }
             }

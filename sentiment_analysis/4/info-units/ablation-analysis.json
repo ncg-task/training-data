@@ -11,7 +11,9 @@
                 }
               }
             },
-            "from sentence" : "Compared to the dual - history variants ( variants 3 , 5 , and 7 ) , these models provide lesser performance ."
+            "from sentence" : "Self vs Dual History :
+Compared to the dual - history variants ( variants 3 , 5 , and 7 ) , these models provide lesser performance ."
+
           }
         },
         "DGIM" : {
@@ -36,7 +38,9 @@
                 }
               }
             },
-            "from sentence" : "Also , removal of multi-hop leads to worse performance than the removal of DGIM ."
+            "from sentence" : "Multi - hop vs No - hop : Variants 2 and 3 represent cases where multi-hop is omitted , i.e. , R = 1 . Performance for them are poorer than variants having multi-hop mechanism ( variants 4 - 7 ) .
+Also , removal of multi-hop leads to worse performance than the removal of DGIM ."
+
           },
           "has" : {
             "best performance" : {

@@ -6,7 +6,9 @@
           "choose" : {
             "CNN architecture" : {
               "as" : "feature extractor and the binary classifier",
-              "from sentence" : "For the discriminator , we choose the CNN architecture as the feature extractor and the binary classifier ."
+              "from sentence" : "GAN Setting .
+For the discriminator , we choose the CNN architecture as the feature extractor and the binary classifier ."
+
             }
           },
           "For" : {

@@ -32,8 +32,8 @@
 151	11	13	of
 151	14	31	attention weights
 151	39	46	same as
-151	4	10	length
-151	11	13	of
+151	51	57	length
+151	58	60	of
 151	61	69	sentence
 152	0	6	Theano
 152	10	18	used for
@@ -46,13 +46,13 @@
 153	40	42	of
 153	43	54	25 examples
 153	63	71	momentum
-153	40	42	of
+153	72	74	of
 153	75	78	0.9
 153	81	108	L 2 - regularization weight
-153	40	42	of
+153	109	111	of
 153	112	117	0.001
 153	122	143	initial learning rate
-153	40	42	of
+153	144	146	of
 153	147	151	0.01
 153	152	155	for
 153	156	163	AdaGrad
@@ -67,9 +67,9 @@
 25	58	76	can concentrate on
 25	81	89	key part
 25	90	92	of
-25	24	32	sentence
+25	95	103	sentence
 25	104	109	given
-25	13	19	aspect
+25	114	120	aspect
 26	3	10	explore
 26	15	36	potential correlation
 26	37	39	of
@@ -89,7 +89,7 @@
 176	7	20	Standard LSTM
 176	21	36	can not capture
 176	41	59	aspect information
-176	48	50	in
+176	60	62	in
 176	63	71	sentence
 182	9	34	can not take advantage of
 182	39	57	aspect information
@@ -101,11 +101,11 @@
 183	53	73	sentiment classifier
 183	74	85	by treating
 183	89	95	aspect
-183	65	67	as
+183	96	98	as
 183	101	107	target
 184	6	17	there is no
 184	18	37	attention mechanism
-184	1	3	in
+184	38	40	in
 184	41	50	TD - LSTM
 184	56	63	can not
 184	66	70	know

@@ -1,54 +1,55 @@
-77	0	17	For preprocessing
-77	23	30	segment
-77	31	40	sentences
-77	41	43	at
-77	44	61	punctuation marks
-77	64	65	.
-77	72	73	!
-77	84	85	?
-79	3	8	train
-79	13	18	model
-79	21	25	with
-79	26	44	hyper - parameters
-79	45	58	lightly tuned
-79	59	61	on
-79	66	80	validation set
-24	49	58	implement
-24	61	67	reader
-24	73	91	dynamically builds
-24	92	115	meaning representations
-24	116	119	for
-24	120	131	each entity
-24	134	163	by gathering and accumulating
-24	164	175	information
-24	31	33	on
-24	125	131	entity
-24	191	202	as it reads
-24	205	213	document
+7	39	76	https://github.com/soskek/der-network
+76	0	3	For
+76	4	17	preprocessing
+76	23	30	segment
+76	31	40	sentences
+76	44	61	punctuation marks
+76	64	65	.
+76	72	73	!
+76	84	85	?
+78	3	8	train
+78	13	18	model
+78	21	25	with
+78	26	44	hyper - parameters
+78	45	58	lightly tuned
+78	59	61	on
+78	66	80	validation set
+23	49	58	implement
+23	61	67	reader
+23	73	91	dynamically builds
+23	92	115	meaning representations
+23	116	119	for
+23	120	131	each entity
+23	134	163	by gathering and accumulating
+23	164	175	information
+23	176	178	on
+23	184	190	entity
+23	191	202	as it reads
+23	205	213	document
 2	58	73	Machine Reading
-81	14	27	Max - pooling
-81	53	73	drastically improves
-81	74	85	performance
-104	4	29	99 % confidence intervals
-104	30	32	of
-104	37	44	results
-104	30	32	of
-104	48	100	full DER Network and the one initialized by word2vec
-104	10	12	on
-104	108	116	test set
-104	117	121	were
-104	122	139	[ 0.700 , 0.740 ]
-104	144	161	[ 0.708 , 0.749 ]
-101	13	22	note that
-101	23	35	initializing
-101	36	45	our model
-101	46	50	with
-101	51	75	pre-trained word vectors
-101	79	81	is
-101	82	89	helpful
-103	23	32	our model
-103	35	51	full DER Network
-103	54	59	shows
-103	64	76	best results
-103	77	88	compared to
-103	89	119	several previous reader models
+80	14	27	Max - pooling
+80	53	73	drastically improves
+80	74	85	performance
+103	4	29	99 % confidence intervals
+103	30	32	of
+103	37	44	results
+103	45	47	of
+103	48	100	full DER Network and the one initialized by word2vec
+103	101	103	on
+103	108	116	test set
+103	117	121	were
+103	122	139	[ 0.700 , 0.740 ]
+103	144	161	[ 0.708 , 0.749 ]
+100	13	22	note that
+100	23	35	initializing
+100	36	45	our model
+100	46	50	with
+100	51	75	pre-trained word vectors
+100	79	81	is
+100	82	89	helpful
+102	23	32	our model
+102	35	51	full DER Network
+102	54	59	shows
+102	64	76	best results
+102	77	88	compared to
+102	89	119	several previous reader models

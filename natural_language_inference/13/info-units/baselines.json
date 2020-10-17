@@ -22,7 +22,9 @@
           "has" : {
             "baselines" : {
               "are" : ["context - less sequence to sequence ( seq2seq ) model", "ASR", "BiDAF"],
-              "from sentence" : "We compete on the summaries setting , in which the baselines are a context - less sequence to sequence ( seq2seq ) model , ASR and BiDAF ."
+              "from sentence" : "NarrativeQA
+We compete on the summaries setting , in which the baselines are a context - less sequence to sequence ( seq2seq ) model , ASR and BiDAF ."
+
             }
           }
         }

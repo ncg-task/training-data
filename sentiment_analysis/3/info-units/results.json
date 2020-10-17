@@ -72,7 +72,7 @@
               },
               "from sentence" : "However , both variants perform noticeably worse than KET on all datasets except EC , validating the importance of our proposed hierarchical self - attention and dynamic context - aware affective graph attention mechanism ."
             },
-            "on par" : {
+            "on a par" : {
               "with" : {
                 "KET model" : {
                   "on" : "EC"

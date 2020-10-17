@@ -23,7 +23,7 @@
 246	16	35	both highway layers
 246	36	40	have
 246	41	58	marginally helped
-246	63	82	overall performance
+246	63	83	over all performance
 248	20	47	Sub and Concat compositions
 248	48	52	were
 248	53	67	more important
@@ -37,7 +37,7 @@
 250	81	105	adding bi-directionality
 250	106	121	did not improve
 250	122	133	performance
-250	125	128	for
+250	134	137	for
 250	138	147	our model
 192	3	12	implement
 192	13	22	our model
@@ -72,7 +72,7 @@
 198	4	8	size
 198	9	11	of
 198	16	29	hidden layers
-198	9	11	of
+198	30	32	of
 198	37	59	highway network layers
 198	64	70	set to
 198	71	74	300
@@ -90,7 +90,6 @@
 202	4	15	batch order
 202	19	45	( randomly ) sorted within
 202	46	53	buckets
-26	10	38	several new novel components
 29	5	26	scalar valued feature
 29	30	37	used to
 29	38	45	augment
@@ -139,13 +138,13 @@
 214	47	58	CAFE + ELMo
 214	130	138	achieves
 214	139	149	89.0 score
-214	17	19	on
+214	150	152	on
 214	153	157	SNLI
 216	5	16	outperforms
 216	21	61	state - of - theart ESIM and DIIN models
 216	62	66	with
 216	74	82	fraction
-216	29	31	of
+216	83	85	of
 216	90	104	parameter cost
 218	15	37	lightweight adaptation
 218	38	46	achieves

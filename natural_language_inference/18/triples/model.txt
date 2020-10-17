@@ -1,6 +1,6 @@
 (Contribution||has||Model)
-(Model||using||reparameterisation method)
-(reparameterisation method||has||inference network)
+(Model||using||reparameteris ation method)
+(reparameteris ation method||has||inference network)
 (inference network||trained through||back - propagating)
 (back - propagating||has||unbiased and low variance gradients)
 (unbiased and low variance gradients||w.r.t.||latent variables)

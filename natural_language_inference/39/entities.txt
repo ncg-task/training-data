@@ -34,7 +34,7 @@
 20	110	115	model
 20	116	136	selectively identify
 20	137	164	important word interactions
-20	165	177	depending on
+20	195	198	for
 20	199	221	similarity measurement
 155	0	3	For
 155	8	35	SICK and MSRVID experiments
@@ -59,16 +59,17 @@
 162	44	64	SICK and MSRVID data
 162	68	74	padded
 162	79	88	sentences
-162	4	6	to
+162	89	91	to
 162	92	100	32 words
 162	111	145	STS2014 , WikiQA , and TrecQA data
-162	68	74	padded
-162	79	88	sentences
-162	4	6	to
+162	151	157	padded
+162	162	171	sentences
+162	172	174	to
 162	175	183	48 words
 2	65	96	Semantic Similarity Measurement
 4	0	30	Textual similarity measurement
 9	43	78	semantic textual similarity ( STS )
+176	0	7	Wiki QA
 178	41	125	paragraph vector ( PV ) , CNN , and PV - Cnt / CNN - Cnt with word matching features
 179	0	9	Our model
 179	10	21	outperforms

@@ -42,7 +42,7 @@ Sentence ( 2 ) is similar to sentence ( 1 ) except that the ( sentiment ) contex
 In this case , when " high " is assigned the correct attention for the aspect price , the model also needs to capture the sentiment interaction between " high " and price in order to identify the correct sentiment polarity .
 This is not as easy as sentence ( 1 ) because " high " itself indicates no clear sentiment .
 Instead , its sentiment polarity is dependent on the given target .
-Looking at sentences ( 3 ) and ( 4 ) , we further seethe importance of this problem and also why relying on attention mechanism alone is insufficient .
+Looking at sentences ( 3 ) and ( 4 ) , we further see the importance of this problem and also why relying on attention mechanism alone is insufficient .
 In these two sentences , sentiment contexts are both " high " ( i.e. , same attention ) , but sentence ( 3 ) is negative and sentence ( 4 ) is positive simply because their target aspects are different .
 Therefore , focusing on improving attention will not help in these cases .
 We will give a theoretical insight about this problem with MNs in Section 3 .
@@ -82,7 +82,7 @@ The analysis can be generalized to many existing MNs as long as their improvemen
 only .
 We first expand the sentiment score calculation from Eq. 2 to its individual terms :
 where " + " denotes element - wise summation .
-In Eq. 3 , ? i W c i can be viewed as the individual sentiment logit fora context word and W v t is the sentiment logit of an aspect .
+In Eq. 3 , ? i W c i can be viewed as the individual sentiment logit for a context word and W v t is the sentiment logit of an aspect .
 They are linearly combined to determine the final sentiment score s .
 This can be problematic in ASC .
 First , an aspect word often expresses no sentiment , for example , " screen " .
@@ -126,7 +126,7 @@ Each of them has its characteristics .
 Non- linear Projection ( NP ) :
 This is the first approach that utilizes a non-linear projection to capture the interplay between an aspect and its context .
 Instead of directly following the common linear combination as shown in Eq. 3 , we use a non-linear projection ( tanh ) as the replacement to calculate the aspect - specific sentiment score .
-As shown in Eq. 4 , by applying a non-linear projection over attention - weighted c i and v t , the context and aspect information are coupled in away that the final sentiment score can not be obtained by simply summing their individual contributions ( compared with Eq. 3 ) .
+As shown in Eq. 4 , by applying a non-linear projection over attention - weighted c i and v t , the context and aspect information are coupled in a way that the final sentiment score can not be obtained by simply summing their individual contributions ( compared with Eq. 3 ) .
 This technique is also intuitive in neural networks .
 However , notice that by using the non-linear projection ( or adding more sophisticated hidden layers ) over them in this way , we sacrifice some interpretability .
 For example , we may have difficulty in tracking how each individual context word ( c i ) affects the final sentiment score s , as all context and target representations are coupled .
@@ -138,7 +138,7 @@ From Eq. 5 , we can see that this approach can keep the linearity of attention -
 If we defin ?
 c i = tanh ( c i + v t ) , c i can be viewed as the target - aware context representation of context xi and the final sentiment score is calculated based on the aggregation of suchc i .
 This could be a more reasonable way to carry the aspect information rather than simply summing the aspect representation ( Eq. 3 ) .
-However , one potential disadvantage is that this setting uses the same set of vector representations ( learned by embeddings C ) for multiple purposes , i.e. , to learn output ( context ) representations and to capture the interplay between contexts and aspects .
+However , one potential dis advantage is that this setting uses the same set of vector representations ( learned by embeddings C ) for multiple purposes , i.e. , to learn output ( context ) representations and to capture the interplay between contexts and aspects .
 This may degenerate its model performance when the computational layers in memory networks ( called " hops " ) are deep , because too much information is required to be encoded in such cases and a sole set of vectors may fail to capture all of it .
 To overcome this , we suggest the involvement of an additional new set of embeddings / vectors , which is exclusively designed for modeling the sentiment interaction between an aspect and its context .
 The key idea is to decouple different functioning components with different representations , but still make them work jointly .
@@ -146,12 +146,12 @@ The following four techniques are based on this idea .
 Interaction Term ( IT ) :
 The third approach is to formulate explicit target - context sentiment interaction terms .
 Different from the targeted - context detection problem which is captured by attention ( discussed in Section 1 ) , here the targetcontext sentiment ( TCS ) interaction measures the sentiment - oriented interaction effect between targets and contexts , which we refer to as TCS interaction ( or sentiment interaction ) for short in the rest of this paper .
-Such sentiment interaction is captured by anew set of vectors , and we thus also call such vectors TCS vectors .
+Such sentiment interaction is captured by a new set of vectors , and we thus also call such vectors TCS vectors .
 In Eq. 6 , W s ?
 R Kd and w I ?
 R K1 are used instead of W in Eq .
 3 . W s models the direct sentiment effect from c i while w I works with d i and d t together for learning the TCS interaction .
-d i and d tare TCS vector representations of context xi and aspect t , produced from anew embedding matrix D , i.e. , d i = Dx i , d t = Dt ( D ? R d V and d i , d t ?
+d i and d tare TCS vector representations of context xi and aspect t , produced from a new embedding matrix D , i.e. , d i = Dx i , d t = Dt ( D ? R d V and d i , d t ?
 R d1 ) .
 Unlike input and output embeddings A and C , Dis designed to capture the sentiment interac- tion .
 The vectors from D affect the final sentiment score through w I d i , d t , where w I is a sentimentspecific vector and d i , d t ?
@@ -203,9 +203,9 @@ y x ,t is the model - predicted sentiment distribution for ( x , t ) .
 y k x ,t denotes it s probability in class k.
 Based on them , the training loss is constructed as :
 Related Work
-Aspect sentiment classification ( ASC ) , which is different from document or sentence level sentiment classification , has recently been tackled by neural networks with promising results ( also seethe survey ) .
+Aspect sentiment classification ( ASC ) , which is different from document or sentence level sentiment classification , has recently been tackled by neural networks with promising results ( also see the survey ) .
 Later on , the seminal work of using attention mechanism for neural machine translation popularized the application of the attention mechanism in many NLP tasks , including ASC .
-Memory networks ( MNs ) area type of neural models that involve such attention mechanisms , and they can be applied to ASC .
+Memory networks ( MNs ) are a type of neural models that involve such attention mechanisms , and they can be applied to ASC .
 proposed an MN variant to ASC and achieved the state - of - the - art performance .
 Another common neural model using attention mechanism is the RNN / LSTM .
 As discussed in Section 1 , the attention mechanism is suitable for ASC because it effectively addresses the targeted - context detection problem .
@@ -239,7 +239,7 @@ Note that other non-neural network based models like SVM and neural models witho
 Also , note that non-neural models like SVMs require feature engineering to manually encode aspect information , while this work aims to improve the aspect representation learning based approaches .
 Evaluation Measure
 Since we have a three - class classification task ( positive , negative and neutral ) and the classes are imbalanced as shown in , we use F1 - score as our evaluation measure .
-We report both F1 - Macro overall classes and all individual classbased F1 scores .
+We report both F1 - Macro over all classes and all individual classbased F1 scores .
 As our problem requires finegrained sentiment interaction , the class - based F1 provides more indicative information .
 In addition , we report the accuracy ( same as F1-Micro ) , as it is used in previous studies .
 However , we suggest using F1 - score because accuracy biases towards the majority class .
@@ -274,10 +274,10 @@ CI and JPI also perform well in most cases .
 IT , NP , and CNP can achieve very good scores in some cases but are less stable .
 We also analyzed their potential issues in Section 4 .
 4 . It is important to note that these improvements are quite large because in many cases sentiment interactions may not be necessary ( like sentence ( 1 ) in Section 1 ) .
-The overall good results obtained by TMNs demonstrate their capability of handling both general and target - sensitive sentiments , i.e. , the proposed Integration with Improved Attention :
+The over all good results obtained by TMNs demonstrate their capability of handling both general and target - sensitive sentiments , i.e. , the proposed Integration with Improved Attention :
 As discussed , the goal of this work is not for learning better attention but addressing the targetsensitive sentiment .
 In fact , solely improving attention does not solve our problem ( see Sections 1 and 3 ) .
-However , better attention can certainly help achieve an overall better performance for the ASC task , as it makes the targeted - context detection more accurate .
+However , better attention can certainly help achieve an over all better performance for the ASC task , as it makes the targeted - context detection more accurate .
 Here we integrate our pro-posed technique JCI with a state - of - the - art sophisticated attention mechanism , namely , the recurrent attention framework , which involves multiple attentions learned iteratively .
 We name our model with this integration as
 , each of which results in a 3 - dimensional vector .

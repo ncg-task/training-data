@@ -1,7 +1,7 @@
 {
   "has research problem" : [
     ["Reading Comprehension", {"from sentence" : "Densely Connected Attention Propagation for Reading Comprehension"}],
-    ["reading comprehension ( RC )", {"from sentence" : "We propose DECAPROP ( Densely Connected Attention Propagation ) , anew densely connected neural architecture for reading comprehension ( RC ) ."}],
+    ["reading comprehension ( RC )", {"from sentence" : "We propose DECAPROP ( Densely Connected Attention Propagation ) , a new densely connected neural architecture for reading comprehension ( RC ) ."}],
     ["RC", {"from sentence" : "We conduct extensive experiments on four challenging RC benchmarks ."}]
   ]
 }

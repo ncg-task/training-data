@@ -5,7 +5,7 @@
 (model||has||fails)
 (fails||to identify||correct sentence completion)
 (correct sentence completion||before and after||fine - tuning)
-(fine - tuning||on||ample of the submitted questions)
+(fine - tuning||on||sample of the submitted questions)
 (Model||propose||novel method)
 (novel method||in which||human annotators)
 (human annotators||educated on||workings)

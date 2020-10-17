@@ -36,8 +36,7 @@
               "of" : "VAEs"
             }
           }
-        },
-        "from sentence" : "Inspired by , we add historical dependencies on the latent variables of VAEs and propose a deep recurrent generative decoder ( DRGD ) for latent structure modeling ."
+        }
       },
       "propose" : {
         "deep recurrent generative decoder ( DRGD )" : {

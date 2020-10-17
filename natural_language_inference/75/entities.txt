@@ -8,7 +8,7 @@
 26	24	26	QA
 26	36	43	storing
 26	44	49	facts
-26	40	42	in
+26	50	52	in
 26	61	84	value structured memory
 27	4	10	memory
 27	11	13	is

@@ -81,7 +81,7 @@
         }
       },
       "further investigated" : {
-        "BERt - MRC" : {
+        "BERT - MRC" : {
           "improved" : {
             "examples" : {
               "found that" : {
@@ -134,7 +134,7 @@
           "tends to have" : {
             "errors" : {
               "as" : {
-                "decison boundary" : {
+                "decision boundary" : {
                   "between" : {
                     "negative and neutral examples" : {
                       "is" : "unclear"

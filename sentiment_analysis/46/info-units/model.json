@@ -30,7 +30,7 @@
                 "different representation subspaces" : {
                   "implied by" : "different types of sentiment sources",
                   "capture" : {
-                    "overall semantics" : {
+                    "over all semantics" : {
                       "of" : {
                         "sentiment , negation and intensity words" : {
                           "for" : "sentiment prediction"
@@ -41,7 +41,7 @@
                 }
               }
             },
-            "from sentence" : "In this way , we can attend to different sentimentrelevant information from different representation subspaces implied by different types of sentiment sources and capture the overall semantics of the sentiment , negation and intensity words for sentiment prediction ."
+            "from sentence" : "In this way , we can attend to different sentimentrelevant information from different representation subspaces implied by different types of sentiment sources and capture the over all semantics of the sentiment , negation and intensity words for sentiment prediction ."
           }
         }
       },

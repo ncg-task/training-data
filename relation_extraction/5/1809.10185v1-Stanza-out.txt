@@ -15,7 +15,7 @@ Successful relation extraction is the cornerstone of applications requiring rela
 Models making use of dependency parses of the input sentences , or dependency - based models , : An example modified from the TAC KBP challenge corpus .
 A subtree of the original UD dependency tree between the subject ( " he " ) and object ( " Mike Cane " ) is also shown , where the shortest dependency path between the entities is highlighted in bold .
 Note that negation ( " not " ) is off the dependency path .
-have proven to be very effective in relation extraction , because they capture long - range syntactic relations that are obscure from the surface form alone ( e.g. , when long clauses or complex scoping are present ) .
+have proven to be very effective in relation extraction , because they capture long - range syntactic relations thatare obscure from the surface form alone ( e.g. , when long clauses or complex scoping are present ) .
 Traditional feature - based models are able to represent dependency information by featurizing dependency trees as overlapping paths along the trees .
 However , these models face the challenge of sparse feature spaces and are brittle to lexical variations .
 More recent neural models address this problem with distributed representations built from their computation graphs formed along parse trees .
@@ -49,14 +49,14 @@ Furthermore , the information in h ( l?1 ) i is never carried over to hi , since
 We resolve these issues by normalizing the activations in the graph convolution before feeding it through the nonlinearity , and adding self - loops to each node in the graph :
 where = A + I with I being then n identity matrix , and d i = n j=1 ij is the degree of token i in the resulting graph . :
 Relation extraction with a graph convolutional network .
-The left side shows the overall architecture , while on the right side , we only show the detailed graph convolution computation for the word " relative " for clarity .
+The left side shows the over all architecture , while on the right side , we only show the detailed graph convolution computation for the word " relative " for clarity .
 A full unlabeled dependency parse of the sentence is also provided for reference .
 Stacking this operation over
 L layers gives us a deep GCN network , where we set h Moreover , the propagation of information between tokens occurs in parallel , and the runtime does not depend on the depth of the dependency tree .
 Note that the GCN model presented above uses the same parameters for all edges in the dependency graph .
 We also experimented with : ( 1 ) using different transformation matrices W for topdown , bottom - up , and self - loop edges ; and ( 2 ) adding dependency relation - specific parameters for edge - wise gating , similar to .
 We found that modeling directions does not lead to improvement , 1 and adding edgewise gating further hurts performance .
-We hypothesize that this is because the presented GCN model is usually already able to capture dependency edge patterns that are informative for classifying relations , and modeling edge directions and types does not offer additional discriminative power to the network before it leads to overfitting .
+We hypothesize that this is because the presented GCN model is usually already able to capture dependency edge patterns thatare informative for classifying relations , and modeling edge directions and types does not offer additional discriminative power to the network before it leads to overfitting .
 For example , the relations entailed by " A 's son , B " and " B 's son , A " can be readily distinguished with " 's " attached to different entities , even when edge directionality is not considered .
 Encoding Relations with GCN
 We now formally define the task of relation extraction .
@@ -65,7 +65,7 @@ A subject entity and an object entity are identified and correspond to two spans
 .
 Given X , X s , and X o , the goal of relation extraction is to predict a relation r ?
 R ( a predefined relation set ) that holds between the entities or " no relation " otherwise .
-After applying an L-layer GCN over word vectors , we obtain hidden representations of each token that are directly influenced by its neighbors no more than L edges apart in the dependency tree .
+After applying an L-layer GCN over word vectors , we obtain hidden representations of each token thatare directly influenced by its neighbors no more than L edges apart in the dependency tree .
 To make use of these word representations for relation extraction , we first obtain a sentence representation as follows ( see also left ) :
 where h ( l ) denotes the collective hidden representations at layer l of the GCN , and f : R dn ?
 Rd is a max pooling function that maps from n output vectors to the sentence vector .
@@ -76,7 +76,7 @@ Inspired by recent work on relational learning between entities , we obtain the 
 This h final representation is then fed into a linear layer followed by a softmax operation to obtain a probability distribution over relations .
 Contextualized GCN
 The network architecture introduced so far learns effective representations for relation extraction , but it also leaves a few issues inadequately addressed .
-First , the input word vectors do not contain contextual information about word order or disambiguation .
+First , the input word vectors do not contain contextual information about word order or dis ambiguation .
 Second , the GCN highly depends on a correct parse tree to extract crucial information from the sentence ( especially when pruning is performed ) , while existing parsing algorithms produce imperfect trees in many cases .
 To resolve these issues , we further apply a Contextualized GCN ( C - GCN ) model , where the input word vectors are first fed into a bi-directional long short - term memory ( LSTM ) network to generate contextualized representations , which are then used ash ( 0 ) in the original model .
 This BiL - STM contextualization layer is trained jointly with the rest of the network .
@@ -84,7 +84,7 @@ We show empirically in Section 5 that this augmentation substantially improves t
 We note that this relation extraction model is conceptually similar to graph kernel - based models , in that it aims to utilize local dependency tree patterns to inform relation classification .
 Our model also incorporates crucial off - path information , which greatly improves its robustness compared to shortest dependency pathbased approaches .
 Compared to tree - structured models ( e.g. , Tree - LSTM
-( Tai et al. , 2015 ) ) , it not only is able to capture more global information through the use of pooling functions , but also achieves substantial speedup by not requiring recursive operations that are difficult to parallelize .
+( Tai et al. , 2015 ) ) , it not only is able to capture more global information through the use of pooling functions , but also achieves substantial speedup by not requiring recursive operations thatare difficult to parallelize .
 For example , we observe that on a Titan Xp GPU , training a Tree - LSTM model over a minibatch of 50 examples takes 6.54 seconds on average , while training the original GCN model takes only 0.07 seconds , and the C - GCN model 0.08 seconds .
 Incorporating Off - path Information with Path - centric Pruning
 Dependency trees provide rich structures that one can exploit in relation extraction , but most of the information pertinent to relations is usually contained within the subtree rooted at the lowest common ancestor ( LCA ) of the two entities .
@@ -95,8 +95,8 @@ For instance , the negation in is neglected when a model is restricted to only l
 Similarly , in the sentence " She was diagnosed with cancer last year , and succumbed this June " , the dependency path She?diagnosed ?
 cancer is not sufficient to establish that cancer is the cause of death for the subject unless the conjunction dependency to succumbed is also present .
 Motivated by these observations , we propose path - centric pruning , a novel technique to incorporate information off the dependency path .
-This is achieved by including tokens that are up to distance K away from the dependency path in the LCA subtree .
-K = 0 , corresponds to pruning the tree down to the path , K = 1 keeps all nodes that are directly attached to the path , and K = ?
+This is achieved by including tokens thatare up to distance K away from the dependency path in the LCA subtree .
+K = 0 , corresponds to pruning the tree down to the path , K = 1 keeps all nodes thatare directly attached to the path , and K = ?
 retains the entire LCA subtree .
 We combine this pruning strategy with our GCN model , by directly feeding the pruned trees into the graph convolutional layers .
 We show that pruning with K = 1 achieves the best balance between including relevant information ( e.g. , negation and conjunction ) and keeping irrelevant content out of the resulting pruned tree as much as possible .

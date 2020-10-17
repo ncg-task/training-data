@@ -8,8 +8,7 @@
               "an" : "auxiliary sentence"
             }
           }
-        },
-        "from sentence" : "In this paper , we investigate several methods of constructing an auxiliary sentence and transform ( T ) ABSA into a sentence - pair classification task ."
+        }
       },
       "transform" : {
         "( T ) ABSA" : {

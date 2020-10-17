@@ -4,8 +4,7 @@
       "reduce" : {
         "size of the input , output , and entity vocabularies" : {
           "to" : "at most 50 K"
-        },
-        "from sentence" : "For both datasets , we further reduce the size of the input , output , and entity vocabularies to at most 50 K as suggested in and replace less frequent words to \" < unk > \" ."
+        }
       },
       "replace" : {
         "less frequent words" : {

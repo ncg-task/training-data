@@ -2,7 +2,6 @@
   "has research problem" : [
     ["Modelling Interaction of Sentence Pair", {"from sentence" : "Modelling Interaction of Sentence Pair with Coupled- LSTMs"}],
     ["modelling the interactions of two sentences", {"from sentence" : "Recently , there is rising interest in modelling the interactions of two sentences with deep neural networks ."}],
-    ["modelling the relevance / similarity of the sentence pair", {"from sentence" : "Among these tasks , a common problem is modelling the relevance / similarity of the sentence pair , which is also called text semantic matching ."}],
-    ["text semantic matching", {"from sentence" : "Among these tasks , a common problem is modelling the relevance / similarity of the sentence pair , which is also called text semantic matching ."}]    
+    ["modelling the relevance / similarity of the sentence pair", "text semantic matching", {"from sentence" : "Among these tasks , a common problem is modelling the relevance / similarity of the sentence pair , which is also called text semantic matching ."}]
   ]
 }

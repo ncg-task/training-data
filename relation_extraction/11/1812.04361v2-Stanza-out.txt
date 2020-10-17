@@ -91,15 +91,15 @@ At k th layer , the importance of an edge ( u , v , l uv ) is computed as :
 Here , ? k luv ?
 R m andb k luv ?
 R are parameters which are trained and ?( ) is the sigmoid function .
-With edgewise gating , the final GCN embedding fora node v after k th layer is given as :
+With edgewise gating , the final GCN embedding for a node v after k th layer is given as :
 ( 2 )
 RESIDE
 Overview
-In multi-instance learning paradigm , we are given a bag of sentences ( or instances ) {s 1 , s 2 , ...s n } fora given entity pair , the task is to predict the relation between them .
+In multi-instance learning paradigm , we are given a bag of sentences ( or instances ) {s 1 , s 2 , ...s n } for a given entity pair , the task is to predict the relation between them .
 RESIDE consists of three components for learning a representation of a given bag , which is fed to a softmax classifier .
 We briefly present the components of RESIDE below .
 Each component will be described in detail in the subsequent sections .
-The overall architecture of RE - SIDE is shown in .
+The over all architecture of RE - SIDE is shown in .
 1 .
 Syntactic Sentence Encoding : RESIDE uses a Bi - GRU over the concatenated positional and word embedding for encoding the local context of each token .
 For capturing long - range dependencies , GCN over dependency tree is employed and its encoding is appended to the representation of each token .
@@ -155,7 +155,7 @@ Further , we extend P by including tokens atone hop distance in dependency path 
 Such features from dependency parse have been exploited in the past by .
 The degree of match between the extracted phrases in P and aliases of a relation can give important clues about the relevance of that relation for the sentence .
 Several KBs like Wikidata provide such relation aliases , which can be readily exploited .
-In RESIDE , we further expand the relation alias set using Paraphrase database ( PPDB ) .
+In RESIDE , we further expand the relation alias set using Paraphrase data base ( PPDB ) .
 We note that even for cases when aliases for relations are not available , providing only the names of relations give competitive performance .
 We shall explore this point further in Section 7.3 .
 For matching P with the PPDB expanded relation alias set R , we project both in a d-dimensional space using GloVe embeddings .
@@ -234,9 +234,9 @@ In this section , we test the performance of the model insetting where relation 
 For this , we evaluate the performance of the model on four different settings :
 None : Relation aliases are not available . One :
 The name of relation is used as its alias .
-One+PPDB : Relation name extended using Paraphrase Database ( PPDB ) .
+One+PPDB : Relation name extended using Paraphrase Data base ( PPDB ) .
 All : Relation aliases from Knowledge Base 3
-The overall results are summarized in .
+The over all results are summarized in .
 We find that the model performs best when aliases are provided by the KB itself .
 Overall , we find that RESIDE gives competitive performance even when very limited amount of relation alias information is available .
 We observe that performance improves further with the availability of more alias information .

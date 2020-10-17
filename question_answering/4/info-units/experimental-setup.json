@@ -43,8 +43,7 @@
             "DECAENC" : {
               "set to" : "3"
             }
-          },
-          "from sentence" : "The number of layers in DECAENC is set to 3 and the number of factors in the factorization kernel is set to 64 ."
+          }
         },
         "number of factors" : {
           "in" : {
@@ -61,8 +60,7 @@
             "? = 0.5" : {
               "for" : "News QA"
             }
-          },
-          "from sentence" : "We use Adadelta with ? = 0.5 for News QA , Adam with ? = 0.001 for Search QA , Quasar - T and Narrative QA ."          
+          }
         },
         "Adam" : {
           "with" : {
@@ -77,8 +75,7 @@
           "from sentence" : "We use the CUDNN implementation of the RNN encoder ."
         },
         "learning rate decay factor" : {
-          "of" : "2",
-          "from sentence" : "We use a learning rate decay factor of 2 and patience of 3 epochs whenever the EM ( or ROUGE - L ) score on the development set does not increase ."
+          "of" : "2"
         },
         "patience" : {
           "of" : "3 epochs",

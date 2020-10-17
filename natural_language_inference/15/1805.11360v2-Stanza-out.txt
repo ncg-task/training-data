@@ -53,13 +53,13 @@ Recently , the architectural developments using deeper layers have led more prog
 The residual connection is widely and commonly used to increase the depth of a network stably ) .
 More recently , Huang et al. ) enable the features to be connected from lower to upper layers using the concatenation operation without any loss of information on lower - layer features .
 External resources are also used for sentence matching .
-Chen et al. ) used syntactic parse trees or lexical databases like WordNet to measure the semantic relationship among the words and Pavlick et al. added interpretable semantics to the paraphrase database .
+Chen et al. ) used syntactic parse trees or lexical data bases like WordNet to measure the semantic relationship among the words and Pavlick et al. added interpretable semantics to the paraphrase data base .
 Unlike these , in this paper , we do not use any such external resources .
 Our work belongs to the joint approaches which uses densely - connected recurrent and co-attentive information to enhance representation power for semantic sentence matching .
 Methods
 In this section , we describe our sentence matching architecture DRCN which is composed of the following three components : ( 1 ) word representation layer , ( 2 ) attentively connected RNN and ( 3 ) interaction and prediction layer .
 We denote two input sentences as P = {p 1 , p 2 , , p I } and Q = {q 1 , q 2 , , q J } where pi / q j is the i th /j th word of the sentence P / Q and I/ J is the word length of P / Q .
-The overall architecture of the proposed DRCN is shown in .
+The over all architecture of the proposed DRCN is shown in .
 Word Representation Layer
 To construct the word representation layer , we concatenate word embedding , character representation and the exact matched flag which was used in .
 In word embedding , each word is represented as a ddimensional vector by using a pre-trained word embedding method such as GloVe or Word2vec ) .
@@ -81,7 +81,7 @@ Densely connected
 Recurrent Networks
 The ordinal stacked RNNs ( Recurrent Neural Networks ) are composed of multiple RNN layers on top of each other , with the output sequence of previous layer forming the input sequence for the next .
 More concretely , let H l be the l th RNN layer in a stacked RNN .
-Note that in our implementation , we employ the bidirectional LSTM ( BiLSTM ) as abase block of H l .
+Note that in our implementation , we employ the bidirectional LSTM ( BiLSTM ) as a base block of H l .
 At the time step t , an ordinal stacked RNN is expressed as follows :
 While this architecture enables us to buildup higher level representation , deeper networks have difficulties in training due to the exploding or vanishing gradient problem .
 To encourage gradient to flow in the backward pass , residual connection ) is introduced which bypasses the non-linear transformations with an identity mapping .
@@ -98,7 +98,7 @@ Autoencoder is a compression technique that reduces the number of features while
 Furthermore , this component increased the test performance by working as a regularizer in our experiments .
 Interaction and Prediction Layer
 To extract a proper representation for each sentence , we apply the step - wise max - pooling operation over densely connected recurrent and co-attentive features ( pooling in ) .
-More specifically , if the output of the final RNN layer is a 100d vector fora sentence with 30 words , a 30 100 matrix is obtained which is max - pooled column - wise such that the size of the resultant vector p or q is 100 .
+More specifically , if the output of the final RNN layer is a 100d vector for a sentence with 30 words , a 30 100 matrix is obtained which is max - pooled column - wise such that the size of the resultant vector p or q is 100 .
 Then , we aggregate these representations p and q for the two sentences P and Q in various ways in the interaction layer and the final feature vector v for semantic sentence matching is obtained as follows :
 Here , the operations +, ? and | | are performed elementwise to infer the relationship between two sentences .
 The element - wise subtraction p ?
@@ -214,7 +214,7 @@ And , in the model of ( 9 ) , we removed additional dense connection over word e
 We denote the model of Table 6 ( 9 ) as Res1 and the model of Table 6 ( 8 ) as Res2 for convenience .
 In , DRCN does not try to find the right alignments at the upper layer if it already finds the rationale for the prediction at the relatively lower layer .
 This is expected that the DRCN use the features of all the preceding layers as a collective knowledge .
-While Res1 and Res2 have to find correct alignments at the top layer , however , there are some misalignments such as competing and bicyclists rather than competing and race in Res2 model .
+While Res1 and Res2 have to find correct alignments at the top layer , however , there are some mis alignments such as competing and bicyclists rather than competing and race in Res2 model .
 In the second example in , although the DRCN could n't find the clues at the lower layer , it gradually finds the alignments , which can be a rationale for the prediction .
 At the 5th layer of DRCN , the attentive weights of gray building and white building are significantly higher than others .
 On the other hand , the attentive weights are spread in several positions in both Res1 and Res2 which use residual connection . :

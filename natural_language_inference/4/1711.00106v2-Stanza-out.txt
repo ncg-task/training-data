@@ -1,23 +1,23 @@
 title
 DCN + : MIXED OBJECTIVE AND DEEP RESIDUAL COATTENTION FOR QUESTION ANSWERING
 abstract
-Traditional models for question answering optimize using cross entropy loss , which encourages exact answers at the cost of penalizing nearby or overlapping answers that are sometimes equally accurate .
+Traditional models for question answering optimize using cross entropy loss , which encourages exact answers at the cost of penalizing nearby or overlapping answers thatare sometimes equally accurate .
 We propose a mixed objective that combines cross entropy loss with self - critical policy learning .
-The objective uses rewards derived from word overlap to solve the misalignment between evaluation metric and optimization objective .
+The objective uses rewards derived from word overlap to solve the mis alignment between evaluation metric and optimization objective .
 In addition to the mixed objective , we improve dynamic coattention networks ( DCN ) with a deep residual coattention encoder that is inspired by recent work in deep self - attention and residual networks .
 Our proposals improve model performance across question types and input lengths , especially for long questions that requires the ability to capture long - term dependencies .
 On the Stanford Question Answering Dataset , our model achieves state - of - the - art results with 75.1 % exact match accuracy and 83.1 % F1 , while the ensemble obtains 78.9 % exact match accuracy and 86.0 % F1 .
 INTRODUCTION
-Existing state - of - the - art question answering models are trained to produce exact answer spans fora question and a document .
+Existing state - of - the - art question answering models are trained to produce exact answer spans for a question and a document .
 In this setting , aground truth answer used to supervise the model is defined as a start and an end position within the document .
 Existing training approaches optimize using cross entropy loss over the two positions .
 However , this suffers from a fundamental disconnect between the optimization , which is tied to the position of a particular ground truth answer span , and the evaluation , which is based on the textual content of the answer .
-This disconnect is especially harmful in cases where answers that are textually similar to , but distinct in positions from , the ground truth are penalized in the same fashion as answers that are textually dissimilar .
+This disconnect is especially harmful in cases where answers thatare textually similar to , but distinct in positions from , the ground truth are penalized in the same fashion as answers thatare textually dissimilar .
 For example , suppose we are given the sentence " Some believe that the Golden State Warriors team of 2017 is one of the greatest teams in NBA history " , the question " which team is considered to be one of the greatest teams in NBA history " , and aground truth answer of " the Golden State Warriors team of 2017 " .
 The span " Warriors " is also a correct answer , but from the perspective of traditional cross entropy based training it is no better than the span " history " .
 To address this problem , we propose a mixed objective that combines traditional cross entropy loss over positions with a measure of word overlap trained with reinforcement learning .
 We obtain the latter objective using self - critical policy learning in which the reward is based on word overlap between the proposed answer and the ground truth answer .
-Our mixed objective brings two benefits : ( i ) the reinforcement learning objective encourages answers that are textually similar to the ground truth answer and discourages those that are not ; ( ii ) the cross entropy objective significantly facilitates policy learning by encouraging trajectories that are known to be correct .
+Our mixed objective brings two benefits : ( i ) the reinforcement learning objective encourages answers thatare textually similar to the ground truth answer and discourages those thatare not ; ( ii ) the cross entropy objective significantly facilitates policy learning by encouraging trajectories thatare known to be correct .
 The resulting objective is one that is both faithful to the evaluation metric and converges quickly in practice .
 In addition to our mixed training objective , we extend the Dynamic Coattention Network ( DCN ) by with a deep residual coattention encoder .
 This allows the network to build richer representations of the input by enabling each input sequence to attend to previous attention contexts .
@@ -114,7 +114,7 @@ The resulting model is constrained in its exploration during fine - tuning becau
 We instead treat the optimization problem as a multi-task learning problem .
 The first task is to optimize for positional match with the ground truth answer using the the cross entropy objective .
 The second task is to optimize for word overlap with the ground truth answer with the self - critical reinforcement learning objective .
-Ina similar fashion to , we combine the two losses using homoscedastic uncertainty as task - dependent weightings .
+In a similar fashion to , we combine the two losses using homoscedastic uncertainty as task - dependent weightings .
 Here , ? ce and ?
 rl are learned parameters .
 The gradient of the cross entropy objective can be derived using straight - forward backpropagation .
@@ -190,7 +190,7 @@ Coattention , which builds codependent representations of multiple inputs , has 
 introduced coattention for question answering .
 Bidirectional attention flow and self - matching attention ( Microsoft Asia Natural Language Computing Group , 2017 ) also build codependent representations between the question and the document .
 Reinforcement learning in NLP .
-Many tasks in natural language processing have evaluation metrics that are not differentiable .
+Many tasks in natural language processing have evaluation metrics thatare not differentiable .
 proposed a hierarchical reinforcement learning technique for generating text in a simulated way - finding domain .
 applied deep Q-networks to learn policies for text - based games using game rewards as feedback .
 introduced a neural conversational model trained using policy gradient methods , whose reward function consisted of heuristics for ease of answering , information flow , and semantic coherence .

@@ -9,8 +9,7 @@
       },
       "has" : {
         "All out - of - vocabulary words" : {
-          "initialized as" : "zero vectors",
-          "from sentence" : "All out - of - vocabulary words are initialized as zero vectors , and all biases are set to zero ."          
+          "initialized as" : "zero vectors"
         },
         "all biases" : {
           "set to" : "zero",
@@ -48,7 +47,7 @@
               "to" : "0.001"
             },
             "batch size" : {
-              "to" : 64
+              "to" : "64"
             },
             "dropout rate" : {
               "to" : "0.5"

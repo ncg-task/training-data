@@ -1,31 +1,30 @@
-248	8	11	set
-248	107	110	for
+248	43	46	set
 248	113	120	NNM - 1
 248	51	65	number of bins
 248	66	68	as
 248	69	72	600
 248	75	99	word embedding dimension
-248	66	68	as
+248	100	102	as
 248	103	106	700
 248	189	196	NNM - 2
-248	51	65	number of bins
-248	66	68	as
+248	127	141	number of bins
+248	142	144	as
 248	145	148	200
-248	75	99	word embedding dimension
-248	66	68	as
-248	103	106	700
+248	151	175	word embedding dimension
+248	176	178	as
+248	179	182	700
 48	92	99	propose
 48	103	150	attention based neural matching model ( a NMM )
 51	0	47	Deep neural network with value - shared weights
 52	3	12	introduce
 52	15	52	novel value - shared weighting scheme
-52	3	5	in
+52	53	55	in
 52	56	76	deep neural networks
 53	0	48	Incorporate attention scheme over question terms
-53	12	28	attention scheme
-53	29	33	over
-53	34	48	question terms
 54	3	14	incorporate
+54	19	35	attention scheme
+54	36	40	over
+54	45	59	question terms
 54	60	65	using
 54	68	83	gating function
 4	21	39	question answering
@@ -46,12 +45,12 @@
 343	61	64	NMM
 343	71	79	performs
 343	80	84	well
-343	74	77	for
+343	85	88	for
 343	89	103	answer ranking
 343	106	113	showing
 343	114	138	significant improvements
 343	139	143	over
 343	144	172	previous deep learning model
 343	173	180	with no
-343	37	56	additional features
+343	181	200	additional features
 343	205	243	linguistic feature engineering methods

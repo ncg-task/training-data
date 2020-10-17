@@ -2,7 +2,7 @@
 (Experimental Setup||adopt||Adam optimizer)
 (Adam optimizer||with||learning rate)
 (learning rate||of||0.0003/ 0.001/0.001)
-(0.0003/ 0.001/0.001||for||RACE / SearchQA / Narrative QA)
+(0.0003/ 0.001/0.001||for||RACE / SearchQA / NarrativeQA)
 (Experimental Setup||based on||TitanXP GPU)
 (TitanXP GPU||trained||All models)
 (TitanXP GPU||has||all runtime benchmarks)

@@ -4,8 +4,7 @@
       "propose" : {
         "novel neural architecture" : {
           "for" : "discriminative sentence modeling"
-        },
-        "from sentence" : "In this paper , we propose a novel neural architecture for discriminative sentence modeling , called the Tree - Based Convolutional Neural Network ( TBCNN ) ."
+        }
       },
       "called" : ["Tree - Based Convolutional Neural Network ( TBCNN )", {"from sentence" : "In this paper , we propose a novel neural architecture for discriminative sentence modeling , called the Tree - Based Convolutional Neural Network ( TBCNN ) ."}],
       "leverage" : ["different sentence parsing trees", {"from sentence" : "Our models can leverage different sentence parsing trees , e.g. , constituency trees and dependency trees ."}],

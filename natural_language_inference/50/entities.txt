@@ -1,4 +1,4 @@
-187	0	8	YahooCQA
+172	0	8	YahooCQA
 188	6	21	key competitors
 188	38	41	are
 188	46	79	Neural Tensor LSTM ( NTN - LSTM )
@@ -76,7 +76,7 @@
 25	30	43	relationships
 25	44	51	between
 25	52	60	QA pairs
-25	15	17	in
+25	61	63	in
 25	64	80	Hyperbolic space
 25	81	91	instead of
 25	92	107	Euclidean space
@@ -89,7 +89,7 @@
 26	87	95	distance
 26	96	103	towards
 26	108	114	border
-26	17	19	is
+26	115	117	is
 26	118	142	increasing exponentially
 2	58	83	Neural Question Answering
 227	33	35	on
@@ -107,13 +107,13 @@
 230	56	60	from
 230	65	86	best performing model
 229	23	31	obtained
-229	36	64	best P@1 performance overall
-229	67	80	outperforming
-229	85	122	state - of - the - art AI - CNN model
-229	123	125	by
-229	126	129	3 %
-229	130	141	in terms of
-229	41	44	P@1
+229	36	65	best P@1 performance over all
+229	68	81	outperforming
+229	86	123	state - of - the - art AI - CNN model
+229	124	126	by
+229	127	130	3 %
+229	131	142	in terms of
+229	143	146	P@1
 239	23	37	TrecQA ( raw )
 239	20	22	on
 240	0	8	Hyper QA
@@ -127,7 +127,8 @@
 241	80	91	in terms of
 241	92	101	MAP / MRR
 247	35	51	TrecQA ( clean )
-249	8	19	outperforms
-249	20	28	MP - CNN
-249	31	39	AP - CNN
-249	44	52	QA - CNN
+248	12	20	Hyper QA
+248	26	37	outperforms
+248	38	46	MP - CNN
+248	49	57	AP - CNN
+248	62	70	QA - CNN

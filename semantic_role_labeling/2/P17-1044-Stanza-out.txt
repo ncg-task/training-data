@@ -55,7 +55,7 @@ Constrained A * Decoding
 The approach described so far does not model any dependencies between the output tags .
 To incorporate constraints on the output structure at decoding time , we use A * search over tag prefixes for decoding .
 Starting with an empty sequence , the tag sequence is built from left to right .
-The score fora partial sequence with length t is defined as :
+The score for a partial sequence with length t is defined as :
 An admissible A * heuristic can be computed efficiently by summing over the best possible tags for all timesteps after t:
 Exploration of the prefixes is determined by an agenda A which is sorted by f ( w , y 1:t ) + g ( w , y 1:t ) .
 In the worst case , A * explores exponentially many prefixes , but because the distribution p ( y t | w ) learned by the BiLSTM models is very peaked , the algorithm is efficient in practice .
@@ -177,7 +177,7 @@ Although the violations are eliminated , the performance does not significantly 
 This is mainly due to two factors : ( 1 ) the model often already satisfies these constraints on its own , so the number of violations to be fixed are relatively small , and ( 2 ) the gold SRL structure sometimes violates the constraints and enforcing hard constraints can hurt performance .
 shows a sentence in the CoNLL 2005 development set .
 Our original model produces two ARG2s for the predicate quicken , and this violates the SRL constraints .
-When the A * decoder fixes this violation , it changes the first ARG1 into ARG2 because ARG0 , ARG1 , ARG2 is a more frequent pattern in the training data and has higher overall score .
+When the A * decoder fixes this violation , it changes the first ARG1 into ARG2 because ARG0 , ARG1 , ARG2 is a more frequent pattern in the training data and has higher over all score .
 Can Syntax Still Help SRL ?
 The Propbank - style SRL formalism is closely tied to syntax .
 In , we show that 98.7 % of the gold SRL arguments match an unlabeled constituent in the gold syntax tree .
@@ -215,7 +215,7 @@ Most recently , several successful LSTM - based architec - tures have achieved s
 Our techniques push results to more than 3 F1 over the best syntax - based models .
 However , we also show that there is potential for syntax to further improve performance .
 Conclusion and Future Work
-We presented anew deep learning model for spanbased semantic role labeling with a 10 % relative error reduction over the previous state of the art .
+We presented a new deep learning model for spanbased semantic role labeling with a 10 % relative error reduction over the previous state of the art .
 Our ensemble of 8 layer BiLSTMs incorporated some of the recent best practices such as orthonormal initialization , RNN - dropout , and highway connections , and we have shown that they are crucial forgetting good results with deep models .
 Extensive error analysis sheds light on the strengths and limitations of our deep SRL model , with detailed comparison against shallower models and two strong non-neural systems .
 While our deep model is better at recovering longdistance predicate - argument relations , we still observe structural inconsistencies , which can be alleviated by constrained decoding .

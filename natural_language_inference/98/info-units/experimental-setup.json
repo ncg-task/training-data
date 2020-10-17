@@ -18,8 +18,7 @@
       },
       "has" : {
         "Stacked BiLSTM" : {
-          "has" : "3 layers",
-          "from sentence" : "Stacked BiLSTM has 3 layers , and all hidden states of BiLSTMs and MLP have 600 dimensions ."
+          "has" : "3 layers"
         },
         "all hidden states" : {
           "of" : {

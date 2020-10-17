@@ -125,7 +125,7 @@ In addition , it has committed a mistake of redundant repetition of the word " C
 It is not semantically relevant to the source text and it is not coherent and adequate .
 Compared with it , the summary of our model is more coherent and more semantically relevant to the source text .
 Our model focuses on the information about price instead of country , and points out the price gap in its generated summary .
-As " China " appears twice in the source text and it is hard for the baseline model to put it in a less significant place , but for our model with CGU , it is able to filter the trivial details that are irrelevant to the core meaning of the source text and just focuses on the information that contributes most to the main idea .
+As " China " appears twice in the source text and it is hard for the baseline model to put it in a less significant place , but for our model with CGU , it is able to filter the trivial details thatare irrelevant to the core meaning of the source text and just focuses on the information that contributes most to the main idea .
 As our CGU is responsible for selecting important information of the outputs from the RNN encoder to improve the quality of the attention score , it should be able to reduce repetition in the generated summary .
 We evaluate the degree of repetition by calculating the percentage of the duplicates at the sentence level .
 The evaluations on the Gigaword for duplicates of 1 - gram to 4 gram prove that our model significantly reduces repetition compared to the conventional seq2seq and its repetition rate is similar to the reference 's .
@@ -139,6 +139,6 @@ proposed a selective gate mechanism to filter secondary information .
 proposed a deep recurrent generative decoder to learn latent structure information .
 proposed a model that generates words by querying word embeddings .
 Conclusion
-In this paper , we propose anew model for abstractive summarization .
+In this paper , we propose a new model for abstractive summarization .
 The convolutional gated unit performs global encoding on the source side information so that the core information can be reserved and the secondary information can be filtered .
 Experiments on the LCSTS and Gigaword show that our model outperforms the baselines , and the analysis shows that it is able to reduce repetition in the generated summaries , and it is more robust to inputs of different lengths , compared with the conventional seq2seq model .

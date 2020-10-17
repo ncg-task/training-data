@@ -2,8 +2,7 @@
   "has research problem" : [
     ["Improved Sentence Modeling", {"from sentence" : "Improved Sentence Modeling using Suffix Bidirectional LSTM"}],
     ["computing representations of sequential data", {"from sentence" : "Recurrent neural networks have become ubiquitous in computing representations of sequential data , especially textual data in natural language processing ."}],
-    ["fine - grained sentiment classification", {"from sentence" : "Using SuBiLSTM we achieve new state - of - the - art results for fine - grained sentiment classification and question classification ."}],
-    ["question classification", {"from sentence" : "Using SuBiLSTM we achieve new state - of - the - art results for fine - grained sentiment classification and question classification ."}],
+    ["fine - grained sentiment classification", "question classification", {"from sentence" : "Using SuBiLSTM we achieve new state - of - the - art results for fine - grained sentiment classification and question classification ."}],
     ["modeling sequential data", {"from sentence" : "Recurrent Neural Networks ( RNN ) ) have emerged as a powerful tool for modeling sequential data ."}]
   ]
 }

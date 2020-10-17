@@ -6,7 +6,7 @@ Although effective , these models do not scale to large corpora due to their com
 Moreover , recent work has shown that such models are sensitive to adversarial inputs .
 In this paper , we study the minimal context required to answer the question , and find that most questions in existing datasets can be answered with a small set of sentences .
 Inspired by this observation , we propose a simple sentence selector to select the minimal set of sentences to feed into the QA model .
-Our overall system achieves significant reductions in training ( up to 15 times ) and inference times ( up to 13 times ) , with accuracy comparable to or better than the state - of - the - art on SQuAD , News QA , Trivia QA and SQuAD - Open .
+Our over all system achieves significant reductions in training ( up to 15 times ) and inference times ( up to 13 times ) , with accuracy comparable to or better than the state - of - the - art on SQuAD , News QA , Trivia QA and SQuAD - Open .
 Furthermore , our experimental results and analyses show that our approach is more robust to adversarial inputs .
 Introduction
 The task of textual question answering ( QA ) , in which a machine reads a document and answers a question , is an important and challenging problem in natural language processing .
@@ -38,7 +38,7 @@ For instance , in the last example in , the question requires the background kno
 Among the answerable examples , 92 % are answerable with a single sentence , 6 % with two sentences , and 2 % with three or more sentences .
 We perform a similar analysis on the TriviaQA ( Wikipedia ) development ( verified ) set .
 Finding the sentences to answer the question on TriviaQA is more challenging than on SQuAD , since Triv - ia QA documents are much longer than SQuAD documents ( 488 vs 5 sentences per document ) .
-Nevertheless , we find that most examples are answerable with one or two sentences - among the 88 % of examples that are answerable given the full document , 95 % can be answered with one or two sentences .
+Nevertheless , we find that most examples are answerable with one or two sentences - among the 88 % of examples thatare answerable given the full document , 95 % can be answered with one or two sentences .
 Analyses on existing QA model
 Given that the majority of examples are answerable with a single oracle sentence on SQuAD , we analyze the performance of an existing , competitive QA model when it is given the oracle sentence .
 We train DCN + , one of the state - of - the - art models on SQuAD ( details in Section 3.1 ) , on the oracle sentence .
@@ -51,10 +51,10 @@ In these examples , we observed that 40 % of questions are answerable given the 
 In addition , we compare predictions by the model trained using the full document ( FULL ) with the model trained on the oracle sentence ( ORACLE ) .
 shows the Venn diagram of the questions answered correctly by FULL and ORACLE on SQuAD and News QA .
 ORACLE is able to answer 93 % and 86 % of the questions correctly answered by FULL on SQuAD and NewsQA , respectively .
-These experiments and analyses indicate that if the model can accurately predict the oracle sentence , the model should be able to achieve comparable performance on overall QA task .
+These experiments and analyses indicate that if the model can accurately predict the oracle sentence , the model should be able to achieve comparable performance on over all QA task .
 Therefore , we aim to create an effective , efficient and robust QA system which only requires a single or a few sentences to answer the question .
 Method
-Our overall architecture ( ) consists of a sentence selector and a QA model .
+Our over all architecture ( ) consists of a sentence selector and a QA model .
 The sentence selector computes a selection score for each sentence in parallel .
 We give to the QA model a reduced set of sentences with high selection scores to answer the question .
 Neural Question Answering Model
@@ -68,10 +68,10 @@ The encoder is a shared module with S - Reader , which computes sentence encodin
 First , the encoder computes sentence embeddings D ?
 Rh d L d , question embeddings Q ?
 Rh d Lq , and question - aware sentence embeddings D q ?
-Rh d L d , where h dis the dimension of word embeddings , and L d and L q are the sequence length of the document and the question , respectively .
+Rh d L d , where h d is the dimension of word embeddings , and L d and L q are the sequence length of the document and the question , respectively .
 Specifically , question - aware sentence embeddings are obtained as follows .
 Here , Di ?
-Rh dis the hidden state of sentence embedding for the i th word and
+Rh d is the hidden state of sentence embedding for the i th word and
 Here , ' ; ' denotes the concatenation of two vectors , and h is a hyperparameter of the hidden dimension .
 Next , the decoder is a task - specific module which computes the score for the sentence by calculating bilinear similarities between sentence encodings and question encodings as follows .
 Here , w ? Rh , W 2 ?
@@ -211,7 +211,7 @@ R L d h d , question embeddings Q ?
 R Lqh d and question - aware document embeddings D q ?
 R L d h d , where D q is defined as Equation 1 , and finally obtains document encodings D enc and question encodings Q enc as Equation 3 .
 The decoder module obtains the scores for start and end position of the answer span by calculating bilinear similarities between document encodings and question encodings as follows .
-The overall architecture is similar to Document Reader in DrQA ( Chen et al. , 2017 ) , except they are different in obtaining embeddings and use different hyperparameters .
+The over all architecture is similar to Document Reader in DrQA ( Chen et al. , 2017 ) , except they are different in obtaining embeddings and use different hyperparameters .
 As shown in , our S - Reader obtains F 1 score of 79.9 on SQuAD development data , while Document Reader in DrQA achieves 78.8 .
 Training details
 We implement all of our models using PyTorch .

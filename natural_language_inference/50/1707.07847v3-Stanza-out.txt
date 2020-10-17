@@ -13,7 +13,7 @@ Our model requires no feature engineering , no similarity matrix matching , no c
 narrative
 are as follows :
 Firstly , representations of questions and answers are first learned via a neural encoder such as the long short - term memory ( LSTM ) network or convolutional neural network ( CNN ) .
-Secondly , these representations of questions and answers are composed by an interaction function to produce an overall matching score .
+Secondly , these representations of questions and answers are composed by an interaction function to produce an over all matching score .
 The design of the interaction function between question and answer representations lives at the heart of deep learning QA research .
 While it is simply possible to combine QA representations with simple feed forward neural networks or other composition functions , a huge bulk of recent work is concerned with designing novel word interaction layers that model the relationship between the words in the QA pairs .
 For example , similarity matrix based matching , soft attention alignment and attentive pooling are highly popular techniques for improving the performance of neural ranking models .
@@ -63,15 +63,15 @@ It has been recently fashionable to model the relationships between question and
 Intuitively , this enables more fine - grained matching across words in question and answer sentences .
 The Multi- Perspective CNN ( MP - CNN ) compared two sentences via a wide diversity of pooling functions and filter widths aiming to capture ' multi-perspectives ' between two sentences .
 The attention based neural matching ( a NMM ) model of Yang et al. performed soft - attention alignment by first measuring the pairwise word similarity between each word in question and answer .
-The attentive pooling models of Santos et al. ( AP - BiLSTM and AP - CNN ) utilized this soft - attention alignment to learn weighted representations of question and answer that are dependent of each other .
+The attentive pooling models of Santos et al. ( AP - BiLSTM and AP - CNN ) utilized this soft - attention alignment to learn weighted representations of question and answer thatare dependent of each other .
 Zhang et al. extended AP - CNN to 3D tensor - based attentive pooling ( AI - CNN ) .
 A recent work , the Cross Temporal Recurrent Network ( CTRN ) proposed a pairwise gating mechanism for joint learning of QA pairs .
-Unfortunately , these models actually introduce a prohibitive computational cost to the model usually fora very marginal performance gain .
+Unfortunately , these models actually introduce a prohibitive computational cost to the model usually for a very marginal performance gain .
 Notably , it is easy to see that similarity matrix based matching incurs a computational cost of quadratic scale .
 Representation ability such as dimension size of word or CNN / RNN embeddings are naturally also quite restricted , i.e. , increasing any of these dimensions can cause computation or memory requirements to explode .
-Moreover , it is not uncommon for models such as AI - CNN or AP - BiLSTM to spend more than 30 minutes on a single epoch on QA datasets that are only medium sized .
+Moreover , it is not uncommon for models such as AI - CNN or AP - BiLSTM to spend more than 30 minutes on a single epoch on QA datasets thatare only medium sized .
 Let us not forget that these models still have to be extensively tuned which aggravates the impracticality problem posed by some of these models .
-In this paper , we seek anew paradigm for neural ranking for QA .
+In this paper , we seek a new paradigm for neural ranking for QA .
 While many recent works try to out - stack each other with new layers , we strip down our network instead .
 Our work is inspired by the very recent Poincar embeddings which demonstrates the superiority and efficiency of generalization in Hyperbolic space .
 Moreover , this alleviates many overfitting and complexity issues that Euclidean embeddings might face especially if the data has intrinsic hierarchical structure .
@@ -79,10 +79,10 @@ It is good to note that power - law distributions , such as Zipf 's law , have b
 Specifically , the defining characteristic of Hyperbolic space is a much quicker expansion relative to that of Euclidean space which makes naturally equipped for modeling hierarchical structure .
 The concept of Hyperbolic spaces has been applied to domains such as complex network modeling , social networks and geographic routing .
 There are several key geometric intuitions regarding Hyperbolic spaces .
-Firstly , the concept of distance and area is warped in Hyperbolic spaces .
-Specifically , each tile in ( a ) is of equal area in Hyperbolic space but diminishes towards zero in Euclidean space towards the boundary .
+Firstly , the concept of distance and are a is warped in Hyperbolic spaces .
+Specifically , each tile in ( a ) is of equal are a in Hyperbolic space but diminishes towards zero in Euclidean space towards the boundary .
 Secondly , Hyperbolic spaces are conformal , i.e. , angles in Hyperbolic spaces and Euclidean spaces are identical .
-In ( b ) , the arcs on the curve are parallel lines that are orthogonal to the boundary .
+In ( b ) , the arcs on the curve are parallel lines thatare orthogonal to the boundary .
 Finally , hyperbolic spaces can be regarded as larger spaces relative to Euclidean spaces due to the fact that the concept of relative distance can be expressed much better , i.e. , not only does the distance between two vectors encode information but also where a vector is placed in Hyperbolic space .
 This enables efficient representation learning .
 In Nickel et al. , the authors applied the hyperbolic distance ( specifically , the Poincar distance ) to model taxonomic entities and graph nodes .
@@ -91,10 +91,10 @@ Moreover , questions and answers introduce an interesting layer of complexity to
 On the other hand , nodes in a graph and taxonomic entities in are already at it s most abstract form , i.e. , symbolic objects .
 As such , we believe it would be interesting to investigate the impacts of QA in Hyperbolic space in lieu of the added compositional nature .
 OUR PROPOSED APPROACH
-This section outlines the overall architecture of our proposed model .
+This section outlines the over all architecture of our proposed model .
 Similar to many neural ranking models for QA , our network has ' two ' sides with shared parameters , i.e. , one for question and another for answer .
-However , since we optimize fora pairwise ranking loss , the model takes in a positive ( correct ) answer and a negative ( wrong ) answer and aims to maximize the margin between the scores of the correct QA pair and the negative QA pair .
-depicts the overall model architecture .
+However , since we optimize for a pairwise ranking loss , the model takes in a positive ( correct ) answer and a negative ( wrong ) answer and aims to maximize the margin between the scores of the correct QA pair and the negative QA pair .
+depicts the over all model architecture .
 Embedding Layer
 Our model accepts three sequences as an input , i.e. , the question ( denoted as q ) , the correct answer ( denoted as a ) and a randomly sampled corrupted answer ( denoted as a ? ) .
 Each sequence consists of M words where M q and M a are predefined maximum sequence lengths for questions and answers respectively .
@@ -175,7 +175,7 @@ In this dataset , the answer lengths are relatively longer than TrecQA and Wiki 
 Therefore , we filtered answers that have more than 50 words and less than 5 characters .
 The train - dev - test splits for this dataset are provided by . WikiQA - This is a recently popular benchmark dataset for open - domain question answering based on factual questions from Wikipedia and Bing search logs . SemEvalCQA
 - This is a well - studied benchmark dataset from SemEval - 2016 Task 3 Subtask A ( CQA ) .
-This is areal world dataset obtained from Qatar Living Forums .
+This is are al world dataset obtained from Qatar Living Forums .
 In this dataset , there are ten answers in each question ' thread ' which are marked as ' Good ' , ' Potentially Useful ' or ''Bad ' .
 We treat ' Good ' as positive and anything else as negative labels . TrecQA
 - This is the benchmark dataset provided by Wang et al ..
@@ -226,7 +226,7 @@ In this section , we present our empirical results on all datasets .
 For all reported results , the best result is in boldface and the second best is underlined .
 reports the experimental results on SemEvalCQA .
 Our proposed approach achieves highly competitive performance on this dataset .
-Specifically , we have obtained the best P@1 performance overall , outperforming the state - of - the - art AI - CNN model by 3 % in terms of P@1 .
+Specifically , we have obtained the best P@1 performance over all , outperforming the state - of - the - art AI - CNN model by 3 % in terms of P@1 .
 The performance of our model on MAP is marginally short from the best performing model .
 Notably , AI - CNN has benefited from external handcrafted features .
 As such , comparing AI - CNN ( w/ o features ) with Hyper QA shows that our proposed model is a superior neural ranking model .
@@ -245,8 +245,7 @@ Hyper QA also outperforms MP - CNN but is around 10 times faster and has 100 tim
 MP - CNN consists of a huge number of filter banks and utilizes heavy parameterization to match multiple perspectives of questions and answers .
 On the other hand , our proposed HyperQA is merely a single layered neural network with 90K parameters and yet outperforms MP - CNN .
 Similarly , reports the results on TrecQA ( clean ) .
-Similarly , Hyper
-QA also outperforms MP - CNN , AP - CNN and QA - CNN .
+Similarly , Hyper QA also outperforms MP - CNN , AP - CNN and QA - CNN .
 On both datasets , the performance of HyperQA is competitive to Rank MP - CNN .
 Experimental Results on WikiQA .
 Overall analysis .
@@ -293,7 +292,7 @@ This is in concert with which shows the question embeddings form a sphere around
 At last , we parsed QA pairs word - by - word according to hierarchical level ( based on their vector norm ) .
 reports the outcome of this experiment where H 1 ?
 H 5 are hierarchical levels based on vector norms .
-First , we find that questions often start with the overall context and drill down into more specific query words .
+First , we find that questions often start with the over all context and drill down into more specific query words .
 Take the first sample in for example , it begins at atop level with ' burger king ' and then drills down progressively to ' what is gross sales ? ' .
 Similarly in the second example , it begins with ' florence nightingale ' and drills down to ' famous ' at H3 in which a match is being found with ' nursing ' in the same hierarchical level .
 Overall , based on our qualitative analysis , we observe that , Hyper QA builds two hierarchical structures at the word - level ( in vector space ) towards the middle which strongly facilitates word - level matching .
@@ -310,7 +309,7 @@ Answer Question
 Starts with the main context and branches to more specific query words .
 Splits root node by
 CONCLUSION
-We proposed anew neural ranking model for question answering .
+We proposed a new neural ranking model for question answering .
 Our proposed Hyper QA achieves very competitive performance on four well - studied benchmark datasets .
 Our model is light - weight , fast and efficient , outperforming many state - of - the - art models with complex word interaction layers , attentive mechanisms or rich neural encoders .
 Our model only has 40K - 90 K parameters as opposed to millions of parameters which plague many competitor models .

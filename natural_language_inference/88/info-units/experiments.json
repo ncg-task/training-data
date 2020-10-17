@@ -116,7 +116,10 @@ We used stochastic gradient descent for optimization with an initial learning ra
             "Sentiment Analysis" : {
               "has" : {
                 "Baselines" : {
-                  "are" : ["LSTM variants", {"from sentence" : "Most of these models ( including ours ) are LSTM variants ( third block in , recursive neural networks ( first block ) , or convolutional neural networks ( CNNs ; second block ) ."}],
+                  "are" : ["LSTM variants", {"from sentence" : "Sentiment Analysis
+Most of these models ( including ours ) are LSTM variants ( third block in , recursive neural networks ( first block ) , or convolutional neural networks ( CNNs ; second block ) ."
+
+                  }],
                   "report" : {
                     "performance" : {
                       "of" : "paragraph vector model",
@@ -170,8 +173,7 @@ We used stochastic gradient descent for optimization with an initial learning ra
                       "from sentence" : "The initial learning rate was set to 2E - 3 ."
                     },
                     "regularization constant" : {
-                      "was" : "1E - 4",
-                      "from sentence" : "The regularization constant was 1E - 4 and the mini-batch size was 5 ."
+                      "was" : "1E - 4"
                     },
                     "mini-batch size" : {
                       "was" : "5",
@@ -270,7 +272,7 @@ We used pre-trained 300 - D Glove 840B vectors to initialize the word embeddings
                 },
                 "Baselines" : {
                   "has" : ["shared LSTM ( Rocktschel et al. , 2016 )", "word - by - word attention model", "matching LSTM ( m LSTM ; )", {"from sentence" : "Specifically , these include a model which encodes the premise and hypothesis independently with two LSTMs , a shared LSTM ( Rocktschel et al. , 2016 ) , a word - by - word attention model , and a matching LSTM ( m LSTM ; ) ."}],
-                  "compared" : ["bag - of - words baseline", {"from sentence" : "We also compared our models with a bag - of - words baseline which averages the pre-trained embeddings for the words in each sentence and concatenates them to create features fora logistic regression classifier ( first block in ) ."}]
+                  "compared" : ["bag - of - words baseline", {"from sentence" : "We also compared our models with a bag - of - words baseline which averages the pre-trained embeddings for the words in each sentence and concatenates them to create features for a logistic regression classifier ( first block in ) ."}]
                 },
                 "Results" : {
                   "has" : {

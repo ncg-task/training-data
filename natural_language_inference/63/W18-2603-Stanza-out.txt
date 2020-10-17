@@ -45,7 +45,7 @@ Question and document can be represented by sequence of words q = {w q i } m i =
 Answerspan a = {w d k } e k=s ( where , 1 ? s ? e ? n) should be returned , given q and d .
 We embed the sequence of words in q and d to get contextual representations .
 These contextual representations are used for calculating question - aware context representation which is controlled by external memory unit and used for predicting answer - span .
-We describe more details of each layer in following sections and depict overall architecture of proposed model in .
+We describe more details of each layer in following sections and depict over all architecture of proposed model in .
 Contextual Representation
 Word Embedding :
 We use two different kinds of embeddings to get the richer feature representation for each word in the question and document .
@@ -120,14 +120,14 @@ We select different datasets based on their average document length to check the
 We compare the performance of our model with all the published results and the baseline memory augmented model .
 The baseline model is developed by replacing modeling layer in BiDAF model with the memory controller from DNC .
 Data Set
-We perform experiments with recently proposed QUASAR - T and Trivia QA datasets to seethe performance of our model on the long documents .
+We perform experiments with recently proposed QUASAR - T and Trivia QA datasets to see the performance of our model on the long documents .
 The QUASAR - T dataset consists of factoid question - answer pairs and a corresponding large background corpus ) to comprehend .
 In TriviaQA , question - answers pairs are collected from trivia and quiz - league websites .
 The evidence documents for these QA pairs are collected from Wikipedia articles and Web search results .
 The average length of the documents in these datasets are much longer than SQuAD and question - documents pairs are collected in a decoupled way , making them more difficult to comprehend .
 In the case of TriviaQA , we truncate the documents to 1200 words for training and 2000 words for the test .
 Even these truncated documents are 3 to 5 times longer than SQuAD documents .
-The average length of original documents in TriviaQA is about 3,000 words , so there is no guarantee that above truncated documents contain the answer fora given question .
+The average length of original documents in TriviaQA is about 3,000 words , so there is no guarantee that above truncated documents contain the answer for a given question .
 We also conduct experiments on SQuAD dataset to show our model can even work well on paragraph - level data .
 The SQuAD contains a collection of Wikipedia articles and crowd - sourced question - answer pairs .
 Even though SQuAD dataset pushed existing models to achieve significant performance improvements in solving RC task , the document length does not resemble the length of the real - world document .

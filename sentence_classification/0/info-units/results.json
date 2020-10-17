@@ -62,7 +62,7 @@
       },
       "has" : {
         "both scaffolds" : {
-          "used simulataneously in" : "BiLSTM - Attn + both scaffolds",
+          "used simultaneously in" : "BiLSTM - Attn + both scaffolds",
           "has" : {
             "F1 score" : {
               "improves to" : "63.1 ( ?= 11.3 )"

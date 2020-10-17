@@ -19,7 +19,7 @@
 (more favourably||compared to||state - of - the - art methods)
 (state - of - the - art methods||in terms of||BLEU - 2 score)
 (Chinese poems composition||estimate||similarity)
-(similarity||between||human-written poem and the machine-created one)
+(similarity||between||human - written poem and the machine - created one)
 (Chinese poems composition||in terms of||human evaluation score)
 (human evaluation score||has||RankGAN)
 (RankGAN||outperforms||compared method)

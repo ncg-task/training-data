@@ -16,7 +16,7 @@
 (Results||has||audio and visual modality)
 (audio and visual modality||when used with||text)
 (text||shared||complementary data)
-(complementary data||to improve||overall performance)
+(complementary data||to improve||over all performance)
 (Results||has||ICON)
 (ICON||performs better than||compared models)
 (compared models||with||significant performance increase)

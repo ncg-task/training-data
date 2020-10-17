@@ -5,7 +5,16 @@
 216	74	78	65.5
 218	20	37	LCNN - VAE - Semi
 218	46	61	best NLL result
-182	15	18	use
+154	41	48	explore
+154	49	63	LSTMs and CNNs
+154	15	17	as
+154	67	75	decoders
+154	3	6	use
+154	10	14	LSTM
+154	64	66	as
+154	21	28	encoder
+154	29	32	for
+154	33	36	VAE
 182	19	45	KL cost annealing strategy
 183	3	6	set
 183	11	25	initial weight
@@ -20,19 +29,9 @@
 180	7	17	batch size
 180	18	20	of
 180	21	23	32
-154	10	14	LSTM
-154	15	17	as
-154	21	28	encoder
-154	29	32	for
-154	33	36	VAE
 165	7	23	Gumbel - softmax
 165	24	33	to sample
 165	34	50	y from q ( y|x )
-168	9	24	vocabulary size
-168	25	27	of
-168	28	32	20 k
-168	33	36	for
-168	37	51	both data sets
 173	7	11	Adam
 173	12	23	to optimize
 173	24	34	all models
@@ -45,14 +44,15 @@
 177	61	76	drop word ratio
 177	80	93	selected from
 177	96	115	0 , 0.3 , 0.5 , 0.7
-168	47	50	set
+168	9	24	vocabulary size
+168	25	27	of
+168	28	32	20 k
+168	33	36	for
+168	37	51	both data sets
+168	56	59	set
 168	64	88	word embedding dimension
 168	89	94	to be
 168	95	98	512
-154	41	48	explore
-154	49	63	LSTMs and CNNs
-154	15	17	as
-154	67	75	decoders
 155	0	3	For
 155	4	8	CNNs
 156	3	6	set
@@ -64,7 +64,7 @@
 178	31	44	dropout ratio
 178	45	47	of
 178	48	51	0.1
-178	40	42	at
+178	52	54	at
 178	55	65	each layer
 170	40	42	in
 170	43	55	CNN decoders
@@ -111,10 +111,10 @@
 191	78	80	to
 191	81	86	337.8
 191	89	94	338.3
-191	78	80	to
+191	95	97	to
 191	98	103	336.2
 191	110	115	335.4
-191	78	80	to
+191	116	118	to
 191	119	124	333.9
 195	0	4	When
 195	5	9	LCNN
@@ -132,6 +132,6 @@
 196	43	56	improves over
 196	57	66	LSTM - LM
 196	67	71	with
-196	22	25	NLL
-196	26	28	of
+196	72	75	NLL
+196	76	78	of
 196	79	84	334.9

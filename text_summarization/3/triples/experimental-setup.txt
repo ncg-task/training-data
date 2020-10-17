@@ -23,7 +23,7 @@
 (hidden state size||set to||256)
 (Experimental setup||has||word embeddings)
 (word embeddings||fine - tune||during training)
-(word embeddings||initialize with||128 - d vectors)
+(word embeddings||initialize||128 - d vectors)
 (Experimental setup||has||vocabulary size)
 (vocabulary size||set to||150 k)
 (150 k||for||both the source and target text)

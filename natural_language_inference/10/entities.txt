@@ -1,3 +1,4 @@
+139	0	26	Natural Language Inference
 150	33	43	initialize
 150	48	69	word embedding matrix
 150	70	74	with
@@ -19,9 +20,9 @@
 156	13	19	models
 156	40	44	used
 156	22	36	Adam optimizer
-163	19	21	on
+163	47	49	on
 163	52	59	machine
-163	28	32	with
+163	60	64	with
 163	65	84	NVIDIA Titan Xp GPU
 158	15	23	see that
 158	24	56	LSTM - based leaf transformation
@@ -41,6 +42,7 @@
 161	40	46	86.0 %
 161	58	71	comparable to
 161	84	112	state - of - the - art model
+166	0	18	Sentiment Analysis
 175	0	2	is
 175	5	30	single - hidden layer MLP
 175	31	35	with
@@ -71,7 +73,7 @@
 179	43	45	of
 179	50	70	word embedding layer
 179	79	99	input and the output
-179	43	45	of
+179	100	102	of
 179	107	116	MLP layer
 181	0	3	For
 181	8	21	SST - 5 model
@@ -79,14 +81,14 @@
 181	44	50	set to
 181	51	85	D x = 300 , D h = 300 , D c = 1024
 181	122	130	optimize
-181	16	21	model
+181	111	116	model
 181	141	146	using
 181	147	165	Adadelta optimizer
 181	166	170	with
 181	171	184	batch size 64
 181	189	194	apply
 181	195	202	dropout
-181	166	170	with
+181	203	207	with
 181	208	215	p = 0.5
 183	4	17	SST - 2 model
 183	18	29	outperforms
@@ -109,7 +111,7 @@
 185	134	151	1.7 % ( SST - 5 )
 23	19	26	propose
 23	27	45	Gumbel Tree - LSTM
-23	5	7	is
+23	54	56	is
 23	59	82	novel RvNN architecture
 23	93	104	not require
 23	105	120	structured data
@@ -126,7 +128,7 @@
 25	147	155	measures
 25	156	164	validity
 25	165	167	of
-25	117	128	composition
+25	170	181	composition
 26	0	5	Using
 26	6	21	validity scores
 26	22	33	computed by
@@ -146,7 +148,7 @@
 28	42	69	discrete sampling operation
 28	70	75	to be
 28	76	86	continuous
-28	56	58	in
+28	87	89	in
 28	94	107	backward pass
 2	20	51	Task - Specific Tree Structures
 6	139	196	task - specific tree structures only from plain text data

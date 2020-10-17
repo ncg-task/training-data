@@ -6,29 +6,21 @@
           "has" : {
             "6 % improvement" : {
               "on" : "RACE - H dataset",
-              "from sentence" : "Experimental Results on RACE
-Overall , there is a 6 % improvement on the RACE - H dataset and 1.8 % improvement on the RACE - M dataset ."
-
+              "from sentence" : "Experimental Results on RACE"
             },
             "1.8 % improvement" : {
               "on" : "RACE - M dataset",
               "from sentence" : "Overall , there is a 6 % improvement on the RACE - H dataset and 1.8 % improvement on the RACE - M dataset ."
             },
-            "Sim .MRU and MRU" : {
+            "Sim . MRU and MRU" : {
               "achieve" : {
                 "comparable performance" : {
                   "to" : "each other"
                 }
-              },
-              "from sentence" : "In general , we also found that the usage of a recurrent cell is not really crucial on this dataset since ( 1 ) Sim .
-MRU and MRU can achieve comparable performance to each other , ( 2 ) GRU and LSTM models do not have a competitive edge and ( 3 ) Using no encoder already achieves comparable 1 performance to DFN ."
-
+              }
             },
             "GRU and LSTM models" : {
-              "do not have" : "competitive edge",
-              "from sentence" : "In general , we also found that the usage of a recurrent cell is not really crucial on this dataset since ( 1 ) Sim .
-MRU and MRU can achieve comparable performance to each other , ( 2 ) GRU and LSTM models do not have a competitive edge and ( 3 ) Using no encoder already achieves comparable 1 performance to DFN ."
-
+              "do not have" : "competitive edge"
             },
             "no encoder" : {
               "achieves" : {
@@ -36,8 +28,7 @@ MRU and MRU can achieve comparable performance to each other , ( 2 ) GRU and LST
                   "to" : "DFN"
                 }
               },
-              "from sentence" : "In general , we also found that the usage of a recurrent cell is not really crucial on this dataset since ( 1 ) Sim .
-MRU and MRU can achieve comparable performance to each other , ( 2 ) GRU and LSTM models do not have a competitive edge and ( 3 ) Using no encoder already achieves comparable 1 performance to DFN ."
+              "from sentence" : "In general , we also found that the usage of a recurrent cell is not really crucial on this dataset since ( 1 ) Sim . MRU and MRU can achieve comparable performance to each other , ( 2 ) GRU and LSTM models do not have a competitive edge and ( 3 ) Using no encoder already achieves comparable 1 performance to DFN ."
 
             },
             "ensemble of Sim . MRU models" : {
@@ -45,13 +36,13 @@ MRU and MRU can achieve comparable performance to each other , ( 2 ) GRU and LST
                 "state - of - the - art performance" : {
                   "on" : "RACE dataset",
                   "achieving" : {
-                    "overall score" : {
+                    "over all score" : {
                       "of" : "53.3 %"
                     }
                   }
                 }
               },
-              "from sentence" : "Finally , an ensemble of Sim . MRU models achieve state - of - the - art performance on the RACE dataset , achieving and overall score of 53.3 % . :"
+              "from sentence" : "Finally , an ensemble of Sim . MRU models achieve state - of - the - art performance on the RACE dataset , achieving and over all score of 53.3 % . :"
             }
           }
         },

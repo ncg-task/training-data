@@ -100,13 +100,13 @@
                 }                
               },
               "are" : "300 - dimensional",
-              "from sentence" : "The standard pre-trained word vectors used for English are the GloVe ones trained on 840 billion tokens of Common Crawl data 1 , while for other languages , we rely on the Facebook fastText Wikipedia embeddings as input representations .
+              "from sentence" : "Embeddings .
+The standard pre-trained word vectors used for English are the GloVe ones trained on 840 billion tokens of Common Crawl data 1 , while for other languages , we rely on the Facebook fastText Wikipedia embeddings as input representations .
 All of these are 300 - dimensional ."
 
             },
             "vectors" : {
-              "fed to" : ["CNN", {"convolutional module" : {"of" : {"DM - MCNN" : {"during" : "initialization"}}}}],
-              "from sentence" : "The vectors are either fed to the CNN , or to the convolutional module of the DM - MCNN during initialization , while unknown words are initialized with zeros ."
+              "fed to" : ["CNN", {"convolutional module" : {"of" : {"DM - MCNN" : {"during" : "initialization"}}}}]
             },
             "unknown words" : {
               "initialized with" : "zeros",
@@ -188,7 +188,7 @@ These contain separate domain - specific scores for 250 different Reddit communi
           "restrict" : {
             "vocabulary link" : {
               "set to include" : "languages",
-              "mining from" : {
+              "mining" : {
                 "Wiktionary" : {
                   "corresponding" : ["translation", "synonymy", "derivation", "etymological links"]
                 }

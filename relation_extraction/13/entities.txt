@@ -44,7 +44,7 @@
 188	89	91	on
 188	96	119	5 - way - 1 - shot task
 188	124	130	12.7 %
-188	89	91	on
+188	131	133	on
 188	138	162	10 - way - 1 - shot task
 189	19	44	significantly outperforms
 189	0	7	BERT EM

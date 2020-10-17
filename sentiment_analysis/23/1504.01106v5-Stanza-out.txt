@@ -48,7 +48,7 @@ R nc are parameters ; f is the activation function .
 Semicolons represent column vector concatenation .
 After convolution , the extracted features are pooled to a fixedsize vector for classification .
 Convolution can extract neighboring information effectively .
-However , the features are " local " - words that are not in a same convolution window do not interact with each other , even though they maybe semantically related .
+However , the features are " local " - words thatare not in a same convolution window do not interact with each other , even though they maybe semantically related .
 build deep convolutional networks so that local features can mix at high - level layers .
 Similar deep CNNs include and .
 All these models are " flat , " by which we mean no structural information is used explicitly .
@@ -127,8 +127,8 @@ As different sentences may have different lengths and tree structures , the extr
 Dynamic pooling ) is a common technique for dealing with this problem .
 We propose several heuristics for pooling along a tree structure .
 Our generic design criteria for pooling include :
-( 1 ) Nodes that are pooled to one slot should be " neighboring " from some viewpoint .
-( 2 ) Each slot should have similar numbers of nodes , in expectation , that are pooled to it .
+( 1 ) Nodes thatare pooled to one slot should be " neighboring " from some viewpoint .
+( 2 ) Each slot should have similar numbers of nodes , in expectation , thatare pooled to it .
 Thus , ( approximately ) equal amount of information is aggregated along different parts of the tree .
 Following the above intuition , we propose pooling heuristics as follows .
 Global pooling .
@@ -253,9 +253,9 @@ Sentences are split into 7 groups by length , with granularity 5 .
 A few too long or too short sentences are grouped together for smoothing ; the numbers of sentences in each group vary from 126 :
 Visualizing how features ( after convolution ) are related to the sentiment of a sentence .
 The sample corresponds a sentence in the dataset , " The stunning dreamlike visual will impress even those viewers who have little patience for Euro - film pretension . "
-The numbers in brackets denote the fraction of a node 's features that are gathered by the max pooling layer ( also indicated by colors ) .
+The numbers in brackets denote the fraction of a node 's features thatare gathered by the max pooling layer ( also indicated by colors ) .
 to 457 . presents accuracies versus lengths in TBCNNs .
-For comparison , we also reimplemented RNN , achieving 42.7 % overall accuracy , slightly worse than 43.2 % reported in .
+For comparison , we also reimplemented RNN , achieving 42.7 % over all accuracy , slightly worse than 43.2 % reported in .
 Thus , we think our reimplementation is fair and that the comparison is sensible .
 We observe that c- TBCNN and d- TBCNN yield very similar behaviors .
 They consistently outperform the RNN in all scenarios .
@@ -267,7 +267,7 @@ Visualization
 Visualization is important to understanding the mechanism of neural networks .
 For TBCNNs , we would like to see how the extracted features ( after convolution ) are further processed by the max pooling layer , and ultimately related to the supervised task .
 To show this , we trace back where the max pooling layer 's features come from .
-For each dimension , the pooling layer chooses the maximum value from the nodes that are pooled to it .
+For each dimension , the pooling layer chooses the maximum value from the nodes thatare pooled to it .
 Thus , we can count the fraction in which a node 's features are gathered by pooling .
 Intuitively , if a node 's features are more related to the task , the fraction tends to be larger , and vice versa . illustrates an example processed by d- TBCNN in the task of sentiment analysis .
 6

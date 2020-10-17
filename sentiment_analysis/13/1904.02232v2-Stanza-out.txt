@@ -28,7 +28,7 @@ We can see that customers may not only ask factoid Questions Q1 :
 Does it have an internal hard drive ?
 Q2 : How large is the internal hard drive ?
 Q3 : is the capacity of the internal hard drive OK ?
-Review Excellent value and a must buy for someone looking fora Macbook .
+Review Excellent value and a must buy for someone looking for a Macbook .
 You ca n't get any better than this price and it come with A1 an internal disk drive .
 All the newer MacBooks do not .
 Plus you get 500 GB A2 which is also a great A3 feature .
@@ -64,11 +64,11 @@ Community QA ( CQA ) is widely adopted by online businesses to help users .
 However , since it solely relies on humans to give answers , it often takes along time to get a question answered or even not answered at all as we discussed in the introduction .
 Although there exist researches that align reviews to questions as an information retrieval task , giving a whole review to the user to read is time - consuming and not suitable for customer service settings that require interactive responses .
 Knowledge bases ( KBs ) ( such as Freebase or DBpedia ) have been used for question answering .
-However , the ever - changing nature of online businesses , where new products and services appear constantly , makes it prohibitive to build a highquality KB to coverall new products and services .
+However , the ever - changing nature of online businesses , where new products and services appear constantly , makes it prohibitive to build a highquality KB to cover all new products and services .
 Reviews also serve as a rich resource for sentiment analysis .
 Although documentlevel ( review ) sentiment classification maybe considered as a solved problem ( given ratings are largely available ) , aspect - based sentiment analysis ( ABSA ) is still an open challenge , where alleviating the cost of human annotation is also a major issue .
 ABSA aims to turn unstructured reviews into structured fine - grained aspects ( such as the " battery " of a laptop ) and their associated opinions ( e.g. , " good battery " is positive about the aspect battery ) .
-Two important tasks in ABSA are aspect extraction ( AE ) and aspect sentiment classification ( ASC ) , where the former aims to extract aspects ( e.g. , " battery " ) and the latter targets to identify the polarity fora given aspect ( e.g. , positive for battery ) .
+Two important tasks in ABSA are aspect extraction ( AE ) and aspect sentiment classification ( ASC ) , where the former aims to extract aspects ( e.g. , " battery " ) and the latter targets to identify the polarity for a given aspect ( e.g. , positive for battery ) .
 Recently , supervised deep learning models dominate both tasks ) and many of these models use handcrafted features , lexicons , and complicated neural network architectures to remedy the insufficient training examples from both tasks .
 Although these approaches may achieve better performances by manually injecting human knowledge into the model , human baby - sat models may not be intelligent enough 6 and automated representation learning from review corpora is always preferred .
 We push forward this trend with the recent advance in pre-trained language models from deep learning .
@@ -78,8 +78,8 @@ BERT and Review - based Tasks
 In this section , we briefly review BERT and derive its fine - tuning formulation on three ( 3 ) reviewbased end tasks .
 BERT
 BERT is one of the key innovations in the recent progress of contextualized representation learning .
-The idea behind the progress is that even though the word embedding layer ( in atypical neural network for NLP ) is trained from large - scale corpora , training a wide variety of neural architectures that encode contextual representations only from the limited supervised data on end tasks is insufficient .
-that are intended to provide additional features fora particular architecture that bears human 's understanding of the end task , BERT adopts a fine - tuning approach that requires almost no specific architecture for each end task .
+The idea behind the progress is that even though the word embedding layer ( in a typical neural network for NLP ) is trained from large - scale corpora , training a wide variety of neural architectures that encode contextual representations only from the limited supervised data on end tasks is insufficient .
+that are intended to provide additional features for a particular architecture that bears human 's understanding of the end task , BERT adopts a fine - tuning approach that requires almost no specific architecture for each end task .
 This is desired as an intelligent agent should minimize the use of prior human knowledge in the model design .
 Instead , it should learn such knowledge from data .
 BERT has two parameter intensive settings :
@@ -158,7 +158,7 @@ We let the loss on SQuAD be L MRC , which is in a similar setting as the loss L 
 As a result , the joint loss of post - training is defined as L = L DK + L MRC .
 One major issue of post - training on such a loss is the prohibitive cost of GPU memory usage .
 Instead of updating parameters over a batch , we divide a batch into multiple sub-batches and accumulate gradients on those sub-batches before parameter updates .
-This allows fora smaller subbatch to be consumed in each iteration .
+This allows for a smaller subbatch to be consumed in each iteration .
 Algorithm 1 describes one training step and takes one batch of data on domain knowledge ( DK ) D DK and one batch of MRC training data D MRC to update the parameters ? of BERT .
 In line 1 , it first initializes the gradients ? ?
 of all parameters as 0 to prepare gradient computation .
@@ -186,7 +186,7 @@ To make sure our questions are close to realworld questions , 2 annotators are f
 Then they are asked to read reviews and independently label textual spans and ask corresponding questions when they feel the textual spans contain valuable information that customers may care about .
 The textual spans are labeled to be as concise as possible but still human - readable .
 Note that the annotations for sentiment analysis tasks are not exposed to annotators to avoid biased annotation on RRC .
-Since it is unlikely that the two annotators can label the same QAs ( the same questions with the same answer spans ) , they further mutually check each other 's annotations and disagreements are discussed until agreements are reached .
+Since it is unlikely that the two annotators can label the same QAs ( the same questions with the same answer spans ) , they further mutually check each other 's annotations and dis agreements are discussed until agreements are reached .
 Annotators are encouraged to label as many questions as possible from testing reviews to get more test examples .
 A training review is encouraged to have 2 questions ( training examples ) on average to have good coverage of reviews .
 The annotated data is in the format of SQuAD 1.1 to ensure compatibility with existing implementations of MRC models .
@@ -202,7 +202,7 @@ For laptop , we filtered out reviewed products that have appeared in the validat
 Since the number of reviews is small , we choose a duplicate factor of 5 ( each review generates about 5 training examples ) during BERT data pre-processing .
 This gives us 1,151,863 posttraining examples for laptop domain knowledge .
 For the restaurant domain , we use Yelp reviews from restaurant categories that the SemEval reviews also belong to .
-We choose 700K reviews to ensure it is large enough to generate training examples ( with a duplicate factor of 1 ) to coverall post - training steps that we can afford ( discussed in Section 5.3 )
+We choose 700K reviews to ensure it is large enough to generate training examples ( with a duplicate factor of 1 ) to cover all post - training steps that we can afford ( discussed in Section 5.3 )
 9 .
 This gives us 2,677,025 post-training examples for restaurant domain knowledge learning .
 For MRC task - awareness post - training , we leverage SQuAD 1.1 ) that come with 87,599 training examples from 442 Wikipedia articles .
@@ -272,7 +272,7 @@ ASC tends to have more errors as the decision boundary between the negative and 
 Also , BERT - PT has the problem of dealing with one sentence with two opposite opinions ( " The screen is good but not for windows . " ) .
 We believe that such training examples are rare .
 Conclusions
-We proposed anew task called review reading comprehension ( RRC ) and investigated the possibility of turning reviews as a valuable resource for answering user questions .
+We proposed a new task called review reading comprehension ( RRC ) and investigated the possibility of turning reviews as a valuable resource for answering user questions .
 We adopted BERT as our base model and proposed a joint post - training approach to enhancing both the domain and task knowledge .
 We further explored the use of this approach in two other review - based tasks : aspect extraction and aspect sentiment classification .
 Experimental results show that the post - training approach before fine - tuning is effective .

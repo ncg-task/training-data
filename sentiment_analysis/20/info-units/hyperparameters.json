@@ -1,19 +1,20 @@
 {
   "has" : {
-    "Hyper-parameters" : {
+    "Hyperparameters" : {
       "has" : {
         "MSA Model" : {
           "size of" : {
             "embedding layer" : {
               "is" : "300"
-            },
-            "from sentence" : "The size of the embedding layer is 300 , and the LSTM layers 150 ( 300 for BiLSTM ) ."            
+            }
           },
-          "has" : ["LSTM layers 150", {"from sentence" : "The size of the embedding layer is 300 , and the LSTM layers 150 ( 300 for BiLSTM ) ."}],
+          "has" : ["LSTM layers 150", {"from sentence" : "MSA Model ( message - level )
+The size of the embedding layer is 300 , and the LSTM layers 150 ( 300 for BiLSTM ) ."
+
+}],
           "add" : {
             "Gaussian noise" : {
-              "with" : "? = 0.2",
-              "from sentence" : "We add Gaussian noise with ? = 0.2 and dropout of 0.3 at the embedding layer , dropout of 0.5 at the LSTM layers and dropout of 0.25 at the recurrent connections of the LSTM ."              
+              "with" : "? = 0.2"
             },
             "dropout" : {
               "of" : {
@@ -51,7 +52,9 @@
             "LSTM layers" : {
               "has" : "64"
             },
-            "from sentence" : "The size of the embedding layer is 300 , and the LSTM layers 64 ( 128 for BiLSTM ) ."
+            "from sentence" : "TSA Model ( topic - based )
+The size of the embedding layer is 300 , and the LSTM layers 64 ( 128 for BiLSTM ) ."
+
           },
           "insert" : {
             "Gaussian noise" : {

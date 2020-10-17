@@ -69,7 +69,7 @@ We then use the hidden vectors to predict the label sequence .
 Specifically , label y i is predicted from hi as follows :
 where W ?
 R 2h and b ?
-R 2 area weight matrix and a weight vector to be learned .
+R 2 are a weight matrix and a weight vector to be learned .
 There are some differences between our base model and the LSTM model by .
 ( 1 ) first encoded the input sentence in its reverse order using the same LSTM before processing the sentence for sequence labeling .
 ( 2 ) used only a single - directional LSTM while we use bi - LSTM to capture contextual information from both directions .
@@ -87,7 +87,7 @@ T and T is a POS tag set .
 We further assume that each t ?
 T has an embedding vector ( to be learned ) .
 Let us use ( t 1 , t 2 , . . . , tn ) ( t i ? R p , p < | T | ) to denote the sequence of POS embedding vectors of this sentence .
-We can then simply concatenate w i with ti as anew vector to be processed by the bi -LSTM model .
+We can then simply concatenate w i with ti as a new vector to be processed by the bi -LSTM model .
 Next , we perform dependency parsing on the input sentences .
 For each word w i in sentence s , let r i ?
 R denote the dependency relation between w i and it s parent word in the sentence , where R is the set of all dependency relation types .
@@ -105,7 +105,7 @@ Although the method above has explicitly incorporated some syntactic information
 We hypothesize that there are also hard constraints we can impose on the compressed sentences .
 For example , the method above as well as the original method by can not impose any length constraint on the compressed sentences .
 This is because the labels y 1 , y 2 , . . . , y n are not jointly predicted .
-We propose to use Integer Linear Programming ( ILP ) to find an optimal combination of the labels y 1 , y 2 , . . . , y n fora sentence , subject to some constraints .
+We propose to use Integer Linear Programming ( ILP ) to find an optimal combination of the labels y 1 , y 2 , . . . , y n for a sentence , subject to some constraints .
 Specifically , the ILP problem consists of two parts : the objective function , and the constraints .
 The Objective Function
 Recall that the trained bi - LSTM model above produces a probability distribution for each label y i , as defined in Eqn . ( 1 ) .
@@ -118,7 +118,7 @@ Intuitively , a word closer to the root of the tree is more likely to be retaine
 In order to incorporate this observation , we define dep ( w i ) to be the depth of the word w i in the dependency parse tree of the sentence .
 The root node of the tree has a depth of 0 , an immediate child of the root has a depth of 1 , and soon .
 For example , the dependency parse tree of an example sentence together with the depth of each word is shown in .
-We can see that some of the words that are deleted according to the ground truth have a relatively larger depth , such as the first " she " ( with a depth of 4 ) and the word " flexible " ( with a depth of 5 ) .
+We can see that some of the words thatare deleted according to the ground truth have a relatively larger depth , such as the first " she " ( with a depth of 4 ) and the word " flexible " ( with a depth of 5 ) .
 Based on these considerations , we define the objective function to be the following :
 where ?
 is a positive parameter to be manually set , and y i is the same as defined before , which is either 0 or 1 to indicate whether w i is deleted or not .
@@ -208,9 +208,9 @@ Overall , shows that our proposed method combines both the strength of neural ne
 Therefore , our method works reasonably well for both in - domain and out - ofdomain data .
 We also notice that on Google News , adding the ILP layer decreased the sentence compression performance .
 After some analysis , we think the reason is that some of the constraints used in the ILP layer have led to less deletion but the ground truth compressed sentences in the Google News data tend to be shorter compared with those in the NBC News data .
-We also conduct additional experiments to seethe effect of the training data size on our meth - :
+We also conduct additional experiments to see the effect of the training data size on our meth - :
 Automatic evaluation of our sentence compression methods .
-CR standards for compression rate and is defined as the average percentage of words that are retained after compression .
+CR standards for compression rate and is defined as the average percentage of words thatare retained after compression .
 ods and the LSTM + method .
 shows the F 1 scores on the in - domain Google News data and the out - of - domain NBC News data when we train the models using different amounts of sentence pairs .
 We can see that in the in - domain setting , our method does not have any advantage over the LSTM + method .

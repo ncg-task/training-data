@@ -51,14 +51,14 @@
         },
         "from sentence" : "The same considerations apply to the momentum , which is fixed to = 0.9 ."
       },
-      "implemented using" : ["Lasagne", {"from sentence" : "The model is implemented using Lasagne 4 and the generated CUDA code is executed on a Tesla K40c 9 as training on a GPU allows to perform a comprehensive model selection in a feasible amount of time ."}],
+      "implemented using" : "Lasagne",
       "generated" : {
         "CUDA code" : {
           "executed on" : "Tesla K40c",
           "from sentence" : "The model is implemented using Lasagne 4 and the generated CUDA code is executed on a Tesla K40c 9 as training on a GPU allows to perform a comprehensive model selection in a feasible amount of time ."
         }
       },
-      "conatins" : {
+      "contains" : {
         "four parameters" : {
           "to be" : "optimized",
           "name" : ["number of convolutions", "number of hidden layers", "number of units per hidden layer", "dropout factor"]

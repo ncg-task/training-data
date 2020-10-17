@@ -9,6 +9,7 @@
 (best model||uses||learning rate)
 (learning rate||of||0.001)
 (best model||uses||batch size)
+(batch size||of||32)
 (Multi - task training||early stop||our model)
 (our model||when||averaged dev accuracy)
 (averaged dev accuracy||stop||increasing)

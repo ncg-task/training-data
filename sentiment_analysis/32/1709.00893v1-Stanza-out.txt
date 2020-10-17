@@ -31,7 +31,7 @@ When " short " is collocated with " battery life " , the sentiment tends to be n
 But when " short " is used with " spoon " in the context " Short fat noodle spoon , relatively deep some curva " , the sentiment can be neutral .
 Then , the next problem is how to simultaneously model targets and contexts precisely .
 First , target and context can determine representations of each other .
-For example , when we seethe target " picture quality " , context word " clear - cut " is naturally associated with the target .
+For example , when we see the target " picture quality " , context word " clear - cut " is naturally associated with the target .
 And it is vice versa - " picture quality " is first connected with " clear - cut " .
 In such cases , we argue that targets and contexts can be modeled separately but learned from their interaction .
 Second , our commonsense is that the context is composed of many words .
@@ -47,10 +47,10 @@ Experiments on SemEval 2014 demonstrate that IAN can precisely model both target
 Model
 In this section , we first introduce the architecture of interactive attention networks ( IAN ) model for aspect - level sentiment classification .
 Next , we show the training details of IAN .
-The overall architecture of IAN model is shown in 1 .
+The over all architecture of IAN model is shown in 1 .
 Interactive Attention Networks
 The IAN model is composed of two parts which model the target and context interactively .
-With word embeddings as input , we employ LSTM networks to obtain hidden states of words on the word level fora target and its context respectively .
+With word embeddings as input , we employ LSTM networks to obtain hidden states of words on the word level for a target and its context respectively .
 We use the average value of the target 's hidden states and the context 's hidden states to supervise the generation of attention vectors with which the attention mechanism is adopted to capture the important information in the context and target .
 With this design , the target and context can influence the generation of their representations interactively .
 Finally , target representation and context representation are concatenated as final representation which is fed to a softmax function for aspect - level sentiment classification .
@@ -88,7 +88,7 @@ is the same as in Eq. 10 .
 After computing the word attention weights , we can get context and target representations c rand tr based on the attention vectors ?
 i and ?
 i by :
-Finally , the target representation tr and context representation c rare concatenated as a vector d fora classifier .
+Finally , the target representation tr and context representation c rare concatenated as a vector d for a classifier .
 Here , we use a non-linear layer to project d into the space of the targeted C classes .
 That is ,
 where W land bl are the weight matrix and bias respectively .

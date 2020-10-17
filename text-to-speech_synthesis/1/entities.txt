@@ -1,7 +1,9 @@
+189	0	27	1D Convolution in FFT Block
 190	14	21	replace
 190	26	56	original fully connected layer
 192	66	76	results in
 192	77	89	- 0.113 CMOS
+193	0	39	Sequence - Level Knowledge Distillation
 196	13	21	removing
 196	22	61	sequence - level knowledge distillation
 196	62	72	results in
@@ -48,7 +50,7 @@
 142	0	13	Audio Quality
 143	3	10	conduct
 143	15	52	MOS ( mean opinion score ) evaluation
-143	4	6	on
+143	53	55	on
 143	60	68	test set
 143	69	79	to measure
 143	84	97	audio quality

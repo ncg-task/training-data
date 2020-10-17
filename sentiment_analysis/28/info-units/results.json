@@ -2,7 +2,7 @@
   "has" : {
     "Results" : {
       "has" : {
-        "overall performance" : {
+        "over all performance" : {
           "of" : {
             "TD - LSTM" : {
               "is" : "not good",
@@ -13,7 +13,7 @@
               }
             }
           },
-          "from sentence" : "The overall performance of TD - LSTM is not good since it only makes a rough treatment of the target words ."
+          "from sentence" : "The over all performance of TD - LSTM is not good since it only makes a rough treatment of the target words ."
         },
         "ATAE - LSTM , IAN and RAM" : {
           "are" : "attention based models",
@@ -53,13 +53,13 @@
             "Mem Net" : {
               "eschews" : "recurrence",
               "has" : {
-                "overall performance" : {
+                "over all performance" : {
                   "is" : "not good"
                 }
               }
             }
           },
-          "from sentence" : "Like AEN , Mem Net also eschews recurrence , but its overall performance is not good since it does not model the hidden semantic of embeddings , and the result of the last attention is essentially a linear combination of word embeddings ."
+          "from sentence" : "Like AEN , Mem Net also eschews recurrence , but its over all performance is not good since it does not model the hidden semantic of embeddings , and the result of the last attention is essentially a linear combination of word embeddings ."
         }
       }
     }

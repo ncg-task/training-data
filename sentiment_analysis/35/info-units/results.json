@@ -27,7 +27,9 @@
                       }
                     }
                   },
-                  "from sentence" : "( 2 ) MGAN consistently outperforms the MGAN w / o C2 F , where C2F module of the source network is removed and the source position information is missed ( we set all p s i to 1 ) , by 1.41 % , 1.03 % , 1.09 % for accuracy and 1.79 % , 3.62 % and 1.16 % for Macro - F1 on average ."
+                  "from sentence" : "Comparison with Non - Transfer
+( 2 ) MGAN consistently outperforms the MGAN w / o C2 F , where C2F module of the source network is removed and the source position information is missed ( we set all p s i to 1 ) , by 1.41 % , 1.03 % , 1.09 % for accuracy and 1.79 % , 3.62 % and 1.16 % for Macro - F1 on average ."
+
                 }  
               }
             },
@@ -42,7 +44,9 @@
           "has" : {
             "SO" : {
               "performs" : "poorly",
-              "from sentence" : "SO performs poorly due to no adaptation applied ."
+              "from sentence" : "Comparison with Transfer
+SO performs poorly due to no adaptation applied ."
+
             },
             "popular technique FT" : {
               "can not achieve" : "satisfactory results",
@@ -131,7 +135,8 @@
                   }
                 }
               },
-              "from sentence" : "Then , compared with MGAN w / o C2F , MGAN further uses C2F to capture more specific aspect terms from the context towards the aspect category , such as \" shells \" to food seafood sea , which helps the source task capture more fine - grained semantics of aspect category and detailed position information like the target task , such that the sentiment attention can be positionaware and identify more relevant sentiment features towards the aspect .
+              "from sentence" : "Effect of C2F Attention Module
+Then , compared with MGAN w / o C2F , MGAN further uses C2F to capture more specific aspect terms from the context towards the aspect category , such as \" shells \" to food seafood sea , which helps the source task capture more fine - grained semantics of aspect category and detailed position information like the target task , such that the sentiment attention can be positionaware and identify more relevant sentiment features towards the aspect .
 While MGAN w / o C2F locates wrong sentiment contexts and fails in ( c ) ."
 
             }
@@ -149,8 +154,7 @@ While MGAN w / o C2F locates wrong sentiment contexts and fails in ( c ) ."
                         }
                       }
                     }
-                  },
-                  "from sentence" : "As such , benefited from distilled knowledge from the source task , MGAN can better model the complicated relatedness between the context and aspect term for the target domain L , but MGAN w / o C2F performs poorly though it make true predictions in ( d ) and ( e ) ."
+                  }
                 },
                 "MGAN w / o C2F" : {
                   "performs" : "poorly",

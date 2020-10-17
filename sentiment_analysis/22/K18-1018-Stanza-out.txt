@@ -146,9 +146,7 @@ IAN interactively learns attentions in the contexts and targets , and generates 
 ?
 RAM ) is a multilayer architecture where each layer consists of attention - based aggregation of word features and a GRU cell to learn the sentence representation .
 ?
-LCR - Rot
-employs three
-Bi- LSTMs to model the left context , the target and the right context .
+LCR - Rot employs three Bi- LSTMs to model the left context , the target and the right context .
 Then they propose a rotatory attention mechanism which models the relation between target and left / right contexts .
 ?
 AOA - LSTM introduces an attention - over- attention ( AOA ) based network to model aspects and sentences in a joint way and explicitly capture the interaction between aspects and context sentences .

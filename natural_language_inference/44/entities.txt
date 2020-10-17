@@ -1,3 +1,4 @@
+110	59	77	SQuAD and New s QA
 110	92	100	selector
 110	101	112	outperforms
 110	113	168	TF - IDF method and the previous state - of - the - art
@@ -26,22 +27,23 @@
 116	19	27	achieves
 116	28	41	92.5 accuracy
 116	52	55	Dyn
-116	19	27	achieves
+116	56	64	achieves
 116	65	78	94.6 accuracy
 116	79	83	with
 116	84	109	3.9 sentences per example
 121	3	8	SQuAD
 121	11	21	S - Reader
 121	70	72	on
-121	3	8	SQuAD
+121	73	78	SQuAD
 121	22	30	achieves
 121	62	69	speedup
 121	31	43	6.7 training
 121	48	61	3.6 inference
 121	128	135	News QA
-121	62	69	speedup
+121	117	124	speedup
 121	85	98	15.0 training
 121	103	116	6.9 inference
+153	0	26	Trivia QA and SQuAD - Open
 171	3	15	compare with
 171	59	74	TF - IDF method
 171	79	99	our selector ( Dyn )
@@ -54,18 +56,19 @@
 174	13	18	model
 174	19	23	with
 174	24	45	our sentence selector
-174	19	23	with
+174	46	50	with
 174	51	54	Dyn
 174	55	63	achieves
 174	64	80	higher F1 and EM
 174	81	85	over
-174	13	18	model
-174	19	23	with
+174	90	95	model
+174	96	100	with
 174	101	118	TF - IDF selector
 176	11	22	outperforms
 176	37	59	state - of - the - art
 176	60	62	on
 176	63	75	both dataset
+177	0	19	SQuAD - Adversarial
 181	8	13	shows
 181	19	26	MINIMAL
 181	27	38	outperforms
@@ -89,7 +92,7 @@
 21	41	60	answer the question
 21	61	72	by sampling
 21	73	81	examples
-21	69	71	in
+21	82	84	in
 21	89	96	dataset
 24	43	50	propose
 24	53	70	sentence selector

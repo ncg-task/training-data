@@ -16,7 +16,7 @@
 (3 - 8 x faster||than||RNN counterparts)
 (Model||has||RNFs)
 (RNFs||alleviates||some well - known drawbacks)
-(some well - known drawbacks||inlcuding||vulnerability)
+(some well - known drawbacks||including||vulnerability)
 (vulnerability||to||gradient vanishing and exploding problems)
 (some well - known drawbacks||of||RNNs)
 (RNFs||applied to||word sequences)

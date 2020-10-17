@@ -1,7 +1,6 @@
 {
   "has research problem" : [
-    ["Relation Extraction", {"from sentence" : "Simple BERT Models for Relation Extraction and Semantic Role Labeling"}],
-    ["Semantic Role Labeling", {"from sentence" : "Simple BERT Models for Relation Extraction and Semantic Role Labeling"}],
+    ["Relation Extraction", "Semantic Role Labeling", {"from sentence" : "Simple BERT Models for Relation Extraction and Semantic Role Labeling"}],
     ["semantic role labeling ( SRL )", {"from sentence" : "Relation extraction and semantic role labeling ( SRL ) are two fundamental tasks in natural language understanding ."}],
     ["SRL", {"from sentence" : "For SRL , the task is to extract the predicate - argument structure of a sentence , determining \" who did what to whom \" , \" when \" , \" where \" , etc ."}]
   ]

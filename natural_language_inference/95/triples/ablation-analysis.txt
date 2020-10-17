@@ -13,7 +13,7 @@
 (our hypothesis||that||cross - passage answer verification)
 (cross - passage answer verification||has||useful)
 (useful||for||multi-passage MRC)
-(great contribution||to||overall improvement)
+(great contribution||to||over all improvement)
 (Ablation analysis||jointly training||three models)
 (three models||provide||great benefits)
 (great benefits||shows that||three tasks)

@@ -71,7 +71,7 @@ In standard machine learning tasks , FMs remain a very competitive choice for le
 Intuitively , FMs are adept at handling data sparsity ( typically interactions ) by using factorized parameters to approximate a feature matching matrix .
 This makes it suitable in our model architecture since feature interaction between subphrase alignment pairs is typically very sparse as well .
 A recent work reports an interesting empirical study pertaining to the ability of standard FC layers and their ability to model ' cross features ' ( or multiplicative features ) .
-Their overall finding suggests that while standard ReLU FC layers are able to approximate 2 - way or 3 - way features , they are extremely inefficient in doing so ( requiring either very wide or deep layers ) .
+Their over all finding suggests that while standard ReLU FC layers are able to approximate 2 - way or 3 - way features , they are extremely inefficient in doing so ( requiring either very wide or deep layers ) .
 This further motivates the usage of FMs in this work and is well aligned with our empirical results , i.e. , strong competitive performance with reasonably small parameterization .
 Our Proposed Model
 In this section , we provide a layer - by - layer description of our model architecture .
@@ -94,7 +94,7 @@ The output of this layer is P ?
 R k P ( premise ) and H ?
 R k H ( hypothesis ) , with each word converted to a r-dimensional vector .
 Soft - Attention Alignment Layer
-This layer describes two soft - attention alignment techniques that are used in our model .
+This layer describes two soft - attention alignment techniques thatare used in our model .
 Inter-Attention Alignment Layer
 This layer learns an alignment of sub - phrases between P and H. Let F ( . ) be a standard projection layer with ReLU activation function .
 The alignment matrix of two sequences is defined as follows :
@@ -146,7 +146,7 @@ Notably , the parameters of the LSTM are siamese in nature , sharing weights bet
 We do not use a bidirectional LSTM encoder , as we found that it did not lead to any improvements on the held - out set .
 A logical explanation would be because our word representations are already augmented with global ( intra-attention ) information .
 As such , modeling in the reverse direction is unnecessary , resulting in some computational savings .
-Pooling Layer Next , to learn an overall representation of each sentence , we apply a pooling function across all hidden outputs of the sequential encoder .
+Pooling Layer Next , to learn an over all representation of each sentence , we apply a pooling function across all hidden outputs of the sequential encoder .
 The pooling function is a concatenation of temporal max and average ( avg ) pooling .
 where x is a final 2 k - dimensional representation of the sentence ( premise or hypothesis ) .
 We also experimented with sum and avg standalone poolings and found sum pooling to be relatively competitive .
@@ -173,7 +173,7 @@ Notably , SciTail is known to be a difficult dataset for NLI , made evident by t
 SNLI
 The state - of - the - art competitors on this dataset are the BiMPM , ESIM and DIIN .
 We compare against competitors across three settings .
-The first setting disallows cross sentence at - tention .
+The first setting dis allows cross sentence at - tention .
 In the second setting , cross sentence is allowed .
 The last ( third ) setting is a comparison between model ensembles while the first two settings only comprise single models .
 Note that we consider the 1st setting to be relatively less important ( since our focus is not on the encoder itself ) but still report the results for completeness .
@@ -217,7 +217,7 @@ This outperforms the state - of - theart ESIM and DIIN models with only a fracti
 At 88.1 % , our model has about three times less parameters than ESIM / DIIN ( i.e. , 1.4 M versus 4.3M / 4.4M ) .
 Moreover , our lightweight adaptation achieves 87.7 % with only 750K parameters , which makes it extremely performant amongst models having the same amount of parameters such as the decomposable attention model ( 86.8 % ) .
 Finally , an ensemble of 5 CAFE models achieves 89.3 % test accuracy , the best test scores on the SNLI benchmark to date 3 .
-Overall , we believe that the good performance of our CAFE can be attributed to ( 1 ) the effectiveness of the ComProp architecture ( i.e. , providing word representations with global and local knowledge for better representation learning ) and ( 2 ) the expressiveness of alignment factorization layers that are used to decompose and compare word alignments .
+Overall , we believe that the good performance of our CAFE can be attributed to ( 1 ) the effectiveness of the ComProp architecture ( i.e. , providing word representations with global and local knowledge for better representation learning ) and ( 2 ) the expressiveness of alignment factorization layers thatare used to decompose and compare word alignments .
 More details are given at the ablation study .
 Finally , we emphasize that CAFE is also relatively lightweight , efficient and fast to train given its performance .
 A single run on SNLI takes approximately 5 minutes per epoch with a batch size of 256 .
@@ -243,7 +243,7 @@ Ablation Study
 In , we explore the utility of using character and syntactic embeddings , which we found to have helped CAFE marginally .
 In ( 4 ) , we remove the inter-attention alignment features , which naturally impact the model performance significantly .
 In ( 5 - 6 ) , we explore the effectiveness of the highway layers ( in prediction layers and encoding layers ) by replacing them to FC layers .
-We observe that both highway layers have marginally helped the overall performance .
+We observe that both highway layers have marginally helped the over all performance .
 Finally , in ( 7 - 9 ) , we remove the alignment features based on their composition type .
 We observe that the Sub and Concat compositions were more important than the Mul composition .
 However , removing any of the three will result in some performance degradation .

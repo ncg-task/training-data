@@ -53,7 +53,7 @@ We achieve currently the best aspect - based sentiment classification performanc
 And we will release our code soon .
 Related Work
 Aspect - based sentiment analysis is a fine - grained classification task in sentiment analysis , which aims at identifying the sentiment polarity of a sentence expressed towards a target .
-In this work , we focus on the aspect term polarity detection task defined in SemEval 2014 : fora given set of labeled aspect terms within a sentence , determine the polarity of each aspect term .
+In this work , we focus on the aspect term polarity detection task defined in SemEval 2014 : for a given set of labeled aspect terms within a sentence , determine the polarity of each aspect term .
 Traditional approaches to this task normally design effective feature templates by making use of external resources like linguistic parser and sentiment lexicons , and then employ the traditional statistical learning algorithms for prediction .
 For example , Vo and manually designed rich features including sentiment - specific word embedding and sentiment lexicons .
 Although these methods have achieved a comparable performance , their results highly depended on the effect of the handcraft features .
@@ -69,7 +69,7 @@ used one gated - RNN to learn the representation of sentence in three components
 proposed an interactive attention networks which interactively learn attentions in the contexts and targets .
 Different from previous models , our model use three LSTMs to model left context , target phrase and right context separately ; meanwhile , considering the interaction of targets and contexts , we propose a rotatory attention mechanism .
 Model
-The overall architecture of the proposed LCR - Rot model is shown in .
+The over all architecture of the proposed LCR - Rot model is shown in .
 Left - Center - Right Separated LSTMs
 Firstly , a sentence is separated into three parts , i.e. , left context , target phrase and right context .
 Suppose a sentence s contains N words [ w 1 , w 2 , . . . , w N ] , and is separated into three parts :
@@ -80,7 +80,7 @@ Taking Example 1 for instance , with respect to the target " the life of battery
 Accordingly , the LCR - Rot model is composed of three Bi - LSTMs , i.e. , left - , center - , and right - Bi - LSTM , respectively modeling left context , target phrase and right context in the sentence .
 Specifically , each word is represented as word embedding .
 All the word vectors are stacked in a word embedding matrix L w ?
-R d|V | , where dis the dimension of word vector and | V | is vocabulary size .
+R d|V | , where d is the dimension of word vector and | V | is vocabulary size .
 After we feed word embedding to Bi - LSTM , we can get hidden states [ h l 1 , h l 2 , . . . , h l L ] for left context , [ h t 1 , ht 2 , . . . , ht M ] for the target phrase and [ h r 1 , hr 2 , . . . , hr R ] for right context as the initial representations .
 Rotatory Attention Mechanism
 Secondly , a rotatory attention mechanism is designed to capture the most indicative words in target and left / right contexts .
@@ -131,8 +131,7 @@ The evaluation metric is classification accuracy .
 In our work , the dimension of word embedding vectors and hidden state vectors is 300 .
 We use GloVe 2 vectors with 300 dimensions to initialize the word embeddings , the same as .
 All out - ofvocabulary words and weight matrices are randomly initialized by a uniform distribution U ( - 0.1 , 0.1 ) , and all bias are set to zero .
-Tensor
-Flow is used for implementing our neural network model .
+Tensor Flow is used for implementing our neural network model .
 In model training , the learning rate is set to 0.1 , the weight for L 2 - norm regularization is set to 1 e - 5 , and dropout rate is set to 0.5 .
 We train the model use stochastic gradient descent optimizer with momentum of 0.9 .
 The paired t- test is used for the significance testing .

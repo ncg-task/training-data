@@ -64,8 +64,7 @@
       "minimize" : {
         "cross entropy" : {
           "of" : "training set"
-        },
-        "from sentence" : "To train the model , we minimize the cross entropy of the training set , and use the ADAM optimizer [ Kingma and Ba , 2014 ] to update parameters ."
+        }
       },
       "use" : {
         "ADAM optimizer" : {

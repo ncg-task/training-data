@@ -50,7 +50,8 @@
                   }
                 }
               },
-              "from sentence" : "DialogueRNN l :
+              "from sentence" : "DialogueRNN vs. DialogueRNN Variants
+DialogueRNN l :
 Following , using explicit listener state update yields slightly worse performance than regular DialogueRNN ."
 
             },

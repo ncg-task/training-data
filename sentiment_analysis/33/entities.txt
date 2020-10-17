@@ -12,12 +12,12 @@
 77	38	50	RNN variants
 77	53	56	GRU
 77	59	63	LSTM
-77	53	56	GRU
+77	66	69	GRU
 77	70	74	with
 77	75	86	max pooling
-77	59	63	LSTM
-77	70	74	with
-77	75	86	max pooling
+77	93	97	LSTM
+77	98	102	with
+77	103	114	max pooling
 18	22	39	propose to employ
 18	40	74	recurrent neural networks ( RNNs )
 18	75	77	as
@@ -27,7 +27,7 @@
 19	4	37	recurrent neural filters ( RNFs )
 19	52	61	deal with
 19	62	87	language compositionality
-19	57	61	with
+19	88	92	with
 19	95	113	recurrent function
 19	114	125	that models
 19	126	140	word relations
@@ -40,10 +40,11 @@
 20	48	64	moderate lengths
 20	73	83	alleviates
 20	84	111	some well - known drawbacks
-20	45	47	of
+20	112	114	of
 20	115	119	RNNs
+20	122	131	including
 20	138	151	vulnerability
-20	27	29	to
+20	152	154	to
 20	159	200	gradient vanishing and exploding problems
 22	14	36	RNF - based CNN models
 22	37	43	can be
@@ -72,7 +73,7 @@
 81	78	134	fine - grained and binary sentiment classification tasks
 81	156	161	match
 81	166	194	state - of the - art results
-81	71	73	on
+81	195	197	on
 81	202	229	Stanford Sentiment Treebank
 82	22	29	obtains
 82	30	49	competitive results

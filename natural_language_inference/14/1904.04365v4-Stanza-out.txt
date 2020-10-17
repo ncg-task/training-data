@@ -58,7 +58,7 @@ This model achieved 80.68 % accuracy on Annotators were provided explicit incent
 The vast majority of submissions were contributed by university computer science students , who were familiar with neural network question answering systems .
 Students were rewarded with extra credit points for submitting valid questions that fooled the baseline model .
 Further , students could earn an equal number of extra credit points for questions that fooled the model when evaluated in cross-validation , after fine - tuning on other submitted questions .
-This protocol was designed to encourage the creation of challenging and valid commonsense questions that are also free from stylistic annotation artifacts or redundancy , which would reduce the difficulty of the questions after fine - tuning and reduce the returns on their submissions .
+This protocol was designed to encourage the creation of challenging and valid commonsense questions thatare also free from stylistic annotation artifacts or redundancy , which would reduce the difficulty of the questions after fine - tuning and reduce the returns on their submissions .
 A small portion of the dataset was submitted anonymously by other individuals .
 We received a total of 4,149 raw questions , which were read and cleaned by four annotators ( the authors ) .
 During cleaning , the answer choice order was shuffled and model 's output answer were hidden from the annotator .
@@ -78,7 +78,7 @@ Question Categorization
 One of our goals is to analyze how system and human performance varies across questions in CODAH that employ different types of commonsense .
 Therefore , we identified a small number of unambiguous categories of commonsense , such as questions involving quantitative reasoning or negation .
 These categories only apply to a portion of the questions in our dataset , but have the advantage of being unambiguous and in many cases predictive of low system performance .
-In earlier attempts to devise categories to coverall questions , similar to analysis performed for textual entailment ( LoBue and Yates , 2011 ) , we found the inter-annotator agreement on such complete categorizations to be substantially lower ( at < 0.4 ) , even after iterating on category definitions .
+In earlier attempts to devise categories to cover all questions , similar to analysis performed for textual entailment ( LoBue and Yates , 2011 ) , we found the inter-annotator agreement on such complete categorizations to be substantially lower ( at < 0.4 ) , even after iterating on category definitions .
 We manually inspected all questions in our dataset and annotated each with one or more category labels , representing all types of reasoning required to identify the correct answer and eliminate incorrect ones .
 The descriptions and examples of these categories are found in .
 Four human annotators ( the authors ) categorized the questions , and we calculated a Feiss ' Kappa score of 0.63 between the annotators over an additional 50 questions .
@@ -115,7 +115,7 @@ Also , when training the initial SWAG model we use the hyperparameters recommend
 In our initial experiments , we found that a lower learning rate and more training epochs produced higher accuracy on CODAH , so we replaced the 5e - 5 learning rate in the original grid search with 1 e - 5 , and we added a 6 - epoch setting .
 The final hyperparameter grid is as follows :
 Batch size : 16 , 32 Learning rate : 1 e - 5 , 2 e - 5 , 3 e - 5 Number of epochs : 3 , 4 , 6 In addition , we observed that in rare cases BERT fails to train ; that is , after several training epochs it has accuracy approximately equal to that of random guessing .
-To combat this , anytime BERT fails to achieve 30 % or greater accuracy on the test set fora given fold , we run it again with a different random seed .
+To combat this , anytime BERT fails to achieve 30 % or greater accuracy on the test set for a given fold , we run it again with a different random seed .
 If it fails five times , take the average of those five trials as the final accuracy .
 Results
 Results for the above configurations are shown in .
@@ -166,6 +166,6 @@ Under such a data collection scheme , we may need to increase the reward for foo
 Conclusion
 We present CODAH , a commonsense question answering dataset that is adversarially - constructed by allowing humans to view feedback from a pre-trained model and use this information to design challenging commonsense questions .
 Our experimental results show that CODAH questions present a complementary extension of the SWAG dataset , testing additional modes of commonsense .
-We identify specific categories of commonsense questions to determine types of reasoning that are more challenging for existing models .
+We identify specific categories of commonsense questions to determine types of reasoning thatare more challenging for existing models .
 In particular , we note that Quantitative questions have low accuracy for both BERT and GPT .
 A more detailed analysis into why models struggle to reason about numbers as well as development of more detailed categories of commonsense reasoning are items for future work .

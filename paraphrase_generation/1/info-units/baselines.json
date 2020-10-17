@@ -11,7 +11,7 @@
           "from sentence" : "Residual LSTM is also the current state - of - the - art on the MSCOCO dataset ."
         }
       },
-      "compared" : {
+      "compare" : {
         "standard VAE model" : {
           "i.e." : "unsupervised version"
         },

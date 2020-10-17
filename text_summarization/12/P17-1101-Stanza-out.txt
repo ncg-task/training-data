@@ -113,7 +113,7 @@ Summary Decoder
 On top of the sentence encoder and the selective gate network , we use GRU with attention as the decoder to produce the output summary .
 At each decoding time step t , the GRU reads the previous word embedding w t?1 and previous context vector c t ?1 as inputs to compute the new hidden state st .
 To initialize the GRU hidden state , we use a linear layer with the last backward encoder hidden state h 1 as input :
-where W dis the weight matrix and b is the bias vector .
+where W d is the weight matrix and b is the bias vector .
 The context vector ct for current time step t is computed through the concatenate attention mechanism , which matches the current decoder state st with each encoder hidden state hi to get an importance score .
 The importance scores are then normalized to get the current context vector by weighted sum :
 We then combine the previous word embedding w t ?1 , the current context vector ct , and the decoder state st to construct the readout state rt .
@@ -141,7 +141,7 @@ Test Set
 We employ DUC 2004 data for tasks 1 & 2 in our experiments as one of the test sets since it is too small to train a neural network model on .
 The dataset pairs each document with 4 different human - written reference summaries which are capped at 75 bytes .
 It has 500 input sentences with each sentence paired with 4 summaries .
-release anew dataset for sentence summarization task by crowdsourcing .
+release a new dataset for sentence summarization task by crowdsourcing .
 This dataset contains approximately 6,000 source text sentences with multiple manually - created summaries ( about 26,000 sentence - summary pairs in total ) .
 provide a standard split of the data into training , development , and test sets , with 4,936 , 448 and 785 input sentences respectively .
 Since the training set is too small , we only use the test set as one of our test sets .

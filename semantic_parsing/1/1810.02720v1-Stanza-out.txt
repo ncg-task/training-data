@@ -2,21 +2,20 @@ title
 TRANX : A Transition - based Neural Abstract Syntax Parser for Semantic Parsing and Code Generation
 abstract
 We present TRANX , a transition - based neural semantic parser that maps natural language ( NL ) utterances into formal meaning representations ( MRs ) .
-TRANX uses a transition system based on the abstract syntax description language for the target MR , which gives it two major advantages : ( 1 ) it is highly accurate , using information from the syntax of the target MR to constrain the output space and model the information flow , and ( 2 ) it is highly generalizable , and can easily be applied to new types of MR by just writing anew abstract syntax description corresponding to the allowable structures in the MR .
+TRANX uses a transition system based on the abstract syntax description language for the target MR , which gives it two major advantages : ( 1 ) it is highly accurate , using information from the syntax of the target MR to constrain the output space and model the information flow , and ( 2 ) it is highly generalizable , and can easily be applied to new types of MR by just writing a new abstract syntax description corresponding to the allowable structures in the MR .
 Experiments on four different semantic parsing and code generation tasks show that our system is generalizable , extensible , and effective , registering strong results compared to existing neural semantic parsers .
 1
 Introduction
 Semantic parsing is the task of transducing natural language ( NL ) utterances into formal meaning representations ( MRs ) .
 The target MRs can be defined according to a wide variety of formalisms .
-This include linguistically - motivated semantic representations that are designed to capture the meaning of any sentence such as ? calculus or the abstract meaning representations .
+This include linguistically - motivated semantic representations thatare designed to capture the meaning of any sentence such as ? calculus or the abstract meaning representations .
 Alternatively , for more task - driven approaches to semantic parsing , it is common for meaning representations to represent executable programs such as SQL queries , robotic commands , smartphone instructions , and even general - purpose programming languages like Python and Java .
 Because of these varying formalisms for MRs , the design of semantic parsers , particularly neural network - based ones has generally focused on a small subset of tasks - in order to ensure the syntactic well - formedness of generated MRs , a parser is usually specifically designed to reflect the domain - dependent grammar of MRs in the structure of the model .
 To alleviate this issue , there have been recent efforts in neural semantic parsing with general - purpose grammar models .
 put forward a neural sequence - to - sequence model that generates tree - structured MRs using a series of tree - construction actions , guided by the task - specific context free grammar provided to the model a priori .
 propose the abstract syntax networks ( ASNs ) , where domain - specific MRs are represented by abstract syntax trees ( ASTs , Left ) specified under the abstract syntax description language ( ASDL ) framework .
 An ASN employs a modular architecture , generating an AST using specifically designed neural networks for each construct in the ASDL grammar .
-Inspired by this existing research , we have developed TRANX , a TRANsition - based abstract synta
-X parser for semantic parsing and code generation .
+Inspired by this existing research , we have developed TRANX , a TRANsition - based abstract syntaX parser for semantic parsing and code generation .
 TRANX is designed with the following principles in mind :
 Generalization ability TRANX employs ASTs as a general - purpose intermediate meaning representation , and the task - dependent grammar is provided to the system as external knowledge to guide the parsing process , therefore decoupling the semantic parsing procedure with specificities of grammars .
 Extensibility TRANX uses a simple transition system to parse NL utterances into tree -
@@ -72,7 +71,7 @@ Right lists the sequence of actions used to construct the example AST .
 In high level , the generation process starts from an initial derivation AST with a single root node , and proceeds according to a top - down , left - to - right order traversal of the AST .
 At each time step , one of the following three types of actions is evoked to expand the opening frontier field n ft of the derivation : APPLYCONSTR [ c ] actions apply a constructor c to the opening composite frontier field which has the same type as c , populating the opening node using the fields inc .
 If the frontier field has sequential cardinality , the action appends the constructor to the list of constructors held by the field .
-REDUCE actions mark the completion of the generation of child values fora field with optional ( ? ) or multiple ( * ) cardinalities .
+REDUCE actions mark the completion of the generation of child values for a field with optional ( ? ) or multiple ( * ) cardinalities .
 actions populate a ( empty ) primitive frontier field with a token v.
 For example , the field f 7 on has type identifier , and is instantiated using a single GENTOKEN action .
 For fields of string type , like f 8 , whose value could consists of multiple tokens ( only one shown here ) , it can be filled using a sequence of GENTOKEN actions , with a special GENTOKEN [</ f > ] action to terminate the generation of token values .

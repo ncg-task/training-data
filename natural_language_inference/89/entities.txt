@@ -2,7 +2,7 @@
 193	13	48	independent span loss ( indep - I )
 193	49	59	results in
 193	62	78	performance drop
-193	65	68	for
+193	79	82	for
 193	83	118	all answerable questions ( HasAns )
 194	0	8	Ablating
 194	9	52	independent no - answer loss ( indep - II )
@@ -12,35 +12,36 @@
 194	102	108	HasAns
 194	115	123	leads to
 194	126	140	severe decline
-194	55	57	on
+194	99	101	on
 194	144	178	no - answer accuracy ( NoAns ACC )
 212	9	29	two auxiliary losses
 212	42	50	leads to
-212	54	73	overall degradation
-212	71	73	on
-212	81	86	curve
-212	102	113	outperforms
-212	118	126	baseline
-212	127	129	by
-212	132	144	large margin
+212	54	74	over all degradation
+212	75	77	on
+212	82	87	curve
+212	103	114	outperforms
+212	119	127	baseline
+212	128	130	by
+212	133	145	large margin
 196	10	18	deleting
 196	19	37	both of two losses
 196	38	44	causes
 196	47	58	degradation
-196	24	26	of
+196	59	61	of
 196	62	82	more than 1.5 points
-196	56	58	on
-196	90	109	overall performance
-196	110	121	in terms of
-196	122	124	F1
-196	127	142	with or without
-196	143	158	ELMo embeddings
+196	83	85	on
+196	90	110	over all performance
+196	111	122	in terms of
+196	123	125	F1
+196	128	143	with or without
+196	144	159	ELMo embeddings
 200	0	6	Adding
 200	7	22	ELMo embeddings
 200	35	43	does not
 200	44	49	boost
 200	54	65	performance
 204	3	12	find that
+204	17	28	improvement
 204	29	31	on
 204	32	49	noanswer accuracy
 204	50	52	is
@@ -51,7 +52,7 @@
 210	51	65	best precision
 210	66	70	when
 210	75	81	recall
-210	60	62	is
+210	82	84	is
 210	85	97	less than 80
 177	3	6	run
 177	9	20	grid search
@@ -68,7 +69,7 @@
 179	199	205	set as
 179	206	209	300
 179	218	225	dropout
-179	160	162	of
+179	228	230	of
 179	231	234	0.3
 179	238	249	applied for
 179	250	272	preventing overfitting
@@ -78,18 +79,18 @@
 180	21	24	for
 180	29	35	reader
 180	38	40	64
-180	21	24	for
+180	41	44	for
 180	45	55	Model - II
 180	62	64	32
-180	21	24	for
-180	45	54	Model - I
+180	65	68	for
+180	69	78	Model - I
 180	90	101	Model - III
 181	3	6	use
 181	11	33	Glo Ve 100D embeddings
 181	34	37	for
 181	42	48	reader
 181	55	70	300D embeddings
-181	34	37	for
+181	71	74	for
 181	75	85	Model - II
 181	90	101	Model - III
 182	3	10	utilize
@@ -102,7 +103,7 @@
 26	42	69	read - then - verify system
 26	75	85	aims to be
 26	86	92	robust
-26	80	82	to
+26	93	95	to
 26	96	118	unanswerable questions
 27	14	24	our system
 27	25	36	consists of
@@ -115,7 +116,7 @@
 27	164	179	answer verifier
 27	180	192	for deciding
 27	212	231	extracted candidate
-27	29	31	is
+27	232	234	is
 27	235	245	legitimate
 29	11	18	augment
 29	19	35	existing readers
@@ -125,7 +126,7 @@
 32	40	61	independent span loss
 32	67	74	aims to
 32	75	86	concentrate
-32	76	78	on
+32	87	89	on
 32	94	116	answer extraction task
 33	57	65	leverage
 33	68	94	multi-head pointer network
@@ -156,7 +157,7 @@
 35	119	126	finding
 35	127	143	local entailment
 35	149	157	supports
-35	80	86	answer
+35	162	168	answer
 39	71	82	investigate
 39	83	112	three different architectures
 39	113	116	for
@@ -172,7 +173,7 @@
 40	114	121	capture
 40	122	134	interactions
 40	135	142	between
-40	47	60	two sentences
+40	143	156	two sentences
 41	4	12	last one
 41	13	15	is
 41	18	30	hybrid model
@@ -186,10 +187,10 @@
 187	128	136	test set
 187	64	76	by achieving
 187	80	88	EM score
-187	43	45	of
+187	89	91	of
 187	92	96	71.7
 187	103	112	F 1 score
-187	43	45	of
+187	113	115	of
 187	116	120	74.2
 188	0	11	Notice that
 188	12	18	SLQA +

@@ -39,7 +39,7 @@ Note that , as in a BiLSTM , we always use different LSTMs for the forward and r
 In general a SuBiLSTM can be used as a drop in replacement in any model that uses the intermediate states of a BiLSTM , without changing any other parts of the model .
 However , the main motivation for introducing SuBiLSTMs is to apply it to problems that require whole sentence modeling e.g. text classification , where the richer contextual information can be helpful .
 We demonstrate the effectiveness of SuBiLSTM on several sentence modeling tasks in NLP - general sentence representation , text classification , textual entailment and paraphrase detection .
-In each of these tasks , we show gains by simply replacing BiLSTMs in strong base models , achieving anew state - of - the - art in fine grained sentiment classification and question classification .
+In each of these tasks , we show gains by simply replacing BiLSTMs in strong base models , achieving a new state - of - the - art in fine grained sentiment classification and question classification .
 Here ; is the concatenation operator .
 This defines the SuBiL - STM model .
 We also define another representation where the two LSTMs encoding the sequence in the same direction are the same or their weights are tied .
@@ -53,7 +53,7 @@ SuBiLSTM thus tries to capture more information by encoding the prefix and suffi
 Interpretations of SuBiLSTM
 In general , the prefix and suffix encodings can be combined in other ways e.g. concatenation , mean or through a learned gating function .
 However , we use max - pooling because it is a simple parameterless operation and it performs better in our experiments .
-Since both SuBiLSTM and SuBiLSTM - Tied produces representations of each token s [ i ] in the same way as a BiLSTM , they can be used as drop in replacements fora BiLSTM in any model that uses these representations .
+Since both SuBiLSTM and SuBiLSTM - Tied produces representations of each token s [ i ] in the same way as a BiLSTM , they can be used as drop in replacements for a BiLSTM in any model that uses these representations .
 Time complexity of a SuBiLSTM
 To compute the contextual representations of a minibatch of sentences using a SuBi LSTM , we calculate all the ?
 h p , i in one pass using ?
@@ -89,10 +89,10 @@ It is possible that SuBiLSTM coupled with training objectives and datasets used 
 Text Classification
 The performance of SuBiLSTM and SuBiLSTM - Tied on the four text classification datasets is shown in .
 In three of these tasks ( SST - 2 , SST - 5 and TREC - 50 ) , SuBiLSTM - Tied using GloVe and CoVe embeddings performs the best .
-It performs notably better than the single layer BiLSTM based base model BCN on SST - 2 and SST - 5 , achieving anew state - of - the - art accuracy of 56.2 % on fine - grained sentiment classification ( SST - 5 ) .
-On TREC - 6 , the best result is obtained for SuBiLSTM - Tied using Glo Ve embeddings only , anew state - of - the - art accuracy of 96.2 % .
+It performs notably better than the single layer BiLSTM based base model BCN on SST - 2 and SST - 5 , achieving a new state - of - the - art accuracy of 56.2 % on fine - grained sentiment classification ( SST - 5 ) .
+On TREC - 6 , the best result is obtained for SuBiLSTM - Tied using Glo Ve embeddings only , a new state - of - the - art accuracy of 96.2 % .
 There is no substantial improvement on the TREC - 50 dataset .
-For text classification , we observe that SuBiLSTM - Tied performs better than SuBiLSTM and CoVe embeddings give a boost inmost cases .
+For text classification , we observe that SuBiLSTM - Tied performs better than SuBiLSTM and CoVe embeddings give a boost in most cases .
 The performance of the base model BCN with a 2 - layer BiLSTM is slightly better than with the Model Test ESIM with BiLSTM 88.0 DIIN 88.0 BCN+Char+CoVe 88.1 DR - BiLSTM 88.5 CAFE 88 This implies that the richer contextual information captured by a SuBiLSTM can not easily be replicated by adding more layers to the BiLSTM .
 Note that BCN uses a self - attention mechanism on top of the token representations and it is able to exploit the richer representations provided by SuBiLSTM .
 Textual Entailment
@@ -136,7 +136,7 @@ Recurrent Highway Networks ) allow for multiple state updates via highway connec
 The idea of capturing long term dependencies in better ways has given rise to memory augmented architectures like Neural Turing Machines and TopicRNNs .
 In this paper , we focus on LSTMs .
 As shown by the work of and , LSTMs represent a robust recurrent neural network architecture for modeling sequential data .
-In particular , LSTMs area core component in several state - of - the - art neural models for NLP tasks like language modeling , textual entailment , question answering , semantic role labeling ) and named entity recognition .
+In particular , LSTMs are a core component in several state - of - the - art neural models for NLP tasks like language modeling , textual entailment , question answering , semantic role labeling ) and named entity recognition .
 A unidirectional RNN processes a sequence in a single direction , usually following the natural order specific to the sequence .
 Bidirectional RNNs , where two distinct recurrent networks process the input sequence in opposite directions was first proposed by .
 This allows the model to have a representation of the prefix and the suffix at each intermediate point in the sequence , thereby providing context in both directions .

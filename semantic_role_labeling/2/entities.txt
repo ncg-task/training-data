@@ -30,6 +30,7 @@
 87	123	136	softmax layer
 87	137	151	for predicting
 87	156	175	output distribution
+89	8	23	weight matrices
 89	24	26	in
 89	27	37	BiL - STMs
 89	42	58	initialized with
@@ -71,7 +72,7 @@
 94	59	63	with
 94	64	68	norm
 94	69	80	larger than
-94	38	39	1
+94	81	82	1
 11	63	68	using
 11	69	101	deep highway bidirectional LSTMs
 11	102	106	with
@@ -93,7 +94,7 @@
 15	158	162	with
 15	163	177	BIOconstraints
 15	190	200	ensembling
-15	158	162	with
+15	201	205	with
 15	208	226	product of experts
 2	0	27	Deep Semantic Role Labeling
 4	43	73	semantic role labeling ( SRL )

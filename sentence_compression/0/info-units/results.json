@@ -103,7 +103,7 @@
               },
               "performs" : {
                 "better" : {
-                  "than" : "LSTM+",
+                  "than" : "LSTM +",
                   "when" : {
                     "amount of training data" : {
                       "is" : "relatively small"

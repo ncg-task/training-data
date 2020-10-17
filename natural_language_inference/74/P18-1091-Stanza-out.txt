@@ -6,7 +6,7 @@ It requires to infer the logical relationship between two given sentences .
 While current approaches mostly focus on the interaction architectures of the sentences , in this paper , we propose to transfer knowledge from some important discourse markers to augment the quality of the NLI model .
 We observe that people usually use some discourse markers such as " so " or " but " to represent the logical relationship between two sentences .
 These words potentially have deep connections with the meanings of the sentences , thus can be utilized to help improve the representations of them .
-Moreover , we use reinforcement learning to optimize anew objective function with a reward defined by the property of the NLI datasets to make full use of the labels information .
+Moreover , we use reinforcement learning to optimize a new objective function with a reward defined by the property of the NLI datasets to make full use of the labels information .
 Experiments show that our method achieves the state - of - the - art performance on several large - scale datasets .
 1
 Here sentences mean either the whole sentences or the main clauses of a compound sentence .
@@ -38,7 +38,7 @@ In consideration of that different confidence level of the final labels should b
 The contributions of this paper can be summarized as follows .
 Unlike previous studies , we solve the task of the natural language inference via transferring knowledge from another supervised task .
 We propose the Discourse Marker Augmented Network to combine the learned encoder of the sentences with the integrated NLI model .
-According to the property of the datasets , we incorporate reinforcement learning to optimize anew objective function to make full use of the labels ' information .
+According to the property of the datasets , we incorporate reinforcement learning to optimize a new objective function to make full use of the labels ' information .
 We conduct extensive experiments on two large - scale datasets to show that our method achieves better performance than other stateof - the - art solutions to the problem .
 2 Task Description
 2.1 Natural Language Inference ( NLI )
@@ -110,8 +110,8 @@ We combine the representations of the sentences computed above with the represen
 Training
 As shown in , many examples from our datasets are labeled by several people , and the choices of the annotators are not always consistent .
 For instance , when the label number is 3 in SNLI , " total = 0 " means that no examples have 3 annotators ( maybe more or less ) ; " correct=8748 " means that there are 8748 examples whose number of correct labels is 3 ( the number of annotators maybe 4 or 5 , but some provided wrong labels ) .
-Although all the labels for each example will be unified to a final ( correct ) label , diversity of the labels fora single example indicates the low confidence of the result , which is not ideal to only use the final label to optimize the model .
-We propose anew objective function that combines both the log probabilities of the ground - truth label and a reward defined by the property of the datasets for the reinforcement learning .
+Although all the labels for each example will be unified to a final ( correct ) label , diversity of the labels for a single example indicates the low confidence of the result , which is not ideal to only use the final label to optimize the model .
+We propose a new objective function that combines both the log probabilities of the ground - truth label and a reward defined by the property of the datasets for the reinforcement learning .
 The most widely used objective function for the natural language inference is to minimize the negative log cross - entropy loss :
 where ?
 are all the parameters to optimize , N is the number of examples in the dataset , d l is the probability of the ground - truth label l .
@@ -204,7 +204,7 @@ However , all those datasets are provided by for evaluating sentence embeddings 
 Moreover , they represent each sentence by a single vector and directly combine them to predict the answer , which is notable to interact among the words level .
 In closely related work , propose a model that also leverage discourse relations .
 However , they manually group the discourse markers into several categories based on human knowledge and predict the category instead of the explicit discourse marker phrase .
-However , the size of their dataset is much smaller than that in , and sometimes there has been disagreement among annotators about what exactly is the correct categorization of discourse relations .
+However , the size of their dataset is much smaller than that in , and sometimes there has been dis agreement among annotators about what exactly is the correct categorization of discourse relations .
 Unlike previous works , we insert the sentence encoder into an integrated network to augment the semantic representation for NLI tasks rather than directly combining the sentence embeddings to predict the relations .
 Natural Language Inference
 Earlier research on the natural language inference was based on small - scale datasets , which relied on traditional methods such as shallow methods , natural logic methods ( MacCartney and , etc .
@@ -215,7 +215,7 @@ Most of them focus on the improvement of the interaction architectures and obtai
 incorpated Skipthought , which is an unsupervised sequence model that has been proven to generate useful sentence embedding .
 proposed to transfer the pre-trained encoder from the neural machine translation ( NMT ) to the NLI tasks .
 Our method combines a pre-trained sentence encoder from the DMP task with an integrated NLI model to compose a novel framework .
-Furthermore , unlike previous studies , we make full use of the labels provided by the annotators and employ policy gradient to optimize anew objective function in order to simulate the thought of human being .
+Furthermore , unlike previous studies , we make full use of the labels provided by the annotators and employ policy gradient to optimize a new objective function in order to simulate the thought of human being .
 Conclusion
 In this paper , we propose Discourse Marker Augmented Network for the task of the natural language inference .
 We transfer the knowledge learned from the discourse marker prediction task to the NLI task to augment the semantic representation of the model .

@@ -2,7 +2,7 @@
 115	35	63	SuBiLSTM and SuBiLSTM - Tied
 115	64	68	with
 115	71	123	single - layer BiLSTM and a 2 - layer BiLSTM encoder
-115	64	68	with
+115	124	128	with
 115	133	154	same hidden dimension
 30	19	26	propose
 30	29	69	simple , general and effective technique
@@ -24,11 +24,6 @@
 34	108	140	richer contextual representation
 34	146	153	in both
 34	158	187	forward and reverse direction
-35	3	7	call
-35	18	31	Suffix BiLSTM
-35	35	43	SuBiLSTM
-35	44	46	in
-35	47	52	short
 2	0	26	Improved Sentence Modeling
 4	52	96	computing representations of sequential data
 12	65	104	fine - grained sentiment classification
@@ -54,7 +49,7 @@
 128	72	91	half the parameters
 128	110	119	should be
 128	124	142	more favored model
-128	24	27	for
+128	143	146	for
 128	147	170	sentence modeling tasks
 127	0	3	For
 127	8	42	larger datasets ( SNLI and QUORA )

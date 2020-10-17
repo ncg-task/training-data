@@ -3,8 +3,8 @@
 247	31	59	scalar training signal L g c
 247	60	63	for
 247	64	82	generator training
-247	90	115	 feature vector F ( m t )
-247	60	63	for
+247	91	115	feature vector F ( m t )
+247	116	119	for
 247	120	132	goal tracker
 248	27	39	increment of
 248	40	47	17.51 %
@@ -25,7 +25,7 @@
 252	22	42	offers a decrease of
 252	43	52	10 . 22 %
 252	53	66	compared with
-252	10	14	RASG
+252	67	71	RASG
 252	72	83	in terms of
 252	84	93	ROUGE - L
 224	6	9	S2S
@@ -73,7 +73,6 @@
 235	27	38	beam size 5
 235	39	50	to generate
 235	51	80	more fluency summary sentence
-51	53	57	name
 51	19	26	propose
 51	29	52	summarization framework
 51	53	58	named
@@ -98,7 +97,8 @@
 54	53	92	focused aspect of the generated summary
 54	95	101	a.k.a.
 54	106	128	decoder focused aspect
-55	0	24	After each decoding step
+55	0	5	After
+55	6	24	each decoding step
 55	43	51	designed
 55	29	39	supervisor
 55	52	62	to measure
@@ -124,4 +124,4 @@
 241	6	20	worth noticing
 241	30	49	baseline model S2SR
 241	50	82	achieves better performance than
-241	45	48	S2S
+241	83	86	S2S

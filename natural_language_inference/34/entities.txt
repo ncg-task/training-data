@@ -2,15 +2,15 @@
 230	24	39	QA performances
 230	40	42	in
 230	47	62	development set
-230	21	23	of
+230	63	65	of
 230	66	75	Hotpot QA
-230	24	38	QA performance
 231	22	30	see that
 231	31	59	each of our model components
 231	64	71	provide
 231	72	87	from 1 % to 2 %
 231	88	101	relative gain
 231	102	106	over
+231	111	125	QA performance
 232	15	20	using
 232	23	45	1 - layer fusion block
 232	46	54	leads to
@@ -20,7 +20,7 @@
 232	116	118	of
 232	119	129	performing
 232	130	149	multi-hop reasoning
-232	17	19	in
+232	150	152	in
 232	153	162	Hotpot QA
 233	14	39	dataset abla-tion results
 233	40	44	show
@@ -32,7 +32,7 @@
 233	125	139	baseline model
 233	146	157	can achieve
 233	160	190	more than 5 % performance gain
-233	112	114	in
+233	191	193	in
 233	200	220	gold paragraphs only
 233	229	250	supporting facts only
 209	0	2	In
@@ -79,7 +79,7 @@
 211	9	33	relatively low threshold
 211	34	40	during
 211	41	50	selection
-211	48	50	on
+211	118	120	on
 211	121	137	supporting facts
 211	51	58	to keep
 211	61	81	high recall ( 97 % )
@@ -122,13 +122,13 @@
 58	4	18	fusion process
 58	19	21	is
 58	22	43	iteratively performed
-58	26	28	at
+58	44	46	at
 58	47	55	each hop
 58	56	63	through
 58	68	96	document tokens and entities
 58	107	129	final resulting answer
 58	138	151	obtained from
-58	68	83	document tokens
+58	152	167	document tokens
 59	19	21	of
 59	22	46	doc2 graph and graph2doc
 59	47	57	along with
@@ -137,9 +137,9 @@
 59	103	114	interaction
 59	115	122	between
 59	127	138	information
-59	19	21	of
+59	139	141	of
 59	142	151	documents
-59	70	82	entity graph
+59	160	172	entity graph
 59	175	185	leading to
 59	188	211	less noisy entity graph
 59	221	242	more accurate answers
@@ -147,14 +147,14 @@
 53	3	13	each round
 53	16	20	DFGN
 53	21	42	generates and reasons
-53	39	41	on
+53	43	45	on
 53	48	61	dynamic graph
 53	70	89	irrelevant entities
 53	90	93	are
 53	94	104	masked out
 53	105	110	while
 53	116	133	reasoning sources
-53	90	93	are
+53	134	137	are
 53	138	147	preserved
 53	150	153	via
 53	156	178	mask prediction module
@@ -166,24 +166,24 @@
 57	56	68	entity graph
 57	71	81	doc2 graph
 57	95	104	propagate
-57	22	33	information
+57	109	120	information
 57	121	123	of
-57	56	68	entity graph
+57	128	140	entity graph
 57	141	148	back to
 57	149	173	document representations
 2	36	55	Multi-hop Reasoning
 4	0	40	Text - based question answering ( TBQA )
 13	0	25	Question answering ( QA )
 14	0	2	QA
-222	43	45	in
+222	113	115	in
 222	120	136	private test set
 222	93	95	of
 222	140	149	Hotpot QA
-222	27	29	on
 223	22	30	see that
 223	31	40	our model
 223	41	49	achieves
 223	54	72	second best result
+223	73	75	on
 223	80	91	leaderboard
 223	103	112	March 1st
 224	41	58	joint performance
@@ -197,7 +197,7 @@
 227	22	31	our model
 227	32	40	achieves
 227	43	53	1.5 % gain
-227	51	53	in
+227	54	56	in
 227	61	77	joint F1 - score
 227	78	82	with
 227	87	99	entity graph

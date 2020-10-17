@@ -108,8 +108,7 @@
             "100" : {
               "for" : "all the LSTM and GRU layers"
             }
-          },
-          "from sentence" : "We set the hidden size as 100 for all the LSTM and GRU layers and apply dropout between layers with a dropout ratio as 0.2 ."
+          }
         }
       },
       "apply" : {

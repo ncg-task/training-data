@@ -35,7 +35,7 @@ Background
 In this section , we briefly review the background of graphemeto - phoneme conversion , Transformer model , as well as knowledge distillation .
 Grapheme - to - Phoneme conversion
 The G2P conversion is the process that generating the phoneme sequence ( pronunciation ) according to the grapheme sequence ( word ) .
-G2P conversion is necessary and important as lexicon can not coverall words , due to many words are long - tailed and a lot of new words and compound words appear .
+G2P conversion is necessary and important as lexicon can not cover all words , due to many words are long - tailed and a lot of new words and compound words appear .
 The spelling and pronunciation are not exactly corresponding for some languages , e.g. English .
 What is more , the alignments between graphemes and phonemes are complex .
 A grapheme may correspond to no phoneme , a single phoneme or many phonemes , as shown in , which makes G2P a hard task. for G2P conversion .

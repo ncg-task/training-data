@@ -29,7 +29,7 @@
           "achieved" : {
             "best F 1 scores" : {
               "on" : {
-                "all test sets" : {
+                "all the test sets" : {
                   "except" : "Brown test set"
                 }
               }

@@ -15,7 +15,7 @@ This is possible due to the comment structure of the social media site Reddit 3 
 Following a discussion of corpus construction and relevant statistics in Section 3 , we discuss the quality of this dataset compared to alternative sources in Section 4 , manually evaluating our corpus for noise .
 Then in Section 5 we use our dataset to construct suitable benchmarks for sarcasm detection systems and examine the performance of simple baseline methods and human evaluators on these subsets .
 Related Work
-Since our main contribution is a corpus and not a method for sarcasm detection , we point the reader to a recent survey by that discusses many interesting efforts in this area .
+Since our main contribution is a corpus and not a method for sarcasm detection , we point the reader to a recent survey by that discusses many interesting efforts in this are a .
 Note that many of the works the authors mention will be discussed by us in this section , with many papers using their own datasets and illustrating the need for common evaluation baselines .
 Sarcasm datasets can largely be distinguished by the sources used to get sarcastic and non-sarcastic statements , the amount of human annotation , and whether the dataset is balanced or unbalanced .
 Reddit has been used before , notably by ; while the authors allow unabalanced labeling , they do not exploit the possibility of using self - annotation and generate around 10,000 human - labeled sentences .
@@ -25,7 +25,7 @@ However , it is by far the largest raw source of data for this purpose and has l
 A further source of comments is the Internet Argument Corpus ( IAC ) , a scraped corpus of Internet discussions that can be further annotated for sarcasm by humans or by machine learning ; this is done by and , in both cases resulting in around 10,000 labeled statements .
 Corpus Details
 Reddit Structure and Annotation
-Reddit is asocial media site in which users communicate by commenting on submissions , which are titled posts consisting of embedded media , external links , and / or text , that are posted on topic - specific forums known as subreddits ; examples of subreddits include funny , pics , and science .
+Reddit is asocial media site in which users communicate by commenting on submissions , which are titled posts consisting of embedded media , external links , and / or text , thatare posted on topic - specific forums known as subreddits ; examples of subreddits include funny , pics , and science .
 Users comment on submissions and on other comments , resulting in tree - like conversation structure such that each comment has a parent comment .
 We refer to elements as any nodes in the tree of a Reddit link ( i.e. , comments or submissions ) .
 Reddit users have adopted a common method for sarcasm annotation consisting of adding the marker " / s " to the end of sarcastic statements ; this originates from the HTML text delineation < sarcasm >... < / sarcasm >.
@@ -36,7 +36,7 @@ Reddit comments from December 2005 have been made available due to web - scrapin
 For each comment we provide a sarcasm label , author , the subreddit it appeared in , the comment score as voted on by users , the date of the comment , and identifiers linking back to the original dataset of all comments .
 To reduce noise , we use several filters to remove noisy and uninformative comments .
 Many of these are standard preprocessing steps such as excluding URLs and limiting characters to be ASCII .
-To handle Reddit data , we also exclude comments that are descendants of sarcastic comments in the conversation tree , as annotation in such cases is extremely noisy , with authors agreeing or disagreeing with the previously expressed sarcasm with their own sarcasm but often with no marking .
+To handle Reddit data , we also exclude comments thatare descendants of sarcastic comments in the conversation tree , as annotation in such cases is extremely noisy , with authors agreeing or dis agreeing with the previously expressed sarcasm with their own sarcasm but often with no marking .
 Our raw corpus consists of three files :
 1 .
 An array in CSV format containing 533 million comments , of which around 1.3 million are sarcastic .
@@ -81,7 +81,7 @@ The corpus developers found 12 % of examples in the IAC to be sarcastic , which 
 As the Reddit data consists of arbitrary conversations , not just arguments , it is not surprising that our sarcasm percentage is much smaller , even when accounting for false negatives ; this property also makes our dataset more realistic .
 Unlike Reddit and Twitter , the IAC also requires manual annotation of sarcasm .
 Limitations of Our Approach
-There area few noteworthy limitations to our method of collecting a self - annotated sarcasm dataset .
+There are a few noteworthy limitations to our method of collecting a self - annotated sarcasm dataset .
 Despite our efforts to filter noisy " / s " labels , there remain instances where no simple rule reliably eliminates incorrect labels .
 We describe the difficulties for both false positives and false negatives :
 False positives are instances where a comment is incorrectly labeled as sarcastic due to the presence of a " / s " tag .
@@ -95,7 +95,7 @@ To combat the first issue , we restrict to users aware of the sarcasm notation b
 This filter helps ensure that the users are aware of the semantic usage of " / s " .
 For the second case , we only keep comments which have the " / s " at the end of the comment .
 All comments we inspected which terminated in " / s " used the annotation to indicate sarcasm .
-The third case amounts to solving word sense disambiguation , and we did not find a universally simple approach to reduce noise of this form .
+The third case amounts to solving word sense dis ambiguation , and we did not find a universally simple approach to reduce noise of this form .
 However , it is possible to reduce the likelihood of this form of sense mismatch by restricting to subreddits which are known to not have alternate senses for " / s " ( e.g. , politics ) .
 False negatives are instances where a comment is sarcastic , but not annotated with a " / s " .
 False negatives are harder to detect than false positives since the portion of comments which have no sarcasm annotation is much larger than the portion that do .
@@ -123,14 +123,14 @@ Evaluation Task
 In the most general case , we use the provided raw files to construct datapoints for systems to learn the following task : given a post and a sequence of comments , determine which comments among the responses to the last comment in the sequence are sarcastic .
 Thus each datapoint consists of a conversation thread followed by a series of responses and sarcasm labels .
 Performance on this task is measured by average precision , recall and F 1 scores .
-Before constructing this subcorpus we first remove from consideration all comments that are not complete sentences and not between 2 and 50 tokens long , allowing for cleaner comments in the evaluation .
+Before constructing this subcorpus we first remove from consideration all comments thatare not complete sentences and not between 2 and 50 tokens long , allowing for cleaner comments in the evaluation .
 Although the responses are still largely non-sarcastic , the proportion of sarcastic comments is much greater here as each datapoint must correspond to a thread where at least one sarcastic annotation occurred .
 In total we construct 8.44 million sequences , with the average proportion of sarcastic responses being 28.1 % . :
 Score distributions of sarcastic and non-sarcastic comments in the raw SARC dataset .
 Balanced Labels
 We construct a balanced learning task by taking only one sarcastic and one non-sarcastic response from each set of responses to a comment sequence .
 The task then becomes one of picking which of two statements that share a context is sarcastic , with performance measured by accuracy .
-While having only posts with at least one sarcastic response is useful , it also increases the false negative rate as comments warranting a sarcastic response often draw other sarcastic statements that are similar in content to the labeled sarcastic responses , but which themselves may not be labeled .
+While having only posts with at least one sarcastic response is useful , it also increases the false negative rate as comments warranting a sarcastic response often draw other sarcastic statements thatare similar in content to the labeled sarcastic responses , but which themselves may not be labeled .
 Thus to reduce this issue when picking the nonsarcastic statement , we featurize all statements using the normalized sum of Common Crawl Glo Ve embeddings of the words and pick from only those non-sarcastic statements that have similarity ?
 0.95 with the sarcastic statement .
 Politics
@@ -151,7 +151,7 @@ We considered including other comment features , such as comment length and scor
 More sophisticated featurization , such as the noun - phrase and feature interaction indicators proposed by , is left to future work .
 Sentence Embeddings
 Given a document , taking the elementwise sum of embeddings of its words provides a simple low - dimensional document representation .
-This particular technique of constructing word sequence featurizations has been previously studied and established as a strong baseline fora multitude of supervised NLP prediction tasks .
+This particular technique of constructing word sequence featurizations has been previously studied and established as a strong baseline for a multitude of supervised NLP prediction tasks .
 We use 1600 - dimensional GloVe representations trained on the Amazon product corpus , which is used instead of Common Crawl because of the semantic closeness between sentiment and sarcasm .
 Human
 As expected , human evaluators performed significantly better , both as a majority and on - average , than the baseline methods .
@@ -160,7 +160,7 @@ Interestingly , while individually human performance was worse on average on seq
 This performance boost indicates that while individuals may not have enough context for all topics of discussion on Reddit , in aggregate there is enough information to do well , even surpassing the performance on a well - known topic such as politics .
 Random
 We use a simple baseline where all responses are labeled sarcastic randomly and independently with a fixed probability .
-This probability is chosen as the average fraction of responses that are sarcastic in the training set . :
+This probability is chosen as the average fraction of responses thatare sarcastic in the training set . :
 Most positive and negative n-grams based on weights assigned by the Bag - of - Bigrams classifier .
 Positive ( negative ) weight for an n-gram implies it is a strong indicator for the comment being sarcastic ( non-sarcastic ) .
 The weights indicate that positive n-grams are more important for linear classification of sarcasm .

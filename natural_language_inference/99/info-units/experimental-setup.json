@@ -4,8 +4,7 @@
       "preprocess" : {
         "each passage and question" : {
           "using" : "library of nltk"
-        },
-        "from sentence" : "We preprocess each passage and question using the library of nltk and exploit the popular pretrained word embedding GloVe with 100 - dimensional vectors ( Pennington , Socher , and Manning 2014 ) for both questions and passages ."
+        }
       },
       "exploit" : {
         "popular pretrained word embedding GloVe" : {

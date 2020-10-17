@@ -26,8 +26,7 @@
             "poorly" : {
               "on" : "EM and F1"
             }
-          },
-          "from sentence" : "The language model performs poorly on EM and F1 , but the embedding - metric score is higher , likely reflecting the fact that the predicted answers - though mostly incorrect - are related to the ground - truth answers ."
+          }
         },
         "embedding - metric score" : {
           "is" : "higher",
@@ -45,7 +44,7 @@
           "are" : {
             "far below" : {
               "has" : {
-                "performance" : {
+                "per-formance" : {
                   "of" : {
                     "GA reader" : {
                       "performs" : {

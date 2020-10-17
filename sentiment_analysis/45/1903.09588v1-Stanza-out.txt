@@ -8,7 +8,7 @@ Introduction
 Sentiment analysis ( SA ) is an important task in natural language processing .
 It solves the computational processing of opinions , emotions , and subjectivity - sentiment is collected , analyzed and summarized .
 It has received much attention not only in academia but also in industry , providing real - time feedback through online reviews on websites such as Amazon , which can take advantage of customers ' opinions on specific products or services .
-The underlying assumption of this task is that the entire text has an overall polarity .
+The underlying assumption of this task is that the entire text has an over all polarity .
 However , the users ' comments may contain different aspects , such as : " This book is a hardcover version , but the price is a bit high . "
 The polarity in ' appearance ' is positive , and the polarity regarding ' price ' is negative .
 Aspect - based sentiment analysis ( ABSA ) aims to identify fine - grained polarity towards a specific aspect .
@@ -29,7 +29,7 @@ We fine - tune the pre-trained model from BERT and achieve new state - of - the 
 We also conduct a comparative experiment to verify that the classification based on a sentence - pair is better than the single - sentence classification with fine - tuned BERT , which means that the improvement is not only from BERT but also from our method .
 In particular , our contribution is two - fold :
 1 .
-We propose anew solution of ( T ) ABSA by converting it to a sentence - pair classification task .
+We propose a new solution of ( T ) ABSA by converting it to a sentence - pair classification task .
 2 .
 We fine - tune the pre-trained BERT model and achieve new state - of - the - art results on Senti - Hood and SemEval - 2014 Task 4 datasets .
 Methodology
@@ -45,7 +45,7 @@ Construction of the auxiliary sentence
 For simplicity , we mainly describe our method with TABSA as an example .
 We consider the following four methods to convert the TABSA task into a sentence pair classification task :
 2 http://alt.qcri.org/semeval2014/task4/
-Example : LOCATION2 is central London so extremely expensive , LOCATION1 is often considered the coolest area of London .
+Example : LOCATION2 is central London so extremely expensive , LOCATION1 is often considered the coolest are a of London .
 transit - location
 Positive Sentences for QA - M
 The sentence we want to generate from the target - aspect pair is a question , and the format needs to be the same .
@@ -63,7 +63,7 @@ The auxiliary sentences are : " location - 1 - safety - positive " , " location 
 After we construct the auxiliary sentence , we can transform the TABSA task from a single sentence classification task to a sentence pair classification task .
 As shown in , this is a necessary operation that can significantly improve the experimental results of the TABSA task .
 Fine - tuning pre-trained BERT
-BERT is anew language representation model , which uses bidirectional transformers to pre-train a large corpus , and fine - tunes the pre-trained model on other tasks .
+BERT is a new language representation model , which uses bidirectional transformers to pre-train a large corpus , and fine - tunes the pre-trained model on other tasks .
 We finetune the pre-trained BERT model on TABSA task .
 Let 's take a brief look at the input representation and the fine - tuning procedure .
 Input representation

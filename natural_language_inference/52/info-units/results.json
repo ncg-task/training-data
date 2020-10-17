@@ -82,7 +82,9 @@ By way of a loose comparison ( since we are evaluating on different data partiti
                       }
                     }
                   },
-                  "from sentence" : "Note that 61 % of the top - ranked justifications from our system were rated as Good as compared to 52 % from the IR baseline ( a gain of 9 % ) , despite the systems using identical corpora ."
+                  "from sentence" : "Justification Performance
+Note that 61 % of the top - ranked justifications from our system were rated as Good as compared to 52 % from the IR baseline ( a gain of 9 % ) , despite the systems using identical corpora ."
+
                 }
               }
             }

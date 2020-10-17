@@ -2,8 +2,7 @@
   "has research problem" : [
     ["Aspect Based Sentiment Analysis", {"from sentence" : "Aspect Based Sentiment Analysis with Gated Convolutional Networks"}],
     ["Aspect based sentiment analysis ( ABSA )", {"from sentence" : "Aspect based sentiment analysis ( ABSA ) can provide more detailed information than general sentiment analysis , because it aims to predict the sentiment polarities of the given aspects or entities in text ."}],
-    ["aspect - category sentiment analysis ( ACSA )", {"from sentence" : "We summarize previous approaches into two subtasks : aspect - category sentiment analysis ( ACSA ) and aspect - term sentiment analysis ( ATSA ) ."}],
-    ["aspect - term sentiment analysis ( ATSA )", {"from sentence" : "We summarize previous approaches into two subtasks : aspect - category sentiment analysis ( ACSA ) and aspect - term sentiment analysis ( ATSA ) ."}],
+    ["aspect - category sentiment analysis ( ACSA )", "aspect - term sentiment analysis ( ATSA )", {"from sentence" : "We summarize previous approaches into two subtasks : aspect - category sentiment analysis ( ACSA ) and aspect - term sentiment analysis ( ATSA ) ."}],
     ["ABSA", {"from sentence" : "A number of models have been developed for ABSA , but there are two different subtasks , namely aspect - category sentiment analysis ( ACSA ) and aspect - term sentiment analysis ( ATSA ) ."}],
     ["ACSA" , {"from sentence" : "The goal of ACSA is to predict the sentiment polarity with regard to the given aspect , which is one of a few predefined categories ."}],
     ["ATSA", {"from sentence" : "On the other hand , the goal of ATSA is to identify the sentiment polarity concerning the target entities that appear in the text instead , which could be a multi-word phrase or a single word ."}]

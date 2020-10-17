@@ -26,7 +26,7 @@
 (ROUGE - 2 RAML training||for||seq2seq model)
 (Baselines||has||Seq2seq + ERAML)
 (Seq2seq + ERAML||with||entailment - aware decoder)
-(entailment - aware decoder||constitutes||Entailment Reward Augmented Maximum Likelihood ( ERAML ) training framework)
+(entailment - aware decoder||conducts||Entailment Reward Augmented Maximum Likelihood ( ERAML ) training framework)
 (Baselines||has||ABS +)
 (ABS +||propose||neural machine translation model)
 (neural machine translation model||with||two - layer LSTMs)

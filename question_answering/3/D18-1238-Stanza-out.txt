@@ -2,16 +2,16 @@ title
 Multi - Granular Sequence Encoding via Dilated Compositional Units for Reading Comprehension
 abstract
 Sequence encoders are crucial components in many neural architectures for learning to read and comprehend .
-This paper presents anew compositional encoder for reading comprehension ( RC ) .
+This paper presents a new compositional encoder for reading comprehension ( RC ) .
 Our proposed encoder is not only aimed at being fast but also expressive .
-Specifically , the key novelty behind our encoder is that it explicitly models across multiple granularities using anew dilated composition mechanism .
+Specifically , the key novelty behind our encoder is that it explicitly models across multiple granularities using a new dilated composition mechanism .
 In our approach , gating functions are learned by modeling relationships and reasoning over multi-granular sequence information , enabling compositional learning that is aware of both long and short term information .
 We conduct experiments on three RC datasets , showing that our proposed encoder demonstrates very promising results both as a standalone encoder as well as a complementary building block .
 Empirical results show that simple Bi-Attentive architectures augmented with our proposed encoder not only achieves state - of - the - art / highly competitive results but is also considerably faster than other published works .
 Introduction
 Teaching machines to read , comprehend and reason lives at the heart of reading comprehension ( RC ) tasks .
 In these tasks , the goal is to answer questions based on a given passage , effectively testing the learner 's capability to understand natural language .
-This has been an extremely productive area of research in the recent years , giving rise to many highly advanced neural network architectures .
+This has been an extremely productive are a of research in the recent years , giving rise to many highly advanced neural network architectures .
 A common denominator in many of these models is the compositional encoder , i.e. , usually a bidirectional recurrent - based ( LSTM or GRU ) encoder that sequentially parses the text sequence wordby - word .
 This helps to model compositionality of words , capturing rich and complex linguistic and syntactic structure in language .
 While the usage of recurrent encoder is often regarded as indispensable in highly complex RC tasks , there are still several challenges and problems pertaining to its usage in modern RC tasks .
@@ -39,9 +39,9 @@ Secondly , modeling at along range ( e.g. , 25 or 50 ) enables our model to look
 As such , the learned gates not only possess information about nearby words but also a larger overview of the context .
 This is in similar 2 spirit to self - attention , albeit occuring within the encoder .
 Thirdly , the final gates are formed by modeling relationships between multi-range projections ( n - gram blocks ) , allowing for fine - grained intra-document relationships to be captured .
-The overall contributions of our work are as follows :
-We propose DCU ( Dilated Compositional Units 3 ) , anew compositional encoder for both fast and expressive sequence encoding .
-We propose an overall architecture that utilizes DCU within a Bi- Attentive framework for both multiple choice and span prediction RC tasks .
+The over all contributions of our work are as follows :
+We propose DCU ( Dilated Compositional Units 3 ) , a new compositional encoder for both fast and expressive sequence encoding .
+We propose an over all architecture that utilizes DCU within a Bi- Attentive framework for both multiple choice and span prediction RC tasks .
 DCU can be used as a standalone ( without RNNs ) for fast reading and / or to - gether with RNN models ( i.e. , DCU - LSTM ) for more expressive reading .
 We conduct extensive experiments on three large - scale and challenging RC datasets - RACE , Search QA and Narrative QA .
 Our model is lightweight , fast and efficient , achieving state - of - the - art or highly competitive performance on three datasets .
@@ -50,12 +50,12 @@ In this section , we describe our proposed DCU encoder .
 Dilated Composition Mechanism
 The inputs to the DCU encoder are ( 1 ) a sequence {w 1 , w 2 w } , and ( 2 ) list of ranges {r 1 , r 2 r k } where k is the number of times the fold / unfold operation is executed .
 The final output of the encoder is a sequence of vectors which retains the same dimensionality as its inputs .
-provides an illustration of the overall encoder architecture .
+provides an illustration of the over all encoder architecture .
 Fold Operation
 This section describes the operation for each r j .
 For each r j and the input sequence , the fold operation performs the summation of every r j word .
 This is essentially the NBOW ( neural bag - ofwords ) representation .
-This reduces the overall document length to /r j where each item in the sequence is the sum of every r j word .
+This reduces the over all document length to /r j where each item in the sequence is the sum of every r j word .
 Given the new sequence of /r j tokens , we then pass each token into a single layered feed - forward neural network : :
 High - level overview of ( 1 ) our proposed DCU encoder ( left ) , ( 2 ) Span Prediction Architecture ( center ) and Multiple Choice Architecture ( right ) .
 In the DCU encoder , blocks are formed at multi-granular levels .
@@ -98,13 +98,13 @@ where ct , ht are the cell and hidden states at time step t.
 gt are the gates learned from the output of the multi - range reasoning step .
 o t is an additional output gate learned via applying an affine transform on the input vector wt , i.e. , o t = W o ( w t ) + b o .
 Similar to RNNs , the Recurrent DCU parses the input sequence word - by - word .
-However , the cost is significantly reduced because we do not have expensive matrix operations that are executed in an non-parallel fashion .
-Finally , the outputs of the DCU encoder area series of hidden vectors {h 1 , h 2 h } for each word in the sequence .
+However , the cost is significantly reduced because we do not have expensive matrix operations thatare executed in an non-parallel fashion .
+Finally , the outputs of the DCU encoder are a series of hidden vectors {h 1 , h 2 h } for each word in the sequence .
 Overall Model Architectures
-This section describes the overall model architectures that utilize DCU encoders .
+This section describes the over all model architectures that utilize DCU encoders .
 In our experiments , we focus on both multiple - choice based ( RACE ) and span prediction RC tasks ( SearchQA , Narrative QA ) .
 Since the core focus of this paper is our encoder , we briefly provide the high - level details 4 of our vanilla Bi - Attentive model .
-The Bi- Attentive models that are used in our experiments act as baselines , often being less complex than current competitive models such as BiDAF , AMANDA or DFN .
+The Bi- Attentive models thatare used in our experiments act as baselines , often being less complex than current competitive models such as BiDAF , AMANDA or DFN .
 ( center and right side of the figure ) provides a high - level illustration of these architectures .
 Multiple Choice Models
 In the Multiple Choice ( MCQ ) model , there are three types of input sequences , namely Passage ( P ) , Question ( Q ) and Answers ( A j ) .
@@ -163,7 +163,7 @@ Given a passage , there are several questions with four options each .
 The authors argue that RACE is more challenging compared to popular benchmarks ( e.g. , SQuAD ) as more multi-sentence and compositional reasoning are required .
 There are two subsets of RACE , namely RACE - M ( Middle school ) and RACE - H ( High school ) .
 The latter is considered to be harder than the former .
-Search QA ) is a recent dataset that emulates areal world QA system .
+Search QA ) is a recent dataset that emulates are al world QA system .
 It involves extracting passages from search engine results and requiring models to answer questions by reasoning and reading these search snippets .
 Narrative QA ) is a recent benchmark proposed for story - based reading comprehension .
 Different from many RC datasets , the answers are handwritten by human annotators .
@@ -213,8 +213,7 @@ Word embeddings are initialized with 300d Glo Ve vectors and are not fine - tune
 Dropout rate is tuned amongst { 0.1 , 0.2 , 0.3 } on all layers including the embedding layer .
 For our DCU model , we use range values of { 1 , 2 , 4 , 10 , 25 }.
 DCU encoders are only applied on the passage and not the query .
-We adopt the Adam optimizer ( Kingma and Ba , 2014 ) with a learning rate of 0.0003/ 0.001/0.001 for RACE / SearchQA / Narrative
-QA respectively .
+We adopt the Adam optimizer ( Kingma and Ba , 2014 ) with a learning rate of 0.0003/ 0.001/0.001 for RACE / SearchQA / Narrative QA respectively .
 The batch size is set to 64/256/32 accordingly .
 The maximum sequence lengths are 500/200/1100 respectively .
 For Narrative QA , we use the Rouge - L score to find the best approximate answer relative to the human written answer for training the span model .
@@ -239,7 +238,7 @@ All models with use the same encoder in the answer pointer layer .
 Our Sim - DCU model also runs at 4 minutes per iteration , which is dramatically faster and simpler than DFN or other recurrent models .
 We believe that this finding highlights the importance of designing strong and fast baselines for the task at hand .
 In general , we also found that the usage of a recurrent cell is not really crucial on this dataset since ( 1 ) Sim- DCU and DCU can achieve comparable performance to each other , ( 2 ) GRU and LSTM models do not have a competitive edge and ( 3 ) using no encoder can achieve comparable 7 performance to DFN .
-Finally , an ensemble of Sim - DCU models achieve state - of - the - art performance on the RACE dataset , achieving an overall score 7 Nevertheless , this suggests the importance of benchmarking good and strong baselines since a well - tuned baseline model can outperform DFN , a highly complicated model. of 53.3 % .
+Finally , an ensemble of Sim - DCU models achieve state - of - the - art performance on the RACE dataset , achieving an over all score 7 Nevertheless , this suggests the importance of benchmarking good and strong baselines since a well - tuned baseline model can outperform DFN , a highly complicated model. of 53.3 % .
 Experimental Results on SearchQA
 Table 2 reports our results on the Search QA dataset .
 We draw the reader 's attention to the performance of the 300d DCU encoder .
@@ -268,12 +267,12 @@ More specifically , our recurrent DCU encoder takes on a similar architecture to
 In these models , gates are pre-learned and then applied .
 However , different from existing models such as QRNNs that use convolution layers as gates , we use block - based fold - unfold layers for learning gates .
 Our model also draws inspiration from dilation , in particular dilated RNNs and dilated convolutions , that intuitively help to model long - range dependencies .
-Notably , our work is orthogonal to recent advances that are targetted at speeding up the reading process .
+Notably , our work is orthogonal to recent advances thatare targetted at speeding up the reading process .
 Such works include residual dilated convolutions , self - attention and coarse - to - fine grained paradigm .
 However , while speed is one of the clear benefits of this work , our work is the first to introduce the idea of block - based multi-granular reasoning .
 We believe that this new building block is complementary / useful to the RC task in general .
 Conclusion and Future Work
-We proposed a novel neural architecture , the DCU encoder and an overall bi-attentive model for both MCQ - based and span prediction MC tasks .
+We proposed a novel neural architecture , the DCU encoder and an over all bi-attentive model for both MCQ - based and span prediction MC tasks .
 We apply it to three MC datasets and achieve competitive performance on all without the use of recurrent and convolution layers .
 Our proposed method outperforms DFN , an extremely complex model , without using any LSTM / GRU layer .
 We also remain competitive to AMANDA and BiDAF without any LSTM / GRU .

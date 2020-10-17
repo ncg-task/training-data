@@ -1,7 +1,7 @@
 {
   "has" : {
     "Ablation analysis" : {
-      "achieves" : {
+      "achieve" : {
         "good convergence" : {
           "with" : "deeper models",
           "from sentence" : "We were notable to achieve good convergence with deeper models ."

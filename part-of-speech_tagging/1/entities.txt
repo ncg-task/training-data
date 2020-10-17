@@ -31,7 +31,7 @@
 177	4	8	size
 177	9	11	of
 177	16	26	dimensions
-177	9	11	of
+177	27	29	of
 177	30	50	character embeddings
 177	51	53	is
 177	54	56	32
@@ -39,11 +39,6 @@
 177	67	87	randomly initialized
 177	88	93	using
 177	96	116	uniform distribution
-181	4	34	number of convolutional layers
-181	35	38	are
-181	39	46	5 and 9
-181	47	50	for
-181	51	76	IntNet - 5 and IntNet - 9
 183	4	14	state size
 183	15	17	of
 183	22	42	bi-directional LSTMs
@@ -53,8 +48,8 @@
 190	5	7	is
 190	0	4	0.05
 190	39	56	gradient clipping
-190	5	7	is
-190	3	4	5
+190	57	59	is
+190	60	61	5
 191	0	7	Dropout
 191	11	21	applied on
 191	26	31	input
@@ -62,6 +57,15 @@
 191	35	59	IntNet , LSTMs , and CRF
 191	70	75	ratio
 191	76	79	0.5
+181	4	34	number of convolutional layers
+181	35	38	are
+181	39	46	5 and 9
+181	47	50	for
+181	51	76	IntNet - 5 and IntNet - 9
+181	106	113	adopted
+181	118	144	same weight initialization
+181	145	147	as
+181	156	162	ResNet
 178	3	8	adopt
 178	13	39	same initialization method
 178	40	43	for
@@ -79,21 +83,17 @@
 179	56	58	is
 179	59	61	32
 179	74	92	other convolutions
-179	56	58	is
+179	93	95	is
 179	96	98	16
-181	106	113	adopted
-181	118	144	same weight initialization
-181	145	147	as
-181	156	162	ResNet
 182	3	6	use
 182	7	34	pre-trained word embeddings
 182	35	38	for
 182	39	53	initialization
 182	56	93	GloVe 100 - dimension word embeddings
-182	35	38	for
+182	94	97	for
 182	98	105	English
 182	112	150	fastText 300 dimension word embeddings
-182	35	38	for
+182	151	154	for
 182	155	183	Spanish , Dutch , and German
 186	3	9	employ
 186	10	48	mini-batch stochastic gradient descent
@@ -122,15 +122,17 @@
 45	61	69	captures
 45	75	85	word shape
 45	90	109	context information
+45	116	130	jointly decode
 45	131	135	tags
-45	100	103	for
+45	136	139	for
 45	140	157	sequence labeling
 2	48	65	Sequence Labeling
+200	27	55	Character - to - word Models
 204	53	61	F1 score
 204	62	70	does not
 204	71	83	improve much
 204	84	88	when
-204	101	104	add
+204	92	104	directly add
 204	105	116	more layers
 209	4	82	proposed character - to - word model , char - IntNet - 5 and char - IntNet - 9
 209	93	101	improves
@@ -152,7 +154,7 @@
 211	72	109	character - to - word representations
 211	110	114	than
 211	115	132	char - IntNet - 9
-211	68	70	in
+211	133	135	in
 211	136	153	most of the cases
 207	17	20	add
 207	21	41	residual connections
@@ -161,7 +163,7 @@
 207	60	62	as
 207	63	80	char - ResNet - 9
 207	89	102	confirms that
-207	21	41	residual connections
+207	103	123	residual connections
 207	128	138	help train
 207	139	150	deep layers
 208	11	18	improve
@@ -177,7 +179,7 @@
 208	163	166	are
 208	167	173	better
 208	174	178	than
-208	49	69	residual connections
+208	179	199	residual connections
 208	200	212	for learning
 208	213	235	word shape information
 221	76	82	IntNet
@@ -189,6 +191,8 @@
 221	158	161	2 %
 221	35	38	for
 221	166	183	Dutch and Spanish
+214	36	54	in comparison with
+214	55	85	state - of - the - art results
 220	18	27	show that
 220	28	45	our char - IntNet
 220	56	64	improves

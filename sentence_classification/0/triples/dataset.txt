@@ -1,6 +1,6 @@
 (Contribution||has||Dataset)
 (Dataset||introduce||Sci - Cite)
-(Sci - Cite||is||new dataset)
+(Sci - Cite||has||new dataset)
 (new dataset||that is||significantly larger , more coarse - grained and generaldomain)
 (significantly larger , more coarse - grained and generaldomain||compared with||existing datasets)
 (new dataset||of||citation intents)

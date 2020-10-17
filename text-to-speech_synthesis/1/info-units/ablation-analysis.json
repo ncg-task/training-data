@@ -3,7 +3,9 @@
     "Ablation analysis" : {
       "has" : {
         "1D Convolution in FFT Block" : {
-          "replace" : ["original fully connected layer", {"from sentence" : "We propose to replace the original fully connected layer ( adopted in Transformer ) with 1D convolution in FFT block , as described in Section 3.1 ."}],
+          "replace" : ["original fully connected layer", {"from sentence" : "1D Convolution in FFT Block
+We propose to replace the original fully connected layer ( adopted in Transformer ) with 1D convolution in FFT block , as described in Section 3.1 ."}],
+
           "results in" : ["- 0.113 CMOS", {"from sentence" : "As shown in , replacing 1D convolution with fully connected layer results in - 0.113 CMOS , which demonstrates the effectiveness of 1D convolution ."}]
         },
         "Sequence - Level Knowledge Distillation" : {
@@ -12,7 +14,9 @@
               "results in" : "- 0.325 CMOS"
             }
           },
-          "from sentence" : "We find that removing sequence - level knowledge distillation results in - 0.325 CMOS , which demonstrates the effectiveness of sequence - level knowledge distillation ."
+          "from sentence" : "Sequence - Level Knowledge Distillation
+We find that removing sequence - level knowledge distillation results in - 0.325 CMOS , which demonstrates the effectiveness of sequence - level knowledge distillation ."
+
         }
       }
     }

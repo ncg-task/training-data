@@ -25,7 +25,7 @@ Eval , only has around 2 K unique sentences and 3K sentence - aspect pairs , whi
 Fortunately , a large amount of unlabeled data is available for free and can be accessed easily from the websites .
 It will be of great significance if numerous unlabeled samples can be utilized to further facilitate the supervised ATSA classifier .
 Therefore , the semi-supervised ATSA is a promising research topic .
-In ATSA , achieving the sentiment of the aspectterm is semantically complicated and it is nontrivial fora model to capture sentimental similarity of the aspects , which causes the difficulties for semi-supervised learning .
+In ATSA , achieving the sentiment of the aspectterm is semantically complicated and it is nontrivial for a model to capture sentimental similarity of the aspects , which causes the difficulties for semi-supervised learning .
 In this paper , we proposed a classifier - agnostic framework which named Aspect - term Semi-supervised Variational Autoencoder ( Kingma and Welling , 2014 ) based on Transformer ( ASVAET ) .
 The variational autoencoder offers the flexibility to customize the model structure .
 In other words , the proposed framework is compatible with other supervised neural networks to boost their performance .
@@ -89,7 +89,7 @@ In terms of the unlabeled data , the ELBO of log p ( x | a ) can be extended fro
 1 .
 where H is the entropy function and q ? ( y|x , a ) is the classification function .
 And q ? ( y|x , a ) can also be trained in the supervised manner using the labeled data .
-Combining the above objectives , the overall objective for the entire data set is :
+Combining the above objectives , the over all objective for the entire data set is :
 where ?
 is a hyper - parameter which controls the weight of the additional classification loss .
 To implement this objective , three components are required to model the q ? ( y|x , a ) , q ? ( z |x , a , y ) and p ? ( x |y , a , z ) respectively .
@@ -115,7 +115,7 @@ The information from two sides are aggregated into the aspect - term a , and the
 Transformer Decoders
 The decoder is also a sub-graph of Transformer architechture which focus on reconstructing original text .
 The main difference from the Transformer encoder is that the Transformer decoder is unidirectional by modifying the self - attention sub - layer to prevent positions from paying attention to subsequent positions .
-The textual sequence is well - known to be semantically complex and it is non-trivial fora Transformer decoder to capture the high - level semantics .
+The textual sequence is well - known to be semantically complex and it is non-trivial for a Transformer decoder to capture the high - level semantics .
 Here we investigate two questions .
 How to implement p ? ( x |y , a , z ) without losing the information of a and how to capture the semantic polarity by a sequential model .
 For the first question , denoting that x is composed of three parts ( x l , a , x r ) , we use two Transformer decoders to model the left and right content .
@@ -131,7 +131,7 @@ The models are evaluated on two benchmarks : Restaurant ( REST ) and Laptop ( LA
 The REST dataset contains the reviews in the restaurant domain , while the LAPTOP dataset contains the reviews of Laptop products .
 The statistics of these two datasets are listed in .
 When processing these two datasets , we follow the same procedures as in another work .
-The dataset has a few samples that are labeled as " conflict " and these samples are removed .
+The dataset has a few samples thatare labeled as " conflict " and these samples are removed .
 All tokens in the samples are lowercased without other preprocess , e.g. , removing the stop words , symbols or digits .
 In terms of the unlabeled data , we obtained samples in the same domain for the REST and LAPTOP datasets .
 For the REST , the unlabeled samples are obtained from a sentiment analysis competition in Kaggle 2 .
@@ -185,7 +185,7 @@ clf ( EMB ) :
 We use CBOW to train the word embedding vectors using both labeled and unlabeled data .
 And the resulting vectors , instead of pre-trained GloVe vectors , are used to initialize the embedding matrix of the classifier .
 This is the embedding - level semi-supervised learning as the embedding layer is trained using in - domain data .
-clf ( ST ) : The self - training ( ST ) method is atypical semi-supervised learning method .
+clf ( ST ) : The self - training ( ST ) method is a typical semi-supervised learning method .
 We performed the self - training method over each classifier .
 At each epoch , we select the 1 K samples with the best confidence and give them pseudo labels using the prediction .
 Then the classifier is re-trained with the new labeled data .
@@ -205,7 +205,7 @@ Effect of Labeled Data
 Here we investigated whether the ASVAET works with less labeled data .
 Without loss of generality , the MemNet is used as the basic classifier .
 We sampled different amount of labeled data to verify the improvement by using ASVAET .
-The test accuracy curve w.r.t. the amount of labeled data used is shown in : Nice sentences that are generated by controlling the sentiment polarity y using the decoder .
+The test accuracy curve w.r.t. the amount of labeled data used is shown in : Nice sentences thatare generated by controlling the sentiment polarity y using the decoder .
 Effect of Sharing Embeddings
 In previous works , the word embedding is shared among all the components .
 In other words , the word embedding is also tuned in learning to reconstruct the data .

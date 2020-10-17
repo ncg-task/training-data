@@ -21,7 +21,8 @@
             }
           },
           "from sentence" : "We use Adadelta as optimizer , which performs more stable than Adam on ReSAN ."
-        }}, ["300D Glo Ve 6B pre-trained vectors", {"from sentence" : "We use 300D Glo Ve 6B pre-trained vectors"}]]
+        }}, 
+		["300D Glo Ve 6B pre-trained vectors", {"from sentence" : "We use 300D Glo Ve 6B pre-trained vectors"}]]
     }
   }
 }

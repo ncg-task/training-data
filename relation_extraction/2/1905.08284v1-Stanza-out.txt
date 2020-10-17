@@ -59,7 +59,7 @@ shows the architecture of our approach .
 Model Architecture
 For a sentence s with two target entities e 1 and e 2 , to make the BERT module capture the location information of the two entities , at both the beginning and end of the first entity , we insert a special token ' $ ' , and at both the beginning and end of the second entity , we insert a special token '# ' .
 We also add '' to the beginning of each sentence .
-For example , after insertion of the special separate tokens , fora sentence with target entities " kitchen " and " house " will become to :
+For example , after insertion of the special separate tokens , for a sentence with target entities " kitchen " and " house " will become to :
 " [ CLS ]
 The $ kitchen $ is the last renovated part of the # house # . " :
 The model architecture .
@@ -73,7 +73,7 @@ For the final hidden state vector of the first token ( i.e. ' [ CLS ] ' ) , we a
 Matrices W 0 , W 1 , W 2 have the same dimensions , i.e. W 0 ?
 R dd , W 1 ?
 R dd , W 2 ?
-R dd , where dis the hidden state size from BERT .
+R dd , where d is the hidden state size from BERT .
 We concatenate H 0 , H 1 , H 2 and then add a fully connected layer and a softmax layer , which can be expressed as following :
 where W 3 ? R L3d ( L is the number of relation types ) , and p is the probability output .
 In Equations ( 1 ) , ( 2 ) , ( 3 ) , b 0 , b 1 , b 2 , b 3 are bias vectors .

@@ -1,17 +1,14 @@
 {
   "has" : {
     "Results" : {
-      "on" : {
+      "has" : {
         "PTB - WSJ dataset" : {
           "has" : {
             "baseline ( BiLSTM - CRF ) model" : {
               "performs" : {
                 "on par" : {
                   "with" : "other state - of - the - art systems"
-                },
-                "from sentence" : "PTB - WSJ dataset .
-As expected , our baseline ( BiLSTM - CRF ) model ( accuracy 97.54 % ) performs on par with other state - of - the - art systems ."
-
+                }
               },
               "has" : {
                 "accuracy" : {

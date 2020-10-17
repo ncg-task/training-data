@@ -13,10 +13,10 @@
 41	10	31	autoencoder structure
 41	32	40	to learn
 41	41	111	both the aspect embeddings as well as the representation of the target
-41	50	52	as
+41	112	114	as
 41	117	137	weighted combination
-41	98	100	of
-41	50	67	aspect embeddings
+41	138	140	of
+41	145	162	aspect embeddings
 43	4	25	autoencoder structure
 43	29	49	jointly trained with
 43	52	97	neural attention - based sentiment classifier
@@ -24,22 +24,23 @@
 43	111	137	good target representation
 43	138	148	as well as
 43	151	164	high accuracy
-43	66	68	on
+43	165	167	on
 43	172	191	predicted sentiment
 46	4	19	second approach
 46	20	28	exploits
 46	29	50	syntactic information
+46	51	63	to construct
 46	66	96	syntax - based attention model
 50	14	48	syntax - based attention mechanism
 50	49	71	selectively focuses on
 50	74	103	small subset of context words
 50	113	121	close to
 50	126	132	target
-50	36	38	on
+50	133	135	on
 50	140	154	syntactic path
 50	164	175	obtained by
 50	176	204	applying a dependency parser
-50	36	38	on
+50	205	207	on
 50	212	227	review sentence
 165	6	25	Feature - based SVM
 166	3	15	compare with
@@ -56,19 +57,19 @@
 179	53	67	our best model
 179	68	76	achieves
 179	77	96	competitive results
-179	38	40	on
+179	97	99	on
 179	100	109	D1 and D2
 179	110	128	without relying on
 179	129	188	so many manually - designed features and external resources
-183	8	37	integrated full model overall
-183	38	46	achieves
-183	51	67	best performance
-183	68	85	compared to using
-183	86	125	only one of the two proposed approaches
+183	8	38	integrated full model over all
+183	39	47	achieves
+183	52	68	best performance
+183	69	86	compared to using
+183	87	126	only one of the two proposed approaches
 185	8	38	proposed target representation
 185	39	41	is
 185	42	54	more helpful
-185	36	38	on
+185	55	57	on
 185	58	96	restaurant domain ( D1 , D3 , and D4 )
 185	97	101	than
 185	102	122	laptop domain ( D2 )

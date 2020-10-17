@@ -27,7 +27,7 @@
 119	165	168	for
 119	169	172	CBT
 119	179	191	5000 batches
-119	165	168	for
+119	192	195	for
 119	198	201	CNN
 120	3	13	initialize
 120	14	25	all weights
@@ -43,9 +43,9 @@
 121	54	59	to be
 121	60	70	orthogonal
 121	75	81	biases
-121	38	41	are
-121	42	53	initialized
-121	54	56	to
+121	82	85	are
+121	86	97	initialized
+121	98	100	to
 121	101	105	zero
 125	0	9	Our model
 125	13	27	implemented in
@@ -82,12 +82,13 @@
 21	64	81	inferential links
 21	93	100	between
 21	105	123	missing query word
-21	113	118	query
+21	130	135	query
 21	146	154	document
 22	11	19	involves
 22	22	59	novel alternating attention mechanism
 22	65	78	first attends
-22	82	95	some parts of
+22	82	92	some parts
+22	93	95	of
 22	100	105	query
 22	108	118	then finds
 22	125	146	corresponding matches
@@ -103,7 +104,7 @@
 25	41	46	model
 25	47	51	uses
 25	54	61	summary
-25	21	23	of
+25	62	64	of
 25	69	86	inference process
 25	87	97	to predict
 25	102	108	answer

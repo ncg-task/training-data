@@ -6,15 +6,15 @@
 200	64	67	D t
 200	68	71	for
 200	76	87	target task
+202	0	8	Transfer
 204	0	19	Source- only ( SO )
-204	8	10	on
 205	3	7	uses
 205	10	24	source network
 205	25	35	trained on
 205	36	39	D s
 205	40	53	to initialize
 205	56	70	target network
-205	80	88	tests it
+205	80	91	tests it on
 205	92	95	D t
 206	0	18	Fine-tuning ( FT )
 206	24	32	advances
@@ -58,7 +58,7 @@
 188	41	44	are
 188	45	55	normalized
 188	56	61	to be
-188	38	40	40
+188	62	64	40
 189	0	11	All weights
 189	12	14	in
 189	15	23	networks
@@ -89,7 +89,7 @@
 195	33	71	10 % randomly held - out training data
 195	72	74	of
 195	79	92	target domain
-195	61	63	in
+195	93	95	in
 195	96	105	R1?L task
 195	114	137	fixed to be used in all
 195	138	152	transfer pairs
@@ -104,10 +104,11 @@
 39	36	48	two networks
 39	49	61	for learning
 39	62	95	aspect - specific representations
-39	49	52	for
+39	96	99	for
 39	104	115	two domains
 46	4	7	CFA
 46	8	17	considers
+46	23	41	semantic alignment
 46	42	63	by maximally ensuring
 46	68	92	equivalent distributions
 46	93	97	from
@@ -116,7 +117,7 @@
 46	129	134	class
 46	141	160	semantic separation
 46	161	176	by guaranteeing
-46	79	92	distributions
+46	177	190	distributions
 46	191	200	from both
 46	201	230	different classes and domains
 46	231	236	to be
@@ -135,7 +136,7 @@
 40	191	202	source task
 40	203	224	automatically capture
 40	229	254	corresponding aspect term
-40	51	53	in
+40	255	257	in
 40	262	269	context
 40	270	277	towards
 40	282	303	given aspect category
@@ -145,10 +146,10 @@
 45	42	79	Contrastive Feature Alignment ( CFA )
 45	104	125	to semantically align
 45	126	159	aspect - specific representations
-2	35	43	Transfer
 2	48	87	Aspect - level Sentiment Classification
 4	0	47	Aspect - level sentiment classification ( ASC )
 22	9	45	aspect - oriented sentiment analysis
+214	0	30	Comparison with Non - Transfer
 220	6	10	MGAN
 220	11	35	consistently outperforms
 220	40	55	MGAN w / o C2 F
@@ -156,23 +157,24 @@
 220	64	74	C2F module
 220	75	77	of
 220	82	96	source network
-220	15	17	is
+220	97	99	is
 220	100	107	removed
 220	116	143	source position information
-220	15	17	is
+220	144	146	is
 220	147	153	missed
 220	182	184	by
 220	185	209	1.41 % , 1.03 % , 1.09 %
-220	30	33	for
+220	210	213	for
 220	214	222	accuracy
 220	227	253	1.79 % , 3.62 % and 1.16 %
-220	30	33	for
+220	254	257	for
 220	258	268	Macro - F1
 223	4	17	MGAN w / o PI
 223	26	42	does not utilize
 223	47	67	position information
 223	70	78	performs
 223	79	90	very poorly
+224	0	24	Comparison with Transfer
 227	0	2	SO
 227	3	11	performs
 227	12	18	poorly
@@ -184,17 +186,17 @@
 229	32	51	M - DAN and M - MMD
 229	52	54	by
 229	55	72	1.80 % and 1.33 %
-229	26	29	for
+229	73	76	for
 229	77	85	accuracy
 229	90	107	1.90 % and 1.66 %
-229	26	29	for
+229	108	111	for
 229	112	133	Marco - F1 on average
 231	13	17	MGAN
 231	18	43	considers both of them in
 231	46	68	point - wise surrogate
 231	88	96	improves
 231	101	112	performance
-231	33	35	of
+231	113	115	of
 231	116	126	our method
 232	15	26	outperforms
 232	31	52	ablation MGAN w/ o SS
@@ -204,14 +206,14 @@
 232	98	101	CFA
 232	102	104	by
 232	105	111	0.81 %
-232	21	24	for
+232	112	115	for
 232	116	124	accuracy
 232	129	135	1.00 %
-232	21	24	for
+232	136	139	for
 232	140	161	Macro - F1 on average
+233	0	30	Effect of C2F Attention Module
 237	21	25	MGAN
 237	7	20	compared with
-237	21	35	MGAN w / o C2F
 237	51	55	uses
 237	32	35	C2F
 237	60	70	to capture
@@ -222,16 +224,19 @@
 237	127	142	aspect category
 237	192	197	helps
 237	202	213	source task
-237	63	70	capture
+237	214	221	capture
 237	222	251	more fine - grained semantics
 237	252	254	of
-237	127	142	aspect category
+237	255	270	aspect category
 237	275	304	detailed position information
 237	305	309	like
 237	314	325	target task
+240	6	20	MGAN w / o C2F
+240	21	28	locates
+240	29	53	wrong sentiment contexts
 241	10	24	benefited from
 241	25	44	distilled knowledge
-241	20	24	from
+241	45	49	from
 241	54	65	source task
 241	68	72	MGAN
 241	73	89	can better model

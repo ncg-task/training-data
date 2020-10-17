@@ -21,7 +21,7 @@
                   }
                 }
               },
-              "from sentence" : "On MCTest - 500 , the Parallel Hierarchical model significantly outperforms these methods on single questions ( > 2 % ) and slightly outperforms the latter two on multi questions ( ? 0.3 % ) and overall ( ?
+              "from sentence" : "On MCTest - 500 , the Parallel Hierarchical model significantly outperforms these methods on single questions ( > 2 % ) and slightly outperforms the latter two on multi questions ( ? 0.3 % ) and over all ( ?
 1 % ) ."
 
             }
@@ -31,9 +31,9 @@
       "has" : {
         "method" : {
           "achieves" : {
-            "best overall result" : {
+            "best over all result" : {
               "on" : "MCTest - 160",
-              "from sentence" : "The method of achieves the best overall result on MCTest - 160 ."
+              "from sentence" : "The method of achieves the best over all result on MCTest - 160 ."
             }
           }
         },

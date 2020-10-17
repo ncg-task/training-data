@@ -11,7 +11,9 @@
                   "has" : "does work effectively"
                 }
               },
-              "from sentence" : "Our proposed two C - LSTMs models with four stacked blocks outperform all the competitor models , which indicates that our thinner and deeper network does work effectively ."
+              "from sentence" : "Experiment - I : Recognizing Textual Entailment
+Our proposed two C - LSTMs models with four stacked blocks outperform all the competitor models , which indicates that our thinner and deeper network does work effectively ."
+
             }
           },
           "Compared with" : {

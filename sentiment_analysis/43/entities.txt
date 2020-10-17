@@ -3,20 +3,20 @@
 179	16	30	basic baseline
 179	39	46	chooses
 179	51	77	largest sentiment polarity
-179	27	29	in
+179	78	80	in
 179	85	97	training set
 179	98	105	to each
 179	106	114	instance
-179	27	29	in
+179	115	117	in
 179	122	130	test set
 180	0	6	MemNet
 180	7	13	applys
 180	14	34	multi-hop attentions
-180	31	33	on
+180	35	37	on
 180	42	57	word embeddings
 180	60	66	learns
 180	71	88	attention weights
-180	31	33	on
+180	89	91	on
 180	92	112	context word vectors
 180	113	128	with respect to
 180	133	154	averaged query vector
@@ -40,14 +40,14 @@
 182	138	148	importance
 182	149	151	of
 182	152	164	left context
-182	57	70	right context
+182	167	180	right context
 182	189	204	entire sentence
 182	205	208	for
 182	209	219	prediction
 183	0	3	RAM
 183	4	10	learns
 183	11	31	multi-hop attentions
-183	28	30	on
+183	32	34	on
 183	39	52	hidden states
 183	53	55	of
 183	56	83	bidirectional LSTM networks
@@ -58,7 +58,7 @@
 183	136	142	to get
 183	147	164	aggregated vector
 183	165	169	from
-183	21	31	attentions
+183	174	184	attentions
 186	0	8	MGAN - C
 186	14	21	employs
 186	26	53	coarse - grained attentions
@@ -98,6 +98,7 @@
 175	21	39	L 2 regularization
 175	45	47	is
 175	48	54	10 ? 5
+176	29	41	dropout rate
 176	46	52	set to
 176	53	56	0.5
 29	19	26	propose
@@ -127,7 +128,7 @@
 32	139	157	objective function
 32	158	168	to enhance
 32	173	183	difference
-32	40	42	of
+32	184	186	of
 32	191	208	attention weights
 32	209	216	towards
 32	221	228	aspects
@@ -146,7 +147,7 @@
 196	18	20	is
 196	21	27	better
 196	28	32	than
-196	13	17	LSTM
+196	33	37	LSTM
 197	0	9	TD - LSTM
 197	10	18	performs
 197	19	34	slightly better
@@ -181,7 +182,8 @@
 203	25	40	other baselines
 206	0	17	Our proposed MGAN
 206	18	39	consistently performs
-206	40	51	better than
+206	40	46	better
+206	47	51	than
 206	52	58	MemNet
 206	61	77	BILSTM - ATT - G
 206	82	85	RAM

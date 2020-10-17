@@ -20,7 +20,9 @@
                   "with" : "extensive feature engineering"
                 }
               },
-              "from sentence" : "Feature - based SVM is a traditional support vector machine based model with extensive feature engineering ."
+              "from sentence" : "Non - RNN based baselines :
+Feature - based SVM is a traditional support vector machine based model with extensive feature engineering ."
+
             },
             "Rec - NN" : {
               "uses" : {
@@ -80,7 +82,9 @@
                   }
                 }
               },
-              "from sentence" : "TD - LSTM extends LSTM by using two LSTM networks to model the left context with target and the right context with target respectively ."
+              "from sentence" : "RNN based baselines :
+TD - LSTM extends LSTM by using two LSTM networks to model the left context with target and the right context with target respectively ."
+
             },
             "ATAE - LSTM" : {
               "strengthens" : {
@@ -157,7 +161,9 @@
           "has" : {
             "AEN - GloVe w/ o PCT" : {
               "ablates" : "PCT module",
-              "from sentence" : "AEN - GloVe w/ o PCT ablates PCT module ."
+              "from sentence" : "AEN - Glo Ve ablations :
+AEN - GloVe w/ o PCT ablates PCT module ."
+
             },
             "AEN - GloVe w/ o MHA" : {
               "ablates" : "MHA module",
@@ -186,7 +192,9 @@
                   "for" : "sentence pair classification task"
                 }
               },
-              "from sentence" : "BERT - SPC feeds sequence \" [ CLS ] + context + [ SEP ] + target + [ SEP ] \" into the basic BERT model for sentence pair classification task ."
+              "from sentence" : "Basic BERT - based model :
+BERT - SPC feeds sequence \" [ CLS ] + context + [ SEP ] + target + [ SEP ] \" into the basic BERT model for sentence pair classification task ."
+
             }
           }
         }

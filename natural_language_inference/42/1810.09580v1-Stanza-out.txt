@@ -13,9 +13,9 @@ That is , in fact , the proposed focus of recent open - domain QA datasets , suc
 In SQuAD , each problem instance consists of a passage P and a question Q. A QA system must then provide an answer A by selecting a snippet from P .
 That format reduces the complexity of the task and also facilitates training , as one can learn a probability distribution over the words that compose the passage .
 Since its publication in 2016 , SQuAD has been targeted by many research groups , and the proposed models are gradually approaching ( even overcoming ) human - level performances .
-All but a few of these models rely on Recurrent Neural Networks ( RNNs ) , which currently dominate the stateof - the - art inmost Natural Language Processing ( NLP ) tasks .
+All but a few of these models rely on Recurrent Neural Networks ( RNNs ) , which currently dominate the stateof - the - art in most Natural Language Processing ( NLP ) tasks .
 However , RNNs do have some drawbacks , of which the most relevant to real - world applications is the high number of sequential operations , which increases the processing time of both learning and inference .
-To address these limitations , proposed the Transformer , a machine translation model that introduces anew deep learning architecture solely based on " attention " mechanisms .
+To address these limitations , proposed the Transformer , a machine translation model that introduces a new deep learning architecture solely based on " attention " mechanisms .
 We later clarify the meaning of attention in this context .
 Inspired by the positive results of Vaswani et al. in machine translation , we have applied a similar architecture to the domain of question - answering , a model that we have named Fully Attention - Based Information Retriever ( FABIR ) .
 Our goal then was to verify how much performance we can get exclusively from the attention mechanism , without combining it with several other techniques .
@@ -32,11 +32,11 @@ Finally , we compare the performance of FABIR with RNN - based models and draw s
 II .
 RELATED WORK
 The vast majority of papers that address the SQuAD dataset have adopted RNN - based models -.
-They all follow a similar pipeline , with pre-trained word - embeddings that are processed by bidirectional RNNs .
+They all follow a similar pipeline , with pre-trained word - embeddings thatare processed by bidirectional RNNs .
 Question and passage are processed independently , and their interaction is modeled by attention mechanisms to produce an answer .
 There are slight differences in how each model employs attention , but they all calculate it over the hidden states of an RNN .
 Vaswani et al.
-were the first to apply attention directly over the word - embeddings , and thus derived anew neural network architecture which , without any recurrence , achieved state - of the - art results in machine translation .
+were the first to apply attention directly over the word - embeddings , and thus derived a new neural network architecture which , without any recurrence , achieved state - of the - art results in machine translation .
 In this section , we briefly discuss both types of attention models .
 A. Traditional Attention Mechanisms
 In recent years , attention mechanisms have been used with success in a variety of NLP tasks , such as machine translation , and natural language inference , .
@@ -57,7 +57,7 @@ where v t is the hidden state of the RNN at time t.
 Notably , in the SQuAD dataset , P and Q are the vectorial representations of passage and question , respectively .
 B. Google 's Transformer
 The Transformer is a machine translation model introduced in [ 2 ] that achieved state - of - the - art results by combining feedforward neural networks with a multiplicative attention mechanism applied over position - encoded embedding vectors .
-It defines three different matrices U , K and V that are associated with queries , keys , and values , respectively .
+It defines three different matrices U , K and V thatare associated with queries , keys , and values , respectively .
 Every attention operation in the Transformer is performed by multiplying these matrices as shown in .
 where W UK , WV ?
 Rd model d model are weight matrices and d model is the embedding size of each word .
@@ -84,7 +84,7 @@ In particular , we introduce the convolutional attention , the column - wise cro
 A.
 Embeddings
 We model each piece of text at the level of a word , i.e. , sentences are defined by a sequence of vectors ? , each one representing a word in a vectorial space R dinput .
-Thus , we build anew representation of question and passage to which we will refer as ?
+Thus , we build a new representation of question and passage to which we will refer as ?
 Q and ?
 P , respectively .
 where Q len and P len denote the number of tokens in the question and the passage , respectively .
@@ -135,7 +135,7 @@ Given P and Q , cross - attention of Q over P is defined as
 In contrast to Vaswani et al. , where the softmax in ( 12 d ) is applied in a row - wise manner , we suggest column - wise cross - attention .
 More precisely , we sum over i instead of j in ( 1 b ) .
 Row - wise softmax is inadequate in QA because , in practice , it computes a weighted average of the question words for every passage word , and thus can not model the likely scenario in which not every word in the passage is related to the question .
-In contrast , the column - wise softmax attributes greater weights to passage words that are more closely related to the respective question word , which seems appropriate for the SQuAD task .
+In contrast , the column - wise softmax attributes greater weights to passage words thatare more closely related to the respective question word , which seems appropriate for the SQuAD task .
 Many question - answering models employ cross - attention in both directions : att cross ( P , Q ) and att cross ( Q , P ) , , .
 However , in FABIR we have observed better results when only the former is used .
 3 ) Feedforward :
@@ -243,7 +243,7 @@ In , the BiDAF scores without parentheses were achieved after training their mod
 Conversely , values in parentheses are BiDAF 's official scores in the SQuAD ranking .
 Note that for both models , we batch the examples by paragraph length to improve computational efficiency .
 Regarding EM and F 1 scores , FABIR and BiDAF showed similar performances .
-Their similar scores render further comparisons even more telling , because their differences can not be explained by their overall performances , but exclusively by their architectures .
+Their similar scores render further comparisons even more telling , because their differences can not be explained by their over all performances , but exclusively by their architectures .
 Although both models required similar training times to reach these scores , the time for training one epoch in FABIR was more than four times shorter , which could be useful for tackling larger data sets .
 Concerning inference time , FABIR was more than five times faster in processing the 10,570 question - passage pairs in the development data set .
 FABIR 's faster inference is a substantial advantage in large - scale applications , such as information extraction in large corpora .

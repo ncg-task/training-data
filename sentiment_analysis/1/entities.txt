@@ -40,16 +40,18 @@
 355	57	66	our model
 355	73	89	greater variance
 312	8	12	RGNN
-312	37	52	empirically set
-312	57	66	number of
+312	37	48	empirically
+312	49	52	set
+312	57	63	number
+312	64	66	of
 312	67	93	convolutional layers L = 2
 312	96	108	dropout rate
-312	64	66	of
+312	109	111	of
 312	112	115	0.7
-312	105	107	at
+312	116	118	at
 312	123	153	output fully - connected layer
 312	160	170	batch size
-312	64	66	of
+312	171	173	of
 312	174	176	16
 313	3	6	use
 313	7	24	Adam optimization
@@ -71,7 +73,7 @@
 52	44	55	EEG signals
 52	56	58	as
 52	61	65	node
-52	41	43	in
+52	66	68	in
 52	69	78	our graph
 53	4	14	RGNN model
 53	15	22	extends
@@ -91,7 +93,7 @@
 54	37	61	nearby groups of neurons
 54	70	76	reveal
 54	77	100	anatomical connectivity
-54	22	24	at
+54	101	103	at
 54	104	114	macroscale
 55	0	30	Global inter-channel relations
 55	31	38	connect
@@ -146,12 +148,12 @@
 329	116	122	BiDANN
 329	123	131	performs
 329	132	136	best
-329	81	83	in
+329	137	139	in
 329	140	149	beta band
 329	156	165	our model
-329	123	131	performs
-329	132	136	best
-329	81	83	in
+329	166	174	performs
+329	175	179	best
+329	180	182	in
 329	183	193	gamma band
 330	3	36	subject - independent experiments
 330	37	39	on
@@ -159,22 +161,21 @@
 330	47	57	BiDANN - S
 330	58	66	achieves
 330	71	87	highest accuracy
-330	13	15	in
+330	88	90	in
 330	91	112	theta and alpha bands
 330	119	128	our model
 330	129	137	performs
 330	138	142	best
-330	13	15	in
+330	143	145	in
 330	146	174	delta , beta and gamma bands
 332	0	3	For
 332	9	60	subject - dependent and subjectindependent settings
 332	61	63	on
 332	64	68	SEED
-332	61	63	on
-332	61	63	on
 333	35	44	our model
 333	45	52	achieve
 333	53	71	better performance
+333	72	74	on
 333	75	95	beta and gamma bands
 333	96	100	than
 333	101	130	delta , theta and alpha bands
@@ -182,4 +183,5 @@
 333	155	160	STRNN
 333	169	177	performs
 333	182	187	worst
-333	84	94	gamma band
+333	188	190	on
+333	191	201	gamma band

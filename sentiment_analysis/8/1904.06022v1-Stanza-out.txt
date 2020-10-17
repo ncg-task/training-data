@@ -12,7 +12,7 @@ Overall , we show that lighter machine learning based models trained over a few 
 I. INTRODUCTION
 Communication is the key to human existence and more often than not , we have to deal with ambiguous situations .
 For instance , the phrase " This is awesome " could be said under either happy or sad settings .
-Humans are able to resolve ambiguity inmost cases because we can efficiently comprehend information from multiple domains ( henceforth , referred to as modalities ) , namely , speech , text and visual .
+Humans are able to resolve ambiguity in most cases because we can efficiently comprehend information from multiple domains ( henceforth , referred to as modalities ) , namely , speech , text and visual .
 With the rise of deep learning algorithms , there have been multiple attempts to tackle the task of Speech Emotion Recognition ( SER ) as in [ 2 ] and .
 However , this rise has made practitioners rely more on the power of the deep learning models as opposed to using domain knowledge to construct meaningful features and building models that perform well as well as are interpretable .
 In this work , we explore the implication of hand - crafted features for SER and compare the performance of lighter machine learning models with the heavily data - reliant deep learning models .
@@ -32,7 +32,7 @@ A majority of the early approaches ( [ 6 ] ) used Hidden Markov Models ( HMMs ) 
 Recent introduction of deep neural networks to the domain has also significantly improved the state - of - the - art performance .
 For instance , and use recurrent autoencoders to solve the task .
 Recently , methods have also been proposed to efficiently combine features from multiple domains , such as , Tensor Fusion Networks and Low - Rank Matrix Multiplication , instead of trivial concatenation .
-This work aims to provide a comparative study between 1 ) deep learning based models that are trained end - to - end , and 2 ) lighter machine learning and deep learning based models trained over handcrafted features .
+This work aims to provide a comparative study between 1 ) deep learning based models thatare trained end - to - end , and 2 ) lighter machine learning and deep learning based models trained over handcrafted features .
 We also investigate the information residing in multiple modalities and how their combination affects the performance .
 III .
 DATASET
@@ -52,7 +52,7 @@ Audio :
 A preliminary frequency analysis revealed that the dataset is not balanced .
 The emotions " fear " and " surprise " were under-represented and use upsampling techniques to alleviate the issue .
 We then merged examples from " happy " and " excited " classes as " happy " was under-represented and the two emotions closely resemble each other .
-In addition to that , we discard examples classified as " others " ; they corresponded to examples that were labeled ambiguous even fora human .
+In addition to that , we discard examples classified as " others " ; they corresponded to examples that were labeled ambiguous even for a human .
 Applying the aforementioned operations resulted in 7837 examples in total .
 Final sample distribution for each of the emotions is shown in .
 b)
@@ -73,7 +73,7 @@ Harmonics :
 In the emotional state of anger or for stressed speech , there are additional excitation signals other than pitch ( , ) .
 This additional excitation is apparent in the spectrum as harmonics ( see ) and cross-harmonics .
 We calculate harmonics using a median - based filter as described in .
-First , the median filter is created fora given window size l , given by :
+First , the median filter is created for a given window size l , given by :
 where l is odd .
 For cases when l is even , the median is obtained as the mean of two values in the middle of the sorted list .
 This filter is then applied to S h , the h?th frequency slice of a given spectrogram S , to get harmonic - enhanced spectrogram frequency slice H h as :
@@ -103,9 +103,9 @@ The simplest choice is to use raw count of a token in a document ( sentences , i
 Inverse Document
 Frequency :
 This term is introduced to lessen the bias due to frequently occurring words in language such " the " , " a " and " an " .
-Usually , idf fora term t and a document Dis defined as :
+Usually , idf for a term t and a document Dis defined as :
 The denominator shows the frequency of documents containing the term t and N is the total number of documents .
-Finally , TFIDF value fora term is calculated by taking the product of TF and IDF values .
+Finally , TFIDF value for a term is calculated by taking the product of TF and IDF values .
 C. Machine Learning Models :
 This section describes the various ML - based classifiers considered in this work , namely , Random Forests , Gradient Boosting , Support Vector Machines , Naive - Bayes , and Logistic Regression a ) Random Forest ( RF ) : Random forests are ensemble learners that operate by constructing multiple decision trees at training time and outputting the class that is the mode of the classes ( classification ) of the individual trees .
 It has two base working principles :
@@ -126,7 +126,7 @@ It represents each training example as a point in space , mapped such that the e
 New examples are then mapped into that same space and predicted to belong to a category based on which side of the gap they fall .
 SVMs were originally introduced to perform linear classification ; however , they can efficiently perform a non-linear classification using the kernel trick , implicitly mapping their inputs into high - dimensional feature spaces .
 d ) Multinomial Naive Bayes ( MNB ) :
-Naive Bayes classifiers area family of simple " probabilistic classifiers " based on applying Bayes ' theorem with strong ( naive ) independence assumptions between the features .
+Naive Bayes classifiers are a family of simple " probabilistic classifiers " based on applying Bayes ' theorem with strong ( naive ) independence assumptions between the features .
 Under multinomial settings , the feature vectors represent the frequencies with which certain events have been generated by a multinomial ( p 1 , . . . , p n ) where pi is the probability that event i occurs .
 MNB is very popular for document classification task in text which too essentially is a multi - class classification problem .
 e)
@@ -170,13 +170,13 @@ We randomly split our dataset into a train ( 80 % ) and test ( 20 % ) set .
 The same split is used for all the experiments to ensure a fair comparison .
 The LSTM classifiers were trained on an NVIDIA Titan X GPU for faster processing .
 We stop the training when we do not see any improvement in validation performance for > 10 epochs .
-Here , one epoch refers to one iteration overall the training samples .
+Here , one epoch refers to one iteration over all the training samples .
 Different batch sizes were used for different models .
 Hyperparameters for the all the models under the three experiment settings could be found in the released repository .
 G. Evaluation Metrics :
 In this section , we first describe the various evaluation metrics used and report results for the three experiment settings .
 a)
-Accuracy : This refers to the percentage of test samples that are classified correctly .
+Accuracy : This refers to the percentage of test samples thatare classified correctly .
 b) Precision :
 This measure tells us out of all predictions , how many are actually present in the ground truth ( a.k.a. labels ) .
 It is calculated using the formula :
@@ -231,4 +231,4 @@ We show that ensembling multiple ML models also lead to some improvement in the 
 We only extract a handful of time - domain features from audio signals .
 The audio feature - space could be made even richer if we could include some frequency - domain features too such as Mel - Frequency Cepstral Coefficients ( MFCC ) , Spectral Roll - off and additional timedomain features such as Zero Crossing Rate ( ZCR ) .
 Also , better fusion methods such as TFN and LMF could be employed for combining speech and text vectors more effectively .
-It would also be interesting to seethe scaling in the performance of ML models v/s DL models if include more data .
+It would also be interesting to see the scaling in the performance of ML models v/s DL models if include more data .

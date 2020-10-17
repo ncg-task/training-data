@@ -3,7 +3,7 @@ A Novel Neural Network Model for Joint POS Tagging and Graph - based Dependency 
 abstract
 We present a novel neural network model that learns POS tagging and graph - based dependency parsing jointly .
 Our model uses bidirectional LSTMs to learn feature representations shared for both POS tagging and dependency parsing tasks , thus handling the feature - engineering problem .
-Our extensive experiments , on 19 languages from the Universal Dependencies project , show that our model outperforms the state - of - the - art neural networkbased Stack - propagation model for joint POS tagging and transition - based dependency parsing , resulting in anew state of the art .
+Our extensive experiments , on 19 languages from the Universal Dependencies project , show that our model outperforms the state - of - the - art neural networkbased Stack - propagation model for joint POS tagging and transition - based dependency parsing , resulting in a new state of the art .
 Our code is open - source and available together with pre-trained models at : https://github.com/ datquocnguyen/jPTDP .
 Introduction
 Dependency parsing has become a key research topic in NLP in the last decade , boosted by the success of the shared tasks on multilingual dependency parsing .
@@ -12,13 +12,13 @@ Most traditional graph - or transition - based parsing approaches manually defin
 Recent work shows that using deep learning in dependency parsing has obtained state - of - the - art performances .
 Several authors represent the core features with dense vector embeddings and then feed them as inputs to neural network - based classifiers .
 In addition , others propose novel neural architectures for parsing to handle feature - engineering .
-Part - of - speech ( POS ) tags are essential features used inmost dependency parsers .
+Part - of - speech ( POS ) tags are essential features used in most dependency parsers .
 In real - world parsing , those dependency parsers rely heavily on the use of automatically predicted POS tags , thus encountering error propagation problems. , and show that parsing accuracies drop by 5 + % when utilizing automatic POS tags instead of gold ones .
 Some attempts have been made to avoid using POS tags during dependency parsing , however , these approaches still additionally use the automatic POS tags to achieve the best accuracy .
 Alternatively , joint learning both POS tagging and dependency parsing has gained more attention because : i ) more accurate POS tags could lead to improved parsing performance and ii ) the the syntactic context of a parse tree could help resolve POS ambiguities .
 In this paper , we propose a novel neural architecture for joint POS tagging and graph - based dependency parsing .
 Our model learns latent feature representations shared for both POS tagging and dependency parsing tasks by using BiLSTMthe bidirectional LSTM .
-Not using any external resources such as pre-trained word embeddings , experimental results on 19 languages from the Universal Dependencies project show that : our joint model performs better than strong baselines and especially outperforms the neural network - based Stack - propagation model for joint POS tagging and transition - based dependency parsing , achieving anew state of the art .
+Not using any external resources such as pre-trained word embeddings , experimental results on 19 languages from the Universal Dependencies project show that : our joint model performs better than strong baselines and especially outperforms the neural network - based Stack - propagation model for joint POS tagging and transition - based dependency parsing , achieving a new state of the art .
 Our joint model
 In this section , we describe our new model for joint POS tagging and dependency parsing , which we call jPTDP .
 illustrates the architecture of our new model .
@@ -85,7 +85,7 @@ compares the POS tagging and dependency parsing results of our model jPTDP with 
 Regarding POS tagging , our joint model jPTDP generally obtains similar POS tagging accuracies to the BiLSTM - aux model .
 Our model also achieves higher averaged POS tagging accuracy than the joint model Stackpropagation ) .
 There are slightly higher tagging results obtained by BiLSTM - aux when utilizing pre-trained word embeddings for initialization , as presented in .
-However , fora fair comparison to both Stack - propagation and our jPTDP , we only compare to the results reported without using the pre-trained word embeddings .
+However , for a fair comparison to both Stack - propagation and our jPTDP , we only compare to the results reported without using the pre-trained word embeddings .
 Main results
 In terms of dependency parsing , in most cases , our model jPTDP outperforms Stack - propagation .
 It is somewhat unexpected that our model produces about 7 % absolute lower LAS score than Stack - propagation on Dutch ( nl ) .
@@ -109,11 +109,11 @@ Note that we only employ the tokenization , word and sentence segmentation , and
 Recall that we perform universal POS tagging and dependency parsing jointly .
 In addition , when we encounter an additional parallel test set in a language where multiple training treebanks exist , i.e. a parallel test set marked with language code suffix " pud " such as " ar pud " , " cs pud " and " de pud " , we simply use the model trained for its corresponding language code prefix , e.g. , " ar " , " cs " and " de " . presents our official parsing results from the CoNLL 2017 shared task on UD parsing .
 We obtain 1 % absolute higher averaged scores than the baseline UD - Pipe 1.1 in both categories : big treebank test sets ( denoted as Big in ) and parallel test sets ( denoted as PUD in ) .
-Specifically , we obtain a highest rank at 8 th place for the PUD category , showing that our parsing model jPTDP is particularly good when it is applied to areal practical application in outof - domain data .
+Specifically , we obtain a highest rank at 8 th place for the PUD category , showing that our parsing model jPTDP is particularly good when it is applied to are al practical application in outof - domain data .
 Unlike the baseline UDPipe 1.1 and others , for each surprise language , we simply : http://universaldependencies.org / conll17/results-las.html .
-" All " refers to the averaged score overall 81 test sets , which is used as the main metric for ranking participating systems .
+" All " refers to the averaged score over all 81 test sets , which is used as the main metric for ranking participating systems .
 Big : the averaged score over 55 / 81 test sets whose training treebanks are big and have development data available .
-PUD : the averaged score over 14 / 81 test sets that are additional parallel ones , produced separately and their domain maybe different from their training data .
+PUD : the averaged score over 14 / 81 test sets thatare additional parallel ones , produced separately and their domain maybe different from their training data .
 Sma. : the averaged score over 8/81 test sets whose training treebanks are small , i.e. , they lack development data and some of them have very little training data .
 Sur. : the averaged score over 4 / 81 remaining test sets for surprise languages .
 Here the subscript denotes the official rank out of 33 participating systems .
@@ -126,7 +126,7 @@ This is because other systems use various external resources and / or better pre
 7
 For example , UDPipe 1.2 only extends the word and sentence segmenters of the baseline UDPipe 1.1 .
 Consequently , UDPipe 1.2 obtains
-0.1 % absolute higher in the macro-averaged word segmentation score 8 and 0.2 % higher in the macro - 7 Combining multiple treebanks available fora language or similar languages to obtain larger training data is also considered as a manner of exploiting external data .
+0.1 % absolute higher in the macro-averaged word segmentation score 8 and 0.2 % higher in the macro - 7 Combining multiple treebanks available for a language or similar languages to obtain larger training data is also considered as a manner of exploiting external data .
 Word segmentation results are available at : averaged sentence segmentation score 9 than the baseline UDPipe 1.1 , resulting in 1 + % better in the macro -averaged LAS F1 score though they use exactly the same parsing model .
 See for an overview of the methods , algorithms , resources and software used for all other participating systems .
 It is worth noting that for universal POS tagging , we obtain a highest rank at 4 th place for the Big category ( i.e. , 4 th on average over 55 big treebank test sets ) .
@@ -136,7 +136,7 @@ In this paper , we describe our novel model for joint POS tagging and graph - ba
 Experiments on 19 languages from the Universal Dependencies ( UD ) v 1.2 show that our model obtains state - of - the - art results in both POS tagging and dependency parsing .
 With our joint model , we participated in the CoNLL 2017 shared task on UD parsing .
 Given that we followed a strict closed setting while other top participating systems did not , we still obtained very competitive results .
-So , we believe our joint model can serve as anew strong baseline for further models in both POS tagging and dependency parsing tasks .
+So , we believe our joint model can serve as a new strong baseline for further models in both POS tagging and dependency parsing tasks .
 For future comparison , we provide in Table 3 the POS tagging , UAS and LAS accuracies with respect to gold - standard segmentation on the UD v 2.0 -CoNLL 2017 shared task test sets :
 Universal POS tagging accuracies ( labeled as UPOS ) , UAS and LAS scores of our jPTDP model with respect to gold - standard segmentation on the UD v 2.0 - CoNLL 2017 shared task test sets .
 UAS refers to the unlabeled attachment score .

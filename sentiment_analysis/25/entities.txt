@@ -27,7 +27,7 @@
 164	0	3	IAN
 164	4	14	stands for
 164	15	44	interactive attention network
-164	11	14	for
+164	45	48	for
 164	49	58	ATSA task
 164	75	83	based on
 164	84	113	LSTM and attention mechanisms
@@ -45,7 +45,7 @@
 166	61	65	GTRU
 166	66	79	does not have
 166	84	100	aspect embedding
-166	84	86	as
+166	101	103	as
 166	107	123	additional input
 148	21	43	word embedding vectors
 148	48	64	initialized with
@@ -55,7 +55,7 @@
 148	135	137	of
 148	138	156	840 billion tokens
 149	0	27	Words out of the vocabulary
-149	10	12	of
+149	28	30	of
 149	31	37	Glo Ve
 149	38	41	are
 149	42	62	randomly initialized
@@ -71,16 +71,16 @@
 150	33	35	of
 150	36	48	32 instances
 150	51	72	default learning rate
-150	33	35	of
+150	73	75	of
 150	76	83	1 e ? 2
 150	90	104	maximal epochs
-150	33	35	of
+150	105	107	of
 150	108	110	30
 151	8	17	fine tune
 151	18	32	early stopping
 151	33	37	with
 151	38	63	5 - fold cross validation
-151	3	5	on
+151	64	66	on
 151	67	84	training datasets
 33	19	26	propose
 33	29	62	fast and effective neural network
@@ -137,7 +137,7 @@
 189	51	53	on
 189	54	72	Restaurant - Large
 189	77	87	5 % higher
-189	51	53	on
+189	88	90	on
 189	91	118	SemEval - 2014 on ACSA task
 190	10	13	GCN
 190	63	75	higher score
@@ -156,6 +156,7 @@
 185	54	63	increased
 185	64	66	by
 185	67	72	7.6 %
+192	0	4	ATSA
 197	0	3	IAN
 197	8	26	better performance
 197	27	31	than
@@ -171,6 +172,7 @@
 201	86	97	outperforms
 201	98	131	other neural models and basic SVM
 199	0	2	On
+199	7	24	hard test dataset
 199	27	31	GCAE
 199	36	55	1 % higher accuracy
 199	56	60	than
@@ -178,5 +180,5 @@
 199	65	67	on
 199	68	83	restaurant data
 199	88	100	1.7 % higher
-199	65	67	on
+199	101	103	on
 199	104	115	laptop data

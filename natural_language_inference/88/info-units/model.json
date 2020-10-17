@@ -11,8 +11,7 @@
                 }
               }
             }
-          },
-          "from sentence" : "The idea is to use multiple memory slots outside the recurrence to piece - wise store representations of the input ; read and write operations for each slot can be modeled as an attention mechanism with a recurrent controller ."
+          }
         },
         "read and write operations" : {
           "for" : {
@@ -72,7 +71,7 @@
           "while" : {
             "learning" : {
               "past tokens" : [
-                "in memory",
+                "in the memory",
                 {"to what extent" : {
                   "relate to" : {
                   "current token" : {

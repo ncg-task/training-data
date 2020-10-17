@@ -1,6 +1,6 @@
 (Contribution||has||Results)
-(Results||has||overall performances)
-(overall performances||of||all models)
+(Results||has||over all performances)
+(over all performances||of||all models)
 (all models||are||low)
 (Results||has||performances)
 (performances||of||SQLNet and TypeSQL)

@@ -70,7 +70,7 @@ It is noteworthy that our method is only applied to the training optimization of
 Basic Intuition
 The basic intuition of our approach stems from the following fact : in attentional ASC models , the importance of each context word on the given aspect mainly depends on its attention weight .
 Thus , the context word with the maximum attention weight has the most important impact on the sentiment prediction of the input sentence .
-Therefore , fora training sentence , if the prediction of ASC model is correct , we believe that it is reasonable to continue focusing on this context word .
+Therefore , for a training sentence , if the prediction of ASC model is correct , we believe that it is reasonable to continue focusing on this context word .
 Conversely , the attention weight of this context word should be decreased .
 However , as previously mentioned , the context word with the maximum attention weight is often the one with strong sentiment polarity .
 It usually occurs frequently in the training corpus and thus tends to be overly considered during model training .
@@ -100,7 +100,7 @@ Train ( Ds ) Return : ? ; effects , whose attention weights are expected to be d
 Specifically , at the k - th training iteration , we adopt the following steps to deal with ( x , t , y ) :
 I n
 Step 1 , we first apply the model parameters ? ( k?1 ) of the previous iteration to generate the aspect representation v ( t ) ( Line 9 ) .
-Importantly , according to s a ( x ) and s m ( x ) , we then mask all previously extracted context words of x to create anew sentence x , where each masked word is replaced with a special token " mask " ( Line 10 ) .
+Importantly , according to s a ( x ) and s m ( x ) , we then mask all previously extracted context words of x to create a new sentence x , where each masked word is replaced with a special token " mask " ( Line 10 ) .
 In this way , the effects of these context words will be shielded during the sentiment prediction of x , and thus other context words can be potentially extracted from x .
 Finally , we generate the word representations h( x ) ={h ( x i ) } N i=1 ( Line 11 ) .
 In Step 2 , on the basis of v ( t ) and h( x ) , we The [ place ] is mask and mask but the service is mask .
@@ -115,18 +115,18 @@ If E (? ( x ) ) is less than a threshold ?
 Hence , we extract the context word x m with the maximum attention weight ( Line 15 - 20 ) that will be exploited as attention supervision information to refine the model training .
 Specifically , we adopt two strategies to deal with x m according to different prediction results on x : if the prediction is correct , we wish to continue focusing on x m and add it into s a ( x ) ( Lines 16 - 17 ) ; otherwise , we expect to decrease the attention weight of x m and thus include it into s m ( x ) ( Lines 18 - 19 ) .
 I n
-Step 4 , we combine x , t and y as a triple , and merge it with the collected ones to form anew training corpus D ( k ) ( Line 22 ) .
+Step 4 , we combine x , t and y as a triple , and merge it with the collected ones to form a new training corpus D ( k ) ( Line 22 ) .
 Then , we leverage D ( k ) to continue updating model parameters for the next iteration ( Line 24 ) .
 In doing so , we make our model adaptive to discover more influential context words .
 Through K iterations of the above steps , we manage to extract influential context words of all training instances .
 illustrates the context word mining process of the first sentence shown in .
 In this example , we iteratively extract three context words in turn : " small " , " crowded " and " quick " .
 The former two words are included in s a ( x ) , while the last one is contained in s m ( x ) .
-Finally , the extracted context words of each training instance will be included into D , forming a final training corpus D s with attention supervision information ( Lines 26 - 29 ) , which will be used to carryout the last model training ( Line 30 ) .
+Finally , the extracted context words of each training instance will be included into D , forming a final training corpus D s with attention supervision information ( Lines 26 - 29 ) , which will be used to carry out the last model training ( Line 30 ) .
 The details will be provided in the next subsection .
 Model Training with Attention Supervision Information
 To exploit the above extracted context words to refine the training of attention mechanisms for ASC models , we propose a soft attention regularizer (? ( s a ( x ) ? s m ( x ) ) , ? ( s a ( x ) ? s m ( x ) ) ; ? ) to jointly minimize the standard training objective , where ?( * ) and ? ( * ) denotes the model - induced and expected attention weight distributions of words in s a ( x ) ?s m ( x ) , respectively .
-More specifically , (? ( * ) , ? ( * ) ; ? ) is an Euclidean Distance style loss that penalizes the disagreement between ?( * ) and ? ( * ) .
+More specifically , (? ( * ) , ? ( * ) ; ? ) is an Euclidean Distance style loss that penalizes the dis agreement between ?( * ) and ? ( * ) .
 As previously analyzed , we expect to equally continue focusing on the context words of s a ( x ) during the final model training .
 To this end , we set their expected attention weights to the same value 1 | sa ( x ) | .
 By doing so , the weights of words extracted first will be reduced , and those of words extracted later will be increased , avoiding the over- fitting of high - frequency context words with sentiment polarities and the under - fitting of lowfrequency ones .

@@ -27,8 +27,7 @@
       },
       "have" : {
         "3 hidden layers" : {
-          "in" : "our network",
-          "from sentence" : "We have 3 hidden layers in our network and the dimensionality of the hidden units is 100 ."
+          "in" : "our network"
         },
         "dimensionality" : {
           "of" : {

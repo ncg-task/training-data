@@ -62,9 +62,9 @@
 26	214	224	BERT model
 26	62	76	before feeding
 26	81	85	text
-26	18	20	to
+26	86	88	to
 26	89	93	BERT
-26	27	30	for
+26	94	97	for
 26	98	111	fine - tuning
 27	8	14	locate
 27	19	28	positions
@@ -81,7 +81,7 @@
 28	3	6	use
 28	13	23	embeddings
 28	39	56	sentence encoding
-28	13	22	embedding
+28	59	68	embedding
 28	69	71	of
 28	76	95	special first token
 28	96	113	in the setting of

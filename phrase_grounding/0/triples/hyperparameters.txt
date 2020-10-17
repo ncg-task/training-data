@@ -32,4 +32,4 @@
 (learning rate||divided by||2)
 (2||again at||15 - th epoch)
 (2||once at||10 - th epoch)
-(network||for||20 epcohs)
+(network||for||20 epochs)

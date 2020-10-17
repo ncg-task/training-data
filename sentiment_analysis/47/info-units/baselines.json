@@ -11,8 +11,7 @@
                 }
               }
             }
-          },
-          "from sentence" : "Majority assigns the sentiment polarity that has the largest probability in the training set ; 2 . Simple SVM is a SVM classifier with simple features such as unigrams and bigrams ; 3 . Feature - enhanced SVM is a SVM classifier with a state - of - the - art feature template which contains n-gram features , parse features and lexicon features ; 4 . LSTM represents a standard LSTM for aspect - based sentiment classification task ; 5 . TD - LSTM adopts two LSTMs to model the left context with target and the right context with target respectively ; 74.30 66.50 66.50 TD- LSTM 75.60 68.10 70.80 AE - LSTM 76.60 68.90 - ATAE - LSTM 77.20 68.70 - GRNN- G3 79.55 * 71.47 * 70.09 * MemNet 79.98 * 70.33 * 70.52 * IAN 78.60 72.10 - LCR - Rot ( our approach ) 81.34 75.24 72.69 : The performance ( classification accuracy ) of different methods on three datasets ."
+          }
         },
         "Simple SVM" : {
           "is" : {
@@ -23,8 +22,7 @@
                 }
               }
             }
-          },
-          "from sentence" : "Majority assigns the sentiment polarity that has the largest probability in the training set ; 2 . Simple SVM is a SVM classifier with simple features such as unigrams and bigrams ; 3 . Feature - enhanced SVM is a SVM classifier with a state - of - the - art feature template which contains n-gram features , parse features and lexicon features ; 4 . LSTM represents a standard LSTM for aspect - based sentiment classification task ; 5 . TD - LSTM adopts two LSTMs to model the left context with target and the right context with target respectively ; 74.30 66.50 66.50 TD- LSTM 75.60 68.10 70.80 AE - LSTM 76.60 68.90 - ATAE - LSTM 77.20 68.70 - GRNN- G3 79.55 * 71.47 * 70.09 * MemNet 79.98 * 70.33 * 70.52 * IAN 78.60 72.10 - LCR - Rot ( our approach ) 81.34 75.24 72.69 : The performance ( classification accuracy ) of different methods on three datasets ."
+          }
         },
         "Feature - enhanced SVM" : {
           "is" : {
@@ -35,8 +33,7 @@
                 }
               }
             }          
-          },
-          "from sentence" : "Majority assigns the sentiment polarity that has the largest probability in the training set ; 2 . Simple SVM is a SVM classifier with simple features such as unigrams and bigrams ; 3 . Feature - enhanced SVM is a SVM classifier with a state - of - the - art feature template which contains n-gram features , parse features and lexicon features ; 4 . LSTM represents a standard LSTM for aspect - based sentiment classification task ; 5 . TD - LSTM adopts two LSTMs to model the left context with target and the right context with target respectively ; 74.30 66.50 66.50 TD- LSTM 75.60 68.10 70.80 AE - LSTM 76.60 68.90 - ATAE - LSTM 77.20 68.70 - GRNN- G3 79.55 * 71.47 * 70.09 * MemNet 79.98 * 70.33 * 70.52 * IAN 78.60 72.10 - LCR - Rot ( our approach ) 81.34 75.24 72.69 : The performance ( classification accuracy ) of different methods on three datasets ."
+          }
         },
         "TD - LSTM" : {
           "adopts" : "two LSTMs",

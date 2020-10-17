@@ -1,7 +1,7 @@
 {
   "has" : {
     "Approach" : {
-      "to scale" : ["attention models", {"from sentence" : "Therefore , in order to scale attention models for this problem , we aim to prune down the length of the source sequence in an intelligent way ."}],
+      "to scale" : "attention models",
       "prune down" : ["length of the source sequence", {"from sentence" : "Therefore , in order to scale attention models for this problem , we aim to prune down the length of the source sequence in an intelligent way ."}],
       "to use" : {
         "two - layer hierarchical attention" : {
@@ -28,8 +28,7 @@
                   "over" : "those chunks"
                 }
               }
-            },
-            "from sentence" : "For document summarization , this means dividing the document into chunks of text , sparsely attending to one or a few chunks at a time using hard attention , then applying the usual full attention over those chunks - we call this method coarse - to - fine attention ."
+            }
           },
           "call" : ["coarse - to - fine attention", {"from sentence" : "For document summarization , this means dividing the document into chunks of text , sparsely attending to one or a few chunks at a time using hard attention , then applying the usual full attention over those chunks - we call this method coarse - to - fine attention ."}]
         }

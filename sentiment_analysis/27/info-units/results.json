@@ -50,8 +50,7 @@
           "better than" : {
             "RAM" : {
               "on" : "Restaurant dataset"
-            },
-            "from sentence" : "To be specific , PBAN is better than RAM on Restaurant dataset , but worse than RAN on Laptop dataset ."
+            }
           },
           "worse than" : {
             "RAN" : {
@@ -85,7 +84,7 @@
       "Compared with" : {
         "RAM and PBAN" : {
           "has" : {
-            "overall performance" : {
+            "over all performance" : {
               "of" : "TSN",
               "has" : {
                 "not perform well" : {
@@ -94,7 +93,7 @@
               }
             }
           },
-          "from sentence" : "Compared with RAM and PBAN , the overall performance of TSN is not perform well on both Restaurant dataset and Laptop dataset , which might because the framework of TSN is too simple to model the representations of context and aspect effectively ."
+          "from sentence" : "Compared with RAM and PBAN , the over all performance of TSN is not perform well on both Restaurant dataset and Laptop dataset , which might because the framework of TSN is too simple to model the representations of context and aspect effectively ."
         }
       },
       "Comparing" : {

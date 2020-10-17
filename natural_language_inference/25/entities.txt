@@ -62,7 +62,7 @@
 80	33	51	token reembeddings
 80	52	56	with
 80	61	74	hidden states
-80	30	32	of
+80	75	77	of
 80	80	101	strong language model
 80	102	114	proves to be
 80	115	131	highly effective
@@ -71,7 +71,7 @@
 83	111	113	of
 83	114	122	training
 83	125	133	QA model
-83	95	97	in
+83	134	136	in
 83	139	161	semisupervised fashion
 83	47	51	with
 83	169	189	large language model

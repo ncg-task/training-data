@@ -41,7 +41,7 @@ Given a sentence , the goal of SRL is to identify and classify the arguments of 
 For example , for the sentence " Marry borrowed a book from John last week . " and the target verb borrowed , SRL yields the following outputs :
 Here ARG0 represents the borrower , ARG1 represents the thing borrowed , ARG2 represents the entity borrowed from , AM - TMP is an adjunct indicating the timing of the action and V represents the verb .
 Generally , semantic role labeling consists of two steps : identifying and classifying arguments .
-The former step involves assigning either a semantic argument or nonargument fora given predicate , while the latter includes labeling a specific semantic role for the identified argument .
+The former step involves assigning either a semantic argument or nonargument for a given predicate , while the latter includes labeling a specific semantic role for the identified argument .
 It is also common to prune obvious non-candidates before the first step and to apply post-processing procedure to fix inconsistent predictions after the second step .
 Finally , a dynamic programming algorithm is often applied to find the global optimum solution for this typical sequence labeling problem at the inference stage .
 In this paper , we treat SRL as a BIO tagging problem .
@@ -65,7 +65,7 @@ Given a matrix of n query vectors Q ?
 R nd , keys K ?
 R nd and values V ?
 R nd , the scaled dot -product attention computes the attention scores based on the following equation :
-where dis the number of hidden units of our network .
+where d is the number of hidden units of our network .
 The multi-head attention mechanism first maps the matrix of input vectors X ?
 R td to queries , keys and values matrices by using different linear projections .
 Then h parallel heads are employed to focus on different part of channels :
@@ -136,7 +136,7 @@ Formally speaking , we have x t = [ e ( w t ) , e ( m t ) ] .
 We then build our deep attentional neural network to learn the sequential and structural information of a given sentence based on the feature maps from the lookup table layer .
 Finally , we take the outputs of the topmost attention sub - layer as inputs to make the final predictions .
 Since there are dependencies between semantic labels , most previous neural network models introduced a transition model for measuring the probability of jumping between the labels .
-Different from these works , we perform SRL as atypical classification problem .
+Different from these works , we perform SRL as a typical classification problem .
 Latent dependency information is embedded in the topmost attention sub - layer learned by our deep models .
 This approach is simpler and easier to implement compared to previous works .
 Formally , given an input sequence x = {x 1 , x 2 , . . . , x n } , the log - likelihood of the corresponding correct label sequence y = {y 1 , y 2 , . . . , y n } is
@@ -236,7 +236,7 @@ pred./ gold
 Labeling Confusion
 Related work developed the first automatic semantic role labeling system based on FrameNet .
 Since then the task has received a tremendous amount of attention .
-The focus of traditional approaches is devising appropriate feature templates to describe the latent structure of utterances . ; ; explored the syntactic features for capturing the overall sentence structure .
+The focus of traditional approaches is devising appropriate feature templates to describe the latent structure of utterances . ; ; explored the syntactic features for capturing the over all sentence structure .
 Combination of different syntactic parsers was also proposed to avoid prediction risk which was introduced by ; ; .
 Beyond these traditional methods above , proposed a convolutional neural network for SRL to reduce the feature engineering .
 The pioneering work on building an end - to - end system was proposed by , who applied an 8 layered LSTM model which outperformed the previous state - of - the - art system .

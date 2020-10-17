@@ -8,8 +8,7 @@
           "from sentence" : "In our work , the dimension of word embedding vectors and hidden state vectors is 300 ."
         },
         "All out - ofvocabulary words and weight matrices" : {
-          "randomly initialized by" : "uniform distribution U ( - 0.1 , 0.1 )",
-          "from sentence" : "All out - ofvocabulary words and weight matrices are randomly initialized by a uniform distribution U ( - 0.1 , 0.1 ) , and all bias are set to zero ."
+          "randomly initialized by" : "uniform distribution U ( - 0.1 , 0.1 )"
         },
         "all bias" : {
           "set to" : "zero",
@@ -17,8 +16,7 @@
         },
         "Tensor Flow" : {
           "for implementing" : "neural network model",
-          "from sentence" : "Tensor
-Flow is used for implementing our neural network model ."
+          "from sentence" : "Tensor Flow is used for implementing our neural network model ."
 
         },
         "paired t- test" : {

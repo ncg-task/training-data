@@ -49,7 +49,7 @@ show that it is possible to enhance the diversity of the generated image caption
 Yang et al .
 further prove that training a convolutional neural network ( CNN ) as a discriminator yields better performance than that of the recurrent neural network ( RNN ) for the task of machine translation ( MT ) .
 Among the works mentioned above , SeqGAN is the most relevant study to our proposed method .
-The major difference between SeqGAN and our proposed model is that we replace the regression based discriminator with a novel ranker , and we formulate anew learning objective function in the adversarial learning framework .
+The major difference between SeqGAN and our proposed model is that we replace the regression based discriminator with a novel ranker , and we formulate a new learning objective function in the adversarial learning framework .
 In this condition , the rewards for training our model are not limited to binary regression , but encoded with relative ranking information .
 Learning to rank : Learning to rank plays an essential role in Information Retrieval ( IR ) .
 The ranking technique has been proven effective for searching documents and images .
@@ -93,7 +93,7 @@ Inspired by this , unlike the conventional GANs , our architecture possesses a n
 Inspired by ranking steps commonly used in Web search , we formulate a relevance score of the input sequence s given a reference u by :
 where they u and y s are the embedded feature vectors of the reference and the input sequence , respectively .
 denotes the norm operator .
-Then , a softmax - like formula is used to compute the ranking score fora certain sequence s given a comparison set C:
+Then , a softmax - like formula is used to compute the ranking score for a certain sequence s given a comparison set C:
 The parameter ? , whose value is set empirically during experiments , shares the similar idea with the Boltzmann exploration method in reinforcement learning .
 Lower ?
 results in all sentences to be nearly equiprobable , while higher ?
@@ -140,7 +140,7 @@ where ? ?
 is the partial differential operator .
 The start state s 0 is the first generated token w 0 .
 Es 1:T ?G ?
-is the mean overall sampled complete sentences based on current generator 's parameter ?
+is the mean over all sampled complete sentences based on current generator 's parameter ?
 within one minibatch .
 Note that we only compute the partial derivatives for ? , as the R ?
 is fixed during the training of generator .
@@ -160,10 +160,10 @@ Note that the proposed Rank GAN has a Nash Equilibrium when the generator G ?
 simulates the human - written sentences distribution P h , and the ranker R ?
 can not correctly estimate rank between the synthetic sentences and the human - written sentences .
 However , as also discussed in the literature , it is still an open problem how a non-Bernoulli GAN converges to such an equilibrium .
-Ina sense , replacing the absolute binary predicates with the ranking scores based on multiple sentences can relieve the gradient vanishing problem and benefit the training process .
+In a sense , replacing the absolute binary predicates with the ranking scores based on multiple sentences can relieve the gradient vanishing problem and benefit the training process .
 In the following experiment section , we observe that the training converges on four different datasets , and leads to a better performance compared to previous state - of - the - arts .
 Experimental results
-Following the evaluation protocol in , we first carryout experiments on the data and simulator proposed in .
+Following the evaluation protocol in , we first carry out experiments on the data and simulator proposed in .
 Then , we compare the performance of RankGAN with other state - of - the - art methods on multiple public language datasets including Chinese poems , COCO captions , and Shakespear 's plays .
 Simulation on synthetic data
 We first conduct the test on the dataset proposed in .
@@ -210,7 +210,7 @@ Following the evaluation protocol in , we compute the BLEU - 2 score and estimat
 summarizes the BLEU - 2 score of different methods .
 It can be seen that the proposed Rank GAN performs more favourably compared to the state - of - the - art methods in terms of BLEU - 2 score .
 This indicates that the proposed objective is able to learn effective language generator with real - world data .
-We further conduct human study to evaluate the quality of the generated poem inhuman perspective .
+We further conduct human study to evaluate the quality of the generated poem in human perspective .
 Specifically , we invite 57 participants who are native mandarin Chinese speakers to score the poems . :
 Example of the generated descriptions with different methods .
 Note that the language models are trained on COCO caption dataset without the images .
@@ -266,7 +266,7 @@ shows the performance comparison of the proposed RankGAN and the other methods i
 As can be seen , the proposed method achieves consistently higher BLEU score than the other methods in terms of the different n-grams criteria .
 The results indicate the proposed RankGAN is able to capture the transition pattern among the words , even if the training sentences are novel , delicate and complicated .
 Conclusion
-We presented anew generative adversarial network , RankGAN , for generating high - quality natural language descriptions .
+We presented a new generative adversarial network , RankGAN , for generating high - quality natural language descriptions .
 Instead of training the discriminator to assign absolute binary predicate to real or synthesized data samples , we propose using a ranker to rank the human - written sentences higher than the machine - written sentences relatively .
 We then train the generator to synthesize natural language sentences that can be ranked higher than the human - written one .
 By relaxing the binary - classification restriction and conceiving a relative space with rich information for the discriminator in the adversarial learning framework , the proposed learning objective is favourable for synthesizing natural language sentences in high quality .

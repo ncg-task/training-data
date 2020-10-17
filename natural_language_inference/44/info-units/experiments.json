@@ -4,7 +4,7 @@
       "has" : {
         "Tasks" : {
           "has" : {
-            "SQuAD and NewsQA" : {
+            "SQuAD and New s QA" : {
               "has" : {
                 "Results" : {
                   "has" : {
@@ -23,6 +23,7 @@
                         }
                       },
                       "from sentence" : "Results shows results in the task of sentence selection on SQuAD and New s QA . First , our selector outperforms TF - IDF method and the previous state - of - the - art by large margin ( up to 2.9 % MAP ) ."
+
                     },
                     "three training techniques" : {
                       "has" : ["weight transfer", "data modification", "score normalization"],
@@ -93,7 +94,8 @@
               "has" : {
                 "Baselines" : {
                   "compare with" : ["TF - IDF method", "our selector ( Dyn )", "published Rank1 - 3 models"],
-                  "from sentence" : "We compare with the results from the sentences selected by TF - IDF method and our selector ( Dyn ) .
+                  "from sentence" : "Trivia QA and SQuAD - Open
+We compare with the results from the sentences selected by TF - IDF method and our selector ( Dyn ) .
 We also compare with published Rank1 - 3 models ."
 
                 },
@@ -158,7 +160,9 @@ We also compare with published Rank1 - 3 models ."
                             }
                           }
                         },
-                        "from sentence" : "Results shows that MINIMAL outperforms FULL , achieving the new state - of - the - art by large margin ( + 11.1 and + 11.5 F1 on AddSent and Add OneSent , respectively ) ."
+                        "from sentence" : "SQuAD - Adversarial
+Results shows that MINIMAL outperforms FULL , achieving the new state - of - the - art by large margin ( + 11.1 and + 11.5 F1 on AddSent and Add OneSent , respectively ) ."
+
                       }
                     }
                   }

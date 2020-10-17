@@ -29,14 +29,6 @@
               "from sentence" : "Each report contains a Learning points section , summarizing the key pieces of information from that report ."
             }
           }
-        },
-        "long support passages" : {
-          "includes" : {
-            "answers" : {
-              "which are" : "single - or multiword medical entities"
-            }
-          },
-          "from sentence" : "Our dataset contains around 100,000 queries on 12,000 case reports , has long support passages ( around 1,500 tokens on average ) and includes answers which are single - or multiword medical entities ."
         }
       },
       "use" : {
@@ -53,6 +45,13 @@
         "around 100,000 queries" : {
           "on" : "12,000 case reports"
         },
+        "long support passages" : {
+          "includes" : {
+            "answers" : {
+              "which are" : "single - or multiword medical entities"
+            }
+          }
+        },      
         "from sentence" : "Our dataset contains around 100,000 queries on 12,000 case reports , has long support passages ( around 1,500 tokens on average ) and includes answers which are single - or multiword medical entities ."
       }
     }

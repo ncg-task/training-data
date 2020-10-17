@@ -5,7 +5,7 @@
 178	40	57	two - layer LSTMs
 178	58	61	for
 178	66	83	encoder - decoder
-178	35	39	with
+178	84	88	with
 178	89	105	500 hidden units
 178	106	108	in
 178	109	119	each layer
@@ -39,7 +39,7 @@
 167	30	64	model performance ( ROUGE - 2 F1 )
 167	65	67	on
 167	68	83	development set
-167	39	42	for
+167	84	87	for
 167	88	107	every 2,000 batches
 169	8	13	apply
 169	14	31	gradient clipping
@@ -116,12 +116,13 @@
 193	106	122	significant test
 193	123	135	according to
 193	140	161	official ROUGE script
+139	0	8	DUC 2004
 199	23	28	SEASS
 199	29	40	outperforms
 199	41	65	all the baseline methods
 199	70	78	achieves
 199	79	101	29.21 , 9.56 and 25.51
-199	35	38	for
+199	102	105	for
 199	106	130	ROUGE 1 , 2 and L recall
 200	161	177	English Gigaword
 200	0	11	Compared to

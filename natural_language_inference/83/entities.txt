@@ -62,9 +62,9 @@
 35	51	70	story understanding
 35	83	101	sequence of events
 35	102	114	described in
-35	51	56	story
+35	119	124	story
 35	138	147	evolution
-35	48	50	of
+35	148	150	of
 35	151	187	sentiment and emotional trajectories
 35	202	221	topical consistency
 36	4	16	first aspect
@@ -78,7 +78,7 @@
 36	152	157	occur
 36	158	164	within
 36	169	187	sequence of events
-36	101	113	described in
+36	188	200	described in
 36	205	222	preceding context
 42	27	40	evaluating if
 42	45	54	sentiment

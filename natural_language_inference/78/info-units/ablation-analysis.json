@@ -49,10 +49,10 @@
         "both highway layers" : {
           "have" : {
             "marginally helped" : {
-              "has" : "overall performance"
+              "has" : "over all performance"
             }
           },
-          "from sentence" : "We observe that both highway layers have marginally helped the overall performance ."
+          "from sentence" : "We observe that both highway layers have marginally helped the over all performance ."
         },
         "Sub and Concat compositions" : {
           "were" : {

@@ -6,7 +6,9 @@
           "has" : {
             "key competitors" : {
               "are" : ["BiDAF", "Match - LSTM", "FastQA / Fast QA - Ext", "R2-BiLSTM", "AMANDA"],
-              "from sentence" : "On this dataset , the key competitors are BiDAF , Match - LSTM , FastQA / Fast QA - Ext , R2-BiLSTM , AMANDA ."
+              "from sentence" : "NewsQA
+On this dataset , the key competitors are BiDAF , Match - LSTM , FastQA / Fast QA - Ext , R2-BiLSTM , AMANDA ."
+
             }
           }
         },
@@ -14,7 +16,9 @@
           "has" : {
             "key competitors" : {
               "are" : ["BiDAF", "Reinforced Ranker - Reader ( R 3 )"],
-              "from sentence" : "The key competitors on this dataset are BiDAF and the Reinforced Ranker - Reader ( R 3 ) ."
+              "from sentence" : "Quasar -T
+The key competitors on this dataset are BiDAF and the Reinforced Ranker - Reader ( R 3 ) ."
+
             }
           }
         },
@@ -22,7 +26,9 @@
           "has" : {
             "competitor baselines" : {
               "are" : ["Attention Sum Reader ( ASR )", "Focused Hierarchical RNNs ( FH - RNN )", "AMANDA", "BiDAF", "AQA", "Reinforced Ranker - Reader ( R 3 )"],
-              "from sentence" : "The competitor baselines on this dataset are Attention Sum Reader ( ASR ) , Focused Hierarchical RNNs ( FH - RNN ) , AMANDA , BiDAF , AQA and the Reinforced Ranker - Reader ( R 3 ) ."
+              "from sentence" : "SearchQA
+The competitor baselines on this dataset are Attention Sum Reader ( ASR ) , Focused Hierarchical RNNs ( FH - RNN ) , AMANDA , BiDAF , AQA and the Reinforced Ranker - Reader ( R 3 ) ."
+
             }
           }          
         },
@@ -30,7 +36,9 @@
           "compare with" : [
             {"baselines" : {
               "namely" : ["Seq2Seq", "Attention Sum Reader", "BiDAF"],
-              "from sentence" : "We compare with the baselines in the original paper , namely Seq2Seq , Attention Sum Reader and BiDAF ."
+              "from sentence" : "Narrative QA ] is a recent QA dataset that involves comprehension over stories .
+We compare with the baselines in the original paper , namely Seq2Seq , Attention Sum Reader and BiDAF ."
+
             }},
             "recent BiAttention + MRU model",
             {"from sentence" : "We also compare with the recent BiAttention + MRU model ."}

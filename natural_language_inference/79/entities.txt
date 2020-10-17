@@ -11,7 +11,7 @@
 164	78	92	neural network
 164	93	97	with
 164	98	114	one hidden layer
-164	93	97	with
+164	115	119	with
 164	120	128	50 units
 164	135	154	logistic classifier
 164	164	174	to predict
@@ -28,9 +28,9 @@
 171	19	49	learned vector representations
 171	50	54	have
 171	55	69	400 dimensions
-171	19	49	learned vector representations
-171	50	54	have
-171	55	69	400 dimensions
+172	17	47	learned vector representations
+172	48	52	have
+172	53	67	400 dimensions
 172	68	71	for
 172	77	96	words and documents
 174	0	18	Special characters
@@ -50,7 +50,6 @@
 23	84	129	continuous distributed vector representations
 23	130	133	for
 23	134	149	pieces of texts
-25	4	8	name
 25	9	25	Paragraph Vector
 25	67	84	can be applied to
 25	85	118	variable - length pieces of texts
@@ -59,7 +58,7 @@
 26	58	64	useful
 26	65	79	for predicting
 26	80	85	words
-26	47	49	in
+26	86	88	in
 26	91	100	paragraph
 28	0	39	Both word vectors and paragraph vectors
 28	44	54	trained by
@@ -71,17 +70,17 @@
 29	35	40	among
 29	41	51	paragraphs
 29	58	70	word vectors
-29	24	27	are
+29	71	74	are
 29	75	81	shared
 27	20	31	concatenate
 27	36	52	paragraph vector
 27	53	57	with
 27	58	78	several word vectors
 27	79	83	from
-27	36	45	paragraph
+27	86	95	paragraph
 27	100	107	predict
 27	112	126	following word
-27	118	120	in
+27	127	129	in
 27	134	147	given context
 30	0	2	At
 30	3	18	prediction time
@@ -109,9 +108,10 @@
 181	72	83	in terms of
 181	84	95	error rates
 184	4	20	method described
-184	26	28	is
+184	35	37	is
 184	42	55	only approach
 184	61	65	goes
+184	66	98	significantly beyond the barrier
 184	99	101	of
 184	102	117	10 % error rate
 185	3	11	achieves

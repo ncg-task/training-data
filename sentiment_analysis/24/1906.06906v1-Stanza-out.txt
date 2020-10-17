@@ -1,7 +1,7 @@
 title
 An Interactive Multi - Task Learning Network for End - to - End Aspect - Based Sentiment Analysis
 abstract
-Aspect - based sentiment analysis produces a list of aspect terms and their corresponding sentiments fora natural language sentence .
+Aspect - based sentiment analysis produces a list of aspect terms and their corresponding sentiments for a natural language sentence .
 This task is usually done in a pipeline manner , with aspect term extraction performed first , followed by sentiment predictions toward the extracted aspect terms .
 While easier to develop , such an approach does not fully exploit joint information from the two subtasks and does not use all available sources of training information that might be helpful , such as document - level labeled sentiment corpus .
 In this paper , we propose an interactive multi-task learning network ( IMN ) which is able to jointly learn multiple related tasks simultaneously at both the token level as well as the document level .
@@ -11,7 +11,7 @@ Introduction
 Aspect - based sentiment analysis ( ABSA ) aims to determine people 's attitude towards specific aspects in a review .
 This is done by extracting explicit aspect mentions , referred to as aspect term extraction ( AE ) , and detecting the sentiment orientation towards each extracted aspect term , referred to as aspect - level sentiment classification ( AS ) .
 For example , in the sentence " Great food but the service is dreadful " , the aspect terms are " food " and " service " , and the sentiment orientations towards them are positive and negative respectively .
-In previous works , AE and AS are typically treated separately and the overall task is performed in a pipeline manner , which may not fully exploit the joint information between the two tasks .
+In previous works , AE and AS are typically treated separately and the over all task is performed in a pipeline manner , which may not fully exploit the joint information between the two tasks .
 Recently , two studies have shown that integrated models can achieve comparable results to pipeline methods .
 Both works formulate the problem as a single sequence labeling task with a unified tagging scheme
 1 .
@@ -31,8 +31,8 @@ Related Work
 Aspect - Based Sentiment Analysis .
 Existing approaches typically decompose ABSA into two subtasks , and solve them in a pipeline setting .
 Both AE and AS have been extensively studied in the literature .
-However , treating each task independently has several disadvantages .
-Ina pipeline setting , errors from the first step tend to be propagated to the second step , leading to a poorer overall performance .
+However , treating each task independently has several dis advantages .
+In a pipeline setting , errors from the first step tend to be propagated to the second step , leading to a poorer over all performance .
 In addition , this approach is unable to exploit the commonalities and associations between tasks , which may help reduce the amount of training data required to train both tasks .
 Some previous works have attempted to develop integrated solutions .
 proposed to model the problem as a sequence labeling task with a unified tagging scheme .
@@ -47,7 +47,7 @@ By learning semantically related tasks in parallel using a shared representation
 For ABSA , have shown that aspectlevel sentiment classification can be significantly improved through joint training with documentlevel sentiment classification .
 However , conventional multi-task learning still does not explicitly model the interactions between tasks - the two tasks only interact with each other through error back - propoagation to contribute to the learned features and such implicit interactions are not controllable .
 Unlike existing methods , our proposed IMN not only allows the representations to be shared , but also explicitly models the interactions between tasks , by using an iterative message passing scheme .
-The propagated information contributes to both learning and inference to boost the overall performance of ABSA .
+The propagated information contributes to both learning and inference to boost the over all performance of ABSA .
 Message Passing Architectures .
 Networked representations for message passing graphical model inference algorithms have been studied in computer vision and NLP .
 Modeling the execution of these message passing algorithms as a network results in recurrent neural network architectures .
@@ -64,7 +64,7 @@ We denote h s ( t ) i as the value of the shared latent vector corresponding to 
 The sequence of shared latent vectors 3 {h s 1 , h s 2 , ... , h s n } is used as input to the different task - specific components .
 Each task - specific component has it s own sets of latent and output variables .
 The output variables correspond to a label sequence in a sequence tagging task ; in AE , we assign to each token a label indicating whether it belongs to any aspect or opinion 4 term , while in AS , we label each word with its sentiment .
-Ina classification task , the output corresponds to the label of the input instance : the sentiment of the document for the sentiment classification task ( DS ) , and the domain of the document for the domain classification task ( DD ) .
+In a classification task , the output corresponds to the label of the input instance : the sentiment of the document for the sentiment classification task ( DS ) , and the domain of the document for the domain classification task ( DD ) .
 At each iteration , appropriate information is passed back to the shared latent vectors to be combined ; this could be the values of the output variables or the latent variables , depending on the task .
 In addition , we also allow messages to be passed between the components in each iteration .
 Specifically for this problem , we send information from the AE task to the AS task as shown in .
@@ -122,7 +122,7 @@ We employ a fully - connected layer with ReLu activation as the re-encoding func
 To update the shared representations , we incorporate ?
 , the outputs of AE and AS from the previous iteration , such that these information are available for both tasks in current round of computation .
 We also incorporate information from DS and DD .?
-ds indicates the overall sentiment of the input sequence , which could be helpful for AS .
+ds indicates the over all sentiment of the input sequence , which could be helpful for AS .
 The attention weights a ds i and add i generated by DS and DD respectively reflect how sentiment - relevant and domain - relevant the ith token is .
 A token that is more sentiment - relevant or domain - relevant is more likely to bean opinion word or aspect word .
 This information is useful for the aspect - level tasks .
@@ -138,9 +138,9 @@ During model training , we only consider AS predictions on these aspect term - r
 When trained on document - level instances , we 6 Let l ( y as i , j ,?
 where N ds and N dd denote the number of training instances for DS and DD respectively , and y ds i and y dd i denote the one - hot encoding of the gold label .
 Message passing iterations are not used when training document - level instances .
-For learning , we first pretrain the network on the document - level instances ( minimize L d ) fora few epochs , such that DS and DD can make reasonable predictions .
+For learning , we first pretrain the network on the document - level instances ( minimize L d ) for a few epochs , such that DS and DD can make reasonable predictions .
 Then the network is trained on aspectlevel instances and document - level instances alternately with ratio r , to minimize La and L d .
-The overall training process is given in Algorithm
+The over all training process is given in Algorithm
 1 . D a , D ds , and D dd denote the aspect - level training set and the training sets for DS , DD respectively .
 D ds and D a are from similar domains .
 D dd contains review documents from at least two domains with y ds i denoting the domain label , where one of the domains is similar to the domains of D a and D ds .
@@ -179,12 +179,12 @@ We train the model for a fix number of epoches , and save the model at the epoch
 Evaluation metrics .
 During testing , we extract aspect ( opinion ) terms , and predict the sentiment for each extracted aspect term based on ? ae ( T ) and y as ( T ) .
 Since the extracted aspect term may consist of multiple tokens and the sentiment predictions on them could be inconsistent in AS , we only output the sentiment label of the first token as the predicted sentiment for any extracted aspect term .
-We employ five metrics for evaluation , where two measure the AE performance , two measure the AS performance , and one measures the overall performance .
+We employ five metrics for evaluation , where two measure the AE performance , two measure the AS performance , and one measures the over all performance .
 Following existing works for AE , we use F1 to measure the performance of aspect term extraction and opinion term extraction , which are denoted as F1 - a and F1 -o respectively .
 Following existing works for AS , we adopt accuracy and macro - F1 to measure the performance of AS .
 We denote them as acc -s and F1-s .
 Since we are solving the integrated task without assuming that gold aspect terms are given , the two metrics are computed based on the correctly extracted aspect terms from AE .
-We compute the F 1 score of the integrated task denoted as F1 - I for measuring the overall performance .
+We compute the F 1 score of the integrated task denoted as F1 - I for measuring the over all performance .
 To compute F1 - I , an extracted aspect term is taken as correct only when both the span and the sentiment are correctly identified .
 When computing F1 - a , we consider all aspect terms , while when computing acc -s , F1 -s , and F1 - I , we ignore aspect terms with conflict sentiment labels .
 Models under Comparison
@@ -206,9 +206,9 @@ During testing of all methods , we perform AE in the first step , and then gener
 Integrated Approach .
 We compare with two recently proposed methods that have achieved stateof - the - art results among integrated approaches :
 MNN and the model from which we denote as INABSA ( integrated network for ABSA ) .
-Both methods model the overall task as a sequence tagging problem with a unified tagging scheme .
+Both methods model the over all task as a sequence tagging problem with a unified tagging scheme .
 Since during testing , IMN only outputs the sentiment on the first token of an extracted aspect term to avoid sentiment inconsistency , to enable fair comparison , we also perform this operation on MNN and IN - ABSA .
-We also show results fora version of IMN that does not use document - level corpora , denoted as IMN ?d .
+We also show results for a version of IMN that does not use document - level corpora , denoted as IMN ?d .
 The structure of IMN ?d is shown as the solid lines in .
 It omits the information y ds , a ds i , and add i propagated from the documentlevel tasks in Eq. ( 4 ) .
 Results and Analysis
@@ -249,7 +249,7 @@ Here , we investigate the impact of the maximum number of iterations T .
 shows the change of F1 - I on the test sets as T increases .
 We find that convergence is quickly achieved within two or three iterations , and further iterations do not provide considerable performance improvement .
 Case study .
-To better understand in which conditions the proposed method helps , we examine the instances that are misclassified by PIPELINE and INABSA , but correctly classified by IMN .
+To better understand in which conditions the proposed method helps , we examine the instances thatare misclassified by PIPELINE and INABSA , but correctly classified by IMN .
 For aspect extraction , we find the message passing mechanism is particularly helpful in two scenarios .
 First , it helps to better recognize uncommon aspect terms by utilizing information from the opinion contexts .
 As shown in example 1 in : Case analysis .
@@ -291,12 +291,12 @@ take take opinion information during training .
 To make fair comparison , we add labels { BP , IP } to the original label sets of MNN , INABSA , and DECNN , indicating the beginning of and inside of an opinion term .
 We train those models on training sets with both aspect and opinion term labels to perform co-extraction as well .
 In addition , for pipeline methods , we also make the gold opinion terms available to the AS models ( ALSTM and dTrans ) during training .
-To make ALSTM and dTrans utilize the opinion label information , we modify their attention layer to assign higher weights to tokens that are more likely to be part of an opinion term .
+To make ALSTM and dTrans utilize the opinion label information , we modify their attention layer to assign higher weights to tokens thatare more likely to be part of an opinion term .
 This is reasonable since the objective of the attention mechanism in an AS model is to find the relevant opinion context .
 The attention weight of the ith token before applying softmax normalization in an input sentence is modified as : a i = a i * P op i
 where a i denotes the attention weight computed by the original attention layer , pop i denotes the probability that the ith token belongs to any opinion term .
 a i denotes the modified attention weights .
-At the training phase , since the gold opinion terms are provided , pop i = 1 for the tokens that are part of the gold opinion terms , while pop i = 0 for the other tokens .
+At the training phase , since the gold opinion terms are provided , pop i = 1 for the tokens thatare part of the gold opinion terms , while pop i = 0 for the other tokens .
 At the testing phase , pop i is computed based on the predictions from the AE model in the pipeline method .
 It is computed by summing up the predicted probabilities on the opinion - related labels BP and IP for the ith token .
 We also present the comparison results in a setting without using opinion term labels in Table 7 12 .
@@ -304,7 +304,7 @@ In this setting , we modify the proposed IMN and IMN ?d to recognize aspect term
 We exclude the results of the pipeline methods with CMLA , as CMLA relies on opinion term labels during training .
 It is difficult to modify it. in AE .
 The opinion transmission operation , which sends the opinion term predictions from AE to AS , is omitted as well .
-Both IMN ?d and IMN still significantly outperform other baselines inmost cases under this setting .
+Both IMN ?d and IMN still significantly outperform other baselines in most cases under this setting .
 In addition , when compare the results in and , we observe that IMN ?d and IMN consistently yield better F1 - I scores on all datasets in , when opinion term extraction is also considered .
 Consistent improvements are not observed in other baseline methods when trained with opinion term labels .
 These findings suggest that knowledge obtained from learning opinion term extraction is indeed beneficial , however , a carefully - designed network structure is needed to utilize such information .

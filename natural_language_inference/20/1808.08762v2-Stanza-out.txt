@@ -49,11 +49,11 @@ of a forward and backward LSTMs
 The max pooling layer produces a vector of the same dimensionality ash t , returning , for each dimension , its maximum value over the hidden units ( h 1 , . . . , h T ) .
 Motivated by the strong results of the BiLSTM max pooling network by , we experimented with combining BiLSTM max pooling networks in a hierarchy - like structure .
 1 To improve the BiLSTM layers ' ability to remember the input words , we let each layer of the network re-read the input embeddings instead of stacking the layers in a strict hierarchical model .
-In this way , our model acts as an iterative refinement architecture that reconsiders the input in each layer while being informed by the previous layer through initialisation .
+In this way , our model acts as an iterative refinement architecture that reconsiders the input in each layer while being informed by the previous layer through initialis ation .
 This creates a hierarchy of refinement layers and each of them contributes to the NLI classification by max pooling the hidden states .
 In the following we refer to that architecture with the abbreviation HBMP .
 Max pooling is defined in the standard way of taking the highest value over each dimension of the hidden states and the final sentence embedding is the concatenation of those vectors coming from each BiLSTM layer .
-The overall architecture is illustrated in .
+The over all architecture is illustrated in .
 To summarize the differences between our model and traditional stacked BiLSTM architectures we can list the following three main aspects : setup that does not transfer knowledge between layers but also combines information from three separate BiLSTM layers for the final classification .
 The second model ( BiLSTM - Ens - Train ) adds a trainable initialization to each layer to study the impact of the hierarchical initialization that we propose in our architecture .
 The third model ( BiLSTM - Ens - Tied ) connects the three layers by tying parameters to each other .
@@ -85,7 +85,7 @@ To further study the performance of HBMP , we train our architecture with three 
 the Stanford Natural Language Inference ( SNLI ) corpus , the Multi - Genre Natural Language Inference ( MultiNLI ) corpus , the Textual Entailment Dataset from Science Question Answering ( SciTail ) .
 Note that we treat them as separate tasks and do not mix any of the training , development and test data in our NLI experiments .
 We further perform additional linguistic error analyses using the MultiNLI Annotation Dataset and the Breaking NLI dataset .
-Finally , in order to test the ability of the model to learn generalpurpose representations , we apply the downstream tasks that are bundled in the SentEval package for sentence embedding evaluation .
+Finally , in order to test the ability of the model to learn generalpurpose representations , we apply the downstream tasks thatare bundled in the SentEval package for sentence embedding evaluation .
 Note that we combine SNLI and MultiNLI data in those experiments in order to be compatible with related work .
 Below we provide a few more details about each of the evaluation frameworks .
 SNLI :
@@ -160,7 +160,7 @@ Unlike for the SNLI and both of the MultiNLI datasets , on the SciTail dataset o
 Infer Sent has slightly higher accuracy on entailment , whereas HBMP outperforms InferSent on neutral .
 contains the confusion matrices for the SciTail dataset comparing the HBMP to InferSent .
 This analysis reveals that our model mainly suffers in recall on entailment detection whereas it performs well for neutral with respect to recall .
-It is difficult to say what the reason might be for the mismatch between the two systems but the overall performance of our architecture suggests that it is superior to the InferSent model even though the balance between precision and recall on individual labels is different .
+It is difficult to say what the reason might be for the mismatch between the two systems but the over all performance of our architecture suggests that it is superior to the InferSent model even though the balance between precision and recall on individual labels is different .
 The error analysis of the MultiNLI dataset is not standard as it can not be based on test data .
 As the labeled test data is not openly available for MultiNLI , we analyzed the error statistics for this dataset based on the development data .
 For the matched dataset ( MultiNLI - m ) our model had a development accuracy of 74.1 % .
@@ -182,7 +182,7 @@ Linguistic Error Analysis of NLI Classifications
 The MultiNLI annotation set makes it possible to conduct a detailed analysis of different linguistic phenomena when predicting inferential relationships .
 We use this to compare our model to InferSent with respect to the type of linguistic properties .
 MultiNLI - mismatched confusion matrices for HBMP and InferSent .
-that are present in the given sentence pairs .
+thatare present in the given sentence pairs .
 contains the comparison for the MultiNLI - mm dataset .
 The analysis shows that our HBMP model outperforms InferSent with antonyms , coreference links , modality , negation , paraphrases and tense differences .
 It also produces improved scores for most of the other categories in entailment detection .
@@ -196,12 +196,12 @@ In the second experiment we conducted testing of the proposed sentence embedding
 The test set is designed to highlight the lack of lexical reasoning capability of NLI systems .
 For the Breaking NLI experiment , we trained our HBMP model and the InferSent model using the SNLI training data .
 We compare our results with the results published by and to results obtained with InferSent sentence encoder ( our implementation ) .
-The results show that our HBMP model outperforms the InferSent model in 7 out of 14 categories , receiving an overall score of 65.1 % ( InferSent : 65.6 % ) .
+The results show that our HBMP model outperforms the InferSent model in 7 out of 14 categories , receiving an over all score of 65.1 % ( InferSent : 65.6 % ) .
 Our model is especially strong with handling antonyms , which shows a good level of semantic abstraction on the lexical level .
 Infer Sent fares well in narrow categories like drinks , instruments and planets , which may indicate a problem of overfitting to prominent examples in the training data .
 The strong result on the synonyms class may also come from a significant representation of related examples in training .
 However , more detailed investigations are necessary to verify this hypothesis .
-Our model also compares well against the other models , outperforming Decomposable Attention model ( 51.90 % ) and Residual Encoders ( 62.20 % ) in the overall score .
+Our model also compares well against the other models , outperforming Decomposable Attention model ( 51.90 % ) and Residual Encoders ( 62.20 % ) in the over all score .
 As these models are not based purely on sentence embeddings , the obtained result highlights that sentence embedding approaches can be competitive when handling inferences requiring lexical information .
 The results of the comparison are summarized in .
 Transfer Learning
@@ -220,9 +220,9 @@ model outperforms the InferSent model in 8 out of 10 probing tasks .
 The results are listed in .
 Looking at both the downstream and the probing tasks we can observe strong results of our model compared to the InferSent model that already demonstrated good general abstractions on the sentence level according to the original publication by .
 Hence , HBMP does not only provide competitive NLI .
-scores but also produces improved sentence embeddings that are useful for other tasks .
+scores but also produces improved sentence embeddings thatare useful for other tasks .
 Conclusion
-In this paper we have introduced an iterative refinement architecture ( HBMP ) based on BiLSTM layers with max pooling that achieves anew state of the art for SciTail and strong results in the SNLI and MultiNLI sentence - encoding category .
+In this paper we have introduced an iterative refinement architecture ( HBMP ) based on BiLSTM layers with max pooling that achieves a new state of the art for SciTail and strong results in the SNLI and MultiNLI sentence - encoding category .
 We carefully analyzed the performance of our model with respect to the label categories and the errors it produces in the various NLI benchmarks .
 We demonstrate that our model outperforms InferSent in nearly all cases with substantially reduced confusion between classes of inferential relationships .
 The linguistic analysis on MultiNLI also reveals that our approach is robust across the various categories and outperforms InferSent on , for example , antonyms and negations that require a good level of semantic abstraction .

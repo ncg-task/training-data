@@ -7,7 +7,7 @@ In this paper , we propose a regularized graph neural network ( RGNN ) for EEG -
 Specifically , we model the inter-channel relations in EEG signals via an adjacency matrix in our graph neural network where the connection and sparseness of the adjacency matrix are supported by the neurosicience theories of human brain organization .
 In addition , we propose two regularizers , namely node - wise domain adversarial training ( NodeDAT ) and emotion - aware distribution learning ( EmotionDL ) , to improve the robustness of our model against cross - subject EEG variations and noisy labels , respectively .
 To thoroughly evaluate our model , we conduct extensive experiments in both subject - dependent and subject - independent classification settings on two public datasets : SEED and SEED - IV .
-Our model obtains better performance than competitive baselines such as SVM , DBN , DGCNN , BiDANN , and the state - of - the - art BiHDM inmost experimental settings .
+Our model obtains better performance than competitive baselines such as SVM , DBN , DGCNN , BiDANN , and the state - of - the - art BiHDM in most experimental settings .
 Our model analysis demonstrates that the proposed biologically supported adjacency matrix and two regularizers contribute consistent and significant gain to the performance .
 Investigations on the neuronal activities reveal that pre-frontal , parietal and occipital regions maybe the most informative regions for emotion recognition , which is consistent with relevant prior studies .
 In addition , experimental results suggest that global inter-channel relations between the left and right hemispheres are important for emotion recognition and local inter-channel relations between ( FP1 , AF3 ) , ( F6 , F8 ) and ( FP2 , AF4 ) may also provide useful information .
@@ -65,7 +65,7 @@ Our model is biologically supported and captures both local and global inter-cha
 2 ) We propose two regularizers : a node - wise domain adversarial training ( NodeDAT ) and an emotionaware distribution learning ( EmotionDL ) , which aim to improve the robustness of our model against cross - subject variations and noisy labels , respectively .
 3 ) We conduct extensive experiment in both subjectdependent and subject - independent classification settings on two public EEG datasets , namely SEED and SEED - IV .
 Experimental results demonstrate the effectiveness of our proposed model and regularizers .
-In addition , our RGNN achieves superior performance over the state - of - the - art baselines inmost experimental settings .
+In addition , our RGNN achieves superior performance over the state - of - the - art baselines in most experimental settings .
 4 ) We investigate the neuronal activities and the results reveal that pre-frontal , parietal and occipital regions maybe the most informative regions for emotion recognition .
 In addition , global inter-channel relations between the left and right hemispheres are important and local inter-channel relations between ( FP1 , AF3 ) , ( F6 , F8 ) and ( FP2 , AF4 ) may also provide useful information .
 RELATED WORK
@@ -256,12 +256,12 @@ In SEED - IV , there are four classes : neutral , sad , fear , and happy with co
 We can convert Y as follows :
 The intuition behind this conversion is based on the distances between the four emotions on the valence - arousal plane .
 Specifically , in the self - reported ratings , neutral , sad , fear , and happy movie ratings cluster in the zero valence zero arousal , negative valence negative arousal , negative valence positive arousal , and positive valence positive arousal regions , respectively .
-Thus , we assume that participants are likely to generate emotions that have similar ratings in either valence or arousal dimensions , e.g. , both angry and happy have high arousal , but unlikely to generate emotions that are faraway in both dimensions , e.g. , sad and happy are different in both valence and arousal .
+Thus , we assume that participants are likely to generate emotions that have similar ratings in either valence or arousal dimensions , e.g. , both angry and happy have high arousal , but unlikely to generate emotions thatare faraway in both dimensions , e.g. , sad and happy are different in both valence and arousal .
 After obtaining the converted class distributions ? , our model can be optimized by minimizing the following Kullback - Leibler ( KL ) divergence instead of ( 11 ) :
 where p ( Y| X i , ? ) denotes the output probability distribution computed via .
 Note that our EmotionDL is different from label smoothing , which simply adds uniform noise to other classes .
 Optimization of RGNN
-Combining both NodeDAT and Emotion DL , the overall loss function ?
+Combining both NodeDAT and Emotion DL , the over all loss function ?
 of RGNN is computed as follows :
 The detailed algorithm for training RGNN is presented in Algorithm
 1 . repeat Draw one batch of training samples X B and ?
@@ -301,7 +301,7 @@ Subject - Dependent Classification
 Subject - Independent Classification
 Similar to , presents the subject - independent classification results .
 When using features from all frequency bands , our model performs marginally worse than BiHDM on SEED but much better than BiHDM on SEED - IV ( nearly 5 % improvement ) .
-In addition , our model achieves the lowest standard deviation inaccuracy compared to all baselines on both datasets , demonstrating the robustness of our model .
+In addition , our model achieves the lowest standard deviation in accuracy compared to all baselines on both datasets , demonstrating the robustness of our model .
 Comparing the results shown in Tables 1 and 2 , we find that the accuracy obtained in subject - independent settings is consistently worse than the accuracy obtained in subjectdependent settings by around 5 % to 30 % for every model .
 This finding is unsurprising because the variability of EEG signals across subjects makes subject - independent classification more challenging .
 However , the interesting part is that the performance gap between these two settings is gradually decreasing from around 27 % on SEED and 19 % on SEED - IV using SVM to around 9 % on SEED and 6 % on SEED - IV using our model .
@@ -386,7 +386,7 @@ In this paper , we propose a regularized graph neural network for emotion recogn
 Our model is biologically supported to capture both local and global inter-channel relations .
 In addition , we propose two regularizers , namely NodeDAT and Emotion DL , to improve the robustness of our model against cross - subject EEG variations and noisy labels .
 We evaluate our model in both subject - dependent and subject - independent classification settings on two public datasets SEED and SEED - IV .
-Our model obtains better performance than a few competitive baselines such as SVM , DBN , DGCNN , BiDANN , and the state - of - the - art BiHDM inmost classification settings .
+Our model obtains better performance than a few competitive baselines such as SVM , DBN , DGCNN , BiDANN , and the state - of - the - art BiHDM in most classification settings .
 Notably , our model achieves accuracy of 79.37 % and 73 . 84 % in subject - dependent and subject - independent classifications on SEED - IV , respectively , outperforming the current stateof - the - art model by around 5 % .
 Our model analysis demonstrates that our proposed biologically supported adjacency matrix and two regularizers contribute consistent and significant gain to the performance of our model .
 Investigations on the neuronal activities reveal that pre-frontal , parietal and occipital regions maybe the most informative regions in emotion recognition .

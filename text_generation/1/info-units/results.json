@@ -9,7 +9,9 @@
                 "more favourably" : {
                   "against" : "compared methods"
                 },
-                "from sentence" : "It can be seen that the proposed RankGAN performs more favourably against the compared methods ."                
+                "from sentence" : "Simulation on synthetic data
+It can be seen that the proposed RankGAN performs more favourably against the compared methods ."
+
               }
             },
             "MLE , PG - BLEU and SeqGAN" : {
@@ -17,8 +19,7 @@
                 "converge" : {
                   "after" : "200 training epochs"
                 }
-              },
-              "from sentence" : "While MLE , PG - BLEU and SeqGAN tend to converge after 200 training epochs , the proposed RankGAN consistently improves the language generator and achieves relatively lower NLL score ."
+              }
             },
             "proposed RankGAN" : {
               "consistently improves" : "language generator",
@@ -44,9 +45,11 @@
         "Chinese poems composition" : {
           "estimate" : {
             "similarity" : {
-              "between" : "human-written poem and the machine-created one"
+              "between" : "human - written poem and the machine - created one"
             },
-            "from sentence" : "Following the evaluation protocol in , we compute the BLEU - 2 score and estimate the similarity between the human - written poem and the machine - created one ."
+            "from sentence" : "Results on Chinese poems composition
+Following the evaluation protocol in , we compute the BLEU - 2 score and estimate the similarity between the human - written poem and the machine - created one ."
+
           },
           "seen that" : {
             "proposed Rank GAN" : {
@@ -85,7 +88,9 @@
                   }
                 }
               },
-              "from sentence" : "RankGAN achieves better performance than the other methods in terms of different BLEU scores ."
+              "from sentence" : "Results on COCO image captions
+RankGAN achieves better performance than the other methods in terms of different BLEU scores ."
+
             },
             "our model" : {
               "able to generate" : {
@@ -131,7 +136,9 @@
                   }
                 }
               },
-              "from sentence" : "As can be seen , the proposed method achieves consistently higher BLEU score than the other methods in terms of the different n-grams criteria ."
+              "from sentence" : "Results on Shakespeare 's plays
+As can be seen , the proposed method achieves consistently higher BLEU score than the other methods in terms of the different n-grams criteria ."
+
             },
             "proposed RankGAN" : {
               "is able to capture" : {

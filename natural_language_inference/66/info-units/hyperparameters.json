@@ -20,8 +20,7 @@
       },
       "has" : {
         "initial learning rate" : {
-          "set to" : "0.001",
-          "from sentence" : "The initial learning rate is set to be 0.001 with a decay ratio of 0.95 for each iteration ."
+          "set to" : "0.001"
         },
         "decay ratio" : {
           "of" : {

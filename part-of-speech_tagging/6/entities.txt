@@ -47,11 +47,12 @@
 91	50	84	about 7 % absolute lower LAS score
 91	85	89	than
 91	90	109	Stack - propagation
-91	107	109	on
+91	110	112	on
 91	113	125	Dutch ( nl )
 94	0	14	Without taking
 94	17	19	nl
-94	22	34	into account
+94	22	26	into
+94	27	34	account
 94	41	59	averaged LAS score
 94	60	64	over
 94	65	88	all remaining languages
@@ -68,7 +69,7 @@
 96	184	214	morphologically rich languages
 96	215	218	get
 96	222	242	averaged improvement
-96	50	52	of
+96	123	125	of
 96	246	251	9.3 %
 98	9	14	jPDTP
 98	31	39	good for

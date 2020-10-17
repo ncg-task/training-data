@@ -1,5 +1,4 @@
 51	33	69	https://github.com/Websail-NU /CODAH
-24	44	51	Dataset
 24	18	27	introduce
 24	32	96	COmmonsense Dataset Adversarially - authored by Humans ( CODAH )
 24	97	100	for
@@ -17,13 +16,13 @@
 114	123	125	of
 114	126	128	16
 114	131	144	learning rate
-114	123	125	of
+114	145	147	of
 114	148	155	2 e - 5
 114	164	170	epochs
 114	162	163	3
 115	132	140	replaced
 115	145	165	5e - 5 learning rate
-115	7	9	in
+115	166	168	in
 115	173	193	original grid search
 115	194	198	with
 115	199	206	1 e - 5
@@ -61,8 +60,8 @@
 26	81	108	correct sentence completion
 26	114	130	before and after
 26	131	144	fine - tuning
-26	36	38	on
-26	151	183	ample of the submitted questions
+26	145	147	on
+26	150	183	sample of the submitted questions
 2	36	54	Question Answering
 4	0	21	Commonsense reasoning
 16	84	115	commonsense reasoning over text
@@ -77,10 +76,10 @@
 122	101	109	accuracy
 122	110	112	of
 122	113	119	84.2 %
-122	40	42	on
+122	120	122	on
 122	123	127	BERT
 122	132	138	80.2 %
-122	40	42	on
+122	139	141	on
 122	142	145	GPT
 123	76	81	train
 123	86	92	models
@@ -89,7 +88,7 @@
 123	105	107	of
 123	108	128	2,241 SWAG questions
 123	208	216	evaluate
-123	93	95	on
+123	193	195	on
 123	229	253	full SWAG validation set
 124	5	13	produces
 124	17	25	accuracy
@@ -98,5 +97,5 @@
 124	36	39	for
 124	40	44	BERT
 124	92	98	63.6 %
-124	36	39	for
+124	99	102	for
 124	103	106	GPT

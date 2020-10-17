@@ -3,11 +3,11 @@
 133	14	35	basic baseline method
 133	44	51	assigns
 133	56	82	largest sentiment polarity
-133	25	27	in
+133	83	85	in
 133	90	102	training set
 133	103	105	to
 133	106	117	each sample
-133	25	27	in
+133	118	120	in
 133	125	133	test set
 134	0	4	LSTM
 134	10	14	uses
@@ -26,8 +26,8 @@
 136	90	94	with
 136	95	101	target
 136	110	123	right context
-136	90	94	with
-136	95	101	target
+136	124	128	with
+136	129	135	target
 138	0	9	AE - LSTM
 138	10	20	represents
 138	21	28	targets
@@ -35,16 +35,16 @@
 138	34	51	aspect embeddings
 140	0	11	ATAE - LSTM
 140	25	33	based on
-140	2	11	AE - LSTM
+140	34	43	AE - LSTM
 125	21	40	all word embeddings
 125	41	45	from
 125	46	64	context and target
 125	69	83	initialized by
 125	84	89	GloVe
 125	98	129	all out - of - vocabulary words
-125	69	83	initialized by
+125	134	148	initialized by
 125	149	157	sampling
-125	41	45	from
+125	158	162	from
 125	167	204	uniform distribution U ( ?0.1 , 0.1 )
 126	4	19	weight matrices
 126	24	35	given their
@@ -67,7 +67,7 @@
 129	66	72	set to
 129	73	78	10 ?5
 129	89	101	dropout rate
-129	66	72	set to
+129	105	111	set to
 129	112	115	0.5
 128	3	8	train
 128	13	23	parameters
@@ -77,11 +77,11 @@
 128	47	55	Momentum
 128	64	68	adds
 128	71	79	fraction
-128	24	26	of
+128	82	84	of
 128	89	102	update vector
-128	6	8	in
+128	103	105	in
 128	110	120	prior step
-128	99	101	to
+128	121	123	to
 128	128	149	current update vector
 42	44	51	propose
 42	55	98	interactive attention network ( IAN ) model
@@ -99,7 +99,7 @@
 43	100	107	context
 43	112	119	compute
 43	120	142	context representation
-43	81	84	for
+43	143	146	for
 43	147	171	sentiment classification
 44	14	26	makes use of
 44	31	54	interactive information
@@ -107,7 +107,7 @@
 44	60	67	context
 44	68	80	to supervise
 44	85	93	modeling
-44	24	26	of
+44	94	96	of
 44	101	107	target
 45	88	96	predicts
 45	101	119	sentiment polarity
@@ -131,7 +131,7 @@
 144	46	85	all the neural network baseline methods
 146	0	9	TD - LSTM
 146	10	21	outperforms
-146	5	9	LSTM
+146	22	26	LSTM
 146	27	31	over
 146	32	55	1 percent and 2 percent
 146	56	58	on
@@ -148,7 +148,7 @@
 151	85	109	context words and target
 151	125	143	better performance
 151	144	148	than
-151	14	23	AE - LSTM
+151	149	158	AE - LSTM
 159	4	19	more attentions
 159	24	31	paid to
 159	32	39	targets
@@ -158,7 +158,7 @@
 149	4	29	AE - LSTM and ATAE - LSTM
 149	37	44	capture
 149	45	66	important information
-149	55	57	in
+149	67	69	in
 149	74	81	context
 149	82	86	with
 149	91	102	supervision
@@ -166,7 +166,7 @@
 149	106	112	target
 149	117	125	generate
 149	126	157	more reasonable representations
-149	57	60	for
+149	158	161	for
 149	162	201	aspect - level sentiment classification
 150	12	15	see
 150	21	46	AE - LSTM and ATAE - LSTM

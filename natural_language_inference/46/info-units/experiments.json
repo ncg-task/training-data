@@ -13,8 +13,7 @@
                         "significantly outperforming" : {
                           "has" : "all other proposed methods"
                         },
-                        "from sentence" : "Reading Summaries
-Only
+                        "from sentence" : "Reading Summaries Only
 This is indeed the case , with the neural span prediction model significantly outperforming all other proposed methods ."
 
                       }
@@ -66,7 +65,9 @@ As expected ( and desired ) , we observe a decline in performance of the span- s
                           "has" : "simple no -context Seq2Seq baseline",
                           "in terms of" : "MRR"
                         },
-                        "from sentence" : "The AS Reader , which was the better - performing model on the summaries task , underperforms the simple no -context Seq2Seq baseline ( shown in ) in terms of MRR ."                    
+                        "from sentence" : "Reading Full Stories Only
+The AS Reader , which was the better - performing model on the summaries task , underperforms the simple no -context Seq2Seq baseline ( shown in ) in terms of MRR ."
+
                       }
                     }
                   },

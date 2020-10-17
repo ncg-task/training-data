@@ -17,14 +17,14 @@ As reported in , a target - dependent biLSTM is ineffective , both in terms of a
 Intuitively , we would expect that a model which better captures linguistic structure via the original word sequencing should perform better , which provides the motivation for this research .
 More recently , successful works in ( T ) ABSA have explored the idea of leveraging external memory .
 Their models are largely based on memory networks , originally developed for reasoning - focused machine reading comprehension tasks .
-In contrast to memory networks , where each input sentence / word occupies a memory slot and is then accessed via attention independently , recent advances in machine reading suggest that processing inputs sequentially is beneficial to overall performance .
+In contrast to memory networks , where each input sentence / word occupies a memory slot and is then accessed via attention independently , recent advances in machine reading suggest that processing inputs sequentially is beneficial to over all performance .
 However , successful machine reading models may not be directly applicable to TABSA due to the key difference in the granularity of inputs between the two tasks : on the Children 's Book Test corpus ( CBT ) , for example , competitive models take as input a window of text , centred around candidate entities , with crucial information contained within that window .
 In TABSA , given the fine - grained nature of the task , it is common practice for models to operate at the word - rather than chunk / sentencelevel .
 It is not uncommon to see examples like Example ( 1 ) , where the sentence starts with LOC1 , but the negative PRICE sentiment towards the entity is not expressed until much later .
 Moreover , phrases such as best bet and although play the role of triggers , indicating that succeeding tokens bear aspect / sentiment signal .
 This key difference necessitates the ability to model the delayed activation of memory updates .
 In this work , we propose a novel model architecture for TABSA , augmented with multiple " memory chains " , and equipped with a delayed memory update mechanism , to keep track of numerous entities independently .
-We evaluate the effectiveness of the proposed model over the task of TABSA , and achieve substantial improvements over a number of baselines , including one incorporating external knowledge bases , setting anew state of the art in both sentiment classification and aspect detection .
+We evaluate the effectiveness of the proposed model over the task of TABSA , and achieve substantial improvements over a number of baselines , including one incorporating external knowledge bases , setting a new state of the art in both sentiment classification and aspect detection .
 Methodology
 Task description .
 In TABSA , a sentence s typically consists of a sequence of words : {w 1 , . . . , w i , . . . , w m } where w i denotes words interleaved with one or more targets ( t ) , which we assume to be pre-identified as with LOC1 and LOC2 in Example ( 1 ) .
@@ -52,8 +52,8 @@ h j i is the unnormalised memory representation for the j - th entity .
 Essentially , gate ? ?
 g j i determines how much the j - th memory should be updated , factoring in three elements : ( 1 ) how similar the current input w i is to the entity being tracked ( k j ) ; ( 2 ) how related the current input w i is to the state of the j - th entity ( ? ? h j i?1 ) ; and how past activation should influence the current one .
 Update of the memory of an entity is only triggered when the gate is activated .
-Normalisation .
-Following the update , the model performs a normalisation step , allowing the memory to forget :
+Normalis ation .
+Following the update , the model performs a normalis ation step , allowing the memory to forget :
 As all information stored in ? ?
 h j i is constrained to be of unit length , when new information ? ?
 h j i is added to the existing memory ? ? h j i?1 , the cosine distance between the original and updated memory decreases , allowing the model to forget information deemed out - of - date .

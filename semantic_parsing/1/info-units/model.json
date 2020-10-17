@@ -5,8 +5,7 @@
         "TRANX" : {
           "name" : "TRANsition - based abstract syntaX parser",
           "for" : "semantic parsing and code generation",
-          "from sentence" : "Inspired by this existing research , we have developed TRANX , a TRANsition - based abstract synta
-X parser for semantic parsing and code generation ."
+          "from sentence" : "Inspired by this existing research , we have developed TRANX , a TRANsition - based abstract syntaX parser for semantic parsing and code generation ."
 
         }
       },
@@ -34,7 +33,9 @@ X parser for semantic parsing and code generation ."
                       }
                     }  
                   },
-                  "from sentence" : "Generalization ability TRANX employs ASTs as a general - purpose intermediate meaning representation , and the task - dependent grammar is provided to the system as external knowledge to guide the parsing process , therefore decoupling the semantic parsing procedure with specificities of grammars ."
+                  "from sentence" : "TRANX is designed with the following principles in mind :
+Generalization ability TRANX employs ASTs as a general - purpose intermediate meaning representation , and the task - dependent grammar is provided to the system as external knowledge to guide the parsing process , therefore decoupling the semantic parsing procedure with specificities of grammars ."
+
                 },
                 "Extensibility" : {
                   "uses" : {
@@ -52,7 +53,9 @@ X parser for semantic parsing and code generation ."
                         "code generation" : {"name" : ["DJANGO", "WIKISQL"]}
                       }
                     },
-                    "from sentence" : "We test TRANX on four semantic parsing ( ATIS , GEO ) and code generation ( DJANGO , WIKISQL ) tasks , and demonstrate that TRANX is capable of generalizing to different domains while registering strong performance , out - performing existing neural networkbased approaches on three of the four datasets ( GEO , ATIS , DJANGO ) ."
+                    "from sentence" : "Effectiveness
+We test TRANX on four semantic parsing ( ATIS , GEO ) and code generation ( DJANGO , WIKISQL ) tasks , and demonstrate that TRANX is capable of generalizing to different domains while registering strong performance , out - performing existing neural networkbased approaches on three of the four datasets ( GEO , ATIS , DJANGO ) ."
+
                   }
                 }
               }

@@ -9,34 +9,29 @@
       },
       "has" : {
         "number of Transformer blocks" : {
-          "is" : "12",
-          "from sentence" : "The number of Transformer blocks is 12 , the hidden layer size is 768 , the number of self - attention heads is 12 , and the total number of parameters for the pretrained model is 110M ."    
+          "is" : "12"
         },
         "hidden layer size" : {
-          "is" : "768",
-          "from sentence" : "The number of Transformer blocks is 12 , the hidden layer size is 768 , the number of self - attention heads is 12 , and the total number of parameters for the pretrained model is 110M ."    
+          "is" : "768"
         },
         "number of self - attention heads" : {
-          "is" : "12",
-          "from sentence" : "The number of Transformer blocks is 12 , the hidden layer size is 768 , the number of self - attention heads is 12 , and the total number of parameters for the pretrained model is 110M ."    
+          "is" : "12"
         },
         "total number of parameters" : {
           "for" : "pretrained model",
           "is" : "110M",
           "from sentence" : "The number of Transformer blocks is 12 , the hidden layer size is 768 , the number of self - attention heads is 12 , and the total number of parameters for the pretrained model is 110M ."    
         },
-        "dropout probability" : {
-          "at" : "0.1",
-          "from sentence" : "the dropout probability at 0.1 , set the number of epochs to 4 ."
-        },
         "initial learning rate" : {
-          "is" : "2 e - 5",
-          "from sentence" : "The initial learning rate is 2 e - 5 , and the batch size is 24 ."
+          "is" : "2 e - 5"
         },
         "batch size" : {
           "is" : "24",
           "from sentence" : "The initial learning rate is 2 e - 5 , and the batch size is 24 ."
-        }
+        },
+        "dropout probability" : {
+          "at" : "0.1"
+        }		
       },
       "set" : {
         "number of epochs" : {

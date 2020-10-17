@@ -20,7 +20,7 @@ SA gained a lot of interest from researchers who recognised its importance and b
 However , most of the work is focused on English whereas Arabic did not receive much attention until recently , but it still lacks behind due to the many challenges of the Arabic language ; including the large variety in dialects and the complex morphology of the language .
 Recently , the world witnessed a strong revolution in deep learning which was the driving force for many improvements in many fields .
 The work on English NLP started utilising deep learning models from an early stage , then followed by Arabic NLP .
-The utilisation of deep learning for Arabic SA started to receive more attention recently showing significant improvement in performance .
+The utilis ation of deep learning for Arabic SA started to receive more attention recently showing significant improvement in performance .
 While there is a considerable amount of work that studies Arabic SA , to the best of our knowledge , there is no existing open - source tool for Arabic SA that could be used directly .
 The only work that we are aware of is SentiStrength 1 , which is mainly developed for English , but supports other languages including Arabic .
 However , it uses a basic dictionary - based approach that works with Arabic MSA and terribly fails with dialects which is the main language used in social media .
@@ -45,7 +45,7 @@ They studied the effect of segmentation in representing the lexical input , also
 In SemEval 2017 , a sentiment analysis task was presented that included Arabic .
 were ranked first in SemEval 2017 task for Arabic SA .
 They used a set of hand - engineered and lexicon - based features , the classifier of choice was a complement NB classifier .
-The second rank in the same task was for the work of Jabreel and Moreno ( 2017 ) , who introduced a rich set of features that are mostly based on bag of words ( BoW ) model in addition to some features extracted from word embeddings .
+The second rank in the same task was for the work of Jabreel and Moreno ( 2017 ) , who introduced a rich set of features thatare mostly based on bag of words ( BoW ) model in addition to some features extracted from word embeddings .
 They used SVM as their classification algorithm .
 proposed a set of word embeddings to be used for Arabic SA , which was built using a corpus of 3.4 billion words .
 They used a convolutional neural network ( CNN ) based system to evaluate their embeddings and the results were promising .
@@ -67,12 +67,12 @@ Among the previous mentioned work , we are not aware of any released open - sour
 While there are many Arabic NLP tools for various tasks , including segmentation , POS tagging , and diacritization , the Arabic NLP research community still lack a tool for sentiment analysis .
 In this work , we offer the first opensource SA tool for Arabic social media .
 Methodology
-This section describes the different components and steps that are used by our system , Mazajak .
+This section describes the different components and steps thatare used by our system , Mazajak .
 Data Preprocessing
 In general , this step is an initial step that aims to reduce the inconsistencies and normalise the data into a coherent form so that it can be handled easily .
 The steps are mainly based on the work in .
 In our implementation , we used the following steps :
-Letter normalisation : unifying the letters that appear in different forms .
+Letter normalis ation : unifying the letters that appear in different forms .
 We replace .
 Elongation removal : removing the repeated letters which might appear specially in social media data .
 Cleaning : removing unknown characters , diacritics , punctuation , URLs , etc .
@@ -131,7 +131,7 @@ This , in turn , would help to continuously collect more training data .
 The collected data is used periodically to update our model to improve the system performance .
 Batch Mode : where the user provides a file with multiple lines of text , and the system returns back an output file with the corresponding sentiment to each line in the input file .
 Timeline mode : where the user provides a Twitter account name , and the system will analyse the sentiment of the tweets in the account 's timeline .
-The output is a graph showing the number of the tweets of each of the classes overtime and an overall ratio of the percentages of the tweets corresponding to each class as shown in . Online API : where an API could be downloaded to help other research that utilises sentiment analysis .
+The output is a graph showing the number of the tweets of each of the classes overtime and an over all ratio of the percentages of the tweets corresponding to each class as shown in . Online API : where an API could be downloaded to help other research that utilises sentiment analysis .
 The API provides two functions , either getting the sentiment of a sentence or a list of sentences .
 The API functions are provided in Python , but with a few lines of coding it can be accessed using other programming languages .
 shows some examples of classified tweets using the tool , these examples show that the model can handle the dialectal variations .

@@ -8,7 +8,7 @@ Introduction
 Question paraphrase identification is a widely useful NLP application .
 For example , in question - andanswer ( QA ) forums ubiquitous on the Web , there are vast numbers of duplicate questions .
 Identifying these duplicates and consolidating their answers increases the efficiency of such QA forums .
-Moreover , identifying questions with the same semantic content could help Web-scale question answering systems that are increasingly concentrating on retrieving focused answers to users ' queries .
+Moreover , identifying questions with the same semantic content could help Web-scale question answering systems thatare increasingly concentrating on retrieving focused answers to users ' queries .
 Here , we focus on a recent dataset published by the QA website Quora.com containing over 400 K annotated question pairs containing binary paraphrase labels .
 We believe that this dataset presents a great opportunity to the NLP research community and practitioners due to its scale and quality ; it can result in systems that accurately identify duplicate questions , thus increasing the quality of many QA forums .
 We examine a simple model family , the decomposable attention model of , that has shown promise in modeling natural language inference and has inspired recent work on similar tasks .
@@ -27,7 +27,7 @@ uses a character - based LSTM at its input representation layer , a layer of bi 
 In contrast , the decomposable attention model uses four simple feedforward networks to ( self - ) attend , compare and predict , leading to a more efficient architecture .
 BIMPM falls short of our best performing model pretrained on noisy paraphrase data and uses more parameters than our best model .
 Character - level modeling of text is a popular approach .
-While conceptually simple , character n-gram embeddings area highly competitive representation .
+While conceptually simple , character n-gram embeddings are a highly competitive representation .
 More complex representations built directly from individual characters have also been proposed .
 These representations are robust to out - of - vocabulary items , often producing improved results .
 Our pretraining procedure is reminiscent of several recent papers , inter alia ) who aim for general purpose character n-gram embeddings .
@@ -96,8 +96,7 @@ We duplicated the training set , which has approximately 36 % positive and 64 % 
 When pretraining the full model parameters , we use the Paralex corpus , which consists of 36 million noisy paraphrase pairs including duplicate reversed paraphrases .
 We created 64 million artificial negative paraphrase pairs ( reflecting the class balance of the Quora training set ) by combining the following three types of negatives in equal proportions : ( 1 ) random unrelated questions , ( 2 ) random questions that share a single word , and ( 3 ) random questions that share all but one word .
 5 Hyperparameters
-We tuned the following hyperparameters by grid search on the development set ( settings for our best model are in parenthesis ) : embedding dimension ( 300 ) , shape of all feedforward networks ( two layers with 400 and 200 width ) , character n -gram sizes ( 5 ) , context size ( 1 ) , learning rate ( 0.1 for both pretraining and tuning ) , batch size ( 256 for pretraining and 64 for tuning ) , dropout ratio ( 0.1 for tuning ) and prediction threshold ( positive paraphrase for a score ?
-0.3 ) .
+We tuned the following hyperparameters by grid search on the development set ( settings for our best model are in parenthesis ) : embedding dimension ( 300 ) , shape of all feedforward networks ( two layers with 400 and 200 width ) , character n -gram sizes ( 5 ) , context size ( 1 ) , learning rate ( 0.1 for both pretraining and tuning ) , batch size ( 256 for pretraining and 64 for tuning ) , dropout ratio ( 0.1 for tuning ) and prediction threshold ( positive paraphrase for a score ? 0.3 ) .
 We examined whether self - attention helps or not for all model variants , and found that it does for our best model .
 Note that we tried multiple orders of character n-.
 grams with n ? { 3 , 4 , 5 } both individually and separately but 5 - grams alone worked better than these alternatives .
@@ -116,8 +115,7 @@ Other than our baselines , we compare within .
 We observe that the simple FFNN baselines work better than more complex Siamese and Multi - Perspective CNN or LSTM models , more so if character n-gram based embeddings are used .
 Our basic decomposable attention model DECATT word without pre-trained embeddings is better than most of the models , all of which used GloVe embeddings .
 An interesting observation is that DECATT char model without any pretrained embeddings outperforms DE - CATT glove that uses task - agnostic GloVe embeddings .
-Furthermore , when character n-gram embeddings are pre-trained in a task - specific manner in DECATT paralex ?
-char model , we observe a significant boost in performance .
+Furthermore , when character n-gram embeddings are pre-trained in a task - specific manner in DECATT paralex ? char model , we observe a significant boost in performance .
 The final two rows of the table show results achieved by pt - DECATT word and pt - DECATT char .
 We note that the former falls short of the DE - CATT paralex ?
 char , which shows that character ngram representations are powerful .

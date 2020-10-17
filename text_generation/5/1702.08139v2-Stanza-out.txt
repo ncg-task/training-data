@@ -3,7 +3,7 @@ Improved Variational Autoencoders for Text Modeling using Dilated Convolutions
 abstract
 Recent work on generative text modeling has found that variational autoencoders ( VAE ) with LSTM decoders perform worse than simpler LSTM language models ( Bowman et al. , 2015 ) .
 This negative result is so far poorly understood , but has been attributed to the propensity of LSTM decoders to ignore conditioning information from the encoder .
-In this paper , we experiment with anew type of decoder for VAE : a dilated CNN .
+In this paper , we experiment with a new type of decoder for VAE : a dilated CNN .
 By changing the decoder 's dilation architecture , we control the size of context from previously generated words .
 In experiments , we find that there is a trade - off between contextual capacity of the decoder and effective use of encoding information .
 We show that when carefully managed , VAEs can outperform LSTM language models .
@@ -11,7 +11,7 @@ We demonstrate perplexity gains on two datasets , representing the first positiv
 Further , we conduct an in - depth investigation of the use of VAE ( with our new decoding architecture ) for semi-supervised and unsupervised labeling tasks , demonstrating gains over several strong baselines .
 Introduction
 Generative models play an important role in NLP , both in their use as language models and because of their ability to effectively learn from unlabeled data .
-By parameterzing generative models using neural nets , recent work has proposed model classes that are particularly expressive and can pontentially model a wide range of phenomena in language and other modalities .
+By parameterzing generative models using neural nets , recent work has proposed model classes thatare particularly expressive and can pontentially model a wide range of phenomena in language and other modalities .
 We focus on a specific instance 1 Carnegie Mellon University .
 Correspondence to : Zichao Yang < zichaoy@cs.cmu.edu >.
 Proceedings of the 34 th International Conference on Machine Learning , Sydney , Australia , PMLR 70 , 2017 .
@@ -24,7 +24,7 @@ The latent representation ( treated as a latent variable during training ) is in
 The choice of decoding architecture and final output distribution , which connect the latent representation to output , depends on the kind of data being modeled .
 The VAE owes it s name to an accompanying variational technique ) that has been successfully used to train such models on image data .
 The application of VAEs to text data has been far less successful .
-The obvious choice for decoding architecture fora textual VAE is an LSTM , atypical workhorse in NLP .
+The obvious choice for decoding architecture for a textual VAE is an LSTM , a typical workhorse in NLP .
 However , found that using an LSTM - VAE for text modeling yields higher perplexity on held - out data than using an LSTM language model .
 In particular , they observe that the LSTM decoder in VAE does not make effective use of the latent representation during training and , as a result , VAE collapses into a simple language model .
 Related work has used simpler decoders that model text as a bag of words .
@@ -37,14 +37,14 @@ Thus , by choosing a dilated CNN as the decoder , we are able to conduct experim
 We demonstrate that when this trade - off is correctly managed , textual VAEs can perform substantially better than simple LSTM language models , a finding consistent with recent image modeling experiments using variational lossy autoencoders .
 We goon to show that VAEs with carefully selected CNN decoders can be quite effective for semi-supervised classification and unsupervised clustering , outperforming several strong baselines ( from ) on both text categorization and sentiment analysis .
 Our contributions are as follows :
-First , we propose the use of a dilated CNN as anew decoder for VAE .
+First , we propose the use of a dilated CNN as a new decoder for VAE .
 We then empirically evaluate several dilation architectures with different capacities , finding that reduced contextual capacity leads to stronger reliance on latent representations .
 By picking a decoder with suitable contextual capacity , we find our VAE performs better than LSTM language models on two data sets .
 We also explore the use of dilated CNN VAEs for semi-supervised classification and find they perform better than strong baselines from .
 Finally , we verify that the same framework can be used effectively for unsupervised clustering .
 Model
 In this section , we begin by providing background on the use of variational autoencoders for language modeling .
-Then we introduce the dilated CNN architecture that we will use as anew decoder for VAE in experiments .
+Then we introduce the dilated CNN architecture that we will use as a new decoder for VAE in experiments .
 Finally , we describe the generalization of VAE that we will use to conduct experiments on semi-supervised classification .
 Background on Variational Autoencoders
 Neural language models typically generate each token x t conditioned on the entire history of previously generated tokens :
@@ -121,7 +121,7 @@ For labeled data ( x , y ) , this bound is :
 ?
 KL ( q ( z|x , y ) || p ( z ) ) + log p ( y ) = L ( x , y ) + log p ( y ) .
 For unlabeled data x , the label is treated as a latent variable , yielding :
-Combining the labeled and unlabeled data terms , we have the overall objective as :
+Combining the labeled and unlabeled data terms , we have the over all objective as :
 where ?
 controls the trade off between generative and discriminative terms .
 Gumbel - softmax :
@@ -226,7 +226,7 @@ Since SCNN - VAE - Semi performs the best according to Table 5 , we fix the deco
 The detailed comparison is in .
 We can see that semisupervised VAE performs better than LM - LSTM and LA - LSTM from .
 We also initialize the encoder of the VAE with parameters from LM and find classification accuracy further improves .
-We also seethe advantage of SCNN - VAE - Semi over LM - LSTM is greater when the number of labeled samples is smaller .
+We also see the advantage of SCNN - VAE - Semi over LM - LSTM is greater when the number of labeled samples is smaller .
 The advantage decreases as we increase the number of labeled samples .
 When we set the number of labeled samples to be 25 k , the SCNN - VAE - Semi achieves an accuracy of 70.4 , which is similar to LM - LSTM with an accuracy of 70.5 .
 Also , SCNN - VAE - Semi performs better on Yahoo data set than Yelp data set .
@@ -272,7 +272,7 @@ food was very good as well .
 will be back !:
 Text generated by conditioning on sentiment label .
 generated reviews conditioning on review rating in .
-For each group of generated text , we fix z and vary the label y , while picking x via beam search with abeam size of 10 .
+For each group of generated text , we fix z and vary the label y , while picking x via beam search with a beam size of 10 .
 Related work
 Variational inference via the re-parameterization trick was initially proposed by and since then , VAE has been widely adopted as generative model for images .
 Our work is inline with previous works on combining variational inferences with text modeling .

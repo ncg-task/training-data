@@ -11,45 +11,45 @@
 26	63	87	gradient - based methods
 26	88	91	for
 26	92	110	efficient training
-11	2	6	Code
 11	23	60	https://github.com/kimiyoung/transfer
+132	0	29	TRANSFER LEARNING PERFORMANCE
 134	77	80	set
 134	85	114	character embedding dimension
 134	115	117	at
 134	118	120	25
 134	127	151	word embedding dimension
-134	115	117	at
+134	152	154	at
 134	155	157	50
 134	27	30	for
 134	162	169	English
 134	174	176	64
-134	27	30	for
+134	158	161	for
 134	181	188	Spanish
-134	105	114	dimension
+134	195	204	dimension
 134	205	207	of
 134	208	221	hidden states
-134	205	207	of
+134	222	224	of
 134	229	251	character - level GRUs
-134	115	117	at
+134	252	254	at
 134	255	257	80
 134	298	315	word - level GRUs
-134	115	117	at
+134	286	288	at
 134	319	322	300
 134	333	354	initial learning rate
-134	115	117	at
+134	316	318	at
 134	358	362	0.01
 146	26	56	our transfer learning approach
 146	61	84	improve the performance
 146	85	87	on
 146	88	115	Twitter POS tagging and NER
-146	76	79	for
+146	116	119	for
 146	120	138	all labeling rates
 146	149	161	improvements
 146	162	166	with
 146	167	177	0.1 labels
 146	178	181	are
 146	182	195	more than 8 %
-146	76	79	for
+146	196	199	for
 146	200	213	both datasets
 147	0	28	Cross - application transfer
 147	34	42	leads to
@@ -69,8 +69,9 @@
 143	61	77	more substantial
 143	78	82	when
 143	87	100	labeling rate
-143	58	60	is
+143	101	103	is
 143	104	109	lower
+157	0	46	COMPARISON WITH STATE - OF - THE - ART RESULTS
 160	3	6	use
 160	7	52	publicly available pretrained word embeddings
 160	53	55	as
@@ -83,7 +84,7 @@
 161	196	199	use
 161	204	219	development set
 161	220	229	to choose
-161	138	148	embeddings
+161	234	244	embeddings
 161	245	248	for
 161	249	277	different tasks and settings
 162	0	3	For

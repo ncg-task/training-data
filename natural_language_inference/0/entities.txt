@@ -6,14 +6,14 @@
 182	85	107	query in the GA module
 182	116	128	allow gating
 182	129	146	individual tokens
-182	47	49	in
+182	147	149	in
 182	154	162	document
 182	168	170	by
 182	171	189	parts of the query
 182	190	201	relevant to
-182	51	56	token
+182	207	212	token
 182	213	224	rather than
-182	229	257	overall query representation
+182	229	258	over all query representation
 183	10	18	removing
 183	23	43	character embeddings
 183	62	70	used for
@@ -30,11 +30,12 @@
 23	252	266	each dimension
 23	267	269	of
 23	274	290	token embeddings
-23	59	61	at
+23	291	293	at
 23	298	314	semantic - level
 23	72	79	applied
 23	332	344	layer - wise
 23	345	347	as
+23	348	367	information filters
 23	368	374	during
 23	379	420	multi-hop representation learning process
 24	7	31	fine - grained attention

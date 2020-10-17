@@ -5,7 +5,7 @@
 133	71	81	large drop
 133	82	84	of
 133	85	94	12 points
-155	0	4	Code
+155	100	179	https://worksheets. codalab.org/worksheets/ 0x91d77db37e0a4bbbaeb37b8972f4784f/
 108	34	49	STAGG and COMPQ
 108	52	61	which are
 108	95	137	highest performing semantic parsing models
@@ -21,14 +21,14 @@
 118	4	29	candidate extraction step
 118	30	35	finds
 118	40	54	correct answer
-118	31	33	in
+118	55	57	in
 118	62	80	top - K candidates
-118	31	33	in
+118	81	83	in
 118	84	90	65.9 %
 118	91	93	of
 118	94	114	development examples
 118	119	125	62.7 %
-118	91	93	of
+118	126	128	of
 118	129	142	test examples
 119	11	19	test F 1
 119	20	22	on
@@ -58,7 +58,7 @@
 122	96	110	COMPQ - SUBSET
 122	111	113	is
 122	114	118	48.5
-122	111	113	is
+122	127	129	is
 122	130	150	3.4 F 1 points lower
 122	151	155	than
 122	156	170	WEBQA - SUBSET
@@ -70,9 +70,9 @@
 18	100	117	answers questions
 18	118	120	by
 18	121	129	querying
-18	70	73	web
+18	134	137	web
 18	142	152	extracting
-18	100	106	answer
+18	157	163	answer
 18	164	168	from
 18	169	190	returned web snippets
 19	7	28	our evaluation scheme

@@ -18,8 +18,7 @@
               }
             }  
           }
-        },
-        "from sentence" : "To address all the above challenges , we propose a novel joint post - training technique that takes BERT 's pre-trained weights as the initialization 4 for basic language understanding and adapt BERT with both domain knowledge and task ( MRC ) knowledge before fine - tuning using the domain end task annotated data for the domain RRC ."
+        }
       },
       "adapt" : {
         "BERT" : {
