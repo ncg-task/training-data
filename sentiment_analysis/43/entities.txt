@@ -83,7 +83,7 @@
 172	4	13	dimension
 172	14	16	of
 172	17	35	word embedding d v
-172	40	52	hidden state
+172	40	53	hidden stated
 173	0	6	set to
 173	7	10	300
 174	4	26	weight matrix and bias

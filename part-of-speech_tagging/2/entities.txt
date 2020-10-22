@@ -33,10 +33,10 @@
 134	252	254	at
 134	255	257	80
 134	298	315	word - level GRUs
-134	286	288	at
+134	316	318	at
 134	319	322	300
 134	333	354	initial learning rate
-134	316	318	at
+134	355	357	at
 134	358	362	0.01
 146	26	56	our transfer learning approach
 146	61	84	improve the performance

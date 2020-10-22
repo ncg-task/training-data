@@ -169,7 +169,7 @@ We used batch size 50 and hidden size 128 for all models ."
                           "with" : {
                             "learning rate" : {
                               "of" : "0.001"
-                            }
+                            },
                             "decay rate" : {
                               "of" : "0.9"
                             }

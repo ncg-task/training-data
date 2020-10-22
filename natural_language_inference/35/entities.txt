@@ -50,9 +50,6 @@
 15	11	39	reading comprehension ( RC )
 16	40	42	RC
 24	59	75	multi-passage RC
-181	5	14	our model
-181	15	22	achieve
-181	23	57	state - of - the - art performance
 182	0	5	shows
 182	11	27	our single model
 182	30	42	trained with
@@ -70,7 +67,6 @@
 183	55	64	NLG style
 183	65	69	were
 183	70	73	low
-184	61	63	on
 184	7	16	our model
 184	17	24	without
 184	25	45	multi-style learning
@@ -78,4 +74,3 @@
 184	99	108	baselines
 184	109	120	in terms of
 184	121	130	ROUGE - L
-186	15	26	NarrativeQA

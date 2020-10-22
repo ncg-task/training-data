@@ -18,7 +18,7 @@
               "from sentence" : "The size of the dimensions of character embeddings is 32 which are randomly initialized using a uniform distribution ."
             }
           }
-        }
+        },
         "state size" : {
           "of" : {
             "bi-directional LSTMs" : {

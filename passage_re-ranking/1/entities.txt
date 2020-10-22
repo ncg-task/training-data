@@ -47,7 +47,6 @@
 63	111	135	entire TREC - CAR corpus
 63	136	141	using
 63	142	146	BM25
-66	117	119	on
 66	3	8	train
 66	16	32	400 k iterations
 66	38	53	12.8 M examples

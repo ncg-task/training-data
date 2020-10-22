@@ -5,7 +5,7 @@
 149	143	145	in
 149	150	161	CNN dataset
 149	168	187	| V | = 151 k words
-149	194	196	in
+149	244	246	in
 149	251	269	Daily Mail dataset
 150	0	15	Embedding Layer
 151	3	9	choose

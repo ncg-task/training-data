@@ -83,7 +83,7 @@ Following the evaluation protocol in , we compute the BLEU - 2 score and estimat
                 "better performance" : {
                   "than" : {
                     "other methods" : {
-                      "in terms of" : "different BLEU score"
+                      "in terms of" : "different BLEU scores"
                     }
                   }
                 }

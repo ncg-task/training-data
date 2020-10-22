@@ -86,7 +86,7 @@
                 }
               } 
             }
-          }
+          },
           "from sentence" : "Although the automatically projected cross - lingual embeddings are very noisy and limited in their coverage , particularly with respect to inflected forms , our model succeeds in exploiting them to obtain substantial gains in several different languages and domains ."
         }
       }

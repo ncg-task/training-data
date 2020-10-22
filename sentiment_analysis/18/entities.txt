@@ -3,10 +3,10 @@
 27	32	45	for improving
 27	50	83	effectiveness of attention models
 28	4	18	first approach
-28	79	81	as
 28	32	34	of
 40	51	56	model
 40	57	68	each target
+40	69	71	as
 40	74	81	mixture
 40	85	104	K aspect embeddings
 41	3	6	use

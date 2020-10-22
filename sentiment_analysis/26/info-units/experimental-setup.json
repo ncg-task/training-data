@@ -152,8 +152,7 @@ All of these are 300 - dimensional ."
                     "word coefficients" : {
                       "in" : "each domain",
                       "also for" : "union of all domains",
-                      "yielding" : "26 - dimensional sentiment embedding",
-                      
+                      "yielding" : "26 - dimensional sentiment embedding"                      
                     }
                   }
                 },

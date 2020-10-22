@@ -29,7 +29,7 @@
         },
         "from sentence" : "Separating the left and the right context ( LR - Left - Right ) for BoW representation , does not improve the performance ."
       },
-      "Among" : {
+      "Amongst" : {
         "two variations of LSTM" : {
           "has" : {
             "model" : {

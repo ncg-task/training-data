@@ -47,7 +47,7 @@
 12	0	29	Automatic dialogue generation
 20	10	33	conversation generation
 97	4	22	proposed AEM model
-97	23	47	significantly outperform
+97	23	48	significantly outperforms
 97	53	66	Seq2Seq model
 98	3	15	demonstrates
 98	20	65	effectiveness of utterance - level dependency

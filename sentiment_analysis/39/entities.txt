@@ -88,7 +88,7 @@
 215	68	86	BoW representation
 215	89	105	does not improve
 215	110	121	performance
-217	0	5	Among
+217	0	7	Amongst
 217	12	34	two variations of LSTM
 217	41	46	model
 217	47	51	with
@@ -114,7 +114,7 @@
 221	119	121	is
 221	122	130	very low
 221	151	162	performance
-221	139	141	is
+221	163	165	is
 221	166	174	superior
 221	175	177	to
 221	178	190	other models

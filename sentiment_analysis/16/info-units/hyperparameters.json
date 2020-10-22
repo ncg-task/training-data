@@ -58,8 +58,7 @@
           }
         },
         "from sentence" : "We implemented all models in the TensorFlow environment using same input , embedding size , dropout rate , optimizer , etc."
-      },
-      
+      }
     }
   }
 }

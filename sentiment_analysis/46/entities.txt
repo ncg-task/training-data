@@ -7,7 +7,7 @@
 90	100	102	of
 90	103	122	child nodes vectors
 91	0	14	LSTM / Bi-LSTM
-91	37	43	employ
+91	37	44	employs
 91	45	69	Long Short - Term Memory
 91	78	99	bidirectional variant
 91	100	110	to capture

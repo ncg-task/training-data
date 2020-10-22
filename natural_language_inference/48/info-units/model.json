@@ -41,7 +41,7 @@
                     }
                   }
                 }
-              }
+              },
               "from sentence" : "This phase involves a novel alternating attention mechanism ; it first attends to some parts of the query , then finds their corresponding matches by attending to the document .
 The result of this alternating search is fed back into the iterative inference process to seed the next search step ."
 

@@ -1,6 +1,6 @@
 {
   "has research problem" : [
-    ["question answering", {"from sentence" : "As an alternative to question answering methods based on feature engineering , deep learning approaches such as convolutional neural networks ( CNNs ) and Long Short - Term Memory Models ( LSTMs ) have recently been proposed for semantic matching of questions and answers ."}]
+    ["question answering", {"from sentence" : "As an alternative to question answering methods based on feature engineering , deep learning approaches such as convolutional neural networks ( CNNs ) and Long Short - Term Memory Models ( LSTMs ) have recently been proposed for semantic matching of questions and answers ."}],
     ["Question answering ( QA )", {"from sentence" : "Question answering ( QA ) , which returns exact answers as either short facts or long passages to natural language questions issued by users , is a challenging task and plays a central role in the next generation of advanced web search ."}],
     ["QA", {"from sentence" : "Many of current QA systems use a learning to rank approach that encodes question / answer pairs with complex linguistic features including lexical , syntactic and semantic features ."}]
   ]

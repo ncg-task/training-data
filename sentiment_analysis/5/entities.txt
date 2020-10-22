@@ -173,7 +173,7 @@
 48	0	15	After obtaining
 48	22	35	deep features
 48	36	38	of
-48	39	53	each electrode
+48	39	54	each electrodes
 48	64	71	extract
 48	76	110	asymmetric discrepancy information
 48	111	118	between

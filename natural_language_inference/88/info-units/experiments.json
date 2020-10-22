@@ -100,7 +100,7 @@ We used stochastic gradient descent for optimization with an initial learning ra
                   }
                 },
                 "Results" : {
-                  "Among" : {
+                  "Amongst" : {
                     "all deep architectures" : {
                       "has" : {
                         "three - layer LSTMN" : {
@@ -298,7 +298,7 @@ We used pre-trained 300 - D Glove 840B vectors to initialize the word embeddings
                     "standard training" : {
                       "has" : {
                         "deep fusion" : {
-                          "yield" : "state - of - the - art performance"
+                          "yields" : "state - of - the - art performance"
                         }
                       },
                       "from sentence" : "With standard training , our deep fusion yields the state - of - the - art performance in this task ."

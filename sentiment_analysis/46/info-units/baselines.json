@@ -16,7 +16,7 @@
           "from sentence" : "RNTN : Recursive Tensor Neural Network ) is used to model correlations between different dimensions of child nodes vectors ."
         },
         "LSTM / Bi-LSTM" : {
-          "employ" : ["Long Short - Term Memory", {"bidirectional variant" : {"to capture" : "sequential information"}}],
+          "employs" : ["Long Short - Term Memory", {"bidirectional variant" : {"to capture" : "sequential information"}}],
           "from sentence" : "LSTM / Bi-LSTM : Cho et al. ( 2014 ) employs Long Short - Term Memory and the bidirectional variant to capture sequential information ."
         },
         "Tree-LSTM" : {

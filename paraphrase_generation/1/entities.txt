@@ -205,5 +205,5 @@
 205	261	263	in
 205	341	357	BLEU ( 2 times )
 205	362	392	more than 10 % absolute points
-205	338	340	in
+205	393	395	in
 205	396	416	METEOR ( 1.5 times )

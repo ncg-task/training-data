@@ -1,47 +1,36 @@
 {
   "has" : {
     "Results" : {
-      "on" : {
-        "NarrativeQA" : {
-          "shows" : {
-            "our model" : {
-              "achieve" : "state - of - the - art performance",
-              "from sentence" : "Does our model achieve state - of - the - art performance ?"
-            },
-            "our single model" : {
-              "trained with" : "two styles",
-              "controlled with" : "NQA style",
-              "pushed forward" : {
-                "state - of - the - art" : {
-                  "by" : "significant margin"
-                }
-              },
-              "from sentence" : "shows that our single model , trained with two styles and controlled with the NQA style , pushed forward the state - of - the - art by a significant margin ."
+      "has" : {
+        "our single model" : {
+          "trained with" : "two styles",
+          "controlled with" : "NQA style",
+          "pushed forward" : {
+            "state - of - the - art" : {
+              "by" : "significant margin"
             }
           },
+          "from sentence" : "shows that our single model , trained with two styles and controlled with the NQA style , pushed forward the state - of - the - art by a significant margin ."
+        },
+        "evaluation scores" : {
+          "of" : {
+            "model" : {
+              "controlled with" : "NLG style",
+              "were" : "low"
+            }
+          },
+          "from sentence" : "The evaluation scores of the model controlled with the NLG style were low because the two styles are different ."
+        },
+        "our model" : {
+          "without" : "multi-style learning",
           "has" : {
-            "evaluation scores" : {
-              "of" : {
-                "model" : {
-                  "controlled with" : "NLG style",
-                  "were" : "low"
-                }
-              },
-              "from sentence" : "The evaluation scores of the model controlled with the NLG style were low because the two styles are different ."
-            },
-            "our model" : {
-              "without" : "multi-style learning",
-              "has" : {
-                "outperformed" : {
-                  "has" : "baselines",
-                  "in terms of" : "ROUGE - L"
-                }
-              },
-              "from sentence" : "Also , our model without multi-style learning ( trained with only the NQA style ) outperformed the baselines in terms of ROUGE - L ."
+            "outperformed" : {
+              "has" : "baselines",
+              "in terms of" : "ROUGE - L"
             }
           },
-          "from sentence" : "Experiments on NarrativeQA"
-        }
+          "from sentence" : "Also , our model without multi-style learning ( trained with only the NQA style ) outperformed the baselines in terms of ROUGE - L ."
+        }        
       }
     }
   }

@@ -103,7 +103,7 @@ Then it regards the average value of all hidden states as the representation of 
             "attention" : {
               "has" : {
                 "multiple times" : {
-                  "on" : "word embedding"
+                  "on" : "word embedding",
                   "so that" : {
                     "more abstractive evidences" : {
                       "could be selected from" : "external memory"

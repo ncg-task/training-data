@@ -9,14 +9,6 @@
 35	104	149	BioScope Corpus ( Abstracts and Full Papers )
 35	156	172	Sherlock Dataset
 35	181	198	SFU Review Corpus
-36	3	8	train
-36	9	16	NegBERT
-36	17	19	on
-36	20	31	one dataset
-36	36	42	report
-36	47	53	scores
-36	54	64	on testing
-36	65	76	all dataset
 189	3	6	use
 189	7	21	Google 's BERT
 189	22	24	as

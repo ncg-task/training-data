@@ -138,10 +138,10 @@
 211	111	119	test set
 211	120	122	of
 211	123	132	Trivia QA
-211	101	103	on
 212	3	10	can see
 212	11	28	our Smarnet model
 212	29	40	outperforms
 212	45	60	other baselines
+212	61	63	on
 212	69	85	wikipedia domain
 212	90	100	web domain

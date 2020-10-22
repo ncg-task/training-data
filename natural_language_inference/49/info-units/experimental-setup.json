@@ -63,7 +63,7 @@
               "with" : "pre-trained 300D Glo Ve 840B vectors"
             }
           }
-        }        
+        },        
         "out - of - vocabulary word" : {
           "are" : {
             "randomly initialized" : {

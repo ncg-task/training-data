@@ -101,7 +101,7 @@
 29	77	99	efficient in capturing
 29	100	124	long - term dependencies
 29	129	140	summarizing
-29	141	165	task - specific details 
+29	141	164	task - specific details 
 30	19	31	memory cells
 30	32	34	of
 30	35	38	CMN

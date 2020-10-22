@@ -3,7 +3,7 @@
 156	46	48	on
 156	49	64	SQ u AD dev set
 157	61	71	contribute
-157	72	78	toward
+157	72	79	towards
 157	84	104	model 's performance
 157	11	15	both
 157	16	36	syntactic embeddings

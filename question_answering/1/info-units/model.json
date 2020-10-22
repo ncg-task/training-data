@@ -85,7 +85,7 @@
                 }
               }
             }
-          }
+          },
           "from sentence" : "Second , we use a memory - less attention mechanism .
 It forces the attention layer to focus on learning the attention between the query and the context , and enables the modeling layer to focus on learning the interaction within the query - aware context representation ( the output of the attention layer ) .
 It also allows the attention at each time step to be unaffected from incorrect attendances at previous time steps ."

@@ -53,7 +53,7 @@
 161	52	64	memory cells
 161	65	67	of
 161	68	94	vertically adjacent layers
-172	0	5	Among
+172	0	7	Amongst
 172	8	30	all deep architectures
 172	37	56	three - layer LSTMN
 172	62	70	performs
@@ -167,7 +167,7 @@
 235	0	4	With
 235	5	22	standard training
 235	29	40	deep fusion
-235	41	46	yield
+235	41	47	yields
 235	52	86	state - of - the - art performance
 42	15	18	use
 42	19	40	multiple memory slots

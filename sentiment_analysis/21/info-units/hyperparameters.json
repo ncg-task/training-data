@@ -48,7 +48,7 @@
           }
         },
         "learning rate" : {
-          "from" : "[ 0.25 , 0.025 , 0.0025 , 0.001 ]",
+          "from" : "[ 0.25 , 0.025 , 0.0025 , 0.001 ]"
         }		
       },
       "tune" : ["number of iterations", {"from sentence" : "We did however tune the number of iterations from , learning rate from [ 0.25 , 0.025 , 0.0025 , 0.001 ] and ? from ."}],

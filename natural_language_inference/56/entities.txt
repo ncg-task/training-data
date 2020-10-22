@@ -116,10 +116,10 @@
 28	69	89	relational reasoning
 28	90	94	into
 28	95	109	two components
-28	13	15	in
 29	2	24	perceptual front - end
 29	43	55	to recognize
 29	56	63	objects
+29	64	66	in
 29	71	80	raw input
 29	85	102	represent them as
 29	103	110	vectors

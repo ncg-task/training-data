@@ -13,7 +13,7 @@
                         "development dataset" : {
                           "of" : "SQuAD"
                         }
-                      }
+                      },
                       "has" : ["baseline approach BiDAF", {"proposed SEST approaches" : {"including" : ["SE - POS", "SECT - LSTM", "SECT - CNN", "SEDT - LSTM", "SEDT - CNN"]}}],
                       "from sentence" : "Predictive Performance
                       We first compared the performance of single models between the baseline approach BiDAF and the proposed SEST approaches , including SE - POS , SECT - LSTM , SECT - CNN , SEDT - LSTM , and SEDT - CNN , on the development dataset of SQuAD ."

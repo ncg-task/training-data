@@ -12,7 +12,7 @@
 165	65	78	in predicting
 165	83	94	happy class
 165	100	111	compared to
-165	116	150	ARE model ( 35.15 % to 75. 73 % ) 
+165	116	149	ARE model ( 35.15 % to 75. 73 % ) 
 168	4	14	MDRE model
 168	17	32	compensates for
 168	37	47	weaknesses

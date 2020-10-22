@@ -3,7 +3,7 @@
     "Results" : {
       "has" : {
         "proposed AEM model" : {
-          "significantly outperform" : "Seq2Seq model",
+          "significantly outperforms" : "Seq2Seq model",
           "from sentence" : "The proposed AEM model significantly outperforms the Seq2Seq model ."
         }
       },

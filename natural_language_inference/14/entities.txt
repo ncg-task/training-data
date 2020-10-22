@@ -88,7 +88,7 @@
 123	105	107	of
 123	108	128	2,241 SWAG questions
 123	208	216	evaluate
-123	193	195	on
+123	222	224	on
 123	229	253	full SWAG validation set
 124	5	13	produces
 124	17	25	accuracy

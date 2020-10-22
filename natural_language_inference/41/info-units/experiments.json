@@ -99,8 +99,7 @@ Nevertheless , BART outperforms all existing work ."
                               }],
                               {"best previous work" : {"leverages" : "BERT", "by" : {"roughly 6.0 points" : {"on" : "all ROUGE metrics", "representing" : {"significant advance" : {"in" : "performance"}}}}}, "from sentence" : "BART outperforms the best previous work , which leverages BERT , by roughly 6.0 points on all ROUGE metrics - representing a significant advance in performance on this problem ."}]
                             }
-                          },
-
+                          }
                         }
                       }
                     }

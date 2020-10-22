@@ -11,7 +11,7 @@
                 }
               }
             }
-          }
+          },
           "from sentence" : "Our baseline ( BASELINE - LSTM ) is a multi - task learning 1 http://groups.inf.ed.ac.uk/ccg/
 bi -LSTM predicting both CCG supertags and sentence compression ( word deletion ) at the outer layer ."
 

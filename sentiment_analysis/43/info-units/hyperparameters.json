@@ -13,7 +13,7 @@
         "dimension" : {
           "set to" : {
             "300" : {
-              "of" : ["word embedding d v", "hidden state"]
+              "of" : ["word embedding d v", "hidden stated"]
             }
           },
           "from sentence" : "The dimension of word embedding d v and hidden stated are 1 The detailed task introduction can be found in http://alt.qcri.org/semeval2014/task4/.

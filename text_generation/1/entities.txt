@@ -115,7 +115,7 @@
 249	36	40	than
 249	45	58	other methods
 249	59	70	in terms of
-249	71	91	different BLEU score
+249	71	92	different BLEU scores
 251	25	34	our model
 251	38	54	able to generate
 251	55	79	fluent , novel sentences

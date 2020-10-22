@@ -47,7 +47,7 @@
               "passed through" : "affine transformation layers",
               "re-expanded to" : "original sequence length"
             }
-          }
+          },
           "from sentence" : "Specifically , we compress the input document an arbitrary k times at multi-ranges ( e.g. , 1 , 2 , 4 , 10 , 25 ) into a neural bag - of - words ( summed ) representation .
 The compact sequence is then passed through affine transformation layers and then re-expanded to the original sequence length ."
 

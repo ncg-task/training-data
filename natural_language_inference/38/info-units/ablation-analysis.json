@@ -6,7 +6,7 @@
           "on" : "SQ u AD dev set",
           "has" : {
             "contribute" : {
-              "toward" : {
+              "towards" : {
                 "model 's performance" : {
                   "both" : ["syntactic embeddings", "semantic embeddings"],
                   "has" : {

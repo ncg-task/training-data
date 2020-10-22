@@ -93,7 +93,7 @@ On the cross sentence ( single model setting ) , the performance of our proposed
             }
           }
         }
-      }
+      },
       "On" : {
         "SciTail" : {
           "has" :{

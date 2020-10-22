@@ -105,7 +105,7 @@ Overall , we conclude that translations are better additional contexts than topi
       "Using" : {
         "topics" : {
           "as" : "additional context",
-          "decrease" : {
+          "decreases" : {
             "performance" : {
               "of" : {
                 "CNN classifier" : {
