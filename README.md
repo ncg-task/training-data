@@ -24,7 +24,7 @@ The repository is organized as follows:
 
 ### Data Element Counts
 
-Total Papers Annotated: 238
+Total Papers Annotated: 237
 
 || Tasks | info-units | sentences | entities | total triples | total unique triples | subject | predicate | object |
 | :---:  | :--- |:---:|  :---:   |   :---:  | :---: | :---: |  :---:  |   :---:   |  :---: |
