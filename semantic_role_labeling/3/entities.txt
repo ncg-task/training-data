@@ -75,7 +75,7 @@
 173	42	46	clip
 173	51	55	norm
 173	56	58	of
-173	19	28	gradients
+173	59	68	gradients
 173	69	73	with
 173	76	100	predefined threshold 1.0
 173	0	8	To avoid

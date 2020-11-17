@@ -108,7 +108,6 @@
 4	52	91	multi-domain natural language inference
 10	0	34	Natural language inference ( NLI )
 10	38	76	recognizing textual entailment ( RTE )
-15	142	153	Multi - NLI
 75	6	9	for
 75	10	21	Multi - NLI
 75	27	34	improve

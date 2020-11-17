@@ -13,7 +13,6 @@
 53	70	72	as
 53	73	93	our task of interest
 13	0	23	Representation learning
-49	27	45	sentiment analysis
 99	0	25	Review Sentiment Analysis
 105	0	39	The representation learned by our model
 105	40	48	achieves

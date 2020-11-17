@@ -2,4 +2,3 @@
 (Contribution||has research problem||multi-domain natural language inference)
 (Contribution||has research problem||Natural language inference ( NLI ))
 (Contribution||has research problem||recognizing textual entailment ( RTE ))
-(Contribution||has research problem||Multi - NLI)

@@ -49,7 +49,7 @@ The proposed model achieved about 4.0 MOS in all datasets , with the VCTK model 
 The scores for the VCTK model tend to be higher than those for LibriSpeech , reflecting the cleaner nature of the dataset ."
 
           },
-          "for" : {
+          "For" : {
             "seen speakers on VCTK" : {
               "has" : {
                 "proposed model" : {

@@ -52,7 +52,7 @@
 135	63	74	LibriSpeech
 135	77	87	reflecting
 135	92	121	cleaner nature of the dataset
-137	123	126	for
+137	0	3	For
 137	4	25	seen speakers on VCTK
 137	32	46	proposed model
 137	47	72	performs about as well as

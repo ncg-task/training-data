@@ -67,7 +67,6 @@
 92	81	83	as
 92	84	105	fixed word embeddings
 2	0	57	Supervised Learning of Universal Sentence Representations
-15	37	84	learning universal representations of sentences
 141	0	19	Architecture impact
 144	4	17	BiLSTM - 4096
 144	18	22	with

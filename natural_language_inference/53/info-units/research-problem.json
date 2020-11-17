@@ -1,6 +1,5 @@
 {
   "has research problem" : [
-    ["Supervised Learning of Universal Sentence Representations", {"from sentence" : "Supervised Learning of Universal Sentence Representations from Natural Language Inference Data"}],
-    ["learning universal representations of sentences", {"from sentence" : "In this paper , we study the task of learning universal representations of sentences , i.e. , a sentence encoder model that is trained on a large corpus and subsequently transferred to other tasks ."}]
+    ["Supervised Learning of Universal Sentence Representations", {"from sentence" : "Supervised Learning of Universal Sentence Representations from Natural Language Inference Data"}]
   ]
 }

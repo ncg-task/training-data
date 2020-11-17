@@ -36,7 +36,7 @@
 (Speaker similarity||scores for||VCTK model)
 (VCTK model||tend to be higher than those for||LibriSpeech)
 (LibriSpeech||reflecting||cleaner nature of the dataset)
-(Speaker similarity||for||seen speakers on VCTK)
+(Speaker similarity||For||seen speakers on VCTK)
 (seen speakers on VCTK||has||proposed model)
 (proposed model||performs about as well as||baseline)
 (baseline||uses||embedding lookup table for speaker conditioning)

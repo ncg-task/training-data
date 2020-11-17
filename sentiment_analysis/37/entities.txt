@@ -1,4 +1,4 @@
-163	63	67	LSTM
+162	0	4	LSTM
 163	16	24	sentence
 163	28	34	fed to
 163	41	77	short - term memory ( LSTM ) network
