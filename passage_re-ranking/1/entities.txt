@@ -35,7 +35,7 @@
 47	29	31	of
 47	32	35	0.1
 47	39	49	all layers
-63	118	128	TREC - CAR
+48	0	10	TREC - CAR
 63	0	3	For
 63	8	21	fine - tuning
 63	22	26	data
