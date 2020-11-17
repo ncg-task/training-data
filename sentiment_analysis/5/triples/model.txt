@@ -16,7 +16,7 @@
 (asymmetric discrepancy information||between||two hemispheres)
 (two hemispheres||by performing||specific pairwise operations)
 (specific pairwise operations||for||any paired symmetric electrodes)
-(deep features||of||each electrode)
+(deep features||of||each electrodes)
 (Model||propose||novel neural network model BiHDM)
 (novel neural network model BiHDM||to learn||bi-hemispheric discrepancy)
 (bi-hemispheric discrepancy||for||EEG emotion recognition)

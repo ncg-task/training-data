@@ -28,7 +28,7 @@
 (two dependencies||has||AEM + Attention model)
 (AEM + Attention model||achieves||best results)
 (Results||has||proposed AEM model)
-(proposed AEM model||significantly outperform||Seq2Seq model)
+(proposed AEM model||significantly outperforms||Seq2Seq model)
 (Results||improvement from||AEM model)
 (AEM model||to||AEM + Attention model)
 (AEM + Attention model||is||0.68 BLEU - 4 point)

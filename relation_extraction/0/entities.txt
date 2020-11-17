@@ -99,7 +99,7 @@
 2	22	71	Joint Extraction of Entity Mentions and Relations
 10	0	52	Extraction of entities and their relations from text
 12	39	98	entity mention and relation extraction at the sentencelevel
-196	0	18	Multiple Relations
+136	0	18	Multiple Relations
 197	3	12	find that
 197	13	36	modifying our objective
 197	37	47	to include

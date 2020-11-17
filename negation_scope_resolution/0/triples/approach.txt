@@ -6,7 +6,3 @@
 (3 public datasets available||name||BioScope Corpus ( Abstracts and Full Papers ))
 (3 public datasets available||name||Sherlock Dataset)
 (3 public datasets available||name||SFU Review Corpus)
-(Approach||train||NegBERT)
-(NegBERT||report||scores)
-(scores||on testing||all dataset)
-(NegBERT||on||one dataset)

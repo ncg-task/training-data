@@ -16,7 +16,7 @@
 (state of the art||on||TREC data set)
 (Results||Using||topics)
 (topics||as||additional context)
-(topics||decrease||performance)
+(topics||decreases||performance)
 (performance||of||CNN classifier)
 (CNN classifier||on||most data sets)
 (Results||show||CNN + MCFA)

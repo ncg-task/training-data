@@ -10,7 +10,7 @@
 (Hyperparameters||has||dimension)
 (dimension||set to||300)
 (300||of||word embedding d v)
-(300||of||hidden state)
+(300||of||hidden stated)
 (Hyperparameters||has||weight matrix and bias)
 (weight matrix and bias||are||initialized)
 (initialized||by||sampling)

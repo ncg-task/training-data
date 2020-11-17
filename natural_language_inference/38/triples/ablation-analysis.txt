@@ -1,7 +1,7 @@
 (Contribution||has||Ablation analysis)
 (Ablation analysis||of||single model)
 (single model||has||contribute)
-(contribute||toward||model 's performance)
+(contribute||towards||model 's performance)
 (model 's performance||has||POS tags)
 (POS tags||to be||more important)
 (model 's performance||both||syntactic embeddings)
