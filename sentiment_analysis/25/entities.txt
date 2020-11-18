@@ -129,7 +129,7 @@
 177	33	47	1.1 % to 2.5 %
 177	48	61	compared with
 177	62	73	ATAE - LSTM
-189	109	113	ACSA
+189	0	4	GCAE
 189	5	13	achieves
 189	14	33	4 % higher accuracy
 189	34	38	than
