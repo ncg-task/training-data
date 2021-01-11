@@ -36,9 +36,7 @@
               }
             }
           },
-          "from sentence" : "Reduction layer : a new layer design that fits the pipeline proposed by Vaswani et al .
-and compresses the input embedding size for subsequent layers ( this is especially beneficial when employing pre-trained embeddings ) ."
-
+          "from sentence" : "Reduction layer : a new layer design that fits the pipeline proposed by Vaswani et al ."
         },
         "Column - wise cross - attention" : {
           "modify" : "crossattention operation",

@@ -57,6 +57,7 @@
 34	250	263	hidden states
 34	111	113	of
 34	267	295	arbitrarily many child units
+39	63	104	https :// github.com/stanfordnlp/treelstm
 2	0	33	Improved Semantic Representations
 8	86	138	predicting the semantic relatedness of two sentences
 8	170	194	sentiment classification

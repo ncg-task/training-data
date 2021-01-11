@@ -24,6 +24,11 @@
 34	108	140	richer contextual representation
 34	146	153	in both
 34	158	187	forward and reverse direction
+35	3	7	call
+35	18	31	Suffix BiLSTM
+35	35	43	SuBiLSTM
+35	44	46	in
+35	47	52	short
 2	0	26	Improved Sentence Modeling
 4	52	96	computing representations of sequential data
 12	65	104	fine - grained sentiment classification

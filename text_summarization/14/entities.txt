@@ -117,12 +117,12 @@
 165	90	92	of
 165	93	117	Entailment and ROUGE - 2
 166	0	19	Seq2seq + selective
-125	0	6	employ
-125	9	33	selective encoding model
-125	34	44	to control
-125	49	65	information flow
-125	66	70	from
-125	71	89	encoder to decoder
+167	0	6	employ
+167	9	33	selective encoding model
+167	34	44	to control
+167	49	65	information flow
+167	66	70	from
+167	71	89	encoder to decoder
 27	79	86	propose
 27	103	129	entailment - aware encoder
 27	137	163	entailment - aware decoder

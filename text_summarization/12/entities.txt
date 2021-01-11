@@ -116,7 +116,7 @@
 193	106	122	significant test
 193	123	135	according to
 193	140	161	official ROUGE script
-139	0	8	DUC 2004
+196	0	8	DUC 2004
 199	23	28	SEASS
 199	29	40	outperforms
 199	41	65	all the baseline methods

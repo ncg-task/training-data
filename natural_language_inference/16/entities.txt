@@ -140,17 +140,17 @@
 32	116	126	NLSM tasks
 33	22	32	belongs to
 33	37	71	" matching aggregation " framework
-10	15	27	BiLSTM layer
-10	31	42	utilized to
-10	43	52	aggregate
-10	57	73	matching results
-10	74	78	into
-10	81	111	fixed - length matching vector
-11	10	18	based on
-11	23	38	matching vector
-11	43	51	decision
-11	55	67	made through
-11	70	91	fully connected layer
+39	15	27	BiLSTM layer
+39	31	42	utilized to
+39	43	52	aggregate
+39	57	73	matching results
+39	74	78	into
+39	81	111	fixed - length matching vector
+40	10	18	based on
+40	23	38	matching vector
+40	43	51	decision
+40	55	67	made through
+40	70	91	fully connected layer
 4	0	34	Natural language sentence matching
 15	0	43	Natural language sentence matching ( NLSM )
 17	52	56	NLSM

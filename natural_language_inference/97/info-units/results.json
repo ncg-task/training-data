@@ -21,9 +21,7 @@
                   }
                 }
               },
-              "from sentence" : "On MCTest - 500 , the Parallel Hierarchical model significantly outperforms these methods on single questions ( > 2 % ) and slightly outperforms the latter two on multi questions ( ? 0.3 % ) and over all ( ?
-1 % ) ."
-
+              "from sentence" : "On MCTest - 500 , the Parallel Hierarchical model significantly outperforms these methods on single questions ( > 2 % ) and slightly outperforms the latter two on multi questions ( ? 0.3 % ) and over all ( ?"
             }
           }
         }

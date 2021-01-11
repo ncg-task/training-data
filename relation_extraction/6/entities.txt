@@ -48,15 +48,15 @@
 20	111	116	label
 20	117	119	of
 20	124	139	target relation
-5	4	16	architecture
-5	17	21	uses
-5	25	45	LSTM - based encoder
-5	46	62	to jointly learn
-5	63	78	representations
-5	79	82	for
-5	83	96	all relations
-5	97	99	in
-5	102	117	single sentence
+22	4	16	architecture
+22	17	21	uses
+22	25	45	LSTM - based encoder
+22	46	62	to jointly learn
+22	63	78	representations
+22	79	82	for
+22	83	96	all relations
+22	97	99	in
+22	102	117	single sentence
 23	87	90	are
 23	91	99	combined
 23	4	21	representation of

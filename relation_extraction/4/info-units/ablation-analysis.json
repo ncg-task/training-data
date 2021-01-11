@@ -33,9 +33,7 @@
               }
             }
           },
-          "from sentence" : "Impact of negative examples .
-shows how the slot filling evaluation scores change as we change the amount of negative ( i.e. , no relation ) training data provided to our proposed model ."
-
+          "from sentence" : "shows how the slot filling evaluation scores change as we change the amount of negative ( i.e. , no relation ) training data provided to our proposed model ."
         }
       },
       "At" : {

@@ -1,4 +1,4 @@
-172	0	8	YahooCQA
+187	0	8	YahooCQA
 188	6	21	key competitors
 188	38	41	are
 188	46	79	Neural Tensor LSTM ( NTN - LSTM )

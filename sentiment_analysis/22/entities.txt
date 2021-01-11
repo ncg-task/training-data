@@ -154,6 +154,7 @@
 40	62	75	softmax layer
 40	76	86	to predict
 40	91	109	sentiment polarity
+43	34	90	https://github.com/DUT-LiuYang/Aspect-Sentiment-Analysis
 2	56	87	Aspect-level Sentiment Analysis
 12	15	33	sentiment analysis
 155	10	25	TD - LSTM model

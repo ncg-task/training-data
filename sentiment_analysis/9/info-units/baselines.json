@@ -91,7 +91,6 @@
             }
           },
           "from sentence" : "BERT - ADA
-  Rietzler et al.
   is a domain - adapted BERT - based model proposed for the APC task , which finetuned the BERT - BASE model on task - related corpus ."
   
         },

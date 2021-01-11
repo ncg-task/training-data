@@ -1,10 +1,7 @@
 {
   "has" : {
     "Model" : {
-      "has" : [["several new novel components", {"from sentence" : "This paper presents a new neural model for NLI .
-There are several new novel components in our work ."
-
-      }], 
+      "has" : [["several new novel components", {"from sentence" : "There are several new novel components in our work ."}], 
       [{"scalar valued feature" : {
         "used to" : {
           "augment" : {

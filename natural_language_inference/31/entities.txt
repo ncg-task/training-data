@@ -104,6 +104,11 @@
 142	64	65	1
 142	66	68	to
 142	69	70	3
+144	3	6	use
+144	11	50	Adam optimizer ( Kingma and Ba , 2015 )
+144	58	94	exponentially decaying learning rate
+144	95	99	with
+144	102	115	linear warmup
 145	4	25	initial learning rate
 145	29	39	tuned from
 145	40	55	0.0001 to 0.003

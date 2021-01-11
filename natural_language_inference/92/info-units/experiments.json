@@ -50,9 +50,7 @@ We use uncased version of BERT base ."
                   "To avoid" : {
                     "local optima" : {
                       "perform" : "annealing",
-                      "from sentence" : "To avoid local optima , we perform annealing : at training step t , the model optimizes on MML objective with a probability of min ( t / ? , 1 ) and otherwise use our objective , where ?
-is a hyperparameter ."
-
+                      "from sentence" : "To avoid local optima , we perform annealing : at training step t , the model optimizes on MML objective with a probability of min ( t / ? , 1 ) and otherwise use our objective , where ?"
                     }
                   }
                 },

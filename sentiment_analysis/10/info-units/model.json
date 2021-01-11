@@ -12,9 +12,7 @@
               "called" : "global GRU and party GRU"
             }
           },
-          "from sentence" : "The incoming utterance is fed into two GRUs called global GRU and party GRU to update the context and party Copyright 2019 , Association for the Advancement of Artificial Intelligence ( www.aaai.org ) .
-All rights reserved .
-state , respectively ."
+          "from sentence" : "The incoming utterance is fed into two GRUs called global GRU and party GRU to update the context and party Copyright 2019 , Association for the Advancement of Artificial Intelligence ( www.aaai.org ) ."
 
         },
         "global GRU" : {

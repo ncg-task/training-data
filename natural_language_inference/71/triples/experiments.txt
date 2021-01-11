@@ -1,5 +1,5 @@
-(Contribution||has||Results)
-(Results||has||Tasks)
+(Contribution||has||Experiments)
+(Experiments||has||Tasks)
 (Tasks||has||Algorithmic Task)
 (Algorithmic Task||has||Hyperparameters)
 (Hyperparameters||used||batch size)

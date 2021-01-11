@@ -100,8 +100,7 @@ Our plain DRCN has a competitive performance without any contextualized knowledg
                 }
               }
             },
-            "from sentence" : "Quora Question
-Pair shows our results on the Quora question pair dataset .
+            "from sentence" : "Pair shows our results on the Quora question pair dataset .
 We obtained accuracies of 90.15 % and 91.30 % in single and ensemble methods , respectively , surpassing the previous state - of - the - art model of DIIN ."            
           }
         },

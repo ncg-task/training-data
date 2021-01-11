@@ -4,8 +4,7 @@
       "has" : {
         "OpenNMT" : {
           "implement" : ["standard attentional seq2seq model", {"from sentence" : "OpenNMT
-We also implement the standard attentional seq2seq model with OpenNMT .
-All the settings are the same as our system ."
+We also implement the standard attentional seq2seq model with OpenNMT ."
 
           }]
         },

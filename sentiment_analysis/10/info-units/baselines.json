@@ -38,8 +38,7 @@ In this variant attention is applied applied to the c - LSTM output at each time
           },
           "from sentence" : "TFN :
 This is specific to multimodal scenario .
-Tensor outer product is used to capture intermodality and intra-modality interactions .
-This model does not capture context from surrounding utterances ."
+Tensor outer product is used to capture intermodality and intra-modality interactions ."
 
         },
         "MFN" : {

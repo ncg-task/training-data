@@ -76,9 +76,7 @@ The second one , named AC , averages the word vectors of the full context ."
               }
             }
           },
-          "from sentence" : "TD - LSTM - A : We developed TD - LSTM to make it have one attention on the outputs of 3 https://github.com/svn2github/word2vec
-forward and backward LSTMs , respectively ."
-
+          "from sentence" : "TD - LSTM - A : We developed TD - LSTM to make it have one attention on the outputs of 3 https://github.com/svn2github/word2vec"
         },
         "MemNet" : {
           "applies" : {

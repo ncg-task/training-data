@@ -54,7 +54,7 @@
 148	21	23	of
 148	24	28	size
 148	29	31	32
-71	0	6	FastQA
+149	0	6	FastQA
 151	3	11	tokenize
 151	16	21	input
 151	22	24	on
@@ -127,4 +127,3 @@
 179	106	114	improves
 179	121	124	for
 179	125	132	News QA
-4	57	59	QA

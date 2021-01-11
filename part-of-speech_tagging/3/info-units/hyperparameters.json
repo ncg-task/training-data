@@ -37,9 +37,7 @@
               "of" : "training"
             }
           },
-          "from sentence" : "We choose an initial learning rate of ? 0 ( ? 0 = 0.01 for POS tagging , and 0.015 for NER , see Section 3.3 . ) , and the learning rate is updated on each epoch of training as ? t = ? 0 / ( 1 + ?t ) , with decay rate ? =
-0.05 and t is the number of epoch completed ."
-
+          "from sentence" : "We choose an initial learning rate of ? 0 ( ? 0 = 0.01 for POS tagging , and 0.015 for NER , see Section 3.3 . ) , and the learning rate is updated on each epoch of training as ? t = ? 0 / ( 1 + ?t ) , with decay rate ? ="
         }
       },
       "reduce" : {

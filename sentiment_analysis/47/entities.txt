@@ -132,22 +132,22 @@
 39	189	201	left context
 39	204	217	target phrase
 39	222	235	right context
-10	4	28	target2context attention
-10	37	47	to capture
-10	52	83	most indicative sentiment words
-10	84	86	in
-10	87	108	left / right contexts
-11	19	43	context2target attention
-11	52	62	to capture
-11	67	86	most important word
-11	87	89	in
-11	94	100	target
-12	5	13	leads to
-12	16	41	two - side representation
-12	42	44	of
-12	49	55	target
-12	58	77	left - aware target
-12	82	102	right - aware target
+41	4	28	target2context attention
+41	37	47	to capture
+41	52	83	most indicative sentiment words
+41	84	86	in
+41	87	108	left / right contexts
+42	19	43	context2target attention
+42	52	62	to capture
+42	67	86	most important word
+42	87	89	in
+42	94	100	target
+43	5	13	leads to
+43	16	41	two - side representation
+43	42	44	of
+43	49	55	target
+43	58	77	left - aware target
+43	82	102	right - aware target
 44	13	24	concatenate
 44	29	54	component representations
 44	55	57	as

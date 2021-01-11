@@ -94,6 +94,7 @@
 29	30	37	used to
 29	38	45	augment
 29	50	74	base word representation
+26	10	38	several new novel components
 27	13	20	propose
 27	23	81	compare , compress and propagate ( Com Prop ) architecture
 27	88	117	compressed alignment features

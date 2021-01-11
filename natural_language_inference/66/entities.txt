@@ -45,6 +45,11 @@
 35	133	168	attention - weighted representation
 35	169	171	of
 35	176	183	premise
+37	3	11	refer to
+37	32	44	match - LSTM
+37	50	56	m LSTM
+37	57	60	for
+37	61	66	short
 2	9	35	Natural Language Inference
 4	0	34	Natural language inference ( NLI )
 6	88	91	NLI
