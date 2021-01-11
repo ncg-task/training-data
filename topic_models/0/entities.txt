@@ -72,3 +72,4 @@
 377	29	67	topic ID systems based on Bayesian SMM
 377	72	96	consistently better than
 377	97	162	variational auto encoder inspired NVDM , and ( non-Bayesian ) SMM
+18	60	80	topic identification

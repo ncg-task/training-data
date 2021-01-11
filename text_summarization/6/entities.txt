@@ -161,3 +161,4 @@
 231	0	14	Our model DRGD
 231	20	28	achieves
 231	33	49	best performance
+39	0	23	Automatic summarization
